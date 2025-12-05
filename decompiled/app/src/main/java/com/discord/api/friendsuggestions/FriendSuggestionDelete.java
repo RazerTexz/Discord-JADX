@@ -1,6 +1,6 @@
 package com.discord.api.friendsuggestions;
 
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: FriendSuggestionDelete.kt */
 /* loaded from: classes.dex */
@@ -25,6 +25,6 @@ public final /* data */ class FriendSuggestionDelete {
     }
 
     public String toString() {
-        return a.C(a.U("FriendSuggestionDelete(suggestedUserId="), this.suggestedUserId, ")");
+        return outline.m815C(outline.m833U("FriendSuggestionDelete(suggestedUserId="), this.suggestedUserId, ")");
     }
 }

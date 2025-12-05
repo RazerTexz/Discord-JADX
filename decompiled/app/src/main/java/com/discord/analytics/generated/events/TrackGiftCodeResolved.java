@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGiftCodeMetadata;
-import com.discord.analytics.generated.traits.TrackGiftCodeMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackGiftCodeMetadata2;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGiftCodeResolved.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGiftCodeResolved implements AnalyticsSchema, TrackBaseReceiver, TrackStoreSkuMetadataReceiver, TrackGiftCodeMetadataReceiver {
+public final /* data */ class TrackGiftCodeResolved implements AnalyticsSchema, TrackBase2, TrackStoreSkuMetadata2, TrackGiftCodeMetadata2 {
     private TrackBase trackBase;
     private TrackGiftCodeMetadata trackGiftCodeMetadata;
     private TrackStoreSkuMetadata trackStoreSkuMetadata;
@@ -27,7 +27,7 @@ public final /* data */ class TrackGiftCodeResolved implements AnalyticsSchema, 
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackGiftCodeResolved) && m.areEqual(this.resolved, ((TrackGiftCodeResolved) other).resolved);
+            return (other instanceof TrackGiftCodeResolved) && Intrinsics3.areEqual(this.resolved, ((TrackGiftCodeResolved) other).resolved);
         }
         return true;
     }
@@ -41,6 +41,6 @@ public final /* data */ class TrackGiftCodeResolved implements AnalyticsSchema, 
     }
 
     public String toString() {
-        return a.D(a.U("TrackGiftCodeResolved(resolved="), this.resolved, ")");
+        return outline.m816D(outline.m833U("TrackGiftCodeResolved(resolved="), this.resolved, ")");
     }
 }

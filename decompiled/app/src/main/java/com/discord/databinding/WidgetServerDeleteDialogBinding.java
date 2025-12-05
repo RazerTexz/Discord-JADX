@@ -11,41 +11,47 @@ import com.google.android.material.textfield.TextInputLayout;
 /* loaded from: classes.dex */
 public final class WidgetServerDeleteDialogBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f17479a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialButton f2536b;
+    public final MaterialButton f17480b;
 
+    /* renamed from: c */
     @NonNull
-    public final MaterialButton c;
+    public final MaterialButton f17481c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f17482d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextInputLayout e;
+    public final TextInputLayout f17483e;
 
+    /* renamed from: f */
     @NonNull
-    public final LinearLayout f;
+    public final LinearLayout f17484f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f17485g;
 
     public WidgetServerDeleteDialogBinding(@NonNull LinearLayout linearLayout, @NonNull MaterialButton materialButton, @NonNull MaterialButton materialButton2, @NonNull TextView textView, @NonNull TextInputLayout textInputLayout, @NonNull LinearLayout linearLayout2, @NonNull TextView textView2) {
-        this.a = linearLayout;
-        this.f2536b = materialButton;
-        this.c = materialButton2;
-        this.d = textView;
-        this.e = textInputLayout;
-        this.f = linearLayout2;
-        this.g = textView2;
+        this.f17479a = linearLayout;
+        this.f17480b = materialButton;
+        this.f17481c = materialButton2;
+        this.f17482d = textView;
+        this.f17483e = textInputLayout;
+        this.f17484f = linearLayout2;
+        this.f17485g = textView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17479a;
     }
 }

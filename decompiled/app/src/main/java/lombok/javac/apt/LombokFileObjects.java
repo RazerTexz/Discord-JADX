@@ -18,20 +18,20 @@ final class LombokFileObjects {
 
     /* loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler.SCL.lombok */
     interface Compiler {
-        public static final Compiler JAVAC6 = new AnonymousClass1();
-        public static final Compiler JAVAC7 = new AnonymousClass2();
+        public static final Compiler JAVAC6 = new C128891();
+        public static final Compiler JAVAC7 = new C128902();
 
         JavaFileObject wrap(LombokFileObject lombokFileObject);
 
         Method getDecoderMethod();
 
-        /* renamed from: lombok.javac.apt.LombokFileObjects$Compiler$1, reason: invalid class name */
+        /* renamed from: lombok.javac.apt.LombokFileObjects$Compiler$1 */
         /* loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler$1.SCL.lombok */
-        class AnonymousClass1 implements Compiler {
+        class C128891 implements Compiler {
             private Method decoderMethod = null;
             private final AtomicBoolean decoderIsSet = new AtomicBoolean();
 
-            AnonymousClass1() {
+            C128891() {
             }
 
             @Override // lombok.javac.apt.LombokFileObjects.Compiler
@@ -53,13 +53,13 @@ final class LombokFileObjects {
             }
         }
 
-        /* renamed from: lombok.javac.apt.LombokFileObjects$Compiler$2, reason: invalid class name */
+        /* renamed from: lombok.javac.apt.LombokFileObjects$Compiler$2 */
         /* loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler$2.SCL.lombok */
-        class AnonymousClass2 implements Compiler {
+        class C128902 implements Compiler {
             private Method decoderMethod = null;
             private final AtomicBoolean decoderIsSet = new AtomicBoolean();
 
-            AnonymousClass2() {
+            C128902() {
             }
 
             @Override // lombok.javac.apt.LombokFileObjects.Compiler

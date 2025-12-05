@@ -1,9 +1,9 @@
 package com.discord.api.guild.welcome;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildWelcomeScreen.kt */
 /* loaded from: classes.dex */
@@ -16,7 +16,8 @@ public final /* data */ class GuildWelcomeScreen {
         return this.description;
     }
 
-    public final List<GuildWelcomeChannel> b() {
+    /* renamed from: b */
+    public final List<GuildWelcomeChannel> m7899b() {
         return this.welcomeChannels;
     }
 
@@ -28,7 +29,7 @@ public final /* data */ class GuildWelcomeScreen {
             return false;
         }
         GuildWelcomeScreen guildWelcomeScreen = (GuildWelcomeScreen) other;
-        return m.areEqual(this.description, guildWelcomeScreen.description) && m.areEqual(this.welcomeChannels, guildWelcomeScreen.welcomeChannels);
+        return Intrinsics3.areEqual(this.description, guildWelcomeScreen.description) && Intrinsics3.areEqual(this.welcomeChannels, guildWelcomeScreen.welcomeChannels);
     }
 
     public int hashCode() {
@@ -39,9 +40,9 @@ public final /* data */ class GuildWelcomeScreen {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildWelcomeScreen(description=");
-        sbU.append(this.description);
-        sbU.append(", welcomeChannels=");
-        return a.L(sbU, this.welcomeChannels, ")");
+        StringBuilder sbM833U = outline.m833U("GuildWelcomeScreen(description=");
+        sbM833U.append(this.description);
+        sbM833U.append(", welcomeChannels=");
+        return outline.m824L(sbM833U, this.welcomeChannels, ")");
     }
 }

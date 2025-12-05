@@ -11,14 +11,9 @@ import com.discord.stores.StoreSearch;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.utilities.analytics.Traits;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.utilities.rx.ObservableWithLeadingEdgeThrottle;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableWithLeadingEdgeThrottle;
 import com.discord.utilities.search.validation.SearchData;
-import d0.t.h0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -27,10 +22,15 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function4;
-import rx.Observable;
-import rx.Subscription;
-import rx.subjects.BehaviorSubject;
-import rx.subjects.Subject;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
+import p658rx.Subscription;
+import p658rx.subjects.BehaviorSubject;
+import p658rx.subjects.Subject;
 
 /* compiled from: StoreSearchData.kt */
 /* loaded from: classes2.dex */
@@ -55,12 +55,12 @@ public final class StoreSearchData {
     }
 
     /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$getChannelSearchData$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<SearchData> {
+    /* renamed from: com.discord.stores.StoreSearchData$getChannelSearchData$1 */
+    public static final class C63831 extends Lambda implements Function0<SearchData> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C63831(long j) {
             super(0);
             this.$channelId = j;
         }
@@ -77,28 +77,28 @@ public final class StoreSearchData {
             MeUser meSnapshot = StoreSearchData.access$getStoreUser$p(StoreSearchData.this).getMeSnapshot();
             Map<Long, GuildMember> mapEmptyMap = StoreSearchData.access$getStoreGuilds$p(StoreSearchData.this).getMembers().get(channel != null ? Long.valueOf(channel.getGuildId()) : null);
             if (mapEmptyMap == null) {
-                mapEmptyMap = h0.emptyMap();
+                mapEmptyMap = Maps6.emptyMap();
             }
             return new SearchData.Builder().buildForChannel(channel, meSnapshot, mapEmptyMap);
         }
     }
 
     /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$getGuildSearchData$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Map<Long, ? extends Channel>, Map<Long, ? extends Channel>> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StoreSearchData$getGuildSearchData$1 */
+    public static final class C63841<T, R> implements Func1<Map<Long, ? extends Channel>, Map<Long, ? extends Channel>> {
+        public static final C63841 INSTANCE = new C63841();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Map<Long, ? extends Channel> call(Map<Long, ? extends Channel> map) {
             return call2((Map<Long, Channel>) map);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Channel> call2(Map<Long, Channel> map) {
-            m.checkNotNullExpressionValue(map, "guildChannels");
+            Intrinsics3.checkNotNullExpressionValue(map, "guildChannels");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             for (Map.Entry<Long, Channel> entry : map.entrySet()) {
-                if (ChannelUtils.v(entry.getValue())) {
+                if (ChannelUtils.m7698v(entry.getValue())) {
                     linkedHashMap.put(entry.getKey(), entry.getValue());
                 }
             }
@@ -107,9 +107,9 @@ public final class StoreSearchData {
     }
 
     /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$getGuildSearchData$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function4<Map<Long, ? extends GuildMember>, Map<Long, ? extends User>, Map<Long, ? extends Channel>, Map<Long, ? extends Long>, SearchData> {
-        public AnonymousClass2(SearchData.Builder builder) {
+    /* renamed from: com.discord.stores.StoreSearchData$getGuildSearchData$2 */
+    public static final /* synthetic */ class C63852 extends FunctionReferenceImpl implements Function4<Map<Long, ? extends GuildMember>, Map<Long, ? extends User>, Map<Long, ? extends Channel>, Map<Long, ? extends Long>, SearchData> {
+        public C63852(SearchData.Builder builder) {
             super(4, builder, SearchData.Builder.class, "buildForGuild", "buildForGuild(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lcom/discord/utilities/search/validation/SearchData;", 0);
         }
 
@@ -120,25 +120,25 @@ public final class StoreSearchData {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final SearchData invoke2(Map<Long, GuildMember> map, Map<Long, ? extends User> map2, Map<Long, Channel> map3, Map<Long, Long> map4) {
-            m.checkNotNullParameter(map, "p1");
-            m.checkNotNullParameter(map2, "p2");
-            m.checkNotNullParameter(map3, "p3");
-            m.checkNotNullParameter(map4, "p4");
+            Intrinsics3.checkNotNullParameter(map, "p1");
+            Intrinsics3.checkNotNullParameter(map2, "p2");
+            Intrinsics3.checkNotNullParameter(map3, "p3");
+            Intrinsics3.checkNotNullParameter(map4, "p4");
             return ((SearchData.Builder) this.receiver).buildForGuild(map, map2, map3, map4);
         }
     }
 
     /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$init$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Subscription, Unit> {
-        public AnonymousClass1(StoreSearchData storeSearchData) {
+    /* renamed from: com.discord.stores.StoreSearchData$init$1 */
+    public static final /* synthetic */ class C63861 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
+        public C63861(StoreSearchData storeSearchData) {
             super(1, storeSearchData, StoreSearchData.class, "handleSubscription", "handleSubscription(Lrx/Subscription;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -148,37 +148,37 @@ public final class StoreSearchData {
     }
 
     /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$init$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<SearchData, Unit> {
-        public AnonymousClass2(StoreSearchData storeSearchData) {
+    /* renamed from: com.discord.stores.StoreSearchData$init$2 */
+    public static final /* synthetic */ class C63872 extends FunctionReferenceImpl implements Function1<SearchData, Unit> {
+        public C63872(StoreSearchData storeSearchData) {
             super(1, storeSearchData, StoreSearchData.class, "handleNewData", "handleNewData(Lcom/discord/utilities/search/validation/SearchData;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(SearchData searchData) {
             invoke2(searchData);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SearchData searchData) {
-            m.checkNotNullParameter(searchData, "p1");
+            Intrinsics3.checkNotNullParameter(searchData, "p1");
             StoreSearchData.access$handleNewData((StoreSearchData) this.receiver, searchData);
         }
     }
 
     public StoreSearchData(ObservationDeck observationDeck, StoreChannels storeChannels, StoreUser storeUser, StoreGuilds storeGuilds) {
-        m.checkNotNullParameter(observationDeck, "observationDeck");
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(storeUser, "storeUser");
-        m.checkNotNullParameter(storeGuilds, "storeGuilds");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
         this.observationDeck = observationDeck;
         this.storeChannels = storeChannels;
         this.storeUser = storeUser;
         this.storeGuilds = storeGuilds;
-        BehaviorSubject behaviorSubjectL0 = BehaviorSubject.l0(new SearchData(null, null, null, null, null, 31, null));
-        m.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(SearchData())");
-        this.searchDataSubject = behaviorSubjectL0;
+        BehaviorSubject behaviorSubjectM11130l0 = BehaviorSubject.m11130l0(new SearchData(null, null, null, null, null, 31, null));
+        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectM11130l0, "BehaviorSubject.create(SearchData())");
+        this.searchDataSubject = behaviorSubjectM11130l0;
     }
 
     public static final /* synthetic */ StoreChannels access$getStoreChannels$p(StoreSearchData storeSearchData) {
@@ -202,13 +202,13 @@ public final class StoreSearchData {
     }
 
     private final Observable<SearchData> getChannelSearchData(long channelId) {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this.storeChannels, this.storeUser, this.storeGuilds}, false, null, null, new AnonymousClass1(channelId), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this.storeChannels, this.storeUser, this.storeGuilds}, false, null, null, new C63831(channelId), 14, null);
     }
 
     private final Observable<SearchData> getGuildSearchData(long guildId) {
         StoreStream.Companion companion = StoreStream.INSTANCE;
-        Observable<SearchData> observableCombineLatest = ObservableWithLeadingEdgeThrottle.combineLatest(companion.getGuilds().observeComputed(guildId), companion.getUsers().observeAllUsers(), StoreChannels.observeChannelsForGuild$default(companion.getChannels(), guildId, null, 2, null).G(AnonymousClass1.INSTANCE), companion.getPermissions().observeChannelPermissionsForGuild(guildId), new StoreSearchData$sam$rx_functions_Func4$0(new AnonymousClass2(new SearchData.Builder())), 3L, TimeUnit.SECONDS);
-        m.checkNotNullExpressionValue(observableCombineLatest, "ObservableWithLeadingEdg…3, TimeUnit.SECONDS\n    )");
+        Observable<SearchData> observableCombineLatest = ObservableWithLeadingEdgeThrottle.combineLatest(companion.getGuilds().observeComputed(guildId), companion.getUsers().observeAllUsers(), StoreChannels.observeChannelsForGuild$default(companion.getChannels(), guildId, null, 2, null).m11083G(C63841.INSTANCE), companion.getPermissions().observeChannelPermissionsForGuild(guildId), new StoreSearchData2(new C63852(new SearchData.Builder())), 3L, TimeUnit.SECONDS);
+        Intrinsics3.checkNotNullExpressionValue(observableCombineLatest, "ObservableWithLeadingEdg…3, TimeUnit.SECONDS\n    )");
         return observableCombineLatest;
     }
 
@@ -235,7 +235,7 @@ public final class StoreSearchData {
 
     public final void init(StoreSearch.SearchTarget searchTarget) {
         Observable<SearchData> guildSearchData;
-        m.checkNotNullParameter(searchTarget, "searchTarget");
+        Intrinsics3.checkNotNullParameter(searchTarget, "searchTarget");
         int iOrdinal = searchTarget.getType().ordinal();
         if (iOrdinal == 0) {
             guildSearchData = getGuildSearchData(searchTarget.getId());
@@ -245,8 +245,8 @@ public final class StoreSearchData {
             }
             guildSearchData = getChannelSearchData(searchTarget.getId());
         }
-        Observable observableR = ObservableExtensionsKt.computationBuffered(guildSearchData).r();
-        m.checkNotNullExpressionValue(observableR, "searchDataObservable\n   …  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(observableR, StoreSearchData.class, (Context) null, new AnonymousClass1(this), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 58, (Object) null);
+        Observable observableM11112r = ObservableExtensionsKt.computationBuffered(guildSearchData).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "searchDataObservable\n   …  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(observableM11112r, StoreSearchData.class, (Context) null, new C63861(this), (Function1) null, (Function0) null, (Function0) null, new C63872(this), 58, (Object) null);
     }
 }

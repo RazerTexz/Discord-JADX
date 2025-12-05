@@ -6,7 +6,7 @@ import androidx.view.LiveData;
 import androidx.view.MutableLiveData;
 import androidx.work.Operation;
 import androidx.work.impl.utils.futures.SettableFuture;
-import b.i.b.d.a.a;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public class OperationImpl implements Operation {
 
     @Override // androidx.work.Operation
     @NonNull
-    public a<Operation.State.SUCCESS> getResult() {
+    public ListenableFuture8<Operation.State.SUCCESS> getResult() {
         return this.mOperationFuture;
     }
 

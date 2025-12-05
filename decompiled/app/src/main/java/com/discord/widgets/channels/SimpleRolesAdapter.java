@@ -5,8 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.role.GuildRole;
 import com.discord.databinding.SimpleRoleListItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -14,11 +13,12 @@ import com.discord.utilities.guilds.RoleUtils;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
-import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SimpleRolesAdapter.kt */
 /* loaded from: classes2.dex */
@@ -31,13 +31,13 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RoleAdapterItem(SimpleRolesAdapter simpleRolesAdapter) {
-            super(R.layout.simple_role_list_item, simpleRolesAdapter);
-            m.checkNotNullParameter(simpleRolesAdapter, "adapter");
+            super(C5419R.layout.simple_role_list_item, simpleRolesAdapter);
+            Intrinsics3.checkNotNullParameter(simpleRolesAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             TextView textView = (TextView) view;
             SimpleRoleListItemBinding simpleRoleListItemBinding = new SimpleRoleListItemBinding(textView, textView);
-            m.checkNotNullExpressionValue(simpleRoleListItemBinding, "SimpleRoleListItemBinding.bind(itemView)");
+            Intrinsics3.checkNotNullExpressionValue(simpleRoleListItemBinding, "SimpleRoleListItemBinding.bind(itemView)");
             this.binding = simpleRoleListItemBinding;
         }
 
@@ -52,18 +52,18 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, RoleItem data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
-            TextView textView = this.binding.f2143b;
-            m.checkNotNullExpressionValue(textView, "binding.serverSettingsRoleItemName");
+            TextView textView = this.binding.f15241b;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.serverSettingsRoleItemName");
             textView.setText(data.getRole().getName());
-            this.binding.a.setOnClickListener(new SimpleRolesAdapter$RoleAdapterItem$onConfigure$1(this, data));
-            TextView textView2 = this.binding.f2143b;
+            this.binding.f15240a.setOnClickListener(new SimpleRolesAdapter2(this, data));
+            TextView textView2 = this.binding.f15241b;
             GuildRole role = data.getRole();
-            TextView textView3 = this.binding.f2143b;
-            m.checkNotNullExpressionValue(textView3, "binding.serverSettingsRoleItemName");
+            TextView textView3 = this.binding.f15241b;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.serverSettingsRoleItemName");
             Context context = textView3.getContext();
-            m.checkNotNullExpressionValue(context, "binding.serverSettingsRoleItemName.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "binding.serverSettingsRoleItemName.context");
             textView2.setTextColor(RoleUtils.getRoleColor$default(role, context, null, 2, null));
         }
     }
@@ -76,7 +76,7 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
         private final int type;
 
         public RoleItem(GuildRole guildRole) {
-            m.checkNotNullParameter(guildRole, "role");
+            Intrinsics3.checkNotNullParameter(guildRole, "role");
             this.role = guildRole;
             this.key = String.valueOf(guildRole.getId());
         }
@@ -99,13 +99,13 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
         }
 
         public final RoleItem copy(GuildRole role) {
-            m.checkNotNullParameter(role, "role");
+            Intrinsics3.checkNotNullParameter(role, "role");
             return new RoleItem(role);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof RoleItem) && m.areEqual(this.role, ((RoleItem) other).role);
+                return (other instanceof RoleItem) && Intrinsics3.areEqual(this.role, ((RoleItem) other).role);
             }
             return true;
         }
@@ -133,15 +133,15 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("RoleItem(role=");
-            sbU.append(this.role);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("RoleItem(role=");
+            sbM833U.append(this.role);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
 
         /* renamed from: compareTo, reason: avoid collision after fix types in other method */
         public int compareTo2(RoleItem other) {
-            m.checkNotNullParameter(other, "other");
+            Intrinsics3.checkNotNullParameter(other, "other");
             return RoleUtils.getROLE_COMPARATOR().compare(this.role, other.role);
         }
     }
@@ -149,7 +149,7 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SimpleRolesAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
     }
 
     public static final /* synthetic */ Function1 access$getOnRoleClickedListener$p(SimpleRolesAdapter simpleRolesAdapter) {
@@ -166,15 +166,15 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
     }
 
     public final void setData(List<RoleItem> data, Function1<? super GuildRole, Unit> onRoleClickedListener) {
-        m.checkNotNullParameter(data, "data");
-        m.checkNotNullParameter(onRoleClickedListener, "onRoleClickedListener");
+        Intrinsics3.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(onRoleClickedListener, "onRoleClickedListener");
         super.setData(data);
         this.onRoleClickedListener = onRoleClickedListener;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RoleAdapterItem onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new RoleAdapterItem(this);
         }

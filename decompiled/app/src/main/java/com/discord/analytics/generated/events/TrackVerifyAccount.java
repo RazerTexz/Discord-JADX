@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackVerifyAccount.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVerifyAccount implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackVerifyAccount implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence source = null;
     private final Long fingerprint = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackVerifyAccount implements AnalyticsSchema, Tra
             return false;
         }
         TrackVerifyAccount trackVerifyAccount = (TrackVerifyAccount) other;
-        return m.areEqual(this.source, trackVerifyAccount.source) && m.areEqual(this.fingerprint, trackVerifyAccount.fingerprint);
+        return Intrinsics3.areEqual(this.source, trackVerifyAccount.source) && Intrinsics3.areEqual(this.fingerprint, trackVerifyAccount.fingerprint);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackVerifyAccount implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackVerifyAccount(source=");
-        sbU.append(this.source);
-        sbU.append(", fingerprint=");
-        return a.G(sbU, this.fingerprint, ")");
+        StringBuilder sbM833U = outline.m833U("TrackVerifyAccount(source=");
+        sbM833U.append(this.source);
+        sbM833U.append(", fingerprint=");
+        return outline.m819G(sbM833U, this.fingerprint, ")");
     }
 }

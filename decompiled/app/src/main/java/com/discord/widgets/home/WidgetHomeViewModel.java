@@ -1,11 +1,8 @@
 package com.discord.widgets.home;
 
-import a0.a.a.b;
 import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.user.NsfwAllowance;
 import com.discord.models.guild.Guild;
 import com.discord.models.user.MeUser;
@@ -23,7 +20,7 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserConnections;
 import com.discord.utilities.cache.SharedPreferencesProvider;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.user.UserUtils;
@@ -31,18 +28,21 @@ import com.discord.widgets.channels.ChannelOnboardingManager;
 import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet;
 import com.discord.widgets.playstation.PlaystationUpsellManager;
 import com.discord.widgets.servers.guild_role_subscription.upsell.GuildRoleSubscriptionOnboardingUpsellManager;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetHomeViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetHomeViewModel extends d0<ViewState> {
+public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -61,42 +61,42 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
     private WidgetHomeModel widgetHomeModel;
 
     /* compiled from: WidgetHomeViewModel.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.home.WidgetHomeViewModel$1 */
+    public static final class C89791 extends Lambda implements Function1<StoreState, Unit> {
+        public C89791() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetHomeViewModel widgetHomeViewModel = WidgetHomeViewModel.this;
-            m.checkNotNullExpressionValue(storeState, "storeState");
+            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
             WidgetHomeViewModel.access$handleStoreState(widgetHomeViewModel, storeState);
         }
     }
 
     /* compiled from: WidgetHomeViewModel.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<StoreNavigation.PanelAction, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.home.WidgetHomeViewModel$2 */
+    public static final class C89802 extends Lambda implements Function1<StoreNavigation.PanelAction, Unit> {
+        public C89802() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreNavigation.PanelAction panelAction) {
             invoke2(panelAction);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreNavigation.PanelAction panelAction) {
-            m.checkNotNullParameter(panelAction, "panelAction");
+            Intrinsics3.checkNotNullParameter(panelAction, "panelAction");
             WidgetHomeViewModel.access$handleNavDrawerAction(WidgetHomeViewModel.this, panelAction);
         }
     }
@@ -111,9 +111,9 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(StoreGuilds storeGuilds, StoreGuildSelected storeGuildSelected, StoreNavigation storeNavigation, StoreLurking storeLurking, StoreUser storeUser, StoreGuildWelcomeScreens storeGuildWelcomeScreens, StoreChannelsSelected storeChannelsSelected, StoreExperiments storeExperiments, StorePermissions storePermissions, StoreUserConnections storeUserConnections, StoreGuildsNsfw storeGuildsNsfw) {
-            Observable<StoreState> observableD = Observable.d(storeNavigation.observeLeftPanelState(), storeNavigation.observeRightPanelState(), storeGuildSelected.observeSelectedGuildId().Y(new WidgetHomeViewModel$Companion$observeStoreState$guildInfoObservable$1(storeGuilds, storeLurking, storeGuildWelcomeScreens, storePermissions, storeGuildsNsfw)), StoreUser.observeMe$default(storeUser, false, 1, null), storeChannelsSelected.observeResolvedSelectedChannel(), storeExperiments.observeUserExperiment("2021-09_events_upsell", false), storeUserConnections.observeConnectedAccounts(), storeExperiments.observeUserExperiment("2021-12_connected_accounts_playstation", false), WidgetHomeViewModel$Companion$observeStoreState$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableD, "Observable.combineLatest…counts,\n        )\n      }");
-            return observableD;
+            Observable<StoreState> observableM11067d = Observable.m11067d(storeNavigation.observeLeftPanelState(), storeNavigation.observeRightPanelState(), storeGuildSelected.observeSelectedGuildId().m11099Y(new WidgetHomeViewModel3(storeGuilds, storeLurking, storeGuildWelcomeScreens, storePermissions, storeGuildsNsfw)), StoreUser.observeMe$default(storeUser, false, 1, null), storeChannelsSelected.observeResolvedSelectedChannel(), storeExperiments.observeUserExperiment("2021-09_events_upsell", false), storeUserConnections.observeConnectedAccounts(), storeExperiments.observeUserExperiment("2021-12_connected_accounts_playstation", false), WidgetHomeViewModel2.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11067d, "Observable.combineLatest…counts,\n        )\n      }");
+            return observableM11067d;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -206,11 +206,11 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.guildId);
+                return C0002b.m3a(this.guildId);
             }
 
             public String toString() {
-                return a.C(a.U("ShowGuildEventUpsell(guildId="), this.guildId, ")");
+                return outline.m815C(outline.m833U("ShowGuildEventUpsell(guildId="), this.guildId, ")");
             }
         }
 
@@ -251,11 +251,11 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.guildId);
+                return C0002b.m3a(this.guildId);
             }
 
             public String toString() {
-                return a.C(a.U("ShowGuildRoleSubscriptionUpsell(guildId="), this.guildId, ")");
+                return outline.m815C(outline.m833U("ShowGuildRoleSubscriptionUpsell(guildId="), this.guildId, ")");
             }
         }
 
@@ -296,11 +296,11 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.guildId);
+                return C0002b.m3a(this.guildId);
             }
 
             public String toString() {
-                return a.C(a.U("ShowGuildWelcomeSheet(guildId="), this.guildId, ")");
+                return outline.m815C(outline.m833U("ShowGuildWelcomeSheet(guildId="), this.guildId, ")");
             }
         }
 
@@ -394,7 +394,7 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
                 return false;
             }
             GuildInfo guildInfo = (GuildInfo) other;
-            return this.guildId == guildInfo.guildId && m.areEqual(this.guild, guildInfo.guild) && this.isLurking == guildInfo.isLurking && m.areEqual(this.welcomeScreenState, guildInfo.welcomeScreenState) && this.isNsfwUnconsented == guildInfo.isNsfwUnconsented && this.canManageEvents == guildInfo.canManageEvents;
+            return this.guildId == guildInfo.guildId && Intrinsics3.areEqual(this.guild, guildInfo.guild) && this.isLurking == guildInfo.isLurking && Intrinsics3.areEqual(this.welcomeScreenState, guildInfo.welcomeScreenState) && this.isNsfwUnconsented == guildInfo.isNsfwUnconsented && this.canManageEvents == guildInfo.canManageEvents;
         }
 
         public final boolean getCanManageEvents() {
@@ -415,9 +415,9 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public int hashCode() {
-            int iA = b.a(this.guildId) * 31;
+            int iM3a = C0002b.m3a(this.guildId) * 31;
             Guild guild = this.guild;
-            int iHashCode = (iA + (guild != null ? guild.hashCode() : 0)) * 31;
+            int iHashCode = (iM3a + (guild != null ? guild.hashCode() : 0)) * 31;
             boolean z2 = this.isLurking;
             int i = z2;
             if (z2 != 0) {
@@ -445,18 +445,18 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("GuildInfo(guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", guild=");
-            sbU.append(this.guild);
-            sbU.append(", isLurking=");
-            sbU.append(this.isLurking);
-            sbU.append(", welcomeScreenState=");
-            sbU.append(this.welcomeScreenState);
-            sbU.append(", isNsfwUnconsented=");
-            sbU.append(this.isNsfwUnconsented);
-            sbU.append(", canManageEvents=");
-            return a.O(sbU, this.canManageEvents, ")");
+            StringBuilder sbM833U = outline.m833U("GuildInfo(guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", isLurking=");
+            sbM833U.append(this.isLurking);
+            sbM833U.append(", welcomeScreenState=");
+            sbM833U.append(this.welcomeScreenState);
+            sbM833U.append(", isNsfwUnconsented=");
+            sbM833U.append(this.isNsfwUnconsented);
+            sbM833U.append(", canManageEvents=");
+            return outline.m827O(sbM833U, this.canManageEvents, ")");
         }
     }
 
@@ -474,11 +474,11 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         private final PanelState rightPanelState;
 
         public StoreState(PanelState panelState, PanelState panelState2, GuildInfo guildInfo, MeUser meUser, boolean z2, boolean z3, boolean z4, NsfwAllowance nsfwAllowance, long j, StoreUserConnections.State state) {
-            m.checkNotNullParameter(panelState, "leftPanelState");
-            m.checkNotNullParameter(panelState2, "rightPanelState");
-            m.checkNotNullParameter(guildInfo, "guildInfo");
-            m.checkNotNullParameter(meUser, "me");
-            m.checkNotNullParameter(state, "connectedAccountsState");
+            Intrinsics3.checkNotNullParameter(panelState, "leftPanelState");
+            Intrinsics3.checkNotNullParameter(panelState2, "rightPanelState");
+            Intrinsics3.checkNotNullParameter(guildInfo, "guildInfo");
+            Intrinsics3.checkNotNullParameter(meUser, "me");
+            Intrinsics3.checkNotNullParameter(state, "connectedAccountsState");
             this.leftPanelState = panelState;
             this.rightPanelState = panelState2;
             this.guildInfo = guildInfo;
@@ -546,11 +546,11 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         }
 
         public final StoreState copy(PanelState leftPanelState, PanelState rightPanelState, GuildInfo guildInfo, MeUser me2, boolean isThreadPeek, boolean isInEventsUpsellExperiment, boolean isChannelNsfw, NsfwAllowance nsfwAllowed, long guildId, StoreUserConnections.State connectedAccountsState) {
-            m.checkNotNullParameter(leftPanelState, "leftPanelState");
-            m.checkNotNullParameter(rightPanelState, "rightPanelState");
-            m.checkNotNullParameter(guildInfo, "guildInfo");
-            m.checkNotNullParameter(me2, "me");
-            m.checkNotNullParameter(connectedAccountsState, "connectedAccountsState");
+            Intrinsics3.checkNotNullParameter(leftPanelState, "leftPanelState");
+            Intrinsics3.checkNotNullParameter(rightPanelState, "rightPanelState");
+            Intrinsics3.checkNotNullParameter(guildInfo, "guildInfo");
+            Intrinsics3.checkNotNullParameter(me2, "me");
+            Intrinsics3.checkNotNullParameter(connectedAccountsState, "connectedAccountsState");
             return new StoreState(leftPanelState, rightPanelState, guildInfo, me2, isThreadPeek, isInEventsUpsellExperiment, isChannelNsfw, nsfwAllowed, guildId, connectedAccountsState);
         }
 
@@ -562,7 +562,7 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.leftPanelState, storeState.leftPanelState) && m.areEqual(this.rightPanelState, storeState.rightPanelState) && m.areEqual(this.guildInfo, storeState.guildInfo) && m.areEqual(this.me, storeState.me) && this.isThreadPeek == storeState.isThreadPeek && this.isInEventsUpsellExperiment == storeState.isInEventsUpsellExperiment && this.isChannelNsfw == storeState.isChannelNsfw && m.areEqual(this.nsfwAllowed, storeState.nsfwAllowed) && this.guildId == storeState.guildId && m.areEqual(this.connectedAccountsState, storeState.connectedAccountsState);
+            return Intrinsics3.areEqual(this.leftPanelState, storeState.leftPanelState) && Intrinsics3.areEqual(this.rightPanelState, storeState.rightPanelState) && Intrinsics3.areEqual(this.guildInfo, storeState.guildInfo) && Intrinsics3.areEqual(this.me, storeState.me) && this.isThreadPeek == storeState.isThreadPeek && this.isInEventsUpsellExperiment == storeState.isInEventsUpsellExperiment && this.isChannelNsfw == storeState.isChannelNsfw && Intrinsics3.areEqual(this.nsfwAllowed, storeState.nsfwAllowed) && this.guildId == storeState.guildId && Intrinsics3.areEqual(this.connectedAccountsState, storeState.connectedAccountsState);
         }
 
         public final StoreUserConnections.State getConnectedAccountsState() {
@@ -618,9 +618,9 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
             boolean z4 = this.isChannelNsfw;
             int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
             NsfwAllowance nsfwAllowance = this.nsfwAllowed;
-            int iA = (b.a(this.guildId) + ((i5 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.guildId) + ((i5 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31)) * 31;
             StoreUserConnections.State state = this.connectedAccountsState;
-            return iA + (state != null ? state.hashCode() : 0);
+            return iM3a + (state != null ? state.hashCode() : 0);
         }
 
         public final boolean isChannelNsfw() {
@@ -636,28 +636,28 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(leftPanelState=");
-            sbU.append(this.leftPanelState);
-            sbU.append(", rightPanelState=");
-            sbU.append(this.rightPanelState);
-            sbU.append(", guildInfo=");
-            sbU.append(this.guildInfo);
-            sbU.append(", me=");
-            sbU.append(this.me);
-            sbU.append(", isThreadPeek=");
-            sbU.append(this.isThreadPeek);
-            sbU.append(", isInEventsUpsellExperiment=");
-            sbU.append(this.isInEventsUpsellExperiment);
-            sbU.append(", isChannelNsfw=");
-            sbU.append(this.isChannelNsfw);
-            sbU.append(", nsfwAllowed=");
-            sbU.append(this.nsfwAllowed);
-            sbU.append(", guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", connectedAccountsState=");
-            sbU.append(this.connectedAccountsState);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("StoreState(leftPanelState=");
+            sbM833U.append(this.leftPanelState);
+            sbM833U.append(", rightPanelState=");
+            sbM833U.append(this.rightPanelState);
+            sbM833U.append(", guildInfo=");
+            sbM833U.append(this.guildInfo);
+            sbM833U.append(", me=");
+            sbM833U.append(this.me);
+            sbM833U.append(", isThreadPeek=");
+            sbM833U.append(this.isThreadPeek);
+            sbM833U.append(", isInEventsUpsellExperiment=");
+            sbM833U.append(this.isInEventsUpsellExperiment);
+            sbM833U.append(", isChannelNsfw=");
+            sbM833U.append(this.isChannelNsfw);
+            sbM833U.append(", nsfwAllowed=");
+            sbM833U.append(this.nsfwAllowed);
+            sbM833U.append(", guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", connectedAccountsState=");
+            sbM833U.append(this.connectedAccountsState);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -671,8 +671,8 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         private final PanelState rightPanelState;
 
         public ViewState(PanelState panelState, PanelState panelState2, boolean z2, boolean z3, NsfwAllowance nsfwAllowance, long j) {
-            m.checkNotNullParameter(panelState, "leftPanelState");
-            m.checkNotNullParameter(panelState2, "rightPanelState");
+            Intrinsics3.checkNotNullParameter(panelState, "leftPanelState");
+            Intrinsics3.checkNotNullParameter(panelState2, "rightPanelState");
             this.leftPanelState = panelState;
             this.rightPanelState = panelState2;
             this.isNsfwUnconsented = z2;
@@ -738,8 +738,8 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         }
 
         public final ViewState copy(PanelState leftPanelState, PanelState rightPanelState, boolean isNsfwUnconsented, boolean isChannelNsfw, NsfwAllowance nsfwAllowed, long guildId) {
-            m.checkNotNullParameter(leftPanelState, "leftPanelState");
-            m.checkNotNullParameter(rightPanelState, "rightPanelState");
+            Intrinsics3.checkNotNullParameter(leftPanelState, "leftPanelState");
+            Intrinsics3.checkNotNullParameter(rightPanelState, "rightPanelState");
             return new ViewState(leftPanelState, rightPanelState, isNsfwUnconsented, isChannelNsfw, nsfwAllowed, guildId);
         }
 
@@ -751,7 +751,7 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return m.areEqual(this.leftPanelState, viewState.leftPanelState) && m.areEqual(this.rightPanelState, viewState.rightPanelState) && this.isNsfwUnconsented == viewState.isNsfwUnconsented && this.isChannelNsfw == viewState.isChannelNsfw && m.areEqual(this.nsfwAllowed, viewState.nsfwAllowed) && this.guildId == viewState.guildId;
+            return Intrinsics3.areEqual(this.leftPanelState, viewState.leftPanelState) && Intrinsics3.areEqual(this.rightPanelState, viewState.rightPanelState) && this.isNsfwUnconsented == viewState.isNsfwUnconsented && this.isChannelNsfw == viewState.isChannelNsfw && Intrinsics3.areEqual(this.nsfwAllowed, viewState.nsfwAllowed) && this.guildId == viewState.guildId;
         }
 
         public final long getGuildId() {
@@ -785,7 +785,7 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
             boolean z3 = this.isChannelNsfw;
             int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
             NsfwAllowance nsfwAllowance = this.nsfwAllowed;
-            return b.a(this.guildId) + ((i3 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31);
+            return C0002b.m3a(this.guildId) + ((i3 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31);
         }
 
         public final boolean isChannelNsfw() {
@@ -797,18 +797,18 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewState(leftPanelState=");
-            sbU.append(this.leftPanelState);
-            sbU.append(", rightPanelState=");
-            sbU.append(this.rightPanelState);
-            sbU.append(", isNsfwUnconsented=");
-            sbU.append(this.isNsfwUnconsented);
-            sbU.append(", isChannelNsfw=");
-            sbU.append(this.isChannelNsfw);
-            sbU.append(", nsfwAllowed=");
-            sbU.append(this.nsfwAllowed);
-            sbU.append(", guildId=");
-            return a.C(sbU, this.guildId, ")");
+            StringBuilder sbM833U = outline.m833U("ViewState(leftPanelState=");
+            sbM833U.append(this.leftPanelState);
+            sbM833U.append(", rightPanelState=");
+            sbM833U.append(this.rightPanelState);
+            sbM833U.append(", isNsfwUnconsented=");
+            sbM833U.append(this.isNsfwUnconsented);
+            sbM833U.append(", isChannelNsfw=");
+            sbM833U.append(this.isChannelNsfw);
+            sbM833U.append(", nsfwAllowed=");
+            sbM833U.append(this.nsfwAllowed);
+            sbM833U.append(", guildId=");
+            return outline.m815C(sbM833U, this.guildId, ")");
         }
     }
 
@@ -860,55 +860,55 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
     @MainThread
     private final void emitAnimatePeekIn() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.AnimatePeekIn.INSTANCE);
+        publishSubject.f27650k.onNext(Event.AnimatePeekIn.INSTANCE);
     }
 
     @MainThread
     private final void emitAnimatePeekOut() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.AnimatePeekOut.INSTANCE);
+        publishSubject.f27650k.onNext(Event.AnimatePeekOut.INSTANCE);
     }
 
     @MainThread
     private final void emitClosePanelsEvent() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.ClosePanels.INSTANCE);
+        publishSubject.f27650k.onNext(Event.ClosePanels.INSTANCE);
     }
 
     @MainThread
     private final void emitShowChannelOnboardingSheet() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.ShowChannelOnboardingSheet.INSTANCE);
+        publishSubject.f27650k.onNext(Event.ShowChannelOnboardingSheet.INSTANCE);
     }
 
     @MainThread
     private final void emitShowGuildEventUpsell(long guildId) {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new Event.ShowGuildEventUpsell(guildId));
+        publishSubject.f27650k.onNext(new Event.ShowGuildEventUpsell(guildId));
     }
 
     @MainThread
     private final void emitShowGuildRoleSubscriptionUpsell(long guildId) {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new Event.ShowGuildRoleSubscriptionUpsell(guildId));
+        publishSubject.f27650k.onNext(new Event.ShowGuildRoleSubscriptionUpsell(guildId));
     }
 
     @MainThread
     private final void emitShowPlaystationUpsell() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.ShowPlaystationUpsell.INSTANCE);
+        publishSubject.f27650k.onNext(Event.ShowPlaystationUpsell.INSTANCE);
     }
 
     @MainThread
     private final void emitShowWelcomeSheet(long guildId) {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new Event.ShowGuildWelcomeSheet(guildId));
+        publishSubject.f27650k.onNext(new Event.ShowGuildWelcomeSheet(guildId));
     }
 
     @MainThread
     private final void emitUnlockLeftPanelEvent() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.UnlockLeftPanel.INSTANCE);
+        publishSubject.f27650k.onNext(Event.UnlockLeftPanel.INSTANCE);
     }
 
     @MainThread
@@ -946,7 +946,7 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
             emitShowChannelOnboardingSheet();
         } else if (shouldShowGuildEventUpsell(storeState.getGuildInfo().getCanManageEvents(), storeState.isInEventsUpsellExperiment())) {
             SharedPreferences.Editor editorEdit = this.sharedPreferences.edit();
-            m.checkNotNullExpressionValue(editorEdit, "editor");
+            Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
             editorEdit.putBoolean(WidgetGuildScheduledEventUpsellBottomSheet.GUILD_EVENT_UPSELL_CACHE_KEY, true);
             editorEdit.apply();
             emitShowGuildEventUpsell(guildId);
@@ -968,7 +968,7 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
     }
 
     private final boolean shouldShowChannelOnboardingSheet(PanelState previousLeftPanelState, PanelState leftPanelState, long guildId, boolean isNewUser) {
-        return ((previousLeftPanelState instanceof PanelState.d) && (leftPanelState instanceof PanelState.c)) && ((guildId > 0L ? 1 : (guildId == 0L ? 0 : -1)) != 0) && isNewUser && !this.channelOnboardingManager.hasUserSeenChannelOnboarding();
+        return ((previousLeftPanelState instanceof PanelState.C5581d) && (leftPanelState instanceof PanelState.C5580c)) && ((guildId > 0L ? 1 : (guildId == 0L ? 0 : -1)) != 0) && isNewUser && !this.channelOnboardingManager.hasUserSeenChannelOnboarding();
     }
 
     private final boolean shouldShowGuildEventUpsell(boolean canManageEvents, boolean isInEventsUpsellExperiment) {
@@ -978,7 +978,7 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
     @MainThread
     public final void emitOpenLeftPanelEvent() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.OpenLeftPanel.INSTANCE);
+        publishSubject.f27650k.onNext(Event.OpenLeftPanel.INSTANCE);
     }
 
     /* renamed from: getWidgetHomeModel$app_productionGoogleRelease, reason: from getter */
@@ -988,17 +988,17 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     public final void onEndPanelStateChange(PanelState panelState) {
-        m.checkNotNullParameter(panelState, "panelState");
+        Intrinsics3.checkNotNullParameter(panelState, "panelState");
         this.storeNavigation.setRightPanelState(panelState);
     }
 
     public final void onStartPanelStateChange(PanelState panelState) {
-        m.checkNotNullParameter(panelState, "panelState");
+        Intrinsics3.checkNotNullParameter(panelState, "panelState");
         this.storeNavigation.setLeftPanelState(panelState);
     }
 
@@ -1008,19 +1008,19 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
 
     /* JADX WARN: Illegal instructions before constructor call */
     public WidgetHomeViewModel(StoreNavigation storeNavigation, StoreGuildWelcomeScreens storeGuildWelcomeScreens, StoreExperiments storeExperiments, StoreGuilds storeGuilds, StorePermissions storePermissions, StoreUser storeUser, Observable<StoreState> observable, Observable<StoreNavigation.PanelAction> observable2, ChannelOnboardingManager channelOnboardingManager, SharedPreferences sharedPreferences, Clock clock) {
-        m.checkNotNullParameter(storeNavigation, "storeNavigation");
-        m.checkNotNullParameter(storeGuildWelcomeScreens, "storeGuildWelcomeScreens");
-        m.checkNotNullParameter(storeExperiments, "storeExperiments");
-        m.checkNotNullParameter(storeGuilds, "storeGuilds");
-        m.checkNotNullParameter(storePermissions, "storePermissions");
-        m.checkNotNullParameter(storeUser, "storeUser");
-        m.checkNotNullParameter(observable, "storeStateObservable");
-        m.checkNotNullParameter(observable2, "navPanelActionObservable");
-        m.checkNotNullParameter(channelOnboardingManager, "channelOnboardingManager");
-        m.checkNotNullParameter(sharedPreferences, "sharedPreferences");
-        m.checkNotNullParameter(clock, "clock");
-        PanelState.a aVar = PanelState.a.a;
-        super(new ViewState(aVar, aVar, false, false, NsfwAllowance.UNKNOWN, 0L));
+        Intrinsics3.checkNotNullParameter(storeNavigation, "storeNavigation");
+        Intrinsics3.checkNotNullParameter(storeGuildWelcomeScreens, "storeGuildWelcomeScreens");
+        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(observable2, "navPanelActionObservable");
+        Intrinsics3.checkNotNullParameter(channelOnboardingManager, "channelOnboardingManager");
+        Intrinsics3.checkNotNullParameter(sharedPreferences, "sharedPreferences");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
+        PanelState.C5578a c5578a = PanelState.C5578a.f18640a;
+        super(new ViewState(c5578a, c5578a, false, false, NsfwAllowance.UNKNOWN, 0L));
         this.storeNavigation = storeNavigation;
         this.storeGuildWelcomeScreens = storeGuildWelcomeScreens;
         this.storeExperiments = storeExperiments;
@@ -1028,12 +1028,12 @@ public final class WidgetHomeViewModel extends d0<ViewState> {
         this.channelOnboardingManager = channelOnboardingManager;
         this.sharedPreferences = sharedPreferences;
         this.clock = clock;
-        this.eventSubject = PublishSubject.k0();
+        this.eventSubject = PublishSubject.m11133k0();
         this.playstationUpsellManager = new PlaystationUpsellManager(sharedPreferences, storeExperiments, clock);
         this.guildRoleSubscriptionsUpsellManager = new GuildRoleSubscriptionOnboardingUpsellManager(sharedPreferences, storePermissions, storeUser, storeExperiments, storeGuilds);
-        Observable<StoreState> observableR = observable.r();
-        m.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetHomeViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable2, this, null, 2, null), WidgetHomeViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        Observable<StoreState> observableM11112r = observable.m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "storeStateObservable\n   …  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableM11112r), this, null, 2, null), WidgetHomeViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C89791(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable2, this, null, 2, null), WidgetHomeViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C89802(), 62, (Object) null);
     }
 }

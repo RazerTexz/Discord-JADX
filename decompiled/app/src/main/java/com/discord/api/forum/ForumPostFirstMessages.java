@@ -1,27 +1,28 @@
 package com.discord.api.forum;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ForumPostFirstMessages.kt */
 /* loaded from: classes.dex */
 public final /* data */ class ForumPostFirstMessages {
-    private final Map<Long, ForumPostFirstMessage> threads;
+    private final Map<Long, ForumPostFirstMessages2> threads;
 
-    public final Map<Long, ForumPostFirstMessage> a() {
+    /* renamed from: a */
+    public final Map<Long, ForumPostFirstMessages2> m7821a() {
         return this.threads;
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ForumPostFirstMessages) && m.areEqual(this.threads, ((ForumPostFirstMessages) other).threads);
+            return (other instanceof ForumPostFirstMessages) && Intrinsics3.areEqual(this.threads, ((ForumPostFirstMessages) other).threads);
         }
         return true;
     }
 
     public int hashCode() {
-        Map<Long, ForumPostFirstMessage> map = this.threads;
+        Map<Long, ForumPostFirstMessages2> map = this.threads;
         if (map != null) {
             return map.hashCode();
         }
@@ -29,6 +30,6 @@ public final /* data */ class ForumPostFirstMessages {
     }
 
     public String toString() {
-        return a.M(a.U("ForumPostFirstMessages(threads="), this.threads, ")");
+        return outline.m825M(outline.m833U("ForumPostFirstMessages(threads="), this.threads, ")");
     }
 }

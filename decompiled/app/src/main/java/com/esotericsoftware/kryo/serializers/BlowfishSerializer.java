@@ -3,8 +3,8 @@ package com.esotericsoftware.kryo.serializers;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.p502io.Input;
+import com.esotericsoftware.kryo.p502io.Output;
 import java.io.IOException;
 import java.io.OutputStream;
 import javax.crypto.Cipher;
@@ -17,13 +17,13 @@ public class BlowfishSerializer extends Serializer {
     private static SecretKeySpec keySpec;
     private final Serializer serializer;
 
-    /* renamed from: com.esotericsoftware.kryo.serializers.BlowfishSerializer$1, reason: invalid class name */
-    public class AnonymousClass1 extends Output {
-        public AnonymousClass1(OutputStream outputStream, int i) {
+    /* renamed from: com.esotericsoftware.kryo.serializers.BlowfishSerializer$1 */
+    public class C106231 extends Output {
+        public C106231(OutputStream outputStream, int i) {
             super(outputStream, i);
         }
 
-        @Override // com.esotericsoftware.kryo.io.Output, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
+        @Override // com.esotericsoftware.kryo.p502io.Output, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
         public void close() throws KryoException {
         }
     }
@@ -56,9 +56,9 @@ public class BlowfishSerializer extends Serializer {
     @Override // com.esotericsoftware.kryo.Serializer
     public void write(Kryo kryo, Output output, Object obj) throws KryoException {
         CipherOutputStream cipherOutputStream = new CipherOutputStream(output, getCipher(1));
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(cipherOutputStream, 256);
-        this.serializer.write(kryo, anonymousClass1, obj);
-        anonymousClass1.flush();
+        C106231 c106231 = new C106231(cipherOutputStream, 256);
+        this.serializer.write(kryo, c106231, obj);
+        c106231.flush();
         try {
             cipherOutputStream.close();
         } catch (IOException e) {

@@ -22,29 +22,24 @@ import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.a.b.c;
-import b.a.d.f0;
-import b.a.k.b;
-import b.d.b.a.a;
-import b.i.a.f.e.o.f;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppViewFlipper;
 import com.discord.databinding.WidgetEmojiPickerBinding;
 import com.discord.models.domain.emoji.Emoji;
-import com.discord.utilities.KotlinExtensionsKt;
+import com.discord.utilities.KotlinExtensions;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.dimen.DimenUtils;
+import com.discord.utilities.p501rx.LeadingEdgeThrottle;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.press.RepeatingOnTouchListener;
 import com.discord.utilities.recycler.SelfHealingLinearLayoutManager;
-import com.discord.utilities.rx.LeadingEdgeThrottle;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.utilities.view.text.TextWatcherKt;
+import com.discord.utilities.view.text.TextWatcher4;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.utilities.views.StickyHeaderItemDecoration;
-import com.discord.utilities.views.ViewCoroutineScopeKt;
+import com.discord.utilities.views.ViewCoroutineScope;
 import com.discord.widgets.chat.input.OnBackspacePressedListener;
 import com.discord.widgets.chat.input.emoji.EmojiCategoryItem;
 import com.discord.widgets.chat.input.emoji.EmojiPickerViewModel;
@@ -52,37 +47,44 @@ import com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter;
 import com.discord.widgets.settings.premium.WidgetSettingsPremium;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.textfield.TextInputEditText;
-import d0.k;
-import d0.l;
-import d0.w.h.c;
-import d0.w.i.a.e;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.l.a.r;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.ranges.IntRange;
+import kotlin.ranges.Ranges2;
 import kotlin.reflect.KProperty;
 import kotlinx.coroutines.CoroutineScope;
-import rx.Observable;
-import rx.functions.Action0;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p009a.p012b.MultiValuePropPremiumUpsellDialog;
+import p007b.p008a.p018d.AppViewModelDelegates2;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.Result2;
+import p507d0.Result3;
+import p507d0.p584w.p585h.Intrinsics2;
+import p507d0.p584w.p586i.p587a.ContinuationImpl6;
+import p507d0.p584w.p586i.p587a.DebugMetadata;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p637j0.p642l.p643a.OnSubscribeLift;
+import p658rx.Observable;
+import p658rx.functions.Action0;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetEmojiPicker.kt */
 /* loaded from: classes2.dex */
 public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelectedListener {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetEmojiPicker.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEmojiPickerBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEmojiPicker.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEmojiPickerBinding;", 0)};
     private static final int EMOJI_PICKER_VIEW_FLIPPER_EMPTY_STATE = 1;
     private static final int EMOJI_PICKER_VIEW_FLIPPER_RESULTS = 0;
 
@@ -107,12 +109,12 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     private final Lazy viewModelForSheet;
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Integer, Unit> {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$configureUI$1 */
+    public static final class C78221 extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ EmojiPickerViewModel.ViewState $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(EmojiPickerViewModel.ViewState viewState) {
+        public C78221(EmojiPickerViewModel.ViewState viewState) {
             super(1);
             this.$viewState = viewState;
         }
@@ -120,7 +122,7 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
             invoke(num.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(int i) {
@@ -129,9 +131,9 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$1 */
+    public static final class ViewOnClickListenerC78231 implements View.OnClickListener {
+        public ViewOnClickListenerC78231() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -142,12 +144,12 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements Action0 {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$2 */
+    public static final class C78242 implements Action0 {
+        public C78242() {
         }
 
-        @Override // rx.functions.Action0
+        @Override // p658rx.functions.Action0
         public final void call() {
             OnBackspacePressedListener onBackspacePressedListenerAccess$getOnBackspacePressedListener$p = WidgetEmojiPicker.access$getOnBackspacePressedListener$p(WidgetEmojiPicker.this);
             if (onBackspacePressedListenerAccess$getOnBackspacePressedListener$p != null) {
@@ -157,20 +159,20 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements Action0 {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$3 */
+    public static final class C78253 implements Action0 {
+        public C78253() {
         }
 
-        @Override // rx.functions.Action0
+        @Override // p658rx.functions.Action0
         public final void call() {
             WidgetEmojiPicker widgetEmojiPicker = WidgetEmojiPicker.this;
             try {
-                k.a aVar = k.j;
-                k.m97constructorimpl(Boolean.valueOf(WidgetEmojiPicker.access$getBinding$p(widgetEmojiPicker).f.performHapticFeedback(3)));
+                Result2.a aVar = Result2.f25169j;
+                Result2.m11474constructorimpl(Boolean.valueOf(WidgetEmojiPicker.access$getBinding$p(widgetEmojiPicker).f16556f.performHapticFeedback(3)));
             } catch (Throwable th) {
-                k.a aVar2 = k.j;
-                k.m97constructorimpl(l.createFailure(th));
+                Result2.a aVar2 = Result2.f25169j;
+                Result2.m11474constructorimpl(Result3.createFailure(th));
             }
             OnBackspacePressedListener onBackspacePressedListenerAccess$getOnBackspacePressedListener$p = WidgetEmojiPicker.access$getOnBackspacePressedListener$p(WidgetEmojiPicker.this);
             if (onBackspacePressedListenerAccess$getOnBackspacePressedListener$p != null) {
@@ -180,71 +182,71 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1 */
+    public static final class ViewOnClickListenerC78261 implements View.OnClickListener {
 
         /* compiled from: WidgetEmojiPicker.kt */
-        @e(c = "com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1$1", f = "WidgetEmojiPicker.kt", l = {412}, m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03781 extends d0.w.i.a.k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+        @DebugMetadata(m10084c = "com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1$1", m10085f = "WidgetEmojiPicker.kt", m10086l = {412}, m10087m = "invokeSuspend")
+        /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public int label;
 
-            public C03781(Continuation continuation) {
+            public AnonymousClass1(Continuation continuation) {
                 super(2, continuation);
             }
 
-            @Override // d0.w.i.a.a
+            @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
             public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-                m.checkNotNullParameter(continuation, "completion");
-                return AnonymousClass1.this.new C03781(continuation);
+                Intrinsics3.checkNotNullParameter(continuation, "completion");
+                return ViewOnClickListenerC78261.this.new AnonymousClass1(continuation);
             }
 
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
-                return ((C03781) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
+                return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.f27425a);
             }
 
-            @Override // d0.w.i.a.a
+            @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
             public final Object invokeSuspend(Object obj) {
-                Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
+                Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
                 int i = this.label;
                 if (i == 0) {
-                    l.throwOnFailure(obj);
+                    Result3.throwOnFailure(obj);
                     this.label = 1;
-                    if (f.P(250L, this) == coroutine_suspended) {
+                    if (C3404f.m4234P(250L, this) == coroutine_suspended) {
                         return coroutine_suspended;
                     }
                 } else {
                     if (i != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    l.throwOnFailure(obj);
+                    Result3.throwOnFailure(obj);
                 }
                 Function0 function0Access$getOnEmojiSearchOpenedListener$p = WidgetEmojiPicker.access$getOnEmojiSearchOpenedListener$p(WidgetEmojiPicker.this);
                 if (function0Access$getOnEmojiSearchOpenedListener$p != null) {
                 }
-                return Unit.a;
+                return Unit.f27425a;
             }
         }
 
-        public AnonymousClass1() {
+        public ViewOnClickListenerC78261() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            m.checkNotNullExpressionValue(view, "view");
-            CoroutineScope coroutineScope = ViewCoroutineScopeKt.getCoroutineScope(view);
+            Intrinsics3.checkNotNullExpressionValue(view, "view");
+            CoroutineScope coroutineScope = ViewCoroutineScope.getCoroutineScope(view);
             if (coroutineScope != null) {
-                f.H0(coroutineScope, null, null, new C03781(null), 3, null);
+                C3404f.m4211H0(coroutineScope, null, null, new AnonymousClass1(null), 3, null);
             }
             WidgetEmojiPicker.access$launchBottomSheet(WidgetEmojiPicker.this);
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$2 */
+    public static final class ViewOnClickListenerC78272 implements View.OnClickListener {
+        public ViewOnClickListenerC78272() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -252,47 +254,47 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             if (WidgetEmojiPicker.access$getEmojiPickerMode$p(WidgetEmojiPicker.this) == EmojiPickerMode.INLINE) {
                 WidgetEmojiPicker.access$launchBottomSheet(WidgetEmojiPicker.this);
             } else {
-                WidgetEmojiPicker.access$getBinding$p(WidgetEmojiPicker.this).m.setText("");
+                WidgetEmojiPicker.access$getBinding$p(WidgetEmojiPicker.this).f16563m.setText("");
             }
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<String, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$3 */
+    public static final class C78283 extends Lambda implements Function1<String, Unit> {
+        public C78283() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            m.checkNotNullParameter(str, "input");
+            Intrinsics3.checkNotNullParameter(str, "input");
             WidgetEmojiPicker.access$handleInputChanged(WidgetEmojiPicker.this, str);
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onEmojiSelected$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Emoji, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onEmojiSelected$1 */
+    public static final class C78291 extends Lambda implements Function1<Emoji, Unit> {
+        public C78291() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Emoji emoji) {
             invoke2(emoji);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Emoji emoji) {
-            m.checkNotNullParameter(emoji, "validEmoji");
+            Intrinsics3.checkNotNullParameter(emoji, "validEmoji");
             EmojiPickerListener emojiPickerListenerAccess$getEmojiPickerListener$p = WidgetEmojiPicker.access$getEmojiPickerListener$p(WidgetEmojiPicker.this);
             if (emojiPickerListenerAccess$getEmojiPickerListener$p != null) {
                 emojiPickerListenerAccess$getEmojiPickerListener$p.onEmojiPicked(emoji);
@@ -301,76 +303,76 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<EmojiPickerViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onViewBoundOrOnResume$1 */
+    public static final class C78301 extends Lambda implements Function1<EmojiPickerViewModel.ViewState, Unit> {
+        public C78301() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(EmojiPickerViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EmojiPickerViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "viewState");
+            Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetEmojiPicker.access$configureUI(WidgetEmojiPicker.this, viewState);
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<EmojiPickerViewModel.Event, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onViewBoundOrOnResume$2 */
+    public static final class C78312 extends Lambda implements Function1<EmojiPickerViewModel.Event, Unit> {
+        public C78312() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(EmojiPickerViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EmojiPickerViewModel.Event event) {
-            m.checkNotNullParameter(event, "event");
+            Intrinsics3.checkNotNullParameter(event, "event");
             WidgetEmojiPicker.access$handleEvent(WidgetEmojiPicker.this, event);
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends d0.z.d.k implements Function1<EmojiCategoryItem, Unit> {
-        public AnonymousClass1(WidgetEmojiPicker widgetEmojiPicker) {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$1 */
+    public static final /* synthetic */ class C78321 extends FunctionReferenceImpl implements Function1<EmojiCategoryItem, Unit> {
+        public C78321(WidgetEmojiPicker widgetEmojiPicker) {
             super(1, widgetEmojiPicker, WidgetEmojiPicker.class, "onCategoryClicked", "onCategoryClicked(Lcom/discord/widgets/chat/input/emoji/EmojiCategoryItem;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(EmojiCategoryItem emojiCategoryItem) {
             invoke2(emojiCategoryItem);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EmojiCategoryItem emojiCategoryItem) {
-            m.checkNotNullParameter(emojiCategoryItem, "p1");
+            Intrinsics3.checkNotNullParameter(emojiCategoryItem, "p1");
             WidgetEmojiPicker.access$onCategoryClicked((WidgetEmojiPicker) this.receiver, emojiCategoryItem);
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends d0.z.d.k implements Function1<Integer, Unit> {
-        public AnonymousClass2(WidgetEmojiPicker widgetEmojiPicker) {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$2 */
+    public static final /* synthetic */ class C78332 extends FunctionReferenceImpl implements Function1<Integer, Unit> {
+        public C78332(WidgetEmojiPicker widgetEmojiPicker) {
             super(1, widgetEmojiPicker, WidgetEmojiPicker.class, "onSelectedCategoryAdapterPositionUpdated", "onSelectedCategoryAdapterPositionUpdated(I)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
             invoke(num.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(int i) {
@@ -379,31 +381,31 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends RecyclerView.OnScrollListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$3 */
+    public static final class C78343 extends RecyclerView.OnScrollListener {
+        public C78343() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
         public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-            m.checkNotNullParameter(recyclerView, "recyclerView");
+            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
             super.onScrolled(recyclerView, dx, dy);
             PublishSubject publishSubjectAccess$getEmojiCategoryScrollSubject$p = WidgetEmojiPicker.access$getEmojiCategoryScrollSubject$p(WidgetEmojiPicker.this);
-            publishSubjectAccess$getEmojiCategoryScrollSubject$p.k.onNext(Unit.a);
+            publishSubjectAccess$getEmojiCategoryScrollSubject$p.f27650k.onNext(Unit.f27425a);
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends d0.z.d.k implements Function0<Unit> {
-        public AnonymousClass1(WidgetEmojiPicker widgetEmojiPicker) {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$1 */
+    public static final /* synthetic */ class C78351 extends FunctionReferenceImpl implements Function0<Unit> {
+        public C78351(WidgetEmojiPicker widgetEmojiPicker) {
             super(0, widgetEmojiPicker, WidgetEmojiPicker.class, "onPremiumCtaClicked", "onPremiumCtaClicked()V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -413,16 +415,16 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function0<Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$2 */
+    public static final class C78362 extends Lambda implements Function0<Unit> {
+        public C78362() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -433,44 +435,44 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends RecyclerView.OnScrollListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$3 */
+    public static final class C78373 extends RecyclerView.OnScrollListener {
+        public C78373() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
         public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-            m.checkNotNullParameter(recyclerView, "recyclerView");
+            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
             WidgetEmojiPicker.access$checkUpsellHeaderVisibility(WidgetEmojiPicker.this, recyclerView);
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setWindowInsetsListeners$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements OnApplyWindowInsetsListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setWindowInsetsListeners$1 */
+    public static final class C78381 implements OnApplyWindowInsetsListener {
+        public C78381() {
         }
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public final WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            m.checkNotNullParameter(view, "view");
-            m.checkNotNullParameter(windowInsetsCompat, "insets");
+            Intrinsics3.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(windowInsetsCompat, "insets");
             view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), WidgetEmojiPicker.access$getAdditionalBottomPaddingPx(WidgetEmojiPicker.this) + windowInsetsCompat.getSystemWindowInsetBottom());
             return windowInsetsCompat.consumeSystemWindowInsets();
         }
     }
 
     /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$subscribeToCategoryRecyclerScrolls$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Unit, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$subscribeToCategoryRecyclerScrolls$1 */
+    public static final class C78391 extends Lambda implements Function1<Unit, Unit> {
+        public C78391() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Unit unit) {
             invoke2(unit);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -481,11 +483,11 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     public WidgetEmojiPicker() {
-        super(R.layout.widget_emoji_picker);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetEmojiPicker$binding$2.INSTANCE, null, 2, null);
-        this.viewModelForInline = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(EmojiPickerViewModel.Inline.class), new WidgetEmojiPicker$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(new WidgetEmojiPicker$viewModelForInline$2(this)));
-        this.viewModelForSheet = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(EmojiPickerViewModel.Sheet.class), new WidgetEmojiPicker$appActivityViewModels$$inlined$activityViewModels$3(this), new f0(new WidgetEmojiPicker$viewModelForSheet$2(this)));
-        this.emojiCategoryScrollSubject = PublishSubject.k0();
+        super(C5419R.layout.widget_emoji_picker);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetEmojiPicker2.INSTANCE, null, 2, null);
+        this.viewModelForInline = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(EmojiPickerViewModel.Inline.class), new C7818x642fc3ef(this), new AppViewModelDelegates2(new WidgetEmojiPicker3(this)));
+        this.viewModelForSheet = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(EmojiPickerViewModel.Sheet.class), new C7820x642fc3f1(this), new AppViewModelDelegates2(new WidgetEmojiPicker4(this)));
+        this.emojiCategoryScrollSubject = PublishSubject.m11133k0();
         this.isNextCategoryScrollSmooth = true;
     }
 
@@ -615,7 +617,7 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             if (headerViewHolder != null) {
                 WidgetEmojiAdapter.HeaderItem boundItem = headerViewHolder.getBoundItem();
                 WidgetEmojiAdapter.HeaderItem.StringHeaderItem stringHeaderItem = (WidgetEmojiAdapter.HeaderItem.StringHeaderItem) (boundItem instanceof WidgetEmojiAdapter.HeaderItem.StringHeaderItem ? boundItem : null);
-                if (stringHeaderItem != null && stringHeaderItem.getStringRes() == R.string.emoji_available_with_premium) {
+                if (stringHeaderItem != null && stringHeaderItem.getStringRes() == C5419R.string.emoji_available_with_premium) {
                     getViewModel().onUpsellHeaderVisible();
                 }
             }
@@ -632,45 +634,45 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         String searchQuery = viewState != null ? viewState.getSearchQuery() : null;
         if (!this.restoredSearchQueryFromViewModel && searchQuery != null) {
             this.restoredSearchQueryFromViewModel = true;
-            getBinding().m.setText(searchQuery);
+            getBinding().f16563m.setText(searchQuery);
         }
         if (viewState == null) {
             return;
         }
         if (viewState instanceof EmojiPickerViewModel.ViewState.EmptySearch) {
-            AppViewFlipper appViewFlipper = getBinding().c;
-            m.checkNotNullExpressionValue(appViewFlipper, "binding.chatInputEmojiPickerViewFlipper");
+            AppViewFlipper appViewFlipper = getBinding().f16553c;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.chatInputEmojiPickerViewFlipper");
             appViewFlipper.setDisplayedChild(1);
             setEmojiPickerBottomBarVisible(false);
-            unit = Unit.a;
+            unit = Unit.f27425a;
         } else {
             if (!(viewState instanceof EmojiPickerViewModel.ViewState.Results)) {
                 throw new NoWhenBranchMatchedException();
             }
             EmojiPickerViewModel.ViewState.Results results = (EmojiPickerViewModel.ViewState.Results) viewState;
             setEmojiPickerBottomBarVisible(results.getShowBottomBar());
-            AppViewFlipper appViewFlipper2 = getBinding().c;
-            m.checkNotNullExpressionValue(appViewFlipper2, "binding.chatInputEmojiPickerViewFlipper");
+            AppViewFlipper appViewFlipper2 = getBinding().f16553c;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.chatInputEmojiPickerViewFlipper");
             appViewFlipper2.setDisplayedChild(0);
             WidgetEmojiAdapter widgetEmojiAdapter = this.emojiAdapter;
             if (widgetEmojiAdapter == null) {
-                m.throwUninitializedPropertyAccessException("emojiAdapter");
+                Intrinsics3.throwUninitializedPropertyAccessException("emojiAdapter");
             }
             widgetEmojiAdapter.setData(results.getResultItems());
             WidgetEmojiAdapter widgetEmojiAdapter2 = this.emojiAdapter;
             if (widgetEmojiAdapter2 == null) {
-                m.throwUninitializedPropertyAccessException("emojiAdapter");
+                Intrinsics3.throwUninitializedPropertyAccessException("emojiAdapter");
             }
-            widgetEmojiAdapter2.setOnScrollPositionListener(new AnonymousClass1(viewState));
+            widgetEmojiAdapter2.setOnScrollPositionListener(new C78221(viewState));
             EmojiCategoryAdapter emojiCategoryAdapter = this.categoryAdapter;
             if (emojiCategoryAdapter == null) {
-                m.throwUninitializedPropertyAccessException("categoryAdapter");
+                Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
             }
             emojiCategoryAdapter.setItems(results.getCategoryItems());
             configureUnicodeCategoriesShortcutButton(viewState);
-            unit = Unit.a;
+            unit = Unit.f27425a;
         }
-        KotlinExtensionsKt.getExhaustive(unit);
+        KotlinExtensions.getExhaustive(unit);
         this.previousViewState = viewState;
     }
 
@@ -682,16 +684,16 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         if (results != null) {
             EmojiCategoryItem.StandardItem firstUnicodeEmojiCategoryItem = results.getFirstUnicodeEmojiCategoryItem();
             if (firstUnicodeEmojiCategoryItem != null) {
-                getBinding().k.setImageDrawable(ContextCompat.getDrawable(requireContext(), EmojiCategoryViewHolder.INSTANCE.getCategoryIconResId(firstUnicodeEmojiCategoryItem.getEmojiCategory())));
+                getBinding().f16561k.setImageDrawable(ContextCompat.getDrawable(requireContext(), EmojiCategoryViewHolder.INSTANCE.getCategoryIconResId(firstUnicodeEmojiCategoryItem.getEmojiCategory())));
             }
             LinearLayoutManager linearLayoutManager = this.categoryLayoutManager;
             if (linearLayoutManager == null) {
-                m.throwUninitializedPropertyAccessException("categoryLayoutManager");
+                Intrinsics3.throwUninitializedPropertyAccessException("categoryLayoutManager");
             }
             int iFindFirstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
             LinearLayoutManager linearLayoutManager2 = this.categoryLayoutManager;
             if (linearLayoutManager2 == null) {
-                m.throwUninitializedPropertyAccessException("categoryLayoutManager");
+                Intrinsics3.throwUninitializedPropertyAccessException("categoryLayoutManager");
             }
             int iFindLastCompletelyVisibleItemPosition = linearLayoutManager2.findLastCompletelyVisibleItemPosition();
             if (iFindFirstCompletelyVisibleItemPosition == -1 || iFindLastCompletelyVisibleItemPosition == -1) {
@@ -699,23 +701,23 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             }
             EmojiCategoryAdapter emojiCategoryAdapter = this.categoryAdapter;
             if (emojiCategoryAdapter == null) {
-                m.throwUninitializedPropertyAccessException("categoryAdapter");
+                Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
             }
             if (iFindLastCompletelyVisibleItemPosition >= emojiCategoryAdapter.getPageSize()) {
                 return;
             }
             EmojiCategoryAdapter emojiCategoryAdapter2 = this.categoryAdapter;
             if (emojiCategoryAdapter2 == null) {
-                m.throwUninitializedPropertyAccessException("categoryAdapter");
+                Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
             }
             EmojiCategoryItem itemAtPosition = emojiCategoryAdapter2.getItemAtPosition(iFindFirstCompletelyVisibleItemPosition);
             EmojiCategoryAdapter emojiCategoryAdapter3 = this.categoryAdapter;
             if (emojiCategoryAdapter3 == null) {
-                m.throwUninitializedPropertyAccessException("categoryAdapter");
+                Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
             }
             boolean z2 = itemAtPosition.containsOnlyUnicodeEmoji() || emojiCategoryAdapter3.getItemAtPosition(iFindLastCompletelyVisibleItemPosition).containsOnlyUnicodeEmoji();
-            ImageView imageView = getBinding().k;
-            m.checkNotNullExpressionValue(imageView, "binding.emojiPickerUnicodeEmojiShortcutButton");
+            ImageView imageView = getBinding().f16561k;
+            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.emojiPickerUnicodeEmojiShortcutButton");
             imageView.setVisibility((z2 || firstUnicodeEmojiCategoryItem == null) ? false : true ? 0 : 8);
         }
     }
@@ -762,51 +764,51 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         if (event instanceof EmojiPickerViewModel.Event.ScrollToEmojiListPosition) {
             WidgetEmojiAdapter widgetEmojiAdapter = this.emojiAdapter;
             if (widgetEmojiAdapter == null) {
-                m.throwUninitializedPropertyAccessException("emojiAdapter");
+                Intrinsics3.throwUninitializedPropertyAccessException("emojiAdapter");
             }
             widgetEmojiAdapter.scrollToPosition(((EmojiPickerViewModel.Event.ScrollToEmojiListPosition) event).getPosition());
-            unit = Unit.a;
+            unit = Unit.f27425a;
         } else {
             if (!(event instanceof EmojiPickerViewModel.Event.ShowPremiumUpsellDialog)) {
                 throw new NoWhenBranchMatchedException();
             }
-            c.Companion companion = b.a.a.b.c.INSTANCE;
+            MultiValuePropPremiumUpsellDialog.Companion companion = MultiValuePropPremiumUpsellDialog.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             EmojiPickerViewModel.Event.ShowPremiumUpsellDialog showPremiumUpsellDialog = (EmojiPickerViewModel.Event.ShowPremiumUpsellDialog) event;
-            c.Companion.a(companion, parentFragmentManager, showPremiumUpsellDialog.getPageNumber(), b.k(this, showPremiumUpsellDialog.getHeader(), new Object[0], null, 4).toString(), b.k(this, showPremiumUpsellDialog.getBody(), new Object[0], null, 4).toString(), null, showPremiumUpsellDialog.getSectionName(), null, null, showPremiumUpsellDialog.getShowOtherPages(), showPremiumUpsellDialog.getShowLearnMore(), 208);
-            unit = Unit.a;
+            MultiValuePropPremiumUpsellDialog.Companion.m114a(companion, parentFragmentManager, showPremiumUpsellDialog.getPageNumber(), FormatUtils.m219k(this, showPremiumUpsellDialog.getHeader(), new Object[0], null, 4).toString(), FormatUtils.m219k(this, showPremiumUpsellDialog.getBody(), new Object[0], null, 4).toString(), null, showPremiumUpsellDialog.getSectionName(), null, null, showPremiumUpsellDialog.getShowOtherPages(), showPremiumUpsellDialog.getShowLearnMore(), 208);
+            unit = Unit.f27425a;
         }
-        KotlinExtensionsKt.getExhaustive(unit);
+        KotlinExtensions.getExhaustive(unit);
     }
 
     private final void handleInputChanged(String input) {
         getViewModel().setSearchText(input);
         boolean z2 = input.length() == 0;
-        getBinding().l.setImageResource(z2 ? R.drawable.ic_search_16dp : R.drawable.ic_clear_white_24dp);
-        ImageView imageView = getBinding().l;
-        m.checkNotNullExpressionValue(imageView, "binding.emojiSearchClear");
-        imageView.setImageTintList(z2 ? ColorStateList.valueOf(ColorCompat.getThemedColor(requireContext(), R.attr.colorTextMuted)) : ColorStateList.valueOf(ColorCompat.getThemedColor(requireContext(), R.attr.colorTextNormal)));
+        getBinding().f16562l.setImageResource(z2 ? C5419R.drawable.ic_search_16dp : C5419R.drawable.ic_clear_white_24dp);
+        ImageView imageView = getBinding().f16562l;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.emojiSearchClear");
+        imageView.setImageTintList(z2 ? ColorStateList.valueOf(ColorCompat.getThemedColor(requireContext(), C5419R.attr.colorTextMuted)) : ColorStateList.valueOf(ColorCompat.getThemedColor(requireContext(), C5419R.attr.colorTextNormal)));
         if (z2) {
-            ImageView imageView2 = getBinding().l;
-            m.checkNotNullExpressionValue(imageView2, "binding.emojiSearchClear");
-            imageView2.setContentDescription(b.k(this, R.string.search_emojis, new Object[0], null, 4));
-            ImageView imageView3 = getBinding().l;
-            m.checkNotNullExpressionValue(imageView3, "binding.emojiSearchClear");
+            ImageView imageView2 = getBinding().f16562l;
+            Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.emojiSearchClear");
+            imageView2.setContentDescription(FormatUtils.m219k(this, C5419R.string.search_emojis, new Object[0], null, 4));
+            ImageView imageView3 = getBinding().f16562l;
+            Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.emojiSearchClear");
             imageView3.setImportantForAccessibility(2);
             return;
         }
-        ImageView imageView4 = getBinding().l;
-        m.checkNotNullExpressionValue(imageView4, "binding.emojiSearchClear");
-        imageView4.setContentDescription(b.k(this, R.string.reset, new Object[0], null, 4));
-        ImageView imageView5 = getBinding().l;
-        m.checkNotNullExpressionValue(imageView5, "binding.emojiSearchClear");
+        ImageView imageView4 = getBinding().f16562l;
+        Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.emojiSearchClear");
+        imageView4.setContentDescription(FormatUtils.m219k(this, C5419R.string.reset, new Object[0], null, 4));
+        ImageView imageView5 = getBinding().f16562l;
+        Intrinsics3.checkNotNullExpressionValue(imageView5, "binding.emojiSearchClear");
         imageView5.setImportantForAccessibility(1);
     }
 
     private final void handleNewEmojiRecyclerScrollPosition(int emojiRecyclerScrollPosition, List<? extends EmojiCategoryItem> emojiCategoryItems) {
         for (EmojiCategoryItem emojiCategoryItem : emojiCategoryItems) {
-            Pair<Integer, Integer> categoryRange = emojiCategoryItem.getCategoryRange();
+            Tuples2<Integer, Integer> categoryRange = emojiCategoryItem.getCategoryRange();
             int iIntValue = categoryRange.getFirst().intValue();
             int iIntValue2 = categoryRange.getSecond().intValue();
             if (iIntValue <= emojiRecyclerScrollPosition && iIntValue2 > emojiRecyclerScrollPosition && !emojiCategoryItem.getIsSelected()) {
@@ -818,41 +820,41 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
 
     private final void initializeInputButtons() {
         boolean z2 = this.emojiPickerMode == EmojiPickerMode.INLINE;
-        ImageView imageView = getBinding().f;
-        m.checkNotNullExpressionValue(imageView, "binding.emojiPickerBackspaceIcon");
+        ImageView imageView = getBinding().f16556f;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.emojiPickerBackspaceIcon");
         imageView.setVisibility(z2 ? 0 : 8);
-        getBinding().k.setOnClickListener(new AnonymousClass1());
-        getBinding().f.setOnTouchListener(new RepeatingOnTouchListener(250L, 50L, TimeUnit.MILLISECONDS, new AnonymousClass2(), new AnonymousClass3()));
+        getBinding().f16561k.setOnClickListener(new ViewOnClickListenerC78231());
+        getBinding().f16556f.setOnTouchListener(new RepeatingOnTouchListener(250L, 50L, TimeUnit.MILLISECONDS, new C78242(), new C78253()));
     }
 
     private final void initializeSearchBar() {
-        AppBarLayout appBarLayout = getBinding().d;
-        m.checkNotNullExpressionValue(appBarLayout, "binding.emojiAppBar");
+        AppBarLayout appBarLayout = getBinding().f16554d;
+        Intrinsics3.checkNotNullExpressionValue(appBarLayout, "binding.emojiAppBar");
         EmojiPickerMode emojiPickerMode = this.emojiPickerMode;
         EmojiPickerMode emojiPickerMode2 = EmojiPickerMode.INLINE;
         appBarLayout.setVisibility(emojiPickerMode != emojiPickerMode2 ? 0 : 8);
-        TextView textView = getBinding().e;
-        m.checkNotNullExpressionValue(textView, "binding.emojiInlineSearchButton");
+        TextView textView = getBinding().f16555e;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.emojiInlineSearchButton");
         textView.setVisibility(this.emojiPickerMode == emojiPickerMode2 ? 0 : 8);
-        TextInputEditText textInputEditText = getBinding().m;
-        m.checkNotNullExpressionValue(textInputEditText, "binding.emojiSearchInput");
+        TextInputEditText textInputEditText = getBinding().f16563m;
+        Intrinsics3.checkNotNullExpressionValue(textInputEditText, "binding.emojiSearchInput");
         textInputEditText.setVisibility(this.emojiPickerMode != emojiPickerMode2 ? 0 : 8);
-        getBinding().e.setOnClickListener(new AnonymousClass1());
-        getBinding().l.setOnClickListener(new AnonymousClass2());
-        TextInputEditText textInputEditText2 = getBinding().m;
-        m.checkNotNullExpressionValue(textInputEditText2, "binding.emojiSearchInput");
-        TextWatcherKt.addLifecycleAwareTextWatcher(textInputEditText2, this, new AnonymousClass3());
+        getBinding().f16555e.setOnClickListener(new ViewOnClickListenerC78261());
+        getBinding().f16562l.setOnClickListener(new ViewOnClickListenerC78272());
+        TextInputEditText textInputEditText2 = getBinding().f16563m;
+        Intrinsics3.checkNotNullExpressionValue(textInputEditText2, "binding.emojiSearchInput");
+        TextWatcher4.addLifecycleAwareTextWatcher(textInputEditText2, this, new C78283());
         if (this.emojiPickerMode == EmojiPickerMode.BOTTOM_SHEET) {
-            getBinding().m.requestFocus();
-            TextInputEditText textInputEditText3 = getBinding().m;
-            m.checkNotNullExpressionValue(textInputEditText3, "binding.emojiSearchInput");
+            getBinding().f16563m.requestFocus();
+            TextInputEditText textInputEditText3 = getBinding().f16563m;
+            Intrinsics3.checkNotNullExpressionValue(textInputEditText3, "binding.emojiSearchInput");
             showKeyboard(textInputEditText3);
         }
     }
 
     private final void launchBottomSheet() {
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         EmojiPickerNavigator.launchBottomSheet$default(parentFragmentManager, this.emojiPickerListener, getEmojiPickerContextType(), null, 8, null);
     }
 
@@ -861,10 +863,10 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             AnalyticsTracker.INSTANCE.emojiCategorySelected(((EmojiCategoryItem.GuildItem) emojiCategoryItem).getGuild().getId());
         }
         selectCategoryByItemId(emojiCategoryItem.getStableId());
-        Pair<Integer, Integer> categoryRange = emojiCategoryItem.getCategoryRange();
+        Tuples2<Integer, Integer> categoryRange = emojiCategoryItem.getCategoryRange();
         WidgetEmojiAdapter widgetEmojiAdapter = this.emojiAdapter;
         if (widgetEmojiAdapter == null) {
-            m.throwUninitializedPropertyAccessException("emojiAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("emojiAdapter");
         }
         widgetEmojiAdapter.scrollToPosition(categoryRange.getFirst().intValue());
     }
@@ -876,28 +878,28 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     private final void onSelectedCategoryAdapterPositionUpdated(int selectedCategoryPosition) {
         LinearLayoutManager linearLayoutManager = this.categoryLayoutManager;
         if (linearLayoutManager == null) {
-            m.throwUninitializedPropertyAccessException("categoryLayoutManager");
+            Intrinsics3.throwUninitializedPropertyAccessException("categoryLayoutManager");
         }
         int iFindFirstCompletelyVisibleItemPosition = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
         LinearLayoutManager linearLayoutManager2 = this.categoryLayoutManager;
         if (linearLayoutManager2 == null) {
-            m.throwUninitializedPropertyAccessException("categoryLayoutManager");
+            Intrinsics3.throwUninitializedPropertyAccessException("categoryLayoutManager");
         }
         int iFindLastCompletelyVisibleItemPosition = linearLayoutManager2.findLastCompletelyVisibleItemPosition();
         int i = iFindLastCompletelyVisibleItemPosition - iFindFirstCompletelyVisibleItemPosition;
-        if (new IntRange(iFindFirstCompletelyVisibleItemPosition, iFindLastCompletelyVisibleItemPosition).contains(selectedCategoryPosition)) {
+        if (new Ranges2(iFindFirstCompletelyVisibleItemPosition, iFindLastCompletelyVisibleItemPosition).contains(selectedCategoryPosition)) {
             return;
         }
         int iMax = Math.max(selectedCategoryPosition < iFindFirstCompletelyVisibleItemPosition ? selectedCategoryPosition - i : selectedCategoryPosition + i, 0);
         EmojiCategoryAdapter emojiCategoryAdapter = this.categoryAdapter;
         if (emojiCategoryAdapter == null) {
-            m.throwUninitializedPropertyAccessException("categoryAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
         }
         int iMin = Math.min(iMax, emojiCategoryAdapter.getPageSize() - 1);
         if (this.isNextCategoryScrollSmooth) {
-            getBinding().i.smoothScrollToPosition(iMin);
+            getBinding().f16559i.smoothScrollToPosition(iMin);
         } else {
-            getBinding().i.scrollToPosition(iMin);
+            getBinding().f16559i.scrollToPosition(iMin);
             this.isNextCategoryScrollSmooth = true;
         }
     }
@@ -907,86 +909,86 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     }
 
     private final void setEmojiPickerBottomBarVisible(boolean visible) {
-        ConstraintLayout constraintLayout = getBinding().g;
-        m.checkNotNullExpressionValue(constraintLayout, "binding.emojiPickerBottomBar");
+        ConstraintLayout constraintLayout = getBinding().f16557g;
+        Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.emojiPickerBottomBar");
         constraintLayout.setVisibility(visible ? 0 : 8);
-        View view = getBinding().h;
-        m.checkNotNullExpressionValue(view, "binding.emojiPickerBottomBarDivider");
+        View view = getBinding().f16558h;
+        Intrinsics3.checkNotNullExpressionValue(view, "binding.emojiPickerBottomBarDivider");
         view.setVisibility(visible ? 0 : 8);
-        RecyclerView recyclerView = getBinding().f2376b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.chatInputEmojiPickerRecycler");
+        RecyclerView recyclerView = getBinding().f16552b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatInputEmojiPickerRecycler");
         ViewGroup.LayoutParams layoutParams = recyclerView.getLayoutParams();
         Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
-        marginLayoutParams.setMargins(marginLayoutParams.leftMargin, marginLayoutParams.topMargin, marginLayoutParams.rightMargin, visible ? getResources().getDimensionPixelSize(R.dimen.expression_picker_category_bar_height) : 0);
+        marginLayoutParams.setMargins(marginLayoutParams.leftMargin, marginLayoutParams.topMargin, marginLayoutParams.rightMargin, visible ? getResources().getDimensionPixelSize(C5419R.dimen.expression_picker_category_bar_height) : 0);
         recyclerView.setLayoutParams(marginLayoutParams);
     }
 
     private final void setUpCategoryRecycler() {
-        RecyclerView recyclerView = getBinding().i;
-        m.checkNotNullExpressionValue(recyclerView, "binding.emojiPickerCategoryRecycler");
+        RecyclerView recyclerView = getBinding().f16559i;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.emojiPickerCategoryRecycler");
         recyclerView.setItemAnimator(null);
-        EmojiCategoryAdapter emojiCategoryAdapter = new EmojiCategoryAdapter(new AnonymousClass1(this), new AnonymousClass2(this), this, null, 8, null);
+        EmojiCategoryAdapter emojiCategoryAdapter = new EmojiCategoryAdapter(new C78321(this), new C78332(this), this, null, 8, null);
         this.categoryAdapter = emojiCategoryAdapter;
         if (emojiCategoryAdapter == null) {
-            m.throwUninitializedPropertyAccessException("categoryAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
         }
         emojiCategoryAdapter.setHasStableIds(true);
-        RecyclerView recyclerView2 = getBinding().i;
-        m.checkNotNullExpressionValue(recyclerView2, "binding.emojiPickerCategoryRecycler");
+        RecyclerView recyclerView2 = getBinding().f16559i;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.emojiPickerCategoryRecycler");
         EmojiCategoryAdapter emojiCategoryAdapter2 = this.categoryAdapter;
         if (emojiCategoryAdapter2 == null) {
-            m.throwUninitializedPropertyAccessException("categoryAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
         }
         recyclerView2.setAdapter(emojiCategoryAdapter2);
-        RecyclerView recyclerView3 = getBinding().i;
-        m.checkNotNullExpressionValue(recyclerView3, "binding.emojiPickerCategoryRecycler");
+        RecyclerView recyclerView3 = getBinding().f16559i;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.emojiPickerCategoryRecycler");
         EmojiCategoryAdapter emojiCategoryAdapter3 = this.categoryAdapter;
         if (emojiCategoryAdapter3 == null) {
-            m.throwUninitializedPropertyAccessException("categoryAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
         }
         this.categoryLayoutManager = new SelfHealingLinearLayoutManager(recyclerView3, emojiCategoryAdapter3, 0, false, 8, null);
-        RecyclerView recyclerView4 = getBinding().i;
-        m.checkNotNullExpressionValue(recyclerView4, "binding.emojiPickerCategoryRecycler");
+        RecyclerView recyclerView4 = getBinding().f16559i;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView4, "binding.emojiPickerCategoryRecycler");
         LinearLayoutManager linearLayoutManager = this.categoryLayoutManager;
         if (linearLayoutManager == null) {
-            m.throwUninitializedPropertyAccessException("categoryLayoutManager");
+            Intrinsics3.throwUninitializedPropertyAccessException("categoryLayoutManager");
         }
         recyclerView4.setLayoutManager(linearLayoutManager);
-        getBinding().i.addOnScrollListener(new AnonymousClass3());
+        getBinding().f16559i.addOnScrollListener(new C78343());
     }
 
     private final void setUpEmojiRecycler() {
-        RecyclerView recyclerView = getBinding().f2376b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.chatInputEmojiPickerRecycler");
+        RecyclerView recyclerView = getBinding().f16552b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatInputEmojiPickerRecycler");
         recyclerView.setItemAnimator(null);
-        RecyclerView recyclerView2 = getBinding().f2376b;
-        m.checkNotNullExpressionValue(recyclerView2, "binding.chatInputEmojiPickerRecycler");
+        RecyclerView recyclerView2 = getBinding().f16552b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.chatInputEmojiPickerRecycler");
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-        WidgetEmojiAdapter widgetEmojiAdapter = new WidgetEmojiAdapter(recyclerView2, parentFragmentManager, this, new AnonymousClass1(this), new AnonymousClass2());
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        WidgetEmojiAdapter widgetEmojiAdapter = new WidgetEmojiAdapter(recyclerView2, parentFragmentManager, this, new C78351(this), new C78362());
         this.emojiAdapter = widgetEmojiAdapter;
         if (widgetEmojiAdapter == null) {
-            m.throwUninitializedPropertyAccessException("emojiAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("emojiAdapter");
         }
         StickyHeaderItemDecoration stickyHeaderItemDecoration = new StickyHeaderItemDecoration(widgetEmojiAdapter);
-        getBinding().f2376b.addItemDecoration(stickyHeaderItemDecoration);
-        RecyclerView recyclerView3 = getBinding().f2376b;
-        m.checkNotNullExpressionValue(recyclerView3, "binding.chatInputEmojiPickerRecycler");
+        getBinding().f16552b.addItemDecoration(stickyHeaderItemDecoration);
+        RecyclerView recyclerView3 = getBinding().f16552b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.chatInputEmojiPickerRecycler");
         stickyHeaderItemDecoration.blockClicks(recyclerView3);
-        getBinding().f2376b.setHasFixedSize(true);
-        getBinding().f2376b.addOnScrollListener(new AnonymousClass3());
+        getBinding().f16552b.setHasFixedSize(true);
+        getBinding().f16552b.addOnScrollListener(new C78373());
     }
 
     private final void setWindowInsetsListeners() {
-        ViewCompat.setOnApplyWindowInsetsListener(getBinding().j, new AnonymousClass1());
+        ViewCompat.setOnApplyWindowInsetsListener(getBinding().f16560j, new C78381());
     }
 
     private final void subscribeToCategoryRecyclerScrolls() {
         PublishSubject<Unit> publishSubject = this.emojiCategoryScrollSubject;
-        Observable observableH0 = Observable.h0(new r(publishSubject.j, new LeadingEdgeThrottle(250L, TimeUnit.MILLISECONDS)));
-        m.checkNotNullExpressionValue(observableH0, "emojiCategoryScrollSubje…, TimeUnit.MILLISECONDS))");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableH0, this, null, 2, null), WidgetEmojiPicker.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable observableM11074h0 = Observable.m11074h0(new OnSubscribeLift(publishSubject.f27640j, new LeadingEdgeThrottle(250L, TimeUnit.MILLISECONDS)));
+        Intrinsics3.checkNotNullExpressionValue(observableM11074h0, "emojiCategoryScrollSubje…, TimeUnit.MILLISECONDS))");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableM11074h0, this, null, 2, null), WidgetEmojiPicker.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C78391(), 62, (Object) null);
     }
 
     public final void clearSearchInput() {
@@ -1001,16 +1003,16 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
 
     @Override // com.discord.widgets.chat.input.emoji.OnEmojiSelectedListener
     public void onEmojiSelected(Emoji emoji) {
-        m.checkNotNullParameter(emoji, "emoji");
-        getViewModel().onEmojiSelected(emoji, new AnonymousClass1());
+        Intrinsics3.checkNotNullParameter(emoji, "emoji");
+        getViewModel().onEmojiSelected(emoji, new C78291());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        CoordinatorLayout coordinatorLayout = getBinding().j;
-        m.checkNotNullExpressionValue(coordinatorLayout, "binding.emojiPickerContainer");
+        CoordinatorLayout coordinatorLayout = getBinding().f16560j;
+        Intrinsics3.checkNotNullExpressionValue(coordinatorLayout, "binding.emojiPickerContainer");
         coordinatorLayout.setPadding(coordinatorLayout.getPaddingLeft(), coordinatorLayout.getPaddingTop(), coordinatorLayout.getPaddingRight(), getAdditionalBottomPaddingPx());
         EmojiPickerMode mode = getMode();
         EmojiPickerMode emojiPickerMode = EmojiPickerMode.INLINE;
@@ -1019,8 +1021,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
         initializeInputButtons();
         initializeSearchBar();
-        Toolbar toolbar = getBinding().n;
-        m.checkNotNullExpressionValue(toolbar, "binding.emojiToolbar");
+        Toolbar toolbar = getBinding().f16564n;
+        Intrinsics3.checkNotNullExpressionValue(toolbar, "binding.emojiToolbar");
         ViewGroup.LayoutParams layoutParams = toolbar.getLayoutParams();
         Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type com.google.android.material.appbar.AppBarLayout.LayoutParams");
         ((AppBarLayout.LayoutParams) layoutParams).setScrollFlags(this.emojiPickerMode == emojiPickerMode ? 5 : 0);
@@ -1031,18 +1033,18 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetEmojiPicker.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetEmojiPicker.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetEmojiPicker.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C78301(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetEmojiPicker.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C78312(), 62, (Object) null);
         subscribeToCategoryRecyclerScrolls();
     }
 
     public final void scrollToTop() {
         WidgetEmojiAdapter widgetEmojiAdapter = this.emojiAdapter;
         if (widgetEmojiAdapter == null) {
-            m.throwUninitializedPropertyAccessException("emojiAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("emojiAdapter");
         }
         if (widgetEmojiAdapter.getPageSize() > 0) {
-            getBinding().f2376b.scrollToPosition(0);
+            getBinding().f16552b.scrollToPosition(0);
         }
     }
 

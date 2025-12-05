@@ -1,11 +1,11 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
 import com.discord.api.application.Application;
 import com.discord.models.domain.Model;
-import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelLibraryApplication.kt */
 /* loaded from: classes.dex */
@@ -32,8 +32,8 @@ public final /* data */ class ModelLibraryApplication {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.discord.models.domain.Model.Parser
         public ModelLibraryApplication parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
-            ref$ObjectRefC0.element = null;
+            Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(reader, "reader");
+            ref$ObjectRefM844c0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
             Ref$ObjectRef ref$ObjectRef2 = new Ref$ObjectRef();
@@ -42,9 +42,9 @@ public final /* data */ class ModelLibraryApplication {
             ref$ObjectRef3.element = null;
             Ref$ObjectRef ref$ObjectRef4 = new Ref$ObjectRef();
             ref$ObjectRef4.element = null;
-            reader.nextObject(new ModelLibraryApplication$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3, ref$ObjectRef4));
-            Application application = (Application) ref$ObjectRefC0.element;
-            m.checkNotNull(application);
+            reader.nextObject(new ModelLibraryApplication2(ref$ObjectRefM844c0, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3, ref$ObjectRef4));
+            Application application = (Application) ref$ObjectRefM844c0.element;
+            Intrinsics3.checkNotNull(application);
             String str = (String) ref$ObjectRef.element;
             if (str == null) {
                 str = "";
@@ -60,8 +60,8 @@ public final /* data */ class ModelLibraryApplication {
     }
 
     public ModelLibraryApplication(Application application, String str, long j, int i, long j2) {
-        m.checkNotNullParameter(application, "application");
-        m.checkNotNullParameter(str, "createdAt");
+        Intrinsics3.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(str, "createdAt");
         this.application = application;
         this.createdAt = str;
         this.skuId = j;
@@ -117,8 +117,8 @@ public final /* data */ class ModelLibraryApplication {
     }
 
     public final ModelLibraryApplication copy(Application application, String createdAt, long skuId, int flags, long branchId) {
-        m.checkNotNullParameter(application, "application");
-        m.checkNotNullParameter(createdAt, "createdAt");
+        Intrinsics3.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(createdAt, "createdAt");
         return new ModelLibraryApplication(application, createdAt, skuId, flags, branchId);
     }
 
@@ -130,7 +130,7 @@ public final /* data */ class ModelLibraryApplication {
             return false;
         }
         ModelLibraryApplication modelLibraryApplication = (ModelLibraryApplication) other;
-        return m.areEqual(this.application, modelLibraryApplication.application) && m.areEqual(this.createdAt, modelLibraryApplication.createdAt) && this.skuId == modelLibraryApplication.skuId && this.flags == modelLibraryApplication.flags && this.branchId == modelLibraryApplication.branchId;
+        return Intrinsics3.areEqual(this.application, modelLibraryApplication.application) && Intrinsics3.areEqual(this.createdAt, modelLibraryApplication.createdAt) && this.skuId == modelLibraryApplication.skuId && this.flags == modelLibraryApplication.flags && this.branchId == modelLibraryApplication.branchId;
     }
 
     public final Application getApplication() {
@@ -165,15 +165,15 @@ public final /* data */ class ModelLibraryApplication {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelLibraryApplication(application=");
-        sbU.append(this.application);
-        sbU.append(", createdAt=");
-        sbU.append(this.createdAt);
-        sbU.append(", skuId=");
-        sbU.append(this.skuId);
-        sbU.append(", flags=");
-        sbU.append(this.flags);
-        sbU.append(", branchId=");
-        return a.C(sbU, this.branchId, ")");
+        StringBuilder sbM833U = outline.m833U("ModelLibraryApplication(application=");
+        sbM833U.append(this.application);
+        sbM833U.append(", createdAt=");
+        sbM833U.append(this.createdAt);
+        sbM833U.append(", skuId=");
+        sbM833U.append(this.skuId);
+        sbM833U.append(", flags=");
+        sbM833U.append(this.flags);
+        sbM833U.append(", branchId=");
+        return outline.m815C(sbM833U, this.branchId, ")");
     }
 }

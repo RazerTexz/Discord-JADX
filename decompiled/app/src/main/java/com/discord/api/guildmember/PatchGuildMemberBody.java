@@ -1,9 +1,9 @@
 package com.discord.api.guildmember;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.nullserializable.NullSerializable;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: PatchGuildMemberBody.kt */
 /* loaded from: classes.dex */
@@ -32,7 +32,7 @@ public final /* data */ class PatchGuildMemberBody {
             return false;
         }
         PatchGuildMemberBody patchGuildMemberBody = (PatchGuildMemberBody) other;
-        return m.areEqual(this.nick, patchGuildMemberBody.nick) && m.areEqual(this.avatar, patchGuildMemberBody.avatar) && m.areEqual(this.banner, patchGuildMemberBody.banner) && m.areEqual(this.bio, patchGuildMemberBody.bio);
+        return Intrinsics3.areEqual(this.nick, patchGuildMemberBody.nick) && Intrinsics3.areEqual(this.avatar, patchGuildMemberBody.avatar) && Intrinsics3.areEqual(this.banner, patchGuildMemberBody.banner) && Intrinsics3.areEqual(this.bio, patchGuildMemberBody.bio);
     }
 
     public int hashCode() {
@@ -47,14 +47,14 @@ public final /* data */ class PatchGuildMemberBody {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("PatchGuildMemberBody(nick=");
-        sbU.append(this.nick);
-        sbU.append(", avatar=");
-        sbU.append(this.avatar);
-        sbU.append(", banner=");
-        sbU.append(this.banner);
-        sbU.append(", bio=");
-        return a.J(sbU, this.bio, ")");
+        StringBuilder sbM833U = outline.m833U("PatchGuildMemberBody(nick=");
+        sbM833U.append(this.nick);
+        sbM833U.append(", avatar=");
+        sbM833U.append(this.avatar);
+        sbM833U.append(", banner=");
+        sbM833U.append(this.banner);
+        sbM833U.append(", bio=");
+        return outline.m822J(sbM833U, this.bio, ")");
     }
 
     public PatchGuildMemberBody(String str, NullSerializable nullSerializable, NullSerializable nullSerializable2, String str2, int i) {

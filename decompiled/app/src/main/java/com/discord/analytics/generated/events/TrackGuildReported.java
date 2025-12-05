@@ -1,19 +1,19 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildReported.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildReported implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackGuildReceiver {
+public final /* data */ class TrackGuildReported implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private TrackLocationMetadata trackLocationMetadata;
@@ -25,14 +25,15 @@ public final /* data */ class TrackGuildReported implements AnalyticsSchema, Tra
     private final Long reportId = null;
     private final transient String analyticsSchemaTypeName = "guild_reported";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -50,7 +51,7 @@ public final /* data */ class TrackGuildReported implements AnalyticsSchema, Tra
             return false;
         }
         TrackGuildReported trackGuildReported = (TrackGuildReported) other;
-        return m.areEqual(this.reportType, trackGuildReported.reportType) && m.areEqual(this.reportSubType, trackGuildReported.reportSubType) && m.areEqual(this.subject, trackGuildReported.subject) && m.areEqual(this.description, trackGuildReported.description) && m.areEqual(this.reasonEnum, trackGuildReported.reasonEnum) && m.areEqual(this.reportId, trackGuildReported.reportId);
+        return Intrinsics3.areEqual(this.reportType, trackGuildReported.reportType) && Intrinsics3.areEqual(this.reportSubType, trackGuildReported.reportSubType) && Intrinsics3.areEqual(this.subject, trackGuildReported.subject) && Intrinsics3.areEqual(this.description, trackGuildReported.description) && Intrinsics3.areEqual(this.reasonEnum, trackGuildReported.reasonEnum) && Intrinsics3.areEqual(this.reportId, trackGuildReported.reportId);
     }
 
     public int hashCode() {
@@ -69,17 +70,17 @@ public final /* data */ class TrackGuildReported implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildReported(reportType=");
-        sbU.append(this.reportType);
-        sbU.append(", reportSubType=");
-        sbU.append(this.reportSubType);
-        sbU.append(", subject=");
-        sbU.append(this.subject);
-        sbU.append(", description=");
-        sbU.append(this.description);
-        sbU.append(", reasonEnum=");
-        sbU.append(this.reasonEnum);
-        sbU.append(", reportId=");
-        return a.G(sbU, this.reportId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildReported(reportType=");
+        sbM833U.append(this.reportType);
+        sbM833U.append(", reportSubType=");
+        sbM833U.append(this.reportSubType);
+        sbM833U.append(", subject=");
+        sbM833U.append(this.subject);
+        sbM833U.append(", description=");
+        sbM833U.append(this.description);
+        sbM833U.append(", reasonEnum=");
+        sbM833U.append(this.reasonEnum);
+        sbM833U.append(", reportId=");
+        return outline.m819G(sbM833U, this.reportId, ")");
     }
 }

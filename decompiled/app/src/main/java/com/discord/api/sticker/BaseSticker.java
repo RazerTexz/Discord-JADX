@@ -7,9 +7,11 @@ public interface BaseSticker {
     /* renamed from: a */
     StickerFormatType getFormatType();
 
-    String b();
+    /* renamed from: b */
+    String mo8228b();
 
-    StickerPartial c();
+    /* renamed from: c */
+    StickerPartial mo8229c();
 
     /* renamed from: d */
     long getId();

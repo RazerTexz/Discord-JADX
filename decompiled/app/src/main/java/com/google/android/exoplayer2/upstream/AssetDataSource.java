@@ -4,26 +4,34 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.net.Uri;
 import androidx.annotation.Nullable;
-import b.i.a.c.e3.g;
-import b.i.a.c.e3.n;
-import b.i.a.c.f3.e0;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
+import p007b.p225i.p226a.p242c.p257e3.BaseDataSource;
+import p007b.p225i.p226a.p242c.p257e3.DataSpec;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
 
 /* loaded from: classes3.dex */
-public final class AssetDataSource extends g {
-    public final AssetManager e;
+public final class AssetDataSource extends BaseDataSource {
 
-    @Nullable
-    public Uri f;
+    /* renamed from: e */
+    public final AssetManager f20213e;
 
+    /* renamed from: f */
     @Nullable
-    public InputStream g;
-    public long h;
-    public boolean i;
+    public Uri f20214f;
+
+    /* renamed from: g */
+    @Nullable
+    public InputStream f20215g;
+
+    /* renamed from: h */
+    public long f20216h;
+
+    /* renamed from: i */
+    public boolean f20217i;
 
     public static final class AssetDataSourceException extends DataSourceException {
         public AssetDataSourceException(@Nullable Throwable th, int i) {
@@ -33,14 +41,15 @@ public final class AssetDataSource extends g {
 
     public AssetDataSource(Context context) {
         super(false);
-        this.e = context.getAssets();
+        this.f20213e = context.getAssets();
     }
 
-    @Override // b.i.a.c.e3.l
-    public long a(n nVar) throws AssetDataSourceException {
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
+    /* renamed from: a */
+    public long mo2586a(DataSpec dataSpec) throws AssetDataSourceException {
         try {
-            Uri uri = nVar.a;
-            this.f = uri;
+            Uri uri = dataSpec.f6542a;
+            this.f20214f = uri;
             String path = uri.getPath();
             Objects.requireNonNull(path);
             if (path.startsWith("/android_asset/")) {
@@ -48,25 +57,25 @@ public final class AssetDataSource extends g {
             } else if (path.startsWith(AutocompleteViewModel.COMMAND_DISCOVER_TOKEN)) {
                 path = path.substring(1);
             }
-            r(nVar);
-            InputStream inputStreamOpen = this.e.open(path, 1);
-            this.g = inputStreamOpen;
-            if (inputStreamOpen.skip(nVar.f) < nVar.f) {
+            m2850r(dataSpec);
+            InputStream inputStreamOpen = this.f20213e.open(path, 1);
+            this.f20215g = inputStreamOpen;
+            if (inputStreamOpen.skip(dataSpec.f6547f) < dataSpec.f6547f) {
                 throw new AssetDataSourceException(null, 2008);
             }
-            long j = nVar.g;
+            long j = dataSpec.f6548g;
             if (j != -1) {
-                this.h = j;
+                this.f20216h = j;
             } else {
-                long jAvailable = this.g.available();
-                this.h = jAvailable;
+                long jAvailable = this.f20215g.available();
+                this.f20216h = jAvailable;
                 if (jAvailable == 2147483647L) {
-                    this.h = -1L;
+                    this.f20216h = -1L;
                 }
             }
-            this.i = true;
-            s(nVar);
-            return this.h;
+            this.f20217i = true;
+            m2851s(dataSpec);
+            return this.f20216h;
         } catch (AssetDataSourceException e) {
             throw e;
         } catch (IOException e2) {
@@ -74,12 +83,12 @@ public final class AssetDataSource extends g {
         }
     }
 
-    @Override // b.i.a.c.e3.l
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     public void close() throws AssetDataSourceException {
-        this.f = null;
+        this.f20214f = null;
         try {
             try {
-                InputStream inputStream = this.g;
+                InputStream inputStream = this.f20215g;
                 if (inputStream != null) {
                     inputStream.close();
                 }
@@ -87,26 +96,27 @@ public final class AssetDataSource extends g {
                 throw new AssetDataSourceException(e, 2000);
             }
         } finally {
-            this.g = null;
-            if (this.i) {
-                this.i = false;
-                q();
+            this.f20215g = null;
+            if (this.f20217i) {
+                this.f20217i = false;
+                m2849q();
             }
         }
     }
 
-    @Override // b.i.a.c.e3.l
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    public Uri n() {
-        return this.f;
+    /* renamed from: n */
+    public Uri mo2589n() {
+        return this.f20214f;
     }
 
-    @Override // b.i.a.c.e3.h
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataReader
     public int read(byte[] bArr, int i, int i2) throws AssetDataSourceException {
         if (i2 == 0) {
             return 0;
         }
-        long j = this.h;
+        long j = this.f20216h;
         if (j == 0) {
             return -1;
         }
@@ -117,17 +127,17 @@ public final class AssetDataSource extends g {
                 throw new AssetDataSourceException(e, 2000);
             }
         }
-        InputStream inputStream = this.g;
-        int i3 = e0.a;
+        InputStream inputStream = this.f20215g;
+        int i3 = Util2.f6708a;
         int i4 = inputStream.read(bArr, i, i2);
         if (i4 == -1) {
             return -1;
         }
-        long j2 = this.h;
+        long j2 = this.f20216h;
         if (j2 != -1) {
-            this.h = j2 - i4;
+            this.f20216h = j2 - i4;
         }
-        p(i4);
+        m2848p(i4);
         return i4;
     }
 }

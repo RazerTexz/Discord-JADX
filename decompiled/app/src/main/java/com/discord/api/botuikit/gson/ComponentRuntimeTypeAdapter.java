@@ -1,10 +1,10 @@
 package com.discord.api.botuikit.gson;
 
 import com.discord.api.botuikit.Component;
-import com.discord.api.botuikit.ComponentType;
-import com.discord.api.botuikit.UnknownComponent;
+import com.discord.api.botuikit.Component6;
+import com.discord.api.botuikit.Component9;
 import com.discord.gsonutils.RuntimeTypeAdapterFactory;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ComponentRuntimeTypeAdapter.kt */
 /* loaded from: classes.dex */
@@ -13,26 +13,27 @@ public final class ComponentRuntimeTypeAdapter {
     private static final RuntimeTypeAdapterFactory<Component> componentRuntimeTypeAdapterFactory;
 
     static {
-        RuntimeTypeAdapterFactory<Component> runtimeTypeAdapterFactory = new RuntimeTypeAdapterFactory<>(Component.class, "type", true, UnknownComponent.class);
-        ComponentType[] componentTypeArrValues = ComponentType.values();
+        RuntimeTypeAdapterFactory<Component> runtimeTypeAdapterFactory = new RuntimeTypeAdapterFactory<>(Component.class, "type", true, Component9.class);
+        Component6[] component6ArrValues = Component6.values();
         for (int i = 0; i < 5; i++) {
-            ComponentType componentType = componentTypeArrValues[i];
-            Class<? extends Component> clazz = componentType.getClazz();
-            String strValueOf = String.valueOf(componentType.getType());
+            Component6 component6 = component6ArrValues[i];
+            Class<? extends Component> clazz = component6.getClazz();
+            String strValueOf = String.valueOf(component6.getType());
             if (clazz == null || strValueOf == null) {
                 throw null;
             }
-            if (runtimeTypeAdapterFactory.m.containsKey(clazz) || runtimeTypeAdapterFactory.l.containsKey(strValueOf)) {
+            if (runtimeTypeAdapterFactory.f18536m.containsKey(clazz) || runtimeTypeAdapterFactory.f18535l.containsKey(strValueOf)) {
                 throw new IllegalArgumentException("types and labels must be unique");
             }
-            runtimeTypeAdapterFactory.l.put(strValueOf, clazz);
-            runtimeTypeAdapterFactory.m.put(clazz, strValueOf);
+            runtimeTypeAdapterFactory.f18535l.put(strValueOf, clazz);
+            runtimeTypeAdapterFactory.f18536m.put(clazz, strValueOf);
         }
-        m.checkNotNullExpressionValue(runtimeTypeAdapterFactory, "RuntimeTypeAdapterFactor…ype.toString())\n    }\n  }");
+        Intrinsics3.checkNotNullExpressionValue(runtimeTypeAdapterFactory, "RuntimeTypeAdapterFactor…ype.toString())\n    }\n  }");
         componentRuntimeTypeAdapterFactory = runtimeTypeAdapterFactory;
     }
 
-    public final RuntimeTypeAdapterFactory<Component> a() {
+    /* renamed from: a */
+    public final RuntimeTypeAdapterFactory<Component> m7624a() {
         return componentRuntimeTypeAdapterFactory;
     }
 }

@@ -9,11 +9,11 @@ import android.widget.Checkable;
 import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding;
 import com.google.android.material.radiobutton.MaterialRadioButton;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildRoleSubscriptionPlanFormatRadioButton.kt */
 /* loaded from: classes2.dex */
@@ -25,38 +25,38 @@ public final class GuildRoleSubscriptionPlanFormatRadioButton extends Constraint
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildRoleSubscriptionPlanFormatRadioButton(Context context) throws Resources.NotFoundException {
         super(context);
-        m.checkNotNullParameter(context, "context");
-        ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.a(LayoutInflater.from(getContext()), this);
-        m.checkNotNullExpressionValue(viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA, "ViewGuildRoleSubscriptio…ater.from(context), this)");
-        this.binding = viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.m8398a(LayoutInflater.from(getContext()), this);
+        Intrinsics3.checkNotNullExpressionValue(viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a, "ViewGuildRoleSubscriptio…ater.from(context), this)");
+        this.binding = viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a;
         initialize$default(this, null, 1, null);
     }
 
     private final void configureUI(int formatType) {
         if (formatType == 0) {
-            this.binding.d.setText(R.string.guild_role_subscription_format_all_channels_name);
-            this.binding.c.setText(R.string.guild_role_subscription_format_all_channels_description);
-            this.binding.e.setImageResource(R.drawable.ic_key_24dp);
+            this.binding.f15489d.setText(C5419R.string.guild_role_subscription_format_all_channels_name);
+            this.binding.f15488c.setText(C5419R.string.guild_role_subscription_format_all_channels_description);
+            this.binding.f15490e.setImageResource(C5419R.drawable.ic_key_24dp);
         } else {
             if (formatType != 1) {
                 return;
             }
-            this.binding.d.setText(R.string.guild_role_subscription_format_some_channels_name);
-            this.binding.c.setText(R.string.guild_role_subscription_format_some_channels_description);
-            this.binding.e.setImageResource(R.drawable.ic_channel_text);
+            this.binding.f15489d.setText(C5419R.string.guild_role_subscription_format_some_channels_name);
+            this.binding.f15488c.setText(C5419R.string.guild_role_subscription_format_some_channels_description);
+            this.binding.f15490e.setImageResource(C5419R.drawable.ic_channel_text);
         }
     }
 
     private final void initialize(AttributeSet attrs) throws Resources.NotFoundException {
-        int dimensionPixelSize = getResources().getDimensionPixelSize(R.dimen.guild_role_subscription_setup_default_padding);
+        int dimensionPixelSize = getResources().getDimensionPixelSize(C5419R.dimen.guild_role_subscription_setup_default_padding);
         setPadding(dimensionPixelSize, dimensionPixelSize, dimensionPixelSize, dimensionPixelSize);
-        setBackground(ContextCompat.getDrawable(getContext(), R.drawable.bg_guild_role_subscription_plan_format_radio_button));
+        setBackground(ContextCompat.getDrawable(getContext(), C5419R.drawable.bg_guild_role_subscription_plan_format_radio_button));
         Context context = getContext();
-        m.checkNotNullExpressionValue(context, "context");
-        int[] iArr = R.a.GuildRoleSubscriptionPlanFormatRadioButton;
-        m.checkNotNullExpressionValue(iArr, "R.styleable.GuildRoleSub…tionPlanFormatRadioButton");
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        int[] iArr = C5419R.a.GuildRoleSubscriptionPlanFormatRadioButton;
+        Intrinsics3.checkNotNullExpressionValue(iArr, "R.styleable.GuildRoleSub…tionPlanFormatRadioButton");
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attrs, iArr);
-        m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(attrs, styleable)");
+        Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(attrs, styleable)");
         configureUI(typedArrayObtainStyledAttributes.getInt(0, 0));
         typedArrayObtainStyledAttributes.recycle();
     }
@@ -70,19 +70,19 @@ public final class GuildRoleSubscriptionPlanFormatRadioButton extends Constraint
 
     @Override // android.widget.Checkable
     public boolean isChecked() {
-        MaterialRadioButton materialRadioButton = this.binding.f2197b;
-        m.checkNotNullExpressionValue(materialRadioButton, "binding.guildRoleSubscriptionPlanFormatButton");
+        MaterialRadioButton materialRadioButton = this.binding.f15487b;
+        Intrinsics3.checkNotNullExpressionValue(materialRadioButton, "binding.guildRoleSubscriptionPlanFormatButton");
         return materialRadioButton.isChecked();
     }
 
     @Override // android.widget.Checkable
     public void setChecked(boolean checked) {
         setSelected(checked);
-        ImageView imageView = this.binding.e;
-        m.checkNotNullExpressionValue(imageView, "binding.guildRoleSubscriptionPlanFormatImage");
+        ImageView imageView = this.binding.f15490e;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.guildRoleSubscriptionPlanFormatImage");
         imageView.setSelected(checked);
-        MaterialRadioButton materialRadioButton = this.binding.f2197b;
-        m.checkNotNullExpressionValue(materialRadioButton, "binding.guildRoleSubscriptionPlanFormatButton");
+        MaterialRadioButton materialRadioButton = this.binding.f15487b;
+        Intrinsics3.checkNotNullExpressionValue(materialRadioButton, "binding.guildRoleSubscriptionPlanFormatButton");
         materialRadioButton.setChecked(checked);
     }
 
@@ -94,10 +94,10 @@ public final class GuildRoleSubscriptionPlanFormatRadioButton extends Constraint
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildRoleSubscriptionPlanFormatRadioButton(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.a(LayoutInflater.from(getContext()), this);
-        m.checkNotNullExpressionValue(viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA, "ViewGuildRoleSubscriptio…ater.from(context), this)");
-        this.binding = viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.m8398a(LayoutInflater.from(getContext()), this);
+        Intrinsics3.checkNotNullExpressionValue(viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a, "ViewGuildRoleSubscriptio…ater.from(context), this)");
+        this.binding = viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a;
         initialize(attributeSet);
     }
 
@@ -108,10 +108,10 @@ public final class GuildRoleSubscriptionPlanFormatRadioButton extends Constraint
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildRoleSubscriptionPlanFormatRadioButton(Context context, AttributeSet attributeSet, int i) throws Resources.NotFoundException {
         super(context, attributeSet, i);
-        m.checkNotNullParameter(context, "context");
-        ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.a(LayoutInflater.from(getContext()), this);
-        m.checkNotNullExpressionValue(viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA, "ViewGuildRoleSubscriptio…ater.from(context), this)");
-        this.binding = viewGuildRoleSubscriptionPlanFormatRadioButtonBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.m8398a(LayoutInflater.from(getContext()), this);
+        Intrinsics3.checkNotNullExpressionValue(viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a, "ViewGuildRoleSubscriptio…ater.from(context), this)");
+        this.binding = viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a;
         initialize(attributeSet);
     }
 

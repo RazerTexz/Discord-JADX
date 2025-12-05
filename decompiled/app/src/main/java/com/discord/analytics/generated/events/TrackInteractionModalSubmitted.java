@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackInteractionModalSubmitted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInteractionModalSubmitted implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackInteractionModalSubmitted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final Long interactionId = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackInteractionModalSubmitted implements Analytic
             return false;
         }
         TrackInteractionModalSubmitted trackInteractionModalSubmitted = (TrackInteractionModalSubmitted) other;
-        return m.areEqual(this.applicationId, trackInteractionModalSubmitted.applicationId) && m.areEqual(this.interactionId, trackInteractionModalSubmitted.interactionId);
+        return Intrinsics3.areEqual(this.applicationId, trackInteractionModalSubmitted.applicationId) && Intrinsics3.areEqual(this.interactionId, trackInteractionModalSubmitted.interactionId);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackInteractionModalSubmitted implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackInteractionModalSubmitted(applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", interactionId=");
-        return a.G(sbU, this.interactionId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackInteractionModalSubmitted(applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", interactionId=");
+        return outline.m819G(sbM833U, this.interactionId, ")");
     }
 }

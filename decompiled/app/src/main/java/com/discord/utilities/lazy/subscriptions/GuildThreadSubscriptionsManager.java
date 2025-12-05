@@ -2,9 +2,6 @@ package com.discord.utilities.lazy.subscriptions;
 
 import android.util.LruCache;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -12,6 +9,9 @@ import java.util.Map;
 import java.util.Set;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
+import p507d0.p580t.Collections2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildThreadSubscriptionsManager.kt */
 /* loaded from: classes2.dex */
@@ -21,7 +21,7 @@ public final class GuildThreadSubscriptionsManager {
 
     /* JADX WARN: Multi-variable type inference failed */
     public GuildThreadSubscriptionsManager(Function2<? super Long, ? super List<Long>, Unit> function2) {
-        m.checkNotNullParameter(function2, "changeHandler");
+        Intrinsics3.checkNotNullParameter(function2, "changeHandler");
         this.changeHandler = function2;
         this.subscriptions = new HashMap<>();
     }
@@ -31,7 +31,7 @@ public final class GuildThreadSubscriptionsManager {
         Set<Long> setKeySet;
         List<Long> list;
         LruCache<Long, Long> lruCache = this.subscriptions.get(Long.valueOf(guildId));
-        return (lruCache == null || (mapSnapshot = lruCache.snapshot()) == null || (setKeySet = mapSnapshot.keySet()) == null || (list = u.toList(setKeySet)) == null) ? n.emptyList() : list;
+        return (lruCache == null || (mapSnapshot = lruCache.snapshot()) == null || (setKeySet = mapSnapshot.keySet()) == null || (list = _Collections.toList(setKeySet)) == null) ? Collections2.emptyList() : list;
     }
 
     public final void remove(long guildId) {
@@ -43,7 +43,7 @@ public final class GuildThreadSubscriptionsManager {
     }
 
     public final void retainAll(List<Long> guildIds) {
-        m.checkNotNullParameter(guildIds, "guildIds");
+        Intrinsics3.checkNotNullParameter(guildIds, "guildIds");
         Iterator<Map.Entry<Long, LruCache<Long, Long>>> it = this.subscriptions.entrySet().iterator();
         while (it.hasNext()) {
             if (!guildIds.contains(Long.valueOf(it.next().getKey().longValue()))) {
@@ -62,6 +62,6 @@ public final class GuildThreadSubscriptionsManager {
         }
         lruCache.put(Long.valueOf(channelId), Long.valueOf(channelId));
         this.subscriptions.put(Long.valueOf(guildId), lruCache);
-        this.changeHandler.invoke(Long.valueOf(guildId), u.toList(lruCache.snapshot().keySet()));
+        this.changeHandler.invoke(Long.valueOf(guildId), _Collections.toList(lruCache.snapshot().keySet()));
     }
 }

@@ -7,10 +7,6 @@ import android.net.Uri;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
 import androidx.core.view.PointerIconCompat;
-import b.d.b.a.a;
-import b.i.a.c.e3.g;
-import b.i.a.c.e3.n;
-import b.i.a.c.f3.e0;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.io.EOFException;
 import java.io.FileInputStream;
@@ -18,22 +14,37 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.channels.FileChannel;
 import java.util.Objects;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p242c.p257e3.BaseDataSource;
+import p007b.p225i.p226a.p242c.p257e3.DataSpec;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
 
 /* loaded from: classes3.dex */
-public final class RawResourceDataSource extends g {
-    public final Resources e;
-    public final String f;
+public final class RawResourceDataSource extends BaseDataSource {
 
-    @Nullable
-    public Uri g;
+    /* renamed from: e */
+    public final Resources f20247e;
 
-    @Nullable
-    public AssetFileDescriptor h;
+    /* renamed from: f */
+    public final String f20248f;
 
+    /* renamed from: g */
     @Nullable
-    public InputStream i;
-    public long j;
-    public boolean k;
+    public Uri f20249g;
+
+    /* renamed from: h */
+    @Nullable
+    public AssetFileDescriptor f20250h;
+
+    /* renamed from: i */
+    @Nullable
+    public InputStream f20251i;
+
+    /* renamed from: j */
+    public long f20252j;
+
+    /* renamed from: k */
+    public boolean f20253k;
 
     public static class RawResourceDataSourceException extends DataSourceException {
         public RawResourceDataSourceException(@Nullable String str, @Nullable Throwable th, int i) {
@@ -43,8 +54,8 @@ public final class RawResourceDataSource extends g {
 
     public RawResourceDataSource(Context context) {
         super(false);
-        this.e = context.getResources();
-        this.f = context.getPackageName();
+        this.f20247e = context.getResources();
+        this.f20248f = context.getPackageName();
     }
 
     public static Uri buildRawResourceUri(int i) {
@@ -55,14 +66,15 @@ public final class RawResourceDataSource extends g {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:86:0x00a5 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    @Override // b.i.a.c.e3.l
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public long a(n nVar) throws RawResourceDataSourceException {
+    public long mo2586a(DataSpec dataSpec) throws RawResourceDataSourceException {
         int identifier;
-        Uri uri = nVar.a;
-        this.g = uri;
+        Uri uri = dataSpec.f6542a;
+        this.f20249g = uri;
         if (TextUtils.equals("rawresource", uri.getScheme())) {
             try {
                 String lastPathSegment = uri.getLastPathSegment();
@@ -89,25 +101,25 @@ public final class RawResourceDataSource extends g {
             String host = uri.getHost();
             String strValueOf = String.valueOf(TextUtils.isEmpty(host) ? "" : String.valueOf(host).concat(":"));
             String strValueOf2 = String.valueOf(path);
-            identifier = this.e.getIdentifier(strValueOf2.length() != 0 ? strValueOf.concat(strValueOf2) : new String(strValueOf), "raw", this.f);
+            identifier = this.f20247e.getIdentifier(strValueOf2.length() != 0 ? strValueOf.concat(strValueOf2) : new String(strValueOf), "raw", this.f20248f);
             if (identifier == 0) {
                 throw new RawResourceDataSourceException("Resource not found.", null, 2005);
             }
         }
-        r(nVar);
+        m2850r(dataSpec);
         try {
-            AssetFileDescriptor assetFileDescriptorOpenRawResourceFd = this.e.openRawResourceFd(identifier);
-            this.h = assetFileDescriptorOpenRawResourceFd;
+            AssetFileDescriptor assetFileDescriptorOpenRawResourceFd = this.f20247e.openRawResourceFd(identifier);
+            this.f20250h = assetFileDescriptorOpenRawResourceFd;
             if (assetFileDescriptorOpenRawResourceFd == null) {
                 String strValueOf3 = String.valueOf(uri);
-                throw new RawResourceDataSourceException(a.j(strValueOf3.length() + 24, "Resource is compressed: ", strValueOf3), null, 2000);
+                throw new RawResourceDataSourceException(outline.m857j(strValueOf3.length() + 24, "Resource is compressed: ", strValueOf3), null, 2000);
             }
             long length = assetFileDescriptorOpenRawResourceFd.getLength();
             FileInputStream fileInputStream = new FileInputStream(assetFileDescriptorOpenRawResourceFd.getFileDescriptor());
-            this.i = fileInputStream;
+            this.f20251i = fileInputStream;
             if (length != -1) {
                 try {
-                    if (nVar.f > length) {
+                    if (dataSpec.f6547f > length) {
                         throw new RawResourceDataSourceException(null, null, 2008);
                     }
                 } catch (RawResourceDataSourceException e) {
@@ -117,66 +129,66 @@ public final class RawResourceDataSource extends g {
                 }
             }
             long startOffset = assetFileDescriptorOpenRawResourceFd.getStartOffset();
-            long jSkip = fileInputStream.skip(nVar.f + startOffset) - startOffset;
-            if (jSkip != nVar.f) {
+            long jSkip = fileInputStream.skip(dataSpec.f6547f + startOffset) - startOffset;
+            if (jSkip != dataSpec.f6547f) {
                 throw new RawResourceDataSourceException(null, null, 2008);
             }
             if (length == -1) {
                 FileChannel channel = fileInputStream.getChannel();
                 if (channel.size() == 0) {
-                    this.j = -1L;
+                    this.f20252j = -1L;
                 } else {
                     long size = channel.size() - channel.position();
-                    this.j = size;
+                    this.f20252j = size;
                     if (size < 0) {
                         throw new RawResourceDataSourceException(null, null, 2008);
                     }
                 }
             } else {
                 long j = length - jSkip;
-                this.j = j;
+                this.f20252j = j;
                 if (j < 0) {
                     throw new DataSourceException(2008);
                 }
             }
-            long jMin = nVar.g;
+            long jMin = dataSpec.f6548g;
             if (jMin != -1) {
-                long j2 = this.j;
+                long j2 = this.f20252j;
                 if (j2 != -1) {
                     jMin = Math.min(j2, jMin);
                 }
-                this.j = jMin;
+                this.f20252j = jMin;
             }
-            this.k = true;
-            s(nVar);
-            long j3 = nVar.g;
-            return j3 != -1 ? j3 : this.j;
+            this.f20253k = true;
+            m2851s(dataSpec);
+            long j3 = dataSpec.f6548g;
+            return j3 != -1 ? j3 : this.f20252j;
         } catch (Resources.NotFoundException e3) {
             throw new RawResourceDataSourceException(null, e3, 2005);
         }
     }
 
-    @Override // b.i.a.c.e3.l
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     public void close() throws RawResourceDataSourceException {
-        this.g = null;
+        this.f20249g = null;
         try {
             try {
-                InputStream inputStream = this.i;
+                InputStream inputStream = this.f20251i;
                 if (inputStream != null) {
                     inputStream.close();
                 }
-                this.i = null;
+                this.f20251i = null;
                 try {
                     try {
-                        AssetFileDescriptor assetFileDescriptor = this.h;
+                        AssetFileDescriptor assetFileDescriptor = this.f20250h;
                         if (assetFileDescriptor != null) {
                             assetFileDescriptor.close();
                         }
                     } finally {
-                        this.h = null;
-                        if (this.k) {
-                            this.k = false;
-                            q();
+                        this.f20250h = null;
+                        if (this.f20253k) {
+                            this.f20253k = false;
+                            m2849q();
                         }
                     }
                 } catch (IOException e) {
@@ -186,44 +198,45 @@ public final class RawResourceDataSource extends g {
                 throw new RawResourceDataSourceException(null, e2, 2000);
             }
         } catch (Throwable th) {
-            this.i = null;
+            this.f20251i = null;
             try {
                 try {
-                    AssetFileDescriptor assetFileDescriptor2 = this.h;
+                    AssetFileDescriptor assetFileDescriptor2 = this.f20250h;
                     if (assetFileDescriptor2 != null) {
                         assetFileDescriptor2.close();
                     }
-                    this.h = null;
-                    if (this.k) {
-                        this.k = false;
-                        q();
+                    this.f20250h = null;
+                    if (this.f20253k) {
+                        this.f20253k = false;
+                        m2849q();
                     }
                     throw th;
                 } catch (IOException e3) {
                     throw new RawResourceDataSourceException(null, e3, 2000);
                 }
             } finally {
-                this.h = null;
-                if (this.k) {
-                    this.k = false;
-                    q();
+                this.f20250h = null;
+                if (this.f20253k) {
+                    this.f20253k = false;
+                    m2849q();
                 }
             }
         }
     }
 
-    @Override // b.i.a.c.e3.l
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    public Uri n() {
-        return this.g;
+    /* renamed from: n */
+    public Uri mo2589n() {
+        return this.f20249g;
     }
 
-    @Override // b.i.a.c.e3.h
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataReader
     public int read(byte[] bArr, int i, int i2) throws RawResourceDataSourceException {
         if (i2 == 0) {
             return 0;
         }
-        long j = this.j;
+        long j = this.f20252j;
         if (j == 0) {
             return -1;
         }
@@ -234,20 +247,20 @@ public final class RawResourceDataSource extends g {
                 throw new RawResourceDataSourceException(null, e, 2000);
             }
         }
-        InputStream inputStream = this.i;
-        int i3 = e0.a;
+        InputStream inputStream = this.f20251i;
+        int i3 = Util2.f6708a;
         int i4 = inputStream.read(bArr, i, i2);
         if (i4 == -1) {
-            if (this.j == -1) {
+            if (this.f20252j == -1) {
                 return -1;
             }
             throw new RawResourceDataSourceException("End of stream reached having not read sufficient data.", new EOFException(), 2000);
         }
-        long j2 = this.j;
+        long j2 = this.f20252j;
         if (j2 != -1) {
-            this.j = j2 - i4;
+            this.f20252j = j2 - i4;
         }
-        p(i4);
+        m2848p(i4);
         return i4;
     }
 }

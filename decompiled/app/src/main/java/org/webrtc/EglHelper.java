@@ -1,10 +1,10 @@
 package org.webrtc;
 
-import h0.c.n0;
+import p617h0.p628c.EglBase2;
 
 /* loaded from: classes3.dex */
 public class EglHelper {
     public static EglBase create() {
-        return n0.a();
+        return EglBase2.m10662a();
     }
 }

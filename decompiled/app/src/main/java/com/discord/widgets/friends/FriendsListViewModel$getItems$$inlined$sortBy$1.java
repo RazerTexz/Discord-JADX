@@ -2,8 +2,8 @@ package com.discord.widgets.friends;
 
 import androidx.exifinterface.media.ExifInterface;
 import com.discord.widgets.friends.FriendsListViewModel;
-import d0.u.a;
 import java.util.Comparator;
+import p507d0.p582u.C12169a;
 
 /* compiled from: Comparisons.kt */
 /* loaded from: classes2.dex */
@@ -11,6 +11,6 @@ public final class FriendsListViewModel$getItems$$inlined$sortBy$1<T> implements
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator
     public final int compare(T t, T t2) {
-        return a.compareValues(Long.valueOf(((FriendsListViewModel.Item.SuggestedFriend) t).getSuggestion().getUser().getId()), Long.valueOf(((FriendsListViewModel.Item.SuggestedFriend) t2).getSuggestion().getUser().getId()));
+        return C12169a.compareValues(Long.valueOf(((FriendsListViewModel.Item.SuggestedFriend) t).getSuggestion().getUser().getId()), Long.valueOf(((FriendsListViewModel.Item.SuggestedFriend) t2).getSuggestion().getUser().getId()));
     }
 }

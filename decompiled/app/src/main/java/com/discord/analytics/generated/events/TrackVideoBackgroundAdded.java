@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackVideoBackgroundAdded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVideoBackgroundAdded implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackVideoBackgroundAdded implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean isAnimated = null;
     private final Boolean isVideo = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackVideoBackgroundAdded implements AnalyticsSche
             return false;
         }
         TrackVideoBackgroundAdded trackVideoBackgroundAdded = (TrackVideoBackgroundAdded) other;
-        return m.areEqual(this.isAnimated, trackVideoBackgroundAdded.isAnimated) && m.areEqual(this.isVideo, trackVideoBackgroundAdded.isVideo) && m.areEqual(this.isFromTenor, trackVideoBackgroundAdded.isFromTenor);
+        return Intrinsics3.areEqual(this.isAnimated, trackVideoBackgroundAdded.isAnimated) && Intrinsics3.areEqual(this.isVideo, trackVideoBackgroundAdded.isVideo) && Intrinsics3.areEqual(this.isFromTenor, trackVideoBackgroundAdded.isFromTenor);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackVideoBackgroundAdded implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackVideoBackgroundAdded(isAnimated=");
-        sbU.append(this.isAnimated);
-        sbU.append(", isVideo=");
-        sbU.append(this.isVideo);
-        sbU.append(", isFromTenor=");
-        return a.D(sbU, this.isFromTenor, ")");
+        StringBuilder sbM833U = outline.m833U("TrackVideoBackgroundAdded(isAnimated=");
+        sbM833U.append(this.isAnimated);
+        sbM833U.append(", isVideo=");
+        sbM833U.append(this.isVideo);
+        sbM833U.append(", isFromTenor=");
+        return outline.m816D(sbM833U, this.isFromTenor, ")");
     }
 }

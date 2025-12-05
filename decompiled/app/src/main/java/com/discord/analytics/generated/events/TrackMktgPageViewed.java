@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackMarketingSite;
-import com.discord.analytics.generated.traits.TrackMarketingSiteReceiver;
+import com.discord.analytics.generated.traits.TrackMarketingSite2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMktgPageViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMktgPageViewed implements AnalyticsSchema, TrackBaseReceiver, TrackMarketingSiteReceiver {
+public final /* data */ class TrackMktgPageViewed implements AnalyticsSchema, TrackBase2, TrackMarketingSite2 {
     private TrackBase trackBase;
     private TrackMarketingSite trackMarketingSite;
     private final CharSequence pageName = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackMktgPageViewed implements AnalyticsSchema, Tr
             return false;
         }
         TrackMktgPageViewed trackMktgPageViewed = (TrackMktgPageViewed) other;
-        return m.areEqual(this.pageName, trackMktgPageViewed.pageName) && m.areEqual(this.previousPageName, trackMktgPageViewed.previousPageName) && m.areEqual(this.previousLinkLocation, trackMktgPageViewed.previousLinkLocation) && m.areEqual(this.queryReferrer, trackMktgPageViewed.queryReferrer) && m.areEqual(this.hasSession, trackMktgPageViewed.hasSession) && m.areEqual(this.staticExperimentUuid, trackMktgPageViewed.staticExperimentUuid);
+        return Intrinsics3.areEqual(this.pageName, trackMktgPageViewed.pageName) && Intrinsics3.areEqual(this.previousPageName, trackMktgPageViewed.previousPageName) && Intrinsics3.areEqual(this.previousLinkLocation, trackMktgPageViewed.previousLinkLocation) && Intrinsics3.areEqual(this.queryReferrer, trackMktgPageViewed.queryReferrer) && Intrinsics3.areEqual(this.hasSession, trackMktgPageViewed.hasSession) && Intrinsics3.areEqual(this.staticExperimentUuid, trackMktgPageViewed.staticExperimentUuid);
     }
 
     public int hashCode() {
@@ -54,17 +54,17 @@ public final /* data */ class TrackMktgPageViewed implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMktgPageViewed(pageName=");
-        sbU.append(this.pageName);
-        sbU.append(", previousPageName=");
-        sbU.append(this.previousPageName);
-        sbU.append(", previousLinkLocation=");
-        sbU.append(this.previousLinkLocation);
-        sbU.append(", queryReferrer=");
-        sbU.append(this.queryReferrer);
-        sbU.append(", hasSession=");
-        sbU.append(this.hasSession);
-        sbU.append(", staticExperimentUuid=");
-        return a.E(sbU, this.staticExperimentUuid, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMktgPageViewed(pageName=");
+        sbM833U.append(this.pageName);
+        sbM833U.append(", previousPageName=");
+        sbM833U.append(this.previousPageName);
+        sbM833U.append(", previousLinkLocation=");
+        sbM833U.append(this.previousLinkLocation);
+        sbM833U.append(", queryReferrer=");
+        sbM833U.append(this.queryReferrer);
+        sbM833U.append(", hasSession=");
+        sbM833U.append(this.hasSession);
+        sbM833U.append(", staticExperimentUuid=");
+        return outline.m817E(sbM833U, this.staticExperimentUuid, ")");
     }
 }

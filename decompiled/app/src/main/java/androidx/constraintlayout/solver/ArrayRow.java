@@ -2,8 +2,8 @@ package androidx.constraintlayout.solver;
 
 import androidx.constraintlayout.solver.LinearSystem;
 import androidx.constraintlayout.solver.SolverVariable;
-import b.d.b.a.a;
 import java.util.ArrayList;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ArrayRow implements LinearSystem.Row {
@@ -64,7 +64,7 @@ public class ArrayRow implements LinearSystem.Row {
             float variableValue = this.variables.getVariableValue(i);
             if (variableValue < 0.0f) {
                 SolverVariable variable = this.variables.getVariable(i);
-                if ((zArr == null || !zArr[variable.f30id]) && variable != solverVariable && (((type = variable.mType) == SolverVariable.Type.SLACK || type == SolverVariable.Type.ERROR) && variableValue < f)) {
+                if ((zArr == null || !zArr[variable.f110id]) && variable != solverVariable && (((type = variable.mType) == SolverVariable.Type.SLACK || type == SolverVariable.Type.ERROR) && variableValue < f)) {
                     f = variableValue;
                     solverVariable2 = variable;
                 }
@@ -392,15 +392,15 @@ public class ArrayRow implements LinearSystem.Row {
         if (this.variable == null) {
             string = "0";
         } else {
-            StringBuilder sbU = a.U("");
-            sbU.append(this.variable);
-            string = sbU.toString();
+            StringBuilder sbM833U = outline.m833U("");
+            sbM833U.append(this.variable);
+            string = sbM833U.toString();
         }
-        String strW = a.w(string, " = ");
+        String strM883w = outline.m883w(string, " = ");
         if (this.constantValue != 0.0f) {
-            StringBuilder sbU2 = a.U(strW);
-            sbU2.append(this.constantValue);
-            strW = sbU2.toString();
+            StringBuilder sbM833U2 = outline.m833U(strM883w);
+            sbM833U2.append(this.constantValue);
+            strM883w = sbM833U2.toString();
             z2 = true;
         } else {
             z2 = false;
@@ -414,18 +414,18 @@ public class ArrayRow implements LinearSystem.Row {
                     String string2 = variable.toString();
                     if (!z2) {
                         if (variableValue < 0.0f) {
-                            strW = a.w(strW, "- ");
+                            strM883w = outline.m883w(strM883w, "- ");
                             variableValue *= -1.0f;
                         }
-                        strW = variableValue == 1.0f ? a.w(strW, string2) : strW + variableValue + " " + string2;
+                        strM883w = variableValue == 1.0f ? outline.m883w(strM883w, string2) : strM883w + variableValue + " " + string2;
                         z2 = true;
                     } else if (variableValue > 0.0f) {
-                        strW = a.w(strW, " + ");
+                        strM883w = outline.m883w(strM883w, " + ");
                         if (variableValue == 1.0f) {
                         }
                         z2 = true;
                     } else {
-                        strW = a.w(strW, " - ");
+                        strM883w = outline.m883w(strM883w, " - ");
                         variableValue *= -1.0f;
                         if (variableValue == 1.0f) {
                         }
@@ -434,7 +434,7 @@ public class ArrayRow implements LinearSystem.Row {
                 }
             }
         }
-        return !z2 ? a.w(strW, "0.0") : strW;
+        return !z2 ? outline.m883w(strM883w, "0.0") : strM883w;
     }
 
     public String toString() {

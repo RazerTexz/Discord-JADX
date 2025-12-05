@@ -6,16 +6,16 @@ import com.discord.models.domain.ModelPayload;
 import com.discord.models.phone.PhoneCountryCode;
 import com.discord.utilities.persister.Persister;
 import com.google.gson.Gson;
-import d0.t.k;
-import d0.y.b;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p507d0.p580t._Arrays;
+import p507d0.p591y.Closeable;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: StorePhone.kt */
 /* loaded from: classes2.dex */
@@ -27,12 +27,12 @@ public final class StorePhone extends StoreV2 {
     private final Persister<PhoneCountryCode> selectedCountryCodeCache;
 
     /* compiled from: StorePhone.kt */
-    /* renamed from: com.discord.stores.StorePhone$updateDefaultCountryCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StorePhone$updateDefaultCountryCode$1 */
+    public static final class C63341 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $alpha2;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C63341(String str) {
             super(0);
             this.$alpha2 = str;
         }
@@ -40,7 +40,7 @@ public final class StorePhone extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -53,7 +53,7 @@ public final class StorePhone extends StoreV2 {
                     break;
                 } else {
                     next = it.next();
-                    if (m.areEqual(((PhoneCountryCode) next).getAlpha2(), this.$alpha2)) {
+                    if (Intrinsics3.areEqual(((PhoneCountryCode) next).getAlpha2(), this.$alpha2)) {
                         break;
                     }
                 }
@@ -67,12 +67,12 @@ public final class StorePhone extends StoreV2 {
     }
 
     /* compiled from: StorePhone.kt */
-    /* renamed from: com.discord.stores.StorePhone$updateSelectedCountryCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StorePhone$updateSelectedCountryCode$1 */
+    public static final class C63351 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ PhoneCountryCode $newSelectedCountryCode;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(PhoneCountryCode phoneCountryCode) {
+        public C63351(PhoneCountryCode phoneCountryCode) {
             super(0);
             this.$newSelectedCountryCode = phoneCountryCode;
         }
@@ -80,7 +80,7 @@ public final class StorePhone extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -91,7 +91,7 @@ public final class StorePhone extends StoreV2 {
     }
 
     public StorePhone(Dispatcher dispatcher) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
         this.dispatcher = dispatcher;
         PhoneCountryCode.Companion companion = PhoneCountryCode.INSTANCE;
         this.defaultCountryCode = companion.getDEFAULT_COUNTRY_CODE();
@@ -102,7 +102,7 @@ public final class StorePhone extends StoreV2 {
     public static final /* synthetic */ List access$getCountryCodes$p(StorePhone storePhone) {
         List<PhoneCountryCode> list = storePhone.countryCodes;
         if (list == null) {
-            m.throwUninitializedPropertyAccessException("countryCodes");
+            Intrinsics3.throwUninitializedPropertyAccessException("countryCodes");
         }
         return list;
     }
@@ -130,30 +130,30 @@ public final class StorePhone extends StoreV2 {
     private final List<PhoneCountryCode> loadCountryCodesFromDisk(Context context) throws IOException {
         InputStreamReader inputStreamReader = new InputStreamReader(context.getAssets().open("data/countries.json"), Constants.ENCODING);
         try {
-            Object objE = new Gson().e(inputStreamReader, PhoneCountryCode[].class);
-            m.checkNotNullExpressionValue(objE, "Gson().fromJson(it, Arra…CountryCode>::class.java)");
-            List<PhoneCountryCode> list = k.toList((Object[]) objE);
-            b.closeFinally(inputStreamReader, null);
+            Object objM9201e = new Gson().m9201e(inputStreamReader, PhoneCountryCode[].class);
+            Intrinsics3.checkNotNullExpressionValue(objM9201e, "Gson().fromJson(it, Arra…CountryCode>::class.java)");
+            List<PhoneCountryCode> list = _Arrays.toList((Object[]) objM9201e);
+            Closeable.closeFinally(inputStreamReader, null);
             return list;
         } finally {
         }
     }
 
     public final PhoneCountryCode getCountryCode() {
-        return m.areEqual(this.selectedCountryCode, PhoneCountryCode.INSTANCE.getMISSING_COUNTRY_CODE()) ? this.defaultCountryCode : this.selectedCountryCode;
+        return Intrinsics3.areEqual(this.selectedCountryCode, PhoneCountryCode.INSTANCE.getMISSING_COUNTRY_CODE()) ? this.defaultCountryCode : this.selectedCountryCode;
     }
 
     public final List<PhoneCountryCode> getCountryCodes() {
         List<PhoneCountryCode> list = this.countryCodes;
         if (list == null) {
-            m.throwUninitializedPropertyAccessException("countryCodes");
+            Intrinsics3.throwUninitializedPropertyAccessException("countryCodes");
         }
         return list;
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         String countryCode = payload.getCountryCode();
         if (countryCode != null) {
             updateDefaultCountryCode(countryCode);
@@ -162,7 +162,7 @@ public final class StorePhone extends StoreV2 {
 
     @Override // com.discord.stores.Store
     public void init(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         super.init(context);
         this.countryCodes = loadCountryCodesFromDisk(context);
         this.selectedCountryCode = this.selectedCountryCodeCache.get();
@@ -170,19 +170,19 @@ public final class StorePhone extends StoreV2 {
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         super.snapshotData();
         Persister.set$default(this.selectedCountryCodeCache, this.selectedCountryCode, false, 2, null);
     }
 
     public final void updateDefaultCountryCode(String alpha2) {
-        m.checkNotNullParameter(alpha2, "alpha2");
-        this.dispatcher.schedule(new AnonymousClass1(alpha2));
+        Intrinsics3.checkNotNullParameter(alpha2, "alpha2");
+        this.dispatcher.schedule(new C63341(alpha2));
     }
 
     public final void updateSelectedCountryCode(PhoneCountryCode newSelectedCountryCode) {
-        m.checkNotNullParameter(newSelectedCountryCode, "newSelectedCountryCode");
-        this.dispatcher.schedule(new AnonymousClass1(newSelectedCountryCode));
+        Intrinsics3.checkNotNullParameter(newSelectedCountryCode, "newSelectedCountryCode");
+        this.dispatcher.schedule(new C63351(newSelectedCountryCode));
     }
 }

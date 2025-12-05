@@ -11,11 +11,11 @@ import java.util.concurrent.TimeUnit;
 /* loaded from: classes3.dex */
 public class ThreadUtils {
 
-    /* renamed from: org.webrtc.ThreadUtils$1, reason: invalid class name */
-    public class AnonymousClass1 implements BlockingOperation {
+    /* renamed from: org.webrtc.ThreadUtils$1 */
+    public class C129911 implements BlockingOperation {
         public final /* synthetic */ Thread val$thread;
 
-        public AnonymousClass1(Thread thread) {
+        public C129911(Thread thread) {
             this.val$thread = thread;
         }
 
@@ -27,7 +27,9 @@ public class ThreadUtils {
 
     /* renamed from: org.webrtc.ThreadUtils$1CaughtException, reason: invalid class name */
     public class C1CaughtException {
-        public Exception e;
+
+        /* renamed from: e */
+        public Exception f27618e;
     }
 
     /* renamed from: org.webrtc.ThreadUtils$1Result, reason: invalid class name */
@@ -35,11 +37,11 @@ public class ThreadUtils {
         public V value;
     }
 
-    /* renamed from: org.webrtc.ThreadUtils$2, reason: invalid class name */
-    public class AnonymousClass2 implements BlockingOperation {
+    /* renamed from: org.webrtc.ThreadUtils$2 */
+    public class C129922 implements BlockingOperation {
         public final /* synthetic */ CountDownLatch val$latch;
 
-        public AnonymousClass2(CountDownLatch countDownLatch) {
+        public C129922(CountDownLatch countDownLatch) {
             this.val$latch = countDownLatch;
         }
 
@@ -49,14 +51,14 @@ public class ThreadUtils {
         }
     }
 
-    /* renamed from: org.webrtc.ThreadUtils$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: org.webrtc.ThreadUtils$3 */
+    public class RunnableC129933 implements Runnable {
         public final /* synthetic */ CountDownLatch val$barrier;
         public final /* synthetic */ Callable val$callable;
         public final /* synthetic */ C1CaughtException val$caughtException;
         public final /* synthetic */ C1Result val$result;
 
-        public AnonymousClass3(C1Result c1Result, Callable callable, C1CaughtException c1CaughtException, CountDownLatch countDownLatch) {
+        public RunnableC129933(C1Result c1Result, Callable callable, C1CaughtException c1CaughtException, CountDownLatch countDownLatch) {
             this.val$result = c1Result;
             this.val$callable = callable;
             this.val$caughtException = c1CaughtException;
@@ -69,17 +71,17 @@ public class ThreadUtils {
             try {
                 this.val$result.value = this.val$callable.call();
             } catch (Exception e) {
-                this.val$caughtException.e = e;
+                this.val$caughtException.f27618e = e;
             }
             this.val$barrier.countDown();
         }
     }
 
-    /* renamed from: org.webrtc.ThreadUtils$4, reason: invalid class name */
-    public class AnonymousClass4 implements Callable<Void> {
+    /* renamed from: org.webrtc.ThreadUtils$4 */
+    public class CallableC129944 implements Callable<Void> {
         public final /* synthetic */ Runnable val$runner;
 
-        public AnonymousClass4(Runnable runnable) {
+        public CallableC129944(Runnable runnable) {
             this.val$runner = runnable;
         }
 
@@ -120,7 +122,7 @@ public class ThreadUtils {
     }
 
     public static void awaitUninterruptibly(CountDownLatch countDownLatch) {
-        executeUninterruptibly(new AnonymousClass2(countDownLatch));
+        executeUninterruptibly(new C129922(countDownLatch));
     }
 
     public static void checkIsOnMainThread() {
@@ -162,13 +164,13 @@ public class ThreadUtils {
         C1Result c1Result = new C1Result();
         C1CaughtException c1CaughtException = new C1CaughtException();
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        handler.post(new AnonymousClass3(c1Result, callable, c1CaughtException, countDownLatch));
+        handler.post(new RunnableC129933(c1Result, callable, c1CaughtException, countDownLatch));
         awaitUninterruptibly(countDownLatch);
-        if (c1CaughtException.e == null) {
+        if (c1CaughtException.f27618e == null) {
             return c1Result.value;
         }
-        RuntimeException runtimeException = new RuntimeException(c1CaughtException.e);
-        runtimeException.setStackTrace(concatStackTraces(c1CaughtException.e.getStackTrace(), runtimeException.getStackTrace()));
+        RuntimeException runtimeException = new RuntimeException(c1CaughtException.f27618e);
+        runtimeException.setStackTrace(concatStackTraces(c1CaughtException.f27618e.getStackTrace(), runtimeException.getStackTrace()));
         throw runtimeException;
     }
 
@@ -212,10 +214,10 @@ public class ThreadUtils {
     }
 
     public static void joinUninterruptibly(Thread thread) {
-        executeUninterruptibly(new AnonymousClass1(thread));
+        executeUninterruptibly(new C129911(thread));
     }
 
     public static void invokeAtFrontUninterruptibly(Handler handler, Runnable runnable) {
-        invokeAtFrontUninterruptibly(handler, new AnonymousClass4(runnable));
+        invokeAtFrontUninterruptibly(handler, new CallableC129944(runnable));
     }
 }

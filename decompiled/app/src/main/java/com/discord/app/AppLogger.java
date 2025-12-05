@@ -3,12 +3,12 @@ package com.discord.app;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.utilities.analytics.AnalyticsUtils;
 import com.discord.utilities.features.GrowthTeamFeatures;
-import d0.e0.g;
-import d0.z.d.m;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.functions.Function0;
+import p507d0.p513e0.KProperty3;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: AppLogger.kt */
 /* loaded from: classes.dex */
@@ -17,11 +17,11 @@ public final class AppLogger {
     /* renamed from: a, reason: from kotlin metadata */
     public boolean hasLoggedImpression;
 
-    /* renamed from: b, reason: collision with root package name and from kotlin metadata */
+    /* renamed from: b, reason: from kotlin metadata */
     public AnalyticsSchema previousAnalyticsSchema;
 
     /* renamed from: c, reason: from kotlin metadata */
-    public final a provider;
+    public final InterfaceC5455a provider;
 
     /* renamed from: d, reason: from kotlin metadata */
     public final AnalyticsUtils.Tracker tracker;
@@ -30,28 +30,30 @@ public final class AppLogger {
     public final boolean isImpressionLoggingEnabled;
 
     /* compiled from: AppLogger.kt */
-    public interface a {
-        LoggingConfig getLoggingConfig();
+    /* renamed from: com.discord.app.AppLogger$a */
+    public interface InterfaceC5455a {
+        AppLogger2 getLoggingConfig();
     }
 
-    public AppLogger(a aVar, AnalyticsUtils.Tracker tracker, boolean z2, int i) {
+    public AppLogger(InterfaceC5455a interfaceC5455a, AnalyticsUtils.Tracker tracker, boolean z2, int i) {
         AnalyticsUtils.Tracker companion = (i & 2) != 0 ? AnalyticsUtils.Tracker.INSTANCE.getInstance() : null;
         z2 = (i & 4) != 0 ? GrowthTeamFeatures.INSTANCE.isImpressionLoggingEnabled() : z2;
-        m.checkNotNullParameter(aVar, "provider");
-        m.checkNotNullParameter(companion, "tracker");
-        this.provider = aVar;
+        Intrinsics3.checkNotNullParameter(interfaceC5455a, "provider");
+        Intrinsics3.checkNotNullParameter(companion, "tracker");
+        this.provider = interfaceC5455a;
         this.tracker = companion;
         this.isImpressionLoggingEnabled = z2;
     }
 
-    public final void a(AnalyticsSchema analyticsSchema) {
+    /* renamed from: a */
+    public final void m8371a(AnalyticsSchema analyticsSchema) {
         Function0<AnalyticsSchema> function0;
         AnalyticsSchema analyticsSchemaInvoke;
         if (analyticsSchema != null) {
             this.tracker.track(analyticsSchema);
             return;
         }
-        LoggingConfig loggingConfig = this.provider.getLoggingConfig();
+        AppLogger2 loggingConfig = this.provider.getLoggingConfig();
         if (loggingConfig == null || (function0 = loggingConfig.impressionSchemaProvider) == null || (analyticsSchemaInvoke = function0.invoke()) == null) {
             return;
         }
@@ -59,14 +61,15 @@ public final class AppLogger {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:40:0x0070  */
+    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final synchronized void b() {
+    public final synchronized void m8372b() {
         AnalyticsSchema analyticsSchemaInvoke;
         boolean z2;
         if (this.isImpressionLoggingEnabled) {
-            LoggingConfig loggingConfig = this.provider.getLoggingConfig();
+            AppLogger2 loggingConfig = this.provider.getLoggingConfig();
             if (loggingConfig != null) {
                 Function0<AnalyticsSchema> function0 = loggingConfig.impressionSchemaProvider;
                 if (function0 == null || (analyticsSchemaInvoke = function0.invoke()) == null) {
@@ -78,19 +81,19 @@ public final class AppLogger {
                     if (this.hasLoggedImpression || z3) {
                         this.previousAnalyticsSchema = analyticsSchemaInvoke;
                         this.hasLoggedImpression = true;
-                        a(analyticsSchemaInvoke);
+                        m8371a(analyticsSchemaInvoke);
                         return;
                     }
                     return;
                 }
                 if (loggingConfig.autoLogImpressionOnChanged) {
-                    if (!loggingConfig.autoLogImpressionProperties.isEmpty() || !(!m.areEqual(r2, analyticsSchemaInvoke))) {
-                        List<g<?, ?>> list = loggingConfig.autoLogImpressionProperties;
+                    if (!loggingConfig.autoLogImpressionProperties.isEmpty() || !(!Intrinsics3.areEqual(r2, analyticsSchemaInvoke))) {
+                        List<KProperty3<?, ?>> list = loggingConfig.autoLogImpressionProperties;
                         if (!(list instanceof Collection) || !list.isEmpty()) {
                             Iterator<T> it = list.iterator();
                             while (it.hasNext()) {
-                                g gVar = (g) it.next();
-                                if ((!(gVar instanceof g) ? null : gVar) != null ? !m.areEqual(gVar.get(analyticsSchemaInvoke), gVar.get(r2)) : false) {
+                                KProperty3 kProperty3 = (KProperty3) it.next();
+                                if ((!(kProperty3 instanceof KProperty3) ? null : kProperty3) != null ? !Intrinsics3.areEqual(kProperty3.get(analyticsSchemaInvoke), kProperty3.get(r2)) : false) {
                                     z2 = true;
                                     break;
                                 }
@@ -105,7 +108,7 @@ public final class AppLogger {
                 }
                 this.previousAnalyticsSchema = analyticsSchemaInvoke;
                 this.hasLoggedImpression = true;
-                a(analyticsSchemaInvoke);
+                m8371a(analyticsSchemaInvoke);
                 return;
             }
         }

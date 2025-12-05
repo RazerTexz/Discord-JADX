@@ -6,21 +6,21 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 @SuppressLint({"BanParcelableUsage"})
 /* loaded from: classes.dex */
 public final class ActivityResult implements Parcelable {
 
     @NonNull
-    public static final Parcelable.Creator<ActivityResult> CREATOR = new AnonymousClass1();
+    public static final Parcelable.Creator<ActivityResult> CREATOR = new C00421();
 
     @Nullable
     private final Intent mData;
     private final int mResultCode;
 
-    /* renamed from: androidx.activity.result.ActivityResult$1, reason: invalid class name */
-    public class AnonymousClass1 implements Parcelable.Creator<ActivityResult> {
+    /* renamed from: androidx.activity.result.ActivityResult$1 */
+    public class C00421 implements Parcelable.Creator<ActivityResult> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ ActivityResult createFromParcel(@NonNull Parcel parcel) {
             return createFromParcel(parcel);
@@ -69,12 +69,12 @@ public final class ActivityResult implements Parcelable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ActivityResult{resultCode=");
-        sbU.append(resultCodeToString(this.mResultCode));
-        sbU.append(", data=");
-        sbU.append(this.mData);
-        sbU.append('}');
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ActivityResult{resultCode=");
+        sbM833U.append(resultCodeToString(this.mResultCode));
+        sbM833U.append(", data=");
+        sbM833U.append(this.mData);
+        sbM833U.append('}');
+        return sbM833U.toString();
     }
 
     @Override // android.os.Parcelable

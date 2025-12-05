@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSubscriptionAccountHoldStarted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSubscriptionAccountHoldStarted implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackSubscriptionAccountHoldStarted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long subscriptionId = null;
     private final Long subscriptionType = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackSubscriptionAccountHoldStarted implements Ana
             return false;
         }
         TrackSubscriptionAccountHoldStarted trackSubscriptionAccountHoldStarted = (TrackSubscriptionAccountHoldStarted) other;
-        return m.areEqual(this.subscriptionId, trackSubscriptionAccountHoldStarted.subscriptionId) && m.areEqual(this.subscriptionType, trackSubscriptionAccountHoldStarted.subscriptionType) && m.areEqual(this.paymentGatewayPlanId, trackSubscriptionAccountHoldStarted.paymentGatewayPlanId) && m.areEqual(this.planId, trackSubscriptionAccountHoldStarted.planId) && m.areEqual(this.paymentGateway, trackSubscriptionAccountHoldStarted.paymentGateway) && m.areEqual(this.createdAt, trackSubscriptionAccountHoldStarted.createdAt) && m.areEqual(this.currentPeriodStart, trackSubscriptionAccountHoldStarted.currentPeriodStart) && m.areEqual(this.currentPeriodEnd, trackSubscriptionAccountHoldStarted.currentPeriodEnd);
+        return Intrinsics3.areEqual(this.subscriptionId, trackSubscriptionAccountHoldStarted.subscriptionId) && Intrinsics3.areEqual(this.subscriptionType, trackSubscriptionAccountHoldStarted.subscriptionType) && Intrinsics3.areEqual(this.paymentGatewayPlanId, trackSubscriptionAccountHoldStarted.paymentGatewayPlanId) && Intrinsics3.areEqual(this.planId, trackSubscriptionAccountHoldStarted.planId) && Intrinsics3.areEqual(this.paymentGateway, trackSubscriptionAccountHoldStarted.paymentGateway) && Intrinsics3.areEqual(this.createdAt, trackSubscriptionAccountHoldStarted.createdAt) && Intrinsics3.areEqual(this.currentPeriodStart, trackSubscriptionAccountHoldStarted.currentPeriodStart) && Intrinsics3.areEqual(this.currentPeriodEnd, trackSubscriptionAccountHoldStarted.currentPeriodEnd);
     }
 
     public int hashCode() {
@@ -57,21 +57,21 @@ public final /* data */ class TrackSubscriptionAccountHoldStarted implements Ana
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSubscriptionAccountHoldStarted(subscriptionId=");
-        sbU.append(this.subscriptionId);
-        sbU.append(", subscriptionType=");
-        sbU.append(this.subscriptionType);
-        sbU.append(", paymentGatewayPlanId=");
-        sbU.append(this.paymentGatewayPlanId);
-        sbU.append(", planId=");
-        sbU.append(this.planId);
-        sbU.append(", paymentGateway=");
-        sbU.append(this.paymentGateway);
-        sbU.append(", createdAt=");
-        sbU.append(this.createdAt);
-        sbU.append(", currentPeriodStart=");
-        sbU.append(this.currentPeriodStart);
-        sbU.append(", currentPeriodEnd=");
-        return a.G(sbU, this.currentPeriodEnd, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSubscriptionAccountHoldStarted(subscriptionId=");
+        sbM833U.append(this.subscriptionId);
+        sbM833U.append(", subscriptionType=");
+        sbM833U.append(this.subscriptionType);
+        sbM833U.append(", paymentGatewayPlanId=");
+        sbM833U.append(this.paymentGatewayPlanId);
+        sbM833U.append(", planId=");
+        sbM833U.append(this.planId);
+        sbM833U.append(", paymentGateway=");
+        sbM833U.append(this.paymentGateway);
+        sbM833U.append(", createdAt=");
+        sbM833U.append(this.createdAt);
+        sbM833U.append(", currentPeriodStart=");
+        sbM833U.append(this.currentPeriodStart);
+        sbM833U.append(", currentPeriodEnd=");
+        return outline.m819G(sbM833U, this.currentPeriodEnd, ")");
     }
 }

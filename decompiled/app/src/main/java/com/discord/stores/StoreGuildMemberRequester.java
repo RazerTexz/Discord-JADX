@@ -6,8 +6,6 @@ import com.discord.api.user.User;
 import com.discord.models.member.GuildMember;
 import com.discord.models.message.Message;
 import com.discord.utilities.lazy.requester.GuildMemberRequestManager;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -17,6 +15,9 @@ import java.util.Map;
 import java.util.TreeMap;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: StoreGuildMemberRequester.kt */
 /* loaded from: classes2.dex */
@@ -28,16 +29,16 @@ public final class StoreGuildMemberRequester extends Store {
     private final GuildMemberRequestManager requestManager;
 
     /* compiled from: StoreGuildMemberRequester.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberRequester$performQueuedRequests$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreGuildMemberRequester$performQueuedRequests$1 */
+    public static final class C60331 extends Lambda implements Function0<Unit> {
+        public C60331() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -47,13 +48,13 @@ public final class StoreGuildMemberRequester extends Store {
     }
 
     /* compiled from: StoreGuildMemberRequester.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberRequester$queueRequest$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGuildMemberRequester$queueRequest$1 */
+    public static final class C60341 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2) {
+        public C60341(long j, long j2) {
             super(0);
             this.$guildId = j;
             this.$userId = j2;
@@ -62,7 +63,7 @@ public final class StoreGuildMemberRequester extends Store {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -72,11 +73,11 @@ public final class StoreGuildMemberRequester extends Store {
     }
 
     public StoreGuildMemberRequester(StoreStream storeStream, Dispatcher dispatcher) {
-        m.checkNotNullParameter(storeStream, "collector");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(storeStream, "collector");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
         this.collector = storeStream;
         this.dispatcher = dispatcher;
-        this.requestManager = new GuildMemberRequestManager(new StoreGuildMemberRequester$requestManager$1(this), new StoreGuildMemberRequester$requestManager$2(this));
+        this.requestManager = new GuildMemberRequestManager(new StoreGuildMemberRequester2(this), new StoreGuildMemberRequester3(this));
         this.channelPendingMessages = new TreeMap<>();
     }
 
@@ -92,13 +93,13 @@ public final class StoreGuildMemberRequester extends Store {
         storeGuildMemberRequester.sendRequests(j, list);
     }
 
-    @StoreThread
+    @Store3
     private final boolean guildMemberExists(long guildId, long userId) {
         Map<Long, GuildMember> map = this.collector.getGuilds().getGuildMembersComputedInternal$app_productionGoogleRelease().get(Long.valueOf(guildId));
         return (map != null ? map.get(Long.valueOf(userId)) : null) != null;
     }
 
-    @StoreThread
+    @Store3
     private final void requestForMessages(long guildId, Iterable<Message> messages) {
         for (Message message : messages) {
             User author = message.getAuthor();
@@ -115,12 +116,12 @@ public final class StoreGuildMemberRequester extends Store {
         }
     }
 
-    @StoreThread
+    @Store3
     private final void sendRequests(long guildId, List<Long> userIds) {
         StoreGatewayConnection.requestGuildMembers$default(this.collector.getGatewaySocket(), guildId, null, userIds, null, 2, null);
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen() {
         this.isConnected = true;
         this.requestManager.reset();
@@ -130,7 +131,7 @@ public final class StoreGuildMemberRequester extends Store {
         this.channelPendingMessages.clear();
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionReady(boolean isConnected) {
         this.isConnected = isConnected;
         if (isConnected) {
@@ -138,13 +139,13 @@ public final class StoreGuildMemberRequester extends Store {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildMembersChunk(GuildMembersChunk chunk) {
-        m.checkNotNullParameter(chunk, "chunk");
+        Intrinsics3.checkNotNullParameter(chunk, "chunk");
         long guildId = chunk.getGuildId();
-        List<com.discord.api.guildmember.GuildMember> listB = chunk.b();
-        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listB, 10));
-        Iterator<T> it = listB.iterator();
+        List<com.discord.api.guildmember.GuildMember> listM7932b = chunk.m7932b();
+        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listM7932b, 10));
+        Iterator<T> it = listM7932b.iterator();
         while (it.hasNext()) {
             arrayList.add(((com.discord.api.guildmember.GuildMember) it.next()).getUser());
         }
@@ -152,18 +153,18 @@ public final class StoreGuildMemberRequester extends Store {
         while (it2.hasNext()) {
             this.requestManager.acknowledge(guildId, ((User) it2.next()).getId());
         }
-        List<Long> listC = chunk.c();
-        if (listC != null) {
-            Iterator<T> it3 = listC.iterator();
+        List<Long> listM7933c = chunk.m7933c();
+        if (listM7933c != null) {
+            Iterator<T> it3 = listM7933c.iterator();
             while (it3.hasNext()) {
                 this.requestManager.acknowledge(guildId, ((Number) it3.next()).longValue());
             }
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleLoadMessages(long channelId, Collection<Message> messages) {
-        m.checkNotNullParameter(messages, "messages");
+        Intrinsics3.checkNotNullParameter(messages, "messages");
         if (!this.isConnected) {
             Map map = this.channelPendingMessages.get(Long.valueOf(channelId));
             if (map == null) {
@@ -189,10 +190,10 @@ public final class StoreGuildMemberRequester extends Store {
     }
 
     public final void performQueuedRequests() {
-        this.dispatcher.schedule(new AnonymousClass1());
+        this.dispatcher.schedule(new C60331());
     }
 
     public final void queueRequest(long guildId, long userId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId, userId));
+        this.dispatcher.schedule(new C60341(guildId, userId));
     }
 }

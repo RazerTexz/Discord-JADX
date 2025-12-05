@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackTextInVoiceOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackTextInVoiceOpened implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver, TrackOverlayClientMetadataReceiver {
+public final /* data */ class TrackTextInVoiceOpened implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -22,14 +22,15 @@ public final /* data */ class TrackTextInVoiceOpened implements AnalyticsSchema,
     private final Boolean channelIsNsfw = null;
     private final transient String analyticsSchemaTypeName = "text_in_voice_opened";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -41,7 +42,7 @@ public final /* data */ class TrackTextInVoiceOpened implements AnalyticsSchema,
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackTextInVoiceOpened) && m.areEqual(this.channelIsNsfw, ((TrackTextInVoiceOpened) other).channelIsNsfw);
+            return (other instanceof TrackTextInVoiceOpened) && Intrinsics3.areEqual(this.channelIsNsfw, ((TrackTextInVoiceOpened) other).channelIsNsfw);
         }
         return true;
     }
@@ -55,6 +56,6 @@ public final /* data */ class TrackTextInVoiceOpened implements AnalyticsSchema,
     }
 
     public String toString() {
-        return a.D(a.U("TrackTextInVoiceOpened(channelIsNsfw="), this.channelIsNsfw, ")");
+        return outline.m816D(outline.m833U("TrackTextInVoiceOpened(channelIsNsfw="), this.channelIsNsfw, ")");
     }
 }

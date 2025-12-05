@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.core.view.OneShotPreDrawListener;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.user.User;
@@ -24,8 +24,8 @@ import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.user.SettingsMemberView;
 import com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites;
-import d0.z.d.m;
 import java.util.Arrays;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
 /* loaded from: classes2.dex */
@@ -35,11 +35,11 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
     private String currentInviteCode;
 
     /* compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
-    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvitesListItem$onConfigure$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvitesListItem$onConfigure$1 */
+    public static final class ViewOnClickListenerC95871 implements View.OnClickListener {
         public final /* synthetic */ WidgetServerSettingsInstantInvites.Model.InviteItem $data;
 
-        public AnonymousClass1(WidgetServerSettingsInstantInvites.Model.InviteItem inviteItem) {
+        public ViewOnClickListenerC95871(WidgetServerSettingsInstantInvites.Model.InviteItem inviteItem) {
             this.$data = inviteItem;
         }
 
@@ -50,12 +50,12 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
     }
 
     /* compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
-    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvitesListItem$setupExpirationTime$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends CountDownTimer {
+    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvitesListItem$setupExpirationTime$1 */
+    public static final class CountDownTimerC95881 extends CountDownTimer {
         public final /* synthetic */ ModelInvite $invite;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ModelInvite modelInvite, long j, long j2) {
+        public CountDownTimerC95881(ModelInvite modelInvite, long j, long j2) {
             super(j, j2);
             this.$invite = modelInvite;
         }
@@ -74,47 +74,47 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetServerSettingsInstantInvitesListItem(WidgetServerSettingsInstantInvites.Adapter adapter) {
-        super(R.layout.widget_server_settings_instant_invite_list_item, adapter);
-        m.checkNotNullParameter(adapter, "adapter");
+        super(C5419R.layout.widget_server_settings_instant_invite_list_item, adapter);
+        Intrinsics3.checkNotNullParameter(adapter, "adapter");
         View view = this.itemView;
-        int i = R.id.invite_barrier_1;
-        Barrier barrier = (Barrier) view.findViewById(R.id.invite_barrier_1);
+        int i = C5419R.id.invite_barrier_1;
+        Barrier barrier = (Barrier) view.findViewById(C5419R.id.invite_barrier_1);
         if (barrier != null) {
-            i = R.id.invite_barrier_2;
-            Barrier barrier2 = (Barrier) view.findViewById(R.id.invite_barrier_2);
+            i = C5419R.id.invite_barrier_2;
+            Barrier barrier2 = (Barrier) view.findViewById(C5419R.id.invite_barrier_2);
             if (barrier2 != null) {
-                i = R.id.invite_channel;
-                TextView textView = (TextView) view.findViewById(R.id.invite_channel);
+                i = C5419R.id.invite_channel;
+                TextView textView = (TextView) view.findViewById(C5419R.id.invite_channel);
                 if (textView != null) {
-                    i = R.id.invite_code;
-                    TextView textView2 = (TextView) view.findViewById(R.id.invite_code);
+                    i = C5419R.id.invite_code;
+                    TextView textView2 = (TextView) view.findViewById(C5419R.id.invite_code);
                     if (textView2 != null) {
-                        i = R.id.invite_container;
-                        LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.invite_container);
+                        i = C5419R.id.invite_container;
+                        LinearLayout linearLayout = (LinearLayout) view.findViewById(C5419R.id.invite_container);
                         if (linearLayout != null) {
-                            i = R.id.invite_divider;
-                            FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.invite_divider);
+                            i = C5419R.id.invite_divider;
+                            FrameLayout frameLayout = (FrameLayout) view.findViewById(C5419R.id.invite_divider);
                             if (frameLayout != null) {
-                                i = R.id.invite_expiration_container;
-                                LinearLayout linearLayout2 = (LinearLayout) view.findViewById(R.id.invite_expiration_container);
+                                i = C5419R.id.invite_expiration_container;
+                                LinearLayout linearLayout2 = (LinearLayout) view.findViewById(C5419R.id.invite_expiration_container);
                                 if (linearLayout2 != null) {
-                                    i = R.id.invite_expiration_time;
-                                    TextView textView3 = (TextView) view.findViewById(R.id.invite_expiration_time);
+                                    i = C5419R.id.invite_expiration_time;
+                                    TextView textView3 = (TextView) view.findViewById(C5419R.id.invite_expiration_time);
                                     if (textView3 != null) {
-                                        i = R.id.invite_settings_icon;
-                                        ImageView imageView = (ImageView) view.findViewById(R.id.invite_settings_icon);
+                                        i = C5419R.id.invite_settings_icon;
+                                        ImageView imageView = (ImageView) view.findViewById(C5419R.id.invite_settings_icon);
                                         if (imageView != null) {
-                                            i = R.id.invite_uses;
-                                            TextView textView4 = (TextView) view.findViewById(R.id.invite_uses);
+                                            i = C5419R.id.invite_uses;
+                                            TextView textView4 = (TextView) view.findViewById(C5419R.id.invite_uses);
                                             if (textView4 != null) {
-                                                i = R.id.invite_uses_container;
-                                                LinearLayout linearLayout3 = (LinearLayout) view.findViewById(R.id.invite_uses_container);
+                                                i = C5419R.id.invite_uses_container;
+                                                LinearLayout linearLayout3 = (LinearLayout) view.findViewById(C5419R.id.invite_uses_container);
                                                 if (linearLayout3 != null) {
-                                                    i = R.id.settings_member;
-                                                    SettingsMemberView settingsMemberView = (SettingsMemberView) view.findViewById(R.id.settings_member);
+                                                    i = C5419R.id.settings_member;
+                                                    SettingsMemberView settingsMemberView = (SettingsMemberView) view.findViewById(C5419R.id.settings_member);
                                                     if (settingsMemberView != null) {
                                                         WidgetServerSettingsInstantInviteListItemBinding widgetServerSettingsInstantInviteListItemBinding = new WidgetServerSettingsInstantInviteListItemBinding((CardView) view, barrier, barrier2, textView, textView2, linearLayout, frameLayout, linearLayout2, textView3, imageView, textView4, linearLayout3, settingsMemberView);
-                                                        m.checkNotNullExpressionValue(widgetServerSettingsInstantInviteListItemBinding, "WidgetServerSettingsInst…temBinding.bind(itemView)");
+                                                        Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsInstantInviteListItemBinding, "WidgetServerSettingsInst…temBinding.bind(itemView)");
                                                         this.binding = widgetServerSettingsInstantInviteListItemBinding;
                                                         return;
                                                     }
@@ -167,22 +167,22 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
         long j2 = 24;
         int i3 = (int) ((timeToExpiration / 3600000) % j2);
         int i4 = (int) ((timeToExpiration / 86400000) % j2);
-        TextView textView = this.binding.d;
-        m.checkNotNullExpressionValue(textView, "binding.inviteExpirationTime");
+        TextView textView = this.binding.f17684d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.inviteExpirationTime");
         String str = String.format("%02d:%02d:%02d:%02d", Arrays.copyOf(new Object[]{Integer.valueOf(i4), Integer.valueOf(i3), Integer.valueOf(i2), Integer.valueOf(i)}, 4));
-        m.checkNotNullExpressionValue(str, "java.lang.String.format(this, *args)");
+        Intrinsics3.checkNotNullExpressionValue(str, "java.lang.String.format(this, *args)");
         textView.setText(str);
-        TextView textView2 = this.binding.d;
-        m.checkNotNullExpressionValue(textView2, "binding.inviteExpirationTime");
-        textView2.setTextColor(ColorCompat.getColor(textView2, R.color.status_green_500_dark));
+        TextView textView2 = this.binding.f17684d;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.inviteExpirationTime");
+        textView2.setTextColor(ColorCompat.getColor(textView2, C5419R.color.status_green_500_dark));
     }
 
     private final void setupExpirationTime(ModelInvite invite) {
         if (invite.getMaxAge() == 0) {
-            this.binding.d.setText(R.string.max_age_never);
-            TextView textView = this.binding.d;
-            m.checkNotNullExpressionValue(textView, "binding.inviteExpirationTime");
-            textView.setTextColor(ColorCompat.getColor(textView, R.color.grey_1));
+            this.binding.f17684d.setText(C5419R.string.max_age_never);
+            TextView textView = this.binding.f17684d;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.inviteExpirationTime");
+            textView.setTextColor(ColorCompat.getColor(textView, C5419R.color.grey_1));
             cancelTimer();
             return;
         }
@@ -191,14 +191,14 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
             cancelTimer();
             return;
         }
-        if ((!m.areEqual(invite.code, this.currentInviteCode)) || this.currentInviteCode == null) {
+        if ((!Intrinsics3.areEqual(invite.code, this.currentInviteCode)) || this.currentInviteCode == null) {
             setCountdownText(invite.getTimeToExpirationMillis());
             cancelTimer();
             this.currentInviteCode = invite.code;
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1(invite, invite.getTimeToExpirationMillis(), 1000L);
-            this.countdownTimer = anonymousClass1;
-            if (anonymousClass1 != null) {
-                anonymousClass1.start();
+            CountDownTimerC95881 countDownTimerC95881 = new CountDownTimerC95881(invite, invite.getTimeToExpirationMillis(), 1000L);
+            this.countdownTimer = countDownTimerC95881;
+            if (countDownTimerC95881 != null) {
+                countDownTimerC95881.start();
             }
         }
     }
@@ -210,46 +210,46 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
 
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, WidgetServerSettingsInstantInvites.Model.InviteItem data) {
-        String strD;
-        m.checkNotNullParameter(data, "data");
+        String strM7680d;
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         User inviter = data.getInvite().getInviter();
-        this.binding.a.setOnClickListener(new AnonymousClass1(data));
-        TextView textView = this.binding.c;
-        m.checkNotNullExpressionValue(textView, "binding.inviteCode");
+        this.binding.f17681a.setOnClickListener(new ViewOnClickListenerC95871(data));
+        TextView textView = this.binding.f17683c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.inviteCode");
         textView.setText(data.getInvite().code);
-        TextView textView2 = this.binding.e;
-        m.checkNotNullExpressionValue(textView2, "binding.inviteUses");
+        TextView textView2 = this.binding.f17685e;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.inviteUses");
         textView2.setText(getUsesText(data.getInvite()));
-        TextView textView3 = this.binding.f2574b;
-        m.checkNotNullExpressionValue(textView3, "binding.inviteChannel");
+        TextView textView3 = this.binding.f17682b;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.inviteChannel");
         Channel channel = data.getInvite().getChannel();
         if (channel != null) {
-            TextView textView4 = this.binding.f2574b;
-            m.checkNotNullExpressionValue(textView4, "binding.inviteChannel");
+            TextView textView4 = this.binding.f17682b;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.inviteChannel");
             Context context = textView4.getContext();
-            m.checkNotNullExpressionValue(context, "binding.inviteChannel.context");
-            strD = ChannelUtils.d(channel, context, true);
+            Intrinsics3.checkNotNullExpressionValue(context, "binding.inviteChannel.context");
+            strM7680d = ChannelUtils.m7680d(channel, context, true);
         } else {
-            strD = null;
+            strM7680d = null;
         }
-        ViewExtensions.setTextAndVisibilityBy(textView3, strD);
-        SettingsMemberView settingsMemberView = this.binding.f;
-        m.checkNotNullExpressionValue(settingsMemberView, "binding.settingsMember");
+        ViewExtensions.setTextAndVisibilityBy(textView3, strM7680d);
+        SettingsMemberView settingsMemberView = this.binding.f17686f;
+        Intrinsics3.checkNotNullExpressionValue(settingsMemberView, "binding.settingsMember");
         settingsMemberView.setVisibility(inviter != null ? 0 : 8);
         if (inviter != null) {
-            this.binding.f.a(new CoreUser(inviter), data.getGuildMember());
-            SettingsMemberView settingsMemberView2 = this.binding.f;
-            m.checkNotNullExpressionValue(settingsMemberView2, "binding.settingsMember");
+            this.binding.f17686f.m8621a(new CoreUser(inviter), data.getGuildMember());
+            SettingsMemberView settingsMemberView2 = this.binding.f17686f;
+            Intrinsics3.checkNotNullExpressionValue(settingsMemberView2, "binding.settingsMember");
             settingsMemberView2.setVisibility(0);
         } else {
-            SettingsMemberView settingsMemberView3 = this.binding.f;
-            m.checkNotNullExpressionValue(settingsMemberView3, "binding.settingsMember");
+            SettingsMemberView settingsMemberView3 = this.binding.f17686f;
+            Intrinsics3.checkNotNullExpressionValue(settingsMemberView3, "binding.settingsMember");
             settingsMemberView3.setVisibility(8);
         }
         setupExpirationTime(data.getInvite());
-        TextView textView5 = this.binding.d;
-        m.checkNotNullExpressionValue(textView5, "binding.inviteExpirationTime");
-        m.checkNotNullExpressionValue(OneShotPreDrawListener.add(textView5, new WidgetServerSettingsInstantInvitesListItem$onConfigure$$inlined$doOnPreDraw$1(textView5)), "View.doOnPreDraw(\n    crossinline action: (view: View) -> Unit\n): OneShotPreDrawListener = OneShotPreDrawListener.add(this) { action(this) }");
+        TextView textView5 = this.binding.f17684d;
+        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.inviteExpirationTime");
+        Intrinsics3.checkNotNullExpressionValue(OneShotPreDrawListener.add(textView5, new RunnableC9586xe6575b2a(textView5)), "View.doOnPreDraw(\n    crossinline action: (view: View) -> Unit\n): OneShotPreDrawListener = OneShotPreDrawListener.add(this) { action(this) }");
     }
 }

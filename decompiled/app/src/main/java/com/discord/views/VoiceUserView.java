@@ -13,10 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.DimenRes;
 import androidx.annotation.MainThread;
 import androidx.annotation.Px;
-import b.a.i.j4;
-import b.a.y.g0;
-import b.a.y.h0;
-import b.a.y.i0;
+import com.discord.C5419R;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.models.member.GuildMember;
 import com.discord.stores.StoreVoiceParticipants;
@@ -26,26 +23,32 @@ import com.discord.utilities.images.MGImages;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
+import p007b.p008a.p025i.ViewVoiceUserBinding;
+import p007b.p008a.p062y.VoiceUserView2;
+import p007b.p008a.p062y.VoiceUserView3;
+import p007b.p008a.p062y.VoiceUserView4;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: VoiceUserView.kt */
 /* loaded from: classes2.dex */
 public final class VoiceUserView extends FrameLayout {
-    public static final /* synthetic */ int j = 0;
+
+    /* renamed from: j */
+    public static final /* synthetic */ int f19182j = 0;
 
     /* renamed from: k, reason: from kotlin metadata */
     public int defaultVoiceStateBackground;
 
     /* renamed from: l, reason: from kotlin metadata */
-    public final j4 binding;
+    public final ViewVoiceUserBinding binding;
 
     /* renamed from: m, reason: from kotlin metadata */
-    public a displayVoiceState;
+    public EnumC7097a displayVoiceState;
 
     /* renamed from: n, reason: from kotlin metadata */
     public final RingAnimator ringAnimator;
@@ -62,11 +65,12 @@ public final class VoiceUserView extends FrameLayout {
     /* renamed from: r, reason: from kotlin metadata */
     public boolean fadeWhenDisconnected;
 
-    /* renamed from: s, reason: collision with root package name and from kotlin metadata */
+    /* renamed from: s, reason: from kotlin metadata */
     public boolean animateAvatarWhenRinging;
 
     /* compiled from: VoiceUserView.kt */
-    public enum a {
+    /* renamed from: com.discord.views.VoiceUserView$a */
+    public enum EnumC7097a {
         CONNECTED,
         SPEAKING,
         MUTED,
@@ -75,11 +79,12 @@ public final class VoiceUserView extends FrameLayout {
     }
 
     /* compiled from: VoiceUserView.kt */
-    public static final class b extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.views.VoiceUserView$b */
+    public static final class C7098b extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ int $avatarSize;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public b(int i) {
+        public C7098b(int i) {
             super(1);
             this.$avatarSize = i;
         }
@@ -87,12 +92,12 @@ public final class VoiceUserView extends FrameLayout {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "$this$resizeLayoutParams");
+            Intrinsics3.checkNotNullParameter(view, "$this$resizeLayoutParams");
             if (view.getLayoutParams().width == this.$avatarSize && view.getLayoutParams().height == this.$avatarSize) {
                 return;
             }
@@ -105,11 +110,12 @@ public final class VoiceUserView extends FrameLayout {
     }
 
     /* compiled from: VoiceUserView.kt */
-    public static final class c extends o implements Function1<ImageRequestBuilder, Unit> {
+    /* renamed from: com.discord.views.VoiceUserView$c */
+    public static final class C7099c extends Lambda implements Function1<ImageRequestBuilder, Unit> {
         public final /* synthetic */ String $newAvatarUrl;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public c(String str) {
+        public C7099c(String str) {
             super(1);
             this.$newAvatarUrl = str;
         }
@@ -117,9 +123,9 @@ public final class VoiceUserView extends FrameLayout {
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(ImageRequestBuilder imageRequestBuilder) {
             ImageRequestBuilder imageRequestBuilder2 = imageRequestBuilder;
-            m.checkNotNullParameter(imageRequestBuilder2, "imageRequestBuilder");
-            imageRequestBuilder2.l = new i0(this);
-            return Unit.a;
+            Intrinsics3.checkNotNullParameter(imageRequestBuilder2, "imageRequestBuilder");
+            imageRequestBuilder2.f19623l = new VoiceUserView4(this);
+            return Unit.f27425a;
         }
     }
 
@@ -131,24 +137,24 @@ public final class VoiceUserView extends FrameLayout {
     public VoiceUserView(Context context, AttributeSet attributeSet, int i, int i2) {
         attributeSet = (i2 & 2) != 0 ? null : attributeSet;
         i = (i2 & 4) != 0 ? 0 : i;
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         super(context, attributeSet, i);
         this.defaultVoiceStateBackground = R.color.transparent;
-        LayoutInflater.from(context).inflate(com.discord.R.layout.view_voice_user, this);
-        int i3 = com.discord.R.id.voice_user_avatar;
-        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) findViewById(com.discord.R.id.voice_user_avatar);
+        LayoutInflater.from(context).inflate(C5419R.layout.view_voice_user, this);
+        int i3 = C5419R.id.voice_user_avatar;
+        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) findViewById(C5419R.id.voice_user_avatar);
         if (simpleDraweeView != null) {
-            i3 = com.discord.R.id.voice_user_name_display;
-            TextView textView = (TextView) findViewById(com.discord.R.id.voice_user_name_display);
+            i3 = C5419R.id.voice_user_name_display;
+            TextView textView = (TextView) findViewById(C5419R.id.voice_user_name_display);
             if (textView != null) {
-                j4 j4Var = new j4(this, simpleDraweeView, textView);
-                m.checkNotNullExpressionValue(j4Var, "ViewVoiceUserBinding.inf…ater.from(context), this)");
-                this.binding = j4Var;
-                this.ringAnimator = new RingAnimator(this, new h0(this));
-                this.onBitmapLoadedListener = g0.j;
+                ViewVoiceUserBinding viewVoiceUserBinding = new ViewVoiceUserBinding(this, simpleDraweeView, textView);
+                Intrinsics3.checkNotNullExpressionValue(viewVoiceUserBinding, "ViewVoiceUserBinding.inf…ater.from(context), this)");
+                this.binding = viewVoiceUserBinding;
+                this.ringAnimator = new RingAnimator(this, new VoiceUserView3(this));
+                this.onBitmapLoadedListener = VoiceUserView2.f2025j;
                 if (attributeSet != null) {
-                    TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, com.discord.R.a.VoiceUserView, 0, 0);
-                    m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…able.VoiceUserView, 0, 0)");
+                    TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C5419R.a.VoiceUserView, 0, 0);
+                    Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…able.VoiceUserView, 0, 0)");
                     int dimension = (int) typedArrayObtainStyledAttributes.getDimension(1, 0.0f);
                     boolean z2 = typedArrayObtainStyledAttributes.getBoolean(2, false);
                     boolean z3 = typedArrayObtainStyledAttributes.getBoolean(0, false);
@@ -168,13 +174,14 @@ public final class VoiceUserView extends FrameLayout {
 
     private final void setVoiceState(StoreVoiceParticipants.VoiceUser voiceUser) {
         VoiceState voiceState = voiceUser.getVoiceState();
-        setVoiceState(voiceUser.getIsSpeaking() ? a.SPEAKING : voiceUser.isRinging() ? a.RINGING : !voiceUser.isConnected() ? a.DISCONNECTED : voiceState != null && (voiceState.getSelfMute() || voiceState.getMute() || voiceState.getSuppress()) ? a.MUTED : a.CONNECTED);
+        setVoiceState(voiceUser.getIsSpeaking() ? EnumC7097a.SPEAKING : voiceUser.isRinging() ? EnumC7097a.RINGING : !voiceUser.isConnected() ? EnumC7097a.DISCONNECTED : voiceState != null && (voiceState.getSelfMute() || voiceState.getMute() || voiceState.getSuppress()) ? EnumC7097a.MUTED : EnumC7097a.CONNECTED);
     }
 
     @MainThread
-    public final void a(StoreVoiceParticipants.VoiceUser voiceUser, @DimenRes int sizeDimenRes) {
-        m.checkNotNullParameter(voiceUser, "voiceUser");
-        if (m.areEqual(this.voiceUser, voiceUser)) {
+    /* renamed from: a */
+    public final void m8570a(StoreVoiceParticipants.VoiceUser voiceUser, @DimenRes int sizeDimenRes) {
+        Intrinsics3.checkNotNullParameter(voiceUser, "voiceUser");
+        if (Intrinsics3.areEqual(this.voiceUser, voiceUser)) {
             return;
         }
         this.voiceUser = voiceUser;
@@ -184,14 +191,14 @@ public final class VoiceUserView extends FrameLayout {
         IconUtils iconUtils = IconUtils.INSTANCE;
         StoreVoiceParticipants.VoiceUser voiceUser2 = this.voiceUser;
         String forGuildMemberOrUser$default = IconUtils.getForGuildMemberOrUser$default(iconUtils, voiceUser2 != null ? voiceUser2.getUser() : null, guildMember, numValueOf, false, 8, null);
-        if (!m.areEqual(this.prevAvatarUrl, forGuildMemberOrUser$default)) {
+        if (!Intrinsics3.areEqual(this.prevAvatarUrl, forGuildMemberOrUser$default)) {
             this.prevAvatarUrl = forGuildMemberOrUser$default;
-            SimpleDraweeView simpleDraweeView = this.binding.f141b;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
-            IconUtils.setIcon$default(simpleDraweeView, forGuildMemberOrUser$default, sizeDimenRes, new c(forGuildMemberOrUser$default), (MGImages.ChangeDetector) null, 16, (Object) null);
+            SimpleDraweeView simpleDraweeView = this.binding.f980b;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
+            IconUtils.setIcon$default(simpleDraweeView, forGuildMemberOrUser$default, sizeDimenRes, new C7099c(forGuildMemberOrUser$default), (MGImages.ChangeDetector) null, 16, (Object) null);
         }
-        TextView textView = this.binding.c;
-        m.checkNotNullExpressionValue(textView, "binding.voiceUserNameDisplay");
+        TextView textView = this.binding.f981c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserNameDisplay");
         textView.setText(voiceUser.getDisplayName());
         setVoiceState(voiceUser);
     }
@@ -203,13 +210,13 @@ public final class VoiceUserView extends FrameLayout {
 
     @MainThread
     public final void setAvatarSize(int avatarSize) {
-        b bVar = new b(avatarSize);
-        SimpleDraweeView simpleDraweeView = this.binding.f141b;
-        m.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
-        bVar.invoke2((View) simpleDraweeView);
-        TextView textView = this.binding.c;
-        m.checkNotNullExpressionValue(textView, "binding.voiceUserNameDisplay");
-        bVar.invoke2((View) textView);
+        C7098b c7098b = new C7098b(avatarSize);
+        SimpleDraweeView simpleDraweeView = this.binding.f980b;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
+        c7098b.invoke2((View) simpleDraweeView);
+        TextView textView = this.binding.f981c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserNameDisplay");
+        c7098b.invoke2((View) textView);
         requestLayout();
     }
 
@@ -223,16 +230,16 @@ public final class VoiceUserView extends FrameLayout {
     }
 
     public final void setOnBitmapLoadedListener(Function2<? super Bitmap, ? super String, Unit> onBitmapLoadedListener) {
-        m.checkNotNullParameter(onBitmapLoadedListener, "onBitmapLoadedListener");
+        Intrinsics3.checkNotNullParameter(onBitmapLoadedListener, "onBitmapLoadedListener");
         this.onBitmapLoadedListener = onBitmapLoadedListener;
     }
 
     @MainThread
     public final void setRingMargin(@Px int size) {
-        SimpleDraweeView simpleDraweeView = this.binding.f141b;
-        m.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
-        SimpleDraweeView simpleDraweeView2 = this.binding.f141b;
-        m.checkNotNullExpressionValue(simpleDraweeView2, "binding.voiceUserAvatar");
+        SimpleDraweeView simpleDraweeView = this.binding.f980b;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
+        SimpleDraweeView simpleDraweeView2 = this.binding.f980b;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.voiceUserAvatar");
         ViewGroup.LayoutParams layoutParams = simpleDraweeView2.getLayoutParams();
         Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams");
         FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) layoutParams;
@@ -246,24 +253,24 @@ public final class VoiceUserView extends FrameLayout {
         boolean z2 = isSelected() != selected;
         super.setSelected(selected);
         if (z2) {
-            ViewExtensions.fadeBy$default(this.binding.c, isSelected(), 0L, 2, null);
+            ViewExtensions.fadeBy$default(this.binding.f981c, isSelected(), 0L, 2, null);
         }
     }
 
     @MainThread
     public final void setVoiceUser(StoreVoiceParticipants.VoiceUser voiceUser) {
-        a(voiceUser, com.discord.R.dimen.avatar_size_unrestricted);
+        m8570a(voiceUser, C5419R.dimen.avatar_size_unrestricted);
     }
 
-    private final void setVoiceState(a displayVoiceState) {
+    private final void setVoiceState(EnumC7097a displayVoiceState) {
         if (displayVoiceState == this.displayVoiceState) {
             return;
         }
         this.displayVoiceState = displayVoiceState;
-        setBackgroundResource(displayVoiceState.ordinal() != 1 ? this.defaultVoiceStateBackground : com.discord.R.drawable.drawable_voice_user_background_speaking);
-        float f = (displayVoiceState == a.DISCONNECTED && this.fadeWhenDisconnected) ? 0.3f : 1.0f;
-        SimpleDraweeView simpleDraweeView = this.binding.f141b;
-        m.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
+        setBackgroundResource(displayVoiceState.ordinal() != 1 ? this.defaultVoiceStateBackground : C5419R.drawable.drawable_voice_user_background_speaking);
+        float f = (displayVoiceState == EnumC7097a.DISCONNECTED && this.fadeWhenDisconnected) ? 0.3f : 1.0f;
+        SimpleDraweeView simpleDraweeView = this.binding.f980b;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
         simpleDraweeView.setAlpha(f);
         setAlpha(f);
         this.ringAnimator.onUpdate();

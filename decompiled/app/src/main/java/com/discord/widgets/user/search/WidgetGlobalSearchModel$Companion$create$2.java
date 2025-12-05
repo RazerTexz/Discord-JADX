@@ -1,26 +1,28 @@
 package com.discord.widgets.user.search;
 
 import android.annotation.SuppressLint;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.models.member.GuildMember;
 import com.discord.models.presence.Presence;
 import com.discord.models.user.User;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import kotlin.jvm.functions.Function3;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGlobalSearchModel$Companion$create$2 extends o implements Function3<User, String, Channel, WidgetGlobalSearchModel.ItemUser> {
+public final class WidgetGlobalSearchModel$Companion$create$2 extends Lambda implements Function3<User, String, Channel, WidgetGlobalSearchModel.ItemUser> {
     public final /* synthetic */ WidgetGlobalSearchModel.ChannelContext $channelContext;
     public final /* synthetic */ WidgetGlobalSearchModel.SearchContext $searchContext;
     public final /* synthetic */ WidgetGlobalSearchModel.UsersContext $usersContext;
@@ -50,8 +52,8 @@ public final class WidgetGlobalSearchModel$Companion$create$2 extends o implemen
     public final WidgetGlobalSearchModel.ItemUser invoke2(User user, String str, Channel channel) {
         String username;
         Integer num;
-        m.checkNotNullParameter(user, "$this$toItemUser");
-        m.checkNotNullParameter(str, "userFilter");
+        Intrinsics3.checkNotNullParameter(user, "$this$toItemUser");
+        Intrinsics3.checkNotNullParameter(str, "userFilter");
         Collection<Map<Long, GuildMember>> collectionValues = this.$usersContext.getMembers().values();
         ArrayList arrayList = new ArrayList();
         Iterator<T> it = collectionValues.iterator();
@@ -59,13 +61,13 @@ public final class WidgetGlobalSearchModel$Companion$create$2 extends o implemen
             if (!it.hasNext()) {
                 break;
             }
-            GuildMember guildMember = (GuildMember) a.f(user, (Map) it.next());
+            GuildMember guildMember = (GuildMember) outline.m849f(user, (Map) it.next());
             String nick = guildMember != null ? guildMember.getNick() : null;
             if (nick != null) {
                 arrayList.add(nick);
             }
         }
-        List listDistinct = u.distinct(arrayList);
+        List listDistinct = _Collections.distinct(arrayList);
         ArrayList arrayList2 = new ArrayList();
         Iterator it2 = listDistinct.iterator();
         while (it2.hasNext()) {
@@ -92,10 +94,10 @@ public final class WidgetGlobalSearchModel$Companion$create$2 extends o implemen
         WidgetGlobalSearchModel.MatchedResult fuzzyMatchedResult2 = companion.toFuzzyMatchedResult(username, str);
         if (matchedResult2 == null) {
             if (!arrayList2.isEmpty()) {
-                fuzzyMatchedResult2 = (WidgetGlobalSearchModel.MatchedResult) u.first((List) arrayList2);
+                fuzzyMatchedResult2 = (WidgetGlobalSearchModel.MatchedResult) _Collections.first((List) arrayList2);
             } else if (fuzzyMatchedResult2 == null) {
                 if (!arrayList3.isEmpty()) {
-                    fuzzyMatchedResult2 = (WidgetGlobalSearchModel.MatchedResult) u.first((List) arrayList3);
+                    fuzzyMatchedResult2 = (WidgetGlobalSearchModel.MatchedResult) _Collections.first((List) arrayList3);
                 } else {
                     matchedResult2 = null;
                 }
@@ -105,20 +107,20 @@ public final class WidgetGlobalSearchModel$Companion$create$2 extends o implemen
         if (matchedResult2 == null) {
             return null;
         }
-        Integer num2 = (Integer) a.f(user, this.$usersContext.getRelationships());
+        Integer num2 = (Integer) outline.m849f(user, this.$usersContext.getRelationships());
         boolean z2 = num2 != null && num2.intValue() == 1;
-        List listListOf = d0.t.m.listOf(user.getUsername() + UserUtils.INSTANCE.getDiscriminatorWithPadding(user));
-        ArrayList arrayList4 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList2, 10));
+        List listListOf = CollectionsJVM.listOf(user.getUsername() + UserUtils.INSTANCE.getDiscriminatorWithPadding(user));
+        ArrayList arrayList4 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList2, 10));
         Iterator it4 = arrayList2.iterator();
         while (it4.hasNext()) {
             arrayList4.add(((WidgetGlobalSearchModel.MatchedResult) it4.next()).getValue());
         }
-        List listPlus = u.plus((Collection) listListOf, (Iterable) arrayList4);
-        ArrayList arrayList5 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList3, 10));
+        List listPlus = _Collections.plus((Collection) listListOf, (Iterable) arrayList4);
+        ArrayList arrayList5 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList3, 10));
         Iterator it5 = arrayList3.iterator();
         while (it5.hasNext()) {
             arrayList5.add(((WidgetGlobalSearchModel.MatchedResult) it5.next()).getValue());
         }
-        return new WidgetGlobalSearchModel.ItemUser(matchedResult2, user, u.distinct(u.plus((Collection) listPlus, (Iterable) arrayList5)), z2, (Presence) a.f(user, this.$usersContext.getPresences()), channel, (channel == null || (num = (Integer) a.d(channel, this.$searchContext.getMentionCounts())) == null) ? 0 : num.intValue(), channel != null ? this.$channelContext.getUnreadChannelIds().contains(Long.valueOf(channel.getId())) : false);
+        return new WidgetGlobalSearchModel.ItemUser(matchedResult2, user, _Collections.distinct(_Collections.plus((Collection) listPlus, (Iterable) arrayList5)), z2, (Presence) outline.m849f(user, this.$usersContext.getPresences()), channel, (channel == null || (num = (Integer) outline.m845d(channel, this.$searchContext.getMentionCounts())) == null) ? 0 : num.intValue(), channel != null ? this.$channelContext.getUnreadChannelIds().contains(Long.valueOf(channel.getId())) : false);
     }
 }

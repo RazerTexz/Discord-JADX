@@ -1,5 +1,6 @@
 package androidx.appcompat.view.menu;
 
+import android.R;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Parcelable;
@@ -14,14 +15,14 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import androidx.appcompat.R;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.view.menu.MenuPresenter;
 import androidx.appcompat.widget.MenuPopupWindow;
 import androidx.core.view.ViewCompat;
 
 /* loaded from: classes.dex */
 public final class StandardMenuPopup extends MenuPopup implements PopupWindow.OnDismissListener, AdapterView.OnItemClickListener, MenuPresenter, View.OnKeyListener {
-    private static final int ITEM_LAYOUT = R.layout.abc_popup_menu_item_layout;
+    private static final int ITEM_LAYOUT = C0051R.layout.abc_popup_menu_item_layout;
     private final MenuAdapter mAdapter;
     private View mAnchorView;
     private int mContentWidth;
@@ -39,13 +40,13 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
     public View mShownAnchorView;
     public ViewTreeObserver mTreeObserver;
     private boolean mWasDismissed;
-    public final ViewTreeObserver.OnGlobalLayoutListener mGlobalLayoutListener = new AnonymousClass1();
-    private final View.OnAttachStateChangeListener mAttachStateChangeListener = new AnonymousClass2();
+    public final ViewTreeObserver.OnGlobalLayoutListener mGlobalLayoutListener = new ViewTreeObserverOnGlobalLayoutListenerC00871();
+    private final View.OnAttachStateChangeListener mAttachStateChangeListener = new ViewOnAttachStateChangeListenerC00882();
     private int mDropDownGravity = 0;
 
-    /* renamed from: androidx.appcompat.view.menu.StandardMenuPopup$1, reason: invalid class name */
-    public class AnonymousClass1 implements ViewTreeObserver.OnGlobalLayoutListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.view.menu.StandardMenuPopup$1 */
+    public class ViewTreeObserverOnGlobalLayoutListenerC00871 implements ViewTreeObserver.OnGlobalLayoutListener {
+        public ViewTreeObserverOnGlobalLayoutListenerC00871() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -62,9 +63,9 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
         }
     }
 
-    /* renamed from: androidx.appcompat.view.menu.StandardMenuPopup$2, reason: invalid class name */
-    public class AnonymousClass2 implements View.OnAttachStateChangeListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.view.menu.StandardMenuPopup$2 */
+    public class ViewOnAttachStateChangeListenerC00882 implements View.OnAttachStateChangeListener {
+        public ViewOnAttachStateChangeListenerC00882() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -93,7 +94,7 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
         this.mPopupStyleAttr = i;
         this.mPopupStyleRes = i2;
         Resources resources = context.getResources();
-        this.mPopupMaxWidth = Math.max(resources.getDisplayMetrics().widthPixels / 2, resources.getDimensionPixelSize(R.dimen.abc_config_prefDialogWidth));
+        this.mPopupMaxWidth = Math.max(resources.getDisplayMetrics().widthPixels / 2, resources.getDimensionPixelSize(C0051R.dimen.abc_config_prefDialogWidth));
         this.mAnchorView = view;
         this.mPopup = new MenuPopupWindow(context, null, i, i2);
         menuBuilder.addMenuPresenter(this, context);
@@ -132,8 +133,8 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
         ListView listView = this.mPopup.getListView();
         listView.setOnKeyListener(this);
         if (this.mShowTitle && this.mMenu.getHeaderTitle() != null) {
-            FrameLayout frameLayout = (FrameLayout) LayoutInflater.from(this.mContext).inflate(R.layout.abc_popup_menu_header_item_layout, (ViewGroup) listView, false);
-            TextView textView = (TextView) frameLayout.findViewById(android.R.id.title);
+            FrameLayout frameLayout = (FrameLayout) LayoutInflater.from(this.mContext).inflate(C0051R.layout.abc_popup_menu_header_item_layout, (ViewGroup) listView, false);
+            TextView textView = (TextView) frameLayout.findViewById(R.id.title);
             if (textView != null) {
                 textView.setText(this.mMenu.getHeaderTitle());
             }

@@ -6,7 +6,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetSettingsItemBlockedUserBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.user.User;
@@ -16,9 +16,9 @@ import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetSettingsBlockedUsersAdapter.kt */
 /* loaded from: classes2.dex */
@@ -33,20 +33,20 @@ public final class WidgetSettingsBlockedUsersAdapter extends MGRecyclerAdapterSi
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public BlockedUserViewHolder(@LayoutRes int i, WidgetSettingsBlockedUsersAdapter widgetSettingsBlockedUsersAdapter) {
             super(i, widgetSettingsBlockedUsersAdapter);
-            m.checkNotNullParameter(widgetSettingsBlockedUsersAdapter, "adapter");
+            Intrinsics3.checkNotNullParameter(widgetSettingsBlockedUsersAdapter, "adapter");
             View view = this.itemView;
             RelativeLayout relativeLayout = (RelativeLayout) view;
-            int i2 = R.id.blocked_user_item_avatar;
-            SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.blocked_user_item_avatar);
+            int i2 = C5419R.id.blocked_user_item_avatar;
+            SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.blocked_user_item_avatar);
             if (simpleDraweeView != null) {
-                i2 = R.id.blocked_user_item_name;
-                TextView textView = (TextView) view.findViewById(R.id.blocked_user_item_name);
+                i2 = C5419R.id.blocked_user_item_name;
+                TextView textView = (TextView) view.findViewById(C5419R.id.blocked_user_item_name);
                 if (textView != null) {
-                    i2 = R.id.unblock_user_button;
-                    MaterialButton materialButton = (MaterialButton) view.findViewById(R.id.unblock_user_button);
+                    i2 = C5419R.id.unblock_user_button;
+                    MaterialButton materialButton = (MaterialButton) view.findViewById(C5419R.id.unblock_user_button);
                     if (materialButton != null) {
                         WidgetSettingsItemBlockedUserBinding widgetSettingsItemBlockedUserBinding = new WidgetSettingsItemBlockedUserBinding((RelativeLayout) view, relativeLayout, simpleDraweeView, textView, materialButton);
-                        m.checkNotNullExpressionValue(widgetSettingsItemBlockedUserBinding, "WidgetSettingsItemBlocke…serBinding.bind(itemView)");
+                        Intrinsics3.checkNotNullExpressionValue(widgetSettingsItemBlockedUserBinding, "WidgetSettingsItemBlocke…serBinding.bind(itemView)");
                         this.binding = widgetSettingsItemBlockedUserBinding;
                         return;
                     }
@@ -66,25 +66,25 @@ public final class WidgetSettingsBlockedUsersAdapter extends MGRecyclerAdapterSi
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetSettingsBlockedUsersViewModel.Item data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
-            this.binding.a.setOnClickListener(new WidgetSettingsBlockedUsersAdapter$BlockedUserViewHolder$onConfigure$1(this, data));
-            SimpleDraweeView simpleDraweeView = this.binding.f2625b;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.blockedUserItemAvatar");
-            IconUtils.setIcon$default(simpleDraweeView, data.getUser(), R.dimen.avatar_size_standard, null, null, null, 56, null);
-            TextView textView = this.binding.c;
-            m.checkNotNullExpressionValue(textView, "binding.blockedUserItemName");
+            this.binding.f17979a.setOnClickListener(new WidgetSettingsBlockedUsersAdapter2(this, data));
+            SimpleDraweeView simpleDraweeView = this.binding.f17980b;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.blockedUserItemAvatar");
+            IconUtils.setIcon$default(simpleDraweeView, data.getUser(), C5419R.dimen.avatar_size_standard, null, null, null, 56, null);
+            TextView textView = this.binding.f17981c;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.blockedUserItemName");
             textView.setText(data.getUser().getUsername());
-            this.binding.d.setOnClickListener(new WidgetSettingsBlockedUsersAdapter$BlockedUserViewHolder$onConfigure$2(this, data));
+            this.binding.f17982d.setOnClickListener(new WidgetSettingsBlockedUsersAdapter3(this, data));
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetSettingsBlockedUsersAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
-        this.onClickUnblock = WidgetSettingsBlockedUsersAdapter$onClickUnblock$1.INSTANCE;
-        this.onClickUserProfile = WidgetSettingsBlockedUsersAdapter$onClickUserProfile$1.INSTANCE;
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        this.onClickUnblock = WidgetSettingsBlockedUsersAdapter4.INSTANCE;
+        this.onClickUserProfile = WidgetSettingsBlockedUsersAdapter5.INSTANCE;
     }
 
     public final Function1<User, Unit> getOnClickUnblock() {
@@ -101,20 +101,20 @@ public final class WidgetSettingsBlockedUsersAdapter extends MGRecyclerAdapterSi
     }
 
     public final void setOnClickUnblock(Function1<? super User, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onClickUnblock = function1;
     }
 
     public final void setOnClickUserProfile(Function1<? super User, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onClickUserProfile = function1;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<WidgetSettingsBlockedUsersAdapter, WidgetSettingsBlockedUsersViewModel.Item> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
-            return new BlockedUserViewHolder(R.layout.widget_settings_item_blocked_user, this);
+            return new BlockedUserViewHolder(C5419R.layout.widget_settings_item_blocked_user, this);
         }
         throw invalidViewTypeException(viewType);
     }

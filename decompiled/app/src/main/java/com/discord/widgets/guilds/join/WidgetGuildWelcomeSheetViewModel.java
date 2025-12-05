@@ -1,9 +1,6 @@
 package com.discord.widgets.guilds.join;
 
-import a0.a.a.b;
 import android.content.Context;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.guild.welcome.GuildWelcomeChannel;
 import com.discord.api.guild.welcome.GuildWelcomeScreen;
 import com.discord.models.guild.Guild;
@@ -11,41 +8,44 @@ import com.discord.stores.StoreGuildWelcomeScreens;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.channel.ChannelSelector;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
+public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long guildId;
 
     /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildWelcomeSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildWelcomeSheetViewModel$1 */
+    public static final class C87241 extends Lambda implements Function1<StoreState, Unit> {
+        public C87241() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetGuildWelcomeSheetViewModel.access$handleStoreState(WidgetGuildWelcomeSheetViewModel.this, storeState);
         }
     }
@@ -57,9 +57,9 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
 
         public final Observable<StoreState> observeStores(long guildId) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable<StoreState> observableJ = Observable.j(companion.getGuilds().observeGuild(guildId), companion.getGuildWelcomeScreens().observeGuildWelcomeScreen(guildId), WidgetGuildWelcomeSheetViewModel$Companion$observeStores$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableJ, "Observable\n            .…          )\n            }");
-            return observableJ;
+            Observable<StoreState> observableM11076j = Observable.m11076j(companion.getGuilds().observeGuild(guildId), companion.getGuildWelcomeScreens().observeGuildWelcomeScreen(guildId), WidgetGuildWelcomeSheetViewModel2.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable\n            .…          )\n            }");
+            return observableM11076j;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -109,7 +109,7 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.guild, storeState.guild) && m.areEqual(this.guildWelcomeScreen, storeState.guildWelcomeScreen);
+            return Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.guildWelcomeScreen, storeState.guildWelcomeScreen);
         }
 
         public final Guild getGuild() {
@@ -128,12 +128,12 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(guild=");
-            sbU.append(this.guild);
-            sbU.append(", guildWelcomeScreen=");
-            sbU.append(this.guildWelcomeScreen);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("StoreState(guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", guildWelcomeScreen=");
+            sbM833U.append(this.guildWelcomeScreen);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -161,8 +161,8 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(long j, String str, String str2, String str3, String str4, List<GuildWelcomeChannel> list) {
                 super(null);
-                m.checkNotNullParameter(str, "guildName");
-                m.checkNotNullParameter(str2, "guildShortName");
+                Intrinsics3.checkNotNullParameter(str, "guildName");
+                Intrinsics3.checkNotNullParameter(str2, "guildShortName");
                 this.guildId = j;
                 this.guildName = str;
                 this.guildShortName = str2;
@@ -205,8 +205,8 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(long guildId, String guildName, String guildShortName, String guildIcon, String guildDescription, List<GuildWelcomeChannel> welcomeChannelsData) {
-                m.checkNotNullParameter(guildName, "guildName");
-                m.checkNotNullParameter(guildShortName, "guildShortName");
+                Intrinsics3.checkNotNullParameter(guildName, "guildName");
+                Intrinsics3.checkNotNullParameter(guildShortName, "guildShortName");
                 return new Loaded(guildId, guildName, guildShortName, guildIcon, guildDescription, welcomeChannelsData);
             }
 
@@ -218,7 +218,7 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return this.guildId == loaded.guildId && m.areEqual(this.guildName, loaded.guildName) && m.areEqual(this.guildShortName, loaded.guildShortName) && m.areEqual(this.guildIcon, loaded.guildIcon) && m.areEqual(this.guildDescription, loaded.guildDescription) && m.areEqual(this.welcomeChannelsData, loaded.welcomeChannelsData);
+                return this.guildId == loaded.guildId && Intrinsics3.areEqual(this.guildName, loaded.guildName) && Intrinsics3.areEqual(this.guildShortName, loaded.guildShortName) && Intrinsics3.areEqual(this.guildIcon, loaded.guildIcon) && Intrinsics3.areEqual(this.guildDescription, loaded.guildDescription) && Intrinsics3.areEqual(this.welcomeChannelsData, loaded.welcomeChannelsData);
             }
 
             public final String getGuildDescription() {
@@ -246,9 +246,9 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                int iA = b.a(this.guildId) * 31;
+                int iM3a = C0002b.m3a(this.guildId) * 31;
                 String str = this.guildName;
-                int iHashCode = (iA + (str != null ? str.hashCode() : 0)) * 31;
+                int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
                 String str2 = this.guildShortName;
                 int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
                 String str3 = this.guildIcon;
@@ -260,18 +260,18 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(guildId=");
-                sbU.append(this.guildId);
-                sbU.append(", guildName=");
-                sbU.append(this.guildName);
-                sbU.append(", guildShortName=");
-                sbU.append(this.guildShortName);
-                sbU.append(", guildIcon=");
-                sbU.append(this.guildIcon);
-                sbU.append(", guildDescription=");
-                sbU.append(this.guildDescription);
-                sbU.append(", welcomeChannelsData=");
-                return a.L(sbU, this.welcomeChannelsData, ")");
+                StringBuilder sbM833U = outline.m833U("Loaded(guildId=");
+                sbM833U.append(this.guildId);
+                sbM833U.append(", guildName=");
+                sbM833U.append(this.guildName);
+                sbM833U.append(", guildShortName=");
+                sbM833U.append(this.guildShortName);
+                sbM833U.append(", guildIcon=");
+                sbM833U.append(this.guildIcon);
+                sbM833U.append(", guildDescription=");
+                sbM833U.append(this.guildDescription);
+                sbM833U.append(", welcomeChannelsData=");
+                return outline.m824L(sbM833U, this.welcomeChannelsData, ")");
             }
         }
 
@@ -301,11 +301,11 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
     }
 
     private final void handleLoadedGuild(Guild guild, GuildWelcomeScreen welcomeScreen) {
-        updateViewState(new ViewState.Loaded(guild.getId(), guild.getName(), guild.getShortName(), guild.getIcon(), welcomeScreen != null ? welcomeScreen.getDescription() : null, welcomeScreen != null ? welcomeScreen.b() : null));
+        updateViewState(new ViewState.Loaded(guild.getId(), guild.getName(), guild.getShortName(), guild.getIcon(), welcomeScreen != null ? welcomeScreen.getDescription() : null, welcomeScreen != null ? welcomeScreen.m7899b() : null));
     }
 
     private final void handleLoadedWelcomeScreen(Guild guild, GuildWelcomeScreen welcomeScreen) {
-        updateViewState(new ViewState.Loaded(guild.getId(), guild.getName(), guild.getShortName(), guild.getIcon(), welcomeScreen.getDescription(), welcomeScreen.b()));
+        updateViewState(new ViewState.Loaded(guild.getId(), guild.getName(), guild.getShortName(), guild.getIcon(), welcomeScreen.getDescription(), welcomeScreen.m7899b()));
     }
 
     private final void handleStoreState(StoreState storeState) {
@@ -338,7 +338,7 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
     }
 
     public final void onClickChannel(long guildId, long channelId, int index, List<GuildWelcomeChannel> welcomeChannels) {
-        m.checkNotNullParameter(welcomeChannels, "welcomeChannels");
+        Intrinsics3.checkNotNullParameter(welcomeChannels, "welcomeChannels");
         ChannelSelector.selectChannel$default(ChannelSelector.INSTANCE.getInstance(), guildId, channelId, null, null, 12, null);
         String description = welcomeChannels.get(index).getDescription();
         boolean z2 = welcomeChannels.get(index).getEmojiId() != null;
@@ -354,9 +354,9 @@ public final class WidgetGuildWelcomeSheetViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGuildWelcomeSheetViewModel(long j, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        m.checkNotNullParameter(observable, "storeObservable");
+        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
         this.guildId = j;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetGuildWelcomeSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetGuildWelcomeSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C87241(), 62, (Object) null);
         StoreStream.Companion companion = StoreStream.INSTANCE;
         companion.getGuildWelcomeScreens().fetchIfNonexisting(j);
         companion.getGuildWelcomeScreens().markWelcomeScreenShown(j);

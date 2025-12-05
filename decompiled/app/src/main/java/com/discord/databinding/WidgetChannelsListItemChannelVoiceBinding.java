@@ -12,45 +12,52 @@ import com.discord.views.VoiceUserLimitView;
 /* loaded from: classes.dex */
 public final class WidgetChannelsListItemChannelVoiceBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f16029a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2290b;
+    public final TextView f16030b;
 
+    /* renamed from: c */
     @NonNull
-    public final ImageView c;
+    public final ImageView f16031c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f16032d;
 
+    /* renamed from: e */
     @NonNull
-    public final ImageView e;
+    public final ImageView f16033e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextView f;
+    public final TextView f16034f;
 
+    /* renamed from: g */
     @NonNull
-    public final ImageView g;
+    public final ImageView f16035g;
 
+    /* renamed from: h */
     @NonNull
-    public final VoiceUserLimitView h;
+    public final VoiceUserLimitView f16036h;
 
     public WidgetChannelsListItemChannelVoiceBinding(@NonNull ConstraintLayout constraintLayout, @NonNull TextView textView, @NonNull ImageView imageView, @NonNull TextView textView2, @NonNull ImageView imageView2, @NonNull TextView textView3, @NonNull ImageView imageView3, @NonNull VoiceUserLimitView voiceUserLimitView, @NonNull LinearLayout linearLayout) {
-        this.a = constraintLayout;
-        this.f2290b = textView;
-        this.c = imageView;
-        this.d = textView2;
-        this.e = imageView2;
-        this.f = textView3;
-        this.g = imageView3;
-        this.h = voiceUserLimitView;
+        this.f16029a = constraintLayout;
+        this.f16030b = textView;
+        this.f16031c = imageView;
+        this.f16032d = textView2;
+        this.f16033e = imageView2;
+        this.f16034f = textView3;
+        this.f16035g = imageView3;
+        this.f16036h = voiceUserLimitView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16029a;
     }
 }

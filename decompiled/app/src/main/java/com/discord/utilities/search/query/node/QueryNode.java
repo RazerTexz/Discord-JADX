@@ -6,12 +6,12 @@ import com.discord.simpleast.core.node.Node;
 import com.discord.utilities.search.query.node.answer.AnswerNode;
 import com.discord.utilities.search.query.node.content.ContentNode;
 import com.discord.utilities.search.validation.SearchData;
-import d0.g0.w;
-import d0.t.o;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p579g0.Strings4;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: QueryNode.kt */
 /* loaded from: classes2.dex */
@@ -43,7 +43,7 @@ public abstract class QueryNode extends Node<Context> {
                 int size = list.size() - 1;
                 QueryNode queryNode3 = list.get(size);
                 if (queryNode3 instanceof ContentNode) {
-                    if (w.trim(((ContentNode) queryNode3).getContent()).length() == 0) {
+                    if (Strings4.trim(((ContentNode) queryNode3).getContent()).length() == 0) {
                         list.remove(size);
                     }
                 }
@@ -51,9 +51,9 @@ public abstract class QueryNode extends Node<Context> {
         }
 
         public final void preprocess(List<QueryNode> list, SearchData searchData) {
-            m.checkNotNullParameter(list, "$this$preprocess");
-            m.checkNotNullParameter(searchData, "searchData");
-            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+            Intrinsics3.checkNotNullParameter(list, "$this$preprocess");
+            Intrinsics3.checkNotNullParameter(searchData, "searchData");
+            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
             for (QueryNode contentNode : list) {
                 if ((contentNode instanceof AnswerNode) && !((AnswerNode) contentNode).isValid(searchData)) {
                     contentNode = new ContentNode(contentNode.getText());

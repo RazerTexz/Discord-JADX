@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
-import androidx.appcompat.R;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.view.SupportMenuInflater;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
@@ -29,9 +29,9 @@ public class PopupMenu {
     public OnDismissListener mOnDismissListener;
     public final MenuPopupHelper mPopup;
 
-    /* renamed from: androidx.appcompat.widget.PopupMenu$1, reason: invalid class name */
-    public class AnonymousClass1 implements MenuBuilder.Callback {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.widget.PopupMenu$1 */
+    public class C01121 implements MenuBuilder.Callback {
+        public C01121() {
         }
 
         @Override // androidx.appcompat.view.menu.MenuBuilder.Callback
@@ -48,9 +48,9 @@ public class PopupMenu {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.PopupMenu$2, reason: invalid class name */
-    public class AnonymousClass2 implements PopupWindow.OnDismissListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.widget.PopupMenu$2 */
+    public class C01132 implements PopupWindow.OnDismissListener {
+        public C01132() {
         }
 
         @Override // android.widget.PopupWindow.OnDismissListener
@@ -63,9 +63,9 @@ public class PopupMenu {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.PopupMenu$3, reason: invalid class name */
-    public class AnonymousClass3 extends ForwardingListener {
-        public AnonymousClass3(View view) {
+    /* renamed from: androidx.appcompat.widget.PopupMenu$3 */
+    public class C01143 extends ForwardingListener {
+        public C01143(View view) {
             super(view);
         }
 
@@ -106,7 +106,7 @@ public class PopupMenu {
     @NonNull
     public View.OnTouchListener getDragToOpenListener() {
         if (this.mDragListener == null) {
-            this.mDragListener = new AnonymousClass3(this.mAnchor);
+            this.mDragListener = new C01143(this.mAnchor);
         }
         return this.mDragListener;
     }
@@ -154,7 +154,7 @@ public class PopupMenu {
     }
 
     public PopupMenu(@NonNull Context context, @NonNull View view, int i) {
-        this(context, view, i, R.attr.popupMenuStyle, 0);
+        this(context, view, i, C0051R.attr.popupMenuStyle, 0);
     }
 
     public PopupMenu(@NonNull Context context, @NonNull View view, int i, @AttrRes int i2, @StyleRes int i3) {
@@ -162,10 +162,10 @@ public class PopupMenu {
         this.mAnchor = view;
         MenuBuilder menuBuilder = new MenuBuilder(context);
         this.mMenu = menuBuilder;
-        menuBuilder.setCallback(new AnonymousClass1());
+        menuBuilder.setCallback(new C01121());
         MenuPopupHelper menuPopupHelper = new MenuPopupHelper(context, menuBuilder, view, false, i2, i3);
         this.mPopup = menuPopupHelper;
         menuPopupHelper.setGravity(i);
-        menuPopupHelper.setOnDismissListener(new AnonymousClass2());
+        menuPopupHelper.setOnDismissListener(new C01132());
     }
 }

@@ -20,9 +20,9 @@ public class MultiSelectListPreferenceDialogFragment extends PreferenceDialogFra
     public Set<String> mNewValues = new HashSet();
     public boolean mPreferenceChanged;
 
-    /* renamed from: androidx.preference.MultiSelectListPreferenceDialogFragment$1, reason: invalid class name */
-    public class AnonymousClass1 implements DialogInterface.OnMultiChoiceClickListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.preference.MultiSelectListPreferenceDialogFragment$1 */
+    public class DialogInterfaceOnMultiChoiceClickListenerC05081 implements DialogInterface.OnMultiChoiceClickListener {
+        public DialogInterfaceOnMultiChoiceClickListenerC05081() {
         }
 
         @Override // android.content.DialogInterface.OnMultiChoiceClickListener
@@ -97,7 +97,7 @@ public class MultiSelectListPreferenceDialogFragment extends PreferenceDialogFra
         for (int i = 0; i < length; i++) {
             zArr[i] = this.mNewValues.contains(this.mEntryValues[i].toString());
         }
-        builder.setMultiChoiceItems(this.mEntries, zArr, new AnonymousClass1());
+        builder.setMultiChoiceItems(this.mEntries, zArr, new DialogInterfaceOnMultiChoiceClickListenerC05081());
     }
 
     @Override // androidx.preference.PreferenceDialogFragment, android.app.DialogFragment, android.app.Fragment

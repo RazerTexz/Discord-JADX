@@ -1,22 +1,12 @@
 package com.discord.widgets.auth;
 
 import android.content.Context;
-import androidx.view.ViewModelKt;
-import b.a.d.d0;
-import b.d.b.a.a;
-import b.i.a.f.e.o.f;
+import androidx.view.ViewModel3;
 import com.discord.models.domain.ModelRemoteAuthHandshake;
 import com.discord.restapi.RestAPIParams;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.g0.t;
-import d0.l;
-import d0.w.h.c;
-import d0.w.i.a.e;
-import d0.w.i.a.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
@@ -25,111 +15,121 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlinx.coroutines.CoroutineScope;
-import rx.subjects.BehaviorSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.Result3;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p584w.p585h.Intrinsics2;
+import p507d0.p584w.p586i.p587a.ContinuationImpl6;
+import p507d0.p584w.p586i.p587a.DebugMetadata;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: WidgetRemoteAuthViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
+public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
     private final RestAPI restAPI;
     private final BehaviorSubject<Boolean> temporaryBehaviorSubject;
 
     /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ModelRemoteAuthHandshake, Unit> {
+    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$1 */
+    public static final class C72651 extends Lambda implements Function1<ModelRemoteAuthHandshake, Unit> {
 
         /* compiled from: WidgetRemoteAuthViewModel.kt */
-        @e(c = "com.discord.widgets.auth.WidgetRemoteAuthViewModel$1$1", f = "WidgetRemoteAuthViewModel.kt", l = {54}, m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03571 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+        @DebugMetadata(m10084c = "com.discord.widgets.auth.WidgetRemoteAuthViewModel$1$1", m10085f = "WidgetRemoteAuthViewModel.kt", m10086l = {54}, m10087m = "invokeSuspend")
+        /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public final /* synthetic */ ModelRemoteAuthHandshake $handshakeData;
             public int label;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C03571(ModelRemoteAuthHandshake modelRemoteAuthHandshake, Continuation continuation) {
+            public AnonymousClass1(ModelRemoteAuthHandshake modelRemoteAuthHandshake, Continuation continuation) {
                 super(2, continuation);
                 this.$handshakeData = modelRemoteAuthHandshake;
             }
 
-            @Override // d0.w.i.a.a
+            @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
             public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-                m.checkNotNullParameter(continuation, "completion");
-                return AnonymousClass1.this.new C03571(this.$handshakeData, continuation);
+                Intrinsics3.checkNotNullParameter(continuation, "completion");
+                return C72651.this.new AnonymousClass1(this.$handshakeData, continuation);
             }
 
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
-                return ((C03571) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
+                return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.f27425a);
             }
 
-            @Override // d0.w.i.a.a
+            @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
             public final Object invokeSuspend(Object obj) {
-                Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
+                Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
                 int i = this.label;
                 if (i == 0) {
-                    l.throwOnFailure(obj);
+                    Result3.throwOnFailure(obj);
                     this.label = 1;
-                    if (f.P(1000L, this) == coroutine_suspended) {
+                    if (C3404f.m4234P(1000L, this) == coroutine_suspended) {
                         return coroutine_suspended;
                     }
                 } else {
                     if (i != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    l.throwOnFailure(obj);
+                    Result3.throwOnFailure(obj);
                 }
                 WidgetRemoteAuthViewModel widgetRemoteAuthViewModel = WidgetRemoteAuthViewModel.this;
                 String handshakeToken = this.$handshakeData.getHandshakeToken();
                 BehaviorSubject behaviorSubjectAccess$getTemporaryBehaviorSubject$p = WidgetRemoteAuthViewModel.access$getTemporaryBehaviorSubject$p(WidgetRemoteAuthViewModel.this);
-                m.checkNotNullExpressionValue(behaviorSubjectAccess$getTemporaryBehaviorSubject$p, "temporaryBehaviorSubject");
-                Object objN0 = behaviorSubjectAccess$getTemporaryBehaviorSubject$p.n0();
-                m.checkNotNullExpressionValue(objN0, "temporaryBehaviorSubject.value");
-                WidgetRemoteAuthViewModel.access$updateViewState(widgetRemoteAuthViewModel, new ViewState.Loaded(handshakeToken, ((Boolean) objN0).booleanValue(), true));
-                return Unit.a;
+                Intrinsics3.checkNotNullExpressionValue(behaviorSubjectAccess$getTemporaryBehaviorSubject$p, "temporaryBehaviorSubject");
+                Object objM11132n0 = behaviorSubjectAccess$getTemporaryBehaviorSubject$p.m11132n0();
+                Intrinsics3.checkNotNullExpressionValue(objM11132n0, "temporaryBehaviorSubject.value");
+                WidgetRemoteAuthViewModel.access$updateViewState(widgetRemoteAuthViewModel, new ViewState.Loaded(handshakeToken, ((Boolean) objM11132n0).booleanValue(), true));
+                return Unit.f27425a;
             }
         }
 
-        public AnonymousClass1() {
+        public C72651() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelRemoteAuthHandshake modelRemoteAuthHandshake) {
             invoke2(modelRemoteAuthHandshake);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelRemoteAuthHandshake modelRemoteAuthHandshake) {
-            m.checkNotNullParameter(modelRemoteAuthHandshake, "handshakeData");
+            Intrinsics3.checkNotNullParameter(modelRemoteAuthHandshake, "handshakeData");
             WidgetRemoteAuthViewModel widgetRemoteAuthViewModel = WidgetRemoteAuthViewModel.this;
             String handshakeToken = modelRemoteAuthHandshake.getHandshakeToken();
             BehaviorSubject behaviorSubjectAccess$getTemporaryBehaviorSubject$p = WidgetRemoteAuthViewModel.access$getTemporaryBehaviorSubject$p(WidgetRemoteAuthViewModel.this);
-            m.checkNotNullExpressionValue(behaviorSubjectAccess$getTemporaryBehaviorSubject$p, "temporaryBehaviorSubject");
-            Object objN0 = behaviorSubjectAccess$getTemporaryBehaviorSubject$p.n0();
-            m.checkNotNullExpressionValue(objN0, "temporaryBehaviorSubject.value");
-            WidgetRemoteAuthViewModel.access$updateViewState(widgetRemoteAuthViewModel, new ViewState.Loaded(handshakeToken, ((Boolean) objN0).booleanValue(), false));
-            f.H0(ViewModelKt.getViewModelScope(WidgetRemoteAuthViewModel.this), null, null, new C03571(modelRemoteAuthHandshake, null), 3, null);
+            Intrinsics3.checkNotNullExpressionValue(behaviorSubjectAccess$getTemporaryBehaviorSubject$p, "temporaryBehaviorSubject");
+            Object objM11132n0 = behaviorSubjectAccess$getTemporaryBehaviorSubject$p.m11132n0();
+            Intrinsics3.checkNotNullExpressionValue(objM11132n0, "temporaryBehaviorSubject.value");
+            WidgetRemoteAuthViewModel.access$updateViewState(widgetRemoteAuthViewModel, new ViewState.Loaded(handshakeToken, ((Boolean) objM11132n0).booleanValue(), false));
+            C3404f.m4211H0(ViewModel3.getViewModelScope(WidgetRemoteAuthViewModel.this), null, null, new AnonymousClass1(modelRemoteAuthHandshake, null), 3, null);
         }
     }
 
     /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$2 */
+    public static final class C72662 extends Lambda implements Function1<Error, Unit> {
+        public C72662() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             Error.Response response = error.getResponse();
-            m.checkNotNullExpressionValue(response, "it.response");
+            Intrinsics3.checkNotNullExpressionValue(response, "it.response");
             if (response.getCode() != 10056) {
                 return;
             }
@@ -158,7 +158,7 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(String str, boolean z2, boolean z3) {
                 super(null);
-                m.checkNotNullParameter(str, "handshakeToken");
+                Intrinsics3.checkNotNullParameter(str, "handshakeToken");
                 this.handshakeToken = str;
                 this.isTemporary = z2;
                 this.loginAllowed = z3;
@@ -193,7 +193,7 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(String handshakeToken, boolean isTemporary, boolean loginAllowed) {
-                m.checkNotNullParameter(handshakeToken, "handshakeToken");
+                Intrinsics3.checkNotNullParameter(handshakeToken, "handshakeToken");
                 return new Loaded(handshakeToken, isTemporary, loginAllowed);
             }
 
@@ -205,7 +205,7 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return m.areEqual(this.handshakeToken, loaded.handshakeToken) && this.isTemporary == loaded.isTemporary && this.loginAllowed == loaded.loginAllowed;
+                return Intrinsics3.areEqual(this.handshakeToken, loaded.handshakeToken) && this.isTemporary == loaded.isTemporary && this.loginAllowed == loaded.loginAllowed;
             }
 
             public final String getHandshakeToken() {
@@ -235,12 +235,12 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(handshakeToken=");
-                sbU.append(this.handshakeToken);
-                sbU.append(", isTemporary=");
-                sbU.append(this.isTemporary);
-                sbU.append(", loginAllowed=");
-                return a.O(sbU, this.loginAllowed, ")");
+                StringBuilder sbM833U = outline.m833U("Loaded(handshakeToken=");
+                sbM833U.append(this.handshakeToken);
+                sbM833U.append(", isTemporary=");
+                sbM833U.append(this.isTemporary);
+                sbM833U.append(", loginAllowed=");
+                return outline.m827O(sbM833U, this.loginAllowed, ")");
             }
         }
 
@@ -271,18 +271,18 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$cancelLogin$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$cancelLogin$1 */
+    public static final class C72671 extends Lambda implements Function1<Void, Unit> {
+        public static final C72671 INSTANCE = new C72671();
 
-        public AnonymousClass1() {
+        public C72671() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -291,16 +291,16 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$remoteLogin$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$remoteLogin$1 */
+    public static final class C72681 extends Lambda implements Function1<Void, Unit> {
+        public C72681() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -310,21 +310,21 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$remoteLogin$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$remoteLogin$2 */
+    public static final class C72692 extends Lambda implements Function1<Error, Unit> {
+        public C72692() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             WidgetRemoteAuthViewModel.access$updateViewState(WidgetRemoteAuthViewModel.this, ViewState.Failed.INSTANCE);
         }
     }
@@ -346,7 +346,7 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
             RestAPI restAPI = this.restAPI;
             ViewState viewState = getViewState();
             Objects.requireNonNull(viewState, "null cannot be cast to non-null type com.discord.widgets.auth.WidgetRemoteAuthViewModel.ViewState.Loaded");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(restAPI.postRemoteAuthCancel(new RestAPIParams.RemoteAuthCancel(((ViewState.Loaded) viewState).getHandshakeToken())), false, 1, null), WidgetRemoteAuthViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass1.INSTANCE, 62, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(restAPI.postRemoteAuthCancel(new RestAPIParams.RemoteAuthCancel(((ViewState.Loaded) viewState).getHandshakeToken())), false, 1, null), WidgetRemoteAuthViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C72671.INSTANCE, 62, (Object) null);
         }
     }
 
@@ -355,7 +355,7 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
             RestAPI restAPI = this.restAPI;
             ViewState viewState = getViewState();
             Objects.requireNonNull(viewState, "null cannot be cast to non-null type com.discord.widgets.auth.WidgetRemoteAuthViewModel.ViewState.Loaded");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn(restAPI.postRemoteAuthFinish(new RestAPIParams.RemoteAuthFinish(false, ((ViewState.Loaded) viewState).getHandshakeToken())), false), this, null, 2, null), WidgetRemoteAuthViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn(restAPI.postRemoteAuthFinish(new RestAPIParams.RemoteAuthFinish(false, ((ViewState.Loaded) viewState).getHandshakeToken())), false), this, null, 2, null), WidgetRemoteAuthViewModel.class, (Context) null, (Function1) null, new C72692(), (Function0) null, (Function0) null, new C72681(), 54, (Object) null);
         }
     }
 
@@ -366,14 +366,14 @@ public final class WidgetRemoteAuthViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetRemoteAuthViewModel(String str, RestAPI restAPI) {
         super(ViewState.Loading.INSTANCE);
-        m.checkNotNullParameter(str, "fingerprint");
-        m.checkNotNullParameter(restAPI, "restAPI");
+        Intrinsics3.checkNotNullParameter(str, "fingerprint");
+        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
         this.restAPI = restAPI;
-        this.temporaryBehaviorSubject = BehaviorSubject.l0(Boolean.TRUE);
-        if (t.isBlank(str)) {
+        this.temporaryBehaviorSubject = BehaviorSubject.m11130l0(Boolean.TRUE);
+        if (StringsJVM.isBlank(str)) {
             updateViewState(ViewState.Failed.INSTANCE);
             return;
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn(restAPI.postRemoteAuthInitialize(new RestAPIParams.RemoteAuthInitialize(str)), false), this, null, 2, null), WidgetRemoteAuthViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn(restAPI.postRemoteAuthInitialize(new RestAPIParams.RemoteAuthInitialize(str)), false), this, null, 2, null), WidgetRemoteAuthViewModel.class, (Context) null, (Function1) null, new C72662(), (Function0) null, (Function0) null, new C72651(), 54, (Object) null);
     }
 }

@@ -1,21 +1,21 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuildLfgGroup;
-import com.discord.analytics.generated.traits.TrackGuildLfgGroupReceiver;
+import com.discord.analytics.generated.traits.TrackGuildLfgGroup2;
 import com.discord.analytics.generated.traits.TrackLfgGroup;
-import com.discord.analytics.generated.traits.TrackLfgGroupReceiver;
+import com.discord.analytics.generated.traits.TrackLfgGroup2;
 import com.discord.analytics.generated.traits.TrackThread;
-import com.discord.analytics.generated.traits.TrackThreadReceiver;
+import com.discord.analytics.generated.traits.TrackThread2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackCreateChannel.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCreateChannel implements AnalyticsSchema, TrackBaseReceiver, TrackLfgGroupReceiver, TrackGuildLfgGroupReceiver, TrackThreadReceiver {
+public final /* data */ class TrackCreateChannel implements AnalyticsSchema, TrackBase2, TrackLfgGroup2, TrackGuildLfgGroup2, TrackThread2 {
     private TrackBase trackBase;
     private TrackGuildLfgGroup trackGuildLfgGroup;
     private TrackLfgGroup trackLfgGroup;
@@ -48,7 +48,7 @@ public final /* data */ class TrackCreateChannel implements AnalyticsSchema, Tra
             return false;
         }
         TrackCreateChannel trackCreateChannel = (TrackCreateChannel) other;
-        return m.areEqual(this.channelId, trackCreateChannel.channelId) && m.areEqual(this.channelType, trackCreateChannel.channelType) && m.areEqual(this.recipientIds, trackCreateChannel.recipientIds) && m.areEqual(this.originChannelId, trackCreateChannel.originChannelId) && m.areEqual(this.guildId, trackCreateChannel.guildId) && m.areEqual(this.guildName, trackCreateChannel.guildName) && m.areEqual(this.channelName, trackCreateChannel.channelName) && m.areEqual(this.isNsfw, trackCreateChannel.isNsfw) && m.areEqual(this.parentId, trackCreateChannel.parentId) && m.areEqual(this.starterMessageAgeMinutes, trackCreateChannel.starterMessageAgeMinutes) && m.areEqual(this.activeThreadCount, trackCreateChannel.activeThreadCount) && m.areEqual(this.activeAnnouncementThreadCount, trackCreateChannel.activeAnnouncementThreadCount);
+        return Intrinsics3.areEqual(this.channelId, trackCreateChannel.channelId) && Intrinsics3.areEqual(this.channelType, trackCreateChannel.channelType) && Intrinsics3.areEqual(this.recipientIds, trackCreateChannel.recipientIds) && Intrinsics3.areEqual(this.originChannelId, trackCreateChannel.originChannelId) && Intrinsics3.areEqual(this.guildId, trackCreateChannel.guildId) && Intrinsics3.areEqual(this.guildName, trackCreateChannel.guildName) && Intrinsics3.areEqual(this.channelName, trackCreateChannel.channelName) && Intrinsics3.areEqual(this.isNsfw, trackCreateChannel.isNsfw) && Intrinsics3.areEqual(this.parentId, trackCreateChannel.parentId) && Intrinsics3.areEqual(this.starterMessageAgeMinutes, trackCreateChannel.starterMessageAgeMinutes) && Intrinsics3.areEqual(this.activeThreadCount, trackCreateChannel.activeThreadCount) && Intrinsics3.areEqual(this.activeAnnouncementThreadCount, trackCreateChannel.activeAnnouncementThreadCount);
     }
 
     public int hashCode() {
@@ -79,29 +79,29 @@ public final /* data */ class TrackCreateChannel implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackCreateChannel(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", recipientIds=");
-        sbU.append(this.recipientIds);
-        sbU.append(", originChannelId=");
-        sbU.append(this.originChannelId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", guildName=");
-        sbU.append(this.guildName);
-        sbU.append(", channelName=");
-        sbU.append(this.channelName);
-        sbU.append(", isNsfw=");
-        sbU.append(this.isNsfw);
-        sbU.append(", parentId=");
-        sbU.append(this.parentId);
-        sbU.append(", starterMessageAgeMinutes=");
-        sbU.append(this.starterMessageAgeMinutes);
-        sbU.append(", activeThreadCount=");
-        sbU.append(this.activeThreadCount);
-        sbU.append(", activeAnnouncementThreadCount=");
-        return a.G(sbU, this.activeAnnouncementThreadCount, ")");
+        StringBuilder sbM833U = outline.m833U("TrackCreateChannel(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", recipientIds=");
+        sbM833U.append(this.recipientIds);
+        sbM833U.append(", originChannelId=");
+        sbM833U.append(this.originChannelId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", guildName=");
+        sbM833U.append(this.guildName);
+        sbM833U.append(", channelName=");
+        sbM833U.append(this.channelName);
+        sbM833U.append(", isNsfw=");
+        sbM833U.append(this.isNsfw);
+        sbM833U.append(", parentId=");
+        sbM833U.append(this.parentId);
+        sbM833U.append(", starterMessageAgeMinutes=");
+        sbM833U.append(this.starterMessageAgeMinutes);
+        sbM833U.append(", activeThreadCount=");
+        sbM833U.append(this.activeThreadCount);
+        sbM833U.append(", activeAnnouncementThreadCount=");
+        return outline.m819G(sbM833U, this.activeAnnouncementThreadCount, ")");
     }
 }

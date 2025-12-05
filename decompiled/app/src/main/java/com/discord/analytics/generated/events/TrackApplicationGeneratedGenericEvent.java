@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackApplicationGeneratedGenericEvent.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationGeneratedGenericEvent implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackApplicationGeneratedGenericEvent implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final CharSequence activitySessionId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackApplicationGeneratedGenericEvent implements A
             return false;
         }
         TrackApplicationGeneratedGenericEvent trackApplicationGeneratedGenericEvent = (TrackApplicationGeneratedGenericEvent) other;
-        return m.areEqual(this.applicationId, trackApplicationGeneratedGenericEvent.applicationId) && m.areEqual(this.activitySessionId, trackApplicationGeneratedGenericEvent.activitySessionId) && m.areEqual(this.type, trackApplicationGeneratedGenericEvent.type) && m.areEqual(this.name, trackApplicationGeneratedGenericEvent.name) && m.areEqual(this.details, trackApplicationGeneratedGenericEvent.details);
+        return Intrinsics3.areEqual(this.applicationId, trackApplicationGeneratedGenericEvent.applicationId) && Intrinsics3.areEqual(this.activitySessionId, trackApplicationGeneratedGenericEvent.activitySessionId) && Intrinsics3.areEqual(this.type, trackApplicationGeneratedGenericEvent.type) && Intrinsics3.areEqual(this.name, trackApplicationGeneratedGenericEvent.name) && Intrinsics3.areEqual(this.details, trackApplicationGeneratedGenericEvent.details);
     }
 
     public int hashCode() {
@@ -49,15 +49,15 @@ public final /* data */ class TrackApplicationGeneratedGenericEvent implements A
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackApplicationGeneratedGenericEvent(applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", activitySessionId=");
-        sbU.append(this.activitySessionId);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", details=");
-        return a.E(sbU, this.details, ")");
+        StringBuilder sbM833U = outline.m833U("TrackApplicationGeneratedGenericEvent(applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", activitySessionId=");
+        sbM833U.append(this.activitySessionId);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", details=");
+        return outline.m817E(sbM833U, this.details, ")");
     }
 }

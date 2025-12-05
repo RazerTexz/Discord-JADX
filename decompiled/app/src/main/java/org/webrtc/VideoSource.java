@@ -1,9 +1,9 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import h0.c.i0;
-import h0.c.t0;
 import org.webrtc.VideoProcessor;
+import p617h0.p628c.C12467i0;
+import p617h0.p628c.VideoProcessor2;
 
 /* loaded from: classes3.dex */
 public class VideoSource extends MediaSource {
@@ -15,9 +15,9 @@ public class VideoSource extends MediaSource {
     private VideoProcessor videoProcessor;
     private final Object videoProcessorLock;
 
-    /* renamed from: org.webrtc.VideoSource$1, reason: invalid class name */
-    public class AnonymousClass1 implements CapturerObserver {
-        public AnonymousClass1() {
+    /* renamed from: org.webrtc.VideoSource$1 */
+    public class C129971 implements CapturerObserver {
+        public C129971() {
         }
 
         @Override // org.webrtc.CapturerObserver
@@ -50,10 +50,10 @@ public class VideoSource extends MediaSource {
                     VideoSource.access$300(VideoSource.this).onFrameCaptured(videoFrame, frameAdaptationParametersAdaptFrame);
                     return;
                 }
-                VideoFrame videoFrameB = t0.b(videoFrame, frameAdaptationParametersAdaptFrame);
-                if (videoFrameB != null) {
-                    VideoSource.access$000(VideoSource.this).onFrameCaptured(videoFrameB);
-                    videoFrameB.release();
+                VideoFrame videoFrameM10680b = VideoProcessor2.m10680b(videoFrame, frameAdaptationParametersAdaptFrame);
+                if (videoFrameM10680b != null) {
+                    VideoSource.access$000(VideoSource.this).onFrameCaptured(videoFrameM10680b);
+                    videoFrameM10680b.release();
                 }
             }
         }
@@ -73,7 +73,7 @@ public class VideoSource extends MediaSource {
     public VideoSource(long j) {
         super(j);
         this.videoProcessorLock = new Object();
-        this.capturerObserver = new AnonymousClass1();
+        this.capturerObserver = new C129971();
         this.nativeAndroidVideoTrackSource = new NativeAndroidVideoTrackSource(j);
     }
 
@@ -94,7 +94,8 @@ public class VideoSource extends MediaSource {
         return videoSource.videoProcessor;
     }
 
-    public /* synthetic */ void a(VideoFrame videoFrame) {
+    /* renamed from: a */
+    public /* synthetic */ void m11053a(VideoFrame videoFrame) {
         this.nativeAndroidVideoTrackSource.onFrameCaptured(videoFrame);
     }
 
@@ -133,7 +134,7 @@ public class VideoSource extends MediaSource {
             }
             this.videoProcessor = videoProcessor;
             if (videoProcessor != null) {
-                videoProcessor.setSink(new i0(this));
+                videoProcessor.setSink(new C12467i0(this));
                 if (this.isCapturerRunning) {
                     videoProcessor.onCapturerStarted(true);
                 }

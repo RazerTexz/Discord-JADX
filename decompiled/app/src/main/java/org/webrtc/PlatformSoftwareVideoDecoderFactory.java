@@ -7,23 +7,24 @@ import org.webrtc.Predicate;
 
 /* loaded from: classes3.dex */
 public class PlatformSoftwareVideoDecoderFactory extends MediaCodecVideoDecoderFactory {
-    private static final Predicate<MediaCodecInfo> defaultAllowedPredicate = new AnonymousClass1();
+    private static final Predicate<MediaCodecInfo> defaultAllowedPredicate = new C129791();
 
-    /* renamed from: org.webrtc.PlatformSoftwareVideoDecoderFactory$1, reason: invalid class name */
-    public class AnonymousClass1 implements Predicate<MediaCodecInfo> {
+    /* renamed from: org.webrtc.PlatformSoftwareVideoDecoderFactory$1 */
+    public class C129791 implements Predicate<MediaCodecInfo> {
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate<MediaCodecInfo> and(Predicate<? super MediaCodecInfo> predicate) {
-            return Predicate.CC.a(this, predicate);
+            return Predicate.CC.m11035a(this, predicate);
         }
 
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate<MediaCodecInfo> negate() {
-            return Predicate.CC.b(this);
+            return Predicate.CC.m11036b(this);
         }
 
         @Override // org.webrtc.Predicate
-        public /* synthetic */ Predicate<MediaCodecInfo> or(Predicate<? super MediaCodecInfo> predicate) {
-            return Predicate.CC.c(this, predicate);
+        /* renamed from: or */
+        public /* synthetic */ Predicate<MediaCodecInfo> mo11025or(Predicate<? super MediaCodecInfo> predicate) {
+            return Predicate.CC.m11037c(this, predicate);
         }
 
         @Override // org.webrtc.Predicate

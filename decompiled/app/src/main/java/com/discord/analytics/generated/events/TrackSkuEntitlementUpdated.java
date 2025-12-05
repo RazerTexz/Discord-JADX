@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackEntitlementMetadata;
-import com.discord.analytics.generated.traits.TrackEntitlementMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackEntitlementMetadata2;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSkuEntitlementUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSkuEntitlementUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackStoreSkuMetadataReceiver, TrackEntitlementMetadataReceiver {
+public final /* data */ class TrackSkuEntitlementUpdated implements AnalyticsSchema, TrackBase2, TrackStoreSkuMetadata2, TrackEntitlementMetadata2 {
     private TrackBase trackBase;
     private TrackEntitlementMetadata trackEntitlementMetadata;
     private TrackStoreSkuMetadata trackStoreSkuMetadata;
@@ -34,7 +34,7 @@ public final /* data */ class TrackSkuEntitlementUpdated implements AnalyticsSch
             return false;
         }
         TrackSkuEntitlementUpdated trackSkuEntitlementUpdated = (TrackSkuEntitlementUpdated) other;
-        return m.areEqual(this.entitlementType, trackSkuEntitlementUpdated.entitlementType) && m.areEqual(this.redemptionCode, trackSkuEntitlementUpdated.redemptionCode);
+        return Intrinsics3.areEqual(this.entitlementType, trackSkuEntitlementUpdated.entitlementType) && Intrinsics3.areEqual(this.redemptionCode, trackSkuEntitlementUpdated.redemptionCode);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class TrackSkuEntitlementUpdated implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSkuEntitlementUpdated(entitlementType=");
-        sbU.append(this.entitlementType);
-        sbU.append(", redemptionCode=");
-        return a.E(sbU, this.redemptionCode, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSkuEntitlementUpdated(entitlementType=");
+        sbM833U.append(this.entitlementType);
+        sbM833U.append(", redemptionCode=");
+        return outline.m817E(sbM833U, this.redemptionCode, ")");
     }
 }

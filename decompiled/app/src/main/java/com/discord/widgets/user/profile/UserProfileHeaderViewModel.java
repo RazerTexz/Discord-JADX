@@ -3,8 +3,6 @@ package com.discord.widgets.user.profile;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.annotation.VisibleForTesting;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.user.UserProfile;
@@ -22,19 +20,11 @@ import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserPresence;
 import com.discord.stores.StoreUserProfile;
 import com.discord.stores.StoreUserSettings;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.streams.StreamContext;
 import com.discord.utilities.streams.StreamContextService;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.user.presence.ModelRichPresence;
-import d0.g;
-import d0.g0.t;
-import d0.t.h0;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.l.e.k;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -45,33 +35,45 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Maps6;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
 
 /* compiled from: UserProfileHeaderViewModel.kt */
 /* loaded from: classes.dex */
-public final class UserProfileHeaderViewModel extends d0<ViewState> {
+public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    public static final long ME = -1;
+
+    /* renamed from: ME */
+    public static final long f19406ME = -1;
     private final long userId;
 
     /* compiled from: UserProfileHeaderViewModel.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$1 */
+    public static final class C103091 extends Lambda implements Function1<StoreState, Unit> {
+        public C103091() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             UserProfileHeaderViewModel.access$handleStoreState(UserProfileHeaderViewModel.this, storeState);
         }
     }
@@ -87,16 +89,16 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
 
         private final Observable<Map<Long, GuildMember>> observeComputedMembers(Long channelId, Long guildId, Collection<Long> users, StoreChannels storeChannels, StoreGuilds storeGuilds) {
             if (channelId != null && channelId.longValue() > 0) {
-                Observable observableY = storeChannels.observeChannel(channelId.longValue()).Y(new UserProfileHeaderViewModel$Companion$observeComputedMembers$1(storeGuilds, users));
-                m.checkNotNullExpressionValue(observableY, "storeChannels\n          …emptyMap())\n            }");
-                return observableY;
+                Observable observableM11099Y = storeChannels.observeChannel(channelId.longValue()).m11099Y(new UserProfileHeaderViewModel2(storeGuilds, users));
+                Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "storeChannels\n          …emptyMap())\n            }");
+                return observableM11099Y;
             }
             if (guildId != null && guildId.longValue() > 0) {
                 return storeGuilds.observeComputed(guildId.longValue(), users);
             }
-            k kVar = new k(h0.emptyMap());
-            m.checkNotNullExpressionValue(kVar, "Observable.just(emptyMap())");
-            return kVar;
+            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(Maps6.emptyMap());
+            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(emptyMap())");
+            return scalarSynchronousObservable;
         }
 
         public static /* synthetic */ Observable observeStoreState$default(Companion companion, long j, Long l, Long l2, StoreUser storeUser, StoreChannels storeChannels, StoreGuilds storeGuilds, StoreUserPresence storeUserPresence, StoreUserProfile storeUserProfile, StoreExperiments storeExperiments, StoreUserSettings storeUserSettings, StreamContextService streamContextService, StoreAccessibility storeAccessibility, int i, Object obj) {
@@ -105,18 +107,18 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
 
         @VisibleForTesting
         public final Observable<StoreState> observeStoreState(long userId, Long channelId, Long guildId, StoreUser storeUser, StoreChannels storeChannels, StoreGuilds storeGuilds, StoreUserPresence storeUserPresence, StoreUserProfile storeUserProfile, StoreExperiments storeExperiments, StoreUserSettings storeUserSettings, StreamContextService streamContextService, StoreAccessibility storeAccessibility) {
-            m.checkNotNullParameter(storeUser, "storeUser");
-            m.checkNotNullParameter(storeChannels, "storeChannels");
-            m.checkNotNullParameter(storeGuilds, "storeGuilds");
-            m.checkNotNullParameter(storeUserPresence, "storeUserPresence");
-            m.checkNotNullParameter(storeUserProfile, "storeUserProfile");
-            m.checkNotNullParameter(storeExperiments, "storeExperiments");
-            m.checkNotNullParameter(storeUserSettings, "storeUserSettings");
-            m.checkNotNullParameter(streamContextService, "streamContextService");
-            m.checkNotNullParameter(storeAccessibility, "storeAccessibility");
-            Observable<StoreState> observableY = StoreUser.observeMe$default(storeUser, false, 1, null).Y(new UserProfileHeaderViewModel$Companion$observeStoreState$1(userId, storeUser)).Y(new UserProfileHeaderViewModel$Companion$observeStoreState$2(channelId, storeChannels, storeGuilds, guildId, storeUserPresence, streamContextService, storeUserProfile, storeUserSettings, storeAccessibility));
-            m.checkNotNullExpressionValue(observableY, "storeUser.observeMe()\n  …            }\n          }");
-            return observableY;
+            Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+            Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+            Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+            Intrinsics3.checkNotNullParameter(storeUserPresence, "storeUserPresence");
+            Intrinsics3.checkNotNullParameter(storeUserProfile, "storeUserProfile");
+            Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
+            Intrinsics3.checkNotNullParameter(storeUserSettings, "storeUserSettings");
+            Intrinsics3.checkNotNullParameter(streamContextService, "streamContextService");
+            Intrinsics3.checkNotNullParameter(storeAccessibility, "storeAccessibility");
+            Observable<StoreState> observableM11099Y = StoreUser.observeMe$default(storeUser, false, 1, null).m11099Y(new UserProfileHeaderViewModel3(userId, storeUser)).m11099Y(new UserProfileHeaderViewModel4(channelId, storeChannels, storeGuilds, guildId, storeUserPresence, streamContextService, storeUserProfile, storeUserSettings, storeAccessibility));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "storeUser.observeMe()\n  …            }\n          }");
+            return observableM11099Y;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -139,11 +141,11 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(MeUser meUser, User user, Map<Long, GuildMember> map, Collection<? extends Map<Long, GuildMember>> collection, ModelRichPresence modelRichPresence, StreamContext streamContext, UserProfile userProfile, boolean z2, boolean z3, Channel channel) {
-            m.checkNotNullParameter(meUser, "me");
-            m.checkNotNullParameter(user, "user");
-            m.checkNotNullParameter(map, "userIdToGuildMemberMap");
-            m.checkNotNullParameter(collection, "guildMembers");
-            m.checkNotNullParameter(userProfile, "userProfile");
+            Intrinsics3.checkNotNullParameter(meUser, "me");
+            Intrinsics3.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(map, "userIdToGuildMemberMap");
+            Intrinsics3.checkNotNullParameter(collection, "guildMembers");
+            Intrinsics3.checkNotNullParameter(userProfile, "userProfile");
             this.me = meUser;
             this.user = user;
             this.userIdToGuildMemberMap = map;
@@ -209,11 +211,11 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
         }
 
         public final StoreState copy(MeUser me2, User user, Map<Long, GuildMember> userIdToGuildMemberMap, Collection<? extends Map<Long, GuildMember>> guildMembers, ModelRichPresence richPresence, StreamContext streamContext, UserProfile userProfile, boolean allowAnimatedEmojis, boolean reducedMotionEnabled, Channel channel) {
-            m.checkNotNullParameter(me2, "me");
-            m.checkNotNullParameter(user, "user");
-            m.checkNotNullParameter(userIdToGuildMemberMap, "userIdToGuildMemberMap");
-            m.checkNotNullParameter(guildMembers, "guildMembers");
-            m.checkNotNullParameter(userProfile, "userProfile");
+            Intrinsics3.checkNotNullParameter(me2, "me");
+            Intrinsics3.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(userIdToGuildMemberMap, "userIdToGuildMemberMap");
+            Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+            Intrinsics3.checkNotNullParameter(userProfile, "userProfile");
             return new StoreState(me2, user, userIdToGuildMemberMap, guildMembers, richPresence, streamContext, userProfile, allowAnimatedEmojis, reducedMotionEnabled, channel);
         }
 
@@ -225,7 +227,7 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.me, storeState.me) && m.areEqual(this.user, storeState.user) && m.areEqual(this.userIdToGuildMemberMap, storeState.userIdToGuildMemberMap) && m.areEqual(this.guildMembers, storeState.guildMembers) && m.areEqual(this.richPresence, storeState.richPresence) && m.areEqual(this.streamContext, storeState.streamContext) && m.areEqual(this.userProfile, storeState.userProfile) && this.allowAnimatedEmojis == storeState.allowAnimatedEmojis && this.reducedMotionEnabled == storeState.reducedMotionEnabled && m.areEqual(this.channel, storeState.channel);
+            return Intrinsics3.areEqual(this.me, storeState.me) && Intrinsics3.areEqual(this.user, storeState.user) && Intrinsics3.areEqual(this.userIdToGuildMemberMap, storeState.userIdToGuildMemberMap) && Intrinsics3.areEqual(this.guildMembers, storeState.guildMembers) && Intrinsics3.areEqual(this.richPresence, storeState.richPresence) && Intrinsics3.areEqual(this.streamContext, storeState.streamContext) && Intrinsics3.areEqual(this.userProfile, storeState.userProfile) && this.allowAnimatedEmojis == storeState.allowAnimatedEmojis && this.reducedMotionEnabled == storeState.reducedMotionEnabled && Intrinsics3.areEqual(this.channel, storeState.channel);
         }
 
         public final boolean getAllowAnimatedEmojis() {
@@ -297,28 +299,28 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(me=");
-            sbU.append(this.me);
-            sbU.append(", user=");
-            sbU.append(this.user);
-            sbU.append(", userIdToGuildMemberMap=");
-            sbU.append(this.userIdToGuildMemberMap);
-            sbU.append(", guildMembers=");
-            sbU.append(this.guildMembers);
-            sbU.append(", richPresence=");
-            sbU.append(this.richPresence);
-            sbU.append(", streamContext=");
-            sbU.append(this.streamContext);
-            sbU.append(", userProfile=");
-            sbU.append(this.userProfile);
-            sbU.append(", allowAnimatedEmojis=");
-            sbU.append(this.allowAnimatedEmojis);
-            sbU.append(", reducedMotionEnabled=");
-            sbU.append(this.reducedMotionEnabled);
-            sbU.append(", channel=");
-            sbU.append(this.channel);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("StoreState(me=");
+            sbM833U.append(this.me);
+            sbM833U.append(", user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", userIdToGuildMemberMap=");
+            sbM833U.append(this.userIdToGuildMemberMap);
+            sbM833U.append(", guildMembers=");
+            sbM833U.append(this.guildMembers);
+            sbM833U.append(", richPresence=");
+            sbM833U.append(this.richPresence);
+            sbM833U.append(", streamContext=");
+            sbM833U.append(this.streamContext);
+            sbM833U.append(", userProfile=");
+            sbM833U.append(this.userProfile);
+            sbM833U.append(", allowAnimatedEmojis=");
+            sbM833U.append(this.allowAnimatedEmojis);
+            sbM833U.append(", reducedMotionEnabled=");
+            sbM833U.append(this.reducedMotionEnabled);
+            sbM833U.append(", channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -375,7 +377,7 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
             private final UserProfile userProfile;
 
             public /* synthetic */ Loaded(User user, String str, String str2, GuildMember guildMember, List list, Presence presence, StreamContext streamContext, UserProfile userProfile, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, boolean z9, int i, DefaultConstructorMarker defaultConstructorMarker) {
-                this(user, str, str2, (i & 8) != 0 ? null : guildMember, (i & 16) != 0 ? n.emptyList() : list, (i & 32) != 0 ? null : presence, (i & 64) != 0 ? null : streamContext, (i & 128) != 0 ? StoreUserProfile.INSTANCE.getEMPTY_PROFILE() : userProfile, z2, z3, (i & 1024) != 0 ? false : z4, z5, (i & 4096) != 0 ? false : z6, (i & 8192) != 0 ? false : z7, (i & 16384) != 0 ? false : z8, (i & 32768) != 0 ? false : z9);
+                this(user, str, str2, (i & 8) != 0 ? null : guildMember, (i & 16) != 0 ? Collections2.emptyList() : list, (i & 32) != 0 ? null : presence, (i & 64) != 0 ? null : streamContext, (i & 128) != 0 ? StoreUserProfile.INSTANCE.getEMPTY_PROFILE() : userProfile, z2, z3, (i & 1024) != 0 ? false : z4, z5, (i & 4096) != 0 ? false : z6, (i & 8192) != 0 ? false : z7, (i & 16384) != 0 ? false : z8, (i & 32768) != 0 ? false : z9);
             }
 
             public static /* synthetic */ Loaded copy$default(Loaded loaded, User user, String str, String str2, GuildMember guildMember, List list, Presence presence, StreamContext streamContext, UserProfile userProfile, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, boolean z9, int i, Object obj) {
@@ -462,9 +464,9 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(User user, String banner, String bannerColorHex, GuildMember guildMember, List<GuildMember> guildMembersForAka, Presence presence, StreamContext streamContext, UserProfile userProfile, boolean isMeUserPremium, boolean isMeUserVerified, boolean allowAnimatedEmojis, boolean showPresence, boolean editable, boolean reducedMotionEnabled, boolean allowAnimationInReducedMotion, boolean isMe) {
-                m.checkNotNullParameter(user, "user");
-                m.checkNotNullParameter(guildMembersForAka, "guildMembersForAka");
-                m.checkNotNullParameter(userProfile, "userProfile");
+                Intrinsics3.checkNotNullParameter(user, "user");
+                Intrinsics3.checkNotNullParameter(guildMembersForAka, "guildMembersForAka");
+                Intrinsics3.checkNotNullParameter(userProfile, "userProfile");
                 return new Loaded(user, banner, bannerColorHex, guildMember, guildMembersForAka, presence, streamContext, userProfile, isMeUserPremium, isMeUserVerified, allowAnimatedEmojis, showPresence, editable, reducedMotionEnabled, allowAnimationInReducedMotion, isMe);
             }
 
@@ -476,7 +478,7 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return m.areEqual(this.user, loaded.user) && m.areEqual(this.banner, loaded.banner) && m.areEqual(this.bannerColorHex, loaded.bannerColorHex) && m.areEqual(this.guildMember, loaded.guildMember) && m.areEqual(this.guildMembersForAka, loaded.guildMembersForAka) && m.areEqual(this.presence, loaded.presence) && m.areEqual(this.streamContext, loaded.streamContext) && m.areEqual(this.userProfile, loaded.userProfile) && this.isMeUserPremium == loaded.isMeUserPremium && this.isMeUserVerified == loaded.isMeUserVerified && this.allowAnimatedEmojis == loaded.allowAnimatedEmojis && this.showPresence == loaded.showPresence && this.editable == loaded.editable && this.reducedMotionEnabled == loaded.reducedMotionEnabled && this.allowAnimationInReducedMotion == loaded.allowAnimationInReducedMotion && this.isMe == loaded.isMe;
+                return Intrinsics3.areEqual(this.user, loaded.user) && Intrinsics3.areEqual(this.banner, loaded.banner) && Intrinsics3.areEqual(this.bannerColorHex, loaded.bannerColorHex) && Intrinsics3.areEqual(this.guildMember, loaded.guildMember) && Intrinsics3.areEqual(this.guildMembersForAka, loaded.guildMembersForAka) && Intrinsics3.areEqual(this.presence, loaded.presence) && Intrinsics3.areEqual(this.streamContext, loaded.streamContext) && Intrinsics3.areEqual(this.userProfile, loaded.userProfile) && this.isMeUserPremium == loaded.isMeUserPremium && this.isMeUserVerified == loaded.isMeUserVerified && this.allowAnimatedEmojis == loaded.allowAnimatedEmojis && this.showPresence == loaded.showPresence && this.editable == loaded.editable && this.reducedMotionEnabled == loaded.reducedMotionEnabled && this.allowAnimationInReducedMotion == loaded.allowAnimationInReducedMotion && this.isMe == loaded.isMe;
             }
 
             public final boolean getAllowAnimatedEmojis() {
@@ -649,47 +651,47 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(user=");
-                sbU.append(this.user);
-                sbU.append(", banner=");
-                sbU.append(this.banner);
-                sbU.append(", bannerColorHex=");
-                sbU.append(this.bannerColorHex);
-                sbU.append(", guildMember=");
-                sbU.append(this.guildMember);
-                sbU.append(", guildMembersForAka=");
-                sbU.append(this.guildMembersForAka);
-                sbU.append(", presence=");
-                sbU.append(this.presence);
-                sbU.append(", streamContext=");
-                sbU.append(this.streamContext);
-                sbU.append(", userProfile=");
-                sbU.append(this.userProfile);
-                sbU.append(", isMeUserPremium=");
-                sbU.append(this.isMeUserPremium);
-                sbU.append(", isMeUserVerified=");
-                sbU.append(this.isMeUserVerified);
-                sbU.append(", allowAnimatedEmojis=");
-                sbU.append(this.allowAnimatedEmojis);
-                sbU.append(", showPresence=");
-                sbU.append(this.showPresence);
-                sbU.append(", editable=");
-                sbU.append(this.editable);
-                sbU.append(", reducedMotionEnabled=");
-                sbU.append(this.reducedMotionEnabled);
-                sbU.append(", allowAnimationInReducedMotion=");
-                sbU.append(this.allowAnimationInReducedMotion);
-                sbU.append(", isMe=");
-                return a.O(sbU, this.isMe, ")");
+                StringBuilder sbM833U = outline.m833U("Loaded(user=");
+                sbM833U.append(this.user);
+                sbM833U.append(", banner=");
+                sbM833U.append(this.banner);
+                sbM833U.append(", bannerColorHex=");
+                sbM833U.append(this.bannerColorHex);
+                sbM833U.append(", guildMember=");
+                sbM833U.append(this.guildMember);
+                sbM833U.append(", guildMembersForAka=");
+                sbM833U.append(this.guildMembersForAka);
+                sbM833U.append(", presence=");
+                sbM833U.append(this.presence);
+                sbM833U.append(", streamContext=");
+                sbM833U.append(this.streamContext);
+                sbM833U.append(", userProfile=");
+                sbM833U.append(this.userProfile);
+                sbM833U.append(", isMeUserPremium=");
+                sbM833U.append(this.isMeUserPremium);
+                sbM833U.append(", isMeUserVerified=");
+                sbM833U.append(this.isMeUserVerified);
+                sbM833U.append(", allowAnimatedEmojis=");
+                sbM833U.append(this.allowAnimatedEmojis);
+                sbM833U.append(", showPresence=");
+                sbM833U.append(this.showPresence);
+                sbM833U.append(", editable=");
+                sbM833U.append(this.editable);
+                sbM833U.append(", reducedMotionEnabled=");
+                sbM833U.append(this.reducedMotionEnabled);
+                sbM833U.append(", allowAnimationInReducedMotion=");
+                sbM833U.append(this.allowAnimationInReducedMotion);
+                sbM833U.append(", isMe=");
+                return outline.m827O(sbM833U, this.isMe, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(User user, String str, String str2, GuildMember guildMember, List<GuildMember> list, Presence presence, StreamContext streamContext, UserProfile userProfile, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, boolean z9) {
                 String nick;
                 super(null);
-                m.checkNotNullParameter(user, "user");
-                m.checkNotNullParameter(list, "guildMembersForAka");
-                m.checkNotNullParameter(userProfile, "userProfile");
+                Intrinsics3.checkNotNullParameter(user, "user");
+                Intrinsics3.checkNotNullParameter(list, "guildMembersForAka");
+                Intrinsics3.checkNotNullParameter(userProfile, "userProfile");
                 this.user = user;
                 this.banner = str;
                 this.bannerColorHex = str2;
@@ -709,15 +711,15 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
                 boolean z10 = false;
                 boolean z11 = guildMember != null && guildMember.hasAvatar();
                 this.hasGuildMemberAvatar = z11;
-                boolean z12 = !t.isBlank((guildMember == null || (nick = guildMember.getNick()) == null) ? "" : nick);
+                boolean z12 = !StringsJVM.isBlank((guildMember == null || (nick = guildMember.getNick()) == null) ? "" : nick);
                 this.hasNickname = z12;
                 this.showMediumAvatar = z11 && !z12;
                 this.showSmallAvatar = z11 && z12;
                 this.shouldAnimateBanner = !z7 || z8;
-                this.shouldShowGIFTag = z7 && !z8 && str != null && t.startsWith$default(str, "a_", false, 2, null);
-                this.isProfileLoaded = !m.areEqual(userProfile, StoreUserProfile.INSTANCE.getEMPTY_PROFILE());
-                this.avatarColorId = g.lazy(new UserProfileHeaderViewModel$ViewState$Loaded$avatarColorId$2(this));
-                this.guildMemberColorId = g.lazy(new UserProfileHeaderViewModel$ViewState$Loaded$guildMemberColorId$2(this));
+                this.shouldShowGIFTag = z7 && !z8 && str != null && StringsJVM.startsWith$default(str, "a_", false, 2, null);
+                this.isProfileLoaded = !Intrinsics3.areEqual(userProfile, StoreUserProfile.INSTANCE.getEMPTY_PROFILE());
+                this.avatarColorId = LazyJVM.lazy(new UserProfileHeaderViewModel5(this));
+                this.guildMemberColorId = LazyJVM.lazy(new UserProfileHeaderViewModel6(this));
                 if ((!list.isEmpty()) && !z9) {
                     z10 = true;
                 }
@@ -741,18 +743,18 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
         List listEmptyList;
         long id2 = storeState.getUser().getId();
         GuildMember guildMember = storeState.getUserIdToGuildMemberMap().get(Long.valueOf(id2));
-        NullSerializable<String> nullSerializableB = storeState.getUserProfile().getUser().b();
-        if (!(nullSerializableB instanceof NullSerializable.b)) {
-            nullSerializableB = null;
+        NullSerializable<String> nullSerializableM8289b = storeState.getUserProfile().getUser().m8289b();
+        if (!(nullSerializableM8289b instanceof NullSerializable.C5566b)) {
+            nullSerializableM8289b = null;
         }
-        NullSerializable.b bVar = (NullSerializable.b) nullSerializableB;
-        String str = bVar != null ? (String) bVar.a() : null;
+        NullSerializable.C5566b c5566b = (NullSerializable.C5566b) nullSerializableM8289b;
+        String str = c5566b != null ? (String) c5566b.mo8429a() : null;
         Channel channel = storeState.getChannel();
-        boolean z2 = channel != null && ChannelUtils.B(channel);
+        boolean z2 = channel != null && ChannelUtils.m7667B(channel);
         ViewState viewState = getViewState();
         User user = storeState.getUser();
-        NullSerializable<String> nullSerializableC = storeState.getUserProfile().getUser().c();
-        String strA = nullSerializableC != null ? nullSerializableC.a() : null;
+        NullSerializable<String> nullSerializableM8290c = storeState.getUserProfile().getUser().m8290c();
+        String strMo8429a = nullSerializableM8290c != null ? nullSerializableM8290c.mo8429a() : null;
         if (z2) {
             Collection<Map<Long, GuildMember>> guildMembers = storeState.getGuildMembers();
             ArrayList arrayList = new ArrayList();
@@ -763,12 +765,12 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
                     arrayList.add(guildMember2);
                 }
             }
-            listEmptyList = u.toList(arrayList);
+            listEmptyList = _Collections.toList(arrayList);
         } else {
-            listEmptyList = n.emptyList();
+            listEmptyList = Collections2.emptyList();
         }
         ModelRichPresence richPresence = storeState.getRichPresence();
-        updateViewState(new ViewState.Loaded(user, str, strA, guildMember, listEmptyList, richPresence != null ? richPresence.getPresence() : null, storeState.getStreamContext(), storeState.getUserProfile(), UserUtils.INSTANCE.isPremium(storeState.getMe()), storeState.getMe().isVerified(), storeState.getAllowAnimatedEmojis(), true, false, storeState.getReducedMotionEnabled(), viewState instanceof ViewState.Loaded ? ((ViewState.Loaded) viewState).getAllowAnimationInReducedMotion() : false, id2 == storeState.getMe().getId(), 4096, null));
+        updateViewState(new ViewState.Loaded(user, str, strMo8429a, guildMember, listEmptyList, richPresence != null ? richPresence.getPresence() : null, storeState.getStreamContext(), storeState.getUserProfile(), UserUtils.INSTANCE.isPremium(storeState.getMe()), storeState.getMe().isVerified(), storeState.getAllowAnimatedEmojis(), true, false, storeState.getReducedMotionEnabled(), viewState instanceof ViewState.Loaded ? ((ViewState.Loaded) viewState).getAllowAnimationInReducedMotion() : false, id2 == storeState.getMe().getId(), 4096, null));
     }
 
     @MainThread
@@ -788,13 +790,13 @@ public final class UserProfileHeaderViewModel extends d0<ViewState> {
     public UserProfileHeaderViewModel(long j, Long l, Long l2, Observable<StoreState> observable, boolean z2, StoreUser storeUser, StoreUserProfile storeUserProfile) {
         super(ViewState.Uninitialized.INSTANCE);
         long j2 = j;
-        m.checkNotNullParameter(observable, "storeObservable");
-        m.checkNotNullParameter(storeUser, "storeUsers");
-        m.checkNotNullParameter(storeUserProfile, "storeUserProfile");
+        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUsers");
+        Intrinsics3.checkNotNullParameter(storeUserProfile, "storeUserProfile");
         this.userId = j2;
         if (z2) {
             StoreUserProfile.fetchProfile$default(storeUserProfile, j2 == -1 ? storeUser.getMeSnapshot().getId() : j2, l2, false, null, 12, null);
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), UserProfileHeaderViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), UserProfileHeaderViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C103091(), 62, (Object) null);
     }
 }

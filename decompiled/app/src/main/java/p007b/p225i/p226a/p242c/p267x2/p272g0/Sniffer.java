@@ -1,0 +1,41 @@
+package p007b.p225i.p226a.p242c.p267x2.p272g0;
+
+import java.io.IOException;
+import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
+import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
+
+/* compiled from: Sniffer.java */
+/* renamed from: b.i.a.c.x2.g0.f, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class Sniffer {
+
+    /* renamed from: a */
+    public final ParsableByteArray f8300a = new ParsableByteArray(8);
+
+    /* renamed from: b */
+    public int f8301b;
+
+    /* renamed from: a */
+    public final long m3684a(ExtractorInput extractorInput) throws IOException {
+        int i = 0;
+        extractorInput.mo3652o(this.f8300a.f6793a, 0, 1);
+        int i2 = this.f8300a.f6793a[0] & 255;
+        if (i2 == 0) {
+            return Long.MIN_VALUE;
+        }
+        int i3 = 128;
+        int i4 = 0;
+        while ((i2 & i3) == 0) {
+            i3 >>= 1;
+            i4++;
+        }
+        int i5 = i2 & (~i3);
+        extractorInput.mo3652o(this.f8300a.f6793a, 1, i4);
+        while (i < i4) {
+            i++;
+            i5 = (this.f8300a.f6793a[i] & 255) + (i5 << 8);
+        }
+        this.f8301b = i4 + 1 + this.f8301b;
+        return i5;
+    }
+}

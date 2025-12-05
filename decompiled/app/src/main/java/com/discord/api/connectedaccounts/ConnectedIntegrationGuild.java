@@ -1,8 +1,8 @@
 package com.discord.api.connectedaccounts;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ConnectedIntegrationGuild.kt */
 /* loaded from: classes.dex */
@@ -34,7 +34,7 @@ public final /* data */ class ConnectedIntegrationGuild {
             return false;
         }
         ConnectedIntegrationGuild connectedIntegrationGuild = (ConnectedIntegrationGuild) other;
-        return this.id == connectedIntegrationGuild.id && m.areEqual(this.icon, connectedIntegrationGuild.icon) && m.areEqual(this.name, connectedIntegrationGuild.name);
+        return this.id == connectedIntegrationGuild.id && Intrinsics3.areEqual(this.icon, connectedIntegrationGuild.icon) && Intrinsics3.areEqual(this.name, connectedIntegrationGuild.name);
     }
 
     public int hashCode() {
@@ -47,11 +47,11 @@ public final /* data */ class ConnectedIntegrationGuild {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ConnectedIntegrationGuild(id=");
-        sbU.append(this.id);
-        sbU.append(", icon=");
-        sbU.append(this.icon);
-        sbU.append(", name=");
-        return a.J(sbU, this.name, ")");
+        StringBuilder sbM833U = outline.m833U("ConnectedIntegrationGuild(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", icon=");
+        sbM833U.append(this.icon);
+        sbM833U.append(", name=");
+        return outline.m822J(sbM833U, this.name, ")");
     }
 }

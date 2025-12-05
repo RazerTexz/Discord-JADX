@@ -3,11 +3,11 @@ package com.discord.models.experiments.dto;
 import com.discord.api.guild.GuildHubType;
 import com.discord.models.deserialization.gson.InboundGatewayGsonParser;
 import com.discord.models.domain.Model;
-import d0.t.u;
-import d0.z.d.m;
 import java.io.IOException;
 import java.util.List;
 import kotlin.jvm.internal.Ref$ObjectRef;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildExperimentFilter.kt */
 /* loaded from: classes.dex */
@@ -16,9 +16,9 @@ public final class GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$
     public final /* synthetic */ Model.JsonReader $reader;
 
     /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$1 */
+    public static final class RunnableC55531 implements Runnable {
+        public RunnableC55531() {
         }
 
         @Override // java.lang.Runnable
@@ -28,8 +28,8 @@ public final class GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$
     }
 
     /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements Runnable {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$2 */
+    public static final class RunnableC55542 implements Runnable {
 
         /* compiled from: GuildExperimentFilter.kt */
         /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$2$1, reason: invalid class name */
@@ -49,7 +49,7 @@ public final class GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$
             }
         }
 
-        public AnonymousClass2() {
+        public RunnableC55542() {
         }
 
         /* JADX WARN: Type inference failed for: r0v3, types: [T, java.util.Set] */
@@ -58,8 +58,8 @@ public final class GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$
             GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1 guildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1 = GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1.this;
             Ref$ObjectRef ref$ObjectRef = guildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1.$hubTypes;
             List listNextList = guildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1.$reader.nextList(new AnonymousClass1());
-            m.checkNotNullExpressionValue(listNextList, "reader.nextList {\n      …ass.java)\n              }");
-            ref$ObjectRef.element = u.toSet(listNextList);
+            Intrinsics3.checkNotNullExpressionValue(listNextList, "reader.nextList {\n      …ass.java)\n              }");
+            ref$ObjectRef.element = _Collections.toSet(listNextList);
         }
     }
 
@@ -70,6 +70,6 @@ public final class GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$
 
     @Override // java.lang.Runnable
     public final void run() throws IOException {
-        this.$reader.nextListIndexed(new AnonymousClass1(), new AnonymousClass2());
+        this.$reader.nextListIndexed(new RunnableC55531(), new RunnableC55542());
     }
 }

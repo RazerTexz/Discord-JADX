@@ -11,30 +11,31 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.PublishMessageDialogBinding;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.chat.list.PublishActionDialogViewModel;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: PublishActionDialog.kt */
 /* loaded from: classes2.dex */
@@ -47,7 +48,7 @@ public final class PublishActionDialog extends AppDialog {
 
     /* renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(PublishActionDialog.class, "binding", "getBinding()Lcom/discord/databinding/PublishMessageDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(PublishActionDialog.class, "binding", "getBinding()Lcom/discord/databinding/PublishMessageDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -62,17 +63,17 @@ public final class PublishActionDialog extends AppDialog {
         }
 
         public final void show(FragmentManager fragmentManager, long messageId, long channelId, Function0<Unit> onSuccess, Integer dialogTheme) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             PublishActionDialog publishActionDialog = new PublishActionDialog();
             if (onSuccess != null) {
                 PublishActionDialog.access$setOnSuccess$p(publishActionDialog, onSuccess);
             }
-            Bundle bundleT = a.T("com.discord.intent.extra.EXTRA_MESSAGE_ID", messageId);
-            bundleT.putLong("com.discord.intent.extra.EXTRA_CHANNEL_ID", channelId);
+            Bundle bundleM832T = outline.m832T("com.discord.intent.extra.EXTRA_MESSAGE_ID", messageId);
+            bundleM832T.putLong("com.discord.intent.extra.EXTRA_CHANNEL_ID", channelId);
             if (dialogTheme != null) {
-                bundleT.putInt(PublishActionDialog.ARG_THEME_ID, dialogTheme.intValue());
+                bundleM832T.putInt(PublishActionDialog.ARG_THEME_ID, dialogTheme.intValue());
             }
-            publishActionDialog.setArguments(bundleT);
+            publishActionDialog.setArguments(bundleM832T);
             publishActionDialog.show(fragmentManager, PublishActionDialog.class.getName());
         }
 
@@ -82,16 +83,16 @@ public final class PublishActionDialog extends AppDialog {
     }
 
     /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$1 */
+    public static final class C79411 extends Lambda implements Function0<Unit> {
+        public C79411() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -101,9 +102,9 @@ public final class PublishActionDialog extends AppDialog {
     }
 
     /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$2 */
+    public static final class ViewOnClickListenerC79422 implements View.OnClickListener {
+        public ViewOnClickListenerC79422() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -117,9 +118,9 @@ public final class PublishActionDialog extends AppDialog {
     }
 
     /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$3 */
+    public static final class ViewOnClickListenerC79433 implements View.OnClickListener {
+        public ViewOnClickListenerC79433() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -129,51 +130,51 @@ public final class PublishActionDialog extends AppDialog {
     }
 
     /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<PublishActionDialogViewModel.ViewState, Unit> {
-        public AnonymousClass1(PublishActionDialog publishActionDialog) {
+    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C79441 extends FunctionReferenceImpl implements Function1<PublishActionDialogViewModel.ViewState, Unit> {
+        public C79441(PublishActionDialog publishActionDialog) {
             super(1, publishActionDialog, PublishActionDialog.class, "updateView", "updateView(Lcom/discord/widgets/chat/list/PublishActionDialogViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(PublishActionDialogViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PublishActionDialogViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "p1");
+            Intrinsics3.checkNotNullParameter(viewState, "p1");
             PublishActionDialog.access$updateView((PublishActionDialog) this.receiver, viewState);
         }
     }
 
     /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<PublishActionDialogViewModel.Event, Unit> {
-        public AnonymousClass2(PublishActionDialog publishActionDialog) {
+    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBoundOrOnResume$2 */
+    public static final /* synthetic */ class C79452 extends FunctionReferenceImpl implements Function1<PublishActionDialogViewModel.Event, Unit> {
+        public C79452(PublishActionDialog publishActionDialog) {
             super(1, publishActionDialog, PublishActionDialog.class, "handleEvent", "handleEvent(Lcom/discord/widgets/chat/list/PublishActionDialogViewModel$Event;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(PublishActionDialogViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PublishActionDialogViewModel.Event event) {
-            m.checkNotNullParameter(event, "p1");
+            Intrinsics3.checkNotNullParameter(event, "p1");
             PublishActionDialog.access$handleEvent((PublishActionDialog) this.receiver, event);
         }
     }
 
     public PublishActionDialog() {
-        super(R.layout.publish_message_dialog);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, PublishActionDialog$binding$2.INSTANCE, null, 2, null);
-        PublishActionDialog$viewModel$2 publishActionDialog$viewModel$2 = new PublishActionDialog$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(PublishActionDialogViewModel.class), new PublishActionDialog$appViewModels$$inlined$viewModels$1(g0Var), new i0(publishActionDialog$viewModel$2));
+        super(C5419R.layout.publish_message_dialog);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, PublishActionDialog2.INSTANCE, null, 2, null);
+        PublishActionDialog3 publishActionDialog3 = new PublishActionDialog3(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(PublishActionDialogViewModel.class), new PublishActionDialog$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(publishActionDialog3));
     }
 
     public static final /* synthetic */ Bundle access$getArgumentsOrDefault$p(PublishActionDialog publishActionDialog) {
@@ -210,29 +211,29 @@ public final class PublishActionDialog extends AppDialog {
 
     private final void handleEvent(PublishActionDialogViewModel.Event event) {
         if (event instanceof PublishActionDialogViewModel.Event.Success) {
-            b.a.d.m.i(this, R.string.message_published, 0, 4);
+            AppToast.m171i(this, C5419R.string.message_published, 0, 4);
         } else if (event instanceof PublishActionDialogViewModel.Event.Failure) {
-            b.a.d.m.i(this, R.string.publish_followed_news_generic_body, 0, 4);
+            AppToast.m171i(this, C5419R.string.publish_followed_news_generic_body, 0, 4);
         }
         dismiss();
     }
 
     private final void renderHasFollowers(PublishActionDialogViewModel.ViewState.LoadedHasFollowers viewState) {
-        TextView textView = getBinding().f2137b;
-        m.checkNotNullExpressionValue(textView, "binding.noticeBodyText");
-        b.n(textView, R.string.publish_followed_news_body_reach, new Object[]{String.valueOf(viewState.getFollowerStats().getGuildsFollowing())}, null, 4);
+        TextView textView = getBinding().f15220b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.noticeBodyText");
+        FormatUtils.m222n(textView, C5419R.string.publish_followed_news_body_reach, new Object[]{String.valueOf(viewState.getFollowerStats().getGuildsFollowing())}, null, 4);
     }
 
     private final void renderLoading() {
-        TextView textView = getBinding().f2137b;
-        m.checkNotNullExpressionValue(textView, "binding.noticeBodyText");
-        b.n(textView, R.string.loading, new Object[0], null, 4);
+        TextView textView = getBinding().f15220b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.noticeBodyText");
+        FormatUtils.m222n(textView, C5419R.string.loading, new Object[0], null, 4);
     }
 
     private final void renderNoFollowers() {
-        TextView textView = getBinding().f2137b;
-        m.checkNotNullExpressionValue(textView, "binding.noticeBodyText");
-        b.n(textView, R.string.publish_followed_news_body, new Object[0], null, 4);
+        TextView textView = getBinding().f15220b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.noticeBodyText");
+        FormatUtils.m222n(textView, C5419R.string.publish_followed_news_body, new Object[0], null, 4);
     }
 
     public static final void show(FragmentManager fragmentManager, long j, long j2, Function0<Unit> function0, Integer num) {
@@ -240,9 +241,9 @@ public final class PublishActionDialog extends AppDialog {
     }
 
     private final void updateView(PublishActionDialogViewModel.ViewState viewState) {
-        if (m.areEqual(viewState, PublishActionDialogViewModel.ViewState.Loading.INSTANCE)) {
+        if (Intrinsics3.areEqual(viewState, PublishActionDialogViewModel.ViewState.Loading.INSTANCE)) {
             renderLoading();
-        } else if (m.areEqual(viewState, PublishActionDialogViewModel.ViewState.LoadedNoFollowers.INSTANCE)) {
+        } else if (Intrinsics3.areEqual(viewState, PublishActionDialogViewModel.ViewState.LoadedNoFollowers.INSTANCE)) {
             renderNoFollowers();
         } else if (viewState instanceof PublishActionDialogViewModel.ViewState.LoadedHasFollowers) {
             renderHasFollowers((PublishActionDialogViewModel.ViewState.LoadedHasFollowers) viewState);
@@ -257,7 +258,7 @@ public final class PublishActionDialog extends AppDialog {
             TypedValue typedValue = new TypedValue();
             Context context = getContext();
             if (context != null && (theme = context.getTheme()) != null) {
-                theme.resolveAttribute(arguments.getInt(ARG_THEME_ID, R.attr.dialogTheme), typedValue, true);
+                theme.resolveAttribute(arguments.getInt(ARG_THEME_ID, C5419R.attr.dialogTheme), typedValue, true);
             }
             setStyle(1, typedValue.resourceId);
         }
@@ -266,34 +267,34 @@ public final class PublishActionDialog extends AppDialog {
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        TextView textView = getBinding().d;
-        m.checkNotNullExpressionValue(textView, "binding.noticeHeader");
-        b.n(textView, R.string.news_channel_publish_bump, new Object[0], null, 4);
-        LinearLayout linearLayout = getBinding().e;
-        m.checkNotNullExpressionValue(linearLayout, "binding.noticeHeaderContainer");
+        TextView textView = getBinding().f15222d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.noticeHeader");
+        FormatUtils.m222n(textView, C5419R.string.news_channel_publish_bump, new Object[0], null, 4);
+        LinearLayout linearLayout = getBinding().f15223e;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.noticeHeaderContainer");
         linearLayout.setVisibility(0);
-        TextView textView2 = getBinding().f2137b;
-        m.checkNotNullExpressionValue(textView2, "binding.noticeBodyText");
+        TextView textView2 = getBinding().f15220b;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.noticeBodyText");
         textView2.setTextAlignment(2);
-        TextView textView3 = getBinding().f2137b;
-        m.checkNotNullExpressionValue(textView3, "binding.noticeBodyText");
-        textView3.setMovementMethod(new WidgetNoticeDialog.ActionLinkMovementMethod(new AnonymousClass1()));
-        MaterialButton materialButton = getBinding().f;
-        m.checkNotNullExpressionValue(materialButton, "binding.noticeOk");
-        ViewExtensions.setTextAndVisibilityBy(materialButton, b.k(this, R.string.news_channel_publish, new Object[0], null, 4));
-        getBinding().f.setOnClickListener(new AnonymousClass2());
-        MaterialButton materialButton2 = getBinding().c;
-        m.checkNotNullExpressionValue(materialButton2, "binding.noticeCancel");
-        ViewExtensions.setTextAndVisibilityBy(materialButton2, b.k(this, R.string.cancel, new Object[0], null, 4));
-        getBinding().c.setOnClickListener(new AnonymousClass3());
+        TextView textView3 = getBinding().f15220b;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.noticeBodyText");
+        textView3.setMovementMethod(new WidgetNoticeDialog.ActionLinkMovementMethod(new C79411()));
+        MaterialButton materialButton = getBinding().f15224f;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.noticeOk");
+        ViewExtensions.setTextAndVisibilityBy(materialButton, FormatUtils.m219k(this, C5419R.string.news_channel_publish, new Object[0], null, 4));
+        getBinding().f15224f.setOnClickListener(new ViewOnClickListenerC79422());
+        MaterialButton materialButton2 = getBinding().f15221c;
+        Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.noticeCancel");
+        ViewExtensions.setTextAndVisibilityBy(materialButton2, FormatUtils.m219k(this, C5419R.string.cancel, new Object[0], null, 4));
+        getBinding().f15221c.setOnClickListener(new ViewOnClickListenerC79433());
     }
 
     @Override // com.discord.app.AppDialog
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), PublishActionDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), PublishActionDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), PublishActionDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C79441(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), PublishActionDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C79452(this), 62, (Object) null);
     }
 }

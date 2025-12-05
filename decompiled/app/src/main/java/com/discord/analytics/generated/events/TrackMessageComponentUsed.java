@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMessageComponentUsed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMessageComponentUsed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackMessageComponentUsed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final Long interactionId = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackMessageComponentUsed implements AnalyticsSche
             return false;
         }
         TrackMessageComponentUsed trackMessageComponentUsed = (TrackMessageComponentUsed) other;
-        return m.areEqual(this.applicationId, trackMessageComponentUsed.applicationId) && m.areEqual(this.interactionId, trackMessageComponentUsed.interactionId) && m.areEqual(this.actionType, trackMessageComponentUsed.actionType) && m.areEqual(this.messageId, trackMessageComponentUsed.messageId);
+        return Intrinsics3.areEqual(this.applicationId, trackMessageComponentUsed.applicationId) && Intrinsics3.areEqual(this.interactionId, trackMessageComponentUsed.interactionId) && Intrinsics3.areEqual(this.actionType, trackMessageComponentUsed.actionType) && Intrinsics3.areEqual(this.messageId, trackMessageComponentUsed.messageId);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackMessageComponentUsed implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMessageComponentUsed(applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", interactionId=");
-        sbU.append(this.interactionId);
-        sbU.append(", actionType=");
-        sbU.append(this.actionType);
-        sbU.append(", messageId=");
-        return a.G(sbU, this.messageId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMessageComponentUsed(applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", interactionId=");
+        sbM833U.append(this.interactionId);
+        sbM833U.append(", actionType=");
+        sbM833U.append(this.actionType);
+        sbM833U.append(", messageId=");
+        return outline.m819G(sbM833U, this.messageId, ")");
     }
 }

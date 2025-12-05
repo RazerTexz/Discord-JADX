@@ -1,8 +1,8 @@
 package com.discord.api.embeddedactivities;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: EmbeddedActivityInboundUpdate.kt */
 /* loaded from: classes.dex */
@@ -27,7 +27,8 @@ public final /* data */ class EmbeddedActivityInboundUpdate {
         return this.guildId;
     }
 
-    public final List<Long> d() {
+    /* renamed from: d */
+    public final List<Long> m7808d() {
         return this.users;
     }
 
@@ -39,7 +40,7 @@ public final /* data */ class EmbeddedActivityInboundUpdate {
             return false;
         }
         EmbeddedActivityInboundUpdate embeddedActivityInboundUpdate = (EmbeddedActivityInboundUpdate) other;
-        return this.channelId == embeddedActivityInboundUpdate.channelId && m.areEqual(this.embeddedActivity, embeddedActivityInboundUpdate.embeddedActivity) && this.guildId == embeddedActivityInboundUpdate.guildId && m.areEqual(this.users, embeddedActivityInboundUpdate.users);
+        return this.channelId == embeddedActivityInboundUpdate.channelId && Intrinsics3.areEqual(this.embeddedActivity, embeddedActivityInboundUpdate.embeddedActivity) && this.guildId == embeddedActivityInboundUpdate.guildId && Intrinsics3.areEqual(this.users, embeddedActivityInboundUpdate.users);
     }
 
     public int hashCode() {
@@ -54,13 +55,13 @@ public final /* data */ class EmbeddedActivityInboundUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("EmbeddedActivityInboundUpdate(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", embeddedActivity=");
-        sbU.append(this.embeddedActivity);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", users=");
-        return a.L(sbU, this.users, ")");
+        StringBuilder sbM833U = outline.m833U("EmbeddedActivityInboundUpdate(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", embeddedActivity=");
+        sbM833U.append(this.embeddedActivity);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", users=");
+        return outline.m824L(sbM833U, this.users, ")");
     }
 }

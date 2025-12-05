@@ -15,69 +15,82 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /* loaded from: classes.dex */
 public final class GuildScheduledEventItemViewBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f15136a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final GuildScheduledEventBottomButtonView f2120b;
+    public final GuildScheduledEventBottomButtonView f15137b;
 
+    /* renamed from: c */
     @NonNull
-    public final ConstraintLayout c;
+    public final ConstraintLayout f15138c;
 
+    /* renamed from: d */
     @NonNull
-    public final SimpleDraweeView d;
+    public final SimpleDraweeView f15139d;
 
+    /* renamed from: e */
     @NonNull
-    public final GuildScheduledEventDateView e;
+    public final GuildScheduledEventDateView f15140e;
 
+    /* renamed from: f */
     @NonNull
-    public final LinkifiedTextView f;
+    public final LinkifiedTextView f15141f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f15142g;
 
+    /* renamed from: h */
     @NonNull
-    public final SimpleDraweeView h;
+    public final SimpleDraweeView f15143h;
 
+    /* renamed from: i */
     @NonNull
-    public final TextView i;
+    public final TextView f15144i;
 
+    /* renamed from: j */
     @NonNull
-    public final TextView j;
+    public final TextView f15145j;
 
+    /* renamed from: k */
     @NonNull
-    public final TextView k;
+    public final TextView f15146k;
 
+    /* renamed from: l */
     @NonNull
-    public final TextView l;
+    public final TextView f15147l;
 
+    /* renamed from: m */
     @NonNull
-    public final ImageView m;
+    public final ImageView f15148m;
 
+    /* renamed from: n */
     @NonNull
-    public final LinkifiedTextView n;
+    public final LinkifiedTextView f15149n;
 
     public GuildScheduledEventItemViewBinding(@NonNull ConstraintLayout constraintLayout, @NonNull GuildScheduledEventBottomButtonView guildScheduledEventBottomButtonView, @NonNull ConstraintLayout constraintLayout2, @NonNull SimpleDraweeView simpleDraweeView, @NonNull GuildScheduledEventDateView guildScheduledEventDateView, @NonNull LinkifiedTextView linkifiedTextView, @NonNull TextView textView, @NonNull SimpleDraweeView simpleDraweeView2, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView5, @NonNull Barrier barrier, @NonNull ImageView imageView, @NonNull LinkifiedTextView linkifiedTextView2) {
-        this.a = constraintLayout;
-        this.f2120b = guildScheduledEventBottomButtonView;
-        this.c = constraintLayout2;
-        this.d = simpleDraweeView;
-        this.e = guildScheduledEventDateView;
-        this.f = linkifiedTextView;
-        this.g = textView;
-        this.h = simpleDraweeView2;
-        this.i = textView2;
-        this.j = textView3;
-        this.k = textView4;
-        this.l = textView5;
-        this.m = imageView;
-        this.n = linkifiedTextView2;
+        this.f15136a = constraintLayout;
+        this.f15137b = guildScheduledEventBottomButtonView;
+        this.f15138c = constraintLayout2;
+        this.f15139d = simpleDraweeView;
+        this.f15140e = guildScheduledEventDateView;
+        this.f15141f = linkifiedTextView;
+        this.f15142g = textView;
+        this.f15143h = simpleDraweeView2;
+        this.f15144i = textView2;
+        this.f15145j = textView3;
+        this.f15146k = textView4;
+        this.f15147l = textView5;
+        this.f15148m = imageView;
+        this.f15149n = linkifiedTextView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15136a;
     }
 }

@@ -13,41 +13,29 @@ import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.a.i.e5;
-import b.a.i.o5;
-import b.a.i.p5;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.hubs.EmailVerification;
-import com.discord.api.hubs.GuildInfo;
+import com.discord.api.hubs.EmailVerification3;
 import com.discord.app.AppFragment;
-import com.discord.app.LoggingConfig;
+import com.discord.app.AppLogger2;
 import com.discord.databinding.WidgetHubEmailFlowBinding;
 import com.discord.stores.StoreNux;
 import com.discord.stores.StoreStream;
-import com.discord.stores.utilities.Loading;
-import com.discord.stores.utilities.RestCallStateKt;
-import com.discord.stores.utilities.Success;
+import com.discord.stores.utilities.RestCallState4;
+import com.discord.stores.utilities.RestCallState5;
+import com.discord.stores.utilities.RestCallState6;
 import com.discord.utilities.features.GrowthTeamFeatures;
-import com.discord.utilities.resources.StringResourceUtilsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.resources.StringResourceUtils;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.view.validators.ValidationManager;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.LoadingButton;
 import com.discord.widgets.guilds.create.CreateGuildTrigger;
 import com.discord.widgets.nux.WidgetGuildTemplates;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import d0.g;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -57,12 +45,25 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p025i.WidgetDiscordHubEmailInputBinding;
+import p007b.p008a.p025i.WidgetHubEmailFlowConfirmationBinding;
+import p007b.p008a.p025i.WidgetHubEmailFlowWaitlistBinding;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: WidgetHubEmailFlow.kt */
 /* loaded from: classes2.dex */
 public final class WidgetHubEmailFlow extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetHubEmailFlow.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubEmailFlowBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubEmailFlow.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubEmailFlowBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -74,7 +75,7 @@ public final class WidgetHubEmailFlow extends AppFragment {
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
-    private final LoggingConfig loggingConfig;
+    private final AppLogger2 loggingConfig;
 
     /* renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
@@ -101,46 +102,46 @@ public final class WidgetHubEmailFlow extends AppFragment {
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;
 
         static {
-            HubEmailEntryPoint.values();
+            WidgetHubEmailViewModel3.values();
             int[] iArr = new int[3];
             $EnumSwitchMapping$0 = iArr;
-            HubEmailEntryPoint hubEmailEntryPoint = HubEmailEntryPoint.Invite;
-            iArr[hubEmailEntryPoint.ordinal()] = 1;
-            HubEmailEntryPoint hubEmailEntryPoint2 = HubEmailEntryPoint.Onboarding;
-            iArr[hubEmailEntryPoint2.ordinal()] = 2;
-            HubEmailEntryPoint.values();
+            WidgetHubEmailViewModel3 widgetHubEmailViewModel3 = WidgetHubEmailViewModel3.Invite;
+            iArr[widgetHubEmailViewModel3.ordinal()] = 1;
+            WidgetHubEmailViewModel3 widgetHubEmailViewModel32 = WidgetHubEmailViewModel3.Onboarding;
+            iArr[widgetHubEmailViewModel32.ordinal()] = 2;
+            WidgetHubEmailViewModel3.values();
             int[] iArr2 = new int[3];
             $EnumSwitchMapping$1 = iArr2;
-            iArr2[hubEmailEntryPoint.ordinal()] = 1;
-            iArr2[hubEmailEntryPoint2.ordinal()] = 2;
+            iArr2[widgetHubEmailViewModel3.ordinal()] = 1;
+            iArr2[widgetHubEmailViewModel32.ordinal()] = 2;
         }
     }
 
     /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<HubEmailState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewBoundOrOnResume$1 */
+    public static final class C90341 extends Lambda implements Function1<WidgetHubEmailViewModel4, Unit> {
+        public C90341() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(HubEmailState hubEmailState) {
-            invoke2(hubEmailState);
-            return Unit.a;
+        public /* bridge */ /* synthetic */ Unit invoke(WidgetHubEmailViewModel4 widgetHubEmailViewModel4) {
+            invoke2(widgetHubEmailViewModel4);
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(HubEmailState hubEmailState) {
+        public final void invoke2(WidgetHubEmailViewModel4 widgetHubEmailViewModel4) {
             WidgetHubEmailFlow widgetHubEmailFlow = WidgetHubEmailFlow.this;
-            m.checkNotNullExpressionValue(hubEmailState, "viewState");
-            WidgetHubEmailFlow.access$updateView(widgetHubEmailFlow, hubEmailState);
+            Intrinsics3.checkNotNullExpressionValue(widgetHubEmailViewModel4, "viewState");
+            WidgetHubEmailFlow.access$updateView(widgetHubEmailFlow, widgetHubEmailViewModel4);
         }
     }
 
     /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$1 */
+    public static final class ViewOnClickListenerC90351 implements View.OnClickListener {
+        public ViewOnClickListenerC90351() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -150,12 +151,12 @@ public final class WidgetHubEmailFlow extends AppFragment {
     }
 
     /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$2 */
+    public static final class ViewOnClickListenerC90362 implements View.OnClickListener {
 
         /* compiled from: WidgetHubEmailFlow.kt */
         /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
+        public static final class AnonymousClass1 extends Lambda implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -169,20 +170,20 @@ public final class WidgetHubEmailFlow extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final StoreNux.NuxState invoke2(StoreNux.NuxState nuxState) {
-                m.checkNotNullParameter(nuxState, "it");
+                Intrinsics3.checkNotNullParameter(nuxState, "it");
                 return StoreNux.NuxState.copy$default(nuxState, false, false, false, false, false, null, 62, null);
             }
         }
 
-        public AnonymousClass2() {
+        public ViewOnClickListenerC90362() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             FragmentActivity activity = WidgetHubEmailFlow.this.getActivity();
             if (activity != null) {
-                m.checkNotNullExpressionValue(activity, "activity ?: return@setOnClickListener");
-                if (WidgetHubEmailFlow.access$getArgs$p(WidgetHubEmailFlow.this).getEntryPoint() == HubEmailEntryPoint.Onboarding) {
+                Intrinsics3.checkNotNullExpressionValue(activity, "activity ?: return@setOnClickListener");
+                if (WidgetHubEmailFlow.access$getArgs$p(WidgetHubEmailFlow.this).getEntryPoint() == WidgetHubEmailViewModel3.Onboarding) {
                     StoreStream.INSTANCE.getNux().updateNux(AnonymousClass1.INSTANCE);
                     WidgetGuildTemplates.INSTANCE.launch(activity, CreateGuildTrigger.NUF, true);
                 }
@@ -192,9 +193,9 @@ public final class WidgetHubEmailFlow extends AppFragment {
     }
 
     /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$3 */
+    public static final class ViewOnClickListenerC90373 implements View.OnClickListener {
+        public ViewOnClickListenerC90373() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -204,9 +205,9 @@ public final class WidgetHubEmailFlow extends AppFragment {
     }
 
     /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$2 */
+    public static final class ViewOnClickListenerC90392 implements View.OnClickListener {
+        public ViewOnClickListenerC90392() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -219,9 +220,9 @@ public final class WidgetHubEmailFlow extends AppFragment {
     }
 
     /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$3 */
+    public static final class ViewOnClickListenerC90403 implements View.OnClickListener {
+        public ViewOnClickListenerC90403() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -231,73 +232,73 @@ public final class WidgetHubEmailFlow extends AppFragment {
     }
 
     /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<Success<? extends EmailVerification>, Unit> {
+    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$4 */
+    public static final class C90414 extends Lambda implements Function1<RestCallState6<? extends EmailVerification>, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ String $email;
-        public final /* synthetic */ HubEmailState $state;
+        public final /* synthetic */ WidgetHubEmailViewModel4 $state;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass4(HubEmailState hubEmailState, Context context, String str) {
+        public C90414(WidgetHubEmailViewModel4 widgetHubEmailViewModel4, Context context, String str) {
             super(1);
-            this.$state = hubEmailState;
+            this.$state = widgetHubEmailViewModel4;
             this.$context = context;
             this.$email = str;
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Success<? extends EmailVerification> success) {
-            invoke2((Success<EmailVerification>) success);
-            return Unit.a;
+        public /* bridge */ /* synthetic */ Unit invoke(RestCallState6<? extends EmailVerification> restCallState6) {
+            invoke2((RestCallState6<EmailVerification>) restCallState6);
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Success<EmailVerification> success) {
-            m.checkNotNullParameter(success, "it");
+        public final void invoke2(RestCallState6<EmailVerification> restCallState6) {
+            Intrinsics3.checkNotNullParameter(restCallState6, "it");
             StoreStream.INSTANCE.getDirectories().markDiscordHubClicked();
             if (!this.$state.getHasMultipleDomains()) {
                 EmailVerification emailVerificationInvoke = this.$state.getVerifyEmailAsync().invoke();
                 if (emailVerificationInvoke == null || emailVerificationInvoke.getHasMatchingGuild() || !GrowthTeamFeatures.INSTANCE.isMultiDomainEnabled()) {
                     return;
                 }
-                j.g.f(this.$context, WidgetHubEmailFlow.access$getActivityResultHandler$p(WidgetHubEmailFlow.this), WidgetHubWaitlist.class, new HubWaitlistArgs(this.$email));
+                AppScreen2.f524g.m160f(this.$context, WidgetHubEmailFlow.access$getActivityResultHandler$p(WidgetHubEmailFlow.this), WidgetHubWaitlist.class, new WidgetHubWaitlistViewModel2(this.$email));
                 WidgetHubEmailFlow.access$getViewModel$p(WidgetHubEmailFlow.this).reset();
                 return;
             }
-            j jVar = j.g;
+            AppScreen2 appScreen2 = AppScreen2.f524g;
             Context context = this.$context;
             ActivityResultLauncher<Intent> activityResultLauncherAccess$getActivityResultHandler$p = WidgetHubEmailFlow.access$getActivityResultHandler$p(WidgetHubEmailFlow.this);
             String str = this.$email;
-            List<GuildInfo> listA = success.invoke().a();
-            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listA, 10));
-            Iterator<T> it = listA.iterator();
+            List<EmailVerification3> listM7998a = restCallState6.invoke().m7998a();
+            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listM7998a, 10));
+            Iterator<T> it = listM7998a.iterator();
             while (it.hasNext()) {
-                arrayList.add(DomainGuildInfo.INSTANCE.from((GuildInfo) it.next()));
+                arrayList.add(WidgetHubDomains2.INSTANCE.from((EmailVerification3) it.next()));
             }
-            jVar.f(context, activityResultLauncherAccess$getActivityResultHandler$p, WidgetHubDomains.class, new HubDomainArgs(str, arrayList));
+            appScreen2.m160f(context, activityResultLauncherAccess$getActivityResultHandler$p, WidgetHubDomains.class, new WidgetHubDomains3(str, arrayList));
             WidgetHubEmailFlow.access$getViewModel$p(WidgetHubEmailFlow.this).reset();
         }
     }
 
     public WidgetHubEmailFlow() {
-        super(R.layout.widget_hub_email_flow);
-        this.args = g.lazy(new WidgetHubEmailFlow$$special$$inlined$args$1(this, "intent_args_key"));
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetHubEmailFlow$binding$2.INSTANCE, null, 2, null);
-        ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetHubEmailFlow$activityResultHandler$1(this));
-        m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "registerForActivityResul…  }\n            }\n      }");
+        super(C5419R.layout.widget_hub_email_flow);
+        this.args = LazyJVM.lazy(new WidgetHubEmailFlow$$special$$inlined$args$1(this, "intent_args_key"));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetHubEmailFlow3.INSTANCE, null, 2, null);
+        ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetHubEmailFlow2(this));
+        Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "registerForActivityResul…  }\n            }\n      }");
         this.activityResultHandler = activityResultLauncherRegisterForActivityResult;
-        WidgetHubEmailFlow$viewModel$2 widgetHubEmailFlow$viewModel$2 = WidgetHubEmailFlow$viewModel$2.INSTANCE;
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetHubEmailViewModel.class), new WidgetHubEmailFlow$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetHubEmailFlow$viewModel$2));
-        this.validationManager = g.lazy(new WidgetHubEmailFlow$validationManager$2(this));
-        this.loggingConfig = new LoggingConfig(false, null, new WidgetHubEmailFlow$loggingConfig$1(this), 3);
+        WidgetHubEmailFlow7 widgetHubEmailFlow7 = WidgetHubEmailFlow7.INSTANCE;
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetHubEmailViewModel.class), new WidgetHubEmailFlow$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetHubEmailFlow7));
+        this.validationManager = LazyJVM.lazy(new WidgetHubEmailFlow6(this));
+        this.loggingConfig = new AppLogger2(false, null, new WidgetHubEmailFlow4(this), 3);
     }
 
     public static final /* synthetic */ ActivityResultLauncher access$getActivityResultHandler$p(WidgetHubEmailFlow widgetHubEmailFlow) {
         return widgetHubEmailFlow.activityResultHandler;
     }
 
-    public static final /* synthetic */ HubEmailArgs access$getArgs$p(WidgetHubEmailFlow widgetHubEmailFlow) {
+    public static final /* synthetic */ WidgetHubEmailViewModel2 access$getArgs$p(WidgetHubEmailFlow widgetHubEmailFlow) {
         return widgetHubEmailFlow.getArgs();
     }
 
@@ -313,16 +314,16 @@ public final class WidgetHubEmailFlow extends AppFragment {
         return widgetHubEmailFlow.getViewModel();
     }
 
-    public static final /* synthetic */ void access$updateView(WidgetHubEmailFlow widgetHubEmailFlow, HubEmailState hubEmailState) {
-        widgetHubEmailFlow.updateView(hubEmailState);
+    public static final /* synthetic */ void access$updateView(WidgetHubEmailFlow widgetHubEmailFlow, WidgetHubEmailViewModel4 widgetHubEmailViewModel4) {
+        widgetHubEmailFlow.updateView(widgetHubEmailViewModel4);
     }
 
     public static final /* synthetic */ void access$verifyEmail(WidgetHubEmailFlow widgetHubEmailFlow) {
         widgetHubEmailFlow.verifyEmail();
     }
 
-    private final HubEmailArgs getArgs() {
-        return (HubEmailArgs) this.args.getValue();
+    private final WidgetHubEmailViewModel2 getArgs() {
+        return (WidgetHubEmailViewModel2) this.args.getValue();
     }
 
     private final WidgetHubEmailFlowBinding getBinding() {
@@ -330,8 +331,8 @@ public final class WidgetHubEmailFlow extends AppFragment {
     }
 
     private final String getEmail() {
-        TextInputEditText textInputEditText = getBinding().c.c;
-        m.checkNotNullExpressionValue(textInputEditText, "binding.discordHubEmailI…aderDescriptionEmailInput");
+        TextInputEditText textInputEditText = getBinding().f17175c.f819c;
+        Intrinsics3.checkNotNullExpressionValue(textInputEditText, "binding.discordHubEmailI…aderDescriptionEmailInput");
         return String.valueOf(textInputEditText.getText());
     }
 
@@ -343,60 +344,60 @@ public final class WidgetHubEmailFlow extends AppFragment {
         return (WidgetHubEmailViewModel) this.viewModel.getValue();
     }
 
-    private final void updateView(HubEmailState state) {
+    private final void updateView(WidgetHubEmailViewModel4 state) {
         String school;
         Context context = getContext();
         if (context != null) {
-            m.checkNotNullExpressionValue(context, "context ?: return");
+            Intrinsics3.checkNotNullExpressionValue(context, "context ?: return");
             EmailVerification emailVerificationInvoke = state.getVerifyEmailAsync().invoke();
             boolean z2 = emailVerificationInvoke != null && emailVerificationInvoke.getHasMatchingGuild();
-            boolean z3 = !(state.getVerifyEmailAsync() instanceof Success) && state.getWaitlistResult() == null;
+            boolean z3 = !(state.getVerifyEmailAsync() instanceof RestCallState6) && state.getWaitlistResult() == null;
             EmailVerification emailVerificationInvoke2 = state.getVerifyEmailAsync().invoke();
             boolean z4 = ((emailVerificationInvoke2 == null || emailVerificationInvoke2.getHasMatchingGuild()) && state.getWaitlistResult() == null) ? false : true;
-            TextInputEditText textInputEditText = getBinding().c.c;
-            m.checkNotNullExpressionValue(textInputEditText, "binding.discordHubEmailI…aderDescriptionEmailInput");
+            TextInputEditText textInputEditText = getBinding().f17175c.f819c;
+            Intrinsics3.checkNotNullExpressionValue(textInputEditText, "binding.discordHubEmailI…aderDescriptionEmailInput");
             String strValueOf = String.valueOf(textInputEditText.getText());
-            e5 e5Var = getBinding().c;
-            m.checkNotNullExpressionValue(e5Var, "binding.discordHubEmailInput");
-            NestedScrollView nestedScrollView = e5Var.a;
-            m.checkNotNullExpressionValue(nestedScrollView, "binding.discordHubEmailInput.root");
+            WidgetDiscordHubEmailInputBinding widgetDiscordHubEmailInputBinding = getBinding().f17175c;
+            Intrinsics3.checkNotNullExpressionValue(widgetDiscordHubEmailInputBinding, "binding.discordHubEmailInput");
+            NestedScrollView nestedScrollView = widgetDiscordHubEmailInputBinding.f817a;
+            Intrinsics3.checkNotNullExpressionValue(nestedScrollView, "binding.discordHubEmailInput.root");
             nestedScrollView.setVisibility(z3 ? 0 : 8);
-            MaterialButton materialButton = getBinding().d;
-            m.checkNotNullExpressionValue(materialButton, "binding.discordHubEmailNo");
+            MaterialButton materialButton = getBinding().f17176d;
+            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.discordHubEmailNo");
             materialButton.setVisibility(z3 ? 0 : 8);
-            o5 o5Var = getBinding().f2473b;
-            m.checkNotNullExpressionValue(o5Var, "binding.discordHubEmailConfirmation");
-            NestedScrollView nestedScrollView2 = o5Var.a;
-            m.checkNotNullExpressionValue(nestedScrollView2, "binding.discordHubEmailConfirmation.root");
+            WidgetHubEmailFlowConfirmationBinding widgetHubEmailFlowConfirmationBinding = getBinding().f17174b;
+            Intrinsics3.checkNotNullExpressionValue(widgetHubEmailFlowConfirmationBinding, "binding.discordHubEmailConfirmation");
+            NestedScrollView nestedScrollView2 = widgetHubEmailFlowConfirmationBinding.f1117a;
+            Intrinsics3.checkNotNullExpressionValue(nestedScrollView2, "binding.discordHubEmailConfirmation.root");
             nestedScrollView2.setVisibility(z2 ? 0 : 8);
-            TextView textView = getBinding().f2473b.c;
-            m.checkNotNullExpressionValue(textView, "binding.discordHubEmailC…ilConfirmationHeaderTitle");
-            textView.setText(b.k(this, R.string.member_verification_email_confirmation_title, new Object[]{strValueOf}, null, 4));
-            p5 p5Var = getBinding().f;
-            m.checkNotNullExpressionValue(p5Var, "binding.discordHubWaitlist");
-            NestedScrollView nestedScrollView3 = p5Var.a;
-            m.checkNotNullExpressionValue(nestedScrollView3, "binding.discordHubWaitlist.root");
+            TextView textView = getBinding().f17174b.f1119c;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.discordHubEmailC…ilConfirmationHeaderTitle");
+            textView.setText(FormatUtils.m219k(this, C5419R.string.member_verification_email_confirmation_title, new Object[]{strValueOf}, null, 4));
+            WidgetHubEmailFlowWaitlistBinding widgetHubEmailFlowWaitlistBinding = getBinding().f17178f;
+            Intrinsics3.checkNotNullExpressionValue(widgetHubEmailFlowWaitlistBinding, "binding.discordHubWaitlist");
+            NestedScrollView nestedScrollView3 = widgetHubEmailFlowWaitlistBinding.f1139a;
+            Intrinsics3.checkNotNullExpressionValue(nestedScrollView3, "binding.discordHubWaitlist.root");
             nestedScrollView3.setVisibility(z4 ? 0 : 8);
-            HubWaitlistResult waitlistResult = state.getWaitlistResult();
+            WidgetHubWaitlist2 waitlistResult = state.getWaitlistResult();
             if (waitlistResult != null && (school = waitlistResult.getSchool()) != null) {
-                TextView textView2 = getBinding().f.f182b;
-                m.checkNotNullExpressionValue(textView2, "binding.discordHubWaitlist.hubWaitlistDescription");
-                textView2.setText(b.k(this, R.string.hub_waitlist_modal_joined_description, new Object[]{school}, null, 4));
+                TextView textView2 = getBinding().f17178f.f1140b;
+                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.discordHubWaitlist.hubWaitlistDescription");
+                textView2.setText(FormatUtils.m219k(this, C5419R.string.hub_waitlist_modal_joined_description, new Object[]{school}, null, 4));
             }
-            getBinding().e.setOnClickListener(z4 ? new AnonymousClass2() : new AnonymousClass3());
-            LoadingButton loadingButton = getBinding().e;
-            m.checkNotNullExpressionValue(loadingButton, "binding.discordHubEmailYes");
+            getBinding().f17177e.setOnClickListener(z4 ? new ViewOnClickListenerC90392() : new ViewOnClickListenerC90403());
+            LoadingButton loadingButton = getBinding().f17177e;
+            Intrinsics3.checkNotNullExpressionValue(loadingButton, "binding.discordHubEmailYes");
             loadingButton.setVisibility(z2 ^ true ? 0 : 8);
-            getBinding().e.setText(z4 ? getString(R.string.hub_add_server_confirmation_button) : getString(R.string.hub_email_connection_content_button));
-            getBinding().e.setIsLoading(state.getVerifyEmailAsync() instanceof Loading);
-            RestCallStateKt.handleResponse$default(state.getVerifyEmailAsync(), context, null, null, new AnonymousClass4(state, context, strValueOf), 6, null);
+            getBinding().f17177e.setText(z4 ? getString(C5419R.string.hub_add_server_confirmation_button) : getString(C5419R.string.hub_email_connection_content_button));
+            getBinding().f17177e.setIsLoading(state.getVerifyEmailAsync() instanceof RestCallState4);
+            RestCallState5.handleResponse$default(state.getVerifyEmailAsync(), context, null, null, new C90414(state, context, strValueOf), 6, null);
         }
     }
 
     private final void verifyEmail() {
         boolean zValidate$default = ValidationManager.validate$default(getValidationManager(), false, 1, null);
-        TextView textView = getBinding().c.f;
-        m.checkNotNullExpressionValue(textView, "binding.discordHubEmailInput.discordHubEmailLabel");
+        TextView textView = getBinding().f17175c.f822f;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.discordHubEmailInput.discordHubEmailLabel");
         textView.setVisibility(zValidate$default ? 0 : 8);
         if (zValidate$default) {
             getViewModel().submitEmail(getEmail());
@@ -404,46 +405,46 @@ public final class WidgetHubEmailFlow extends AppFragment {
         }
     }
 
-    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public LoggingConfig getLoggingConfig() {
+    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.InterfaceC5455a
+    public AppLogger2 getLoggingConfig() {
         return this.loggingConfig;
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        Observable<HubEmailState> observableR = getViewModel().observeViewState().r();
-        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetHubEmailFlow.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable<WidgetHubEmailViewModel4> observableM11112r = getViewModel().observeViewState().m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "viewModel\n        .obser…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11112r, this, null, 2, null), WidgetHubEmailFlow.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C90341(), 62, (Object) null);
     }
 
     @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
         CharSequence string;
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
-        getBinding().f2473b.d.setOnClickListener(new AnonymousClass1());
-        getBinding().d.setOnClickListener(new AnonymousClass2());
-        getBinding().f2473b.f176b.setOnClickListener(new AnonymousClass3());
-        TextView textView = getBinding().c.e;
-        m.checkNotNullExpressionValue(textView, "binding.discordHubEmailI…iscordHubEmailHeaderTitle");
+        getBinding().f17174b.f1120d.setOnClickListener(new ViewOnClickListenerC90351());
+        getBinding().f17176d.setOnClickListener(new ViewOnClickListenerC90362());
+        getBinding().f17174b.f1118b.setOnClickListener(new ViewOnClickListenerC90373());
+        TextView textView = getBinding().f17175c.f821e;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.discordHubEmailI…iscordHubEmailHeaderTitle");
         int iOrdinal = getArgs().getEntryPoint().ordinal();
         if (iOrdinal == 0) {
-            string = getString(R.string.hub_email_connection_nux_header);
+            string = getString(C5419R.string.hub_email_connection_nux_header);
         } else if (iOrdinal != 1) {
-            string = getString(R.string.hub_waitlist_modal_join_header);
+            string = getString(C5419R.string.hub_waitlist_modal_join_header);
         } else {
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "view.context");
-            string = b.k(this, R.string.hub_email_connection_invite_header, new Object[]{StringResourceUtilsKt.getI18nPluralString(context, R.plurals.hub_email_connection_invite_header_count, getArgs().getGuildMemberCount(), Integer.valueOf(getArgs().getGuildMemberCount())), getArgs().getGuildName()}, null, 4);
+            Intrinsics3.checkNotNullExpressionValue(context, "view.context");
+            string = FormatUtils.m219k(this, C5419R.string.hub_email_connection_invite_header, new Object[]{StringResourceUtils.getI18nPluralString(context, C5419R.plurals.hub_email_connection_invite_header_count, getArgs().getGuildMemberCount(), Integer.valueOf(getArgs().getGuildMemberCount())), getArgs().getGuildName()}, null, 4);
         }
         textView.setText(string);
         int iOrdinal2 = getArgs().getEntryPoint().ordinal();
-        String string2 = getString(iOrdinal2 != 0 ? iOrdinal2 != 1 ? R.string.hub_waitlist_modal_join_subheader : R.string.hub_email_connection_content_description : R.string.hub_email_connection_nux_content_description);
-        m.checkNotNullExpressionValue(string2, "getString(\n        when …subheader\n        }\n    )");
-        CharSequence charSequenceE = b.e(this, R.string.learn_more_link, new Object[0], new WidgetHubEmailFlow$onViewCreated$learnMore$1(this));
-        LinkifiedTextView linkifiedTextView = getBinding().c.f107b;
-        m.checkNotNullExpressionValue(linkifiedTextView, "binding.discordHubEmailI…HubEmailHeaderDescription");
-        linkifiedTextView.setText(new SpannableStringBuilder(string2).append((CharSequence) " ").append(charSequenceE));
+        String string2 = getString(iOrdinal2 != 0 ? iOrdinal2 != 1 ? C5419R.string.hub_waitlist_modal_join_subheader : C5419R.string.hub_email_connection_content_description : C5419R.string.hub_email_connection_nux_content_description);
+        Intrinsics3.checkNotNullExpressionValue(string2, "getString(\n        when …subheader\n        }\n    )");
+        CharSequence charSequenceM213e = FormatUtils.m213e(this, C5419R.string.learn_more_link, new Object[0], new WidgetHubEmailFlow5(this));
+        LinkifiedTextView linkifiedTextView = getBinding().f17175c.f818b;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.discordHubEmailI…HubEmailHeaderDescription");
+        linkifiedTextView.setText(new SpannableStringBuilder(string2).append((CharSequence) " ").append(charSequenceM213e));
     }
 }

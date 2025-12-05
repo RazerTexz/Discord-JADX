@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackInviteAppOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInviteAppOpened implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackInviteAppOpened implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence inviteCode = null;
     private final Long guildId = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackInviteAppOpened implements AnalyticsSchema, T
             return false;
         }
         TrackInviteAppOpened trackInviteAppOpened = (TrackInviteAppOpened) other;
-        return m.areEqual(this.inviteCode, trackInviteAppOpened.inviteCode) && m.areEqual(this.guildId, trackInviteAppOpened.guildId) && m.areEqual(this.channelId, trackInviteAppOpened.channelId) && m.areEqual(this.inviterId, trackInviteAppOpened.inviterId) && m.areEqual(this.hasUsername, trackInviteAppOpened.hasUsername);
+        return Intrinsics3.areEqual(this.inviteCode, trackInviteAppOpened.inviteCode) && Intrinsics3.areEqual(this.guildId, trackInviteAppOpened.guildId) && Intrinsics3.areEqual(this.channelId, trackInviteAppOpened.channelId) && Intrinsics3.areEqual(this.inviterId, trackInviteAppOpened.inviterId) && Intrinsics3.areEqual(this.hasUsername, trackInviteAppOpened.hasUsername);
     }
 
     public int hashCode() {
@@ -48,15 +48,15 @@ public final /* data */ class TrackInviteAppOpened implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackInviteAppOpened(inviteCode=");
-        sbU.append(this.inviteCode);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", inviterId=");
-        sbU.append(this.inviterId);
-        sbU.append(", hasUsername=");
-        return a.D(sbU, this.hasUsername, ")");
+        StringBuilder sbM833U = outline.m833U("TrackInviteAppOpened(inviteCode=");
+        sbM833U.append(this.inviteCode);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", inviterId=");
+        sbM833U.append(this.inviterId);
+        sbM833U.append(", hasUsername=");
+        return outline.m816D(sbM833U, this.hasUsername, ")");
     }
 }

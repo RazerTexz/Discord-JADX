@@ -14,12 +14,12 @@ public final class SavedStateHandleController implements LifecycleEventObserver 
     private boolean mIsAttached = false;
     private final String mKey;
 
-    /* renamed from: androidx.lifecycle.SavedStateHandleController$1, reason: invalid class name */
-    public class AnonymousClass1 implements LifecycleEventObserver {
+    /* renamed from: androidx.lifecycle.SavedStateHandleController$1 */
+    public class C04481 implements LifecycleEventObserver {
         public final /* synthetic */ Lifecycle val$lifecycle;
         public final /* synthetic */ SavedStateRegistry val$registry;
 
-        public AnonymousClass1(Lifecycle lifecycle, SavedStateRegistry savedStateRegistry) {
+        public C04481(Lifecycle lifecycle, SavedStateRegistry savedStateRegistry) {
             this.val$lifecycle = lifecycle;
             this.val$registry = savedStateRegistry;
         }
@@ -78,7 +78,7 @@ public final class SavedStateHandleController implements LifecycleEventObserver 
         if (currentState == Lifecycle.State.INITIALIZED || currentState.isAtLeast(Lifecycle.State.STARTED)) {
             savedStateRegistry.runOnNextRecreation(OnRecreation.class);
         } else {
-            lifecycle.addObserver(new AnonymousClass1(lifecycle, savedStateRegistry));
+            lifecycle.addObserver(new C04481(lifecycle, savedStateRegistry));
         }
     }
 

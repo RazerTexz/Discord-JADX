@@ -4,31 +4,33 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.n;
 import com.discord.widgets.chat.input.emoji.GuildIcon;
+import p007b.p008a.p025i.ExpressionPickerCategorySelectionOverlineViewBinding;
 
 /* loaded from: classes.dex */
 public final class EmojiCategoryItemGuildBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final FrameLayout a;
+    public final FrameLayout f15050a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final GuildIcon f2099b;
+    public final GuildIcon f15051b;
 
+    /* renamed from: c */
     @NonNull
-    public final n c;
+    public final ExpressionPickerCategorySelectionOverlineViewBinding f15052c;
 
-    public EmojiCategoryItemGuildBinding(@NonNull FrameLayout frameLayout, @NonNull GuildIcon guildIcon, @NonNull n nVar) {
-        this.a = frameLayout;
-        this.f2099b = guildIcon;
-        this.c = nVar;
+    public EmojiCategoryItemGuildBinding(@NonNull FrameLayout frameLayout, @NonNull GuildIcon guildIcon, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding) {
+        this.f15050a = frameLayout;
+        this.f15051b = guildIcon;
+        this.f15052c = expressionPickerCategorySelectionOverlineViewBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15050a;
     }
 }

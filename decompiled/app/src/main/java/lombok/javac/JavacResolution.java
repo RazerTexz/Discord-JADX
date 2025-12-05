@@ -198,7 +198,7 @@ public class JavacResolution {
                 break;
             }
             stack.push(n.get());
-            javacNodeUp = n.up();
+            javacNodeUp = n.m10925up();
         }
         this.messageSuppressor.disableLoggers();
         try {
@@ -274,7 +274,7 @@ public class JavacResolution {
                 break;
             }
             stack.push(n.get());
-            javacNodeUp = n.up();
+            javacNodeUp = n.m10925up();
         }
         this.messageSuppressor.disableLoggers();
         try {
@@ -398,23 +398,23 @@ public class JavacResolution {
     }
 
     private static Iterable<? extends Type> concat(Type t, Collection<? extends Type> ts) {
-        return t == null ? ts : new AnonymousClass1(ts, t);
+        return t == null ? ts : new C128881(ts, t);
     }
 
-    /* renamed from: lombok.javac.JavacResolution$1, reason: invalid class name */
+    /* renamed from: lombok.javac.JavacResolution$1 */
     /* loaded from: discord-126021.apk:lombok/javac/JavacResolution$1.SCL.lombok */
-    class AnonymousClass1 implements Iterable<Type> {
+    class C128881 implements Iterable<Type> {
         private final /* synthetic */ Collection val$ts;
         private final /* synthetic */ Type val$t;
 
-        AnonymousClass1(Collection collection, Type type) {
+        C128881(Collection collection, Type type) {
             this.val$ts = collection;
             this.val$t = type;
         }
 
-        /* renamed from: lombok.javac.JavacResolution$1$1, reason: invalid class name and collision with other inner class name */
+        /* renamed from: lombok.javac.JavacResolution$1$1, reason: invalid class name */
         /* loaded from: discord-126021.apk:lombok/javac/JavacResolution$1$1.SCL.lombok */
-        class C06431 implements Iterator<Type> {
+        class AnonymousClass1 implements Iterator<Type> {
             private boolean first = true;
             private Iterator<? extends Type> wrap;
             private final /* synthetic */ Type val$t;
@@ -424,7 +424,7 @@ public class JavacResolution {
                 return next();
             }
 
-            C06431(Collection collection, Type type) {
+            AnonymousClass1(Collection collection, Type type) {
                 this.val$t = type;
                 this.wrap = collection == null ? null : collection.iterator();
             }
@@ -461,7 +461,7 @@ public class JavacResolution {
 
         @Override // java.lang.Iterable
         public Iterator<Type> iterator() {
-            return new C06431(this.val$ts, this.val$t);
+            return new AnonymousClass1(this.val$ts, this.val$t);
         }
     }
 

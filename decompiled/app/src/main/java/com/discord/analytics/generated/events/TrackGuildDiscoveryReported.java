@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildDiscoveryReported.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildDiscoveryReported implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackGuildReceiver {
+public final /* data */ class TrackGuildDiscoveryReported implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private TrackLocationMetadata trackLocationMetadata;
@@ -22,14 +22,15 @@ public final /* data */ class TrackGuildDiscoveryReported implements AnalyticsSc
     private final Long reportId = null;
     private final transient String analyticsSchemaTypeName = "guild_discovery_reported";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -47,7 +48,7 @@ public final /* data */ class TrackGuildDiscoveryReported implements AnalyticsSc
             return false;
         }
         TrackGuildDiscoveryReported trackGuildDiscoveryReported = (TrackGuildDiscoveryReported) other;
-        return m.areEqual(this.reportType, trackGuildDiscoveryReported.reportType) && m.areEqual(this.reportSubType, trackGuildDiscoveryReported.reportSubType) && m.areEqual(this.reasonEnum, trackGuildDiscoveryReported.reasonEnum) && m.areEqual(this.reportId, trackGuildDiscoveryReported.reportId);
+        return Intrinsics3.areEqual(this.reportType, trackGuildDiscoveryReported.reportType) && Intrinsics3.areEqual(this.reportSubType, trackGuildDiscoveryReported.reportSubType) && Intrinsics3.areEqual(this.reasonEnum, trackGuildDiscoveryReported.reasonEnum) && Intrinsics3.areEqual(this.reportId, trackGuildDiscoveryReported.reportId);
     }
 
     public int hashCode() {
@@ -62,13 +63,13 @@ public final /* data */ class TrackGuildDiscoveryReported implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildDiscoveryReported(reportType=");
-        sbU.append(this.reportType);
-        sbU.append(", reportSubType=");
-        sbU.append(this.reportSubType);
-        sbU.append(", reasonEnum=");
-        sbU.append(this.reasonEnum);
-        sbU.append(", reportId=");
-        return a.G(sbU, this.reportId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildDiscoveryReported(reportType=");
+        sbM833U.append(this.reportType);
+        sbM833U.append(", reportSubType=");
+        sbM833U.append(this.reportSubType);
+        sbM833U.append(", reasonEnum=");
+        sbM833U.append(this.reasonEnum);
+        sbM833U.append(", reportId=");
+        return outline.m819G(sbM833U, this.reportId, ")");
     }
 }

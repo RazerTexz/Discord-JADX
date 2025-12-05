@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAfParty.kt */
 /* loaded from: classes.dex */
@@ -19,7 +19,7 @@ public final /* data */ class TrackAfParty {
             return false;
         }
         TrackAfParty trackAfParty = (TrackAfParty) other;
-        return m.areEqual(this.afVoiceChat, trackAfParty.afVoiceChat) && m.areEqual(this.afPeopleCount, trackAfParty.afPeopleCount) && m.areEqual(this.afRecentlyPlayed, trackAfParty.afRecentlyPlayed) && m.areEqual(this.afRichPresence, trackAfParty.afRichPresence);
+        return Intrinsics3.areEqual(this.afVoiceChat, trackAfParty.afVoiceChat) && Intrinsics3.areEqual(this.afPeopleCount, trackAfParty.afPeopleCount) && Intrinsics3.areEqual(this.afRecentlyPlayed, trackAfParty.afRecentlyPlayed) && Intrinsics3.areEqual(this.afRichPresence, trackAfParty.afRichPresence);
     }
 
     public int hashCode() {
@@ -34,13 +34,13 @@ public final /* data */ class TrackAfParty {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAfParty(afVoiceChat=");
-        sbU.append(this.afVoiceChat);
-        sbU.append(", afPeopleCount=");
-        sbU.append(this.afPeopleCount);
-        sbU.append(", afRecentlyPlayed=");
-        sbU.append(this.afRecentlyPlayed);
-        sbU.append(", afRichPresence=");
-        return a.D(sbU, this.afRichPresence, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAfParty(afVoiceChat=");
+        sbM833U.append(this.afVoiceChat);
+        sbM833U.append(", afPeopleCount=");
+        sbM833U.append(this.afPeopleCount);
+        sbM833U.append(", afRecentlyPlayed=");
+        sbM833U.append(this.afRecentlyPlayed);
+        sbM833U.append(", afRichPresence=");
+        return outline.m816D(sbM833U, this.afRichPresence, ")");
     }
 }

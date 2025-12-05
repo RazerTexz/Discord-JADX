@@ -1,0 +1,45 @@
+package p007b.p008a.p025i;
+
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.viewbinding.ViewBinding;
+import com.discord.views.LoadingButton;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputLayout;
+
+/* compiled from: WidgetEnableTwoFactorPasswordDialogBinding.java */
+/* renamed from: b.a.i.h5, reason: use source file name */
+/* loaded from: classes.dex */
+public final class WidgetEnableTwoFactorPasswordDialogBinding implements ViewBinding {
+
+    /* renamed from: a */
+    @NonNull
+    public final LinearLayout f931a;
+
+    /* renamed from: b */
+    @NonNull
+    public final MaterialButton f932b;
+
+    /* renamed from: c */
+    @NonNull
+    public final LoadingButton f933c;
+
+    /* renamed from: d */
+    @NonNull
+    public final TextInputLayout f934d;
+
+    public WidgetEnableTwoFactorPasswordDialogBinding(@NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2, @NonNull TextView textView, @NonNull MaterialButton materialButton, @NonNull TextView textView2, @NonNull LinearLayout linearLayout3, @NonNull LoadingButton loadingButton, @NonNull TextInputLayout textInputLayout) {
+        this.f931a = linearLayout;
+        this.f932b = materialButton;
+        this.f933c = loadingButton;
+        this.f934d = textInputLayout;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return this.f931a;
+    }
+}

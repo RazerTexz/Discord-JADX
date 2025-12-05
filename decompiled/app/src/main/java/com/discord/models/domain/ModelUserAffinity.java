@@ -1,6 +1,6 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: ModelUserAffinity.kt */
 /* loaded from: classes.dex */
@@ -62,11 +62,11 @@ public final /* data */ class ModelUserAffinity {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelUserAffinity(userId=");
-        sbU.append(this.userId);
-        sbU.append(", affinity=");
-        sbU.append(this.affinity);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ModelUserAffinity(userId=");
+        sbM833U.append(this.userId);
+        sbM833U.append(", affinity=");
+        sbM833U.append(this.affinity);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

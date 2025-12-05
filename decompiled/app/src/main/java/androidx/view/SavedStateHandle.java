@@ -11,13 +11,13 @@ import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.view.SavedStateRegistry;
-import b.d.b.a.a;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public final class SavedStateHandle {
@@ -29,9 +29,9 @@ public final class SavedStateHandle {
     private final SavedStateRegistry.SavedStateProvider mSavedStateProvider;
     public final Map<String, SavedStateRegistry.SavedStateProvider> mSavedStateProviders;
 
-    /* renamed from: androidx.lifecycle.SavedStateHandle$1, reason: invalid class name */
-    public class AnonymousClass1 implements SavedStateRegistry.SavedStateProvider {
-        public AnonymousClass1() {
+    /* renamed from: androidx.lifecycle.SavedStateHandle$1 */
+    public class C04471 implements SavedStateRegistry.SavedStateProvider {
+        public C04471() {
         }
 
         @Override // androidx.savedstate.SavedStateRegistry.SavedStateProvider
@@ -57,7 +57,7 @@ public final class SavedStateHandle {
     public SavedStateHandle(@NonNull Map<String, Object> map) {
         this.mSavedStateProviders = new HashMap();
         this.mLiveDatas = new HashMap();
-        this.mSavedStateProvider = new AnonymousClass1();
+        this.mSavedStateProvider = new C04471();
         this.mRegular = new HashMap(map);
     }
 
@@ -105,10 +105,10 @@ public final class SavedStateHandle {
                 return;
             }
         }
-        StringBuilder sbU = a.U("Can't put value with type ");
-        sbU.append(obj.getClass());
-        sbU.append(" into saved state");
-        throw new IllegalArgumentException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Can't put value with type ");
+        sbM833U.append(obj.getClass());
+        sbM833U.append(" into saved state");
+        throw new IllegalArgumentException(sbM833U.toString());
     }
 
     @MainThread
@@ -212,7 +212,7 @@ public final class SavedStateHandle {
     public SavedStateHandle() {
         this.mSavedStateProviders = new HashMap();
         this.mLiveDatas = new HashMap();
-        this.mSavedStateProvider = new AnonymousClass1();
+        this.mSavedStateProvider = new C04471();
         this.mRegular = new HashMap();
     }
 }

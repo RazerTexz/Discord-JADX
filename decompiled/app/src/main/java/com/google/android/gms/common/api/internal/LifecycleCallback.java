@@ -8,23 +8,24 @@ import androidx.annotation.MainThread;
 import androidx.annotation.Nullable;
 import androidx.annotation.RecentlyNonNull;
 import androidx.fragment.app.FragmentActivity;
-import b.c.a.a0.d;
-import b.i.a.f.e.h.j.d1;
-import b.i.a.f.e.h.j.f1;
-import b.i.a.f.e.h.j.i;
-import b.i.a.f.e.h.j.j;
 import java.lang.ref.WeakReference;
 import java.util.WeakHashMap;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3292f1;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3297i;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.FragmentC3286d1;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3299j;
 
 /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
 /* loaded from: classes3.dex */
 public class LifecycleCallback {
 
+    /* renamed from: j */
     @RecentlyNonNull
-    public final j j;
+    public final InterfaceC3299j f20511j;
 
-    public LifecycleCallback(@RecentlyNonNull j jVar) {
-        this.j = jVar;
+    public LifecycleCallback(@RecentlyNonNull InterfaceC3299j interfaceC3299j) {
+        this.f20511j = interfaceC3299j;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x0031  */
@@ -32,32 +33,33 @@ public class LifecycleCallback {
     /* JADX WARN: Removed duplicated region for block: B:31:0x006b A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:33:0x001f A[EXC_TOP_SPLITTER, SYNTHETIC] */
     @RecentlyNonNull
+    /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static j c(@RecentlyNonNull Activity activity) {
-        j jVar;
-        d.z(activity, "Activity must not be null");
+    public static InterfaceC3299j m9038c(@RecentlyNonNull Activity activity) {
+        InterfaceC3299j interfaceC3299j;
+        AnimatableValueParser.m595z(activity, "Activity must not be null");
         if (activity instanceof FragmentActivity) {
             FragmentActivity fragmentActivity = (FragmentActivity) activity;
-            WeakHashMap<FragmentActivity, WeakReference<f1>> weakHashMap = f1.j;
-            WeakReference<f1> weakReference = weakHashMap.get(fragmentActivity);
+            WeakHashMap<FragmentActivity, WeakReference<C3292f1>> weakHashMap = C3292f1.f9372j;
+            WeakReference<C3292f1> weakReference = weakHashMap.get(fragmentActivity);
             if (weakReference != null) {
-                j jVar2 = (f1) weakReference.get();
-                jVar = jVar2;
-                if (jVar2 == null) {
+                InterfaceC3299j interfaceC3299j2 = (C3292f1) weakReference.get();
+                interfaceC3299j = interfaceC3299j2;
+                if (interfaceC3299j2 == null) {
                     try {
-                        f1 f1Var = (f1) fragmentActivity.getSupportFragmentManager().findFragmentByTag("SupportLifecycleFragmentImpl");
-                        if (f1Var != null) {
-                            boolean zIsRemoving = f1Var.isRemoving();
-                            f1 f1Var2 = f1Var;
+                        C3292f1 c3292f1 = (C3292f1) fragmentActivity.getSupportFragmentManager().findFragmentByTag("SupportLifecycleFragmentImpl");
+                        if (c3292f1 != null) {
+                            boolean zIsRemoving = c3292f1.isRemoving();
+                            C3292f1 c3292f12 = c3292f1;
                             if (zIsRemoving) {
-                                f1 f1Var3 = new f1();
-                                fragmentActivity.getSupportFragmentManager().beginTransaction().add(f1Var3, "SupportLifecycleFragmentImpl").commitAllowingStateLoss();
-                                f1Var2 = f1Var3;
+                                C3292f1 c3292f13 = new C3292f1();
+                                fragmentActivity.getSupportFragmentManager().beginTransaction().add(c3292f13, "SupportLifecycleFragmentImpl").commitAllowingStateLoss();
+                                c3292f12 = c3292f13;
                             }
-                            weakHashMap.put(fragmentActivity, new WeakReference<>(f1Var2));
-                            jVar = f1Var2;
+                            weakHashMap.put(fragmentActivity, new WeakReference<>(c3292f12));
+                            interfaceC3299j = c3292f12;
                         }
                     } catch (ClassCastException e) {
                         throw new IllegalStateException("Fragment with tag SupportLifecycleFragmentImpl is not a SupportLifecycleFragmentImpl", e);
@@ -65,24 +67,24 @@ public class LifecycleCallback {
                 }
             }
         } else {
-            WeakHashMap<Activity, WeakReference<d1>> weakHashMap2 = d1.j;
-            WeakReference<d1> weakReference2 = weakHashMap2.get(activity);
+            WeakHashMap<Activity, WeakReference<FragmentC3286d1>> weakHashMap2 = FragmentC3286d1.f9363j;
+            WeakReference<FragmentC3286d1> weakReference2 = weakHashMap2.get(activity);
             if (weakReference2 != null) {
-                j jVar3 = (d1) weakReference2.get();
-                jVar = jVar3;
-                if (jVar3 == null) {
+                InterfaceC3299j interfaceC3299j3 = (FragmentC3286d1) weakReference2.get();
+                interfaceC3299j = interfaceC3299j3;
+                if (interfaceC3299j3 == null) {
                     try {
-                        d1 d1Var = (d1) activity.getFragmentManager().findFragmentByTag("LifecycleFragmentImpl");
-                        if (d1Var != null) {
-                            boolean zIsRemoving2 = d1Var.isRemoving();
-                            j jVar4 = d1Var;
+                        FragmentC3286d1 fragmentC3286d1 = (FragmentC3286d1) activity.getFragmentManager().findFragmentByTag("LifecycleFragmentImpl");
+                        if (fragmentC3286d1 != null) {
+                            boolean zIsRemoving2 = fragmentC3286d1.isRemoving();
+                            InterfaceC3299j interfaceC3299j4 = fragmentC3286d1;
                             if (zIsRemoving2) {
-                                d1 d1Var2 = new d1();
-                                activity.getFragmentManager().beginTransaction().add(d1Var2, "LifecycleFragmentImpl").commitAllowingStateLoss();
-                                jVar4 = d1Var2;
+                                FragmentC3286d1 fragmentC3286d12 = new FragmentC3286d1();
+                                activity.getFragmentManager().beginTransaction().add(fragmentC3286d12, "LifecycleFragmentImpl").commitAllowingStateLoss();
+                                interfaceC3299j4 = fragmentC3286d12;
                             }
-                            weakHashMap2.put(activity, new WeakReference<>(jVar4));
-                            jVar = jVar4;
+                            weakHashMap2.put(activity, new WeakReference<>(interfaceC3299j4));
+                            interfaceC3299j = interfaceC3299j4;
                         }
                     } catch (ClassCastException e2) {
                         throw new IllegalStateException("Fragment with tag LifecycleFragmentImpl is not a LifecycleFragmentImpl", e2);
@@ -90,48 +92,57 @@ public class LifecycleCallback {
                 }
             }
         }
-        return jVar;
+        return interfaceC3299j;
     }
 
     @Keep
-    private static j getChimeraLifecycleFragmentImpl(i iVar) {
+    private static InterfaceC3299j getChimeraLifecycleFragmentImpl(C3297i c3297i) {
         throw new IllegalStateException("Method not available in SDK.");
     }
 
     @MainThread
-    public void a() {
+    /* renamed from: a */
+    public void m9039a() {
     }
 
     @RecentlyNonNull
-    public Activity b() {
-        return this.j.e();
+    /* renamed from: b */
+    public Activity m9040b() {
+        return this.f20511j.mo4071e();
     }
 
     @MainThread
-    public void d(int i, int i2, @RecentlyNonNull Intent intent) {
+    /* renamed from: d */
+    public void mo4115d(int i, int i2, @RecentlyNonNull Intent intent) {
     }
 
     @MainThread
-    public void e(@Nullable Bundle bundle) {
+    /* renamed from: e */
+    public void mo4116e(@Nullable Bundle bundle) {
     }
 
     @MainThread
-    public void f() {
+    /* renamed from: f */
+    public void mo4063f() {
     }
 
     @MainThread
-    public void g() {
+    /* renamed from: g */
+    public void mo4058g() {
     }
 
     @MainThread
-    public void h(@RecentlyNonNull Bundle bundle) {
+    /* renamed from: h */
+    public void mo4117h(@RecentlyNonNull Bundle bundle) {
     }
 
     @MainThread
-    public void i() {
+    /* renamed from: i */
+    public void mo4059i() {
     }
 
     @MainThread
-    public void j() {
+    /* renamed from: j */
+    public void mo4060j() {
     }
 }

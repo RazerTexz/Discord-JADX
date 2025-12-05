@@ -2,15 +2,10 @@ package com.discord.widgets.guilds.invite;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
@@ -22,29 +17,33 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities5;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.guilds.invite.GuildInviteViewModel;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventModel;
-import com.discord.widgets.guildscheduledevent.GuildScheduledEventModelKt;
+import com.discord.widgets.guildscheduledevent.GuildScheduledEventModel2;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetGuildInvite.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildInvite extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildInvite.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInvitePageBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildInvite.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInvitePageBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -63,11 +62,11 @@ public final class WidgetGuildInvite extends AppFragment {
         }
 
         public final void launch(Context context, StoreInviteSettings.InviteCode inviteCode) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(inviteCode, "inviteCode");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(inviteCode, "inviteCode");
             Intent intent = new Intent();
             intent.putExtra(WidgetGuildInvite.EXTRA_CODE, inviteCode);
-            j.d(context, WidgetGuildInvite.class, intent);
+            AppScreen2.m156d(context, WidgetGuildInvite.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -76,9 +75,9 @@ public final class WidgetGuildInvite extends AppFragment {
     }
 
     /* compiled from: WidgetGuildInvite.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$onViewBound$1 */
+    public static final class ViewOnClickListenerC86481 implements View.OnClickListener {
+        public ViewOnClickListenerC86481() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -91,31 +90,31 @@ public final class WidgetGuildInvite extends AppFragment {
     }
 
     /* compiled from: WidgetGuildInvite.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildInviteViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$onViewBoundOrOnResume$1 */
+    public static final class C86491 extends Lambda implements Function1<GuildInviteViewModel.ViewState, Unit> {
+        public C86491() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(GuildInviteViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
-            m.checkNotNullParameter(viewState, "viewState");
+        public final void invoke2(GuildInviteViewModel.ViewState viewState) {
+            Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetGuildInvite.this.configureUI(viewState);
         }
     }
 
     public WidgetGuildInvite() {
-        super(R.layout.widget_guild_invite_page);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildInvite$binding$2.INSTANCE, null, 2, null);
-        WidgetGuildInvite$viewModel$2 widgetGuildInvite$viewModel$2 = new WidgetGuildInvite$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildInviteViewModel.class), new WidgetGuildInvite$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildInvite$viewModel$2));
+        super(C5419R.layout.widget_guild_invite_page);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildInvite2.INSTANCE, null, 2, null);
+        WidgetGuildInvite4 widgetGuildInvite4 = new WidgetGuildInvite4(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildInviteViewModel.class), new WidgetGuildInvite$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildInvite4));
         this.inviteCode = (StoreInviteSettings.InviteCode) getMostRecentIntent().getParcelableExtra(EXTRA_CODE);
     }
 
@@ -123,31 +122,31 @@ public final class WidgetGuildInvite extends AppFragment {
         widgetGuildInvite.configureUIFailure(error);
     }
 
-    private final void configureLoadedUI(GuildInviteViewModel.ViewState.Loaded viewState) throws Resources.NotFoundException {
+    private final void configureLoadedUI(GuildInviteViewModel.ViewState.Loaded viewState) {
         boolean z2;
         GuildScheduledEventModel model;
         ModelInvite invite = viewState.getInvite();
-        getBinding().d.configureUI(invite, new WidgetGuildInvite$configureLoadedUI$onAcceptClick$1(this, invite));
-        GuildScheduledEventItemView guildScheduledEventItemView = getBinding().c;
-        m.checkNotNullExpressionValue(guildScheduledEventItemView, "binding.guildInviteEventInfo");
+        getBinding().f16797d.configureUI(invite, new WidgetGuildInvite3(this, invite));
+        GuildScheduledEventItemView guildScheduledEventItemView = getBinding().f16796c;
+        Intrinsics3.checkNotNullExpressionValue(guildScheduledEventItemView, "binding.guildInviteEventInfo");
         GuildScheduledEvent guildScheduledEvent = invite.getGuildScheduledEvent();
-        if (guildScheduledEvent == null || (model = GuildScheduledEventModelKt.toModel(guildScheduledEvent)) == null) {
+        if (guildScheduledEvent == null || (model = GuildScheduledEventModel2.toModel(guildScheduledEvent)) == null) {
             z2 = false;
         } else {
-            getBinding().c.configureAsPreview(model, invite.getChannel(), GuildScheduledEventUtilitiesKt.getCreatorUserGuildMember$default(model, (StoreGuilds) null, (StoreUser) null, 3, (Object) null));
+            getBinding().f16796c.configureAsPreview(model, invite.getChannel(), GuildScheduledEventUtilities5.getCreatorUserGuildMember$default(model, (StoreGuilds) null, (StoreUser) null, 3, (Object) null));
             z2 = true;
         }
         guildScheduledEventItemView.setVisibility(z2 ? 0 : 8);
-        MaterialButton materialButton = getBinding().f2416b;
-        m.checkNotNullExpressionValue(materialButton, "binding.guildInviteCancel");
+        MaterialButton materialButton = getBinding().f16795b;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.guildInviteCancel");
         materialButton.setVisibility(8);
     }
 
     private final void configureUIFailure(Error e) {
-        MaterialButton materialButton = getBinding().f2416b;
-        m.checkNotNullExpressionValue(materialButton, "binding.guildInviteCancel");
+        MaterialButton materialButton = getBinding().f16795b;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.guildInviteCancel");
         materialButton.setVisibility(0);
-        getBinding().d.configureUIFailure(e);
+        getBinding().f16797d.configureUIFailure(e);
         trackAndConsumeDynamicLinkCache(null);
     }
 
@@ -184,8 +183,8 @@ public final class WidgetGuildInvite extends AppFragment {
         analyticsTracker.inviteResolved(invite, str);
     }
 
-    public final void configureUI(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
-        m.checkNotNullParameter(viewState, "viewState");
+    public final void configureUI(GuildInviteViewModel.ViewState viewState) {
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
         if (viewState instanceof GuildInviteViewModel.ViewState.Invalid) {
             configureUIFailure(null);
         } else if (viewState instanceof GuildInviteViewModel.ViewState.Loaded) {
@@ -197,19 +196,19 @@ public final class WidgetGuildInvite extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
         StoreInviteSettings.InviteCode inviteCode = this.inviteCode;
         analyticsTracker.impressionInviteAccept(inviteCode != null ? inviteCode.getInviteCode() : null);
-        getBinding().f2416b.setOnClickListener(new AnonymousClass1());
+        getBinding().f16795b.setOnClickListener(new ViewOnClickListenerC86481());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         getViewModel().fetchInviteIfNotLoaded();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetGuildInvite.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetGuildInvite.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C86491(), 62, (Object) null);
     }
 }

@@ -3,12 +3,7 @@ package com.discord.utilities.lazy.subscriptions;
 import android.content.Context;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.analytics.Traits;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.n0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.p.a;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -20,9 +15,14 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Scheduler;
-import rx.Subscription;
+import p507d0.p580t.Sets5;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p653p.Schedulers2;
+import p658rx.Observable;
+import p658rx.Scheduler;
+import p658rx.Subscription;
 
 /* compiled from: GuildMemberSubscriptionsManager.kt */
 /* loaded from: classes2.dex */
@@ -35,32 +35,32 @@ public final class GuildMemberSubscriptionsManager {
     private final HashMap<Long, Map<Long, Integer>> subscriptions;
 
     /* compiled from: GuildMemberSubscriptionsManager.kt */
-    /* renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Subscription, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$1 */
+    public static final class C67911 extends Lambda implements Function1<Subscription, Unit> {
+        public C67911() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             GuildMemberSubscriptionsManager.access$setDelayedFlushSubscription$p(GuildMemberSubscriptionsManager.this, subscription);
         }
     }
 
     /* compiled from: GuildMemberSubscriptionsManager.kt */
-    /* renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Long, Unit> {
+    /* renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$2 */
+    public static final class C67922 extends Lambda implements Function1<Long, Unit> {
 
         /* compiled from: GuildMemberSubscriptionsManager.kt */
         /* renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$2$1, reason: invalid class name */
-        public static final /* synthetic */ class AnonymousClass1 extends k implements Function0<Unit> {
+        public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function0<Unit> {
             public AnonymousClass1(GuildMemberSubscriptionsManager guildMemberSubscriptionsManager) {
                 super(0, guildMemberSubscriptionsManager, GuildMemberSubscriptionsManager.class, "flushUnsubscriptions", "flushUnsubscriptions()V", 0);
             }
@@ -68,7 +68,7 @@ public final class GuildMemberSubscriptionsManager {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -77,14 +77,14 @@ public final class GuildMemberSubscriptionsManager {
             }
         }
 
-        public AnonymousClass2() {
+        public C67922() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke2(l);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -95,9 +95,9 @@ public final class GuildMemberSubscriptionsManager {
 
     /* JADX WARN: Multi-variable type inference failed */
     public GuildMemberSubscriptionsManager(Function3<? super Long, ? super Set<Long>, ? super Boolean, Unit> function3, Function1<? super Function0<Unit>, Unit> function1, Scheduler scheduler) {
-        m.checkNotNullParameter(function3, "onChange");
-        m.checkNotNullParameter(function1, "requestFlushUnsubscriptions");
-        m.checkNotNullParameter(scheduler, "delayScheduler");
+        Intrinsics3.checkNotNullParameter(function3, "onChange");
+        Intrinsics3.checkNotNullParameter(function1, "requestFlushUnsubscriptions");
+        Intrinsics3.checkNotNullParameter(scheduler, "delayScheduler");
         this.onChange = function3;
         this.requestFlushUnsubscriptions = function1;
         this.delayScheduler = scheduler;
@@ -130,7 +130,7 @@ public final class GuildMemberSubscriptionsManager {
             Map<Long, Integer> value = entry.getValue();
             Map<Long, Integer> map = this.subscriptions.get(Long.valueOf(jLongValue));
             if (map != null) {
-                m.checkNotNullExpressionValue(map, "subscriptions[guildId] ?: continue");
+                Intrinsics3.checkNotNullExpressionValue(map, "subscriptions[guildId] ?: continue");
                 boolean z2 = false;
                 for (Map.Entry<Long, Integer> entry2 : value.entrySet()) {
                     long jLongValue2 = entry2.getKey().longValue();
@@ -160,16 +160,16 @@ public final class GuildMemberSubscriptionsManager {
 
     private final void triggerUnsubscribe() {
         if (this.delayedFlushSubscription == null) {
-            Observable<Long> observableE0 = Observable.e0(20L, TimeUnit.SECONDS, this.delayScheduler);
-            m.checkNotNullExpressionValue(observableE0, "Observable\n          .ti….SECONDS, delayScheduler)");
-            ObservableExtensionsKt.appSubscribe$default(observableE0, GuildMemberSubscriptionsManager.class, (Context) null, new AnonymousClass1(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 58, (Object) null);
+            Observable<Long> observableM11070e0 = Observable.m11070e0(20L, TimeUnit.SECONDS, this.delayScheduler);
+            Intrinsics3.checkNotNullExpressionValue(observableM11070e0, "Observable\n          .ti….SECONDS, delayScheduler)");
+            ObservableExtensionsKt.appSubscribe$default(observableM11070e0, GuildMemberSubscriptionsManager.class, (Context) null, new C67911(), (Function1) null, (Function0) null, (Function0) null, new C67922(), 58, (Object) null);
         }
     }
 
     public final Set<Long> get(long guildId) {
         Set<Long> setKeySet;
         Map<Long, Integer> map = this.subscriptions.get(Long.valueOf(guildId));
-        return (map == null || (setKeySet = map.keySet()) == null) ? n0.emptySet() : setKeySet;
+        return (map == null || (setKeySet = map.keySet()) == null) ? Sets5.emptySet() : setKeySet;
     }
 
     public final void remove(long guildId) {
@@ -188,7 +188,7 @@ public final class GuildMemberSubscriptionsManager {
     }
 
     public final void retainAll(List<Long> guildIds) {
-        m.checkNotNullParameter(guildIds, "guildIds");
+        Intrinsics3.checkNotNullParameter(guildIds, "guildIds");
         Iterator<Map.Entry<Long, Map<Long, Integer>>> it = this.subscriptions.entrySet().iterator();
         while (it.hasNext()) {
             if (!guildIds.contains(Long.valueOf(it.next().getKey().longValue()))) {
@@ -234,8 +234,8 @@ public final class GuildMemberSubscriptionsManager {
     /* JADX WARN: Illegal instructions before constructor call */
     public /* synthetic */ GuildMemberSubscriptionsManager(Function3 function3, Function1 function1, Scheduler scheduler, int i, DefaultConstructorMarker defaultConstructorMarker) {
         if ((i & 4) != 0) {
-            scheduler = a.a();
-            m.checkNotNullExpressionValue(scheduler, "Schedulers.computation()");
+            scheduler = Schedulers2.m10873a();
+            Intrinsics3.checkNotNullExpressionValue(scheduler, "Schedulers.computation()");
         }
         this(function3, function1, scheduler);
     }

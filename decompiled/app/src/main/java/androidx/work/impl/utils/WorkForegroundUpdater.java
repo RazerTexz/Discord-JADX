@@ -12,8 +12,8 @@ import androidx.work.impl.foreground.SystemForegroundDispatcher;
 import androidx.work.impl.model.WorkSpecDao;
 import androidx.work.impl.utils.futures.SettableFuture;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
-import b.i.b.d.a.a;
 import java.util.UUID;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -22,14 +22,14 @@ public class WorkForegroundUpdater implements ForegroundUpdater {
     private final TaskExecutor mTaskExecutor;
     public final WorkSpecDao mWorkSpecDao;
 
-    /* renamed from: androidx.work.impl.utils.WorkForegroundUpdater$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.work.impl.utils.WorkForegroundUpdater$1 */
+    public class RunnableC07821 implements Runnable {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ ForegroundInfo val$foregroundInfo;
         public final /* synthetic */ SettableFuture val$future;
         public final /* synthetic */ UUID val$id;
 
-        public AnonymousClass1(SettableFuture settableFuture, UUID uuid, ForegroundInfo foregroundInfo, Context context) {
+        public RunnableC07821(SettableFuture settableFuture, UUID uuid, ForegroundInfo foregroundInfo, Context context) {
             this.val$future = settableFuture;
             this.val$id = uuid;
             this.val$foregroundInfo = foregroundInfo;
@@ -63,9 +63,9 @@ public class WorkForegroundUpdater implements ForegroundUpdater {
 
     @Override // androidx.work.ForegroundUpdater
     @NonNull
-    public a<Void> setForegroundAsync(@NonNull Context context, @NonNull UUID uuid, @NonNull ForegroundInfo foregroundInfo) {
+    public ListenableFuture8<Void> setForegroundAsync(@NonNull Context context, @NonNull UUID uuid, @NonNull ForegroundInfo foregroundInfo) {
         SettableFuture settableFutureCreate = SettableFuture.create();
-        this.mTaskExecutor.executeOnBackgroundThread(new AnonymousClass1(settableFutureCreate, uuid, foregroundInfo, context));
+        this.mTaskExecutor.executeOnBackgroundThread(new RunnableC07821(settableFutureCreate, uuid, foregroundInfo, context));
         return settableFutureCreate;
     }
 }

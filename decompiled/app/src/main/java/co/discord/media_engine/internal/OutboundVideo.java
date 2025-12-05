@@ -1,9 +1,9 @@
 package co.discord.media_engine.internal;
 
-import a0.a.a.b;
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.Arrays;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -27,9 +27,9 @@ public final /* data */ class OutboundVideo {
     private final int targetMediaBitrate;
 
     public OutboundVideo(String str, int i, int i2, boolean z2, boolean z3, int i3, int i4, String str2, long j, int i5, int i6, int i7, int i8, long j2, Substream[] substreamArr, boolean z4, int i9) {
-        m.checkNotNullParameter(str, "codecName");
-        m.checkNotNullParameter(str2, "encoderImplementationName");
-        m.checkNotNullParameter(substreamArr, "substreams");
+        Intrinsics3.checkNotNullParameter(str, "codecName");
+        Intrinsics3.checkNotNullParameter(str2, "encoderImplementationName");
+        Intrinsics3.checkNotNullParameter(substreamArr, "substreams");
         this.codecName = str;
         this.codecPayloadType = i;
         this.avgEncodeTime = i2;
@@ -139,9 +139,9 @@ public final /* data */ class OutboundVideo {
     }
 
     public final OutboundVideo copy(String codecName, int codecPayloadType, int avgEncodeTime, boolean bwLimitedResolution, boolean cpuLimitedResolution, int encodeFrameRate, int encodeUsage, String encoderImplementationName, long framesEncoded, int inputFrameRate, int mediaBitrate, int numberOfCPUAdaptChanges, int numberOfQualityAdaptChanges, long qpSum, Substream[] substreams, boolean suspended, int targetMediaBitrate) {
-        m.checkNotNullParameter(codecName, "codecName");
-        m.checkNotNullParameter(encoderImplementationName, "encoderImplementationName");
-        m.checkNotNullParameter(substreams, "substreams");
+        Intrinsics3.checkNotNullParameter(codecName, "codecName");
+        Intrinsics3.checkNotNullParameter(encoderImplementationName, "encoderImplementationName");
+        Intrinsics3.checkNotNullParameter(substreams, "substreams");
         return new OutboundVideo(codecName, codecPayloadType, avgEncodeTime, bwLimitedResolution, cpuLimitedResolution, encodeFrameRate, encodeUsage, encoderImplementationName, framesEncoded, inputFrameRate, mediaBitrate, numberOfCPUAdaptChanges, numberOfQualityAdaptChanges, qpSum, substreams, suspended, targetMediaBitrate);
     }
 
@@ -153,7 +153,7 @@ public final /* data */ class OutboundVideo {
             return false;
         }
         OutboundVideo outboundVideo = (OutboundVideo) other;
-        return m.areEqual(this.codecName, outboundVideo.codecName) && this.codecPayloadType == outboundVideo.codecPayloadType && this.avgEncodeTime == outboundVideo.avgEncodeTime && this.bwLimitedResolution == outboundVideo.bwLimitedResolution && this.cpuLimitedResolution == outboundVideo.cpuLimitedResolution && this.encodeFrameRate == outboundVideo.encodeFrameRate && this.encodeUsage == outboundVideo.encodeUsage && m.areEqual(this.encoderImplementationName, outboundVideo.encoderImplementationName) && this.framesEncoded == outboundVideo.framesEncoded && this.inputFrameRate == outboundVideo.inputFrameRate && this.mediaBitrate == outboundVideo.mediaBitrate && this.numberOfCPUAdaptChanges == outboundVideo.numberOfCPUAdaptChanges && this.numberOfQualityAdaptChanges == outboundVideo.numberOfQualityAdaptChanges && this.qpSum == outboundVideo.qpSum && m.areEqual(this.substreams, outboundVideo.substreams) && this.suspended == outboundVideo.suspended && this.targetMediaBitrate == outboundVideo.targetMediaBitrate;
+        return Intrinsics3.areEqual(this.codecName, outboundVideo.codecName) && this.codecPayloadType == outboundVideo.codecPayloadType && this.avgEncodeTime == outboundVideo.avgEncodeTime && this.bwLimitedResolution == outboundVideo.bwLimitedResolution && this.cpuLimitedResolution == outboundVideo.cpuLimitedResolution && this.encodeFrameRate == outboundVideo.encodeFrameRate && this.encodeUsage == outboundVideo.encodeUsage && Intrinsics3.areEqual(this.encoderImplementationName, outboundVideo.encoderImplementationName) && this.framesEncoded == outboundVideo.framesEncoded && this.inputFrameRate == outboundVideo.inputFrameRate && this.mediaBitrate == outboundVideo.mediaBitrate && this.numberOfCPUAdaptChanges == outboundVideo.numberOfCPUAdaptChanges && this.numberOfQualityAdaptChanges == outboundVideo.numberOfQualityAdaptChanges && this.qpSum == outboundVideo.qpSum && Intrinsics3.areEqual(this.substreams, outboundVideo.substreams) && this.suspended == outboundVideo.suspended && this.targetMediaBitrate == outboundVideo.targetMediaBitrate;
     }
 
     public final int getAvgEncodeTime() {
@@ -241,47 +241,47 @@ public final /* data */ class OutboundVideo {
         }
         int i4 = (((((i2 + i3) * 31) + this.encodeFrameRate) * 31) + this.encodeUsage) * 31;
         String str2 = this.encoderImplementationName;
-        int iA = (b.a(this.qpSum) + ((((((((((b.a(this.framesEncoded) + ((i4 + (str2 != null ? str2.hashCode() : 0)) * 31)) * 31) + this.inputFrameRate) * 31) + this.mediaBitrate) * 31) + this.numberOfCPUAdaptChanges) * 31) + this.numberOfQualityAdaptChanges) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.qpSum) + ((((((((((C0002b.m3a(this.framesEncoded) + ((i4 + (str2 != null ? str2.hashCode() : 0)) * 31)) * 31) + this.inputFrameRate) * 31) + this.mediaBitrate) * 31) + this.numberOfCPUAdaptChanges) * 31) + this.numberOfQualityAdaptChanges) * 31)) * 31;
         Substream[] substreamArr = this.substreams;
-        int iHashCode2 = (iA + (substreamArr != null ? Arrays.hashCode(substreamArr) : 0)) * 31;
+        int iHashCode2 = (iM3a + (substreamArr != null ? Arrays.hashCode(substreamArr) : 0)) * 31;
         boolean z4 = this.suspended;
         return ((iHashCode2 + (z4 ? 1 : z4 ? 1 : 0)) * 31) + this.targetMediaBitrate;
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("OutboundVideo(codecName=");
-        sbU.append(this.codecName);
-        sbU.append(", codecPayloadType=");
-        sbU.append(this.codecPayloadType);
-        sbU.append(", avgEncodeTime=");
-        sbU.append(this.avgEncodeTime);
-        sbU.append(", bwLimitedResolution=");
-        sbU.append(this.bwLimitedResolution);
-        sbU.append(", cpuLimitedResolution=");
-        sbU.append(this.cpuLimitedResolution);
-        sbU.append(", encodeFrameRate=");
-        sbU.append(this.encodeFrameRate);
-        sbU.append(", encodeUsage=");
-        sbU.append(this.encodeUsage);
-        sbU.append(", encoderImplementationName=");
-        sbU.append(this.encoderImplementationName);
-        sbU.append(", framesEncoded=");
-        sbU.append(this.framesEncoded);
-        sbU.append(", inputFrameRate=");
-        sbU.append(this.inputFrameRate);
-        sbU.append(", mediaBitrate=");
-        sbU.append(this.mediaBitrate);
-        sbU.append(", numberOfCPUAdaptChanges=");
-        sbU.append(this.numberOfCPUAdaptChanges);
-        sbU.append(", numberOfQualityAdaptChanges=");
-        sbU.append(this.numberOfQualityAdaptChanges);
-        sbU.append(", qpSum=");
-        sbU.append(this.qpSum);
-        sbU.append(", substreams=");
-        sbU.append(Arrays.toString(this.substreams));
-        sbU.append(", suspended=");
-        sbU.append(this.suspended);
-        sbU.append(", targetMediaBitrate=");
-        return a.B(sbU, this.targetMediaBitrate, ")");
+        StringBuilder sbM833U = outline.m833U("OutboundVideo(codecName=");
+        sbM833U.append(this.codecName);
+        sbM833U.append(", codecPayloadType=");
+        sbM833U.append(this.codecPayloadType);
+        sbM833U.append(", avgEncodeTime=");
+        sbM833U.append(this.avgEncodeTime);
+        sbM833U.append(", bwLimitedResolution=");
+        sbM833U.append(this.bwLimitedResolution);
+        sbM833U.append(", cpuLimitedResolution=");
+        sbM833U.append(this.cpuLimitedResolution);
+        sbM833U.append(", encodeFrameRate=");
+        sbM833U.append(this.encodeFrameRate);
+        sbM833U.append(", encodeUsage=");
+        sbM833U.append(this.encodeUsage);
+        sbM833U.append(", encoderImplementationName=");
+        sbM833U.append(this.encoderImplementationName);
+        sbM833U.append(", framesEncoded=");
+        sbM833U.append(this.framesEncoded);
+        sbM833U.append(", inputFrameRate=");
+        sbM833U.append(this.inputFrameRate);
+        sbM833U.append(", mediaBitrate=");
+        sbM833U.append(this.mediaBitrate);
+        sbM833U.append(", numberOfCPUAdaptChanges=");
+        sbM833U.append(this.numberOfCPUAdaptChanges);
+        sbM833U.append(", numberOfQualityAdaptChanges=");
+        sbM833U.append(this.numberOfQualityAdaptChanges);
+        sbM833U.append(", qpSum=");
+        sbM833U.append(this.qpSum);
+        sbM833U.append(", substreams=");
+        sbM833U.append(Arrays.toString(this.substreams));
+        sbM833U.append(", suspended=");
+        sbM833U.append(this.suspended);
+        sbM833U.append(", targetMediaBitrate=");
+        return outline.m814B(sbM833U, this.targetMediaBitrate, ")");
     }
 }

@@ -1,11 +1,8 @@
 package com.discord.widgets.forums;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.channel.ForumTag;
@@ -38,17 +35,8 @@ import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserRelationships;
 import com.discord.stores.StoreUserTyping;
 import com.discord.utilities.SnowflakeUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.forums.ForumBrowserItem;
-import d0.d0.f;
-import d0.f0.q;
-import d0.t.g0;
-import d0.t.i0;
-import d0.t.n;
-import d0.t.r;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -57,18 +45,31 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.sequences.Sequence;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p512d0._Ranges;
+import p507d0.p578f0._Sequences2;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.MapsJVM;
+import p507d0.p580t.MutableCollections;
+import p507d0.p580t._Collections;
+import p507d0.p580t._Maps;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetForumBrowserViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetForumBrowserViewModel extends d0<ViewState> {
+public final class WidgetForumBrowserViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -97,22 +98,22 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
     private final StoreUserTyping storeUserTyping;
 
     /* compiled from: WidgetForumBrowserViewModel.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$1 */
+    public static final class C83471 extends Lambda implements Function1<StoreState, Unit> {
+        public C83471() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetForumBrowserViewModel widgetForumBrowserViewModel = WidgetForumBrowserViewModel.this;
-            m.checkNotNullExpressionValue(storeState, "storeState");
+            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
             WidgetForumBrowserViewModel.access$handleStoreState(widgetForumBrowserViewModel, storeState);
         }
     }
@@ -127,15 +128,15 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
         }
 
         private final Observable<MinimalStoreState> observeMinimalStoreState(StoreThreadsActive storeThreadsActive, StoreChannelsSelected storeChannelsSelected, StoreTabsNavigation storeTabsNavigation, StoreExperiments storeExperiments) {
-            Observable observableY = storeChannelsSelected.observeResolvedSelectedChannel().Y(new WidgetForumBrowserViewModel$Companion$observeMinimalStoreState$1(storeTabsNavigation, storeThreadsActive, storeExperiments));
-            m.checkNotNullExpressionValue(observableY, "storeChannelsSelected.ob…      }\n        }\n      }");
-            return observableY;
+            Observable observableM11099Y = storeChannelsSelected.observeResolvedSelectedChannel().m11099Y(new WidgetForumBrowserViewModel2(storeTabsNavigation, storeThreadsActive, storeExperiments));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "storeChannelsSelected.ob…      }\n        }\n      }");
+            return observableM11099Y;
         }
 
         private final Observable<StoreState> observeStoreState(StoreUser storeUser, StoreChannels storeChannels, StoreGuilds storeGuilds, StoreThreadsActive storeThreadsActive, ArchivedThreadsStore storeArchivedThreads, StoreThreadMessages storeThreadsMessages, StoreForumPostMessages storeForumPostMessages, StoreUserRelationships storeUserRelationships, StoreChannelsSelected storeChannelsSelected, StoreTabsNavigation storeTabsNavigation, StoreExperiments storeExperiments, StorePermissions storePermissions, StoreMessagesMostRecent storeMessagesMostRecent, StoreEmoji storeEmoji, StoreForumPostReadStates storeForumPostReadStates, StoreUserTyping storeUserTyping) {
-            Observable observableY = observeMinimalStoreState(storeThreadsActive, storeChannelsSelected, storeTabsNavigation, storeExperiments).Y(new WidgetForumBrowserViewModel$Companion$observeStoreState$1(storeUser, storeArchivedThreads, storeChannels, storeGuilds, storeForumPostMessages, storeThreadsMessages, storeUserRelationships, storePermissions, storeMessagesMostRecent, storeEmoji, storeForumPostReadStates, storeThreadsActive, storeUserTyping));
-            m.checkNotNullExpressionValue(observableY, "observeMinimalStoreState…      }\n        }\n      }");
-            return observableY;
+            Observable observableM11099Y = observeMinimalStoreState(storeThreadsActive, storeChannelsSelected, storeTabsNavigation, storeExperiments).m11099Y(new WidgetForumBrowserViewModel3(storeUser, storeArchivedThreads, storeChannels, storeGuilds, storeForumPostMessages, storeThreadsMessages, storeUserRelationships, storePermissions, storeMessagesMostRecent, storeEmoji, storeForumPostReadStates, storeThreadsActive, storeUserTyping));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "observeMinimalStoreState…      }\n        }\n      }");
+            return observableM11099Y;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -183,8 +184,8 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(Channel channel, Map<Long, Channel> map) {
                 super(null);
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(map, "activeThreads");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(map, "activeThreads");
                 this.channel = channel;
                 this.activeThreads = map;
             }
@@ -210,8 +211,8 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             }
 
             public final Valid copy(Channel channel, Map<Long, Channel> activeThreads) {
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(activeThreads, "activeThreads");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(activeThreads, "activeThreads");
                 return new Valid(channel, activeThreads);
             }
 
@@ -223,7 +224,7 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return m.areEqual(this.channel, valid.channel) && m.areEqual(this.activeThreads, valid.activeThreads);
+                return Intrinsics3.areEqual(this.channel, valid.channel) && Intrinsics3.areEqual(this.activeThreads, valid.activeThreads);
             }
 
             public final Map<Long, Channel> getActiveThreads() {
@@ -242,10 +243,10 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Valid(channel=");
-                sbU.append(this.channel);
-                sbU.append(", activeThreads=");
-                return a.M(sbU, this.activeThreads, ")");
+                StringBuilder sbM833U = outline.m833U("Valid(channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(", activeThreads=");
+                return outline.m825M(sbM833U, this.activeThreads, ")");
             }
         }
 
@@ -321,7 +322,7 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
                 return false;
             }
             NsfwPanelState nsfwPanelState = (NsfwPanelState) other;
-            return this.isNsfwUnconsented == nsfwPanelState.isNsfwUnconsented && this.isChannelNsfw == nsfwPanelState.isChannelNsfw && m.areEqual(this.nsfwAllowed, nsfwPanelState.nsfwAllowed) && this.guildId == nsfwPanelState.guildId;
+            return this.isNsfwUnconsented == nsfwPanelState.isNsfwUnconsented && this.isChannelNsfw == nsfwPanelState.isChannelNsfw && Intrinsics3.areEqual(this.nsfwAllowed, nsfwPanelState.nsfwAllowed) && this.guildId == nsfwPanelState.guildId;
         }
 
         public final long getGuildId() {
@@ -346,7 +347,7 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             boolean z3 = this.isChannelNsfw;
             int i2 = (i + (z3 ? 1 : z3 ? 1 : 0)) * 31;
             NsfwAllowance nsfwAllowance = this.nsfwAllowed;
-            return b.a(this.guildId) + ((i2 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31);
+            return C0002b.m3a(this.guildId) + ((i2 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31);
         }
 
         public final boolean isChannelNsfw() {
@@ -358,14 +359,14 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("NsfwPanelState(isNsfwUnconsented=");
-            sbU.append(this.isNsfwUnconsented);
-            sbU.append(", isChannelNsfw=");
-            sbU.append(this.isChannelNsfw);
-            sbU.append(", nsfwAllowed=");
-            sbU.append(this.nsfwAllowed);
-            sbU.append(", guildId=");
-            return a.C(sbU, this.guildId, ")");
+            StringBuilder sbM833U = outline.m833U("NsfwPanelState(isNsfwUnconsented=");
+            sbM833U.append(this.isNsfwUnconsented);
+            sbM833U.append(", isChannelNsfw=");
+            sbM833U.append(this.isChannelNsfw);
+            sbM833U.append(", nsfwAllowed=");
+            sbM833U.append(this.nsfwAllowed);
+            sbM833U.append(", guildId=");
+            return outline.m815C(sbM833U, this.guildId, ")");
         }
     }
 
@@ -406,22 +407,22 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(MeUser meUser, Map<Long, ? extends User> map, ArchivedThreadsStore.ThreadListingState threadListingState, Map<Long, Channel> map2, Map<Long, GuildMember> map3, Map<Long, GuildRole> map4, Map<Long, String> map5, Channel channel, Map<Long, Message> map6, Map<Long, StoreThreadMessages.ThreadState> map7, Set<Long> set, boolean z2, Map<Long, Long> map8, Map<String, ? extends Emoji> map9, Map<Long, ForumPostReadState> map10, Map<Long, Integer> map11, boolean z3, Map<Long, ? extends Set<Long>> map12) {
                 super(null);
-                m.checkNotNullParameter(meUser, "meUser");
-                m.checkNotNullParameter(map, "users");
-                m.checkNotNullParameter(threadListingState, "archivedThreadsState");
-                m.checkNotNullParameter(map2, "activeThreads");
-                m.checkNotNullParameter(map3, "guildMembers");
-                m.checkNotNullParameter(map4, "guildRoles");
-                m.checkNotNullParameter(map5, "channelNames");
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(map6, "forumPostFirstMessages");
-                m.checkNotNullParameter(map7, "forumPostMessageCounts");
-                m.checkNotNullParameter(set, "myBlockedUserIds");
-                m.checkNotNullParameter(map8, "mostRecentMessageIds");
-                m.checkNotNullParameter(map9, "guildEmojis");
-                m.checkNotNullParameter(map10, "forumPostReadStates");
-                m.checkNotNullParameter(map11, "forumPostUnreadCounts");
-                m.checkNotNullParameter(map12, "typingUsers");
+                Intrinsics3.checkNotNullParameter(meUser, "meUser");
+                Intrinsics3.checkNotNullParameter(map, "users");
+                Intrinsics3.checkNotNullParameter(threadListingState, "archivedThreadsState");
+                Intrinsics3.checkNotNullParameter(map2, "activeThreads");
+                Intrinsics3.checkNotNullParameter(map3, "guildMembers");
+                Intrinsics3.checkNotNullParameter(map4, "guildRoles");
+                Intrinsics3.checkNotNullParameter(map5, "channelNames");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(map6, "forumPostFirstMessages");
+                Intrinsics3.checkNotNullParameter(map7, "forumPostMessageCounts");
+                Intrinsics3.checkNotNullParameter(set, "myBlockedUserIds");
+                Intrinsics3.checkNotNullParameter(map8, "mostRecentMessageIds");
+                Intrinsics3.checkNotNullParameter(map9, "guildEmojis");
+                Intrinsics3.checkNotNullParameter(map10, "forumPostReadStates");
+                Intrinsics3.checkNotNullParameter(map11, "forumPostUnreadCounts");
+                Intrinsics3.checkNotNullParameter(map12, "typingUsers");
                 this.meUser = meUser;
                 this.users = map;
                 this.archivedThreadsState = threadListingState;
@@ -524,22 +525,22 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(MeUser meUser, Map<Long, ? extends User> users, ArchivedThreadsStore.ThreadListingState archivedThreadsState, Map<Long, Channel> activeThreads, Map<Long, GuildMember> guildMembers, Map<Long, GuildRole> guildRoles, Map<Long, String> channelNames, Channel channel, Map<Long, Message> forumPostFirstMessages, Map<Long, StoreThreadMessages.ThreadState> forumPostMessageCounts, Set<Long> myBlockedUserIds, boolean canCreateForumChannelPosts, Map<Long, Long> mostRecentMessageIds, Map<String, ? extends Emoji> guildEmojis, Map<Long, ForumPostReadState> forumPostReadStates, Map<Long, Integer> forumPostUnreadCounts, boolean isThreadSyncedGuild, Map<Long, ? extends Set<Long>> typingUsers) {
-                m.checkNotNullParameter(meUser, "meUser");
-                m.checkNotNullParameter(users, "users");
-                m.checkNotNullParameter(archivedThreadsState, "archivedThreadsState");
-                m.checkNotNullParameter(activeThreads, "activeThreads");
-                m.checkNotNullParameter(guildMembers, "guildMembers");
-                m.checkNotNullParameter(guildRoles, "guildRoles");
-                m.checkNotNullParameter(channelNames, "channelNames");
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(forumPostFirstMessages, "forumPostFirstMessages");
-                m.checkNotNullParameter(forumPostMessageCounts, "forumPostMessageCounts");
-                m.checkNotNullParameter(myBlockedUserIds, "myBlockedUserIds");
-                m.checkNotNullParameter(mostRecentMessageIds, "mostRecentMessageIds");
-                m.checkNotNullParameter(guildEmojis, "guildEmojis");
-                m.checkNotNullParameter(forumPostReadStates, "forumPostReadStates");
-                m.checkNotNullParameter(forumPostUnreadCounts, "forumPostUnreadCounts");
-                m.checkNotNullParameter(typingUsers, "typingUsers");
+                Intrinsics3.checkNotNullParameter(meUser, "meUser");
+                Intrinsics3.checkNotNullParameter(users, "users");
+                Intrinsics3.checkNotNullParameter(archivedThreadsState, "archivedThreadsState");
+                Intrinsics3.checkNotNullParameter(activeThreads, "activeThreads");
+                Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+                Intrinsics3.checkNotNullParameter(guildRoles, "guildRoles");
+                Intrinsics3.checkNotNullParameter(channelNames, "channelNames");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(forumPostFirstMessages, "forumPostFirstMessages");
+                Intrinsics3.checkNotNullParameter(forumPostMessageCounts, "forumPostMessageCounts");
+                Intrinsics3.checkNotNullParameter(myBlockedUserIds, "myBlockedUserIds");
+                Intrinsics3.checkNotNullParameter(mostRecentMessageIds, "mostRecentMessageIds");
+                Intrinsics3.checkNotNullParameter(guildEmojis, "guildEmojis");
+                Intrinsics3.checkNotNullParameter(forumPostReadStates, "forumPostReadStates");
+                Intrinsics3.checkNotNullParameter(forumPostUnreadCounts, "forumPostUnreadCounts");
+                Intrinsics3.checkNotNullParameter(typingUsers, "typingUsers");
                 return new Loaded(meUser, users, archivedThreadsState, activeThreads, guildMembers, guildRoles, channelNames, channel, forumPostFirstMessages, forumPostMessageCounts, myBlockedUserIds, canCreateForumChannelPosts, mostRecentMessageIds, guildEmojis, forumPostReadStates, forumPostUnreadCounts, isThreadSyncedGuild, typingUsers);
             }
 
@@ -551,7 +552,7 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return m.areEqual(this.meUser, loaded.meUser) && m.areEqual(this.users, loaded.users) && m.areEqual(this.archivedThreadsState, loaded.archivedThreadsState) && m.areEqual(this.activeThreads, loaded.activeThreads) && m.areEqual(this.guildMembers, loaded.guildMembers) && m.areEqual(this.guildRoles, loaded.guildRoles) && m.areEqual(this.channelNames, loaded.channelNames) && m.areEqual(this.channel, loaded.channel) && m.areEqual(this.forumPostFirstMessages, loaded.forumPostFirstMessages) && m.areEqual(this.forumPostMessageCounts, loaded.forumPostMessageCounts) && m.areEqual(this.myBlockedUserIds, loaded.myBlockedUserIds) && this.canCreateForumChannelPosts == loaded.canCreateForumChannelPosts && m.areEqual(this.mostRecentMessageIds, loaded.mostRecentMessageIds) && m.areEqual(this.guildEmojis, loaded.guildEmojis) && m.areEqual(this.forumPostReadStates, loaded.forumPostReadStates) && m.areEqual(this.forumPostUnreadCounts, loaded.forumPostUnreadCounts) && this.isThreadSyncedGuild == loaded.isThreadSyncedGuild && m.areEqual(this.typingUsers, loaded.typingUsers);
+                return Intrinsics3.areEqual(this.meUser, loaded.meUser) && Intrinsics3.areEqual(this.users, loaded.users) && Intrinsics3.areEqual(this.archivedThreadsState, loaded.archivedThreadsState) && Intrinsics3.areEqual(this.activeThreads, loaded.activeThreads) && Intrinsics3.areEqual(this.guildMembers, loaded.guildMembers) && Intrinsics3.areEqual(this.guildRoles, loaded.guildRoles) && Intrinsics3.areEqual(this.channelNames, loaded.channelNames) && Intrinsics3.areEqual(this.channel, loaded.channel) && Intrinsics3.areEqual(this.forumPostFirstMessages, loaded.forumPostFirstMessages) && Intrinsics3.areEqual(this.forumPostMessageCounts, loaded.forumPostMessageCounts) && Intrinsics3.areEqual(this.myBlockedUserIds, loaded.myBlockedUserIds) && this.canCreateForumChannelPosts == loaded.canCreateForumChannelPosts && Intrinsics3.areEqual(this.mostRecentMessageIds, loaded.mostRecentMessageIds) && Intrinsics3.areEqual(this.guildEmojis, loaded.guildEmojis) && Intrinsics3.areEqual(this.forumPostReadStates, loaded.forumPostReadStates) && Intrinsics3.areEqual(this.forumPostUnreadCounts, loaded.forumPostUnreadCounts) && this.isThreadSyncedGuild == loaded.isThreadSyncedGuild && Intrinsics3.areEqual(this.typingUsers, loaded.typingUsers);
             }
 
             public final Map<Long, Channel> getActiveThreads() {
@@ -671,42 +672,42 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(meUser=");
-                sbU.append(this.meUser);
-                sbU.append(", users=");
-                sbU.append(this.users);
-                sbU.append(", archivedThreadsState=");
-                sbU.append(this.archivedThreadsState);
-                sbU.append(", activeThreads=");
-                sbU.append(this.activeThreads);
-                sbU.append(", guildMembers=");
-                sbU.append(this.guildMembers);
-                sbU.append(", guildRoles=");
-                sbU.append(this.guildRoles);
-                sbU.append(", channelNames=");
-                sbU.append(this.channelNames);
-                sbU.append(", channel=");
-                sbU.append(this.channel);
-                sbU.append(", forumPostFirstMessages=");
-                sbU.append(this.forumPostFirstMessages);
-                sbU.append(", forumPostMessageCounts=");
-                sbU.append(this.forumPostMessageCounts);
-                sbU.append(", myBlockedUserIds=");
-                sbU.append(this.myBlockedUserIds);
-                sbU.append(", canCreateForumChannelPosts=");
-                sbU.append(this.canCreateForumChannelPosts);
-                sbU.append(", mostRecentMessageIds=");
-                sbU.append(this.mostRecentMessageIds);
-                sbU.append(", guildEmojis=");
-                sbU.append(this.guildEmojis);
-                sbU.append(", forumPostReadStates=");
-                sbU.append(this.forumPostReadStates);
-                sbU.append(", forumPostUnreadCounts=");
-                sbU.append(this.forumPostUnreadCounts);
-                sbU.append(", isThreadSyncedGuild=");
-                sbU.append(this.isThreadSyncedGuild);
-                sbU.append(", typingUsers=");
-                return a.M(sbU, this.typingUsers, ")");
+                StringBuilder sbM833U = outline.m833U("Loaded(meUser=");
+                sbM833U.append(this.meUser);
+                sbM833U.append(", users=");
+                sbM833U.append(this.users);
+                sbM833U.append(", archivedThreadsState=");
+                sbM833U.append(this.archivedThreadsState);
+                sbM833U.append(", activeThreads=");
+                sbM833U.append(this.activeThreads);
+                sbM833U.append(", guildMembers=");
+                sbM833U.append(this.guildMembers);
+                sbM833U.append(", guildRoles=");
+                sbM833U.append(this.guildRoles);
+                sbM833U.append(", channelNames=");
+                sbM833U.append(this.channelNames);
+                sbM833U.append(", channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(", forumPostFirstMessages=");
+                sbM833U.append(this.forumPostFirstMessages);
+                sbM833U.append(", forumPostMessageCounts=");
+                sbM833U.append(this.forumPostMessageCounts);
+                sbM833U.append(", myBlockedUserIds=");
+                sbM833U.append(this.myBlockedUserIds);
+                sbM833U.append(", canCreateForumChannelPosts=");
+                sbM833U.append(this.canCreateForumChannelPosts);
+                sbM833U.append(", mostRecentMessageIds=");
+                sbM833U.append(this.mostRecentMessageIds);
+                sbM833U.append(", guildEmojis=");
+                sbM833U.append(this.guildEmojis);
+                sbM833U.append(", forumPostReadStates=");
+                sbM833U.append(this.forumPostReadStates);
+                sbM833U.append(", forumPostUnreadCounts=");
+                sbM833U.append(this.forumPostUnreadCounts);
+                sbM833U.append(", isThreadSyncedGuild=");
+                sbM833U.append(this.isThreadSyncedGuild);
+                sbM833U.append(", typingUsers=");
+                return outline.m825M(sbM833U, this.typingUsers, ")");
             }
         }
 
@@ -736,9 +737,9 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(NsfwPanelState nsfwPanelState, List<? extends ForumBrowserItem> list, boolean z2, String str, String str2, long j, long j2) {
                 super(nsfwPanelState, null);
-                m.checkNotNullParameter(nsfwPanelState, "nsfwPanelState");
-                m.checkNotNullParameter(list, "listItems");
-                m.checkNotNullParameter(str, "channelName");
+                Intrinsics3.checkNotNullParameter(nsfwPanelState, "nsfwPanelState");
+                Intrinsics3.checkNotNullParameter(list, "listItems");
+                Intrinsics3.checkNotNullParameter(str, "channelName");
                 this.nsfwPanelState = nsfwPanelState;
                 this.listItems = list;
                 this.canCreateForumChannelPosts = z2;
@@ -786,9 +787,9 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(NsfwPanelState nsfwPanelState, List<? extends ForumBrowserItem> listItems, boolean canCreateForumChannelPosts, String channelName, String channelTopic, long channelId, long guildId) {
-                m.checkNotNullParameter(nsfwPanelState, "nsfwPanelState");
-                m.checkNotNullParameter(listItems, "listItems");
-                m.checkNotNullParameter(channelName, "channelName");
+                Intrinsics3.checkNotNullParameter(nsfwPanelState, "nsfwPanelState");
+                Intrinsics3.checkNotNullParameter(listItems, "listItems");
+                Intrinsics3.checkNotNullParameter(channelName, "channelName");
                 return new Loaded(nsfwPanelState, listItems, canCreateForumChannelPosts, channelName, channelTopic, channelId, guildId);
             }
 
@@ -800,7 +801,7 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return m.areEqual(getNsfwPanelState(), loaded.getNsfwPanelState()) && m.areEqual(this.listItems, loaded.listItems) && this.canCreateForumChannelPosts == loaded.canCreateForumChannelPosts && m.areEqual(this.channelName, loaded.channelName) && m.areEqual(this.channelTopic, loaded.channelTopic) && this.channelId == loaded.channelId && this.guildId == loaded.guildId;
+                return Intrinsics3.areEqual(getNsfwPanelState(), loaded.getNsfwPanelState()) && Intrinsics3.areEqual(this.listItems, loaded.listItems) && this.canCreateForumChannelPosts == loaded.canCreateForumChannelPosts && Intrinsics3.areEqual(this.channelName, loaded.channelName) && Intrinsics3.areEqual(this.channelTopic, loaded.channelTopic) && this.channelId == loaded.channelId && this.guildId == loaded.guildId;
             }
 
             public final boolean getCanCreateForumChannelPosts() {
@@ -847,24 +848,24 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
                 String str = this.channelName;
                 int iHashCode3 = (i2 + (str != null ? str.hashCode() : 0)) * 31;
                 String str2 = this.channelTopic;
-                return b.a(this.guildId) + ((b.a(this.channelId) + ((iHashCode3 + (str2 != null ? str2.hashCode() : 0)) * 31)) * 31);
+                return C0002b.m3a(this.guildId) + ((C0002b.m3a(this.channelId) + ((iHashCode3 + (str2 != null ? str2.hashCode() : 0)) * 31)) * 31);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(nsfwPanelState=");
-                sbU.append(getNsfwPanelState());
-                sbU.append(", listItems=");
-                sbU.append(this.listItems);
-                sbU.append(", canCreateForumChannelPosts=");
-                sbU.append(this.canCreateForumChannelPosts);
-                sbU.append(", channelName=");
-                sbU.append(this.channelName);
-                sbU.append(", channelTopic=");
-                sbU.append(this.channelTopic);
-                sbU.append(", channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", guildId=");
-                return a.C(sbU, this.guildId, ")");
+                StringBuilder sbM833U = outline.m833U("Loaded(nsfwPanelState=");
+                sbM833U.append(getNsfwPanelState());
+                sbM833U.append(", listItems=");
+                sbM833U.append(this.listItems);
+                sbM833U.append(", canCreateForumChannelPosts=");
+                sbM833U.append(this.canCreateForumChannelPosts);
+                sbM833U.append(", channelName=");
+                sbM833U.append(this.channelName);
+                sbM833U.append(", channelTopic=");
+                sbM833U.append(this.channelTopic);
+                sbM833U.append(", channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", guildId=");
+                return outline.m815C(sbM833U, this.guildId, ")");
             }
         }
 
@@ -875,7 +876,7 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loading(NsfwPanelState nsfwPanelState) {
                 super(nsfwPanelState, null);
-                m.checkNotNullParameter(nsfwPanelState, "nsfwPanelState");
+                Intrinsics3.checkNotNullParameter(nsfwPanelState, "nsfwPanelState");
                 this.nsfwPanelState = nsfwPanelState;
             }
 
@@ -891,13 +892,13 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             }
 
             public final Loading copy(NsfwPanelState nsfwPanelState) {
-                m.checkNotNullParameter(nsfwPanelState, "nsfwPanelState");
+                Intrinsics3.checkNotNullParameter(nsfwPanelState, "nsfwPanelState");
                 return new Loading(nsfwPanelState);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loading) && m.areEqual(getNsfwPanelState(), ((Loading) other).getNsfwPanelState());
+                    return (other instanceof Loading) && Intrinsics3.areEqual(getNsfwPanelState(), ((Loading) other).getNsfwPanelState());
                 }
                 return true;
             }
@@ -916,10 +917,10 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loading(nsfwPanelState=");
-                sbU.append(getNsfwPanelState());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Loading(nsfwPanelState=");
+                sbM833U.append(getNsfwPanelState());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -937,16 +938,16 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumBrowserViewModel.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$maybeFetchOlderPosts$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$maybeFetchOlderPosts$1 */
+    public static final class C83501 extends Lambda implements Function0<Unit> {
+        public C83501() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -956,13 +957,13 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumBrowserViewModel.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$setupListViewState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Channel, ForumBrowserItem.PostItem> {
+    /* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$setupListViewState$1 */
+    public static final class C83511 extends Lambda implements Function1<Channel, ForumBrowserItem.PostItem> {
         public final /* synthetic */ Set $seenChannelIds;
         public final /* synthetic */ StoreState.Loaded $storeState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Set set, StoreState.Loaded loaded) {
+        public C83511(Set set, StoreState.Loaded loaded) {
             super(1);
             this.$seenChannelIds = set;
             this.$storeState = loaded;
@@ -975,7 +976,7 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ForumBrowserItem.PostItem invoke2(Channel channel) {
-            m.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
             if (this.$seenChannelIds.contains(Long.valueOf(channel.getId()))) {
                 return null;
             }
@@ -1038,64 +1039,64 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
     */
     private final ForumBrowserItem.PostItem createPostItem(StoreState.Loaded storeState, Channel channel) {
         LinkedHashMap linkedHashMap;
-        PostTagData postTagData;
+        PostData2 postData2;
         List listEmptyList;
         GuildMember guildMember;
-        PostTagData postTagDataFromTag;
+        PostData2 postData2FromTag;
         ForumTag forumTag;
         boolean z2;
         com.discord.api.user.User author;
         User user = storeState.getUsers().get(Long.valueOf(channel.getOwnerId()));
-        Message message = (Message) a.d(channel, storeState.getForumPostFirstMessages());
+        Message message = (Message) outline.m845d(channel, storeState.getForumPostFirstMessages());
         Long lValueOf = (message == null || (author = message.getAuthor()) == null) ? null : Long.valueOf(author.getId());
         boolean z3 = lValueOf != null && storeState.getMyBlockedUserIds().contains(lValueOf);
-        StoreThreadMessages.ThreadState threadState = (StoreThreadMessages.ThreadState) a.d(channel, storeState.getForumPostMessageCounts());
+        StoreThreadMessages.ThreadState threadState = (StoreThreadMessages.ThreadState) outline.m845d(channel, storeState.getForumPostMessageCounts());
         Integer numValueOf = threadState != null ? Integer.valueOf(threadState.getCount()) : null;
-        Long l = (Long) a.d(channel, storeState.getMostRecentMessageIds());
+        Long l = (Long) outline.m845d(channel, storeState.getMostRecentMessageIds());
         Long lValueOf2 = l != null ? Long.valueOf((l.longValue() >>> 22) + SnowflakeUtils.DISCORD_EPOCH) : null;
-        ForumPostReadState forumPostReadStateCreateDefault = (ForumPostReadState) a.d(channel, storeState.getForumPostReadStates());
+        ForumPostReadState forumPostReadStateCreateDefault = (ForumPostReadState) outline.m845d(channel, storeState.getForumPostReadStates());
         if (forumPostReadStateCreateDefault == null) {
             forumPostReadStateCreateDefault = ForumPostReadState.INSTANCE.createDefault(channel.getId());
         }
         ForumPostReadState forumPostReadState = forumPostReadStateCreateDefault;
-        List<ForumTag> listD = storeState.getChannel().d();
-        if (listD != null) {
-            linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(listD, 10)), 16));
-            for (Object obj : listD) {
+        List<ForumTag> listM7637d = storeState.getChannel().m7637d();
+        if (listM7637d != null) {
+            linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(listM7637d, 10)), 16));
+            for (Object obj : listM7637d) {
                 linkedHashMap.put(Long.valueOf(((ForumTag) obj).getId()), obj);
             }
         } else {
             linkedHashMap = null;
         }
-        List<Long> listC = channel.c();
-        if (listC != null) {
+        List<Long> listM7636c = channel.m7636c();
+        if (listM7636c != null) {
             ArrayList arrayList = new ArrayList();
-            Iterator<T> it = listC.iterator();
+            Iterator<T> it = listM7636c.iterator();
             while (it.hasNext()) {
                 long jLongValue = ((Number) it.next()).longValue();
                 if (linkedHashMap == null || (forumTag = (ForumTag) linkedHashMap.get(Long.valueOf(jLongValue))) == null) {
-                    postTagDataFromTag = null;
+                    postData2FromTag = null;
                 } else if (forumTag.getCustomEmojiId() == null) {
                     z2 = false;
-                    postTagDataFromTag = PostTagData.INSTANCE.fromTag(forumTag, z2);
+                    postData2FromTag = PostData2.INSTANCE.fromTag(forumTag, z2);
                 } else {
                     Emoji emoji = storeState.getGuildEmojis().get(forumTag.getCustomEmojiId());
                     if ((emoji instanceof ModelEmojiCustom) && ((ModelEmojiCustom) emoji).isAnimated()) {
                         z2 = true;
                     }
-                    postTagDataFromTag = PostTagData.INSTANCE.fromTag(forumTag, z2);
+                    postData2FromTag = PostData2.INSTANCE.fromTag(forumTag, z2);
                 }
-                if (postTagDataFromTag != null) {
-                    arrayList.add(postTagDataFromTag);
+                if (postData2FromTag != null) {
+                    arrayList.add(postData2FromTag);
                 }
             }
-            postTagData = (PostTagData) u.firstOrNull((List) arrayList);
+            postData2 = (PostData2) _Collections.firstOrNull((List) arrayList);
         } else {
-            postTagData = null;
+            postData2 = null;
         }
         MessageReaction messageReactionMostCommonReaction = message != null ? ForumUtils.INSTANCE.mostCommonReaction(message, this.storeEmoji) : null;
         boolean zIsDefaultPostReaction = messageReactionMostCommonReaction != null ? ForumUtils.INSTANCE.isDefaultPostReaction(messageReactionMostCommonReaction, this.storeEmoji) : false;
-        Set set = (Set) a.d(channel, storeState.getTypingUsers());
+        Set set = (Set) outline.m845d(channel, storeState.getTypingUsers());
         if (set != null) {
             ArrayList arrayList2 = new ArrayList();
             Iterator it2 = set.iterator();
@@ -1107,12 +1108,12 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
                     arrayList2.add(userGuildMember);
                 }
             }
-            listEmptyList = u.take(arrayList2, 3);
+            listEmptyList = _Collections.take(arrayList2, 3);
             if (listEmptyList == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
         }
-        return new ForumBrowserItem.PostItem(new PostData(channel, user, storeState.getMeUser().getId(), storeState.getGuildMembers(), storeState.getGuildRoles(), storeState.getChannelNames(), message, z3, lValueOf2, numValueOf, postTagData, messageReactionMostCommonReaction, zIsDefaultPostReaction, forumPostReadState, (Integer) a.d(channel, storeState.getForumPostUnreadCounts()), listEmptyList));
+        return new ForumBrowserItem.PostItem(new PostData(channel, user, storeState.getMeUser().getId(), storeState.getGuildMembers(), storeState.getGuildRoles(), storeState.getChannelNames(), message, z3, lValueOf2, numValueOf, postData2, messageReactionMostCommonReaction, zIsDefaultPostReaction, forumPostReadState, (Integer) outline.m845d(channel, storeState.getForumPostUnreadCounts()), listEmptyList));
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x0033  */
@@ -1162,7 +1163,7 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
     }
 
     private final void setupEmptyViewState(StoreState.Loaded storeState, NsfwPanelState nsfwPanelState) {
-        List listEmptyList = n.emptyList();
+        List listEmptyList = Collections2.emptyList();
         boolean canCreateForumChannelPosts = storeState.getCanCreateForumChannelPosts();
         String name = storeState.getChannel().getName();
         if (name == null) {
@@ -1178,50 +1179,50 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
     private final void setupListViewState(StoreState.Loaded storeState, NsfwPanelState nsfwPanelState) {
         if (this.lastSelectedForumChannelId != storeState.getChannel().getId()) {
             this.lastSelectedForumChannelId = storeState.getChannel().getId();
-            this.eventSubject.k.onNext(Event.ScrollToTop.INSTANCE);
+            this.eventSubject.f27650k.onNext(Event.ScrollToTop.INSTANCE);
         }
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         ArrayList arrayList = new ArrayList();
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(linkedHashSet, storeState);
-        Sequence sequenceAsSequence = i0.asSequence(storeState.getActiveThreads());
+        C83511 c83511 = new C83511(linkedHashSet, storeState);
+        Sequence sequenceAsSequence = _Maps.asSequence(storeState.getActiveThreads());
         ArrayList arrayList2 = new ArrayList();
         ArrayList arrayList3 = new ArrayList();
         for (Object obj : sequenceAsSequence) {
-            if (ChannelUtils.A((Channel) ((Map.Entry) obj).getValue())) {
+            if (ChannelUtils.m7666A((Channel) ((Map.Entry) obj).getValue())) {
                 arrayList2.add(obj);
             } else {
                 arrayList3.add(obj);
             }
         }
-        Pair pair = new Pair(arrayList2, arrayList3);
-        List list = (List) pair.component1();
-        List list2 = (List) pair.component2();
+        Tuples2 tuples2 = new Tuples2(arrayList2, arrayList3);
+        List list = (List) tuples2.component1();
+        List list2 = (List) tuples2.component2();
         ArrayList arrayList4 = new ArrayList();
         Iterator it = list.iterator();
         while (it.hasNext()) {
-            ForumBrowserItem.PostItem postItemInvoke2 = anonymousClass1.invoke2((Channel) ((Map.Entry) it.next()).getValue());
+            ForumBrowserItem.PostItem postItemInvoke2 = c83511.invoke2((Channel) ((Map.Entry) it.next()).getValue());
             if (postItemInvoke2 != null) {
                 arrayList4.add(postItemInvoke2);
             }
         }
-        List listSortedWith = u.sortedWith(arrayList4, ForumBrowserItem.INSTANCE.getPostItemComparatorByMostRecent());
+        List listSortedWith = _Collections.sortedWith(arrayList4, ForumBrowserItem.INSTANCE.getPostItemComparatorByMostRecent());
         ArrayList arrayList5 = new ArrayList();
         Iterator it2 = list2.iterator();
         while (it2.hasNext()) {
-            ForumBrowserItem.PostItem postItemInvoke22 = anonymousClass1.invoke2((Channel) ((Map.Entry) it2.next()).getValue());
+            ForumBrowserItem.PostItem postItemInvoke22 = c83511.invoke2((Channel) ((Map.Entry) it2.next()).getValue());
             if (postItemInvoke22 != null) {
                 arrayList5.add(postItemInvoke22);
             }
         }
         ForumBrowserItem.Companion companion = ForumBrowserItem.INSTANCE;
-        List listSortedWith2 = u.sortedWith(arrayList5, companion.getPostItemComparatorByMostRecent());
+        List listSortedWith2 = _Collections.sortedWith(arrayList5, companion.getPostItemComparatorByMostRecent());
         arrayList.addAll(listSortedWith);
         arrayList.addAll(listSortedWith2);
-        List<Channel> threads = storeState.getArchivedThreadsState() instanceof ArchivedThreadsStore.ThreadListingState.Listing ? ((ArchivedThreadsStore.ThreadListingState.Listing) storeState.getArchivedThreadsState()).getThreads() : n.emptyList();
+        List<Channel> threads = storeState.getArchivedThreadsState() instanceof ArchivedThreadsStore.ThreadListingState.Listing ? ((ArchivedThreadsStore.ThreadListingState.Listing) storeState.getArchivedThreadsState()).getThreads() : Collections2.emptyList();
         boolean z2 = true;
         if (!threads.isEmpty()) {
-            arrayList.add(new ForumBrowserItem.HeaderItem(R.string.forum_section_archived));
-            r.addAll(arrayList, q.sortedWith(q.mapNotNull(u.asSequence(threads), new WidgetForumBrowserViewModel$setupListViewState$archivedPostItems$1(anonymousClass1)), companion.getPostItemComparatorByMostRecent()));
+            arrayList.add(new ForumBrowserItem.HeaderItem(C5419R.string.forum_section_archived));
+            MutableCollections.addAll(arrayList, _Sequences2.sortedWith(_Sequences2.mapNotNull(_Collections.asSequence(threads), new WidgetForumBrowserViewModel4(c83511)), companion.getPostItemComparatorByMostRecent()));
         }
         if ((storeState.getArchivedThreadsState() instanceof ArchivedThreadsStore.ThreadListingState.Listing) && ((ArchivedThreadsStore.ThreadListingState.Listing) storeState.getArchivedThreadsState()).isLoadingMore()) {
             arrayList.add(ForumBrowserItem.LoadingItem.INSTANCE);
@@ -1275,13 +1276,13 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
     public final void maybeFetchOlderPosts(long channelId, long guildId) {
         if (ForumUtils.canAccessRedesignedForumChannels$default(ForumUtils.INSTANCE, guildId, null, 2, null) && this.canFetchMoreOlderPosts && !this.isFetchingMoreOlderPosts) {
             this.isFetchingMoreOlderPosts = true;
-            ArchivedThreadsStore.fetchGuildForumThreadListing$default(this.storeArchivedThreads, channelId, false, new AnonymousClass1(), 2, null);
+            ArchivedThreadsStore.fetchGuildForumThreadListing$default(this.storeArchivedThreads, channelId, false, new C83501(), 2, null);
         }
     }
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -1295,24 +1296,24 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetForumBrowserViewModel(StoreUser storeUser, StoreChannels storeChannels, StoreGuilds storeGuilds, ArchivedThreadsStore archivedThreadsStore, StoreThreadsActive storeThreadsActive, StoreThreadMessages storeThreadMessages, StoreForumPostMessages storeForumPostMessages, StoreUserRelationships storeUserRelationships, StoreGuildMemberRequester storeGuildMemberRequester, StoreChannelsSelected storeChannelsSelected, StoreTabsNavigation storeTabsNavigation, StoreExperiments storeExperiments, StorePermissions storePermissions, StoreMessagesMostRecent storeMessagesMostRecent, StoreEmoji storeEmoji, StoreForumPostReadStates storeForumPostReadStates, StoreUserTyping storeUserTyping, Observable<StoreState> observable) {
         super(null, 1, null);
-        m.checkNotNullParameter(storeUser, "storeUser");
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(storeGuilds, "storeGuilds");
-        m.checkNotNullParameter(archivedThreadsStore, "storeArchivedThreads");
-        m.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
-        m.checkNotNullParameter(storeThreadMessages, "storeThreadsMessages");
-        m.checkNotNullParameter(storeForumPostMessages, "storeForumPostMessages");
-        m.checkNotNullParameter(storeUserRelationships, "storeUserRelationships");
-        m.checkNotNullParameter(storeGuildMemberRequester, "guildMemberRequester");
-        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        m.checkNotNullParameter(storeTabsNavigation, "storeTabsNavigation");
-        m.checkNotNullParameter(storeExperiments, "storeExperiments");
-        m.checkNotNullParameter(storePermissions, "storePermissions");
-        m.checkNotNullParameter(storeMessagesMostRecent, "storeMessagesMostRecent");
-        m.checkNotNullParameter(storeEmoji, "storeEmoji");
-        m.checkNotNullParameter(storeForumPostReadStates, "storeForumPostReadStates");
-        m.checkNotNullParameter(storeUserTyping, "storeUserTyping");
-        m.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        Intrinsics3.checkNotNullParameter(archivedThreadsStore, "storeArchivedThreads");
+        Intrinsics3.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
+        Intrinsics3.checkNotNullParameter(storeThreadMessages, "storeThreadsMessages");
+        Intrinsics3.checkNotNullParameter(storeForumPostMessages, "storeForumPostMessages");
+        Intrinsics3.checkNotNullParameter(storeUserRelationships, "storeUserRelationships");
+        Intrinsics3.checkNotNullParameter(storeGuildMemberRequester, "guildMemberRequester");
+        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        Intrinsics3.checkNotNullParameter(storeTabsNavigation, "storeTabsNavigation");
+        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
+        Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
+        Intrinsics3.checkNotNullParameter(storeMessagesMostRecent, "storeMessagesMostRecent");
+        Intrinsics3.checkNotNullParameter(storeEmoji, "storeEmoji");
+        Intrinsics3.checkNotNullParameter(storeForumPostReadStates, "storeForumPostReadStates");
+        Intrinsics3.checkNotNullParameter(storeUserTyping, "storeUserTyping");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
         this.storeUser = storeUser;
         this.storeChannels = storeChannels;
         this.storeGuilds = storeGuilds;
@@ -1330,11 +1331,11 @@ public final class WidgetForumBrowserViewModel extends d0<ViewState> {
         this.storeEmoji = storeEmoji;
         this.storeForumPostReadStates = storeForumPostReadStates;
         this.storeUserTyping = storeUserTyping;
-        this.eventSubject = PublishSubject.k0();
+        this.eventSubject = PublishSubject.m11133k0();
         this.initialChannelActivePostFirstMessageFetches = new LinkedHashSet();
-        Observable observableR = ObservableExtensionsKt.computationLatest(observable).r();
-        m.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableR, this, null, 2, null), WidgetForumBrowserViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable observableM11112r = ObservableExtensionsKt.computationLatest(observable).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "storeStateObservable\n   …  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableM11112r, this, null, 2, null), WidgetForumBrowserViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C83471(), 62, (Object) null);
         ForumPostReadStateManager.initialize$default(ForumPostReadStateManager.INSTANCE, null, null, null, 7, null);
     }
 }

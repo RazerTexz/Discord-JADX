@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackActivityReportProblem.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityReportProblem implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackActivityReportProblem implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long guildId = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackActivityReportProblem implements AnalyticsSch
             return false;
         }
         TrackActivityReportProblem trackActivityReportProblem = (TrackActivityReportProblem) other;
-        return m.areEqual(this.channelId, trackActivityReportProblem.channelId) && m.areEqual(this.guildId, trackActivityReportProblem.guildId) && m.areEqual(this.reason, trackActivityReportProblem.reason) && m.areEqual(this.rtcConnectionId, trackActivityReportProblem.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackActivityReportProblem.mediaSessionId) && m.areEqual(this.rating, trackActivityReportProblem.rating) && m.areEqual(this.feedback, trackActivityReportProblem.feedback) && m.areEqual(this.applicationId, trackActivityReportProblem.applicationId) && m.areEqual(this.applicationName, trackActivityReportProblem.applicationName);
+        return Intrinsics3.areEqual(this.channelId, trackActivityReportProblem.channelId) && Intrinsics3.areEqual(this.guildId, trackActivityReportProblem.guildId) && Intrinsics3.areEqual(this.reason, trackActivityReportProblem.reason) && Intrinsics3.areEqual(this.rtcConnectionId, trackActivityReportProblem.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackActivityReportProblem.mediaSessionId) && Intrinsics3.areEqual(this.rating, trackActivityReportProblem.rating) && Intrinsics3.areEqual(this.feedback, trackActivityReportProblem.feedback) && Intrinsics3.areEqual(this.applicationId, trackActivityReportProblem.applicationId) && Intrinsics3.areEqual(this.applicationName, trackActivityReportProblem.applicationName);
     }
 
     public int hashCode() {
@@ -61,23 +61,23 @@ public final /* data */ class TrackActivityReportProblem implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackActivityReportProblem(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", reason=");
-        sbU.append(this.reason);
-        sbU.append(", rtcConnectionId=");
-        sbU.append(this.rtcConnectionId);
-        sbU.append(", mediaSessionId=");
-        sbU.append(this.mediaSessionId);
-        sbU.append(", rating=");
-        sbU.append(this.rating);
-        sbU.append(", feedback=");
-        sbU.append(this.feedback);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", applicationName=");
-        return a.E(sbU, this.applicationName, ")");
+        StringBuilder sbM833U = outline.m833U("TrackActivityReportProblem(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", reason=");
+        sbM833U.append(this.reason);
+        sbM833U.append(", rtcConnectionId=");
+        sbM833U.append(this.rtcConnectionId);
+        sbM833U.append(", mediaSessionId=");
+        sbM833U.append(this.mediaSessionId);
+        sbM833U.append(", rating=");
+        sbM833U.append(this.rating);
+        sbM833U.append(", feedback=");
+        sbM833U.append(this.feedback);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", applicationName=");
+        return outline.m817E(sbM833U, this.applicationName, ")");
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSpotifyListenAlongStarted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSpotifyListenAlongStarted implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackSpotifyListenAlongStarted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence partyId = null;
     private final Long otherUserId = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackSpotifyListenAlongStarted implements Analytic
             return false;
         }
         TrackSpotifyListenAlongStarted trackSpotifyListenAlongStarted = (TrackSpotifyListenAlongStarted) other;
-        return m.areEqual(this.partyId, trackSpotifyListenAlongStarted.partyId) && m.areEqual(this.otherUserId, trackSpotifyListenAlongStarted.otherUserId);
+        return Intrinsics3.areEqual(this.partyId, trackSpotifyListenAlongStarted.partyId) && Intrinsics3.areEqual(this.otherUserId, trackSpotifyListenAlongStarted.otherUserId);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackSpotifyListenAlongStarted implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSpotifyListenAlongStarted(partyId=");
-        sbU.append(this.partyId);
-        sbU.append(", otherUserId=");
-        return a.G(sbU, this.otherUserId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSpotifyListenAlongStarted(partyId=");
+        sbM833U.append(this.partyId);
+        sbM833U.append(", otherUserId=");
+        return outline.m819G(sbM833U, this.otherUserId, ")");
     }
 }

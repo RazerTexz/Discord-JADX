@@ -7,12 +7,6 @@ import com.discord.models.domain.ModelPayload;
 import com.discord.models.domain.emoji.ModelEmojiCustom;
 import com.discord.models.member.GuildMember;
 import com.discord.utilities.persister.Persister;
-import d0.d0.f;
-import d0.t.g0;
-import d0.t.h0;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -22,7 +16,14 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
-import rx.Observable;
+import p507d0.p512d0._Ranges;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreEmojiCustom.kt */
 /* loaded from: classes2.dex */
@@ -36,12 +37,12 @@ public final class StoreEmojiCustom extends StoreV2 {
     private final StoreStream stream;
 
     /* compiled from: StoreEmojiCustom.kt */
-    /* renamed from: com.discord.stores.StoreEmojiCustom$updateAllowedGuildEmojis$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function2<Long, ModelEmojiCustom, Unit> {
+    /* renamed from: com.discord.stores.StoreEmojiCustom$updateAllowedGuildEmojis$1 */
+    public static final class C58981 extends Lambda implements Function2<Long, ModelEmojiCustom, Unit> {
         public final /* synthetic */ Map $allowed;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Map map) {
+        public C58981(Map map) {
             super(2);
             this.$allowed = map;
         }
@@ -49,11 +50,11 @@ public final class StoreEmojiCustom extends StoreV2 {
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Long l, ModelEmojiCustom modelEmojiCustom) {
             invoke(l.longValue(), modelEmojiCustom);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j, ModelEmojiCustom modelEmojiCustom) {
-            m.checkNotNullParameter(modelEmojiCustom, "emoji");
+            Intrinsics3.checkNotNullParameter(modelEmojiCustom, "emoji");
             Map map = this.$allowed;
             Long lValueOf = Long.valueOf(j);
             Object map2 = map.get(lValueOf);
@@ -63,7 +64,7 @@ public final class StoreEmojiCustom extends StoreV2 {
             }
             Map map3 = (Map) map2;
             long id2 = modelEmojiCustom.getId();
-            if (!m.areEqual(modelEmojiCustom, (ModelEmojiCustom) map3.get(Long.valueOf(id2)))) {
+            if (!Intrinsics3.areEqual(modelEmojiCustom, (ModelEmojiCustom) map3.get(Long.valueOf(id2)))) {
                 map3.put(Long.valueOf(id2), modelEmojiCustom);
                 StoreEmojiCustom.this.markChanged();
             }
@@ -71,10 +72,10 @@ public final class StoreEmojiCustom extends StoreV2 {
     }
 
     public StoreEmojiCustom(StoreStream storeStream) {
-        m.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
         this.stream = storeStream;
         this.allGuildEmoji = new LinkedHashMap();
-        this.allGuildEmojiSnapshot = h0.emptyMap();
+        this.allGuildEmojiSnapshot = Maps6.emptyMap();
         this.allowedGuildEmojis = new LinkedHashMap();
         this.allowedGuildEmojiPersister = new Persister<>("STORE_EMOJI_AVAILABLE_V5", new HashMap());
     }
@@ -90,11 +91,11 @@ public final class StoreEmojiCustom extends StoreV2 {
         }
         Map<Long, Map<Long, ModelEmojiCustom>> map3 = map2;
         map3.clear();
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(map3);
+        C58981 c58981 = new C58981(map3);
         for (ModelEmojiCustom modelEmojiCustom : guildEmojis) {
             List<Long> roles = modelEmojiCustom.getRoles();
             if (roles.isEmpty()) {
-                anonymousClass1.invoke(0L, modelEmojiCustom);
+                c58981.invoke(0L, modelEmojiCustom);
             } else {
                 Iterator<T> it = myRoles.iterator();
                 while (true) {
@@ -110,7 +111,7 @@ public final class StoreEmojiCustom extends StoreV2 {
                 }
                 Long l = (Long) next;
                 if (l != null) {
-                    anonymousClass1.invoke(l.longValue(), modelEmojiCustom);
+                    c58981.invoke(l.longValue(), modelEmojiCustom);
                 }
             }
         }
@@ -122,7 +123,7 @@ public final class StoreEmojiCustom extends StoreV2 {
         } else {
             Map<Long, Map<Long, ModelEmojiCustom>> map = this.allGuildEmoji;
             Long lValueOf = Long.valueOf(guildId);
-            LinkedHashMap linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(emojis, 10)), 16));
+            LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(emojis, 10)), 16));
             for (Object obj : emojis) {
                 linkedHashMap.put(Long.valueOf(((ModelEmojiCustom) obj).getId()), obj);
             }
@@ -135,40 +136,40 @@ public final class StoreEmojiCustom extends StoreV2 {
         return this.allGuildEmojiSnapshot;
     }
 
-    @StoreThread
+    @Store3
     public final Map<Long, Map<Long, ModelEmojiCustom>> getAllGuildEmojiInternal() {
         return this.allGuildEmoji;
     }
 
     public final Map<Long, ModelEmojiCustom> getEmojiForGuild(long guildId) {
         Map<Long, ModelEmojiCustom> map = getAllGuildEmoji().get(Long.valueOf(guildId));
-        return map != null ? map : h0.emptyMap();
+        return map != null ? map : Maps6.emptyMap();
     }
 
-    @StoreThread
+    @Store3
     public final Map<Long, ModelEmojiCustom> getEmojiForGuildInternal(long guildId) {
         return this.allGuildEmoji.get(Long.valueOf(guildId));
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         this.me = payload.getMe().getId();
         for (Guild guild : payload.getGuilds()) {
-            m.checkNotNullExpressionValue(guild, "guild");
+            Intrinsics3.checkNotNullExpressionValue(guild, "guild");
             handleGuildAdd(guild);
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleEmojiUpdate(GuildEmojisUpdate emojiUpdate) {
         GuildMember guildMember;
-        m.checkNotNullParameter(emojiUpdate, "emojiUpdate");
+        Intrinsics3.checkNotNullParameter(emojiUpdate, "emojiUpdate");
         long guildId = emojiUpdate.getGuildId();
         Map<Long, GuildMember> map = this.stream.getGuilds().getGuildMembersComputedInternal$app_productionGoogleRelease().get(Long.valueOf(guildId));
-        List<GuildEmoji> listA = emojiUpdate.a();
-        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listA, 10));
-        Iterator<T> it = listA.iterator();
+        List<GuildEmoji> listM7816a = emojiUpdate.m7816a();
+        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listM7816a, 10));
+        Iterator<T> it = listM7816a.iterator();
         while (it.hasNext()) {
             arrayList.add(new ModelEmojiCustom((GuildEmoji) it.next(), guildId));
         }
@@ -179,16 +180,16 @@ public final class StoreEmojiCustom extends StoreV2 {
         updateAllowedGuildEmojis(guildId, guildMember.getRoles(), arrayList);
     }
 
-    @StoreThread
+    @Store3
     public final Unit handleGuildAdd(Guild guild) {
         Object next;
         Collection<? extends ModelEmojiCustom> collectionEmptyList;
-        m.checkNotNullParameter(guild, "guild");
-        List<com.discord.api.guildmember.GuildMember> listV = guild.v();
-        if (listV == null) {
+        Intrinsics3.checkNotNullParameter(guild, "guild");
+        List<com.discord.api.guildmember.GuildMember> listM7875v = guild.m7875v();
+        if (listM7875v == null) {
             return null;
         }
-        Iterator<T> it = listV.iterator();
+        Iterator<T> it = listM7875v.iterator();
         while (true) {
             if (!it.hasNext()) {
                 next = null;
@@ -204,38 +205,38 @@ public final class StoreEmojiCustom extends StoreV2 {
             return null;
         }
         long id2 = guild.getId();
-        List<GuildEmoji> listK = guild.k();
-        if (listK != null) {
-            collectionEmptyList = new ArrayList<>(d0.t.o.collectionSizeOrDefault(listK, 10));
-            Iterator<T> it2 = listK.iterator();
+        List<GuildEmoji> listM7864k = guild.m7864k();
+        if (listM7864k != null) {
+            collectionEmptyList = new ArrayList<>(Iterables2.collectionSizeOrDefault(listM7864k, 10));
+            Iterator<T> it2 = listM7864k.iterator();
             while (it2.hasNext()) {
                 collectionEmptyList.add(new ModelEmojiCustom((GuildEmoji) it2.next(), id2));
             }
         } else {
-            collectionEmptyList = n.emptyList();
+            collectionEmptyList = Collections2.emptyList();
         }
         updateGlobalEmojis(id2, collectionEmptyList);
-        updateAllowedGuildEmojis(id2, guildMember.l(), collectionEmptyList);
-        return Unit.a;
+        updateAllowedGuildEmojis(id2, guildMember.m7926l(), collectionEmptyList);
+        return Unit.f27425a;
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildMemberAdd(com.discord.api.guildmember.GuildMember member) {
         Collection<ModelEmojiCustom> collectionValues;
-        m.checkNotNullParameter(member, "member");
+        Intrinsics3.checkNotNullParameter(member, "member");
         if (member.getUser().getId() == this.me) {
             long guildId = member.getGuildId();
             Map<Long, ModelEmojiCustom> map = this.allGuildEmoji.get(Long.valueOf(guildId));
             if (map == null || (collectionValues = map.values()) == null) {
                 return;
             }
-            updateAllowedGuildEmojis(guildId, member.l(), collectionValues);
+            updateAllowedGuildEmojis(guildId, member.m7926l(), collectionValues);
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildRemove(Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         long id2 = guild.getId();
         if (this.allowedGuildEmojis.containsKey(Long.valueOf(id2))) {
             this.allowedGuildEmojis.remove(Long.valueOf(id2));
@@ -256,7 +257,7 @@ public final class StoreEmojiCustom extends StoreV2 {
         super.snapshotData();
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Map.Entry<Long, Map<Long, ModelEmojiCustom>> entry : this.allGuildEmoji.entrySet()) {
-            linkedHashMap.put(Long.valueOf(entry.getKey().longValue()), h0.toMap(entry.getValue()));
+            linkedHashMap.put(Long.valueOf(entry.getKey().longValue()), Maps6.toMap(entry.getValue()));
         }
         this.allGuildEmojiSnapshot = linkedHashMap;
         LinkedHashMap linkedHashMap2 = new LinkedHashMap();

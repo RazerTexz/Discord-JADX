@@ -1,0 +1,31 @@
+package p007b.p109f.p111b.p113b;
+
+import p007b.p109f.p111b.p113b.DiskStorage;
+
+/* compiled from: DefaultEntryEvictionComparatorSupplier.java */
+/* renamed from: b.f.b.b.b, reason: use source file name */
+/* loaded from: classes.dex */
+public class DefaultEntryEvictionComparatorSupplier implements EntryEvictionComparatorSupplier {
+
+    /* compiled from: DefaultEntryEvictionComparatorSupplier.java */
+    /* renamed from: b.f.b.b.b$a */
+    public class a implements EntryEvictionComparator {
+        public a(DefaultEntryEvictionComparatorSupplier defaultEntryEvictionComparatorSupplier) {
+        }
+
+        @Override // java.util.Comparator
+        public int compare(DiskStorage.a aVar, DiskStorage.a aVar2) {
+            long jMo945a = aVar.mo945a();
+            long jMo945a2 = aVar2.mo945a();
+            if (jMo945a < jMo945a2) {
+                return -1;
+            }
+            return jMo945a2 == jMo945a ? 0 : 1;
+        }
+    }
+
+    @Override // p007b.p109f.p111b.p113b.EntryEvictionComparatorSupplier
+    public EntryEvictionComparator get() {
+        return new a(this);
+    }
+}

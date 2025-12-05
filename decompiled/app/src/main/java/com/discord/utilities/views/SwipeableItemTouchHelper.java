@@ -7,8 +7,8 @@ import android.view.View;
 import androidx.annotation.ColorInt;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SwipeableItemTouchHelper.kt */
 /* loaded from: classes2.dex */
@@ -68,11 +68,11 @@ public abstract class SwipeableItemTouchHelper extends ItemTouchHelper.SimpleCal
 
     @Override // androidx.recyclerview.widget.ItemTouchHelper.Callback
     public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
-        m.checkNotNullParameter(c, "c");
-        m.checkNotNullParameter(recyclerView, "recyclerView");
-        m.checkNotNullParameter(viewHolder, "viewHolder");
+        Intrinsics3.checkNotNullParameter(c, "c");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+        Intrinsics3.checkNotNullParameter(viewHolder, "viewHolder");
         View view = viewHolder.itemView;
-        m.checkNotNullExpressionValue(view, "viewHolder.itemView");
+        Intrinsics3.checkNotNullExpressionValue(view, "viewHolder.itemView");
         float f = 0;
         if (dX > f && this.startConfiguration != null) {
             int left = view.getLeft();
@@ -108,9 +108,9 @@ public abstract class SwipeableItemTouchHelper extends ItemTouchHelper.SimpleCal
 
     @Override // androidx.recyclerview.widget.ItemTouchHelper.Callback
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-        m.checkNotNullParameter(recyclerView, "recyclerView");
-        m.checkNotNullParameter(viewHolder, "viewHolder");
-        m.checkNotNullParameter(target, "target");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+        Intrinsics3.checkNotNullParameter(viewHolder, "viewHolder");
+        Intrinsics3.checkNotNullParameter(target, "target");
         return false;
     }
 

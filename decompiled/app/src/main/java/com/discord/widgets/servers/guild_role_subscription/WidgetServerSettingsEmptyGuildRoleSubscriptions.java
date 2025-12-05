@@ -5,40 +5,44 @@ import android.content.Intent;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppViewFlipper;
 import com.discord.databinding.WidgetServerSettingsEmptyGuildRoleSubscriptionBinding;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup;
 import com.discord.widgets.servers.guild_role_subscription.ServerSettingsEmptyGuildRoleSubscriptionsViewModel;
-import d0.g;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsEmptyGuildRoleSubscriptions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEmptyGuildRoleSubscriptionBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsEmptyGuildRoleSubscriptions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEmptyGuildRoleSubscriptionBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final int SERVER_SETTINGS_EMPTY_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADED_STATE = 1;
-    private static final int SERVER_SETTINGS_EMPTY_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADING_STATE = 0;
+
+    /* renamed from: SERVER_SETTINGS_EMPTY_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADED_STATE */
+    private static final int f19391x695af06c = 1;
+
+    /* renamed from: SERVER_SETTINGS_EMPTY_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADING_STATE */
+    private static final int f19392x40bf7979 = 0;
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -55,10 +59,10 @@ public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFr
         }
 
         public final void launch(Context context, long guildId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra("com.discord.intent.extra.EXTRA_GUILD_ID", guildId);
-            j.d(context, WidgetServerSettingsEmptyGuildRoleSubscriptions.class, intent);
+            AppScreen2.m156d(context, WidgetServerSettingsEmptyGuildRoleSubscriptions.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -67,9 +71,9 @@ public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFr
     }
 
     /* compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$onViewBound$1 */
+    public static final class ViewOnClickListenerC94521 implements View.OnClickListener {
+        public ViewOnClickListenerC94521() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -80,33 +84,33 @@ public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFr
     }
 
     /* compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$onViewBoundOrOnResume$1 */
+    public static final class C94531 extends Lambda implements Function1<ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState, Unit> {
+        public C94531() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState viewState) {
             WidgetServerSettingsEmptyGuildRoleSubscriptions widgetServerSettingsEmptyGuildRoleSubscriptions = WidgetServerSettingsEmptyGuildRoleSubscriptions.this;
-            m.checkNotNullExpressionValue(viewState, "it");
+            Intrinsics3.checkNotNullExpressionValue(viewState, "it");
             WidgetServerSettingsEmptyGuildRoleSubscriptions.access$configureUI(widgetServerSettingsEmptyGuildRoleSubscriptions, viewState);
         }
     }
 
     public WidgetServerSettingsEmptyGuildRoleSubscriptions() {
-        super(R.layout.widget_server_settings_empty_guild_role_subscription);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsEmptyGuildRoleSubscriptions$binding$2.INSTANCE, null, 2, null);
-        this.guildId = g.lazy(new WidgetServerSettingsEmptyGuildRoleSubscriptions$guildId$2(this));
-        WidgetServerSettingsEmptyGuildRoleSubscriptions$viewModel$2 widgetServerSettingsEmptyGuildRoleSubscriptions$viewModel$2 = new WidgetServerSettingsEmptyGuildRoleSubscriptions$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(ServerSettingsEmptyGuildRoleSubscriptionsViewModel.class), new WidgetServerSettingsEmptyGuildRoleSubscriptions$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetServerSettingsEmptyGuildRoleSubscriptions$viewModel$2));
+        super(C5419R.layout.widget_server_settings_empty_guild_role_subscription);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsEmptyGuildRoleSubscriptions2.INSTANCE, null, 2, null);
+        this.guildId = LazyJVM.lazy(new WidgetServerSettingsEmptyGuildRoleSubscriptions5(this));
+        WidgetServerSettingsEmptyGuildRoleSubscriptions6 widgetServerSettingsEmptyGuildRoleSubscriptions6 = new WidgetServerSettingsEmptyGuildRoleSubscriptions6(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(ServerSettingsEmptyGuildRoleSubscriptionsViewModel.class), new C9449x24a2fb51(appViewModelDelegates3), new AppViewModelDelegates5(widgetServerSettingsEmptyGuildRoleSubscriptions6));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetServerSettingsEmptyGuildRoleSubscriptions widgetServerSettingsEmptyGuildRoleSubscriptions, ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState viewState) {
@@ -119,20 +123,20 @@ public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFr
 
     private final void configureUI(ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState viewState) {
         if (viewState.isLoading()) {
-            AppViewFlipper appViewFlipper = getBinding().c;
-            m.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsEm…eSubscriptionsViewFlipper");
+            AppViewFlipper appViewFlipper = getBinding().f17657c;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsEm…eSubscriptionsViewFlipper");
             appViewFlipper.setDisplayedChild(0);
         } else {
-            AppViewFlipper appViewFlipper2 = getBinding().c;
-            m.checkNotNullExpressionValue(appViewFlipper2, "binding.serverSettingsEm…eSubscriptionsViewFlipper");
+            AppViewFlipper appViewFlipper2 = getBinding().f17657c;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.serverSettingsEm…eSubscriptionsViewFlipper");
             appViewFlipper2.setDisplayedChild(1);
         }
         Boolean boolIsMonetizationEnabled = viewState.isMonetizationEnabled();
         if (boolIsMonetizationEnabled != null) {
             if (boolIsMonetizationEnabled.booleanValue()) {
-                getBinding().f2567b.setOnClickListener(new WidgetServerSettingsEmptyGuildRoleSubscriptions$configureUI$$inlined$let$lambda$1(this));
+                getBinding().f17656b.setOnClickListener(new WidgetServerSettingsEmptyGuildRoleSubscriptions3(this));
             } else {
-                getBinding().f2567b.setOnClickListener(new WidgetServerSettingsEmptyGuildRoleSubscriptions$configureUI$$inlined$let$lambda$2(this));
+                getBinding().f17656b.setOnClickListener(new WidgetServerSettingsEmptyGuildRoleSubscriptions4(this));
             }
         }
     }
@@ -155,18 +159,18 @@ public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFr
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setActionBarDisplayHomeAsUpEnabled(true);
-        setActionBarTitle(R.string.guild_settings_role_subscriptions_title);
-        getBinding().f2567b.setOnClickListener(new AnonymousClass1());
+        setActionBarTitle(C5419R.string.guild_settings_role_subscriptions_title);
+        getBinding().f17656b.setOnClickListener(new ViewOnClickListenerC94521());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        Observable<ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetServerSettingsEmptyGuildRoleSubscriptions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable<ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState> observableM11112r = getViewModel().observeViewState().m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "viewModel\n        .obser…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11112r, this, null, 2, null), WidgetServerSettingsEmptyGuildRoleSubscriptions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C94531(), 62, (Object) null);
     }
 }

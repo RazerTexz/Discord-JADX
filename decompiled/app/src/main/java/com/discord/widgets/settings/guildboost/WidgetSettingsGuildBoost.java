@@ -11,35 +11,23 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.a.a.a;
-import b.a.a.a.b;
-import b.a.d.f;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppViewFlipper;
 import com.discord.databinding.WidgetSettingsBoostBinding;
 import com.discord.models.domain.ModelGuildBoostSlot;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.guilds.WidgetGuildSelector;
 import com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation;
 import com.discord.widgets.servers.guildboost.WidgetGuildBoostTransfer;
 import com.discord.widgets.settings.guildboost.SettingsGuildBoostViewModel;
 import com.discord.widgets.settings.premium.WidgetSettingsPremium;
-import d0.t.o0;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Lazy;
 import kotlin.Unit;
@@ -48,12 +36,25 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p008a.p009a.p010a.GuildBoostCancelDialog;
+import p007b.p008a.p009a.p010a.GuildBoostUncancelDialog;
+import p007b.p008a.p018d.AppHelpDesk;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t._Sets;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: WidgetSettingsGuildBoost.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsGuildBoost extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsGuildBoost.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsBoostBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsGuildBoost.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsBoostBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -75,8 +76,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
 
         public final void launch(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetSettingsGuildBoost.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetSettingsGuildBoost.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -85,24 +86,24 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$1 */
+    public static final class ViewOnClickListenerC98561 implements View.OnClickListener {
         public final /* synthetic */ String $helpdeskArticleUrl;
 
-        public AnonymousClass1(String str) {
+        public ViewOnClickListenerC98561(String str) {
             this.$helpdeskArticleUrl = str;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            UriHandler.handle$default(UriHandler.INSTANCE, a.x(view, "it", "it.context"), this.$helpdeskArticleUrl, false, false, null, 28, null);
+            UriHandler.handle$default(UriHandler.INSTANCE, outline.m885x(view, "it", "it.context"), this.$helpdeskArticleUrl, false, false, null, 28, null);
         }
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$2 */
+    public static final class ViewOnClickListenerC98572 implements View.OnClickListener {
+        public ViewOnClickListenerC98572() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -112,35 +113,35 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function2<Long, String, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$3 */
+    public static final class C98583 extends Lambda implements Function2<Long, String, Unit> {
+        public C98583() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Long l, String str) {
             invoke(l.longValue(), str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j, String str) {
-            m.checkNotNullParameter(str, "<anonymous parameter 1>");
+            Intrinsics3.checkNotNullParameter(str, "<anonymous parameter 1>");
             WidgetSettingsGuildBoost.access$getViewModel$p(WidgetSettingsGuildBoost.this).handleGuildSearchCallback(j);
         }
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<SettingsGuildBoostViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBoundOrOnResume$1 */
+    public static final class C98591 extends Lambda implements Function1<SettingsGuildBoostViewModel.ViewState, Unit> {
+        public C98591() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(SettingsGuildBoostViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -156,36 +157,36 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function2<ModelGuildBoostSlot, Long, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$1 */
+    public static final class C98601 extends Lambda implements Function2<ModelGuildBoostSlot, Long, Unit> {
+        public C98601() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(ModelGuildBoostSlot modelGuildBoostSlot, Long l) {
             invoke(modelGuildBoostSlot, l.longValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(ModelGuildBoostSlot modelGuildBoostSlot, long j) {
-            m.checkNotNullParameter(modelGuildBoostSlot, "slot");
+            Intrinsics3.checkNotNullParameter(modelGuildBoostSlot, "slot");
             WidgetSettingsGuildBoost.access$getViewModel$p(WidgetSettingsGuildBoost.this).transferClicked(modelGuildBoostSlot, j);
-            WidgetGuildSelector.Companion.launch$default(WidgetGuildSelector.INSTANCE, WidgetSettingsGuildBoost.this, null, false, 0, new WidgetGuildSelector.GuildFilterFunction(o0.minus(StoreStream.INSTANCE.getGuilds().getGuilds().keySet(), Long.valueOf(j))), 14, null);
+            WidgetGuildSelector.Companion.launch$default(WidgetGuildSelector.INSTANCE, WidgetSettingsGuildBoost.this, null, false, 0, new WidgetGuildSelector.GuildFilterFunction(_Sets.minus(StoreStream.INSTANCE.getGuilds().getGuilds().keySet(), Long.valueOf(j))), 14, null);
         }
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function2<Long, Boolean, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$2 */
+    public static final class C98612 extends Lambda implements Function2<Long, Boolean, Unit> {
+        public C98612() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Long l, Boolean bool) {
             invoke(l.longValue(), bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j, boolean z2) {
@@ -194,16 +195,16 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Long, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$3 */
+    public static final class C98623 extends Lambda implements Function1<Long, Unit> {
+        public C98623() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke(l.longValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j) {
@@ -213,16 +214,16 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends k implements Function1<Long, Unit> {
-        public AnonymousClass4(WidgetSettingsGuildBoost widgetSettingsGuildBoost) {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$4 */
+    public static final /* synthetic */ class C98634 extends FunctionReferenceImpl implements Function1<Long, Unit> {
+        public C98634(WidgetSettingsGuildBoost widgetSettingsGuildBoost) {
             super(1, widgetSettingsGuildBoost, WidgetSettingsGuildBoost.class, "handleSampleGuildSelected", "handleSampleGuildSelected(J)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke(l.longValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j) {
@@ -231,16 +232,16 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$7, reason: invalid class name */
-    public static final class AnonymousClass7 extends o implements Function0<Unit> {
-        public AnonymousClass7() {
+    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$7 */
+    public static final class C98647 extends Lambda implements Function0<Unit> {
+        public C98647() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -250,11 +251,11 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     public WidgetSettingsGuildBoost() {
-        super(R.layout.widget_settings_boost);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsGuildBoost$binding$2.INSTANCE, null, 2, null);
-        WidgetSettingsGuildBoost$viewModel$2 widgetSettingsGuildBoost$viewModel$2 = WidgetSettingsGuildBoost$viewModel$2.INSTANCE;
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(SettingsGuildBoostViewModel.class), new WidgetSettingsGuildBoost$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetSettingsGuildBoost$viewModel$2));
+        super(C5419R.layout.widget_settings_boost);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsGuildBoost2.INSTANCE, null, 2, null);
+        WidgetSettingsGuildBoost3 widgetSettingsGuildBoost3 = WidgetSettingsGuildBoost3.INSTANCE;
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(SettingsGuildBoostViewModel.class), new WidgetSettingsGuildBoost$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetSettingsGuildBoost3));
     }
 
     public static final /* synthetic */ SettingsGuildBoostViewModel access$getViewModel$p(WidgetSettingsGuildBoost widgetSettingsGuildBoost) {
@@ -278,14 +279,14 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     private final void configureNoGuildsViews(boolean hasNoGuilds) {
-        ImageView imageView = getBinding().f2612b.f204b;
-        m.checkNotNullExpressionValue(imageView, "binding.noGuilds.settingsBoostNoGuildsImage");
+        ImageView imageView = getBinding().f17921b.f1251b;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.noGuilds.settingsBoostNoGuildsImage");
         imageView.setVisibility(hasNoGuilds ? 0 : 8);
-        TextView textView = getBinding().f2612b.d;
-        m.checkNotNullExpressionValue(textView, "binding.noGuilds.settingsBoostNoGuildsTitle");
+        TextView textView = getBinding().f17921b.f1253d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.noGuilds.settingsBoostNoGuildsTitle");
         textView.setVisibility(hasNoGuilds ? 0 : 8);
-        TextView textView2 = getBinding().f2612b.c;
-        m.checkNotNullExpressionValue(textView2, "binding.noGuilds.settingsBoostNoGuildsSubtitle");
+        TextView textView2 = getBinding().f17921b.f1252c;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.noGuilds.settingsBoostNoGuildsSubtitle");
         textView2.setVisibility(hasNoGuilds ? 0 : 8);
     }
 
@@ -302,7 +303,7 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         Intent intent = new Intent();
         intent.putExtra("com.discord.intent.extra.EXTRA_OPEN_PANEL", true);
         intent.addFlags(268468224);
-        j.c(requireContext(), false, intent, 2);
+        AppScreen2.m155c(requireContext(), false, intent, 2);
     }
 
     public static final void launch(Context context) {
@@ -310,25 +311,25 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
     }
 
     private final void showContent(SettingsGuildBoostViewModel.ViewState.Loaded viewState) {
-        AppViewFlipper appViewFlipper = getBinding().c;
-        m.checkNotNullExpressionValue(appViewFlipper, "binding.settingsBoostFlipper");
+        AppViewFlipper appViewFlipper = getBinding().f17922c;
+        Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.settingsBoostFlipper");
         appViewFlipper.setDisplayedChild(2);
         boolean z2 = !viewState.getGuildBoostItems().isEmpty();
-        LinearLayout linearLayout = getBinding().i;
-        m.checkNotNullExpressionValue(linearLayout, "binding.settingsBoostSubtextContainer");
+        LinearLayout linearLayout = getBinding().f17928i;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.settingsBoostSubtextContainer");
         linearLayout.setVisibility(z2 ? 0 : 8);
         if (z2) {
             WidgetSettingsGuildBoostSubscriptionAdapter widgetSettingsGuildBoostSubscriptionAdapter = this.guildBoostSubscriptionsAdapter;
             if (widgetSettingsGuildBoostSubscriptionAdapter == null) {
-                m.throwUninitializedPropertyAccessException("guildBoostSubscriptionsAdapter");
+                Intrinsics3.throwUninitializedPropertyAccessException("guildBoostSubscriptionsAdapter");
             }
-            widgetSettingsGuildBoostSubscriptionAdapter.configure(viewState.getGuildBoostItems(), new AnonymousClass3(), new AnonymousClass1(), new AnonymousClass2(), viewState.getCanCancelBoosts(), viewState.getCanUncancelBoosts());
+            widgetSettingsGuildBoostSubscriptionAdapter.configure(viewState.getGuildBoostItems(), new C98623(), new C98601(), new C98612(), viewState.getCanCancelBoosts(), viewState.getCanUncancelBoosts());
         }
         SettingsGuildBoostSampleGuildAdapter settingsGuildBoostSampleGuildAdapter = this.sampleGuildsAdapter;
         if (settingsGuildBoostSampleGuildAdapter == null) {
-            m.throwUninitializedPropertyAccessException("sampleGuildsAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("sampleGuildsAdapter");
         }
-        settingsGuildBoostSampleGuildAdapter.configure(viewState.getSampleGuildItems(), new AnonymousClass4(this));
+        settingsGuildBoostSampleGuildAdapter.configure(viewState.getSampleGuildItems(), new C98634(this));
         SettingsGuildBoostViewModel.PendingAction pendingAction = viewState.getPendingAction();
         if (pendingAction instanceof SettingsGuildBoostViewModel.PendingAction.Subscribe) {
             SettingsGuildBoostViewModel.PendingAction.Subscribe subscribe = (SettingsGuildBoostViewModel.PendingAction.Subscribe) pendingAction;
@@ -347,78 +348,78 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
                 getViewModel().consumePendingAction();
             }
         } else if (pendingAction instanceof SettingsGuildBoostViewModel.PendingAction.Cancel) {
-            b.Companion companion = b.INSTANCE;
+            GuildBoostCancelDialog.Companion companion = GuildBoostCancelDialog.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             long slotId = ((SettingsGuildBoostViewModel.PendingAction.Cancel) pendingAction).getSlotId();
             Objects.requireNonNull(companion);
-            m.checkNotNullParameter(parentFragmentManager, "fragmentManager");
-            b bVar = new b();
+            Intrinsics3.checkNotNullParameter(parentFragmentManager, "fragmentManager");
+            GuildBoostCancelDialog guildBoostCancelDialog = new GuildBoostCancelDialog();
             Bundle bundle = new Bundle();
             bundle.putLong("extra_slot_id", slotId);
-            bVar.setArguments(bundle);
-            bVar.show(parentFragmentManager, b.class.getName());
+            guildBoostCancelDialog.setArguments(bundle);
+            guildBoostCancelDialog.show(parentFragmentManager, GuildBoostCancelDialog.class.getName());
             getViewModel().consumePendingAction();
         } else if (pendingAction instanceof SettingsGuildBoostViewModel.PendingAction.Uncancel) {
-            a.Companion companion2 = b.a.a.a.a.INSTANCE;
+            GuildBoostUncancelDialog.Companion companion2 = GuildBoostUncancelDialog.INSTANCE;
             FragmentManager parentFragmentManager2 = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
             long slotId2 = ((SettingsGuildBoostViewModel.PendingAction.Uncancel) pendingAction).getSlotId();
             Objects.requireNonNull(companion2);
-            m.checkNotNullParameter(parentFragmentManager2, "fragmentManager");
-            b.a.a.a.a aVar = new b.a.a.a.a();
+            Intrinsics3.checkNotNullParameter(parentFragmentManager2, "fragmentManager");
+            GuildBoostUncancelDialog guildBoostUncancelDialog = new GuildBoostUncancelDialog();
             Bundle bundle2 = new Bundle();
             bundle2.putLong("extra_slot_id", slotId2);
-            aVar.setArguments(bundle2);
-            aVar.show(parentFragmentManager2, b.a.a.a.a.class.getName());
+            guildBoostUncancelDialog.setArguments(bundle2);
+            guildBoostUncancelDialog.show(parentFragmentManager2, GuildBoostUncancelDialog.class.getName());
             getViewModel().consumePendingAction();
         }
-        getBinding().d.a(viewState.getUserPremiumTier(), new AnonymousClass7());
-        getBinding().j.a(viewState.getUserPremiumTier(), !viewState.getSampleGuildItems().isEmpty());
+        getBinding().f17923d.m8595a(viewState.getUserPremiumTier(), new C98647());
+        getBinding().f17929j.m8597a(viewState.getUserPremiumTier(), !viewState.getSampleGuildItems().isEmpty());
         configureNoGuildsViews(viewState.getSampleGuildItems().isEmpty());
     }
 
     private final void showFailureUI() {
-        AppViewFlipper appViewFlipper = getBinding().c;
-        m.checkNotNullExpressionValue(appViewFlipper, "binding.settingsBoostFlipper");
+        AppViewFlipper appViewFlipper = getBinding().f17922c;
+        Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.settingsBoostFlipper");
         appViewFlipper.setDisplayedChild(1);
     }
 
     private final void showLoadingUI() {
-        AppViewFlipper appViewFlipper = getBinding().c;
-        m.checkNotNullExpressionValue(appViewFlipper, "binding.settingsBoostFlipper");
+        AppViewFlipper appViewFlipper = getBinding().f17922c;
+        Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.settingsBoostFlipper");
         appViewFlipper.setDisplayedChild(0);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
-        setActionBarSubtitle(R.string.user_settings);
-        setActionBarTitle(R.string.premium_guild_subscription_title);
+        setActionBarSubtitle(C5419R.string.user_settings);
+        setActionBarTitle(C5419R.string.premium_guild_subscription_title);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        RecyclerView recyclerView = getBinding().e;
-        m.checkNotNullExpressionValue(recyclerView, "binding.settingsBoostRecycler");
+        RecyclerView recyclerView = getBinding().f17924e;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.settingsBoostRecycler");
         this.guildBoostSubscriptionsAdapter = (WidgetSettingsGuildBoostSubscriptionAdapter) companion.configure(new WidgetSettingsGuildBoostSubscriptionAdapter(recyclerView));
-        RecyclerView recyclerView2 = getBinding().g;
-        m.checkNotNullExpressionValue(recyclerView2, "binding.settingsBoostSampleGuilds");
+        RecyclerView recyclerView2 = getBinding().f17926g;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.settingsBoostSampleGuilds");
         this.sampleGuildsAdapter = (SettingsGuildBoostSampleGuildAdapter) companion.configure(new SettingsGuildBoostSampleGuildAdapter(recyclerView2));
-        String strA = f.a.a(360028038352L, null);
-        LinkifiedTextView linkifiedTextView = getBinding().h;
-        m.checkNotNullExpressionValue(linkifiedTextView, "binding.settingsBoostSubtext");
-        b.a.k.b.n(linkifiedTextView, R.string.premium_guild_subscription_subtitle_mobile_2, new Object[]{strA}, null, 4);
-        getBinding().h.setOnClickListener(new AnonymousClass1(strA));
-        getBinding().f.setOnClickListener(new AnonymousClass2());
-        getBinding().e.setHasFixedSize(false);
-        WidgetGuildSelector.Companion.registerForResult$default(WidgetGuildSelector.INSTANCE, this, null, false, new AnonymousClass3(), 6, null);
+        String strM149a = AppHelpDesk.f507a.m149a(360028038352L, null);
+        LinkifiedTextView linkifiedTextView = getBinding().f17927h;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.settingsBoostSubtext");
+        FormatUtils.m222n(linkifiedTextView, C5419R.string.premium_guild_subscription_subtitle_mobile_2, new Object[]{strM149a}, null, 4);
+        getBinding().f17927h.setOnClickListener(new ViewOnClickListenerC98561(strM149a));
+        getBinding().f17925f.setOnClickListener(new ViewOnClickListenerC98572());
+        getBinding().f17924e.setHasFixedSize(false);
+        WidgetGuildSelector.Companion.registerForResult$default(WidgetGuildSelector.INSTANCE, this, null, false, new C98583(), 6, null);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        Observable<SettingsGuildBoostViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetSettingsPremium.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable<SettingsGuildBoostViewModel.ViewState> observableM11112r = getViewModel().observeViewState().m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "viewModel\n        .obser…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11112r, this, null, 2, null), WidgetSettingsPremium.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C98591(), 62, (Object) null);
     }
 }

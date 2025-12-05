@@ -1,13 +1,13 @@
 package com.discord.widgets.user;
 
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetUserMentions.kt */
 /* loaded from: classes.dex */
-public final class WidgetUserMentions$Model$MessageLoader$retry$2 extends o implements Function1<Long, Unit> {
+public final class WidgetUserMentions$Model$MessageLoader$retry$2 extends Lambda implements Function1<Long, Unit> {
     public final /* synthetic */ Function0 $retryAction;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -19,7 +19,7 @@ public final class WidgetUserMentions$Model$MessageLoader$retry$2 extends o impl
     @Override // kotlin.jvm.functions.Function1
     public /* bridge */ /* synthetic */ Unit invoke(Long l) {
         invoke2(l);
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */

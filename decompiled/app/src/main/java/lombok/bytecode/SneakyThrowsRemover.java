@@ -22,7 +22,7 @@ public class SneakyThrowsRemover implements PostCompilerTransformation {
         ClassReader reader = new ClassReader(fixedByteCode);
         ClassWriter writer = new ClassWriter(reader, 0);
         AtomicBoolean changesMade = new AtomicBoolean();
-        reader.accept(new AnonymousClass1(Opcodes.ASM7, writer, diagnostics, changesMade), 0);
+        reader.accept(new C128101(Opcodes.ASM7, writer, diagnostics, changesMade), 0);
         if (changesMade.get()) {
             return writer.toByteArray();
         }
@@ -179,14 +179,14 @@ public class SneakyThrowsRemover implements PostCompilerTransformation {
         }
     }
 
-    /* renamed from: lombok.bytecode.SneakyThrowsRemover$1, reason: invalid class name */
+    /* renamed from: lombok.bytecode.SneakyThrowsRemover$1 */
     /* loaded from: discord-126021.apk:lombok/bytecode/SneakyThrowsRemover$1.SCL.lombok */
-    class AnonymousClass1 extends ClassVisitor {
+    class C128101 extends ClassVisitor {
         private final /* synthetic */ DiagnosticsReceiver val$diagnostics;
         private final /* synthetic */ AtomicBoolean val$changesMade;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        AnonymousClass1(int $anonymous0, ClassVisitor $anonymous1, DiagnosticsReceiver diagnosticsReceiver, AtomicBoolean atomicBoolean) {
+        C128101(int $anonymous0, ClassVisitor $anonymous1, DiagnosticsReceiver diagnosticsReceiver, AtomicBoolean atomicBoolean) {
             super($anonymous0, $anonymous1);
             this.val$diagnostics = diagnosticsReceiver;
             this.val$changesMade = atomicBoolean;

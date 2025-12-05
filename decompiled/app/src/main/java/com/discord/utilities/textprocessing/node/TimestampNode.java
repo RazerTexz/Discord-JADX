@@ -4,17 +4,17 @@ import android.text.SpannableStringBuilder;
 import android.text.format.DateUtils;
 import android.text.style.BackgroundColorSpan;
 import androidx.exifinterface.media.ExifInterface;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.simpleast.core.node.Node;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.spans.ClickableSpan;
 import com.discord.utilities.textprocessing.node.TimestampNode.RenderContext;
-import d0.t.n;
-import d0.z.d.m;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TimestampNode.kt */
 /* loaded from: classes2.dex */
@@ -28,7 +28,7 @@ public final class TimestampNode<T extends RenderContext> extends Node<T> {
         /* compiled from: TimestampNode.kt */
         public static final class DefaultImpls {
             public static void onTimestampClicked(RenderContext renderContext, CharSequence charSequence) {
-                m.checkNotNullParameter(charSequence, "full");
+                Intrinsics3.checkNotNullParameter(charSequence, "full");
             }
         }
 
@@ -44,14 +44,14 @@ public final class TimestampNode<T extends RenderContext> extends Node<T> {
         DateFormat dateInstance;
         CharSequence relativeTimeSpanString;
         super(null, 1, null);
-        m.checkNotNullParameter(str, "timestampString");
+        Intrinsics3.checkNotNullParameter(str, "timestampString");
         Date date = new Date(Long.parseLong(str) * 1000);
         String str3 = DateFormat.getDateTimeInstance(0, 3).format(date);
-        m.checkNotNullExpressionValue(str3, "DateFormat.getDateTimeIn…ormat.SHORT).format(date)");
+        Intrinsics3.checkNotNullExpressionValue(str3, "DateFormat.getDateTimeIn…ormat.SHORT).format(date)");
         this.full = str3;
-        if (m.areEqual(str2, "R")) {
+        if (Intrinsics3.areEqual(str2, "R")) {
             relativeTimeSpanString = DateUtils.getRelativeTimeSpanString(date.getTime());
-            m.checkNotNullExpressionValue(relativeTimeSpanString, "DateUtils.getRelativeTimeSpanString(date.time)");
+            Intrinsics3.checkNotNullExpressionValue(relativeTimeSpanString, "DateUtils.getRelativeTimeSpanString(date.time)");
         } else if (str2 != null) {
             int iHashCode = str2.hashCode();
             if (iHashCode == 68) {
@@ -59,35 +59,35 @@ public final class TimestampNode<T extends RenderContext> extends Node<T> {
                     dateInstance = DateFormat.getDateInstance(1);
                 }
                 relativeTimeSpanString = dateInstance.format(date);
-                m.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
+                Intrinsics3.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
             } else if (iHashCode == 70) {
                 if (str2.equals("F")) {
                     dateInstance = DateFormat.getDateTimeInstance(0, 3);
                 }
                 relativeTimeSpanString = dateInstance.format(date);
-                m.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
+                Intrinsics3.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
             } else if (iHashCode == 84) {
                 if (str2.equals(ExifInterface.GPS_DIRECTION_TRUE)) {
                     dateInstance = DateFormat.getTimeInstance(2);
                 }
                 relativeTimeSpanString = dateInstance.format(date);
-                m.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
+                Intrinsics3.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
             } else if (iHashCode == 100) {
                 if (str2.equals("d")) {
                     dateInstance = DateFormat.getDateInstance(3);
                 }
                 relativeTimeSpanString = dateInstance.format(date);
-                m.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
+                Intrinsics3.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
             } else if (iHashCode != 102) {
                 dateInstance = (iHashCode == 116 && str2.equals("t")) ? DateFormat.getTimeInstance(3) : DateFormat.getDateTimeInstance(1, 3);
                 relativeTimeSpanString = dateInstance.format(date);
-                m.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
+                Intrinsics3.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
             } else {
                 if (str2.equals("f")) {
                     dateInstance = DateFormat.getDateTimeInstance(1, 3);
                 }
                 relativeTimeSpanString = dateInstance.format(date);
-                m.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
+                Intrinsics3.checkNotNullExpressionValue(relativeTimeSpanString, "when (formatString) {\n  …ORT)\n      }.format(date)");
             }
         }
         this.formatted = relativeTimeSpanString;
@@ -107,9 +107,9 @@ public final class TimestampNode<T extends RenderContext> extends Node<T> {
     }
 
     public void render(SpannableStringBuilder builder, T renderContext) {
-        m.checkNotNullParameter(builder, "builder");
-        m.checkNotNullParameter(renderContext, "renderContext");
-        List listListOf = n.listOf(new ClickableSpan(null, false, null, new TimestampNode$render$styles$1(this, renderContext), 4, null), new BackgroundColorSpan(ColorCompat.getThemedColor(renderContext.getContext(), R.attr.colorBackgroundModifierAccent)));
+        Intrinsics3.checkNotNullParameter(builder, "builder");
+        Intrinsics3.checkNotNullParameter(renderContext, "renderContext");
+        List listListOf = Collections2.listOf(new ClickableSpan(null, false, null, new TimestampNode2(this, renderContext), 4, null), new BackgroundColorSpan(ColorCompat.getThemedColor(renderContext.getContext(), C5419R.attr.colorBackgroundModifierAccent)));
         int length = builder.length();
         builder.append(this.formatted);
         Iterator it = listListOf.iterator();

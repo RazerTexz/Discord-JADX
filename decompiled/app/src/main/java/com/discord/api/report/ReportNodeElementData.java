@@ -1,7 +1,7 @@
 package com.discord.api.report;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: InAppReportsMenu.kt */
 /* loaded from: classes.dex */
@@ -10,8 +10,8 @@ public final /* data */ class ReportNodeElementData {
     private final String elementValue;
 
     public ReportNodeElementData(String str, String str2) {
-        m.checkNotNullParameter(str, "elementKey");
-        m.checkNotNullParameter(str2, "elementValue");
+        Intrinsics3.checkNotNullParameter(str, "elementKey");
+        Intrinsics3.checkNotNullParameter(str2, "elementValue");
         this.elementKey = str;
         this.elementValue = str2;
     }
@@ -34,7 +34,7 @@ public final /* data */ class ReportNodeElementData {
             return false;
         }
         ReportNodeElementData reportNodeElementData = (ReportNodeElementData) other;
-        return m.areEqual(this.elementKey, reportNodeElementData.elementKey) && m.areEqual(this.elementValue, reportNodeElementData.elementValue);
+        return Intrinsics3.areEqual(this.elementKey, reportNodeElementData.elementKey) && Intrinsics3.areEqual(this.elementValue, reportNodeElementData.elementValue);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class ReportNodeElementData {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ReportNodeElementData(elementKey=");
-        sbU.append(this.elementKey);
-        sbU.append(", elementValue=");
-        return a.J(sbU, this.elementValue, ")");
+        StringBuilder sbM833U = outline.m833U("ReportNodeElementData(elementKey=");
+        sbM833U.append(this.elementKey);
+        sbM833U.append(", elementValue=");
+        return outline.m822J(sbM833U, this.elementValue, ")");
     }
 }

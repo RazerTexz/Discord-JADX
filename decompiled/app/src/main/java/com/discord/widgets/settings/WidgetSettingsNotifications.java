@@ -4,30 +4,30 @@ import android.content.Context;
 import android.view.View;
 import android.widget.LinearLayout;
 import androidx.fragment.app.Fragment;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsNotificationsBinding;
 import com.discord.stores.StoreNotifications;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.fcm.NotificationClient;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetSettingsNotifications.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsNotifications extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsNotifications.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsNotificationsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsNotifications.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsNotificationsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -42,8 +42,8 @@ public final class WidgetSettingsNotifications extends AppFragment {
         }
 
         public final void launch(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetSettingsNotifications.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetSettingsNotifications.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -52,45 +52,45 @@ public final class WidgetSettingsNotifications extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsNotifications.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsNotifications$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<NotificationClient.SettingsV2, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsNotifications$onViewBoundOrOnResume$1 */
+    public static final class C96531 extends Lambda implements Function1<NotificationClient.SettingsV2, Unit> {
+        public C96531() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(NotificationClient.SettingsV2 settingsV2) {
             invoke2(settingsV2);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(NotificationClient.SettingsV2 settingsV2) {
-            m.checkNotNullParameter(settingsV2, "settings");
-            LinearLayout linearLayout = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).g;
-            m.checkNotNullExpressionValue(linearLayout, "binding.settingsNotificationsWrap");
+            Intrinsics3.checkNotNullParameter(settingsV2, "settings");
+            LinearLayout linearLayout = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f18028g;
+            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.settingsNotificationsWrap");
             linearLayout.setVisibility(settingsV2.isEnabled() ? 0 : 8);
-            CheckedSetting checkedSetting = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).d;
-            m.checkNotNullExpressionValue(checkedSetting, "binding.settingsNotificationsEnabled");
+            CheckedSetting checkedSetting = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f18025d;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsNotificationsEnabled");
             checkedSetting.setChecked(settingsV2.isEnabled());
-            CheckedSetting checkedSetting2 = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f2632b;
-            m.checkNotNullExpressionValue(checkedSetting2, "binding.settingsInappNotifsSwitch");
+            CheckedSetting checkedSetting2 = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f18023b;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.settingsInappNotifsSwitch");
             checkedSetting2.setChecked(settingsV2.isEnabledInApp());
-            CheckedSetting checkedSetting3 = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).c;
-            m.checkNotNullExpressionValue(checkedSetting3, "binding.settingsNotificationsBlink");
+            CheckedSetting checkedSetting3 = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f18024c;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.settingsNotificationsBlink");
             checkedSetting3.setChecked(settingsV2.isDisableBlink());
-            CheckedSetting checkedSetting4 = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f;
-            m.checkNotNullExpressionValue(checkedSetting4, "binding.settingsNotificationsVibrations");
+            CheckedSetting checkedSetting4 = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f18027f;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting4, "binding.settingsNotificationsVibrations");
             checkedSetting4.setChecked(settingsV2.isDisableVibrate());
-            CheckedSetting checkedSetting5 = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).e;
-            m.checkNotNullExpressionValue(checkedSetting5, "binding.settingsNotificationsMuteAll");
+            CheckedSetting checkedSetting5 = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f18026e;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting5, "binding.settingsNotificationsMuteAll");
             checkedSetting5.setChecked(settingsV2.isDisableSound());
         }
     }
 
     public WidgetSettingsNotifications() {
-        super(R.layout.widget_settings_notifications);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsNotifications$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_settings_notifications);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsNotifications2.INSTANCE, null, 2, null);
         this.notificationStore = StoreStream.INSTANCE.getNotifications();
     }
 
@@ -108,22 +108,22 @@ public final class WidgetSettingsNotifications extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        setActionBarSubtitle(R.string.user_settings);
-        setActionBarTitle(R.string.notifications);
+        setActionBarSubtitle(C5419R.string.user_settings);
+        setActionBarTitle(C5419R.string.notifications);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         StoreNotifications storeNotifications = this.notificationStore;
-        getBinding().d.setOnCheckedListener(new WidgetSettingsNotifications$onViewBound$1$1(storeNotifications));
-        getBinding().f2632b.setOnCheckedListener(new WidgetSettingsNotifications$onViewBound$1$2(storeNotifications));
-        getBinding().c.setOnCheckedListener(new WidgetSettingsNotifications$onViewBound$1$3(storeNotifications));
-        getBinding().f.setOnCheckedListener(new WidgetSettingsNotifications$onViewBound$1$4(storeNotifications));
-        getBinding().e.setOnCheckedListener(new WidgetSettingsNotifications$onViewBound$1$5(storeNotifications));
+        getBinding().f18025d.setOnCheckedListener(new WidgetSettingsNotifications3(storeNotifications));
+        getBinding().f18023b.setOnCheckedListener(new WidgetSettingsNotifications4(storeNotifications));
+        getBinding().f18024c.setOnCheckedListener(new WidgetSettingsNotifications5(storeNotifications));
+        getBinding().f18027f.setOnCheckedListener(new WidgetSettingsNotifications6(storeNotifications));
+        getBinding().f18026e.setOnCheckedListener(new WidgetSettingsNotifications7(storeNotifications));
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getNotifications().getSettings(), this, null, 2, null), WidgetSettingsNotifications.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getNotifications().getSettings(), this, null, 2, null), WidgetSettingsNotifications.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C96531(), 62, (Object) null);
     }
 }

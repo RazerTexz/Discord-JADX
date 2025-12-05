@@ -5,8 +5,6 @@ import android.graphics.Matrix;
 import android.opengl.GLES20;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.a0.a;
-import d0.z.d.m;
 import java.nio.ByteBuffer;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -16,6 +14,8 @@ import org.webrtc.GlUtil;
 import org.webrtc.JniCommon;
 import org.webrtc.VideoFrame;
 import org.webrtc.VideoFrameDrawer;
+import p507d0.p508a0.MathJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ThumbnailEmitter.kt */
 /* loaded from: classes.dex */
@@ -24,7 +24,7 @@ public final class ThumbnailEmitter {
     /* renamed from: a, reason: from kotlin metadata */
     public long lastTimestampNs;
 
-    /* renamed from: b, reason: collision with root package name and from kotlin metadata */
+    /* renamed from: b, reason: from kotlin metadata */
     public final ByteBuffer outputByteBuffer;
 
     /* renamed from: c, reason: from kotlin metadata */
@@ -60,8 +60,8 @@ public final class ThumbnailEmitter {
     public ThumbnailEmitter(int i, int i2, long j, long j2, Clock clock, Function1 function1, int i3) {
         j2 = (i3 & 8) != 0 ? 0L : j2;
         Clock clock2 = (i3 & 16) != 0 ? ClockFactory.get() : null;
-        m.checkNotNullParameter(clock2, "clock");
-        m.checkNotNullParameter(function1, "onNextThumbnail");
+        Intrinsics3.checkNotNullParameter(clock2, "clock");
+        Intrinsics3.checkNotNullParameter(function1, "onNextThumbnail");
         this.width = i;
         this.height = i2;
         this.periodMs = j;
@@ -81,7 +81,8 @@ public final class ThumbnailEmitter {
         this.renderMatrix = matrix;
     }
 
-    public final Bitmap a(VideoFrame frame) {
+    /* renamed from: a */
+    public final Bitmap m8502a(VideoFrame frame) {
         GlTextureFrameBuffer glTextureFrameBuffer = new GlTextureFrameBuffer(6408);
         glTextureFrameBuffer.setSize(this.width, this.height);
         GLES20.glBindFramebuffer(36160, glTextureFrameBuffer.getFrameBufferId());
@@ -90,10 +91,10 @@ public final class ThumbnailEmitter {
         GLES20.glClear(16384);
         if (frame.getRotatedWidth() / frame.getRotatedHeight() < this.width / this.height) {
             float rotatedHeight = (this.height / frame.getRotatedHeight()) * frame.getRotatedWidth();
-            this.frameDrawer.drawFrame(frame, this.rectDrawer, this.renderMatrix, a.roundToInt((this.width - rotatedHeight) / 2.0f), 0, a.roundToInt(rotatedHeight), this.height);
+            this.frameDrawer.drawFrame(frame, this.rectDrawer, this.renderMatrix, MathJVM.roundToInt((this.width - rotatedHeight) / 2.0f), 0, MathJVM.roundToInt(rotatedHeight), this.height);
         } else {
             float rotatedWidth = (this.width / frame.getRotatedWidth()) * frame.getRotatedHeight();
-            this.frameDrawer.drawFrame(frame, this.rectDrawer, this.renderMatrix, 0, a.roundToInt((this.height - rotatedWidth) / 2.0f), this.width, a.roundToInt(rotatedWidth));
+            this.frameDrawer.drawFrame(frame, this.rectDrawer, this.renderMatrix, 0, MathJVM.roundToInt((this.height - rotatedWidth) / 2.0f), this.width, MathJVM.roundToInt(rotatedWidth));
         }
         this.outputByteBuffer.rewind();
         GLES20.glReadPixels(0, 0, glTextureFrameBuffer.getWidth(), glTextureFrameBuffer.getHeight(), 6408, 5121, this.outputByteBuffer);
@@ -102,7 +103,7 @@ public final class ThumbnailEmitter {
         this.outputByteBuffer.rewind();
         Bitmap bitmapCreateBitmap = Bitmap.createBitmap(this.width, this.height, Bitmap.Config.ARGB_8888);
         bitmapCreateBitmap.copyPixelsFromBuffer(this.outputByteBuffer);
-        m.checkNotNullExpressionValue(bitmapCreateBitmap, "bitmap");
+        Intrinsics3.checkNotNullExpressionValue(bitmapCreateBitmap, "bitmap");
         return bitmapCreateBitmap;
     }
 }

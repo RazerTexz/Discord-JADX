@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackHoverMenuOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence loadId = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, T
             return false;
         }
         TrackHoverMenuOpened trackHoverMenuOpened = (TrackHoverMenuOpened) other;
-        return m.areEqual(this.loadId, trackHoverMenuOpened.loadId) && m.areEqual(this.numUsers, trackHoverMenuOpened.numUsers);
+        return Intrinsics3.areEqual(this.loadId, trackHoverMenuOpened.loadId) && Intrinsics3.areEqual(this.numUsers, trackHoverMenuOpened.numUsers);
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackHoverMenuOpened(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", numUsers=");
-        return a.G(sbU, this.numUsers, ")");
+        StringBuilder sbM833U = outline.m833U("TrackHoverMenuOpened(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", numUsers=");
+        return outline.m819G(sbM833U, this.numUsers, ")");
     }
 }

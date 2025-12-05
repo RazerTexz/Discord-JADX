@@ -1,8 +1,8 @@
 package com.discord.api.report;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: InAppReportsMenu.kt */
 /* loaded from: classes.dex */
@@ -11,7 +11,7 @@ public final /* data */ class ReportNodeChild {
     private final int ref;
 
     public ReportNodeChild(String str, int i) {
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.name = str;
         this.ref = i;
     }
@@ -34,7 +34,7 @@ public final /* data */ class ReportNodeChild {
             return false;
         }
         ReportNodeChild reportNodeChild = (ReportNodeChild) other;
-        return m.areEqual(this.name, reportNodeChild.name) && this.ref == reportNodeChild.ref;
+        return Intrinsics3.areEqual(this.name, reportNodeChild.name) && this.ref == reportNodeChild.ref;
     }
 
     public int hashCode() {
@@ -43,9 +43,9 @@ public final /* data */ class ReportNodeChild {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ReportNodeChild(name=");
-        sbU.append(this.name);
-        sbU.append(", ref=");
-        return a.B(sbU, this.ref, ")");
+        StringBuilder sbM833U = outline.m833U("ReportNodeChild(name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", ref=");
+        return outline.m814B(sbM833U, this.ref, ")");
     }
 }

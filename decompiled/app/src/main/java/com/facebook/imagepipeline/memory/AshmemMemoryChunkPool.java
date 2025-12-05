@@ -1,29 +1,32 @@
 package com.facebook.imagepipeline.memory;
 
 import android.annotation.TargetApi;
-import b.f.d.d.c;
-import b.f.j.l.a;
-import b.f.j.l.r;
-import b.f.j.l.s;
-import b.f.j.l.y;
-import b.f.j.l.z;
+import p007b.p109f.p115d.p119d.DoNotStrip;
+import p007b.p109f.p115d.p122g.MemoryTrimmableRegistry;
+import p007b.p109f.p161j.p177l.AshmemMemoryChunk;
+import p007b.p109f.p161j.p177l.MemoryChunk;
+import p007b.p109f.p161j.p177l.MemoryChunkPool;
+import p007b.p109f.p161j.p177l.PoolParams;
+import p007b.p109f.p161j.p177l.PoolStatsTracker;
 
-@c
+@DoNotStrip
 @TargetApi(27)
 /* loaded from: classes3.dex */
-public class AshmemMemoryChunkPool extends s {
-    @c
-    public AshmemMemoryChunkPool(b.f.d.g.c cVar, y yVar, z zVar) {
-        super(cVar, yVar, zVar);
+public class AshmemMemoryChunkPool extends MemoryChunkPool {
+    @DoNotStrip
+    public AshmemMemoryChunkPool(MemoryTrimmableRegistry memoryTrimmableRegistry, PoolParams poolParams, PoolStatsTracker poolStatsTracker) {
+        super(memoryTrimmableRegistry, poolParams, poolStatsTracker);
     }
 
-    @Override // b.f.j.l.s, com.facebook.imagepipeline.memory.BasePool
-    public r e(int i) {
-        return new a(i);
+    @Override // p007b.p109f.p161j.p177l.MemoryChunkPool, com.facebook.imagepipeline.memory.BasePool
+    /* renamed from: e */
+    public MemoryChunk mo1382e(int i) {
+        return new AshmemMemoryChunk(i);
     }
 
-    @Override // b.f.j.l.s
-    public r s(int i) {
-        return new a(i);
+    @Override // p007b.p109f.p161j.p177l.MemoryChunkPool
+    /* renamed from: s */
+    public MemoryChunk mo1393s(int i) {
+        return new AshmemMemoryChunk(i);
     }
 }

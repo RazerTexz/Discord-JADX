@@ -7,11 +7,11 @@ import androidx.paging.PositionalDataSource;
 import androidx.room.InvalidationTracker;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
-import androidx.sqlite.db.SupportSQLiteQuery;
-import b.d.b.a.a;
+import androidx.sqlite.p006db.SupportSQLiteQuery;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
@@ -23,9 +23,9 @@ public abstract class LimitOffsetDataSource<T> extends PositionalDataSource<T> {
     private final InvalidationTracker.Observer mObserver;
     private final RoomSQLiteQuery mSourceQuery;
 
-    /* renamed from: androidx.room.paging.LimitOffsetDataSource$1, reason: invalid class name */
-    public class AnonymousClass1 extends InvalidationTracker.Observer {
-        public AnonymousClass1(String[] strArr) {
+    /* renamed from: androidx.room.paging.LimitOffsetDataSource$1 */
+    public class C05981 extends InvalidationTracker.Observer {
+        public C05981(String[] strArr) {
             super(strArr);
         }
 
@@ -125,17 +125,17 @@ public abstract class LimitOffsetDataSource<T> extends PositionalDataSource<T> {
         this.mDb = roomDatabase;
         this.mSourceQuery = roomSQLiteQuery;
         this.mInTransaction = z2;
-        StringBuilder sbU = a.U("SELECT COUNT(*) FROM ( ");
-        sbU.append(roomSQLiteQuery.getSql());
-        sbU.append(" )");
-        this.mCountQuery = sbU.toString();
-        StringBuilder sbU2 = a.U("SELECT * FROM ( ");
-        sbU2.append(roomSQLiteQuery.getSql());
-        sbU2.append(" ) LIMIT ? OFFSET ?");
-        this.mLimitOffsetQuery = sbU2.toString();
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(strArr);
-        this.mObserver = anonymousClass1;
-        roomDatabase.getInvalidationTracker().addWeakObserver(anonymousClass1);
+        StringBuilder sbM833U = outline.m833U("SELECT COUNT(*) FROM ( ");
+        sbM833U.append(roomSQLiteQuery.getSql());
+        sbM833U.append(" )");
+        this.mCountQuery = sbM833U.toString();
+        StringBuilder sbM833U2 = outline.m833U("SELECT * FROM ( ");
+        sbM833U2.append(roomSQLiteQuery.getSql());
+        sbM833U2.append(" ) LIMIT ? OFFSET ?");
+        this.mLimitOffsetQuery = sbM833U2.toString();
+        C05981 c05981 = new C05981(strArr);
+        this.mObserver = c05981;
+        roomDatabase.getInvalidationTracker().addWeakObserver(c05981);
     }
 
     @NonNull

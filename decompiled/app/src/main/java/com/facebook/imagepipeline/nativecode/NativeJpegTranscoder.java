@@ -1,58 +1,70 @@
 package com.facebook.imagepipeline.nativecode;
 
 import androidx.annotation.VisibleForTesting;
-import b.c.a.a0.d;
-import b.f.d.d.c;
-import b.f.d.d.e;
-import b.f.j.d.f;
-import b.f.j.s.a;
-import b.f.j.s.b;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Objects;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p115d.p119d.Closeables;
+import p007b.p109f.p115d.p119d.DoNotStrip;
+import p007b.p109f.p115d.p119d.ImmutableList;
+import p007b.p109f.p160i.DefaultImageFormats;
+import p007b.p109f.p160i.ImageFormat;
+import p007b.p109f.p161j.p169d.ResizeOptions;
+import p007b.p109f.p161j.p169d.RotationOptions;
+import p007b.p109f.p161j.p175j.EncodedImage2;
+import p007b.p109f.p161j.p184s.ImageTranscodeResult;
+import p007b.p109f.p161j.p184s.ImageTranscoder;
+import p007b.p109f.p161j.p184s.JpegTranscoderUtils;
 
-@c
+@DoNotStrip
 /* loaded from: classes3.dex */
-public class NativeJpegTranscoder implements b {
-    public boolean a;
+public class NativeJpegTranscoder implements ImageTranscoder {
 
-    /* renamed from: b, reason: collision with root package name */
-    public int f2899b;
-    public boolean c;
+    /* renamed from: a */
+    public boolean f19568a;
+
+    /* renamed from: b */
+    public int f19569b;
+
+    /* renamed from: c */
+    public boolean f19570c;
 
     public NativeJpegTranscoder(boolean z2, int i, boolean z3, boolean z4) {
-        this.a = z2;
-        this.f2899b = i;
-        this.c = z3;
+        this.f19568a = z2;
+        this.f19569b = i;
+        this.f19570c = z3;
         if (z4) {
-            d.e0();
+            AnimatableValueParser.m512e0();
         }
     }
 
     @VisibleForTesting
-    public static void e(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException {
-        d.e0();
-        d.i(Boolean.valueOf(i2 >= 1));
-        d.i(Boolean.valueOf(i2 <= 16));
-        d.i(Boolean.valueOf(i3 >= 0));
-        d.i(Boolean.valueOf(i3 <= 100));
-        e<Integer> eVar = b.f.j.s.d.a;
-        d.i(Boolean.valueOf(i >= 0 && i <= 270 && i % 90 == 0));
-        d.k((i2 == 8 && i == 0) ? false : true, "no transformation requested");
+    /* renamed from: e */
+    public static void m8713e(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException {
+        AnimatableValueParser.m512e0();
+        AnimatableValueParser.m527i(Boolean.valueOf(i2 >= 1));
+        AnimatableValueParser.m527i(Boolean.valueOf(i2 <= 16));
+        AnimatableValueParser.m527i(Boolean.valueOf(i3 >= 0));
+        AnimatableValueParser.m527i(Boolean.valueOf(i3 <= 100));
+        ImmutableList<Integer> immutableList = JpegTranscoderUtils.f4268a;
+        AnimatableValueParser.m527i(Boolean.valueOf(i >= 0 && i <= 270 && i % 90 == 0));
+        AnimatableValueParser.m535k((i2 == 8 && i == 0) ? false : true, "no transformation requested");
         Objects.requireNonNull(outputStream);
         nativeTranscodeJpeg(inputStream, outputStream, i, i2, i3);
     }
 
     @VisibleForTesting
-    public static void f(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException {
+    /* renamed from: f */
+    public static void m8714f(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException {
         boolean z2;
-        d.e0();
-        d.i(Boolean.valueOf(i2 >= 1));
-        d.i(Boolean.valueOf(i2 <= 16));
-        d.i(Boolean.valueOf(i3 >= 0));
-        d.i(Boolean.valueOf(i3 <= 100));
-        e<Integer> eVar = b.f.j.s.d.a;
+        AnimatableValueParser.m512e0();
+        AnimatableValueParser.m527i(Boolean.valueOf(i2 >= 1));
+        AnimatableValueParser.m527i(Boolean.valueOf(i2 <= 16));
+        AnimatableValueParser.m527i(Boolean.valueOf(i3 >= 0));
+        AnimatableValueParser.m527i(Boolean.valueOf(i3 <= 100));
+        ImmutableList<Integer> immutableList = JpegTranscoderUtils.f4268a;
         switch (i) {
             case 1:
             case 2:
@@ -68,68 +80,72 @@ public class NativeJpegTranscoder implements b {
                 z2 = false;
                 break;
         }
-        d.i(Boolean.valueOf(z2));
-        d.k((i2 == 8 && i == 1) ? false : true, "no transformation requested");
+        AnimatableValueParser.m527i(Boolean.valueOf(z2));
+        AnimatableValueParser.m535k((i2 == 8 && i == 1) ? false : true, "no transformation requested");
         Objects.requireNonNull(outputStream);
         nativeTranscodeJpegWithExifOrientation(inputStream, outputStream, i, i2, i3);
     }
 
-    @c
+    @DoNotStrip
     private static native void nativeTranscodeJpeg(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException;
 
-    @c
+    @DoNotStrip
     private static native void nativeTranscodeJpegWithExifOrientation(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException;
 
-    @Override // b.f.j.s.b
-    public String a() {
+    @Override // p007b.p109f.p161j.p184s.ImageTranscoder
+    /* renamed from: a */
+    public String mo1528a() {
         return "NativeJpegTranscoder";
     }
 
-    @Override // b.f.j.s.b
-    public boolean b(b.f.j.j.e eVar, f fVar, b.f.j.d.e eVar2) {
-        if (fVar == null) {
-            fVar = f.a;
+    @Override // p007b.p109f.p161j.p184s.ImageTranscoder
+    /* renamed from: b */
+    public boolean mo1529b(EncodedImage2 encodedImage2, RotationOptions rotationOptions, ResizeOptions resizeOptions) {
+        if (rotationOptions == null) {
+            rotationOptions = RotationOptions.f3721a;
         }
-        return b.f.j.s.d.c(fVar, eVar2, eVar, this.a) < 8;
+        return JpegTranscoderUtils.m1534c(rotationOptions, resizeOptions, encodedImage2, this.f19568a) < 8;
     }
 
-    @Override // b.f.j.s.b
-    public a c(b.f.j.j.e eVar, OutputStream outputStream, f fVar, b.f.j.d.e eVar2, b.f.i.c cVar, Integer num) throws IOException {
+    @Override // p007b.p109f.p161j.p184s.ImageTranscoder
+    /* renamed from: c */
+    public ImageTranscodeResult mo1530c(EncodedImage2 encodedImage2, OutputStream outputStream, RotationOptions rotationOptions, ResizeOptions resizeOptions, ImageFormat imageFormat, Integer num) throws IOException {
         if (num == null) {
             num = 85;
         }
-        if (fVar == null) {
-            fVar = f.a;
+        if (rotationOptions == null) {
+            rotationOptions = RotationOptions.f3721a;
         }
-        int iA0 = d.a0(fVar, eVar2, eVar, this.f2899b);
+        int iM496a0 = AnimatableValueParser.m496a0(rotationOptions, resizeOptions, encodedImage2, this.f19569b);
         try {
-            int iC = b.f.j.s.d.c(fVar, eVar2, eVar, this.a);
-            int iMax = Math.max(1, 8 / iA0);
-            if (this.c) {
-                iC = iMax;
+            int iM1534c = JpegTranscoderUtils.m1534c(rotationOptions, resizeOptions, encodedImage2, this.f19568a);
+            int iMax = Math.max(1, 8 / iM496a0);
+            if (this.f19570c) {
+                iM1534c = iMax;
             }
-            InputStream inputStreamE = eVar.e();
-            e<Integer> eVar3 = b.f.j.s.d.a;
-            eVar.x();
-            if (eVar3.contains(Integer.valueOf(eVar.n))) {
-                int iA = b.f.j.s.d.a(fVar, eVar);
-                d.y(inputStreamE, "Cannot transcode from null input stream!");
-                f(inputStreamE, outputStream, iA, iC, num.intValue());
+            InputStream inputStreamM1342e = encodedImage2.m1342e();
+            ImmutableList<Integer> immutableList = JpegTranscoderUtils.f4268a;
+            encodedImage2.m1347x();
+            if (immutableList.contains(Integer.valueOf(encodedImage2.f3895n))) {
+                int iM1532a = JpegTranscoderUtils.m1532a(rotationOptions, encodedImage2);
+                AnimatableValueParser.m591y(inputStreamM1342e, "Cannot transcode from null input stream!");
+                m8714f(inputStreamM1342e, outputStream, iM1532a, iM1534c, num.intValue());
             } else {
-                int iB = b.f.j.s.d.b(fVar, eVar);
-                d.y(inputStreamE, "Cannot transcode from null input stream!");
-                e(inputStreamE, outputStream, iB, iC, num.intValue());
+                int iM1533b = JpegTranscoderUtils.m1533b(rotationOptions, encodedImage2);
+                AnimatableValueParser.m591y(inputStreamM1342e, "Cannot transcode from null input stream!");
+                m8713e(inputStreamM1342e, outputStream, iM1533b, iM1534c, num.intValue());
             }
-            b.f.d.d.a.b(inputStreamE);
-            return new a(iA0 != 1 ? 0 : 1);
+            Closeables.m966b(inputStreamM1342e);
+            return new ImageTranscodeResult(iM496a0 != 1 ? 0 : 1);
         } catch (Throwable th) {
-            b.f.d.d.a.b(null);
+            Closeables.m966b(null);
             throw th;
         }
     }
 
-    @Override // b.f.j.s.b
-    public boolean d(b.f.i.c cVar) {
-        return cVar == b.f.i.b.a;
+    @Override // p007b.p109f.p161j.p184s.ImageTranscoder
+    /* renamed from: d */
+    public boolean mo1531d(ImageFormat imageFormat) {
+        return imageFormat == DefaultImageFormats.f3585a;
     }
 }

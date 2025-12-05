@@ -5,27 +5,29 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.c.a.a0.d;
-import b.i.a.f.c.a.d.i;
 import com.google.android.gms.common.internal.ReflectedParcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p292c.p293a.p294d.C3194i;
 
 /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
 /* loaded from: classes3.dex */
 public final class IdToken extends AbstractSafeParcelable implements ReflectedParcelable {
-    public static final Parcelable.Creator<IdToken> CREATOR = new i();
+    public static final Parcelable.Creator<IdToken> CREATOR = new C3194i();
 
+    /* renamed from: j */
     @NonNull
-    public final String j;
+    public final String f20414j;
 
+    /* renamed from: k */
     @NonNull
-    public final String k;
+    public final String f20415k;
 
     public IdToken(@NonNull String str, @NonNull String str2) {
-        d.o(!TextUtils.isEmpty(str), "account type string cannot be null or empty");
-        d.o(!TextUtils.isEmpty(str2), "id token string cannot be null or empty");
-        this.j = str;
-        this.k = str2;
+        AnimatableValueParser.m551o(!TextUtils.isEmpty(str), "account type string cannot be null or empty");
+        AnimatableValueParser.m551o(!TextUtils.isEmpty(str2), "id token string cannot be null or empty");
+        this.f20414j = str;
+        this.f20415k = str2;
     }
 
     public final boolean equals(@Nullable Object obj) {
@@ -36,14 +38,14 @@ public final class IdToken extends AbstractSafeParcelable implements ReflectedPa
             return false;
         }
         IdToken idToken = (IdToken) obj;
-        return d.h0(this.j, idToken.j) && d.h0(this.k, idToken.k);
+        return AnimatableValueParser.m524h0(this.f20414j, idToken.f20414j) && AnimatableValueParser.m524h0(this.f20415k, idToken.f20415k);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = d.y2(parcel, 20293);
-        d.t2(parcel, 1, this.j, false);
-        d.t2(parcel, 2, this.k, false);
-        d.A2(parcel, iY2);
+        int iM594y2 = AnimatableValueParser.m594y2(parcel, 20293);
+        AnimatableValueParser.m574t2(parcel, 1, this.f20414j, false);
+        AnimatableValueParser.m574t2(parcel, 2, this.f20415k, false);
+        AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 }

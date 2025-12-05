@@ -1,16 +1,17 @@
 package com.discord.api.hubs;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: EmailVerification.kt */
 /* loaded from: classes.dex */
 public final /* data */ class EmailVerification {
-    private final List<GuildInfo> guildsInfo;
+    private final List<EmailVerification3> guildsInfo;
     private final boolean hasMatchingGuild;
 
-    public final List<GuildInfo> a() {
+    /* renamed from: a */
+    public final List<EmailVerification3> m7998a() {
         return this.guildsInfo;
     }
 
@@ -27,12 +28,12 @@ public final /* data */ class EmailVerification {
             return false;
         }
         EmailVerification emailVerification = (EmailVerification) other;
-        return m.areEqual(this.guildsInfo, emailVerification.guildsInfo) && this.hasMatchingGuild == emailVerification.hasMatchingGuild;
+        return Intrinsics3.areEqual(this.guildsInfo, emailVerification.guildsInfo) && this.hasMatchingGuild == emailVerification.hasMatchingGuild;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        List<GuildInfo> list = this.guildsInfo;
+        List<EmailVerification3> list = this.guildsInfo;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
         boolean z2 = this.hasMatchingGuild;
         int i = z2;
@@ -43,9 +44,9 @@ public final /* data */ class EmailVerification {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("EmailVerification(guildsInfo=");
-        sbU.append(this.guildsInfo);
-        sbU.append(", hasMatchingGuild=");
-        return a.O(sbU, this.hasMatchingGuild, ")");
+        StringBuilder sbM833U = outline.m833U("EmailVerification(guildsInfo=");
+        sbM833U.append(this.guildsInfo);
+        sbM833U.append(", hasMatchingGuild=");
+        return outline.m827O(sbM833U, this.hasMatchingGuild, ")");
     }
 }

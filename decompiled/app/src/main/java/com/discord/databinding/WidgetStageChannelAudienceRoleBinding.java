@@ -9,21 +9,22 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetStageChannelAudienceRoleBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f18137a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2650b;
+    public final TextView f18138b;
 
     public WidgetStageChannelAudienceRoleBinding(@NonNull ConstraintLayout constraintLayout, @NonNull TextView textView) {
-        this.a = constraintLayout;
-        this.f2650b = textView;
+        this.f18137a = constraintLayout;
+        this.f18138b = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18137a;
     }
 }

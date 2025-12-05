@@ -1,68 +1,69 @@
 package com.discord.widgets.guildcommunicationdisabled.start;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.guild.Guild;
 import com.discord.models.member.GuildMember;
 import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.stores.updates.ObservationDeck4;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.k;
-import d0.z.d.m;
 import java.util.concurrent.TimeUnit;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.functions.Func2;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p637j0.p653p.Schedulers2;
+import p658rx.Observable;
+import p658rx.functions.Func2;
 
 /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<ViewState> {
+public final class GuildCommunicationDisabledBottomSheetViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
     /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2, R> implements Func2<Long, StoreState, StoreState> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$1 */
+    public static final class C85551<T1, T2, R> implements Func2<Long, StoreState, StoreState> {
+        public static final C85551 INSTANCE = new C85551();
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(Long l, StoreState storeState) {
             return storeState;
         }
 
-        @Override // rx.functions.Func2
+        @Override // p658rx.functions.Func2
         public /* bridge */ /* synthetic */ StoreState call(Long l, StoreState storeState) {
             return call2(l, storeState);
         }
     }
 
     /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<StoreState, Unit> {
-        public AnonymousClass2(GuildCommunicationDisabledBottomSheetViewModel guildCommunicationDisabledBottomSheetViewModel) {
+    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$2 */
+    public static final /* synthetic */ class C85562 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+        public C85562(GuildCommunicationDisabledBottomSheetViewModel guildCommunicationDisabledBottomSheetViewModel) {
             super(1, guildCommunicationDisabledBottomSheetViewModel, GuildCommunicationDisabledBottomSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guildcommunicationdisabled/start/GuildCommunicationDisabledBottomSheetViewModel$StoreState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "p1");
+            Intrinsics3.checkNotNullParameter(storeState, "p1");
             GuildCommunicationDisabledBottomSheetViewModel.access$handleStoreState((GuildCommunicationDisabledBottomSheetViewModel) this.receiver, storeState);
         }
     }
@@ -77,7 +78,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
         }
 
         private final Observable<StoreState> observeStores(long userId, long guildId, ObservationDeck observationDeck, StoreGuilds guildStore) {
-            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{guildStore}, false, null, null, new GuildCommunicationDisabledBottomSheetViewModel$Companion$observeStores$1(guildStore, guildId, userId), 14, null);
+            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{guildStore}, false, null, null, new GuildCommunicationDisabledBottomSheetViewModel2(guildStore, guildId, userId), 14, null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -127,7 +128,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.guild, storeState.guild) && m.areEqual(this.guildMember, storeState.guildMember);
+            return Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.guildMember, storeState.guildMember);
         }
 
         public final Guild getGuild() {
@@ -146,12 +147,12 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(guild=");
-            sbU.append(this.guild);
-            sbU.append(", guildMember=");
-            sbU.append(this.guildMember);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("StoreState(guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", guildMember=");
+            sbM833U.append(this.guildMember);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -175,7 +176,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(long j, String str) {
                 super(null);
-                m.checkNotNullParameter(str, "guildName");
+                Intrinsics3.checkNotNullParameter(str, "guildName");
                 this.timeoutTimeLeftMs = j;
                 this.guildName = str;
             }
@@ -201,7 +202,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
             }
 
             public final Valid copy(long timeoutTimeLeftMs, String guildName) {
-                m.checkNotNullParameter(guildName, "guildName");
+                Intrinsics3.checkNotNullParameter(guildName, "guildName");
                 return new Valid(timeoutTimeLeftMs, guildName);
             }
 
@@ -213,7 +214,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return this.timeoutTimeLeftMs == valid.timeoutTimeLeftMs && m.areEqual(this.guildName, valid.guildName);
+                return this.timeoutTimeLeftMs == valid.timeoutTimeLeftMs && Intrinsics3.areEqual(this.guildName, valid.guildName);
             }
 
             public final String getGuildName() {
@@ -225,16 +226,16 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
             }
 
             public int hashCode() {
-                int iA = b.a(this.timeoutTimeLeftMs) * 31;
+                int iM3a = C0002b.m3a(this.timeoutTimeLeftMs) * 31;
                 String str = this.guildName;
-                return iA + (str != null ? str.hashCode() : 0);
+                return iM3a + (str != null ? str.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Valid(timeoutTimeLeftMs=");
-                sbU.append(this.timeoutTimeLeftMs);
-                sbU.append(", guildName=");
-                return a.J(sbU, this.guildName, ")");
+                StringBuilder sbM833U = outline.m833U("Valid(timeoutTimeLeftMs=");
+                sbM833U.append(this.timeoutTimeLeftMs);
+                sbM833U.append(", guildName=");
+                return outline.m822J(sbM833U, this.guildName, ")");
             }
         }
 
@@ -248,7 +249,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
 
     /* JADX WARN: Illegal instructions before constructor call */
     public /* synthetic */ GuildCommunicationDisabledBottomSheetViewModel(long j, long j2, ObservationDeck observationDeck, StoreGuilds storeGuilds, Observable observable, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        ObservationDeck observationDeck2 = (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck;
+        ObservationDeck observationDeck2 = (i & 4) != 0 ? ObservationDeck4.get() : observationDeck;
         StoreGuilds guilds = (i & 8) != 0 ? StoreStream.INSTANCE.getGuilds() : storeGuilds;
         this(j, j2, observationDeck2, guilds, (i & 16) != 0 ? Companion.access$observeStores(INSTANCE, j, j2, observationDeck2, guilds) : observable);
     }
@@ -271,11 +272,11 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<Vie
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildCommunicationDisabledBottomSheetViewModel(long j, long j2, ObservationDeck observationDeck, StoreGuilds storeGuilds, Observable<StoreState> observable) {
         super(null, 1, null);
-        m.checkNotNullParameter(observationDeck, "observationDeck");
-        m.checkNotNullParameter(storeGuilds, "guildStore");
-        m.checkNotNullParameter(observable, "storeStateObservable");
-        Observable observableJ = Observable.j(Observable.F(0L, 1L, TimeUnit.SECONDS, j0.p.a.a()), observable, AnonymousClass1.INSTANCE);
-        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…->\n      storeState\n    }");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableJ), this, null, 2, null), GuildCommunicationDisabledBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "guildStore");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        Observable observableM11076j = Observable.m11076j(Observable.m11062F(0L, 1L, TimeUnit.SECONDS, Schedulers2.m10873a()), observable, C85551.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable.combineLatest…->\n      storeState\n    }");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableM11076j), this, null, 2, null), GuildCommunicationDisabledBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85562(this), 62, (Object) null);
     }
 }

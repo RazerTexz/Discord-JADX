@@ -26,7 +26,8 @@ public enum ThermalStatus {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        public final ThermalStatus a(int i) {
+        /* renamed from: a */
+        public final ThermalStatus m8500a(int i) {
             ThermalStatus thermalStatus;
             ThermalStatus[] thermalStatusArrValues = ThermalStatus.values();
             int i2 = 0;

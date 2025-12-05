@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackUserSettingsKeybindUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserSettingsKeybindUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackUserSettingsKeybindUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence keybindAction = null;
     private final Boolean keybindIsBound = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackUserSettingsKeybindUpdated implements Analyti
             return false;
         }
         TrackUserSettingsKeybindUpdated trackUserSettingsKeybindUpdated = (TrackUserSettingsKeybindUpdated) other;
-        return m.areEqual(this.keybindAction, trackUserSettingsKeybindUpdated.keybindAction) && m.areEqual(this.keybindIsBound, trackUserSettingsKeybindUpdated.keybindIsBound) && m.areEqual(this.keybindHasShortcut, trackUserSettingsKeybindUpdated.keybindHasShortcut);
+        return Intrinsics3.areEqual(this.keybindAction, trackUserSettingsKeybindUpdated.keybindAction) && Intrinsics3.areEqual(this.keybindIsBound, trackUserSettingsKeybindUpdated.keybindIsBound) && Intrinsics3.areEqual(this.keybindHasShortcut, trackUserSettingsKeybindUpdated.keybindHasShortcut);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackUserSettingsKeybindUpdated implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackUserSettingsKeybindUpdated(keybindAction=");
-        sbU.append(this.keybindAction);
-        sbU.append(", keybindIsBound=");
-        sbU.append(this.keybindIsBound);
-        sbU.append(", keybindHasShortcut=");
-        return a.D(sbU, this.keybindHasShortcut, ")");
+        StringBuilder sbM833U = outline.m833U("TrackUserSettingsKeybindUpdated(keybindAction=");
+        sbM833U.append(this.keybindAction);
+        sbM833U.append(", keybindIsBound=");
+        sbM833U.append(this.keybindIsBound);
+        sbM833U.append(", keybindHasShortcut=");
+        return outline.m816D(sbM833U, this.keybindHasShortcut, ")");
     }
 }

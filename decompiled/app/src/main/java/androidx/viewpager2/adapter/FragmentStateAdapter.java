@@ -24,8 +24,8 @@ import androidx.view.Lifecycle;
 import androidx.view.LifecycleEventObserver;
 import androidx.view.LifecycleOwner;
 import androidx.viewpager2.widget.ViewPager2;
-import b.d.b.a.a;
 import java.util.Iterator;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class FragmentStateAdapter extends RecyclerView.Adapter<FragmentViewHolder> implements StatefulAdapter {
@@ -41,12 +41,12 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
     public final Lifecycle mLifecycle;
     private final LongSparseArray<Fragment.SavedState> mSavedStates;
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements View.OnLayoutChangeListener {
+    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$1 */
+    public class ViewOnLayoutChangeListenerC06941 implements View.OnLayoutChangeListener {
         public final /* synthetic */ FrameLayout val$container;
         public final /* synthetic */ FragmentViewHolder val$holder;
 
-        public AnonymousClass1(FrameLayout frameLayout, FragmentViewHolder fragmentViewHolder) {
+        public ViewOnLayoutChangeListenerC06941(FrameLayout frameLayout, FragmentViewHolder fragmentViewHolder) {
             this.val$container = frameLayout;
             this.val$holder = fragmentViewHolder;
         }
@@ -60,11 +60,11 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         }
     }
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$2, reason: invalid class name */
-    public class AnonymousClass2 implements LifecycleEventObserver {
+    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$2 */
+    public class C06952 implements LifecycleEventObserver {
         public final /* synthetic */ FragmentViewHolder val$holder;
 
-        public AnonymousClass2(FragmentViewHolder fragmentViewHolder) {
+        public C06952(FragmentViewHolder fragmentViewHolder) {
             this.val$holder = fragmentViewHolder;
         }
 
@@ -80,12 +80,12 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         }
     }
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$3, reason: invalid class name */
-    public class AnonymousClass3 extends FragmentManager.FragmentLifecycleCallbacks {
+    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$3 */
+    public class C06963 extends FragmentManager.FragmentLifecycleCallbacks {
         public final /* synthetic */ FrameLayout val$container;
         public final /* synthetic */ Fragment val$fragment;
 
-        public AnonymousClass3(Fragment fragment, FrameLayout frameLayout) {
+        public C06963(Fragment fragment, FrameLayout frameLayout) {
             this.val$fragment = fragment;
             this.val$container = frameLayout;
         }
@@ -99,9 +99,9 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         }
     }
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$4, reason: invalid class name */
-    public class AnonymousClass4 implements Runnable {
-        public AnonymousClass4() {
+    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$4 */
+    public class RunnableC06974 implements Runnable {
+        public RunnableC06974() {
         }
 
         @Override // java.lang.Runnable
@@ -112,12 +112,12 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         }
     }
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$5, reason: invalid class name */
-    public class AnonymousClass5 implements LifecycleEventObserver {
+    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$5 */
+    public class C06985 implements LifecycleEventObserver {
         public final /* synthetic */ Handler val$handler;
         public final /* synthetic */ Runnable val$runnable;
 
-        public AnonymousClass5(Handler handler, Runnable runnable) {
+        public C06985(Handler handler, Runnable runnable) {
             this.val$handler = handler;
             this.val$runnable = runnable;
         }
@@ -158,7 +158,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
             onChanged();
         }
 
-        public /* synthetic */ DataSetChangeObserver(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ DataSetChangeObserver(ViewOnLayoutChangeListenerC06941 viewOnLayoutChangeListenerC06941) {
             this();
         }
 
@@ -175,9 +175,9 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         private long mPrimaryItemId = -1;
         private ViewPager2 mViewPager;
 
-        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$1, reason: invalid class name */
-        public class AnonymousClass1 extends ViewPager2.OnPageChangeCallback {
-            public AnonymousClass1() {
+        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$1 */
+        public class C06991 extends ViewPager2.OnPageChangeCallback {
+            public C06991() {
             }
 
             @Override // androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
@@ -191,9 +191,9 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
             }
         }
 
-        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$2, reason: invalid class name */
-        public class AnonymousClass2 extends DataSetChangeObserver {
-            public AnonymousClass2() {
+        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$2 */
+        public class C07002 extends DataSetChangeObserver {
+            public C07002() {
                 super(null);
             }
 
@@ -203,9 +203,9 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
             }
         }
 
-        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3, reason: invalid class name */
-        public class AnonymousClass3 implements LifecycleEventObserver {
-            public AnonymousClass3() {
+        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3 */
+        public class C07013 implements LifecycleEventObserver {
+            public C07013() {
             }
 
             @Override // androidx.view.LifecycleEventObserver
@@ -228,15 +228,15 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
 
         public void register(@NonNull RecyclerView recyclerView) {
             this.mViewPager = inferViewPager(recyclerView);
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-            this.mPageChangeCallback = anonymousClass1;
-            this.mViewPager.registerOnPageChangeCallback(anonymousClass1);
-            AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-            this.mDataObserver = anonymousClass2;
-            FragmentStateAdapter.this.registerAdapterDataObserver(anonymousClass2);
-            AnonymousClass3 anonymousClass3 = new AnonymousClass3();
-            this.mLifecycleObserver = anonymousClass3;
-            FragmentStateAdapter.this.mLifecycle.addObserver(anonymousClass3);
+            C06991 c06991 = new C06991();
+            this.mPageChangeCallback = c06991;
+            this.mViewPager.registerOnPageChangeCallback(c06991);
+            C07002 c07002 = new C07002();
+            this.mDataObserver = c07002;
+            FragmentStateAdapter.this.registerAdapterDataObserver(c07002);
+            C07013 c07013 = new C07013();
+            this.mLifecycleObserver = c07013;
+            FragmentStateAdapter.this.mLifecycle.addObserver(c07013);
         }
 
         public void unregister(@NonNull RecyclerView recyclerView) {
@@ -286,7 +286,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
 
     @NonNull
     private static String createKey(@NonNull String str, long j) {
-        return a.t(str, j);
+        return outline.m877t(str, j);
     }
 
     private void ensureFragment(int i) {
@@ -358,13 +358,13 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
 
     private void scheduleGracePeriodEnd() {
         Handler handler = new Handler(Looper.getMainLooper());
-        AnonymousClass4 anonymousClass4 = new AnonymousClass4();
-        this.mLifecycle.addObserver(new AnonymousClass5(handler, anonymousClass4));
-        handler.postDelayed(anonymousClass4, 10000L);
+        RunnableC06974 runnableC06974 = new RunnableC06974();
+        this.mLifecycle.addObserver(new C06985(handler, runnableC06974));
+        handler.postDelayed(runnableC06974, 10000L);
     }
 
     private void scheduleViewAttach(Fragment fragment, @NonNull FrameLayout frameLayout) {
-        this.mFragmentManager.registerFragmentLifecycleCallbacks(new AnonymousClass3(fragment, frameLayout), false);
+        this.mFragmentManager.registerFragmentLifecycleCallbacks(new C06963(fragment, frameLayout), false);
     }
 
     public void addViewToContainer(@NonNull View view, @NonNull FrameLayout frameLayout) {
@@ -495,13 +495,13 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
                 if (this.mFragmentManager.isDestroyed()) {
                     return;
                 }
-                this.mLifecycle.addObserver(new AnonymousClass2(fragmentViewHolder));
+                this.mLifecycle.addObserver(new C06952(fragmentViewHolder));
             } else {
                 scheduleViewAttach(fragment, container);
                 FragmentTransaction fragmentTransactionBeginTransaction = this.mFragmentManager.beginTransaction();
-                StringBuilder sbU = a.U("f");
-                sbU.append(fragmentViewHolder.getItemId());
-                fragmentTransactionBeginTransaction.add(fragment, sbU.toString()).setMaxLifecycle(fragment, Lifecycle.State.STARTED).commitNow();
+                StringBuilder sbM833U = outline.m833U("f");
+                sbM833U.append(fragmentViewHolder.getItemId());
+                fragmentTransactionBeginTransaction.add(fragment, sbM833U.toString()).setMaxLifecycle(fragment, Lifecycle.State.STARTED).commitNow();
                 this.mFragmentMaxLifecycleEnforcer.updateFragmentMaxLifecycle(false);
             }
         }
@@ -521,7 +521,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
                 this.mFragments.put(parseIdFromKey(str, KEY_PREFIX_FRAGMENT), this.mFragmentManager.getFragment(bundle, str));
             } else {
                 if (!isValidKey(str, KEY_PREFIX_STATE)) {
-                    throw new IllegalArgumentException(a.w("Unexpected key in savedState: ", str));
+                    throw new IllegalArgumentException(outline.m883w("Unexpected key in savedState: ", str));
                 }
                 long idFromKey = parseIdFromKey(str, KEY_PREFIX_STATE);
                 Fragment.SavedState savedState = (Fragment.SavedState) bundle.getParcelable(str);
@@ -587,7 +587,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
             if (container.getParent() != null) {
                 throw new IllegalStateException("Design assumption violated.");
             }
-            container.addOnLayoutChangeListener(new AnonymousClass1(container, fragmentViewHolder));
+            container.addOnLayoutChangeListener(new ViewOnLayoutChangeListenerC06941(container, fragmentViewHolder));
         }
         gcFragments();
     }

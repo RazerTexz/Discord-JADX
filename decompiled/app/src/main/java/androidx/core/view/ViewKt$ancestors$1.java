@@ -1,13 +1,13 @@
 package androidx.core.view;
 
 import android.view.ViewParent;
-import d0.z.d.k;
-import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: View.kt */
 /* loaded from: classes.dex */
-public /* synthetic */ class ViewKt$ancestors$1 extends k implements Function1<ViewParent, ViewParent> {
+public /* synthetic */ class ViewKt$ancestors$1 extends FunctionReferenceImpl implements Function1<ViewParent, ViewParent> {
     public static final ViewKt$ancestors$1 INSTANCE = new ViewKt$ancestors$1();
 
     public ViewKt$ancestors$1() {
@@ -16,7 +16,7 @@ public /* synthetic */ class ViewKt$ancestors$1 extends k implements Function1<V
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ViewParent invoke2(ViewParent viewParent) {
-        m.checkNotNullParameter(viewParent, "p0");
+        Intrinsics3.checkNotNullParameter(viewParent, "p0");
         return viewParent.getParent();
     }
 

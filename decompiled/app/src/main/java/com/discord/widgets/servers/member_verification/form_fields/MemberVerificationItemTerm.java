@@ -1,12 +1,12 @@
 package com.discord.widgets.servers.member_verification.form_fields;
 
-import b.d.b.a.a;
 import com.discord.api.role.GuildRole;
 import com.discord.simpleast.core.node.Node;
 import com.discord.utilities.textprocessing.MessageRenderContext;
-import d0.z.d.m;
 import java.util.List;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MemberVerificationItemTerm.kt */
 /* loaded from: classes2.dex */
@@ -23,10 +23,10 @@ public final /* data */ class MemberVerificationItemTerm implements MemberVerifi
     private final int type;
 
     public MemberVerificationItemTerm(int i, String str, List<Node<MessageRenderContext>> list, Map<Long, String> map, Map<Long, GuildRole> map2, boolean z2, boolean z3, boolean z4) {
-        m.checkNotNullParameter(str, "rule");
-        m.checkNotNullParameter(list, "ast");
-        m.checkNotNullParameter(map, "channelNames");
-        m.checkNotNullParameter(map2, "roles");
+        Intrinsics3.checkNotNullParameter(str, "rule");
+        Intrinsics3.checkNotNullParameter(list, "ast");
+        Intrinsics3.checkNotNullParameter(map, "channelNames");
+        Intrinsics3.checkNotNullParameter(map2, "roles");
         this.index = i;
         this.rule = str;
         this.ast = list;
@@ -81,10 +81,10 @@ public final /* data */ class MemberVerificationItemTerm implements MemberVerifi
     }
 
     public final MemberVerificationItemTerm copy(int index, String rule, List<Node<MessageRenderContext>> ast, Map<Long, String> channelNames, Map<Long, GuildRole> roles, boolean allowAnimatedEmojis, boolean isFirstItem, boolean isLastItem) {
-        m.checkNotNullParameter(rule, "rule");
-        m.checkNotNullParameter(ast, "ast");
-        m.checkNotNullParameter(channelNames, "channelNames");
-        m.checkNotNullParameter(roles, "roles");
+        Intrinsics3.checkNotNullParameter(rule, "rule");
+        Intrinsics3.checkNotNullParameter(ast, "ast");
+        Intrinsics3.checkNotNullParameter(channelNames, "channelNames");
+        Intrinsics3.checkNotNullParameter(roles, "roles");
         return new MemberVerificationItemTerm(index, rule, ast, channelNames, roles, allowAnimatedEmojis, isFirstItem, isLastItem);
     }
 
@@ -96,7 +96,7 @@ public final /* data */ class MemberVerificationItemTerm implements MemberVerifi
             return false;
         }
         MemberVerificationItemTerm memberVerificationItemTerm = (MemberVerificationItemTerm) other;
-        return this.index == memberVerificationItemTerm.index && m.areEqual(this.rule, memberVerificationItemTerm.rule) && m.areEqual(this.ast, memberVerificationItemTerm.ast) && m.areEqual(this.channelNames, memberVerificationItemTerm.channelNames) && m.areEqual(this.roles, memberVerificationItemTerm.roles) && this.allowAnimatedEmojis == memberVerificationItemTerm.allowAnimatedEmojis && this.isFirstItem == memberVerificationItemTerm.isFirstItem && this.isLastItem == memberVerificationItemTerm.isLastItem;
+        return this.index == memberVerificationItemTerm.index && Intrinsics3.areEqual(this.rule, memberVerificationItemTerm.rule) && Intrinsics3.areEqual(this.ast, memberVerificationItemTerm.ast) && Intrinsics3.areEqual(this.channelNames, memberVerificationItemTerm.channelNames) && Intrinsics3.areEqual(this.roles, memberVerificationItemTerm.roles) && this.allowAnimatedEmojis == memberVerificationItemTerm.allowAnimatedEmojis && this.isFirstItem == memberVerificationItemTerm.isFirstItem && this.isLastItem == memberVerificationItemTerm.isLastItem;
     }
 
     public final boolean getAllowAnimatedEmojis() {
@@ -169,21 +169,21 @@ public final /* data */ class MemberVerificationItemTerm implements MemberVerifi
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("MemberVerificationItemTerm(index=");
-        sbU.append(this.index);
-        sbU.append(", rule=");
-        sbU.append(this.rule);
-        sbU.append(", ast=");
-        sbU.append(this.ast);
-        sbU.append(", channelNames=");
-        sbU.append(this.channelNames);
-        sbU.append(", roles=");
-        sbU.append(this.roles);
-        sbU.append(", allowAnimatedEmojis=");
-        sbU.append(this.allowAnimatedEmojis);
-        sbU.append(", isFirstItem=");
-        sbU.append(this.isFirstItem);
-        sbU.append(", isLastItem=");
-        return a.O(sbU, this.isLastItem, ")");
+        StringBuilder sbM833U = outline.m833U("MemberVerificationItemTerm(index=");
+        sbM833U.append(this.index);
+        sbM833U.append(", rule=");
+        sbM833U.append(this.rule);
+        sbM833U.append(", ast=");
+        sbM833U.append(this.ast);
+        sbM833U.append(", channelNames=");
+        sbM833U.append(this.channelNames);
+        sbM833U.append(", roles=");
+        sbM833U.append(this.roles);
+        sbM833U.append(", allowAnimatedEmojis=");
+        sbM833U.append(this.allowAnimatedEmojis);
+        sbM833U.append(", isFirstItem=");
+        sbM833U.append(this.isFirstItem);
+        sbM833U.append(", isLastItem=");
+        return outline.m827O(sbM833U, this.isLastItem, ")");
     }
 }

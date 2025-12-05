@@ -1,8 +1,8 @@
 package com.discord.api.activity;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ActivityEmoji.kt */
 /* loaded from: classes.dex */
@@ -40,7 +40,7 @@ public final /* data */ class ActivityEmoji {
             return false;
         }
         ActivityEmoji activityEmoji = (ActivityEmoji) other;
-        return m.areEqual(this.id, activityEmoji.id) && m.areEqual(this.name, activityEmoji.name) && this.animated == activityEmoji.animated;
+        return Intrinsics3.areEqual(this.id, activityEmoji.id) && Intrinsics3.areEqual(this.name, activityEmoji.name) && this.animated == activityEmoji.animated;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -58,11 +58,11 @@ public final /* data */ class ActivityEmoji {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ActivityEmoji(id=");
-        sbU.append(this.id);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", animated=");
-        return a.O(sbU, this.animated, ")");
+        StringBuilder sbM833U = outline.m833U("ActivityEmoji(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", animated=");
+        return outline.m827O(sbM833U, this.animated, ")");
     }
 }

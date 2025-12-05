@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events.network_action;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackNetworkMetadata;
-import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackNetworkActionChannelCreate.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNetworkActionChannelCreate implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackNetworkMetadataReceiver {
+public final /* data */ class TrackNetworkActionChannelCreate implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
     private final transient String analyticsSchemaTypeName;
     private final Long channelId;
     private final Long channelType;
@@ -32,8 +32,9 @@ public final /* data */ class TrackNetworkActionChannelCreate implements Analyti
         this.analyticsSchemaTypeName = "network_action_channel_create";
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver
-    public void b(TrackNetworkMetadata trackNetworkMetadata) {
+    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
+    /* renamed from: b */
+    public void mo7529b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
 
@@ -51,7 +52,7 @@ public final /* data */ class TrackNetworkActionChannelCreate implements Analyti
             return false;
         }
         TrackNetworkActionChannelCreate trackNetworkActionChannelCreate = (TrackNetworkActionChannelCreate) other;
-        return m.areEqual(this.isPrivate, trackNetworkActionChannelCreate.isPrivate) && m.areEqual(this.channelType, trackNetworkActionChannelCreate.channelType) && m.areEqual(this.channelId, trackNetworkActionChannelCreate.channelId) && m.areEqual(this.parentId, trackNetworkActionChannelCreate.parentId) && m.areEqual(this.guildId, trackNetworkActionChannelCreate.guildId);
+        return Intrinsics3.areEqual(this.isPrivate, trackNetworkActionChannelCreate.isPrivate) && Intrinsics3.areEqual(this.channelType, trackNetworkActionChannelCreate.channelType) && Intrinsics3.areEqual(this.channelId, trackNetworkActionChannelCreate.channelId) && Intrinsics3.areEqual(this.parentId, trackNetworkActionChannelCreate.parentId) && Intrinsics3.areEqual(this.guildId, trackNetworkActionChannelCreate.guildId);
     }
 
     public int hashCode() {
@@ -68,16 +69,16 @@ public final /* data */ class TrackNetworkActionChannelCreate implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackNetworkActionChannelCreate(isPrivate=");
-        sbU.append(this.isPrivate);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", parentId=");
-        sbU.append(this.parentId);
-        sbU.append(", guildId=");
-        return a.G(sbU, this.guildId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackNetworkActionChannelCreate(isPrivate=");
+        sbM833U.append(this.isPrivate);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", parentId=");
+        sbM833U.append(this.parentId);
+        sbM833U.append(", guildId=");
+        return outline.m819G(sbM833U, this.guildId, ")");
     }
 
     public TrackNetworkActionChannelCreate() {

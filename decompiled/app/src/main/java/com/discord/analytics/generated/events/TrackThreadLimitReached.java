@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackThreadLimitReached.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackThreadLimitReached implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackThreadLimitReached implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long parentChannelId = null;
     private final Long parentChannelType = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackThreadLimitReached implements AnalyticsSchema
             return false;
         }
         TrackThreadLimitReached trackThreadLimitReached = (TrackThreadLimitReached) other;
-        return m.areEqual(this.parentChannelId, trackThreadLimitReached.parentChannelId) && m.areEqual(this.parentChannelType, trackThreadLimitReached.parentChannelType) && m.areEqual(this.guildId, trackThreadLimitReached.guildId);
+        return Intrinsics3.areEqual(this.parentChannelId, trackThreadLimitReached.parentChannelId) && Intrinsics3.areEqual(this.parentChannelType, trackThreadLimitReached.parentChannelType) && Intrinsics3.areEqual(this.guildId, trackThreadLimitReached.guildId);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackThreadLimitReached implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackThreadLimitReached(parentChannelId=");
-        sbU.append(this.parentChannelId);
-        sbU.append(", parentChannelType=");
-        sbU.append(this.parentChannelType);
-        sbU.append(", guildId=");
-        return a.G(sbU, this.guildId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackThreadLimitReached(parentChannelId=");
+        sbM833U.append(this.parentChannelId);
+        sbM833U.append(", parentChannelType=");
+        sbM833U.append(this.parentChannelType);
+        sbM833U.append(", guildId=");
+        return outline.m819G(sbM833U, this.guildId, ")");
     }
 }

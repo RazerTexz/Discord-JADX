@@ -10,12 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentKt;
+import androidx.fragment.app.Fragment2;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetGuildSelectorBinding;
 import com.discord.databinding.WidgetGuildSelectorItemBinding;
@@ -23,20 +21,15 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.guild.Guild;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.extensions.SimpleDraweeViewExtensionsKt;
+import com.discord.utilities.extensions.SimpleDraweeViewExtensions;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.g;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -51,8 +44,18 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
-import rx.subscriptions.CompositeSubscription;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
+import p658rx.subscriptions.CompositeSubscription;
 
 /* compiled from: WidgetGuildSelector.kt */
 /* loaded from: classes2.dex */
@@ -71,7 +74,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
 
     /* renamed from: requestKey$delegate, reason: from kotlin metadata */
     private final Lazy requestKey;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildSelector.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildSelectorBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildSelector.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildSelectorBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -89,23 +92,23 @@ public final class WidgetGuildSelector extends AppBottomSheet {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public ItemGuild(@LayoutRes int i, Adapter adapter, int i2) {
                 super(i, adapter);
-                m.checkNotNullParameter(adapter, "adapter");
+                Intrinsics3.checkNotNullParameter(adapter, "adapter");
                 this.noGuildStringId = i2;
                 View view = this.itemView;
-                int i3 = R.id.item_avatar_wrap;
-                FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.item_avatar_wrap);
+                int i3 = C5419R.id.item_avatar_wrap;
+                FrameLayout frameLayout = (FrameLayout) view.findViewById(C5419R.id.item_avatar_wrap);
                 if (frameLayout != null) {
-                    i3 = R.id.item_icon;
-                    SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.item_icon);
+                    i3 = C5419R.id.item_icon;
+                    SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.item_icon);
                     if (simpleDraweeView != null) {
-                        i3 = R.id.item_name;
-                        TextView textView = (TextView) view.findViewById(R.id.item_name);
+                        i3 = C5419R.id.item_name;
+                        TextView textView = (TextView) view.findViewById(C5419R.id.item_name);
                         if (textView != null) {
-                            i3 = R.id.item_text;
-                            TextView textView2 = (TextView) view.findViewById(R.id.item_text);
+                            i3 = C5419R.id.item_text;
+                            TextView textView2 = (TextView) view.findViewById(C5419R.id.item_text);
                             if (textView2 != null) {
                                 WidgetGuildSelectorItemBinding widgetGuildSelectorItemBinding = new WidgetGuildSelectorItemBinding((LinearLayout) view, frameLayout, simpleDraweeView, textView, textView2);
-                                m.checkNotNullExpressionValue(widgetGuildSelectorItemBinding, "WidgetGuildSelectorItemBinding.bind(itemView)");
+                                Intrinsics3.checkNotNullExpressionValue(widgetGuildSelectorItemBinding, "WidgetGuildSelectorItemBinding.bind(itemView)");
                                 this.binding = widgetGuildSelectorItemBinding;
                                 return;
                             }
@@ -130,42 +133,42 @@ public final class WidgetGuildSelector extends AppBottomSheet {
 
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Item data) {
-                CharSequence charSequenceJ;
+                CharSequence charSequenceM218j;
                 Guild guild;
                 String icon;
-                m.checkNotNullParameter(data, "data");
+                Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
-                this.binding.a.setOnClickListener(new WidgetGuildSelector$Adapter$ItemGuild$onConfigure$1(this, data));
-                TextView textView = this.binding.d;
-                m.checkNotNullExpressionValue(textView, "binding.itemName");
+                this.binding.f17052a.setOnClickListener(new WidgetGuildSelector2(this, data));
+                TextView textView = this.binding.f17055d;
+                Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemName");
                 Guild guild2 = data.getGuild();
                 boolean z2 = false;
                 String shortName = null;
-                if (guild2 == null || (charSequenceJ = guild2.getName()) == null) {
-                    TextView textView2 = this.binding.d;
-                    m.checkNotNullExpressionValue(textView2, "binding.itemName");
-                    charSequenceJ = b.j(textView2, this.noGuildStringId, new Object[0], null, 4);
+                if (guild2 == null || (charSequenceM218j = guild2.getName()) == null) {
+                    TextView textView2 = this.binding.f17055d;
+                    Intrinsics3.checkNotNullExpressionValue(textView2, "binding.itemName");
+                    charSequenceM218j = FormatUtils.m218j(textView2, this.noGuildStringId, new Object[0], null, 4);
                 }
-                textView.setText(charSequenceJ);
+                textView.setText(charSequenceM218j);
                 Guild guild3 = data.getGuild();
                 if (guild3 != null && (icon = guild3.getIcon()) != null) {
                     if (icon.length() > 0) {
                         z2 = true;
                     }
                 }
-                SimpleDraweeView simpleDraweeView = this.binding.c;
-                m.checkNotNullExpressionValue(simpleDraweeView, "binding.itemIcon");
+                SimpleDraweeView simpleDraweeView = this.binding.f17054c;
+                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.itemIcon");
                 Guild guild4 = data.getGuild();
                 View view = this.itemView;
-                m.checkNotNullExpressionValue(view, "itemView");
-                Integer numValueOf = Integer.valueOf(ColorCompat.getThemedColor(view, R.attr.colorBackgroundPrimary));
-                m.checkNotNullExpressionValue(this.binding.c, "binding.itemIcon");
-                SimpleDraweeViewExtensionsKt.setGuildIcon$default(simpleDraweeView, false, guild4, r4.getResources().getDimensionPixelSize(R.dimen.guild_icon_radius), null, numValueOf, null, null, true, null, 360, null);
-                FrameLayout frameLayout = this.binding.f2452b;
-                m.checkNotNullExpressionValue(frameLayout, "binding.itemAvatarWrap");
+                Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+                Integer numValueOf = Integer.valueOf(ColorCompat.getThemedColor(view, C5419R.attr.colorBackgroundPrimary));
+                Intrinsics3.checkNotNullExpressionValue(this.binding.f17054c, "binding.itemIcon");
+                SimpleDraweeViewExtensions.setGuildIcon$default(simpleDraweeView, false, guild4, r4.getResources().getDimensionPixelSize(C5419R.dimen.guild_icon_radius), null, numValueOf, null, null, true, null, 360, null);
+                FrameLayout frameLayout = this.binding.f17053b;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.itemAvatarWrap");
                 frameLayout.setClipToOutline(true);
-                TextView textView3 = this.binding.e;
-                m.checkNotNullExpressionValue(textView3, "binding.itemText");
+                TextView textView3 = this.binding.f17056e;
+                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.itemText");
                 if (!z2 && (guild = data.getGuild()) != null) {
                     shortName = guild.getShortName();
                 }
@@ -176,8 +179,8 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Adapter(RecyclerView recyclerView, WidgetGuildSelector widgetGuildSelector, int i) {
             super(recyclerView, false, 2, null);
-            m.checkNotNullParameter(recyclerView, "recycler");
-            m.checkNotNullParameter(widgetGuildSelector, "dialog");
+            Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+            Intrinsics3.checkNotNullParameter(widgetGuildSelector, "dialog");
             this.dialog = widgetGuildSelector;
             this.noGuildStringId = i;
         }
@@ -193,8 +196,8 @@ public final class WidgetGuildSelector extends AppBottomSheet {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public ItemGuild onCreateViewHolder(ViewGroup parent, int viewType) {
-            m.checkNotNullParameter(parent, "parent");
-            return new ItemGuild(R.layout.widget_guild_selector_item, this, this.noGuildStringId);
+            Intrinsics3.checkNotNullParameter(parent, "parent");
+            return new ItemGuild(C5419R.layout.widget_guild_selector_item, this, this.noGuildStringId);
         }
     }
 
@@ -202,7 +205,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
     public static final class BaseFilterFunction implements FilterFunction {
         @Override // com.discord.widgets.guilds.WidgetGuildSelector.FilterFunction
         public boolean includeGuild(Guild guild) {
-            m.checkNotNullParameter(guild, "guild");
+            Intrinsics3.checkNotNullParameter(guild, "guild");
             return FilterFunction.DefaultImpls.includeGuild(this, guild);
         }
     }
@@ -218,7 +221,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
             }
             String str2 = str;
             boolean z3 = (i2 & 4) != 0 ? false : z2;
-            int i3 = (i2 & 8) != 0 ? R.string.none : i;
+            int i3 = (i2 & 8) != 0 ? C5419R.string.none : i;
             if ((i2 & 16) != 0) {
                 filterFunction = null;
             }
@@ -236,8 +239,8 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         }
 
         public final void launch(Fragment fragment, String requestKey, boolean includeNoGuild, int noGuildStringId, FilterFunction filterFunction) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
             WidgetGuildSelector widgetGuildSelector = new WidgetGuildSelector();
             Bundle bundle = new Bundle();
             bundle.putString(WidgetGuildSelector.ARG_REQUEST_KEY, requestKey);
@@ -246,15 +249,15 @@ public final class WidgetGuildSelector extends AppBottomSheet {
             bundle.putSerializable(WidgetGuildSelector.ARG_FILTER_FUNCTION, filterFunction);
             widgetGuildSelector.setArguments(bundle);
             FragmentManager parentFragmentManager = fragment.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
             widgetGuildSelector.show(parentFragmentManager, WidgetGuildSelector.class.getName());
         }
 
         public final void registerForResult(Fragment fragment, String requestKey, boolean allowNullGuild, Function2<? super Long, ? super String, Unit> onGuildSelected) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(requestKey, "requestKey");
-            m.checkNotNullParameter(onGuildSelected, "onGuildSelected");
-            FragmentKt.setFragmentResultListener(fragment, requestKey, new WidgetGuildSelector$Companion$registerForResult$1(requestKey, allowNullGuild, onGuildSelected));
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(onGuildSelected, "onGuildSelected");
+            Fragment2.setFragmentResultListener(fragment, requestKey, new WidgetGuildSelector3(requestKey, allowNullGuild, onGuildSelected));
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -268,7 +271,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         /* compiled from: WidgetGuildSelector.kt */
         public static final class DefaultImpls {
             public static boolean includeGuild(FilterFunction filterFunction, Guild guild) {
-                m.checkNotNullParameter(guild, "guild");
+                Intrinsics3.checkNotNullParameter(guild, "guild");
                 return true;
             }
         }
@@ -281,7 +284,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         private final Set<Long> guildIds;
 
         public GuildFilterFunction(Set<Long> set) {
-            m.checkNotNullParameter(set, "guildIds");
+            Intrinsics3.checkNotNullParameter(set, "guildIds");
             this.guildIds = set;
         }
 
@@ -298,13 +301,13 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         }
 
         public final GuildFilterFunction copy(Set<Long> guildIds) {
-            m.checkNotNullParameter(guildIds, "guildIds");
+            Intrinsics3.checkNotNullParameter(guildIds, "guildIds");
             return new GuildFilterFunction(guildIds);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof GuildFilterFunction) && m.areEqual(this.guildIds, ((GuildFilterFunction) other).guildIds);
+                return (other instanceof GuildFilterFunction) && Intrinsics3.areEqual(this.guildIds, ((GuildFilterFunction) other).guildIds);
             }
             return true;
         }
@@ -319,12 +322,12 @@ public final class WidgetGuildSelector extends AppBottomSheet {
 
         @Override // com.discord.widgets.guilds.WidgetGuildSelector.FilterFunction
         public boolean includeGuild(Guild guild) {
-            m.checkNotNullParameter(guild, "guild");
+            Intrinsics3.checkNotNullParameter(guild, "guild");
             return this.guildIds.contains(Long.valueOf(guild.getId()));
         }
 
         public String toString() {
-            return a.N(a.U("GuildFilterFunction(guildIds="), this.guildIds, ")");
+            return outline.m826N(outline.m833U("GuildFilterFunction(guildIds="), this.guildIds, ")");
         }
     }
 
@@ -358,7 +361,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Item) && m.areEqual(this.guild, ((Item) other).guild);
+                return (other instanceof Item) && Intrinsics3.areEqual(this.guild, ((Item) other).guild);
             }
             return true;
         }
@@ -386,45 +389,45 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Item(guild=");
-            sbU.append(this.guild);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Item(guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     /* compiled from: WidgetGuildSelector.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildSelector$bindSubscriptions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<List<? extends Item>, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.WidgetGuildSelector$bindSubscriptions$1 */
+    public static final class C85811 extends Lambda implements Function1<List<? extends Item>, Unit> {
+        public C85811() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends Item> list) {
             invoke2((List<Item>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<Item> list) {
-            m.checkNotNullParameter(list, "it");
+            Intrinsics3.checkNotNullParameter(list, "it");
             WidgetGuildSelector.access$getAdapter$p(WidgetGuildSelector.this).setData(list);
         }
     }
 
     /* compiled from: WidgetGuildSelector.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildSelector$get$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements j0.k.b<LinkedHashMap<Long, Guild>, List<? extends Item>> {
+    /* renamed from: com.discord.widgets.guilds.WidgetGuildSelector$get$1 */
+    public static final class C85821<T, R> implements Func1<LinkedHashMap<Long, Guild>, List<? extends Item>> {
         public final /* synthetic */ FilterFunction $filterFunction;
         public final /* synthetic */ boolean $includeNoGuild;
 
-        public AnonymousClass1(FilterFunction filterFunction, boolean z2) {
+        public C85821(FilterFunction filterFunction, boolean z2) {
             this.$filterFunction = filterFunction;
             this.$includeNoGuild = z2;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ List<? extends Item> call(LinkedHashMap<Long, Guild> linkedHashMap) {
             return call2(linkedHashMap);
         }
@@ -432,7 +435,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Item> call2(LinkedHashMap<Long, Guild> linkedHashMap) {
             Collection<Guild> collectionValues = linkedHashMap.values();
-            m.checkNotNullExpressionValue(collectionValues, "guilds.values");
+            Intrinsics3.checkNotNullExpressionValue(collectionValues, "guilds.values");
             FilterFunction filterFunction = this.$filterFunction;
             ArrayList arrayList = new ArrayList();
             for (T t : collectionValues) {
@@ -440,26 +443,26 @@ public final class WidgetGuildSelector extends AppBottomSheet {
                     arrayList.add(t);
                 }
             }
-            List listListOf = this.$includeNoGuild ? d0.t.m.listOf(new Item(null)) : n.emptyList();
-            ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
+            List listListOf = this.$includeNoGuild ? CollectionsJVM.listOf(new Item(null)) : Collections2.emptyList();
+            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
             Iterator<T> it = arrayList.iterator();
             while (it.hasNext()) {
                 arrayList2.add(new Item((Guild) it.next()));
             }
-            return u.plus((Collection) listListOf, (Iterable) arrayList2);
+            return _Collections.plus((Collection) listListOf, (Iterable) arrayList2);
         }
     }
 
     public WidgetGuildSelector() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildSelector$binding$2.INSTANCE, null, 2, null);
-        this.requestKey = g.lazy(new WidgetGuildSelector$requestKey$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildSelector4.INSTANCE, null, 2, null);
+        this.requestKey = LazyJVM.lazy(new WidgetGuildSelector5(this));
     }
 
     public static final /* synthetic */ Adapter access$getAdapter$p(WidgetGuildSelector widgetGuildSelector) {
         Adapter adapter = widgetGuildSelector.adapter;
         if (adapter == null) {
-            m.throwUninitializedPropertyAccessException("adapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
         }
         return adapter;
     }
@@ -477,11 +480,11 @@ public final class WidgetGuildSelector extends AppBottomSheet {
     }
 
     private final Observable<List<Item>> get(boolean includeNoGuild, FilterFunction filterFunction) {
-        Observable<R> observableG = StoreStream.INSTANCE.getGuildsSorted().observeOrderedGuilds().G(new AnonymousClass1(filterFunction, includeNoGuild));
-        m.checkNotNullExpressionValue(observableG, "StoreStream.getGuildsSor….map { Item(it) }\n      }");
-        Observable<List<Item>> observableR = ObservableExtensionsKt.computationLatest(observableG).r();
-        m.checkNotNullExpressionValue(observableR, "StoreStream.getGuildsSor…  .distinctUntilChanged()");
-        return observableR;
+        Observable<R> observableM11083G = StoreStream.INSTANCE.getGuildsSorted().observeOrderedGuilds().m11083G(new C85821(filterFunction, includeNoGuild));
+        Intrinsics3.checkNotNullExpressionValue(observableM11083G, "StoreStream.getGuildsSor….map { Item(it) }\n      }");
+        Observable<List<Item>> observableM11112r = ObservableExtensionsKt.computationLatest(observableM11083G).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "StoreStream.getGuildsSor…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     private final WidgetGuildSelectorBinding getBinding() {
@@ -494,17 +497,17 @@ public final class WidgetGuildSelector extends AppBottomSheet {
 
     private final void onGuildSelected(Guild guild) {
         String requestKey = getRequestKey();
-        m.checkNotNullExpressionValue(requestKey, "requestKey");
+        Intrinsics3.checkNotNullExpressionValue(requestKey, "requestKey");
         Bundle bundle = new Bundle();
         bundle.putLong("INTENT_EXTRA_GUILD_ID", guild != null ? guild.getId() : -1L);
         bundle.putString(RESULT_EXTRA_GUILD_NAME, guild != null ? guild.getName() : null);
-        FragmentKt.setFragmentResult(this, requestKey, bundle);
+        Fragment2.setFragmentResult(this, requestKey, bundle);
         dismiss();
     }
 
     @Override // com.discord.app.AppBottomSheet
     public void bindSubscriptions(CompositeSubscription compositeSubscription) {
-        m.checkNotNullParameter(compositeSubscription, "compositeSubscription");
+        Intrinsics3.checkNotNullParameter(compositeSubscription, "compositeSubscription");
         super.bindSubscriptions(compositeSubscription);
         boolean z2 = getArgumentsOrDefault().getBoolean(ARG_INCLUDE_NO_GUILD, false);
         Serializable serializable = getArgumentsOrDefault().getSerializable(ARG_FILTER_FUNCTION);
@@ -518,23 +521,23 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         Observable<List<Item>> observable = get(z2, baseFilterFunction);
         Adapter adapter = this.adapter;
         if (adapter == null) {
-            m.throwUninitializedPropertyAccessException("adapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(observable, this, adapter), WidgetGuildSelector.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.m8519ui(observable, this, adapter), WidgetGuildSelector.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85811(), 62, (Object) null);
     }
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_guild_selector;
+        return C5419R.layout.widget_guild_selector;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        RecyclerView recyclerView = getBinding().f2451b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.guildSelectorList");
+        RecyclerView recyclerView = getBinding().f17051b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.guildSelectorList");
         this.adapter = (Adapter) companion.configure(new Adapter(recyclerView, this, getArgumentsOrDefault().getInt(ARG_NO_GUILD_STRING_ID)));
     }
 }

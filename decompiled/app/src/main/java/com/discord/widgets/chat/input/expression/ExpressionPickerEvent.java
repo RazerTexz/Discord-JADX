@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.input.expression;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ExpressionPickerEvent.kt */
 /* loaded from: classes2.dex */
@@ -71,7 +71,7 @@ public abstract class ExpressionPickerEvent {
                 return false;
             }
             OpenStickerPicker openStickerPicker = (OpenStickerPicker) other;
-            return m.areEqual(this.stickerPackId, openStickerPicker.stickerPackId) && m.areEqual(this.searchText, openStickerPicker.searchText) && this.inline == openStickerPicker.inline;
+            return Intrinsics3.areEqual(this.stickerPackId, openStickerPicker.stickerPackId) && Intrinsics3.areEqual(this.searchText, openStickerPicker.searchText) && this.inline == openStickerPicker.inline;
         }
 
         public final boolean getInline() {
@@ -101,12 +101,12 @@ public abstract class ExpressionPickerEvent {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("OpenStickerPicker(stickerPackId=");
-            sbU.append(this.stickerPackId);
-            sbU.append(", searchText=");
-            sbU.append(this.searchText);
-            sbU.append(", inline=");
-            return a.O(sbU, this.inline, ")");
+            StringBuilder sbM833U = outline.m833U("OpenStickerPicker(stickerPackId=");
+            sbM833U.append(this.stickerPackId);
+            sbM833U.append(", searchText=");
+            sbM833U.append(this.searchText);
+            sbM833U.append(", inline=");
+            return outline.m827O(sbM833U, this.inline, ")");
         }
 
         public OpenStickerPicker(Long l, String str, boolean z2) {

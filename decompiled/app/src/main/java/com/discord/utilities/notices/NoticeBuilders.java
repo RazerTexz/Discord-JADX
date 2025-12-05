@@ -4,9 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.View;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppLog;
 import com.discord.i18n.RenderContext;
 import com.discord.stores.StoreNotices;
@@ -15,15 +13,18 @@ import com.discord.utilities.logging.Logger;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.discord.widgets.settings.connections.WidgetSettingsUserConnections;
-import d0.t.g0;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: NoticeBuilders.kt */
 /* loaded from: classes2.dex */
@@ -42,8 +43,8 @@ public final class NoticeBuilders {
 
         /* JADX WARN: Multi-variable type inference failed */
         public DialogData(CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, Map<Integer, ? extends Function1<? super View, Unit>> map, Integer num) {
-            m.checkNotNullParameter(charSequence, "headerText");
-            m.checkNotNullParameter(charSequence2, "bodyText");
+            Intrinsics3.checkNotNullParameter(charSequence, "headerText");
+            Intrinsics3.checkNotNullParameter(charSequence2, "bodyText");
             this.headerText = charSequence;
             this.bodyText = charSequence2;
             this.okText = charSequence3;
@@ -108,8 +109,8 @@ public final class NoticeBuilders {
         }
 
         public final DialogData copy(CharSequence headerText, CharSequence bodyText, CharSequence okText, CharSequence cancelText, Map<Integer, ? extends Function1<? super View, Unit>> listenerMap, Integer extraLayoutId) {
-            m.checkNotNullParameter(headerText, "headerText");
-            m.checkNotNullParameter(bodyText, "bodyText");
+            Intrinsics3.checkNotNullParameter(headerText, "headerText");
+            Intrinsics3.checkNotNullParameter(bodyText, "bodyText");
             return new DialogData(headerText, bodyText, okText, cancelText, listenerMap, extraLayoutId);
         }
 
@@ -121,7 +122,7 @@ public final class NoticeBuilders {
                 return false;
             }
             DialogData dialogData = (DialogData) other;
-            return m.areEqual(this.headerText, dialogData.headerText) && m.areEqual(this.bodyText, dialogData.bodyText) && m.areEqual(this.okText, dialogData.okText) && m.areEqual(this.cancelText, dialogData.cancelText) && m.areEqual(this.listenerMap, dialogData.listenerMap) && m.areEqual(this.extraLayoutId, dialogData.extraLayoutId);
+            return Intrinsics3.areEqual(this.headerText, dialogData.headerText) && Intrinsics3.areEqual(this.bodyText, dialogData.bodyText) && Intrinsics3.areEqual(this.okText, dialogData.okText) && Intrinsics3.areEqual(this.cancelText, dialogData.cancelText) && Intrinsics3.areEqual(this.listenerMap, dialogData.listenerMap) && Intrinsics3.areEqual(this.extraLayoutId, dialogData.extraLayoutId);
         }
 
         public final CharSequence getBodyText() {
@@ -164,18 +165,18 @@ public final class NoticeBuilders {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("DialogData(headerText=");
-            sbU.append(this.headerText);
-            sbU.append(", bodyText=");
-            sbU.append(this.bodyText);
-            sbU.append(", okText=");
-            sbU.append(this.okText);
-            sbU.append(", cancelText=");
-            sbU.append(this.cancelText);
-            sbU.append(", listenerMap=");
-            sbU.append(this.listenerMap);
-            sbU.append(", extraLayoutId=");
-            return a.F(sbU, this.extraLayoutId, ")");
+            StringBuilder sbM833U = outline.m833U("DialogData(headerText=");
+            sbM833U.append(this.headerText);
+            sbM833U.append(", bodyText=");
+            sbM833U.append(this.bodyText);
+            sbM833U.append(", okText=");
+            sbM833U.append(this.okText);
+            sbM833U.append(", cancelText=");
+            sbM833U.append(this.cancelText);
+            sbM833U.append(", listenerMap=");
+            sbM833U.append(this.listenerMap);
+            sbM833U.append(", extraLayoutId=");
+            return outline.m818F(sbM833U, this.extraLayoutId, ")");
         }
 
         public /* synthetic */ DialogData(CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, Map map, Integer num, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -184,34 +185,34 @@ public final class NoticeBuilders {
     }
 
     /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$deleteConnectionModalBuilder$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.notices.NoticeBuilders$deleteConnectionModalBuilder$1 */
+    public static final class C68251 extends Lambda implements Function1<RenderContext, Unit> {
+        public static final C68251 INSTANCE = new C68251();
 
-        public AnonymousClass1() {
+        public C68251() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(RenderContext renderContext) {
             invoke2(renderContext);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            m.checkNotNullParameter(renderContext, "$receiver");
+            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.uppercase = true;
         }
     }
 
     /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$deleteConnectionModalBuilder$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.utilities.notices.NoticeBuilders$deleteConnectionModalBuilder$2 */
+    public static final class C68262 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ StoreNotices.Dialog $notice;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(StoreNotices.Dialog dialog) {
+        public C68262(StoreNotices.Dialog dialog) {
             super(1);
             this.$notice = dialog;
         }
@@ -219,12 +220,12 @@ public final class NoticeBuilders {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             if (this.$notice.getMetadata() != null) {
                 Object obj = this.$notice.getMetadata().get(WidgetSettingsUserConnections.PLATFORM_NAME);
                 if (!(obj instanceof String)) {
@@ -234,7 +235,7 @@ public final class NoticeBuilders {
                 Object obj2 = this.$notice.getMetadata().get(WidgetSettingsUserConnections.CONNECTION_ID);
                 String str2 = (String) (obj2 instanceof String ? obj2 : null);
                 if (str == null || str2 == null) {
-                    Logger.e$default(AppLog.g, "Delete Connections", new Exception(a.y(str, ", ", str2)), null, 4, null);
+                    Logger.e$default(AppLog.f14950g, "Delete Connections", new Exception(outline.m886y(str, ", ", str2)), null, 4, null);
                 } else {
                     StoreStream.INSTANCE.getUserConnections().deleteUserConnection(str, str2);
                 }
@@ -243,70 +244,70 @@ public final class NoticeBuilders {
     }
 
     /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$1 */
+    public static final class C68271 extends Lambda implements Function1<View, Unit> {
+        public static final C68271 INSTANCE = new C68271();
 
-        public AnonymousClass1() {
+        public C68271() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "<anonymous parameter 0>");
+            Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
             StoreStream.INSTANCE.getReviewRequest().onReviewRequestShown();
         }
     }
 
     /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<View, Unit> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$2 */
+    public static final class C68282 extends Lambda implements Function1<View, Unit> {
+        public static final C68282 INSTANCE = new C68282();
 
-        public AnonymousClass2() {
+        public C68282() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(view, "view");
             StoreStream.INSTANCE.getReviewRequest().onUserAcceptedRequest();
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "view.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "view.context");
             UriHandler.directToPlayStore$default(context, null, null, 6, null);
         }
     }
 
     /* compiled from: NoticeBuilders.kt */
-    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<View, Unit> {
-        public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
+    /* renamed from: com.discord.utilities.notices.NoticeBuilders$requestRatingModalBuilder$3 */
+    public static final class C68293 extends Lambda implements Function1<View, Unit> {
+        public static final C68293 INSTANCE = new C68293();
 
-        public AnonymousClass3() {
+        public C68293() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "<anonymous parameter 0>");
+            Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
             StoreStream.INSTANCE.getReviewRequest().onUserDismissedRequest();
         }
     }
@@ -314,7 +315,7 @@ public final class NoticeBuilders {
     static {
         NoticeBuilders noticeBuilders = new NoticeBuilders();
         INSTANCE = noticeBuilders;
-        noticeDataBuilders = h0.mapOf(d0.o.to(StoreNotices.Dialog.Type.REQUEST_RATING_MODAL, new NoticeBuilders$noticeDataBuilders$1(noticeBuilders)), d0.o.to(StoreNotices.Dialog.Type.DELETE_CONNECTION_MODAL, new NoticeBuilders$noticeDataBuilders$2(noticeBuilders)));
+        noticeDataBuilders = Maps6.mapOf(Tuples.m10073to(StoreNotices.Dialog.Type.REQUEST_RATING_MODAL, new NoticeBuilders2(noticeBuilders)), Tuples.m10073to(StoreNotices.Dialog.Type.DELETE_CONNECTION_MODAL, new NoticeBuilders3(noticeBuilders)));
     }
 
     private NoticeBuilders() {
@@ -333,17 +334,17 @@ public final class NoticeBuilders {
         Object[] objArr = new Object[1];
         Map<String, Object> metadata = notice.getMetadata();
         objArr[0] = metadata != null ? metadata.get(WidgetSettingsUserConnections.PLATFORM_TITLE) : null;
-        return new DialogData(b.b(context, R.string.disconnect_account_title, objArr, AnonymousClass1.INSTANCE), b.h(context, R.string.disconnect_account_body, new Object[0], null, 4), b.h(context, R.string.service_connections_disconnect, new Object[0], null, 4), b.h(context, R.string.cancel, new Object[0], null, 4), g0.mapOf(d0.o.to(Integer.valueOf(R.id.notice_ok), new AnonymousClass2(notice))), null, 32, null);
+        return new DialogData(FormatUtils.m210b(context, C5419R.string.disconnect_account_title, objArr, C68251.INSTANCE), FormatUtils.m216h(context, C5419R.string.disconnect_account_body, new Object[0], null, 4), FormatUtils.m216h(context, C5419R.string.service_connections_disconnect, new Object[0], null, 4), FormatUtils.m216h(context, C5419R.string.cancel, new Object[0], null, 4), MapsJVM.mapOf(Tuples.m10073to(Integer.valueOf(C5419R.id.notice_ok), new C68262(notice))), null, 32, null);
     }
 
     private final DialogData requestRatingModalBuilder(Context context, StoreNotices.Dialog notice) {
-        return new DialogData(b.h(context, R.string.rating_request_title, new Object[0], null, 4), b.h(context, R.string.rating_request_body_android, new Object[0], null, 4), b.h(context, R.string.okay, new Object[0], null, 4), b.h(context, R.string.no_thanks, new Object[0], null, 4), h0.mapOf(d0.o.to(0, AnonymousClass1.INSTANCE), d0.o.to(Integer.valueOf(R.id.notice_ok), AnonymousClass2.INSTANCE), d0.o.to(Integer.valueOf(R.id.notice_cancel), AnonymousClass3.INSTANCE)), Integer.valueOf(R.layout.view_review_request_modal_image));
+        return new DialogData(FormatUtils.m216h(context, C5419R.string.rating_request_title, new Object[0], null, 4), FormatUtils.m216h(context, C5419R.string.rating_request_body_android, new Object[0], null, 4), FormatUtils.m216h(context, C5419R.string.okay, new Object[0], null, 4), FormatUtils.m216h(context, C5419R.string.no_thanks, new Object[0], null, 4), Maps6.mapOf(Tuples.m10073to(0, C68271.INSTANCE), Tuples.m10073to(Integer.valueOf(C5419R.id.notice_ok), C68282.INSTANCE), Tuples.m10073to(Integer.valueOf(C5419R.id.notice_cancel), C68293.INSTANCE)), Integer.valueOf(C5419R.layout.view_review_request_modal_image));
     }
 
     public final void showNotice(Context context, FragmentManager fragmentManager, StoreNotices.Dialog notice) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(fragmentManager, "fragmentManager");
-        m.checkNotNullParameter(notice, "notice");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        Intrinsics3.checkNotNullParameter(notice, "notice");
         Function2<Context, StoreNotices.Dialog, DialogData> function2 = noticeDataBuilders.get(notice.getType());
         DialogData dialogDataInvoke = function2 != null ? function2.invoke(context, notice) : null;
         if (dialogDataInvoke != null) {

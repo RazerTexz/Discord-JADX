@@ -28,9 +28,9 @@ public class SeekBarPreference extends Preference {
     public boolean mTrackingTouch;
     public boolean mUpdatesContinuously;
 
-    /* renamed from: androidx.preference.SeekBarPreference$1, reason: invalid class name */
-    public class AnonymousClass1 implements SeekBar.OnSeekBarChangeListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.preference.SeekBarPreference$1 */
+    public class C05261 implements SeekBar.OnSeekBarChangeListener {
+        public C05261() {
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
@@ -62,9 +62,9 @@ public class SeekBarPreference extends Preference {
         }
     }
 
-    /* renamed from: androidx.preference.SeekBarPreference$2, reason: invalid class name */
-    public class AnonymousClass2 implements View.OnKeyListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.preference.SeekBarPreference$2 */
+    public class ViewOnKeyListenerC05272 implements View.OnKeyListener {
+        public ViewOnKeyListenerC05272() {
         }
 
         @Override // android.view.View.OnKeyListener
@@ -87,15 +87,15 @@ public class SeekBarPreference extends Preference {
 
     public SeekBarPreference(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        this.mSeekBarChangeListener = new AnonymousClass1();
-        this.mSeekBarKeyListener = new AnonymousClass2();
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.SeekBarPreference, i, i2);
-        this.mMin = typedArrayObtainStyledAttributes.getInt(R.styleable.SeekBarPreference_min, 0);
-        setMax(typedArrayObtainStyledAttributes.getInt(R.styleable.SeekBarPreference_android_max, 100));
-        setSeekBarIncrement(typedArrayObtainStyledAttributes.getInt(R.styleable.SeekBarPreference_seekBarIncrement, 0));
-        this.mAdjustable = typedArrayObtainStyledAttributes.getBoolean(R.styleable.SeekBarPreference_adjustable, true);
-        this.mShowSeekBarValue = typedArrayObtainStyledAttributes.getBoolean(R.styleable.SeekBarPreference_showSeekBarValue, false);
-        this.mUpdatesContinuously = typedArrayObtainStyledAttributes.getBoolean(R.styleable.SeekBarPreference_updatesContinuously, false);
+        this.mSeekBarChangeListener = new C05261();
+        this.mSeekBarKeyListener = new ViewOnKeyListenerC05272();
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0525R.styleable.SeekBarPreference, i, i2);
+        this.mMin = typedArrayObtainStyledAttributes.getInt(C0525R.styleable.SeekBarPreference_min, 0);
+        setMax(typedArrayObtainStyledAttributes.getInt(C0525R.styleable.SeekBarPreference_android_max, 100));
+        setSeekBarIncrement(typedArrayObtainStyledAttributes.getInt(C0525R.styleable.SeekBarPreference_seekBarIncrement, 0));
+        this.mAdjustable = typedArrayObtainStyledAttributes.getBoolean(C0525R.styleable.SeekBarPreference_adjustable, true);
+        this.mShowSeekBarValue = typedArrayObtainStyledAttributes.getBoolean(C0525R.styleable.SeekBarPreference_showSeekBarValue, false);
+        this.mUpdatesContinuously = typedArrayObtainStyledAttributes.getBoolean(C0525R.styleable.SeekBarPreference_updatesContinuously, false);
         typedArrayObtainStyledAttributes.recycle();
     }
 
@@ -150,8 +150,8 @@ public class SeekBarPreference extends Preference {
     public void onBindViewHolder(PreferenceViewHolder preferenceViewHolder) {
         super.onBindViewHolder(preferenceViewHolder);
         preferenceViewHolder.itemView.setOnKeyListener(this.mSeekBarKeyListener);
-        this.mSeekBar = (SeekBar) preferenceViewHolder.findViewById(R.id.seekbar);
-        TextView textView = (TextView) preferenceViewHolder.findViewById(R.id.seekbar_value);
+        this.mSeekBar = (SeekBar) preferenceViewHolder.findViewById(C0525R.id.seekbar);
+        TextView textView = (TextView) preferenceViewHolder.findViewById(C0525R.id.seekbar_value);
         this.mSeekBarValueTextView = textView;
         if (this.mShowSeekBarValue) {
             textView.setVisibility(0);
@@ -283,13 +283,13 @@ public class SeekBarPreference extends Preference {
     }
 
     public static class SavedState extends Preference.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C05281();
         public int mMax;
         public int mMin;
         public int mSeekBarValue;
 
-        /* renamed from: androidx.preference.SeekBarPreference$SavedState$1, reason: invalid class name */
-        public static class AnonymousClass1 implements Parcelable.Creator<SavedState> {
+        /* renamed from: androidx.preference.SeekBarPreference$SavedState$1 */
+        public static class C05281 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -338,7 +338,7 @@ public class SeekBarPreference extends Preference {
     }
 
     public SeekBarPreference(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, R.attr.seekBarPreferenceStyle);
+        this(context, attributeSet, C0525R.attr.seekBarPreferenceStyle);
     }
 
     public SeekBarPreference(Context context) {

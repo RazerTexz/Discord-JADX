@@ -8,11 +8,11 @@ import com.discord.models.member.GuildMember;
 import com.discord.models.user.User;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
 import com.discord.widgets.channels.list.items.ChannelListItemVoiceUser;
-import d0.z.d.m;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import rx.functions.Func6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.functions.Func6;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
@@ -23,7 +23,7 @@ public final class WidgetChannelListModel$VoiceStates$get$1<T1, T2, T3, T4, T5, 
         this.$voiceUserComparator = comparator;
     }
 
-    @Override // rx.functions.Func6
+    @Override // p658rx.functions.Func6
     public /* bridge */ /* synthetic */ Map<Long, ? extends List<? extends ChannelListItemVoiceUser>> call(Map<Long, ? extends ModelApplicationStream> map, Map<Long, ? extends VoiceState> map2, Map<Long, ? extends User> map3, Map<Long, ? extends GuildMember> map4, Map<Long, ? extends Channel> map5, Map<Long, ? extends Long> map6) {
         return call2(map, (Map<Long, VoiceState>) map2, map3, (Map<Long, GuildMember>) map4, (Map<Long, Channel>) map5, (Map<Long, Long>) map6);
     }
@@ -31,12 +31,12 @@ public final class WidgetChannelListModel$VoiceStates$get$1<T1, T2, T3, T4, T5, 
     /* renamed from: call, reason: avoid collision after fix types in other method */
     public final Map<Long, List<ChannelListItemVoiceUser>> call2(Map<Long, ? extends ModelApplicationStream> map, Map<Long, VoiceState> map2, Map<Long, ? extends User> map3, Map<Long, GuildMember> map4, Map<Long, Channel> map5, Map<Long, Long> map6) {
         WidgetChannelListModel.VoiceStates voiceStates = WidgetChannelListModel.VoiceStates.INSTANCE;
-        m.checkNotNullExpressionValue(map2, "voiceStates");
-        m.checkNotNullExpressionValue(map3, "users");
-        m.checkNotNullExpressionValue(map4, "guildMembers");
-        m.checkNotNullExpressionValue(map5, "guildChannels");
-        m.checkNotNullExpressionValue(map, "guildStreams");
-        m.checkNotNullExpressionValue(map6, "guildPermissions");
+        Intrinsics3.checkNotNullExpressionValue(map2, "voiceStates");
+        Intrinsics3.checkNotNullExpressionValue(map3, "users");
+        Intrinsics3.checkNotNullExpressionValue(map4, "guildMembers");
+        Intrinsics3.checkNotNullExpressionValue(map5, "guildChannels");
+        Intrinsics3.checkNotNullExpressionValue(map, "guildStreams");
+        Intrinsics3.checkNotNullExpressionValue(map6, "guildPermissions");
         return WidgetChannelListModel.VoiceStates.access$createVoiceStates(voiceStates, map2, map3, map4, map5, map, map6, this.$voiceUserComparator);
     }
 }

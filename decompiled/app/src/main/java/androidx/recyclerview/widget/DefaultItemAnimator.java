@@ -9,10 +9,10 @@ import android.view.ViewPropertyAnimator;
 import androidx.annotation.NonNull;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class DefaultItemAnimator extends SimpleItemAnimator {
@@ -30,11 +30,11 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
     public ArrayList<RecyclerView.ViewHolder> mRemoveAnimations = new ArrayList<>();
     public ArrayList<RecyclerView.ViewHolder> mChangeAnimations = new ArrayList<>();
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$1 */
+    public class RunnableC05381 implements Runnable {
         public final /* synthetic */ ArrayList val$moves;
 
-        public AnonymousClass1(ArrayList arrayList) {
+        public RunnableC05381(ArrayList arrayList) {
             this.val$moves = arrayList;
         }
 
@@ -48,11 +48,11 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$2 */
+    public class RunnableC05392 implements Runnable {
         public final /* synthetic */ ArrayList val$changes;
 
-        public AnonymousClass2(ArrayList arrayList) {
+        public RunnableC05392(ArrayList arrayList) {
             this.val$changes = arrayList;
         }
 
@@ -67,11 +67,11 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$3 */
+    public class RunnableC05403 implements Runnable {
         public final /* synthetic */ ArrayList val$additions;
 
-        public AnonymousClass3(ArrayList arrayList) {
+        public RunnableC05403(ArrayList arrayList) {
             this.val$additions = arrayList;
         }
 
@@ -86,13 +86,13 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$4, reason: invalid class name */
-    public class AnonymousClass4 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$4 */
+    public class C05414 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewPropertyAnimator val$animation;
         public final /* synthetic */ RecyclerView.ViewHolder val$holder;
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass4(RecyclerView.ViewHolder viewHolder, ViewPropertyAnimator viewPropertyAnimator, View view) {
+        public C05414(RecyclerView.ViewHolder viewHolder, ViewPropertyAnimator viewPropertyAnimator, View view) {
             this.val$holder = viewHolder;
             this.val$animation = viewPropertyAnimator;
             this.val$view = view;
@@ -113,13 +113,13 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$5, reason: invalid class name */
-    public class AnonymousClass5 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$5 */
+    public class C05425 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewPropertyAnimator val$animation;
         public final /* synthetic */ RecyclerView.ViewHolder val$holder;
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass5(RecyclerView.ViewHolder viewHolder, View view, ViewPropertyAnimator viewPropertyAnimator) {
+        public C05425(RecyclerView.ViewHolder viewHolder, View view, ViewPropertyAnimator viewPropertyAnimator) {
             this.val$holder = viewHolder;
             this.val$view = view;
             this.val$animation = viewPropertyAnimator;
@@ -144,15 +144,15 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$6, reason: invalid class name */
-    public class AnonymousClass6 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$6 */
+    public class C05436 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewPropertyAnimator val$animation;
         public final /* synthetic */ int val$deltaX;
         public final /* synthetic */ int val$deltaY;
         public final /* synthetic */ RecyclerView.ViewHolder val$holder;
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass6(RecyclerView.ViewHolder viewHolder, int i, View view, int i2, ViewPropertyAnimator viewPropertyAnimator) {
+        public C05436(RecyclerView.ViewHolder viewHolder, int i, View view, int i2, ViewPropertyAnimator viewPropertyAnimator) {
             this.val$holder = viewHolder;
             this.val$deltaX = i;
             this.val$view = view;
@@ -184,13 +184,13 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$7, reason: invalid class name */
-    public class AnonymousClass7 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$7 */
+    public class C05447 extends AnimatorListenerAdapter {
         public final /* synthetic */ ChangeInfo val$changeInfo;
         public final /* synthetic */ ViewPropertyAnimator val$oldViewAnim;
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass7(ChangeInfo changeInfo, ViewPropertyAnimator viewPropertyAnimator, View view) {
+        public C05447(ChangeInfo changeInfo, ViewPropertyAnimator viewPropertyAnimator, View view) {
             this.val$changeInfo = changeInfo;
             this.val$oldViewAnim = viewPropertyAnimator;
             this.val$view = view;
@@ -213,13 +213,13 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$8, reason: invalid class name */
-    public class AnonymousClass8 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$8 */
+    public class C05458 extends AnimatorListenerAdapter {
         public final /* synthetic */ ChangeInfo val$changeInfo;
         public final /* synthetic */ View val$newView;
         public final /* synthetic */ ViewPropertyAnimator val$newViewAnimation;
 
-        public AnonymousClass8(ChangeInfo changeInfo, ViewPropertyAnimator viewPropertyAnimator, View view) {
+        public C05458(ChangeInfo changeInfo, ViewPropertyAnimator viewPropertyAnimator, View view) {
             this.val$changeInfo = changeInfo;
             this.val$newViewAnimation = viewPropertyAnimator;
             this.val$newView = view;
@@ -262,7 +262,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         View view = viewHolder.itemView;
         ViewPropertyAnimator viewPropertyAnimatorAnimate = view.animate();
         this.mRemoveAnimations.add(viewHolder);
-        viewPropertyAnimatorAnimate.setDuration(getRemoveDuration()).alpha(0.0f).setListener(new AnonymousClass4(viewHolder, viewPropertyAnimatorAnimate, view)).start();
+        viewPropertyAnimatorAnimate.setDuration(getRemoveDuration()).alpha(0.0f).setListener(new C05414(viewHolder, viewPropertyAnimatorAnimate, view)).start();
     }
 
     private void endChangeAnimation(List<ChangeInfo> list, RecyclerView.ViewHolder viewHolder) {
@@ -305,7 +305,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         View view = viewHolder.itemView;
         ViewPropertyAnimator viewPropertyAnimatorAnimate = view.animate();
         this.mAddAnimations.add(viewHolder);
-        viewPropertyAnimatorAnimate.alpha(1.0f).setDuration(getAddDuration()).setListener(new AnonymousClass5(viewHolder, view, viewPropertyAnimatorAnimate)).start();
+        viewPropertyAnimatorAnimate.alpha(1.0f).setDuration(getAddDuration()).setListener(new C05425(viewHolder, view, viewPropertyAnimatorAnimate)).start();
     }
 
     @Override // androidx.recyclerview.widget.SimpleItemAnimator
@@ -342,12 +342,12 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
             this.mChangeAnimations.add(changeInfo.oldHolder);
             duration.translationX(changeInfo.toX - changeInfo.fromX);
             duration.translationY(changeInfo.toY - changeInfo.fromY);
-            duration.alpha(0.0f).setListener(new AnonymousClass7(changeInfo, duration, view)).start();
+            duration.alpha(0.0f).setListener(new C05447(changeInfo, duration, view)).start();
         }
         if (view2 != null) {
             ViewPropertyAnimator viewPropertyAnimatorAnimate = view2.animate();
             this.mChangeAnimations.add(changeInfo.newHolder);
-            viewPropertyAnimatorAnimate.translationX(0.0f).translationY(0.0f).setDuration(getChangeDuration()).alpha(1.0f).setListener(new AnonymousClass8(changeInfo, viewPropertyAnimatorAnimate, view2)).start();
+            viewPropertyAnimatorAnimate.translationX(0.0f).translationY(0.0f).setDuration(getChangeDuration()).alpha(1.0f).setListener(new C05458(changeInfo, viewPropertyAnimatorAnimate, view2)).start();
         }
     }
 
@@ -385,7 +385,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
         ViewPropertyAnimator viewPropertyAnimatorAnimate = view.animate();
         this.mMoveAnimations.add(viewHolder);
-        viewPropertyAnimatorAnimate.setDuration(getMoveDuration()).setListener(new AnonymousClass6(viewHolder, i5, view, i6, viewPropertyAnimatorAnimate)).start();
+        viewPropertyAnimatorAnimate.setDuration(getMoveDuration()).setListener(new C05436(viewHolder, i5, view, i6, viewPropertyAnimatorAnimate)).start();
     }
 
     @Override // androidx.recyclerview.widget.SimpleItemAnimator
@@ -583,11 +583,11 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
                 arrayList.addAll(this.mPendingMoves);
                 this.mMovesList.add(arrayList);
                 this.mPendingMoves.clear();
-                AnonymousClass1 anonymousClass1 = new AnonymousClass1(arrayList);
+                RunnableC05381 runnableC05381 = new RunnableC05381(arrayList);
                 if (z2) {
-                    ViewCompat.postOnAnimationDelayed(arrayList.get(0).holder.itemView, anonymousClass1, getRemoveDuration());
+                    ViewCompat.postOnAnimationDelayed(arrayList.get(0).holder.itemView, runnableC05381, getRemoveDuration());
                 } else {
-                    anonymousClass1.run();
+                    runnableC05381.run();
                 }
             }
             if (z4) {
@@ -595,11 +595,11 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
                 arrayList2.addAll(this.mPendingChanges);
                 this.mChangesList.add(arrayList2);
                 this.mPendingChanges.clear();
-                AnonymousClass2 anonymousClass2 = new AnonymousClass2(arrayList2);
+                RunnableC05392 runnableC05392 = new RunnableC05392(arrayList2);
                 if (z2) {
-                    ViewCompat.postOnAnimationDelayed(arrayList2.get(0).oldHolder.itemView, anonymousClass2, getRemoveDuration());
+                    ViewCompat.postOnAnimationDelayed(arrayList2.get(0).oldHolder.itemView, runnableC05392, getRemoveDuration());
                 } else {
-                    anonymousClass2.run();
+                    runnableC05392.run();
                 }
             }
             if (z5) {
@@ -607,11 +607,11 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
                 arrayList3.addAll(this.mPendingAdditions);
                 this.mAdditionsList.add(arrayList3);
                 this.mPendingAdditions.clear();
-                AnonymousClass3 anonymousClass3 = new AnonymousClass3(arrayList3);
+                RunnableC05403 runnableC05403 = new RunnableC05403(arrayList3);
                 if (z2 || z3 || z4) {
-                    ViewCompat.postOnAnimationDelayed(arrayList3.get(0).itemView, anonymousClass3, Math.max(z3 ? getMoveDuration() : 0L, z4 ? getChangeDuration() : 0L) + (z2 ? getRemoveDuration() : 0L));
+                    ViewCompat.postOnAnimationDelayed(arrayList3.get(0).itemView, runnableC05403, Math.max(z3 ? getMoveDuration() : 0L, z4 ? getChangeDuration() : 0L) + (z2 ? getRemoveDuration() : 0L));
                 } else {
-                    anonymousClass3.run();
+                    runnableC05403.run();
                 }
             }
         }
@@ -631,18 +631,18 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ChangeInfo{oldHolder=");
-            sbU.append(this.oldHolder);
-            sbU.append(", newHolder=");
-            sbU.append(this.newHolder);
-            sbU.append(", fromX=");
-            sbU.append(this.fromX);
-            sbU.append(", fromY=");
-            sbU.append(this.fromY);
-            sbU.append(", toX=");
-            sbU.append(this.toX);
-            sbU.append(", toY=");
-            return a.A(sbU, this.toY, '}');
+            StringBuilder sbM833U = outline.m833U("ChangeInfo{oldHolder=");
+            sbM833U.append(this.oldHolder);
+            sbM833U.append(", newHolder=");
+            sbM833U.append(this.newHolder);
+            sbM833U.append(", fromX=");
+            sbM833U.append(this.fromX);
+            sbM833U.append(", fromY=");
+            sbM833U.append(this.fromY);
+            sbM833U.append(", toX=");
+            sbM833U.append(this.toX);
+            sbM833U.append(", toY=");
+            return outline.m813A(sbM833U, this.toY, '}');
         }
 
         public ChangeInfo(RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder viewHolder2, int i, int i2, int i3, int i4) {

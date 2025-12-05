@@ -10,9 +10,6 @@ import android.os.RemoteException;
 import android.os.SystemClock;
 import android.util.Log;
 import androidx.annotation.Nullable;
-import b.i.a.f.e.c;
-import b.i.a.f.h.a.b;
-import b.i.a.f.h.a.d;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import java.io.IOException;
@@ -21,47 +18,70 @@ import java.util.HashMap;
 import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p289a.p290a.C3173a;
+import p007b.p225i.p226a.p288f.p289a.p290a.C3174b;
+import p007b.p225i.p226a.p288f.p299e.C3256c;
+import p007b.p225i.p226a.p288f.p299e.ServiceConnectionC3252a;
+import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
+import p007b.p225i.p226a.p288f.p313h.p314a.AbstractBinderC3439c;
+import p007b.p225i.p226a.p288f.p313h.p314a.C3440d;
+import p007b.p225i.p226a.p288f.p313h.p314a.InterfaceC3438b;
 
 /* loaded from: classes3.dex */
 public class AdvertisingIdClient {
 
+    /* renamed from: a */
     @Nullable
-    public b.i.a.f.e.a a;
+    public ServiceConnectionC3252a f20372a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @Nullable
-    public b f2993b;
-    public boolean c;
-    public final Object d = new Object();
+    public InterfaceC3438b f20373b;
 
+    /* renamed from: c */
+    public boolean f20374c;
+
+    /* renamed from: d */
+    public final Object f20375d = new Object();
+
+    /* renamed from: e */
     @Nullable
-    public a e;
-    public final Context f;
-    public final boolean g;
-    public final long h;
+    public C10786a f20376e;
+
+    /* renamed from: f */
+    public final Context f20377f;
+
+    /* renamed from: g */
+    public final boolean f20378g;
+
+    /* renamed from: h */
+    public final long f20379h;
 
     public static final class Info {
-        public final String a;
 
-        /* renamed from: b, reason: collision with root package name */
-        public final boolean f2994b;
+        /* renamed from: a */
+        public final String f20380a;
+
+        /* renamed from: b */
+        public final boolean f20381b;
 
         public Info(String str, boolean z2) {
-            this.a = str;
-            this.f2994b = z2;
+            this.f20380a = str;
+            this.f20381b = z2;
         }
 
         public final String getId() {
-            return this.a;
+            return this.f20380a;
         }
 
         public final boolean isLimitAdTrackingEnabled() {
-            return this.f2994b;
+            return this.f20381b;
         }
 
         public final String toString() {
-            String str = this.a;
-            boolean z2 = this.f2994b;
+            String str = this.f20380a;
+            boolean z2 = this.f20381b;
             StringBuilder sb = new StringBuilder(String.valueOf(str).length() + 7);
             sb.append("{");
             sb.append(str);
@@ -71,15 +91,24 @@ public class AdvertisingIdClient {
         }
     }
 
-    public static class a extends Thread {
-        public WeakReference<AdvertisingIdClient> j;
-        public long k;
-        public CountDownLatch l = new CountDownLatch(1);
-        public boolean m = false;
+    /* renamed from: com.google.android.gms.ads.identifier.AdvertisingIdClient$a */
+    public static class C10786a extends Thread {
 
-        public a(AdvertisingIdClient advertisingIdClient, long j) {
-            this.j = new WeakReference<>(advertisingIdClient);
-            this.k = j;
+        /* renamed from: j */
+        public WeakReference<AdvertisingIdClient> f20382j;
+
+        /* renamed from: k */
+        public long f20383k;
+
+        /* renamed from: l */
+        public CountDownLatch f20384l = new CountDownLatch(1);
+
+        /* renamed from: m */
+        public boolean f20385m = false;
+
+        public C10786a(AdvertisingIdClient advertisingIdClient, long j) {
+            this.f20382j = new WeakReference<>(advertisingIdClient);
+            this.f20383k = j;
             start();
         }
 
@@ -87,16 +116,16 @@ public class AdvertisingIdClient {
         public final void run() {
             AdvertisingIdClient advertisingIdClient;
             try {
-                if (this.l.await(this.k, TimeUnit.MILLISECONDS) || (advertisingIdClient = this.j.get()) == null) {
+                if (this.f20384l.await(this.f20383k, TimeUnit.MILLISECONDS) || (advertisingIdClient = this.f20382j.get()) == null) {
                     return;
                 }
-                advertisingIdClient.a();
-                this.m = true;
+                advertisingIdClient.m9002a();
+                this.f20385m = true;
             } catch (InterruptedException unused) {
-                AdvertisingIdClient advertisingIdClient2 = this.j.get();
+                AdvertisingIdClient advertisingIdClient2 = this.f20382j.get();
                 if (advertisingIdClient2 != null) {
-                    advertisingIdClient2.a();
-                    this.m = true;
+                    advertisingIdClient2.m9002a();
+                    this.f20385m = true;
                 }
             }
         }
@@ -108,26 +137,27 @@ public class AdvertisingIdClient {
         if (z2 && (applicationContext = context.getApplicationContext()) != null) {
             context = applicationContext;
         }
-        this.f = context;
-        this.c = false;
-        this.h = j;
-        this.g = z3;
+        this.f20377f = context;
+        this.f20374c = false;
+        this.f20379h = j;
+        this.f20378g = z3;
     }
 
-    public static b.i.a.f.e.a c(Context context, boolean z2) throws GooglePlayServicesRepairableException, GooglePlayServicesNotAvailableException, PackageManager.NameNotFoundException, IOException {
+    /* renamed from: c */
+    public static ServiceConnectionC3252a m9000c(Context context, boolean z2) throws GooglePlayServicesRepairableException, GooglePlayServicesNotAvailableException, PackageManager.NameNotFoundException, IOException {
         try {
             context.getPackageManager().getPackageInfo("com.android.vending", 0);
-            int iB = c.f1346b.b(context, 12451000);
-            if (iB != 0 && iB != 2) {
+            int iMo4018b = C3256c.f9307b.mo4018b(context, 12451000);
+            if (iMo4018b != 0 && iMo4018b != 2) {
                 throw new IOException("Google Play services not available");
             }
             String str = z2 ? "com.google.android.gms.ads.identifier.service.PERSISTENT_START" : "com.google.android.gms.ads.identifier.service.START";
-            b.i.a.f.e.a aVar = new b.i.a.f.e.a();
+            ServiceConnectionC3252a serviceConnectionC3252a = new ServiceConnectionC3252a();
             Intent intent = new Intent(str);
             intent.setPackage("com.google.android.gms");
             try {
-                if (b.i.a.f.e.n.a.b().a(context, intent, aVar, 1)) {
-                    return aVar;
+                if (C3398a.m4181b().m4182a(context, intent, serviceConnectionC3252a, 1)) {
+                    return serviceConnectionC3252a;
                 }
                 throw new IOException("Connection failure");
             } catch (Throwable th) {
@@ -138,12 +168,13 @@ public class AdvertisingIdClient {
         }
     }
 
-    public static b d(b.i.a.f.e.a aVar) throws IOException {
+    /* renamed from: d */
+    public static InterfaceC3438b m9001d(ServiceConnectionC3252a serviceConnectionC3252a) throws IOException {
         try {
-            IBinder iBinderA = aVar.a(10000L, TimeUnit.MILLISECONDS);
-            int i = b.i.a.f.h.a.c.a;
-            IInterface iInterfaceQueryLocalInterface = iBinderA.queryLocalInterface("com.google.android.gms.ads.identifier.internal.IAdvertisingIdService");
-            return iInterfaceQueryLocalInterface instanceof b ? (b) iInterfaceQueryLocalInterface : new d(iBinderA);
+            IBinder iBinderM4014a = serviceConnectionC3252a.m4014a(10000L, TimeUnit.MILLISECONDS);
+            int i = AbstractBinderC3439c.f9622a;
+            IInterface iInterfaceQueryLocalInterface = iBinderM4014a.queryLocalInterface("com.google.android.gms.ads.identifier.internal.IAdvertisingIdService");
+            return iInterfaceQueryLocalInterface instanceof InterfaceC3438b ? (InterfaceC3438b) iInterfaceQueryLocalInterface : new C3440d(iBinderM4014a);
         } catch (InterruptedException unused) {
             throw new IOException("Interrupted exception");
         } catch (Throwable th) {
@@ -161,90 +192,92 @@ public class AdvertisingIdClient {
         String string;
         SharedPreferences sharedPreferences;
         SharedPreferences sharedPreferences2;
-        b.i.a.f.a.a.b bVar = new b.i.a.f.a.a.b(context);
-        boolean zA = bVar.a("gads:ad_id_app_context:enabled");
+        C3174b c3174b = new C3174b(context);
+        boolean zM3965a = c3174b.m3965a("gads:ad_id_app_context:enabled");
         try {
-            sharedPreferences2 = bVar.a;
+            sharedPreferences2 = c3174b.f9191a;
         } catch (Throwable th) {
             Log.w("GmscoreFlag", "Error while reading from SharedPreferences ", th);
         }
         if (sharedPreferences2 == null) {
             f = 0.0f;
             try {
-                sharedPreferences = bVar.a;
+                sharedPreferences = c3174b.f9191a;
             } catch (Throwable th2) {
                 Log.w("GmscoreFlag", "Error while reading from SharedPreferences ", th2);
             }
             if (sharedPreferences == null) {
                 string = sharedPreferences.getString("gads:ad_id_use_shared_preference:experiment_id", "");
-                AdvertisingIdClient advertisingIdClient = new AdvertisingIdClient(context, -1L, zA, bVar.a("gads:ad_id_use_persistent_service:enabled"));
+                AdvertisingIdClient advertisingIdClient = new AdvertisingIdClient(context, -1L, zM3965a, c3174b.m3965a("gads:ad_id_use_persistent_service:enabled"));
                 long jElapsedRealtime = SystemClock.elapsedRealtime();
-                advertisingIdClient.f(false);
-                Info infoB = advertisingIdClient.b();
-                advertisingIdClient.g(infoB, zA, f, SystemClock.elapsedRealtime() - jElapsedRealtime, string, null);
-                return infoB;
+                advertisingIdClient.m9005f(false);
+                Info infoM9003b = advertisingIdClient.m9003b();
+                advertisingIdClient.m9006g(infoM9003b, zM3965a, f, SystemClock.elapsedRealtime() - jElapsedRealtime, string, null);
+                return infoM9003b;
             }
             string = "";
-            AdvertisingIdClient advertisingIdClient2 = new AdvertisingIdClient(context, -1L, zA, bVar.a("gads:ad_id_use_persistent_service:enabled"));
+            AdvertisingIdClient advertisingIdClient2 = new AdvertisingIdClient(context, -1L, zM3965a, c3174b.m3965a("gads:ad_id_use_persistent_service:enabled"));
             try {
                 long jElapsedRealtime2 = SystemClock.elapsedRealtime();
-                advertisingIdClient2.f(false);
-                Info infoB2 = advertisingIdClient2.b();
-                advertisingIdClient2.g(infoB2, zA, f, SystemClock.elapsedRealtime() - jElapsedRealtime2, string, null);
-                return infoB2;
+                advertisingIdClient2.m9005f(false);
+                Info infoM9003b2 = advertisingIdClient2.m9003b();
+                advertisingIdClient2.m9006g(infoM9003b2, zM3965a, f, SystemClock.elapsedRealtime() - jElapsedRealtime2, string, null);
+                return infoM9003b2;
             } finally {
             }
         } else {
             f = sharedPreferences2.getFloat("gads:ad_id_app_context:ping_ratio", 0.0f);
-            sharedPreferences = bVar.a;
+            sharedPreferences = c3174b.f9191a;
             if (sharedPreferences == null) {
             }
         }
     }
 
-    public final void a() {
-        b.c.a.a0.d.x("Calling this from your main thread can lead to deadlock");
+    /* renamed from: a */
+    public final void m9002a() {
+        AnimatableValueParser.m587x("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
-            if (this.f == null || this.a == null) {
+            if (this.f20377f == null || this.f20372a == null) {
                 return;
             }
             try {
-                if (this.c) {
-                    b.i.a.f.e.n.a.b().c(this.f, this.a);
+                if (this.f20374c) {
+                    C3398a.m4181b().m4183c(this.f20377f, this.f20372a);
                 }
             } catch (Throwable th) {
                 Log.i("AdvertisingIdClient", "AdvertisingIdClient unbindService failed.", th);
             }
-            this.c = false;
-            this.f2993b = null;
-            this.a = null;
+            this.f20374c = false;
+            this.f20373b = null;
+            this.f20372a = null;
         }
     }
 
-    public Info b() throws IOException {
+    /* renamed from: b */
+    public Info m9003b() throws IOException {
         Info info;
-        b.c.a.a0.d.x("Calling this from your main thread can lead to deadlock");
+        AnimatableValueParser.m587x("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
-            if (this.c) {
-                Objects.requireNonNull(this.a, "null reference");
-                Objects.requireNonNull(this.f2993b, "null reference");
-                info = new Info(this.f2993b.getId(), this.f2993b.D(true));
+            if (this.f20374c) {
+                Objects.requireNonNull(this.f20372a, "null reference");
+                Objects.requireNonNull(this.f20373b, "null reference");
+                info = new Info(this.f20373b.getId(), this.f20373b.mo4391D(true));
             } else {
-                synchronized (this.d) {
-                    a aVar = this.e;
-                    if (aVar == null || !aVar.m) {
+                synchronized (this.f20375d) {
+                    C10786a c10786a = this.f20376e;
+                    if (c10786a == null || !c10786a.f20385m) {
                         throw new IOException("AdvertisingIdClient is not connected.");
                     }
                 }
                 try {
-                    f(false);
-                    if (!this.c) {
+                    m9005f(false);
+                    if (!this.f20374c) {
                         throw new IOException("AdvertisingIdClient cannot reconnect.");
                     }
-                    Objects.requireNonNull(this.a, "null reference");
-                    Objects.requireNonNull(this.f2993b, "null reference");
+                    Objects.requireNonNull(this.f20372a, "null reference");
+                    Objects.requireNonNull(this.f20373b, "null reference");
                     try {
-                        info = new Info(this.f2993b.getId(), this.f2993b.D(true));
+                        info = new Info(this.f20373b.getId(), this.f20373b.mo4391D(true));
                     } catch (RemoteException e) {
                         Log.i("AdvertisingIdClient", "GMS remote exception ", e);
                         throw new IOException("Remote exception");
@@ -254,48 +287,51 @@ public class AdvertisingIdClient {
                 }
             }
         }
-        e();
+        m9004e();
         return info;
     }
 
-    public final void e() {
-        synchronized (this.d) {
-            a aVar = this.e;
-            if (aVar != null) {
-                aVar.l.countDown();
+    /* renamed from: e */
+    public final void m9004e() {
+        synchronized (this.f20375d) {
+            C10786a c10786a = this.f20376e;
+            if (c10786a != null) {
+                c10786a.f20384l.countDown();
                 try {
-                    this.e.join();
+                    this.f20376e.join();
                 } catch (InterruptedException unused) {
                 }
             }
-            if (this.h > 0) {
-                this.e = new a(this, this.h);
+            if (this.f20379h > 0) {
+                this.f20376e = new C10786a(this, this.f20379h);
             }
         }
     }
 
-    public final void f(boolean z2) throws GooglePlayServicesRepairableException, IllegalStateException, GooglePlayServicesNotAvailableException, IOException {
-        b.c.a.a0.d.x("Calling this from your main thread can lead to deadlock");
+    /* renamed from: f */
+    public final void m9005f(boolean z2) throws GooglePlayServicesRepairableException, IllegalStateException, GooglePlayServicesNotAvailableException, IOException {
+        AnimatableValueParser.m587x("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
-            if (this.c) {
-                a();
+            if (this.f20374c) {
+                m9002a();
             }
-            b.i.a.f.e.a aVarC = c(this.f, this.g);
-            this.a = aVarC;
-            this.f2993b = d(aVarC);
-            this.c = true;
+            ServiceConnectionC3252a serviceConnectionC3252aM9000c = m9000c(this.f20377f, this.f20378g);
+            this.f20372a = serviceConnectionC3252aM9000c;
+            this.f20373b = m9001d(serviceConnectionC3252aM9000c);
+            this.f20374c = true;
             if (z2) {
-                e();
+                m9004e();
             }
         }
     }
 
     public void finalize() throws Throwable {
-        a();
+        m9002a();
         super.finalize();
     }
 
-    public final boolean g(Info info, boolean z2, float f, long j, String str, Throwable th) {
+    /* renamed from: g */
+    public final boolean m9006g(Info info, boolean z2, float f, long j, String str, Throwable th) {
         if (Math.random() > f) {
             return false;
         }
@@ -315,7 +351,7 @@ public class AdvertisingIdClient {
         }
         map.put("tag", "AdvertisingIdClient");
         map.put("time_spent", Long.toString(j));
-        new b.i.a.f.a.a.a(map).start();
+        new C3173a(map).start();
         return true;
     }
 }

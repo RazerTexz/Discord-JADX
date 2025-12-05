@@ -9,21 +9,22 @@ import com.discord.views.calls.VideoCallParticipantView;
 /* loaded from: classes.dex */
 public final class WidgetStageChannelSpeakerMediaBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CardView a;
+    public final CardView f18160a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final VideoCallParticipantView f2655b;
+    public final VideoCallParticipantView f18161b;
 
     public WidgetStageChannelSpeakerMediaBinding(@NonNull CardView cardView, @NonNull VideoCallParticipantView videoCallParticipantView) {
-        this.a = cardView;
-        this.f2655b = videoCallParticipantView;
+        this.f18160a = cardView;
+        this.f18161b = videoCallParticipantView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18160a;
     }
 }

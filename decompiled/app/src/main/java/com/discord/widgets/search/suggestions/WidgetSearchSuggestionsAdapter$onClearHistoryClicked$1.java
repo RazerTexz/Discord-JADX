@@ -1,12 +1,12 @@
 package com.discord.widgets.search.suggestions;
 
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetSearchSuggestionsAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSearchSuggestionsAdapter$onClearHistoryClicked$1 extends o implements Function0<Unit> {
+public final class WidgetSearchSuggestionsAdapter$onClearHistoryClicked$1 extends Lambda implements Function0<Unit> {
     public static final WidgetSearchSuggestionsAdapter$onClearHistoryClicked$1 INSTANCE = new WidgetSearchSuggestionsAdapter$onClearHistoryClicked$1();
 
     public WidgetSearchSuggestionsAdapter$onClearHistoryClicked$1() {
@@ -16,7 +16,7 @@ public final class WidgetSearchSuggestionsAdapter$onClearHistoryClicked$1 extend
     @Override // kotlin.jvm.functions.Function0
     public /* bridge */ /* synthetic */ Unit invoke() {
         invoke2();
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */

@@ -2,11 +2,11 @@ package com.discord.utilities.images;
 
 import android.graphics.Bitmap;
 import android.util.Base64;
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ImageEncoder.kt */
 /* loaded from: classes2.dex */
@@ -19,16 +19,16 @@ public final class ImageEncoder {
     }
 
     public final String encodeBitmapAsJpegDataUrl(Bitmap bitmap, int jpegQuality) {
-        m.checkNotNullParameter(bitmap, "bitmap");
+        Intrinsics3.checkNotNullParameter(bitmap, "bitmap");
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, jpegQuality, byteArrayOutputStream);
         String strEncodeToString = Base64.encodeToString(byteArrayOutputStream.toByteArray(), 2);
-        m.checkNotNullExpressionValue(strEncodeToString, "Base64.encodeToString(jp…eArray(), Base64.NO_WRAP)");
-        return a.P(new Object[]{"image/jpeg", strEncodeToString}, 2, "data:%s;base64,%s", "java.lang.String.format(format, *args)");
+        Intrinsics3.checkNotNullExpressionValue(strEncodeToString, "Base64.encodeToString(jp…eArray(), Base64.NO_WRAP)");
+        return outline.m828P(new Object[]{"image/jpeg", strEncodeToString}, 2, "data:%s;base64,%s", "java.lang.String.format(format, *args)");
     }
 
     public final String getBase64EncodedString(InputStream inputStream, int flags) throws IOException {
-        m.checkNotNullParameter(inputStream, "inputStream");
+        Intrinsics3.checkNotNullParameter(inputStream, "inputStream");
         byte[] bArr = new byte[8192];
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         while (true) {
@@ -41,8 +41,8 @@ public final class ImageEncoder {
     }
 
     public final String getDataUrl(String mimeType, InputStream inputStream) throws IOException {
-        m.checkNotNullParameter(mimeType, "mimeType");
-        m.checkNotNullParameter(inputStream, "inputStream");
-        return a.P(new Object[]{mimeType, getBase64EncodedString(inputStream, 2)}, 2, "data:%s;base64,%s", "java.lang.String.format(format, *args)");
+        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
+        Intrinsics3.checkNotNullParameter(inputStream, "inputStream");
+        return outline.m828P(new Object[]{mimeType, getBase64EncodedString(inputStream, 2)}, 2, "data:%s;base64,%s", "java.lang.String.format(format, *args)");
     }
 }

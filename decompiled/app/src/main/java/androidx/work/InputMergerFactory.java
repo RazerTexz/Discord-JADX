@@ -7,8 +7,8 @@ import androidx.annotation.RestrictTo;
 /* loaded from: classes.dex */
 public abstract class InputMergerFactory {
 
-    /* renamed from: androidx.work.InputMergerFactory$1, reason: invalid class name */
-    public class AnonymousClass1 extends InputMergerFactory {
+    /* renamed from: androidx.work.InputMergerFactory$1 */
+    public class C07151 extends InputMergerFactory {
         @Override // androidx.work.InputMergerFactory
         @Nullable
         public InputMerger createInputMerger(@NonNull String str) {
@@ -19,7 +19,7 @@ public abstract class InputMergerFactory {
     @NonNull
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public static InputMergerFactory getDefaultInputMergerFactory() {
-        return new AnonymousClass1();
+        return new C07151();
     }
 
     @Nullable

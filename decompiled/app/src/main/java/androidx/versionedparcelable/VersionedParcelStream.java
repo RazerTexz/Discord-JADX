@@ -7,7 +7,6 @@ import android.os.Parcelable;
 import androidx.annotation.RestrictTo;
 import androidx.collection.ArrayMap;
 import androidx.versionedparcelable.VersionedParcel;
-import b.d.b.a.a;
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -18,6 +17,7 @@ import java.io.OutputStream;
 import java.lang.reflect.Method;
 import java.nio.charset.Charset;
 import java.util.Set;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 /* loaded from: classes.dex */
@@ -125,7 +125,7 @@ public class VersionedParcelStream extends VersionedParcel {
                 bundle.putFloatArray(str, readFloatArray());
                 return;
             default:
-                throw new RuntimeException(a.q("Unknown type ", i));
+                throw new RuntimeException(outline.m871q("Unknown type ", i));
         }
     }
 
@@ -194,9 +194,9 @@ public class VersionedParcelStream extends VersionedParcel {
             writeInt(14);
             writeFloatArray((float[]) obj);
         } else {
-            StringBuilder sbU = a.U("Unsupported type ");
-            sbU.append(obj.getClass());
-            throw new IllegalArgumentException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Unsupported type ");
+            sbM833U.append(obj.getClass());
+            throw new IllegalArgumentException(sbM833U.toString());
         }
     }
 
@@ -498,7 +498,7 @@ public class VersionedParcelStream extends VersionedParcel {
         this.mCount = 0;
         this.mFieldId = -1;
         this.mFieldSize = -1;
-        DataInputStream dataInputStream = inputStream != null ? new DataInputStream(new AnonymousClass1(inputStream)) : null;
+        DataInputStream dataInputStream = inputStream != null ? new DataInputStream(new C06831(inputStream)) : null;
         this.mMasterInput = dataInputStream;
         DataOutputStream dataOutputStream = outputStream != null ? new DataOutputStream(outputStream) : null;
         this.mMasterOutput = dataOutputStream;
@@ -506,9 +506,9 @@ public class VersionedParcelStream extends VersionedParcel {
         this.mCurrentOutput = dataOutputStream;
     }
 
-    /* renamed from: androidx.versionedparcelable.VersionedParcelStream$1, reason: invalid class name */
-    public class AnonymousClass1 extends FilterInputStream {
-        public AnonymousClass1(InputStream inputStream) {
+    /* renamed from: androidx.versionedparcelable.VersionedParcelStream$1 */
+    public class C06831 extends FilterInputStream {
+        public C06831(InputStream inputStream) {
             super(inputStream);
         }
 

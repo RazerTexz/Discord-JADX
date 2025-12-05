@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.core.provider.FontsContractCompat;
-import b.d.b.a.a;
 import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,6 +25,7 @@ import java.nio.channels.FileChannel;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
@@ -108,14 +108,14 @@ public class TypefaceCompatUtil {
         if (cacheDir == null) {
             return null;
         }
-        StringBuilder sbU = a.U(CACHE_FILE_PREFIX);
-        sbU.append(Process.myPid());
-        sbU.append("-");
-        sbU.append(Process.myTid());
-        sbU.append("-");
-        String string = sbU.toString();
+        StringBuilder sbM833U = outline.m833U(CACHE_FILE_PREFIX);
+        sbM833U.append(Process.myPid());
+        sbM833U.append("-");
+        sbM833U.append(Process.myTid());
+        sbM833U.append("-");
+        String string = sbM833U.toString();
         for (int i = 0; i < 100; i++) {
-            File file = new File(cacheDir, a.q(string, i));
+            File file = new File(cacheDir, outline.m871q(string, i));
             if (file.createNewFile()) {
                 return file;
             }

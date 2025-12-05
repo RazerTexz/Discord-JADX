@@ -1,11 +1,8 @@
 package com.discord.widgets.settings.guildboost;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.premium.PremiumTier;
 import com.discord.models.domain.ModelAppliedGuildBoost;
 import com.discord.models.domain.ModelGuildBoostSlot;
@@ -17,12 +14,9 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreSubscriptions;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.analytics.Traits;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.settings.guildboost.SettingsGuildBoostSampleGuildAdapter;
 import com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -34,12 +28,19 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.functions.Func4;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.functions.Func4;
 
 /* compiled from: SettingsGuildBoostViewModel.kt */
 /* loaded from: classes2.dex */
-public final class SettingsGuildBoostViewModel extends d0<ViewState> {
+public final class SettingsGuildBoostViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -49,21 +50,21 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
     private final StoreSubscriptions storeSubscriptions;
 
     /* compiled from: SettingsGuildBoostViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.SettingsGuildBoostViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.guildboost.SettingsGuildBoostViewModel$1 */
+    public static final class C98551 extends Lambda implements Function1<StoreState, Unit> {
+        public C98551() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             SettingsGuildBoostViewModel.access$handleStoreState(SettingsGuildBoostViewModel.this, storeState);
         }
     }
@@ -82,15 +83,15 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             Observable observableObserveGuildBoostState$default = StoreGuildBoost.observeGuildBoostState$default(companion.getGuildBoosts(), null, 1, null);
             Observable<StoreSubscriptions.SubscriptionsState> observableObserveSubscriptions = companion.getSubscriptions().observeSubscriptions();
             Observable<LinkedHashMap<Long, Guild>> observableObserveOrderedGuilds = companion.getGuildsSorted().observeOrderedGuilds();
-            Observable observableR = StoreUser.observeMe$default(companion.getUsers(), false, 1, null).G(SettingsGuildBoostViewModel$Companion$observeStores$1.INSTANCE).r();
-            SettingsGuildBoostViewModel$Companion$observeStores$2 settingsGuildBoostViewModel$Companion$observeStores$2 = SettingsGuildBoostViewModel$Companion$observeStores$2.INSTANCE;
-            Object settingsGuildBoostViewModel$sam$rx_functions_Func4$0 = settingsGuildBoostViewModel$Companion$observeStores$2;
-            if (settingsGuildBoostViewModel$Companion$observeStores$2 != null) {
-                settingsGuildBoostViewModel$sam$rx_functions_Func4$0 = new SettingsGuildBoostViewModel$sam$rx_functions_Func4$0(settingsGuildBoostViewModel$Companion$observeStores$2);
+            Observable observableM11112r = StoreUser.observeMe$default(companion.getUsers(), false, 1, null).m11083G(SettingsGuildBoostViewModel2.INSTANCE).m11112r();
+            SettingsGuildBoostViewModel3 settingsGuildBoostViewModel3 = SettingsGuildBoostViewModel3.INSTANCE;
+            Object settingsGuildBoostViewModel4 = settingsGuildBoostViewModel3;
+            if (settingsGuildBoostViewModel3 != null) {
+                settingsGuildBoostViewModel4 = new SettingsGuildBoostViewModel4(settingsGuildBoostViewModel3);
             }
-            Observable<StoreState> observableH = Observable.h(observableObserveGuildBoostState$default, observableObserveSubscriptions, observableObserveOrderedGuilds, observableR, (Func4) settingsGuildBoostViewModel$sam$rx_functions_Func4$0);
-            m.checkNotNullExpressionValue(observableH, "Observable.combineLatest…     ::StoreState\n      )");
-            return observableH;
+            Observable<StoreState> observableM11073h = Observable.m11073h(observableObserveGuildBoostState$default, observableObserveSubscriptions, observableObserveOrderedGuilds, observableM11112r, (Func4) settingsGuildBoostViewModel4);
+            Intrinsics3.checkNotNullExpressionValue(observableM11073h, "Observable.combineLatest…     ::StoreState\n      )");
+            return observableM11073h;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -138,11 +139,11 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.slotId);
+                return C0002b.m3a(this.slotId);
             }
 
             public String toString() {
-                return a.C(a.U("Cancel(slotId="), this.slotId, ")");
+                return outline.m815C(outline.m833U("Cancel(slotId="), this.slotId, ")");
             }
         }
 
@@ -187,7 +188,7 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
                     return false;
                 }
                 Subscribe subscribe = (Subscribe) other;
-                return this.slotId == subscribe.slotId && m.areEqual(this.targetGuildId, subscribe.targetGuildId);
+                return this.slotId == subscribe.slotId && Intrinsics3.areEqual(this.targetGuildId, subscribe.targetGuildId);
             }
 
             public final long getSlotId() {
@@ -199,16 +200,16 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                int iA = b.a(this.slotId) * 31;
+                int iM3a = C0002b.m3a(this.slotId) * 31;
                 Long l = this.targetGuildId;
-                return iA + (l != null ? l.hashCode() : 0);
+                return iM3a + (l != null ? l.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Subscribe(slotId=");
-                sbU.append(this.slotId);
-                sbU.append(", targetGuildId=");
-                return a.G(sbU, this.targetGuildId, ")");
+                StringBuilder sbM833U = outline.m833U("Subscribe(slotId=");
+                sbM833U.append(this.slotId);
+                sbM833U.append(", targetGuildId=");
+                return outline.m819G(sbM833U, this.targetGuildId, ")");
             }
 
             public Subscribe(long j, Long l) {
@@ -257,7 +258,7 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             }
 
             public final Transfer copy(ModelGuildBoostSlot slot, long previousGuildId, Long targetGuildId) {
-                m.checkNotNullParameter(slot, "slot");
+                Intrinsics3.checkNotNullParameter(slot, "slot");
                 return new Transfer(slot, previousGuildId, targetGuildId);
             }
 
@@ -269,7 +270,7 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
                     return false;
                 }
                 Transfer transfer = (Transfer) other;
-                return m.areEqual(this.slot, transfer.slot) && this.previousGuildId == transfer.previousGuildId && m.areEqual(this.targetGuildId, transfer.targetGuildId);
+                return Intrinsics3.areEqual(this.slot, transfer.slot) && this.previousGuildId == transfer.previousGuildId && Intrinsics3.areEqual(this.targetGuildId, transfer.targetGuildId);
             }
 
             public final long getPreviousGuildId() {
@@ -286,24 +287,24 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
 
             public int hashCode() {
                 ModelGuildBoostSlot modelGuildBoostSlot = this.slot;
-                int iA = (b.a(this.previousGuildId) + ((modelGuildBoostSlot != null ? modelGuildBoostSlot.hashCode() : 0) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.previousGuildId) + ((modelGuildBoostSlot != null ? modelGuildBoostSlot.hashCode() : 0) * 31)) * 31;
                 Long l = this.targetGuildId;
-                return iA + (l != null ? l.hashCode() : 0);
+                return iM3a + (l != null ? l.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Transfer(slot=");
-                sbU.append(this.slot);
-                sbU.append(", previousGuildId=");
-                sbU.append(this.previousGuildId);
-                sbU.append(", targetGuildId=");
-                return a.G(sbU, this.targetGuildId, ")");
+                StringBuilder sbM833U = outline.m833U("Transfer(slot=");
+                sbM833U.append(this.slot);
+                sbM833U.append(", previousGuildId=");
+                sbM833U.append(this.previousGuildId);
+                sbM833U.append(", targetGuildId=");
+                return outline.m819G(sbM833U, this.targetGuildId, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Transfer(ModelGuildBoostSlot modelGuildBoostSlot, long j, Long l) {
                 super(null);
-                m.checkNotNullParameter(modelGuildBoostSlot, "slot");
+                Intrinsics3.checkNotNullParameter(modelGuildBoostSlot, "slot");
                 this.slot = modelGuildBoostSlot;
                 this.previousGuildId = j;
                 this.targetGuildId = l;
@@ -347,11 +348,11 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.slotId);
+                return C0002b.m3a(this.slotId);
             }
 
             public String toString() {
-                return a.C(a.U("Uncancel(slotId="), this.slotId, ")");
+                return outline.m815C(outline.m833U("Uncancel(slotId="), this.slotId, ")");
             }
         }
 
@@ -371,10 +372,10 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
         private final PremiumTier userPremiumTier;
 
         public StoreState(StoreGuildBoost.State state, StoreSubscriptions.SubscriptionsState subscriptionsState, Map<Long, Guild> map, PremiumTier premiumTier) {
-            m.checkNotNullParameter(state, "guildBoostState");
-            m.checkNotNullParameter(subscriptionsState, "subscriptionState");
-            m.checkNotNullParameter(map, "guilds");
-            m.checkNotNullParameter(premiumTier, "userPremiumTier");
+            Intrinsics3.checkNotNullParameter(state, "guildBoostState");
+            Intrinsics3.checkNotNullParameter(subscriptionsState, "subscriptionState");
+            Intrinsics3.checkNotNullParameter(map, "guilds");
+            Intrinsics3.checkNotNullParameter(premiumTier, "userPremiumTier");
             this.guildBoostState = state;
             this.subscriptionState = subscriptionsState;
             this.guilds = map;
@@ -418,10 +419,10 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
         }
 
         public final StoreState copy(StoreGuildBoost.State guildBoostState, StoreSubscriptions.SubscriptionsState subscriptionState, Map<Long, Guild> guilds, PremiumTier userPremiumTier) {
-            m.checkNotNullParameter(guildBoostState, "guildBoostState");
-            m.checkNotNullParameter(subscriptionState, "subscriptionState");
-            m.checkNotNullParameter(guilds, "guilds");
-            m.checkNotNullParameter(userPremiumTier, "userPremiumTier");
+            Intrinsics3.checkNotNullParameter(guildBoostState, "guildBoostState");
+            Intrinsics3.checkNotNullParameter(subscriptionState, "subscriptionState");
+            Intrinsics3.checkNotNullParameter(guilds, "guilds");
+            Intrinsics3.checkNotNullParameter(userPremiumTier, "userPremiumTier");
             return new StoreState(guildBoostState, subscriptionState, guilds, userPremiumTier);
         }
 
@@ -433,7 +434,7 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.guildBoostState, storeState.guildBoostState) && m.areEqual(this.subscriptionState, storeState.subscriptionState) && m.areEqual(this.guilds, storeState.guilds) && m.areEqual(this.userPremiumTier, storeState.userPremiumTier);
+            return Intrinsics3.areEqual(this.guildBoostState, storeState.guildBoostState) && Intrinsics3.areEqual(this.subscriptionState, storeState.subscriptionState) && Intrinsics3.areEqual(this.guilds, storeState.guilds) && Intrinsics3.areEqual(this.userPremiumTier, storeState.userPremiumTier);
         }
 
         public final StoreGuildBoost.State getGuildBoostState() {
@@ -464,16 +465,16 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(guildBoostState=");
-            sbU.append(this.guildBoostState);
-            sbU.append(", subscriptionState=");
-            sbU.append(this.subscriptionState);
-            sbU.append(", guilds=");
-            sbU.append(this.guilds);
-            sbU.append(", userPremiumTier=");
-            sbU.append(this.userPremiumTier);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("StoreState(guildBoostState=");
+            sbM833U.append(this.guildBoostState);
+            sbM833U.append(", subscriptionState=");
+            sbM833U.append(this.subscriptionState);
+            sbM833U.append(", guilds=");
+            sbM833U.append(this.guilds);
+            sbM833U.append(", userPremiumTier=");
+            sbM833U.append(this.userPremiumTier);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -502,9 +503,9 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(boolean z2, boolean z3, List<? extends WidgetSettingsGuildBoostSubscriptionAdapter.Item> list, List<SettingsGuildBoostSampleGuildAdapter.Item> list2, PendingAction pendingAction, PremiumTier premiumTier) {
                 super(null);
-                m.checkNotNullParameter(list, "guildBoostItems");
-                m.checkNotNullParameter(list2, "sampleGuildItems");
-                m.checkNotNullParameter(premiumTier, "userPremiumTier");
+                Intrinsics3.checkNotNullParameter(list, "guildBoostItems");
+                Intrinsics3.checkNotNullParameter(list2, "sampleGuildItems");
+                Intrinsics3.checkNotNullParameter(premiumTier, "userPremiumTier");
                 this.canCancelBoosts = z2;
                 this.canUncancelBoosts = z3;
                 this.guildBoostItems = list;
@@ -568,9 +569,9 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(boolean canCancelBoosts, boolean canUncancelBoosts, List<? extends WidgetSettingsGuildBoostSubscriptionAdapter.Item> guildBoostItems, List<SettingsGuildBoostSampleGuildAdapter.Item> sampleGuildItems, PendingAction pendingAction, PremiumTier userPremiumTier) {
-                m.checkNotNullParameter(guildBoostItems, "guildBoostItems");
-                m.checkNotNullParameter(sampleGuildItems, "sampleGuildItems");
-                m.checkNotNullParameter(userPremiumTier, "userPremiumTier");
+                Intrinsics3.checkNotNullParameter(guildBoostItems, "guildBoostItems");
+                Intrinsics3.checkNotNullParameter(sampleGuildItems, "sampleGuildItems");
+                Intrinsics3.checkNotNullParameter(userPremiumTier, "userPremiumTier");
                 return new Loaded(canCancelBoosts, canUncancelBoosts, guildBoostItems, sampleGuildItems, pendingAction, userPremiumTier);
             }
 
@@ -582,7 +583,7 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return this.canCancelBoosts == loaded.canCancelBoosts && this.canUncancelBoosts == loaded.canUncancelBoosts && m.areEqual(this.guildBoostItems, loaded.guildBoostItems) && m.areEqual(this.sampleGuildItems, loaded.sampleGuildItems) && m.areEqual(this.pendingAction, loaded.pendingAction) && m.areEqual(this.userPremiumTier, loaded.userPremiumTier);
+                return this.canCancelBoosts == loaded.canCancelBoosts && this.canUncancelBoosts == loaded.canUncancelBoosts && Intrinsics3.areEqual(this.guildBoostItems, loaded.guildBoostItems) && Intrinsics3.areEqual(this.sampleGuildItems, loaded.sampleGuildItems) && Intrinsics3.areEqual(this.pendingAction, loaded.pendingAction) && Intrinsics3.areEqual(this.userPremiumTier, loaded.userPremiumTier);
             }
 
             public final boolean getCanCancelBoosts() {
@@ -633,20 +634,20 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(canCancelBoosts=");
-                sbU.append(this.canCancelBoosts);
-                sbU.append(", canUncancelBoosts=");
-                sbU.append(this.canUncancelBoosts);
-                sbU.append(", guildBoostItems=");
-                sbU.append(this.guildBoostItems);
-                sbU.append(", sampleGuildItems=");
-                sbU.append(this.sampleGuildItems);
-                sbU.append(", pendingAction=");
-                sbU.append(this.pendingAction);
-                sbU.append(", userPremiumTier=");
-                sbU.append(this.userPremiumTier);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Loaded(canCancelBoosts=");
+                sbM833U.append(this.canCancelBoosts);
+                sbM833U.append(", canUncancelBoosts=");
+                sbM833U.append(this.canUncancelBoosts);
+                sbM833U.append(", guildBoostItems=");
+                sbM833U.append(this.guildBoostItems);
+                sbM833U.append(", sampleGuildItems=");
+                sbM833U.append(this.sampleGuildItems);
+                sbM833U.append(", pendingAction=");
+                sbM833U.append(this.pendingAction);
+                sbM833U.append(", userPremiumTier=");
+                sbM833U.append(this.userPremiumTier);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -706,7 +707,7 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
             }
         }
         if (!map.isEmpty()) {
-            arrayList.add(new WidgetSettingsGuildBoostSubscriptionAdapter.Item.HeaderItem(R.string.premium_guild_subscription_active_title));
+            arrayList.add(new WidgetSettingsGuildBoostSubscriptionAdapter.Item.HeaderItem(C5419R.string.premium_guild_subscription_active_title));
         }
         for (Map.Entry entry : map.entrySet()) {
             Long l = (Long) entry.getKey();
@@ -764,8 +765,8 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
                     }
                     boolean z4 = !z3;
                     List<WidgetSettingsGuildBoostSubscriptionAdapter.Item> listCreateGuildBoostItems = createGuildBoostItems((StoreGuildBoost.State.Loaded) guildBoostState, storeState.getGuilds(), premiumSubscription);
-                    List listTake = u.take(storeState.getGuilds().values(), 4);
-                    ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listTake, 10));
+                    List listTake = _Collections.take(storeState.getGuilds().values(), 4);
+                    ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listTake, 10));
                     it = listTake.iterator();
                     while (it.hasNext()) {
                         arrayList.add(new SettingsGuildBoostSampleGuildAdapter.Item((Guild) it.next()));
@@ -778,8 +779,8 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
                 z2 = true;
                 boolean z42 = !z3;
                 List<WidgetSettingsGuildBoostSubscriptionAdapter.Item> listCreateGuildBoostItems2 = createGuildBoostItems((StoreGuildBoost.State.Loaded) guildBoostState, storeState.getGuilds(), premiumSubscription);
-                List listTake2 = u.take(storeState.getGuilds().values(), 4);
-                ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(listTake2, 10));
+                List listTake2 = _Collections.take(storeState.getGuilds().values(), 4);
+                ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(listTake2, 10));
                 it = listTake2.iterator();
                 while (it.hasNext()) {
                 }
@@ -848,7 +849,7 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
 
     @MainThread
     public final void transferClicked(ModelGuildBoostSlot slot, long previousGuildId) {
-        m.checkNotNullParameter(slot, "slot");
+        Intrinsics3.checkNotNullParameter(slot, "slot");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -862,12 +863,12 @@ public final class SettingsGuildBoostViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SettingsGuildBoostViewModel(StoreGuildBoost storeGuildBoost, StoreSubscriptions storeSubscriptions, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        m.checkNotNullParameter(storeGuildBoost, "storeGuildBoost");
-        m.checkNotNullParameter(storeSubscriptions, "storeSubscriptions");
-        m.checkNotNullParameter(observable, "storeObservable");
+        Intrinsics3.checkNotNullParameter(storeGuildBoost, "storeGuildBoost");
+        Intrinsics3.checkNotNullParameter(storeSubscriptions, "storeSubscriptions");
+        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
         this.storeGuildBoost = storeGuildBoost;
         this.storeSubscriptions = storeSubscriptions;
         fetchData();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), SettingsGuildBoostViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), SettingsGuildBoostViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C98551(), 62, (Object) null);
     }
 }

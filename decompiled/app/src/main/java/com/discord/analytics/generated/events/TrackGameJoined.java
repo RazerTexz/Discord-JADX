@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGameJoined.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGameJoined implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackGameJoined implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence source = null;
     private final Long applicationId = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackGameJoined implements AnalyticsSchema, TrackB
             return false;
         }
         TrackGameJoined trackGameJoined = (TrackGameJoined) other;
-        return m.areEqual(this.source, trackGameJoined.source) && m.areEqual(this.applicationId, trackGameJoined.applicationId) && m.areEqual(this.partyId, trackGameJoined.partyId);
+        return Intrinsics3.areEqual(this.source, trackGameJoined.source) && Intrinsics3.areEqual(this.applicationId, trackGameJoined.applicationId) && Intrinsics3.areEqual(this.partyId, trackGameJoined.partyId);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackGameJoined implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGameJoined(source=");
-        sbU.append(this.source);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", partyId=");
-        return a.E(sbU, this.partyId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGameJoined(source=");
+        sbM833U.append(this.source);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", partyId=");
+        return outline.m817E(sbM833U, this.partyId, ")");
     }
 }

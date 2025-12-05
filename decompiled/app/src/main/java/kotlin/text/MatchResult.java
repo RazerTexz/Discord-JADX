@@ -1,42 +1,46 @@
 package kotlin.text;
 
-import d0.g0.f;
-import d0.z.d.m;
 import java.util.List;
-import kotlin.ranges.IntRange;
+import kotlin.ranges.Ranges2;
+import p507d0.p579g0.MatchResult2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MatchResult.kt */
 /* loaded from: classes3.dex */
 public interface MatchResult {
 
     /* compiled from: MatchResult.kt */
-    public static final class a {
-        public static b getDestructured(MatchResult matchResult) {
-            return new b(matchResult);
+    /* renamed from: kotlin.text.MatchResult$a */
+    public static final class C12797a {
+        public static C12798b getDestructured(MatchResult matchResult) {
+            return new C12798b(matchResult);
         }
     }
 
     /* compiled from: MatchResult.kt */
-    public static final class b {
-        public final MatchResult a;
+    /* renamed from: kotlin.text.MatchResult$b */
+    public static final class C12798b {
 
-        public b(MatchResult matchResult) {
-            m.checkNotNullParameter(matchResult, "match");
-            this.a = matchResult;
+        /* renamed from: a */
+        public final MatchResult f27452a;
+
+        public C12798b(MatchResult matchResult) {
+            Intrinsics3.checkNotNullParameter(matchResult, "match");
+            this.f27452a = matchResult;
         }
 
         public final MatchResult getMatch() {
-            return this.a;
+            return this.f27452a;
         }
     }
 
-    b getDestructured();
+    C12798b getDestructured();
 
     List<String> getGroupValues();
 
-    f getGroups();
+    MatchResult2 getGroups();
 
-    IntRange getRange();
+    Ranges2 getRange();
 
     String getValue();
 

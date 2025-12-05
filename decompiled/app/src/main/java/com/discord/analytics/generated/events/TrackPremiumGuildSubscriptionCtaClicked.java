@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPremiumGuildSubscriptionCtaClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumGuildSubscriptionCtaClicked implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPremiumGuildSubscriptionCtaClicked implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence source = null;
     private final Long guildId = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackPremiumGuildSubscriptionCtaClicked implements
             return false;
         }
         TrackPremiumGuildSubscriptionCtaClicked trackPremiumGuildSubscriptionCtaClicked = (TrackPremiumGuildSubscriptionCtaClicked) other;
-        return m.areEqual(this.source, trackPremiumGuildSubscriptionCtaClicked.source) && m.areEqual(this.guildId, trackPremiumGuildSubscriptionCtaClicked.guildId);
+        return Intrinsics3.areEqual(this.source, trackPremiumGuildSubscriptionCtaClicked.source) && Intrinsics3.areEqual(this.guildId, trackPremiumGuildSubscriptionCtaClicked.guildId);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackPremiumGuildSubscriptionCtaClicked implements
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPremiumGuildSubscriptionCtaClicked(source=");
-        sbU.append(this.source);
-        sbU.append(", guildId=");
-        return a.G(sbU, this.guildId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPremiumGuildSubscriptionCtaClicked(source=");
+        sbM833U.append(this.source);
+        sbM833U.append(", guildId=");
+        return outline.m819G(sbM833U, this.guildId, ")");
     }
 }

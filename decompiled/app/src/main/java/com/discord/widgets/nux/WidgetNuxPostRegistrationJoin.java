@@ -4,19 +4,19 @@ import android.content.Context;
 import android.text.Editable;
 import android.view.View;
 import androidx.fragment.app.FragmentActivity;
-import b.a.d.j;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.widgets.guilds.join.WidgetGuildJoin;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g0.t;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p018d.AppScreen2;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetNuxPostRegistrationJoin.kt */
 /* loaded from: classes2.dex */
@@ -33,8 +33,8 @@ public final class WidgetNuxPostRegistrationJoin extends WidgetGuildJoin {
         }
 
         public final void show(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetNuxPostRegistrationJoin.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetNuxPostRegistrationJoin.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -43,19 +43,19 @@ public final class WidgetNuxPostRegistrationJoin extends WidgetGuildJoin {
     }
 
     /* compiled from: WidgetNuxPostRegistrationJoin.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxPostRegistrationJoin$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.nux.WidgetNuxPostRegistrationJoin$onViewBound$1 */
+    public static final class ViewOnClickListenerC91131 implements View.OnClickListener {
         public final /* synthetic */ long $startTimeMs;
 
-        public AnonymousClass1(long j) {
+        public ViewOnClickListenerC91131(long j) {
             this.$startTimeMs = j;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            TextInputLayout textInputLayout = WidgetNuxPostRegistrationJoin.this.getBinding().c;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.guildJoinInvite");
-            if (t.isBlank(ViewExtensions.getTextOrEmpty(textInputLayout))) {
+            TextInputLayout textInputLayout = WidgetNuxPostRegistrationJoin.this.getBinding().f16853c;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.guildJoinInvite");
+            if (StringsJVM.isBlank(ViewExtensions.getTextOrEmpty(textInputLayout))) {
                 AnalyticsTracker.INSTANCE.newUserOnboarding(WidgetNuxPostRegistrationJoin.NUX_FLOW_TYPE, WidgetNuxPostRegistrationJoin.NUX_STEP, "Friend List", Long.valueOf(this.$startTimeMs), true);
                 FragmentActivity activity = WidgetNuxPostRegistrationJoin.this.getActivity();
                 if (activity != null) {
@@ -74,27 +74,27 @@ public final class WidgetNuxPostRegistrationJoin extends WidgetGuildJoin {
     }
 
     /* compiled from: WidgetNuxPostRegistrationJoin.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxPostRegistrationJoin$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Editable, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.nux.WidgetNuxPostRegistrationJoin$onViewBound$2 */
+    public static final class C91142 extends Lambda implements Function1<Editable, Unit> {
+        public C91142() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Editable editable) {
             invoke2(editable);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
-            m.checkNotNullParameter(editable, "editable");
-            WidgetNuxPostRegistrationJoin.this.getBinding().f2423b.setText(t.isBlank(editable) ? R.string.nux_post_reg_join_server_skip : R.string.join);
+            Intrinsics3.checkNotNullParameter(editable, "editable");
+            WidgetNuxPostRegistrationJoin.this.getBinding().f16852b.setText(StringsJVM.isBlank(editable) ? C5419R.string.nux_post_reg_join_server_skip : C5419R.string.join);
         }
     }
 
     public WidgetNuxPostRegistrationJoin() {
-        super(R.layout.widget_nux_post_registration);
+        super(C5419R.layout.widget_nux_post_registration);
     }
 
     public static final /* synthetic */ void access$handleGuildJoin(WidgetNuxPostRegistrationJoin widgetNuxPostRegistrationJoin) {
@@ -103,13 +103,13 @@ public final class WidgetNuxPostRegistrationJoin extends WidgetGuildJoin {
 
     @Override // com.discord.widgets.guilds.join.WidgetGuildJoin, com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setActionBarDisplayHomeAsUpEnabled(false);
         AnalyticsTracker.newUserOnboarding$default(AnalyticsTracker.INSTANCE, NUX_FLOW_TYPE, GuildTemplateAnalytics.STEP_REGISTRATION, NUX_STEP, null, false, 24, null);
-        getBinding().f2423b.setOnClickListener(new AnonymousClass1(ClockFactory.get().currentTimeMillis()));
-        TextInputLayout textInputLayout = getBinding().c;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.guildJoinInvite");
-        ViewExtensions.addBindedTextWatcher(textInputLayout, this, new AnonymousClass2());
+        getBinding().f16852b.setOnClickListener(new ViewOnClickListenerC91131(ClockFactory.get().currentTimeMillis()));
+        TextInputLayout textInputLayout = getBinding().f16853c;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.guildJoinInvite");
+        ViewExtensions.addBindedTextWatcher(textInputLayout, this, new C91142());
     }
 }

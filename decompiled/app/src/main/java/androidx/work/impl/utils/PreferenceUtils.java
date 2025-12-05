@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.arch.core.util.Function;
-import androidx.sqlite.db.SupportSQLiteDatabase;
+import androidx.sqlite.p006db.SupportSQLiteDatabase;
 import androidx.view.LiveData;
 import androidx.view.Transformations;
 import androidx.work.impl.WorkDatabase;
@@ -20,9 +20,9 @@ public class PreferenceUtils {
     public static final String PREFERENCES_FILE_NAME = "androidx.work.util.preferences";
     private final WorkDatabase mWorkDatabase;
 
-    /* renamed from: androidx.work.impl.utils.PreferenceUtils$1, reason: invalid class name */
-    public class AnonymousClass1 implements Function<Long, Long> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.work.impl.utils.PreferenceUtils$1 */
+    public class C07761 implements Function<Long, Long> {
+        public C07761() {
         }
 
         @Override // androidx.arch.core.util.Function
@@ -67,7 +67,7 @@ public class PreferenceUtils {
 
     @NonNull
     public LiveData<Long> getLastCancelAllTimeMillisLiveData() {
-        return Transformations.map(this.mWorkDatabase.preferenceDao().getObservableLongValue(KEY_LAST_CANCEL_ALL_TIME_MS), new AnonymousClass1());
+        return Transformations.map(this.mWorkDatabase.preferenceDao().getObservableLongValue(KEY_LAST_CANCEL_ALL_TIME_MS), new C07761());
     }
 
     public boolean getNeedsReschedule() {

@@ -36,9 +36,9 @@ public class ScreenCapturerAndroid implements VideoCapturer, VideoSink {
     private VirtualDisplay virtualDisplay;
     private int width;
 
-    /* renamed from: org.webrtc.ScreenCapturerAndroid$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: org.webrtc.ScreenCapturerAndroid$1 */
+    public class RunnableC129841 implements Runnable {
+        public RunnableC129841() {
         }
 
         @Override // java.lang.Runnable
@@ -59,9 +59,9 @@ public class ScreenCapturerAndroid implements VideoCapturer, VideoSink {
         }
     }
 
-    /* renamed from: org.webrtc.ScreenCapturerAndroid$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: org.webrtc.ScreenCapturerAndroid$2 */
+    public class RunnableC129852 implements Runnable {
+        public RunnableC129852() {
         }
 
         @Override // java.lang.Runnable
@@ -111,7 +111,7 @@ public class ScreenCapturerAndroid implements VideoCapturer, VideoSink {
         if (this.virtualDisplay == null) {
             return;
         }
-        ThreadUtils.invokeAtFrontUninterruptibly(this.surfaceTextureHelper.getHandler(), new AnonymousClass2());
+        ThreadUtils.invokeAtFrontUninterruptibly(this.surfaceTextureHelper.getHandler(), new RunnableC129852());
     }
 
     public void createVirtualDisplay() {
@@ -173,6 +173,6 @@ public class ScreenCapturerAndroid implements VideoCapturer, VideoSink {
     @Override // org.webrtc.VideoCapturer
     public synchronized void stopCapture() {
         checkNotDisposed();
-        ThreadUtils.invokeAtFrontUninterruptibly(this.surfaceTextureHelper.getHandler(), new AnonymousClass1());
+        ThreadUtils.invokeAtFrontUninterruptibly(this.surfaceTextureHelper.getHandler(), new RunnableC129841());
     }
 }

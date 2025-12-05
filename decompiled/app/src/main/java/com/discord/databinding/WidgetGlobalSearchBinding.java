@@ -13,45 +13,52 @@ import com.google.android.material.textfield.TextInputLayout;
 /* loaded from: classes.dex */
 public final class WidgetGlobalSearchBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f16707a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialButton f2403b;
+    public final MaterialButton f16708b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextInputLayout c;
+    public final TextInputLayout f16709c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextInputEditText d;
+    public final TextInputEditText f16710d;
 
+    /* renamed from: e */
     @NonNull
-    public final RecyclerView e;
+    public final RecyclerView f16711e;
 
+    /* renamed from: f */
     @NonNull
-    public final MaterialButton f;
+    public final MaterialButton f16712f;
 
+    /* renamed from: g */
     @NonNull
-    public final RecyclerView g;
+    public final RecyclerView f16713g;
 
+    /* renamed from: h */
     @NonNull
-    public final AppViewFlipper h;
+    public final AppViewFlipper f16714h;
 
     public WidgetGlobalSearchBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull MaterialButton materialButton, @NonNull TextInputLayout textInputLayout, @NonNull TextInputEditText textInputEditText, @NonNull RecyclerView recyclerView, @NonNull MaterialButton materialButton2, @NonNull RecyclerView recyclerView2, @NonNull AppViewFlipper appViewFlipper) {
-        this.a = coordinatorLayout;
-        this.f2403b = materialButton;
-        this.c = textInputLayout;
-        this.d = textInputEditText;
-        this.e = recyclerView;
-        this.f = materialButton2;
-        this.g = recyclerView2;
-        this.h = appViewFlipper;
+        this.f16707a = coordinatorLayout;
+        this.f16708b = materialButton;
+        this.f16709c = textInputLayout;
+        this.f16710d = textInputEditText;
+        this.f16711e = recyclerView;
+        this.f16712f = materialButton2;
+        this.f16713g = recyclerView2;
+        this.f16714h = appViewFlipper;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16707a;
     }
 }

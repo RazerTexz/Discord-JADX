@@ -1,15 +1,15 @@
 package com.discord.utilities.system;
 
-import a0.a.a.b;
-import b.d.b.a.a;
-import d0.g;
-import d0.g0.s;
-import d0.g0.w;
-import d0.y.f;
-import d0.z.d.m;
 import java.io.File;
 import java.util.List;
 import kotlin.Lazy;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p579g0.StringNumberConversions;
+import p507d0.p579g0.Strings4;
+import p507d0.p591y.FileReadWrite;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ProcfsReader.kt */
 /* loaded from: classes2.dex */
@@ -17,7 +17,7 @@ public final class ProcfsReader {
     public static final ProcfsReader INSTANCE = new ProcfsReader();
 
     /* renamed from: pid$delegate, reason: from kotlin metadata */
-    private static final Lazy pid = g.lazy(ProcfsReader$pid$2.INSTANCE);
+    private static final Lazy pid = LazyJVM.lazy(ProcfsReader2.INSTANCE);
     private static final Stat default = new Stat(0, 0, 0, 0);
 
     /* compiled from: ProcfsReader.kt */
@@ -90,18 +90,18 @@ public final class ProcfsReader {
         }
 
         public int hashCode() {
-            return b.a(this.rssPages) + ((b.a(this.totalTime) + ((b.a(this.systemTime) + (b.a(this.userTime) * 31)) * 31)) * 31);
+            return C0002b.m3a(this.rssPages) + ((C0002b.m3a(this.totalTime) + ((C0002b.m3a(this.systemTime) + (C0002b.m3a(this.userTime) * 31)) * 31)) * 31);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Stat(userTime=");
-            sbU.append(this.userTime);
-            sbU.append(", systemTime=");
-            sbU.append(this.systemTime);
-            sbU.append(", totalTime=");
-            sbU.append(this.totalTime);
-            sbU.append(", rssPages=");
-            return a.C(sbU, this.rssPages, ")");
+            StringBuilder sbM833U = outline.m833U("Stat(userTime=");
+            sbM833U.append(this.userTime);
+            sbM833U.append(", systemTime=");
+            sbM833U.append(this.systemTime);
+            sbM833U.append(", totalTime=");
+            sbM833U.append(this.totalTime);
+            sbM833U.append(", rssPages=");
+            return outline.m815C(sbM833U, this.rssPages, ")");
         }
     }
 
@@ -116,7 +116,7 @@ public final class ProcfsReader {
         if (input.length() == 0) {
             return default;
         }
-        List listSplit$default = w.split$default((CharSequence) input, new char[]{' '}, false, 0, 6, (Object) null);
+        List listSplit$default = Strings4.split$default((CharSequence) input, new char[]{' '}, false, 0, 6, (Object) null);
         long j = toLong((String) listSplit$default.get(13));
         long j2 = toLong((String) listSplit$default.get(14));
         return new Stat(j, j2, j + j2, toLong((String) listSplit$default.get(23)));
@@ -125,7 +125,7 @@ public final class ProcfsReader {
     private final String readFile(File file) {
         try {
             if (file.exists()) {
-                return f.readText$default(file, null, 1, null);
+                return FileReadWrite.readText$default(file, null, 1, null);
             }
             return null;
         } catch (Exception unused) {
@@ -134,7 +134,7 @@ public final class ProcfsReader {
     }
 
     private final long toLong(String s2) {
-        Long longOrNull = s.toLongOrNull(s2);
+        Long longOrNull = StringNumberConversions.toLongOrNull(s2);
         if (longOrNull != null) {
             return longOrNull.longValue();
         }
@@ -142,11 +142,11 @@ public final class ProcfsReader {
     }
 
     public final Stat readStatFile() {
-        return readStatFile(new File(a.B(a.U("/proc/"), getPid(), "/stat")));
+        return readStatFile(new File(outline.m814B(outline.m833U("/proc/"), getPid(), "/stat")));
     }
 
     public final Stat readStatFile(File file) {
-        m.checkNotNullParameter(file, "file");
+        Intrinsics3.checkNotNullParameter(file, "file");
         String file2 = readFile(file);
         return file2 != null ? parsePidStats(file2) : default;
     }

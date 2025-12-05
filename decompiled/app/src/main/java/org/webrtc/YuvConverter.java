@@ -2,11 +2,11 @@ package org.webrtc;
 
 import android.graphics.Matrix;
 import android.opengl.GLES20;
-import h0.c.j0;
 import java.nio.ByteBuffer;
 import org.webrtc.GlGenericDrawer;
 import org.webrtc.ThreadUtils;
 import org.webrtc.VideoFrame;
+import p617h0.p628c.RunnableC12469j0;
 
 /* loaded from: classes3.dex */
 public class YuvConverter {
@@ -59,7 +59,7 @@ public class YuvConverter {
             this.stepSize = 1.0f;
         }
 
-        public /* synthetic */ ShaderCallbacks(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ ShaderCallbacks(C129981 c129981) {
             this();
         }
     }
@@ -109,7 +109,7 @@ public class YuvConverter {
         byteBufferNativeAllocateByteBuffer.limit(i8 + i9);
         ByteBuffer byteBufferSlice3 = byteBufferNativeAllocateByteBuffer.slice();
         textureBuffer2.release();
-        return JavaI420Buffer.wrap(width, height, byteBufferSlice, i, byteBufferSlice2, i, byteBufferSlice3, i, new j0(byteBufferNativeAllocateByteBuffer));
+        return JavaI420Buffer.wrap(width, height, byteBufferSlice, i, byteBufferSlice2, i, byteBufferSlice3, i, new RunnableC12469j0(byteBufferNativeAllocateByteBuffer));
     }
 
     public void release() {

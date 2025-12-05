@@ -1,8 +1,8 @@
 package com.discord.api.activity;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ActivityMetadata.kt */
 /* loaded from: classes.dex */
@@ -17,7 +17,8 @@ public final /* data */ class ActivityMetadata {
         return this.albumId;
     }
 
-    public final List<String> b() {
+    /* renamed from: b */
+    public final List<String> m7557b() {
         return this.buttonUrls;
     }
 
@@ -29,7 +30,7 @@ public final /* data */ class ActivityMetadata {
             return false;
         }
         ActivityMetadata activityMetadata = (ActivityMetadata) other;
-        return m.areEqual(this.contextUri, activityMetadata.contextUri) && m.areEqual(this.albumId, activityMetadata.albumId) && m.areEqual(this.artistIds, activityMetadata.artistIds) && m.areEqual(this.buttonUrls, activityMetadata.buttonUrls);
+        return Intrinsics3.areEqual(this.contextUri, activityMetadata.contextUri) && Intrinsics3.areEqual(this.albumId, activityMetadata.albumId) && Intrinsics3.areEqual(this.artistIds, activityMetadata.artistIds) && Intrinsics3.areEqual(this.buttonUrls, activityMetadata.buttonUrls);
     }
 
     public int hashCode() {
@@ -44,13 +45,13 @@ public final /* data */ class ActivityMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ActivityMetadata(contextUri=");
-        sbU.append(this.contextUri);
-        sbU.append(", albumId=");
-        sbU.append(this.albumId);
-        sbU.append(", artistIds=");
-        sbU.append(this.artistIds);
-        sbU.append(", buttonUrls=");
-        return a.L(sbU, this.buttonUrls, ")");
+        StringBuilder sbM833U = outline.m833U("ActivityMetadata(contextUri=");
+        sbM833U.append(this.contextUri);
+        sbM833U.append(", albumId=");
+        sbM833U.append(this.albumId);
+        sbM833U.append(", artistIds=");
+        sbM833U.append(this.artistIds);
+        sbM833U.append(", buttonUrls=");
+        return outline.m824L(sbM833U, this.buttonUrls, ")");
     }
 }

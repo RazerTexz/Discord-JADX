@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.ViewTypeStorage;
 /* loaded from: classes.dex */
 public class NestedAdapterWrapper {
     public final RecyclerView.Adapter<RecyclerView.ViewHolder> adapter;
-    private RecyclerView.AdapterDataObserver mAdapterObserver = new AnonymousClass1();
+    private RecyclerView.AdapterDataObserver mAdapterObserver = new C05621();
     public int mCachedItemCount;
     public final Callback mCallback;
 
@@ -21,9 +21,9 @@ public class NestedAdapterWrapper {
     @NonNull
     private final ViewTypeStorage.ViewTypeLookup mViewTypeLookup;
 
-    /* renamed from: androidx.recyclerview.widget.NestedAdapterWrapper$1, reason: invalid class name */
-    public class AnonymousClass1 extends RecyclerView.AdapterDataObserver {
-        public AnonymousClass1() {
+    /* renamed from: androidx.recyclerview.widget.NestedAdapterWrapper$1 */
+    public class C05621 extends RecyclerView.AdapterDataObserver {
+        public C05621() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.AdapterDataObserver

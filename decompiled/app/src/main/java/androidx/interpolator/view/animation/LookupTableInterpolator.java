@@ -1,7 +1,7 @@
 package androidx.interpolator.view.animation;
 
 import android.view.animation.Interpolator;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class LookupTableInterpolator implements Interpolator {
@@ -26,6 +26,6 @@ public abstract class LookupTableInterpolator implements Interpolator {
         float f2 = this.mStepSize;
         float f3 = (f - (iMin * f2)) / f2;
         float[] fArr2 = this.mValues;
-        return a.a(fArr2[iMin + 1], fArr2[iMin], f3, fArr2[iMin]);
+        return outline.m839a(fArr2[iMin + 1], fArr2[iMin], f3, fArr2[iMin]);
     }
 }

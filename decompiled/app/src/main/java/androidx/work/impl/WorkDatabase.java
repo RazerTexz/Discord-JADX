@@ -7,9 +7,9 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
-import androidx.sqlite.db.SupportSQLiteDatabase;
-import androidx.sqlite.db.SupportSQLiteOpenHelper;
-import androidx.sqlite.db.framework.FrameworkSQLiteOpenHelperFactory;
+import androidx.sqlite.p006db.SupportSQLiteDatabase;
+import androidx.sqlite.p006db.SupportSQLiteOpenHelper;
+import androidx.sqlite.p006db.framework.FrameworkSQLiteOpenHelperFactory;
 import androidx.work.Data;
 import androidx.work.impl.WorkDatabaseMigrations;
 import androidx.work.impl.model.Dependency;
@@ -28,9 +28,9 @@ import androidx.work.impl.model.WorkSpecDao;
 import androidx.work.impl.model.WorkTag;
 import androidx.work.impl.model.WorkTagDao;
 import androidx.work.impl.model.WorkTypeConverters;
-import b.d.b.a.a;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
+import p007b.p100d.p104b.p105a.outline;
 
 @TypeConverters({Data.class, WorkTypeConverters.class})
 @Database(entities = {Dependency.class, WorkSpec.class, WorkTag.class, SystemIdInfo.class, WorkName.class, WorkProgress.class, Preference.class}, version = 11)
@@ -41,11 +41,11 @@ public abstract class WorkDatabase extends RoomDatabase {
     private static final String PRUNE_SQL_FORMAT_SUFFIX = " AND (SELECT COUNT(*)=0 FROM dependency WHERE     prerequisite_id=id AND     work_spec_id NOT IN         (SELECT id FROM workspec WHERE state IN (2, 3, 5)))";
     private static final long PRUNE_THRESHOLD_MILLIS = TimeUnit.DAYS.toMillis(7);
 
-    /* renamed from: androidx.work.impl.WorkDatabase$1, reason: invalid class name */
-    public class AnonymousClass1 implements SupportSQLiteOpenHelper.Factory {
+    /* renamed from: androidx.work.impl.WorkDatabase$1 */
+    public class C07221 implements SupportSQLiteOpenHelper.Factory {
         public final /* synthetic */ Context val$context;
 
-        public AnonymousClass1(Context context) {
+        public C07221(Context context) {
             this.val$context = context;
         }
 
@@ -58,8 +58,8 @@ public abstract class WorkDatabase extends RoomDatabase {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabase$2, reason: invalid class name */
-    public class AnonymousClass2 extends RoomDatabase.Callback {
+    /* renamed from: androidx.work.impl.WorkDatabase$2 */
+    public class C07232 extends RoomDatabase.Callback {
         @Override // androidx.room.RoomDatabase.Callback
         public void onOpen(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             super.onOpen(supportSQLiteDatabase);
@@ -80,13 +80,13 @@ public abstract class WorkDatabase extends RoomDatabase {
             builderDatabaseBuilder = Room.inMemoryDatabaseBuilder(context, WorkDatabase.class).allowMainThreadQueries();
         } else {
             builderDatabaseBuilder = Room.databaseBuilder(context, WorkDatabase.class, WorkDatabasePathHelper.getWorkDatabaseName());
-            builderDatabaseBuilder.openHelperFactory(new AnonymousClass1(context));
+            builderDatabaseBuilder.openHelperFactory(new C07221(context));
         }
         return (WorkDatabase) builderDatabaseBuilder.setQueryExecutor(executor).addCallback(generateCleanupCallback()).addMigrations(WorkDatabaseMigrations.MIGRATION_1_2).addMigrations(new WorkDatabaseMigrations.RescheduleMigration(context, 2, 3)).addMigrations(WorkDatabaseMigrations.MIGRATION_3_4).addMigrations(WorkDatabaseMigrations.MIGRATION_4_5).addMigrations(new WorkDatabaseMigrations.RescheduleMigration(context, 5, 6)).addMigrations(WorkDatabaseMigrations.MIGRATION_6_7).addMigrations(WorkDatabaseMigrations.MIGRATION_7_8).addMigrations(WorkDatabaseMigrations.MIGRATION_8_9).addMigrations(new WorkDatabaseMigrations.WorkMigration9To10(context)).addMigrations(new WorkDatabaseMigrations.RescheduleMigration(context, 10, 11)).fallbackToDestructiveMigration().build();
     }
 
     public static RoomDatabase.Callback generateCleanupCallback() {
-        return new AnonymousClass2();
+        return new C07232();
     }
 
     public static long getPruneDate() {
@@ -95,10 +95,10 @@ public abstract class WorkDatabase extends RoomDatabase {
 
     @NonNull
     public static String getPruneSQL() {
-        StringBuilder sbU = a.U(PRUNE_SQL_FORMAT_PREFIX);
-        sbU.append(getPruneDate());
-        sbU.append(PRUNE_SQL_FORMAT_SUFFIX);
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U(PRUNE_SQL_FORMAT_PREFIX);
+        sbM833U.append(getPruneDate());
+        sbM833U.append(PRUNE_SQL_FORMAT_SUFFIX);
+        return sbM833U.toString();
     }
 
     @NonNull

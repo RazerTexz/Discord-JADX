@@ -3,9 +3,6 @@ package com.discord.utilities.websocket;
 import androidx.core.app.NotificationCompat;
 import com.adjust.sdk.Constants;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.y.b;
-import d0.y.i;
-import d0.z.d.m;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -17,6 +14,9 @@ import java.util.zip.InflaterOutputStream;
 import okhttp3.Response;
 import okhttp3.WebSocketListener;
 import okio.ByteString;
+import p507d0.p591y.Closeable;
+import p507d0.p591y.ReadWrite;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ZLibWebSocketListener.kt */
 /* loaded from: classes2.dex */
@@ -39,15 +39,15 @@ public final class ZLibWebSocketListener extends WebSocketListener {
 
         @Override // okhttp3.WebSocketListener
         public final void onMessage(okhttp3.WebSocket webSocket, ByteString bytes) {
-            m.checkNotNullParameter(webSocket, "webSocket");
-            m.checkNotNullParameter(bytes, "bytes");
+            Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
+            Intrinsics3.checkNotNullParameter(bytes, "bytes");
             throw new UnsupportedOperationException();
         }
 
         @Override // okhttp3.WebSocketListener
         public final void onMessage(okhttp3.WebSocket webSocket, String text) {
-            m.checkNotNullParameter(webSocket, "webSocket");
-            m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+            Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
+            Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
             throw new UnsupportedOperationException();
         }
     }
@@ -60,11 +60,11 @@ public final class ZLibWebSocketListener extends WebSocketListener {
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ZLibByteStream(ByteString byteString, Inflater inflater) throws IOException {
-            super(byteString.j() * 2);
-            m.checkNotNullParameter(byteString, "bytes");
-            m.checkNotNullParameter(inflater, "inflater");
+            super(byteString.mo10502j() * 2);
+            Intrinsics3.checkNotNullParameter(byteString, "bytes");
+            Intrinsics3.checkNotNullParameter(inflater, "inflater");
             InflaterOutputStream inflaterOutputStream = new InflaterOutputStream(this, inflater, 4096);
-            byteString.r(inflaterOutputStream);
+            byteString.mo10509r(inflaterOutputStream);
             inflaterOutputStream.flush();
         }
 
@@ -74,7 +74,7 @@ public final class ZLibWebSocketListener extends WebSocketListener {
     }
 
     public ZLibWebSocketListener(Listener listener) {
-        m.checkNotNullParameter(listener, "listener");
+        Intrinsics3.checkNotNullParameter(listener, "listener");
         this.listener = listener;
         this.loggingInflater = new Inflater();
         this.inflater = new Inflater();
@@ -91,39 +91,39 @@ public final class ZLibWebSocketListener extends WebSocketListener {
 
     @Override // okhttp3.WebSocketListener
     public void onClosed(okhttp3.WebSocket webSocket, int code, String reason) {
-        m.checkNotNullParameter(webSocket, "webSocket");
-        m.checkNotNullParameter(reason, ModelAuditLogEntry.CHANGE_KEY_REASON);
+        Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
+        Intrinsics3.checkNotNullParameter(reason, ModelAuditLogEntry.CHANGE_KEY_REASON);
         resetInflaters();
         this.listener.onClosed(webSocket, code, reason);
     }
 
     @Override // okhttp3.WebSocketListener
     public void onClosing(okhttp3.WebSocket webSocket, int code, String reason) {
-        m.checkNotNullParameter(webSocket, "webSocket");
-        m.checkNotNullParameter(reason, ModelAuditLogEntry.CHANGE_KEY_REASON);
+        Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
+        Intrinsics3.checkNotNullParameter(reason, ModelAuditLogEntry.CHANGE_KEY_REASON);
         resetInflaters();
         this.listener.onClosing(webSocket, code, reason);
     }
 
     @Override // okhttp3.WebSocketListener
     public void onFailure(okhttp3.WebSocket webSocket, Throwable t, Response response) {
-        m.checkNotNullParameter(webSocket, "webSocket");
-        m.checkNotNullParameter(t, "t");
+        Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
+        Intrinsics3.checkNotNullParameter(t, "t");
         resetInflaters();
         this.listener.onFailure(webSocket, t, response);
     }
 
     @Override // okhttp3.WebSocketListener
     public void onMessage(okhttp3.WebSocket webSocket, String text) {
-        m.checkNotNullParameter(webSocket, "webSocket");
-        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
+        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         this.listener.onMessage(webSocket, text);
     }
 
     @Override // okhttp3.WebSocketListener
     public void onOpen(okhttp3.WebSocket webSocket, Response response) {
-        m.checkNotNullParameter(webSocket, "webSocket");
-        m.checkNotNullParameter(response, "response");
+        Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
+        Intrinsics3.checkNotNullParameter(response, "response");
         resetInflaters();
         this.listener.onOpen(webSocket, response);
     }
@@ -131,30 +131,30 @@ public final class ZLibWebSocketListener extends WebSocketListener {
     @Override // okhttp3.WebSocketListener
     public void onMessage(okhttp3.WebSocket webSocket, ByteString bytes) throws IOException {
         InputStreamReader reader;
-        m.checkNotNullParameter(webSocket, "webSocket");
-        m.checkNotNullParameter(bytes, "bytes");
+        Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
+        Intrinsics3.checkNotNullParameter(bytes, "bytes");
         if (this.listener.getRawMessageHandler() != null) {
             try {
                 reader = new ZLibByteStream(bytes, this.loggingInflater).toReader();
                 try {
-                    String text = i.readText(reader);
+                    String text = ReadWrite.readText(reader);
                     RawMessageHandler rawMessageHandler = this.listener.getRawMessageHandler();
-                    m.checkNotNull(rawMessageHandler);
+                    Intrinsics3.checkNotNull(rawMessageHandler);
                     rawMessageHandler.onRawMessage(text);
-                    b.closeFinally(reader, null);
+                    Closeable.closeFinally(reader, null);
                 } finally {
                 }
             } catch (Throwable th) {
                 RawMessageHandler rawMessageHandler2 = this.listener.getRawMessageHandler();
-                m.checkNotNull(rawMessageHandler2);
+                Intrinsics3.checkNotNull(rawMessageHandler2);
                 rawMessageHandler2.onRawMessageInflateFailed(th);
             }
         }
         try {
             reader = new ZLibByteStream(bytes, this.inflater).toReader();
             try {
-                this.listener.onInflatedMessage(webSocket, reader, bytes.j());
-                b.closeFinally(reader, null);
+                this.listener.onInflatedMessage(webSocket, reader, bytes.mo10502j());
+                Closeable.closeFinally(reader, null);
             } finally {
             }
         } catch (Exception e) {

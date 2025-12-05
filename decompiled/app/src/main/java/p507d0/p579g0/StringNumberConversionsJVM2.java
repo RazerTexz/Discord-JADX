@@ -1,0 +1,32 @@
+package p507d0.p579g0;
+
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: StringNumberConversionsJVM.kt */
+/* renamed from: d0.g0.r, reason: use source file name */
+/* loaded from: classes3.dex */
+public class StringNumberConversionsJVM2 extends StringBuilder {
+    public static final Double toDoubleOrNull(String str) {
+        Intrinsics3.checkNotNullParameter(str, "$this$toDoubleOrNull");
+        try {
+            if (StringNumberConversionsJVM.f25162a.matches(str)) {
+                return Double.valueOf(Double.parseDouble(str));
+            }
+            return null;
+        } catch (NumberFormatException unused) {
+            return null;
+        }
+    }
+
+    public static final Float toFloatOrNull(String str) {
+        Intrinsics3.checkNotNullParameter(str, "$this$toFloatOrNull");
+        try {
+            if (StringNumberConversionsJVM.f25162a.matches(str)) {
+                return Float.valueOf(Float.parseFloat(str));
+            }
+            return null;
+        } catch (NumberFormatException unused) {
+            return null;
+        }
+    }
+}

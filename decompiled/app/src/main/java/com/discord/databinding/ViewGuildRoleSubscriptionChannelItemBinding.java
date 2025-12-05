@@ -10,29 +10,32 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class ViewGuildRoleSubscriptionChannelItemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f15464a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2193b;
+    public final TextView f15465b;
 
+    /* renamed from: c */
     @NonNull
-    public final ImageView c;
+    public final ImageView f15466c;
 
+    /* renamed from: d */
     @NonNull
-    public final ImageView d;
+    public final ImageView f15467d;
 
     public ViewGuildRoleSubscriptionChannelItemBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull ImageView imageView, @NonNull ImageView imageView2) {
-        this.a = linearLayout;
-        this.f2193b = textView;
-        this.c = imageView;
-        this.d = imageView2;
+        this.f15464a = linearLayout;
+        this.f15465b = textView;
+        this.f15466c = imageView;
+        this.f15467d = imageView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15464a;
     }
 }

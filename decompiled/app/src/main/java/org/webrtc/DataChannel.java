@@ -25,12 +25,12 @@ public class DataChannel {
         public int maxRetransmits = -1;
         public String protocol = "";
 
-        /* renamed from: id, reason: collision with root package name */
-        public int f3819id = -1;
+        /* renamed from: id */
+        public int f27611id = -1;
 
         @CalledByNative("Init")
         public int getId() {
-            return this.f3819id;
+            return this.f27611id;
         }
 
         @CalledByNative("Init")
@@ -130,7 +130,8 @@ public class DataChannel {
         return this.nativeDataChannel;
     }
 
-    public int id() {
+    /* renamed from: id */
+    public int m11016id() {
         checkDataChannelExists();
         return nativeId();
     }

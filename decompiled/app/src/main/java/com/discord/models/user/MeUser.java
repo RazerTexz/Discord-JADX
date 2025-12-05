@@ -1,18 +1,18 @@
 package com.discord.models.user;
 
-import a0.a.a.b;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.api.premium.PremiumTier;
 import com.discord.api.user.NsfwAllowance;
 import com.discord.api.user.Phone;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.nullserializable.NullSerializable;
-import d0.g0.s;
-import d0.z.d.m;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.StringNumberConversions;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MeUser.kt */
 /* loaded from: classes.dex */
@@ -61,33 +61,33 @@ public final /* data */ class MeUser implements User {
             String phoneNumber;
             String str;
             NsfwAllowance nsfwAllowed;
-            NullSerializable<String> nullSerializableD;
+            NullSerializable<String> nullSerializableM8291d;
             String bio;
             String str2;
-            NullSerializable<String> nullSerializableC;
-            String strA;
-            m.checkNotNullParameter(oldUser, "oldUser");
-            m.checkNotNullParameter(newUser, "newUser");
+            NullSerializable<String> nullSerializableM8290c;
+            String strMo8429a;
+            Intrinsics3.checkNotNullParameter(oldUser, "oldUser");
+            Intrinsics3.checkNotNullParameter(newUser, "newUser");
             long id2 = newUser.getId();
             String username = newUser.getUsername();
-            NullSerializable<String> nullSerializableA = newUser.a();
-            if (nullSerializableA instanceof NullSerializable.b) {
-                avatar = (String) ((NullSerializable.b) nullSerializableA).a();
-            } else if (nullSerializableA instanceof NullSerializable.a) {
+            NullSerializable<String> nullSerializableM8288a = newUser.m8288a();
+            if (nullSerializableM8288a instanceof NullSerializable.C5566b) {
+                avatar = (String) ((NullSerializable.C5566b) nullSerializableM8288a).mo8429a();
+            } else if (nullSerializableM8288a instanceof NullSerializable.C5565a) {
                 avatar = null;
             } else {
-                if (nullSerializableA != null) {
+                if (nullSerializableM8288a != null) {
                     throw new NoWhenBranchMatchedException();
                 }
                 avatar = oldUser.getAvatar();
             }
-            NullSerializable<String> nullSerializableB = newUser.b();
-            if (nullSerializableB instanceof NullSerializable.b) {
-                banner = (String) ((NullSerializable.b) nullSerializableB).a();
-            } else if (nullSerializableB instanceof NullSerializable.a) {
+            NullSerializable<String> nullSerializableM8289b = newUser.m8289b();
+            if (nullSerializableM8289b instanceof NullSerializable.C5566b) {
+                banner = (String) ((NullSerializable.C5566b) nullSerializableM8289b).mo8429a();
+            } else if (nullSerializableM8289b instanceof NullSerializable.C5565a) {
                 banner = null;
             } else {
-                if (nullSerializableB != null) {
+                if (nullSerializableM8289b != null) {
                     throw new NoWhenBranchMatchedException();
                 }
                 banner = oldUser.getBanner();
@@ -96,7 +96,7 @@ public final /* data */ class MeUser implements User {
             boolean zBooleanValue = bot != null ? bot.booleanValue() : oldUser.getIsBot();
             Boolean system = newUser.getSystem();
             boolean zBooleanValue2 = system != null ? system.booleanValue() : oldUser.getIsSystemUser();
-            Integer intOrNull = s.toIntOrNull(newUser.getDiscriminator());
+            Integer intOrNull = StringNumberConversions.toIntOrNull(newUser.getDiscriminator());
             int iIntValue = intOrNull != null ? intOrNull.intValue() : oldUser.getDiscriminator();
             PremiumTier premiumType = newUser.getPremiumType();
             if (premiumType == null) {
@@ -124,42 +124,42 @@ public final /* data */ class MeUser implements User {
                 Objects.requireNonNull(phone2, "null cannot be cast to non-null type com.discord.api.user.Phone.PhoneNumber");
                 phoneNumber = ((Phone.PhoneNumber) phone2).getNumber();
             } else {
-                if (m.areEqual(phone, Phone.NoPhoneNumber.INSTANCE)) {
+                if (Intrinsics3.areEqual(phone, Phone.NoPhoneNumber.INSTANCE)) {
                     str = null;
                     nsfwAllowed = newUser.getNsfwAllowed();
                     if (nsfwAllowed == null) {
                         nsfwAllowed = oldUser.getNsfwAllowance();
                     }
                     NsfwAllowance nsfwAllowance = nsfwAllowed;
-                    nullSerializableD = newUser.d();
-                    if (!(nullSerializableD instanceof NullSerializable.b)) {
-                        bio = (String) ((NullSerializable.b) nullSerializableD).a();
+                    nullSerializableM8291d = newUser.m8291d();
+                    if (!(nullSerializableM8291d instanceof NullSerializable.C5566b)) {
+                        bio = (String) ((NullSerializable.C5566b) nullSerializableM8291d).mo8429a();
                     } else {
-                        if (nullSerializableD instanceof NullSerializable.a) {
+                        if (nullSerializableM8291d instanceof NullSerializable.C5565a) {
                             str2 = null;
-                            nullSerializableC = newUser.c();
-                            if (!(nullSerializableC instanceof NullSerializable.b) || (nullSerializableC instanceof NullSerializable.a)) {
-                                strA = nullSerializableC.a();
+                            nullSerializableM8290c = newUser.m8290c();
+                            if (!(nullSerializableM8290c instanceof NullSerializable.C5566b) || (nullSerializableM8290c instanceof NullSerializable.C5565a)) {
+                                strMo8429a = nullSerializableM8290c.mo8429a();
                             } else {
-                                if (nullSerializableC == null) {
+                                if (nullSerializableM8290c == null) {
                                     throw new NoWhenBranchMatchedException();
                                 }
-                                strA = oldUser.getBannerColor();
+                                strMo8429a = oldUser.getBannerColor();
                             }
-                            return new MeUser(id2, username, avatar, banner, zBooleanValue, zBooleanValue2, iIntValue, premiumType, email, zBooleanValue3, zBooleanValue4, token, iIntValue2, iIntValue3, str, nsfwAllowance, str2, strA);
+                            return new MeUser(id2, username, avatar, banner, zBooleanValue, zBooleanValue2, iIntValue, premiumType, email, zBooleanValue3, zBooleanValue4, token, iIntValue2, iIntValue3, str, nsfwAllowance, str2, strMo8429a);
                         }
-                        if (nullSerializableD != null) {
+                        if (nullSerializableM8291d != null) {
                             throw new NoWhenBranchMatchedException();
                         }
                         bio = oldUser.getBio();
                     }
                     str2 = bio;
-                    nullSerializableC = newUser.c();
-                    if (!(nullSerializableC instanceof NullSerializable.b)) {
-                        if (nullSerializableC == null) {
+                    nullSerializableM8290c = newUser.m8290c();
+                    if (!(nullSerializableM8290c instanceof NullSerializable.C5566b)) {
+                        if (nullSerializableM8290c == null) {
                         }
                     }
-                    return new MeUser(id2, username, avatar, banner, zBooleanValue, zBooleanValue2, iIntValue, premiumType, email, zBooleanValue3, zBooleanValue4, token, iIntValue2, iIntValue3, str, nsfwAllowance, str2, strA);
+                    return new MeUser(id2, username, avatar, banner, zBooleanValue, zBooleanValue2, iIntValue, premiumType, email, zBooleanValue3, zBooleanValue4, token, iIntValue2, iIntValue3, str, nsfwAllowance, str2, strMo8429a);
                 }
                 if (phone != null) {
                     throw new NoWhenBranchMatchedException();
@@ -171,14 +171,14 @@ public final /* data */ class MeUser implements User {
             if (nsfwAllowed == null) {
             }
             NsfwAllowance nsfwAllowance2 = nsfwAllowed;
-            nullSerializableD = newUser.d();
-            if (!(nullSerializableD instanceof NullSerializable.b)) {
+            nullSerializableM8291d = newUser.m8291d();
+            if (!(nullSerializableM8291d instanceof NullSerializable.C5566b)) {
             }
             str2 = bio;
-            nullSerializableC = newUser.c();
-            if (!(nullSerializableC instanceof NullSerializable.b)) {
+            nullSerializableM8290c = newUser.m8290c();
+            if (!(nullSerializableM8290c instanceof NullSerializable.C5566b)) {
             }
-            return new MeUser(id2, username, avatar, banner, zBooleanValue, zBooleanValue2, iIntValue, premiumType, email, zBooleanValue3, zBooleanValue4, token, iIntValue2, iIntValue3, str, nsfwAllowance2, str2, strA);
+            return new MeUser(id2, username, avatar, banner, zBooleanValue, zBooleanValue2, iIntValue, premiumType, email, zBooleanValue3, zBooleanValue4, token, iIntValue2, iIntValue3, str, nsfwAllowance2, str2, strMo8429a);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -187,9 +187,9 @@ public final /* data */ class MeUser implements User {
     }
 
     public MeUser(long j, String str, String str2, String str3, boolean z2, boolean z3, int i, PremiumTier premiumTier, String str4, boolean z4, boolean z5, String str5, int i2, int i3, String str6, NsfwAllowance nsfwAllowance, String str7, String str8) {
-        m.checkNotNullParameter(str, "username");
-        m.checkNotNullParameter(premiumTier, "premiumTier");
-        m.checkNotNullParameter(nsfwAllowance, "nsfwAllowance");
+        Intrinsics3.checkNotNullParameter(str, "username");
+        Intrinsics3.checkNotNullParameter(premiumTier, "premiumTier");
+        Intrinsics3.checkNotNullParameter(nsfwAllowance, "nsfwAllowance");
         this.id = j;
         this.username = str;
         this.avatar = str2;
@@ -294,9 +294,9 @@ public final /* data */ class MeUser implements User {
     }
 
     public final MeUser copy(long id2, String username, String avatar, String banner, boolean isBot, boolean isSystemUser, int discriminator, PremiumTier premiumTier, String email, boolean mfaEnabled, boolean isVerified, String token, int flags, int publicFlags, String phoneNumber, NsfwAllowance nsfwAllowance, String bio, String bannerColor) {
-        m.checkNotNullParameter(username, "username");
-        m.checkNotNullParameter(premiumTier, "premiumTier");
-        m.checkNotNullParameter(nsfwAllowance, "nsfwAllowance");
+        Intrinsics3.checkNotNullParameter(username, "username");
+        Intrinsics3.checkNotNullParameter(premiumTier, "premiumTier");
+        Intrinsics3.checkNotNullParameter(nsfwAllowance, "nsfwAllowance");
         return new MeUser(id2, username, avatar, banner, isBot, isSystemUser, discriminator, premiumTier, email, mfaEnabled, isVerified, token, flags, publicFlags, phoneNumber, nsfwAllowance, bio, bannerColor);
     }
 
@@ -308,7 +308,7 @@ public final /* data */ class MeUser implements User {
             return false;
         }
         MeUser meUser = (MeUser) other;
-        return getId() == meUser.getId() && m.areEqual(getUsername(), meUser.getUsername()) && m.areEqual(getAvatar(), meUser.getAvatar()) && m.areEqual(getBanner(), meUser.getBanner()) && getIsBot() == meUser.getIsBot() && getIsSystemUser() == meUser.getIsSystemUser() && getDiscriminator() == meUser.getDiscriminator() && m.areEqual(getPremiumTier(), meUser.getPremiumTier()) && m.areEqual(this.email, meUser.email) && this.mfaEnabled == meUser.mfaEnabled && this.isVerified == meUser.isVerified && m.areEqual(this.token, meUser.token) && getFlags() == meUser.getFlags() && getPublicFlags() == meUser.getPublicFlags() && m.areEqual(this.phoneNumber, meUser.phoneNumber) && m.areEqual(this.nsfwAllowance, meUser.nsfwAllowance) && m.areEqual(getBio(), meUser.getBio()) && m.areEqual(getBannerColor(), meUser.getBannerColor());
+        return getId() == meUser.getId() && Intrinsics3.areEqual(getUsername(), meUser.getUsername()) && Intrinsics3.areEqual(getAvatar(), meUser.getAvatar()) && Intrinsics3.areEqual(getBanner(), meUser.getBanner()) && getIsBot() == meUser.getIsBot() && getIsSystemUser() == meUser.getIsSystemUser() && getDiscriminator() == meUser.getDiscriminator() && Intrinsics3.areEqual(getPremiumTier(), meUser.getPremiumTier()) && Intrinsics3.areEqual(this.email, meUser.email) && this.mfaEnabled == meUser.mfaEnabled && this.isVerified == meUser.isVerified && Intrinsics3.areEqual(this.token, meUser.token) && getFlags() == meUser.getFlags() && getPublicFlags() == meUser.getPublicFlags() && Intrinsics3.areEqual(this.phoneNumber, meUser.phoneNumber) && Intrinsics3.areEqual(this.nsfwAllowance, meUser.nsfwAllowance) && Intrinsics3.areEqual(getBio(), meUser.getBio()) && Intrinsics3.areEqual(getBannerColor(), meUser.getBannerColor());
     }
 
     @Override // com.discord.models.user.User
@@ -387,9 +387,9 @@ public final /* data */ class MeUser implements User {
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        int iA = b.a(getId()) * 31;
+        int iM3a = C0002b.m3a(getId()) * 31;
         String username = getUsername();
-        int iHashCode = (iA + (username != null ? username.hashCode() : 0)) * 31;
+        int iHashCode = (iM3a + (username != null ? username.hashCode() : 0)) * 31;
         String avatar = getAvatar();
         int iHashCode2 = (iHashCode + (avatar != null ? avatar.hashCode() : 0)) * 31;
         String banner = getBanner();
@@ -447,44 +447,44 @@ public final /* data */ class MeUser implements User {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("MeUser(id=");
-        sbU.append(getId());
-        sbU.append(", username=");
-        sbU.append(getUsername());
-        sbU.append(", avatar=");
-        sbU.append(getAvatar());
-        sbU.append(", banner=");
-        sbU.append(getBanner());
-        sbU.append(", isBot=");
-        sbU.append(getIsBot());
-        sbU.append(", isSystemUser=");
-        sbU.append(getIsSystemUser());
-        sbU.append(", discriminator=");
-        sbU.append(getDiscriminator());
-        sbU.append(", premiumTier=");
-        sbU.append(getPremiumTier());
-        sbU.append(", email=");
-        sbU.append(this.email);
-        sbU.append(", mfaEnabled=");
-        sbU.append(this.mfaEnabled);
-        sbU.append(", isVerified=");
-        sbU.append(this.isVerified);
-        sbU.append(", token=");
-        sbU.append(this.token);
-        sbU.append(", flags=");
-        sbU.append(getFlags());
-        sbU.append(", publicFlags=");
-        sbU.append(getPublicFlags());
-        sbU.append(", phoneNumber=");
-        sbU.append(this.phoneNumber);
-        sbU.append(", nsfwAllowance=");
-        sbU.append(this.nsfwAllowance);
-        sbU.append(", bio=");
-        sbU.append(getBio());
-        sbU.append(", bannerColor=");
-        sbU.append(getBannerColor());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("MeUser(id=");
+        sbM833U.append(getId());
+        sbM833U.append(", username=");
+        sbM833U.append(getUsername());
+        sbM833U.append(", avatar=");
+        sbM833U.append(getAvatar());
+        sbM833U.append(", banner=");
+        sbM833U.append(getBanner());
+        sbM833U.append(", isBot=");
+        sbM833U.append(getIsBot());
+        sbM833U.append(", isSystemUser=");
+        sbM833U.append(getIsSystemUser());
+        sbM833U.append(", discriminator=");
+        sbM833U.append(getDiscriminator());
+        sbM833U.append(", premiumTier=");
+        sbM833U.append(getPremiumTier());
+        sbM833U.append(", email=");
+        sbM833U.append(this.email);
+        sbM833U.append(", mfaEnabled=");
+        sbM833U.append(this.mfaEnabled);
+        sbM833U.append(", isVerified=");
+        sbM833U.append(this.isVerified);
+        sbM833U.append(", token=");
+        sbM833U.append(this.token);
+        sbM833U.append(", flags=");
+        sbM833U.append(getFlags());
+        sbM833U.append(", publicFlags=");
+        sbM833U.append(getPublicFlags());
+        sbM833U.append(", phoneNumber=");
+        sbM833U.append(this.phoneNumber);
+        sbM833U.append(", nsfwAllowance=");
+        sbM833U.append(this.nsfwAllowance);
+        sbM833U.append(", bio=");
+        sbM833U.append(getBio());
+        sbM833U.append(", bannerColor=");
+        sbM833U.append(getBannerColor());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public /* synthetic */ MeUser(long j, String str, String str2, String str3, boolean z2, boolean z3, int i, PremiumTier premiumTier, String str4, boolean z4, boolean z5, String str5, int i2, int i3, String str6, NsfwAllowance nsfwAllowance, String str7, String str8, int i4, DefaultConstructorMarker defaultConstructorMarker) {
@@ -494,18 +494,18 @@ public final /* data */ class MeUser implements User {
     /* JADX WARN: Illegal instructions before constructor call */
     public MeUser(com.discord.api.user.User user) {
         String number;
-        m.checkNotNullParameter(user, "user");
+        Intrinsics3.checkNotNullParameter(user, "user");
         long id2 = user.getId();
         String username = user.getUsername();
-        NullSerializable<String> nullSerializableA = user.a();
-        String strA = nullSerializableA != null ? nullSerializableA.a() : null;
-        NullSerializable<String> nullSerializableB = user.b();
-        String strA2 = nullSerializableB != null ? nullSerializableB.a() : null;
+        NullSerializable<String> nullSerializableM8288a = user.m8288a();
+        String strMo8429a = nullSerializableM8288a != null ? nullSerializableM8288a.mo8429a() : null;
+        NullSerializable<String> nullSerializableM8289b = user.m8289b();
+        String strMo8429a2 = nullSerializableM8289b != null ? nullSerializableM8289b.mo8429a() : null;
         Boolean bot = user.getBot();
         boolean zBooleanValue = bot != null ? bot.booleanValue() : false;
         Boolean system = user.getSystem();
         boolean zBooleanValue2 = system != null ? system.booleanValue() : false;
-        Integer intOrNull = s.toIntOrNull(user.getDiscriminator());
+        Integer intOrNull = StringNumberConversions.toIntOrNull(user.getDiscriminator());
         int iIntValue = intOrNull != null ? intOrNull.intValue() : 0;
         PremiumTier premiumType = user.getPremiumType();
         premiumType = premiumType == null ? PremiumTier.NONE : premiumType;
@@ -525,16 +525,16 @@ public final /* data */ class MeUser implements User {
             Objects.requireNonNull(phone2, "null cannot be cast to non-null type com.discord.api.user.Phone.PhoneNumber");
             number = ((Phone.PhoneNumber) phone2).getNumber();
         } else {
-            if (!m.areEqual(phone, Phone.NoPhoneNumber.INSTANCE) && phone != null) {
+            if (!Intrinsics3.areEqual(phone, Phone.NoPhoneNumber.INSTANCE) && phone != null) {
                 throw new NoWhenBranchMatchedException();
             }
             number = null;
         }
         NsfwAllowance nsfwAllowed = user.getNsfwAllowed();
         NsfwAllowance nsfwAllowance = nsfwAllowed == null ? NsfwAllowance.UNKNOWN : nsfwAllowed;
-        NullSerializable<String> nullSerializableD = user.d();
-        String strA3 = nullSerializableD != null ? nullSerializableD.a() : null;
-        NullSerializable<String> nullSerializableC = user.c();
-        this(id2, username, strA, strA2, zBooleanValue, zBooleanValue2, iIntValue, premiumType, email, zBooleanValue3, zBooleanValue4, token, iIntValue2, iIntValue3, number, nsfwAllowance, strA3, nullSerializableC != null ? nullSerializableC.a() : null);
+        NullSerializable<String> nullSerializableM8291d = user.m8291d();
+        String strMo8429a3 = nullSerializableM8291d != null ? nullSerializableM8291d.mo8429a() : null;
+        NullSerializable<String> nullSerializableM8290c = user.m8290c();
+        this(id2, username, strMo8429a, strMo8429a2, zBooleanValue, zBooleanValue2, iIntValue, premiumType, email, zBooleanValue3, zBooleanValue4, token, iIntValue2, iIntValue3, number, nsfwAllowance, strMo8429a3, nullSerializableM8290c != null ? nullSerializableM8290c.mo8429a() : null);
     }
 }

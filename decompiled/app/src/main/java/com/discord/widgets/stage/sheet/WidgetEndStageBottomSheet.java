@@ -3,34 +3,35 @@ package com.discord.widgets.stage.sheet;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import androidx.core.os.BundleKt;
+import androidx.core.os.Bundle2;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentKt;
+import androidx.fragment.app.Fragment2;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetEndStageBottomSheetBinding;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.ScreenTitleView;
 import com.google.android.material.button.MaterialButton;
-import d0.g;
-import d0.o;
-import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.Tuples;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetEndStageBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetEndStageBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetEndStageBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEndStageBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEndStageBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEndStageBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -51,17 +52,17 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
         }
 
         public final void registerForResult(Fragment fragment, String requestKey, Function0<Unit> onActionTaken) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(requestKey, "requestKey");
-            m.checkNotNullParameter(onActionTaken, "onActionTaken");
-            FragmentKt.setFragmentResultListener(fragment, requestKey, new WidgetEndStageBottomSheet$Companion$registerForResult$1(requestKey, onActionTaken));
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(onActionTaken, "onActionTaken");
+            Fragment2.setFragmentResultListener(fragment, requestKey, new WidgetEndStageBottomSheet2(requestKey, onActionTaken));
         }
 
         public final void show(FragmentManager fragmentManager, String requestKey, long channelId) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
-            m.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
             WidgetEndStageBottomSheet widgetEndStageBottomSheet = new WidgetEndStageBottomSheet();
-            widgetEndStageBottomSheet.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId)), o.to(WidgetEndStageBottomSheet.EXTRA_REQUEST_KEY, requestKey)));
+            widgetEndStageBottomSheet.setArguments(Bundle2.bundleOf(Tuples.m10073to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId)), Tuples.m10073to(WidgetEndStageBottomSheet.EXTRA_REQUEST_KEY, requestKey)));
             widgetEndStageBottomSheet.show(fragmentManager, WidgetEndStageBottomSheet.class.getSimpleName());
         }
 
@@ -71,30 +72,30 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetEndStageBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onConfirmEnd$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Unit, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onConfirmEnd$1 */
+    public static final class C100181 extends Lambda implements Function1<Unit, Unit> {
+        public static final C100181 INSTANCE = new C100181();
 
-        public AnonymousClass1() {
+        public C100181() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Unit unit) {
             invoke2(unit);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
-            m.checkNotNullParameter(unit, "it");
+            Intrinsics3.checkNotNullParameter(unit, "it");
         }
     }
 
     /* compiled from: WidgetEndStageBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onViewCreated$1 */
+    public static final class ViewOnClickListenerC100191 implements View.OnClickListener {
+        public ViewOnClickListenerC100191() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -105,9 +106,9 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetEndStageBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onViewCreated$2 */
+    public static final class ViewOnClickListenerC100202 implements View.OnClickListener {
+        public ViewOnClickListenerC100202() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -120,9 +121,9 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
 
     public WidgetEndStageBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetEndStageBottomSheet$binding$2.INSTANCE, null, 2, null);
-        this.channelId = g.lazy(new WidgetEndStageBottomSheet$channelId$2(this));
-        this.requestKey = g.lazy(new WidgetEndStageBottomSheet$requestKey$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetEndStageBottomSheet3.INSTANCE, null, 2, null);
+        this.channelId = LazyJVM.lazy(new WidgetEndStageBottomSheet4(this));
+        this.requestKey = LazyJVM.lazy(new WidgetEndStageBottomSheet5(this));
     }
 
     public static final /* synthetic */ void access$callOnActionTaken(WidgetEndStageBottomSheet widgetEndStageBottomSheet) {
@@ -135,8 +136,8 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
 
     private final void callOnActionTaken() {
         String requestKey = getRequestKey();
-        m.checkNotNullExpressionValue(requestKey, "requestKey");
-        FragmentKt.setFragmentResult(this, requestKey, new Bundle());
+        Intrinsics3.checkNotNullExpressionValue(requestKey, "requestKey");
+        Fragment2.setFragmentResult(this, requestKey, new Bundle());
     }
 
     private final WidgetEndStageBottomSheetBinding getBinding() {
@@ -152,30 +153,30 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
     }
 
     private final void onConfirmEnd() {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().endStageInstance(getChannelId()), false, 1, null), WidgetEndStageBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass1.INSTANCE, 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().endStageInstance(getChannelId()), false, 1, null), WidgetEndStageBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C100181.INSTANCE, 62, (Object) null);
     }
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_end_stage_bottom_sheet;
+        return C5419R.layout.widget_end_stage_bottom_sheet;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
-        ScreenTitleView screenTitleView = getBinding().d;
-        String string = requireContext().getString(R.string.explicit_end_stage_title);
-        m.checkNotNullExpressionValue(string, "requireContext().getStri…explicit_end_stage_title)");
+        ScreenTitleView screenTitleView = getBinding().f16601d;
+        String string = requireContext().getString(C5419R.string.explicit_end_stage_title);
+        Intrinsics3.checkNotNullExpressionValue(string, "requireContext().getStri…explicit_end_stage_title)");
         screenTitleView.setTitle(string);
-        getBinding().d.setSubtitle(requireContext().getString(R.string.explicit_end_stage_subtitle));
-        MaterialButton materialButton = getBinding().f2382b;
-        m.checkNotNullExpressionValue(materialButton, "binding.cancel");
-        materialButton.setText(requireContext().getString(R.string.explicit_end_stage_cancel));
-        MaterialButton materialButton2 = getBinding().c;
-        m.checkNotNullExpressionValue(materialButton2, "binding.confirm");
-        materialButton2.setText(requireContext().getString(R.string.explicit_end_stage_confirm_mobile));
-        getBinding().f2382b.setOnClickListener(new AnonymousClass1());
-        getBinding().c.setOnClickListener(new AnonymousClass2());
+        getBinding().f16601d.setSubtitle(requireContext().getString(C5419R.string.explicit_end_stage_subtitle));
+        MaterialButton materialButton = getBinding().f16599b;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.cancel");
+        materialButton.setText(requireContext().getString(C5419R.string.explicit_end_stage_cancel));
+        MaterialButton materialButton2 = getBinding().f16600c;
+        Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.confirm");
+        materialButton2.setText(requireContext().getString(C5419R.string.explicit_end_stage_confirm_mobile));
+        getBinding().f16599b.setOnClickListener(new ViewOnClickListenerC100191());
+        getBinding().f16600c.setOnClickListener(new ViewOnClickListenerC100202());
     }
 }

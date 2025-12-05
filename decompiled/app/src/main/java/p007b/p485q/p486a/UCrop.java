@@ -1,0 +1,25 @@
+package p007b.p485q.p486a;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import androidx.annotation.NonNull;
+
+/* compiled from: UCrop.java */
+/* renamed from: b.q.a.a, reason: use source file name */
+/* loaded from: classes3.dex */
+public class UCrop {
+
+    /* renamed from: a */
+    public Intent f14387a = new Intent();
+
+    /* renamed from: b */
+    public Bundle f14388b;
+
+    public UCrop(@NonNull Uri uri, @NonNull Uri uri2) {
+        Bundle bundle = new Bundle();
+        this.f14388b = bundle;
+        bundle.putParcelable("com.yalantis.ucrop.InputUri", uri);
+        this.f14388b.putParcelable("com.yalantis.ucrop.OutputUri", uri2);
+    }
+}

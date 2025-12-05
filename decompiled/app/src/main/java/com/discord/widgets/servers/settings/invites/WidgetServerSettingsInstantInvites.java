@@ -1,6 +1,5 @@
 package com.discord.widgets.servers.settings.invites;
 
-import a0.a.a.b;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
@@ -9,16 +8,14 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.user.User;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
+import com.discord.app.AppLogger2;
 import com.discord.app.AppViewFlipper;
-import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetServerSettingsInstantInvitesBinding;
 import com.discord.models.domain.ModelInvite;
 import com.discord.models.guild.Guild;
@@ -27,22 +24,16 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreInstantInvites;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions;
-import d0.g;
-import d0.g0.t;
-import d0.t.o;
-import d0.t.u;
-import d0.z.d.k;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -53,12 +44,22 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetServerSettingsInstantInvites.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsInstantInvites extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsInstantInvites.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsInstantInvitesBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsInstantInvites.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsInstantInvitesBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -73,7 +74,7 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
 
     /* renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
-    private final LoggingConfig loggingConfig;
+    private final AppLogger2 loggingConfig;
     private final StoreInstantInvites storeInstantInvites;
 
     /* compiled from: WidgetServerSettingsInstantInvites.kt */
@@ -84,15 +85,15 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Adapter(RecyclerView recyclerView) {
             super(recyclerView, false, 2, null);
-            m.checkNotNullParameter(recyclerView, "recycler");
-            this.onInviteSelectedListener = WidgetServerSettingsInstantInvites$Adapter$onInviteSelectedListener$1.INSTANCE;
-            this.onInviteExpiredListener = WidgetServerSettingsInstantInvites$Adapter$onInviteExpiredListener$1.INSTANCE;
+            Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+            this.onInviteSelectedListener = WidgetServerSettingsInstantInvites3.INSTANCE;
+            this.onInviteExpiredListener = WidgetServerSettingsInstantInvites2.INSTANCE;
         }
 
         public final void configure(List<Model.InviteItem> data, Function1<? super ModelInvite, Unit> onInviteSelectedListener, Function1<? super ModelInvite, Unit> onInviteExpiredListener) {
-            m.checkNotNullParameter(data, "data");
-            m.checkNotNullParameter(onInviteSelectedListener, "onInviteSelectedListener");
-            m.checkNotNullParameter(onInviteExpiredListener, "onInviteExpiredListener");
+            Intrinsics3.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(onInviteSelectedListener, "onInviteSelectedListener");
+            Intrinsics3.checkNotNullParameter(onInviteExpiredListener, "onInviteExpiredListener");
             this.onInviteSelectedListener = onInviteSelectedListener;
             this.onInviteExpiredListener = onInviteExpiredListener;
             setData(data);
@@ -104,18 +105,18 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
         }
 
         public final void onInviteExpired(ModelInvite invite) {
-            m.checkNotNullParameter(invite, "invite");
+            Intrinsics3.checkNotNullParameter(invite, "invite");
             this.onInviteExpiredListener.invoke(invite);
         }
 
         public final void onInviteSelected(ModelInvite invite) {
-            m.checkNotNullParameter(invite, "invite");
+            Intrinsics3.checkNotNullParameter(invite, "invite");
             this.onInviteSelectedListener.invoke(invite);
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public MGRecyclerViewHolder<?, Model.InviteItem> onCreateViewHolder(ViewGroup parent, int viewType) {
-            m.checkNotNullParameter(parent, "parent");
+            Intrinsics3.checkNotNullParameter(parent, "parent");
             if (viewType == 0) {
                 return new WidgetServerSettingsInstantInvitesListItem(this);
             }
@@ -129,11 +130,11 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
         }
 
         public final void create(Context context, long guildId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             StoreStream.INSTANCE.getAnalytics().onGuildSettingsPaneViewed("INSTANT_INVITES", guildId);
             Intent intentPutExtra = new Intent().putExtra("INTENT_EXTRA_GUILD_ID", guildId);
-            m.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…_EXTRA_GUILD_ID, guildId)");
-            j.d(context, WidgetServerSettingsInstantInvites.class, intentPutExtra);
+            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…_EXTRA_GUILD_ID, guildId)");
+            AppScreen2.m156d(context, WidgetServerSettingsInstantInvites.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -165,11 +166,11 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
             }
 
             public final Observable<Model> get(long guildId, StoreGuilds storeGuilds, StoreInstantInvites storeInstantInvites) {
-                m.checkNotNullParameter(storeGuilds, "storeGuilds");
-                m.checkNotNullParameter(storeInstantInvites, "storeInstantInvites");
-                Observable<Model> observableR = ObservableExtensionsKt.computationLatest(ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{storeGuilds, storeInstantInvites}, false, null, null, new WidgetServerSettingsInstantInvites$Model$Companion$get$1(storeGuilds, guildId, storeInstantInvites), 14, null)).r();
-                m.checkNotNullExpressionValue(observableR, "ObservationDeckProvider.…  .distinctUntilChanged()");
-                return observableR;
+                Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+                Intrinsics3.checkNotNullParameter(storeInstantInvites, "storeInstantInvites");
+                Observable<Model> observableM11112r = ObservableExtensionsKt.computationLatest(ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{storeGuilds, storeInstantInvites}, false, null, null, new WidgetServerSettingsInstantInvites4(storeGuilds, guildId, storeInstantInvites), 14, null)).m11112r();
+                Intrinsics3.checkNotNullExpressionValue(observableM11112r, "ObservationDeckProvider.…  .distinctUntilChanged()");
+                return observableM11112r;
             }
 
             public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -195,15 +196,15 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
                 }
 
                 public final List<InviteItem> createList(Map<String, ? extends ModelInvite> invites, long guildId, Map<Long, GuildMember> guildMembers) {
-                    m.checkNotNullParameter(invites, "invites");
-                    m.checkNotNullParameter(guildMembers, "guildMembers");
+                    Intrinsics3.checkNotNullParameter(invites, "invites");
+                    Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
                     Collection<? extends ModelInvite> collectionValues = invites.values();
-                    ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(collectionValues, 10));
+                    ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(collectionValues, 10));
                     for (ModelInvite modelInvite : collectionValues) {
                         User inviter = modelInvite.getInviter();
                         arrayList.add(new InviteItem(modelInvite, guildId, inviter != null ? guildMembers.get(Long.valueOf(inviter.getId())) : null));
                     }
-                    return u.sorted(arrayList);
+                    return _Collections.sorted(arrayList);
                 }
 
                 public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -212,12 +213,12 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
             }
 
             public InviteItem(ModelInvite modelInvite, long j, GuildMember guildMember) {
-                m.checkNotNullParameter(modelInvite, "invite");
+                Intrinsics3.checkNotNullParameter(modelInvite, "invite");
                 this.invite = modelInvite;
                 this.guildId = j;
                 this.guildMember = guildMember;
                 String str = modelInvite.code;
-                m.checkNotNullExpressionValue(str, "invite.code");
+                Intrinsics3.checkNotNullExpressionValue(str, "invite.code");
                 this.key = str;
             }
 
@@ -255,7 +256,7 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
             }
 
             public final InviteItem copy(ModelInvite invite, long guildId, GuildMember guildMember) {
-                m.checkNotNullParameter(invite, "invite");
+                Intrinsics3.checkNotNullParameter(invite, "invite");
                 return new InviteItem(invite, guildId, guildMember);
             }
 
@@ -267,7 +268,7 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
                     return false;
                 }
                 InviteItem inviteItem = (InviteItem) other;
-                return m.areEqual(this.invite, inviteItem.invite) && this.guildId == inviteItem.guildId && m.areEqual(this.guildMember, inviteItem.guildMember);
+                return Intrinsics3.areEqual(this.invite, inviteItem.invite) && this.guildId == inviteItem.guildId && Intrinsics3.areEqual(this.guildMember, inviteItem.guildMember);
             }
 
             public final long getGuildId() {
@@ -294,32 +295,32 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
 
             public int hashCode() {
                 ModelInvite modelInvite = this.invite;
-                int iA = (b.a(this.guildId) + ((modelInvite != null ? modelInvite.hashCode() : 0) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.guildId) + ((modelInvite != null ? modelInvite.hashCode() : 0) * 31)) * 31;
                 GuildMember guildMember = this.guildMember;
-                return iA + (guildMember != null ? guildMember.hashCode() : 0);
+                return iM3a + (guildMember != null ? guildMember.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("InviteItem(invite=");
-                sbU.append(this.invite);
-                sbU.append(", guildId=");
-                sbU.append(this.guildId);
-                sbU.append(", guildMember=");
-                sbU.append(this.guildMember);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("InviteItem(invite=");
+                sbM833U.append(this.invite);
+                sbM833U.append(", guildId=");
+                sbM833U.append(this.guildId);
+                sbM833U.append(", guildMember=");
+                sbM833U.append(this.guildMember);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
 
             /* renamed from: compareTo, reason: avoid collision after fix types in other method */
             public int compareTo2(InviteItem other) {
                 String username;
                 String username2;
-                m.checkNotNullParameter(other, "other");
+                Intrinsics3.checkNotNullParameter(other, "other");
                 Channel channel = this.invite.getChannel();
-                String strC = channel != null ? ChannelUtils.c(channel) : null;
+                String strM7679c = channel != null ? ChannelUtils.m7679c(channel) : null;
                 Channel channel2 = other.invite.getChannel();
-                String strC2 = channel2 != null ? ChannelUtils.c(channel2) : null;
-                int iCompareTo = (strC == null || strC2 == null) ? 0 : t.compareTo(strC, strC2, true);
+                String strM7679c2 = channel2 != null ? ChannelUtils.m7679c(channel2) : null;
+                int iCompareTo = (strM7679c == null || strM7679c2 == null) ? 0 : StringsJVM.compareTo(strM7679c, strM7679c2, true);
                 User inviter = this.invite.getInviter();
                 User inviter2 = other.invite.getInviter();
                 if (iCompareTo != 0) {
@@ -337,7 +338,7 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
         }
 
         public Model(Guild guild, List<InviteItem> list) {
-            m.checkNotNullParameter(guild, "guild");
+            Intrinsics3.checkNotNullParameter(guild, "guild");
             this.guild = guild;
             this.inviteItems = list;
         }
@@ -363,7 +364,7 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
         }
 
         public final Model copy(Guild guild, List<InviteItem> inviteItems) {
-            m.checkNotNullParameter(guild, "guild");
+            Intrinsics3.checkNotNullParameter(guild, "guild");
             return new Model(guild, inviteItems);
         }
 
@@ -375,7 +376,7 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return m.areEqual(this.guild, model.guild) && m.areEqual(this.inviteItems, model.inviteItems);
+            return Intrinsics3.areEqual(this.guild, model.guild) && Intrinsics3.areEqual(this.inviteItems, model.inviteItems);
         }
 
         public final Guild getGuild() {
@@ -394,71 +395,71 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Model(guild=");
-            sbU.append(this.guild);
-            sbU.append(", inviteItems=");
-            return a.L(sbU, this.inviteItems, ")");
+            StringBuilder sbM833U = outline.m833U("Model(guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", inviteItems=");
+            return outline.m824L(sbM833U, this.inviteItems, ")");
         }
     }
 
     /* compiled from: WidgetServerSettingsInstantInvites.kt */
-    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<ModelInvite, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$configureUI$1 */
+    public static final class C95831 extends Lambda implements Function1<ModelInvite, Unit> {
+        public C95831() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelInvite modelInvite) {
             invoke2(modelInvite);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelInvite modelInvite) {
-            m.checkNotNullParameter(modelInvite, "invite");
+            Intrinsics3.checkNotNullParameter(modelInvite, "invite");
             WidgetServerSettingsInstantInvitesActions.Companion companion = WidgetServerSettingsInstantInvitesActions.INSTANCE;
             FragmentManager parentFragmentManager = WidgetServerSettingsInstantInvites.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             String str = modelInvite.code;
-            m.checkNotNullExpressionValue(str, "invite.code");
+            Intrinsics3.checkNotNullExpressionValue(str, "invite.code");
             companion.create(parentFragmentManager, str);
         }
     }
 
     /* compiled from: WidgetServerSettingsInstantInvites.kt */
-    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<ModelInvite, Unit> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$configureUI$2 */
+    public static final class C95842 extends Lambda implements Function1<ModelInvite, Unit> {
+        public static final C95842 INSTANCE = new C95842();
 
-        public AnonymousClass2() {
+        public C95842() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelInvite modelInvite) {
             invoke2(modelInvite);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelInvite modelInvite) {
-            m.checkNotNullParameter(modelInvite, "invite");
+            Intrinsics3.checkNotNullParameter(modelInvite, "invite");
             StoreStream.INSTANCE.getInstantInvites().onInviteRemoved(modelInvite);
         }
     }
 
     /* compiled from: WidgetServerSettingsInstantInvites.kt */
-    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
-        public AnonymousClass1(WidgetServerSettingsInstantInvites widgetServerSettingsInstantInvites) {
+    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C95851 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+        public C95851(WidgetServerSettingsInstantInvites widgetServerSettingsInstantInvites) {
             super(1, widgetServerSettingsInstantInvites, WidgetServerSettingsInstantInvites.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/settings/invites/WidgetServerSettingsInstantInvites$Model;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) throws Exception {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -468,11 +469,11 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
     }
 
     public WidgetServerSettingsInstantInvites() {
-        super(R.layout.widget_server_settings_instant_invites);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsInstantInvites$binding$2.INSTANCE, null, 2, null);
-        this.guildId = g.lazy(new WidgetServerSettingsInstantInvites$guildId$2(this));
+        super(C5419R.layout.widget_server_settings_instant_invites);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsInstantInvites5.INSTANCE, null, 2, null);
+        this.guildId = LazyJVM.lazy(new WidgetServerSettingsInstantInvites6(this));
         this.storeInstantInvites = StoreStream.INSTANCE.getInstantInvites();
-        this.loggingConfig = new LoggingConfig(false, null, WidgetServerSettingsInstantInvites$loggingConfig$1.INSTANCE, 3);
+        this.loggingConfig = new AppLogger2(false, null, WidgetServerSettingsInstantInvites7.INSTANCE, 3);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetServerSettingsInstantInvites widgetServerSettingsInstantInvites, Model model) throws Exception {
@@ -489,23 +490,23 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
             return;
         }
         if (data.getInviteItems() == null) {
-            AppViewFlipper appViewFlipper = getBinding().c;
-            m.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsInstantInvitesViewFlipper");
+            AppViewFlipper appViewFlipper = getBinding().f17689c;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsInstantInvitesViewFlipper");
             appViewFlipper.setDisplayedChild(0);
         } else if (data.getInviteItems().isEmpty()) {
-            AppViewFlipper appViewFlipper2 = getBinding().c;
-            m.checkNotNullExpressionValue(appViewFlipper2, "binding.serverSettingsInstantInvitesViewFlipper");
+            AppViewFlipper appViewFlipper2 = getBinding().f17689c;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.serverSettingsInstantInvitesViewFlipper");
             appViewFlipper2.setDisplayedChild(2);
         } else {
-            AppViewFlipper appViewFlipper3 = getBinding().c;
-            m.checkNotNullExpressionValue(appViewFlipper3, "binding.serverSettingsInstantInvitesViewFlipper");
+            AppViewFlipper appViewFlipper3 = getBinding().f17689c;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper3, "binding.serverSettingsInstantInvitesViewFlipper");
             appViewFlipper3.setDisplayedChild(1);
             Adapter adapter = this.adapter;
             if (adapter != null) {
-                adapter.configure(data.getInviteItems(), new AnonymousClass1(), AnonymousClass2.INSTANCE);
+                adapter.configure(data.getInviteItems(), new C95831(), C95842.INSTANCE);
             }
         }
-        setActionBarTitle(R.string.instant_invites);
+        setActionBarTitle(C5419R.string.instant_invites);
         setActionBarSubtitle(data.getGuild().getName());
     }
 
@@ -517,18 +518,18 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
         return ((Number) this.guildId.getValue()).longValue();
     }
 
-    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public LoggingConfig getLoggingConfig() {
+    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.InterfaceC5455a
+    public AppLogger2 getLoggingConfig() {
         return this.loggingConfig;
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        RecyclerView recyclerView = getBinding().f2575b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.serverSettingsInstantInvitesRecycler");
+        RecyclerView recyclerView = getBinding().f17688b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.serverSettingsInstantInvitesRecycler");
         this.adapter = (Adapter) companion.configure(new Adapter(recyclerView));
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         this.storeInstantInvites.clearInvites(getGuildId());
@@ -538,6 +539,6 @@ public final class WidgetServerSettingsInstantInvites extends AppFragment {
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.Companion.get$default(Model.INSTANCE, getGuildId(), null, null, 6, null), this, null, 2, null), WidgetServerSettingsInstantInvites.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.Companion.get$default(Model.INSTANCE, getGuildId(), null, null, 6, null), this, null, 2, null), WidgetServerSettingsInstantInvites.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C95851(this), 62, (Object) null);
     }
 }

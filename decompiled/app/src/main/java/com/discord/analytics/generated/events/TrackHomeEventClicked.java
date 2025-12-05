@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackHomeEventClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackHomeEventClicked implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
+public final /* data */ class TrackHomeEventClicked implements AnalyticsSchema, TrackBase2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final Long guildScheduledEventId = null;
@@ -18,14 +18,15 @@ public final /* data */ class TrackHomeEventClicked implements AnalyticsSchema, 
     private final Boolean isActive = null;
     private final transient String analyticsSchemaTypeName = "home_event_clicked";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -43,7 +44,7 @@ public final /* data */ class TrackHomeEventClicked implements AnalyticsSchema, 
             return false;
         }
         TrackHomeEventClicked trackHomeEventClicked = (TrackHomeEventClicked) other;
-        return m.areEqual(this.guildScheduledEventId, trackHomeEventClicked.guildScheduledEventId) && m.areEqual(this.homeSessionId, trackHomeEventClicked.homeSessionId) && m.areEqual(this.isActive, trackHomeEventClicked.isActive);
+        return Intrinsics3.areEqual(this.guildScheduledEventId, trackHomeEventClicked.guildScheduledEventId) && Intrinsics3.areEqual(this.homeSessionId, trackHomeEventClicked.homeSessionId) && Intrinsics3.areEqual(this.isActive, trackHomeEventClicked.isActive);
     }
 
     public int hashCode() {
@@ -56,11 +57,11 @@ public final /* data */ class TrackHomeEventClicked implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackHomeEventClicked(guildScheduledEventId=");
-        sbU.append(this.guildScheduledEventId);
-        sbU.append(", homeSessionId=");
-        sbU.append(this.homeSessionId);
-        sbU.append(", isActive=");
-        return a.D(sbU, this.isActive, ")");
+        StringBuilder sbM833U = outline.m833U("TrackHomeEventClicked(guildScheduledEventId=");
+        sbM833U.append(this.guildScheduledEventId);
+        sbM833U.append(", homeSessionId=");
+        sbM833U.append(this.homeSessionId);
+        sbM833U.append(", isActive=");
+        return outline.m816D(sbM833U, this.isActive, ")");
     }
 }

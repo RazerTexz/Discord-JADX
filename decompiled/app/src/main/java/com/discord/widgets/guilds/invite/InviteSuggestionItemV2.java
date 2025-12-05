@@ -1,11 +1,11 @@
 package com.discord.widgets.guilds.invite;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.models.user.User;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: InviteSuggestionItemV2.kt */
 /* loaded from: classes2.dex */
@@ -25,16 +25,16 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ChannelItem(Channel channel, boolean z2, String str) {
             super(null);
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(str, "searchQuery");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(str, "searchQuery");
             this.channel = channel;
             this.hasSent = z2;
             this.searchQuery = str;
             this.type = 3;
-            StringBuilder sbU = a.U("c");
-            sbU.append(String.valueOf(channel.getId()));
-            sbU.append(str);
-            this.key = sbU.toString();
+            StringBuilder sbM833U = outline.m833U("c");
+            sbM833U.append(String.valueOf(channel.getId()));
+            sbM833U.append(str);
+            this.key = sbM833U.toString();
         }
 
         public static /* synthetic */ ChannelItem copy$default(ChannelItem channelItem, Channel channel, boolean z2, String str, int i, Object obj) {
@@ -66,8 +66,8 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         }
 
         public final ChannelItem copy(Channel channel, boolean hasSent, String searchQuery) {
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(searchQuery, "searchQuery");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(searchQuery, "searchQuery");
             return new ChannelItem(channel, hasSent, searchQuery);
         }
 
@@ -79,7 +79,7 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
                 return false;
             }
             ChannelItem channelItem = (ChannelItem) other;
-            return m.areEqual(this.channel, channelItem.channel) && this.hasSent == channelItem.hasSent && m.areEqual(this.searchQuery, channelItem.searchQuery);
+            return Intrinsics3.areEqual(this.channel, channelItem.channel) && this.hasSent == channelItem.hasSent && Intrinsics3.areEqual(this.searchQuery, channelItem.searchQuery);
         }
 
         public final Channel getChannel() {
@@ -124,12 +124,12 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ChannelItem(channel=");
-            sbU.append(this.channel);
-            sbU.append(", hasSent=");
-            sbU.append(this.hasSent);
-            sbU.append(", searchQuery=");
-            return a.J(sbU, this.searchQuery, ")");
+            StringBuilder sbM833U = outline.m833U("ChannelItem(channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", hasSent=");
+            sbM833U.append(this.hasSent);
+            sbM833U.append(", searchQuery=");
+            return outline.m822J(sbM833U, this.searchQuery, ")");
         }
     }
 
@@ -170,16 +170,16 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UserItem(User user, boolean z2, String str) {
             super(null);
-            m.checkNotNullParameter(user, "user");
-            m.checkNotNullParameter(str, "searchQuery");
+            Intrinsics3.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(str, "searchQuery");
             this.user = user;
             this.hasSent = z2;
             this.searchQuery = str;
             this.type = 2;
-            StringBuilder sbU = a.U("u");
-            sbU.append(String.valueOf(user.getId()));
-            sbU.append(str);
-            this.key = sbU.toString();
+            StringBuilder sbM833U = outline.m833U("u");
+            sbM833U.append(String.valueOf(user.getId()));
+            sbM833U.append(str);
+            this.key = sbM833U.toString();
         }
 
         public static /* synthetic */ UserItem copy$default(UserItem userItem, User user, boolean z2, String str, int i, Object obj) {
@@ -211,8 +211,8 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         }
 
         public final UserItem copy(User user, boolean hasSent, String searchQuery) {
-            m.checkNotNullParameter(user, "user");
-            m.checkNotNullParameter(searchQuery, "searchQuery");
+            Intrinsics3.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(searchQuery, "searchQuery");
             return new UserItem(user, hasSent, searchQuery);
         }
 
@@ -224,7 +224,7 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
                 return false;
             }
             UserItem userItem = (UserItem) other;
-            return m.areEqual(this.user, userItem.user) && this.hasSent == userItem.hasSent && m.areEqual(this.searchQuery, userItem.searchQuery);
+            return Intrinsics3.areEqual(this.user, userItem.user) && this.hasSent == userItem.hasSent && Intrinsics3.areEqual(this.searchQuery, userItem.searchQuery);
         }
 
         public final boolean getHasSent() {
@@ -269,12 +269,12 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("UserItem(user=");
-            sbU.append(this.user);
-            sbU.append(", hasSent=");
-            sbU.append(this.hasSent);
-            sbU.append(", searchQuery=");
-            return a.J(sbU, this.searchQuery, ")");
+            StringBuilder sbM833U = outline.m833U("UserItem(user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", hasSent=");
+            sbM833U.append(this.hasSent);
+            sbM833U.append(", searchQuery=");
+            return outline.m822J(sbM833U, this.searchQuery, ")");
         }
     }
 

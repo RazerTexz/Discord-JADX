@@ -29,6 +29,7 @@ import androidx.core.view.accessibility.AccessibilityViewCommand;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.C0693R;
 import androidx.viewpager2.adapter.StatefulAdapter;
 import com.google.android.material.badge.BadgeDrawable;
 import java.lang.annotation.Retention;
@@ -64,9 +65,9 @@ public final class ViewPager2 extends ViewGroup {
     private final Rect mTmpContainerRect;
     private boolean mUserInputEnabled;
 
-    /* renamed from: androidx.viewpager2.widget.ViewPager2$1, reason: invalid class name */
-    public class AnonymousClass1 extends DataSetChangeObserver {
-        public AnonymousClass1() {
+    /* renamed from: androidx.viewpager2.widget.ViewPager2$1 */
+    public class C07031 extends DataSetChangeObserver {
+        public C07031() {
             super(null);
         }
 
@@ -78,9 +79,9 @@ public final class ViewPager2 extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager2.widget.ViewPager2$2, reason: invalid class name */
-    public class AnonymousClass2 extends OnPageChangeCallback {
-        public AnonymousClass2() {
+    /* renamed from: androidx.viewpager2.widget.ViewPager2$2 */
+    public class C07042 extends OnPageChangeCallback {
+        public C07042() {
         }
 
         @Override // androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
@@ -100,9 +101,9 @@ public final class ViewPager2 extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager2.widget.ViewPager2$3, reason: invalid class name */
-    public class AnonymousClass3 extends OnPageChangeCallback {
-        public AnonymousClass3() {
+    /* renamed from: androidx.viewpager2.widget.ViewPager2$3 */
+    public class C07053 extends OnPageChangeCallback {
+        public C07053() {
         }
 
         @Override // androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
@@ -114,9 +115,9 @@ public final class ViewPager2 extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager2.widget.ViewPager2$4, reason: invalid class name */
-    public class AnonymousClass4 implements RecyclerView.OnChildAttachStateChangeListener {
-        public AnonymousClass4() {
+    /* renamed from: androidx.viewpager2.widget.ViewPager2$4 */
+    public class C07064 implements RecyclerView.OnChildAttachStateChangeListener {
+        public C07064() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnChildAttachStateChangeListener
@@ -201,7 +202,7 @@ public final class ViewPager2 extends ViewGroup {
         public void onSetUserInputEnabled() {
         }
 
-        public /* synthetic */ AccessibilityProvider(ViewPager2 viewPager2, AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ AccessibilityProvider(ViewPager2 viewPager2, C07031 c07031) {
             this();
         }
     }
@@ -275,7 +276,7 @@ public final class ViewPager2 extends ViewGroup {
             onChanged();
         }
 
-        public /* synthetic */ DataSetChangeObserver(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ DataSetChangeObserver(C07031 c07031) {
             this();
         }
 
@@ -346,9 +347,9 @@ public final class ViewPager2 extends ViewGroup {
         private final AccessibilityViewCommand mActionPageForward;
         private RecyclerView.AdapterDataObserver mAdapterDataObserver;
 
-        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$1, reason: invalid class name */
-        public class AnonymousClass1 implements AccessibilityViewCommand {
-            public AnonymousClass1() {
+        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$1 */
+        public class C07071 implements AccessibilityViewCommand {
+            public C07071() {
             }
 
             @Override // androidx.core.view.accessibility.AccessibilityViewCommand
@@ -358,9 +359,9 @@ public final class ViewPager2 extends ViewGroup {
             }
         }
 
-        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$2, reason: invalid class name */
-        public class AnonymousClass2 implements AccessibilityViewCommand {
-            public AnonymousClass2() {
+        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$2 */
+        public class C07082 implements AccessibilityViewCommand {
+            public C07082() {
             }
 
             @Override // androidx.core.view.accessibility.AccessibilityViewCommand
@@ -370,9 +371,9 @@ public final class ViewPager2 extends ViewGroup {
             }
         }
 
-        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$3, reason: invalid class name */
-        public class AnonymousClass3 extends DataSetChangeObserver {
-            public AnonymousClass3() {
+        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$3 */
+        public class C07093 extends DataSetChangeObserver {
+            public C07093() {
                 super(null);
             }
 
@@ -384,8 +385,8 @@ public final class ViewPager2 extends ViewGroup {
 
         public PageAwareAccessibilityProvider() {
             super(ViewPager2.this, null);
-            this.mActionPageForward = new AnonymousClass1();
-            this.mActionPageBackward = new AnonymousClass2();
+            this.mActionPageForward = new C07071();
+            this.mActionPageBackward = new C07082();
         }
 
         private void addCollectionInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
@@ -456,7 +457,7 @@ public final class ViewPager2 extends ViewGroup {
         @Override // androidx.viewpager2.widget.ViewPager2.AccessibilityProvider
         public void onInitialize(@NonNull CompositeOnPageChangeCallback compositeOnPageChangeCallback, @NonNull RecyclerView recyclerView) {
             ViewCompat.setImportantForAccessibility(recyclerView, 2);
-            this.mAdapterDataObserver = new AnonymousClass3();
+            this.mAdapterDataObserver = new C07093();
             if (ViewCompat.getImportantForAccessibility(ViewPager2.this) == 0) {
                 ViewCompat.setImportantForAccessibility(ViewPager2.this, 1);
             }
@@ -624,7 +625,7 @@ public final class ViewPager2 extends ViewGroup {
         this.mTmpChildRect = new Rect();
         this.mExternalPageChangeCallbacks = new CompositeOnPageChangeCallback(3);
         this.mCurrentItemDirty = false;
-        this.mCurrentItemDataSetChangeObserver = new AnonymousClass1();
+        this.mCurrentItemDataSetChangeObserver = new C07031();
         this.mPendingCurrentItem = -1;
         this.mSavedItemAnimator = null;
         this.mSavedItemAnimatorPresent = false;
@@ -634,7 +635,7 @@ public final class ViewPager2 extends ViewGroup {
     }
 
     private RecyclerView.OnChildAttachStateChangeListener enforceChildFillListener() {
-        return new AnonymousClass4();
+        return new C07064();
     }
 
     private void initialize(Context context, AttributeSet attributeSet) throws IllegalStateException {
@@ -660,10 +661,10 @@ public final class ViewPager2 extends ViewGroup {
         CompositeOnPageChangeCallback compositeOnPageChangeCallback = new CompositeOnPageChangeCallback(3);
         this.mPageChangeEventDispatcher = compositeOnPageChangeCallback;
         this.mScrollEventAdapter.setOnPageChangeCallback(compositeOnPageChangeCallback);
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-        AnonymousClass3 anonymousClass3 = new AnonymousClass3();
-        this.mPageChangeEventDispatcher.addOnPageChangeCallback(anonymousClass2);
-        this.mPageChangeEventDispatcher.addOnPageChangeCallback(anonymousClass3);
+        C07042 c07042 = new C07042();
+        C07053 c07053 = new C07053();
+        this.mPageChangeEventDispatcher.addOnPageChangeCallback(c07042);
+        this.mPageChangeEventDispatcher.addOnPageChangeCallback(c07053);
         this.mAccessibilityProvider.onInitialize(this.mPageChangeEventDispatcher, this.mRecyclerView);
         this.mPageChangeEventDispatcher.addOnPageChangeCallback(this.mExternalPageChangeCallbacks);
         PageTransformerAdapter pageTransformerAdapter = new PageTransformerAdapter(this.mLayoutManager);
@@ -700,13 +701,13 @@ public final class ViewPager2 extends ViewGroup {
     }
 
     private void setOrientation(Context context, AttributeSet attributeSet) {
-        int[] iArr = androidx.viewpager2.R.styleable.ViewPager2;
+        int[] iArr = C0693R.styleable.ViewPager2;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr);
         if (Build.VERSION.SDK_INT >= 29) {
             saveAttributeDataForStyleable(context, iArr, attributeSet, typedArrayObtainStyledAttributes, 0, 0);
         }
         try {
-            setOrientation(typedArrayObtainStyledAttributes.getInt(androidx.viewpager2.R.styleable.ViewPager2_android_orientation, 0));
+            setOrientation(typedArrayObtainStyledAttributes.getInt(C0693R.styleable.ViewPager2_android_orientation, 0));
         } finally {
             typedArrayObtainStyledAttributes.recycle();
         }
@@ -1051,13 +1052,13 @@ public final class ViewPager2 extends ViewGroup {
     }
 
     public static class SavedState extends View.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C07101();
         public Parcelable mAdapterState;
         public int mCurrentItem;
         public int mRecyclerViewId;
 
-        /* renamed from: androidx.viewpager2.widget.ViewPager2$SavedState$1, reason: invalid class name */
-        public static class AnonymousClass1 implements Parcelable.ClassLoaderCreator<SavedState> {
+        /* renamed from: androidx.viewpager2.widget.ViewPager2$SavedState$1 */
+        public static class C07101 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -1142,7 +1143,7 @@ public final class ViewPager2 extends ViewGroup {
         this.mTmpChildRect = new Rect();
         this.mExternalPageChangeCallbacks = new CompositeOnPageChangeCallback(3);
         this.mCurrentItemDirty = false;
-        this.mCurrentItemDataSetChangeObserver = new AnonymousClass1();
+        this.mCurrentItemDataSetChangeObserver = new C07031();
         this.mPendingCurrentItem = -1;
         this.mSavedItemAnimator = null;
         this.mSavedItemAnimatorPresent = false;
@@ -1157,7 +1158,7 @@ public final class ViewPager2 extends ViewGroup {
         this.mTmpChildRect = new Rect();
         this.mExternalPageChangeCallbacks = new CompositeOnPageChangeCallback(3);
         this.mCurrentItemDirty = false;
-        this.mCurrentItemDataSetChangeObserver = new AnonymousClass1();
+        this.mCurrentItemDataSetChangeObserver = new C07031();
         this.mPendingCurrentItem = -1;
         this.mSavedItemAnimator = null;
         this.mSavedItemAnimatorPresent = false;
@@ -1173,7 +1174,7 @@ public final class ViewPager2 extends ViewGroup {
         this.mTmpChildRect = new Rect();
         this.mExternalPageChangeCallbacks = new CompositeOnPageChangeCallback(3);
         this.mCurrentItemDirty = false;
-        this.mCurrentItemDataSetChangeObserver = new AnonymousClass1();
+        this.mCurrentItemDataSetChangeObserver = new C07031();
         this.mPendingCurrentItem = -1;
         this.mSavedItemAnimator = null;
         this.mSavedItemAnimatorPresent = false;

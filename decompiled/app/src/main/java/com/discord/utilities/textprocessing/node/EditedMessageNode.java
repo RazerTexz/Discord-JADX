@@ -4,13 +4,13 @@ import android.content.Context;
 import android.text.style.CharacterStyle;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
-import b.a.t.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.simpleast.core.node.StyleNode;
 import com.discord.utilities.color.ColorCompat;
-import d0.t.n;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p050t.p052b.p053a.TextNode;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: EditedMessageNode.kt */
 /* loaded from: classes2.dex */
@@ -29,7 +29,7 @@ public final class EditedMessageNode<RC> extends StyleNode<RC, CharacterStyle> {
         }
 
         private final ForegroundColorSpan getForegroundColorSpan(Context context) {
-            return new ForegroundColorSpan(ColorCompat.getThemedColor(context, R.attr.colorTextMuted));
+            return new ForegroundColorSpan(ColorCompat.getThemedColor(context, C5419R.attr.colorTextMuted));
         }
 
         private final RelativeSizeSpan getRelativeSizeSpan(float relativeSize) {
@@ -44,9 +44,9 @@ public final class EditedMessageNode<RC> extends StyleNode<RC, CharacterStyle> {
         }
 
         public final String getEditedString(Context context) {
-            m.checkNotNullParameter(context, "context");
-            String string = context.getString(R.string.message_edited);
-            m.checkNotNullExpressionValue(string, "context.getString(R.string.message_edited)");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            String string = context.getString(C5419R.string.message_edited);
+            Intrinsics3.checkNotNullExpressionValue(string, "context.getString(R.string.message_edited)");
             return " (" + string + ')';
         }
 
@@ -57,9 +57,9 @@ public final class EditedMessageNode<RC> extends StyleNode<RC, CharacterStyle> {
 
     /* JADX WARN: Illegal instructions before constructor call */
     public EditedMessageNode(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         Companion companion = INSTANCE;
-        super(n.listOf(Companion.getRelativeSizeSpan$default(companion, 0.0f, 1, null), Companion.access$getForegroundColorSpan(companion, context)));
-        addChild(new a(companion.getEditedString(context)));
+        super(Collections2.listOf(Companion.getRelativeSizeSpan$default(companion, 0.0f, 1, null), Companion.access$getForegroundColorSpan(companion, context)));
+        addChild(new TextNode(companion.getEditedString(context)));
     }
 }

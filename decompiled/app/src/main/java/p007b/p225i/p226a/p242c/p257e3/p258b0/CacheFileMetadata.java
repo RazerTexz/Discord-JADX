@@ -1,0 +1,18 @@
+package p007b.p225i.p226a.p242c.p257e3.p258b0;
+
+/* compiled from: CacheFileMetadata.java */
+/* renamed from: b.i.a.c.e3.b0.e, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class CacheFileMetadata {
+
+    /* renamed from: a */
+    public final long f6459a;
+
+    /* renamed from: b */
+    public final long f6460b;
+
+    public CacheFileMetadata(long j, long j2) {
+        this.f6459a = j;
+        this.f6460b = j2;
+    }
+}

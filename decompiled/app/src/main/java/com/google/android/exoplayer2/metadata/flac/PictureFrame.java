@@ -3,25 +3,44 @@ package com.google.android.exoplayer2.metadata.flac;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.i.a.c.f3.e0;
-import b.i.a.c.j1;
-import b.i.a.c.p1;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.Arrays;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p242c.Format2;
+import p007b.p225i.p226a.p242c.MediaMetadata;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
+import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
 /* loaded from: classes3.dex */
 public final class PictureFrame implements Metadata.Entry {
-    public static final Parcelable.Creator<PictureFrame> CREATOR = new a();
-    public final int j;
-    public final String k;
-    public final String l;
-    public final int m;
-    public final int n;
-    public final int o;
-    public final int p;
-    public final byte[] q;
+    public static final Parcelable.Creator<PictureFrame> CREATOR = new C10722a();
 
-    public class a implements Parcelable.Creator<PictureFrame> {
+    /* renamed from: j */
+    public final int f19947j;
+
+    /* renamed from: k */
+    public final String f19948k;
+
+    /* renamed from: l */
+    public final String f19949l;
+
+    /* renamed from: m */
+    public final int f19950m;
+
+    /* renamed from: n */
+    public final int f19951n;
+
+    /* renamed from: o */
+    public final int f19952o;
+
+    /* renamed from: p */
+    public final int f19953p;
+
+    /* renamed from: q */
+    public final byte[] f19954q;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.flac.PictureFrame$a */
+    public class C10722a implements Parcelable.Creator<PictureFrame> {
         @Override // android.os.Parcelable.Creator
         public PictureFrame createFromParcel(Parcel parcel) {
             return new PictureFrame(parcel);
@@ -34,14 +53,14 @@ public final class PictureFrame implements Metadata.Entry {
     }
 
     public PictureFrame(int i, String str, String str2, int i2, int i3, int i4, int i5, byte[] bArr) {
-        this.j = i;
-        this.k = str;
-        this.l = str2;
-        this.m = i2;
-        this.n = i3;
-        this.o = i4;
-        this.p = i5;
-        this.q = bArr;
+        this.f19947j = i;
+        this.f19948k = str;
+        this.f19949l = str2;
+        this.f19950m = i2;
+        this.f19951n = i3;
+        this.f19952o = i4;
+        this.f19953p = i5;
+        this.f19954q = bArr;
     }
 
     @Override // android.os.Parcelable
@@ -57,56 +76,59 @@ public final class PictureFrame implements Metadata.Entry {
             return false;
         }
         PictureFrame pictureFrame = (PictureFrame) obj;
-        return this.j == pictureFrame.j && this.k.equals(pictureFrame.k) && this.l.equals(pictureFrame.l) && this.m == pictureFrame.m && this.n == pictureFrame.n && this.o == pictureFrame.o && this.p == pictureFrame.p && Arrays.equals(this.q, pictureFrame.q);
+        return this.f19947j == pictureFrame.f19947j && this.f19948k.equals(pictureFrame.f19948k) && this.f19949l.equals(pictureFrame.f19949l) && this.f19950m == pictureFrame.f19950m && this.f19951n == pictureFrame.f19951n && this.f19952o == pictureFrame.f19952o && this.f19953p == pictureFrame.f19953p && Arrays.equals(this.f19954q, pictureFrame.f19954q);
     }
 
     public int hashCode() {
-        return Arrays.hashCode(this.q) + ((((((((b.d.b.a.a.m(this.l, b.d.b.a.a.m(this.k, (this.j + 527) * 31, 31), 31) + this.m) * 31) + this.n) * 31) + this.o) * 31) + this.p) * 31);
+        return Arrays.hashCode(this.f19954q) + ((((((((outline.m863m(this.f19949l, outline.m863m(this.f19948k, (this.f19947j + 527) * 31, 31), 31) + this.f19950m) * 31) + this.f19951n) * 31) + this.f19952o) * 31) + this.f19953p) * 31);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public void n(p1.b bVar) {
-        bVar.b(this.q, this.j);
+    /* renamed from: n */
+    public void mo8878n(MediaMetadata.b bVar) {
+        bVar.m3346b(this.f19954q, this.f19947j);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ byte[] o0() {
-        return b.i.a.c.z2.a.a(this);
+    /* renamed from: o0 */
+    public /* synthetic */ byte[] mo8879o0() {
+        return Metadata2.m3892a(this);
     }
 
     public String toString() {
-        String str = this.k;
-        String str2 = this.l;
-        return b.d.b.a.a.l(b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 32)), "Picture: mimeType=", str, ", description=", str2);
+        String str = this.f19948k;
+        String str2 = this.f19949l;
+        return outline.m861l(outline.m841b(str2, outline.m841b(str, 32)), "Picture: mimeType=", str, ", description=", str2);
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(this.j);
-        parcel.writeString(this.k);
-        parcel.writeString(this.l);
-        parcel.writeInt(this.m);
-        parcel.writeInt(this.n);
-        parcel.writeInt(this.o);
-        parcel.writeInt(this.p);
-        parcel.writeByteArray(this.q);
+        parcel.writeInt(this.f19947j);
+        parcel.writeString(this.f19948k);
+        parcel.writeString(this.f19949l);
+        parcel.writeInt(this.f19950m);
+        parcel.writeInt(this.f19951n);
+        parcel.writeInt(this.f19952o);
+        parcel.writeInt(this.f19953p);
+        parcel.writeByteArray(this.f19954q);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ j1 y() {
-        return b.i.a.c.z2.a.b(this);
+    /* renamed from: y */
+    public /* synthetic */ Format2 mo8880y() {
+        return Metadata2.m3893b(this);
     }
 
     public PictureFrame(Parcel parcel) {
-        this.j = parcel.readInt();
+        this.f19947j = parcel.readInt();
         String string = parcel.readString();
-        int i = e0.a;
-        this.k = string;
-        this.l = parcel.readString();
-        this.m = parcel.readInt();
-        this.n = parcel.readInt();
-        this.o = parcel.readInt();
-        this.p = parcel.readInt();
-        this.q = parcel.createByteArray();
+        int i = Util2.f6708a;
+        this.f19948k = string;
+        this.f19949l = parcel.readString();
+        this.f19950m = parcel.readInt();
+        this.f19951n = parcel.readInt();
+        this.f19952o = parcel.readInt();
+        this.f19953p = parcel.readInt();
+        this.f19954q = parcel.createByteArray();
     }
 }

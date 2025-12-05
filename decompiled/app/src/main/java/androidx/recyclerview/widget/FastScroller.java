@@ -76,9 +76,9 @@ public class FastScroller extends RecyclerView.ItemDecoration implements Recycle
     private final int[] mVerticalRange = new int[2];
     private final int[] mHorizontalRange = new int[2];
 
-    /* renamed from: androidx.recyclerview.widget.FastScroller$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.recyclerview.widget.FastScroller$1 */
+    public class RunnableC05471 implements Runnable {
+        public RunnableC05471() {
         }
 
         @Override // java.lang.Runnable
@@ -87,9 +87,9 @@ public class FastScroller extends RecyclerView.ItemDecoration implements Recycle
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.FastScroller$2, reason: invalid class name */
-    public class AnonymousClass2 extends RecyclerView.OnScrollListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.recyclerview.widget.FastScroller$2 */
+    public class C05482 extends RecyclerView.OnScrollListener {
+        public C05482() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
@@ -144,8 +144,8 @@ public class FastScroller extends RecyclerView.ItemDecoration implements Recycle
         ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
         this.mShowHideAnimator = valueAnimatorOfFloat;
         this.mAnimationState = 0;
-        this.mHideRunnable = new AnonymousClass1();
-        this.mOnScrollListener = new AnonymousClass2();
+        this.mHideRunnable = new RunnableC05471();
+        this.mOnScrollListener = new C05482();
         this.mVerticalThumbDrawable = stateListDrawable;
         this.mVerticalTrackDrawable = drawable;
         this.mHorizontalThumbDrawable = stateListDrawable2;

@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetChatListAdapterItemMentionFooterBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
-import d0.z.d.m;
 import java.util.Objects;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetChatListAdapterItemMentionFooter.kt */
 /* loaded from: classes2.dex */
@@ -21,23 +21,23 @@ public final class WidgetChatListAdapterItemMentionFooter extends WidgetChatList
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemMentionFooter(WidgetChatListAdapter widgetChatListAdapter) {
-        super(R.layout.widget_chat_list_adapter_item_mention_footer, widgetChatListAdapter);
-        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        super(C5419R.layout.widget_chat_list_adapter_item_mention_footer, widgetChatListAdapter);
+        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
-        int i = R.id.chat_list_item_mention_footer_divider;
-        View viewFindViewById = view.findViewById(R.id.chat_list_item_mention_footer_divider);
+        int i = C5419R.id.chat_list_item_mention_footer_divider;
+        View viewFindViewById = view.findViewById(C5419R.id.chat_list_item_mention_footer_divider);
         if (viewFindViewById != null) {
-            i = R.id.chat_list_item_mention_footer_hand;
-            ImageView imageView = (ImageView) view.findViewById(R.id.chat_list_item_mention_footer_hand);
+            i = C5419R.id.chat_list_item_mention_footer_hand;
+            ImageView imageView = (ImageView) view.findViewById(C5419R.id.chat_list_item_mention_footer_hand);
             if (imageView != null) {
-                i = R.id.chat_list_item_message_header_channel;
-                TextView textView = (TextView) view.findViewById(R.id.chat_list_item_message_header_channel);
+                i = C5419R.id.chat_list_item_message_header_channel;
+                TextView textView = (TextView) view.findViewById(C5419R.id.chat_list_item_message_header_channel);
                 if (textView != null) {
-                    i = R.id.tile;
-                    View viewFindViewById2 = view.findViewById(R.id.tile);
+                    i = C5419R.id.tile;
+                    View viewFindViewById2 = view.findViewById(C5419R.id.tile);
                     if (viewFindViewById2 != null) {
                         WidgetChatListAdapterItemMentionFooterBinding widgetChatListAdapterItemMentionFooterBinding = new WidgetChatListAdapterItemMentionFooterBinding((LinearLayout) view, viewFindViewById, imageView, textView, viewFindViewById2);
-                        m.checkNotNullExpressionValue(widgetChatListAdapterItemMentionFooterBinding, "WidgetChatListAdapterIte…terBinding.bind(itemView)");
+                        Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemMentionFooterBinding, "WidgetChatListAdapterIte…terBinding.bind(itemView)");
                         this.binding = widgetChatListAdapterItemMentionFooterBinding;
                         return;
                     }
@@ -48,8 +48,8 @@ public final class WidgetChatListAdapterItemMentionFooter extends WidgetChatList
     }
 
     private final void tileBackgroundBitmapDrawable(WidgetChatListAdapterItemMentionFooterBinding widgetChatListAdapterItemMentionFooterBinding) {
-        View view = widgetChatListAdapterItemMentionFooterBinding.c;
-        m.checkNotNullExpressionValue(view, "tile");
+        View view = widgetChatListAdapterItemMentionFooterBinding.f16255c;
+        Intrinsics3.checkNotNullExpressionValue(view, "tile");
         Drawable background = view.getBackground();
         Objects.requireNonNull(background, "null cannot be cast to non-null type android.graphics.drawable.BitmapDrawable");
         BitmapDrawable bitmapDrawable = (BitmapDrawable) background;
@@ -66,11 +66,11 @@ public final class WidgetChatListAdapterItemMentionFooter extends WidgetChatList
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         boolean z2 = ((WidgetChatListAdapter) this.adapter).getData().getList().size() == 1;
-        View view = this.binding.f2326b;
-        m.checkNotNullExpressionValue(view, "binding.chatListItemMentionFooterDivider");
+        View view = this.binding.f16254b;
+        Intrinsics3.checkNotNullExpressionValue(view, "binding.chatListItemMentionFooterDivider");
         view.setVisibility(z2 ^ true ? 0 : 8);
         tileBackgroundBitmapDrawable(this.binding);
     }

@@ -15,7 +15,7 @@ public abstract class InstallReferrerClient {
             this.mContext = context;
         }
 
-        public /* synthetic */ Builder(Context context, a aVar) {
+        public /* synthetic */ Builder(Context context, C5416a c5416a) {
             this(context);
         }
 
@@ -32,7 +32,9 @@ public abstract class InstallReferrerClient {
     public @interface InstallReferrerResponse {
         public static final int DEVELOPER_ERROR = 3;
         public static final int FEATURE_NOT_SUPPORTED = 2;
-        public static final int OK = 0;
+
+        /* renamed from: OK */
+        public static final int f14568OK = 0;
         public static final int PERMISSION_ERROR = 4;
         public static final int SERVICE_DISCONNECTED = -1;
         public static final int SERVICE_UNAVAILABLE = 1;

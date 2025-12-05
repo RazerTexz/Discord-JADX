@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAppOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAppOpened implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackAppOpened implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence openedFrom = null;
     private final CharSequence uriHost = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackAppOpened implements AnalyticsSchema, TrackBa
             return false;
         }
         TrackAppOpened trackAppOpened = (TrackAppOpened) other;
-        return m.areEqual(this.openedFrom, trackAppOpened.openedFrom) && m.areEqual(this.uriHost, trackAppOpened.uriHost) && m.areEqual(this.uriScheme, trackAppOpened.uriScheme) && m.areEqual(this.uriPath, trackAppOpened.uriPath) && m.areEqual(this.loadId, trackAppOpened.loadId) && m.areEqual(this.theme, trackAppOpened.theme);
+        return Intrinsics3.areEqual(this.openedFrom, trackAppOpened.openedFrom) && Intrinsics3.areEqual(this.uriHost, trackAppOpened.uriHost) && Intrinsics3.areEqual(this.uriScheme, trackAppOpened.uriScheme) && Intrinsics3.areEqual(this.uriPath, trackAppOpened.uriPath) && Intrinsics3.areEqual(this.loadId, trackAppOpened.loadId) && Intrinsics3.areEqual(this.theme, trackAppOpened.theme);
     }
 
     public int hashCode() {
@@ -51,17 +51,17 @@ public final /* data */ class TrackAppOpened implements AnalyticsSchema, TrackBa
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAppOpened(openedFrom=");
-        sbU.append(this.openedFrom);
-        sbU.append(", uriHost=");
-        sbU.append(this.uriHost);
-        sbU.append(", uriScheme=");
-        sbU.append(this.uriScheme);
-        sbU.append(", uriPath=");
-        sbU.append(this.uriPath);
-        sbU.append(", loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", theme=");
-        return a.E(sbU, this.theme, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAppOpened(openedFrom=");
+        sbM833U.append(this.openedFrom);
+        sbM833U.append(", uriHost=");
+        sbM833U.append(this.uriHost);
+        sbM833U.append(", uriScheme=");
+        sbM833U.append(this.uriScheme);
+        sbM833U.append(", uriPath=");
+        sbM833U.append(this.uriPath);
+        sbM833U.append(", loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", theme=");
+        return outline.m817E(sbM833U, this.theme, ")");
     }
 }

@@ -5,30 +5,32 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.n;
+import p007b.p008a.p025i.ExpressionPickerCategorySelectionOverlineViewBinding;
 
 /* loaded from: classes.dex */
 public final class EmojiCategoryItemStandardBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final FrameLayout a;
+    public final FrameLayout f15053a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ImageView f2100b;
+    public final ImageView f15054b;
 
+    /* renamed from: c */
     @NonNull
-    public final n c;
+    public final ExpressionPickerCategorySelectionOverlineViewBinding f15055c;
 
-    public EmojiCategoryItemStandardBinding(@NonNull FrameLayout frameLayout, @NonNull ImageView imageView, @NonNull n nVar) {
-        this.a = frameLayout;
-        this.f2100b = imageView;
-        this.c = nVar;
+    public EmojiCategoryItemStandardBinding(@NonNull FrameLayout frameLayout, @NonNull ImageView imageView, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding) {
+        this.f15053a = frameLayout;
+        this.f15054b = imageView;
+        this.f15055c = expressionPickerCategorySelectionOverlineViewBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15053a;
     }
 }

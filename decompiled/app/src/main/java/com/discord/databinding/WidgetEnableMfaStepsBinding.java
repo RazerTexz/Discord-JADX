@@ -10,25 +10,27 @@ import com.discord.views.steps.StepsView;
 /* loaded from: classes.dex */
 public final class WidgetEnableMfaStepsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final FrameLayout a;
+    public final FrameLayout f16589a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final DimmerView f2380b;
+    public final DimmerView f16590b;
 
+    /* renamed from: c */
     @NonNull
-    public final StepsView c;
+    public final StepsView f16591c;
 
     public WidgetEnableMfaStepsBinding(@NonNull FrameLayout frameLayout, @NonNull DimmerView dimmerView, @NonNull StepsView stepsView) {
-        this.a = frameLayout;
-        this.f2380b = dimmerView;
-        this.c = stepsView;
+        this.f16589a = frameLayout;
+        this.f16590b = dimmerView;
+        this.f16591c = stepsView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16589a;
     }
 }

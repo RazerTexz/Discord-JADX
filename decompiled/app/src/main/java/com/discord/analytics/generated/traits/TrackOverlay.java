@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackOverlay.kt */
 /* loaded from: classes.dex */
@@ -34,7 +34,7 @@ public final /* data */ class TrackOverlay {
             return false;
         }
         TrackOverlay trackOverlay = (TrackOverlay) other;
-        return m.areEqual(this.gameName, trackOverlay.gameName) && m.areEqual(this.gameId, trackOverlay.gameId) && m.areEqual(this.error, trackOverlay.error) && m.areEqual(this.rendererStarted, trackOverlay.rendererStarted) && m.areEqual(this.rendererStartedAfter, trackOverlay.rendererStartedAfter) && m.areEqual(this.rendererReadyAfter, trackOverlay.rendererReadyAfter) && m.areEqual(this.rendererLoadSucceededAfter, trackOverlay.rendererLoadSucceededAfter) && m.areEqual(this.rendererCrashCount, trackOverlay.rendererCrashCount) && m.areEqual(this.rendererLoadFailures, trackOverlay.rendererLoadFailures) && m.areEqual(this.rendererIgnoredPaints, trackOverlay.rendererIgnoredPaints) && m.areEqual(this.hostCrashCount, trackOverlay.hostCrashCount) && m.areEqual(this.framebufferSource, trackOverlay.framebufferSource) && m.areEqual(this.firstFramebufferAfter, trackOverlay.firstFramebufferAfter) && m.areEqual(this.graphicsWidth, trackOverlay.graphicsWidth) && m.areEqual(this.graphicsHeight, trackOverlay.graphicsHeight) && m.areEqual(this.graphicsApi, trackOverlay.graphicsApi) && m.areEqual(this.graphicsInfoAfter, trackOverlay.graphicsInfoAfter) && m.areEqual(this.cpu, trackOverlay.cpu) && m.areEqual(this.gpu, trackOverlay.gpu);
+        return Intrinsics3.areEqual(this.gameName, trackOverlay.gameName) && Intrinsics3.areEqual(this.gameId, trackOverlay.gameId) && Intrinsics3.areEqual(this.error, trackOverlay.error) && Intrinsics3.areEqual(this.rendererStarted, trackOverlay.rendererStarted) && Intrinsics3.areEqual(this.rendererStartedAfter, trackOverlay.rendererStartedAfter) && Intrinsics3.areEqual(this.rendererReadyAfter, trackOverlay.rendererReadyAfter) && Intrinsics3.areEqual(this.rendererLoadSucceededAfter, trackOverlay.rendererLoadSucceededAfter) && Intrinsics3.areEqual(this.rendererCrashCount, trackOverlay.rendererCrashCount) && Intrinsics3.areEqual(this.rendererLoadFailures, trackOverlay.rendererLoadFailures) && Intrinsics3.areEqual(this.rendererIgnoredPaints, trackOverlay.rendererIgnoredPaints) && Intrinsics3.areEqual(this.hostCrashCount, trackOverlay.hostCrashCount) && Intrinsics3.areEqual(this.framebufferSource, trackOverlay.framebufferSource) && Intrinsics3.areEqual(this.firstFramebufferAfter, trackOverlay.firstFramebufferAfter) && Intrinsics3.areEqual(this.graphicsWidth, trackOverlay.graphicsWidth) && Intrinsics3.areEqual(this.graphicsHeight, trackOverlay.graphicsHeight) && Intrinsics3.areEqual(this.graphicsApi, trackOverlay.graphicsApi) && Intrinsics3.areEqual(this.graphicsInfoAfter, trackOverlay.graphicsInfoAfter) && Intrinsics3.areEqual(this.cpu, trackOverlay.cpu) && Intrinsics3.areEqual(this.gpu, trackOverlay.gpu);
     }
 
     public int hashCode() {
@@ -79,43 +79,43 @@ public final /* data */ class TrackOverlay {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackOverlay(gameName=");
-        sbU.append(this.gameName);
-        sbU.append(", gameId=");
-        sbU.append(this.gameId);
-        sbU.append(", error=");
-        sbU.append(this.error);
-        sbU.append(", rendererStarted=");
-        sbU.append(this.rendererStarted);
-        sbU.append(", rendererStartedAfter=");
-        sbU.append(this.rendererStartedAfter);
-        sbU.append(", rendererReadyAfter=");
-        sbU.append(this.rendererReadyAfter);
-        sbU.append(", rendererLoadSucceededAfter=");
-        sbU.append(this.rendererLoadSucceededAfter);
-        sbU.append(", rendererCrashCount=");
-        sbU.append(this.rendererCrashCount);
-        sbU.append(", rendererLoadFailures=");
-        sbU.append(this.rendererLoadFailures);
-        sbU.append(", rendererIgnoredPaints=");
-        sbU.append(this.rendererIgnoredPaints);
-        sbU.append(", hostCrashCount=");
-        sbU.append(this.hostCrashCount);
-        sbU.append(", framebufferSource=");
-        sbU.append(this.framebufferSource);
-        sbU.append(", firstFramebufferAfter=");
-        sbU.append(this.firstFramebufferAfter);
-        sbU.append(", graphicsWidth=");
-        sbU.append(this.graphicsWidth);
-        sbU.append(", graphicsHeight=");
-        sbU.append(this.graphicsHeight);
-        sbU.append(", graphicsApi=");
-        sbU.append(this.graphicsApi);
-        sbU.append(", graphicsInfoAfter=");
-        sbU.append(this.graphicsInfoAfter);
-        sbU.append(", cpu=");
-        sbU.append(this.cpu);
-        sbU.append(", gpu=");
-        return a.E(sbU, this.gpu, ")");
+        StringBuilder sbM833U = outline.m833U("TrackOverlay(gameName=");
+        sbM833U.append(this.gameName);
+        sbM833U.append(", gameId=");
+        sbM833U.append(this.gameId);
+        sbM833U.append(", error=");
+        sbM833U.append(this.error);
+        sbM833U.append(", rendererStarted=");
+        sbM833U.append(this.rendererStarted);
+        sbM833U.append(", rendererStartedAfter=");
+        sbM833U.append(this.rendererStartedAfter);
+        sbM833U.append(", rendererReadyAfter=");
+        sbM833U.append(this.rendererReadyAfter);
+        sbM833U.append(", rendererLoadSucceededAfter=");
+        sbM833U.append(this.rendererLoadSucceededAfter);
+        sbM833U.append(", rendererCrashCount=");
+        sbM833U.append(this.rendererCrashCount);
+        sbM833U.append(", rendererLoadFailures=");
+        sbM833U.append(this.rendererLoadFailures);
+        sbM833U.append(", rendererIgnoredPaints=");
+        sbM833U.append(this.rendererIgnoredPaints);
+        sbM833U.append(", hostCrashCount=");
+        sbM833U.append(this.hostCrashCount);
+        sbM833U.append(", framebufferSource=");
+        sbM833U.append(this.framebufferSource);
+        sbM833U.append(", firstFramebufferAfter=");
+        sbM833U.append(this.firstFramebufferAfter);
+        sbM833U.append(", graphicsWidth=");
+        sbM833U.append(this.graphicsWidth);
+        sbM833U.append(", graphicsHeight=");
+        sbM833U.append(this.graphicsHeight);
+        sbM833U.append(", graphicsApi=");
+        sbM833U.append(this.graphicsApi);
+        sbM833U.append(", graphicsInfoAfter=");
+        sbM833U.append(this.graphicsInfoAfter);
+        sbM833U.append(", cpu=");
+        sbM833U.append(this.cpu);
+        sbM833U.append(", gpu=");
+        return outline.m817E(sbM833U, this.gpu, ")");
     }
 }

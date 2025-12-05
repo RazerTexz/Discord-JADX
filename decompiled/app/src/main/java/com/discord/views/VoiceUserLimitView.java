@@ -12,21 +12,22 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import b.a.i.k4;
-import b.a.y.f0;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.color.ColorCompat;
-import d0.a0.a;
-import d0.g;
-import d0.z.d.m;
 import kotlin.Lazy;
+import p007b.p008a.p025i.VoiceUserLimitViewBinding;
+import p007b.p008a.p062y.VoiceUserLimitView2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p508a0.MathJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: VoiceUserLimitView.kt */
 /* loaded from: classes2.dex */
 public final class VoiceUserLimitView extends LinearLayout {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final k4 binding;
+    public final VoiceUserLimitViewBinding binding;
 
     /* renamed from: k, reason: from kotlin metadata */
     public final Paint paint;
@@ -52,17 +53,17 @@ public final class VoiceUserLimitView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public VoiceUserLimitView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        LayoutInflater.from(getContext()).inflate(R.layout.voice_user_limit_view, this);
-        int i = R.id.voice_user_limit_current;
-        TextView textView = (TextView) findViewById(R.id.voice_user_limit_current);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        LayoutInflater.from(getContext()).inflate(C5419R.layout.voice_user_limit_view, this);
+        int i = C5419R.id.voice_user_limit_current;
+        TextView textView = (TextView) findViewById(C5419R.id.voice_user_limit_current);
         if (textView != null) {
-            i = R.id.voice_user_limit_max;
-            TextView textView2 = (TextView) findViewById(R.id.voice_user_limit_max);
+            i = C5419R.id.voice_user_limit_max;
+            TextView textView2 = (TextView) findViewById(C5419R.id.voice_user_limit_max);
             if (textView2 != null) {
-                k4 k4Var = new k4(this, textView, textView2);
-                m.checkNotNullExpressionValue(k4Var, "VoiceUserLimitViewBindin…ater.from(context), this)");
-                this.binding = k4Var;
+                VoiceUserLimitViewBinding voiceUserLimitViewBinding = new VoiceUserLimitViewBinding(this, textView, textView2);
+                Intrinsics3.checkNotNullExpressionValue(voiceUserLimitViewBinding, "VoiceUserLimitViewBindin…ater.from(context), this)");
+                this.binding = voiceUserLimitViewBinding;
                 Paint paint = new Paint(1);
                 this.paint = paint;
                 Path path = new Path();
@@ -70,11 +71,11 @@ public final class VoiceUserLimitView extends LinearLayout {
                 this.point1 = new Point();
                 this.point2 = new Point();
                 this.point3 = new Point();
-                this.videoCamDrawable = g.lazy(new f0(this));
+                this.videoCamDrawable = LazyJVM.lazy(new VoiceUserLimitView2(this));
                 Resources resources = getResources();
-                m.checkNotNullExpressionValue(resources, "resources");
-                this.slantWidthPx = a.roundToInt(TypedValue.applyDimension(1, 6.0f, resources.getDisplayMetrics()));
-                paint.setColor(ColorCompat.getThemedColor(getContext(), R.attr.colorBackgroundMobilePrimary));
+                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+                this.slantWidthPx = MathJVM.roundToInt(TypedValue.applyDimension(1, 6.0f, resources.getDisplayMetrics()));
+                paint.setColor(ColorCompat.getThemedColor(getContext(), C5419R.attr.colorBackgroundMobilePrimary));
                 paint.setStrokeWidth(2.0f);
                 paint.setStyle(Paint.Style.FILL_AND_STROKE);
                 paint.setAntiAlias(true);
@@ -89,30 +90,31 @@ public final class VoiceUserLimitView extends LinearLayout {
         return (Drawable) this.videoCamDrawable.getValue();
     }
 
-    public final void a(int current, int max, boolean isVideo) {
-        TextView textView = this.binding.f148b;
-        m.checkNotNullExpressionValue(textView, "binding.voiceUserLimitCurrent");
-        textView.setText(current < 100 ? b.d.b.a.a.P(new Object[]{Integer.valueOf(current)}, 1, "%02d", "java.lang.String.format(format, *args)") : String.valueOf(current));
-        TextView textView2 = this.binding.c;
-        m.checkNotNullExpressionValue(textView2, "binding.voiceUserLimitMax");
-        textView2.setText(max < 100 ? b.d.b.a.a.P(new Object[]{Integer.valueOf(max)}, 1, "%02d", "java.lang.String.format(format, *args)") : String.valueOf(max));
+    /* renamed from: a */
+    public final void m8569a(int current, int max, boolean isVideo) {
+        TextView textView = this.binding.f1005b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserLimitCurrent");
+        textView.setText(current < 100 ? outline.m828P(new Object[]{Integer.valueOf(current)}, 1, "%02d", "java.lang.String.format(format, *args)") : String.valueOf(current));
+        TextView textView2 = this.binding.f1006c;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.voiceUserLimitMax");
+        textView2.setText(max < 100 ? outline.m828P(new Object[]{Integer.valueOf(max)}, 1, "%02d", "java.lang.String.format(format, *args)") : String.valueOf(max));
         if (isVideo) {
-            this.binding.f148b.setCompoundDrawablesWithIntrinsicBounds(getVideoCamDrawable(), (Drawable) null, (Drawable) null, (Drawable) null);
+            this.binding.f1005b.setCompoundDrawablesWithIntrinsicBounds(getVideoCamDrawable(), (Drawable) null, (Drawable) null, (Drawable) null);
         } else {
-            this.binding.f148b.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, (Drawable) null, (Drawable) null, (Drawable) null);
+            this.binding.f1005b.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, (Drawable) null, (Drawable) null, (Drawable) null);
         }
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-        m.checkNotNull(canvas);
+        Intrinsics3.checkNotNull(canvas);
         int height = getHeight();
-        TextView textView = this.binding.f148b;
-        m.checkNotNullExpressionValue(textView, "binding.voiceUserLimitCurrent");
+        TextView textView = this.binding.f1005b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserLimitCurrent");
         int width = textView.getWidth();
-        TextView textView2 = this.binding.f148b;
-        m.checkNotNullExpressionValue(textView2, "binding.voiceUserLimitCurrent");
+        TextView textView2 = this.binding.f1005b;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.voiceUserLimitCurrent");
         int width2 = textView2.getWidth() + this.slantWidthPx;
         this.point1.set(width, height);
         this.point2.set(width2, 0);

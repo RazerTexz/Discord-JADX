@@ -1,9 +1,9 @@
 package com.discord.utilities.contacts;
 
 import android.content.Context;
-import d0.t.n0;
-import d0.z.d.m;
 import java.util.Set;
+import p507d0.p580t.Sets5;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ContactsFetcher.kt */
 /* loaded from: classes2.dex */
@@ -11,13 +11,13 @@ public final class ContactsFetcher {
     private final Context context;
 
     public ContactsFetcher(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         this.context = context;
     }
 
     public final Set<String> fetchContacts() {
         ContactsProviderUtils contactsProviderUtils = ContactsProviderUtils.INSTANCE;
-        return !contactsProviderUtils.hasContactPermissions(this.context) ? n0.emptySet() : contactsProviderUtils.getAllContactPhoneNumbers(this.context);
+        return !contactsProviderUtils.hasContactPermissions(this.context) ? Sets5.emptySet() : contactsProviderUtils.getAllContactPhoneNumbers(this.context);
     }
 
     public final Context getContext() {

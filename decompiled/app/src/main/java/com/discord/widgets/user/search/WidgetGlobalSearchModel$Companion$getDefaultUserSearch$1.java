@@ -2,12 +2,12 @@ package com.discord.widgets.user.search;
 
 import com.discord.models.user.User;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGlobalSearchModel$Companion$getDefaultUserSearch$1 extends o implements Function1<Long, User> {
+public final class WidgetGlobalSearchModel$Companion$getDefaultUserSearch$1 extends Lambda implements Function1<Long, User> {
     public final /* synthetic */ WidgetGlobalSearchModel.UsersContext $usersContext;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackUserFlowTransition.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserFlowTransition implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
+public final /* data */ class TrackUserFlowTransition implements AnalyticsSchema, TrackBase2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final CharSequence flowType = null;
@@ -20,14 +20,15 @@ public final /* data */ class TrackUserFlowTransition implements AnalyticsSchema
     private final Float secondsOnFromStep = null;
     private final transient String analyticsSchemaTypeName = "user_flow_transition";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -45,7 +46,7 @@ public final /* data */ class TrackUserFlowTransition implements AnalyticsSchema
             return false;
         }
         TrackUserFlowTransition trackUserFlowTransition = (TrackUserFlowTransition) other;
-        return m.areEqual(this.flowType, trackUserFlowTransition.flowType) && m.areEqual(this.fromStep, trackUserFlowTransition.fromStep) && m.areEqual(this.toStep, trackUserFlowTransition.toStep) && m.areEqual(this.skip, trackUserFlowTransition.skip) && m.areEqual(this.secondsOnFromStep, trackUserFlowTransition.secondsOnFromStep);
+        return Intrinsics3.areEqual(this.flowType, trackUserFlowTransition.flowType) && Intrinsics3.areEqual(this.fromStep, trackUserFlowTransition.fromStep) && Intrinsics3.areEqual(this.toStep, trackUserFlowTransition.toStep) && Intrinsics3.areEqual(this.skip, trackUserFlowTransition.skip) && Intrinsics3.areEqual(this.secondsOnFromStep, trackUserFlowTransition.secondsOnFromStep);
     }
 
     public int hashCode() {
@@ -62,17 +63,17 @@ public final /* data */ class TrackUserFlowTransition implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackUserFlowTransition(flowType=");
-        sbU.append(this.flowType);
-        sbU.append(", fromStep=");
-        sbU.append(this.fromStep);
-        sbU.append(", toStep=");
-        sbU.append(this.toStep);
-        sbU.append(", skip=");
-        sbU.append(this.skip);
-        sbU.append(", secondsOnFromStep=");
-        sbU.append(this.secondsOnFromStep);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("TrackUserFlowTransition(flowType=");
+        sbM833U.append(this.flowType);
+        sbM833U.append(", fromStep=");
+        sbM833U.append(this.fromStep);
+        sbM833U.append(", toStep=");
+        sbM833U.append(this.toStep);
+        sbM833U.append(", skip=");
+        sbM833U.append(this.skip);
+        sbM833U.append(", secondsOnFromStep=");
+        sbM833U.append(this.secondsOnFromStep);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

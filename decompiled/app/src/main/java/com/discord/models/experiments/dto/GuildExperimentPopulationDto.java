@@ -1,12 +1,12 @@
 package com.discord.models.experiments.dto;
 
-import b.d.b.a.a;
 import com.discord.models.domain.Model;
-import d0.t.n;
-import d0.z.d.m;
 import java.io.IOException;
 import java.util.List;
 import kotlin.jvm.internal.Ref$ObjectRef;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildExperimentDto.kt */
 /* loaded from: classes.dex */
@@ -22,16 +22,16 @@ public final /* data */ class GuildExperimentPopulationDto {
         }
 
         public final GuildExperimentPopulationDto parse(Model.JsonReader jsonReader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = a.c0(jsonReader, "jsonReader");
-            ref$ObjectRefC0.element = null;
+            Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(jsonReader, "jsonReader");
+            ref$ObjectRefM844c0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
-            jsonReader.nextListIndexed(new GuildExperimentPopulationDto$Parser$parse$1(ref$ObjectRefC0, jsonReader), new GuildExperimentPopulationDto$Parser$parse$2(ref$ObjectRef, jsonReader));
-            List list = (List) ref$ObjectRefC0.element;
-            m.checkNotNull(list);
+            jsonReader.nextListIndexed(new GuildExperimentPopulationDto$Parser$parse$1(ref$ObjectRefM844c0, jsonReader), new GuildExperimentPopulationDto$Parser$parse$2(ref$ObjectRef, jsonReader));
+            List list = (List) ref$ObjectRefM844c0.element;
+            Intrinsics3.checkNotNull(list);
             List listEmptyList = (List) ref$ObjectRef.element;
             if (listEmptyList == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             return new GuildExperimentPopulationDto(list, listEmptyList);
         }
@@ -39,8 +39,8 @@ public final /* data */ class GuildExperimentPopulationDto {
 
     /* JADX WARN: Multi-variable type inference failed */
     public GuildExperimentPopulationDto(List<GuildExperimentBucketDto> list, List<? extends GuildExperimentFilter> list2) {
-        m.checkNotNullParameter(list, "buckets");
-        m.checkNotNullParameter(list2, "filters");
+        Intrinsics3.checkNotNullParameter(list, "buckets");
+        Intrinsics3.checkNotNullParameter(list2, "filters");
         this.buckets = list;
         this.filters = list2;
     }
@@ -65,8 +65,8 @@ public final /* data */ class GuildExperimentPopulationDto {
     }
 
     public final GuildExperimentPopulationDto copy(List<GuildExperimentBucketDto> buckets, List<? extends GuildExperimentFilter> filters) {
-        m.checkNotNullParameter(buckets, "buckets");
-        m.checkNotNullParameter(filters, "filters");
+        Intrinsics3.checkNotNullParameter(buckets, "buckets");
+        Intrinsics3.checkNotNullParameter(filters, "filters");
         return new GuildExperimentPopulationDto(buckets, filters);
     }
 
@@ -78,7 +78,7 @@ public final /* data */ class GuildExperimentPopulationDto {
             return false;
         }
         GuildExperimentPopulationDto guildExperimentPopulationDto = (GuildExperimentPopulationDto) other;
-        return m.areEqual(this.buckets, guildExperimentPopulationDto.buckets) && m.areEqual(this.filters, guildExperimentPopulationDto.filters);
+        return Intrinsics3.areEqual(this.buckets, guildExperimentPopulationDto.buckets) && Intrinsics3.areEqual(this.filters, guildExperimentPopulationDto.filters);
     }
 
     public final List<GuildExperimentBucketDto> getBuckets() {
@@ -97,9 +97,9 @@ public final /* data */ class GuildExperimentPopulationDto {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildExperimentPopulationDto(buckets=");
-        sbU.append(this.buckets);
-        sbU.append(", filters=");
-        return a.L(sbU, this.filters, ")");
+        StringBuilder sbM833U = outline.m833U("GuildExperimentPopulationDto(buckets=");
+        sbM833U.append(this.buckets);
+        sbM833U.append(", filters=");
+        return outline.m824L(sbM833U, this.filters, ")");
     }
 }

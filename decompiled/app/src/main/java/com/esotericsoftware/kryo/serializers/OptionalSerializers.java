@@ -3,8 +3,8 @@ package com.esotericsoftware.kryo.serializers;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.p502io.Input;
+import com.esotericsoftware.kryo.p502io.Output;
 import com.esotericsoftware.kryo.util.Util;
 import java.util.Optional;
 import java.util.OptionalDouble;
@@ -43,7 +43,7 @@ public final class OptionalSerializers {
             }
         }
 
-        public /* synthetic */ OptionalDoubleSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ OptionalDoubleSerializer(C106261 c106261) {
             this();
         }
     }
@@ -77,7 +77,7 @@ public final class OptionalSerializers {
             }
         }
 
-        public /* synthetic */ OptionalIntSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ OptionalIntSerializer(C106261 c106261) {
             this();
         }
     }
@@ -111,7 +111,7 @@ public final class OptionalSerializers {
             }
         }
 
-        public /* synthetic */ OptionalLongSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ OptionalLongSerializer(C106261 c106261) {
             this();
         }
     }
@@ -152,7 +152,7 @@ public final class OptionalSerializers {
             kryo.writeClassAndObject(output, optional.isPresent() ? optional.get() : null);
         }
 
-        public /* synthetic */ OptionalSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ OptionalSerializer(C106261 c106261) {
             this();
         }
     }

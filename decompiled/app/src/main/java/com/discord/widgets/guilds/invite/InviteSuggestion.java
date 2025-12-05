@@ -1,10 +1,10 @@
 package com.discord.widgets.guilds.invite;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.models.user.User;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: InviteSuggestion.kt */
 /* loaded from: classes2.dex */
@@ -17,7 +17,7 @@ public abstract class InviteSuggestion {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ChannelItem(Channel channel) {
             super(null);
-            m.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
             this.channel = channel;
         }
 
@@ -34,13 +34,13 @@ public abstract class InviteSuggestion {
         }
 
         public final ChannelItem copy(Channel channel) {
-            m.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
             return new ChannelItem(channel);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof ChannelItem) && m.areEqual(this.channel, ((ChannelItem) other).channel);
+                return (other instanceof ChannelItem) && Intrinsics3.areEqual(this.channel, ((ChannelItem) other).channel);
             }
             return true;
         }
@@ -58,10 +58,10 @@ public abstract class InviteSuggestion {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ChannelItem(channel=");
-            sbU.append(this.channel);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ChannelItem(channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -72,7 +72,7 @@ public abstract class InviteSuggestion {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UserSuggestion(User user) {
             super(null);
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             this.user = user;
         }
 
@@ -89,13 +89,13 @@ public abstract class InviteSuggestion {
         }
 
         public final UserSuggestion copy(User user) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             return new UserSuggestion(user);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof UserSuggestion) && m.areEqual(this.user, ((UserSuggestion) other).user);
+                return (other instanceof UserSuggestion) && Intrinsics3.areEqual(this.user, ((UserSuggestion) other).user);
             }
             return true;
         }
@@ -113,10 +113,10 @@ public abstract class InviteSuggestion {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("UserSuggestion(user=");
-            sbU.append(this.user);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("UserSuggestion(user=");
+            sbM833U.append(this.user);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 

@@ -62,7 +62,7 @@ public class HandleHelper extends EclipseAnnotationHandler<Helper> {
     public void handle(AnnotationValues<Helper> annotation, Annotation ast, EclipseNode annotationNode) {
         char[] name;
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.HELPER_FLAG_USAGE, "@Helper");
-        EclipseNode annotatedType = annotationNode.up();
+        EclipseNode annotatedType = annotationNode.m10925up();
         EclipseNode containingBlock = annotatedType == null ? null : annotatedType.directUp();
         Statement[] origStatements = getStatementsFromAstNode(containingBlock == null ? null : containingBlock.get());
         if (annotatedType == null || annotatedType.getKind() != AST.Kind.TYPE || origStatements == null) {
@@ -95,7 +95,7 @@ public class HandleHelper extends EclipseAnnotationHandler<Helper> {
         boolean[] helperUsed = new boolean[1];
         helperName[0] = '$';
         System.arraycopy(((TypeDeclaration) statement).name, 0, helperName, 1, helperName.length - 1);
-        ASTVisitor visitor = new AnonymousClass1(knownMethodNames_, helperName, helperUsed);
+        ASTVisitor visitor = new C128661(knownMethodNames_, helperName, helperUsed);
         for (int i2 = indexOfType + 1; i2 < origStatements.length; i2++) {
             origStatements[i2].traverse(visitor, (BlockScope) null);
         }
@@ -118,14 +118,14 @@ public class HandleHelper extends EclipseAnnotationHandler<Helper> {
         setStatementsOfAstNode(containingBlock.get(), newStatements);
     }
 
-    /* renamed from: lombok.eclipse.handlers.HandleHelper$1, reason: invalid class name */
+    /* renamed from: lombok.eclipse.handlers.HandleHelper$1 */
     /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleHelper$1.SCL.lombok */
-    class AnonymousClass1 extends ASTVisitor {
+    class C128661 extends ASTVisitor {
         private final /* synthetic */ String[] val$knownMethodNames_;
         private final /* synthetic */ char[] val$helperName;
         private final /* synthetic */ boolean[] val$helperUsed;
 
-        AnonymousClass1(String[] strArr, char[] cArr, boolean[] zArr) {
+        C128661(String[] strArr, char[] cArr, boolean[] zArr) {
             this.val$knownMethodNames_ = strArr;
             this.val$helperName = cArr;
             this.val$helperUsed = zArr;

@@ -1,13 +1,13 @@
 package com.discord.api.message.allowedmentions;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MessageAllowedMentions.kt */
 /* loaded from: classes.dex */
 public final /* data */ class MessageAllowedMentions {
-    private final List<MessageAllowedMentionsTypes> parse;
+    private final List<MessageAllowedMentions2> parse;
     private final Boolean repliedUser;
     private final List<Long> roles;
     private final List<Long> users;
@@ -27,7 +27,8 @@ public final /* data */ class MessageAllowedMentions {
         this.repliedUser = bool;
     }
 
-    public final List<MessageAllowedMentionsTypes> a() {
+    /* renamed from: a */
+    public final List<MessageAllowedMentions2> m8060a() {
         return this.parse;
     }
 
@@ -36,11 +37,13 @@ public final /* data */ class MessageAllowedMentions {
         return this.repliedUser;
     }
 
-    public final List<Long> c() {
+    /* renamed from: c */
+    public final List<Long> m8062c() {
         return this.roles;
     }
 
-    public final List<Long> d() {
+    /* renamed from: d */
+    public final List<Long> m8063d() {
         return this.users;
     }
 
@@ -52,11 +55,11 @@ public final /* data */ class MessageAllowedMentions {
             return false;
         }
         MessageAllowedMentions messageAllowedMentions = (MessageAllowedMentions) other;
-        return m.areEqual(this.parse, messageAllowedMentions.parse) && m.areEqual(this.users, messageAllowedMentions.users) && m.areEqual(this.roles, messageAllowedMentions.roles) && m.areEqual(this.repliedUser, messageAllowedMentions.repliedUser);
+        return Intrinsics3.areEqual(this.parse, messageAllowedMentions.parse) && Intrinsics3.areEqual(this.users, messageAllowedMentions.users) && Intrinsics3.areEqual(this.roles, messageAllowedMentions.roles) && Intrinsics3.areEqual(this.repliedUser, messageAllowedMentions.repliedUser);
     }
 
     public int hashCode() {
-        List<MessageAllowedMentionsTypes> list = this.parse;
+        List<MessageAllowedMentions2> list = this.parse;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
         List<Long> list2 = this.users;
         int iHashCode2 = (iHashCode + (list2 != null ? list2.hashCode() : 0)) * 31;
@@ -67,13 +70,13 @@ public final /* data */ class MessageAllowedMentions {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("MessageAllowedMentions(parse=");
-        sbU.append(this.parse);
-        sbU.append(", users=");
-        sbU.append(this.users);
-        sbU.append(", roles=");
-        sbU.append(this.roles);
-        sbU.append(", repliedUser=");
-        return a.D(sbU, this.repliedUser, ")");
+        StringBuilder sbM833U = outline.m833U("MessageAllowedMentions(parse=");
+        sbM833U.append(this.parse);
+        sbM833U.append(", users=");
+        sbM833U.append(this.users);
+        sbM833U.append(", roles=");
+        sbM833U.append(this.roles);
+        sbM833U.append(", repliedUser=");
+        return outline.m816D(sbM833U, this.repliedUser, ")");
     }
 }

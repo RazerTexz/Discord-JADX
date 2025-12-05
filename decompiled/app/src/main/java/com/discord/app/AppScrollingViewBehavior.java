@@ -10,27 +10,30 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.discord.utilities.display.DisplayUtils;
 import com.google.android.material.appbar.AppBarLayout;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: AppScrollingViewBehavior.kt */
 /* loaded from: classes.dex */
 public final class AppScrollingViewBehavior extends AppBarLayout.ScrollingViewBehavior {
 
     /* renamed from: a, reason: from kotlin metadata */
-    public final a onApplyWindowInsetsListener;
+    public final C5456a onApplyWindowInsetsListener;
 
     /* compiled from: AppScrollingViewBehavior.kt */
-    public static final class a implements OnApplyWindowInsetsListener {
-        public Rect a;
+    /* renamed from: com.discord.app.AppScrollingViewBehavior$a */
+    public static final class C5456a implements OnApplyWindowInsetsListener {
+
+        /* renamed from: a */
+        public Rect f14962a;
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            m.checkNotNullParameter(view, "v");
-            m.checkNotNullParameter(windowInsetsCompat, "insets");
-            if (this.a == null) {
-                this.a = new Rect(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), view.getPaddingBottom());
+            Intrinsics3.checkNotNullParameter(view, "v");
+            Intrinsics3.checkNotNullParameter(windowInsetsCompat, "insets");
+            if (this.f14962a == null) {
+                this.f14962a = new Rect(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), view.getPaddingBottom());
             }
-            Rect rect = this.a;
+            Rect rect = this.f14962a;
             if (rect == null) {
                 rect = new Rect();
             }
@@ -42,16 +45,16 @@ public final class AppScrollingViewBehavior extends AppBarLayout.ScrollingViewBe
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AppScrollingViewBehavior(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(attributeSet, "attrs");
-        this.onApplyWindowInsetsListener = new a();
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
+        this.onApplyWindowInsetsListener = new C5456a();
     }
 
     @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
     public WindowInsetsCompat onApplyWindowInsets(CoordinatorLayout coordinatorLayout, View child, WindowInsetsCompat insets) {
-        m.checkNotNullParameter(coordinatorLayout, "coordinatorLayout");
-        m.checkNotNullParameter(child, "child");
-        m.checkNotNullParameter(insets, "insets");
+        Intrinsics3.checkNotNullParameter(coordinatorLayout, "coordinatorLayout");
+        Intrinsics3.checkNotNullParameter(child, "child");
+        Intrinsics3.checkNotNullParameter(insets, "insets");
         ViewCompat.setOnApplyWindowInsetsListener(child, DisplayUtils.getNO_OP_WINDOW_INSETS_LISTENER());
         this.onApplyWindowInsetsListener.onApplyWindowInsets(child, insets);
         return insets;

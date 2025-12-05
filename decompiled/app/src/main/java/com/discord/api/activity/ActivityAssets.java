@@ -1,7 +1,7 @@
 package com.discord.api.activity;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ActivityAssets.kt */
 /* loaded from: classes.dex */
@@ -46,7 +46,7 @@ public final /* data */ class ActivityAssets {
             return false;
         }
         ActivityAssets activityAssets = (ActivityAssets) other;
-        return m.areEqual(this.largeImage, activityAssets.largeImage) && m.areEqual(this.largeText, activityAssets.largeText) && m.areEqual(this.smallImage, activityAssets.smallImage) && m.areEqual(this.smallText, activityAssets.smallText);
+        return Intrinsics3.areEqual(this.largeImage, activityAssets.largeImage) && Intrinsics3.areEqual(this.largeText, activityAssets.largeText) && Intrinsics3.areEqual(this.smallImage, activityAssets.smallImage) && Intrinsics3.areEqual(this.smallText, activityAssets.smallText);
     }
 
     public int hashCode() {
@@ -61,13 +61,13 @@ public final /* data */ class ActivityAssets {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ActivityAssets(largeImage=");
-        sbU.append(this.largeImage);
-        sbU.append(", largeText=");
-        sbU.append(this.largeText);
-        sbU.append(", smallImage=");
-        sbU.append(this.smallImage);
-        sbU.append(", smallText=");
-        return a.J(sbU, this.smallText, ")");
+        StringBuilder sbM833U = outline.m833U("ActivityAssets(largeImage=");
+        sbM833U.append(this.largeImage);
+        sbM833U.append(", largeText=");
+        sbM833U.append(this.largeText);
+        sbM833U.append(", smallImage=");
+        sbM833U.append(this.smallImage);
+        sbM833U.append(", smallText=");
+        return outline.m822J(sbM833U, this.smallText, ")");
     }
 }

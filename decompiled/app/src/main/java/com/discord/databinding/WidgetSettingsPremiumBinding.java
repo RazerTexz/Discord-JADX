@@ -9,111 +9,130 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.a3;
-import b.a.i.a6;
-import b.a.i.b3;
-import b.a.i.f0;
-import b.a.i.s0;
-import b.a.i.z2;
 import com.discord.app.AppViewFlipper;
 import com.discord.views.ActiveSubscriptionView;
 import com.google.android.material.button.MaterialButton;
+import p007b.p008a.p025i.LayoutAccountCreditsListBinding;
+import p007b.p008a.p025i.LayoutPremiumSettingsPaymentBinding;
+import p007b.p008a.p025i.ViewPremiumSettingsPerksBinding;
+import p007b.p008a.p025i.ViewPremiumSettingsTier1Binding;
+import p007b.p008a.p025i.ViewPremiumSettingsTier2Binding;
+import p007b.p008a.p025i.WidgetSettingsPremiumPriceChangeNoticeBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetSettingsPremiumBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f18029a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final f0 f2633b;
+    public final LayoutAccountCreditsListBinding f18030b;
 
+    /* renamed from: c */
     @NonNull
-    public final s0 c;
+    public final LayoutPremiumSettingsPaymentBinding f18031c;
 
+    /* renamed from: d */
     @NonNull
-    public final z2 d;
+    public final ViewPremiumSettingsPerksBinding f18032d;
 
+    /* renamed from: e */
     @NonNull
-    public final ActiveSubscriptionView e;
+    public final ActiveSubscriptionView f18033e;
 
+    /* renamed from: f */
     @NonNull
-    public final ActiveSubscriptionView f;
+    public final ActiveSubscriptionView f18034f;
 
+    /* renamed from: g */
     @NonNull
-    public final LinearLayout g;
+    public final LinearLayout f18035g;
 
+    /* renamed from: h */
     @NonNull
-    public final TextView h;
+    public final TextView f18036h;
 
+    /* renamed from: i */
     @NonNull
-    public final TextView i;
+    public final TextView f18037i;
 
+    /* renamed from: j */
     @NonNull
-    public final TextView j;
+    public final TextView f18038j;
 
+    /* renamed from: k */
     @NonNull
-    public final a6 k;
+    public final WidgetSettingsPremiumPriceChangeNoticeBinding f18039k;
 
+    /* renamed from: l */
     @NonNull
-    public final MaterialButton l;
+    public final MaterialButton f18040l;
 
+    /* renamed from: m */
     @NonNull
-    public final ScrollView m;
+    public final ScrollView f18041m;
 
+    /* renamed from: n */
     @NonNull
-    public final Button n;
+    public final Button f18042n;
 
+    /* renamed from: o */
     @NonNull
-    public final CardView o;
+    public final CardView f18043o;
 
+    /* renamed from: p */
     @NonNull
-    public final TextView p;
+    public final TextView f18044p;
 
+    /* renamed from: q */
     @NonNull
-    public final LinearLayout q;
+    public final LinearLayout f18045q;
 
+    /* renamed from: r */
     @NonNull
-    public final TextView r;
+    public final TextView f18046r;
 
-    /* renamed from: s, reason: collision with root package name */
+    /* renamed from: s */
     @NonNull
-    public final AppViewFlipper f2634s;
+    public final AppViewFlipper f18047s;
 
+    /* renamed from: t */
     @NonNull
-    public final a3 t;
+    public final ViewPremiumSettingsTier1Binding f18048t;
 
+    /* renamed from: u */
     @NonNull
-    public final b3 u;
+    public final ViewPremiumSettingsTier2Binding f18049u;
 
-    public WidgetSettingsPremiumBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull f0 f0Var, @NonNull s0 s0Var, @NonNull z2 z2Var, @NonNull ActiveSubscriptionView activeSubscriptionView, @NonNull ActiveSubscriptionView activeSubscriptionView2, @NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull a6 a6Var, @NonNull MaterialButton materialButton, @NonNull ScrollView scrollView, @NonNull Button button, @NonNull CardView cardView, @NonNull TextView textView4, @NonNull LinearLayout linearLayout2, @NonNull TextView textView5, @NonNull AppViewFlipper appViewFlipper, @NonNull a3 a3Var, @NonNull b3 b3Var) {
-        this.a = coordinatorLayout;
-        this.f2633b = f0Var;
-        this.c = s0Var;
-        this.d = z2Var;
-        this.e = activeSubscriptionView;
-        this.f = activeSubscriptionView2;
-        this.g = linearLayout;
-        this.h = textView;
-        this.i = textView2;
-        this.j = textView3;
-        this.k = a6Var;
-        this.l = materialButton;
-        this.m = scrollView;
-        this.n = button;
-        this.o = cardView;
-        this.p = textView4;
-        this.q = linearLayout2;
-        this.r = textView5;
-        this.f2634s = appViewFlipper;
-        this.t = a3Var;
-        this.u = b3Var;
+    public WidgetSettingsPremiumBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LayoutAccountCreditsListBinding layoutAccountCreditsListBinding, @NonNull LayoutPremiumSettingsPaymentBinding layoutPremiumSettingsPaymentBinding, @NonNull ViewPremiumSettingsPerksBinding viewPremiumSettingsPerksBinding, @NonNull ActiveSubscriptionView activeSubscriptionView, @NonNull ActiveSubscriptionView activeSubscriptionView2, @NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull WidgetSettingsPremiumPriceChangeNoticeBinding widgetSettingsPremiumPriceChangeNoticeBinding, @NonNull MaterialButton materialButton, @NonNull ScrollView scrollView, @NonNull Button button, @NonNull CardView cardView, @NonNull TextView textView4, @NonNull LinearLayout linearLayout2, @NonNull TextView textView5, @NonNull AppViewFlipper appViewFlipper, @NonNull ViewPremiumSettingsTier1Binding viewPremiumSettingsTier1Binding, @NonNull ViewPremiumSettingsTier2Binding viewPremiumSettingsTier2Binding) {
+        this.f18029a = coordinatorLayout;
+        this.f18030b = layoutAccountCreditsListBinding;
+        this.f18031c = layoutPremiumSettingsPaymentBinding;
+        this.f18032d = viewPremiumSettingsPerksBinding;
+        this.f18033e = activeSubscriptionView;
+        this.f18034f = activeSubscriptionView2;
+        this.f18035g = linearLayout;
+        this.f18036h = textView;
+        this.f18037i = textView2;
+        this.f18038j = textView3;
+        this.f18039k = widgetSettingsPremiumPriceChangeNoticeBinding;
+        this.f18040l = materialButton;
+        this.f18041m = scrollView;
+        this.f18042n = button;
+        this.f18043o = cardView;
+        this.f18044p = textView4;
+        this.f18045q = linearLayout2;
+        this.f18046r = textView5;
+        this.f18047s = appViewFlipper;
+        this.f18048t = viewPremiumSettingsTier1Binding;
+        this.f18049u = viewPremiumSettingsTier2Binding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18029a;
     }
 }

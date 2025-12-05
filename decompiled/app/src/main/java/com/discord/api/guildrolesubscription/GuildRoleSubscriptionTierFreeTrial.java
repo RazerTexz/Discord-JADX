@@ -1,8 +1,8 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildRoleSubscriptionTierFreeTrial.kt */
 /* loaded from: classes.dex */
@@ -35,7 +35,7 @@ public final /* data */ class GuildRoleSubscriptionTierFreeTrial {
             return false;
         }
         GuildRoleSubscriptionTierFreeTrial guildRoleSubscriptionTierFreeTrial = (GuildRoleSubscriptionTierFreeTrial) other;
-        return this.id == guildRoleSubscriptionTierFreeTrial.id && m.areEqual(this.numActiveTrialUsers, guildRoleSubscriptionTierFreeTrial.numActiveTrialUsers) && m.areEqual(this.activeTrial, guildRoleSubscriptionTierFreeTrial.activeTrial) && m.areEqual(this.maxNumActiveTrialUsers, guildRoleSubscriptionTierFreeTrial.maxNumActiveTrialUsers);
+        return this.id == guildRoleSubscriptionTierFreeTrial.id && Intrinsics3.areEqual(this.numActiveTrialUsers, guildRoleSubscriptionTierFreeTrial.numActiveTrialUsers) && Intrinsics3.areEqual(this.activeTrial, guildRoleSubscriptionTierFreeTrial.activeTrial) && Intrinsics3.areEqual(this.maxNumActiveTrialUsers, guildRoleSubscriptionTierFreeTrial.maxNumActiveTrialUsers);
     }
 
     public int hashCode() {
@@ -50,13 +50,13 @@ public final /* data */ class GuildRoleSubscriptionTierFreeTrial {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildRoleSubscriptionTierFreeTrial(id=");
-        sbU.append(this.id);
-        sbU.append(", numActiveTrialUsers=");
-        sbU.append(this.numActiveTrialUsers);
-        sbU.append(", activeTrial=");
-        sbU.append(this.activeTrial);
-        sbU.append(", maxNumActiveTrialUsers=");
-        return a.F(sbU, this.maxNumActiveTrialUsers, ")");
+        StringBuilder sbM833U = outline.m833U("GuildRoleSubscriptionTierFreeTrial(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", numActiveTrialUsers=");
+        sbM833U.append(this.numActiveTrialUsers);
+        sbM833U.append(", activeTrial=");
+        sbM833U.append(this.activeTrial);
+        sbM833U.append(", maxNumActiveTrialUsers=");
+        return outline.m818F(sbM833U, this.maxNumActiveTrialUsers, ")");
     }
 }

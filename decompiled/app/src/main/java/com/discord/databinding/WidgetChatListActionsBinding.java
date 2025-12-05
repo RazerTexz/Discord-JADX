@@ -11,81 +11,97 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetChatListActionsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final NestedScrollView a;
+    public final NestedScrollView f16121a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final RecyclerView f2307b;
+    public final RecyclerView f16122b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f16123c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f16124d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16125e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextView f;
+    public final TextView f16126f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f16127g;
 
+    /* renamed from: h */
     @NonNull
-    public final TextView h;
+    public final TextView f16128h;
 
+    /* renamed from: i */
     @NonNull
-    public final TextView i;
+    public final TextView f16129i;
 
+    /* renamed from: j */
     @NonNull
-    public final TextView j;
+    public final TextView f16130j;
 
+    /* renamed from: k */
     @NonNull
-    public final TextView k;
+    public final TextView f16131k;
 
+    /* renamed from: l */
     @NonNull
-    public final TextView l;
+    public final TextView f16132l;
 
+    /* renamed from: m */
     @NonNull
-    public final TextView m;
+    public final TextView f16133m;
 
+    /* renamed from: n */
     @NonNull
-    public final TextView n;
+    public final TextView f16134n;
 
+    /* renamed from: o */
     @NonNull
-    public final TextView o;
+    public final TextView f16135o;
 
+    /* renamed from: p */
     @NonNull
-    public final TextView p;
+    public final TextView f16136p;
 
+    /* renamed from: q */
     @NonNull
-    public final TextView q;
+    public final TextView f16137q;
 
     public WidgetChatListActionsBinding(@NonNull NestedScrollView nestedScrollView, @NonNull RecyclerView recyclerView, @NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView5, @NonNull TextView textView6, @NonNull TextView textView7, @NonNull TextView textView8, @NonNull TextView textView9, @NonNull TextView textView10, @NonNull TextView textView11, @NonNull TextView textView12, @NonNull TextView textView13, @NonNull TextView textView14, @NonNull TextView textView15) {
-        this.a = nestedScrollView;
-        this.f2307b = recyclerView;
-        this.c = textView;
-        this.d = textView2;
-        this.e = textView3;
-        this.f = textView4;
-        this.g = textView5;
-        this.h = textView6;
-        this.i = textView7;
-        this.j = textView8;
-        this.k = textView9;
-        this.l = textView10;
-        this.m = textView11;
-        this.n = textView12;
-        this.o = textView13;
-        this.p = textView14;
-        this.q = textView15;
+        this.f16121a = nestedScrollView;
+        this.f16122b = recyclerView;
+        this.f16123c = textView;
+        this.f16124d = textView2;
+        this.f16125e = textView3;
+        this.f16126f = textView4;
+        this.f16127g = textView5;
+        this.f16128h = textView6;
+        this.f16129i = textView7;
+        this.f16130j = textView8;
+        this.f16131k = textView9;
+        this.f16132l = textView10;
+        this.f16133m = textView11;
+        this.f16134n = textView12;
+        this.f16135o = textView13;
+        this.f16136p = textView14;
+        this.f16137q = textView15;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16121a;
     }
 }

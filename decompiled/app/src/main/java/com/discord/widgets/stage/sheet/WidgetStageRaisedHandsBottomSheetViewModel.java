@@ -3,8 +3,6 @@ package com.discord.widgets.stage.sheet;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.core.app.NotificationCompat;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
@@ -16,34 +14,36 @@ import com.discord.stores.StoreStageChannels;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreVoiceParticipants;
-import com.discord.utilities.PermissionOverwriteUtilsKt;
+import com.discord.utilities.PermissionOverwriteUtils;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.widgets.stage.StageChannelAPI;
 import com.discord.widgets.stage.StageRoles;
 import com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetAdapter;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
 import java.util.List;
 import java.util.Map;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Subscription;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
+import p658rx.Subscription;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewState> {
+public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -55,21 +55,21 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
     private final StoreVoiceParticipants voiceParticipants;
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$1 */
+    public static final class C100411 extends Lambda implements Function1<StoreState, Unit> {
+        public C100411() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetStageRaisedHandsBottomSheetViewModel.access$handleStoreState(WidgetStageRaisedHandsBottomSheetViewModel.this, storeState);
         }
     }
@@ -84,11 +84,11 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
         }
 
         private final Observable<StoreState> observeStoreState(long channelId, StoreVoiceParticipants voiceParticipants, StoreChannels channelsStore, StoreGuilds guildsStore, StoreStageChannels stageChannels, Clock clock) {
-            Observable<R> observableG = channelsStore.observeChannel(channelId).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-            m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
-            Observable<StoreState> observableY = observableG.r().Y(new WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1(guildsStore, voiceParticipants, channelId, stageChannels, clock));
-            m.checkNotNullExpressionValue(observableY, "channelsStore.observeCha…          }\n            }");
-            return observableY;
+            Observable<R> observableM11083G = channelsStore.observeChannel(channelId).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
+            Observable<StoreState> observableM11099Y = observableM11083G.m11112r().m11099Y(new WidgetStageRaisedHandsBottomSheetViewModel2(guildsStore, voiceParticipants, channelId, stageChannels, clock));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "channelsStore.observeCha…          }\n            }");
+            return observableM11099Y;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -115,7 +115,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Error(com.discord.utilities.error.Error error) {
                 super(null);
-                m.checkNotNullParameter(error, "error");
+                Intrinsics3.checkNotNullParameter(error, "error");
                 this.error = error;
             }
 
@@ -132,13 +132,13 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
             }
 
             public final Error copy(com.discord.utilities.error.Error error) {
-                m.checkNotNullParameter(error, "error");
+                Intrinsics3.checkNotNullParameter(error, "error");
                 return new Error(error);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Error) && m.areEqual(this.error, ((Error) other).error);
+                    return (other instanceof Error) && Intrinsics3.areEqual(this.error, ((Error) other).error);
                 }
                 return true;
             }
@@ -156,10 +156,10 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Error(error=");
-                sbU.append(this.error);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Error(error=");
+                sbM833U.append(this.error);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -188,7 +188,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
 
         /* JADX WARN: Multi-variable type inference failed */
         /* renamed from: copy-FZjiw-U$default, reason: not valid java name */
-        public static /* synthetic */ StoreState m47copyFZjiwU$default(StoreState storeState, Channel channel, Map map, List list, int i, int i2, Object obj) {
+        public static /* synthetic */ StoreState m11424copyFZjiwU$default(StoreState storeState, Channel channel, Map map, List list, int i, int i2, Object obj) {
             if ((i2 & 1) != 0) {
                 channel = storeState.channel;
             }
@@ -201,7 +201,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
             if ((i2 & 8) != 0) {
                 i = storeState.myStageRoles;
             }
-            return storeState.m49copyFZjiwU(channel, map, list, i);
+            return storeState.m11426copyFZjiwU(channel, map, list, i);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -223,10 +223,10 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
         }
 
         /* renamed from: copy-FZjiw-U, reason: not valid java name */
-        public final StoreState m49copyFZjiwU(Channel channel, Map<Long, GuildRole> roles, List<? extends WidgetStageRaisedHandsBottomSheetAdapter.ListItem> raisedHandsParticipants, int myStageRoles) {
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(roles, "roles");
-            m.checkNotNullParameter(raisedHandsParticipants, "raisedHandsParticipants");
+        public final StoreState m11426copyFZjiwU(Channel channel, Map<Long, GuildRole> roles, List<? extends WidgetStageRaisedHandsBottomSheetAdapter.ListItem> raisedHandsParticipants, int myStageRoles) {
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(roles, "roles");
+            Intrinsics3.checkNotNullParameter(raisedHandsParticipants, "raisedHandsParticipants");
             return new StoreState(channel, roles, raisedHandsParticipants, myStageRoles);
         }
 
@@ -238,7 +238,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.channel, storeState.channel) && m.areEqual(this.roles, storeState.roles) && m.areEqual(this.raisedHandsParticipants, storeState.raisedHandsParticipants) && this.myStageRoles == storeState.myStageRoles;
+            return Intrinsics3.areEqual(this.channel, storeState.channel) && Intrinsics3.areEqual(this.roles, storeState.roles) && Intrinsics3.areEqual(this.raisedHandsParticipants, storeState.raisedHandsParticipants) && this.myStageRoles == storeState.myStageRoles;
         }
 
         public final Channel getChannel() {
@@ -246,7 +246,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
         }
 
         /* renamed from: getMyStageRoles-1LxfuJo, reason: not valid java name */
-        public final int m50getMyStageRoles1LxfuJo() {
+        public final int m11427getMyStageRoles1LxfuJo() {
             return this.myStageRoles;
         }
 
@@ -268,16 +268,16 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(channel=");
-            sbU.append(this.channel);
-            sbU.append(", roles=");
-            sbU.append(this.roles);
-            sbU.append(", raisedHandsParticipants=");
-            sbU.append(this.raisedHandsParticipants);
-            sbU.append(", myStageRoles=");
-            sbU.append(StageRoles.m34toStringimpl(this.myStageRoles));
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("StoreState(channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", roles=");
+            sbM833U.append(this.roles);
+            sbM833U.append(", raisedHandsParticipants=");
+            sbM833U.append(this.raisedHandsParticipants);
+            sbM833U.append(", myStageRoles=");
+            sbM833U.append(StageRoles.m11411toStringimpl(this.myStageRoles));
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
 
         public /* synthetic */ StoreState(Channel channel, Map map, List list, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -367,8 +367,8 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
             }
 
             public final Loaded copy(Channel channel, List<? extends WidgetStageRaisedHandsBottomSheetAdapter.ListItem> raisedHandsParticipants, boolean isRequestToSpeakEnabled, boolean isSpeaker, boolean isUpdatingRequestToSpeakPermissions, boolean isTogglingSpeakingState) {
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(raisedHandsParticipants, "raisedHandsParticipants");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(raisedHandsParticipants, "raisedHandsParticipants");
                 return new Loaded(channel, raisedHandsParticipants, isRequestToSpeakEnabled, isSpeaker, isUpdatingRequestToSpeakPermissions, isTogglingSpeakingState);
             }
 
@@ -380,7 +380,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return m.areEqual(this.channel, loaded.channel) && m.areEqual(this.raisedHandsParticipants, loaded.raisedHandsParticipants) && this.isRequestToSpeakEnabled == loaded.isRequestToSpeakEnabled && this.isSpeaker == loaded.isSpeaker && this.isUpdatingRequestToSpeakPermissions == loaded.isUpdatingRequestToSpeakPermissions && this.isTogglingSpeakingState == loaded.isTogglingSpeakingState;
+                return Intrinsics3.areEqual(this.channel, loaded.channel) && Intrinsics3.areEqual(this.raisedHandsParticipants, loaded.raisedHandsParticipants) && this.isRequestToSpeakEnabled == loaded.isRequestToSpeakEnabled && this.isSpeaker == loaded.isSpeaker && this.isUpdatingRequestToSpeakPermissions == loaded.isUpdatingRequestToSpeakPermissions && this.isTogglingSpeakingState == loaded.isTogglingSpeakingState;
             }
 
             public final Channel getChannel() {
@@ -441,26 +441,26 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(channel=");
-                sbU.append(this.channel);
-                sbU.append(", raisedHandsParticipants=");
-                sbU.append(this.raisedHandsParticipants);
-                sbU.append(", isRequestToSpeakEnabled=");
-                sbU.append(this.isRequestToSpeakEnabled);
-                sbU.append(", isSpeaker=");
-                sbU.append(this.isSpeaker);
-                sbU.append(", isUpdatingRequestToSpeakPermissions=");
-                sbU.append(this.isUpdatingRequestToSpeakPermissions);
-                sbU.append(", isTogglingSpeakingState=");
-                return a.O(sbU, this.isTogglingSpeakingState, ")");
+                StringBuilder sbM833U = outline.m833U("Loaded(channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(", raisedHandsParticipants=");
+                sbM833U.append(this.raisedHandsParticipants);
+                sbM833U.append(", isRequestToSpeakEnabled=");
+                sbM833U.append(this.isRequestToSpeakEnabled);
+                sbM833U.append(", isSpeaker=");
+                sbM833U.append(this.isSpeaker);
+                sbM833U.append(", isUpdatingRequestToSpeakPermissions=");
+                sbM833U.append(this.isUpdatingRequestToSpeakPermissions);
+                sbM833U.append(", isTogglingSpeakingState=");
+                return outline.m827O(sbM833U, this.isTogglingSpeakingState, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(Channel channel, List<? extends WidgetStageRaisedHandsBottomSheetAdapter.ListItem> list, boolean z2, boolean z3, boolean z4, boolean z5) {
                 super(null);
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(list, "raisedHandsParticipants");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(list, "raisedHandsParticipants");
                 this.channel = channel;
                 this.raisedHandsParticipants = list;
                 this.isRequestToSpeakEnabled = z2;
@@ -480,18 +480,18 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$dismissRequestToSpeak$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$dismissRequestToSpeak$1 */
+    public static final class C100441 extends Lambda implements Function1<Void, Unit> {
+        public static final C100441 INSTANCE = new C100441();
 
-        public AnonymousClass1() {
+        public C100441() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -500,38 +500,38 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$inviteToSpeak$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Error, Unit> {
-        public AnonymousClass1(WidgetStageRaisedHandsBottomSheetViewModel widgetStageRaisedHandsBottomSheetViewModel) {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$inviteToSpeak$1 */
+    public static final /* synthetic */ class C100451 extends FunctionReferenceImpl implements Function1<Error, Unit> {
+        public C100451(WidgetStageRaisedHandsBottomSheetViewModel widgetStageRaisedHandsBottomSheetViewModel) {
             super(1, widgetStageRaisedHandsBottomSheetViewModel, WidgetStageRaisedHandsBottomSheetViewModel.class, "emitError", "emitError(Lcom/discord/utilities/error/Error;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "p1");
+            Intrinsics3.checkNotNullParameter(error, "p1");
             WidgetStageRaisedHandsBottomSheetViewModel.access$emitError((WidgetStageRaisedHandsBottomSheetViewModel) this.receiver, error);
         }
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$inviteToSpeak$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$inviteToSpeak$2 */
+    public static final class C100462 extends Lambda implements Function1<Void, Unit> {
+        public static final C100462 INSTANCE = new C100462();
 
-        public AnonymousClass2() {
+        public C100462() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -540,41 +540,41 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Subscription, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$1 */
+    public static final class C100471 extends Lambda implements Function1<Subscription, Unit> {
+        public C100471() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            m.checkNotNullParameter(subscription, "it");
+            Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetStageRaisedHandsBottomSheetViewModel.access$setLastRequestToSpeakSubscription$p(WidgetStageRaisedHandsBottomSheetViewModel.this, subscription);
         }
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$2 */
+    public static final class C100482 extends Lambda implements Function1<Error, Unit> {
+        public C100482() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             ViewState viewStateAccess$getViewState$p = WidgetStageRaisedHandsBottomSheetViewModel.access$getViewState$p(WidgetStageRaisedHandsBottomSheetViewModel.this);
             if (!(viewStateAccess$getViewState$p instanceof ViewState.Loaded)) {
                 viewStateAccess$getViewState$p = null;
@@ -587,12 +587,12 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$3 */
+    public static final class C100493 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ boolean $isEnabled;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(boolean z2) {
+        public C100493(boolean z2) {
             super(1);
             this.$isEnabled = z2;
         }
@@ -600,7 +600,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -617,36 +617,36 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Error, Unit> {
-        public AnonymousClass1(WidgetStageRaisedHandsBottomSheetViewModel widgetStageRaisedHandsBottomSheetViewModel) {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$1 */
+    public static final /* synthetic */ class C100501 extends FunctionReferenceImpl implements Function1<Error, Unit> {
+        public C100501(WidgetStageRaisedHandsBottomSheetViewModel widgetStageRaisedHandsBottomSheetViewModel) {
             super(1, widgetStageRaisedHandsBottomSheetViewModel, WidgetStageRaisedHandsBottomSheetViewModel.class, "emitError", "emitError(Lcom/discord/utilities/error/Error;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "p1");
+            Intrinsics3.checkNotNullParameter(error, "p1");
             WidgetStageRaisedHandsBottomSheetViewModel.access$emitError((WidgetStageRaisedHandsBottomSheetViewModel) this.receiver, error);
         }
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function0<Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$2 */
+    public static final class C100512 extends Lambda implements Function0<Unit> {
+        public C100512() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -663,18 +663,18 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Void, Unit> {
-        public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$3 */
+    public static final class C100523 extends Lambda implements Function1<Void, Unit> {
+        public static final C100523 INSTANCE = new C100523();
 
-        public AnonymousClass3() {
+        public C100523() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -683,17 +683,17 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setUserSuppressed$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Channel, Observable<? extends Void>> {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setUserSuppressed$1 */
+    public static final class C100531<T, R> implements Func1<Channel, Observable<? extends Void>> {
         public final /* synthetic */ boolean $isSuppressed;
         public final /* synthetic */ long $userId;
 
-        public AnonymousClass1(long j, boolean z2) {
+        public C100531(long j, boolean z2) {
             this.$userId = j;
             this.$isSuppressed = z2;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Observable<? extends Void> call(Channel channel) {
             return call2(channel);
         }
@@ -701,7 +701,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Void> call2(Channel channel) {
             StageChannelAPI stageChannelAPI = StageChannelAPI.INSTANCE;
-            m.checkNotNullExpressionValue(channel, "channel");
+            Intrinsics3.checkNotNullExpressionValue(channel, "channel");
             return ObservableExtensionsKt.restSubscribeOn$default(StageChannelAPI.setUserSuppressedInChannel$default(stageChannelAPI, channel, this.$userId, this.$isSuppressed, 0L, 8, null), false, 1, null);
         }
     }
@@ -743,40 +743,40 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
 
     private final void emitDismiss() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.Dismiss.INSTANCE);
+        publishSubject.f27650k.onNext(Event.Dismiss.INSTANCE);
     }
 
     private final void emitError(Error error) {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new Event.Error(error));
+        publishSubject.f27650k.onNext(new Event.Error(error));
     }
 
     @MainThread
     private final void handleStoreState(StoreState storeState) {
-        updateViewState(new ViewState.Loaded(storeState.getChannel(), storeState.getRaisedHandsParticipants(), PermissionUtils.INSTANCE.canEveryoneRole(Permission.REQUEST_TO_SPEAK, storeState.getChannel(), storeState.getRoles()), StageRoles.m33isSpeakerimpl(storeState.m50getMyStageRoles1LxfuJo()), false, false, 48, null));
+        updateViewState(new ViewState.Loaded(storeState.getChannel(), storeState.getRaisedHandsParticipants(), PermissionUtils.INSTANCE.canEveryoneRole(Permission.REQUEST_TO_SPEAK, storeState.getChannel(), storeState.getRoles()), StageRoles.m11410isSpeakerimpl(storeState.m11427getMyStageRoles1LxfuJo()), false, false, 48, null));
     }
 
     private final Observable<Void> setUserSuppressed(long userId, boolean isSuppressed) {
-        Observable<R> observableG = this.channelsStore.observeChannel(this.channelId).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-        m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
-        Observable observableA = observableG.z().A(new AnonymousClass1(userId, isSuppressed));
-        m.checkNotNullExpressionValue(observableA, "channelSingle\n        .f…stSubscribeOn()\n        }");
-        return ObservableExtensionsKt.ui$default(observableA, this, null, 2, null);
+        Observable<R> observableM11083G = this.channelsStore.observeChannel(this.channelId).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
+        Observable observableM11082A = observableM11083G.m11119z().m11082A(new C100531(userId, isSuppressed));
+        Intrinsics3.checkNotNullExpressionValue(observableM11082A, "channelSingle\n        .f…stSubscribeOn()\n        }");
+        return ObservableExtensionsKt.ui$default(observableM11082A, this, null, 2, null);
     }
 
     public final void dismissRequestToSpeak(StoreVoiceParticipants.VoiceUser participant) {
-        m.checkNotNullParameter(participant, "participant");
-        ObservableExtensionsKt.appSubscribe$default(setUserSuppressed(participant.getUser().getId(), true), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass1.INSTANCE, 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(participant, "participant");
+        ObservableExtensionsKt.appSubscribe$default(setUserSuppressed(participant.getUser().getId(), true), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C100441.INSTANCE, 62, (Object) null);
     }
 
     public final void inviteToSpeak(StoreVoiceParticipants.VoiceUser participant) {
-        m.checkNotNullParameter(participant, "participant");
-        ObservableExtensionsKt.appSubscribe$default(setUserSuppressed(participant.getUser().getId(), false), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, (Function1) null, new AnonymousClass1(this), (Function0) null, (Function0) null, AnonymousClass2.INSTANCE, 54, (Object) null);
+        Intrinsics3.checkNotNullParameter(participant, "participant");
+        ObservableExtensionsKt.appSubscribe$default(setUserSuppressed(participant.getUser().getId(), false), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, (Function1) null, new C100451(this), (Function0) null, (Function0) null, C100462.INSTANCE, 54, (Object) null);
     }
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -788,14 +788,14 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
         ViewState.Loaded loaded = (ViewState.Loaded) viewState;
         if (loaded != null) {
             updateViewState(ViewState.Loaded.copy$default(loaded, null, null, false, false, true, false, 47, null));
-            Pair<Long, Long> pairComputeAllowDenyUpdateBits = PermissionOverwriteUtilsKt.computeAllowDenyUpdateBits(ChannelUtils.f(loaded.getChannel(), loaded.getChannel().getGuildId()), Permission.REQUEST_TO_SPEAK, isEnabled);
-            long jLongValue = pairComputeAllowDenyUpdateBits.component1().longValue();
-            long jLongValue2 = pairComputeAllowDenyUpdateBits.component2().longValue();
+            Tuples2<Long, Long> tuples2ComputeAllowDenyUpdateBits = PermissionOverwriteUtils.computeAllowDenyUpdateBits(ChannelUtils.m7682f(loaded.getChannel(), loaded.getChannel().getGuildId()), Permission.REQUEST_TO_SPEAK, isEnabled);
+            long jLongValue = tuples2ComputeAllowDenyUpdateBits.component1().longValue();
+            long jLongValue2 = tuples2ComputeAllowDenyUpdateBits.component2().longValue();
             Subscription subscription = this.lastRequestToSpeakSubscription;
             if (subscription != null) {
                 subscription.unsubscribe();
             }
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updatePermissionOverwrites(loaded.getChannel().getId(), loaded.getChannel().getGuildId(), RestAPIParams.ChannelPermissionOverwrites.INSTANCE.createForRole(loaded.getChannel().getGuildId(), Long.valueOf(jLongValue), Long.valueOf(jLongValue2))), false, 1, null), this, null, 2, null), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, new AnonymousClass1(), new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass3(isEnabled), 50, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updatePermissionOverwrites(loaded.getChannel().getId(), loaded.getChannel().getGuildId(), RestAPIParams.ChannelPermissionOverwrites.INSTANCE.createForRole(loaded.getChannel().getGuildId(), Long.valueOf(jLongValue), Long.valueOf(jLongValue2))), false, 1, null), this, null, 2, null), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, new C100471(), new C100482(), (Function0) null, (Function0) null, new C100493(isEnabled), 50, (Object) null);
         }
     }
 
@@ -807,25 +807,25 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends d0<ViewSta
         ViewState.Loaded loaded = (ViewState.Loaded) viewState;
         if (loaded != null) {
             updateViewState(ViewState.Loaded.copy$default(loaded, null, null, false, false, false, true, 31, null));
-            ObservableExtensionsKt.appSubscribe$default(setUserSuppressed(this.usersStore.getMeSnapshot().getId(), isSuppressed), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, (Function1) null, new AnonymousClass1(this), (Function0) null, new AnonymousClass2(), AnonymousClass3.INSTANCE, 22, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(setUserSuppressed(this.usersStore.getMeSnapshot().getId(), isSuppressed), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, (Function1) null, new C100501(this), (Function0) null, new C100512(), C100523.INSTANCE, 22, (Object) null);
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetStageRaisedHandsBottomSheetViewModel(long j, StoreVoiceParticipants storeVoiceParticipants, StoreChannels storeChannels, StoreUser storeUser, StoreGuilds storeGuilds, StoreStageChannels storeStageChannels, Clock clock, Observable<StoreState> observable) {
         super(null, 1, null);
-        m.checkNotNullParameter(storeVoiceParticipants, "voiceParticipants");
-        m.checkNotNullParameter(storeChannels, "channelsStore");
-        m.checkNotNullParameter(storeUser, "usersStore");
-        m.checkNotNullParameter(storeGuilds, "guildsStore");
-        m.checkNotNullParameter(storeStageChannels, "stageChannelsStore");
-        m.checkNotNullParameter(clock, "clock");
-        m.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(storeVoiceParticipants, "voiceParticipants");
+        Intrinsics3.checkNotNullParameter(storeChannels, "channelsStore");
+        Intrinsics3.checkNotNullParameter(storeUser, "usersStore");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "guildsStore");
+        Intrinsics3.checkNotNullParameter(storeStageChannels, "stageChannelsStore");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
         this.channelId = j;
         this.voiceParticipants = storeVoiceParticipants;
         this.channelsStore = storeChannels;
         this.usersStore = storeUser;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        this.eventSubject = PublishSubject.k0();
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetStageRaisedHandsBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C100411(), 62, (Object) null);
+        this.eventSubject = PublishSubject.m11133k0();
     }
 }

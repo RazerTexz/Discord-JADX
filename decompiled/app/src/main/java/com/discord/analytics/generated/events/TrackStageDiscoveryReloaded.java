@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStageDiscoveryReloaded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final CharSequence stageInstanceRecommendations = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSc
             return false;
         }
         TrackStageDiscoveryReloaded trackStageDiscoveryReloaded = (TrackStageDiscoveryReloaded) other;
-        return m.areEqual(this.loadId, trackStageDiscoveryReloaded.loadId) && m.areEqual(this.stageInstanceRecommendations, trackStageDiscoveryReloaded.stageInstanceRecommendations) && m.areEqual(this.lastVisibleIndexAtLoad, trackStageDiscoveryReloaded.lastVisibleIndexAtLoad) && m.areEqual(this.lastVisibleIndex, trackStageDiscoveryReloaded.lastVisibleIndex) && m.areEqual(this.hasScrolled, trackStageDiscoveryReloaded.hasScrolled);
+        return Intrinsics3.areEqual(this.loadId, trackStageDiscoveryReloaded.loadId) && Intrinsics3.areEqual(this.stageInstanceRecommendations, trackStageDiscoveryReloaded.stageInstanceRecommendations) && Intrinsics3.areEqual(this.lastVisibleIndexAtLoad, trackStageDiscoveryReloaded.lastVisibleIndexAtLoad) && Intrinsics3.areEqual(this.lastVisibleIndex, trackStageDiscoveryReloaded.lastVisibleIndex) && Intrinsics3.areEqual(this.hasScrolled, trackStageDiscoveryReloaded.hasScrolled);
     }
 
     public int hashCode() {
@@ -48,15 +48,15 @@ public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStageDiscoveryReloaded(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", stageInstanceRecommendations=");
-        sbU.append(this.stageInstanceRecommendations);
-        sbU.append(", lastVisibleIndexAtLoad=");
-        sbU.append(this.lastVisibleIndexAtLoad);
-        sbU.append(", lastVisibleIndex=");
-        sbU.append(this.lastVisibleIndex);
-        sbU.append(", hasScrolled=");
-        return a.D(sbU, this.hasScrolled, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStageDiscoveryReloaded(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", stageInstanceRecommendations=");
+        sbM833U.append(this.stageInstanceRecommendations);
+        sbM833U.append(", lastVisibleIndexAtLoad=");
+        sbM833U.append(this.lastVisibleIndexAtLoad);
+        sbM833U.append(", lastVisibleIndex=");
+        sbM833U.append(this.lastVisibleIndex);
+        sbM833U.append(", hasScrolled=");
+        return outline.m816D(sbM833U, this.hasScrolled, ")");
     }
 }

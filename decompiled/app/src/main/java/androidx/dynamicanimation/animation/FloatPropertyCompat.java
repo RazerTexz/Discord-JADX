@@ -7,12 +7,12 @@ import androidx.annotation.RequiresApi;
 public abstract class FloatPropertyCompat<T> {
     public final String mPropertyName;
 
-    /* renamed from: androidx.dynamicanimation.animation.FloatPropertyCompat$1, reason: invalid class name */
-    public static class AnonymousClass1 extends FloatPropertyCompat<T> {
+    /* renamed from: androidx.dynamicanimation.animation.FloatPropertyCompat$1 */
+    public static class C03411 extends FloatPropertyCompat<T> {
         public final /* synthetic */ FloatProperty val$property;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str, FloatProperty floatProperty) {
+        public C03411(String str, FloatProperty floatProperty) {
             super(str);
             this.val$property = floatProperty;
         }
@@ -34,7 +34,7 @@ public abstract class FloatPropertyCompat<T> {
 
     @RequiresApi(24)
     public static <T> FloatPropertyCompat<T> createFloatPropertyCompat(FloatProperty<T> floatProperty) {
-        return new AnonymousClass1(floatProperty.getName(), floatProperty);
+        return new C03411(floatProperty.getName(), floatProperty);
     }
 
     public abstract float getValue(T t);

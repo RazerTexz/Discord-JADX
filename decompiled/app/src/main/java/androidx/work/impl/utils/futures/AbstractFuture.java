@@ -3,7 +3,6 @@ package androidx.work.impl.utils.futures;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import b.i.b.d.a.a;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.CancellationException;
@@ -17,10 +16,12 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import java.util.concurrent.locks.LockSupport;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
-public abstract class AbstractFuture<V> implements a<V> {
+public abstract class AbstractFuture<V> implements ListenableFuture8<V> {
     public static final AtomicHelper ATOMIC_HELPER;
     private static final Object NULL;
     private static final long SPIN_THRESHOLD_NANOS = 1000;
@@ -50,7 +51,7 @@ public abstract class AbstractFuture<V> implements a<V> {
 
         public abstract void putThread(Waiter waiter, Thread thread);
 
-        public /* synthetic */ AtomicHelper(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ AtomicHelper(C07851 c07851) {
             this();
         }
     }
@@ -80,12 +81,12 @@ public abstract class AbstractFuture<V> implements a<V> {
     }
 
     public static final class Failure {
-        public static final Failure FALLBACK_INSTANCE = new Failure(new AnonymousClass1("Failure occurred while trying to finish a future."));
+        public static final Failure FALLBACK_INSTANCE = new Failure(new C07861("Failure occurred while trying to finish a future."));
         public final Throwable exception;
 
-        /* renamed from: androidx.work.impl.utils.futures.AbstractFuture$Failure$1, reason: invalid class name */
-        public class AnonymousClass1 extends Throwable {
-            public AnonymousClass1(String str) {
+        /* renamed from: androidx.work.impl.utils.futures.AbstractFuture$Failure$1 */
+        public class C07861 extends Throwable {
+            public C07861(String str) {
                 super(str);
             }
 
@@ -157,12 +158,12 @@ public abstract class AbstractFuture<V> implements a<V> {
     }
 
     public static final class SetFuture<V> implements Runnable {
-        public final a<? extends V> future;
+        public final ListenableFuture8<? extends V> future;
         public final AbstractFuture<V> owner;
 
-        public SetFuture(AbstractFuture<V> abstractFuture, a<? extends V> aVar) {
+        public SetFuture(AbstractFuture<V> abstractFuture, ListenableFuture8<? extends V> listenableFuture8) {
             this.owner = abstractFuture;
-            this.future = aVar;
+            this.future = listenableFuture8;
         }
 
         @Override // java.lang.Runnable
@@ -367,27 +368,27 @@ public abstract class AbstractFuture<V> implements a<V> {
         return obj;
     }
 
-    public static Object getFutureValue(a<?> aVar) {
-        if (aVar instanceof AbstractFuture) {
-            Object obj = ((AbstractFuture) aVar).value;
+    public static Object getFutureValue(ListenableFuture8<?> listenableFuture8) {
+        if (listenableFuture8 instanceof AbstractFuture) {
+            Object obj = ((AbstractFuture) listenableFuture8).value;
             if (!(obj instanceof Cancellation)) {
                 return obj;
             }
             Cancellation cancellation = (Cancellation) obj;
             return cancellation.wasInterrupted ? cancellation.cause != null ? new Cancellation(false, cancellation.cause) : Cancellation.CAUSELESS_CANCELLED : obj;
         }
-        boolean zIsCancelled = aVar.isCancelled();
+        boolean zIsCancelled = listenableFuture8.isCancelled();
         if ((!GENERATE_CANCELLATION_CAUSES) && zIsCancelled) {
             return Cancellation.CAUSELESS_CANCELLED;
         }
         try {
-            Object uninterruptibly = getUninterruptibly(aVar);
+            Object uninterruptibly = getUninterruptibly(listenableFuture8);
             return uninterruptibly == null ? NULL : uninterruptibly;
         } catch (CancellationException e) {
             if (zIsCancelled) {
                 return new Cancellation(false, e);
             }
-            return new Failure(new IllegalArgumentException("get() threw CancellationException, despite reporting isCancelled() == false: " + aVar, e));
+            return new Failure(new IllegalArgumentException("get() threw CancellationException, despite reporting isCancelled() == false: " + listenableFuture8, e));
         } catch (ExecutionException e2) {
             return new Failure(e2.getCause());
         } catch (Throwable th) {
@@ -458,7 +459,7 @@ public abstract class AbstractFuture<V> implements a<V> {
         return obj == this ? "this future" : String.valueOf(obj);
     }
 
-    @Override // b.i.b.d.a.a
+    @Override // p007b.p225i.p355b.p359d.p360a.ListenableFuture8
     public final void addListener(Runnable runnable, Executor executor) {
         checkNotNull(runnable);
         checkNotNull(executor);
@@ -498,12 +499,12 @@ public abstract class AbstractFuture<V> implements a<V> {
                 if (!(obj instanceof SetFuture)) {
                     return true;
                 }
-                a<? extends V> aVar = ((SetFuture) obj).future;
-                if (!(aVar instanceof AbstractFuture)) {
-                    aVar.cancel(z2);
+                ListenableFuture8<? extends V> listenableFuture8 = ((SetFuture) obj).future;
+                if (!(listenableFuture8 instanceof AbstractFuture)) {
+                    listenableFuture8.cancel(z2);
                     return true;
                 }
-                abstractFuture = (AbstractFuture) aVar;
+                abstractFuture = (AbstractFuture) listenableFuture8;
                 obj = abstractFuture.value;
                 if (!(obj == null) && !(obj instanceof SetFuture)) {
                     return true;
@@ -570,29 +571,29 @@ public abstract class AbstractFuture<V> implements a<V> {
         String string2 = timeUnit.toString();
         Locale locale = Locale.ROOT;
         String lowerCase = string2.toLowerCase(locale);
-        String strW = "Waited " + j + " " + timeUnit.toString().toLowerCase(locale);
+        String strM883w = "Waited " + j + " " + timeUnit.toString().toLowerCase(locale);
         if (nanos + 1000 < 0) {
-            String strW2 = b.d.b.a.a.w(strW, " (plus ");
+            String strM883w2 = outline.m883w(strM883w, " (plus ");
             long j2 = -nanos;
             long jConvert = timeUnit.convert(j2, TimeUnit.NANOSECONDS);
             long nanos2 = j2 - timeUnit.toNanos(jConvert);
             boolean z2 = jConvert == 0 || nanos2 > 1000;
             if (jConvert > 0) {
-                String strW3 = strW2 + jConvert + " " + lowerCase;
+                String strM883w3 = strM883w2 + jConvert + " " + lowerCase;
                 if (z2) {
-                    strW3 = b.d.b.a.a.w(strW3, ",");
+                    strM883w3 = outline.m883w(strM883w3, ",");
                 }
-                strW2 = b.d.b.a.a.w(strW3, " ");
+                strM883w2 = outline.m883w(strM883w3, " ");
             }
             if (z2) {
-                strW2 = strW2 + nanos2 + " nanoseconds ";
+                strM883w2 = strM883w2 + nanos2 + " nanoseconds ";
             }
-            strW = b.d.b.a.a.w(strW2, "delay)");
+            strM883w = outline.m883w(strM883w2, "delay)");
         }
         if (isDone()) {
-            throw new TimeoutException(b.d.b.a.a.w(strW, " but future completed as timeout expired"));
+            throw new TimeoutException(outline.m883w(strM883w, " but future completed as timeout expired"));
         }
-        throw new TimeoutException(b.d.b.a.a.y(strW, " for ", string));
+        throw new TimeoutException(outline.m886y(strM883w, " for ", string));
     }
 
     public void interruptTask() {
@@ -619,15 +620,15 @@ public abstract class AbstractFuture<V> implements a<V> {
     public String pendingToString() {
         Object obj = this.value;
         if (obj instanceof SetFuture) {
-            return b.d.b.a.a.J(b.d.b.a.a.U("setFuture=["), userObjectToString(((SetFuture) obj).future), "]");
+            return outline.m822J(outline.m833U("setFuture=["), userObjectToString(((SetFuture) obj).future), "]");
         }
         if (!(this instanceof ScheduledFuture)) {
             return null;
         }
-        StringBuilder sbU = b.d.b.a.a.U("remaining delay=[");
-        sbU.append(((ScheduledFuture) this).getDelay(TimeUnit.MILLISECONDS));
-        sbU.append(" ms]");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("remaining delay=[");
+        sbM833U.append(((ScheduledFuture) this).getDelay(TimeUnit.MILLISECONDS));
+        sbM833U.append(" ms]");
+        return sbM833U.toString();
     }
 
     public boolean set(@Nullable V v) {
@@ -649,22 +650,22 @@ public abstract class AbstractFuture<V> implements a<V> {
         return true;
     }
 
-    public boolean setFuture(a<? extends V> aVar) {
+    public boolean setFuture(ListenableFuture8<? extends V> listenableFuture8) {
         Failure failure;
-        checkNotNull(aVar);
+        checkNotNull(listenableFuture8);
         Object obj = this.value;
         if (obj == null) {
-            if (aVar.isDone()) {
-                if (!ATOMIC_HELPER.casValue(this, null, getFutureValue(aVar))) {
+            if (listenableFuture8.isDone()) {
+                if (!ATOMIC_HELPER.casValue(this, null, getFutureValue(listenableFuture8))) {
                     return false;
                 }
                 complete(this);
                 return true;
             }
-            SetFuture setFuture = new SetFuture(this, aVar);
+            SetFuture setFuture = new SetFuture(this, listenableFuture8);
             if (ATOMIC_HELPER.casValue(this, null, setFuture)) {
                 try {
-                    aVar.addListener(setFuture, DirectExecutor.INSTANCE);
+                    listenableFuture8.addListener(setFuture, DirectExecutor.INSTANCE);
                 } catch (Throwable th) {
                     try {
                         failure = new Failure(th);
@@ -678,7 +679,7 @@ public abstract class AbstractFuture<V> implements a<V> {
             obj = this.value;
         }
         if (obj instanceof Cancellation) {
-            aVar.cancel(((Cancellation) obj).wasInterrupted);
+            listenableFuture8.cancel(((Cancellation) obj).wasInterrupted);
         }
         return false;
     }
@@ -696,9 +697,9 @@ public abstract class AbstractFuture<V> implements a<V> {
             try {
                 string = pendingToString();
             } catch (RuntimeException e) {
-                StringBuilder sbU = b.d.b.a.a.U("Exception thrown from implementation: ");
-                sbU.append(e.getClass());
-                string = sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Exception thrown from implementation: ");
+                sbM833U.append(e.getClass());
+                string = sbM833U.toString();
             }
             if (string != null && !string.isEmpty()) {
                 sb.append("PENDING, info=[");

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackExternalFingerprintDropped.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackExternalFingerprintDropped implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackExternalFingerprintDropped implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long fingerprint = null;
     private final Long droppedFingerprint = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackExternalFingerprintDropped implements Analyti
             return false;
         }
         TrackExternalFingerprintDropped trackExternalFingerprintDropped = (TrackExternalFingerprintDropped) other;
-        return m.areEqual(this.fingerprint, trackExternalFingerprintDropped.fingerprint) && m.areEqual(this.droppedFingerprint, trackExternalFingerprintDropped.droppedFingerprint);
+        return Intrinsics3.areEqual(this.fingerprint, trackExternalFingerprintDropped.fingerprint) && Intrinsics3.areEqual(this.droppedFingerprint, trackExternalFingerprintDropped.droppedFingerprint);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackExternalFingerprintDropped implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackExternalFingerprintDropped(fingerprint=");
-        sbU.append(this.fingerprint);
-        sbU.append(", droppedFingerprint=");
-        return a.G(sbU, this.droppedFingerprint, ")");
+        StringBuilder sbM833U = outline.m833U("TrackExternalFingerprintDropped(fingerprint=");
+        sbM833U.append(this.fingerprint);
+        sbM833U.append(", droppedFingerprint=");
+        return outline.m819G(sbM833U, this.droppedFingerprint, ")");
     }
 }

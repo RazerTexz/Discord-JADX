@@ -1,0 +1,343 @@
+package p007b.p443l.p444a;
+
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.view.animation.AnimationUtils;
+import androidx.annotation.IntRange;
+import androidx.annotation.VisibleForTesting;
+import androidx.annotation.WorkerThread;
+import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
+import com.linecorp.apng.decoder.Apng;
+import com.linecorp.apng.decoder.ApngException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import kotlin.jvm.functions.Function0;
+import org.objectweb.asm.Opcodes;
+import p507d0.p580t._Arrays;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+
+/* compiled from: ApngDrawable.kt */
+/* renamed from: b.l.a.a, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class ApngDrawable extends Drawable implements Animatable2Compat {
+
+    /* renamed from: j */
+    @IntRange(from = 0, m76to = 2147483647L)
+    public final int f13618j;
+
+    /* renamed from: k */
+    @IntRange(from = 1, m76to = 2147483647L)
+    public final int f13619k;
+
+    /* renamed from: l */
+    public final List<Integer> f13620l;
+
+    /* renamed from: m */
+    @IntRange(from = 0, m76to = 2147483647L)
+    public final int f13621m;
+
+    /* renamed from: n */
+    @IntRange(from = -1, m76to = 2147483647L)
+    public int f13622n;
+
+    /* renamed from: o */
+    public final Paint f13623o;
+
+    /* renamed from: p */
+    public final List<Animatable2Compat.AnimationCallback> f13624p;
+
+    /* renamed from: q */
+    public final List<RepeatAnimationCallback> f13625q;
+
+    /* renamed from: r */
+    public final int[] f13626r;
+
+    /* renamed from: s */
+    public int f13627s;
+
+    /* renamed from: t */
+    public int f13628t;
+
+    /* renamed from: u */
+    public boolean f13629u;
+
+    /* renamed from: v */
+    public long f13630v;
+
+    /* renamed from: w */
+    public Long f13631w;
+
+    /* renamed from: x */
+    public a f13632x;
+
+    /* compiled from: ApngDrawable.kt */
+    /* renamed from: b.l.a.a$a */
+    public static final class a extends Drawable.ConstantState {
+
+        /* renamed from: a */
+        public final Apng f13633a;
+
+        /* renamed from: b */
+        public final int f13634b;
+
+        /* renamed from: c */
+        public final int f13635c;
+
+        /* renamed from: d */
+        public final int f13636d;
+
+        /* renamed from: e */
+        public final Function0<Long> f13637e;
+
+        /* compiled from: ApngDrawable.kt */
+        /* renamed from: b.l.a.a$a$a, reason: collision with other inner class name */
+        public static final class C13240a extends Lambda implements Function0<Long> {
+
+            /* renamed from: j */
+            public static final C13240a f13638j = new C13240a();
+
+            public C13240a() {
+                super(0);
+            }
+
+            @Override // kotlin.jvm.functions.Function0
+            public Long invoke() {
+                return Long.valueOf(AnimationUtils.currentAnimationTimeMillis());
+            }
+        }
+
+        public a(Apng apng, @IntRange(from = 1, m76to = 2147483647L) int i, @IntRange(from = 1, m76to = 2147483647L) int i2, int i3, Function0<Long> function0) {
+            Intrinsics3.checkNotNullParameter(apng, "apng");
+            Intrinsics3.checkNotNullParameter(function0, "currentTimeProvider");
+            this.f13633a = apng;
+            this.f13634b = i;
+            this.f13635c = i2;
+            this.f13636d = i3;
+            this.f13637e = function0;
+        }
+
+        @Override // android.graphics.drawable.Drawable.ConstantState
+        public int getChangingConfigurations() {
+            return 0;
+        }
+
+        @Override // android.graphics.drawable.Drawable.ConstantState
+        public Drawable newDrawable() {
+            return new ApngDrawable(new a(this));
+        }
+
+        /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+        public a(a aVar) {
+            this(aVar.f13633a.copy(), aVar.f13634b, aVar.f13635c, aVar.f13636d, aVar.f13637e);
+            Intrinsics3.checkNotNullParameter(aVar, "apngState");
+        }
+    }
+
+    @VisibleForTesting
+    public ApngDrawable(a aVar) {
+        Intrinsics3.checkNotNullParameter(aVar, "apngState");
+        this.f13632x = aVar;
+        this.f13618j = aVar.f13633a.getDuration();
+        int frameCount = this.f13632x.f13633a.getFrameCount();
+        this.f13619k = frameCount;
+        this.f13620l = _Arrays.toList(this.f13632x.f13633a.getFrameDurations());
+        this.f13621m = this.f13632x.f13633a.getByteCount();
+        this.f13632x.f13633a.getAllFrameByteCount();
+        this.f13622n = this.f13632x.f13633a.getLoopCount();
+        this.f13632x.f13633a.isRecycled();
+        this.f13623o = new Paint(6);
+        this.f13624p = new ArrayList();
+        this.f13625q = new ArrayList();
+        this.f13626r = new int[frameCount];
+        a aVar2 = this.f13632x;
+        this.f13627s = aVar2.f13634b;
+        this.f13628t = aVar2.f13635c;
+        for (int i = 1; i < frameCount; i++) {
+            int[] iArr = this.f13626r;
+            int i2 = i - 1;
+            iArr[i] = iArr[i2] + this.f13632x.f13633a.getFrameDurations()[i2];
+        }
+        Rect bounds = getBounds();
+        a aVar3 = this.f13632x;
+        bounds.set(0, 0, aVar3.f13634b, aVar3.f13635c);
+    }
+
+    @WorkerThread
+    /* renamed from: a */
+    public static final ApngDrawable m7121a(InputStream inputStream, @IntRange(from = 1, m76to = 2147483647L) Integer num, @IntRange(from = 1, m76to = 2147483647L) Integer num2) throws ApngException {
+        Intrinsics3.checkNotNullParameter(inputStream, "stream");
+        boolean z2 = true;
+        if (!(!((num == null) ^ (num2 == null)))) {
+            throw new IllegalArgumentException(("Can not specify only one side of size. width = " + num + ", height = " + num2).toString());
+        }
+        if (!(num == null || num.intValue() > 0)) {
+            throw new IllegalArgumentException(("Can not specify 0 or negative as width value. width = " + num).toString());
+        }
+        if (num2 != null && num2.intValue() <= 0) {
+            z2 = false;
+        }
+        if (z2) {
+            int i = (num == null && num2 == null) ? Opcodes.IF_ICMPNE : 0;
+            Apng apngDecode = Apng.INSTANCE.decode(inputStream);
+            return new ApngDrawable(new a(apngDecode, num != null ? num.intValue() : apngDecode.getWidth(), num2 != null ? num2.intValue() : apngDecode.getHeight(), i, a.C13240a.f13638j));
+        }
+        throw new IllegalArgumentException(("Can not specify 0 or negative as height value. height = " + num2).toString());
+    }
+
+    /* renamed from: b */
+    public final boolean m7122b() {
+        return this.f13622n != 0 && m7124d() > this.f13622n - 1;
+    }
+
+    /* renamed from: c */
+    public final int m7123c() {
+        int i;
+        int i2 = 0;
+        long j = (this.f13630v % this.f13618j) + (m7122b() ? this.f13618j : 0);
+        int i3 = this.f13619k - 1;
+        while (true) {
+            i = (i2 + i3) / 2;
+            int i4 = i + 1;
+            if (this.f13626r.length > i4 && j >= r5[i4]) {
+                i2 = i4;
+            } else {
+                if (i2 == i3 || j >= r5[i]) {
+                    break;
+                }
+                i3 = i;
+            }
+        }
+        return i;
+    }
+
+    @Override // androidx.vectordrawable.graphics.drawable.Animatable2Compat
+    public void clearAnimationCallbacks() {
+        this.f13624p.clear();
+    }
+
+    /* renamed from: d */
+    public final int m7124d() {
+        return (int) (this.f13630v / this.f13618j);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:29:0x006f  */
+    @Override // android.graphics.drawable.Drawable
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public void draw(Canvas canvas) {
+        Intrinsics3.checkNotNullParameter(canvas, "canvas");
+        if (this.f13629u) {
+            int iM7123c = m7123c();
+            long jLongValue = this.f13632x.f13637e.invoke().longValue();
+            Long l = this.f13631w;
+            this.f13630v = l == null ? this.f13630v : (this.f13630v + jLongValue) - l.longValue();
+            this.f13631w = Long.valueOf(jLongValue);
+            boolean z2 = m7123c() != iM7123c;
+            if (this.f13629u) {
+                if (m7123c() == 0) {
+                    if ((m7124d() == 0) && l == null) {
+                        Iterator<T> it = this.f13624p.iterator();
+                        while (it.hasNext()) {
+                            ((Animatable2Compat.AnimationCallback) it.next()).onAnimationStart(this);
+                        }
+                    }
+                } else if (m7123c() == this.f13619k - 1) {
+                    if ((this.f13622n == 0 || m7124d() < this.f13622n - 1) && z2) {
+                        for (RepeatAnimationCallback repeatAnimationCallback : this.f13625q) {
+                            repeatAnimationCallback.m7126b(this, m7124d() + 2);
+                            repeatAnimationCallback.m7125a(this, m7124d() + 1);
+                        }
+                    }
+                }
+            }
+            if (m7122b()) {
+                this.f13629u = false;
+                Iterator<T> it2 = this.f13624p.iterator();
+                while (it2.hasNext()) {
+                    ((Animatable2Compat.AnimationCallback) it2.next()).onAnimationEnd(this);
+                }
+            }
+        }
+        Apng apng = this.f13632x.f13633a;
+        int iM7123c2 = m7123c();
+        Rect bounds = getBounds();
+        Intrinsics3.checkNotNullExpressionValue(bounds, "bounds");
+        apng.drawWithIndex(iM7123c2, canvas, null, bounds, this.f13623o);
+        if (this.f13629u) {
+            invalidateSelf();
+        }
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public Drawable.ConstantState getConstantState() {
+        return this.f13632x;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getIntrinsicHeight() {
+        return this.f13628t;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getIntrinsicWidth() {
+        return this.f13627s;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getOpacity() {
+        return -2;
+    }
+
+    @Override // android.graphics.drawable.Animatable
+    public boolean isRunning() {
+        return this.f13629u;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public Drawable mutate() {
+        this.f13632x = new a(this.f13632x);
+        return this;
+    }
+
+    @Override // androidx.vectordrawable.graphics.drawable.Animatable2Compat
+    public void registerAnimationCallback(Animatable2Compat.AnimationCallback animationCallback) {
+        Intrinsics3.checkNotNullParameter(animationCallback, "callback");
+        this.f13624p.add(animationCallback);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setAlpha(int i) {
+        this.f13623o.setAlpha(i);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setColorFilter(ColorFilter colorFilter) {
+        this.f13623o.setColorFilter(colorFilter);
+    }
+
+    @Override // android.graphics.drawable.Animatable
+    public void start() {
+        this.f13629u = true;
+        this.f13631w = null;
+        invalidateSelf();
+    }
+
+    @Override // android.graphics.drawable.Animatable
+    public void stop() {
+        this.f13629u = false;
+        invalidateSelf();
+    }
+
+    @Override // androidx.vectordrawable.graphics.drawable.Animatable2Compat
+    public boolean unregisterAnimationCallback(Animatable2Compat.AnimationCallback animationCallback) {
+        Intrinsics3.checkNotNullParameter(animationCallback, "callback");
+        return this.f13624p.remove(animationCallback);
+    }
+}

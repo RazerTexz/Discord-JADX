@@ -2,8 +2,6 @@ package com.discord.widgets.channels.settings;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelNotificationSettings;
@@ -12,22 +10,24 @@ import com.discord.stores.StoreChannels;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserGuildSettings;
 import com.discord.utilities.icon.IconUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.g;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: ChannelGroupDMSettingsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
+public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -37,21 +37,21 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
     private final StoreUserGuildSettings storeUserGuildSettings;
 
     /* compiled from: ChannelGroupDMSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$1 */
+    public static final class C75711 extends Lambda implements Function1<StoreState, Unit> {
+        public C75711() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             ChannelGroupDMSettingsViewModel.access$handleStoreState(ChannelGroupDMSettingsViewModel.this, storeState);
         }
     }
@@ -62,9 +62,9 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(long channelId, StoreChannels storeChannels, StoreUserGuildSettings storeUserGuildSettings) {
-            Observable observableY = storeChannels.observeChannel(channelId).Y(new ChannelGroupDMSettingsViewModel$Companion$observeStoreState$1(storeUserGuildSettings));
-            m.checkNotNullExpressionValue(observableY, "storeChannels\n          …            }\n          }");
-            return observableY;
+            Observable observableM11099Y = storeChannels.observeChannel(channelId).m11099Y(new ChannelGroupDMSettingsViewModel2(storeUserGuildSettings));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "storeChannels\n          …            }\n          }");
+            return observableM11099Y;
         }
 
         public static /* synthetic */ Observable observeStoreState$default(Companion companion, long j, StoreChannels storeChannels, StoreUserGuildSettings storeUserGuildSettings, int i, Object obj) {
@@ -131,8 +131,8 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(Channel channel, ModelNotificationSettings modelNotificationSettings) {
                 super(null);
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(modelNotificationSettings, "notificationSettings");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(modelNotificationSettings, "notificationSettings");
                 this.channel = channel;
                 this.notificationSettings = modelNotificationSettings;
             }
@@ -158,8 +158,8 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
             }
 
             public final Valid copy(Channel channel, ModelNotificationSettings notificationSettings) {
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(notificationSettings, "notificationSettings");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(notificationSettings, "notificationSettings");
                 return new Valid(channel, notificationSettings);
             }
 
@@ -171,7 +171,7 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return m.areEqual(this.channel, valid.channel) && m.areEqual(this.notificationSettings, valid.notificationSettings);
+                return Intrinsics3.areEqual(this.channel, valid.channel) && Intrinsics3.areEqual(this.notificationSettings, valid.notificationSettings);
             }
 
             public final Channel getChannel() {
@@ -190,12 +190,12 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Valid(channel=");
-                sbU.append(this.channel);
-                sbU.append(", notificationSettings=");
-                sbU.append(this.notificationSettings);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Valid(channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(", notificationSettings=");
+                sbM833U.append(this.notificationSettings);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -232,12 +232,12 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(ChannelSettings channelSettings, String str, String str2) {
                 super(null);
-                m.checkNotNullParameter(channelSettings, "channelSettings");
+                Intrinsics3.checkNotNullParameter(channelSettings, "channelSettings");
                 this.channelSettings = channelSettings;
                 this.originalIconUrl = str;
                 this.editedIconUrl = str2;
-                this.hasUnsavedIconChange = !m.areEqual(str, str2);
-                this.isDefaultPhoto = g.lazy(new ChannelGroupDMSettingsViewModel$ViewState$Valid$isDefaultPhoto$2(this));
+                this.hasUnsavedIconChange = !Intrinsics3.areEqual(str, str2);
+                this.isDefaultPhoto = LazyJVM.lazy(new ChannelGroupDMSettingsViewModel3(this));
             }
 
             public static /* synthetic */ Valid copy$default(Valid valid, ChannelSettings channelSettings, String str, String str2, int i, Object obj) {
@@ -269,7 +269,7 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
             }
 
             public final Valid copy(ChannelSettings channelSettings, String originalIconUrl, String editedIconUrl) {
-                m.checkNotNullParameter(channelSettings, "channelSettings");
+                Intrinsics3.checkNotNullParameter(channelSettings, "channelSettings");
                 return new Valid(channelSettings, originalIconUrl, editedIconUrl);
             }
 
@@ -281,7 +281,7 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return m.areEqual(this.channelSettings, valid.channelSettings) && m.areEqual(this.originalIconUrl, valid.originalIconUrl) && m.areEqual(this.editedIconUrl, valid.editedIconUrl);
+                return Intrinsics3.areEqual(this.channelSettings, valid.channelSettings) && Intrinsics3.areEqual(this.originalIconUrl, valid.originalIconUrl) && Intrinsics3.areEqual(this.editedIconUrl, valid.editedIconUrl);
             }
 
             public final ChannelSettings getChannelSettings() {
@@ -322,12 +322,12 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Valid(channelSettings=");
-                sbU.append(this.channelSettings);
-                sbU.append(", originalIconUrl=");
-                sbU.append(this.originalIconUrl);
-                sbU.append(", editedIconUrl=");
-                return a.J(sbU, this.editedIconUrl, ")");
+                StringBuilder sbM833U = outline.m833U("Valid(channelSettings=");
+                sbM833U.append(this.channelSettings);
+                sbM833U.append(", originalIconUrl=");
+                sbM833U.append(this.originalIconUrl);
+                sbM833U.append(", editedIconUrl=");
+                return outline.m822J(sbM833U, this.editedIconUrl, ")");
             }
         }
 
@@ -340,12 +340,12 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
     }
 
     /* compiled from: ChannelGroupDMSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$editGroup$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
+    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$editGroup$1 */
+    public static final class C75731 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ ViewState.Valid $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ViewState.Valid valid) {
+        public C75731(ViewState.Valid valid) {
             super(1);
             this.$viewState = valid;
         }
@@ -353,14 +353,14 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Channel channel) {
             invoke2(channel);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            m.checkNotNullParameter(channel, "it");
+            Intrinsics3.checkNotNullParameter(channel, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = ChannelGroupDMSettingsViewModel.access$getEventSubject$p(ChannelGroupDMSettingsViewModel.this);
-            publishSubjectAccess$getEventSubject$p.k.onNext(Event.SettingsSaved.INSTANCE);
+            publishSubjectAccess$getEventSubject$p.f27650k.onNext(Event.SettingsSaved.INSTANCE);
             ChannelGroupDMSettingsViewModel channelGroupDMSettingsViewModel = ChannelGroupDMSettingsViewModel.this;
             ViewState.Valid valid = this.$viewState;
             ChannelGroupDMSettingsViewModel.access$updateViewState(channelGroupDMSettingsViewModel, valid.copy(ChannelSettings.copy$default(valid.getChannelSettings(), channel, false, null, 6, null), IconUtils.getForChannel(channel, null), IconUtils.getForChannel(channel, null)));
@@ -368,23 +368,23 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
     }
 
     /* compiled from: ChannelGroupDMSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$leaveGroup$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$leaveGroup$1 */
+    public static final class C75741 extends Lambda implements Function1<Channel, Unit> {
+        public C75741() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Channel channel) {
             invoke2(channel);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            m.checkNotNullParameter(channel, "it");
+            Intrinsics3.checkNotNullParameter(channel, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = ChannelGroupDMSettingsViewModel.access$getEventSubject$p(ChannelGroupDMSettingsViewModel.this);
-            publishSubjectAccess$getEventSubject$p.k.onNext(Event.LeaveGroupSuccess.INSTANCE);
+            publishSubjectAccess$getEventSubject$p.f27650k.onNext(Event.LeaveGroupSuccess.INSTANCE);
         }
     }
 
@@ -406,7 +406,7 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
 
     @MainThread
     private final void handleStoreState(StoreState storeState) {
-        if (m.areEqual(storeState, StoreState.Invalid.INSTANCE)) {
+        if (Intrinsics3.areEqual(storeState, StoreState.Invalid.INSTANCE)) {
             updateViewState(ViewState.Invalid.INSTANCE);
             return;
         }
@@ -436,7 +436,7 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
             } else {
                 originalIconUrl = valid.getOriginalIconUrl();
             }
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restApi.editGroupDM(groupId, new RestAPIParams.GroupDM(name, originalIconUrl)), false, 1, null), this, null, 2, null), ChannelGroupDMSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(valid), 62, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restApi.editGroupDM(groupId, new RestAPIParams.GroupDM(name, originalIconUrl)), false, 1, null), this, null, 2, null), ChannelGroupDMSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75731(valid), 62, (Object) null);
         }
     }
 
@@ -448,20 +448,20 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
         }
         ViewState.Valid valid = (ViewState.Valid) viewState;
         if (valid != null) {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restApi.deleteChannel(valid.getChannelSettings().getChannel().getId()), false, 1, null), this, null, 2, null), ChannelGroupDMSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restApi.deleteChannel(valid.getChannelSettings().getChannel().getId()), false, 1, null), this, null, 2, null), ChannelGroupDMSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75741(), 62, (Object) null);
         }
     }
 
     @MainThread
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     @MainThread
     public final void onIconEdited(String iconUrl) {
-        m.checkNotNullParameter(iconUrl, "iconUrl");
+        Intrinsics3.checkNotNullParameter(iconUrl, "iconUrl");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Valid)) {
             viewState = null;
@@ -485,20 +485,20 @@ public final class ChannelGroupDMSettingsViewModel extends d0<ViewState> {
     }
 
     public final void unmute(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         this.storeUserGuildSettings.setChannelMuted(context, this.channelId, false, null);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ChannelGroupDMSettingsViewModel(long j, RestAPI restAPI, StoreUserGuildSettings storeUserGuildSettings, Observable<StoreState> observable) {
         super(null, 1, null);
-        m.checkNotNullParameter(restAPI, "restApi");
-        m.checkNotNullParameter(storeUserGuildSettings, "storeUserGuildSettings");
-        m.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(restAPI, "restApi");
+        Intrinsics3.checkNotNullParameter(storeUserGuildSettings, "storeUserGuildSettings");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
         this.channelId = j;
         this.restApi = restAPI;
         this.storeUserGuildSettings = storeUserGuildSettings;
-        this.eventSubject = PublishSubject.k0();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), ChannelGroupDMSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        this.eventSubject = PublishSubject.m11133k0();
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), ChannelGroupDMSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75711(), 62, (Object) null);
     }
 }

@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStreamReportProblem.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStreamReportProblem implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackStreamReportProblem implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence reason = null;
     private final Long streamerUserId = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackStreamReportProblem implements AnalyticsSchem
             return false;
         }
         TrackStreamReportProblem trackStreamReportProblem = (TrackStreamReportProblem) other;
-        return m.areEqual(this.reason, trackStreamReportProblem.reason) && m.areEqual(this.streamerUserId, trackStreamReportProblem.streamerUserId) && m.areEqual(this.streamChannelId, trackStreamReportProblem.streamChannelId) && m.areEqual(this.guildId, trackStreamReportProblem.guildId) && m.areEqual(this.applicationName, trackStreamReportProblem.applicationName) && m.areEqual(this.applicationId, trackStreamReportProblem.applicationId) && m.areEqual(this.mediaSessionId, trackStreamReportProblem.mediaSessionId) && m.areEqual(this.rtcConnectionId, trackStreamReportProblem.rtcConnectionId) && m.areEqual(this.rating, trackStreamReportProblem.rating) && m.areEqual(this.feedback, trackStreamReportProblem.feedback);
+        return Intrinsics3.areEqual(this.reason, trackStreamReportProblem.reason) && Intrinsics3.areEqual(this.streamerUserId, trackStreamReportProblem.streamerUserId) && Intrinsics3.areEqual(this.streamChannelId, trackStreamReportProblem.streamChannelId) && Intrinsics3.areEqual(this.guildId, trackStreamReportProblem.guildId) && Intrinsics3.areEqual(this.applicationName, trackStreamReportProblem.applicationName) && Intrinsics3.areEqual(this.applicationId, trackStreamReportProblem.applicationId) && Intrinsics3.areEqual(this.mediaSessionId, trackStreamReportProblem.mediaSessionId) && Intrinsics3.areEqual(this.rtcConnectionId, trackStreamReportProblem.rtcConnectionId) && Intrinsics3.areEqual(this.rating, trackStreamReportProblem.rating) && Intrinsics3.areEqual(this.feedback, trackStreamReportProblem.feedback);
     }
 
     public int hashCode() {
@@ -64,25 +64,25 @@ public final /* data */ class TrackStreamReportProblem implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStreamReportProblem(reason=");
-        sbU.append(this.reason);
-        sbU.append(", streamerUserId=");
-        sbU.append(this.streamerUserId);
-        sbU.append(", streamChannelId=");
-        sbU.append(this.streamChannelId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", applicationName=");
-        sbU.append(this.applicationName);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", mediaSessionId=");
-        sbU.append(this.mediaSessionId);
-        sbU.append(", rtcConnectionId=");
-        sbU.append(this.rtcConnectionId);
-        sbU.append(", rating=");
-        sbU.append(this.rating);
-        sbU.append(", feedback=");
-        return a.E(sbU, this.feedback, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStreamReportProblem(reason=");
+        sbM833U.append(this.reason);
+        sbM833U.append(", streamerUserId=");
+        sbM833U.append(this.streamerUserId);
+        sbM833U.append(", streamChannelId=");
+        sbM833U.append(this.streamChannelId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", applicationName=");
+        sbM833U.append(this.applicationName);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", mediaSessionId=");
+        sbM833U.append(this.mediaSessionId);
+        sbM833U.append(", rtcConnectionId=");
+        sbM833U.append(this.rtcConnectionId);
+        sbM833U.append(", rating=");
+        sbM833U.append(this.rating);
+        sbM833U.append(", feedback=");
+        return outline.m817E(sbM833U, this.feedback, ")");
     }
 }

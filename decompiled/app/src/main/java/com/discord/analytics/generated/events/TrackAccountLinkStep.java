@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAccountLinkStep.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAccountLinkStep implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackAccountLinkStep implements AnalyticsSchema, TrackBase2 {
     private final transient String analyticsSchemaTypeName;
     private final CharSequence currentStep;
     private final CharSequence platformType;
@@ -46,7 +46,7 @@ public final /* data */ class TrackAccountLinkStep implements AnalyticsSchema, T
             return false;
         }
         TrackAccountLinkStep trackAccountLinkStep = (TrackAccountLinkStep) other;
-        return m.areEqual(this.previousStep, trackAccountLinkStep.previousStep) && m.areEqual(this.currentStep, trackAccountLinkStep.currentStep) && m.areEqual(this.sessionId, trackAccountLinkStep.sessionId) && m.areEqual(this.platformType, trackAccountLinkStep.platformType);
+        return Intrinsics3.areEqual(this.previousStep, trackAccountLinkStep.previousStep) && Intrinsics3.areEqual(this.currentStep, trackAccountLinkStep.currentStep) && Intrinsics3.areEqual(this.sessionId, trackAccountLinkStep.sessionId) && Intrinsics3.areEqual(this.platformType, trackAccountLinkStep.platformType);
     }
 
     public int hashCode() {
@@ -61,13 +61,13 @@ public final /* data */ class TrackAccountLinkStep implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAccountLinkStep(previousStep=");
-        sbU.append(this.previousStep);
-        sbU.append(", currentStep=");
-        sbU.append(this.currentStep);
-        sbU.append(", sessionId=");
-        sbU.append(this.sessionId);
-        sbU.append(", platformType=");
-        return a.E(sbU, this.platformType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAccountLinkStep(previousStep=");
+        sbM833U.append(this.previousStep);
+        sbM833U.append(", currentStep=");
+        sbM833U.append(this.currentStep);
+        sbM833U.append(", sessionId=");
+        sbM833U.append(this.sessionId);
+        sbM833U.append(", platformType=");
+        return outline.m817E(sbM833U, this.platformType, ")");
     }
 }

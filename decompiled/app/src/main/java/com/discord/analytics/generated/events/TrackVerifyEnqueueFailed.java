@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackVerifyEnqueueFailed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVerifyEnqueueFailed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackVerifyEnqueueFailed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence phoneNumber = null;
     private final CharSequence channel = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackVerifyEnqueueFailed implements AnalyticsSchem
             return false;
         }
         TrackVerifyEnqueueFailed trackVerifyEnqueueFailed = (TrackVerifyEnqueueFailed) other;
-        return m.areEqual(this.phoneNumber, trackVerifyEnqueueFailed.phoneNumber) && m.areEqual(this.channel, trackVerifyEnqueueFailed.channel) && m.areEqual(this.reason, trackVerifyEnqueueFailed.reason);
+        return Intrinsics3.areEqual(this.phoneNumber, trackVerifyEnqueueFailed.phoneNumber) && Intrinsics3.areEqual(this.channel, trackVerifyEnqueueFailed.channel) && Intrinsics3.areEqual(this.reason, trackVerifyEnqueueFailed.reason);
     }
 
     public int hashCode() {
@@ -43,11 +43,11 @@ public final /* data */ class TrackVerifyEnqueueFailed implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackVerifyEnqueueFailed(phoneNumber=");
-        sbU.append(this.phoneNumber);
-        sbU.append(", channel=");
-        sbU.append(this.channel);
-        sbU.append(", reason=");
-        return a.E(sbU, this.reason, ")");
+        StringBuilder sbM833U = outline.m833U("TrackVerifyEnqueueFailed(phoneNumber=");
+        sbM833U.append(this.phoneNumber);
+        sbM833U.append(", channel=");
+        sbM833U.append(this.channel);
+        sbM833U.append(", reason=");
+        return outline.m817E(sbM833U, this.reason, ")");
     }
 }

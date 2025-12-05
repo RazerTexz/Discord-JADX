@@ -3,12 +3,6 @@ package com.facebook.imagepipeline.platform;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.MemoryFile;
-import b.c.a.a0.d;
-import b.f.d.d.c;
-import b.f.d.d.m;
-import b.f.d.g.h;
-import b.f.d.j.a;
-import b.f.d.m.b;
 import com.facebook.common.memory.PooledByteBuffer;
 import com.facebook.common.references.CloseableReference;
 import com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder;
@@ -17,34 +11,47 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.Method;
 import java.util.Objects;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p115d.p119d.Closeables;
+import p007b.p109f.p115d.p119d.DoNotStrip;
+import p007b.p109f.p115d.p119d.Throwables;
+import p007b.p109f.p115d.p122g.PooledByteBufferInputStream;
+import p007b.p109f.p115d.p125j.LimitedInputStream;
+import p007b.p109f.p115d.p128m.WebpBitmapFactory;
+import p007b.p109f.p115d.p128m.WebpSupportStatus;
 
-@c
+@DoNotStrip
 /* loaded from: classes3.dex */
 public class GingerbreadPurgeableDecoder extends DalvikPurgeableDecoder {
-    public static Method c;
-    public final b d = b.f.d.m.c.c();
 
-    @c
+    /* renamed from: c */
+    public static Method f19574c;
+
+    /* renamed from: d */
+    public final WebpBitmapFactory f19575d = WebpSupportStatus.m1015c();
+
+    @DoNotStrip
     public GingerbreadPurgeableDecoder() {
     }
 
-    public static MemoryFile g(CloseableReference<PooledByteBuffer> closeableReference, int i, byte[] bArr) throws Throwable {
+    /* renamed from: g */
+    public static MemoryFile m8715g(CloseableReference<PooledByteBuffer> closeableReference, int i, byte[] bArr) throws Throwable {
         OutputStream outputStream;
-        a aVar;
-        h hVar = null;
+        LimitedInputStream limitedInputStream;
+        PooledByteBufferInputStream pooledByteBufferInputStream = null;
         OutputStream outputStream2 = null;
         MemoryFile memoryFile = new MemoryFile(null, (bArr == null ? 0 : bArr.length) + i);
         memoryFile.allowPurging(false);
         try {
-            h hVar2 = new h(closeableReference.u());
+            PooledByteBufferInputStream pooledByteBufferInputStream2 = new PooledByteBufferInputStream(closeableReference.m8642u());
             try {
-                aVar = new a(hVar2, i);
+                limitedInputStream = new LimitedInputStream(pooledByteBufferInputStream2, i);
                 try {
                     outputStream2 = memoryFile.getOutputStream();
                     Objects.requireNonNull(outputStream2);
                     byte[] bArr2 = new byte[4096];
                     while (true) {
-                        int i2 = aVar.read(bArr2);
+                        int i2 = limitedInputStream.read(bArr2);
                         if (i2 == -1) {
                             break;
                         }
@@ -54,69 +61,72 @@ public class GingerbreadPurgeableDecoder extends DalvikPurgeableDecoder {
                         memoryFile.writeBytes(bArr, 0, i, bArr.length);
                     }
                     closeableReference.close();
-                    b.f.d.d.a.b(hVar2);
-                    b.f.d.d.a.b(aVar);
-                    b.f.d.d.a.a(outputStream2, true);
+                    Closeables.m966b(pooledByteBufferInputStream2);
+                    Closeables.m966b(limitedInputStream);
+                    Closeables.m965a(outputStream2, true);
                     return memoryFile;
                 } catch (Throwable th) {
                     th = th;
                     outputStream = outputStream2;
-                    hVar = hVar2;
-                    Class<CloseableReference> cls = CloseableReference.j;
+                    pooledByteBufferInputStream = pooledByteBufferInputStream2;
+                    Class<CloseableReference> cls = CloseableReference.f19438j;
                     if (closeableReference != null) {
                         closeableReference.close();
                     }
-                    b.f.d.d.a.b(hVar);
-                    b.f.d.d.a.b(aVar);
-                    b.f.d.d.a.a(outputStream, true);
+                    Closeables.m966b(pooledByteBufferInputStream);
+                    Closeables.m966b(limitedInputStream);
+                    Closeables.m965a(outputStream, true);
                     throw th;
                 }
             } catch (Throwable th2) {
                 th = th2;
                 outputStream = null;
-                aVar = null;
+                limitedInputStream = null;
             }
         } catch (Throwable th3) {
             th = th3;
             outputStream = null;
-            aVar = null;
+            limitedInputStream = null;
         }
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
-    public Bitmap c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options) {
-        return h(closeableReference, closeableReference.u().size(), null, options);
+    /* renamed from: c */
+    public Bitmap mo8710c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options) {
+        return m8716h(closeableReference, closeableReference.m8642u().size(), null, options);
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
-    public Bitmap d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options) {
-        return h(closeableReference, i, DalvikPurgeableDecoder.e(closeableReference, i) ? null : DalvikPurgeableDecoder.a, options);
+    /* renamed from: d */
+    public Bitmap mo8711d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options) {
+        return m8716h(closeableReference, i, DalvikPurgeableDecoder.m8709e(closeableReference, i) ? null : DalvikPurgeableDecoder.f19566a, options);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:24:0x003c  */
+    /* renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final Bitmap h(CloseableReference<PooledByteBuffer> closeableReference, int i, byte[] bArr, BitmapFactory.Options options) throws Throwable {
+    public final Bitmap m8716h(CloseableReference<PooledByteBuffer> closeableReference, int i, byte[] bArr, BitmapFactory.Options options) throws Throwable {
         MemoryFile memoryFile = null;
         try {
-            MemoryFile memoryFileG = g(closeableReference, i, bArr);
+            MemoryFile memoryFileM8715g = m8715g(closeableReference, i, bArr);
             try {
-                FileDescriptor fileDescriptorJ = j(memoryFileG);
-                b bVar = this.d;
-                if (bVar == null) {
+                FileDescriptor fileDescriptorM8718j = m8718j(memoryFileM8715g);
+                WebpBitmapFactory webpBitmapFactory = this.f19575d;
+                if (webpBitmapFactory == null) {
                     throw new IllegalStateException("WebpBitmapFactory is null");
                 }
-                Bitmap bitmapA = bVar.a(fileDescriptorJ, null, options);
-                d.y(bitmapA, "BitmapFactory returned null");
-                Bitmap bitmap = bitmapA;
-                memoryFileG.close();
+                Bitmap bitmapMo1011a = webpBitmapFactory.mo1011a(fileDescriptorM8718j, null, options);
+                AnimatableValueParser.m591y(bitmapMo1011a, "BitmapFactory returned null");
+                Bitmap bitmap = bitmapMo1011a;
+                memoryFileM8715g.close();
                 return bitmap;
             } catch (IOException e) {
                 e = e;
-                memoryFile = memoryFileG;
+                memoryFile = memoryFileM8715g;
                 try {
-                    m.a(e);
+                    Throwables.m972a(e);
                     throw new RuntimeException(e);
                 } catch (Throwable th) {
                     th = th;
@@ -127,7 +137,7 @@ public class GingerbreadPurgeableDecoder extends DalvikPurgeableDecoder {
                 }
             } catch (Throwable th2) {
                 th = th2;
-                memoryFile = memoryFileG;
+                memoryFile = memoryFileM8715g;
                 if (memoryFile != null) {
                 }
                 throw th;
@@ -139,25 +149,27 @@ public class GingerbreadPurgeableDecoder extends DalvikPurgeableDecoder {
         }
     }
 
-    public final synchronized Method i() {
-        if (c == null) {
+    /* renamed from: i */
+    public final synchronized Method m8717i() {
+        if (f19574c == null) {
             try {
-                c = MemoryFile.class.getDeclaredMethod("getFileDescriptor", new Class[0]);
+                f19574c = MemoryFile.class.getDeclaredMethod("getFileDescriptor", new Class[0]);
             } catch (Exception e) {
-                m.a(e);
+                Throwables.m972a(e);
                 throw new RuntimeException(e);
             }
         }
-        return c;
+        return f19574c;
     }
 
-    public final FileDescriptor j(MemoryFile memoryFile) throws Throwable {
+    /* renamed from: j */
+    public final FileDescriptor m8718j(MemoryFile memoryFile) throws Throwable {
         try {
-            Object objInvoke = i().invoke(memoryFile, new Object[0]);
+            Object objInvoke = m8717i().invoke(memoryFile, new Object[0]);
             Objects.requireNonNull(objInvoke);
             return (FileDescriptor) objInvoke;
         } catch (Exception e) {
-            m.a(e);
+            Throwables.m972a(e);
             throw new RuntimeException(e);
         }
     }

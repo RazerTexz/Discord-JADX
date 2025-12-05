@@ -1,7 +1,5 @@
 package com.discord.widgets.guildscheduledevent;
 
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.guildscheduledevent.GuildScheduledEventEntityType;
 import com.discord.api.utcdatetime.UtcDateTime;
@@ -9,15 +7,17 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.StoreGuildScheduledEvents;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: GuildScheduledEventSettingsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
+public final class GuildScheduledEventSettingsViewModel extends AppViewModel<ViewState> {
     public static final int SAMPLE_USER_COUNT = 1;
 
     /* compiled from: GuildScheduledEventSettingsViewModel.kt */
@@ -39,7 +39,7 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Initialized(GuildScheduledEventModel guildScheduledEventModel, GuildScheduledEvent guildScheduledEvent) {
                 super(null);
-                m.checkNotNullParameter(guildScheduledEventModel, "eventModel");
+                Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "eventModel");
                 this.eventModel = guildScheduledEventModel;
                 this.existingEvent = guildScheduledEvent;
             }
@@ -65,7 +65,7 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
             }
 
             public final Initialized copy(GuildScheduledEventModel eventModel, GuildScheduledEvent existingEvent) {
-                m.checkNotNullParameter(eventModel, "eventModel");
+                Intrinsics3.checkNotNullParameter(eventModel, "eventModel");
                 return new Initialized(eventModel, existingEvent);
             }
 
@@ -77,7 +77,7 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
                     return false;
                 }
                 Initialized initialized = (Initialized) other;
-                return m.areEqual(this.eventModel, initialized.eventModel) && m.areEqual(this.existingEvent, initialized.existingEvent);
+                return Intrinsics3.areEqual(this.eventModel, initialized.eventModel) && Intrinsics3.areEqual(this.existingEvent, initialized.existingEvent);
             }
 
             public final GuildScheduledEventModel getEventModel() {
@@ -96,12 +96,12 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Initialized(eventModel=");
-                sbU.append(this.eventModel);
-                sbU.append(", existingEvent=");
-                sbU.append(this.existingEvent);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Initialized(eventModel=");
+                sbM833U.append(this.eventModel);
+                sbM833U.append(", existingEvent=");
+                sbM833U.append(this.existingEvent);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -123,12 +123,12 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
     }
 
     /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setDescription$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
+    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setDescription$1 */
+    public static final class C88251 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ String $description;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C88251(String str) {
             super(1);
             this.$description = str;
         }
@@ -140,20 +140,20 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
-            m.checkNotNullParameter(guildScheduledEventModel, "$receiver");
+            Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, null, null, null, this.$description, null, null, null, null, 7935, null);
         }
     }
 
     /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setEndDate$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
-        public final /* synthetic */ GuildScheduledEventPickerDate $newEndDate;
+    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setEndDate$1 */
+    public static final class C88261 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
+        public final /* synthetic */ GuildScheduledEventPickerDateTime2 $newEndDate;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(GuildScheduledEventPickerDate guildScheduledEventPickerDate) {
+        public C88261(GuildScheduledEventPickerDateTime2 guildScheduledEventPickerDateTime2) {
             super(1);
-            this.$newEndDate = guildScheduledEventPickerDate;
+            this.$newEndDate = guildScheduledEventPickerDateTime2;
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -163,20 +163,20 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
-            m.checkNotNullParameter(guildScheduledEventModel, "$receiver");
+            Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, null, this.$newEndDate, null, null, null, null, null, null, 8127, null);
         }
     }
 
     /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setEndTime$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
-        public final /* synthetic */ GuildScheduledEventPickerTime $newEndTime;
+    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setEndTime$1 */
+    public static final class C88271 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
+        public final /* synthetic */ GuildScheduledEventPickerDateTime3 $newEndTime;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(GuildScheduledEventPickerTime guildScheduledEventPickerTime) {
+        public C88271(GuildScheduledEventPickerDateTime3 guildScheduledEventPickerDateTime3) {
             super(1);
-            this.$newEndTime = guildScheduledEventPickerTime;
+            this.$newEndTime = guildScheduledEventPickerDateTime3;
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -186,20 +186,20 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
-            m.checkNotNullParameter(guildScheduledEventModel, "$receiver");
+            Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, null, null, this.$newEndTime, null, null, null, null, null, 8063, null);
         }
     }
 
     /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setStartDate$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
-        public final /* synthetic */ GuildScheduledEventPickerDate $newStartDate;
+    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setStartDate$1 */
+    public static final class C88281 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
+        public final /* synthetic */ GuildScheduledEventPickerDateTime2 $newStartDate;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(GuildScheduledEventPickerDate guildScheduledEventPickerDate) {
+        public C88281(GuildScheduledEventPickerDateTime2 guildScheduledEventPickerDateTime2) {
             super(1);
-            this.$newStartDate = guildScheduledEventPickerDate;
+            this.$newStartDate = guildScheduledEventPickerDateTime2;
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -209,20 +209,20 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
-            m.checkNotNullParameter(guildScheduledEventModel, "$receiver");
+            Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, this.$newStartDate, null, null, null, null, null, null, null, null, 8175, null);
         }
     }
 
     /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setStartTime$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
-        public final /* synthetic */ GuildScheduledEventPickerTime $newStartTime;
+    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setStartTime$1 */
+    public static final class C88291 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
+        public final /* synthetic */ GuildScheduledEventPickerDateTime3 $newStartTime;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(GuildScheduledEventPickerTime guildScheduledEventPickerTime) {
+        public C88291(GuildScheduledEventPickerDateTime3 guildScheduledEventPickerDateTime3) {
             super(1);
-            this.$newStartTime = guildScheduledEventPickerTime;
+            this.$newStartTime = guildScheduledEventPickerDateTime3;
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -232,18 +232,18 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
-            m.checkNotNullParameter(guildScheduledEventModel, "$receiver");
+            Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, this.$newStartTime, null, null, null, null, null, null, null, 8159, null);
         }
     }
 
     /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setTopic$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
+    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setTopic$1 */
+    public static final class C88301 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ String $topic;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C88301(String str) {
             super(1);
             this.$topic = str;
         }
@@ -255,18 +255,18 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
-            m.checkNotNullParameter(guildScheduledEventModel, "$receiver");
+            Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, this.$topic, null, null, null, null, null, null, null, null, null, null, null, 8189, null);
         }
     }
 
     /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$toggleBroadcastToDirectoryChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
+    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$toggleBroadcastToDirectoryChannel$1 */
+    public static final class C88311 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ boolean $associateToHubs;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2) {
+        public C88311(boolean z2) {
             super(1);
             this.$associateToHubs = z2;
         }
@@ -278,7 +278,7 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
-            m.checkNotNullParameter(guildScheduledEventModel, "$receiver");
+            Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, null, null, null, null, null, null, null, Boolean.valueOf(this.$associateToHubs), 4095, null);
         }
     }
@@ -297,11 +297,11 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
             return null;
         }
         updateViewState(ViewState.Initialized.copy$default(initialized, updateEventModel.invoke(initialized.getEventModel()), null, 2, null));
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     public final boolean hasEndTimeChanged(ViewState.Initialized viewState) {
-        m.checkNotNullParameter(viewState, "viewState");
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
         if (viewState.getExistingEvent() == null) {
             return true;
         }
@@ -315,11 +315,11 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
     }
 
     public final boolean hasStartTimeChanged(ViewState.Initialized viewState) {
-        m.checkNotNullParameter(viewState, "viewState");
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
         return viewState.getExistingEvent() == null || GuildScheduledEventPickerDateTime.INSTANCE.toMillis(viewState.getEventModel().getStartDate(), viewState.getEventModel().getStartTime()) != viewState.getExistingEvent().getScheduledStartTime().getDateTimeMillis();
     }
 
-    public final boolean isDateInFuture(GuildScheduledEventPickerDate date, GuildScheduledEventPickerTime time) {
+    public final boolean isDateInFuture(GuildScheduledEventPickerDateTime2 date, GuildScheduledEventPickerDateTime3 time) {
         return date == null || time == null || GuildScheduledEventPickerDateTime.INSTANCE.toMillis(date, time) >= ClockFactory.get().currentTimeMillis();
     }
 
@@ -340,9 +340,9 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
         return (eventModel.getEntityType() == GuildScheduledEventEntityType.EXTERNAL && (eventModel.getEndDate() == null || eventModel.getEndTime() == null)) ? false : true;
     }
 
-    public final boolean isStartDateBeforeEndDate(GuildScheduledEventPickerDate startDate, GuildScheduledEventPickerTime startTime, GuildScheduledEventPickerDate endDate, GuildScheduledEventPickerTime endTime) {
-        m.checkNotNullParameter(startDate, "startDate");
-        m.checkNotNullParameter(startTime, "startTime");
+    public final boolean isStartDateBeforeEndDate(GuildScheduledEventPickerDateTime2 startDate, GuildScheduledEventPickerDateTime3 startTime, GuildScheduledEventPickerDateTime2 endDate, GuildScheduledEventPickerDateTime3 endTime) {
+        Intrinsics3.checkNotNullParameter(startDate, "startDate");
+        Intrinsics3.checkNotNullParameter(startTime, "startTime");
         if (endDate == null || endTime == null) {
             return endDate == null || endDate.toMillis() >= startDate.toMillis();
         }
@@ -351,45 +351,45 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
     }
 
     public final Unit setDescription(String description) {
-        m.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
-        return updateEventModel(new AnonymousClass1(description));
+        Intrinsics3.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        return updateEventModel(new C88251(description));
     }
 
     public final DateError setEndDate(int year, int month, int dayOfMonth) {
-        if (updateEventModel(new AnonymousClass1(new GuildScheduledEventPickerDate(year, month, dayOfMonth))) != null) {
+        if (updateEventModel(new C88261(new GuildScheduledEventPickerDateTime2(year, month, dayOfMonth))) != null) {
             return null;
         }
         return DateError.INVALID_VIEW_STATE;
     }
 
     public final DateError setEndTime(int hourOfDay, int minute) {
-        if (updateEventModel(new AnonymousClass1(new GuildScheduledEventPickerTime(hourOfDay, minute, 0))) != null) {
+        if (updateEventModel(new C88271(new GuildScheduledEventPickerDateTime3(hourOfDay, minute, 0))) != null) {
             return null;
         }
         return DateError.INVALID_VIEW_STATE;
     }
 
     public final DateError setStartDate(int year, int month, int dayOfMonth) {
-        if (updateEventModel(new AnonymousClass1(new GuildScheduledEventPickerDate(year, month, dayOfMonth))) != null) {
+        if (updateEventModel(new C88281(new GuildScheduledEventPickerDateTime2(year, month, dayOfMonth))) != null) {
             return null;
         }
         return DateError.INVALID_VIEW_STATE;
     }
 
     public final DateError setStartTime(int hourOfDay, int minute) {
-        if (updateEventModel(new AnonymousClass1(new GuildScheduledEventPickerTime(hourOfDay, minute, 0))) != null) {
+        if (updateEventModel(new C88291(new GuildScheduledEventPickerDateTime3(hourOfDay, minute, 0))) != null) {
             return null;
         }
         return DateError.INVALID_VIEW_STATE;
     }
 
     public final Unit setTopic(String topic) {
-        m.checkNotNullParameter(topic, ModelAuditLogEntry.CHANGE_KEY_TOPIC);
-        return updateEventModel(new AnonymousClass1(topic));
+        Intrinsics3.checkNotNullParameter(topic, ModelAuditLogEntry.CHANGE_KEY_TOPIC);
+        return updateEventModel(new C88301(topic));
     }
 
     public final Unit toggleBroadcastToDirectoryChannel(boolean associateToHubs) {
-        return updateEventModel(new AnonymousClass1(associateToHubs));
+        return updateEventModel(new C88311(associateToHubs));
     }
 
     /*  JADX ERROR: NullPointerException in pass: InitCodeVariables
@@ -403,9 +403,9 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
             r5 = r27
             r1 = r28
             java.lang.String r2 = "entityType"
-            d0.z.d.m.checkNotNullParameter(r12, r2)
+            p507d0.p592z.p594d.Intrinsics3.checkNotNullParameter(r12, r2)
             java.lang.String r2 = "guildScheduledEventsStore"
-            d0.z.d.m.checkNotNullParameter(r1, r2)
+            p507d0.p592z.p594d.Intrinsics3.checkNotNullParameter(r1, r2)
             r2 = 0
             r15 = 1
             r0.<init>(r2, r15, r2)
@@ -418,7 +418,7 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
             r1 = r2
         L27:
             if (r1 == 0) goto L57
-            com.discord.widgets.guildscheduledevent.GuildScheduledEventModel r18 = com.discord.widgets.guildscheduledevent.GuildScheduledEventModelKt.toModel(r1)
+            com.discord.widgets.guildscheduledevent.GuildScheduledEventModel r18 = com.discord.widgets.guildscheduledevent.GuildScheduledEventModel2.toModel(r1)
             if (r18 == 0) goto L57
             r2 = 0
             r4 = 0
@@ -429,7 +429,7 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
             r10 = 0
             r11 = 0
             com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata$Companion r13 = com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata.INSTANCE
-            com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata r13 = r13.a(r12, r5)
+            com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata r13 = r13.m7992a(r12, r5)
             r14 = 0
             r16 = 0
             r19 = 1
@@ -461,16 +461,16 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
             r6 = 0
             java.lang.Object r2 = r3.getFirst()
             r7 = r2
-            com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDate r7 = (com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDate) r7
+            com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDate r7 = (com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDateTime2) r7
             java.lang.Object r2 = r3.getSecond()
             r8 = r2
-            com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerTime r8 = (com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerTime) r8
+            com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerTime r8 = (com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDateTime3) r8
             r9 = 0
             r10 = 0
             r11 = 0
             com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata$Companion r2 = com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata.INSTANCE
             r3 = r27
-            com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata r13 = r2.a(r0, r3)
+            com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata r13 = r2.m7992a(r0, r3)
             java.lang.Integer r14 = java.lang.Integer.valueOf(r19)
             r15 = 0
             r16 = 4096(0x1000, float:5.74E-42)
@@ -492,7 +492,7 @@ public final class GuildScheduledEventSettingsViewModel extends d0<ViewState> {
     }
 
     public final boolean isStartDateBeforeEndDate(ViewState.Initialized viewState) {
-        m.checkNotNullParameter(viewState, "viewState");
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
         return isStartDateBeforeEndDate(viewState.getEventModel().getStartDate(), viewState.getEventModel().getStartTime(), viewState.getEventModel().getEndDate(), viewState.getEventModel().getEndTime());
     }
 }

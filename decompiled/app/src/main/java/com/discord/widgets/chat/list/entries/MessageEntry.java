@@ -1,6 +1,5 @@
 package com.discord.widgets.chat.list.entries;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.role.GuildRole;
 import com.discord.api.sticker.BaseSticker;
@@ -8,9 +7,10 @@ import com.discord.models.member.GuildMember;
 import com.discord.models.message.Message;
 import com.discord.stores.StoreMessageReplies;
 import com.discord.stores.StoreMessageState;
-import d0.z.d.m;
 import java.util.Map;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MessageEntry.kt */
 /* loaded from: classes2.dex */
@@ -40,8 +40,8 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         private final BaseSticker sticker;
 
         public CtaData(BaseSticker baseSticker, Channel channel) {
-            m.checkNotNullParameter(baseSticker, "sticker");
-            m.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(baseSticker, "sticker");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
             this.sticker = baseSticker;
             this.channel = channel;
         }
@@ -67,8 +67,8 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         }
 
         public final CtaData copy(BaseSticker sticker, Channel channel) {
-            m.checkNotNullParameter(sticker, "sticker");
-            m.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(sticker, "sticker");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
             return new CtaData(sticker, channel);
         }
 
@@ -80,7 +80,7 @@ public final /* data */ class MessageEntry extends ChatListEntry {
                 return false;
             }
             CtaData ctaData = (CtaData) other;
-            return m.areEqual(this.sticker, ctaData.sticker) && m.areEqual(this.channel, ctaData.channel);
+            return Intrinsics3.areEqual(this.sticker, ctaData.sticker) && Intrinsics3.areEqual(this.channel, ctaData.channel);
         }
 
         public final Channel getChannel() {
@@ -99,12 +99,12 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("CtaData(sticker=");
-            sbU.append(this.sticker);
-            sbU.append(", channel=");
-            sbU.append(this.channel);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("CtaData(sticker=");
+            sbM833U.append(this.sticker);
+            sbM833U.append(", channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -115,7 +115,7 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         private final StoreMessageReplies.MessageState messageState;
 
         public ReplyData(StoreMessageReplies.MessageState messageState, MessageEntry messageEntry, boolean z2) {
-            m.checkNotNullParameter(messageState, "messageState");
+            Intrinsics3.checkNotNullParameter(messageState, "messageState");
             this.messageState = messageState;
             this.messageEntry = messageEntry;
             this.isRepliedUserBlocked = z2;
@@ -150,7 +150,7 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         }
 
         public final ReplyData copy(StoreMessageReplies.MessageState messageState, MessageEntry messageEntry, boolean isRepliedUserBlocked) {
-            m.checkNotNullParameter(messageState, "messageState");
+            Intrinsics3.checkNotNullParameter(messageState, "messageState");
             return new ReplyData(messageState, messageEntry, isRepliedUserBlocked);
         }
 
@@ -162,7 +162,7 @@ public final /* data */ class MessageEntry extends ChatListEntry {
                 return false;
             }
             ReplyData replyData = (ReplyData) other;
-            return m.areEqual(this.messageState, replyData.messageState) && m.areEqual(this.messageEntry, replyData.messageEntry) && this.isRepliedUserBlocked == replyData.isRepliedUserBlocked;
+            return Intrinsics3.areEqual(this.messageState, replyData.messageState) && Intrinsics3.areEqual(this.messageEntry, replyData.messageEntry) && this.isRepliedUserBlocked == replyData.isRepliedUserBlocked;
         }
 
         public final MessageEntry getMessageEntry() {
@@ -192,12 +192,12 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ReplyData(messageState=");
-            sbU.append(this.messageState);
-            sbU.append(", messageEntry=");
-            sbU.append(this.messageEntry);
-            sbU.append(", isRepliedUserBlocked=");
-            return a.O(sbU, this.isRepliedUserBlocked, ")");
+            StringBuilder sbM833U = outline.m833U("ReplyData(messageState=");
+            sbM833U.append(this.messageState);
+            sbM833U.append(", messageEntry=");
+            sbM833U.append(this.messageEntry);
+            sbM833U.append(", isRepliedUserBlocked=");
+            return outline.m827O(sbM833U, this.isRepliedUserBlocked, ")");
         }
 
         public /* synthetic */ ReplyData(StoreMessageReplies.MessageState messageState, MessageEntry messageEntry, boolean z2, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -292,8 +292,8 @@ public final /* data */ class MessageEntry extends ChatListEntry {
     }
 
     public final MessageEntry copy(Message message, StoreMessageState.State messageState, GuildMember author, GuildMember firstMentionedUser, Map<Long, GuildRole> roles, Map<Long, String> nickOrUsernames, boolean isMinimal, boolean isExpandedBlocked, boolean animateEmojis, ReplyData replyData, GuildMember interactionAuthor, boolean isThreadStarterMessage, boolean isGuildForumPostFirstMessage, boolean isGuildForumPostAuthor, CtaData ctaData, Long permissionsForChannel) {
-        m.checkNotNullParameter(message, "message");
-        m.checkNotNullParameter(nickOrUsernames, "nickOrUsernames");
+        Intrinsics3.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(nickOrUsernames, "nickOrUsernames");
         return new MessageEntry(message, messageState, author, firstMentionedUser, roles, nickOrUsernames, isMinimal, isExpandedBlocked, animateEmojis, replyData, interactionAuthor, isThreadStarterMessage, isGuildForumPostFirstMessage, isGuildForumPostAuthor, ctaData, permissionsForChannel);
     }
 
@@ -305,7 +305,7 @@ public final /* data */ class MessageEntry extends ChatListEntry {
             return false;
         }
         MessageEntry messageEntry = (MessageEntry) other;
-        return m.areEqual(this.message, messageEntry.message) && m.areEqual(this.messageState, messageEntry.messageState) && m.areEqual(this.author, messageEntry.author) && m.areEqual(this.firstMentionedUser, messageEntry.firstMentionedUser) && m.areEqual(this.roles, messageEntry.roles) && m.areEqual(this.nickOrUsernames, messageEntry.nickOrUsernames) && this.isMinimal == messageEntry.isMinimal && this.isExpandedBlocked == messageEntry.isExpandedBlocked && this.animateEmojis == messageEntry.animateEmojis && m.areEqual(this.replyData, messageEntry.replyData) && m.areEqual(this.interactionAuthor, messageEntry.interactionAuthor) && this.isThreadStarterMessage == messageEntry.isThreadStarterMessage && this.isGuildForumPostFirstMessage == messageEntry.isGuildForumPostFirstMessage && this.isGuildForumPostAuthor == messageEntry.isGuildForumPostAuthor && m.areEqual(this.ctaData, messageEntry.ctaData) && m.areEqual(this.permissionsForChannel, messageEntry.permissionsForChannel);
+        return Intrinsics3.areEqual(this.message, messageEntry.message) && Intrinsics3.areEqual(this.messageState, messageEntry.messageState) && Intrinsics3.areEqual(this.author, messageEntry.author) && Intrinsics3.areEqual(this.firstMentionedUser, messageEntry.firstMentionedUser) && Intrinsics3.areEqual(this.roles, messageEntry.roles) && Intrinsics3.areEqual(this.nickOrUsernames, messageEntry.nickOrUsernames) && this.isMinimal == messageEntry.isMinimal && this.isExpandedBlocked == messageEntry.isExpandedBlocked && this.animateEmojis == messageEntry.animateEmojis && Intrinsics3.areEqual(this.replyData, messageEntry.replyData) && Intrinsics3.areEqual(this.interactionAuthor, messageEntry.interactionAuthor) && this.isThreadStarterMessage == messageEntry.isThreadStarterMessage && this.isGuildForumPostFirstMessage == messageEntry.isGuildForumPostFirstMessage && this.isGuildForumPostAuthor == messageEntry.isGuildForumPostAuthor && Intrinsics3.areEqual(this.ctaData, messageEntry.ctaData) && Intrinsics3.areEqual(this.permissionsForChannel, messageEntry.permissionsForChannel);
     }
 
     public final boolean getAnimateEmojis() {
@@ -436,38 +436,38 @@ public final /* data */ class MessageEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("MessageEntry(message=");
-        sbU.append(this.message);
-        sbU.append(", messageState=");
-        sbU.append(this.messageState);
-        sbU.append(", author=");
-        sbU.append(this.author);
-        sbU.append(", firstMentionedUser=");
-        sbU.append(this.firstMentionedUser);
-        sbU.append(", roles=");
-        sbU.append(this.roles);
-        sbU.append(", nickOrUsernames=");
-        sbU.append(this.nickOrUsernames);
-        sbU.append(", isMinimal=");
-        sbU.append(this.isMinimal);
-        sbU.append(", isExpandedBlocked=");
-        sbU.append(this.isExpandedBlocked);
-        sbU.append(", animateEmojis=");
-        sbU.append(this.animateEmojis);
-        sbU.append(", replyData=");
-        sbU.append(this.replyData);
-        sbU.append(", interactionAuthor=");
-        sbU.append(this.interactionAuthor);
-        sbU.append(", isThreadStarterMessage=");
-        sbU.append(this.isThreadStarterMessage);
-        sbU.append(", isGuildForumPostFirstMessage=");
-        sbU.append(this.isGuildForumPostFirstMessage);
-        sbU.append(", isGuildForumPostAuthor=");
-        sbU.append(this.isGuildForumPostAuthor);
-        sbU.append(", ctaData=");
-        sbU.append(this.ctaData);
-        sbU.append(", permissionsForChannel=");
-        return a.G(sbU, this.permissionsForChannel, ")");
+        StringBuilder sbM833U = outline.m833U("MessageEntry(message=");
+        sbM833U.append(this.message);
+        sbM833U.append(", messageState=");
+        sbM833U.append(this.messageState);
+        sbM833U.append(", author=");
+        sbM833U.append(this.author);
+        sbM833U.append(", firstMentionedUser=");
+        sbM833U.append(this.firstMentionedUser);
+        sbM833U.append(", roles=");
+        sbM833U.append(this.roles);
+        sbM833U.append(", nickOrUsernames=");
+        sbM833U.append(this.nickOrUsernames);
+        sbM833U.append(", isMinimal=");
+        sbM833U.append(this.isMinimal);
+        sbM833U.append(", isExpandedBlocked=");
+        sbM833U.append(this.isExpandedBlocked);
+        sbM833U.append(", animateEmojis=");
+        sbM833U.append(this.animateEmojis);
+        sbM833U.append(", replyData=");
+        sbM833U.append(this.replyData);
+        sbM833U.append(", interactionAuthor=");
+        sbM833U.append(this.interactionAuthor);
+        sbM833U.append(", isThreadStarterMessage=");
+        sbM833U.append(this.isThreadStarterMessage);
+        sbM833U.append(", isGuildForumPostFirstMessage=");
+        sbM833U.append(this.isGuildForumPostFirstMessage);
+        sbM833U.append(", isGuildForumPostAuthor=");
+        sbM833U.append(this.isGuildForumPostAuthor);
+        sbM833U.append(", ctaData=");
+        sbM833U.append(this.ctaData);
+        sbM833U.append(", permissionsForChannel=");
+        return outline.m819G(sbM833U, this.permissionsForChannel, ")");
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0059  */
@@ -480,8 +480,8 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         Integer type3;
         Integer type4;
         Integer type5;
-        m.checkNotNullParameter(message, "message");
-        m.checkNotNullParameter(map2, "nickOrUsernames");
+        Intrinsics3.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(map2, "nickOrUsernames");
         this.message = message;
         this.messageState = state;
         this.author = guildMember;

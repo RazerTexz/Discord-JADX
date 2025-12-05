@@ -1,0 +1,75 @@
+package p007b.p225i.p361c.p369m.p370d.p380q.p381c;
+
+import java.io.File;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p361c.p369m.p370d.Logger3;
+
+/* compiled from: SessionReport.java */
+/* renamed from: b.i.c.m.d.q.c.d, reason: use source file name */
+/* loaded from: classes3.dex */
+public class SessionReport implements Report2 {
+
+    /* renamed from: a */
+    public final File f12713a;
+
+    /* renamed from: b */
+    public final File[] f12714b;
+
+    /* renamed from: c */
+    public final Map<String, String> f12715c;
+
+    public SessionReport(File file, Map<String, String> map) {
+        this.f12713a = file;
+        this.f12714b = new File[]{file};
+        this.f12715c = new HashMap(map);
+    }
+
+    @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
+    /* renamed from: a */
+    public String mo6672a() {
+        String strMo6677f = mo6677f();
+        return strMo6677f.substring(0, strMo6677f.lastIndexOf(46));
+    }
+
+    @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
+    /* renamed from: b */
+    public Map<String, String> mo6673b() {
+        return Collections.unmodifiableMap(this.f12715c);
+    }
+
+    @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
+    /* renamed from: c */
+    public File mo6674c() {
+        return this.f12713a;
+    }
+
+    @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
+    /* renamed from: d */
+    public int mo6675d() {
+        return 1;
+    }
+
+    @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
+    /* renamed from: e */
+    public File[] mo6676e() {
+        return this.f12714b;
+    }
+
+    @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
+    /* renamed from: f */
+    public String mo6677f() {
+        return this.f12713a.getName();
+    }
+
+    @Override // p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2
+    public void remove() {
+        Logger3 logger3 = Logger3.f12227a;
+        StringBuilder sbM833U = outline.m833U("Removing report at ");
+        sbM833U.append(this.f12713a.getPath());
+        logger3.m6371b(sbM833U.toString());
+        this.f12713a.delete();
+    }
+}

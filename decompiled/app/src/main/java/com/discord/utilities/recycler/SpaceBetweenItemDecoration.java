@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.dimen.DimenUtils;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SpaceBetweenItemDecoration.kt */
 /* loaded from: classes2.dex */
@@ -28,10 +28,10 @@ public final class SpaceBetweenItemDecoration extends DividerItemDecoration {
 
     @Override // androidx.recyclerview.widget.DividerItemDecoration, androidx.recyclerview.widget.RecyclerView.ItemDecoration
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-        m.checkNotNullParameter(outRect, "outRect");
-        m.checkNotNullParameter(view, "view");
-        m.checkNotNullParameter(parent, "parent");
-        m.checkNotNullParameter(state, "state");
+        Intrinsics3.checkNotNullParameter(outRect, "outRect");
+        Intrinsics3.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(state, "state");
         if (parent.getChildAdapterPosition(view) != this.adapter.getItemCount() - 1) {
             super.getItemOffsets(outRect, view, parent, state);
         }
@@ -40,8 +40,8 @@ public final class SpaceBetweenItemDecoration extends DividerItemDecoration {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SpaceBetweenItemDecoration(Context context, int i, RecyclerView.Adapter<?> adapter, int i2, @ColorRes int i3) {
         super(context, i);
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(adapter, "adapter");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(adapter, "adapter");
         this.adapter = adapter;
         this.sizePx = i2;
         this.color = i3;
@@ -49,7 +49,7 @@ public final class SpaceBetweenItemDecoration extends DividerItemDecoration {
         shapeDrawable.setIntrinsicWidth(i2);
         shapeDrawable.setIntrinsicHeight(i2);
         Paint paint = shapeDrawable.getPaint();
-        m.checkNotNullExpressionValue(paint, "paint");
+        Intrinsics3.checkNotNullExpressionValue(paint, "paint");
         paint.setColor(ContextCompat.getColor(context, i3));
         setDrawable(shapeDrawable);
     }

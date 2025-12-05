@@ -1,7 +1,7 @@
 package com.discord.widgets.settings;
 
 import kotlin.jvm.functions.Function3;
-import rx.functions.Func3;
+import p658rx.functions.Func3;
 
 /* compiled from: WidgetSettingsVoice.kt */
 /* loaded from: classes2.dex */
@@ -12,7 +12,7 @@ public final class WidgetSettingsVoice$sam$rx_functions_Func3$0 implements Func3
         this.function = function3;
     }
 
-    @Override // rx.functions.Func3
+    @Override // p658rx.functions.Func3
     public final /* synthetic */ Object call(Object obj, Object obj2, Object obj3) {
         return this.function.invoke(obj, obj2, obj3);
     }

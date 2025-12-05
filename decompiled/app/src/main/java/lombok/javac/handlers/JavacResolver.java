@@ -9,9 +9,9 @@ import lombok.javac.JavacResolution;
 /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
 /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver.SCL.lombok */
 public abstract class JavacResolver {
-    public static final JavacResolver CLASS = new AnonymousClass1("CLASS", 0);
-    public static final JavacResolver METHOD = new AnonymousClass2("METHOD", 1);
-    public static final JavacResolver CLASS_AND_METHOD = new AnonymousClass3("CLASS_AND_METHOD", 2);
+    public static final JavacResolver CLASS = new C129051("CLASS", 0);
+    public static final JavacResolver METHOD = new C129062("METHOD", 1);
+    public static final JavacResolver CLASS_AND_METHOD = new C129073("CLASS_AND_METHOD", 2);
     private static final /* synthetic */ JavacResolver[] ENUM$VALUES = {CLASS, METHOD, CLASS_AND_METHOD};
 
     public abstract Type resolveMember(JavacNode javacNode, JCTree.JCExpression jCExpression);
@@ -28,10 +28,10 @@ public abstract class JavacResolver {
         return (JavacResolver) Enum.valueOf(JavacResolver.class, str);
     }
 
-    /* renamed from: lombok.javac.handlers.JavacResolver$1, reason: invalid class name */
+    /* renamed from: lombok.javac.handlers.JavacResolver$1 */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$1.SCL.lombok */
-    enum AnonymousClass1 extends JavacResolver {
-        AnonymousClass1(String str, int i) {
+    enum C129051 extends JavacResolver {
+        C129051(String str, int i) {
             super(str, i, null);
         }
 
@@ -56,10 +56,10 @@ public abstract class JavacResolver {
         this(str, i);
     }
 
-    /* renamed from: lombok.javac.handlers.JavacResolver$2, reason: invalid class name */
+    /* renamed from: lombok.javac.handlers.JavacResolver$2 */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$2.SCL.lombok */
-    enum AnonymousClass2 extends JavacResolver {
-        AnonymousClass2(String str, int i) {
+    enum C129062 extends JavacResolver {
+        C129062(String str, int i) {
             super(str, i, null);
         }
 
@@ -79,10 +79,10 @@ public abstract class JavacResolver {
         }
     }
 
-    /* renamed from: lombok.javac.handlers.JavacResolver$3, reason: invalid class name */
+    /* renamed from: lombok.javac.handlers.JavacResolver$3 */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$3.SCL.lombok */
-    enum AnonymousClass3 extends JavacResolver {
-        AnonymousClass3(String str, int i) {
+    enum C129073 extends JavacResolver {
+        C129073(String str, int i) {
             super(str, i, null);
         }
 
@@ -97,7 +97,7 @@ public abstract class JavacResolver {
                     if (classNode == null || !noneOf(classNode.get(), JCTree.JCBlock.class, JCTree.JCMethodDecl.class, JCTree.JCVariableDecl.class)) {
                         break;
                     }
-                    javacNodeUp = classNode.up();
+                    javacNodeUp = classNode.m10925up();
                 }
                 if (classNode != null) {
                     type = CLASS.resolveMember(classNode, expr);

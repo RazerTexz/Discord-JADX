@@ -1,8 +1,8 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackLfgGroup.kt */
 /* loaded from: classes.dex */
@@ -23,7 +23,7 @@ public final /* data */ class TrackLfgGroup {
             return false;
         }
         TrackLfgGroup trackLfgGroup = (TrackLfgGroup) other;
-        return m.areEqual(this.gameName, trackLfgGroup.gameName) && m.areEqual(this.gameId, trackLfgGroup.gameId) && m.areEqual(this.totalSize, trackLfgGroup.totalSize) && m.areEqual(this.freeSize, trackLfgGroup.freeSize) && m.areEqual(this.ownerId, trackLfgGroup.ownerId) && m.areEqual(this.title, trackLfgGroup.title) && m.areEqual(this.description, trackLfgGroup.description);
+        return Intrinsics3.areEqual(this.gameName, trackLfgGroup.gameName) && Intrinsics3.areEqual(this.gameId, trackLfgGroup.gameId) && Intrinsics3.areEqual(this.totalSize, trackLfgGroup.totalSize) && Intrinsics3.areEqual(this.freeSize, trackLfgGroup.freeSize) && Intrinsics3.areEqual(this.ownerId, trackLfgGroup.ownerId) && Intrinsics3.areEqual(this.title, trackLfgGroup.title) && Intrinsics3.areEqual(this.description, trackLfgGroup.description);
     }
 
     public int hashCode() {
@@ -44,19 +44,19 @@ public final /* data */ class TrackLfgGroup {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackLfgGroup(gameName=");
-        sbU.append(this.gameName);
-        sbU.append(", gameId=");
-        sbU.append(this.gameId);
-        sbU.append(", totalSize=");
-        sbU.append(this.totalSize);
-        sbU.append(", freeSize=");
-        sbU.append(this.freeSize);
-        sbU.append(", ownerId=");
-        sbU.append(this.ownerId);
-        sbU.append(", title=");
-        sbU.append(this.title);
-        sbU.append(", description=");
-        return a.E(sbU, this.description, ")");
+        StringBuilder sbM833U = outline.m833U("TrackLfgGroup(gameName=");
+        sbM833U.append(this.gameName);
+        sbM833U.append(", gameId=");
+        sbM833U.append(this.gameId);
+        sbM833U.append(", totalSize=");
+        sbM833U.append(this.totalSize);
+        sbM833U.append(", freeSize=");
+        sbM833U.append(this.freeSize);
+        sbM833U.append(", ownerId=");
+        sbM833U.append(this.ownerId);
+        sbM833U.append(", title=");
+        sbM833U.append(this.title);
+        sbM833U.append(", description=");
+        return outline.m817E(sbM833U, this.description, ")");
     }
 }

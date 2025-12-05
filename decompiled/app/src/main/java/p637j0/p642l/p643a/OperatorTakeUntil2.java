@@ -1,0 +1,38 @@
+package p637j0.p642l.p643a;
+
+import androidx.recyclerview.widget.RecyclerView;
+import p658rx.Subscriber;
+
+/* JADX INFO: Add missing generic type declarations: [E] */
+/* compiled from: OperatorTakeUntil.java */
+/* renamed from: j0.l.a.e2, reason: use source file name */
+/* loaded from: classes3.dex */
+public class OperatorTakeUntil2<E> extends Subscriber<E> {
+
+    /* renamed from: j */
+    public final /* synthetic */ Subscriber f26779j;
+
+    public OperatorTakeUntil2(OperatorTakeUntil3 operatorTakeUntil3, Subscriber subscriber) {
+        this.f26779j = subscriber;
+    }
+
+    @Override // p637j0.Observer2
+    public void onCompleted() {
+        this.f26779j.onCompleted();
+    }
+
+    @Override // p637j0.Observer2
+    public void onError(Throwable th) {
+        this.f26779j.onError(th);
+    }
+
+    @Override // p637j0.Observer2
+    public void onNext(E e) {
+        this.f26779j.onCompleted();
+    }
+
+    @Override // p658rx.Subscriber
+    public void onStart() {
+        request(RecyclerView.FOREVER_NS);
+    }
+}

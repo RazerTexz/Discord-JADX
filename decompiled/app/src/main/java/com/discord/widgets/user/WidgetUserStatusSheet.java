@@ -7,35 +7,35 @@ import androidx.annotation.MainThread;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.i.e4;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.presence.ClientStatus;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetUserStatusUpdateBinding;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.analytics.Traits;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.user.WidgetUserStatusSheetViewModel;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p025i.ViewUserStatusPresenceBinding;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetUserStatusSheet.kt */
 /* loaded from: classes.dex */
 public final class WidgetUserStatusSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetUserStatusSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserStatusUpdateBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserStatusSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserStatusUpdateBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -52,10 +52,10 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
         }
 
         public final void show(Fragment fragment) {
-            m.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
             WidgetUserStatusSheet widgetUserStatusSheet = new WidgetUserStatusSheet();
             FragmentManager parentFragmentManager = fragment.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
             widgetUserStatusSheet.show(parentFragmentManager, "javaClass");
         }
 
@@ -65,29 +65,29 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetUserStatusSheetViewModel.ViewState, Unit> {
-        public AnonymousClass1(WidgetUserStatusSheet widgetUserStatusSheet) {
+    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onResume$1 */
+    public static final /* synthetic */ class C102391 extends FunctionReferenceImpl implements Function1<WidgetUserStatusSheetViewModel.ViewState, Unit> {
+        public C102391(WidgetUserStatusSheet widgetUserStatusSheet) {
             super(1, widgetUserStatusSheet, WidgetUserStatusSheet.class, "updateView", "updateView(Lcom/discord/widgets/user/WidgetUserStatusSheetViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetUserStatusSheetViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetUserStatusSheetViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "p1");
+            Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetUserStatusSheet.access$updateView((WidgetUserStatusSheet) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$1 */
+    public static final class ViewOnClickListenerC102401 implements View.OnClickListener {
+        public ViewOnClickListenerC102401() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -97,9 +97,9 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$2 */
+    public static final class ViewOnClickListenerC102412 implements View.OnClickListener {
+        public ViewOnClickListenerC102412() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -109,9 +109,9 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$3 */
+    public static final class ViewOnClickListenerC102423 implements View.OnClickListener {
+        public ViewOnClickListenerC102423() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -121,9 +121,9 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$4 */
+    public static final class ViewOnClickListenerC102434 implements View.OnClickListener {
+        public ViewOnClickListenerC102434() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -133,32 +133,32 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
-        public AnonymousClass5() {
+    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$5 */
+    public static final class ViewOnClickListenerC102445 implements View.OnClickListener {
+        public ViewOnClickListenerC102445() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetUserStatusSheet widgetUserStatusSheet = WidgetUserStatusSheet.this;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             WidgetUserStatusSheet.access$openCustomStatusAndDismiss(widgetUserStatusSheet, context);
         }
     }
 
     /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends o implements Function0<Unit> {
-        public AnonymousClass6() {
+    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$6 */
+    public static final class C102456 extends Lambda implements Function0<Unit> {
+        public C102456() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -169,10 +169,10 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
 
     public WidgetUserStatusSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetUserStatusSheet$binding$2.INSTANCE, null, 2, null);
-        WidgetUserStatusSheet$viewModel$2 widgetUserStatusSheet$viewModel$2 = WidgetUserStatusSheet$viewModel$2.INSTANCE;
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetUserStatusSheetViewModel.class), new WidgetUserStatusSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetUserStatusSheet$viewModel$2));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetUserStatusSheet2.INSTANCE, null, 2, null);
+        WidgetUserStatusSheet3 widgetUserStatusSheet3 = WidgetUserStatusSheet3.INSTANCE;
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetUserStatusSheetViewModel.class), new WidgetUserStatusSheet$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetUserStatusSheet3));
     }
 
     public static final /* synthetic */ void access$clearCustomStatus(WidgetUserStatusSheet widgetUserStatusSheet) {
@@ -219,13 +219,13 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
 
     private final void updateView(WidgetUserStatusSheetViewModel.ViewState viewState) {
         if (viewState instanceof WidgetUserStatusSheetViewModel.ViewState.Loaded) {
-            getBinding().f2698b.updateViewState(((WidgetUserStatusSheetViewModel.ViewState.Loaded) viewState).getCustomStatusViewState());
+            getBinding().f18432b.updateViewState(((WidgetUserStatusSheetViewModel.ViewState.Loaded) viewState).getCustomStatusViewState());
         }
     }
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_user_status_update;
+        return C5419R.layout.widget_user_status_update;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
@@ -237,36 +237,36 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onResume() {
         super.onResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetUserStatusSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetUserStatusSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C102391(this), 62, (Object) null);
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
-        getBinding().f.f106b.setImageResource(R.drawable.ic_status_online_16dp);
-        getBinding().f.d.setText(R.string.status_online);
-        e4 e4Var = getBinding().f;
-        m.checkNotNullExpressionValue(e4Var, "binding.userStatusUpdateOnline");
-        e4Var.a.setOnClickListener(new AnonymousClass1());
-        getBinding().d.f106b.setImageResource(R.drawable.ic_status_idle_16dp);
-        getBinding().d.d.setText(R.string.status_idle);
-        e4 e4Var2 = getBinding().d;
-        m.checkNotNullExpressionValue(e4Var2, "binding.userStatusUpdateIdle");
-        e4Var2.a.setOnClickListener(new AnonymousClass2());
-        getBinding().c.f106b.setImageResource(R.drawable.ic_status_dnd_16dp);
-        getBinding().c.d.setText(R.string.status_dnd);
-        getBinding().c.c.setText(R.string.status_dnd_help);
-        e4 e4Var3 = getBinding().c;
-        m.checkNotNullExpressionValue(e4Var3, "binding.userStatusUpdateDnd");
-        e4Var3.a.setOnClickListener(new AnonymousClass3());
-        getBinding().e.f106b.setImageResource(R.drawable.ic_status_invisible_16dp);
-        getBinding().e.d.setText(R.string.status_invisible);
-        getBinding().e.c.setText(R.string.status_invisible_helper);
-        e4 e4Var4 = getBinding().e;
-        m.checkNotNullExpressionValue(e4Var4, "binding.userStatusUpdateInvisible");
-        e4Var4.a.setOnClickListener(new AnonymousClass4());
-        getBinding().f2698b.setOnClickListener(new AnonymousClass5());
-        getBinding().f2698b.setOnClear(new AnonymousClass6());
+        getBinding().f18436f.f814b.setImageResource(C5419R.drawable.ic_status_online_16dp);
+        getBinding().f18436f.f816d.setText(C5419R.string.status_online);
+        ViewUserStatusPresenceBinding viewUserStatusPresenceBinding = getBinding().f18436f;
+        Intrinsics3.checkNotNullExpressionValue(viewUserStatusPresenceBinding, "binding.userStatusUpdateOnline");
+        viewUserStatusPresenceBinding.f813a.setOnClickListener(new ViewOnClickListenerC102401());
+        getBinding().f18434d.f814b.setImageResource(C5419R.drawable.ic_status_idle_16dp);
+        getBinding().f18434d.f816d.setText(C5419R.string.status_idle);
+        ViewUserStatusPresenceBinding viewUserStatusPresenceBinding2 = getBinding().f18434d;
+        Intrinsics3.checkNotNullExpressionValue(viewUserStatusPresenceBinding2, "binding.userStatusUpdateIdle");
+        viewUserStatusPresenceBinding2.f813a.setOnClickListener(new ViewOnClickListenerC102412());
+        getBinding().f18433c.f814b.setImageResource(C5419R.drawable.ic_status_dnd_16dp);
+        getBinding().f18433c.f816d.setText(C5419R.string.status_dnd);
+        getBinding().f18433c.f815c.setText(C5419R.string.status_dnd_help);
+        ViewUserStatusPresenceBinding viewUserStatusPresenceBinding3 = getBinding().f18433c;
+        Intrinsics3.checkNotNullExpressionValue(viewUserStatusPresenceBinding3, "binding.userStatusUpdateDnd");
+        viewUserStatusPresenceBinding3.f813a.setOnClickListener(new ViewOnClickListenerC102423());
+        getBinding().f18435e.f814b.setImageResource(C5419R.drawable.ic_status_invisible_16dp);
+        getBinding().f18435e.f816d.setText(C5419R.string.status_invisible);
+        getBinding().f18435e.f815c.setText(C5419R.string.status_invisible_helper);
+        ViewUserStatusPresenceBinding viewUserStatusPresenceBinding4 = getBinding().f18435e;
+        Intrinsics3.checkNotNullExpressionValue(viewUserStatusPresenceBinding4, "binding.userStatusUpdateInvisible");
+        viewUserStatusPresenceBinding4.f813a.setOnClickListener(new ViewOnClickListenerC102434());
+        getBinding().f18432b.setOnClickListener(new ViewOnClickListenerC102445());
+        getBinding().f18432b.setOnClear(new C102456());
     }
 }

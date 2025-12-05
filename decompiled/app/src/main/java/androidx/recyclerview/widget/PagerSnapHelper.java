@@ -18,9 +18,9 @@ public class PagerSnapHelper extends SnapHelper {
     @Nullable
     private OrientationHelper mVerticalHelper;
 
-    /* renamed from: androidx.recyclerview.widget.PagerSnapHelper$1, reason: invalid class name */
-    public class AnonymousClass1 extends LinearSmoothScroller {
-        public AnonymousClass1(Context context) {
+    /* renamed from: androidx.recyclerview.widget.PagerSnapHelper$1 */
+    public class C05651 extends LinearSmoothScroller {
+        public C05651(Context context) {
             super(context);
         }
 
@@ -135,7 +135,7 @@ public class PagerSnapHelper extends SnapHelper {
     @Nullable
     public RecyclerView.SmoothScroller createScroller(@NonNull RecyclerView.LayoutManager layoutManager) {
         if (layoutManager instanceof RecyclerView.SmoothScroller.ScrollVectorProvider) {
-            return new AnonymousClass1(this.mRecyclerView.getContext());
+            return new C05651(this.mRecyclerView.getContext());
         }
         return null;
     }

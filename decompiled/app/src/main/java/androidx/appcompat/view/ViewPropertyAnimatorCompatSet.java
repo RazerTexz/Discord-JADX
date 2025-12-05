@@ -16,15 +16,15 @@ public class ViewPropertyAnimatorCompatSet {
     private boolean mIsStarted;
     public ViewPropertyAnimatorListener mListener;
     private long mDuration = -1;
-    private final ViewPropertyAnimatorListenerAdapter mProxyListener = new AnonymousClass1();
+    private final ViewPropertyAnimatorListenerAdapter mProxyListener = new C00811();
     public final ArrayList<ViewPropertyAnimatorCompat> mAnimators = new ArrayList<>();
 
-    /* renamed from: androidx.appcompat.view.ViewPropertyAnimatorCompatSet$1, reason: invalid class name */
-    public class AnonymousClass1 extends ViewPropertyAnimatorListenerAdapter {
+    /* renamed from: androidx.appcompat.view.ViewPropertyAnimatorCompatSet$1 */
+    public class C00811 extends ViewPropertyAnimatorListenerAdapter {
         private boolean mProxyStarted = false;
         private int mProxyEndCount = 0;
 
-        public AnonymousClass1() {
+        public C00811() {
         }
 
         @Override // androidx.core.view.ViewPropertyAnimatorListenerAdapter, androidx.core.view.ViewPropertyAnimatorListener

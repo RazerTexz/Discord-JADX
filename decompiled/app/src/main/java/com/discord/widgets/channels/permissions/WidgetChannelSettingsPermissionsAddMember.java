@@ -8,15 +8,7 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.j;
-import b.a.z.a.a.b;
-import b.a.z.a.a.c;
-import b.a.z.a.a.e;
-import b.a.z.a.a.i;
-import b.a.z.a.a.n;
-import b.a.z.a.a.o;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
@@ -26,19 +18,29 @@ import com.discord.models.guild.Guild;
 import com.discord.models.user.MeUser;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.permissions.PermissionUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.widgets.channels.SimpleMembersAdapter;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.m;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import kotlin.Unit;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
-import rx.subjects.Subject;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.C0879o;
+import p007b.p008a.p073z.p074a.p075a.C1391a;
+import p007b.p008a.p073z.p074a.p075a.C1392b;
+import p007b.p008a.p073z.p074a.p075a.C1393c;
+import p007b.p008a.p073z.p074a.p075a.C1395e;
+import p007b.p008a.p073z.p074a.p075a.C1399i;
+import p007b.p008a.p073z.p074a.p075a.C1404n;
+import p007b.p008a.p073z.p074a.p075a.C1405o;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
+import p658rx.subjects.Subject;
 
 /* loaded from: classes2.dex */
 public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
@@ -46,7 +48,9 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final int VIEW_INDEX_MEMBER_LIST = 0;
     private static final int VIEW_INDEX_NO_RESULTS = 1;
-    public static final /* synthetic */ int j = 0;
+
+    /* renamed from: j */
+    public static final /* synthetic */ int f19372j = 0;
     private SimpleMembersAdapter membersAdapter;
     private RecyclerView membersRecycler;
     private final Subject<String, String> nameFilterPublisher;
@@ -78,11 +82,11 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         }
 
         public static Observable<Model> get(long j, long j2, Observable<String> observable) {
-            return StoreStream.getChannels().observeChannel(j2).Y(new e(j, j2, observable));
+            return StoreStream.getChannels().observeChannel(j2).m11099Y(new C1395e(j, j2, observable));
         }
 
         private static Observable<List<SimpleMembersAdapter.MemberItem>> getMemberItems(long j, @Nullable List<PermissionOverwrite> list, String str) {
-            return StoreStream.getGuilds().observeComputed(j).Y(new i(list, str.toLowerCase(Locale.getDefault())));
+            return StoreStream.getGuilds().observeComputed(j).m11099Y(new C1399i(list, str.toLowerCase(Locale.getDefault())));
         }
 
         private static boolean isValid(MeUser meUser, Guild guild, Channel channel, List<SimpleMembersAdapter.MemberItem> list) {
@@ -90,7 +94,7 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         }
 
         public static /* synthetic */ Observable lambda$null$0(long j, Channel channel, String str) {
-            return getMemberItems(j, channel.v(), str);
+            return getMemberItems(j, channel.m7655v(), str);
         }
 
         public static /* synthetic */ Model lambda$null$1(Channel channel, MeUser meUser, Guild guild, Long l, List list) {
@@ -134,23 +138,23 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("WidgetChannelSettingsPermissionsAddMember.Model(channel=");
-            sbU.append(this.channel);
-            sbU.append(", memberItems=");
-            sbU.append(this.memberItems);
-            sbU.append(", canManage=");
-            return a.O(sbU, this.canManage, ")");
+            StringBuilder sbM833U = outline.m833U("WidgetChannelSettingsPermissionsAddMember.Model(channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", memberItems=");
+            sbM833U.append(this.memberItems);
+            sbM833U.append(", canManage=");
+            return outline.m827O(sbM833U, this.canManage, ")");
         }
     }
 
     public WidgetChannelSettingsPermissionsAddMember() {
-        super(R.layout.widget_channel_settings_permissions_add_member);
-        this.nameFilterPublisher = BehaviorSubject.l0("");
+        super(C5419R.layout.widget_channel_settings_permissions_add_member);
+        this.nameFilterPublisher = BehaviorSubject.m11130l0("");
     }
 
     private void configureToolbar(Channel channel) {
-        setActionBarTitle(R.string.add_a_member);
-        setActionBarSubtitle(ChannelUtils.d(channel, requireContext(), true));
+        setActionBarTitle(C5419R.string.add_a_member);
+        setActionBarSubtitle(ChannelUtils.m7680d(channel, requireContext(), true));
     }
 
     private void configureUI(Model model) {
@@ -160,7 +164,7 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
             }
         } else {
             configureToolbar(Model.access$100(model));
-            this.membersAdapter.setData(Model.access$200(model), new c(this, model));
+            this.membersAdapter.setData(Model.access$200(model), new C1393c(this, model));
             ViewFlipper viewFlipper = this.viewFlipper;
             if (viewFlipper != null) {
                 viewFlipper.setDisplayedChild(Model.access$200(model).isEmpty() ? 1 : 0);
@@ -168,18 +172,20 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         }
     }
 
-    public static void create(Context context, long j2, long j3) {
+    public static void create(Context context, long j, long j2) {
         Intent intent = new Intent();
-        intent.putExtra("INTENT_EXTRA_GUILD_ID", j2);
-        intent.putExtra(INTENT_EXTRA_CHANNEL_ID, j3);
-        j.d(context, WidgetChannelSettingsPermissionsAddMember.class, intent);
+        intent.putExtra("INTENT_EXTRA_GUILD_ID", j);
+        intent.putExtra(INTENT_EXTRA_CHANNEL_ID, j2);
+        AppScreen2.m156d(context, WidgetChannelSettingsPermissionsAddMember.class, intent);
     }
 
-    public static /* synthetic */ void g(WidgetChannelSettingsPermissionsAddMember widgetChannelSettingsPermissionsAddMember, Model model) {
+    /* renamed from: g */
+    public static /* synthetic */ void m8625g(WidgetChannelSettingsPermissionsAddMember widgetChannelSettingsPermissionsAddMember, Model model) {
         widgetChannelSettingsPermissionsAddMember.configureUI(model);
     }
 
-    public /* synthetic */ Unit h(Editable editable) {
+    /* renamed from: h */
+    public /* synthetic */ Unit m8626h(Editable editable) {
         this.nameFilterPublisher.onNext(editable.toString());
         return null;
     }
@@ -187,9 +193,9 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
     @Override // com.discord.app.AppFragment
     public void onViewBound(@NonNull View view) {
         super.onViewBound(view);
-        this.membersRecycler = (RecyclerView) view.findViewById(R.id.channel_settings_permissions_add_member_recycler);
-        this.searchBox = (TextInputLayout) view.findViewById(R.id.channel_settings_permissions_add_member_name_search);
-        this.viewFlipper = (ViewFlipper) view.findViewById(R.id.channel_settings_permissions_add_member_view_flipper);
+        this.membersRecycler = (RecyclerView) view.findViewById(C5419R.id.channel_settings_permissions_add_member_recycler);
+        this.searchBox = (TextInputLayout) view.findViewById(C5419R.id.channel_settings_permissions_add_member_name_search);
+        this.viewFlipper = (ViewFlipper) view.findViewById(C5419R.id.channel_settings_permissions_add_member_view_flipper);
         setActionBarDisplayHomeAsUpEnabled();
         this.membersAdapter = (SimpleMembersAdapter) MGRecyclerAdapter.configure(new SimpleMembersAdapter(this.membersRecycler));
     }
@@ -199,12 +205,12 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         super.onViewBoundOrOnResume();
         long longExtra = getMostRecentIntent().getLongExtra("INTENT_EXTRA_GUILD_ID", -1L);
         long longExtra2 = getMostRecentIntent().getLongExtra(INTENT_EXTRA_CHANNEL_ID, -1L);
-        ViewExtensions.addBindedTextWatcher(this.searchBox, this, new n(this));
+        ViewExtensions.addBindedTextWatcher(this.searchBox, this, new C1404n(this));
         this.nameFilterPublisher.onNext(ViewExtensions.getTextOrEmpty(this.searchBox));
-        this.nameFilterPublisher.p(750L, TimeUnit.MILLISECONDS).y(o.j).k(b.a.d.o.e(new b(longExtra), getClass()));
+        this.nameFilterPublisher.m11110p(750L, TimeUnit.MILLISECONDS).m11118y(C1405o.f2104j).m11108k(C0879o.m179e(new C1392b(longExtra), getClass()));
         Observable<Model> observable = Model.get(longExtra, longExtra2, this.nameFilterPublisher);
-        m.checkNotNullParameter(this, "appComponent");
-        m.checkNotNullExpressionValue(observable, "it");
-        ObservableExtensionsKt.ui(observable, this, null).k(b.a.d.o.e(new b.a.z.a.a.a(this), getClass()));
+        Intrinsics3.checkNotNullParameter(this, "appComponent");
+        Intrinsics3.checkNotNullExpressionValue(observable, "it");
+        ObservableExtensionsKt.m8519ui(observable, this, null).m11108k(C0879o.m179e(new C1391a(this), getClass()));
     }
 }

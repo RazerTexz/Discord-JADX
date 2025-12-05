@@ -24,7 +24,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class PreferenceFragmentCompat extends Fragment implements PreferenceManager.OnPreferenceTreeClickListener, PreferenceManager.OnDisplayPreferenceDialogListener, PreferenceManager.OnNavigateToScreenListener, DialogPreference.TargetFragment {
@@ -39,13 +39,13 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
     private PreferenceManager mPreferenceManager;
     private Runnable mSelectPreferenceRunnable;
     private final DividerDecoration mDividerDecoration = new DividerDecoration();
-    private int mLayoutResId = R.layout.preference_list_fragment;
-    private Handler mHandler = new AnonymousClass1();
-    private final Runnable mRequestFocus = new AnonymousClass2();
+    private int mLayoutResId = C0525R.layout.preference_list_fragment;
+    private Handler mHandler = new HandlerC05151();
+    private final Runnable mRequestFocus = new RunnableC05162();
 
-    /* renamed from: androidx.preference.PreferenceFragmentCompat$1, reason: invalid class name */
-    public class AnonymousClass1 extends Handler {
-        public AnonymousClass1() {
+    /* renamed from: androidx.preference.PreferenceFragmentCompat$1 */
+    public class HandlerC05151 extends Handler {
+        public HandlerC05151() {
         }
 
         @Override // android.os.Handler
@@ -57,9 +57,9 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
         }
     }
 
-    /* renamed from: androidx.preference.PreferenceFragmentCompat$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.preference.PreferenceFragmentCompat$2 */
+    public class RunnableC05162 implements Runnable {
+        public RunnableC05162() {
         }
 
         @Override // java.lang.Runnable
@@ -69,12 +69,12 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
         }
     }
 
-    /* renamed from: androidx.preference.PreferenceFragmentCompat$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: androidx.preference.PreferenceFragmentCompat$3 */
+    public class RunnableC05173 implements Runnable {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ Preference val$preference;
 
-        public AnonymousClass3(Preference preference, String str) {
+        public RunnableC05173(Preference preference, String str) {
             this.val$preference = preference;
             this.val$key = str;
         }
@@ -248,11 +248,11 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
     }
 
     private void scrollToPreferenceInternal(Preference preference, String str) {
-        AnonymousClass3 anonymousClass3 = new AnonymousClass3(preference, str);
+        RunnableC05173 runnableC05173 = new RunnableC05173(preference, str);
         if (this.mList == null) {
-            this.mSelectPreferenceRunnable = anonymousClass3;
+            this.mSelectPreferenceRunnable = runnableC05173;
         } else {
-            anonymousClass3.run();
+            runnableC05173.run();
         }
     }
 
@@ -314,10 +314,10 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
     public void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
         TypedValue typedValue = new TypedValue();
-        getActivity().getTheme().resolveAttribute(R.attr.preferenceTheme, typedValue, true);
+        getActivity().getTheme().resolveAttribute(C0525R.attr.preferenceTheme, typedValue, true);
         int i = typedValue.resourceId;
         if (i == 0) {
-            i = R.style.PreferenceThemeOverlay;
+            i = C0525R.style.PreferenceThemeOverlay;
         }
         getActivity().getTheme().applyStyle(i, false);
         PreferenceManager preferenceManager = new PreferenceManager(getContext());
@@ -338,10 +338,10 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
 
     public RecyclerView onCreateRecyclerView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         RecyclerView recyclerView;
-        if (getContext().getPackageManager().hasSystemFeature("android.hardware.type.automotive") && (recyclerView = (RecyclerView) viewGroup.findViewById(R.id.recycler_view)) != null) {
+        if (getContext().getPackageManager().hasSystemFeature("android.hardware.type.automotive") && (recyclerView = (RecyclerView) viewGroup.findViewById(C0525R.id.recycler_view)) != null) {
             return recyclerView;
         }
-        RecyclerView recyclerView2 = (RecyclerView) layoutInflater.inflate(R.layout.preference_recyclerview, viewGroup, false);
+        RecyclerView recyclerView2 = (RecyclerView) layoutInflater.inflate(C0525R.layout.preference_recyclerview, viewGroup, false);
         recyclerView2.setLayoutManager(onCreateLayoutManager());
         recyclerView2.setAccessibilityDelegateCompat(new PreferenceRecyclerViewAccessibilityDelegate(recyclerView2));
         return recyclerView2;
@@ -349,11 +349,11 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle) {
-        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(null, R.styleable.PreferenceFragmentCompat, R.attr.preferenceFragmentCompatStyle, 0);
-        this.mLayoutResId = typedArrayObtainStyledAttributes.getResourceId(R.styleable.PreferenceFragmentCompat_android_layout, this.mLayoutResId);
-        Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(R.styleable.PreferenceFragmentCompat_android_divider);
-        int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(R.styleable.PreferenceFragmentCompat_android_dividerHeight, -1);
-        boolean z2 = typedArrayObtainStyledAttributes.getBoolean(R.styleable.PreferenceFragmentCompat_allowDividerAfterLastItem, true);
+        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(null, C0525R.styleable.PreferenceFragmentCompat, C0525R.attr.preferenceFragmentCompatStyle, 0);
+        this.mLayoutResId = typedArrayObtainStyledAttributes.getResourceId(C0525R.styleable.PreferenceFragmentCompat_android_layout, this.mLayoutResId);
+        Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(C0525R.styleable.PreferenceFragmentCompat_android_divider);
+        int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C0525R.styleable.PreferenceFragmentCompat_android_dividerHeight, -1);
+        boolean z2 = typedArrayObtainStyledAttributes.getBoolean(C0525R.styleable.PreferenceFragmentCompat_allowDividerAfterLastItem, true);
         typedArrayObtainStyledAttributes.recycle();
         LayoutInflater layoutInflaterCloneInContext = layoutInflater.cloneInContext(getContext());
         View viewInflate = layoutInflaterCloneInContext.inflate(this.mLayoutResId, viewGroup, false);
@@ -405,10 +405,10 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
                 dialogFragmentNewInstance = ListPreferenceDialogFragmentCompat.newInstance(preference.getKey());
             } else {
                 if (!(preference instanceof MultiSelectListPreference)) {
-                    StringBuilder sbU = a.U("Cannot display dialog for an unknown Preference type: ");
-                    sbU.append(preference.getClass().getSimpleName());
-                    sbU.append(". Make sure to implement onPreferenceDisplayDialog() to handle displaying a custom dialog for this Preference.");
-                    throw new IllegalArgumentException(sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("Cannot display dialog for an unknown Preference type: ");
+                    sbM833U.append(preference.getClass().getSimpleName());
+                    sbM833U.append(". Make sure to implement onPreferenceDisplayDialog() to handle displaying a custom dialog for this Preference.");
+                    throw new IllegalArgumentException(sbM833U.toString());
                 }
                 dialogFragmentNewInstance = MultiSelectListPreferenceDialogFragmentCompat.newInstance(preference.getKey());
             }
@@ -527,7 +527,7 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
             boolean z2 = objFindPreference instanceof PreferenceScreen;
             obj = objFindPreference;
             if (!z2) {
-                throw new IllegalArgumentException(a.y("Preference object with key ", str, " is not a PreferenceScreen"));
+                throw new IllegalArgumentException(outline.m886y("Preference object with key ", str, " is not a PreferenceScreen"));
             }
         }
         setPreferenceScreen((PreferenceScreen) obj);

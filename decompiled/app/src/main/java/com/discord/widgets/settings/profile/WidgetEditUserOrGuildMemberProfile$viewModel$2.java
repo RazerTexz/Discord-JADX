@@ -1,11 +1,11 @@
 package com.discord.widgets.settings.profile;
 
-import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
 /* loaded from: classes2.dex */
-public final class WidgetEditUserOrGuildMemberProfile$viewModel$2 extends o implements Function0<SettingsUserProfileViewModel> {
+public final class WidgetEditUserOrGuildMemberProfile$viewModel$2 extends Lambda implements Function0<EditUserOrGuildMemberProfileViewModel2> {
     public final /* synthetic */ WidgetEditUserOrGuildMemberProfile this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -15,13 +15,13 @@ public final class WidgetEditUserOrGuildMemberProfile$viewModel$2 extends o impl
     }
 
     @Override // kotlin.jvm.functions.Function0
-    public /* bridge */ /* synthetic */ SettingsUserProfileViewModel invoke() {
+    public /* bridge */ /* synthetic */ EditUserOrGuildMemberProfileViewModel2 invoke() {
         return invoke();
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // kotlin.jvm.functions.Function0
-    public final SettingsUserProfileViewModel invoke() {
-        return new SettingsUserProfileViewModel(WidgetEditUserOrGuildMemberProfile.access$getGuildId$p(this.this$0), null, null, null, null, null, null, 126, null);
+    public final EditUserOrGuildMemberProfileViewModel2 invoke() {
+        return new EditUserOrGuildMemberProfileViewModel2(WidgetEditUserOrGuildMemberProfile.access$getGuildId$p(this.this$0), null, null, null, null, null, null, 126, null);
     }
 }

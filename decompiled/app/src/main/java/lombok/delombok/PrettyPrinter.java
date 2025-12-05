@@ -801,12 +801,8 @@ public class PrettyPrinter extends JCTree.Visitor {
                 if (!this.onNewLine) {
                     this.needsNewLine = true;
                     this.needsAlign = true;
-                    break;
-                } else {
-                    if (!this.aligned) {
-                        this.needsAlign = true;
-                    }
-                    break;
+                } else if (!this.aligned) {
+                    this.needsAlign = true;
                 }
                 break;
             case 3:

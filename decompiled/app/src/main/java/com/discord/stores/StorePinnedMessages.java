@@ -5,13 +5,8 @@ import androidx.core.app.NotificationCompat;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.message.Message;
 import com.discord.stores.updates.ObservationDeck;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.n;
-import d0.t.o;
-import d0.t.u;
-import d0.z.d.m;
-import j0.k.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -24,7 +19,13 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
 
 /* compiled from: StorePinnedMessages.kt */
 /* loaded from: classes2.dex */
@@ -88,19 +89,19 @@ public final class StorePinnedMessages extends StoreV2 {
     }
 
     /* compiled from: StorePinnedMessages.kt */
-    /* renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<List<? extends com.discord.api.message.Message>, List<? extends Message>> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$1 */
+    public static final class C63361<T, R> implements Func1<List<? extends com.discord.api.message.Message>, List<? extends Message>> {
+        public static final C63361 INSTANCE = new C63361();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ List<? extends Message> call(List<? extends com.discord.api.message.Message> list) {
             return call2((List<com.discord.api.message.Message>) list);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Message> call2(List<com.discord.api.message.Message> list) {
-            m.checkNotNullExpressionValue(list, "messages");
-            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+            Intrinsics3.checkNotNullExpressionValue(list, "messages");
+            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
             Iterator<T> it = list.iterator();
             while (it.hasNext()) {
                 arrayList.add(new Message((com.discord.api.message.Message) it.next()));
@@ -110,13 +111,13 @@ public final class StorePinnedMessages extends StoreV2 {
     }
 
     /* compiled from: StorePinnedMessages.kt */
-    /* renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<List<? extends Message>, Unit> {
+    /* renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$2 */
+    public static final class C63372 extends Lambda implements Function1<List<? extends Message>, Unit> {
         public final /* synthetic */ long $channelId;
 
         /* compiled from: StorePinnedMessages.kt */
         /* renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends d0.z.d.o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $it;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -128,22 +129,22 @@ public final class StorePinnedMessages extends StoreV2 {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
+                C63372 c63372 = C63372.this;
                 StorePinnedMessages storePinnedMessages = StorePinnedMessages.this;
-                long j = anonymousClass2.$channelId;
+                long j = c63372.$channelId;
                 List list = this.$it;
-                m.checkNotNullExpressionValue(list, "it");
+                Intrinsics3.checkNotNullExpressionValue(list, "it");
                 StorePinnedMessages.access$handlePinnedMessagesLoaded(storePinnedMessages, j, list);
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(long j) {
+        public C63372(long j) {
             super(1);
             this.$channelId = j;
         }
@@ -151,7 +152,7 @@ public final class StorePinnedMessages extends StoreV2 {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends Message> list) {
             invoke2((List<Message>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -161,12 +162,12 @@ public final class StorePinnedMessages extends StoreV2 {
     }
 
     /* compiled from: StorePinnedMessages.kt */
-    /* renamed from: com.discord.stores.StorePinnedMessages$observeForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function0<List<? extends Message>> {
+    /* renamed from: com.discord.stores.StorePinnedMessages$observeForChannel$1 */
+    public static final class C63381 extends Lambda implements Function0<List<? extends Message>> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C63381(long j) {
             super(0);
             this.$channelId = j;
         }
@@ -180,18 +181,18 @@ public final class StorePinnedMessages extends StoreV2 {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends Message> invoke2() {
             List<? extends Message> list = (List) StorePinnedMessages.access$getPinnedMessages$p(StorePinnedMessages.this).get(Long.valueOf(this.$channelId));
-            return list != null ? list : n.emptyList();
+            return list != null ? list : Collections2.emptyList();
         }
     }
 
     /* compiled from: StorePinnedMessages.kt */
-    /* renamed from: com.discord.stores.StorePinnedMessages$observePinnedMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function0<Message> {
+    /* renamed from: com.discord.stores.StorePinnedMessages$observePinnedMessage$1 */
+    public static final class C63391 extends Lambda implements Function0<Message> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $messageId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2) {
+        public C63391(long j, long j2) {
             super(0);
             this.$channelId = j;
             this.$messageId = j2;
@@ -207,15 +208,15 @@ public final class StorePinnedMessages extends StoreV2 {
         public final Message invoke() {
             List listEmptyList = (List) StorePinnedMessages.access$getPinnedMessages$p(StorePinnedMessages.this).get(Long.valueOf(this.$channelId));
             if (listEmptyList == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             return Companion.access$getMessage(StorePinnedMessages.INSTANCE, listEmptyList, this.$messageId);
         }
     }
 
     public StorePinnedMessages(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.pinnedMessages = new HashMap();
@@ -231,9 +232,9 @@ public final class StorePinnedMessages extends StoreV2 {
         storePinnedMessages.handlePinnedMessagesLoaded(j, list);
     }
 
-    @StoreThread
+    @Store3
     private final void handlePinnedMessagesLoaded(long channelId, List<Message> messages) {
-        this.pinnedMessages.put(Long.valueOf(channelId), u.toMutableList((Collection) messages));
+        this.pinnedMessages.put(Long.valueOf(channelId), _Collections.toMutableList((Collection) messages));
         this.updatedChannelIds.add(Long.valueOf(channelId));
         markChanged();
     }
@@ -242,9 +243,9 @@ public final class StorePinnedMessages extends StoreV2 {
         if (this.pinnedMessagesSnapshot.containsKey(Long.valueOf(channelId))) {
             return;
         }
-        Observable observableG = ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getChannelPins(channelId), false, 1, null).G(AnonymousClass1.INSTANCE);
-        m.checkNotNullExpressionValue(observableG, "api\n        .getChannelP…messages.map(::Message) }");
-        ObservableExtensionsKt.appSubscribe$default(observableG, StorePinnedMessages.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(channelId), 62, (Object) null);
+        Observable observableM11083G = ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getChannelPins(channelId), false, 1, null).m11083G(C63361.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11083G, "api\n        .getChannelP…messages.map(::Message) }");
+        ObservableExtensionsKt.appSubscribe$default(observableM11083G, StorePinnedMessages.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C63372(channelId), 62, (Object) null);
     }
 
     public final Dispatcher getDispatcher() {
@@ -255,9 +256,9 @@ public final class StorePinnedMessages extends StoreV2 {
         return this.observationDeck;
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageDeleteBulk(long channelId, Collection<Long> messageIds) {
-        m.checkNotNullParameter(messageIds, "messageIds");
+        Intrinsics3.checkNotNullParameter(messageIds, "messageIds");
         List<Message> list = this.pinnedMessages.get(Long.valueOf(channelId));
         if (list != null) {
             Iterator<Message> it = list.iterator();
@@ -273,13 +274,13 @@ public final class StorePinnedMessages extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageUpdate(com.discord.api.message.Message updatedMessage) {
         UtcDateTime timestamp;
-        m.checkNotNullParameter(updatedMessage, "updatedMessage");
+        Intrinsics3.checkNotNullParameter(updatedMessage, "updatedMessage");
         long channelId = updatedMessage.getChannelId();
         long id2 = updatedMessage.getId();
-        boolean zAreEqual = m.areEqual(updatedMessage.getPinned(), Boolean.TRUE);
+        boolean zAreEqual = Intrinsics3.areEqual(updatedMessage.getPinned(), Boolean.TRUE);
         List<Message> list = this.pinnedMessages.get(Long.valueOf(channelId));
         if (list != null) {
             int iAccess$getMessageIndex = Companion.access$getMessageIndex(INSTANCE, list, id2);
@@ -313,17 +314,17 @@ public final class StorePinnedMessages extends StoreV2 {
 
     public final Observable<List<Message>> observeForChannel(long channelId) {
         loadPinnedMessages(channelId);
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(channelId), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C63381(channelId), 14, null);
     }
 
     public final Observable<Message> observePinnedMessage(long channelId, long messageId) {
-        Observable<Message> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(channelId, messageId), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
-        return observableR;
+        Observable<Message> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C63391(channelId, messageId), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         HashMap map = new HashMap(this.pinnedMessages);
         Iterator<Long> it = this.updatedChannelIds.iterator();
@@ -332,7 +333,7 @@ public final class StorePinnedMessages extends StoreV2 {
             Long lValueOf = Long.valueOf(jLongValue);
             List listEmptyList = (List) map.get(Long.valueOf(jLongValue));
             if (listEmptyList == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             map.put(lValueOf, new ArrayList(listEmptyList));
         }

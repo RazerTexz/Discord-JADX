@@ -10,10 +10,11 @@ import androidx.appcompat.widget.AppCompatEditText;
 import androidx.core.view.inputmethod.EditorInfoCompat;
 import androidx.core.view.inputmethod.InputConnectionCompat;
 import androidx.core.view.inputmethod.InputContentInfoCompat;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
+import p007b.p076b.p077a.p084i.FlexEditText2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: FlexEditText.kt */
 /* loaded from: classes3.dex */
@@ -29,8 +30,9 @@ public class FlexEditText extends AppCompatEditText {
     public Function1<? super Integer, Unit> onMaxLinesChangedListener;
 
     /* compiled from: FlexEditText.kt */
-    public static final class a implements InputConnectionCompat.OnCommitContentListener {
-        public a(EditorInfo editorInfo) {
+    /* renamed from: com.lytefast.flexinput.widget.FlexEditText$a */
+    public static final class C11193a implements InputConnectionCompat.OnCommitContentListener {
+        public C11193a(EditorInfo editorInfo) {
         }
 
         @Override // androidx.core.view.inputmethod.InputConnectionCompat.OnCommitContentListener
@@ -43,7 +45,7 @@ public class FlexEditText extends AppCompatEditText {
                 }
             }
             Function1<InputContentInfoCompat, Unit> inputContentHandler = FlexEditText.this.getInputContentHandler();
-            m.checkNotNullExpressionValue(inputContentInfoCompat, "inputContentInfo");
+            Intrinsics3.checkNotNullExpressionValue(inputContentInfoCompat, "inputContentInfo");
             inputContentHandler.invoke(inputContentInfoCompat);
             return true;
         }
@@ -52,8 +54,8 @@ public class FlexEditText extends AppCompatEditText {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public FlexEditText(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        this.inputContentHandler = new b.b.a.i.a(this);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        this.inputContentHandler = new FlexEditText2(this);
     }
 
     public final Function1<InputContentInfoCompat, Unit> getInputContentHandler() {
@@ -70,13 +72,13 @@ public class FlexEditText extends AppCompatEditText {
 
     @Override // androidx.appcompat.widget.AppCompatEditText, android.widget.TextView, android.view.View
     public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
-        m.checkNotNullParameter(editorInfo, "editorInfo");
+        Intrinsics3.checkNotNullParameter(editorInfo, "editorInfo");
         InputConnection inputConnectionOnCreateInputConnection = super.onCreateInputConnection(editorInfo);
         if (inputConnectionOnCreateInputConnection == null) {
             return null;
         }
         EditorInfoCompat.setContentMimeTypes(editorInfo, new String[]{"image/*"});
-        return InputConnectionCompat.createWrapper(inputConnectionOnCreateInputConnection, editorInfo, new a(editorInfo));
+        return InputConnectionCompat.createWrapper(inputConnectionOnCreateInputConnection, editorInfo, new C11193a(editorInfo));
     }
 
     @Override // android.widget.TextView
@@ -89,7 +91,7 @@ public class FlexEditText extends AppCompatEditText {
     }
 
     public final void setInputContentHandler(Function1<? super InputContentInfoCompat, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.inputContentHandler = function1;
     }
 

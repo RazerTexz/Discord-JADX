@@ -1,0 +1,28 @@
+package p007b.p008a.p041q.p044m0.p045c;
+
+import com.discord.rtcconnection.mediaengine.MediaEngine;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+
+/* compiled from: MediaEngineLegacy.kt */
+/* renamed from: b.a.q.m0.c.l */
+/* loaded from: classes.dex */
+public final class C1234l extends Lambda implements Function1<MediaEngine.InterfaceC5642c, Unit> {
+
+    /* renamed from: j */
+    public static final C1234l f1748j = new C1234l();
+
+    public C1234l() {
+        super(1);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public Unit invoke(MediaEngine.InterfaceC5642c interfaceC5642c) {
+        MediaEngine.InterfaceC5642c interfaceC5642c2 = interfaceC5642c;
+        Intrinsics3.checkNotNullParameter(interfaceC5642c2, "it");
+        interfaceC5642c2.onConnected();
+        return Unit.f27425a;
+    }
+}

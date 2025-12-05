@@ -825,27 +825,27 @@ public class JavacHandlerUtil {
                 }
                 positions.add(rhs.pos());
             }
-            values.put(mName, new AnonymousClass1(node, raws, expressions, guesses, true, node, positions));
+            values.put(mName, new C128971(node, raws, expressions, guesses, true, node, positions));
         }
         for (Method m : type.getDeclaredMethods()) {
             if (Modifier.isPublic(m.getModifiers())) {
                 String name = m.getName();
                 if (!values.containsKey(name)) {
-                    values.put(name, new AnonymousClass2(node, new ArrayList(), new ArrayList(), new ArrayList(), false, node));
+                    values.put(name, new C128982(node, new ArrayList(), new ArrayList(), new ArrayList(), false, node));
                 }
             }
         }
         return new AnnotationValues<>(type, values, node);
     }
 
-    /* renamed from: lombok.javac.handlers.JavacHandlerUtil$1, reason: invalid class name */
+    /* renamed from: lombok.javac.handlers.JavacHandlerUtil$1 */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$1.SCL.lombok */
-    class AnonymousClass1 extends AnnotationValues.AnnotationValue {
+    class C128971 extends AnnotationValues.AnnotationValue {
         private final /* synthetic */ JavacNode val$node;
         private final /* synthetic */ java.util.List val$positions;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        AnonymousClass1(LombokNode lombokNode, java.util.List list, java.util.List list2, java.util.List list3, boolean $anonymous4, JavacNode javacNode, java.util.List list4) {
+        C128971(LombokNode lombokNode, java.util.List list, java.util.List list2, java.util.List list3, boolean $anonymous4, JavacNode javacNode, java.util.List list4) {
             super(lombokNode, list, list2, list3, $anonymous4);
             this.val$node = javacNode;
             this.val$positions = list4;
@@ -870,13 +870,13 @@ public class JavacHandlerUtil {
         }
     }
 
-    /* renamed from: lombok.javac.handlers.JavacHandlerUtil$2, reason: invalid class name */
+    /* renamed from: lombok.javac.handlers.JavacHandlerUtil$2 */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$2.SCL.lombok */
-    class AnonymousClass2 extends AnnotationValues.AnnotationValue {
+    class C128982 extends AnnotationValues.AnnotationValue {
         private final /* synthetic */ JavacNode val$node;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        AnonymousClass2(LombokNode lombokNode, java.util.List list, java.util.List list2, java.util.List list3, boolean $anonymous4, JavacNode javacNode) {
+        C128982(LombokNode lombokNode, java.util.List list, java.util.List list2, java.util.List list3, boolean $anonymous4, JavacNode javacNode) {
             super(lombokNode, list, list2, list3, $anonymous4);
             this.val$node = javacNode;
         }
@@ -1013,7 +1013,7 @@ public class JavacHandlerUtil {
         JavacNode typeNode = childOfType;
         JavacTreeMaker maker = childOfType.getTreeMaker();
         while (typeNode != null && typeNode.getKind() != AST.Kind.TYPE) {
-            typeNode = typeNode.up();
+            typeNode = typeNode.m10925up();
         }
         return namePlusTypeParamsToTypeReference(maker, typeNode, typeNode.get().typarams);
     }
@@ -1044,7 +1044,7 @@ public class JavacHandlerUtil {
             }
         }
         if (prefixes == null) {
-            JavacNode javacNodeUp = field.up();
+            JavacNode javacNodeUp = field.m10925up();
             while (true) {
                 JavacNode current = javacNodeUp;
                 if (current == null) {
@@ -1058,7 +1058,7 @@ public class JavacHandlerUtil {
                         }
                     }
                 }
-                javacNodeUp = current.up();
+                javacNodeUp = current.m10925up();
             }
         }
         if (prefixes == null) {
@@ -1073,7 +1073,7 @@ public class JavacHandlerUtil {
                 return createAnnotation(Accessors.class, node);
             }
         }
-        JavacNode javacNodeUp = field.up();
+        JavacNode javacNodeUp = field.m10925up();
         while (true) {
             JavacNode current = javacNodeUp;
             if (current != null) {
@@ -1082,9 +1082,9 @@ public class JavacHandlerUtil {
                         return createAnnotation(Accessors.class, node2);
                     }
                 }
-                javacNodeUp = current.up();
+                javacNodeUp = current.m10925up();
             } else {
-                return AnnotationValues.of(Accessors.class, field);
+                return AnnotationValues.m10917of(Accessors.class, field);
             }
         }
     }
@@ -1229,7 +1229,7 @@ public class JavacHandlerUtil {
         String getterName;
         JavacNode containingType;
         JCTree.JCVariableDecl decl = field.get();
-        JavacNode typeNode = field.up();
+        JavacNode typeNode = field.m10925up();
         for (String potentialGetterName : toAllGetterNames(field)) {
             for (JavacNode potentialGetter : typeNode.down()) {
                 if (potentialGetter.getKind() == AST.Kind.METHOD) {
@@ -1250,7 +1250,7 @@ public class JavacHandlerUtil {
                 hasGetterAnnotation = true;
             }
         }
-        if (!hasGetterAnnotation && HandleGetter.fieldQualifiesForGetterGeneration(field) && (containingType = field.up()) != null) {
+        if (!hasGetterAnnotation && HandleGetter.fieldQualifiesForGetterGeneration(field) && (containingType = field.m10925up()) != null) {
             for (JavacNode child2 : containingType.down()) {
                 if (child2.getKind() == AST.Kind.ANNOTATION && annotationTypeMatches((Class<? extends Annotation>) Data.class, child2)) {
                     hasGetterAnnotation = true;
@@ -1313,9 +1313,9 @@ public class JavacHandlerUtil {
                 if ((fieldDecl.mods.flags & 8) == 0) {
                     receiver = maker.Ident(field.toName("this"));
                 } else {
-                    JavacNode containerNode = field.up();
+                    JavacNode containerNode = field.m10925up();
                     if (containerNode != null && (containerNode.get() instanceof JCTree.JCClassDecl)) {
-                        JCTree.JCClassDecl container = field.up().get();
+                        JCTree.JCClassDecl container = field.m10925up().get();
                         receiver = maker.Ident(container.name);
                     }
                 }
@@ -1338,8 +1338,8 @@ public class JavacHandlerUtil {
         JCTree.JCMethodDecl methodDecl = method.get();
         if (receiver == null && (methodDecl.mods.flags & 8) == 0) {
             receiver = maker.Ident(method.toName("this"));
-        } else if (receiver == null && (containerNode = method.up()) != null && (containerNode.get() instanceof JCTree.JCClassDecl)) {
-            JCTree.JCClassDecl container = method.up().get();
+        } else if (receiver == null && (containerNode = method.m10925up()) != null && (containerNode.get() instanceof JCTree.JCClassDecl)) {
+            JCTree.JCClassDecl container = method.m10925up().get();
             receiver = maker.Ident(container.name);
         }
         JCTree.JCMethodInvocation call = maker.Apply(List.nil(), receiver == null ? maker.Ident(methodDecl.name) : maker.Select(receiver, methodDecl.name), List.nil());
@@ -1439,7 +1439,8 @@ public class JavacHandlerUtil {
             }
         }
 
-        static boolean is(JCTree obj) {
+        /* renamed from: is */
+        static boolean m10951is(JCTree obj) {
             if (obj == null) {
                 return false;
             }
@@ -1578,7 +1579,7 @@ public class JavacHandlerUtil {
                 if ((jCMethodDecl instanceof JCTree.JCMethodDecl) && (jCMethodDecl.mods.flags & Permission.CREATE_PRIVATE_THREADS) != 0) {
                     JavacNode tossMe = typeNode.getNodeFor(jCMethodDecl);
                     if (tossMe != null) {
-                        tossMe.up().removeChild(tossMe);
+                        tossMe.m10925up().removeChild(tossMe);
                     }
                     type.defs = addAllButOne(type.defs, idx);
                     ClassSymbolMembersField.remove(type.sym, jCMethodDecl.sym);
@@ -1786,7 +1787,7 @@ public class JavacHandlerUtil {
         }
         JavacTreeMaker maker = node.getTreeMaker();
         if (pos != -1) {
-            maker = maker.at(pos);
+            maker = maker.m10939at(pos);
         }
         JCTree.JCIdent jCIdentIdent = elem1 != null ? maker.Ident(node.toName(elem1)) : null;
         if (elem2 != null) {
@@ -1833,7 +1834,7 @@ public class JavacHandlerUtil {
                     }
                 }
             }
-            node = node.up();
+            node = node.m10925up();
         }
         return null;
     }
@@ -2017,7 +2018,7 @@ public class JavacHandlerUtil {
         }
         JCTree.JCExpression exType = genTypeRef(source, exceptionType.getExceptionType());
         JCTree.JCBlock throwBlock = maker.Block(0L, List.of(maker.Throw(maker.NewClass(null, List.nil(), exType, List.of(message), null))));
-        return maker.If(maker.Binary(Javac.CTC_EQUAL, maker.Ident(varName), maker.Literal(Javac.CTC_BOT, null)), throwBlock, null);
+        return maker.m10940If(maker.Binary(Javac.CTC_EQUAL, maker.Ident(varName), maker.Literal(Javac.CTC_BOT, null)), throwBlock, null);
     }
 
     public static JCTree.JCStatement generateNullCheck(JavacTreeMaker maker, JCTree.JCVariableDecl varDecl, JavacNode source) {
@@ -2169,23 +2170,23 @@ public class JavacHandlerUtil {
     }
 
     public static List<JCTree.JCAnnotation> getTypeUseAnnotations(JCTree.JCExpression from) {
-        return !JCAnnotatedTypeReflect.is(from) ? List.nil() : JCAnnotatedTypeReflect.getAnnotations(from);
+        return !JCAnnotatedTypeReflect.m10951is(from) ? List.nil() : JCAnnotatedTypeReflect.getAnnotations(from);
     }
 
     public static JCTree.JCExpression removeTypeUseAnnotations(JCTree.JCExpression from) {
-        return !JCAnnotatedTypeReflect.is(from) ? from : JCAnnotatedTypeReflect.getUnderlyingType(from);
+        return !JCAnnotatedTypeReflect.m10951is(from) ? from : JCAnnotatedTypeReflect.getUnderlyingType(from);
     }
 
     public static JCTree.JCExpression namePlusTypeParamsToTypeReference(JavacTreeMaker maker, JavacNode type, List<JCTree.JCTypeParameter> params) {
         JCTree.JCClassDecl td = type.get();
         boolean instance = (td.mods.flags & 8) == 0;
-        return namePlusTypeParamsToTypeReference(maker, type.up(), td.name, instance, params, List.nil());
+        return namePlusTypeParamsToTypeReference(maker, type.m10925up(), td.name, instance, params, List.nil());
     }
 
     public static JCTree.JCExpression namePlusTypeParamsToTypeReference(JavacTreeMaker maker, JavacNode type, List<JCTree.JCTypeParameter> params, List<JCTree.JCAnnotation> annotations) {
         JCTree.JCClassDecl td = type.get();
         boolean instance = (td.mods.flags & 8) == 0;
-        return namePlusTypeParamsToTypeReference(maker, type.up(), td.name, instance, params, annotations);
+        return namePlusTypeParamsToTypeReference(maker, type.m10925up(), td.name, instance, params, annotations);
     }
 
     public static JCTree.JCExpression namePlusTypeParamsToTypeReference(JavacTreeMaker maker, JavacNode parentType, Name typeName, boolean instance, List<JCTree.JCTypeParameter> params) {
@@ -2198,7 +2199,7 @@ public class JavacHandlerUtil {
             JCTree.JCClassDecl td = parentType.get();
             boolean outerInstance = instance && (td.mods.flags & 8) == 0;
             List<JCTree.JCTypeParameter> outerParams = instance ? td.typarams : List.nil();
-            r = namePlusTypeParamsToTypeReference(maker, parentType.up(), td.name, outerInstance, outerParams, List.nil());
+            r = namePlusTypeParamsToTypeReference(maker, parentType.m10925up(), td.name, outerInstance, outerParams, List.nil());
         }
         JCTree.JCIdent jCIdentIdent = r == null ? maker.Ident(typeName) : maker.Select(r, typeName);
         if (!annotations.isEmpty()) {
@@ -2293,7 +2294,7 @@ public class JavacHandlerUtil {
             throw new NullPointerException("node");
         }
         while (node != null && !(node.get() instanceof JCTree.JCClassDecl)) {
-            node = node.up();
+            node = node.m10925up();
         }
         return node;
     }
@@ -2364,7 +2365,7 @@ public class JavacHandlerUtil {
             }
             return maker.Wildcard(newKind, newInner);
         }
-        if (JCAnnotatedTypeReflect.is(in)) {
+        if (JCAnnotatedTypeReflect.m10951is(in)) {
             JCTree.JCExpression underlyingType = cloneType0(maker, JCAnnotatedTypeReflect.getUnderlyingType(in));
             List<JCTree.JCAnnotation> anns = copyAnnotations(JCAnnotatedTypeReflect.getAnnotations(in));
             return JCAnnotatedTypeReflect.create(anns, underlyingType);
@@ -2376,11 +2377,11 @@ public class JavacHandlerUtil {
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc.SCL.lombok */
     public static abstract class CopyJavadoc {
-        public static final CopyJavadoc VERBATIM = new AnonymousClass1("VERBATIM", 0);
-        public static final CopyJavadoc GETTER = new AnonymousClass2("GETTER", 1);
-        public static final CopyJavadoc SETTER = new AnonymousClass3("SETTER", 2);
-        public static final CopyJavadoc WITH = new AnonymousClass4("WITH", 3);
-        public static final CopyJavadoc WITH_BY = new AnonymousClass5("WITH_BY", 4);
+        public static final CopyJavadoc VERBATIM = new C128991("VERBATIM", 0);
+        public static final CopyJavadoc GETTER = new C129002("GETTER", 1);
+        public static final CopyJavadoc SETTER = new C129013("SETTER", 2);
+        public static final CopyJavadoc WITH = new C129024("WITH", 3);
+        public static final CopyJavadoc WITH_BY = new C129035("WITH_BY", 4);
         private static final /* synthetic */ CopyJavadoc[] ENUM$VALUES = {VERBATIM, GETTER, SETTER, WITH, WITH_BY};
 
         public abstract String apply(JCTree.JCCompilationUnit jCCompilationUnit, JavacNode javacNode);
@@ -2397,10 +2398,10 @@ public class JavacHandlerUtil {
             return (CopyJavadoc) Enum.valueOf(CopyJavadoc.class, str);
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$1, reason: invalid class name */
+        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$1 */
         /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$1.SCL.lombok */
-        enum AnonymousClass1 extends CopyJavadoc {
-            AnonymousClass1(String str, int i) {
+        enum C128991 extends CopyJavadoc {
+            C128991(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2417,10 +2418,10 @@ public class JavacHandlerUtil {
             this(str, i);
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$2, reason: invalid class name */
+        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$2 */
         /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$2.SCL.lombok */
-        enum AnonymousClass2 extends CopyJavadoc {
-            AnonymousClass2(String str, int i) {
+        enum C129002 extends CopyJavadoc {
+            C129002(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2465,10 +2466,10 @@ public class JavacHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$3, reason: invalid class name */
+        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$3 */
         /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$3.SCL.lombok */
-        enum AnonymousClass3 extends CopyJavadoc {
-            AnonymousClass3(String str, int i) {
+        enum C129013 extends CopyJavadoc {
+            C129013(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2478,10 +2479,10 @@ public class JavacHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$4, reason: invalid class name */
+        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$4 */
         /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$4.SCL.lombok */
-        enum AnonymousClass4 extends CopyJavadoc {
-            AnonymousClass4(String str, int i) {
+        enum C129024 extends CopyJavadoc {
+            C129024(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2491,10 +2492,10 @@ public class JavacHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$5, reason: invalid class name */
+        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$5 */
         /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$5.SCL.lombok */
-        enum AnonymousClass5 extends CopyJavadoc {
-            AnonymousClass5(String str, int i) {
+        enum C129035 extends CopyJavadoc {
+            C129035(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2516,18 +2517,18 @@ public class JavacHandlerUtil {
             if (!sectionBased) {
                 out = HandlerUtil.stripLinesWithTagFromJavadoc(HandlerUtil.stripSectionsFromJavadoc(javadoc), "@returns?\\s+.*");
             }
-            node.getAst().cleanupTask("javadocfilter-setter", n, new AnonymousClass6(cu, n, sectionBased));
+            node.getAst().cleanupTask("javadocfilter-setter", n, new C129046(cu, n, sectionBased));
             return JavacHandlerUtil.shouldReturnThis(node) ? HandlerUtil.addReturnsThisIfNeeded(out) : out;
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$6, reason: invalid class name */
+        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$6 */
         /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$6.SCL.lombok */
-        class AnonymousClass6 implements CleanupTask {
+        class C129046 implements CleanupTask {
             private final /* synthetic */ JCTree.JCCompilationUnit val$cu;
             private final /* synthetic */ JCTree val$n;
             private final /* synthetic */ boolean val$sectionBased;
 
-            AnonymousClass6(JCTree.JCCompilationUnit jCCompilationUnit, JCTree jCTree, boolean z2) {
+            C129046(JCTree.JCCompilationUnit jCCompilationUnit, JCTree jCTree, boolean z2) {
                 this.val$cu = jCCompilationUnit;
                 this.val$n = jCTree;
                 this.val$sectionBased = z2;
@@ -2629,7 +2630,7 @@ public class JavacHandlerUtil {
                 mth.restype = maker.AnnotatedType(List.of(m), resType);
                 return;
             }
-            if (JCAnnotatedTypeReflect.is(resType)) {
+            if (JCAnnotatedTypeReflect.m10951is(resType)) {
                 List<JCTree.JCAnnotation> annotations = JCAnnotatedTypeReflect.getAnnotations(resType);
                 JCAnnotatedTypeReflect.setAnnotations(resType, annotations.prepend(m));
                 return;
@@ -2667,7 +2668,7 @@ public class JavacHandlerUtil {
                     return;
                 }
             }
-            if (JCAnnotatedTypeReflect.is(varType)) {
+            if (JCAnnotatedTypeReflect.m10951is(varType)) {
                 List<JCTree.JCAnnotation> annotations = JCAnnotatedTypeReflect.getAnnotations(varType);
                 JCAnnotatedTypeReflect.setAnnotations(varType, annotations.prepend(m));
                 return;

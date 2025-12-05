@@ -32,12 +32,12 @@ public class ListFragment extends Fragment {
     public View mProgressContainer;
     public TextView mStandardEmptyView;
     private final Handler mHandler = new Handler();
-    private final Runnable mRequestFocus = new AnonymousClass1();
-    private final AdapterView.OnItemClickListener mOnClickListener = new AnonymousClass2();
+    private final Runnable mRequestFocus = new RunnableC04131();
+    private final AdapterView.OnItemClickListener mOnClickListener = new C04142();
 
-    /* renamed from: androidx.fragment.app.ListFragment$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.fragment.app.ListFragment$1 */
+    public class RunnableC04131 implements Runnable {
+        public RunnableC04131() {
         }
 
         @Override // java.lang.Runnable
@@ -47,9 +47,9 @@ public class ListFragment extends Fragment {
         }
     }
 
-    /* renamed from: androidx.fragment.app.ListFragment$2, reason: invalid class name */
-    public class AnonymousClass2 implements AdapterView.OnItemClickListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.fragment.app.ListFragment$2 */
+    public class C04142 implements AdapterView.OnItemClickListener {
+        public C04142() {
         }
 
         @Override // android.widget.AdapterView.OnItemClickListener

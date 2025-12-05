@@ -9,21 +9,22 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetSettingsEnableMfaSuccessBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f17951a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialButton f2619b;
+    public final MaterialButton f17952b;
 
     public WidgetSettingsEnableMfaSuccessBinding(@NonNull LinearLayout linearLayout, @NonNull MaterialButton materialButton) {
-        this.a = linearLayout;
-        this.f2619b = materialButton;
+        this.f17951a = linearLayout;
+        this.f17952b = materialButton;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17951a;
     }
 }

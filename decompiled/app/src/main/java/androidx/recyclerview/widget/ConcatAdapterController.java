@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.NestedAdapterWrapper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StableIdStorage;
 import androidx.recyclerview.widget.ViewTypeStorage;
-import b.d.b.a.a;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.IdentityHashMap;
 import java.util.Iterator;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ConcatAdapterController implements NestedAdapterWrapper.Callback {
@@ -114,7 +114,7 @@ public class ConcatAdapterController implements NestedAdapterWrapper.Callback {
         if (wrapperAndLocalPosition.mWrapper != null) {
             return wrapperAndLocalPosition;
         }
-        throw new IllegalArgumentException(a.q("Cannot find wrapper for ", i));
+        throw new IllegalArgumentException(outline.m871q("Cannot find wrapper for ", i));
     }
 
     @Nullable
@@ -221,11 +221,11 @@ public class ConcatAdapterController implements NestedAdapterWrapper.Callback {
         if (iCountItemsBefore >= 0 && iCountItemsBefore < itemCount) {
             return nestedAdapterWrapper.adapter.findRelativeAdapterPositionIn(adapter, viewHolder, iCountItemsBefore);
         }
-        StringBuilder sbW = a.W("Detected inconsistent adapter updates. The local position of the view holder maps to ", iCountItemsBefore, " which is out of bounds for the adapter with size ", itemCount, ".Make sure to immediately call notify methods in your adapter when you change the backing dataviewHolder:");
-        sbW.append(viewHolder);
-        sbW.append("adapter:");
-        sbW.append(adapter);
-        throw new IllegalStateException(sbW.toString());
+        StringBuilder sbM835W = outline.m835W("Detected inconsistent adapter updates. The local position of the view holder maps to ", iCountItemsBefore, " which is out of bounds for the adapter with size ", itemCount, ".Make sure to immediately call notify methods in your adapter when you change the backing dataviewHolder:");
+        sbM835W.append(viewHolder);
+        sbM835W.append("adapter:");
+        sbM835W.append(adapter);
+        throw new IllegalStateException(sbM835W.toString());
     }
 
     public int getTotalCount() {
@@ -367,11 +367,11 @@ public class ConcatAdapterController implements NestedAdapterWrapper.Callback {
 
     public boolean addAdapter(int i, RecyclerView.Adapter<RecyclerView.ViewHolder> adapter) {
         if (i < 0 || i > this.mWrappers.size()) {
-            StringBuilder sbU = a.U("Index must be between 0 and ");
-            sbU.append(this.mWrappers.size());
-            sbU.append(". Given:");
-            sbU.append(i);
-            throw new IndexOutOfBoundsException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Index must be between 0 and ");
+            sbM833U.append(this.mWrappers.size());
+            sbM833U.append(". Given:");
+            sbM833U.append(i);
+            throw new IndexOutOfBoundsException(sbM833U.toString());
         }
         if (hasStableIds()) {
             Preconditions.checkArgument(adapter.hasStableIds(), "All sub adapters must have stable ids when stable id mode is ISOLATED_STABLE_IDS or SHARED_STABLE_IDS");

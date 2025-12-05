@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPremiumGuildPendingModal.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumGuildPendingModal implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPremiumGuildPendingModal implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final transient String analyticsSchemaTypeName = "premium_guild_pending_modal";
@@ -21,7 +21,7 @@ public final /* data */ class TrackPremiumGuildPendingModal implements Analytics
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackPremiumGuildPendingModal) && m.areEqual(this.guildId, ((TrackPremiumGuildPendingModal) other).guildId);
+            return (other instanceof TrackPremiumGuildPendingModal) && Intrinsics3.areEqual(this.guildId, ((TrackPremiumGuildPendingModal) other).guildId);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackPremiumGuildPendingModal implements Analytics
     }
 
     public String toString() {
-        return a.G(a.U("TrackPremiumGuildPendingModal(guildId="), this.guildId, ")");
+        return outline.m819G(outline.m833U("TrackPremiumGuildPendingModal(guildId="), this.guildId, ")");
     }
 }

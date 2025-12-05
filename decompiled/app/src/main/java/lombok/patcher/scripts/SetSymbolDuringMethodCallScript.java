@@ -53,17 +53,17 @@ public class SetSymbolDuringMethodCallScript extends MethodLevelPatchScript {
     @Override // lombok.patcher.scripts.MethodLevelPatchScript
     protected PatchScript.MethodPatcher createPatcher(ClassWriter writer, String classSpec, TransplantMapper transplantMapper) {
         List<WrapperMethodDescriptor> descriptors = new ArrayList<>();
-        PatchScript.MethodPatcher patcher = new AnonymousClass2(writer, transplantMapper, new AnonymousClass1(classSpec, descriptors), descriptors);
+        PatchScript.MethodPatcher patcher = new C129192(writer, transplantMapper, new C129181(classSpec, descriptors), descriptors);
         return patcher;
     }
 
-    /* renamed from: lombok.patcher.scripts.SetSymbolDuringMethodCallScript$1, reason: invalid class name */
+    /* renamed from: lombok.patcher.scripts.SetSymbolDuringMethodCallScript$1 */
     /* loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript$1.SCL.lombok */
-    class AnonymousClass1 implements PatchScript.MethodPatcherFactory {
+    class C129181 implements PatchScript.MethodPatcherFactory {
         private final /* synthetic */ String val$classSpec;
         private final /* synthetic */ List val$descriptors;
 
-        AnonymousClass1(String str, List list) {
+        C129181(String str, List list) {
             this.val$classSpec = str;
             this.val$descriptors = list;
         }
@@ -74,13 +74,13 @@ public class SetSymbolDuringMethodCallScript extends MethodLevelPatchScript {
         }
     }
 
-    /* renamed from: lombok.patcher.scripts.SetSymbolDuringMethodCallScript$2, reason: invalid class name */
+    /* renamed from: lombok.patcher.scripts.SetSymbolDuringMethodCallScript$2 */
     /* loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript$2.SCL.lombok */
-    class AnonymousClass2 extends PatchScript.MethodPatcher {
+    class C129192 extends PatchScript.MethodPatcher {
         private final /* synthetic */ List val$descriptors;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        AnonymousClass2(ClassVisitor $anonymous0, TransplantMapper $anonymous1, PatchScript.MethodPatcherFactory $anonymous2, List list) {
+        C129192(ClassVisitor $anonymous0, TransplantMapper $anonymous1, PatchScript.MethodPatcherFactory $anonymous2, List list) {
             super($anonymous0, $anonymous1, $anonymous2);
             this.val$descriptors = list;
         }

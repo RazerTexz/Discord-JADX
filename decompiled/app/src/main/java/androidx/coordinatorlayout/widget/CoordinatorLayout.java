@@ -31,7 +31,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
-import androidx.coordinatorlayout.R;
+import androidx.coordinatorlayout.C0202R;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.util.ObjectsCompat;
@@ -44,7 +44,6 @@ import androidx.core.view.OnApplyWindowInsetsListener;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.customview.view.AbsSavedState;
-import b.d.b.a.a;
 import com.google.android.material.badge.BadgeDrawable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -55,6 +54,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class CoordinatorLayout extends ViewGroup implements NestedScrollingParent2, NestedScrollingParent3 {
@@ -90,9 +90,9 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
     private final List<View> mTempDependenciesList;
     private final List<View> mTempList1;
 
-    /* renamed from: androidx.coordinatorlayout.widget.CoordinatorLayout$1, reason: invalid class name */
-    public class AnonymousClass1 implements OnApplyWindowInsetsListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.coordinatorlayout.widget.CoordinatorLayout$1 */
+    public class C02031 implements OnApplyWindowInsetsListener {
+        public C02031() {
         }
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
@@ -132,7 +132,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
             return ViewCompat.MEASURED_STATE_MASK;
         }
 
-        @FloatRange(from = 0.0d, to = 1.0d)
+        @FloatRange(from = 0.0d, m75to = 1.0d)
         public float getScrimOpacity(@NonNull CoordinatorLayout coordinatorLayout, @NonNull V v) {
             return 0.0f;
         }
@@ -499,11 +499,11 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
             if (behavior == null || !behavior.getInsetDodgeRect(this, view, rectAcquireTempRect)) {
                 rectAcquireTempRect.set(rectAcquireTempRect2);
             } else if (!rectAcquireTempRect2.contains(rectAcquireTempRect)) {
-                StringBuilder sbU = a.U("Rect should be within the child's bounds. Rect:");
-                sbU.append(rectAcquireTempRect.toShortString());
-                sbU.append(" | Bounds:");
-                sbU.append(rectAcquireTempRect2.toShortString());
-                throw new IllegalArgumentException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("Rect should be within the child's bounds. Rect:");
+                sbM833U.append(rectAcquireTempRect.toShortString());
+                sbM833U.append(" | Bounds:");
+                sbM833U.append(rectAcquireTempRect2.toShortString());
+                throw new IllegalArgumentException(sbM833U.toString());
             }
             releaseTempRect(rectAcquireTempRect2);
             if (rectAcquireTempRect.isEmpty()) {
@@ -571,7 +571,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
             }
             return constructor.newInstance(context, attributeSet);
         } catch (Exception e) {
-            throw new RuntimeException(a.w("Could not inflate Behavior subclass ", str), e);
+            throw new RuntimeException(outline.m883w("Could not inflate Behavior subclass ", str), e);
         }
     }
 
@@ -715,7 +715,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
             return;
         }
         if (this.mApplyWindowInsetsListener == null) {
-            this.mApplyWindowInsetsListener = new AnonymousClass1();
+            this.mApplyWindowInsetsListener = new C02031();
         }
         ViewCompat.setOnApplyWindowInsetsListener(this, this.mApplyWindowInsetsListener);
         setSystemUiVisibility(1280);
@@ -927,10 +927,10 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
                     try {
                         layoutParams.setBehavior(defaultBehavior.value().getDeclaredConstructor(new Class[0]).newInstance(new Object[0]));
                     } catch (Exception e) {
-                        StringBuilder sbU = a.U("Default behavior class ");
-                        sbU.append(defaultBehavior.value().getName());
-                        sbU.append(" could not be instantiated. Did you forget a default constructor?");
-                        Log.e(TAG, sbU.toString(), e);
+                        StringBuilder sbM833U = outline.m833U("Default behavior class ");
+                        sbM833U.append(defaultBehavior.value().getName());
+                        sbM833U.append(" could not be instantiated. Did you forget a default constructor?");
+                        Log.e(TAG, sbM833U.toString(), e);
                     }
                 }
                 layoutParams.mBehaviorResolved = true;
@@ -1546,7 +1546,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
     }
 
     public CoordinatorLayout(@NonNull Context context, @Nullable AttributeSet attributeSet) {
-        this(context, attributeSet, R.attr.coordinatorLayoutStyle);
+        this(context, attributeSet, C0202R.attr.coordinatorLayoutStyle);
     }
 
     @Override // android.view.ViewGroup
@@ -1661,18 +1661,18 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
         this.mNestedScrollingV2ConsumedCompat = new int[2];
         this.mNestedScrollingParentHelper = new NestedScrollingParentHelper(this);
         if (i == 0) {
-            typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.CoordinatorLayout, 0, R.style.Widget_Support_CoordinatorLayout);
+            typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0202R.styleable.CoordinatorLayout, 0, C0202R.style.Widget_Support_CoordinatorLayout);
         } else {
-            typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.CoordinatorLayout, i, 0);
+            typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0202R.styleable.CoordinatorLayout, i, 0);
         }
         if (Build.VERSION.SDK_INT >= 29) {
             if (i == 0) {
-                saveAttributeDataForStyleable(context, R.styleable.CoordinatorLayout, attributeSet, typedArrayObtainStyledAttributes, 0, R.style.Widget_Support_CoordinatorLayout);
+                saveAttributeDataForStyleable(context, C0202R.styleable.CoordinatorLayout, attributeSet, typedArrayObtainStyledAttributes, 0, C0202R.style.Widget_Support_CoordinatorLayout);
             } else {
-                saveAttributeDataForStyleable(context, R.styleable.CoordinatorLayout, attributeSet, typedArrayObtainStyledAttributes, i, 0);
+                saveAttributeDataForStyleable(context, C0202R.styleable.CoordinatorLayout, attributeSet, typedArrayObtainStyledAttributes, i, 0);
             }
         }
-        int resourceId = typedArrayObtainStyledAttributes.getResourceId(R.styleable.CoordinatorLayout_keylines, 0);
+        int resourceId = typedArrayObtainStyledAttributes.getResourceId(C0202R.styleable.CoordinatorLayout_keylines, 0);
         if (resourceId != 0) {
             Resources resources = context.getResources();
             this.mKeylines = resources.getIntArray(resourceId);
@@ -1682,7 +1682,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
                 this.mKeylines[i2] = (int) (r12[i2] * f);
             }
         }
-        this.mStatusBarBackground = typedArrayObtainStyledAttributes.getDrawable(R.styleable.CoordinatorLayout_statusBarBackground);
+        this.mStatusBarBackground = typedArrayObtainStyledAttributes.getDrawable(C0202R.styleable.CoordinatorLayout_statusBarBackground);
         typedArrayObtainStyledAttributes.recycle();
         setupForInsets();
         super.setOnHierarchyChangeListener(new HierarchyChangeListener());
@@ -1744,11 +1744,11 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
     }
 
     public static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C02041();
         public SparseArray<Parcelable> behaviorStates;
 
-        /* renamed from: androidx.coordinatorlayout.widget.CoordinatorLayout$SavedState$1, reason: invalid class name */
-        public static class AnonymousClass1 implements Parcelable.ClassLoaderCreator<SavedState> {
+        /* renamed from: androidx.coordinatorlayout.widget.CoordinatorLayout$SavedState$1 */
+        public static class C02041 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -1855,11 +1855,11 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
                     this.mAnchorView = null;
                     return;
                 } else {
-                    StringBuilder sbU = a.U("Could not find CoordinatorLayout descendant view with id ");
-                    sbU.append(coordinatorLayout.getResources().getResourceName(this.mAnchorId));
-                    sbU.append(" to anchor view ");
-                    sbU.append(view);
-                    throw new IllegalStateException(sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("Could not find CoordinatorLayout descendant view with id ");
+                    sbM833U.append(coordinatorLayout.getResources().getResourceName(this.mAnchorId));
+                    sbM833U.append(" to anchor view ");
+                    sbM833U.append(view);
+                    throw new IllegalStateException(sbM833U.toString());
                 }
             }
             if (viewFindViewById == coordinatorLayout) {
@@ -2043,14 +2043,14 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
             this.insetEdge = 0;
             this.dodgeInsetEdges = 0;
             this.mLastChildRect = new Rect();
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.CoordinatorLayout_Layout);
-            this.gravity = typedArrayObtainStyledAttributes.getInteger(R.styleable.CoordinatorLayout_Layout_android_layout_gravity, 0);
-            this.mAnchorId = typedArrayObtainStyledAttributes.getResourceId(R.styleable.CoordinatorLayout_Layout_layout_anchor, -1);
-            this.anchorGravity = typedArrayObtainStyledAttributes.getInteger(R.styleable.CoordinatorLayout_Layout_layout_anchorGravity, 0);
-            this.keyline = typedArrayObtainStyledAttributes.getInteger(R.styleable.CoordinatorLayout_Layout_layout_keyline, -1);
-            this.insetEdge = typedArrayObtainStyledAttributes.getInt(R.styleable.CoordinatorLayout_Layout_layout_insetEdge, 0);
-            this.dodgeInsetEdges = typedArrayObtainStyledAttributes.getInt(R.styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges, 0);
-            int i = R.styleable.CoordinatorLayout_Layout_layout_behavior;
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0202R.styleable.CoordinatorLayout_Layout);
+            this.gravity = typedArrayObtainStyledAttributes.getInteger(C0202R.styleable.CoordinatorLayout_Layout_android_layout_gravity, 0);
+            this.mAnchorId = typedArrayObtainStyledAttributes.getResourceId(C0202R.styleable.CoordinatorLayout_Layout_layout_anchor, -1);
+            this.anchorGravity = typedArrayObtainStyledAttributes.getInteger(C0202R.styleable.CoordinatorLayout_Layout_layout_anchorGravity, 0);
+            this.keyline = typedArrayObtainStyledAttributes.getInteger(C0202R.styleable.CoordinatorLayout_Layout_layout_keyline, -1);
+            this.insetEdge = typedArrayObtainStyledAttributes.getInt(C0202R.styleable.CoordinatorLayout_Layout_layout_insetEdge, 0);
+            this.dodgeInsetEdges = typedArrayObtainStyledAttributes.getInt(C0202R.styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges, 0);
+            int i = C0202R.styleable.CoordinatorLayout_Layout_layout_behavior;
             boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(i);
             this.mBehaviorResolved = zHasValue;
             if (zHasValue) {

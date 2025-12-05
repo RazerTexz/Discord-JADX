@@ -35,6 +35,7 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.TextViewCompat;
 import androidx.customview.view.AbsSavedState;
+import com.google.android.material.C10817R;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.resources.MaterialResources;
@@ -48,12 +49,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Objects;
+import p007b.p225i.p226a.p341g.p343b.MaterialButtonHelper;
 
 /* loaded from: classes3.dex */
 public class MaterialButton extends AppCompatButton implements Checkable, Shapeable {
     private static final int[] CHECKABLE_STATE_SET = {R.attr.state_checkable};
     private static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
-    private static final int DEF_STYLE_RES = com.google.android.material.R.style.Widget_MaterialComponents_Button;
+    private static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_Button;
     public static final int ICON_GRAVITY_END = 3;
     public static final int ICON_GRAVITY_START = 1;
     public static final int ICON_GRAVITY_TEXT_END = 4;
@@ -87,13 +89,13 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     private int iconTop;
 
     @NonNull
-    private final b.i.a.g.b.a materialButtonHelper;
+    private final MaterialButtonHelper materialButtonHelper;
 
     @NonNull
     private final LinkedHashSet<OnCheckedChangeListener> onCheckedChangeListeners;
 
     @Nullable
-    private a onPressedChangeListenerInternal;
+    private InterfaceC10866a onPressedChangeListenerInternal;
 
     @Retention(RetentionPolicy.SOURCE)
     public @interface IconGravity {
@@ -104,10 +106,13 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     }
 
     public static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new a();
-        public boolean j;
+        public static final Parcelable.Creator<SavedState> CREATOR = new C10865a();
 
-        public static class a implements Parcelable.ClassLoaderCreator<SavedState> {
+        /* renamed from: j */
+        public boolean f20940j;
+
+        /* renamed from: com.google.android.material.button.MaterialButton$SavedState$a */
+        public static class C10865a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.ClassLoaderCreator
             @NonNull
             public SavedState createFromParcel(@NonNull Parcel parcel, ClassLoader classLoader) {
@@ -134,7 +139,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
         @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
         public void writeToParcel(@NonNull Parcel parcel, int i) {
             super.writeToParcel(parcel, i);
-            parcel.writeInt(this.j ? 1 : 0);
+            parcel.writeInt(this.f20940j ? 1 : 0);
         }
 
         public SavedState(@NonNull Parcel parcel, ClassLoader classLoader) {
@@ -142,11 +147,12 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
             if (classLoader == null) {
                 SavedState.class.getClassLoader();
             }
-            this.j = parcel.readInt() == 1;
+            this.f20940j = parcel.readInt() == 1;
         }
     }
 
-    public interface a {
+    /* renamed from: com.google.android.material.button.MaterialButton$a */
+    public interface InterfaceC10866a {
     }
 
     public MaterialButton(@NonNull Context context) {
@@ -198,8 +204,8 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     }
 
     private boolean isUsingOriginalBackground() {
-        b.i.a.g.b.a aVar = this.materialButtonHelper;
-        return (aVar == null || aVar.o) ? false : true;
+        MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+        return (materialButtonHelper == null || materialButtonHelper.f11552o) ? false : true;
     }
 
     private void resetIconDrawable() {
@@ -322,7 +328,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     @Px
     public int getCornerRadius() {
         if (isUsingOriginalBackground()) {
-            return this.materialButtonHelper.g;
+            return this.materialButtonHelper.f11544g;
         }
         return 0;
     }
@@ -355,18 +361,18 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
 
     @Dimension
     public int getInsetBottom() {
-        return this.materialButtonHelper.f;
+        return this.materialButtonHelper.f11543f;
     }
 
     @Dimension
     public int getInsetTop() {
-        return this.materialButtonHelper.e;
+        return this.materialButtonHelper.f11542e;
     }
 
     @Nullable
     public ColorStateList getRippleColor() {
         if (isUsingOriginalBackground()) {
-            return this.materialButtonHelper.l;
+            return this.materialButtonHelper.f11549l;
         }
         return null;
     }
@@ -375,14 +381,14 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     @NonNull
     public ShapeAppearanceModel getShapeAppearanceModel() {
         if (isUsingOriginalBackground()) {
-            return this.materialButtonHelper.f1604b;
+            return this.materialButtonHelper.f11539b;
         }
         throw new IllegalStateException("Attempted to get ShapeAppearanceModel from a MaterialButton which has an overwritten background.");
     }
 
     public ColorStateList getStrokeColor() {
         if (isUsingOriginalBackground()) {
-            return this.materialButtonHelper.k;
+            return this.materialButtonHelper.f11548k;
         }
         return null;
     }
@@ -390,7 +396,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     @Px
     public int getStrokeWidth() {
         if (isUsingOriginalBackground()) {
-            return this.materialButtonHelper.h;
+            return this.materialButtonHelper.f11545h;
         }
         return 0;
     }
@@ -399,19 +405,19 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     @Nullable
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public ColorStateList getSupportBackgroundTintList() {
-        return isUsingOriginalBackground() ? this.materialButtonHelper.j : super.getSupportBackgroundTintList();
+        return isUsingOriginalBackground() ? this.materialButtonHelper.f11547j : super.getSupportBackgroundTintList();
     }
 
     @Override // androidx.appcompat.widget.AppCompatButton, androidx.core.view.TintableBackgroundView
     @Nullable
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        return isUsingOriginalBackground() ? this.materialButtonHelper.i : super.getSupportBackgroundTintMode();
+        return isUsingOriginalBackground() ? this.materialButtonHelper.f11546i : super.getSupportBackgroundTintMode();
     }
 
     public boolean isCheckable() {
-        b.i.a.g.b.a aVar = this.materialButtonHelper;
-        return aVar != null && aVar.q;
+        MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+        return materialButtonHelper != null && materialButtonHelper.f11554q;
     }
 
     @Override // android.widget.Checkable
@@ -423,7 +429,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         if (isUsingOriginalBackground()) {
-            MaterialShapeUtils.setParentAbsoluteElevation(this, this.materialButtonHelper.b());
+            MaterialShapeUtils.setParentAbsoluteElevation(this, this.materialButtonHelper.m6037b());
         }
     }
 
@@ -457,16 +463,16 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
 
     @Override // androidx.appcompat.widget.AppCompatButton, android.widget.TextView, android.view.View
     public void onLayout(boolean z2, int i, int i2, int i3, int i4) {
-        b.i.a.g.b.a aVar;
+        MaterialButtonHelper materialButtonHelper;
         super.onLayout(z2, i, i2, i3, i4);
-        if (Build.VERSION.SDK_INT != 21 || (aVar = this.materialButtonHelper) == null) {
+        if (Build.VERSION.SDK_INT != 21 || (materialButtonHelper = this.materialButtonHelper) == null) {
             return;
         }
         int i5 = i4 - i2;
         int i6 = i3 - i;
-        Drawable drawable = aVar.m;
+        Drawable drawable = materialButtonHelper.f11550m;
         if (drawable != null) {
-            drawable.setBounds(aVar.c, aVar.e, i6 - aVar.d, i5 - aVar.f);
+            drawable.setBounds(materialButtonHelper.f11540c, materialButtonHelper.f11542e, i6 - materialButtonHelper.f11541d, i5 - materialButtonHelper.f11543f);
         }
     }
 
@@ -478,14 +484,14 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
         }
         SavedState savedState = (SavedState) parcelable;
         super.onRestoreInstanceState(savedState.getSuperState());
-        setChecked(savedState.j);
+        setChecked(savedState.f20940j);
     }
 
     @Override // android.widget.TextView, android.view.View
     @NonNull
     public Parcelable onSaveInstanceState() {
         SavedState savedState = new SavedState(super.onSaveInstanceState());
-        savedState.j = this.checked;
+        savedState.f20940j = this.checked;
         return savedState;
     }
 
@@ -522,9 +528,9 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
             super.setBackgroundColor(i);
             return;
         }
-        b.i.a.g.b.a aVar = this.materialButtonHelper;
-        if (aVar.b() != null) {
-            aVar.b().setTint(i);
+        MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+        if (materialButtonHelper.m6037b() != null) {
+            materialButtonHelper.m6037b().setTint(i);
         }
     }
 
@@ -539,10 +545,10 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
             return;
         }
         Log.w(LOG_TAG, "MaterialButton manages its own background to control elevation, shape, color and states. Consider using backgroundTint, shapeAppearance and other attributes where available. A custom background will ignore these attributes and you should consider handling interaction states such as pressed, focused and disabled");
-        b.i.a.g.b.a aVar = this.materialButtonHelper;
-        aVar.o = true;
-        aVar.a.setSupportBackgroundTintList(aVar.j);
-        aVar.a.setSupportBackgroundTintMode(aVar.i);
+        MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+        materialButtonHelper.f11552o = true;
+        materialButtonHelper.f11538a.setSupportBackgroundTintList(materialButtonHelper.f11547j);
+        materialButtonHelper.f11538a.setSupportBackgroundTintMode(materialButtonHelper.f11546i);
         super.setBackgroundDrawable(drawable);
     }
 
@@ -563,7 +569,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
 
     public void setCheckable(boolean z2) {
         if (isUsingOriginalBackground()) {
-            this.materialButtonHelper.q = z2;
+            this.materialButtonHelper.f11554q = z2;
         }
     }
 
@@ -586,13 +592,13 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
 
     public void setCornerRadius(@Px int i) {
         if (isUsingOriginalBackground()) {
-            b.i.a.g.b.a aVar = this.materialButtonHelper;
-            if (aVar.p && aVar.g == i) {
+            MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+            if (materialButtonHelper.f11553p && materialButtonHelper.f11544g == i) {
                 return;
             }
-            aVar.g = i;
-            aVar.p = true;
-            aVar.e(aVar.f1604b.withCornerSize(i));
+            materialButtonHelper.f11544g = i;
+            materialButtonHelper.f11553p = true;
+            materialButtonHelper.m6040e(materialButtonHelper.f11539b.withCornerSize(i));
         }
     }
 
@@ -607,7 +613,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     public void setElevation(float f) {
         super.setElevation(f);
         if (isUsingOriginalBackground()) {
-            this.materialButtonHelper.b().setElevation(f);
+            this.materialButtonHelper.m6037b().setElevation(f);
         }
     }
 
@@ -666,27 +672,27 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     }
 
     public void setInsetBottom(@Dimension int i) {
-        b.i.a.g.b.a aVar = this.materialButtonHelper;
-        aVar.f(aVar.e, i);
+        MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+        materialButtonHelper.m6041f(materialButtonHelper.f11542e, i);
     }
 
     public void setInsetTop(@Dimension int i) {
-        b.i.a.g.b.a aVar = this.materialButtonHelper;
-        aVar.f(i, aVar.f);
+        MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+        materialButtonHelper.m6041f(i, materialButtonHelper.f11543f);
     }
 
     public void setInternalBackground(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
     }
 
-    public void setOnPressedChangeListenerInternal(@Nullable a aVar) {
-        this.onPressedChangeListenerInternal = aVar;
+    public void setOnPressedChangeListenerInternal(@Nullable InterfaceC10866a interfaceC10866a) {
+        this.onPressedChangeListenerInternal = interfaceC10866a;
     }
 
     @Override // android.view.View
     public void setPressed(boolean z2) {
-        a aVar = this.onPressedChangeListenerInternal;
-        if (aVar != null) {
+        InterfaceC10866a interfaceC10866a = this.onPressedChangeListenerInternal;
+        if (interfaceC10866a != null) {
             MaterialButtonToggleGroup.this.invalidate();
         }
         super.setPressed(z2);
@@ -694,11 +700,11 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
 
     public void setRippleColor(@Nullable ColorStateList colorStateList) {
         if (isUsingOriginalBackground()) {
-            b.i.a.g.b.a aVar = this.materialButtonHelper;
-            if (aVar.l != colorStateList) {
-                aVar.l = colorStateList;
-                if (aVar.a.getBackground() instanceof RippleDrawable) {
-                    ((RippleDrawable) aVar.a.getBackground()).setColor(RippleUtils.sanitizeRippleDrawableColor(colorStateList));
+            MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+            if (materialButtonHelper.f11549l != colorStateList) {
+                materialButtonHelper.f11549l = colorStateList;
+                if (materialButtonHelper.f11538a.getBackground() instanceof RippleDrawable) {
+                    ((RippleDrawable) materialButtonHelper.f11538a.getBackground()).setColor(RippleUtils.sanitizeRippleDrawableColor(colorStateList));
                 }
             }
         }
@@ -715,23 +721,23 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
         if (!isUsingOriginalBackground()) {
             throw new IllegalStateException("Attempted to set ShapeAppearanceModel on a MaterialButton which has an overwritten background.");
         }
-        this.materialButtonHelper.e(shapeAppearanceModel);
+        this.materialButtonHelper.m6040e(shapeAppearanceModel);
     }
 
     public void setShouldDrawSurfaceColorStroke(boolean z2) {
         if (isUsingOriginalBackground()) {
-            b.i.a.g.b.a aVar = this.materialButtonHelper;
-            aVar.n = z2;
-            aVar.h();
+            MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+            materialButtonHelper.f11551n = z2;
+            materialButtonHelper.m6043h();
         }
     }
 
     public void setStrokeColor(@Nullable ColorStateList colorStateList) {
         if (isUsingOriginalBackground()) {
-            b.i.a.g.b.a aVar = this.materialButtonHelper;
-            if (aVar.k != colorStateList) {
-                aVar.k = colorStateList;
-                aVar.h();
+            MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+            if (materialButtonHelper.f11548k != colorStateList) {
+                materialButtonHelper.f11548k = colorStateList;
+                materialButtonHelper.m6043h();
             }
         }
     }
@@ -744,10 +750,10 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
 
     public void setStrokeWidth(@Px int i) {
         if (isUsingOriginalBackground()) {
-            b.i.a.g.b.a aVar = this.materialButtonHelper;
-            if (aVar.h != i) {
-                aVar.h = i;
-                aVar.h();
+            MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+            if (materialButtonHelper.f11545h != i) {
+                materialButtonHelper.f11545h = i;
+                materialButtonHelper.m6043h();
             }
         }
     }
@@ -765,11 +771,11 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
             super.setSupportBackgroundTintList(colorStateList);
             return;
         }
-        b.i.a.g.b.a aVar = this.materialButtonHelper;
-        if (aVar.j != colorStateList) {
-            aVar.j = colorStateList;
-            if (aVar.b() != null) {
-                DrawableCompat.setTintList(aVar.b(), aVar.j);
+        MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+        if (materialButtonHelper.f11547j != colorStateList) {
+            materialButtonHelper.f11547j = colorStateList;
+            if (materialButtonHelper.m6037b() != null) {
+                DrawableCompat.setTintList(materialButtonHelper.m6037b(), materialButtonHelper.f11547j);
             }
         }
     }
@@ -781,13 +787,13 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
             super.setSupportBackgroundTintMode(mode);
             return;
         }
-        b.i.a.g.b.a aVar = this.materialButtonHelper;
-        if (aVar.i != mode) {
-            aVar.i = mode;
-            if (aVar.b() == null || aVar.i == null) {
+        MaterialButtonHelper materialButtonHelper = this.materialButtonHelper;
+        if (materialButtonHelper.f11546i != mode) {
+            materialButtonHelper.f11546i = mode;
+            if (materialButtonHelper.m6037b() == null || materialButtonHelper.f11546i == null) {
                 return;
             }
-            DrawableCompat.setTintMode(aVar.b(), aVar.i);
+            DrawableCompat.setTintMode(materialButtonHelper.m6037b(), materialButtonHelper.f11546i);
         }
     }
 
@@ -797,7 +803,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     }
 
     public MaterialButton(@NonNull Context context, @Nullable AttributeSet attributeSet) {
-        this(context, attributeSet, com.google.android.material.R.attr.materialButtonStyle);
+        this(context, attributeSet, C10817R.attr.materialButtonStyle);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -808,46 +814,46 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
         this.checked = false;
         this.broadcasting = false;
         Context context2 = getContext();
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, com.google.android.material.R.styleable.MaterialButton, i, i2, new int[0]);
-        this.iconPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(com.google.android.material.R.styleable.MaterialButton_iconPadding, 0);
-        this.iconTintMode = ViewUtils.parseTintMode(typedArrayObtainStyledAttributes.getInt(com.google.android.material.R.styleable.MaterialButton_iconTintMode, -1), PorterDuff.Mode.SRC_IN);
-        this.iconTint = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, com.google.android.material.R.styleable.MaterialButton_iconTint);
-        this.icon = MaterialResources.getDrawable(getContext(), typedArrayObtainStyledAttributes, com.google.android.material.R.styleable.MaterialButton_icon);
-        this.iconGravity = typedArrayObtainStyledAttributes.getInteger(com.google.android.material.R.styleable.MaterialButton_iconGravity, 1);
-        this.iconSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(com.google.android.material.R.styleable.MaterialButton_iconSize, 0);
-        b.i.a.g.b.a aVar = new b.i.a.g.b.a(this, ShapeAppearanceModel.builder(context2, attributeSet, i, i2).build());
-        this.materialButtonHelper = aVar;
-        Objects.requireNonNull(aVar);
-        aVar.c = typedArrayObtainStyledAttributes.getDimensionPixelOffset(com.google.android.material.R.styleable.MaterialButton_android_insetLeft, 0);
-        aVar.d = typedArrayObtainStyledAttributes.getDimensionPixelOffset(com.google.android.material.R.styleable.MaterialButton_android_insetRight, 0);
-        aVar.e = typedArrayObtainStyledAttributes.getDimensionPixelOffset(com.google.android.material.R.styleable.MaterialButton_android_insetTop, 0);
-        aVar.f = typedArrayObtainStyledAttributes.getDimensionPixelOffset(com.google.android.material.R.styleable.MaterialButton_android_insetBottom, 0);
-        int i3 = com.google.android.material.R.styleable.MaterialButton_cornerRadius;
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C10817R.styleable.MaterialButton, i, i2, new int[0]);
+        this.iconPadding = typedArrayObtainStyledAttributes.getDimensionPixelSize(C10817R.styleable.MaterialButton_iconPadding, 0);
+        this.iconTintMode = ViewUtils.parseTintMode(typedArrayObtainStyledAttributes.getInt(C10817R.styleable.MaterialButton_iconTintMode, -1), PorterDuff.Mode.SRC_IN);
+        this.iconTint = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, C10817R.styleable.MaterialButton_iconTint);
+        this.icon = MaterialResources.getDrawable(getContext(), typedArrayObtainStyledAttributes, C10817R.styleable.MaterialButton_icon);
+        this.iconGravity = typedArrayObtainStyledAttributes.getInteger(C10817R.styleable.MaterialButton_iconGravity, 1);
+        this.iconSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C10817R.styleable.MaterialButton_iconSize, 0);
+        MaterialButtonHelper materialButtonHelper = new MaterialButtonHelper(this, ShapeAppearanceModel.builder(context2, attributeSet, i, i2).build());
+        this.materialButtonHelper = materialButtonHelper;
+        Objects.requireNonNull(materialButtonHelper);
+        materialButtonHelper.f11540c = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C10817R.styleable.MaterialButton_android_insetLeft, 0);
+        materialButtonHelper.f11541d = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C10817R.styleable.MaterialButton_android_insetRight, 0);
+        materialButtonHelper.f11542e = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C10817R.styleable.MaterialButton_android_insetTop, 0);
+        materialButtonHelper.f11543f = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C10817R.styleable.MaterialButton_android_insetBottom, 0);
+        int i3 = C10817R.styleable.MaterialButton_cornerRadius;
         if (typedArrayObtainStyledAttributes.hasValue(i3)) {
             int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(i3, -1);
-            aVar.g = dimensionPixelSize;
-            aVar.e(aVar.f1604b.withCornerSize(dimensionPixelSize));
-            aVar.p = true;
+            materialButtonHelper.f11544g = dimensionPixelSize;
+            materialButtonHelper.m6040e(materialButtonHelper.f11539b.withCornerSize(dimensionPixelSize));
+            materialButtonHelper.f11553p = true;
         }
-        aVar.h = typedArrayObtainStyledAttributes.getDimensionPixelSize(com.google.android.material.R.styleable.MaterialButton_strokeWidth, 0);
-        aVar.i = ViewUtils.parseTintMode(typedArrayObtainStyledAttributes.getInt(com.google.android.material.R.styleable.MaterialButton_backgroundTintMode, -1), PorterDuff.Mode.SRC_IN);
-        aVar.j = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, com.google.android.material.R.styleable.MaterialButton_backgroundTint);
-        aVar.k = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, com.google.android.material.R.styleable.MaterialButton_strokeColor);
-        aVar.l = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, com.google.android.material.R.styleable.MaterialButton_rippleColor);
-        aVar.q = typedArrayObtainStyledAttributes.getBoolean(com.google.android.material.R.styleable.MaterialButton_android_checkable, false);
-        aVar.f1605s = typedArrayObtainStyledAttributes.getDimensionPixelSize(com.google.android.material.R.styleable.MaterialButton_elevation, 0);
+        materialButtonHelper.f11545h = typedArrayObtainStyledAttributes.getDimensionPixelSize(C10817R.styleable.MaterialButton_strokeWidth, 0);
+        materialButtonHelper.f11546i = ViewUtils.parseTintMode(typedArrayObtainStyledAttributes.getInt(C10817R.styleable.MaterialButton_backgroundTintMode, -1), PorterDuff.Mode.SRC_IN);
+        materialButtonHelper.f11547j = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, C10817R.styleable.MaterialButton_backgroundTint);
+        materialButtonHelper.f11548k = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, C10817R.styleable.MaterialButton_strokeColor);
+        materialButtonHelper.f11549l = MaterialResources.getColorStateList(getContext(), typedArrayObtainStyledAttributes, C10817R.styleable.MaterialButton_rippleColor);
+        materialButtonHelper.f11554q = typedArrayObtainStyledAttributes.getBoolean(C10817R.styleable.MaterialButton_android_checkable, false);
+        materialButtonHelper.f11556s = typedArrayObtainStyledAttributes.getDimensionPixelSize(C10817R.styleable.MaterialButton_elevation, 0);
         int paddingStart = ViewCompat.getPaddingStart(this);
         int paddingTop = getPaddingTop();
         int paddingEnd = ViewCompat.getPaddingEnd(this);
         int paddingBottom = getPaddingBottom();
-        if (typedArrayObtainStyledAttributes.hasValue(com.google.android.material.R.styleable.MaterialButton_android_background)) {
-            aVar.o = true;
-            setSupportBackgroundTintList(aVar.j);
-            setSupportBackgroundTintMode(aVar.i);
+        if (typedArrayObtainStyledAttributes.hasValue(C10817R.styleable.MaterialButton_android_background)) {
+            materialButtonHelper.f11552o = true;
+            setSupportBackgroundTintList(materialButtonHelper.f11547j);
+            setSupportBackgroundTintMode(materialButtonHelper.f11546i);
         } else {
-            aVar.g();
+            materialButtonHelper.m6042g();
         }
-        ViewCompat.setPaddingRelative(this, paddingStart + aVar.c, paddingTop + aVar.e, paddingEnd + aVar.d, paddingBottom + aVar.f);
+        ViewCompat.setPaddingRelative(this, paddingStart + materialButtonHelper.f11540c, paddingTop + materialButtonHelper.f11542e, paddingEnd + materialButtonHelper.f11541d, paddingBottom + materialButtonHelper.f11543f);
         typedArrayObtainStyledAttributes.recycle();
         setCompoundDrawablePadding(this.iconPadding);
         updateIcon(this.icon != null);

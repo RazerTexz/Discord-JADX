@@ -8,14 +8,14 @@ import lombok.core.handlers.HandlerUtil;
 @ExampleValueString("[NullPointerException | IllegalArgumentException | Assertion | JDK | Guava]")
 /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType.SCL.lombok */
 public abstract class NullCheckExceptionType {
-    public static final NullCheckExceptionType ILLEGAL_ARGUMENT_EXCEPTION = new AnonymousClass1("ILLEGAL_ARGUMENT_EXCEPTION", 0);
-    public static final NullCheckExceptionType NULL_POINTER_EXCEPTION = new AnonymousClass2("NULL_POINTER_EXCEPTION", 1);
-    public static final NullCheckExceptionType ASSERTION = new AnonymousClass3("ASSERTION", 2);
-    public static final NullCheckExceptionType JDK = new AnonymousClass4("JDK", 3);
-    public static final NullCheckExceptionType GUAVA = new AnonymousClass5("GUAVA", 4);
+    public static final NullCheckExceptionType ILLEGAL_ARGUMENT_EXCEPTION = new C128331("ILLEGAL_ARGUMENT_EXCEPTION", 0);
+    public static final NullCheckExceptionType NULL_POINTER_EXCEPTION = new C128342("NULL_POINTER_EXCEPTION", 1);
+    public static final NullCheckExceptionType ASSERTION = new C128353("ASSERTION", 2);
+    public static final NullCheckExceptionType JDK = new C128364("JDK", 3);
+    public static final NullCheckExceptionType GUAVA = new C128375("GUAVA", 4);
     private static final /* synthetic */ NullCheckExceptionType[] ENUM$VALUES = {ILLEGAL_ARGUMENT_EXCEPTION, NULL_POINTER_EXCEPTION, ASSERTION, JDK, GUAVA};
-    private static final LombokImmutableList<String> METHOD_JDK = LombokImmutableList.of("java", "util", "Objects", "requireNonNull");
-    private static final LombokImmutableList<String> METHOD_GUAVA = LombokImmutableList.of("com", "google", "common", "base", "Preconditions", "checkNotNull", new String[0]);
+    private static final LombokImmutableList<String> METHOD_JDK = LombokImmutableList.m10922of("java", "util", "Objects", "requireNonNull");
+    private static final LombokImmutableList<String> METHOD_GUAVA = LombokImmutableList.m10924of("com", "google", "common", "base", "Preconditions", "checkNotNull", new String[0]);
 
     public abstract String getExceptionType();
 
@@ -33,10 +33,10 @@ public abstract class NullCheckExceptionType {
         return (NullCheckExceptionType) Enum.valueOf(NullCheckExceptionType.class, str);
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$1, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.NullCheckExceptionType$1 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$1.SCL.lombok */
-    enum AnonymousClass1 extends NullCheckExceptionType {
-        AnonymousClass1(String str, int i) {
+    enum C128331 extends NullCheckExceptionType {
+        C128331(String str, int i) {
             super(str, i, null);
         }
 
@@ -58,10 +58,10 @@ public abstract class NullCheckExceptionType {
         this(str, i);
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$2, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.NullCheckExceptionType$2 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$2.SCL.lombok */
-    enum AnonymousClass2 extends NullCheckExceptionType {
-        AnonymousClass2(String str, int i) {
+    enum C128342 extends NullCheckExceptionType {
+        C128342(String str, int i) {
             super(str, i, null);
         }
 
@@ -76,10 +76,10 @@ public abstract class NullCheckExceptionType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$3, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.NullCheckExceptionType$3 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$3.SCL.lombok */
-    enum AnonymousClass3 extends NullCheckExceptionType {
-        AnonymousClass3(String str, int i) {
+    enum C128353 extends NullCheckExceptionType {
+        C128353(String str, int i) {
             super(str, i, null);
         }
 
@@ -94,10 +94,10 @@ public abstract class NullCheckExceptionType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$4, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.NullCheckExceptionType$4 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$4.SCL.lombok */
-    enum AnonymousClass4 extends NullCheckExceptionType {
-        AnonymousClass4(String str, int i) {
+    enum C128364 extends NullCheckExceptionType {
+        C128364(String str, int i) {
             super(str, i, null);
         }
 
@@ -112,10 +112,10 @@ public abstract class NullCheckExceptionType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$5, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.NullCheckExceptionType$5 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$5.SCL.lombok */
-    enum AnonymousClass5 extends NullCheckExceptionType {
-        AnonymousClass5(String str, int i) {
+    enum C128375 extends NullCheckExceptionType {
+        C128375(String str, int i) {
             super(str, i, null);
         }
 

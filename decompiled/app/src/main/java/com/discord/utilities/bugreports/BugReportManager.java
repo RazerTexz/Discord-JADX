@@ -8,19 +8,19 @@ import com.discord.screenshot_detection.ScreenshotDetector;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.cache.SharedPreferencesProvider;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.bugreports.WidgetBugReport;
-import d0.g;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
 
 /* compiled from: BugReportManager.kt */
 /* loaded from: classes2.dex */
@@ -46,7 +46,7 @@ public final class BugReportManager {
         public final BugReportManager get() {
             BugReportManager bugReportManagerAccess$getBugReportManager$cp = BugReportManager.access$getBugReportManager$cp();
             if (bugReportManagerAccess$getBugReportManager$cp == null) {
-                m.throwUninitializedPropertyAccessException("bugReportManager");
+                Intrinsics3.throwUninitializedPropertyAccessException("bugReportManager");
             }
             return bugReportManagerAccess$getBugReportManager$cp;
         }
@@ -55,7 +55,7 @@ public final class BugReportManager {
             BugReportManager.access$setBugReportManager$cp(new BugReportManager(SharedPreferencesProvider.INSTANCE.get(), null, 2, null));
             BugReportManager bugReportManagerAccess$getBugReportManager$cp = BugReportManager.access$getBugReportManager$cp();
             if (bugReportManagerAccess$getBugReportManager$cp == null) {
-                m.throwUninitializedPropertyAccessException("bugReportManager");
+                Intrinsics3.throwUninitializedPropertyAccessException("bugReportManager");
             }
             bugReportManagerAccess$getBugReportManager$cp.setupSubscriptions();
         }
@@ -66,11 +66,11 @@ public final class BugReportManager {
     }
 
     /* compiled from: BugReportManager.kt */
-    /* renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<MeUser, Boolean> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$1 */
+    public static final class C67101<T, R> implements Func1<MeUser, Boolean> {
+        public static final C67101 INSTANCE = new C67101();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Boolean call(MeUser meUser) {
             return call2(meUser);
         }
@@ -78,39 +78,39 @@ public final class BugReportManager {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(MeUser meUser) {
             UserUtils userUtils = UserUtils.INSTANCE;
-            m.checkNotNullExpressionValue(meUser, "it");
+            Intrinsics3.checkNotNullExpressionValue(meUser, "it");
             return Boolean.valueOf(userUtils.isStaff(meUser));
         }
     }
 
     /* compiled from: BugReportManager.kt */
-    /* renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Boolean, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$2 */
+    public static final class C67112 extends Lambda implements Function1<Boolean, Unit> {
+        public C67112() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
             invoke2(bool);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             BugReportManager bugReportManager = BugReportManager.this;
-            m.checkNotNullExpressionValue(bool, "isStaff");
+            Intrinsics3.checkNotNullExpressionValue(bool, "isStaff");
             bugReportManager.setUserIsStaff(bool.booleanValue());
         }
     }
 
     public BugReportManager(SharedPreferences sharedPreferences, StoreUser storeUser) {
-        m.checkNotNullParameter(sharedPreferences, "cache");
-        m.checkNotNullParameter(storeUser, "storeUser");
+        Intrinsics3.checkNotNullParameter(sharedPreferences, "cache");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
         this.cache = sharedPreferences;
         this.storeUser = storeUser;
         this.settingsEnabled = true;
-        this.screenshotDetector = g.lazy(BugReportManager$screenshotDetector$2.INSTANCE);
+        this.screenshotDetector = LazyJVM.lazy(BugReportManager2.INSTANCE);
         this.settingsEnabled = sharedPreferences.getBoolean(PREFS_SS_BUG_REPORTING_SETTINGS_ENABLED, true);
     }
 
@@ -144,8 +144,8 @@ public final class BugReportManager {
     }
 
     public final void onScreenshot(Context context, ScreenshotDetector.Screenshot screenshot) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(screenshot, "screenshot");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(screenshot, "screenshot");
         if (isEnabled()) {
             WidgetBugReport.INSTANCE.launch(context, screenshot);
         }
@@ -153,22 +153,22 @@ public final class BugReportManager {
 
     public final void setBugReportingSettingEnabled(boolean enabled) {
         SharedPreferences.Editor editorEdit = this.cache.edit();
-        m.checkNotNullExpressionValue(editorEdit, "editor");
+        Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
         editorEdit.putBoolean(PREFS_SS_BUG_REPORTING_SETTINGS_ENABLED, enabled);
         editorEdit.apply();
         this.settingsEnabled = enabled;
-        getScreenshotDetector().a(isEnabled());
+        getScreenshotDetector().m8505a(isEnabled());
     }
 
     public final void setUserIsStaff(boolean isStaff) {
         this.isStaff = isStaff;
-        getScreenshotDetector().a(isEnabled());
+        getScreenshotDetector().m8505a(isEnabled());
     }
 
     public final void setupSubscriptions() {
-        Observable observableR = this.storeUser.observeMe(true).G(AnonymousClass1.INSTANCE).r();
-        m.checkNotNullExpressionValue(observableR, "storeUser.observeMe(emit… }.distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(observableR, BugReportManager.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        Observable observableM11112r = this.storeUser.observeMe(true).m11083G(C67101.INSTANCE).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "storeUser.observeMe(emit… }.distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(observableM11112r, BugReportManager.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C67112(), 62, (Object) null);
     }
 
     public /* synthetic */ BugReportManager(SharedPreferences sharedPreferences, StoreUser storeUser, int i, DefaultConstructorMarker defaultConstructorMarker) {

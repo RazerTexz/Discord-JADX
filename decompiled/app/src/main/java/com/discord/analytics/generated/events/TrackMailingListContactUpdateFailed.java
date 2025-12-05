@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMailingListContactUpdateFailed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMailingListContactUpdateFailed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackMailingListContactUpdateFailed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long erroredUserId = null;
     private final CharSequence provider = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackMailingListContactUpdateFailed implements Ana
             return false;
         }
         TrackMailingListContactUpdateFailed trackMailingListContactUpdateFailed = (TrackMailingListContactUpdateFailed) other;
-        return m.areEqual(this.erroredUserId, trackMailingListContactUpdateFailed.erroredUserId) && m.areEqual(this.provider, trackMailingListContactUpdateFailed.provider) && m.areEqual(this.listName, trackMailingListContactUpdateFailed.listName);
+        return Intrinsics3.areEqual(this.erroredUserId, trackMailingListContactUpdateFailed.erroredUserId) && Intrinsics3.areEqual(this.provider, trackMailingListContactUpdateFailed.provider) && Intrinsics3.areEqual(this.listName, trackMailingListContactUpdateFailed.listName);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackMailingListContactUpdateFailed implements Ana
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMailingListContactUpdateFailed(erroredUserId=");
-        sbU.append(this.erroredUserId);
-        sbU.append(", provider=");
-        sbU.append(this.provider);
-        sbU.append(", listName=");
-        return a.E(sbU, this.listName, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMailingListContactUpdateFailed(erroredUserId=");
+        sbM833U.append(this.erroredUserId);
+        sbM833U.append(", provider=");
+        sbM833U.append(this.provider);
+        sbM833U.append(", listName=");
+        return outline.m817E(sbM833U, this.listName, ")");
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackRemoveReaction.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackRemoveReaction implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackRemoveReaction implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Long channelId = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackRemoveReaction implements AnalyticsSchema, Tr
             return false;
         }
         TrackRemoveReaction trackRemoveReaction = (TrackRemoveReaction) other;
-        return m.areEqual(this.guildId, trackRemoveReaction.guildId) && m.areEqual(this.channelId, trackRemoveReaction.channelId) && m.areEqual(this.channelType, trackRemoveReaction.channelType) && m.areEqual(this.messageId, trackRemoveReaction.messageId) && m.areEqual(this.emojiId, trackRemoveReaction.emojiId) && m.areEqual(this.emojiName, trackRemoveReaction.emojiName) && m.areEqual(this.emojiAnimated, trackRemoveReaction.emojiAnimated) && m.areEqual(this.uniqueReactionCount, trackRemoveReaction.uniqueReactionCount);
+        return Intrinsics3.areEqual(this.guildId, trackRemoveReaction.guildId) && Intrinsics3.areEqual(this.channelId, trackRemoveReaction.channelId) && Intrinsics3.areEqual(this.channelType, trackRemoveReaction.channelType) && Intrinsics3.areEqual(this.messageId, trackRemoveReaction.messageId) && Intrinsics3.areEqual(this.emojiId, trackRemoveReaction.emojiId) && Intrinsics3.areEqual(this.emojiName, trackRemoveReaction.emojiName) && Intrinsics3.areEqual(this.emojiAnimated, trackRemoveReaction.emojiAnimated) && Intrinsics3.areEqual(this.uniqueReactionCount, trackRemoveReaction.uniqueReactionCount);
     }
 
     public int hashCode() {
@@ -57,21 +57,21 @@ public final /* data */ class TrackRemoveReaction implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackRemoveReaction(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", emojiId=");
-        sbU.append(this.emojiId);
-        sbU.append(", emojiName=");
-        sbU.append(this.emojiName);
-        sbU.append(", emojiAnimated=");
-        sbU.append(this.emojiAnimated);
-        sbU.append(", uniqueReactionCount=");
-        return a.G(sbU, this.uniqueReactionCount, ")");
+        StringBuilder sbM833U = outline.m833U("TrackRemoveReaction(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", emojiId=");
+        sbM833U.append(this.emojiId);
+        sbM833U.append(", emojiName=");
+        sbM833U.append(this.emojiName);
+        sbM833U.append(", emojiAnimated=");
+        sbM833U.append(this.emojiAnimated);
+        sbM833U.append(", uniqueReactionCount=");
+        return outline.m819G(sbM833U, this.uniqueReactionCount, ")");
     }
 }

@@ -26,13 +26,13 @@ import androidx.collection.LongSparseArray;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class Transition implements Cloneable {
@@ -54,7 +54,7 @@ public abstract class Transition implements Cloneable {
     public TransitionPropagation mPropagation;
     private ArrayList<TransitionValues> mStartValuesList;
     private static final int[] DEFAULT_MATCH_ORDER = {2, 1, 3, 4};
-    private static final PathMotion STRAIGHT_PATH_MOTION = new AnonymousClass1();
+    private static final PathMotion STRAIGHT_PATH_MOTION = new C06651();
     private static ThreadLocal<ArrayMap<Animator, AnimationInfo>> sRunningAnimators = new ThreadLocal<>();
     private String mName = getClass().getName();
     private long mStartDelay = -1;
@@ -85,8 +85,8 @@ public abstract class Transition implements Cloneable {
     private ArrayList<Animator> mAnimators = new ArrayList<>();
     private PathMotion mPathMotion = STRAIGHT_PATH_MOTION;
 
-    /* renamed from: androidx.transition.Transition$1, reason: invalid class name */
-    public static class AnonymousClass1 extends PathMotion {
+    /* renamed from: androidx.transition.Transition$1 */
+    public static class C06651 extends PathMotion {
         @Override // androidx.transition.PathMotion
         public Path getPath(float f, float f2, float f3, float f4) {
             Path path = new Path();
@@ -96,11 +96,11 @@ public abstract class Transition implements Cloneable {
         }
     }
 
-    /* renamed from: androidx.transition.Transition$2, reason: invalid class name */
-    public class AnonymousClass2 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.transition.Transition$2 */
+    public class C06662 extends AnimatorListenerAdapter {
         public final /* synthetic */ ArrayMap val$runningAnimators;
 
-        public AnonymousClass2(ArrayMap arrayMap) {
+        public C06662(ArrayMap arrayMap) {
             this.val$runningAnimators = arrayMap;
         }
 
@@ -116,9 +116,9 @@ public abstract class Transition implements Cloneable {
         }
     }
 
-    /* renamed from: androidx.transition.Transition$3, reason: invalid class name */
-    public class AnonymousClass3 extends AnimatorListenerAdapter {
-        public AnonymousClass3() {
+    /* renamed from: androidx.transition.Transition$3 */
+    public class C06673 extends AnimatorListenerAdapter {
+        public C06673() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -462,7 +462,7 @@ public abstract class Transition implements Cloneable {
                 iArr[i] = 4;
             } else {
                 if (!strTrim.isEmpty()) {
-                    throw new InflateException(a.y("Unknown match type in matchOrder: '", strTrim, "'"));
+                    throw new InflateException(outline.m886y("Unknown match type in matchOrder: '", strTrim, "'"));
                 }
                 int[] iArr2 = new int[iArr.length - 1];
                 System.arraycopy(iArr, 0, iArr2, 0, i);
@@ -476,7 +476,7 @@ public abstract class Transition implements Cloneable {
 
     private void runAnimator(Animator animator, ArrayMap<Animator, AnimationInfo> arrayMap) {
         if (animator != null) {
-            animator.addListener(new AnonymousClass2(arrayMap));
+            animator.addListener(new C06662(arrayMap));
             animate(animator);
         }
     }
@@ -511,7 +511,7 @@ public abstract class Transition implements Cloneable {
         if (getInterpolator() != null) {
             animator.setInterpolator(getInterpolator());
         }
-        animator.addListener(new AnonymousClass3());
+        animator.addListener(new C06673());
         animator.start();
     }
 
@@ -630,7 +630,7 @@ public abstract class Transition implements Cloneable {
     }
 
     /* renamed from: clone, reason: collision with other method in class */
-    public /* bridge */ /* synthetic */ Object mo5clone() throws CloneNotSupportedException {
+    public /* bridge */ /* synthetic */ Object mo11382clone() throws CloneNotSupportedException {
         return clone();
     }
 
@@ -1232,49 +1232,49 @@ public abstract class Transition implements Cloneable {
     }
 
     public String toString(String str) {
-        StringBuilder sbU = a.U(str);
-        sbU.append(getClass().getSimpleName());
-        sbU.append("@");
-        sbU.append(Integer.toHexString(hashCode()));
-        sbU.append(": ");
-        String string = sbU.toString();
+        StringBuilder sbM833U = outline.m833U(str);
+        sbM833U.append(getClass().getSimpleName());
+        sbM833U.append("@");
+        sbM833U.append(Integer.toHexString(hashCode()));
+        sbM833U.append(": ");
+        String string = sbM833U.toString();
         if (this.mDuration != -1) {
-            string = a.C(a.X(string, "dur("), this.mDuration, ") ");
+            string = outline.m815C(outline.m836X(string, "dur("), this.mDuration, ") ");
         }
         if (this.mStartDelay != -1) {
-            string = a.C(a.X(string, "dly("), this.mStartDelay, ") ");
+            string = outline.m815C(outline.m836X(string, "dly("), this.mStartDelay, ") ");
         }
         if (this.mInterpolator != null) {
-            StringBuilder sbX = a.X(string, "interp(");
-            sbX.append(this.mInterpolator);
-            sbX.append(") ");
-            string = sbX.toString();
+            StringBuilder sbM836X = outline.m836X(string, "interp(");
+            sbM836X.append(this.mInterpolator);
+            sbM836X.append(") ");
+            string = sbM836X.toString();
         }
         if (this.mTargetIds.size() <= 0 && this.mTargets.size() <= 0) {
             return string;
         }
-        String strW = a.w(string, "tgts(");
+        String strM883w = outline.m883w(string, "tgts(");
         if (this.mTargetIds.size() > 0) {
             for (int i = 0; i < this.mTargetIds.size(); i++) {
                 if (i > 0) {
-                    strW = a.w(strW, ", ");
+                    strM883w = outline.m883w(strM883w, ", ");
                 }
-                StringBuilder sbU2 = a.U(strW);
-                sbU2.append(this.mTargetIds.get(i));
-                strW = sbU2.toString();
+                StringBuilder sbM833U2 = outline.m833U(strM883w);
+                sbM833U2.append(this.mTargetIds.get(i));
+                strM883w = sbM833U2.toString();
             }
         }
         if (this.mTargets.size() > 0) {
             for (int i2 = 0; i2 < this.mTargets.size(); i2++) {
                 if (i2 > 0) {
-                    strW = a.w(strW, ", ");
+                    strM883w = outline.m883w(strM883w, ", ");
                 }
-                StringBuilder sbU3 = a.U(strW);
-                sbU3.append(this.mTargets.get(i2));
-                strW = sbU3.toString();
+                StringBuilder sbM833U3 = outline.m833U(strM883w);
+                sbM833U3.append(this.mTargets.get(i2));
+                strM883w = sbM833U3.toString();
             }
         }
-        return a.w(strW, ")");
+        return outline.m883w(strM883w, ")");
     }
 
     @NonNull

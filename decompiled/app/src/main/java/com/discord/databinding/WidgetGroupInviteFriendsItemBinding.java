@@ -14,41 +14,47 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /* loaded from: classes.dex */
 public final class WidgetGroupInviteFriendsItemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f16733a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final RelativeLayout f2407b;
+    public final RelativeLayout f16734b;
 
+    /* renamed from: c */
     @NonNull
-    public final SimpleDraweeView c;
+    public final SimpleDraweeView f16735c;
 
+    /* renamed from: d */
     @NonNull
-    public final SimpleDraweeSpanTextView d;
+    public final SimpleDraweeSpanTextView f16736d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16737e;
 
+    /* renamed from: f */
     @NonNull
-    public final StatusView f;
+    public final StatusView f16738f;
 
+    /* renamed from: g */
     @NonNull
-    public final CheckBox g;
+    public final CheckBox f16739g;
 
     public WidgetGroupInviteFriendsItemBinding(@NonNull LinearLayout linearLayout, @NonNull RelativeLayout relativeLayout, @NonNull SimpleDraweeView simpleDraweeView, @NonNull RelativeLayout relativeLayout2, @NonNull SimpleDraweeSpanTextView simpleDraweeSpanTextView, @NonNull TextView textView, @NonNull StatusView statusView, @NonNull CheckBox checkBox) {
-        this.a = linearLayout;
-        this.f2407b = relativeLayout;
-        this.c = simpleDraweeView;
-        this.d = simpleDraweeSpanTextView;
-        this.e = textView;
-        this.f = statusView;
-        this.g = checkBox;
+        this.f16733a = linearLayout;
+        this.f16734b = relativeLayout;
+        this.f16735c = simpleDraweeView;
+        this.f16736d = simpleDraweeSpanTextView;
+        this.f16737e = textView;
+        this.f16738f = statusView;
+        this.f16739g = checkBox;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16733a;
     }
 }

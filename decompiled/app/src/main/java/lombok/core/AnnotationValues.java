@@ -64,11 +64,13 @@ public class AnnotationValues<A extends Annotation> {
         this.ast = ast;
     }
 
-    public static <A extends Annotation> AnnotationValues<A> of(Class<A> type) {
+    /* renamed from: of */
+    public static <A extends Annotation> AnnotationValues<A> m10916of(Class<A> type) {
         return new AnnotationValues<>(type, Collections.emptyMap(), null);
     }
 
-    public static <A extends Annotation> AnnotationValues<A> of(Class<A> type, LombokNode<?, ?, ?> ast) {
+    /* renamed from: of */
+    public static <A extends Annotation> AnnotationValues<A> m10917of(Class<A> type, LombokNode<?, ?, ?> ast) {
         return new AnnotationValues<>(type, Collections.emptyMap(), ast);
     }
 
@@ -142,10 +144,10 @@ public class AnnotationValues<A extends Annotation> {
         }
     }
 
-    /* renamed from: lombok.core.AnnotationValues$1, reason: invalid class name */
+    /* renamed from: lombok.core.AnnotationValues$1 */
     /* loaded from: discord-126021.apk:lombok/core/AnnotationValues$1.SCL.lombok */
-    class AnonymousClass1 implements InvocationHandler {
-        AnonymousClass1() {
+    class C128111 implements InvocationHandler {
+        C128111() {
         }
 
         @Override // java.lang.reflect.InvocationHandler
@@ -213,7 +215,7 @@ public class AnnotationValues<A extends Annotation> {
         if (this.cachedInstance != null) {
             return this.cachedInstance;
         }
-        AnonymousClass1 invocations = new AnonymousClass1();
+        C128111 invocations = new C128111();
         A a = (A) Proxy.newProxyInstance(this.type.getClassLoader(), new Class[]{this.type}, invocations);
         this.cachedInstance = a;
         return a;
@@ -444,9 +446,9 @@ public class AnnotationValues<A extends Annotation> {
     */
     private String toFQ(String typeName) {
         String prefix = typeName.indexOf(46) > -1 ? typeName.substring(0, typeName.indexOf(46)) : typeName;
-        LombokNode<?, ?, ?> lombokNodeUp = this.ast;
+        LombokNode<?, ?, ?> lombokNodeM10925up = this.ast;
         while (true) {
-            LombokNode<?, ?, ?> n = lombokNodeUp;
+            LombokNode<?, ?, ?> n = lombokNodeM10925up;
             if (n == null) {
                 break;
             }
@@ -454,7 +456,7 @@ public class AnnotationValues<A extends Annotation> {
                 String simpleName = n.getName();
                 if (prefix.equals(simpleName)) {
                     List<String> outerNames = new ArrayList<>();
-                    LombokNode<?, ?, ?> n2 = n.up();
+                    LombokNode<?, ?, ?> n2 = n.m10925up();
                     if (n2 != null && n2.getKind() != AST.Kind.COMPILATION_UNIT) {
                         if (n2.getKind() == AST.Kind.TYPE) {
                             outerNames.add(n2.getName());
@@ -476,7 +478,7 @@ public class AnnotationValues<A extends Annotation> {
                     }
                 }
             }
-            lombokNodeUp = n.up();
+            lombokNodeM10925up = n.m10925up();
         }
     }
 

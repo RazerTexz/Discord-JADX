@@ -10,11 +10,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 public abstract class StageCallViewHolder extends MGRecyclerViewHolder<StageCallAdapter, StageCallItem> {
 
     /* compiled from: StageCallViewHolder.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.stage.StageCallViewHolder$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.voice.fullscreen.stage.StageCallViewHolder$1 */
+    public static final class ViewOnClickListenerC105581 implements View.OnClickListener {
         public final /* synthetic */ StageCallAdapter $adapter;
 
-        public AnonymousClass1(StageCallAdapter stageCallAdapter) {
+        public ViewOnClickListenerC105581(StageCallAdapter stageCallAdapter) {
             this.$adapter = stageCallAdapter;
         }
 
@@ -33,6 +33,6 @@ public abstract class StageCallViewHolder extends MGRecyclerViewHolder<StageCall
 
     private StageCallViewHolder(@LayoutRes int i, StageCallAdapter stageCallAdapter) {
         super(i, stageCallAdapter);
-        this.itemView.setOnClickListener(new AnonymousClass1(stageCallAdapter));
+        this.itemView.setOnClickListener(new ViewOnClickListenerC105581(stageCallAdapter));
     }
 }

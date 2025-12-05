@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPremiumUpgradeCompleted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumUpgradeCompleted implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPremiumUpgradeCompleted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean success = null;
     private final CharSequence errorCode = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackPremiumUpgradeCompleted implements AnalyticsS
             return false;
         }
         TrackPremiumUpgradeCompleted trackPremiumUpgradeCompleted = (TrackPremiumUpgradeCompleted) other;
-        return m.areEqual(this.success, trackPremiumUpgradeCompleted.success) && m.areEqual(this.errorCode, trackPremiumUpgradeCompleted.errorCode) && m.areEqual(this.plan, trackPremiumUpgradeCompleted.plan);
+        return Intrinsics3.areEqual(this.success, trackPremiumUpgradeCompleted.success) && Intrinsics3.areEqual(this.errorCode, trackPremiumUpgradeCompleted.errorCode) && Intrinsics3.areEqual(this.plan, trackPremiumUpgradeCompleted.plan);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackPremiumUpgradeCompleted implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPremiumUpgradeCompleted(success=");
-        sbU.append(this.success);
-        sbU.append(", errorCode=");
-        sbU.append(this.errorCode);
-        sbU.append(", plan=");
-        return a.E(sbU, this.plan, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPremiumUpgradeCompleted(success=");
+        sbM833U.append(this.success);
+        sbM833U.append(", errorCode=");
+        sbM833U.append(this.errorCode);
+        sbM833U.append(", plan=");
+        return outline.m817E(sbM833U, this.plan, ")");
     }
 }

@@ -1,0 +1,44 @@
+package p007b.p008a.p025i;
+
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.viewbinding.ViewBinding;
+
+/* compiled from: ViewPremiumGuildProgressBinding.java */
+/* renamed from: b.a.i.x2, reason: use source file name */
+/* loaded from: classes.dex */
+public final class ViewPremiumGuildProgressBinding implements ViewBinding {
+
+    /* renamed from: a */
+    @NonNull
+    public final FrameLayout f1373a;
+
+    /* renamed from: b */
+    @NonNull
+    public final ImageView f1374b;
+
+    /* renamed from: c */
+    @NonNull
+    public final TextView f1375c;
+
+    /* renamed from: d */
+    @NonNull
+    public final ProgressBar f1376d;
+
+    public ViewPremiumGuildProgressBinding(@NonNull FrameLayout frameLayout, @NonNull ImageView imageView, @NonNull TextView textView, @NonNull ProgressBar progressBar) {
+        this.f1373a = frameLayout;
+        this.f1374b = imageView;
+        this.f1375c = textView;
+        this.f1376d = progressBar;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return this.f1373a;
+    }
+}

@@ -15,8 +15,8 @@ import android.widget.TabHost;
 import android.widget.TabWidget;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
 import java.util.ArrayList;
+import p007b.p100d.p104b.p105a.outline;
 
 @Deprecated
 /* loaded from: classes.dex */
@@ -47,11 +47,11 @@ public class FragmentTabHost extends TabHost implements TabHost.OnTabChangeListe
     }
 
     public static class SavedState extends View.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C03931();
         public String curTab;
 
-        /* renamed from: androidx.fragment.app.FragmentTabHost$SavedState$1, reason: invalid class name */
-        public class AnonymousClass1 implements Parcelable.Creator<SavedState> {
+        /* renamed from: androidx.fragment.app.FragmentTabHost$SavedState$1 */
+        public class C03931 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -81,10 +81,10 @@ public class FragmentTabHost extends TabHost implements TabHost.OnTabChangeListe
 
         @NonNull
         public String toString() {
-            StringBuilder sbU = a.U("FragmentTabHost.SavedState{");
-            sbU.append(Integer.toHexString(System.identityHashCode(this)));
-            sbU.append(" curTab=");
-            return a.J(sbU, this.curTab, "}");
+            StringBuilder sbM833U = outline.m833U("FragmentTabHost.SavedState{");
+            sbM833U.append(Integer.toHexString(System.identityHashCode(this)));
+            sbM833U.append(" curTab=");
+            return outline.m822J(sbM833U, this.curTab, "}");
         }
 
         @Override // android.view.View.BaseSavedState, android.view.AbsSavedState, android.os.Parcelable
@@ -160,9 +160,9 @@ public class FragmentTabHost extends TabHost implements TabHost.OnTabChangeListe
             if (frameLayout != null) {
                 return;
             }
-            StringBuilder sbU = a.U("No tab content FrameLayout found for id ");
-            sbU.append(this.mContainerId);
-            throw new IllegalStateException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("No tab content FrameLayout found for id ");
+            sbM833U.append(this.mContainerId);
+            throw new IllegalStateException(sbM833U.toString());
         }
     }
 

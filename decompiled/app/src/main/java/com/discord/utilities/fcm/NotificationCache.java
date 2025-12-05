@@ -5,7 +5,6 @@ import com.discord.app.AppLog;
 import com.discord.utilities.fcm.NotificationData;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.persister.Persister;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -14,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: NotificationCache.kt */
 /* loaded from: classes2.dex */
@@ -30,7 +30,7 @@ public final class NotificationCache {
         Object next;
         NotificationData data;
         Collection<NotificationData.DisplayPayload> collectionValues = cache.get().values();
-        m.checkNotNullExpressionValue(collectionValues, "cache.get().values");
+        Intrinsics3.checkNotNullExpressionValue(collectionValues, "cache.get().values");
         Iterator<T> it = collectionValues.iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -48,7 +48,7 @@ public final class NotificationCache {
 
     public final synchronized NotificationData.DisplayPayload getAndUpdate(NotificationData data) {
         NotificationData.DisplayPayload displayPayload;
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         Persister<HashMap<String, NotificationData.DisplayPayload>> persister = cache;
         HashMap<String, NotificationData.DisplayPayload> map = new HashMap<>(persister.get());
         displayPayload = map.get(data.getKey());
@@ -63,7 +63,7 @@ public final class NotificationCache {
 
     public final synchronized void remove(long channelId, boolean isAckRequest, Function1<? super Integer, Unit> notificationRemovedCallback) {
         NotificationData data;
-        m.checkNotNullParameter(notificationRemovedCallback, "notificationRemovedCallback");
+        Intrinsics3.checkNotNullParameter(notificationRemovedCallback, "notificationRemovedCallback");
         HashMap<String, NotificationData.DisplayPayload> map = new HashMap<>(cache.get());
         Iterator<NotificationData.DisplayPayload> it = map.values().iterator();
         boolean z2 = false;
@@ -86,7 +86,7 @@ public final class NotificationCache {
         boolean z2;
         HashMap<String, NotificationData.DisplayPayload> map = cache.get();
         Set<Map.Entry<String, NotificationData.DisplayPayload>> setEntrySet = map.entrySet();
-        m.checkNotNullExpressionValue(setEntrySet, "content.entries");
+        Intrinsics3.checkNotNullExpressionValue(setEntrySet, "content.entries");
         ArrayList arrayList = new ArrayList();
         Iterator<T> it = setEntrySet.iterator();
         while (it.hasNext()) {
@@ -95,7 +95,7 @@ public final class NotificationCache {
             if (str == null) {
                 str = "";
             }
-            m.checkNotNullExpressionValue(str, "entry.key ?: \"\"");
+            Intrinsics3.checkNotNullExpressionValue(str, "entry.key ?: \"\"");
             NotificationData.DisplayPayload displayPayload = (NotificationData.DisplayPayload) entry.getValue();
             if (displayPayload == null) {
                 StringBuilder sb = new StringBuilder();
@@ -107,9 +107,9 @@ public final class NotificationCache {
                 sb2.append("and notification data type: ");
                 sb2.append(str);
                 sb.append(sb2.toString());
-                AppLog appLog = AppLog.g;
+                AppLog appLog = AppLog.f14950g;
                 String string = sb.toString();
-                m.checkNotNullExpressionValue(string, "warningMessage.toString()");
+                Intrinsics3.checkNotNullExpressionValue(string, "warningMessage.toString()");
                 Logger.w$default(appLog, string, null, 2, null);
             }
             if (displayPayload != null) {

@@ -4,13 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import androidx.core.app.NotificationCompat;
-import androidx.core.content.pm.ShortcutManagerCompat;
-import b.a.d.m0.a;
-import b.c.a.a0.d;
-import b.i.c.c;
-import b.i.c.k.b;
+import androidx.core.content.p004pm.ShortcutManagerCompat;
 import com.adjust.sdk.Constants;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.restapi.RestAPIBuilder;
@@ -20,15 +16,9 @@ import com.discord.utilities.analytics.AppStartAnalyticsTracker;
 import com.discord.utilities.fcm.NotificationClient;
 import com.discord.utilities.intent.RouteHandlers;
 import com.discord.utilities.logging.Logger;
-import com.discord.widgets.chat.input.MentionUtilsKt;
+import com.discord.widgets.chat.input.MentionUtils;
 import com.google.firebase.appindexing.internal.zza;
 import com.google.firebase.appindexing.internal.zzc;
-import d0.g0.i;
-import d0.g0.s;
-import d0.g0.t;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.lang.ref.WeakReference;
 import java.util.Iterator;
 import java.util.Locale;
@@ -39,6 +29,19 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.functions.Function3;
 import kotlin.text.MatchResult;
 import kotlin.text.Regex;
+import p007b.p008a.p018d.p019m0.RoutingPatterns;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p361c.FirebaseApp2;
+import p007b.p225i.p361c.p365k.AbstractC4561b;
+import p007b.p225i.p361c.p365k.p366c.C4562a;
+import p007b.p225i.p361c.p365k.p367d.C4564b;
+import p507d0.Tuples;
+import p507d0.p579g0.Regex5;
+import p507d0.p579g0.StringNumberConversions;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: IntentUtils.kt */
 /* loaded from: classes2.dex */
@@ -58,7 +61,7 @@ public final class IntentUtils {
             }
 
             public static final Intent join(String deeplink, long applicationId, String secret) {
-                m.checkNotNullParameter(deeplink, Constants.DEEPLINK);
+                Intrinsics3.checkNotNullParameter(deeplink, Constants.DEEPLINK);
                 return new Intent("com.discord.intent.action.SDK", Uri.parse(deeplink).buildUpon().appendPath("join").appendQueryParameter(ModelAuditLogEntry.CHANGE_KEY_APPLICATION_ID, String.valueOf(applicationId)).appendQueryParameter("secret", secret).build());
             }
         }
@@ -72,19 +75,19 @@ public final class IntentUtils {
 
             public final Uri getApp() {
                 Uri uri = Uri.parse("discord://app");
-                m.checkNotNullExpressionValue(uri, "Uri.parse(\"discord://app\")");
+                Intrinsics3.checkNotNullExpressionValue(uri, "Uri.parse(\"discord://app\")");
                 return uri;
             }
 
             public final Uri getOauth2Authorize() {
                 Uri uri = Uri.parse("discord://action/oauth2/authorize");
-                m.checkNotNullExpressionValue(uri, "Uri.parse(\"discord://action/oauth2/authorize\")");
+                Intrinsics3.checkNotNullExpressionValue(uri, "Uri.parse(\"discord://action/oauth2/authorize\")");
                 return uri;
             }
 
             public final Uri getSelectSettingsVoice() {
                 Uri uri = Uri.parse("discord://app/settings/voice");
-                m.checkNotNullExpressionValue(uri, "Uri.parse(\"discord://app/settings/voice\")");
+                Intrinsics3.checkNotNullExpressionValue(uri, "Uri.parse(\"discord://app/settings/voice\")");
                 return uri;
             }
         }
@@ -102,7 +105,7 @@ public final class IntentUtils {
             if (messageId == 0) {
                 messageId = "";
             }
-            return new Intent("android.intent.action.VIEW", Uri.parse("discord://app/channels/" + objValueOf + MentionUtilsKt.SLASH_CHAR + channelId + MentionUtilsKt.SLASH_CHAR + messageId));
+            return new Intent("android.intent.action.VIEW", Uri.parse("discord://app/channels/" + objValueOf + MentionUtils.SLASH_CHAR + channelId + MentionUtils.SLASH_CHAR + messageId));
         }
 
         public static /* synthetic */ Intent selectChannel$default(long j, long j2, Long l, int i, Object obj) {
@@ -116,7 +119,7 @@ public final class IntentUtils {
         }
 
         public static final Intent selectExternalEvent(long guildId, Long eventId) {
-            return new Intent("android.intent.action.VIEW", Uri.parse("discord://app/events/" + ((guildId == 0 || guildId == -1) ? "@me" : Long.valueOf(guildId)) + MentionUtilsKt.SLASH_CHAR + eventId));
+            return new Intent("android.intent.action.VIEW", Uri.parse("discord://app/events/" + ((guildId == 0 || guildId == -1) ? "@me" : Long.valueOf(guildId)) + MentionUtils.SLASH_CHAR + eventId));
         }
 
         public static final Intent selectGuild(long guildId) {
@@ -141,11 +144,11 @@ public final class IntentUtils {
         */
         public final Intent selectGuildTemplate(String guildTemplateText, String source) {
             Uri uri = Uri.parse(guildTemplateText);
-            m.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            Intrinsics3.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
             if (uri.getScheme() == null) {
                 if (guildTemplateText != null) {
-                    a aVar = a.G;
-                    if (t.startsWith$default(guildTemplateText, a.e, false, 2, null)) {
+                    RoutingPatterns routingPatterns = RoutingPatterns.f538G;
+                    if (StringsJVM.startsWith$default(guildTemplateText, RoutingPatterns.f543e, false, 2, null)) {
                         uri = Uri.parse("https://" + guildTemplateText);
                     } else {
                         uri = Uri.parse("discord://app/template/" + guildTemplateText + "?source=" + source);
@@ -153,7 +156,7 @@ public final class IntentUtils {
                 }
             }
             Intent data = new Intent().setData(uri);
-            m.checkNotNullExpressionValue(data, "Intent().setData(uriMerged)");
+            Intrinsics3.checkNotNullExpressionValue(data, "Intent().setData(uriMerged)");
             return data;
         }
 
@@ -163,11 +166,11 @@ public final class IntentUtils {
         */
         public final Intent selectInvite(String inviteText, String source) {
             Uri uri = Uri.parse(inviteText);
-            m.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            Intrinsics3.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
             if (uri.getScheme() == null) {
                 if (inviteText != null) {
-                    a aVar = a.G;
-                    if (t.startsWith$default(inviteText, a.d, false, 2, null)) {
+                    RoutingPatterns routingPatterns = RoutingPatterns.f538G;
+                    if (StringsJVM.startsWith$default(inviteText, RoutingPatterns.f542d, false, 2, null)) {
                         uri = Uri.parse("https://" + inviteText);
                     } else {
                         uri = Uri.parse("discord://app/invite/" + inviteText + "?source=" + source);
@@ -175,18 +178,18 @@ public final class IntentUtils {
                 }
             }
             Intent data = new Intent().setData(uri);
-            m.checkNotNullExpressionValue(data, "Intent().setData(uriMerged)");
+            Intrinsics3.checkNotNullExpressionValue(data, "Intent().setData(uriMerged)");
             return data;
         }
     }
 
     /* compiled from: IntentUtils.kt */
-    /* renamed from: com.discord.utilities.intent.IntentUtils$consumeExternalRoutingIntent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function2<Uri, Boolean, Unit> {
+    /* renamed from: com.discord.utilities.intent.IntentUtils$consumeExternalRoutingIntent$1 */
+    public static final class C67831 extends Lambda implements Function2<Uri, Boolean, Unit> {
         public final /* synthetic */ Intent $intent;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Intent intent) {
+        public C67831(Intent intent) {
             super(2);
             this.$intent = intent;
         }
@@ -194,11 +197,11 @@ public final class IntentUtils {
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Uri uri, Boolean bool) {
             invoke(uri, bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(Uri uri, boolean z2) {
-            m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
             Map<String, Object> mapBuildTrackingData = NotificationClient.INSTANCE.buildTrackingData(this.$intent);
             Iterator<T> it = mapBuildTrackingData.keySet().iterator();
             while (it.hasNext()) {
@@ -210,30 +213,30 @@ public final class IntentUtils {
     }
 
     /* compiled from: IntentUtils.kt */
-    /* renamed from: com.discord.utilities.intent.IntentUtils$consumeRoutingIntent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function2<Uri, Boolean, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.intent.IntentUtils$consumeRoutingIntent$1 */
+    public static final class C67841 extends Lambda implements Function2<Uri, Boolean, Unit> {
+        public static final C67841 INSTANCE = new C67841();
 
-        public AnonymousClass1() {
+        public C67841() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Uri uri, Boolean bool) {
             invoke(uri, bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(Uri uri, boolean z2) {
-            m.checkNotNullParameter(uri, "<anonymous parameter 0>");
+            Intrinsics3.checkNotNullParameter(uri, "<anonymous parameter 0>");
         }
     }
 
     static {
-        a aVar = a.G;
-        Regex regex = a.F;
+        RoutingPatterns routingPatterns = RoutingPatterns.f538G;
+        Regex regex = RoutingPatterns.f537F;
         RouteHandlers routeHandlers = RouteHandlers.INSTANCE;
-        pathRouterMap = h0.mapOf(d0.o.to(a.t, IntentUtils$pathRouterMap$1.INSTANCE), d0.o.to(a.u, IntentUtils$pathRouterMap$2.INSTANCE), d0.o.to(regex, new IntentUtils$pathRouterMap$3(routeHandlers)), d0.o.to(a.v, new IntentUtils$pathRouterMap$4(routeHandlers)), d0.o.to(a.f62x, new IntentUtils$pathRouterMap$5(routeHandlers)), d0.o.to(a.f63y, new IntentUtils$pathRouterMap$6(routeHandlers)), d0.o.to(a.f64z, new IntentUtils$pathRouterMap$7(routeHandlers)), d0.o.to(a.A, new IntentUtils$pathRouterMap$8(routeHandlers)), d0.o.to(a.f61s, new IntentUtils$pathRouterMap$9(routeHandlers)), d0.o.to(a.w, new IntentUtils$pathRouterMap$10(routeHandlers)), d0.o.to(a.C, new IntentUtils$pathRouterMap$11(routeHandlers)), d0.o.to(a.D, new IntentUtils$pathRouterMap$12(routeHandlers)), d0.o.to(a.E, new IntentUtils$pathRouterMap$13(routeHandlers)), d0.o.to(a.B, new IntentUtils$pathRouterMap$14(routeHandlers)), d0.o.to(a.m, new IntentUtils$pathRouterMap$15(routeHandlers)));
+        pathRouterMap = Maps6.mapOf(Tuples.m10073to(RoutingPatterns.f558t, IntentUtils$pathRouterMap$1.INSTANCE), Tuples.m10073to(RoutingPatterns.f559u, IntentUtils$pathRouterMap$2.INSTANCE), Tuples.m10073to(regex, new IntentUtils$pathRouterMap$3(routeHandlers)), Tuples.m10073to(RoutingPatterns.f560v, new IntentUtils$pathRouterMap$4(routeHandlers)), Tuples.m10073to(RoutingPatterns.f562x, new IntentUtils$pathRouterMap$5(routeHandlers)), Tuples.m10073to(RoutingPatterns.f563y, new IntentUtils$pathRouterMap$6(routeHandlers)), Tuples.m10073to(RoutingPatterns.f564z, new IntentUtils$pathRouterMap$7(routeHandlers)), Tuples.m10073to(RoutingPatterns.f532A, new IntentUtils$pathRouterMap$8(routeHandlers)), Tuples.m10073to(RoutingPatterns.f557s, new IntentUtils$pathRouterMap$9(routeHandlers)), Tuples.m10073to(RoutingPatterns.f561w, new IntentUtils$pathRouterMap$10(routeHandlers)), Tuples.m10073to(RoutingPatterns.f534C, new IntentUtils$pathRouterMap$11(routeHandlers)), Tuples.m10073to(RoutingPatterns.f535D, new IntentUtils$pathRouterMap$12(routeHandlers)), Tuples.m10073to(RoutingPatterns.f536E, new IntentUtils$pathRouterMap$13(routeHandlers)), Tuples.m10073to(RoutingPatterns.f533B, new IntentUtils$pathRouterMap$14(routeHandlers)), Tuples.m10073to(RoutingPatterns.f551m, new IntentUtils$pathRouterMap$15(routeHandlers)));
     }
 
     private IntentUtils() {
@@ -242,56 +245,56 @@ public final class IntentUtils {
     /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ boolean consumeRoutingIntent$default(IntentUtils intentUtils, Intent intent, Context context, Function2 function2, int i, Object obj) {
         if ((i & 4) != 0) {
-            function2 = AnonymousClass1.INSTANCE;
+            function2 = C67841.INSTANCE;
         }
         return intentUtils.consumeRoutingIntent(intent, context, function2);
     }
 
     private final Uri externalize(Uri uri) {
         Uri.Builder builderScheme = uri.buildUpon().scheme(Constants.SCHEME);
-        a aVar = a.G;
-        return builderScheme.authority(a.a).build();
+        RoutingPatterns routingPatterns = RoutingPatterns.f538G;
+        return builderScheme.authority(RoutingPatterns.f539a).build();
     }
 
     private final void notifyFirebaseUserActionStatus(Intent intent, boolean isHandledSuccessfully) {
         String stringExtra = intent.getStringExtra("actions.fulfillment.extra.ACTION_TOKEN");
         if (stringExtra != null) {
-            m.checkNotNullExpressionValue(stringExtra, "intent.getStringExtra(In…A_VOICE_ACTION) ?: return");
+            Intrinsics3.checkNotNullExpressionValue(stringExtra, "intent.getStringExtra(In…A_VOICE_ACTION) ?: return");
             String str = isHandledSuccessfully ? "http://schema.org/CompletedActionStatus" : "http://schema.org/FailedActionStatus";
-            b.i.c.k.c.a aVar = new b.i.c.k.c.a();
-            aVar.f = stringExtra;
-            aVar.e = str;
-            d.z(stringExtra, "setActionToken is required before calling build().");
-            d.z(new String(aVar.e), "setActionStatus is required before calling build().");
-            aVar.a("actionToken", aVar.f);
-            b bVar = null;
-            if ((aVar.c == null ? null : new String(aVar.c)) == null) {
-                aVar.c = "AssistAction";
-                aVar.a(ModelAuditLogEntry.CHANGE_KEY_NAME, "AssistAction");
+            C4562a c4562a = new C4562a();
+            c4562a.f12169f = stringExtra;
+            c4562a.f12167e = str;
+            AnimatableValueParser.m595z(stringExtra, "setActionToken is required before calling build().");
+            AnimatableValueParser.m595z(new String(c4562a.f12167e), "setActionStatus is required before calling build().");
+            c4562a.m6344a("actionToken", c4562a.f12169f);
+            AbstractC4561b c4564b = null;
+            if ((c4562a.f12165c == null ? null : new String(c4562a.f12165c)) == null) {
+                c4562a.f12165c = "AssistAction";
+                c4562a.m6344a(ModelAuditLogEntry.CHANGE_KEY_NAME, "AssistAction");
             }
-            if ((aVar.d == null ? null : new String(aVar.d)) == null) {
-                String strValueOf = String.valueOf(aVar.f);
+            if ((c4562a.f12166d == null ? null : new String(c4562a.f12166d)) == null) {
+                String strValueOf = String.valueOf(c4562a.f12169f);
                 String strConcat = strValueOf.length() != 0 ? "https://developers.google.com/actions?invocation=".concat(strValueOf) : new String("https://developers.google.com/actions?invocation=");
                 Objects.requireNonNull(strConcat, "null reference");
-                aVar.d = strConcat;
-                aVar.a("url", strConcat);
+                c4562a.f12166d = strConcat;
+                c4562a.m6344a("url", strConcat);
             }
-            d.z(aVar.c, "setObject is required before calling build().");
-            d.z(aVar.d, "setObject is required before calling build().");
-            zza zzaVar = new zza(aVar.f1660b, aVar.c, aVar.d, null, new zzc(true), aVar.e, aVar.a);
-            synchronized (b.class) {
-                WeakReference<b> weakReference = b.a;
+            AnimatableValueParser.m595z(c4562a.f12165c, "setObject is required before calling build().");
+            AnimatableValueParser.m595z(c4562a.f12166d, "setObject is required before calling build().");
+            zza zzaVar = new zza(c4562a.f12164b, c4562a.f12165c, c4562a.f12166d, null, new zzc(true), c4562a.f12167e, c4562a.f12163a);
+            synchronized (AbstractC4561b.class) {
+                WeakReference<AbstractC4561b> weakReference = AbstractC4561b.f12168a;
                 if (weakReference != null) {
-                    bVar = weakReference.get();
+                    c4564b = weakReference.get();
                 }
-                if (bVar == null) {
-                    c cVarB = c.b();
-                    cVarB.a();
-                    bVar = new b.i.c.k.d.b(cVarB.d);
-                    b.a = new WeakReference<>(bVar);
+                if (c4564b == null) {
+                    FirebaseApp2 firebaseApp2M6327b = FirebaseApp2.m6327b();
+                    firebaseApp2M6327b.m6330a();
+                    c4564b = new C4564b(firebaseApp2M6327b.f12118d);
+                    AbstractC4561b.f12168a = new WeakReference<>(c4564b);
                 }
             }
-            bVar.a(zzaVar);
+            c4564b.mo6345a(zzaVar);
         }
     }
 
@@ -300,16 +303,16 @@ public final class IntentUtils {
     }
 
     public static final void performChooserSendIntent(Context context, String text, CharSequence chooserText) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
-        m.checkNotNullParameter(chooserText, "chooserText");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        Intrinsics3.checkNotNullParameter(chooserText, "chooserText");
         context.startActivity(Intent.createChooser(INSTANCE.sendText(new Intent("android.intent.action.SEND"), text), chooserText));
     }
 
     public static /* synthetic */ void performChooserSendIntent$default(Context context, String str, CharSequence charSequence, int i, Object obj) {
         if ((i & 4) != 0) {
-            charSequence = context.getString(R.string.share);
-            m.checkNotNullExpressionValue(charSequence, "context.getString(R.string.share)");
+            charSequence = context.getString(C5419R.string.share);
+            Intrinsics3.checkNotNullExpressionValue(charSequence, "context.getString(R.string.share)");
         }
         performChooserSendIntent(context, str, charSequence);
     }
@@ -325,41 +328,41 @@ public final class IntentUtils {
     }
 
     public final boolean consumeExternalRoutingIntent(Intent intent, Context context) {
-        m.checkNotNullParameter(intent, "intent");
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(intent, "intent");
+        Intrinsics3.checkNotNullParameter(context, "context");
         StoreStream.INSTANCE.getDynamicLinkCache().storeLinkIfExists(intent, context);
-        return consumeRoutingIntent(intent, context, new AnonymousClass1(intent));
+        return consumeRoutingIntent(intent, context, new C67831(intent));
     }
 
     public final boolean consumeRoutingIntent(Intent intent, Context context, Function2<? super Uri, ? super Boolean, Unit> callback) {
         MatchResult matchResultMatchEntire;
         RouteHandlers.AnalyticsMetadata unknown;
-        m.checkNotNullParameter(intent, "intent");
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(callback, "callback");
+        Intrinsics3.checkNotNullParameter(intent, "intent");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(callback, "callback");
         Uri data = intent.getData();
         if (data == null) {
             data = Uri.EMPTY;
         }
-        m.checkNotNullExpressionValue(data, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        Intrinsics3.checkNotNullExpressionValue(data, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
         boolean z2 = isDiscordAppUri(data) || isHttpDomainUrl(data);
         callback.invoke(data, Boolean.valueOf(z2));
         if (z2) {
-            AppLog appLog = AppLog.g;
+            AppLog appLog = AppLog.f14950g;
             String simpleName = IntentUtils.class.getSimpleName();
-            m.checkNotNullExpressionValue(simpleName, "javaClass.simpleName");
+            Intrinsics3.checkNotNullExpressionValue(simpleName, "javaClass.simpleName");
             String string = data.toString();
             if (string == null) {
                 string = "<null>";
             }
-            m.checkNotNullExpressionValue(string, "uri?.toString() ?: \"<null>\"");
-            appLog.f(simpleName, string);
+            Intrinsics3.checkNotNullExpressionValue(string, "uri?.toString() ?: \"<null>\"");
+            appLog.m8365f(simpleName, string);
             for (Map.Entry<Regex, Function3<Uri, MatchResult, Context, RouteHandlers.AnalyticsMetadata>> entry : pathRouterMap.entrySet()) {
                 Regex key = entry.getKey();
                 Function3<Uri, MatchResult, Context, RouteHandlers.AnalyticsMetadata> value = entry.getValue();
                 String path = data.getPath();
                 if (path != null) {
-                    m.checkNotNullExpressionValue(path, "it");
+                    Intrinsics3.checkNotNullExpressionValue(path, "it");
                     matchResultMatchEntire = key.matchEntire(path);
                 } else {
                     matchResultMatchEntire = null;
@@ -371,8 +374,8 @@ public final class IntentUtils {
                         unknown = RouteHandlers.AnalyticsMetadata.INSTANCE.getUNKNOWN();
                     }
                     intent.setData(Uri.EMPTY);
-                    boolean z3 = !m.areEqual(unknown, RouteHandlers.AnalyticsMetadata.INSTANCE.getUNKNOWN());
-                    Logger.d$default(AppLog.g, "Intent handler activated for " + data + ", consumed: " + z3, null, 2, null);
+                    boolean z3 = !Intrinsics3.areEqual(unknown, RouteHandlers.AnalyticsMetadata.INSTANCE.getUNKNOWN());
+                    Logger.d$default(AppLog.f14950g, "Intent handler activated for " + data + ", consumed: " + z3, null, 2, null);
                     notifyFirebaseUserActionStatus(intent, z3);
                     StoreStream.INSTANCE.getAnalytics().deepLinkReceived(intent, unknown);
                     return z3;
@@ -384,10 +387,10 @@ public final class IntentUtils {
     }
 
     public final Long getDirectShareId(Intent intent) {
-        m.checkNotNullParameter(intent, "$this$getDirectShareId");
+        Intrinsics3.checkNotNullParameter(intent, "$this$getDirectShareId");
         String stringExtra = intent.getStringExtra(ShortcutManagerCompat.EXTRA_SHORTCUT_ID);
         if (stringExtra != null) {
-            return s.toLongOrNull(stringExtra);
+            return StringNumberConversions.toLongOrNull(stringExtra);
         }
         return null;
     }
@@ -395,14 +398,14 @@ public final class IntentUtils {
     public final boolean isDiscordAppUri(Uri uri) {
         String lowerCase;
         int iHashCode;
-        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        if (t.equals(uri.getScheme(), "discord", true)) {
+        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        if (StringsJVM.equals(uri.getScheme(), "discord", true)) {
             String host = uri.getHost();
             if (host != null) {
                 Locale locale = Locale.ENGLISH;
-                m.checkNotNullExpressionValue(locale, "Locale.ENGLISH");
+                Intrinsics3.checkNotNullExpressionValue(locale, "Locale.ENGLISH");
                 lowerCase = host.toLowerCase(locale);
-                m.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
+                Intrinsics3.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
             } else {
                 lowerCase = null;
             }
@@ -414,22 +417,22 @@ public final class IntentUtils {
     }
 
     public final boolean isHttpDomainUrl(Uri uri) {
-        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        Regex regex = new Regex("https?", i.IGNORE_CASE);
+        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        Regex regex = new Regex("https?", Regex5.IGNORE_CASE);
         String scheme = uri.getScheme();
         if (scheme == null) {
             scheme = "";
         }
-        m.checkNotNullExpressionValue(scheme, "uri.scheme ?: \"\"");
+        Intrinsics3.checkNotNullExpressionValue(scheme, "uri.scheme ?: \"\"");
         if (regex.matches(scheme)) {
-            return a.G.a(uri.getHost());
+            return RoutingPatterns.f538G.m173a(uri.getHost());
         }
         return false;
     }
 
     public final Intent toExternalizedSend(Intent intent) {
         Uri uriExternalize;
-        m.checkNotNullParameter(intent, "$this$toExternalizedSend");
+        Intrinsics3.checkNotNullParameter(intent, "$this$toExternalizedSend");
         Uri data = intent.getData();
         if (data == null || (uriExternalize = INSTANCE.externalize(data)) == null) {
             uriExternalize = Uri.EMPTY;

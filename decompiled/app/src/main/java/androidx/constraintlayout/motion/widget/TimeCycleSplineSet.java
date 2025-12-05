@@ -5,11 +5,11 @@ import android.util.SparseArray;
 import android.view.View;
 import androidx.constraintlayout.motion.utils.CurveFit;
 import androidx.constraintlayout.widget.ConstraintAttribute;
-import b.d.b.a.a;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.DecimalFormat;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class TimeCycleSplineSet {
@@ -429,9 +429,9 @@ public abstract class TimeCycleSplineSet {
     public void setup(int i) {
         int i2 = this.count;
         if (i2 == 0) {
-            StringBuilder sbU = a.U("Error no points added to ");
-            sbU.append(this.mType);
-            Log.e(TAG, sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Error no points added to ");
+            sbM833U.append(this.mType);
+            Log.e(TAG, sbM833U.toString());
             return;
         }
         Sort.doubleQuickSort(this.mTimePoints, this.mValues, 0, i2 - 1);
@@ -474,12 +474,12 @@ public abstract class TimeCycleSplineSet {
         String string = this.mType;
         DecimalFormat decimalFormat = new DecimalFormat("##.##");
         for (int i = 0; i < this.count; i++) {
-            StringBuilder sbX = a.X(string, "[");
-            sbX.append(this.mTimePoints[i]);
-            sbX.append(" , ");
-            sbX.append(decimalFormat.format(this.mValues[i]));
-            sbX.append("] ");
-            string = sbX.toString();
+            StringBuilder sbM836X = outline.m836X(string, "[");
+            sbM836X.append(this.mTimePoints[i]);
+            sbM836X.append(" , ");
+            sbM836X.append(decimalFormat.format(this.mValues[i]));
+            sbM836X.append("] ");
+            string = sbM836X.toString();
         }
         return string;
     }

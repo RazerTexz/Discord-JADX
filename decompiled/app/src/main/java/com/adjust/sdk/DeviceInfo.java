@@ -10,10 +10,10 @@ import android.os.Build;
 import android.util.DisplayMetrics;
 import androidx.core.app.NotificationCompat;
 import androidx.vectordrawable.graphics.drawable.PathInterpolatorCompat;
-import b.d.b.a.a;
 import com.adjust.sdk.GooglePlayServicesClient;
 import java.util.Date;
 import java.util.Locale;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class DeviceInfo {
@@ -86,9 +86,9 @@ public class DeviceInfo {
     }
 
     private String getApiLevel() {
-        StringBuilder sbU = a.U("");
-        sbU.append(Build.VERSION.SDK_INT);
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("");
+        sbM833U.append(Build.VERSION.SDK_INT);
+        return sbM833U.toString();
     }
 
     private String getAppInstallTime(Context context) {

@@ -4,15 +4,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import androidx.core.app.NotificationCompat;
 import com.discord.utilities.analytics.Traits;
-import d0.z.d.m;
-import j0.k.b;
-import j0.p.a;
 import java.util.concurrent.TimeUnit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Subscription;
-import rx.functions.Action0;
-import rx.functions.Action1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p637j0.p638j.p640b.AndroidSchedulers;
+import p637j0.p641k.Func1;
+import p637j0.p653p.Schedulers2;
+import p658rx.Observable;
+import p658rx.Subscription;
+import p658rx.functions.Action0;
+import p658rx.functions.Action1;
 
 /* compiled from: RepeatingOnTouchListener.kt */
 /* loaded from: classes2.dex */
@@ -25,12 +26,12 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
     private final TimeUnit timeUnit;
 
     /* compiled from: RepeatingOnTouchListener.kt */
-    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Long, Observable<? extends Long>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$1 */
+    public static final class C68431<T, R> implements Func1<Long, Observable<? extends Long>> {
+        public C68431() {
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Observable<? extends Long> call(Long l) {
             return call2(l);
         }
@@ -38,17 +39,17 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Long> call2(Long l) {
             long repeatRate = RepeatingOnTouchListener.this.getRepeatRate();
-            return Observable.F(repeatRate, repeatRate, RepeatingOnTouchListener.this.getTimeUnit(), a.a());
+            return Observable.m11062F(repeatRate, repeatRate, RepeatingOnTouchListener.this.getTimeUnit(), Schedulers2.m10873a());
         }
     }
 
     /* compiled from: RepeatingOnTouchListener.kt */
-    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$2, reason: invalid class name */
-    public static final class AnonymousClass2<T> implements Action1<Long> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$2 */
+    public static final class C68442<T> implements Action1<Long> {
+        public C68442() {
         }
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Long l) {
             call2(l);
         }
@@ -60,11 +61,11 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
     }
 
     /* compiled from: RepeatingOnTouchListener.kt */
-    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$3, reason: invalid class name */
-    public static final class AnonymousClass3<T> implements Action1<Throwable> {
-        public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
+    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$3 */
+    public static final class C68453<T> implements Action1<Throwable> {
+        public static final C68453 INSTANCE = new C68453();
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Throwable th) {
             call2(th);
         }
@@ -79,9 +80,9 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
     }
 
     public RepeatingOnTouchListener(long j, long j2, TimeUnit timeUnit, Action0 action0, Action0 action02) {
-        m.checkNotNullParameter(timeUnit, "timeUnit");
-        m.checkNotNullParameter(action0, "action");
-        m.checkNotNullParameter(action02, "initialAction");
+        Intrinsics3.checkNotNullParameter(timeUnit, "timeUnit");
+        Intrinsics3.checkNotNullParameter(action0, "action");
+        Intrinsics3.checkNotNullParameter(action02, "initialAction");
         this.initialDelay = j;
         this.repeatRate = j2;
         this.timeUnit = timeUnit;
@@ -90,7 +91,7 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
     }
 
     private final void subscribe() {
-        this.subscription = Observable.d0(this.initialDelay, this.timeUnit).A(new AnonymousClass1()).J(j0.j.b.a.a()).W(new AnonymousClass2(), AnonymousClass3.INSTANCE);
+        this.subscription = Observable.m11068d0(this.initialDelay, this.timeUnit).m11082A(new C68431()).m11084J(AndroidSchedulers.m10738a()).m11097W(new C68442(), C68453.INSTANCE);
     }
 
     public final Action0 getAction() {

@@ -14,45 +14,52 @@ import com.google.android.material.textfield.TextInputLayout;
 /* loaded from: classes.dex */
 public final class WidgetSettingsAccountChangePasswordBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f17818a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ImageView f2596b;
+    public final ImageView f17819b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextInputLayout c;
+    public final TextInputLayout f17820c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextInputLayout d;
+    public final TextInputLayout f17821d;
 
+    /* renamed from: e */
     @NonNull
-    public final LoadingButton e;
+    public final LoadingButton f17822e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextInputLayout f;
+    public final TextInputLayout f17823f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f17824g;
 
+    /* renamed from: h */
     @NonNull
-    public final DimmerView h;
+    public final DimmerView f17825h;
 
     public WidgetSettingsAccountChangePasswordBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull ImageView imageView, @NonNull TextInputLayout textInputLayout, @NonNull TextInputLayout textInputLayout2, @NonNull LoadingButton loadingButton, @NonNull ScreenTitleView screenTitleView, @NonNull TextInputLayout textInputLayout3, @NonNull TextView textView, @NonNull DimmerView dimmerView) {
-        this.a = coordinatorLayout;
-        this.f2596b = imageView;
-        this.c = textInputLayout;
-        this.d = textInputLayout2;
-        this.e = loadingButton;
-        this.f = textInputLayout3;
-        this.g = textView;
-        this.h = dimmerView;
+        this.f17818a = coordinatorLayout;
+        this.f17819b = imageView;
+        this.f17820c = textInputLayout;
+        this.f17821d = textInputLayout2;
+        this.f17822e = loadingButton;
+        this.f17823f = textInputLayout3;
+        this.f17824g = textView;
+        this.f17825h = dimmerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17818a;
     }
 }

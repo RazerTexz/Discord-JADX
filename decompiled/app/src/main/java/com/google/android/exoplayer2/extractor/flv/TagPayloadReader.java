@@ -1,12 +1,14 @@
 package com.google.android.exoplayer2.extractor.flv;
 
-import b.i.a.c.f3.x;
-import b.i.a.c.x2.w;
 import com.google.android.exoplayer2.ParserException;
+import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
+import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
 /* loaded from: classes3.dex */
 public abstract class TagPayloadReader {
-    public final w a;
+
+    /* renamed from: a */
+    public final TrackOutput2 f19856a;
 
     public static final class UnsupportedFormatException extends ParserException {
         public UnsupportedFormatException(String str) {
@@ -14,15 +16,18 @@ public abstract class TagPayloadReader {
         }
     }
 
-    public TagPayloadReader(w wVar) {
-        this.a = wVar;
+    public TagPayloadReader(TrackOutput2 trackOutput2) {
+        this.f19856a = trackOutput2;
     }
 
-    public final boolean a(x xVar, long j) throws ParserException {
-        return b(xVar) && c(xVar, j);
+    /* renamed from: a */
+    public final boolean m8837a(ParsableByteArray parsableByteArray, long j) throws ParserException {
+        return mo3657b(parsableByteArray) && mo3658c(parsableByteArray, j);
     }
 
-    public abstract boolean b(x xVar) throws ParserException;
+    /* renamed from: b */
+    public abstract boolean mo3657b(ParsableByteArray parsableByteArray) throws ParserException;
 
-    public abstract boolean c(x xVar, long j) throws ParserException;
+    /* renamed from: c */
+    public abstract boolean mo3658c(ParsableByteArray parsableByteArray, long j) throws ParserException;
 }

@@ -21,9 +21,9 @@ public abstract class VolumeProviderCompat {
     private final int mMaxVolume;
     private VolumeProvider mVolumeProviderFwk;
 
-    /* renamed from: androidx.media.VolumeProviderCompat$1, reason: invalid class name */
-    public class AnonymousClass1 extends VolumeProvider {
-        public AnonymousClass1(int i, int i2, int i3, String str) {
+    /* renamed from: androidx.media.VolumeProviderCompat$1 */
+    public class C05001 extends VolumeProvider {
+        public C05001(int i, int i2, int i3, String str) {
             super(i, i2, i3, str);
         }
 
@@ -38,9 +38,9 @@ public abstract class VolumeProviderCompat {
         }
     }
 
-    /* renamed from: androidx.media.VolumeProviderCompat$2, reason: invalid class name */
-    public class AnonymousClass2 extends VolumeProvider {
-        public AnonymousClass2(int i, int i2, int i3) {
+    /* renamed from: androidx.media.VolumeProviderCompat$2 */
+    public class C05012 extends VolumeProvider {
+        public C05012(int i, int i2, int i3) {
             super(i, i2, i3);
         }
 
@@ -100,9 +100,9 @@ public abstract class VolumeProviderCompat {
     public Object getVolumeProvider() {
         if (this.mVolumeProviderFwk == null) {
             if (Build.VERSION.SDK_INT >= 30) {
-                this.mVolumeProviderFwk = new AnonymousClass1(this.mControlType, this.mMaxVolume, this.mCurrentVolume, this.mControlId);
+                this.mVolumeProviderFwk = new C05001(this.mControlType, this.mMaxVolume, this.mCurrentVolume, this.mControlId);
             } else {
-                this.mVolumeProviderFwk = new AnonymousClass2(this.mControlType, this.mMaxVolume, this.mCurrentVolume);
+                this.mVolumeProviderFwk = new C05012(this.mControlType, this.mMaxVolume, this.mCurrentVolume);
             }
         }
         return this.mVolumeProviderFwk;

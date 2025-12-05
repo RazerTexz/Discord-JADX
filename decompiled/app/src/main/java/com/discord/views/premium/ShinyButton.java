@@ -11,52 +11,52 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
-import b.a.i.n1;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.color.ColorCompatKt;
-import d0.z.d.m;
+import com.discord.utilities.color.ColorCompat2;
+import p007b.p008a.p025i.ShinyButtonBinding;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ShinyButton.kt */
 /* loaded from: classes2.dex */
 public final class ShinyButton extends RelativeLayout {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final n1 binding;
+    public final ShinyButtonBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ShinyButton(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
-        m.checkNotNullParameter(context, "context");
-        LayoutInflater.from(context).inflate(R.layout.shiny_button, this);
-        int i = R.id.button_container;
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.button_container);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        LayoutInflater.from(context).inflate(C5419R.layout.shiny_button, this);
+        int i = C5419R.id.button_container;
+        LinearLayout linearLayout = (LinearLayout) findViewById(C5419R.id.button_container);
         if (linearLayout != null) {
-            i = R.id.icon;
-            ImageView imageView = (ImageView) findViewById(R.id.icon);
+            i = C5419R.id.icon;
+            ImageView imageView = (ImageView) findViewById(C5419R.id.icon);
             if (imageView != null) {
-                i = R.id.text;
-                TextView textView = (TextView) findViewById(R.id.text);
+                i = C5419R.id.text;
+                TextView textView = (TextView) findViewById(C5419R.id.text);
                 if (textView != null) {
-                    n1 n1Var = new n1(this, linearLayout, imageView, textView);
-                    m.checkNotNullExpressionValue(n1Var, "ShinyButtonBinding.infla…ater.from(context), this)");
-                    this.binding = n1Var;
+                    ShinyButtonBinding shinyButtonBinding = new ShinyButtonBinding(this, linearLayout, imageView, textView);
+                    Intrinsics3.checkNotNullExpressionValue(shinyButtonBinding, "ShinyButtonBinding.infla…ater.from(context), this)");
+                    this.binding = shinyButtonBinding;
                     if (attributeSet != null) {
-                        TypedArray typedArrayObtainStyledAttributes = context.getTheme().obtainStyledAttributes(attributeSet, R.a.ShinyButton, 0, 0);
+                        TypedArray typedArrayObtainStyledAttributes = context.getTheme().obtainStyledAttributes(attributeSet, C5419R.a.ShinyButton, 0, 0);
                         try {
                             String string = typedArrayObtainStyledAttributes.getString(3);
                             if (string != null) {
-                                m.checkNotNullExpressionValue(string, "it");
+                                Intrinsics3.checkNotNullExpressionValue(string, "it");
                                 setText(string);
                             }
                             Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(2);
                             if (drawable != null) {
-                                m.checkNotNullExpressionValue(drawable, "it");
+                                Intrinsics3.checkNotNullExpressionValue(drawable, "it");
                                 setDrawable(drawable);
                             }
-                            setBackgroundTint(typedArrayObtainStyledAttributes.getColor(0, ColorCompat.getColor(context, R.color.uikit_btn_bg_color_selector_green)));
-                            int color = typedArrayObtainStyledAttributes.getColor(1, ColorCompat.getColor(context, R.color.white));
+                            setBackgroundTint(typedArrayObtainStyledAttributes.getColor(0, ColorCompat.getColor(context, C5419R.color.uikit_btn_bg_color_selector_green)));
+                            int color = typedArrayObtainStyledAttributes.getColor(1, ColorCompat.getColor(context, C5419R.color.white));
                             setTextColor(color);
                             setDrawableColor(color);
                             return;
@@ -75,42 +75,42 @@ public final class ShinyButton extends RelativeLayout {
     public void onLayout(boolean changed, int l, int t, int r, int b2) {
         super.onLayout(changed, l, t, r, b2);
         if (changed) {
-            LinearLayout linearLayout = this.binding.f165b;
-            m.checkNotNullExpressionValue(linearLayout, "binding.buttonContainer");
+            LinearLayout linearLayout = this.binding.f1071b;
+            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.buttonContainer");
             ViewGroup.LayoutParams layoutParams = linearLayout.getLayoutParams();
             layoutParams.width = getLayoutParams().width;
             layoutParams.height = getLayoutParams().height;
-            LinearLayout linearLayout2 = this.binding.f165b;
-            m.checkNotNullExpressionValue(linearLayout2, "binding.buttonContainer");
+            LinearLayout linearLayout2 = this.binding.f1071b;
+            Intrinsics3.checkNotNullExpressionValue(linearLayout2, "binding.buttonContainer");
             linearLayout2.setLayoutParams(layoutParams);
         }
     }
 
     public final void setBackgroundTint(int color) {
-        LinearLayout linearLayout = this.binding.f165b;
-        m.checkNotNullExpressionValue(linearLayout, "binding.buttonContainer");
+        LinearLayout linearLayout = this.binding.f1071b;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.buttonContainer");
         linearLayout.getBackground().setTint(color);
     }
 
     public final void setDrawable(Drawable iconStart) {
-        m.checkNotNullParameter(iconStart, "iconStart");
-        this.binding.c.setImageDrawable(iconStart);
+        Intrinsics3.checkNotNullParameter(iconStart, "iconStart");
+        this.binding.f1072c.setImageDrawable(iconStart);
     }
 
     public final void setDrawableColor(int color) {
-        ImageView imageView = this.binding.c;
-        m.checkNotNullExpressionValue(imageView, "binding.icon");
-        ColorCompatKt.tintWithColor(imageView, color);
+        ImageView imageView = this.binding.f1072c;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.icon");
+        ColorCompat2.tintWithColor(imageView, color);
     }
 
     public final void setText(String text) {
-        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
-        TextView textView = this.binding.d;
-        m.checkNotNullExpressionValue(textView, "binding.text");
+        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        TextView textView = this.binding.f1073d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.text");
         textView.setText(text);
     }
 
     public final void setTextColor(int color) {
-        this.binding.d.setTextColor(color);
+        this.binding.f1073d.setTextColor(color);
     }
 }

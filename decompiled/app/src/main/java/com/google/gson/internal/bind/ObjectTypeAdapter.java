@@ -1,6 +1,5 @@
 package com.google.gson.internal.bind;
 
-import b.i.d.o;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.internal.LinkedTreeMap;
@@ -9,17 +8,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import p007b.p225i.p408d.TypeAdapterFactory2;
 
 /* loaded from: classes3.dex */
 public final class ObjectTypeAdapter extends TypeAdapter<Object> {
-    public static final o a = new AnonymousClass1();
 
-    /* renamed from: b, reason: collision with root package name */
-    public final Gson f3121b;
+    /* renamed from: a */
+    public static final TypeAdapterFactory2 f21525a = new C111081();
 
-    /* renamed from: com.google.gson.internal.bind.ObjectTypeAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements o {
-        @Override // b.i.d.o
+    /* renamed from: b */
+    public final Gson f21526b;
+
+    /* renamed from: com.google.gson.internal.bind.ObjectTypeAdapter$1 */
+    public class C111081 implements TypeAdapterFactory2 {
+        @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             if (typeToken.getRawType() == Object.class) {
                 return new ObjectTypeAdapter(gson);
@@ -29,58 +31,58 @@ public final class ObjectTypeAdapter extends TypeAdapter<Object> {
     }
 
     public ObjectTypeAdapter(Gson gson) {
-        this.f3121b = gson;
+        this.f21526b = gson;
     }
 
     @Override // com.google.gson.TypeAdapter
     public Object read(JsonReader jsonReader) throws IOException {
-        int iOrdinal = jsonReader.N().ordinal();
+        int iOrdinal = jsonReader.mo6878N().ordinal();
         if (iOrdinal == 0) {
             ArrayList arrayList = new ArrayList();
-            jsonReader.a();
-            while (jsonReader.q()) {
+            jsonReader.mo6882a();
+            while (jsonReader.mo6888q()) {
                 arrayList.add(read(jsonReader));
             }
-            jsonReader.e();
+            jsonReader.mo6886e();
             return arrayList;
         }
         if (iOrdinal == 2) {
             LinkedTreeMap linkedTreeMap = new LinkedTreeMap();
-            jsonReader.b();
-            while (jsonReader.q()) {
-                linkedTreeMap.put(jsonReader.C(), read(jsonReader));
+            jsonReader.mo6883b();
+            while (jsonReader.mo6888q()) {
+                linkedTreeMap.put(jsonReader.mo6875C(), read(jsonReader));
             }
-            jsonReader.f();
+            jsonReader.mo6887f();
             return linkedTreeMap;
         }
         if (iOrdinal == 5) {
-            return jsonReader.J();
+            return jsonReader.mo6877J();
         }
         if (iOrdinal == 6) {
-            return Double.valueOf(jsonReader.x());
+            return Double.valueOf(jsonReader.mo6890x());
         }
         if (iOrdinal == 7) {
-            return Boolean.valueOf(jsonReader.u());
+            return Boolean.valueOf(jsonReader.mo6889u());
         }
         if (iOrdinal != 8) {
             throw new IllegalStateException();
         }
-        jsonReader.H();
+        jsonReader.mo6876H();
         return null;
     }
 
     @Override // com.google.gson.TypeAdapter
     public void write(JsonWriter jsonWriter, Object obj) throws IOException {
         if (obj == null) {
-            jsonWriter.s();
+            jsonWriter.mo6905s();
             return;
         }
-        TypeAdapter typeAdapterI = this.f3121b.i(obj.getClass());
-        if (!(typeAdapterI instanceof ObjectTypeAdapter)) {
-            typeAdapterI.write(jsonWriter, obj);
+        TypeAdapter typeAdapterM9205i = this.f21526b.m9205i(obj.getClass());
+        if (!(typeAdapterM9205i instanceof ObjectTypeAdapter)) {
+            typeAdapterM9205i.write(jsonWriter, obj);
         } else {
-            jsonWriter.c();
-            jsonWriter.f();
+            jsonWriter.mo6901c();
+            jsonWriter.mo6903f();
         }
     }
 }

@@ -55,10 +55,10 @@ public class HistogramTracker {
         return System.nanoTime();
     }
 
-    /* renamed from: lombok.core.debug.HistogramTracker$1, reason: invalid class name */
+    /* renamed from: lombok.core.debug.HistogramTracker$1 */
     /* loaded from: discord-126021.apk:lombok/core/debug/HistogramTracker$1.SCL.lombok */
-    class AnonymousClass1 extends Thread {
-        AnonymousClass1(String $anonymous0) {
+    class C128401 extends Thread {
+        C128401(String $anonymous0) {
             super($anonymous0);
         }
 
@@ -73,7 +73,7 @@ public class HistogramTracker {
     public void end(long startToken) {
         long[] newBars;
         if (!this.addedSysHook.getAndSet(true)) {
-            Runtime.getRuntime().addShutdownHook(new AnonymousClass1("Histogram Printer"));
+            Runtime.getRuntime().addShutdownHook(new C128401("Histogram Printer"));
         }
         long end = System.nanoTime();
         long now = System.currentTimeMillis();

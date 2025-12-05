@@ -6,12 +6,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.room.migration.Migration;
-import androidx.sqlite.db.SimpleSQLiteQuery;
-import androidx.sqlite.db.SupportSQLiteDatabase;
-import androidx.sqlite.db.SupportSQLiteOpenHelper;
-import b.d.b.a.a;
+import androidx.sqlite.p006db.SimpleSQLiteQuery;
+import androidx.sqlite.p006db.SupportSQLiteDatabase;
+import androidx.sqlite.p006db.SupportSQLiteOpenHelper;
 import java.util.Iterator;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
@@ -92,9 +92,9 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
                 updateIdentity(supportSQLiteDatabase);
                 return;
             } else {
-                StringBuilder sbU = a.U("Pre-packaged database has an invalid schema: ");
-                sbU.append(validationResultOnValidateSchema.expectedFoundMsg);
-                throw new IllegalStateException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("Pre-packaged database has an invalid schema: ");
+                sbM833U.append(validationResultOnValidateSchema.expectedFoundMsg);
+                throw new IllegalStateException(sbM833U.toString());
             }
         }
         Cursor cursorQuery = supportSQLiteDatabase.query(new SimpleSQLiteQuery(RoomMasterTable.READ_QUERY));
@@ -161,9 +161,9 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
         if (!zHasEmptySchema) {
             ValidationResult validationResultOnValidateSchema = this.mDelegate.onValidateSchema(supportSQLiteDatabase);
             if (!validationResultOnValidateSchema.isValid) {
-                StringBuilder sbU = a.U("Pre-packaged database has an invalid schema: ");
-                sbU.append(validationResultOnValidateSchema.expectedFoundMsg);
-                throw new IllegalStateException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("Pre-packaged database has an invalid schema: ");
+                sbM833U.append(validationResultOnValidateSchema.expectedFoundMsg);
+                throw new IllegalStateException(sbM833U.toString());
             }
         }
         updateIdentity(supportSQLiteDatabase);
@@ -198,9 +198,9 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
             }
             ValidationResult validationResultOnValidateSchema = this.mDelegate.onValidateSchema(supportSQLiteDatabase);
             if (!validationResultOnValidateSchema.isValid) {
-                StringBuilder sbU = a.U("Migration didn't properly handle: ");
-                sbU.append(validationResultOnValidateSchema.expectedFoundMsg);
-                throw new IllegalStateException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("Migration didn't properly handle: ");
+                sbM833U.append(validationResultOnValidateSchema.expectedFoundMsg);
+                throw new IllegalStateException(sbM833U.toString());
             }
             this.mDelegate.onPostMigrate(supportSQLiteDatabase);
             updateIdentity(supportSQLiteDatabase);

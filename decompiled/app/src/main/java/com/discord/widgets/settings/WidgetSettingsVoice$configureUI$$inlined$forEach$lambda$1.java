@@ -2,7 +2,7 @@ package com.discord.widgets.settings;
 
 import androidx.core.app.NotificationCompat;
 import com.discord.views.CheckedSetting;
-import rx.functions.Action1;
+import p658rx.functions.Action1;
 
 /* compiled from: WidgetSettingsVoice.kt */
 /* loaded from: classes2.dex */
@@ -15,14 +15,14 @@ public final class WidgetSettingsVoice$configureUI$$inlined$forEach$lambda$1<T> 
         this.this$0 = widgetSettingsVoice;
     }
 
-    @Override // rx.functions.Action1
+    @Override // p658rx.functions.Action1
     public /* bridge */ /* synthetic */ void call(Boolean bool) {
         call2(bool);
     }
 
     /* renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Boolean bool) {
-        WidgetSettingsVoice.access$getOpenSLESConfigRadioManager$p(this.this$0).a(this.$button);
+        WidgetSettingsVoice.access$getOpenSLESConfigRadioManager$p(this.this$0).m8550a(this.$button);
         WidgetSettingsVoice.access$onOpenSLESConfigChanged(this.this$0);
     }
 }

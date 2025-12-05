@@ -17,12 +17,12 @@ import java.util.HashMap;
 public class MultiInstanceInvalidationService extends Service {
     public int mMaxClientId = 0;
     public final HashMap<Integer, String> mClientNames = new HashMap<>();
-    public final RemoteCallbackList<IMultiInstanceInvalidationCallback> mCallbackList = new AnonymousClass1();
-    private final IMultiInstanceInvalidationService.Stub mBinder = new AnonymousClass2();
+    public final RemoteCallbackList<IMultiInstanceInvalidationCallback> mCallbackList = new RemoteCallbackListC05901();
+    private final IMultiInstanceInvalidationService.Stub mBinder = new BinderC05912();
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationService$1, reason: invalid class name */
-    public class AnonymousClass1 extends RemoteCallbackList<IMultiInstanceInvalidationCallback> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.room.MultiInstanceInvalidationService$1 */
+    public class RemoteCallbackListC05901 extends RemoteCallbackList<IMultiInstanceInvalidationCallback> {
+        public RemoteCallbackListC05901() {
         }
 
         @Override // android.os.RemoteCallbackList
@@ -35,9 +35,9 @@ public class MultiInstanceInvalidationService extends Service {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationService$2, reason: invalid class name */
-    public class AnonymousClass2 extends IMultiInstanceInvalidationService.Stub {
-        public AnonymousClass2() {
+    /* renamed from: androidx.room.MultiInstanceInvalidationService$2 */
+    public class BinderC05912 extends IMultiInstanceInvalidationService.Stub {
+        public BinderC05912() {
         }
 
         @Override // androidx.room.IMultiInstanceInvalidationService

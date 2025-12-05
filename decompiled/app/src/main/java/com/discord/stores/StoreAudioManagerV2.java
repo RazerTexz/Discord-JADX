@@ -5,18 +5,13 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
 import androidx.annotation.VisibleForTesting;
-import b.c.a.a0.d;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.rtcconnection.RtcConnection;
 import com.discord.rtcconnection.audio.DiscordAudioManager;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.voice.PerceptualVolumeUtils;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -29,7 +24,14 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p508a0.MathJVM;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreAudioManagerV2.kt */
 /* loaded from: classes2.dex */
@@ -81,8 +83,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
 
         public State(List<DiscordAudioManager.AudioDevice> list, DiscordAudioManager.DeviceTypes deviceTypes) {
-            m.checkNotNullParameter(list, "audioDevices");
-            m.checkNotNullParameter(deviceTypes, "activeAudioDevice");
+            Intrinsics3.checkNotNullParameter(list, "audioDevices");
+            Intrinsics3.checkNotNullParameter(deviceTypes, "activeAudioDevice");
             this.audioDevices = list;
             this.activeAudioDevice = deviceTypes;
         }
@@ -108,8 +110,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
 
         public final State copy(List<DiscordAudioManager.AudioDevice> audioDevices, DiscordAudioManager.DeviceTypes activeAudioDevice) {
-            m.checkNotNullParameter(audioDevices, "audioDevices");
-            m.checkNotNullParameter(activeAudioDevice, "activeAudioDevice");
+            Intrinsics3.checkNotNullParameter(audioDevices, "audioDevices");
+            Intrinsics3.checkNotNullParameter(activeAudioDevice, "activeAudioDevice");
             return new State(audioDevices, activeAudioDevice);
         }
 
@@ -121,7 +123,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 return false;
             }
             State state = (State) other;
-            return m.areEqual(this.audioDevices, state.audioDevices) && m.areEqual(this.activeAudioDevice, state.activeAudioDevice);
+            return Intrinsics3.areEqual(this.audioDevices, state.audioDevices) && Intrinsics3.areEqual(this.activeAudioDevice, state.activeAudioDevice);
         }
 
         public final DiscordAudioManager.DeviceTypes getActiveAudioDevice() {
@@ -140,29 +142,29 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
 
         public final void setActiveAudioDevice(DiscordAudioManager.DeviceTypes deviceTypes) {
-            m.checkNotNullParameter(deviceTypes, "<set-?>");
+            Intrinsics3.checkNotNullParameter(deviceTypes, "<set-?>");
             this.activeAudioDevice = deviceTypes;
         }
 
         public final void setAudioDevices(List<DiscordAudioManager.AudioDevice> list) {
-            m.checkNotNullParameter(list, "<set-?>");
+            Intrinsics3.checkNotNullParameter(list, "<set-?>");
             this.audioDevices = list;
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("State(audioDevices=");
-            sbU.append(this.audioDevices);
-            sbU.append(", activeAudioDevice=");
-            sbU.append(this.activeAudioDevice);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("State(audioDevices=");
+            sbM833U.append(this.audioDevices);
+            sbM833U.append(", activeAudioDevice=");
+            sbM833U.append(this.activeAudioDevice);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
 
         /* JADX WARN: Illegal instructions before constructor call */
         public /* synthetic */ State(List list, DiscordAudioManager.DeviceTypes deviceTypes, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 1) != 0) {
-                DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-                list = DiscordAudioManager.f();
+                DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+                list = DiscordAudioManager.m8482f();
             }
             this(list, (i & 2) != 0 ? DiscordAudioManager.DeviceTypes.INVALID : deviceTypes);
         }
@@ -175,20 +177,20 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         private final StoreVoiceStates voiceStatesStore;
 
         public VideoUseDetector(StoreChannels storeChannels, StoreVoiceStates storeVoiceStates, StoreUser storeUser) {
-            m.checkNotNullParameter(storeChannels, "channelsStore");
-            m.checkNotNullParameter(storeVoiceStates, "voiceStatesStore");
-            m.checkNotNullParameter(storeUser, "usersStore");
+            Intrinsics3.checkNotNullParameter(storeChannels, "channelsStore");
+            Intrinsics3.checkNotNullParameter(storeVoiceStates, "voiceStatesStore");
+            Intrinsics3.checkNotNullParameter(storeUser, "usersStore");
             this.channelsStore = storeChannels;
             this.voiceStatesStore = storeVoiceStates;
             this.usersStore = storeUser;
         }
 
-        @StoreThread
+        @Store3
         private final Map<Long, VoiceState> getVoiceStatesForChannel(long channelId) {
             Channel channelFindChannelByIdInternal$app_productionGoogleRelease = this.channelsStore.findChannelByIdInternal$app_productionGoogleRelease(channelId);
             Map<Long, VoiceState> map = this.voiceStatesStore.getInternal$app_productionGoogleRelease().get(channelFindChannelByIdInternal$app_productionGoogleRelease != null ? Long.valueOf(channelFindChannelByIdInternal$app_productionGoogleRelease.getGuildId()) : null);
             if (map == null) {
-                return h0.emptyMap();
+                return Maps6.emptyMap();
             }
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             for (Map.Entry<Long, VoiceState> entry : map.entrySet()) {
@@ -200,13 +202,13 @@ public final class StoreAudioManagerV2 extends StoreV2 {
             return linkedHashMap;
         }
 
-        @StoreThread
+        @Store3
         public final boolean isMyVideoOn(long channelId) {
             VoiceState voiceState = getVoiceStatesForChannel(channelId).get(Long.valueOf(this.usersStore.getMe().getId()));
             if (voiceState == null) {
                 return false;
             }
-            m.checkNotNullParameter(voiceState, "$this$hasVideo");
+            Intrinsics3.checkNotNullParameter(voiceState, "$this$hasVideo");
             return voiceState.getSelfStream() || voiceState.getSelfVideo();
         }
     }
@@ -223,44 +225,44 @@ public final class StoreAudioManagerV2 extends StoreV2 {
     }
 
     /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$handleRtcConnectionState$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StoreAudioManagerV2$handleRtcConnectionState$1 */
+    public static final class RunnableC57521 implements Runnable {
+        public static final RunnableC57521 INSTANCE = new RunnableC57521();
 
         @Override // java.lang.Runnable
         public final void run() {
-            DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-            DiscordAudioManager.d().h(true);
+            DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+            DiscordAudioManager.m8481d().m8488h(true);
         }
     }
 
     /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$handleRtcConnectionState$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements Runnable {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.stores.StoreAudioManagerV2$handleRtcConnectionState$2 */
+    public static final class RunnableC57532 implements Runnable {
+        public static final RunnableC57532 INSTANCE = new RunnableC57532();
 
         @Override // java.lang.Runnable
         public final void run() {
-            DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-            DiscordAudioManager.d().h(false);
+            DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+            DiscordAudioManager.m8481d().m8488h(false);
         }
     }
 
     /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
+    /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1 */
+    public static final class RunnableC57541 implements Runnable {
 
         /* compiled from: StoreAudioManagerV2.kt */
-        /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02071 extends o implements Function1<List<? extends DiscordAudioManager.AudioDevice>, Unit> {
+        /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends DiscordAudioManager.AudioDevice>, Unit> {
 
             /* compiled from: StoreAudioManagerV2.kt */
             /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02081 extends o implements Function0<Unit> {
+            public static final class C132491 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $it;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C02081(List list) {
+                public C132491(List list) {
                     super(0);
                     this.$it = list;
                 }
@@ -268,7 +270,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -277,34 +279,34 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 }
             }
 
-            public C02071() {
+            public AnonymousClass1() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(List<? extends DiscordAudioManager.AudioDevice> list) {
                 invoke2((List<DiscordAudioManager.AudioDevice>) list);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<DiscordAudioManager.AudioDevice> list) {
-                m.checkNotNullParameter(list, "it");
-                StoreAudioManagerV2.access$getDispatcher$p(StoreAudioManagerV2.this).schedule(new C02081(list));
+                Intrinsics3.checkNotNullParameter(list, "it");
+                StoreAudioManagerV2.access$getDispatcher$p(StoreAudioManagerV2.this).schedule(new C132491(list));
             }
         }
 
         /* compiled from: StoreAudioManagerV2.kt */
         /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends o implements Function1<DiscordAudioManager.DeviceTypes, Unit> {
+        public static final class AnonymousClass2 extends Lambda implements Function1<DiscordAudioManager.DeviceTypes, Unit> {
 
             /* compiled from: StoreAudioManagerV2.kt */
-            /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02091 extends o implements Function0<Unit> {
+            /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$2$1, reason: invalid class name */
+            public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ DiscordAudioManager.DeviceTypes $it;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C02091(DiscordAudioManager.DeviceTypes deviceTypes) {
+                public AnonymousClass1(DiscordAudioManager.DeviceTypes deviceTypes) {
                     super(0);
                     this.$it = deviceTypes;
                 }
@@ -312,7 +314,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -328,27 +330,27 @@ public final class StoreAudioManagerV2 extends StoreV2 {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(DiscordAudioManager.DeviceTypes deviceTypes) {
                 invoke2(deviceTypes);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(DiscordAudioManager.DeviceTypes deviceTypes) {
-                m.checkNotNullParameter(deviceTypes, "it");
-                StoreAudioManagerV2.access$getDispatcher$p(StoreAudioManagerV2.this).schedule(new C02091(deviceTypes));
+                Intrinsics3.checkNotNullParameter(deviceTypes, "it");
+                StoreAudioManagerV2.access$getDispatcher$p(StoreAudioManagerV2.this).schedule(new AnonymousClass1(deviceTypes));
             }
         }
 
         /* compiled from: StoreAudioManagerV2.kt */
         /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$3, reason: invalid class name */
-        public static final class AnonymousClass3 extends o implements Function1<Integer, Unit> {
+        public static final class AnonymousClass3 extends Lambda implements Function1<Integer, Unit> {
 
             /* compiled from: StoreAudioManagerV2.kt */
-            /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$3$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02101 extends o implements Function0<Unit> {
+            /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$3$1, reason: invalid class name */
+            public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ int $it;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C02101(int i) {
+                public AnonymousClass1(int i) {
                     super(0);
                     this.$it = i;
                 }
@@ -356,7 +358,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -372,36 +374,36 @@ public final class StoreAudioManagerV2 extends StoreV2 {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
                 invoke(num.intValue());
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             public final void invoke(int i) {
-                StoreAudioManagerV2.access$getDispatcher$p(StoreAudioManagerV2.this).schedule(new C02101(i));
+                StoreAudioManagerV2.access$getDispatcher$p(StoreAudioManagerV2.this).schedule(new AnonymousClass1(i));
             }
         }
 
-        public AnonymousClass1() {
+        public RunnableC57541() {
         }
 
         @Override // java.lang.Runnable
         public final void run() {
-            DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-            Observable<List<DiscordAudioManager.AudioDevice>> observableR = DiscordAudioManager.d().f2785s.r();
-            m.checkNotNullExpressionValue(observableR, "audioDevicesSubject.distinctUntilChanged()");
-            ObservableExtensionsKt.appSubscribe$default(observableR, StoreAudioManagerV2.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C02071(), 62, (Object) null);
-            Observable<DiscordAudioManager.DeviceTypes> observableR2 = DiscordAudioManager.d().u.r();
-            m.checkNotNullExpressionValue(observableR2, "activeAudioDeviceSubject.distinctUntilChanged()");
-            ObservableExtensionsKt.appSubscribe$default(observableR2, StoreAudioManagerV2.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
-            Observable<Integer> observableR3 = DiscordAudioManager.d().f2787y.r();
-            m.checkNotNullExpressionValue(observableR3, "currentMediaVolumeSubject.distinctUntilChanged()");
-            ObservableExtensionsKt.appSubscribe$default(observableR3, StoreAudioManagerV2.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
+            DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+            Observable<List<DiscordAudioManager.AudioDevice>> observableM11112r = DiscordAudioManager.m8481d().f18848s.m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r, "audioDevicesSubject.distinctUntilChanged()");
+            ObservableExtensionsKt.appSubscribe$default(observableM11112r, StoreAudioManagerV2.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+            Observable<DiscordAudioManager.DeviceTypes> observableM11112r2 = DiscordAudioManager.m8481d().f18850u.m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r2, "activeAudioDeviceSubject.distinctUntilChanged()");
+            ObservableExtensionsKt.appSubscribe$default(observableM11112r2, StoreAudioManagerV2.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+            Observable<Integer> observableM11112r3 = DiscordAudioManager.m8481d().f18854y.m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r3, "currentMediaVolumeSubject.distinctUntilChanged()");
+            ObservableExtensionsKt.appSubscribe$default(observableM11112r3, StoreAudioManagerV2.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
         }
     }
 
     /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$observeAudioManagerState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<State> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreAudioManagerV2$observeAudioManagerState$1 */
+    public static final class C57551 extends Lambda implements Function0<State> {
+        public C57551() {
             super(0);
         }
 
@@ -418,11 +420,11 @@ public final class StoreAudioManagerV2 extends StoreV2 {
     }
 
     /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$selectOutputDevice$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
+    /* renamed from: com.discord.stores.StoreAudioManagerV2$selectOutputDevice$1 */
+    public static final class RunnableC57561 implements Runnable {
         public final /* synthetic */ DiscordAudioManager.DeviceTypes $device;
 
-        public AnonymousClass1(DiscordAudioManager.DeviceTypes deviceTypes) {
+        public RunnableC57561(DiscordAudioManager.DeviceTypes deviceTypes) {
             this.$device = deviceTypes;
         }
 
@@ -431,31 +433,31 @@ public final class StoreAudioManagerV2 extends StoreV2 {
             ArrayList arrayList;
             boolean z2;
             boolean z3;
-            DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-            DiscordAudioManager discordAudioManagerD = DiscordAudioManager.d();
+            DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+            DiscordAudioManager discordAudioManagerM8481d = DiscordAudioManager.m8481d();
             DiscordAudioManager.DeviceTypes deviceTypes = this.$device;
-            Objects.requireNonNull(discordAudioManagerD);
-            m.checkNotNullParameter(deviceTypes, "deviceType");
-            discordAudioManagerD.c();
-            if (!discordAudioManagerD.e().f262b) {
-                d.f1("DiscordAudioManager", "Can't setDevice, requires MODIFY_AUDIO_SETTINGS.");
+            Objects.requireNonNull(discordAudioManagerM8481d);
+            Intrinsics3.checkNotNullParameter(deviceTypes, "deviceType");
+            discordAudioManagerM8481d.m8485c();
+            if (!discordAudioManagerM8481d.m8486e().f1644b) {
+                AnimatableValueParser.m517f1("DiscordAudioManager", "Can't setDevice, requires MODIFY_AUDIO_SETTINGS.");
                 return;
             }
-            d.b1("DiscordAudioManager", "setDevice(deviceType=" + deviceTypes + ')');
-            synchronized (discordAudioManagerD.i) {
-                List<DiscordAudioManager.AudioDevice> list = discordAudioManagerD.r;
-                arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(list, 10));
+            AnimatableValueParser.m501b1("DiscordAudioManager", "setDevice(deviceType=" + deviceTypes + ')');
+            synchronized (discordAudioManagerM8481d.f18838i) {
+                List<DiscordAudioManager.AudioDevice> list = discordAudioManagerM8481d.f18847r;
+                arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                 Iterator<T> it = list.iterator();
                 while (it.hasNext()) {
-                    arrayList.add(DiscordAudioManager.AudioDevice.a((DiscordAudioManager.AudioDevice) it.next(), null, false, null, null, 15));
+                    arrayList.add(DiscordAudioManager.AudioDevice.m8493a((DiscordAudioManager.AudioDevice) it.next(), null, false, null, null, 15));
                 }
             }
             DiscordAudioManager.DeviceTypes deviceTypes2 = DiscordAudioManager.DeviceTypes.DEFAULT;
             if (deviceTypes == deviceTypes2) {
-                synchronized (discordAudioManagerD.i) {
-                    discordAudioManagerD.f2788z = deviceTypes2;
+                synchronized (discordAudioManagerM8481d.f18838i) {
+                    discordAudioManagerM8481d.f18855z = deviceTypes2;
                 }
-                discordAudioManagerD.a(arrayList);
+                discordAudioManagerM8481d.m8483a(arrayList);
                 return;
             }
             int iOrdinal = deviceTypes.ordinal();
@@ -468,31 +470,31 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 z2 = true;
             }
             if (z2) {
-                synchronized (discordAudioManagerD.i) {
-                    z3 = true ^ discordAudioManagerD.r.get(deviceTypes.getValue()).isAvailable;
+                synchronized (discordAudioManagerM8481d.f18838i) {
+                    z3 = true ^ discordAudioManagerM8481d.f18847r.get(deviceTypes.getValue()).isAvailable;
                 }
                 if (z3) {
                     return;
                 }
-                synchronized (discordAudioManagerD.i) {
-                    discordAudioManagerD.f2788z = deviceTypes;
+                synchronized (discordAudioManagerM8481d.f18838i) {
+                    discordAudioManagerM8481d.f18855z = deviceTypes;
                 }
-                discordAudioManagerD.b(deviceTypes);
+                discordAudioManagerM8481d.m8484b(deviceTypes);
             }
         }
     }
 
     /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$toggleSpeakerOutput$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreAudioManagerV2$toggleSpeakerOutput$1 */
+    public static final class C57571 extends Lambda implements Function0<Unit> {
+        public C57571() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -502,8 +504,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 StoreAudioManagerV2.this.selectOutputDevice(DiscordAudioManager.DeviceTypes.SPEAKERPHONE);
                 return;
             }
-            DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-            List<DiscordAudioManager.DeviceTypes> list = DiscordAudioManager.c;
+            DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+            List<DiscordAudioManager.DeviceTypes> list = DiscordAudioManager.f18828c;
             ListIterator<DiscordAudioManager.DeviceTypes> listIterator = list.listIterator(list.size());
             while (true) {
                 if (!listIterator.hasPrevious()) {
@@ -516,51 +518,51 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                     break;
                 }
             }
-            m.checkNotNull(deviceTypesPrevious);
+            Intrinsics3.checkNotNull(deviceTypesPrevious);
             StoreAudioManagerV2.this.selectOutputDevice(deviceTypesPrevious);
         }
     }
 
     /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$updateMediaVolume$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
+    /* renamed from: com.discord.stores.StoreAudioManagerV2$updateMediaVolume$1 */
+    public static final class RunnableC57581 implements Runnable {
         public final /* synthetic */ float $ratio;
 
-        public AnonymousClass1(float f) {
+        public RunnableC57581(float f) {
             this.$ratio = f;
         }
 
         @Override // java.lang.Runnable
         public final void run() {
-            DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-            DiscordAudioManager discordAudioManagerD = DiscordAudioManager.d();
+            DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+            DiscordAudioManager discordAudioManagerM8481d = DiscordAudioManager.m8481d();
             float f = this.$ratio;
-            discordAudioManagerD.c();
+            discordAudioManagerM8481d.m8485c();
             if (f < 0.0f || f > 1.0f) {
-                d.f1("DiscordAudioManager", "Unexpected media volume ratio: " + f);
+                AnimatableValueParser.m517f1("DiscordAudioManager", "Unexpected media volume ratio: " + f);
                 return;
             }
             try {
-                discordAudioManagerD.e.setStreamVolume(3, d0.a0.a.roundToInt(f * discordAudioManagerD.f2786x), 0);
+                discordAudioManagerM8481d.f18834e.setStreamVolume(3, MathJVM.roundToInt(f * discordAudioManagerM8481d.f18853x), 0);
             } catch (SecurityException e) {
-                d.f1("DiscordAudioManager", "Failed to set stream volume: " + e);
+                AnimatableValueParser.m517f1("DiscordAudioManager", "Failed to set stream volume: " + e);
             }
         }
     }
 
     static {
-        DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-        DEFAULT_STATE = new State(DiscordAudioManager.f(), DiscordAudioManager.DeviceTypes.EARPIECE);
+        DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+        DEFAULT_STATE = new State(DiscordAudioManager.m8482f(), DiscordAudioManager.DeviceTypes.EARPIECE);
     }
 
     public StoreAudioManagerV2(ObservationDeck observationDeck, Dispatcher dispatcher, StoreVoiceChannelSelected storeVoiceChannelSelected, StoreChannels storeChannels, StoreStreamRtcConnection storeStreamRtcConnection, VideoUseDetector videoUseDetector, StoreExperiments storeExperiments) {
-        m.checkNotNullParameter(observationDeck, "observationDeck");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(storeVoiceChannelSelected, "voiceChannelSelectedStore");
-        m.checkNotNullParameter(storeChannels, "channelsStore");
-        m.checkNotNullParameter(storeStreamRtcConnection, "streamRtcConnectionStore");
-        m.checkNotNullParameter(videoUseDetector, "videoUseDetector");
-        m.checkNotNullParameter(storeExperiments, "experimentsStore");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(storeVoiceChannelSelected, "voiceChannelSelectedStore");
+        Intrinsics3.checkNotNullParameter(storeChannels, "channelsStore");
+        Intrinsics3.checkNotNullParameter(storeStreamRtcConnection, "streamRtcConnectionStore");
+        Intrinsics3.checkNotNullParameter(videoUseDetector, "videoUseDetector");
+        Intrinsics3.checkNotNullParameter(storeExperiments, "experimentsStore");
         this.observationDeck = observationDeck;
         this.dispatcher = dispatcher;
         this.voiceChannelSelectedStore = storeVoiceChannelSelected;
@@ -571,8 +573,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         State state = new State(null, null, 3, null);
         this.state = state;
         this.stateSnapshot = state;
-        DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-        this.lastActiveAudioDevice = DiscordAudioManager.f2784b;
+        DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+        this.lastActiveAudioDevice = DiscordAudioManager.f18827b;
         this.audioManagerThread = new HandlerThread("AudioManagerThread", -1);
     }
 
@@ -605,7 +607,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         return this.stateSnapshot;
     }
 
-    @StoreThread
+    @Store3
     private final void updateActiveAudioDevice(DiscordAudioManager.DeviceTypes device) {
         State stateCopy$default = State.copy$default(this.state, null, device, 1, null);
         this.state = stateCopy$default;
@@ -615,15 +617,15 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void updateAudioDevices(List<DiscordAudioManager.AudioDevice> devices) {
         this.state = State.copy$default(this.state, devices, null, 2, null);
         markChanged();
     }
 
     private final void updateCurrentMediaVolume(int currentMediaVolumeIndex) {
-        DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-        this.streamRtcConnectionStore.updateStreamVolume(PerceptualVolumeUtils.INSTANCE.perceptualToAmplitude((currentMediaVolumeIndex / DiscordAudioManager.d().f2786x) * 300.0f, 300.0f));
+        DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+        this.streamRtcConnectionStore.updateStreamVolume(PerceptualVolumeUtils.INSTANCE.perceptualToAmplitude((currentMediaVolumeIndex / DiscordAudioManager.m8481d().f18853x) * 300.0f, 300.0f));
     }
 
     /* renamed from: getLastActiveAudioDevice$app_productionGoogleRelease, reason: from getter */
@@ -636,61 +638,61 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         return this.state;
     }
 
-    @StoreThread
+    @Store3
     public final void handleRtcConnectionState(RtcConnection.State state) {
-        m.checkNotNullParameter(state, "state");
-        if (m.areEqual(state, RtcConnection.State.f.a)) {
+        Intrinsics3.checkNotNullParameter(state, "state");
+        if (Intrinsics3.areEqual(state, RtcConnection.State.C5612f.f18814a)) {
             Handler handler = this.audioManagerHandler;
             if (handler == null) {
-                m.throwUninitializedPropertyAccessException("audioManagerHandler");
+                Intrinsics3.throwUninitializedPropertyAccessException("audioManagerHandler");
             }
-            handler.post(AnonymousClass1.INSTANCE);
+            handler.post(RunnableC57521.INSTANCE);
             return;
         }
-        if (!(state instanceof RtcConnection.State.d) || ((RtcConnection.State.d) state).a) {
+        if (!(state instanceof RtcConnection.State.C5610d) || ((RtcConnection.State.C5610d) state).f18812a) {
             return;
         }
         Handler handler2 = this.audioManagerHandler;
         if (handler2 == null) {
-            m.throwUninitializedPropertyAccessException("audioManagerHandler");
+            Intrinsics3.throwUninitializedPropertyAccessException("audioManagerHandler");
         }
-        handler2.post(AnonymousClass2.INSTANCE);
+        handler2.post(RunnableC57532.INSTANCE);
     }
 
-    @StoreThread
+    @Store3
     public final void handleVoiceStatesUpdated() {
         boolean zIsMyVideoOn = this.videoUseDetector.isMyVideoOn(this.voiceChannelSelectedStore.getSelectedVoiceChannelId());
         if (zIsMyVideoOn == this.prevMyVideoOn) {
             return;
         }
         if (zIsMyVideoOn) {
-            DiscordAudioManager discordAudioManager = DiscordAudioManager.d;
-            DiscordAudioManager discordAudioManagerD = DiscordAudioManager.d();
-            synchronized (discordAudioManagerD) {
-                if (discordAudioManagerD.r.get(DiscordAudioManager.DeviceTypes.EARPIECE.getValue()).isAvailable) {
-                    List<DiscordAudioManager.AudioDevice> list = discordAudioManagerD.r;
-                    ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(list, 10));
+            DiscordAudioManager discordAudioManager = DiscordAudioManager.f18829d;
+            DiscordAudioManager discordAudioManagerM8481d = DiscordAudioManager.m8481d();
+            synchronized (discordAudioManagerM8481d) {
+                if (discordAudioManagerM8481d.f18847r.get(DiscordAudioManager.DeviceTypes.EARPIECE.getValue()).isAvailable) {
+                    List<DiscordAudioManager.AudioDevice> list = discordAudioManagerM8481d.f18847r;
+                    ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                     for (DiscordAudioManager.AudioDevice audioDevice : list) {
-                        arrayList.add(audioDevice.type.ordinal() != 4 ? DiscordAudioManager.AudioDevice.a(audioDevice, null, false, null, null, 15) : DiscordAudioManager.AudioDevice.a(audioDevice, null, false, null, null, 13));
+                        arrayList.add(audioDevice.type.ordinal() != 4 ? DiscordAudioManager.AudioDevice.m8493a(audioDevice, null, false, null, null, 15) : DiscordAudioManager.AudioDevice.m8493a(audioDevice, null, false, null, null, 13));
                     }
-                    discordAudioManagerD.r = arrayList;
-                    discordAudioManagerD.f2785s.k.onNext(arrayList);
-                    discordAudioManagerD.l();
+                    discordAudioManagerM8481d.f18847r = arrayList;
+                    discordAudioManagerM8481d.f18848s.f27653k.onNext(arrayList);
+                    discordAudioManagerM8481d.m8492l();
                 }
             }
         } else {
-            DiscordAudioManager discordAudioManager2 = DiscordAudioManager.d;
-            DiscordAudioManager discordAudioManagerD2 = DiscordAudioManager.d();
-            synchronized (discordAudioManagerD2) {
-                if (discordAudioManagerD2.r.get(DiscordAudioManager.DeviceTypes.EARPIECE.getValue()).isAvailable != discordAudioManagerD2.h) {
-                    List<DiscordAudioManager.AudioDevice> list2 = discordAudioManagerD2.r;
-                    ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(list2, 10));
+            DiscordAudioManager discordAudioManager2 = DiscordAudioManager.f18829d;
+            DiscordAudioManager discordAudioManagerM8481d2 = DiscordAudioManager.m8481d();
+            synchronized (discordAudioManagerM8481d2) {
+                if (discordAudioManagerM8481d2.f18847r.get(DiscordAudioManager.DeviceTypes.EARPIECE.getValue()).isAvailable != discordAudioManagerM8481d2.f18837h) {
+                    List<DiscordAudioManager.AudioDevice> list2 = discordAudioManagerM8481d2.f18847r;
+                    ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(list2, 10));
                     for (DiscordAudioManager.AudioDevice audioDevice2 : list2) {
-                        arrayList2.add(audioDevice2.type.ordinal() != 4 ? DiscordAudioManager.AudioDevice.a(audioDevice2, null, false, null, null, 15) : DiscordAudioManager.AudioDevice.a(audioDevice2, null, discordAudioManagerD2.h, null, null, 13));
+                        arrayList2.add(audioDevice2.type.ordinal() != 4 ? DiscordAudioManager.AudioDevice.m8493a(audioDevice2, null, false, null, null, 15) : DiscordAudioManager.AudioDevice.m8493a(audioDevice2, null, discordAudioManagerM8481d2.f18837h, null, null, 13));
                     }
-                    discordAudioManagerD2.r = arrayList2;
-                    discordAudioManagerD2.f2785s.k.onNext(arrayList2);
-                    discordAudioManagerD2.l();
+                    discordAudioManagerM8481d2.f18847r = arrayList2;
+                    discordAudioManagerM8481d2.f18848s.f27653k.onNext(arrayList2);
+                    discordAudioManagerM8481d2.m8492l();
                 }
             }
         }
@@ -698,7 +700,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
     }
 
     public final void init(Application context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         this.context = context;
         if (!this.audioManagerThread.isAlive()) {
             this.audioManagerThread.start();
@@ -706,26 +708,26 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         Handler handler = new Handler(this.audioManagerThread.getLooper());
         this.audioManagerHandler = handler;
         if (handler == null) {
-            m.throwUninitializedPropertyAccessException("audioManagerHandler");
+            Intrinsics3.throwUninitializedPropertyAccessException("audioManagerHandler");
         }
-        handler.post(new AnonymousClass1());
+        handler.post(new RunnableC57541());
     }
 
     public final Observable<State> observeAudioManagerState() {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C57551(), 14, null);
     }
 
     public final void selectOutputDevice(DiscordAudioManager.DeviceTypes device) {
-        m.checkNotNullParameter(device, "device");
+        Intrinsics3.checkNotNullParameter(device, "device");
         Handler handler = this.audioManagerHandler;
         if (handler == null) {
-            m.throwUninitializedPropertyAccessException("audioManagerHandler");
+            Intrinsics3.throwUninitializedPropertyAccessException("audioManagerHandler");
         }
-        handler.post(new AnonymousClass1(device));
+        handler.post(new RunnableC57561(device));
     }
 
     public final void setState$app_productionGoogleRelease(State state) {
-        m.checkNotNullParameter(state, "<set-?>");
+        Intrinsics3.checkNotNullParameter(state, "<set-?>");
         this.state = state;
     }
 
@@ -733,23 +735,23 @@ public final class StoreAudioManagerV2 extends StoreV2 {
     public void snapshotData() {
         super.snapshotData();
         List<DiscordAudioManager.AudioDevice> audioDevices = this.state.getAudioDevices();
-        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(audioDevices, 10));
+        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(audioDevices, 10));
         Iterator<T> it = audioDevices.iterator();
         while (it.hasNext()) {
-            arrayList.add(DiscordAudioManager.AudioDevice.a((DiscordAudioManager.AudioDevice) it.next(), null, false, null, null, 15));
+            arrayList.add(DiscordAudioManager.AudioDevice.m8493a((DiscordAudioManager.AudioDevice) it.next(), null, false, null, null, 15));
         }
         this.stateSnapshot = this.state.copy(arrayList, this.state.getActiveAudioDevice());
     }
 
     public final void toggleSpeakerOutput() {
-        this.dispatcher.schedule(new AnonymousClass1());
+        this.dispatcher.schedule(new C57571());
     }
 
     public final void updateMediaVolume(float ratio) {
         Handler handler = this.audioManagerHandler;
         if (handler == null) {
-            m.throwUninitializedPropertyAccessException("audioManagerHandler");
+            Intrinsics3.throwUninitializedPropertyAccessException("audioManagerHandler");
         }
-        handler.post(new AnonymousClass1(ratio));
+        handler.post(new RunnableC57581(ratio));
     }
 }

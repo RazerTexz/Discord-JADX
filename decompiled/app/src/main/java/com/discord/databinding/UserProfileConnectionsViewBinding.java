@@ -10,29 +10,32 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class UserProfileConnectionsViewBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f15335a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2164b;
+    public final TextView f15336b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f15337c;
 
+    /* renamed from: d */
     @NonNull
-    public final RecyclerView d;
+    public final RecyclerView f15338d;
 
     public UserProfileConnectionsViewBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull RecyclerView recyclerView) {
-        this.a = linearLayout;
-        this.f2164b = textView;
-        this.c = textView2;
-        this.d = recyclerView;
+        this.f15335a = linearLayout;
+        this.f15336b = textView;
+        this.f15337c = textView2;
+        this.f15338d = recyclerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15335a;
     }
 }

@@ -22,13 +22,13 @@ public class FragmentTransition {
     public static final FragmentTransitionImpl PLATFORM_IMPL = new FragmentTransitionCompat21();
     public static final FragmentTransitionImpl SUPPORT_IMPL = resolveSupportImpl();
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransition$1 */
+    public class RunnableC03951 implements Runnable {
         public final /* synthetic */ Callback val$callback;
         public final /* synthetic */ Fragment val$outFragment;
         public final /* synthetic */ CancellationSignal val$signal;
 
-        public AnonymousClass1(Callback callback, Fragment fragment, CancellationSignal cancellationSignal) {
+        public RunnableC03951(Callback callback, Fragment fragment, CancellationSignal cancellationSignal) {
             this.val$callback = callback;
             this.val$outFragment = fragment;
             this.val$signal = cancellationSignal;
@@ -40,11 +40,11 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransition$2 */
+    public class RunnableC03962 implements Runnable {
         public final /* synthetic */ ArrayList val$exitingViews;
 
-        public AnonymousClass2(ArrayList arrayList) {
+        public RunnableC03962(ArrayList arrayList) {
             this.val$exitingViews = arrayList;
         }
 
@@ -54,13 +54,13 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransition$3 */
+    public class RunnableC03973 implements Runnable {
         public final /* synthetic */ Callback val$callback;
         public final /* synthetic */ Fragment val$outFragment;
         public final /* synthetic */ CancellationSignal val$signal;
 
-        public AnonymousClass3(Callback callback, Fragment fragment, CancellationSignal cancellationSignal) {
+        public RunnableC03973(Callback callback, Fragment fragment, CancellationSignal cancellationSignal) {
             this.val$callback = callback;
             this.val$outFragment = fragment;
             this.val$signal = cancellationSignal;
@@ -72,8 +72,8 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$4, reason: invalid class name */
-    public class AnonymousClass4 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransition$4 */
+    public class RunnableC03984 implements Runnable {
         public final /* synthetic */ Object val$enterTransition;
         public final /* synthetic */ ArrayList val$enteringViews;
         public final /* synthetic */ Object val$exitTransition;
@@ -83,7 +83,7 @@ public class FragmentTransition {
         public final /* synthetic */ View val$nonExistentView;
         public final /* synthetic */ ArrayList val$sharedElementsIn;
 
-        public AnonymousClass4(Object obj, FragmentTransitionImpl fragmentTransitionImpl, View view, Fragment fragment, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3, Object obj2) {
+        public RunnableC03984(Object obj, FragmentTransitionImpl fragmentTransitionImpl, View view, Fragment fragment, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3, Object obj2) {
             this.val$enterTransition = obj;
             this.val$impl = fragmentTransitionImpl;
             this.val$nonExistentView = view;
@@ -113,8 +113,8 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$5, reason: invalid class name */
-    public class AnonymousClass5 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransition$5 */
+    public class RunnableC03995 implements Runnable {
         public final /* synthetic */ Rect val$epicenter;
         public final /* synthetic */ View val$epicenterView;
         public final /* synthetic */ FragmentTransitionImpl val$impl;
@@ -123,7 +123,7 @@ public class FragmentTransition {
         public final /* synthetic */ ArrayMap val$inSharedElements;
         public final /* synthetic */ Fragment val$outFragment;
 
-        public AnonymousClass5(Fragment fragment, Fragment fragment2, boolean z2, ArrayMap arrayMap, View view, FragmentTransitionImpl fragmentTransitionImpl, Rect rect) {
+        public RunnableC03995(Fragment fragment, Fragment fragment2, boolean z2, ArrayMap arrayMap, View view, FragmentTransitionImpl fragmentTransitionImpl, Rect rect) {
             this.val$inFragment = fragment;
             this.val$outFragment = fragment2;
             this.val$inIsPop = z2;
@@ -143,8 +143,8 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$6, reason: invalid class name */
-    public class AnonymousClass6 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransition$6 */
+    public class RunnableC04006 implements Runnable {
         public final /* synthetic */ Object val$enterTransition;
         public final /* synthetic */ Object val$finalSharedElementTransition;
         public final /* synthetic */ FragmentContainerTransition val$fragments;
@@ -158,7 +158,7 @@ public class FragmentTransition {
         public final /* synthetic */ ArrayList val$sharedElementsIn;
         public final /* synthetic */ ArrayList val$sharedElementsOut;
 
-        public AnonymousClass6(FragmentTransitionImpl fragmentTransitionImpl, ArrayMap arrayMap, Object obj, FragmentContainerTransition fragmentContainerTransition, ArrayList arrayList, View view, Fragment fragment, Fragment fragment2, boolean z2, ArrayList arrayList2, Object obj2, Rect rect) {
+        public RunnableC04006(FragmentTransitionImpl fragmentTransitionImpl, ArrayMap arrayMap, Object obj, FragmentContainerTransition fragmentContainerTransition, ArrayList arrayList, View view, Fragment fragment, Fragment fragment2, boolean z2, ArrayList arrayList2, Object obj2, Rect rect) {
             this.val$impl = fragmentTransitionImpl;
             this.val$nameOverrides = arrayMap;
             this.val$finalSharedElementTransition = obj;
@@ -228,17 +228,17 @@ public class FragmentTransition {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private static void addToFirstInLastOut(BackStackRecord backStackRecord, FragmentTransaction.Op op, SparseArray<FragmentContainerTransition> sparseArray, boolean z2, boolean z3) {
+    private static void addToFirstInLastOut(BackStackRecord backStackRecord, FragmentTransaction.C0394Op c0394Op, SparseArray<FragmentContainerTransition> sparseArray, boolean z2, boolean z3) {
         int i;
         boolean z4;
         boolean z5;
         boolean z6;
         View view;
-        Fragment fragment = op.mFragment;
+        Fragment fragment = c0394Op.mFragment;
         if (fragment == null || (i = fragment.mContainerId) == 0) {
             return;
         }
-        int i2 = z2 ? INVERSE_OPS[op.mCmd] : op.mCmd;
+        int i2 = z2 ? INVERSE_OPS[c0394Op.mCmd] : c0394Op.mCmd;
         boolean z7 = false;
         boolean z8 = true;
         if (i2 == 1) {
@@ -586,7 +586,7 @@ public class FragmentTransition {
         } else {
             rect = null;
         }
-        OneShotPreDrawListener.add(viewGroup, new AnonymousClass6(fragmentTransitionImpl, arrayMap, obj3, fragmentContainerTransition, arrayList2, view, fragment, fragment2, z2, arrayList, obj, rect));
+        OneShotPreDrawListener.add(viewGroup, new RunnableC04006(fragmentTransitionImpl, arrayMap, obj3, fragmentContainerTransition, arrayList2, view, fragment, fragment2, z2, arrayList, obj, rect));
         return obj3;
     }
 
@@ -638,7 +638,7 @@ public class FragmentTransition {
             view2 = null;
             rect = null;
         }
-        OneShotPreDrawListener.add(viewGroup, new AnonymousClass5(fragment, fragment2, z2, arrayMapCaptureInSharedElements, view2, fragmentTransitionImpl, rect));
+        OneShotPreDrawListener.add(viewGroup, new RunnableC03995(fragment, fragment2, z2, arrayMapCaptureInSharedElements, view2, fragmentTransitionImpl, rect));
         return obj3;
     }
 
@@ -675,7 +675,7 @@ public class FragmentTransition {
         if (fragment2 != null && arrayListConfigureEnteringExitingViews != null && (arrayListConfigureEnteringExitingViews.size() > 0 || arrayList.size() > 0)) {
             CancellationSignal cancellationSignal = new CancellationSignal();
             callback.onStart(fragment2, cancellationSignal);
-            fragmentTransitionImplChooseImpl.setListenerForTransitionEnd(fragment2, objMergeTransitions, cancellationSignal, new AnonymousClass3(callback, fragment2, cancellationSignal));
+            fragmentTransitionImplChooseImpl.setListenerForTransitionEnd(fragment2, objMergeTransitions, cancellationSignal, new RunnableC03973(callback, fragment2, cancellationSignal));
         }
         if (objMergeTransitions != null) {
             ArrayList<View> arrayList3 = new ArrayList<>();
@@ -717,7 +717,7 @@ public class FragmentTransition {
         if (fragment2 != null && arrayListConfigureEnteringExitingViews != null && (arrayListConfigureEnteringExitingViews.size() > 0 || arrayList2.size() > 0)) {
             CancellationSignal cancellationSignal = new CancellationSignal();
             callback.onStart(fragment2, cancellationSignal);
-            fragmentTransitionImplChooseImpl.setListenerForTransitionEnd(fragment2, objMergeTransitions, cancellationSignal, new AnonymousClass1(callback, fragment2, cancellationSignal));
+            fragmentTransitionImplChooseImpl.setListenerForTransitionEnd(fragment2, objMergeTransitions, cancellationSignal, new RunnableC03951(callback, fragment2, cancellationSignal));
         }
         if (objMergeTransitions != null) {
             replaceHide(fragmentTransitionImplChooseImpl, obj, fragment2, arrayListConfigureEnteringExitingViews);
@@ -787,7 +787,7 @@ public class FragmentTransition {
         if (fragment != null && obj != null && fragment.mAdded && fragment.mHidden && fragment.mHiddenChanged) {
             fragment.setHideReplaced(true);
             fragmentTransitionImpl.scheduleHideFragmentView(obj, fragment.getView(), arrayList);
-            OneShotPreDrawListener.add(fragment.mContainer, new AnonymousClass2(arrayList));
+            OneShotPreDrawListener.add(fragment.mContainer, new RunnableC03962(arrayList));
         }
     }
 
@@ -808,7 +808,7 @@ public class FragmentTransition {
     }
 
     private static void scheduleTargetChange(FragmentTransitionImpl fragmentTransitionImpl, ViewGroup viewGroup, Fragment fragment, View view, ArrayList<View> arrayList, Object obj, ArrayList<View> arrayList2, Object obj2, ArrayList<View> arrayList3) {
-        OneShotPreDrawListener.add(viewGroup, new AnonymousClass4(obj, fragmentTransitionImpl, view, fragment, arrayList, arrayList2, arrayList3, obj2));
+        OneShotPreDrawListener.add(viewGroup, new RunnableC03984(obj, fragmentTransitionImpl, view, fragment, arrayList, arrayList2, arrayList3, obj2));
     }
 
     private static void setOutEpicenter(FragmentTransitionImpl fragmentTransitionImpl, Object obj, Object obj2, ArrayMap<String, View> arrayMap, boolean z2, BackStackRecord backStackRecord) {

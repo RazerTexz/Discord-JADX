@@ -11,25 +11,27 @@ import com.discord.views.CodeVerificationView;
 /* loaded from: classes.dex */
 public final class WidgetAuthMfaBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f15692a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final CodeVerificationView f2234b;
+    public final CodeVerificationView f15693b;
 
+    /* renamed from: c */
     @NonNull
-    public final DimmerView c;
+    public final DimmerView f15694c;
 
     public WidgetAuthMfaBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull TextView textView, @NonNull CodeVerificationView codeVerificationView, @NonNull DimmerView dimmerView) {
-        this.a = coordinatorLayout;
-        this.f2234b = codeVerificationView;
-        this.c = dimmerView;
+        this.f15692a = coordinatorLayout;
+        this.f15693b = codeVerificationView;
+        this.f15694c = dimmerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15692a;
     }
 }

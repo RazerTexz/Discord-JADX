@@ -1,0 +1,28 @@
+package p007b.p225i.p226a.p341g.p352k;
+
+import com.google.android.material.C10817R;
+import com.google.android.material.button.MaterialButtonToggleGroup;
+import com.google.android.material.timepicker.TimePickerView;
+
+/* compiled from: TimePickerView.java */
+/* renamed from: b.i.a.g.k.k, reason: use source file name */
+/* loaded from: classes3.dex */
+public class TimePickerView2 implements MaterialButtonToggleGroup.OnButtonCheckedListener {
+
+    /* renamed from: a */
+    public final /* synthetic */ TimePickerView f11891a;
+
+    public TimePickerView2(TimePickerView timePickerView) {
+        this.f11891a = timePickerView;
+    }
+
+    @Override // com.google.android.material.button.MaterialButtonToggleGroup.OnButtonCheckedListener
+    public void onButtonChecked(MaterialButtonToggleGroup materialButtonToggleGroup, int i, boolean z2) {
+        int i2 = i == C10817R.id.material_clock_period_pm_button ? 1 : 0;
+        TimePickerView.InterfaceC11030c interfaceC11030c = this.f11891a.f21233p;
+        if (interfaceC11030c == null || !z2) {
+            return;
+        }
+        ((TimePickerClockPresenter) interfaceC11030c).f11869n.m9163d(i2);
+    }
+}

@@ -6,163 +6,198 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
 import androidx.annotation.Nullable;
-import b.i.a.c.a3.e0;
-import b.i.a.c.a3.h0;
-import b.i.a.c.a3.m;
-import b.i.a.c.f3.q;
-import b.i.a.c.x2.h;
 import com.google.android.exoplayer2.drm.DrmSession;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p242c.p243a3.BundledExtractorsAdapter;
+import p007b.p225i.p226a.p242c.p243a3.ProgressiveMediaPeriod;
+import p007b.p225i.p226a.p242c.p243a3.SampleQueue;
+import p007b.p225i.p226a.p242c.p259f3.Log2;
+import p007b.p225i.p226a.p242c.p259f3.ThreadFactoryC2735d;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
+import p007b.p225i.p226a.p242c.p267x2.Extractor;
 
 /* loaded from: classes3.dex */
 public final class Loader {
-    public static final c a = new c(2, -9223372036854775807L, null);
 
-    /* renamed from: b, reason: collision with root package name */
-    public static final c f2978b = new c(3, -9223372036854775807L, null);
-    public final ExecutorService c;
+    /* renamed from: a */
+    public static final C10768c f20229a = new C10768c(2, -9223372036854775807L, null);
 
+    /* renamed from: b */
+    public static final C10768c f20230b = new C10768c(3, -9223372036854775807L, null);
+
+    /* renamed from: c */
+    public final ExecutorService f20231c;
+
+    /* renamed from: d */
     @Nullable
-    public d<? extends e> d;
+    public HandlerC10769d<? extends InterfaceC10770e> f20232d;
 
+    /* renamed from: e */
     @Nullable
-    public IOException e;
+    public IOException f20233e;
 
     public static final class UnexpectedLoaderException extends IOException {
         /* JADX WARN: Illegal instructions before constructor call */
         public UnexpectedLoaderException(Throwable th) {
             String simpleName = th.getClass().getSimpleName();
             String message = th.getMessage();
-            super(b.d.b.a.a.l(b.d.b.a.a.b(message, simpleName.length() + 13), "Unexpected ", simpleName, ": ", message), th);
+            super(outline.m861l(outline.m841b(message, simpleName.length() + 13), "Unexpected ", simpleName, ": ", message), th);
         }
     }
 
-    public interface b<T extends e> {
-        void b(T t, long j, long j2, boolean z2);
+    /* renamed from: com.google.android.exoplayer2.upstream.Loader$b */
+    public interface InterfaceC10767b<T extends InterfaceC10770e> {
+        /* renamed from: b */
+        void mo2478b(T t, long j, long j2, boolean z2);
 
-        void d(T t, long j, long j2);
+        /* renamed from: d */
+        void mo2480d(T t, long j, long j2);
 
-        c o(T t, long j, long j2, IOException iOException, int i);
+        /* renamed from: o */
+        C10768c mo2491o(T t, long j, long j2, IOException iOException, int i);
     }
 
-    public static final class c {
-        public final int a;
+    /* renamed from: com.google.android.exoplayer2.upstream.Loader$c */
+    public static final class C10768c {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final long f2979b;
+        /* renamed from: a */
+        public final int f20234a;
 
-        public c(int i, long j, a aVar) {
-            this.a = i;
-            this.f2979b = j;
+        /* renamed from: b */
+        public final long f20235b;
+
+        public C10768c(int i, long j, C10766a c10766a) {
+            this.f20234a = i;
+            this.f20235b = j;
         }
     }
 
     @SuppressLint({"HandlerLeak"})
-    public final class d<T extends e> extends Handler implements Runnable {
-        public final int j;
-        public final T k;
-        public final long l;
+    /* renamed from: com.google.android.exoplayer2.upstream.Loader$d */
+    public final class HandlerC10769d<T extends InterfaceC10770e> extends Handler implements Runnable {
 
+        /* renamed from: j */
+        public final int f20236j;
+
+        /* renamed from: k */
+        public final T f20237k;
+
+        /* renamed from: l */
+        public final long f20238l;
+
+        /* renamed from: m */
         @Nullable
-        public b<T> m;
+        public InterfaceC10767b<T> f20239m;
 
+        /* renamed from: n */
         @Nullable
-        public IOException n;
-        public int o;
+        public IOException f20240n;
 
+        /* renamed from: o */
+        public int f20241o;
+
+        /* renamed from: p */
         @Nullable
-        public Thread p;
-        public boolean q;
-        public volatile boolean r;
+        public Thread f20242p;
 
-        public d(Looper looper, T t, b<T> bVar, int i, long j) {
+        /* renamed from: q */
+        public boolean f20243q;
+
+        /* renamed from: r */
+        public volatile boolean f20244r;
+
+        public HandlerC10769d(Looper looper, T t, InterfaceC10767b<T> interfaceC10767b, int i, long j) {
             super(looper);
-            this.k = t;
-            this.m = bVar;
-            this.j = i;
-            this.l = j;
+            this.f20237k = t;
+            this.f20239m = interfaceC10767b;
+            this.f20236j = i;
+            this.f20238l = j;
         }
 
-        public void a(boolean z2) {
-            this.r = z2;
-            this.n = null;
+        /* renamed from: a */
+        public void m8941a(boolean z2) {
+            this.f20244r = z2;
+            this.f20240n = null;
             if (hasMessages(0)) {
-                this.q = true;
+                this.f20243q = true;
                 removeMessages(0);
                 if (!z2) {
                     sendEmptyMessage(1);
                 }
             } else {
                 synchronized (this) {
-                    this.q = true;
-                    ((e0.a) this.k).h = true;
-                    Thread thread = this.p;
+                    this.f20243q = true;
+                    ((ProgressiveMediaPeriod.a) this.f20237k).f5545h = true;
+                    Thread thread = this.f20242p;
                     if (thread != null) {
                         thread.interrupt();
                     }
                 }
             }
             if (z2) {
-                Loader.this.d = null;
+                Loader.this.f20232d = null;
                 long jElapsedRealtime = SystemClock.elapsedRealtime();
-                b<T> bVar = this.m;
-                Objects.requireNonNull(bVar);
-                bVar.b(this.k, jElapsedRealtime, jElapsedRealtime - this.l, true);
-                this.m = null;
+                InterfaceC10767b<T> interfaceC10767b = this.f20239m;
+                Objects.requireNonNull(interfaceC10767b);
+                interfaceC10767b.mo2478b(this.f20237k, jElapsedRealtime, jElapsedRealtime - this.f20238l, true);
+                this.f20239m = null;
             }
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public void b(long j) {
-            b.c.a.a0.d.D(Loader.this.d == null);
+        /* renamed from: b */
+        public void m8942b(long j) {
+            AnimatableValueParser.m426D(Loader.this.f20232d == null);
             Loader loader = Loader.this;
-            loader.d = this;
+            loader.f20232d = this;
             if (j > 0) {
                 sendEmptyMessageDelayed(0, j);
             } else {
-                this.n = null;
-                loader.c.execute(this);
+                this.f20240n = null;
+                loader.f20231c.execute(this);
             }
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
-            if (this.r) {
+            if (this.f20244r) {
                 return;
             }
             int i = message.what;
             if (i == 0) {
-                this.n = null;
+                this.f20240n = null;
                 Loader loader = Loader.this;
-                ExecutorService executorService = loader.c;
-                d<? extends e> dVar = loader.d;
-                Objects.requireNonNull(dVar);
-                executorService.execute(dVar);
+                ExecutorService executorService = loader.f20231c;
+                HandlerC10769d<? extends InterfaceC10770e> handlerC10769d = loader.f20232d;
+                Objects.requireNonNull(handlerC10769d);
+                executorService.execute(handlerC10769d);
                 return;
             }
             if (i == 3) {
                 throw ((Error) message.obj);
             }
-            Loader.this.d = null;
+            Loader.this.f20232d = null;
             long jElapsedRealtime = SystemClock.elapsedRealtime();
-            long j = jElapsedRealtime - this.l;
-            b<T> bVar = this.m;
-            Objects.requireNonNull(bVar);
-            if (this.q) {
-                bVar.b(this.k, jElapsedRealtime, j, false);
+            long j = jElapsedRealtime - this.f20238l;
+            InterfaceC10767b<T> interfaceC10767b = this.f20239m;
+            Objects.requireNonNull(interfaceC10767b);
+            if (this.f20243q) {
+                interfaceC10767b.mo2478b(this.f20237k, jElapsedRealtime, j, false);
                 return;
             }
             int i2 = message.what;
             if (i2 == 1) {
                 try {
-                    bVar.d(this.k, jElapsedRealtime, j);
+                    interfaceC10767b.mo2480d(this.f20237k, jElapsedRealtime, j);
                     return;
                 } catch (RuntimeException e) {
-                    q.b("LoadTask", "Unexpected exception handling load completed", e);
-                    Loader.this.e = new UnexpectedLoaderException(e);
+                    Log2.m3039b("LoadTask", "Unexpected exception handling load completed", e);
+                    Loader.this.f20233e = new UnexpectedLoaderException(e);
                     return;
                 }
             }
@@ -170,22 +205,22 @@ public final class Loader {
                 return;
             }
             IOException iOException = (IOException) message.obj;
-            this.n = iOException;
-            int i3 = this.o + 1;
-            this.o = i3;
-            c cVarO = bVar.o(this.k, jElapsedRealtime, j, iOException, i3);
-            int i4 = cVarO.a;
+            this.f20240n = iOException;
+            int i3 = this.f20241o + 1;
+            this.f20241o = i3;
+            C10768c c10768cMo2491o = interfaceC10767b.mo2491o(this.f20237k, jElapsedRealtime, j, iOException, i3);
+            int i4 = c10768cMo2491o.f20234a;
             if (i4 == 3) {
-                Loader.this.e = this.n;
+                Loader.this.f20233e = this.f20240n;
             } else if (i4 != 2) {
                 if (i4 == 1) {
-                    this.o = 1;
+                    this.f20241o = 1;
                 }
-                long jMin = cVarO.f2979b;
+                long jMin = c10768cMo2491o.f20235b;
                 if (jMin == -9223372036854775807L) {
-                    jMin = Math.min((this.o - 1) * 1000, 5000);
+                    jMin = Math.min((this.f20241o - 1) * 1000, 5000);
                 }
-                b(jMin);
+                m8942b(jMin);
             }
         }
 
@@ -194,101 +229,108 @@ public final class Loader {
             boolean z2;
             try {
                 synchronized (this) {
-                    z2 = !this.q;
-                    this.p = Thread.currentThread();
+                    z2 = !this.f20243q;
+                    this.f20242p = Thread.currentThread();
                 }
                 if (z2) {
-                    String simpleName = this.k.getClass().getSimpleName();
-                    b.c.a.a0.d.f(simpleName.length() != 0 ? "load:".concat(simpleName) : new String("load:"));
+                    String simpleName = this.f20237k.getClass().getSimpleName();
+                    AnimatableValueParser.m515f(simpleName.length() != 0 ? "load:".concat(simpleName) : new String("load:"));
                     try {
-                        ((e0.a) this.k).b();
-                        b.c.a.a0.d.d0();
+                        ((ProgressiveMediaPeriod.a) this.f20237k).m2504b();
+                        AnimatableValueParser.m508d0();
                     } catch (Throwable th) {
-                        b.c.a.a0.d.d0();
+                        AnimatableValueParser.m508d0();
                         throw th;
                     }
                 }
                 synchronized (this) {
-                    this.p = null;
+                    this.f20242p = null;
                     Thread.interrupted();
                 }
-                if (this.r) {
+                if (this.f20244r) {
                     return;
                 }
                 sendEmptyMessage(1);
             } catch (IOException e) {
-                if (this.r) {
+                if (this.f20244r) {
                     return;
                 }
                 obtainMessage(2, e).sendToTarget();
             } catch (OutOfMemoryError e2) {
-                if (this.r) {
+                if (this.f20244r) {
                     return;
                 }
-                q.b("LoadTask", "OutOfMemory error loading stream", e2);
+                Log2.m3039b("LoadTask", "OutOfMemory error loading stream", e2);
                 obtainMessage(2, new UnexpectedLoaderException(e2)).sendToTarget();
             } catch (Error e3) {
-                if (!this.r) {
-                    q.b("LoadTask", "Unexpected error loading stream", e3);
+                if (!this.f20244r) {
+                    Log2.m3039b("LoadTask", "Unexpected error loading stream", e3);
                     obtainMessage(3, e3).sendToTarget();
                 }
                 throw e3;
             } catch (Exception e4) {
-                if (this.r) {
+                if (this.f20244r) {
                     return;
                 }
-                q.b("LoadTask", "Unexpected exception loading stream", e4);
+                Log2.m3039b("LoadTask", "Unexpected exception loading stream", e4);
                 obtainMessage(2, new UnexpectedLoaderException(e4)).sendToTarget();
             }
         }
     }
 
-    public interface e {
+    /* renamed from: com.google.android.exoplayer2.upstream.Loader$e */
+    public interface InterfaceC10770e {
     }
 
-    public interface f {
+    /* renamed from: com.google.android.exoplayer2.upstream.Loader$f */
+    public interface InterfaceC10771f {
     }
 
-    public static final class g implements Runnable {
-        public final f j;
+    /* renamed from: com.google.android.exoplayer2.upstream.Loader$g */
+    public static final class RunnableC10772g implements Runnable {
 
-        public g(f fVar) {
-            this.j = fVar;
+        /* renamed from: j */
+        public final InterfaceC10771f f20246j;
+
+        public RunnableC10772g(InterfaceC10771f interfaceC10771f) {
+            this.f20246j = interfaceC10771f;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            e0 e0Var = (e0) this.j;
-            for (h0 h0Var : e0Var.D) {
-                h0Var.s(true);
-                DrmSession drmSession = h0Var.i;
+            ProgressiveMediaPeriod progressiveMediaPeriod = (ProgressiveMediaPeriod) this.f20246j;
+            for (SampleQueue sampleQueue : progressiveMediaPeriod.f5503D) {
+                sampleQueue.m2540s(true);
+                DrmSession drmSession = sampleQueue.f5604i;
                 if (drmSession != null) {
-                    drmSession.b(h0Var.e);
-                    h0Var.i = null;
-                    h0Var.h = null;
+                    drmSession.mo3607b(sampleQueue.f5600e);
+                    sampleQueue.f5604i = null;
+                    sampleQueue.f5603h = null;
                 }
             }
-            m mVar = (m) e0Var.w;
-            h hVar = mVar.f828b;
-            if (hVar != null) {
-                hVar.release();
-                mVar.f828b = null;
+            BundledExtractorsAdapter bundledExtractorsAdapter = (BundledExtractorsAdapter) progressiveMediaPeriod.f5534w;
+            Extractor extractor = bundledExtractorsAdapter.f5646b;
+            if (extractor != null) {
+                extractor.release();
+                bundledExtractorsAdapter.f5646b = null;
             }
-            mVar.c = null;
+            bundledExtractorsAdapter.f5647c = null;
         }
     }
 
     public Loader(String str) {
         String strConcat = str.length() != 0 ? "ExoPlayer:Loader:".concat(str) : new String("ExoPlayer:Loader:");
-        int i = b.i.a.c.f3.e0.a;
-        this.c = Executors.newSingleThreadExecutor(new b.i.a.c.f3.d(strConcat));
+        int i = Util2.f6708a;
+        this.f20231c = Executors.newSingleThreadExecutor(new ThreadFactoryC2735d(strConcat));
     }
 
-    public static c a(boolean z2, long j) {
-        return new c(z2 ? 1 : 0, j, null);
+    /* renamed from: a */
+    public static C10768c m8939a(boolean z2, long j) {
+        return new C10768c(z2 ? 1 : 0, j, null);
     }
 
-    public boolean b() {
-        return this.d != null;
+    /* renamed from: b */
+    public boolean m8940b() {
+        return this.f20232d != null;
     }
 }

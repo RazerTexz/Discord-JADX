@@ -1,0 +1,49 @@
+package p007b.p008a.p025i;
+
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.viewbinding.ViewBinding;
+
+/* compiled from: ViewAccountCreditBinding.java */
+/* renamed from: b.a.i.x1, reason: use source file name */
+/* loaded from: classes.dex */
+public final class ViewAccountCreditBinding implements ViewBinding {
+
+    /* renamed from: a */
+    @NonNull
+    public final ConstraintLayout f1368a;
+
+    /* renamed from: b */
+    @NonNull
+    public final TextView f1369b;
+
+    /* renamed from: c */
+    @NonNull
+    public final ImageView f1370c;
+
+    /* renamed from: d */
+    @NonNull
+    public final TextView f1371d;
+
+    /* renamed from: e */
+    @NonNull
+    public final TextView f1372e;
+
+    public ViewAccountCreditBinding(@NonNull ConstraintLayout constraintLayout, @NonNull TextView textView, @NonNull ImageView imageView, @NonNull TextView textView2, @NonNull LinearLayout linearLayout, @NonNull TextView textView3) {
+        this.f1368a = constraintLayout;
+        this.f1369b = textView;
+        this.f1370c = imageView;
+        this.f1371d = textView2;
+        this.f1372e = textView3;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return this.f1368a;
+    }
+}

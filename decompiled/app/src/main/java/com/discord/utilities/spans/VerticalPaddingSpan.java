@@ -4,7 +4,7 @@ import android.graphics.Paint;
 import android.text.Spanned;
 import android.text.style.LineHeightSpan;
 import androidx.core.app.NotificationCompat;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: VerticalPaddingSpan.kt */
 /* loaded from: classes2.dex */
@@ -24,8 +24,8 @@ public final class VerticalPaddingSpan implements LineHeightSpan {
 
     @Override // android.text.style.LineHeightSpan
     public void chooseHeight(CharSequence text, int start, int end, int spanstartv, int v, Paint.FontMetricsInt fontMetrics) {
-        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
-        m.checkNotNullParameter(fontMetrics, "fontMetrics");
+        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        Intrinsics3.checkNotNullParameter(fontMetrics, "fontMetrics");
         if (((Spanned) (!(text instanceof Spanned) ? null : text)) != null) {
             if (!this.initialized) {
                 this.origTop = fontMetrics.top;

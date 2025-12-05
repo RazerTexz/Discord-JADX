@@ -21,7 +21,8 @@ public enum GuildScheduledEventEntityType {
         public Companion() {
         }
 
-        public final GuildScheduledEventEntityType a(int type) {
+        /* renamed from: a */
+        public final GuildScheduledEventEntityType m7993a(int type) {
             return type != 0 ? type != 1 ? type != 2 ? type != 3 ? GuildScheduledEventEntityType.UNKNOWN : GuildScheduledEventEntityType.EXTERNAL : GuildScheduledEventEntityType.VOICE : GuildScheduledEventEntityType.STAGE_INSTANCE : GuildScheduledEventEntityType.NONE;
         }
 

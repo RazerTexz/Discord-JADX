@@ -9,33 +9,37 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetUrlActionsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f18315a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2678b;
+    public final TextView f18316b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f18317c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f18318d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f18319e;
 
     public WidgetUrlActionsBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4) {
-        this.a = linearLayout;
-        this.f2678b = textView;
-        this.c = textView2;
-        this.d = textView3;
-        this.e = textView4;
+        this.f18315a = linearLayout;
+        this.f18316b = textView;
+        this.f18317c = textView2;
+        this.f18318d = textView3;
+        this.f18319e = textView4;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18315a;
     }
 }

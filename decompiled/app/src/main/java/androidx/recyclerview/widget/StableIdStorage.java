@@ -40,11 +40,11 @@ public interface StableIdStorage {
     }
 
     public static class NoStableIdStorage implements StableIdStorage {
-        private final StableIdLookup mNoIdLookup = new AnonymousClass1();
+        private final StableIdLookup mNoIdLookup = new C05781();
 
-        /* renamed from: androidx.recyclerview.widget.StableIdStorage$NoStableIdStorage$1, reason: invalid class name */
-        public class AnonymousClass1 implements StableIdLookup {
-            public AnonymousClass1() {
+        /* renamed from: androidx.recyclerview.widget.StableIdStorage$NoStableIdStorage$1 */
+        public class C05781 implements StableIdLookup {
+            public C05781() {
             }
 
             @Override // androidx.recyclerview.widget.StableIdStorage.StableIdLookup
@@ -61,11 +61,11 @@ public interface StableIdStorage {
     }
 
     public static class SharedPoolStableIdStorage implements StableIdStorage {
-        private final StableIdLookup mSameIdLookup = new AnonymousClass1();
+        private final StableIdLookup mSameIdLookup = new C05791();
 
-        /* renamed from: androidx.recyclerview.widget.StableIdStorage$SharedPoolStableIdStorage$1, reason: invalid class name */
-        public class AnonymousClass1 implements StableIdLookup {
-            public AnonymousClass1() {
+        /* renamed from: androidx.recyclerview.widget.StableIdStorage$SharedPoolStableIdStorage$1 */
+        public class C05791 implements StableIdLookup {
+            public C05791() {
             }
 
             @Override // androidx.recyclerview.widget.StableIdStorage.StableIdLookup

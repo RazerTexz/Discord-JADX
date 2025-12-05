@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildDiscoveryGuildSelected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildDiscoveryGuildSelected implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackGuildDiscoveryGuildSelected implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final Long guildId = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackGuildDiscoveryGuildSelected implements Analyt
             return false;
         }
         TrackGuildDiscoveryGuildSelected trackGuildDiscoveryGuildSelected = (TrackGuildDiscoveryGuildSelected) other;
-        return m.areEqual(this.guildId, trackGuildDiscoveryGuildSelected.guildId) && m.areEqual(this.loadId, trackGuildDiscoveryGuildSelected.loadId) && m.areEqual(this.cardIndex, trackGuildDiscoveryGuildSelected.cardIndex) && m.areEqual(this.categoryId, trackGuildDiscoveryGuildSelected.categoryId);
+        return Intrinsics3.areEqual(this.guildId, trackGuildDiscoveryGuildSelected.guildId) && Intrinsics3.areEqual(this.loadId, trackGuildDiscoveryGuildSelected.loadId) && Intrinsics3.areEqual(this.cardIndex, trackGuildDiscoveryGuildSelected.cardIndex) && Intrinsics3.areEqual(this.categoryId, trackGuildDiscoveryGuildSelected.categoryId);
     }
 
     public int hashCode() {
@@ -48,13 +48,13 @@ public final /* data */ class TrackGuildDiscoveryGuildSelected implements Analyt
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildDiscoveryGuildSelected(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", cardIndex=");
-        sbU.append(this.cardIndex);
-        sbU.append(", categoryId=");
-        return a.G(sbU, this.categoryId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildDiscoveryGuildSelected(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", cardIndex=");
+        sbM833U.append(this.cardIndex);
+        sbM833U.append(", categoryId=");
+        return outline.m819G(sbM833U, this.categoryId, ")");
     }
 }

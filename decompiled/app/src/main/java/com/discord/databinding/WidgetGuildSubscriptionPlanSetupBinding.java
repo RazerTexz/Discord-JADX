@@ -8,21 +8,22 @@ import com.discord.views.steps.StepsView;
 /* loaded from: classes.dex */
 public final class WidgetGuildSubscriptionPlanSetupBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final StepsView a;
+    public final StepsView f17071a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final StepsView f2454b;
+    public final StepsView f17072b;
 
     public WidgetGuildSubscriptionPlanSetupBinding(@NonNull StepsView stepsView, @NonNull StepsView stepsView2) {
-        this.a = stepsView;
-        this.f2454b = stepsView2;
+        this.f17071a = stepsView;
+        this.f17072b = stepsView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17071a;
     }
 }

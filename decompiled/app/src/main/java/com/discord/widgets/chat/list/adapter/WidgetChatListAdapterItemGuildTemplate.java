@@ -6,31 +6,31 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetChatListAdapterItemGuildTemplateBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelGuildTemplate;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.resources.StringResourceUtilsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.resources.StringResourceUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.GuildTemplateEntry;
 import com.discord.widgets.guilds.create.WidgetGuildClone;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Subscription;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.Subscription;
 
 /* compiled from: WidgetChatListAdapterItemGuildTemplate.kt */
 /* loaded from: classes2.dex */
@@ -67,7 +67,7 @@ public final class WidgetChatListAdapterItemGuildTemplate extends WidgetChatList
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Resolved(ModelGuildTemplate modelGuildTemplate) {
                 super(null);
-                m.checkNotNullParameter(modelGuildTemplate, "guildTemplate");
+                Intrinsics3.checkNotNullParameter(modelGuildTemplate, "guildTemplate");
                 this.guildTemplate = modelGuildTemplate;
             }
 
@@ -84,13 +84,13 @@ public final class WidgetChatListAdapterItemGuildTemplate extends WidgetChatList
             }
 
             public final Resolved copy(ModelGuildTemplate guildTemplate) {
-                m.checkNotNullParameter(guildTemplate, "guildTemplate");
+                Intrinsics3.checkNotNullParameter(guildTemplate, "guildTemplate");
                 return new Resolved(guildTemplate);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Resolved) && m.areEqual(this.guildTemplate, ((Resolved) other).guildTemplate);
+                    return (other instanceof Resolved) && Intrinsics3.areEqual(this.guildTemplate, ((Resolved) other).guildTemplate);
                 }
                 return true;
             }
@@ -108,10 +108,10 @@ public final class WidgetChatListAdapterItemGuildTemplate extends WidgetChatList
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Resolved(guildTemplate=");
-                sbU.append(this.guildTemplate);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Resolved(guildTemplate=");
+                sbM833U.append(this.guildTemplate);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -131,111 +131,111 @@ public final class WidgetChatListAdapterItemGuildTemplate extends WidgetChatList
         }
 
         public final Observable<Model> get(GuildTemplateEntry item) {
-            m.checkNotNullParameter(item, "item");
-            Observable observableY = StoreStream.INSTANCE.getGuildTemplates().observeGuildTemplate(item.getGuildTemplateCode()).v(new WidgetChatListAdapterItemGuildTemplate$ModelProvider$get$1(item)).Y(WidgetChatListAdapterItemGuildTemplate$ModelProvider$get$2.INSTANCE);
-            m.checkNotNullExpressionValue(observableY, "StoreStream\n        .get…tes\n          }\n        }");
-            return observableY;
+            Intrinsics3.checkNotNullParameter(item, "item");
+            Observable observableM11099Y = StoreStream.INSTANCE.getGuildTemplates().observeGuildTemplate(item.getGuildTemplateCode()).m11116v(new WidgetChatListAdapterItemGuildTemplate2(item)).m11099Y(WidgetChatListAdapterItemGuildTemplate3.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "StoreStream\n        .get…tes\n          }\n        }");
+            return observableM11099Y;
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGuildTemplate.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildTemplate$configureResolvedUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildTemplate$configureResolvedUI$1 */
+    public static final class ViewOnClickListenerC80831 implements View.OnClickListener {
         public final /* synthetic */ ModelGuildTemplate $guildTemplate;
 
-        public AnonymousClass1(ModelGuildTemplate modelGuildTemplate) {
+        public ViewOnClickListenerC80831(ModelGuildTemplate modelGuildTemplate) {
             this.$guildTemplate = modelGuildTemplate;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetChatListAdapterItemGuildTemplate.access$openGuildTemplate(WidgetChatListAdapterItemGuildTemplate.this, a.x(view, "it", "it.context"), this.$guildTemplate);
+            WidgetChatListAdapterItemGuildTemplate.access$openGuildTemplate(WidgetChatListAdapterItemGuildTemplate.this, outline.m885x(view, "it", "it.context"), this.$guildTemplate);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGuildTemplate.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildTemplate$onConfigure$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
-        public AnonymousClass1(WidgetChatListAdapterItemGuildTemplate widgetChatListAdapterItemGuildTemplate) {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildTemplate$onConfigure$1 */
+    public static final /* synthetic */ class C80841 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+        public C80841(WidgetChatListAdapterItemGuildTemplate widgetChatListAdapterItemGuildTemplate) {
             super(1, widgetChatListAdapterItemGuildTemplate, WidgetChatListAdapterItemGuildTemplate.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemGuildTemplate$Model;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
-            m.checkNotNullParameter(model, "p1");
+            Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetChatListAdapterItemGuildTemplate.access$configureUI((WidgetChatListAdapterItemGuildTemplate) this.receiver, model);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGuildTemplate.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildTemplate$onConfigure$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildTemplate$onConfigure$2 */
+    public static final class C80852 extends Lambda implements Function1<Error, Unit> {
+        public C80852() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             WidgetChatListAdapterItemGuildTemplate.access$configureInvalidUI(WidgetChatListAdapterItemGuildTemplate.this);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGuildTemplate.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildTemplate$onConfigure$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Subscription, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildTemplate$onConfigure$3 */
+    public static final class C80863 extends Lambda implements Function1<Subscription, Unit> {
+        public C80863() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            m.checkNotNullParameter(subscription, "it");
+            Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetChatListAdapterItemGuildTemplate.access$setSubscription$p(WidgetChatListAdapterItemGuildTemplate.this, subscription);
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemGuildTemplate(WidgetChatListAdapter widgetChatListAdapter) {
-        super(R.layout.widget_chat_list_adapter_item_guild_template, widgetChatListAdapter);
-        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        super(C5419R.layout.widget_chat_list_adapter_item_guild_template, widgetChatListAdapter);
+        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
-        int i = R.id.item_guild_template_header;
-        TextView textView = (TextView) view.findViewById(R.id.item_guild_template_header);
+        int i = C5419R.id.item_guild_template_header;
+        TextView textView = (TextView) view.findViewById(C5419R.id.item_guild_template_header);
         if (textView != null) {
-            i = R.id.item_guild_template_image;
-            ImageView imageView = (ImageView) view.findViewById(R.id.item_guild_template_image);
+            i = C5419R.id.item_guild_template_image;
+            ImageView imageView = (ImageView) view.findViewById(C5419R.id.item_guild_template_image);
             if (imageView != null) {
-                i = R.id.item_guild_template_join_button;
-                MaterialButton materialButton = (MaterialButton) view.findViewById(R.id.item_guild_template_join_button);
+                i = C5419R.id.item_guild_template_join_button;
+                MaterialButton materialButton = (MaterialButton) view.findViewById(C5419R.id.item_guild_template_join_button);
                 if (materialButton != null) {
-                    i = R.id.item_guild_template_name;
-                    TextView textView2 = (TextView) view.findViewById(R.id.item_guild_template_name);
+                    i = C5419R.id.item_guild_template_name;
+                    TextView textView2 = (TextView) view.findViewById(C5419R.id.item_guild_template_name);
                     if (textView2 != null) {
-                        i = R.id.item_guild_template_subtext;
-                        TextView textView3 = (TextView) view.findViewById(R.id.item_guild_template_subtext);
+                        i = C5419R.id.item_guild_template_subtext;
+                        TextView textView3 = (TextView) view.findViewById(C5419R.id.item_guild_template_subtext);
                         if (textView3 != null) {
                             ConstraintLayout constraintLayout = (ConstraintLayout) view;
                             WidgetChatListAdapterItemGuildTemplateBinding widgetChatListAdapterItemGuildTemplateBinding = new WidgetChatListAdapterItemGuildTemplateBinding(constraintLayout, textView, imageView, materialButton, textView2, textView3, constraintLayout);
-                            m.checkNotNullExpressionValue(widgetChatListAdapterItemGuildTemplateBinding, "WidgetChatListAdapterIte…ateBinding.bind(itemView)");
+                            Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemGuildTemplateBinding, "WidgetChatListAdapterIte…ateBinding.bind(itemView)");
                             this.binding = widgetChatListAdapterItemGuildTemplateBinding;
                             return;
                         }
@@ -267,38 +267,38 @@ public final class WidgetChatListAdapterItemGuildTemplate extends WidgetChatList
     }
 
     private final void configureInvalidUI() {
-        this.binding.c.setText(R.string.guild_template_invalid_title);
-        this.binding.d.setText(R.string.guild_template_invalid_subtitle);
-        TextView textView = this.binding.d;
-        m.checkNotNullExpressionValue(textView, "binding.itemGuildTemplateSubtext");
+        this.binding.f16230c.setText(C5419R.string.guild_template_invalid_title);
+        this.binding.f16231d.setText(C5419R.string.guild_template_invalid_subtitle);
+        TextView textView = this.binding.f16231d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemGuildTemplateSubtext");
         textView.setVisibility(0);
-        MaterialButton materialButton = this.binding.f2323b;
-        m.checkNotNullExpressionValue(materialButton, "binding.itemGuildTemplateJoinButton");
+        MaterialButton materialButton = this.binding.f16229b;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.itemGuildTemplateJoinButton");
         materialButton.setVisibility(8);
     }
 
     private final void configureLoadingUI() {
-        this.binding.c.setText(R.string.guild_template_resolving_title);
-        TextView textView = this.binding.d;
-        m.checkNotNullExpressionValue(textView, "binding.itemGuildTemplateSubtext");
+        this.binding.f16230c.setText(C5419R.string.guild_template_resolving_title);
+        TextView textView = this.binding.f16231d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemGuildTemplateSubtext");
         textView.setVisibility(8);
-        MaterialButton materialButton = this.binding.f2323b;
-        m.checkNotNullExpressionValue(materialButton, "binding.itemGuildTemplateJoinButton");
+        MaterialButton materialButton = this.binding.f16229b;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.itemGuildTemplateJoinButton");
         materialButton.setVisibility(8);
     }
 
     private final void configureResolvedUI(Model.Resolved model) {
         ModelGuildTemplate guildTemplate = model.getGuildTemplate();
-        TextView textView = this.binding.c;
-        m.checkNotNullExpressionValue(textView, "binding.itemGuildTemplateName");
+        TextView textView = this.binding.f16230c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemGuildTemplateName");
         textView.setText(guildTemplate.getName());
-        TextView textView2 = this.binding.d;
-        m.checkNotNullExpressionValue(textView2, "binding.itemGuildTemplateSubtext");
-        ViewExtensions.setTextAndVisibilityBy(textView2, StringResourceUtilsKt.getI18nPluralString(a.I(this.binding.d, "binding.itemGuildTemplateSubtext", "binding.itemGuildTemplateSubtext.context"), R.plurals.guild_template_usages_usageCount, guildTemplate.getUsageCount(), Integer.valueOf(guildTemplate.getUsageCount())));
-        MaterialButton materialButton = this.binding.f2323b;
-        m.checkNotNullExpressionValue(materialButton, "binding.itemGuildTemplateJoinButton");
+        TextView textView2 = this.binding.f16231d;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.itemGuildTemplateSubtext");
+        ViewExtensions.setTextAndVisibilityBy(textView2, StringResourceUtils.getI18nPluralString(outline.m821I(this.binding.f16231d, "binding.itemGuildTemplateSubtext", "binding.itemGuildTemplateSubtext.context"), C5419R.plurals.guild_template_usages_usageCount, guildTemplate.getUsageCount(), Integer.valueOf(guildTemplate.getUsageCount())));
+        MaterialButton materialButton = this.binding.f16229b;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.itemGuildTemplateJoinButton");
         materialButton.setVisibility(0);
-        this.binding.f2323b.setOnClickListener(new AnonymousClass1(guildTemplate));
+        this.binding.f16229b.setOnClickListener(new ViewOnClickListenerC80831(guildTemplate));
     }
 
     private final void configureUI(Model model) {
@@ -331,16 +331,16 @@ public final class WidgetChatListAdapterItemGuildTemplate extends WidgetChatList
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         GuildTemplateEntry guildTemplateEntry = (GuildTemplateEntry) data;
         this.item = guildTemplateEntry;
         ModelProvider modelProvider = ModelProvider.INSTANCE;
         if (guildTemplateEntry == null) {
-            m.throwUninitializedPropertyAccessException("item");
+            Intrinsics3.throwUninitializedPropertyAccessException("item");
         }
-        Observable observableUi = ObservableExtensionsKt.ui(modelProvider.get(guildTemplateEntry));
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(this);
-        ObservableExtensionsKt.appSubscribe$default(observableUi, WidgetChatListAdapterItemGuildTemplate.class, (Context) null, new AnonymousClass3(), new AnonymousClass2(), (Function0) null, (Function0) null, anonymousClass1, 50, (Object) null);
+        Observable observableM8518ui = ObservableExtensionsKt.m8518ui(modelProvider.get(guildTemplateEntry));
+        C80841 c80841 = new C80841(this);
+        ObservableExtensionsKt.appSubscribe$default(observableM8518ui, WidgetChatListAdapterItemGuildTemplate.class, (Context) null, new C80863(), new C80852(), (Function0) null, (Function0) null, c80841, 50, (Object) null);
     }
 }

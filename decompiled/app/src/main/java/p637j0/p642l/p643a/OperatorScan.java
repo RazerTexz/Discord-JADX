@@ -1,0 +1,222 @@
+package p637j0.p642l.p643a;
+
+import android.R;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.Queue;
+import java.util.concurrent.atomic.AtomicLong;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p637j0.Observer2;
+import p637j0.p642l.p647e.p648n.SpscLinkedAtomicQueue;
+import p637j0.p642l.p647e.p649o.SpscLinkedQueue;
+import p637j0.p642l.p647e.p649o.UnsafeAccess;
+import p658rx.Observable;
+import p658rx.Producer;
+import p658rx.Subscriber;
+import p658rx.functions.Func0;
+import p658rx.functions.Func2;
+
+/* compiled from: OperatorScan.java */
+/* renamed from: j0.l.a.o1, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class OperatorScan<R, T> implements Observable.InterfaceC13006b<R, T> {
+
+    /* renamed from: j */
+    public static final Object f26957j = new Object();
+
+    /* renamed from: k */
+    public final Func0<R> f26958k;
+
+    /* renamed from: l */
+    public final Func2<R, ? super T, R> f26959l;
+
+    /* compiled from: OperatorScan.java */
+    /* renamed from: j0.l.a.o1$a */
+    public class a implements Func0<R> {
+
+        /* renamed from: j */
+        public final /* synthetic */ Object f26960j;
+
+        public a(Object obj) {
+            this.f26960j = obj;
+        }
+
+        @Override // p658rx.functions.Func0, java.util.concurrent.Callable
+        public R call() {
+            return (R) this.f26960j;
+        }
+    }
+
+    /* compiled from: OperatorScan.java */
+    /* renamed from: j0.l.a.o1$b */
+    public static final class b<R> implements Producer, Observer2<R> {
+
+        /* renamed from: j */
+        public final Subscriber<? super R> f26961j;
+
+        /* renamed from: k */
+        public final Queue<Object> f26962k;
+
+        /* renamed from: l */
+        public boolean f26963l;
+
+        /* renamed from: m */
+        public boolean f26964m;
+
+        /* renamed from: n */
+        public long f26965n;
+
+        /* renamed from: o */
+        public final AtomicLong f26966o;
+
+        /* renamed from: p */
+        public volatile Producer f26967p;
+
+        /* renamed from: q */
+        public volatile boolean f26968q;
+
+        /* renamed from: r */
+        public Throwable f26969r;
+
+        public b(R r, Subscriber<? super R> subscriber) {
+            this.f26961j = subscriber;
+            Queue<Object> spscLinkedQueue = UnsafeAccess.m10858b() ? new SpscLinkedQueue<>() : new SpscLinkedAtomicQueue<>();
+            this.f26962k = spscLinkedQueue;
+            spscLinkedQueue.offer(r == null ? (R) NotificationLite.f26769b : r);
+            this.f26966o = new AtomicLong();
+        }
+
+        /* renamed from: a */
+        public boolean m10776a(boolean z2, boolean z3, Subscriber<? super R> subscriber) {
+            if (subscriber.isUnsubscribed()) {
+                return true;
+            }
+            if (!z2) {
+                return false;
+            }
+            Throwable th = this.f26969r;
+            if (th != null) {
+                subscriber.onError(th);
+                return true;
+            }
+            if (!z3) {
+                return false;
+            }
+            subscriber.onCompleted();
+            return true;
+        }
+
+        /* renamed from: b */
+        public void m10777b() {
+            synchronized (this) {
+                if (this.f26963l) {
+                    this.f26964m = true;
+                    return;
+                }
+                this.f26963l = true;
+                Subscriber<? super R> subscriber = this.f26961j;
+                Queue<Object> queue = this.f26962k;
+                AtomicLong atomicLong = this.f26966o;
+                long jM4250U0 = atomicLong.get();
+                while (!m10776a(this.f26968q, queue.isEmpty(), subscriber)) {
+                    long j = 0;
+                    while (j != jM4250U0) {
+                        boolean z2 = this.f26968q;
+                        Object objPoll = queue.poll();
+                        boolean z3 = objPoll == null;
+                        if (m10776a(z2, z3, subscriber)) {
+                            return;
+                        }
+                        if (z3) {
+                            break;
+                        }
+                        R r = (Object) NotificationLite.m10745b(objPoll);
+                        try {
+                            subscriber.onNext(r);
+                            j++;
+                        } catch (Throwable th) {
+                            C3404f.m4329p1(th, subscriber, r);
+                            return;
+                        }
+                    }
+                    if (j != 0 && jM4250U0 != RecyclerView.FOREVER_NS) {
+                        jM4250U0 = C3404f.m4250U0(atomicLong, j);
+                    }
+                    synchronized (this) {
+                        if (!this.f26964m) {
+                            this.f26963l = false;
+                            return;
+                        }
+                        this.f26964m = false;
+                    }
+                }
+            }
+        }
+
+        @Override // p658rx.Producer
+        /* renamed from: j */
+        public void mo10704j(long j) {
+            if (j < 0) {
+                throw new IllegalArgumentException(outline.m877t("n >= required but it was ", j));
+            }
+            if (j != 0) {
+                C3404f.m4276c0(this.f26966o, j);
+                Producer producer = this.f26967p;
+                if (producer == null) {
+                    synchronized (this.f26966o) {
+                        producer = this.f26967p;
+                        if (producer == null) {
+                            this.f26965n = C3404f.m4287f(this.f26965n, j);
+                        }
+                    }
+                }
+                if (producer != null) {
+                    producer.mo10704j(j);
+                }
+                m10777b();
+            }
+        }
+
+        @Override // p637j0.Observer2
+        public void onCompleted() {
+            this.f26968q = true;
+            m10777b();
+        }
+
+        @Override // p637j0.Observer2
+        public void onError(Throwable th) {
+            this.f26969r = th;
+            this.f26968q = true;
+            m10777b();
+        }
+
+        @Override // p637j0.Observer2
+        public void onNext(R r) {
+            Queue<Object> queue = this.f26962k;
+            if (r == null) {
+                r = (R) NotificationLite.f26769b;
+            }
+            queue.offer(r);
+            m10777b();
+        }
+    }
+
+    public OperatorScan(R r, Func2<R, ? super T, R> func2) {
+        this.f26958k = new a(r);
+        this.f26959l = func2;
+    }
+
+    @Override // p637j0.p641k.Func1
+    public Object call(Object obj) {
+        Subscriber subscriber = (Subscriber) obj;
+        R rCall = this.f26958k.call();
+        if (rCall == f26957j) {
+            return new OperatorScan2(this, subscriber, subscriber);
+        }
+        b bVar = new b(rCall, subscriber);
+        OperatorScan3 operatorScan3 = new OperatorScan3(this, rCall, bVar);
+        subscriber.add(operatorScan3);
+        subscriber.setProducer(bVar);
+        return operatorScan3;
+    }
+}

@@ -19,7 +19,8 @@ public enum StickerType {
         public Companion() {
         }
 
-        public final StickerType a(int i) {
+        /* renamed from: a */
+        public final StickerType m8244a(int i) {
             StickerType stickerType;
             StickerType[] stickerTypeArrValues = StickerType.values();
             int i2 = 0;

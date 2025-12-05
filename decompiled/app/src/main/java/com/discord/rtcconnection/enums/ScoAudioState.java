@@ -1,9 +1,9 @@
 package com.discord.rtcconnection.enums;
 
 import android.content.Intent;
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ScoAudioState.kt */
 /* loaded from: classes.dex */
@@ -24,7 +24,8 @@ public enum ScoAudioState {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        public final ScoAudioState a(int i) {
+        /* renamed from: a */
+        public final ScoAudioState m8498a(int i) {
             ScoAudioState[] scoAudioStateArrValues = ScoAudioState.values();
             for (int i2 = 0; i2 < 4; i2++) {
                 ScoAudioState scoAudioState = scoAudioStateArrValues[i2];
@@ -35,61 +36,65 @@ public enum ScoAudioState {
             return null;
         }
 
-        public final b b(Intent intent) {
-            m.checkNotNullParameter(intent, "intent");
-            if (!m.areEqual(intent.getAction(), "android.media.ACTION_SCO_AUDIO_STATE_UPDATED")) {
+        /* renamed from: b */
+        public final C5637b m8499b(Intent intent) {
+            Intrinsics3.checkNotNullParameter(intent, "intent");
+            if (!Intrinsics3.areEqual(intent.getAction(), "android.media.ACTION_SCO_AUDIO_STATE_UPDATED")) {
                 throw new IllegalArgumentException("Failed requirement.".toString());
             }
-            ScoAudioState scoAudioStateA = a(intent.getIntExtra("android.media.extra.SCO_AUDIO_STATE", 0));
-            m.checkNotNull(scoAudioStateA);
-            ScoAudioState scoAudioStateA2 = a(intent.getIntExtra("android.media.extra.SCO_AUDIO_PREVIOUS_STATE", 0));
-            m.checkNotNull(scoAudioStateA2);
-            return new b(scoAudioStateA, scoAudioStateA2);
+            ScoAudioState scoAudioStateM8498a = m8498a(intent.getIntExtra("android.media.extra.SCO_AUDIO_STATE", 0));
+            Intrinsics3.checkNotNull(scoAudioStateM8498a);
+            ScoAudioState scoAudioStateM8498a2 = m8498a(intent.getIntExtra("android.media.extra.SCO_AUDIO_PREVIOUS_STATE", 0));
+            Intrinsics3.checkNotNull(scoAudioStateM8498a2);
+            return new C5637b(scoAudioStateM8498a, scoAudioStateM8498a2);
         }
     }
 
     /* compiled from: ScoAudioState.kt */
-    public static final class b {
-        public final ScoAudioState a;
+    /* renamed from: com.discord.rtcconnection.enums.ScoAudioState$b */
+    public static final class C5637b {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final ScoAudioState f2792b;
+        /* renamed from: a */
+        public final ScoAudioState f18874a;
 
-        public b(ScoAudioState scoAudioState, ScoAudioState scoAudioState2) {
-            m.checkNotNullParameter(scoAudioState, "current");
-            m.checkNotNullParameter(scoAudioState2, "previous");
-            this.a = scoAudioState;
-            this.f2792b = scoAudioState2;
+        /* renamed from: b */
+        public final ScoAudioState f18875b;
+
+        public C5637b(ScoAudioState scoAudioState, ScoAudioState scoAudioState2) {
+            Intrinsics3.checkNotNullParameter(scoAudioState, "current");
+            Intrinsics3.checkNotNullParameter(scoAudioState2, "previous");
+            this.f18874a = scoAudioState;
+            this.f18875b = scoAudioState2;
         }
 
         public boolean equals(Object obj) {
             if (this == obj) {
                 return true;
             }
-            if (!(obj instanceof b)) {
+            if (!(obj instanceof C5637b)) {
                 return false;
             }
-            b bVar = (b) obj;
-            return m.areEqual(this.a, bVar.a) && m.areEqual(this.f2792b, bVar.f2792b);
+            C5637b c5637b = (C5637b) obj;
+            return Intrinsics3.areEqual(this.f18874a, c5637b.f18874a) && Intrinsics3.areEqual(this.f18875b, c5637b.f18875b);
         }
 
         public int hashCode() {
-            ScoAudioState scoAudioState = this.a;
+            ScoAudioState scoAudioState = this.f18874a;
             int iHashCode = (scoAudioState != null ? scoAudioState.hashCode() : 0) * 31;
-            ScoAudioState scoAudioState2 = this.f2792b;
+            ScoAudioState scoAudioState2 = this.f18875b;
             return iHashCode + (scoAudioState2 != null ? scoAudioState2.hashCode() : 0);
         }
 
         public String toString() {
-            if (this.f2792b == ScoAudioState.Error) {
-                return String.valueOf(this.a);
+            if (this.f18875b == ScoAudioState.Error) {
+                return String.valueOf(this.f18874a);
             }
-            StringBuilder sbU = a.U("Update(");
-            sbU.append(this.f2792b);
-            sbU.append(" -> ");
-            sbU.append(this.a);
-            sbU.append(')');
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Update(");
+            sbM833U.append(this.f18875b);
+            sbM833U.append(" -> ");
+            sbM833U.append(this.f18874a);
+            sbM833U.append(')');
+            return sbM833U.toString();
         }
     }
 

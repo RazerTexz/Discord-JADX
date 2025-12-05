@@ -11,8 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.FragmentManager;
-import b.a.j.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppComponent;
 import com.discord.app.AppLog;
 import com.discord.databinding.AnchoredVoiceControlsViewBinding;
@@ -28,9 +27,6 @@ import com.discord.widgets.voice.controls.WidgetScreenShareNfxSheet;
 import com.discord.widgets.voice.model.CameraState;
 import com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
 import java.lang.ref.WeakReference;
 import java.util.Objects;
 import java.util.Set;
@@ -38,7 +34,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p008a.p026j.FloatingViewManager;
+import p007b.p008a.p058v.AcknowledgedTooltipsCache;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
 
 /* compiled from: AnchoredVoiceControlsView.kt */
 /* loaded from: classes.dex */
@@ -58,8 +59,8 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     }
 
     /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$1 */
+    public static final class ViewOnClickListenerC104271 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ WidgetVoiceBottomSheet.FeatureContext $featureContext;
         public final /* synthetic */ boolean $forwardToFullscreenIfVideoActivated;
@@ -68,7 +69,7 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         public final /* synthetic */ Function0 $onNavigateToScreenShareNfxSheet;
         public final /* synthetic */ Function0 $onScreenSharePressed;
 
-        public AnonymousClass1(FragmentManager fragmentManager, long j, long j2, boolean z2, WidgetVoiceBottomSheet.FeatureContext featureContext, Function0 function0, Function0 function02) {
+        public ViewOnClickListenerC104271(FragmentManager fragmentManager, long j, long j2, boolean z2, WidgetVoiceBottomSheet.FeatureContext featureContext, Function0 function0, Function0 function02) {
             this.$fragmentManager = fragmentManager;
             this.$channelId = j;
             this.$guildId = j2;
@@ -80,7 +81,7 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            AnchoredVoiceControlsView.access$getTooltipManager$p(AnchoredVoiceControlsView.this).a(ScreenShareButtonSparkleTooltip.INSTANCE);
+            AnchoredVoiceControlsView.access$getTooltipManager$p(AnchoredVoiceControlsView.this).m8512a(ScreenShareButtonSparkleTooltip.INSTANCE);
             WidgetScreenShareNfxSheet.Companion companion = WidgetScreenShareNfxSheet.INSTANCE;
             if (!companion.canShow()) {
                 this.$onScreenSharePressed.invoke();
@@ -92,14 +93,14 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     }
 
     /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements b<Void, Unit> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$2 */
+    public static final class C104282<T, R> implements Func1<Void, Unit> {
+        public static final C104282 INSTANCE = new C104282();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Unit call(Void r1) {
             call2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
@@ -108,11 +109,11 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     }
 
     /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$1 */
+    public static final class ViewOnClickListenerC104291 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onCameraButtonPressed;
 
-        public AnonymousClass1(Function0 function0) {
+        public ViewOnClickListenerC104291(Function0 function0) {
             this.$onCameraButtonPressed = function0;
         }
 
@@ -123,11 +124,11 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     }
 
     /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$2 */
+    public static final class ViewOnClickListenerC104302 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onSpeakerButtonPressed;
 
-        public AnonymousClass2(Function0 function0) {
+        public ViewOnClickListenerC104302(Function0 function0) {
             this.$onSpeakerButtonPressed = function0;
         }
 
@@ -138,11 +139,11 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     }
 
     /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$3 */
+    public static final class ViewOnClickListenerC104313 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onMutePressed;
 
-        public AnonymousClass3(Function0 function0) {
+        public ViewOnClickListenerC104313(Function0 function0) {
             this.$onMutePressed = function0;
         }
 
@@ -153,11 +154,11 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     }
 
     /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$4 */
+    public static final class ViewOnClickListenerC104324 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onScreenSharePressed;
 
-        public AnonymousClass4(Function0 function0) {
+        public ViewOnClickListenerC104324(Function0 function0) {
             this.$onScreenSharePressed = function0;
         }
 
@@ -168,11 +169,11 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     }
 
     /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$5 */
+    public static final class ViewOnClickListenerC104335 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onDisconnectPressed;
 
-        public AnonymousClass5(Function0 function0) {
+        public ViewOnClickListenerC104335(Function0 function0) {
             this.$onDisconnectPressed = function0;
         }
 
@@ -183,12 +184,12 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     }
 
     /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$setOnPttPressedListener$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
+    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$setOnPttPressedListener$1 */
+    public static final class C104341 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ Function1 $onPttPressed;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Function1 function1) {
+        public C104341(Function1 function1) {
             super(1);
             this.$onPttPressed = function1;
         }
@@ -196,7 +197,7 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
             invoke(bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(boolean z2) {
@@ -223,174 +224,174 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
     private final void configureScreenShareButtonSparkle(boolean showSparkle, AppComponent appComponent, FragmentManager fragmentManager, long channelId, long guildId, boolean forwardToFullscreenIfVideoActivated, WidgetVoiceBottomSheet.FeatureContext featureContext, Function0<Unit> onNavigateToScreenShareNfxSheet, Function0<Unit> onScreenSharePressed) {
         if (showSparkle) {
             TooltipManager tooltipManager = this.tooltipManager;
-            TooltipManager.b bVar = ScreenShareButtonSparkleTooltip.INSTANCE;
+            TooltipManager.C6648b c6648b = ScreenShareButtonSparkleTooltip.INSTANCE;
             Objects.requireNonNull(tooltipManager);
-            m.checkNotNullParameter(bVar, "tooltip");
-            if (!(tooltipManager.tooltipNameToTooltipViewIdMap.get(bVar.getTooltipName()) != null)) {
-                ImageView imageView = this.binding.f;
-                m.checkNotNullExpressionValue(imageView, "binding.voiceFullscreenControlsScreenshare");
+            Intrinsics3.checkNotNullParameter(c6648b, "tooltip");
+            if (!(tooltipManager.tooltipNameToTooltipViewIdMap.get(c6648b.getTooltipName()) != null)) {
+                ImageView imageView = this.binding.f15012f;
+                Intrinsics3.checkNotNullExpressionValue(imageView, "binding.voiceFullscreenControlsScreenshare");
                 Context context = imageView.getContext();
-                m.checkNotNullExpressionValue(context, "binding.voiceFullscreenControlsScreenshare.context");
+                Intrinsics3.checkNotNullExpressionValue(context, "binding.voiceFullscreenControlsScreenshare.context");
                 SparkleView sparkleView = new SparkleView(context, null);
-                sparkleView.setOnClickListener(new AnonymousClass1(fragmentManager, channelId, guildId, forwardToFullscreenIfVideoActivated, featureContext, onNavigateToScreenShareNfxSheet, onScreenSharePressed));
+                sparkleView.setOnClickListener(new ViewOnClickListenerC104271(fragmentManager, channelId, guildId, forwardToFullscreenIfVideoActivated, featureContext, onNavigateToScreenShareNfxSheet, onScreenSharePressed));
                 TooltipManager tooltipManager2 = this.tooltipManager;
-                View view = this.binding.f;
-                m.checkNotNullExpressionValue(view, "binding.voiceFullscreenControlsScreenshare");
+                View view = this.binding.f15012f;
+                Intrinsics3.checkNotNullExpressionValue(view, "binding.voiceFullscreenControlsScreenshare");
                 FloatingViewGravity floatingViewGravity = FloatingViewGravity.CENTER;
-                Observable<R> observableG = appComponent.getUnsubscribeSignal().G(AnonymousClass2.INSTANCE);
-                m.checkNotNullExpressionValue(observableG, "appComponent.unsubscribeSignal.map { Unit }");
-                tooltipManager2.d(view, sparkleView, bVar, floatingViewGravity, 0, 0, false, observableG);
+                Observable<R> observableM11083G = appComponent.getUnsubscribeSignal().m11083G(C104282.INSTANCE);
+                Intrinsics3.checkNotNullExpressionValue(observableM11083G, "appComponent.unsubscribeSignal.map { Unit }");
+                tooltipManager2.m8515d(view, sparkleView, c6648b, floatingViewGravity, 0, 0, false, observableM11083G);
                 return;
             }
         }
         if (showSparkle) {
             return;
         }
-        this.tooltipManager.c(ScreenShareButtonSparkleTooltip.INSTANCE);
+        this.tooltipManager.m8514c(ScreenShareButtonSparkleTooltip.INSTANCE);
     }
 
     public final void configureUI(MediaEngineConnection.InputMode inputMode, StoreAudioManagerV2.State audioManagerState, boolean isMuted, boolean isScreensharing, boolean showScreenShareSparkle, CameraState cameraState, Function0<Unit> onMutePressed, Function0<Unit> onScreenSharePressed, Function0<Unit> onSpeakerButtonPressed, Function0<Unit> onCameraButtonPressed, Function0<Unit> onDisconnectPressed, AppComponent appComponent, FragmentManager fragmentManager, Function0<Unit> onNavigateToScreenShareNfxSheet, long channelId, long guildId, boolean forwardToFullscreenIfVideoActivated, WidgetVoiceBottomSheet.FeatureContext featureContext) {
         String string;
-        m.checkNotNullParameter(inputMode, "inputMode");
-        m.checkNotNullParameter(audioManagerState, "audioManagerState");
-        m.checkNotNullParameter(cameraState, "cameraState");
-        m.checkNotNullParameter(onMutePressed, "onMutePressed");
-        m.checkNotNullParameter(onScreenSharePressed, "onScreenSharePressed");
-        m.checkNotNullParameter(onSpeakerButtonPressed, "onSpeakerButtonPressed");
-        m.checkNotNullParameter(onCameraButtonPressed, "onCameraButtonPressed");
-        m.checkNotNullParameter(onDisconnectPressed, "onDisconnectPressed");
-        m.checkNotNullParameter(appComponent, "appComponent");
-        m.checkNotNullParameter(fragmentManager, "fragmentManager");
-        m.checkNotNullParameter(onNavigateToScreenShareNfxSheet, "onNavigateToScreenShareNfxSheet");
-        m.checkNotNullParameter(featureContext, "featureContext");
-        MaterialButton materialButton = this.binding.e;
-        m.checkNotNullExpressionValue(materialButton, "binding.voiceFullscreenControlsPtt");
+        Intrinsics3.checkNotNullParameter(inputMode, "inputMode");
+        Intrinsics3.checkNotNullParameter(audioManagerState, "audioManagerState");
+        Intrinsics3.checkNotNullParameter(cameraState, "cameraState");
+        Intrinsics3.checkNotNullParameter(onMutePressed, "onMutePressed");
+        Intrinsics3.checkNotNullParameter(onScreenSharePressed, "onScreenSharePressed");
+        Intrinsics3.checkNotNullParameter(onSpeakerButtonPressed, "onSpeakerButtonPressed");
+        Intrinsics3.checkNotNullParameter(onCameraButtonPressed, "onCameraButtonPressed");
+        Intrinsics3.checkNotNullParameter(onDisconnectPressed, "onDisconnectPressed");
+        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
+        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        Intrinsics3.checkNotNullParameter(onNavigateToScreenShareNfxSheet, "onNavigateToScreenShareNfxSheet");
+        Intrinsics3.checkNotNullParameter(featureContext, "featureContext");
+        MaterialButton materialButton = this.binding.f15011e;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.voiceFullscreenControlsPtt");
         materialButton.setVisibility(inputMode.ordinal() != 1 ? 8 : 0);
-        this.binding.f2088b.setOnClickListener(new AnonymousClass1(onCameraButtonPressed));
-        ImageView imageView = this.binding.f2088b;
-        m.checkNotNullExpressionValue(imageView, "binding.voiceFullscreenControlsCamera");
+        this.binding.f15008b.setOnClickListener(new ViewOnClickListenerC104291(onCameraButtonPressed));
+        ImageView imageView = this.binding.f15008b;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.voiceFullscreenControlsCamera");
         imageView.setVisibility(cameraState != CameraState.CAMERA_DISABLED ? 0 : 8);
         if (cameraState == CameraState.CAMERA_ON) {
-            ImageView imageView2 = this.binding.f2088b;
-            m.checkNotNullExpressionValue(imageView2, "binding.voiceFullscreenControlsCamera");
-            imageView2.setImageTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.colorInteractiveActive)));
-            ImageView imageView3 = this.binding.f2088b;
-            m.checkNotNullExpressionValue(imageView3, "binding.voiceFullscreenControlsCamera");
-            imageView3.setContentDescription(getContext().getString(R.string.camera_on));
+            ImageView imageView2 = this.binding.f15008b;
+            Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.voiceFullscreenControlsCamera");
+            imageView2.setImageTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), C5419R.attr.colorInteractiveActive)));
+            ImageView imageView3 = this.binding.f15008b;
+            Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.voiceFullscreenControlsCamera");
+            imageView3.setContentDescription(getContext().getString(C5419R.string.camera_on));
         } else {
-            ImageView imageView4 = this.binding.f2088b;
-            m.checkNotNullExpressionValue(imageView4, "binding.voiceFullscreenControlsCamera");
-            imageView4.setImageTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.colorInteractiveNormal)));
-            ImageView imageView5 = this.binding.f2088b;
-            m.checkNotNullExpressionValue(imageView5, "binding.voiceFullscreenControlsCamera");
-            imageView5.setContentDescription(getContext().getString(R.string.camera_off));
+            ImageView imageView4 = this.binding.f15008b;
+            Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.voiceFullscreenControlsCamera");
+            imageView4.setImageTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), C5419R.attr.colorInteractiveNormal)));
+            ImageView imageView5 = this.binding.f15008b;
+            Intrinsics3.checkNotNullExpressionValue(imageView5, "binding.voiceFullscreenControlsCamera");
+            imageView5.setContentDescription(getContext().getString(C5419R.string.camera_off));
         }
         if (audioManagerState.getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.BLUETOOTH_HEADSET) {
-            this.binding.g.setImageResource(R.drawable.ic_audio_output_bluetooth_white_24dp);
+            this.binding.f15013g.setImageResource(C5419R.drawable.ic_audio_output_bluetooth_white_24dp);
         } else {
-            this.binding.g.setImageResource(R.drawable.ic_audio_output_white_24dp);
+            this.binding.f15013g.setImageResource(C5419R.drawable.ic_audio_output_white_24dp);
         }
         if (audioManagerState.getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.EARPIECE || audioManagerState.getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.WIRED_HEADSET) {
-            ImageView imageView6 = this.binding.g;
-            m.checkNotNullExpressionValue(imageView6, "binding.voiceFullscreenControlsSpeaker");
-            int themedColor = ColorCompat.getThemedColor(imageView6.getContext(), R.attr.colorInteractiveNormal);
-            ImageView imageView7 = this.binding.g;
-            m.checkNotNullExpressionValue(imageView7, "binding.voiceFullscreenControlsSpeaker");
+            ImageView imageView6 = this.binding.f15013g;
+            Intrinsics3.checkNotNullExpressionValue(imageView6, "binding.voiceFullscreenControlsSpeaker");
+            int themedColor = ColorCompat.getThemedColor(imageView6.getContext(), C5419R.attr.colorInteractiveNormal);
+            ImageView imageView7 = this.binding.f15013g;
+            Intrinsics3.checkNotNullExpressionValue(imageView7, "binding.voiceFullscreenControlsSpeaker");
             imageView7.setImageTintList(ColorStateList.valueOf(themedColor));
         } else {
-            ImageView imageView8 = this.binding.g;
-            m.checkNotNullExpressionValue(imageView8, "binding.voiceFullscreenControlsSpeaker");
-            int themedColor2 = ColorCompat.getThemedColor(imageView8.getContext(), R.attr.colorInteractiveActive);
-            ImageView imageView9 = this.binding.g;
-            m.checkNotNullExpressionValue(imageView9, "binding.voiceFullscreenControlsSpeaker");
+            ImageView imageView8 = this.binding.f15013g;
+            Intrinsics3.checkNotNullExpressionValue(imageView8, "binding.voiceFullscreenControlsSpeaker");
+            int themedColor2 = ColorCompat.getThemedColor(imageView8.getContext(), C5419R.attr.colorInteractiveActive);
+            ImageView imageView9 = this.binding.f15013g;
+            Intrinsics3.checkNotNullExpressionValue(imageView9, "binding.voiceFullscreenControlsSpeaker");
             imageView9.setImageTintList(ColorStateList.valueOf(themedColor2));
         }
-        ImageView imageView10 = this.binding.g;
-        m.checkNotNullExpressionValue(imageView10, "binding.voiceFullscreenControlsSpeaker");
+        ImageView imageView10 = this.binding.f15013g;
+        Intrinsics3.checkNotNullExpressionValue(imageView10, "binding.voiceFullscreenControlsSpeaker");
         imageView10.setActivated(audioManagerState.getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.SPEAKERPHONE);
-        this.binding.g.setOnClickListener(new AnonymousClass2(onSpeakerButtonPressed));
-        ImageView imageView11 = this.binding.d;
-        m.checkNotNullExpressionValue(imageView11, "binding.voiceFullscreenControlsMuteState");
+        this.binding.f15013g.setOnClickListener(new ViewOnClickListenerC104302(onSpeakerButtonPressed));
+        ImageView imageView11 = this.binding.f15010d;
+        Intrinsics3.checkNotNullExpressionValue(imageView11, "binding.voiceFullscreenControlsMuteState");
         imageView11.setActivated(isMuted);
-        ImageView imageView12 = this.binding.d;
-        m.checkNotNullExpressionValue(imageView12, "binding.voiceFullscreenControlsMuteState");
-        imageView12.setContentDescription(getContext().getString(isMuted ? R.string.unmute : R.string.mute));
-        this.binding.d.setOnClickListener(new AnonymousClass3(onMutePressed));
-        ImageView imageView13 = this.binding.f;
-        m.checkNotNullExpressionValue(imageView13, "binding.voiceFullscreenControlsScreenshare");
+        ImageView imageView12 = this.binding.f15010d;
+        Intrinsics3.checkNotNullExpressionValue(imageView12, "binding.voiceFullscreenControlsMuteState");
+        imageView12.setContentDescription(getContext().getString(isMuted ? C5419R.string.unmute : C5419R.string.mute));
+        this.binding.f15010d.setOnClickListener(new ViewOnClickListenerC104313(onMutePressed));
+        ImageView imageView13 = this.binding.f15012f;
+        Intrinsics3.checkNotNullExpressionValue(imageView13, "binding.voiceFullscreenControlsScreenshare");
         imageView13.setActivated(isScreensharing);
-        this.binding.f.setImageResource(isScreensharing ? R.drawable.ic_mobile_screenshare_end_24dp : R.drawable.ic_mobile_screenshare_24dp);
-        ImageView imageView14 = this.binding.f;
-        m.checkNotNullExpressionValue(imageView14, "binding.voiceFullscreenControlsScreenshare");
+        this.binding.f15012f.setImageResource(isScreensharing ? C5419R.drawable.ic_mobile_screenshare_end_24dp : C5419R.drawable.ic_mobile_screenshare_24dp);
+        ImageView imageView14 = this.binding.f15012f;
+        Intrinsics3.checkNotNullExpressionValue(imageView14, "binding.voiceFullscreenControlsScreenshare");
         Context context = getContext();
         if (context != null) {
-            string = context.getString(isScreensharing ? R.string.stop_streaming : R.string.screenshare_screen);
+            string = context.getString(isScreensharing ? C5419R.string.stop_streaming : C5419R.string.screenshare_screen);
         } else {
             string = null;
         }
         imageView14.setContentDescription(string);
-        this.binding.f.setOnClickListener(new AnonymousClass4(onScreenSharePressed));
+        this.binding.f15012f.setOnClickListener(new ViewOnClickListenerC104324(onScreenSharePressed));
         configureScreenShareButtonSparkle(showScreenShareSparkle, appComponent, fragmentManager, channelId, guildId, forwardToFullscreenIfVideoActivated, featureContext, onNavigateToScreenShareNfxSheet, onScreenSharePressed);
-        this.binding.c.setOnClickListener(new AnonymousClass5(onDisconnectPressed));
+        this.binding.f15009c.setOnClickListener(new ViewOnClickListenerC104335(onDisconnectPressed));
     }
 
     public final void hidePtt() {
-        MaterialButton materialButton = this.binding.e;
-        m.checkNotNullExpressionValue(materialButton, "binding.voiceFullscreenControlsPtt");
+        MaterialButton materialButton = this.binding.f15011e;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.voiceFullscreenControlsPtt");
         materialButton.setVisibility(8);
     }
 
     public final void setOnPttPressedListener(Function1<? super Boolean, Unit> onPttPressed) {
-        m.checkNotNullParameter(onPttPressed, "onPttPressed");
-        this.binding.e.setOnTouchListener(new OnPressListener(new AnonymousClass1(onPttPressed)));
+        Intrinsics3.checkNotNullParameter(onPttPressed, "onPttPressed");
+        this.binding.f15011e.setOnTouchListener(new OnPressListener(new C104341(onPttPressed)));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AnchoredVoiceControlsView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        m.checkNotNullParameter(context, "context");
-        View viewInflate = LayoutInflater.from(context).inflate(R.layout.anchored_voice_controls_view, (ViewGroup) this, false);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        View viewInflate = LayoutInflater.from(context).inflate(C5419R.layout.anchored_voice_controls_view, (ViewGroup) this, false);
         addView(viewInflate);
-        int i2 = R.id.voice_fullscreen_controls_camera;
-        ImageView imageView = (ImageView) viewInflate.findViewById(R.id.voice_fullscreen_controls_camera);
+        int i2 = C5419R.id.voice_fullscreen_controls_camera;
+        ImageView imageView = (ImageView) viewInflate.findViewById(C5419R.id.voice_fullscreen_controls_camera);
         if (imageView != null) {
-            i2 = R.id.voice_fullscreen_controls_controls_wrap;
-            LinearLayout linearLayout = (LinearLayout) viewInflate.findViewById(R.id.voice_fullscreen_controls_controls_wrap);
+            i2 = C5419R.id.voice_fullscreen_controls_controls_wrap;
+            LinearLayout linearLayout = (LinearLayout) viewInflate.findViewById(C5419R.id.voice_fullscreen_controls_controls_wrap);
             if (linearLayout != null) {
-                i2 = R.id.voice_fullscreen_controls_disconnect;
-                ImageView imageView2 = (ImageView) viewInflate.findViewById(R.id.voice_fullscreen_controls_disconnect);
+                i2 = C5419R.id.voice_fullscreen_controls_disconnect;
+                ImageView imageView2 = (ImageView) viewInflate.findViewById(C5419R.id.voice_fullscreen_controls_disconnect);
                 if (imageView2 != null) {
-                    i2 = R.id.voice_fullscreen_controls_mute_state;
-                    ImageView imageView3 = (ImageView) viewInflate.findViewById(R.id.voice_fullscreen_controls_mute_state);
+                    i2 = C5419R.id.voice_fullscreen_controls_mute_state;
+                    ImageView imageView3 = (ImageView) viewInflate.findViewById(C5419R.id.voice_fullscreen_controls_mute_state);
                     if (imageView3 != null) {
-                        i2 = R.id.voice_fullscreen_controls_ptt;
-                        MaterialButton materialButton = (MaterialButton) viewInflate.findViewById(R.id.voice_fullscreen_controls_ptt);
+                        i2 = C5419R.id.voice_fullscreen_controls_ptt;
+                        MaterialButton materialButton = (MaterialButton) viewInflate.findViewById(C5419R.id.voice_fullscreen_controls_ptt);
                         if (materialButton != null) {
-                            i2 = R.id.voice_fullscreen_controls_screenshare;
-                            ImageView imageView4 = (ImageView) viewInflate.findViewById(R.id.voice_fullscreen_controls_screenshare);
+                            i2 = C5419R.id.voice_fullscreen_controls_screenshare;
+                            ImageView imageView4 = (ImageView) viewInflate.findViewById(C5419R.id.voice_fullscreen_controls_screenshare);
                             if (imageView4 != null) {
-                                i2 = R.id.voice_fullscreen_controls_speaker;
-                                ImageView imageView5 = (ImageView) viewInflate.findViewById(R.id.voice_fullscreen_controls_speaker);
+                                i2 = C5419R.id.voice_fullscreen_controls_speaker;
+                                ImageView imageView5 = (ImageView) viewInflate.findViewById(C5419R.id.voice_fullscreen_controls_speaker);
                                 if (imageView5 != null) {
                                     AnchoredVoiceControlsViewBinding anchoredVoiceControlsViewBinding = new AnchoredVoiceControlsViewBinding((LinearLayout) viewInflate, imageView, linearLayout, imageView2, imageView3, materialButton, imageView4, imageView5);
-                                    m.checkNotNullExpressionValue(anchoredVoiceControlsViewBinding, "AnchoredVoiceControlsVie…rom(context), this, true)");
+                                    Intrinsics3.checkNotNullExpressionValue(anchoredVoiceControlsViewBinding, "AnchoredVoiceControlsVie…rom(context), this, true)");
                                     this.binding = anchoredVoiceControlsViewBinding;
-                                    AppLog appLog = AppLog.g;
-                                    m.checkNotNullParameter(appLog, "logger");
-                                    WeakReference<a> weakReference = a.b.a;
-                                    a aVar = weakReference != null ? weakReference.get() : null;
-                                    if (aVar == null) {
-                                        aVar = new a(appLog);
-                                        a.b.a = new WeakReference<>(aVar);
+                                    AppLog appLog = AppLog.f14950g;
+                                    Intrinsics3.checkNotNullParameter(appLog, "logger");
+                                    WeakReference<FloatingViewManager> weakReference = FloatingViewManager.b.f1460a;
+                                    FloatingViewManager floatingViewManager = weakReference != null ? weakReference.get() : null;
+                                    if (floatingViewManager == null) {
+                                        floatingViewManager = new FloatingViewManager(appLog);
+                                        FloatingViewManager.b.f1460a = new WeakReference<>(floatingViewManager);
                                     }
-                                    a aVar2 = aVar;
-                                    TooltipManager.a aVar3 = TooltipManager.a.d;
-                                    m.checkNotNullParameter(aVar2, "floatingViewManager");
-                                    WeakReference<TooltipManager> weakReference2 = TooltipManager.a.a;
+                                    FloatingViewManager floatingViewManager2 = floatingViewManager;
+                                    TooltipManager.C6647a c6647a = TooltipManager.C6647a.f18975d;
+                                    Intrinsics3.checkNotNullParameter(floatingViewManager2, "floatingViewManager");
+                                    WeakReference<TooltipManager> weakReference2 = TooltipManager.C6647a.f18972a;
                                     TooltipManager tooltipManager = weakReference2 != null ? weakReference2.get() : null;
                                     if (tooltipManager == null) {
-                                        tooltipManager = new TooltipManager((b.a.v.a) TooltipManager.a.f2815b.getValue(), (Set) TooltipManager.a.c.getValue(), 0, aVar2, 4);
-                                        TooltipManager.a.a = new WeakReference<>(tooltipManager);
+                                        tooltipManager = new TooltipManager((AcknowledgedTooltipsCache) TooltipManager.C6647a.f18973b.getValue(), (Set) TooltipManager.C6647a.f18974c.getValue(), 0, floatingViewManager2, 4);
+                                        TooltipManager.C6647a.f18972a = new WeakReference<>(tooltipManager);
                                     }
                                     this.tooltipManager = tooltipManager;
                                     return;

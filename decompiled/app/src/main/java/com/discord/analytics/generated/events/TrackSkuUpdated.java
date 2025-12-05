@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackPriceByCurrency;
-import com.discord.analytics.generated.traits.TrackPriceByCurrencyReceiver;
+import com.discord.analytics.generated.traits.TrackPriceByCurrency2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSkuUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackPriceByCurrencyReceiver {
+public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackBase2, TrackPriceByCurrency2 {
     private TrackBase trackBase;
     private TrackPriceByCurrency trackPriceByCurrency;
     private final Long skuId = null;
@@ -51,7 +51,7 @@ public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackB
             return false;
         }
         TrackSkuUpdated trackSkuUpdated = (TrackSkuUpdated) other;
-        return m.areEqual(this.skuId, trackSkuUpdated.skuId) && m.areEqual(this.updateFrom, trackSkuUpdated.updateFrom) && m.areEqual(this.updateType, trackSkuUpdated.updateType) && m.areEqual(this.storeTitle, trackSkuUpdated.storeTitle) && m.areEqual(this.dependentSkuId, trackSkuUpdated.dependentSkuId) && m.areEqual(this.bundledSkuIds, trackSkuUpdated.bundledSkuIds) && m.areEqual(this.accessType, trackSkuUpdated.accessType) && m.areEqual(this.releaseDate, trackSkuUpdated.releaseDate) && m.areEqual(this.isPremium, trackSkuUpdated.isPremium) && m.areEqual(this.isDistribution, trackSkuUpdated.isDistribution) && m.areEqual(this.available, trackSkuUpdated.available) && m.areEqual(this.availableLocales, trackSkuUpdated.availableLocales) && m.areEqual(this.metacriticId, trackSkuUpdated.metacriticId) && m.areEqual(this.isExclusive, trackSkuUpdated.isExclusive) && m.areEqual(this.genres, trackSkuUpdated.genres) && m.areEqual(this.features, trackSkuUpdated.features) && m.areEqual(this.contentRatingPegi, trackSkuUpdated.contentRatingPegi) && m.areEqual(this.contentRatingEsrb, trackSkuUpdated.contentRatingEsrb) && m.areEqual(this.regularPriceTier, trackSkuUpdated.regularPriceTier) && m.areEqual(this.priceTier, trackSkuUpdated.priceTier);
+        return Intrinsics3.areEqual(this.skuId, trackSkuUpdated.skuId) && Intrinsics3.areEqual(this.updateFrom, trackSkuUpdated.updateFrom) && Intrinsics3.areEqual(this.updateType, trackSkuUpdated.updateType) && Intrinsics3.areEqual(this.storeTitle, trackSkuUpdated.storeTitle) && Intrinsics3.areEqual(this.dependentSkuId, trackSkuUpdated.dependentSkuId) && Intrinsics3.areEqual(this.bundledSkuIds, trackSkuUpdated.bundledSkuIds) && Intrinsics3.areEqual(this.accessType, trackSkuUpdated.accessType) && Intrinsics3.areEqual(this.releaseDate, trackSkuUpdated.releaseDate) && Intrinsics3.areEqual(this.isPremium, trackSkuUpdated.isPremium) && Intrinsics3.areEqual(this.isDistribution, trackSkuUpdated.isDistribution) && Intrinsics3.areEqual(this.available, trackSkuUpdated.available) && Intrinsics3.areEqual(this.availableLocales, trackSkuUpdated.availableLocales) && Intrinsics3.areEqual(this.metacriticId, trackSkuUpdated.metacriticId) && Intrinsics3.areEqual(this.isExclusive, trackSkuUpdated.isExclusive) && Intrinsics3.areEqual(this.genres, trackSkuUpdated.genres) && Intrinsics3.areEqual(this.features, trackSkuUpdated.features) && Intrinsics3.areEqual(this.contentRatingPegi, trackSkuUpdated.contentRatingPegi) && Intrinsics3.areEqual(this.contentRatingEsrb, trackSkuUpdated.contentRatingEsrb) && Intrinsics3.areEqual(this.regularPriceTier, trackSkuUpdated.regularPriceTier) && Intrinsics3.areEqual(this.priceTier, trackSkuUpdated.priceTier);
     }
 
     public int hashCode() {
@@ -98,45 +98,45 @@ public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSkuUpdated(skuId=");
-        sbU.append(this.skuId);
-        sbU.append(", updateFrom=");
-        sbU.append(this.updateFrom);
-        sbU.append(", updateType=");
-        sbU.append(this.updateType);
-        sbU.append(", storeTitle=");
-        sbU.append(this.storeTitle);
-        sbU.append(", dependentSkuId=");
-        sbU.append(this.dependentSkuId);
-        sbU.append(", bundledSkuIds=");
-        sbU.append(this.bundledSkuIds);
-        sbU.append(", accessType=");
-        sbU.append(this.accessType);
-        sbU.append(", releaseDate=");
-        sbU.append(this.releaseDate);
-        sbU.append(", isPremium=");
-        sbU.append(this.isPremium);
-        sbU.append(", isDistribution=");
-        sbU.append(this.isDistribution);
-        sbU.append(", available=");
-        sbU.append(this.available);
-        sbU.append(", availableLocales=");
-        sbU.append(this.availableLocales);
-        sbU.append(", metacriticId=");
-        sbU.append(this.metacriticId);
-        sbU.append(", isExclusive=");
-        sbU.append(this.isExclusive);
-        sbU.append(", genres=");
-        sbU.append(this.genres);
-        sbU.append(", features=");
-        sbU.append(this.features);
-        sbU.append(", contentRatingPegi=");
-        sbU.append(this.contentRatingPegi);
-        sbU.append(", contentRatingEsrb=");
-        sbU.append(this.contentRatingEsrb);
-        sbU.append(", regularPriceTier=");
-        sbU.append(this.regularPriceTier);
-        sbU.append(", priceTier=");
-        return a.G(sbU, this.priceTier, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSkuUpdated(skuId=");
+        sbM833U.append(this.skuId);
+        sbM833U.append(", updateFrom=");
+        sbM833U.append(this.updateFrom);
+        sbM833U.append(", updateType=");
+        sbM833U.append(this.updateType);
+        sbM833U.append(", storeTitle=");
+        sbM833U.append(this.storeTitle);
+        sbM833U.append(", dependentSkuId=");
+        sbM833U.append(this.dependentSkuId);
+        sbM833U.append(", bundledSkuIds=");
+        sbM833U.append(this.bundledSkuIds);
+        sbM833U.append(", accessType=");
+        sbM833U.append(this.accessType);
+        sbM833U.append(", releaseDate=");
+        sbM833U.append(this.releaseDate);
+        sbM833U.append(", isPremium=");
+        sbM833U.append(this.isPremium);
+        sbM833U.append(", isDistribution=");
+        sbM833U.append(this.isDistribution);
+        sbM833U.append(", available=");
+        sbM833U.append(this.available);
+        sbM833U.append(", availableLocales=");
+        sbM833U.append(this.availableLocales);
+        sbM833U.append(", metacriticId=");
+        sbM833U.append(this.metacriticId);
+        sbM833U.append(", isExclusive=");
+        sbM833U.append(this.isExclusive);
+        sbM833U.append(", genres=");
+        sbM833U.append(this.genres);
+        sbM833U.append(", features=");
+        sbM833U.append(this.features);
+        sbM833U.append(", contentRatingPegi=");
+        sbM833U.append(this.contentRatingPegi);
+        sbM833U.append(", contentRatingEsrb=");
+        sbM833U.append(this.contentRatingEsrb);
+        sbM833U.append(", regularPriceTier=");
+        sbM833U.append(this.regularPriceTier);
+        sbM833U.append(", priceTier=");
+        return outline.m819G(sbM833U, this.priceTier, ")");
     }
 }

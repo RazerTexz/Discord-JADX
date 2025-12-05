@@ -9,7 +9,7 @@ import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.room.util.StringUtil;
-import androidx.sqlite.db.SupportSQLiteStatement;
+import androidx.sqlite.p006db.SupportSQLiteStatement;
 import androidx.view.LiveData;
 import androidx.work.Constraints;
 import androidx.work.Data;
@@ -28,15 +28,17 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
     private final SharedSQLiteStatement __preparedStmtOfDelete;
     private final SharedSQLiteStatement __preparedStmtOfIncrementWorkSpecRunAttemptCount;
     private final SharedSQLiteStatement __preparedStmtOfMarkWorkSpecScheduled;
-    private final SharedSQLiteStatement __preparedStmtOfPruneFinishedWorkWithZeroDependentsIgnoringKeepForAtLeast;
+
+    /* renamed from: __preparedStmtOfPruneFinishedWorkWithZeroDependentsIgnoringKeepForAtLeast */
+    private final SharedSQLiteStatement f166xd91a9514;
     private final SharedSQLiteStatement __preparedStmtOfResetScheduledState;
     private final SharedSQLiteStatement __preparedStmtOfResetWorkSpecRunAttemptCount;
     private final SharedSQLiteStatement __preparedStmtOfSetOutput;
     private final SharedSQLiteStatement __preparedStmtOfSetPeriodStartTime;
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$1, reason: invalid class name */
-    public class AnonymousClass1 extends EntityInsertionAdapter<WorkSpec> {
-        public AnonymousClass1(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$1 */
+    public class C07571 extends EntityInsertionAdapter<WorkSpec> {
+        public C07571(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -52,7 +54,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
 
         /* renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(SupportSQLiteStatement supportSQLiteStatement, WorkSpec workSpec) throws Throwable {
-            String str = workSpec.f38id;
+            String str = workSpec.f163id;
             if (str == null) {
                 supportSQLiteStatement.bindNull(1);
             } else {
@@ -121,11 +123,11 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$10, reason: invalid class name */
-    public class AnonymousClass10 implements Callable<List<WorkSpec.WorkInfoPojo>> {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$10 */
+    public class CallableC075810 implements Callable<List<WorkSpec.WorkInfoPojo>> {
         public final /* synthetic */ RoomSQLiteQuery val$_statement;
 
-        public AnonymousClass10(RoomSQLiteQuery roomSQLiteQuery) {
+        public CallableC075810(RoomSQLiteQuery roomSQLiteQuery) {
             this.val$_statement = roomSQLiteQuery;
         }
 
@@ -180,7 +182,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
                             arrayList3 = new ArrayList();
                         }
                         WorkSpec.WorkInfoPojo workInfoPojo = new WorkSpec.WorkInfoPojo();
-                        workInfoPojo.f40id = cursorQuery.getString(columnIndexOrThrow);
+                        workInfoPojo.f165id = cursorQuery.getString(columnIndexOrThrow);
                         workInfoPojo.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndexOrThrow2));
                         workInfoPojo.output = Data.fromByteArray(cursorQuery.getBlob(columnIndexOrThrow3));
                         workInfoPojo.runAttemptCount = cursorQuery.getInt(columnIndexOrThrow4);
@@ -199,11 +201,11 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$11, reason: invalid class name */
-    public class AnonymousClass11 implements Callable<List<WorkSpec.WorkInfoPojo>> {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$11 */
+    public class CallableC075911 implements Callable<List<WorkSpec.WorkInfoPojo>> {
         public final /* synthetic */ RoomSQLiteQuery val$_statement;
 
-        public AnonymousClass11(RoomSQLiteQuery roomSQLiteQuery) {
+        public CallableC075911(RoomSQLiteQuery roomSQLiteQuery) {
             this.val$_statement = roomSQLiteQuery;
         }
 
@@ -258,7 +260,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
                             arrayList3 = new ArrayList();
                         }
                         WorkSpec.WorkInfoPojo workInfoPojo = new WorkSpec.WorkInfoPojo();
-                        workInfoPojo.f40id = cursorQuery.getString(columnIndexOrThrow);
+                        workInfoPojo.f165id = cursorQuery.getString(columnIndexOrThrow);
                         workInfoPojo.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndexOrThrow2));
                         workInfoPojo.output = Data.fromByteArray(cursorQuery.getBlob(columnIndexOrThrow3));
                         workInfoPojo.runAttemptCount = cursorQuery.getInt(columnIndexOrThrow4);
@@ -277,11 +279,11 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$12, reason: invalid class name */
-    public class AnonymousClass12 implements Callable<List<WorkSpec.WorkInfoPojo>> {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$12 */
+    public class CallableC076012 implements Callable<List<WorkSpec.WorkInfoPojo>> {
         public final /* synthetic */ RoomSQLiteQuery val$_statement;
 
-        public AnonymousClass12(RoomSQLiteQuery roomSQLiteQuery) {
+        public CallableC076012(RoomSQLiteQuery roomSQLiteQuery) {
             this.val$_statement = roomSQLiteQuery;
         }
 
@@ -336,7 +338,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
                             arrayList3 = new ArrayList();
                         }
                         WorkSpec.WorkInfoPojo workInfoPojo = new WorkSpec.WorkInfoPojo();
-                        workInfoPojo.f40id = cursorQuery.getString(columnIndexOrThrow);
+                        workInfoPojo.f165id = cursorQuery.getString(columnIndexOrThrow);
                         workInfoPojo.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndexOrThrow2));
                         workInfoPojo.output = Data.fromByteArray(cursorQuery.getBlob(columnIndexOrThrow3));
                         workInfoPojo.runAttemptCount = cursorQuery.getInt(columnIndexOrThrow4);
@@ -355,9 +357,9 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$2, reason: invalid class name */
-    public class AnonymousClass2 extends SharedSQLiteStatement {
-        public AnonymousClass2(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$2 */
+    public class C07612 extends SharedSQLiteStatement {
+        public C07612(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -367,9 +369,9 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$3, reason: invalid class name */
-    public class AnonymousClass3 extends SharedSQLiteStatement {
-        public AnonymousClass3(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$3 */
+    public class C07623 extends SharedSQLiteStatement {
+        public C07623(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -379,9 +381,9 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$4, reason: invalid class name */
-    public class AnonymousClass4 extends SharedSQLiteStatement {
-        public AnonymousClass4(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$4 */
+    public class C07634 extends SharedSQLiteStatement {
+        public C07634(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -391,9 +393,9 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$5, reason: invalid class name */
-    public class AnonymousClass5 extends SharedSQLiteStatement {
-        public AnonymousClass5(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$5 */
+    public class C07645 extends SharedSQLiteStatement {
+        public C07645(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -403,9 +405,9 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$6, reason: invalid class name */
-    public class AnonymousClass6 extends SharedSQLiteStatement {
-        public AnonymousClass6(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$6 */
+    public class C07656 extends SharedSQLiteStatement {
+        public C07656(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -415,9 +417,9 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$7, reason: invalid class name */
-    public class AnonymousClass7 extends SharedSQLiteStatement {
-        public AnonymousClass7(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$7 */
+    public class C07667 extends SharedSQLiteStatement {
+        public C07667(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -427,9 +429,9 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$8, reason: invalid class name */
-    public class AnonymousClass8 extends SharedSQLiteStatement {
-        public AnonymousClass8(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$8 */
+    public class C07678 extends SharedSQLiteStatement {
+        public C07678(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -439,9 +441,9 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$9, reason: invalid class name */
-    public class AnonymousClass9 extends SharedSQLiteStatement {
-        public AnonymousClass9(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$9 */
+    public class C07689 extends SharedSQLiteStatement {
+        public C07689(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -453,15 +455,15 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
 
     public WorkSpecDao_Impl(RoomDatabase roomDatabase) {
         this.__db = roomDatabase;
-        this.__insertionAdapterOfWorkSpec = new AnonymousClass1(roomDatabase);
-        this.__preparedStmtOfDelete = new AnonymousClass2(roomDatabase);
-        this.__preparedStmtOfSetOutput = new AnonymousClass3(roomDatabase);
-        this.__preparedStmtOfSetPeriodStartTime = new AnonymousClass4(roomDatabase);
-        this.__preparedStmtOfIncrementWorkSpecRunAttemptCount = new AnonymousClass5(roomDatabase);
-        this.__preparedStmtOfResetWorkSpecRunAttemptCount = new AnonymousClass6(roomDatabase);
-        this.__preparedStmtOfMarkWorkSpecScheduled = new AnonymousClass7(roomDatabase);
-        this.__preparedStmtOfResetScheduledState = new AnonymousClass8(roomDatabase);
-        this.__preparedStmtOfPruneFinishedWorkWithZeroDependentsIgnoringKeepForAtLeast = new AnonymousClass9(roomDatabase);
+        this.__insertionAdapterOfWorkSpec = new C07571(roomDatabase);
+        this.__preparedStmtOfDelete = new C07612(roomDatabase);
+        this.__preparedStmtOfSetOutput = new C07623(roomDatabase);
+        this.__preparedStmtOfSetPeriodStartTime = new C07634(roomDatabase);
+        this.__preparedStmtOfIncrementWorkSpecRunAttemptCount = new C07645(roomDatabase);
+        this.__preparedStmtOfResetWorkSpecRunAttemptCount = new C07656(roomDatabase);
+        this.__preparedStmtOfMarkWorkSpecScheduled = new C07667(roomDatabase);
+        this.__preparedStmtOfResetScheduledState = new C07678(roomDatabase);
+        this.f166xd91a9514 = new C07689(roomDatabase);
     }
 
     private void __fetchRelationshipWorkProgressAsandroidxWorkData(ArrayMap<String, ArrayList<Data>> arrayMap) {
@@ -1461,7 +1463,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
             ArrayList arrayList = new ArrayList(cursorQuery.getCount());
             while (cursorQuery.moveToNext()) {
                 WorkSpec.IdAndState idAndState = new WorkSpec.IdAndState();
-                idAndState.f39id = cursorQuery.getString(columnIndexOrThrow);
+                idAndState.f164id = cursorQuery.getString(columnIndexOrThrow);
                 idAndState.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndexOrThrow2));
                 arrayList.add(idAndState);
             }
@@ -1653,7 +1655,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
                         arrayList2 = new ArrayList<>();
                     }
                     WorkSpec.WorkInfoPojo workInfoPojo2 = new WorkSpec.WorkInfoPojo();
-                    workInfoPojo2.f40id = cursorQuery.getString(columnIndexOrThrow);
+                    workInfoPojo2.f165id = cursorQuery.getString(columnIndexOrThrow);
                     workInfoPojo2.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndexOrThrow2));
                     workInfoPojo2.output = Data.fromByteArray(cursorQuery.getBlob(columnIndexOrThrow3));
                     workInfoPojo2.runAttemptCount = cursorQuery.getInt(columnIndexOrThrow4);
@@ -1728,7 +1730,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
                         arrayList3 = new ArrayList<>();
                     }
                     WorkSpec.WorkInfoPojo workInfoPojo = new WorkSpec.WorkInfoPojo();
-                    workInfoPojo.f40id = cursorQuery.getString(columnIndexOrThrow);
+                    workInfoPojo.f165id = cursorQuery.getString(columnIndexOrThrow);
                     workInfoPojo.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndexOrThrow2));
                     workInfoPojo.output = Data.fromByteArray(cursorQuery.getBlob(columnIndexOrThrow3));
                     workInfoPojo.runAttemptCount = cursorQuery.getInt(columnIndexOrThrow4);
@@ -1794,7 +1796,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
                         arrayList3 = new ArrayList<>();
                     }
                     WorkSpec.WorkInfoPojo workInfoPojo = new WorkSpec.WorkInfoPojo();
-                    workInfoPojo.f40id = cursorQuery.getString(columnIndexOrThrow);
+                    workInfoPojo.f165id = cursorQuery.getString(columnIndexOrThrow);
                     workInfoPojo.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndexOrThrow2));
                     workInfoPojo.output = Data.fromByteArray(cursorQuery.getBlob(columnIndexOrThrow3));
                     workInfoPojo.runAttemptCount = cursorQuery.getInt(columnIndexOrThrow4);
@@ -1860,7 +1862,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
                         arrayList3 = new ArrayList<>();
                     }
                     WorkSpec.WorkInfoPojo workInfoPojo = new WorkSpec.WorkInfoPojo();
-                    workInfoPojo.f40id = cursorQuery.getString(columnIndexOrThrow);
+                    workInfoPojo.f165id = cursorQuery.getString(columnIndexOrThrow);
                     workInfoPojo.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndexOrThrow2));
                     workInfoPojo.output = Data.fromByteArray(cursorQuery.getBlob(columnIndexOrThrow3));
                     workInfoPojo.runAttemptCount = cursorQuery.getInt(columnIndexOrThrow4);
@@ -1896,7 +1898,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
             }
             i++;
         }
-        return this.__db.getInvalidationTracker().createLiveData(new String[]{"WorkTag", "WorkProgress", "workspec"}, true, new AnonymousClass10(roomSQLiteQueryAcquire));
+        return this.__db.getInvalidationTracker().createLiveData(new String[]{"WorkTag", "WorkProgress", "workspec"}, true, new CallableC075810(roomSQLiteQueryAcquire));
     }
 
     @Override // androidx.work.impl.model.WorkSpecDao
@@ -1907,7 +1909,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         } else {
             roomSQLiteQueryAcquire.bindString(1, str);
         }
-        return this.__db.getInvalidationTracker().createLiveData(new String[]{"WorkTag", "WorkProgress", "workspec", "workname"}, true, new AnonymousClass12(roomSQLiteQueryAcquire));
+        return this.__db.getInvalidationTracker().createLiveData(new String[]{"WorkTag", "WorkProgress", "workspec", "workname"}, true, new CallableC076012(roomSQLiteQueryAcquire));
     }
 
     @Override // androidx.work.impl.model.WorkSpecDao
@@ -1918,7 +1920,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         } else {
             roomSQLiteQueryAcquire.bindString(1, str);
         }
-        return this.__db.getInvalidationTracker().createLiveData(new String[]{"WorkTag", "WorkProgress", "workspec", "worktag"}, true, new AnonymousClass11(roomSQLiteQueryAcquire));
+        return this.__db.getInvalidationTracker().createLiveData(new String[]{"WorkTag", "WorkProgress", "workspec", "worktag"}, true, new CallableC075911(roomSQLiteQueryAcquire));
     }
 
     @Override // androidx.work.impl.model.WorkSpecDao
@@ -1977,14 +1979,14 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
     @Override // androidx.work.impl.model.WorkSpecDao
     public void pruneFinishedWorkWithZeroDependentsIgnoringKeepForAtLeast() {
         this.__db.assertNotSuspendingTransaction();
-        SupportSQLiteStatement supportSQLiteStatementAcquire = this.__preparedStmtOfPruneFinishedWorkWithZeroDependentsIgnoringKeepForAtLeast.acquire();
+        SupportSQLiteStatement supportSQLiteStatementAcquire = this.f166xd91a9514.acquire();
         this.__db.beginTransaction();
         try {
             supportSQLiteStatementAcquire.executeUpdateDelete();
             this.__db.setTransactionSuccessful();
         } finally {
             this.__db.endTransaction();
-            this.__preparedStmtOfPruneFinishedWorkWithZeroDependentsIgnoringKeepForAtLeast.release(supportSQLiteStatementAcquire);
+            this.f166xd91a9514.release(supportSQLiteStatementAcquire);
         }
     }
 

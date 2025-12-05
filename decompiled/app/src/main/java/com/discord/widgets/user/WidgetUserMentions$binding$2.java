@@ -4,15 +4,15 @@ import android.view.View;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetUserMentionsBinding;
-import d0.z.d.k;
-import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetUserMentions.kt */
 /* loaded from: classes.dex */
-public final /* synthetic */ class WidgetUserMentions$binding$2 extends k implements Function1<View, WidgetUserMentionsBinding> {
+public final /* synthetic */ class WidgetUserMentions$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetUserMentionsBinding> {
     public static final WidgetUserMentions$binding$2 INSTANCE = new WidgetUserMentions$binding$2();
 
     public WidgetUserMentions$binding$2() {
@@ -21,12 +21,12 @@ public final /* synthetic */ class WidgetUserMentions$binding$2 extends k implem
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetUserMentionsBinding invoke2(View view) {
-        m.checkNotNullParameter(view, "p1");
-        int i = R.id.action_bar_toolbar;
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.action_bar_toolbar);
+        Intrinsics3.checkNotNullParameter(view, "p1");
+        int i = C5419R.id.action_bar_toolbar;
+        Toolbar toolbar = (Toolbar) view.findViewById(C5419R.id.action_bar_toolbar);
         if (toolbar != null) {
-            i = R.id.user_mentions_list;
-            RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.user_mentions_list);
+            i = C5419R.id.user_mentions_list;
+            RecyclerView recyclerView = (RecyclerView) view.findViewById(C5419R.id.user_mentions_list);
             if (recyclerView != null) {
                 return new WidgetUserMentionsBinding((CoordinatorLayout) view, toolbar, recyclerView);
             }

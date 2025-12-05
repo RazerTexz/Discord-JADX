@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildLfgGroup.kt */
 /* loaded from: classes.dex */
@@ -23,7 +23,7 @@ public final /* data */ class TrackGuildLfgGroup {
             return false;
         }
         TrackGuildLfgGroup trackGuildLfgGroup = (TrackGuildLfgGroup) other;
-        return m.areEqual(this.lfgGroupChannelId, trackGuildLfgGroup.lfgGroupChannelId) && m.areEqual(this.lfgGroupOwnerId, trackGuildLfgGroup.lfgGroupOwnerId) && m.areEqual(this.lfgDirectoryChannelId, trackGuildLfgGroup.lfgDirectoryChannelId) && m.areEqual(this.lfgDirectoryGuildId, trackGuildLfgGroup.lfgDirectoryGuildId) && m.areEqual(this.lfgDirectoryGuildName, trackGuildLfgGroup.lfgDirectoryGuildName) && m.areEqual(this.lfgGroupMaxSize, trackGuildLfgGroup.lfgGroupMaxSize) && m.areEqual(this.lfgGroupCurrentSize, trackGuildLfgGroup.lfgGroupCurrentSize) && m.areEqual(this.lfgGroupDescription, trackGuildLfgGroup.lfgGroupDescription);
+        return Intrinsics3.areEqual(this.lfgGroupChannelId, trackGuildLfgGroup.lfgGroupChannelId) && Intrinsics3.areEqual(this.lfgGroupOwnerId, trackGuildLfgGroup.lfgGroupOwnerId) && Intrinsics3.areEqual(this.lfgDirectoryChannelId, trackGuildLfgGroup.lfgDirectoryChannelId) && Intrinsics3.areEqual(this.lfgDirectoryGuildId, trackGuildLfgGroup.lfgDirectoryGuildId) && Intrinsics3.areEqual(this.lfgDirectoryGuildName, trackGuildLfgGroup.lfgDirectoryGuildName) && Intrinsics3.areEqual(this.lfgGroupMaxSize, trackGuildLfgGroup.lfgGroupMaxSize) && Intrinsics3.areEqual(this.lfgGroupCurrentSize, trackGuildLfgGroup.lfgGroupCurrentSize) && Intrinsics3.areEqual(this.lfgGroupDescription, trackGuildLfgGroup.lfgGroupDescription);
     }
 
     public int hashCode() {
@@ -46,21 +46,21 @@ public final /* data */ class TrackGuildLfgGroup {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildLfgGroup(lfgGroupChannelId=");
-        sbU.append(this.lfgGroupChannelId);
-        sbU.append(", lfgGroupOwnerId=");
-        sbU.append(this.lfgGroupOwnerId);
-        sbU.append(", lfgDirectoryChannelId=");
-        sbU.append(this.lfgDirectoryChannelId);
-        sbU.append(", lfgDirectoryGuildId=");
-        sbU.append(this.lfgDirectoryGuildId);
-        sbU.append(", lfgDirectoryGuildName=");
-        sbU.append(this.lfgDirectoryGuildName);
-        sbU.append(", lfgGroupMaxSize=");
-        sbU.append(this.lfgGroupMaxSize);
-        sbU.append(", lfgGroupCurrentSize=");
-        sbU.append(this.lfgGroupCurrentSize);
-        sbU.append(", lfgGroupDescription=");
-        return a.E(sbU, this.lfgGroupDescription, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildLfgGroup(lfgGroupChannelId=");
+        sbM833U.append(this.lfgGroupChannelId);
+        sbM833U.append(", lfgGroupOwnerId=");
+        sbM833U.append(this.lfgGroupOwnerId);
+        sbM833U.append(", lfgDirectoryChannelId=");
+        sbM833U.append(this.lfgDirectoryChannelId);
+        sbM833U.append(", lfgDirectoryGuildId=");
+        sbM833U.append(this.lfgDirectoryGuildId);
+        sbM833U.append(", lfgDirectoryGuildName=");
+        sbM833U.append(this.lfgDirectoryGuildName);
+        sbM833U.append(", lfgGroupMaxSize=");
+        sbM833U.append(this.lfgGroupMaxSize);
+        sbM833U.append(", lfgGroupCurrentSize=");
+        sbM833U.append(this.lfgGroupCurrentSize);
+        sbM833U.append(", lfgGroupDescription=");
+        return outline.m817E(sbM833U, this.lfgGroupDescription, ")");
     }
 }

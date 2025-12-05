@@ -18,7 +18,7 @@ public class GlRectDrawer extends GlGenericDrawer {
         public void onPrepareShader(GlShader glShader, float[] fArr, int i, int i2, int i3, int i4) {
         }
 
-        public /* synthetic */ ShaderCallbacks(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ ShaderCallbacks(C129651 c129651) {
             this();
         }
     }

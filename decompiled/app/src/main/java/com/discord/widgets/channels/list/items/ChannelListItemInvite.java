@@ -1,8 +1,8 @@
 package com.discord.widgets.channels.list.items;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.widgets.channels.list.items.ChannelListItem;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: ChannelListItemInvite.kt */
 /* loaded from: classes2.dex */
@@ -68,13 +68,13 @@ public final /* data */ class ChannelListItemInvite implements ChannelListItem {
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        int iA = b.a(this.guildId) * 31;
+        int iM3a = C0002b.m3a(this.guildId) * 31;
         boolean z2 = this.isHub;
         int i = z2;
         if (z2 != 0) {
             i = 1;
         }
-        return iA + i;
+        return iM3a + i;
     }
 
     public final boolean isHub() {
@@ -82,9 +82,9 @@ public final /* data */ class ChannelListItemInvite implements ChannelListItem {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelListItemInvite(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", isHub=");
-        return a.O(sbU, this.isHub, ")");
+        StringBuilder sbM833U = outline.m833U("ChannelListItemInvite(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", isHub=");
+        return outline.m827O(sbM833U, this.isHub, ")");
     }
 }

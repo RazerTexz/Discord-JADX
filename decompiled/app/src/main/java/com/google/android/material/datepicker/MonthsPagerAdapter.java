@@ -9,22 +9,30 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.i.a.g.d.g;
-import b.i.a.g.d.h;
-import com.google.android.material.R;
+import com.google.android.material.C10817R;
 import com.google.android.material.datepicker.MaterialCalendar;
 import java.util.Iterator;
+import p007b.p225i.p226a.p341g.p345d.MonthAdapter;
+import p007b.p225i.p226a.p341g.p345d.MonthsPagerAdapter2;
 
 /* loaded from: classes3.dex */
 public class MonthsPagerAdapter extends RecyclerView.Adapter<ViewHolder> {
-    public final Context a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: a */
+    public final Context f20991a;
+
+    /* renamed from: b */
     @NonNull
-    public final CalendarConstraints f3036b;
-    public final DateSelector<?> c;
-    public final MaterialCalendar.l d;
-    public final int e;
+    public final CalendarConstraints f20992b;
+
+    /* renamed from: c */
+    public final DateSelector<?> f20993c;
+
+    /* renamed from: d */
+    public final MaterialCalendar.InterfaceC10896l f20994d;
+
+    /* renamed from: e */
+    public final int f20995e;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public final MaterialCalendarGridView monthGrid;
@@ -32,10 +40,10 @@ public class MonthsPagerAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         public ViewHolder(@NonNull LinearLayout linearLayout, boolean z2) {
             super(linearLayout);
-            TextView textView = (TextView) linearLayout.findViewById(R.id.month_title);
+            TextView textView = (TextView) linearLayout.findViewById(C10817R.id.month_title);
             this.monthTitle = textView;
             ViewCompat.setAccessibilityHeading(textView, true);
-            this.monthGrid = (MaterialCalendarGridView) linearLayout.findViewById(R.id.month_grid);
+            this.monthGrid = (MaterialCalendarGridView) linearLayout.findViewById(C10817R.id.month_grid);
             if (z2) {
                 return;
             }
@@ -43,83 +51,85 @@ public class MonthsPagerAdapter extends RecyclerView.Adapter<ViewHolder> {
         }
     }
 
-    public MonthsPagerAdapter(@NonNull Context context, DateSelector<?> dateSelector, @NonNull CalendarConstraints calendarConstraints, MaterialCalendar.l lVar) {
+    public MonthsPagerAdapter(@NonNull Context context, DateSelector<?> dateSelector, @NonNull CalendarConstraints calendarConstraints, MaterialCalendar.InterfaceC10896l interfaceC10896l) {
         Month start = calendarConstraints.getStart();
         Month end = calendarConstraints.getEnd();
         Month openAt = calendarConstraints.getOpenAt();
-        if (start.f(openAt) > 0) {
+        if (start.m9134f(openAt) > 0) {
             throw new IllegalArgumentException("firstPage cannot be after currentPage");
         }
-        if (openAt.f(end) > 0) {
+        if (openAt.m9134f(end) > 0) {
             throw new IllegalArgumentException("currentPage cannot be after lastPage");
         }
-        int dayHeight = MaterialCalendar.getDayHeight(context) * g.j;
+        int dayHeight = MaterialCalendar.getDayHeight(context) * MonthAdapter.f11606j;
         int dayHeight2 = MaterialDatePicker.isFullscreen(context) ? MaterialCalendar.getDayHeight(context) : 0;
-        this.a = context;
-        this.e = dayHeight + dayHeight2;
-        this.f3036b = calendarConstraints;
-        this.c = dateSelector;
-        this.d = lVar;
+        this.f20991a = context;
+        this.f20995e = dayHeight + dayHeight2;
+        this.f20992b = calendarConstraints;
+        this.f20993c = dateSelector;
+        this.f20994d = interfaceC10896l;
         setHasStableIds(true);
     }
 
     @NonNull
-    public Month a(int i) {
-        return this.f3036b.getStart().m(i);
+    /* renamed from: a */
+    public Month m9140a(int i) {
+        return this.f20992b.getStart().m9138m(i);
     }
 
-    public int b(@NonNull Month month) {
-        return this.f3036b.getStart().o(month);
+    /* renamed from: b */
+    public int m9141b(@NonNull Month month) {
+        return this.f20992b.getStart().m9139o(month);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: getItemCount */
     public int getPageSize() {
-        return this.f3036b.getMonthSpan();
+        return this.f20992b.getMonthSpan();
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public long getItemId(int i) {
-        return this.f3036b.getStart().m(i).j.getTimeInMillis();
+        return this.f20992b.getStart().m9138m(i).f20984j.getTimeInMillis();
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
         ViewHolder viewHolder2 = (ViewHolder) viewHolder;
-        Month monthM = this.f3036b.getStart().m(i);
-        viewHolder2.monthTitle.setText(monthM.l(viewHolder2.itemView.getContext()));
-        MaterialCalendarGridView materialCalendarGridView = (MaterialCalendarGridView) viewHolder2.monthGrid.findViewById(R.id.month_grid);
-        if (materialCalendarGridView.a() == null || !monthM.equals(materialCalendarGridView.a().k)) {
-            g gVar = new g(monthM, this.c, this.f3036b);
-            materialCalendarGridView.setNumColumns(monthM.m);
-            materialCalendarGridView.setAdapter((ListAdapter) gVar);
+        Month monthM9138m = this.f20992b.getStart().m9138m(i);
+        viewHolder2.monthTitle.setText(monthM9138m.m9137l(viewHolder2.itemView.getContext()));
+        MaterialCalendarGridView materialCalendarGridView = (MaterialCalendarGridView) viewHolder2.monthGrid.findViewById(C10817R.id.month_grid);
+        if (materialCalendarGridView.m9130a() == null || !monthM9138m.equals(materialCalendarGridView.m9130a().f11607k)) {
+            MonthAdapter monthAdapter = new MonthAdapter(monthM9138m, this.f20993c, this.f20992b);
+            materialCalendarGridView.setNumColumns(monthM9138m.f20987m);
+            materialCalendarGridView.setAdapter((ListAdapter) monthAdapter);
         } else {
             materialCalendarGridView.invalidate();
-            g gVarA = materialCalendarGridView.a();
-            Iterator<Long> it = gVarA.m.iterator();
+            MonthAdapter monthAdapterM9130a = materialCalendarGridView.m9130a();
+            Iterator<Long> it = monthAdapterM9130a.f11609m.iterator();
             while (it.hasNext()) {
-                gVarA.f(materialCalendarGridView, it.next().longValue());
+                monthAdapterM9130a.m6067f(materialCalendarGridView, it.next().longValue());
             }
-            DateSelector<?> dateSelector = gVarA.l;
+            DateSelector<?> dateSelector = monthAdapterM9130a.f11608l;
             if (dateSelector != null) {
                 Iterator<Long> it2 = dateSelector.getSelectedDays().iterator();
                 while (it2.hasNext()) {
-                    gVarA.f(materialCalendarGridView, it2.next().longValue());
+                    monthAdapterM9130a.m6067f(materialCalendarGridView, it2.next().longValue());
                 }
-                gVarA.m = gVarA.l.getSelectedDays();
+                monthAdapterM9130a.f11609m = monthAdapterM9130a.f11608l.getSelectedDays();
             }
         }
-        materialCalendarGridView.setOnItemClickListener(new h(this, materialCalendarGridView));
+        materialCalendarGridView.setOnItemClickListener(new MonthsPagerAdapter2(this, materialCalendarGridView));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     @NonNull
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.mtrl_calendar_month_labeled, viewGroup, false);
+        LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(viewGroup.getContext()).inflate(C10817R.layout.mtrl_calendar_month_labeled, viewGroup, false);
         if (!MaterialDatePicker.isFullscreen(viewGroup.getContext())) {
             return new ViewHolder(linearLayout, false);
         }
-        linearLayout.setLayoutParams(new RecyclerView.LayoutParams(-1, this.e));
+        linearLayout.setLayoutParams(new RecyclerView.LayoutParams(-1, this.f20995e));
         return new ViewHolder(linearLayout, true);
     }
 }

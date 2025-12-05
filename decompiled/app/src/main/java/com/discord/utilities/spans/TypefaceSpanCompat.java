@@ -5,7 +5,7 @@ import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 import android.text.style.TypefaceSpan;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TypefaceSpanCompat.kt */
 /* loaded from: classes2.dex */
@@ -20,7 +20,7 @@ public final class TypefaceSpanCompat extends MetricAffectingSpan {
     }
 
     public TypefaceSpanCompat(Typeface typeface) {
-        m.checkNotNullParameter(typeface, "typeface");
+        Intrinsics3.checkNotNullParameter(typeface, "typeface");
         this.typeface = typeface;
     }
 
@@ -38,13 +38,13 @@ public final class TypefaceSpanCompat extends MetricAffectingSpan {
 
     @Override // android.text.style.CharacterStyle
     public void updateDrawState(TextPaint drawState) {
-        m.checkNotNullParameter(drawState, "drawState");
+        Intrinsics3.checkNotNullParameter(drawState, "drawState");
         apply(drawState);
     }
 
     @Override // android.text.style.MetricAffectingSpan
     public void updateMeasureState(TextPaint paint) {
-        m.checkNotNullParameter(paint, "paint");
+        Intrinsics3.checkNotNullParameter(paint, "paint");
         apply(paint);
     }
 }

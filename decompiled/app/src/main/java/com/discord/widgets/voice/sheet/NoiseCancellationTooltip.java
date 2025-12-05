@@ -4,7 +4,7 @@ import com.discord.tooltips.TooltipManager;
 
 /* compiled from: NoiseCancellationTooltip.kt */
 /* loaded from: classes.dex */
-public final class NoiseCancellationTooltip extends TooltipManager.b {
+public final class NoiseCancellationTooltip extends TooltipManager.C6648b {
     public static final NoiseCancellationTooltip INSTANCE = new NoiseCancellationTooltip();
 
     private NoiseCancellationTooltip() {

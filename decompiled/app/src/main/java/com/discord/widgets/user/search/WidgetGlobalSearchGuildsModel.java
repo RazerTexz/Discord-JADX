@@ -1,24 +1,24 @@
 package com.discord.widgets.user.search;
 
-import a0.a.a.b;
 import androidx.core.app.FrameMetricsAggregator;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelNotificationSettings;
 import com.discord.models.guild.Guild;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
-import d0.f0.n;
-import d0.f0.q;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.sequences.Sequence;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p578f0.C12075n;
+import p507d0.p578f0._Sequences2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetGlobalSearchGuildsModel.kt */
 /* loaded from: classes.dex */
@@ -35,23 +35,23 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
         }
 
         private final Sequence<Item> asDirectMessageItems(Map<Long, Channel> map, Map<Long, Integer> map2, ModelNotificationSettings modelNotificationSettings) {
-            return q.map(q.sortedWith(q.filter(q.filterNotNull(u.asSequence(map.values())), new WidgetGlobalSearchGuildsModel$Companion$asDirectMessageItems$1(modelNotificationSettings, map2)), ChannelUtils.h(Channel.INSTANCE)), new WidgetGlobalSearchGuildsModel$Companion$asDirectMessageItems$2(map2));
+            return _Sequences2.map(_Sequences2.sortedWith(_Sequences2.filter(_Sequences2.filterNotNull(_Collections.asSequence(map.values())), new WidgetGlobalSearchGuildsModel2(modelNotificationSettings, map2)), ChannelUtils.m7684h(Channel.INSTANCE)), new WidgetGlobalSearchGuildsModel3(map2));
         }
 
         private final Sequence<Item> asGuildItems(Sequence<Guild> sequence, Long l, long j, Set<Long> set, Map<Long, ? extends ModelNotificationSettings> map, Map<Long, Integer> map2, Map<Long, ? extends List<Long>> map3) {
-            return q.map(sequence, new WidgetGlobalSearchGuildsModel$Companion$asGuildItems$1(map3, map2, map, set, l, j));
+            return _Sequences2.map(sequence, new WidgetGlobalSearchGuildsModel4(map3, map2, map, set, l, j));
         }
 
         public final WidgetGlobalSearchGuildsModel create(List<Long> recentGuildIds, long selectedVoiceChannelId, Set<Long> unreadGuildIds, Map<Long, Integer> mentionCounts, Map<Long, Channel> privateChannels, Map<Long, Guild> guilds, Map<Long, ? extends List<Long>> channelIds, Map<Long, ? extends ModelNotificationSettings> guildSettings) {
-            m.checkNotNullParameter(recentGuildIds, "recentGuildIds");
-            m.checkNotNullParameter(unreadGuildIds, "unreadGuildIds");
-            m.checkNotNullParameter(mentionCounts, "mentionCounts");
-            m.checkNotNullParameter(privateChannels, "privateChannels");
-            m.checkNotNullParameter(guilds, "guilds");
-            m.checkNotNullParameter(channelIds, "channelIds");
-            m.checkNotNullParameter(guildSettings, "guildSettings");
+            Intrinsics3.checkNotNullParameter(recentGuildIds, "recentGuildIds");
+            Intrinsics3.checkNotNullParameter(unreadGuildIds, "unreadGuildIds");
+            Intrinsics3.checkNotNullParameter(mentionCounts, "mentionCounts");
+            Intrinsics3.checkNotNullParameter(privateChannels, "privateChannels");
+            Intrinsics3.checkNotNullParameter(guilds, "guilds");
+            Intrinsics3.checkNotNullParameter(channelIds, "channelIds");
+            Intrinsics3.checkNotNullParameter(guildSettings, "guildSettings");
             Sequence<Item> sequenceAsDirectMessageItems = asDirectMessageItems(privateChannels, mentionCounts, guildSettings.get(0L));
-            return new WidgetGlobalSearchGuildsModel(q.toList(q.plus(q.plus((Sequence) sequenceAsDirectMessageItems, q.any(sequenceAsDirectMessageItems) ? n.sequenceOf(Item.INSTANCE.createDivider$app_productionGoogleRelease()) : n.emptySequence()), q.sortedWith(asGuildItems(q.mapNotNull(q.drop(q.distinct(u.asSequence(u.plus((Collection) recentGuildIds, (Iterable) guilds.keySet()))), 1), new WidgetGlobalSearchGuildsModel$Companion$create$guildItems$1(guilds)), (Long) u.firstOrNull((List) recentGuildIds), selectedVoiceChannelId, unreadGuildIds, guildSettings, mentionCounts, channelIds), new WidgetGlobalSearchGuildsModel$Companion$create$$inlined$sortedByDescending$1()))), !channelIds.isEmpty());
+            return new WidgetGlobalSearchGuildsModel(_Sequences2.toList(_Sequences2.plus(_Sequences2.plus((Sequence) sequenceAsDirectMessageItems, _Sequences2.any(sequenceAsDirectMessageItems) ? C12075n.sequenceOf(Item.INSTANCE.createDivider$app_productionGoogleRelease()) : C12075n.emptySequence()), _Sequences2.sortedWith(asGuildItems(_Sequences2.mapNotNull(_Sequences2.drop(_Sequences2.distinct(_Collections.asSequence(_Collections.plus((Collection) recentGuildIds, (Iterable) guilds.keySet()))), 1), new WidgetGlobalSearchGuildsModel5(guilds)), (Long) _Collections.firstOrNull((List) recentGuildIds), selectedVoiceChannelId, unreadGuildIds, guildSettings, mentionCounts, channelIds), new C10327x4c1841d0()))), !channelIds.isEmpty());
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -60,7 +60,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
     }
 
     public WidgetGlobalSearchGuildsModel(List<Item> list, boolean z2) {
-        m.checkNotNullParameter(list, "items");
+        Intrinsics3.checkNotNullParameter(list, "items");
         this.items = list;
         this.hasChannels = z2;
     }
@@ -86,7 +86,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
     }
 
     public final WidgetGlobalSearchGuildsModel copy(List<Item> items, boolean hasChannels) {
-        m.checkNotNullParameter(items, "items");
+        Intrinsics3.checkNotNullParameter(items, "items");
         return new WidgetGlobalSearchGuildsModel(items, hasChannels);
     }
 
@@ -98,7 +98,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
             return false;
         }
         WidgetGlobalSearchGuildsModel widgetGlobalSearchGuildsModel = (WidgetGlobalSearchGuildsModel) other;
-        return m.areEqual(this.items, widgetGlobalSearchGuildsModel.items) && this.hasChannels == widgetGlobalSearchGuildsModel.hasChannels;
+        return Intrinsics3.areEqual(this.items, widgetGlobalSearchGuildsModel.items) && this.hasChannels == widgetGlobalSearchGuildsModel.hasChannels;
     }
 
     public final boolean getHasChannels() {
@@ -122,10 +122,10 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("WidgetGlobalSearchGuildsModel(items=");
-        sbU.append(this.items);
-        sbU.append(", hasChannels=");
-        return a.O(sbU, this.hasChannels, ")");
+        StringBuilder sbM833U = outline.m833U("WidgetGlobalSearchGuildsModel(items=");
+        sbM833U.append(this.items);
+        sbM833U.append(", hasChannels=");
+        return outline.m827O(sbM833U, this.hasChannels, ")");
     }
 
     public /* synthetic */ WidgetGlobalSearchGuildsModel(List list, boolean z2, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -158,7 +158,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
             }
 
             public final Item createDirectMessage$app_productionGoogleRelease(Channel channel, int mentionCount) {
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 return new Item(2, channel.getId(), channel, null, mentionCount, false, false, false, 0, 488, null);
             }
 
@@ -167,7 +167,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
             }
 
             public final Item createGuild$app_productionGoogleRelease(Guild guild, int mentionCount, boolean hasUnread, boolean isSelected, boolean connectedToVoice) {
-                m.checkNotNullParameter(guild, "guild");
+                Intrinsics3.checkNotNullParameter(guild, "guild");
                 return new Item(3, guild.getId(), null, guild, mentionCount, hasUnread, isSelected, connectedToVoice, 0, 260, null);
             }
 
@@ -259,7 +259,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
                 return false;
             }
             Item item = (Item) other;
-            return this._type == item._type && this.id == item.id && m.areEqual(this.channel, item.channel) && m.areEqual(this.guild, item.guild) && this.mentionCount == item.mentionCount && this.isUnread == item.isUnread && this.isSelected == item.isSelected && this.connectedToVoice == item.connectedToVoice && this.unavailableGuildCount == item.unavailableGuildCount;
+            return this._type == item._type && this.id == item.id && Intrinsics3.areEqual(this.channel, item.channel) && Intrinsics3.areEqual(this.guild, item.guild) && this.mentionCount == item.mentionCount && this.isUnread == item.isUnread && this.isSelected == item.isSelected && this.connectedToVoice == item.connectedToVoice && this.unavailableGuildCount == item.unavailableGuildCount;
         }
 
         public final Channel getChannel() {
@@ -298,9 +298,9 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
 
         /* JADX WARN: Multi-variable type inference failed */
         public int hashCode() {
-            int iA = (b.a(this.id) + (this._type * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.id) + (this._type * 31)) * 31;
             Channel channel = this.channel;
-            int iHashCode = (iA + (channel != null ? channel.hashCode() : 0)) * 31;
+            int iHashCode = (iM3a + (channel != null ? channel.hashCode() : 0)) * 31;
             Guild guild = this.guild;
             int iHashCode2 = (((iHashCode + (guild != null ? guild.hashCode() : 0)) * 31) + this.mentionCount) * 31;
             boolean z2 = this.isUnread;
@@ -328,24 +328,24 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Item(_type=");
-            sbU.append(this._type);
-            sbU.append(", id=");
-            sbU.append(this.id);
-            sbU.append(", channel=");
-            sbU.append(this.channel);
-            sbU.append(", guild=");
-            sbU.append(this.guild);
-            sbU.append(", mentionCount=");
-            sbU.append(this.mentionCount);
-            sbU.append(", isUnread=");
-            sbU.append(this.isUnread);
-            sbU.append(", isSelected=");
-            sbU.append(this.isSelected);
-            sbU.append(", connectedToVoice=");
-            sbU.append(this.connectedToVoice);
-            sbU.append(", unavailableGuildCount=");
-            return a.B(sbU, this.unavailableGuildCount, ")");
+            StringBuilder sbM833U = outline.m833U("Item(_type=");
+            sbM833U.append(this._type);
+            sbM833U.append(", id=");
+            sbM833U.append(this.id);
+            sbM833U.append(", channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", mentionCount=");
+            sbM833U.append(this.mentionCount);
+            sbM833U.append(", isUnread=");
+            sbM833U.append(this.isUnread);
+            sbM833U.append(", isSelected=");
+            sbM833U.append(this.isSelected);
+            sbM833U.append(", connectedToVoice=");
+            sbM833U.append(this.connectedToVoice);
+            sbM833U.append(", unavailableGuildCount=");
+            return outline.m814B(sbM833U, this.unavailableGuildCount, ")");
         }
 
         public /* synthetic */ Item(int i, long j, Channel channel, Guild guild, int i2, boolean z2, boolean z3, boolean z4, int i3, int i4, DefaultConstructorMarker defaultConstructorMarker) {

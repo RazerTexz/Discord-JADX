@@ -1,57 +1,67 @@
 package com.google.zxing;
 
-import b.i.e.a;
-import b.i.e.j;
-import b.i.e.k;
 import java.util.EnumMap;
 import java.util.Map;
+import p007b.p225i.p414e.BarcodeFormat;
+import p007b.p225i.p414e.ResultMetadataType;
+import p007b.p225i.p414e.ResultPoint;
 
 /* loaded from: classes3.dex */
 public final class Result {
-    public final String a;
 
-    /* renamed from: b, reason: collision with root package name */
-    public final byte[] f3140b;
-    public k[] c;
-    public final a d;
-    public Map<j, Object> e;
+    /* renamed from: a */
+    public final String f21668a;
 
-    public Result(String str, byte[] bArr, k[] kVarArr, a aVar) {
+    /* renamed from: b */
+    public final byte[] f21669b;
+
+    /* renamed from: c */
+    public ResultPoint[] f21670c;
+
+    /* renamed from: d */
+    public final BarcodeFormat f21671d;
+
+    /* renamed from: e */
+    public Map<ResultMetadataType, Object> f21672e;
+
+    public Result(String str, byte[] bArr, ResultPoint[] resultPointArr, BarcodeFormat barcodeFormat) {
         System.currentTimeMillis();
-        this.a = str;
-        this.f3140b = bArr;
-        this.c = kVarArr;
-        this.d = aVar;
-        this.e = null;
+        this.f21668a = str;
+        this.f21669b = bArr;
+        this.f21670c = resultPointArr;
+        this.f21671d = barcodeFormat;
+        this.f21672e = null;
     }
 
-    public void a(Map<j, Object> map) {
+    /* renamed from: a */
+    public void m9261a(Map<ResultMetadataType, Object> map) {
         if (map != null) {
-            Map<j, Object> map2 = this.e;
+            Map<ResultMetadataType, Object> map2 = this.f21672e;
             if (map2 == null) {
-                this.e = map;
+                this.f21672e = map;
             } else {
                 map2.putAll(map);
             }
         }
     }
 
-    public void b(j jVar, Object obj) {
-        if (this.e == null) {
-            this.e = new EnumMap(j.class);
+    /* renamed from: b */
+    public void m9262b(ResultMetadataType resultMetadataType, Object obj) {
+        if (this.f21672e == null) {
+            this.f21672e = new EnumMap(ResultMetadataType.class);
         }
-        this.e.put(jVar, obj);
+        this.f21672e.put(resultMetadataType, obj);
     }
 
     public String toString() {
-        return this.a;
+        return this.f21668a;
     }
 
-    public Result(String str, byte[] bArr, int i, k[] kVarArr, a aVar, long j) {
-        this.a = str;
-        this.f3140b = bArr;
-        this.c = kVarArr;
-        this.d = aVar;
-        this.e = null;
+    public Result(String str, byte[] bArr, int i, ResultPoint[] resultPointArr, BarcodeFormat barcodeFormat, long j) {
+        this.f21668a = str;
+        this.f21669b = bArr;
+        this.f21670c = resultPointArr;
+        this.f21671d = barcodeFormat;
+        this.f21672e = null;
     }
 }

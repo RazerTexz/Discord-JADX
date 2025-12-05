@@ -1,18 +1,18 @@
 package com.discord.utilities.views;
 
-import d0.z.d.m;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: ViewVisibilityObserver.kt */
 /* loaded from: classes2.dex */
 public final class ViewVisibilityObserver {
-    private final BehaviorSubject<Boolean> isVisibleSubject = BehaviorSubject.k0();
+    private final BehaviorSubject<Boolean> isVisibleSubject = BehaviorSubject.m11129k0();
 
     public final Observable<Boolean> observeIsVisible() {
-        Observable<Boolean> observableR = this.isVisibleSubject.r();
-        m.checkNotNullExpressionValue(observableR, "isVisibleSubject.distinctUntilChanged()");
-        return observableR;
+        Observable<Boolean> observableM11112r = this.isVisibleSubject.m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "isVisibleSubject.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final void updateVisibility(boolean isVisible) {

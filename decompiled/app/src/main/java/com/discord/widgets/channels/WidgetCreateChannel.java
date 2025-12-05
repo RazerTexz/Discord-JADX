@@ -18,11 +18,9 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.analytics.generated.events.network_action.TrackNetworkActionChannelCreate;
-import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
@@ -30,37 +28,32 @@ import com.discord.api.permission.PermissionOverwrite;
 import com.discord.api.role.GuildRole;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
-import com.discord.app.LoggingConfig;
+import com.discord.app.AppLogger2;
 import com.discord.databinding.ViewCheckableRoleListItemThemedBinding;
 import com.discord.databinding.WidgetCreateChannelBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
-import com.discord.stores.utilities.RestCallStateKt;
+import com.discord.stores.utilities.RestCallState5;
 import com.discord.utilities.channel.ChannelSelector;
-import com.discord.utilities.channel.GuildChannelIconUtilsKt;
+import com.discord.utilities.channel.GuildChannelIconUtils2;
 import com.discord.utilities.guilds.RoleUtils;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.mg_recycler.SingleTypePayload;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.stage.StageChannelUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
 import com.discord.views.RadioManager;
 import com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember;
 import com.discord.widgets.forums.ForumUtils;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g;
-import d0.t.n;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -75,13 +68,20 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
-import rx.functions.Action2;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.functions.Action2;
 
 /* compiled from: WidgetCreateChannel.kt */
 /* loaded from: classes2.dex */
 public final class WidgetCreateChannel extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetCreateChannel.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCreateChannelBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCreateChannel.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCreateChannelBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -110,7 +110,7 @@ public final class WidgetCreateChannel extends AppFragment {
 
     /* renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
-    private final LoggingConfig loggingConfig;
+    private final AppLogger2 loggingConfig;
 
     /* renamed from: provideResultOnly$delegate, reason: from kotlin metadata */
     private final Lazy provideResultOnly;
@@ -140,9 +140,9 @@ public final class WidgetCreateChannel extends AppFragment {
         }
 
         public final void launch(Context context, ActivityResultLauncher<Intent> launcher, long guildId, int type, Long categoryId, boolean shouldChannelDefaultPrivate, boolean provideResultOnly, boolean disablePrivateSwitch, boolean disableAnnouncementChannelType) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(launcher, "launcher");
-            j jVar = j.g;
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(launcher, "launcher");
+            AppScreen2 appScreen2 = AppScreen2.f524g;
             Intent intent = new Intent();
             intent.putExtra(WidgetCreateChannel.INTENT_GUILD_ID, guildId);
             intent.putExtra(WidgetCreateChannel.INTENT_TYPE, type);
@@ -151,24 +151,24 @@ public final class WidgetCreateChannel extends AppFragment {
             intent.putExtra(WidgetCreateChannel.INTENT_SHOULD_CHANNEL_DEFAULT_PRIVATE, shouldChannelDefaultPrivate);
             intent.putExtra(WidgetCreateChannel.INTENT_DISABLE_PRIVATE_SWITCH, disablePrivateSwitch);
             intent.putExtra(WidgetCreateChannel.INTENT_DISABLE_ANNOUNCEMENT_CHANNEL_TYPE, disableAnnouncementChannelType);
-            jVar.f(context, launcher, WidgetCreateChannel.class, intent);
+            appScreen2.m160f(context, launcher, WidgetCreateChannel.class, intent);
         }
 
         public final ActivityResultLauncher<Intent> registerForResult(AppFragment fragment, Function3<? super Long, ? super String, ? super Integer, Unit> callback) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(callback, "callback");
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(callback, "callback");
             ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetCreateChannel$Companion$registerForResult$1(callback));
-            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…  }\n          }\n        }");
+            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…  }\n          }\n        }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
         public final void show(Context context, long guildId, int type, Long categoryId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra(WidgetCreateChannel.INTENT_GUILD_ID, guildId);
             intent.putExtra(WidgetCreateChannel.INTENT_TYPE, type);
             intent.putExtra(WidgetCreateChannel.INTENT_CATEGORY_ID, categoryId);
-            j.d(context, WidgetCreateChannel.class, intent);
+            AppScreen2.m156d(context, WidgetCreateChannel.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -194,11 +194,11 @@ public final class WidgetCreateChannel extends AppFragment {
 
             public final Observable<Model> get(long guildId, Long categoryId) {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
-                Observable observableF = Observable.f(StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getGuilds().observeGuild(guildId), companion.getPermissions().observePermissionsForGuild(guildId), companion.getPermissions().observePermissionsForChannel(categoryId != null ? categoryId.longValue() : 0L), companion.getGuilds().observeSortedRoles(guildId), ForumUtils.observeCanCreateForumChannels$default(ForumUtils.INSTANCE, guildId, null, null, 6, null), WidgetCreateChannel$Model$Companion$get$1.INSTANCE);
-                m.checkNotNullExpressionValue(observableF, "Observable\n            .…          }\n            }");
-                Observable<Model> observableR = ObservableExtensionsKt.computationLatest(observableF).r();
-                m.checkNotNullExpressionValue(observableR, "Observable\n            .…  .distinctUntilChanged()");
-                return observableR;
+                Observable observableM11071f = Observable.m11071f(StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getGuilds().observeGuild(guildId), companion.getPermissions().observePermissionsForGuild(guildId), companion.getPermissions().observePermissionsForChannel(categoryId != null ? categoryId.longValue() : 0L), companion.getGuilds().observeSortedRoles(guildId), ForumUtils.observeCanCreateForumChannels$default(ForumUtils.INSTANCE, guildId, null, null, 6, null), WidgetCreateChannel$Model$Companion$get$1.INSTANCE);
+                Intrinsics3.checkNotNullExpressionValue(observableM11071f, "Observable\n            .…          }\n            }");
+                Observable<Model> observableM11112r = ObservableExtensionsKt.computationLatest(observableM11071f).m11112r();
+                Intrinsics3.checkNotNullExpressionValue(observableM11112r, "Observable\n            .…  .distinctUntilChanged()");
+                return observableM11112r;
             }
 
             public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -249,13 +249,13 @@ public final class WidgetCreateChannel extends AppFragment {
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public RoleListItem(RolesAdapter rolesAdapter) {
-                super(R.layout.view_checkable_role_list_item_themed, rolesAdapter);
-                m.checkNotNullParameter(rolesAdapter, "adapter");
+                super(C5419R.layout.view_checkable_role_list_item_themed, rolesAdapter);
+                Intrinsics3.checkNotNullParameter(rolesAdapter, "adapter");
                 View view = this.itemView;
                 Objects.requireNonNull(view, "rootView");
                 CheckedSetting checkedSetting = (CheckedSetting) view;
                 ViewCheckableRoleListItemThemedBinding viewCheckableRoleListItemThemedBinding = new ViewCheckableRoleListItemThemedBinding(checkedSetting, checkedSetting);
-                m.checkNotNullExpressionValue(viewCheckableRoleListItemThemedBinding, "ViewCheckableRoleListIte…medBinding.bind(itemView)");
+                Intrinsics3.checkNotNullExpressionValue(viewCheckableRoleListItemThemedBinding, "ViewCheckableRoleListIte…medBinding.bind(itemView)");
                 this.binding = viewCheckableRoleListItemThemedBinding;
             }
 
@@ -274,19 +274,19 @@ public final class WidgetCreateChannel extends AppFragment {
 
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, SingleTypePayload<GuildRole> data) {
-                m.checkNotNullParameter(data, "data");
+                Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
                 GuildRole data2 = data.getData();
                 boolean zContainsKey = ((RolesAdapter) this.adapter).getCheckedRoles().containsKey(Long.valueOf(data2.getId()));
-                CheckedSetting checkedSetting = this.binding.f2180b;
-                m.checkNotNullExpressionValue(checkedSetting, "binding.roleItemCheckedSetting");
+                CheckedSetting checkedSetting = this.binding.f15400b;
+                Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.roleItemCheckedSetting");
                 checkedSetting.setChecked(zContainsKey);
-                this.binding.f2180b.e(new WidgetCreateChannel$RolesAdapter$RoleListItem$onConfigure$1(this, data2));
-                this.binding.f2180b.setText(data2.getName());
-                CheckedSetting checkedSetting2 = this.binding.f2180b;
-                m.checkNotNullExpressionValue(checkedSetting2, "binding.roleItemCheckedSetting");
+                this.binding.f15400b.m8527e(new WidgetCreateChannel$RolesAdapter$RoleListItem$onConfigure$1(this, data2));
+                this.binding.f15400b.setText(data2.getName());
+                CheckedSetting checkedSetting2 = this.binding.f15400b;
+                Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.roleItemCheckedSetting");
                 Context context = checkedSetting2.getContext();
-                m.checkNotNullExpressionValue(context, "binding.roleItemCheckedSetting.context");
+                Intrinsics3.checkNotNullExpressionValue(context, "binding.roleItemCheckedSetting.context");
                 checkedSetting2.setTextColor(RoleUtils.getRoleColor$default(data2, context, null, 2, null));
             }
         }
@@ -294,7 +294,7 @@ public final class WidgetCreateChannel extends AppFragment {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RolesAdapter(RecyclerView recyclerView) {
             super(recyclerView, false, 2, null);
-            m.checkNotNullParameter(recyclerView, "recycler");
+            Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
             this.checkedRoles = new HashMap();
         }
 
@@ -330,44 +330,44 @@ public final class WidgetCreateChannel extends AppFragment {
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple
         public void setData(List<SingleTypePayload<GuildRole>> data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.setData(data);
             this.checkedRoles.clear();
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public MGRecyclerViewHolder<?, SingleTypePayload<GuildRole>> onCreateViewHolder(ViewGroup parent, int viewType) {
-            m.checkNotNullParameter(parent, "parent");
+            Intrinsics3.checkNotNullParameter(parent, "parent");
             return new RoleListItem(this);
         }
     }
 
     /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2> implements Action2<MenuItem, Context> {
+    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1 */
+    public static final class C73701<T1, T2> implements Action2<MenuItem, Context> {
 
         /* compiled from: WidgetCreateChannel.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03601 extends o implements Function1<Channel, TrackNetworkMetadataReceiver> {
-            public C03601() {
+        /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<Channel, TrackNetworkMetadata2> {
+            public AnonymousClass1() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
-            public /* bridge */ /* synthetic */ TrackNetworkMetadataReceiver invoke(Channel channel) {
+            public /* bridge */ /* synthetic */ TrackNetworkMetadata2 invoke(Channel channel) {
                 return invoke2(channel);
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
-            public final TrackNetworkMetadataReceiver invoke2(Channel channel) {
-                List<PermissionOverwrite> listV;
-                return new TrackNetworkActionChannelCreate((channel == null || (listV = channel.v()) == null) ? null : Boolean.valueOf(!listV.isEmpty()), channel != null ? Long.valueOf(channel.getType()) : null, channel != null ? Long.valueOf(channel.getId()) : null, channel != null ? Long.valueOf(channel.getParentId()) : null, Long.valueOf(WidgetCreateChannel.access$getGuildId$p(WidgetCreateChannel.this)));
+            public final TrackNetworkMetadata2 invoke2(Channel channel) {
+                List<PermissionOverwrite> listM7655v;
+                return new TrackNetworkActionChannelCreate((channel == null || (listM7655v = channel.m7655v()) == null) ? null : Boolean.valueOf(!listM7655v.isEmpty()), channel != null ? Long.valueOf(channel.getType()) : null, channel != null ? Long.valueOf(channel.getId()) : null, channel != null ? Long.valueOf(channel.getParentId()) : null, Long.valueOf(WidgetCreateChannel.access$getGuildId$p(WidgetCreateChannel.this)));
             }
         }
 
         /* compiled from: WidgetCreateChannel.kt */
         /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1$2, reason: invalid class name */
-        public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<Channel, Unit> {
+        public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<Channel, Unit> {
             public AnonymousClass2(WidgetCreateChannel widgetCreateChannel) {
                 super(1, widgetCreateChannel, WidgetCreateChannel.class, "onChannelCreated", "onChannelCreated(Lcom/discord/api/channel/Channel;)V", 0);
             }
@@ -375,49 +375,49 @@ public final class WidgetCreateChannel extends AppFragment {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Channel channel) {
                 invoke2(channel);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Channel channel) {
-                m.checkNotNullParameter(channel, "p1");
+                Intrinsics3.checkNotNullParameter(channel, "p1");
                 WidgetCreateChannel.access$onChannelCreated((WidgetCreateChannel) this.receiver, channel);
             }
         }
 
-        public AnonymousClass1() {
+        public C73701() {
         }
 
-        @Override // rx.functions.Action2
+        @Override // p658rx.functions.Action2
         public /* bridge */ /* synthetic */ void call(MenuItem menuItem, Context context) {
             call2(menuItem, context);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
-            m.checkNotNullParameter(menuItem, "menuItem");
-            if (menuItem.getItemId() == R.id.menu_sort_channel) {
+            Intrinsics3.checkNotNullParameter(menuItem, "menuItem");
+            if (menuItem.getItemId() == C5419R.id.menu_sort_channel) {
                 RestAPI api = RestAPI.INSTANCE.getApi();
                 long jAccess$getGuildId$p = WidgetCreateChannel.access$getGuildId$p(WidgetCreateChannel.this);
                 int iAccess$getChannelType$p = WidgetCreateChannel.access$getChannelType$p(WidgetCreateChannel.this);
-                TextInputLayout textInputLayout = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f;
-                m.checkNotNullExpressionValue(textInputLayout, "binding.createChannelNameLayout");
-                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestCallStateKt.logNetworkAction(api.createGuildChannel(jAccess$getGuildId$p, new RestAPIParams.CreateGuildChannel(iAccess$getChannelType$p, null, ViewExtensions.getTextOrEmpty(textInputLayout), WidgetCreateChannel.access$getCategoryId$p(WidgetCreateChannel.this), WidgetCreateChannel.access$getPermissionOverwrites(WidgetCreateChannel.this), null)), new C03601()), false, 1, null), WidgetCreateChannel.this, null, 2, null), WidgetCreateChannel.this.getClass(), WidgetCreateChannel.this.getContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(WidgetCreateChannel.this), 60, (Object) null);
+                TextInputLayout textInputLayout = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f16424f;
+                Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.createChannelNameLayout");
+                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestCallState5.logNetworkAction(api.createGuildChannel(jAccess$getGuildId$p, new RestAPIParams.CreateGuildChannel(iAccess$getChannelType$p, null, ViewExtensions.getTextOrEmpty(textInputLayout), WidgetCreateChannel.access$getCategoryId$p(WidgetCreateChannel.this), WidgetCreateChannel.access$getPermissionOverwrites(WidgetCreateChannel.this), null)), new AnonymousClass1()), false, 1, null), WidgetCreateChannel.this, null, 2, null), WidgetCreateChannel.this.getClass(), WidgetCreateChannel.this.getContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(WidgetCreateChannel.this), 60, (Object) null);
             }
         }
     }
 
     /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
-        public AnonymousClass1(WidgetCreateChannel widgetCreateChannel) {
+    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C73711 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+        public C73711(WidgetCreateChannel widgetCreateChannel) {
             super(1, widgetCreateChannel, WidgetCreateChannel.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/WidgetCreateChannel$Model;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -427,127 +427,127 @@ public final class WidgetCreateChannel extends AppFragment {
     }
 
     /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$2 */
+    public static final class ViewOnClickListenerC73722 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
-        public AnonymousClass2(RadioManager radioManager) {
+        public ViewOnClickListenerC73722(RadioManager radioManager) {
             this.$radioManager = radioManager;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             RadioManager radioManager = this.$radioManager;
-            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).q;
-            m.checkNotNullExpressionValue(radioButton, "binding.createChannelTextRadio");
-            radioManager.a(radioButton);
+            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f16435q;
+            Intrinsics3.checkNotNullExpressionValue(radioButton, "binding.createChannelTextRadio");
+            radioManager.m8550a(radioButton);
             WidgetCreateChannel.access$configurePrivateRoles(WidgetCreateChannel.this);
         }
     }
 
     /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$3 */
+    public static final class ViewOnClickListenerC73733 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
-        public AnonymousClass3(RadioManager radioManager) {
+        public ViewOnClickListenerC73733(RadioManager radioManager) {
             this.$radioManager = radioManager;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             RadioManager radioManager = this.$radioManager;
-            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).t;
-            m.checkNotNullExpressionValue(radioButton, "binding.createChannelVoiceRadio");
-            radioManager.a(radioButton);
+            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f16438t;
+            Intrinsics3.checkNotNullExpressionValue(radioButton, "binding.createChannelVoiceRadio");
+            radioManager.m8550a(radioButton);
             WidgetCreateChannel.access$configurePrivateRoles(WidgetCreateChannel.this);
         }
     }
 
     /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$4 */
+    public static final class ViewOnClickListenerC73744 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
-        public AnonymousClass4(RadioManager radioManager) {
+        public ViewOnClickListenerC73744(RadioManager radioManager) {
             this.$radioManager = radioManager;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             RadioManager radioManager = this.$radioManager;
-            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).c;
-            m.checkNotNullExpressionValue(radioButton, "binding.createChannelAnnouncementsRadio");
-            radioManager.a(radioButton);
+            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f16421c;
+            Intrinsics3.checkNotNullExpressionValue(radioButton, "binding.createChannelAnnouncementsRadio");
+            radioManager.m8550a(radioButton);
             WidgetCreateChannel.access$configurePrivateRoles(WidgetCreateChannel.this);
         }
     }
 
     /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$5 */
+    public static final class ViewOnClickListenerC73755 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
-        public AnonymousClass5(RadioManager radioManager) {
+        public ViewOnClickListenerC73755(RadioManager radioManager) {
             this.$radioManager = radioManager;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             RadioManager radioManager = this.$radioManager;
-            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).o;
-            m.checkNotNullExpressionValue(radioButton, "binding.createChannelStageRadio");
-            radioManager.a(radioButton);
+            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f16433o;
+            Intrinsics3.checkNotNullExpressionValue(radioButton, "binding.createChannelStageRadio");
+            radioManager.m8550a(radioButton);
             WidgetCreateChannel.access$configurePrivateRoles(WidgetCreateChannel.this);
         }
     }
 
     /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$6, reason: invalid class name */
-    public static final class AnonymousClass6 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$6 */
+    public static final class ViewOnClickListenerC73766 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
-        public AnonymousClass6(RadioManager radioManager) {
+        public ViewOnClickListenerC73766(RadioManager radioManager) {
             this.$radioManager = radioManager;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             RadioManager radioManager = this.$radioManager;
-            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).e;
-            m.checkNotNullExpressionValue(radioButton, "binding.createChannelForumRadio");
-            radioManager.a(radioButton);
+            RadioButton radioButton = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f16423e;
+            Intrinsics3.checkNotNullExpressionValue(radioButton, "binding.createChannelForumRadio");
+            radioManager.m8550a(radioButton);
             WidgetCreateChannel.access$configurePrivateRoles(WidgetCreateChannel.this);
         }
     }
 
     /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$7, reason: invalid class name */
-    public static final class AnonymousClass7 implements View.OnClickListener {
-        public AnonymousClass7() {
+    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$7 */
+    public static final class ViewOnClickListenerC73777 implements View.OnClickListener {
+        public ViewOnClickListenerC73777() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            SwitchCompat switchCompat = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).i;
-            m.checkNotNullExpressionValue(switchCompat, "binding.createChannelPrivateSwitch");
-            m.checkNotNullExpressionValue(WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).i, "binding.createChannelPrivateSwitch");
+            SwitchCompat switchCompat = WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f16427i;
+            Intrinsics3.checkNotNullExpressionValue(switchCompat, "binding.createChannelPrivateSwitch");
+            Intrinsics3.checkNotNullExpressionValue(WidgetCreateChannel.access$getBinding$p(WidgetCreateChannel.this).f16427i, "binding.createChannelPrivateSwitch");
             switchCompat.setChecked(!r1.isChecked());
             WidgetCreateChannel.access$configurePrivateRoles(WidgetCreateChannel.this);
         }
     }
 
     public WidgetCreateChannel() {
-        super(R.layout.widget_create_channel);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetCreateChannel$binding$2.INSTANCE, null, 2, null);
-        this.guildId = g.lazy(new WidgetCreateChannel$guildId$2(this));
-        this.type = g.lazy(new WidgetCreateChannel$type$2(this));
-        this.categoryId = g.lazy(new WidgetCreateChannel$categoryId$2(this));
-        this.provideResultOnly = g.lazy(new WidgetCreateChannel$provideResultOnly$2(this));
-        this.shouldChannelDefaultPrivate = g.lazy(new WidgetCreateChannel$shouldChannelDefaultPrivate$2(this));
-        this.disablePrivateSwitch = g.lazy(new WidgetCreateChannel$disablePrivateSwitch$2(this));
-        this.disableAnnouncementChannelType = g.lazy(new WidgetCreateChannel$disableAnnouncementChannelType$2(this));
-        this.loggingConfig = new LoggingConfig(false, null, WidgetCreateChannel$loggingConfig$1.INSTANCE, 3);
+        super(C5419R.layout.widget_create_channel);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetCreateChannel$binding$2.INSTANCE, null, 2, null);
+        this.guildId = LazyJVM.lazy(new WidgetCreateChannel$guildId$2(this));
+        this.type = LazyJVM.lazy(new WidgetCreateChannel$type$2(this));
+        this.categoryId = LazyJVM.lazy(new WidgetCreateChannel$categoryId$2(this));
+        this.provideResultOnly = LazyJVM.lazy(new WidgetCreateChannel$provideResultOnly$2(this));
+        this.shouldChannelDefaultPrivate = LazyJVM.lazy(new WidgetCreateChannel$shouldChannelDefaultPrivate$2(this));
+        this.disablePrivateSwitch = LazyJVM.lazy(new WidgetCreateChannel$disablePrivateSwitch$2(this));
+        this.disableAnnouncementChannelType = LazyJVM.lazy(new WidgetCreateChannel$disableAnnouncementChannelType$2(this));
+        this.loggingConfig = new AppLogger2(false, null, WidgetCreateChannel$loggingConfig$1.INSTANCE, 3);
     }
 
     public static final /* synthetic */ void access$configurePrivateRoles(WidgetCreateChannel widgetCreateChannel) {
@@ -584,20 +584,20 @@ public final class WidgetCreateChannel extends AppFragment {
 
     private final void configurePrivateRoles() {
         boolean z2 = (getChannelType() == 13 || getDisablePrivateSwitch()) ? false : true;
-        SwitchCompat switchCompat = getBinding().i;
-        m.checkNotNullExpressionValue(switchCompat, "binding.createChannelPrivateSwitch");
+        SwitchCompat switchCompat = getBinding().f16427i;
+        Intrinsics3.checkNotNullExpressionValue(switchCompat, "binding.createChannelPrivateSwitch");
         boolean zIsChecked = switchCompat.isChecked();
-        RelativeLayout relativeLayout = getBinding().g;
-        m.checkNotNullExpressionValue(relativeLayout, "binding.createChannelPrivateContainer");
+        RelativeLayout relativeLayout = getBinding().f16425g;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.createChannelPrivateContainer");
         relativeLayout.setVisibility(z2 ? 0 : 8);
-        View view = getBinding().l;
-        m.checkNotNullExpressionValue(view, "binding.createChannelRoleDivider");
+        View view = getBinding().f16430l;
+        Intrinsics3.checkNotNullExpressionValue(view, "binding.createChannelRoleDivider");
         view.setVisibility(z2 ? 0 : 8);
-        TextView textView = getBinding().m;
-        m.checkNotNullExpressionValue(textView, "binding.createChannelRoleHeader");
+        TextView textView = getBinding().f16431m;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.createChannelRoleHeader");
         textView.setVisibility(z2 && zIsChecked ? 0 : 8);
-        RecyclerView recyclerView = getBinding().k;
-        m.checkNotNullExpressionValue(recyclerView, "binding.createChannelRoleAccessRecycler");
+        RecyclerView recyclerView = getBinding().f16429k;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.createChannelRoleAccessRecycler");
         recyclerView.setVisibility(z2 && zIsChecked ? 0 : 8);
     }
 
@@ -611,16 +611,16 @@ public final class WidgetCreateChannel extends AppFragment {
             return;
         }
         setActionBarDisplayHomeAsUpEnabled(true);
-        setActionBarTitle(getType() == 4 ? R.string.create_category : R.string.create_channel);
-        AppFragment.setActionBarOptionsMenu$default(this, R.menu.menu_channel_create, new AnonymousClass1(), null, 4, null);
-        ConstraintLayout constraintLayout = getBinding().f2357b;
-        m.checkNotNullExpressionValue(constraintLayout, "binding.createChannelAnnouncementsContainer");
+        setActionBarTitle(getType() == 4 ? C5419R.string.create_category : C5419R.string.create_channel);
+        AppFragment.setActionBarOptionsMenu$default(this, C5419R.menu.menu_channel_create, new C73701(), null, 4, null);
+        ConstraintLayout constraintLayout = getBinding().f16420b;
+        Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.createChannelAnnouncementsContainer");
         constraintLayout.setVisibility(model.getCanCreateCommunityChannels() && !getDisableAnnouncementChannelType() ? 0 : 8);
-        ConstraintLayout constraintLayout2 = getBinding().n;
-        m.checkNotNullExpressionValue(constraintLayout2, "binding.createChannelStageContainer");
+        ConstraintLayout constraintLayout2 = getBinding().f16432n;
+        Intrinsics3.checkNotNullExpressionValue(constraintLayout2, "binding.createChannelStageContainer");
         constraintLayout2.setVisibility(model.getCanCreateCommunityChannels() && model.getCanManageRoles() ? 0 : 8);
-        ConstraintLayout constraintLayout3 = getBinding().d;
-        m.checkNotNullExpressionValue(constraintLayout3, "binding.createChannelForumContainer");
+        ConstraintLayout constraintLayout3 = getBinding().f16422d;
+        Intrinsics3.checkNotNullExpressionValue(constraintLayout3, "binding.createChannelForumContainer");
         constraintLayout3.setVisibility(model.getCanCreateForumChannels() ? 0 : 8);
         RolesAdapter rolesAdapter = this.rolesAdapter;
         if (rolesAdapter != null) {
@@ -648,23 +648,23 @@ public final class WidgetCreateChannel extends AppFragment {
         if (getType() == 4) {
             return 4;
         }
-        RadioButton radioButton = getBinding().t;
-        m.checkNotNullExpressionValue(radioButton, "binding.createChannelVoiceRadio");
+        RadioButton radioButton = getBinding().f16438t;
+        Intrinsics3.checkNotNullExpressionValue(radioButton, "binding.createChannelVoiceRadio");
         if (radioButton.isChecked()) {
             return 2;
         }
-        RadioButton radioButton2 = getBinding().c;
-        m.checkNotNullExpressionValue(radioButton2, "binding.createChannelAnnouncementsRadio");
+        RadioButton radioButton2 = getBinding().f16421c;
+        Intrinsics3.checkNotNullExpressionValue(radioButton2, "binding.createChannelAnnouncementsRadio");
         if (radioButton2.isChecked()) {
             return 5;
         }
-        RadioButton radioButton3 = getBinding().o;
-        m.checkNotNullExpressionValue(radioButton3, "binding.createChannelStageRadio");
+        RadioButton radioButton3 = getBinding().f16433o;
+        Intrinsics3.checkNotNullExpressionValue(radioButton3, "binding.createChannelStageRadio");
         if (radioButton3.isChecked()) {
             return 13;
         }
-        RadioButton radioButton4 = getBinding().e;
-        m.checkNotNullExpressionValue(radioButton4, "binding.createChannelForumRadio");
+        RadioButton radioButton4 = getBinding().f16423e;
+        Intrinsics3.checkNotNullExpressionValue(radioButton4, "binding.createChannelForumRadio");
         return radioButton4.isChecked() ? 15 : 0;
     }
 
@@ -690,8 +690,8 @@ public final class WidgetCreateChannel extends AppFragment {
         Map<Long, Integer> checkedRoles2;
         Set<Long> setKeySet2;
         if (getChannelType() != 13) {
-            SwitchCompat switchCompat = getBinding().i;
-            m.checkNotNullExpressionValue(switchCompat, "binding.createChannelPrivateSwitch");
+            SwitchCompat switchCompat = getBinding().f16427i;
+            Intrinsics3.checkNotNullExpressionValue(switchCompat, "binding.createChannelPrivateSwitch");
             if (!switchCompat.isChecked()) {
                 if (!getDisablePrivateSwitch() || !getShouldChannelDefaultPrivate()) {
                     return null;
@@ -732,8 +732,8 @@ public final class WidgetCreateChannel extends AppFragment {
             FragmentActivity fragmentActivityRequireActivity = requireActivity();
             Intent intent = new Intent();
             intent.putExtra(RESULT_EXTRA_CHANNEL_ID, channel.getId());
-            intent.putExtra(RESULT_EXTRA_CHANNEL_NAME, ChannelUtils.c(channel));
-            intent.putExtra(RESULT_EXTRA_CHANNEL_ICON_RES_ID, GuildChannelIconUtilsKt.guildChannelIcon(channel));
+            intent.putExtra(RESULT_EXTRA_CHANNEL_NAME, ChannelUtils.m7679c(channel));
+            intent.putExtra(RESULT_EXTRA_CHANNEL_ICON_RES_ID, GuildChannelIconUtils2.guildChannelIcon(channel));
             fragmentActivityRequireActivity.setResult(-1, intent);
             finishActivity();
             return;
@@ -749,70 +749,70 @@ public final class WidgetCreateChannel extends AppFragment {
         finishActivity();
     }
 
-    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public LoggingConfig getLoggingConfig() {
+    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.InterfaceC5455a
+    public AppLogger2 getLoggingConfig() {
         return this.loggingConfig;
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        RecyclerView recyclerView = getBinding().k;
-        m.checkNotNullExpressionValue(recyclerView, "binding.createChannelRoleAccessRecycler");
+        RecyclerView recyclerView = getBinding().f16429k;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.createChannelRoleAccessRecycler");
         this.rolesAdapter = (RolesAdapter) companion.configure(new RolesAdapter(recyclerView));
-        getBinding().k.setHasFixedSize(false);
-        RecyclerView recyclerView2 = getBinding().k;
-        m.checkNotNullExpressionValue(recyclerView2, "binding.createChannelRoleAccessRecycler");
+        getBinding().f16429k.setHasFixedSize(false);
+        RecyclerView recyclerView2 = getBinding().f16429k;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.createChannelRoleAccessRecycler");
         recyclerView2.setNestedScrollingEnabled(false);
-        SwitchCompat switchCompat = getBinding().i;
-        m.checkNotNullExpressionValue(switchCompat, "binding.createChannelPrivateSwitch");
+        SwitchCompat switchCompat = getBinding().f16427i;
+        Intrinsics3.checkNotNullExpressionValue(switchCompat, "binding.createChannelPrivateSwitch");
         switchCompat.setChecked(getShouldChannelDefaultPrivate() || getDisablePrivateSwitch());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(getGuildId(), getCategoryId()), this, null, 2, null), WidgetCreateChannel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        RadioManager radioManager = new RadioManager(n.listOf((Object[]) new RadioButton[]{getBinding().q, getBinding().t, getBinding().c, getBinding().o, getBinding().e}));
-        getBinding().p.setOnClickListener(new AnonymousClass2(radioManager));
-        getBinding().f2358s.setOnClickListener(new AnonymousClass3(radioManager));
-        getBinding().f2357b.setOnClickListener(new AnonymousClass4(radioManager));
-        getBinding().n.setOnClickListener(new AnonymousClass5(radioManager));
-        getBinding().d.setOnClickListener(new AnonymousClass6(radioManager));
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(getGuildId(), getCategoryId()), this, null, 2, null), WidgetCreateChannel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C73711(this), 62, (Object) null);
+        RadioManager radioManager = new RadioManager(Collections2.listOf((Object[]) new RadioButton[]{getBinding().f16435q, getBinding().f16438t, getBinding().f16421c, getBinding().f16433o, getBinding().f16423e}));
+        getBinding().f16434p.setOnClickListener(new ViewOnClickListenerC73722(radioManager));
+        getBinding().f16437s.setOnClickListener(new ViewOnClickListenerC73733(radioManager));
+        getBinding().f16420b.setOnClickListener(new ViewOnClickListenerC73744(radioManager));
+        getBinding().f16432n.setOnClickListener(new ViewOnClickListenerC73755(radioManager));
+        getBinding().f16422d.setOnClickListener(new ViewOnClickListenerC73766(radioManager));
         int type = getType();
         if (type == 0) {
-            RadioButton radioButton = getBinding().q;
-            m.checkNotNullExpressionValue(radioButton, "binding.createChannelTextRadio");
-            radioManager.a(radioButton);
+            RadioButton radioButton = getBinding().f16435q;
+            Intrinsics3.checkNotNullExpressionValue(radioButton, "binding.createChannelTextRadio");
+            radioManager.m8550a(radioButton);
         } else if (type == 2) {
-            RadioButton radioButton2 = getBinding().t;
-            m.checkNotNullExpressionValue(radioButton2, "binding.createChannelVoiceRadio");
-            radioManager.a(radioButton2);
+            RadioButton radioButton2 = getBinding().f16438t;
+            Intrinsics3.checkNotNullExpressionValue(radioButton2, "binding.createChannelVoiceRadio");
+            radioManager.m8550a(radioButton2);
         } else if (type == 5) {
-            RadioButton radioButton3 = getBinding().c;
-            m.checkNotNullExpressionValue(radioButton3, "binding.createChannelAnnouncementsRadio");
-            radioManager.a(radioButton3);
+            RadioButton radioButton3 = getBinding().f16421c;
+            Intrinsics3.checkNotNullExpressionValue(radioButton3, "binding.createChannelAnnouncementsRadio");
+            radioManager.m8550a(radioButton3);
         } else if (type == 13) {
-            RadioButton radioButton4 = getBinding().o;
-            m.checkNotNullExpressionValue(radioButton4, "binding.createChannelStageRadio");
-            radioManager.a(radioButton4);
+            RadioButton radioButton4 = getBinding().f16433o;
+            Intrinsics3.checkNotNullExpressionValue(radioButton4, "binding.createChannelStageRadio");
+            radioManager.m8550a(radioButton4);
         } else if (type == 15) {
-            RadioButton radioButton5 = getBinding().e;
-            m.checkNotNullExpressionValue(radioButton5, "binding.createChannelForumRadio");
-            radioManager.a(radioButton5);
+            RadioButton radioButton5 = getBinding().f16423e;
+            Intrinsics3.checkNotNullExpressionValue(radioButton5, "binding.createChannelForumRadio");
+            radioManager.m8550a(radioButton5);
         }
         configurePrivateRoles();
-        getBinding().g.setOnClickListener(new AnonymousClass7());
-        LinearLayout linearLayout = getBinding().r;
-        m.checkNotNullExpressionValue(linearLayout, "binding.createChannelTypeContainer");
+        getBinding().f16425g.setOnClickListener(new ViewOnClickListenerC73777());
+        LinearLayout linearLayout = getBinding().f16436r;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.createChannelTypeContainer");
         linearLayout.setVisibility(getType() != 4 ? 0 : 8);
-        getBinding().j.setText(getType() == 4 ? R.string.private_category : R.string.private_channel);
-        getBinding().h.setText(getType() == 4 ? R.string.private_category_note : R.string.private_channel_note);
-        getBinding().m.setText(getType() == 4 ? R.string.form_label_category_permissions : R.string.form_label_channel_permissions);
-        TextInputLayout textInputLayout = getBinding().f;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.createChannelNameLayout");
-        textInputLayout.setHint(getString(getType() == 4 ? R.string.category_name : R.string.form_label_channel_name));
+        getBinding().f16428j.setText(getType() == 4 ? C5419R.string.private_category : C5419R.string.private_channel);
+        getBinding().f16426h.setText(getType() == 4 ? C5419R.string.private_category_note : C5419R.string.private_channel_note);
+        getBinding().f16431m.setText(getType() == 4 ? C5419R.string.form_label_category_permissions : C5419R.string.form_label_channel_permissions);
+        TextInputLayout textInputLayout = getBinding().f16424f;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.createChannelNameLayout");
+        textInputLayout.setHint(getString(getType() == 4 ? C5419R.string.category_name : C5419R.string.form_label_channel_name));
     }
 }

@@ -1,8 +1,8 @@
 package com.discord.api.guildmember;
 
-import b.d.b.a.a;
 import com.discord.api.user.User;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildMemberRemove.kt */
 /* loaded from: classes.dex */
@@ -28,7 +28,7 @@ public final /* data */ class GuildMemberRemove {
             return false;
         }
         GuildMemberRemove guildMemberRemove = (GuildMemberRemove) other;
-        return this.guildId == guildMemberRemove.guildId && m.areEqual(this.user, guildMemberRemove.user);
+        return this.guildId == guildMemberRemove.guildId && Intrinsics3.areEqual(this.user, guildMemberRemove.user);
     }
 
     public int hashCode() {
@@ -39,11 +39,11 @@ public final /* data */ class GuildMemberRemove {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildMemberRemove(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", user=");
-        sbU.append(this.user);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("GuildMemberRemove(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", user=");
+        sbM833U.append(this.user);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

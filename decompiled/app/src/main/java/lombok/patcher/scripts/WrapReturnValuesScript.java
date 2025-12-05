@@ -78,12 +78,12 @@ public final class WrapReturnValuesScript extends MethodLevelPatchScript {
         }
     }
 
-    /* renamed from: lombok.patcher.scripts.WrapReturnValuesScript$1, reason: invalid class name */
+    /* renamed from: lombok.patcher.scripts.WrapReturnValuesScript$1 */
     /* loaded from: discord-126021.apk:lombok/patcher/scripts/WrapReturnValuesScript$1.SCL.lombok */
-    class AnonymousClass1 implements PatchScript.MethodPatcherFactory {
+    class C129211 implements PatchScript.MethodPatcherFactory {
         private final /* synthetic */ String val$classSpec;
 
-        AnonymousClass1(String str) {
+        C129211(String str) {
             this.val$classSpec = str;
         }
 
@@ -95,7 +95,7 @@ public final class WrapReturnValuesScript extends MethodLevelPatchScript {
 
     @Override // lombok.patcher.scripts.MethodLevelPatchScript
     protected PatchScript.MethodPatcher createPatcher(ClassWriter writer, String classSpec, TransplantMapper transplantMapper) {
-        PatchScript.MethodPatcher patcher = new PatchScript.MethodPatcher(writer, transplantMapper, new AnonymousClass1(classSpec));
+        PatchScript.MethodPatcher patcher = new PatchScript.MethodPatcher(writer, transplantMapper, new C129211(classSpec));
         if (this.transplant) {
             patcher.addTransplant(this.wrapper);
         }
@@ -136,21 +136,21 @@ public final class WrapReturnValuesScript extends MethodLevelPatchScript {
             }
             if (WrapReturnValuesScript.access$1(WrapReturnValuesScript.this).contains(StackRequest.RETURN_VALUE)) {
                 if (!WrapReturnValuesScript.access$2(WrapReturnValuesScript.this)) {
-                    this.logistics.generateDupForReturn(this.mv);
+                    this.logistics.generateDupForReturn(this.f27600mv);
                 }
             } else if (WrapReturnValuesScript.access$2(WrapReturnValuesScript.this)) {
-                this.logistics.generatePopForReturn(this.mv);
+                this.logistics.generatePopForReturn(this.f27600mv);
             }
             if (WrapReturnValuesScript.access$1(WrapReturnValuesScript.this).contains(StackRequest.THIS)) {
-                this.logistics.generateLoadOpcodeForThis(this.mv);
+                this.logistics.generateLoadOpcodeForThis(this.f27600mv);
             }
             for (StackRequest param : StackRequest.PARAMS_IN_ORDER) {
                 if (WrapReturnValuesScript.access$1(WrapReturnValuesScript.this).contains(param)) {
-                    this.logistics.generateLoadOpcodeForParam(param.getParamPos(), this.mv);
+                    this.logistics.generateLoadOpcodeForParam(param.getParamPos(), this.f27600mv);
                 }
             }
             if (WrapReturnValuesScript.access$3(WrapReturnValuesScript.this)) {
-                WrapReturnValuesScript.access$5(WrapReturnValuesScript.access$4(WrapReturnValuesScript.this), this.mv);
+                WrapReturnValuesScript.access$5(WrapReturnValuesScript.access$4(WrapReturnValuesScript.this), this.f27600mv);
             } else {
                 super.visitMethodInsn(Opcodes.INVOKESTATIC, WrapReturnValuesScript.access$6(WrapReturnValuesScript.this) ? this.ownClassSpec : WrapReturnValuesScript.access$4(WrapReturnValuesScript.this).getClassSpec(), WrapReturnValuesScript.access$4(WrapReturnValuesScript.this).getMethodName(), WrapReturnValuesScript.access$4(WrapReturnValuesScript.this).getMethodDescriptor(), false);
             }

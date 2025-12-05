@@ -1,8 +1,8 @@
 package com.discord.models.experiments.domain;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ExperimentContext.kt */
 /* loaded from: classes.dex */
@@ -61,7 +61,7 @@ public final /* data */ class ExperimentContext {
             return false;
         }
         ExperimentContext experimentContext = (ExperimentContext) other;
-        return this.shouldTrigger == experimentContext.shouldTrigger && m.areEqual(this.guildId, experimentContext.guildId) && m.areEqual(this.channelId, experimentContext.channelId);
+        return this.shouldTrigger == experimentContext.shouldTrigger && Intrinsics3.areEqual(this.guildId, experimentContext.guildId) && Intrinsics3.areEqual(this.channelId, experimentContext.channelId);
     }
 
     public final Long getChannelId() {
@@ -94,12 +94,12 @@ public final /* data */ class ExperimentContext {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ExperimentContext(shouldTrigger=");
-        sbU.append(this.shouldTrigger);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        return a.G(sbU, this.channelId, ")");
+        StringBuilder sbM833U = outline.m833U("ExperimentContext(shouldTrigger=");
+        sbM833U.append(this.shouldTrigger);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        return outline.m819G(sbM833U, this.channelId, ")");
     }
 
     public /* synthetic */ ExperimentContext(boolean z2, Long l, Long l2, int i, DefaultConstructorMarker defaultConstructorMarker) {

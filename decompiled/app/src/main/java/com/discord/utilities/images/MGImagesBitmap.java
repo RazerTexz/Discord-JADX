@@ -3,21 +3,10 @@ package com.discord.utilities.images;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import androidx.core.app.NotificationCompat;
-import b.c.a.a0.d;
-import b.f.j.e.h;
-import b.f.j.f.c;
 import com.facebook.common.references.CloseableReference;
 import com.facebook.datasource.DataSource;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
-import d0.g0.t;
-import d0.g0.w;
-import d0.o;
-import d0.t.h0;
-import d0.z.d.g0.a;
-import d0.z.d.m;
-import j0.k.b;
-import j0.l.a.q;
 import java.io.Closeable;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,10 +16,25 @@ import java.util.Set;
 import java.util.concurrent.Executor;
 import java.util.function.BiFunction;
 import java.util.function.Function;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Subscriber;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p109f.p161j.p170e.ImagePipeline2;
+import p007b.p109f.p161j.p170e.ImagePipelineFactory;
+import p007b.p109f.p161j.p171f.BaseBitmapDataSubscriber;
+import p007b.p109f.p161j.p175j.CloseableImage;
+import p507d0.Tuples;
+import p507d0.p579g0.Strings4;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.p595g0.KMarkers;
+import p637j0.p641k.Func1;
+import p637j0.p642l.p643a.OnSubscribeFromIterable;
+import p637j0.p653p.Schedulers2;
+import p658rx.Observable;
+import p658rx.Subscriber;
 
 /* compiled from: MGImagesBitmap.kt */
 /* loaded from: classes2.dex */
@@ -38,12 +42,12 @@ public final class MGImagesBitmap {
     public static final MGImagesBitmap INSTANCE = new MGImagesBitmap();
 
     /* compiled from: MGImagesBitmap.kt */
-    public static final class CloseableBitmaps implements Map<String, Bitmap>, Closeable, a {
+    public static final class CloseableBitmaps implements Map<String, Bitmap>, Closeable, KMarkers {
         private final boolean recycleBitmaps;
         private final Map<String, Bitmap> underlyingMap;
 
         public CloseableBitmaps(Map<String, Bitmap> map, boolean z2) {
-            m.checkNotNullParameter(map, "underlyingMap");
+            Intrinsics3.checkNotNullParameter(map, "underlyingMap");
             this.underlyingMap = map;
             this.recycleBitmaps = z2;
         }
@@ -102,12 +106,12 @@ public final class MGImagesBitmap {
         }
 
         public boolean containsKey(String key) {
-            m.checkNotNullParameter(key, "key");
+            Intrinsics3.checkNotNullParameter(key, "key");
             return this.underlyingMap.containsKey(key);
         }
 
         public boolean containsValue(Bitmap value) {
-            m.checkNotNullParameter(value, "value");
+            Intrinsics3.checkNotNullParameter(value, "value");
             return this.underlyingMap.containsValue(value);
         }
 
@@ -125,7 +129,7 @@ public final class MGImagesBitmap {
         }
 
         public Bitmap get(String key) {
-            m.checkNotNullParameter(key, "key");
+            Intrinsics3.checkNotNullParameter(key, "key");
             return this.underlyingMap.get(key);
         }
 
@@ -174,8 +178,8 @@ public final class MGImagesBitmap {
         }
 
         public final CloseableBitmaps plus(CloseableBitmaps other) {
-            m.checkNotNullParameter(other, "other");
-            return new CloseableBitmaps(h0.plus(this.underlyingMap, other.underlyingMap), this.recycleBitmaps && other.recycleBitmaps);
+            Intrinsics3.checkNotNullParameter(other, "other");
+            return new CloseableBitmaps(Maps6.plus(this.underlyingMap, other.underlyingMap), this.recycleBitmaps && other.recycleBitmaps);
         }
 
         /* renamed from: put, reason: avoid collision after fix types in other method */
@@ -258,7 +262,7 @@ public final class MGImagesBitmap {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public DecodeException(String str) {
             super("Unable to decode image: " + str + '.');
-            m.checkNotNullParameter(str, "imageUri");
+            Intrinsics3.checkNotNullParameter(str, "imageUri");
         }
     }
 
@@ -267,7 +271,7 @@ public final class MGImagesBitmap {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ImageNotFoundException(String str) {
             super("404 image not found: " + str);
-            m.checkNotNullParameter(str, "imageUri");
+            Intrinsics3.checkNotNullParameter(str, "imageUri");
         }
     }
 
@@ -277,7 +281,7 @@ public final class MGImagesBitmap {
         private final boolean roundAsCircle;
 
         public ImageRequest(String str, boolean z2) {
-            m.checkNotNullParameter(str, "imageUri");
+            Intrinsics3.checkNotNullParameter(str, "imageUri");
             this.imageUri = str;
             this.roundAsCircle = z2;
         }
@@ -303,7 +307,7 @@ public final class MGImagesBitmap {
         }
 
         public final ImageRequest copy(String imageUri, boolean roundAsCircle) {
-            m.checkNotNullParameter(imageUri, "imageUri");
+            Intrinsics3.checkNotNullParameter(imageUri, "imageUri");
             return new ImageRequest(imageUri, roundAsCircle);
         }
 
@@ -315,7 +319,7 @@ public final class MGImagesBitmap {
                 return false;
             }
             ImageRequest imageRequest = (ImageRequest) other;
-            return m.areEqual(this.imageUri, imageRequest.imageUri) && this.roundAsCircle == imageRequest.roundAsCircle;
+            return Intrinsics3.areEqual(this.imageUri, imageRequest.imageUri) && this.roundAsCircle == imageRequest.roundAsCircle;
         }
 
         public final String getImageUri() {
@@ -339,10 +343,10 @@ public final class MGImagesBitmap {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("ImageRequest(imageUri=");
-            sbU.append(this.imageUri);
-            sbU.append(", roundAsCircle=");
-            return b.d.b.a.a.O(sbU, this.roundAsCircle, ")");
+            StringBuilder sbM833U = outline.m833U("ImageRequest(imageUri=");
+            sbM833U.append(this.imageUri);
+            sbM833U.append(", roundAsCircle=");
+            return outline.m827O(sbM833U, this.roundAsCircle, ")");
         }
     }
 
@@ -351,46 +355,46 @@ public final class MGImagesBitmap {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public MissingBitmapException(String str) {
             super("Unable to decode image as bitmap: " + str);
-            m.checkNotNullParameter(str, "imageUri");
+            Intrinsics3.checkNotNullParameter(str, "imageUri");
         }
     }
 
     /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Observable.a<Bitmap> {
+    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1 */
+    public static final class C67751<T> implements Observable.InterfaceC13005a<Bitmap> {
         public final /* synthetic */ DataSource $dataSource;
         public final /* synthetic */ String $imageUri;
 
         /* compiled from: MGImagesBitmap.kt */
-        /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03341 extends c {
+        /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends BaseBitmapDataSubscriber {
             public final /* synthetic */ Subscriber $emitter;
 
-            public C03341(Subscriber subscriber) {
+            public AnonymousClass1(Subscriber subscriber) {
                 this.$emitter = subscriber;
             }
 
-            @Override // b.f.e.d
-            public void onFailureImpl(DataSource<CloseableReference<b.f.j.j.c>> dataSource) {
+            @Override // p007b.p109f.p129e.BaseDataSubscriber
+            public void onFailureImpl(DataSource<CloseableReference<CloseableImage>> dataSource) {
                 String message;
-                m.checkNotNullParameter(dataSource, "dataSource");
-                Throwable thD = dataSource.d();
-                if (thD != null && (message = thD.getMessage()) != null && w.contains$default((CharSequence) message, (CharSequence) "404", false, 2, (Object) null)) {
-                    this.$emitter.onError(new ImageNotFoundException(AnonymousClass1.this.$imageUri));
+                Intrinsics3.checkNotNullParameter(dataSource, "dataSource");
+                Throwable thMo1020d = dataSource.mo1020d();
+                if (thMo1020d != null && (message = thMo1020d.getMessage()) != null && Strings4.contains$default((CharSequence) message, (CharSequence) "404", false, 2, (Object) null)) {
+                    this.$emitter.onError(new ImageNotFoundException(C67751.this.$imageUri));
                     return;
                 }
                 Subscriber subscriber = this.$emitter;
-                Throwable thD2 = dataSource.d();
-                if (thD2 == null) {
-                    thD2 = new DecodeException(AnonymousClass1.this.$imageUri);
+                Throwable thMo1020d2 = dataSource.mo1020d();
+                if (thMo1020d2 == null) {
+                    thMo1020d2 = new DecodeException(C67751.this.$imageUri);
                 }
-                subscriber.onError(thD2);
+                subscriber.onError(thMo1020d2);
             }
 
-            @Override // b.f.j.f.c
+            @Override // p007b.p109f.p161j.p171f.BaseBitmapDataSubscriber
             public void onNewResultImpl(Bitmap bitmap) {
                 if (bitmap == null) {
-                    this.$emitter.onError(new MissingBitmapException(AnonymousClass1.this.$imageUri));
+                    this.$emitter.onError(new MissingBitmapException(C67751.this.$imageUri));
                 } else {
                     this.$emitter.onNext(Bitmap.createBitmap(bitmap));
                     this.$emitter.onCompleted();
@@ -409,102 +413,102 @@ public final class MGImagesBitmap {
             }
         }
 
-        public AnonymousClass1(DataSource dataSource, String str) {
+        public C67751(DataSource dataSource, String str) {
             this.$dataSource = dataSource;
             this.$imageUri = str;
         }
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Object obj) {
             call((Subscriber<? super Bitmap>) obj);
         }
 
         public final void call(Subscriber<? super Bitmap> subscriber) {
-            this.$dataSource.f(new C03341(subscriber), AnonymousClass2.INSTANCE);
+            this.$dataSource.mo1022f(new AnonymousClass1(subscriber), AnonymousClass2.INSTANCE);
         }
     }
 
     /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<ImageRequest, Observable<? extends Pair<? extends String, ? extends Bitmap>>> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$1 */
+    public static final class C67761<T, R> implements Func1<ImageRequest, Observable<? extends Tuples2<? extends String, ? extends Bitmap>>> {
+        public static final C67761 INSTANCE = new C67761();
 
         /* compiled from: MGImagesBitmap.kt */
-        /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03351<T, R> implements b<Bitmap, Pair<? extends String, ? extends Bitmap>> {
+        /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$1$1, reason: invalid class name */
+        public static final class AnonymousClass1<T, R> implements Func1<Bitmap, Tuples2<? extends String, ? extends Bitmap>> {
             public final /* synthetic */ ImageRequest $imageRequest;
 
-            public C03351(ImageRequest imageRequest) {
+            public AnonymousClass1(ImageRequest imageRequest) {
                 this.$imageRequest = imageRequest;
             }
 
-            @Override // j0.k.b
-            public /* bridge */ /* synthetic */ Pair<? extends String, ? extends Bitmap> call(Bitmap bitmap) {
+            @Override // p637j0.p641k.Func1
+            public /* bridge */ /* synthetic */ Tuples2<? extends String, ? extends Bitmap> call(Bitmap bitmap) {
                 return call2(bitmap);
             }
 
             /* renamed from: call, reason: avoid collision after fix types in other method */
-            public final Pair<String, Bitmap> call2(Bitmap bitmap) {
-                return o.to(this.$imageRequest.getImageUri(), bitmap);
+            public final Tuples2<String, Bitmap> call2(Bitmap bitmap) {
+                return Tuples.m10073to(this.$imageRequest.getImageUri(), bitmap);
             }
         }
 
-        @Override // j0.k.b
-        public /* bridge */ /* synthetic */ Observable<? extends Pair<? extends String, ? extends Bitmap>> call(ImageRequest imageRequest) {
+        @Override // p637j0.p641k.Func1
+        public /* bridge */ /* synthetic */ Observable<? extends Tuples2<? extends String, ? extends Bitmap>> call(ImageRequest imageRequest) {
             return call2(imageRequest);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final Observable<? extends Pair<String, Bitmap>> call2(ImageRequest imageRequest) {
-            return MGImagesBitmap.INSTANCE.getBitmap(imageRequest.getImageUri(), imageRequest.getRoundAsCircle()).G(new C03351(imageRequest));
+        public final Observable<? extends Tuples2<String, Bitmap>> call2(ImageRequest imageRequest) {
+            return MGImagesBitmap.INSTANCE.getBitmap(imageRequest.getImageUri(), imageRequest.getRoundAsCircle()).m11083G(new AnonymousClass1(imageRequest));
         }
     }
 
     /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements b<Pair<? extends String, ? extends Bitmap>, String> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$2 */
+    public static final class C67772<T, R> implements Func1<Tuples2<? extends String, ? extends Bitmap>, String> {
+        public static final C67772 INSTANCE = new C67772();
 
-        @Override // j0.k.b
-        public /* bridge */ /* synthetic */ String call(Pair<? extends String, ? extends Bitmap> pair) {
-            return call2((Pair<String, Bitmap>) pair);
+        @Override // p637j0.p641k.Func1
+        public /* bridge */ /* synthetic */ String call(Tuples2<? extends String, ? extends Bitmap> tuples2) {
+            return call2((Tuples2<String, Bitmap>) tuples2);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final String call2(Pair<String, Bitmap> pair) {
-            return pair.getFirst();
+        public final String call2(Tuples2<String, Bitmap> tuples2) {
+            return tuples2.getFirst();
         }
     }
 
     /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$3, reason: invalid class name */
-    public static final class AnonymousClass3<T, R> implements b<Pair<? extends String, ? extends Bitmap>, Bitmap> {
-        public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
+    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$3 */
+    public static final class C67783<T, R> implements Func1<Tuples2<? extends String, ? extends Bitmap>, Bitmap> {
+        public static final C67783 INSTANCE = new C67783();
 
-        @Override // j0.k.b
-        public /* bridge */ /* synthetic */ Bitmap call(Pair<? extends String, ? extends Bitmap> pair) {
-            return call2((Pair<String, Bitmap>) pair);
+        @Override // p637j0.p641k.Func1
+        public /* bridge */ /* synthetic */ Bitmap call(Tuples2<? extends String, ? extends Bitmap> tuples2) {
+            return call2((Tuples2<String, Bitmap>) tuples2);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final Bitmap call2(Pair<String, Bitmap> pair) {
-            return pair.getSecond();
+        public final Bitmap call2(Tuples2<String, Bitmap> tuples2) {
+            return tuples2.getSecond();
         }
     }
 
     /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$4, reason: invalid class name */
-    public static final class AnonymousClass4<T, R> implements b<Map<String, Bitmap>, CloseableBitmaps> {
-        public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
+    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$4 */
+    public static final class C67794<T, R> implements Func1<Map<String, Bitmap>, CloseableBitmaps> {
+        public static final C67794 INSTANCE = new C67794();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ CloseableBitmaps call(Map<String, Bitmap> map) {
             return call2(map);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final CloseableBitmaps call2(Map<String, Bitmap> map) {
-            m.checkNotNullExpressionValue(map, "it");
+            Intrinsics3.checkNotNullExpressionValue(map, "it");
             return new CloseableBitmaps(map, false, 2, null);
         }
     }
@@ -513,52 +517,52 @@ public final class MGImagesBitmap {
     }
 
     public static final Observable<CloseableBitmaps> getBitmaps(Set<ImageRequest> imageRequests) {
-        m.checkNotNullParameter(imageRequests, "imageRequests");
+        Intrinsics3.checkNotNullParameter(imageRequests, "imageRequests");
         ArrayList arrayList = new ArrayList();
         for (Object obj : imageRequests) {
-            if (!t.isBlank(((ImageRequest) obj).getImageUri())) {
+            if (!StringsJVM.isBlank(((ImageRequest) obj).getImageUri())) {
                 arrayList.add(obj);
             }
         }
-        Observable<CloseableBitmaps> observableX = Observable.h0(new q(arrayList)).A(AnonymousClass1.INSTANCE).g0(AnonymousClass2.INSTANCE, AnonymousClass3.INSTANCE).G(AnonymousClass4.INSTANCE).X(j0.p.a.a());
-        m.checkNotNullExpressionValue(observableX, "Observable\n        .from…Schedulers.computation())");
-        return observableX;
+        Observable<CloseableBitmaps> observableM11098X = Observable.m11074h0(new OnSubscribeFromIterable(arrayList)).m11082A(C67761.INSTANCE).m11106g0(C67772.INSTANCE, C67783.INSTANCE).m11083G(C67794.INSTANCE).m11098X(Schedulers2.m10873a());
+        Intrinsics3.checkNotNullExpressionValue(observableM11098X, "Observable\n        .from…Schedulers.computation())");
+        return observableM11098X;
     }
 
     private final boolean isValidUri(String imageUri) {
         Uri uri = Uri.parse(imageUri);
-        m.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        Intrinsics3.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
         String scheme = uri.getScheme();
-        if (scheme == null || t.isBlank(scheme)) {
+        if (scheme == null || StringsJVM.isBlank(scheme)) {
             return false;
         }
         String host = uri.getHost();
-        if (host == null || t.isBlank(host)) {
+        if (host == null || StringsJVM.isBlank(host)) {
             return false;
         }
         String path = uri.getPath();
-        return !(path == null || t.isBlank(path));
+        return !(path == null || StringsJVM.isBlank(path));
     }
 
     public final Observable<Bitmap> getBitmap(String imageUri, boolean imageIsCircle) {
-        m.checkNotNullParameter(imageUri, "imageUri");
+        Intrinsics3.checkNotNullParameter(imageUri, "imageUri");
         if (!isValidUri(imageUri)) {
-            Observable<Bitmap> observableX = Observable.x(new IllegalArgumentException(b.d.b.a.a.w("invalid uri: ", imageUri)));
-            m.checkNotNullExpressionValue(observableX, "Observable.error(Illegal…invalid uri: $imageUri\"))");
-            return observableX;
+            Observable<Bitmap> observableM11081x = Observable.m11081x(new IllegalArgumentException(outline.m883w("invalid uri: ", imageUri)));
+            Intrinsics3.checkNotNullExpressionValue(observableM11081x, "Observable.error(Illegal…invalid uri: $imageUri\"))");
+            return observableM11081x;
         }
-        b.f.j.e.m mVar = b.f.j.e.m.a;
-        d.y(mVar, "ImagePipelineFactory was not initialized!");
-        if (mVar.l == null) {
-            mVar.l = mVar.a();
+        ImagePipelineFactory imagePipelineFactory = ImagePipelineFactory.f3788a;
+        AnimatableValueParser.m591y(imagePipelineFactory, "ImagePipelineFactory was not initialized!");
+        if (imagePipelineFactory.f3799l == null) {
+            imagePipelineFactory.f3799l = imagePipelineFactory.m1295a();
         }
-        h hVar = mVar.l;
+        ImagePipeline2 imagePipeline2 = imagePipelineFactory.f3799l;
         ImageRequestBuilder imageRequest = MGImages.getImageRequest(imageUri, 0, 0, false);
         if (imageIsCircle) {
-            imageRequest.l = new RoundAsCirclePostprocessor(imageUri);
+            imageRequest.f19623l = new RoundAsCirclePostProcessor2(imageUri);
         }
-        Observable<Bitmap> observableH0 = Observable.h0(new AnonymousClass1(hVar.a(imageRequest.a(), null, ImageRequest.c.FULL_FETCH, null, null), imageUri));
-        m.checkNotNullExpressionValue(observableH0, "Observable.unsafeCreate …y emits the bitmap.\n    }");
-        return observableH0;
+        Observable<Bitmap> observableM11074h0 = Observable.m11074h0(new C67751(imagePipeline2.m1262a(imageRequest.m8724a(), null, ImageRequest.EnumC10667c.FULL_FETCH, null, null), imageUri));
+        Intrinsics3.checkNotNullExpressionValue(observableM11074h0, "Observable.unsafeCreate …y emits the bitmap.\n    }");
+        return observableM11074h0;
     }
 }

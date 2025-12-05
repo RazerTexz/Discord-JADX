@@ -11,41 +11,47 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetMemberVerificationPendingDialogBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final RelativeLayout a;
+    public final RelativeLayout f17250a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ImageView f2492b;
+    public final ImageView f17251b;
 
+    /* renamed from: c */
     @NonNull
-    public final MaterialButton c;
+    public final MaterialButton f17252c;
 
+    /* renamed from: d */
     @NonNull
-    public final MaterialButton d;
+    public final MaterialButton f17253d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f17254e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextView f;
+    public final TextView f17255f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f17256g;
 
     public WidgetMemberVerificationPendingDialogBinding(@NonNull RelativeLayout relativeLayout, @NonNull ImageView imageView, @NonNull MaterialButton materialButton, @NonNull MaterialButton materialButton2, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3) {
-        this.a = relativeLayout;
-        this.f2492b = imageView;
-        this.c = materialButton;
-        this.d = materialButton2;
-        this.e = textView;
-        this.f = textView2;
-        this.g = textView3;
+        this.f17250a = relativeLayout;
+        this.f17251b = imageView;
+        this.f17252c = materialButton;
+        this.f17253d = materialButton2;
+        this.f17254e = textView;
+        this.f17255f = textView2;
+        this.f17256g = textView3;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17250a;
     }
 }

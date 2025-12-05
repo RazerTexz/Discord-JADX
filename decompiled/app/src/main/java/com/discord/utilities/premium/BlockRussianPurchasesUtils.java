@@ -1,14 +1,14 @@
 package com.discord.utilities.premium;
 
-import b.a.a.r;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.stores.StoreNotices;
 import com.discord.stores.StoreStream;
-import d0.g;
-import d0.z.d.m;
 import java.util.Objects;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p009a.WidgetBlockRussianPurchasesDialog;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: BlockRussianPurchasesUtils.kt */
 /* loaded from: classes2.dex */
@@ -16,7 +16,7 @@ public final class BlockRussianPurchasesUtils {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = g.lazy(BlockRussianPurchasesUtils$Companion$INSTANCE$2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(BlockRussianPurchasesUtils2.INSTANCE);
     private Boolean isBlockedFromPurchases;
 
     /* compiled from: BlockRussianPurchasesUtils.kt */
@@ -45,7 +45,7 @@ public final class BlockRussianPurchasesUtils {
             this.isBlockedFromPurchases = Boolean.valueOf(userExperiment != null && userExperiment.getBucket() == 1);
         }
         Boolean bool = this.isBlockedFromPurchases;
-        m.checkNotNull(bool);
+        Intrinsics3.checkNotNull(bool);
         return bool.booleanValue();
     }
 
@@ -53,8 +53,8 @@ public final class BlockRussianPurchasesUtils {
         if (!isBlockedFromPurchases()) {
             return false;
         }
-        Objects.requireNonNull(r.INSTANCE);
-        StoreStream.INSTANCE.getNotices().requestToShow(new StoreNotices.Notice("Block Russian Purchases Dialog", null, 0L, 0, false, null, 0L, true, 0L, BlockRussianPurchasesUtils$showDialog$blockRussianPurchasesNotice$1.INSTANCE, 54, null));
+        Objects.requireNonNull(WidgetBlockRussianPurchasesDialog.INSTANCE);
+        StoreStream.INSTANCE.getNotices().requestToShow(new StoreNotices.Notice("Block Russian Purchases Dialog", null, 0L, 0, false, null, 0L, true, 0L, BlockRussianPurchasesUtils3.INSTANCE, 54, null));
         return true;
     }
 }

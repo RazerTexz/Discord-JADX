@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAutoSuggestExpressionSelected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAutoSuggestExpressionSelected implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackAutoSuggestExpressionSelected implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final Long stickerId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackAutoSuggestExpressionSelected implements Anal
             return false;
         }
         TrackAutoSuggestExpressionSelected trackAutoSuggestExpressionSelected = (TrackAutoSuggestExpressionSelected) other;
-        return m.areEqual(this.stickerId, trackAutoSuggestExpressionSelected.stickerId) && m.areEqual(this.emojiId, trackAutoSuggestExpressionSelected.emojiId) && m.areEqual(this.suggestionTrigger, trackAutoSuggestExpressionSelected.suggestionTrigger);
+        return Intrinsics3.areEqual(this.stickerId, trackAutoSuggestExpressionSelected.stickerId) && Intrinsics3.areEqual(this.emojiId, trackAutoSuggestExpressionSelected.emojiId) && Intrinsics3.areEqual(this.suggestionTrigger, trackAutoSuggestExpressionSelected.suggestionTrigger);
     }
 
     public int hashCode() {
@@ -45,11 +45,11 @@ public final /* data */ class TrackAutoSuggestExpressionSelected implements Anal
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAutoSuggestExpressionSelected(stickerId=");
-        sbU.append(this.stickerId);
-        sbU.append(", emojiId=");
-        sbU.append(this.emojiId);
-        sbU.append(", suggestionTrigger=");
-        return a.E(sbU, this.suggestionTrigger, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAutoSuggestExpressionSelected(stickerId=");
+        sbM833U.append(this.stickerId);
+        sbM833U.append(", emojiId=");
+        sbM833U.append(this.emojiId);
+        sbM833U.append(", suggestionTrigger=");
+        return outline.m817E(sbM833U, this.suggestionTrigger, ")");
     }
 }

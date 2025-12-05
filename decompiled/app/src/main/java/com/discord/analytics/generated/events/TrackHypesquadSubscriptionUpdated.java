@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackHypesquadSubscriptionUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackHypesquadSubscriptionUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackHypesquadSubscriptionUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long houseId = null;
     private final Boolean subscribed = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackHypesquadSubscriptionUpdated implements Analy
             return false;
         }
         TrackHypesquadSubscriptionUpdated trackHypesquadSubscriptionUpdated = (TrackHypesquadSubscriptionUpdated) other;
-        return m.areEqual(this.houseId, trackHypesquadSubscriptionUpdated.houseId) && m.areEqual(this.subscribed, trackHypesquadSubscriptionUpdated.subscribed);
+        return Intrinsics3.areEqual(this.houseId, trackHypesquadSubscriptionUpdated.houseId) && Intrinsics3.areEqual(this.subscribed, trackHypesquadSubscriptionUpdated.subscribed);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackHypesquadSubscriptionUpdated implements Analy
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackHypesquadSubscriptionUpdated(houseId=");
-        sbU.append(this.houseId);
-        sbU.append(", subscribed=");
-        return a.D(sbU, this.subscribed, ")");
+        StringBuilder sbM833U = outline.m833U("TrackHypesquadSubscriptionUpdated(houseId=");
+        sbM833U.append(this.houseId);
+        sbM833U.append(", subscribed=");
+        return outline.m816D(sbM833U, this.subscribed, ")");
     }
 }

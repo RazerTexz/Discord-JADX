@@ -12,11 +12,11 @@ import java.util.concurrent.TimeUnit;
 public class SingleThreadFutureScheduler implements FutureScheduler {
     private ScheduledThreadPoolExecutor scheduledThreadPoolExecutor;
 
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadFutureScheduler$1, reason: invalid class name */
-    public class AnonymousClass1 implements RejectedExecutionHandler {
+    /* renamed from: com.adjust.sdk.scheduler.SingleThreadFutureScheduler$1 */
+    public class RejectedExecutionHandlerC54011 implements RejectedExecutionHandler {
         public final /* synthetic */ String val$source;
 
-        public AnonymousClass1(String str) {
+        public RejectedExecutionHandlerC54011(String str) {
             this.val$source = str;
         }
 
@@ -27,11 +27,11 @@ public class SingleThreadFutureScheduler implements FutureScheduler {
     }
 
     /* JADX INFO: Add missing generic type declarations: [V] */
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadFutureScheduler$2, reason: invalid class name */
-    public class AnonymousClass2<V> implements Callable<V> {
+    /* renamed from: com.adjust.sdk.scheduler.SingleThreadFutureScheduler$2 */
+    public class CallableC54022<V> implements Callable<V> {
         public final /* synthetic */ Callable val$callable;
 
-        public AnonymousClass2(Callable callable) {
+        public CallableC54022(Callable callable) {
             this.val$callable = callable;
         }
 
@@ -47,7 +47,7 @@ public class SingleThreadFutureScheduler implements FutureScheduler {
     }
 
     public SingleThreadFutureScheduler(String str, boolean z2) {
-        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1, new ThreadFactoryWrapper(str), new AnonymousClass1(str));
+        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1, new ThreadFactoryWrapper(str), new RejectedExecutionHandlerC54011(str));
         this.scheduledThreadPoolExecutor = scheduledThreadPoolExecutor;
         if (z2) {
             return;
@@ -68,7 +68,7 @@ public class SingleThreadFutureScheduler implements FutureScheduler {
 
     @Override // com.adjust.sdk.scheduler.FutureScheduler
     public <V> ScheduledFuture<V> scheduleFutureWithReturn(Callable<V> callable, long j) {
-        return this.scheduledThreadPoolExecutor.schedule(new AnonymousClass2(callable), j, TimeUnit.MILLISECONDS);
+        return this.scheduledThreadPoolExecutor.schedule(new CallableC54022(callable), j, TimeUnit.MILLISECONDS);
     }
 
     @Override // com.adjust.sdk.scheduler.FutureScheduler

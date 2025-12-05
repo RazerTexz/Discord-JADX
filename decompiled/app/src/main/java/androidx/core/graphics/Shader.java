@@ -1,0 +1,20 @@
+package androidx.core.graphics;
+
+import android.graphics.Matrix;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: Shader.kt */
+/* renamed from: androidx.core.graphics.ShaderKt, reason: use source file name */
+/* loaded from: classes.dex */
+public final class Shader {
+    public static final void transform(android.graphics.Shader shader, Function1<? super Matrix, Unit> function1) {
+        Intrinsics3.checkNotNullParameter(shader, "<this>");
+        Intrinsics3.checkNotNullParameter(function1, "block");
+        Matrix matrix = new Matrix();
+        shader.getLocalMatrix(matrix);
+        function1.invoke(matrix);
+        shader.setLocalMatrix(matrix);
+    }
+}

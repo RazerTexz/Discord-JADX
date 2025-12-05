@@ -1,7 +1,5 @@
 package com.discord.stores;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.guild.Guild;
@@ -11,12 +9,7 @@ import com.discord.models.message.Message;
 import com.discord.models.thread.dto.ModelThreadListSync;
 import com.discord.stores.StoreMessagesLoader;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
-import d0.d0.f;
-import d0.t.h0;
-import d0.t.r;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.stores.updates.ObservationDeck4;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -24,7 +17,14 @@ import java.util.List;
 import java.util.Map;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p512d0._Ranges;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MutableCollections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreThreadMessages.kt */
 /* loaded from: classes2.dex */
@@ -93,7 +93,7 @@ public final class StoreThreadMessages extends StoreV2 {
                 return false;
             }
             ThreadState threadState = (ThreadState) other;
-            return this.threadId == threadState.threadId && this.guildId == threadState.guildId && this.parentId == threadState.parentId && this.count == threadState.count && m.areEqual(this.mostRecentMessage, threadState.mostRecentMessage);
+            return this.threadId == threadState.threadId && this.guildId == threadState.guildId && this.parentId == threadState.parentId && this.count == threadState.count && Intrinsics3.areEqual(this.mostRecentMessage, threadState.mostRecentMessage);
         }
 
         public final int getCount() {
@@ -117,9 +117,9 @@ public final class StoreThreadMessages extends StoreV2 {
         }
 
         public int hashCode() {
-            int iA = (((b.a(this.parentId) + ((b.a(this.guildId) + (b.a(this.threadId) * 31)) * 31)) * 31) + this.count) * 31;
+            int iM3a = (((C0002b.m3a(this.parentId) + ((C0002b.m3a(this.guildId) + (C0002b.m3a(this.threadId) * 31)) * 31)) * 31) + this.count) * 31;
             Message message = this.mostRecentMessage;
-            return iA + (message != null ? message.hashCode() : 0);
+            return iM3a + (message != null ? message.hashCode() : 0);
         }
 
         public final void setCount(int i) {
@@ -131,25 +131,25 @@ public final class StoreThreadMessages extends StoreV2 {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ThreadState(threadId=");
-            sbU.append(this.threadId);
-            sbU.append(", guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", parentId=");
-            sbU.append(this.parentId);
-            sbU.append(", count=");
-            sbU.append(this.count);
-            sbU.append(", mostRecentMessage=");
-            sbU.append(this.mostRecentMessage);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ThreadState(threadId=");
+            sbM833U.append(this.threadId);
+            sbM833U.append(", guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", parentId=");
+            sbM833U.append(this.parentId);
+            sbM833U.append(", count=");
+            sbM833U.append(this.count);
+            sbM833U.append(", mostRecentMessage=");
+            sbM833U.append(this.mostRecentMessage);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     /* compiled from: StoreThreadMessages.kt */
-    /* renamed from: com.discord.stores.StoreThreadMessages$observeThreadCountAndLatestMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends ThreadState>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreThreadMessages$observeThreadCountAndLatestMessage$1 */
+    public static final class C65331 extends Lambda implements Function0<Map<Long, ? extends ThreadState>> {
+        public C65331() {
             super(0);
         }
 
@@ -166,12 +166,12 @@ public final class StoreThreadMessages extends StoreV2 {
     }
 
     /* compiled from: StoreThreadMessages.kt */
-    /* renamed from: com.discord.stores.StoreThreadMessages$observeThreadCountAndLatestMessage$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function0<ThreadState> {
+    /* renamed from: com.discord.stores.StoreThreadMessages$observeThreadCountAndLatestMessage$2 */
+    public static final class C65342 extends Lambda implements Function0<ThreadState> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(long j) {
+        public C65342(long j) {
             super(0);
             this.$channelId = j;
         }
@@ -189,7 +189,7 @@ public final class StoreThreadMessages extends StoreV2 {
     }
 
     public /* synthetic */ StoreThreadMessages(StoreMessages storeMessages, StoreChannels storeChannels, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(storeMessages, storeChannels, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(storeMessages, storeChannels, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ Map access$getThreadsSnapshot$p(StoreThreadMessages storeThreadMessages) {
@@ -200,23 +200,23 @@ public final class StoreThreadMessages extends StoreV2 {
         storeThreadMessages.threadsSnapshot = map;
     }
 
-    @StoreThread
+    @Store3
     private final void deleteForGuild(long guildId) {
-        if (r.removeAll(this.threads.values(), new StoreThreadMessages$deleteForGuild$removed$1(guildId))) {
+        if (MutableCollections.removeAll(this.threads.values(), new StoreThreadMessages2(guildId))) {
             markChanged();
         }
     }
 
-    @StoreThread
+    @Store3
     private final void deleteForParentChannel(long parentChannelId) {
-        if (r.removeAll(this.threads.values(), new StoreThreadMessages$deleteForParentChannel$removed$1(parentChannelId))) {
+        if (MutableCollections.removeAll(this.threads.values(), new StoreThreadMessages3(parentChannelId))) {
             markChanged();
         }
     }
 
-    @StoreThread
+    @Store3
     private final ThreadState getOrAddState(Channel thread) {
-        ThreadState threadState = (ThreadState) a.d(thread, this.threads);
+        ThreadState threadState = (ThreadState) outline.m845d(thread, this.threads);
         if (threadState == null) {
             long id2 = thread.getId();
             long guildId = thread.getGuildId();
@@ -229,18 +229,18 @@ public final class StoreThreadMessages extends StoreV2 {
         return threadState;
     }
 
-    @StoreThread
+    @Store3
     private final void updateFromGuild(Guild guild) {
-        List<Channel> listN = guild.N();
-        if (listN != null) {
-            Iterator<T> it = listN.iterator();
+        List<Channel> listM7849N = guild.m7849N();
+        if (listM7849N != null) {
+            Iterator<T> it = listM7849N.iterator();
             while (it.hasNext()) {
                 updateFromThread((Channel) it.next());
             }
         }
     }
 
-    @StoreThread
+    @Store3
     private final void updateFromThread(Channel thread) {
         ThreadState orAddState = getOrAddState(thread);
         Integer messageCount = thread.getMessageCount();
@@ -265,57 +265,57 @@ public final class StoreThreadMessages extends StoreV2 {
         return null;
     }
 
-    @StoreThread
+    @Store3
     public final void handleChannelDelete(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         deleteForParentChannel(channel.getId());
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         List<Guild> guilds = payload.getGuilds();
-        m.checkNotNullExpressionValue(guilds, "payload.guilds");
+        Intrinsics3.checkNotNullExpressionValue(guilds, "payload.guilds");
         Iterator<T> it = guilds.iterator();
         while (it.hasNext()) {
             updateFromGuild((Guild) it.next());
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildCreate(Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         updateFromGuild(guild);
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildDelete(long guildId) {
         deleteForGuild(guildId);
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageCreate(com.discord.api.message.Message message) {
-        m.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(message, "message");
         Channel channel = this.storeChannels.getChannel(message.getChannelId());
-        if (channel == null || !ChannelUtils.H(channel)) {
+        if (channel == null || !ChannelUtils.m7673H(channel)) {
             return;
         }
         ThreadState orAddState = getOrAddState(channel);
-        this.threads.put(Long.valueOf(channel.getId()), ThreadState.copy$default(orAddState, 0L, 0L, 0L, f.coerceAtMost(orAddState.getCount() + 1, 50), new Message(message), 7, null));
+        this.threads.put(Long.valueOf(channel.getId()), ThreadState.copy$default(orAddState, 0L, 0L, 0L, _Ranges.coerceAtMost(orAddState.getCount() + 1, 50), new Message(message), 7, null));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageDelete(ModelMessageDelete messageDeleteBulk) {
         Message mostRecentMessage;
-        m.checkNotNullParameter(messageDeleteBulk, "messageDeleteBulk");
+        Intrinsics3.checkNotNullParameter(messageDeleteBulk, "messageDeleteBulk");
         ThreadState threadState = this.threads.get(Long.valueOf(messageDeleteBulk.getChannelId()));
         Long lValueOf = (threadState == null || (mostRecentMessage = threadState.getMostRecentMessage()) == null) ? null : Long.valueOf(mostRecentMessage.getId());
         if (lValueOf != null) {
             lValueOf.longValue();
             Iterator<Long> it = messageDeleteBulk.getMessageIds().iterator();
             while (it.hasNext()) {
-                if (!(!m.areEqual(lValueOf, it.next()))) {
+                if (!(!Intrinsics3.areEqual(lValueOf, it.next()))) {
                     this.threads.put(Long.valueOf(messageDeleteBulk.getChannelId()), ThreadState.copy$default(threadState, 0L, 0L, 0L, 0, null, 15, null));
                     markChanged();
                     return;
@@ -324,10 +324,10 @@ public final class StoreThreadMessages extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageUpdate(com.discord.api.message.Message message) {
         Message mostRecentMessage;
-        m.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(message, "message");
         ThreadState threadState = this.threads.get(Long.valueOf(message.getChannelId()));
         if (threadState == null || (mostRecentMessage = threadState.getMostRecentMessage()) == null || mostRecentMessage.getId() != message.getId()) {
             return;
@@ -336,11 +336,11 @@ public final class StoreThreadMessages extends StoreV2 {
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessagesLoaded(StoreMessagesLoader.ChannelChunk chunk) {
         Channel channel;
         Channel channel2;
-        m.checkNotNullParameter(chunk, "chunk");
+        Intrinsics3.checkNotNullParameter(chunk, "chunk");
         boolean z2 = false;
         boolean z3 = false;
         for (Message message : chunk.getMessages()) {
@@ -352,7 +352,7 @@ public final class StoreThreadMessages extends StoreV2 {
         if (z3) {
             markChanged();
         }
-        if (chunk.isPresent() && (channel = this.storeChannels.getThreadsByIdInternal$app_productionGoogleRelease().get(Long.valueOf(chunk.getChannelId()))) != null && ChannelUtils.H(channel)) {
+        if (chunk.isPresent() && (channel = this.storeChannels.getThreadsByIdInternal$app_productionGoogleRelease().get(Long.valueOf(chunk.getChannelId()))) != null && ChannelUtils.m7673H(channel)) {
             ThreadState orAddState = getOrAddState(channel);
             if (chunk.getMessages().isEmpty()) {
                 this.threads.put(Long.valueOf(channel.getId()), ThreadState.copy$default(orAddState, 0L, 0L, 0L, 0, null, 7, null));
@@ -377,30 +377,30 @@ public final class StoreThreadMessages extends StoreV2 {
                     size--;
                 }
                 Integer type2 = message2 != null ? message2.getType() : null;
-                this.threads.put(Long.valueOf(channel.getId()), ThreadState.copy$default(orAddState, 0L, 0L, 0L, f.coerceAtMost(size, 50), (type2 != null && type2.intValue() == 21) ? null : message2, 7, null));
+                this.threads.put(Long.valueOf(channel.getId()), ThreadState.copy$default(orAddState, 0L, 0L, 0L, _Ranges.coerceAtMost(size, 50), (type2 != null && type2.intValue() == 21) ? null : message2, 7, null));
             }
             markChanged();
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadCreateOrUpdate(Channel thread) {
-        m.checkNotNullParameter(thread, "thread");
+        Intrinsics3.checkNotNullParameter(thread, "thread");
         updateFromThread(thread);
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadDelete(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         if (this.threads.containsKey(Long.valueOf(channel.getId()))) {
             this.threads.remove(Long.valueOf(channel.getId()));
             markChanged();
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadListSync(ModelThreadListSync threadListSync) {
-        m.checkNotNullParameter(threadListSync, "threadListSync");
+        Intrinsics3.checkNotNullParameter(threadListSync, "threadListSync");
         Iterator<T> it = threadListSync.getThreads().iterator();
         while (it.hasNext()) {
             updateFromThread((Channel) it.next());
@@ -417,31 +417,31 @@ public final class StoreThreadMessages extends StoreV2 {
     }
 
     public final Observable<Map<Long, ThreadState>> observeThreadCountAndLatestMessage() {
-        Observable<Map<Long, ThreadState>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
-        return observableR;
+        Observable<Map<Long, ThreadState>> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C65331(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         this.threadsSnapshot = new HashMap(this.threads);
     }
 
     public StoreThreadMessages(StoreMessages storeMessages, StoreChannels storeChannels, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(storeMessages, "storeMessages");
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(storeMessages, "storeMessages");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.storeMessages = storeMessages;
         this.storeChannels = storeChannels;
         this.observationDeck = observationDeck;
         this.threads = new HashMap();
-        this.threadsSnapshot = h0.emptyMap();
+        this.threadsSnapshot = Maps6.emptyMap();
     }
 
     public final Observable<ThreadState> observeThreadCountAndLatestMessage(long channelId) {
-        Observable<ThreadState> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass2(channelId), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
-        return observableR;
+        Observable<ThreadState> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C65342(channelId), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 }

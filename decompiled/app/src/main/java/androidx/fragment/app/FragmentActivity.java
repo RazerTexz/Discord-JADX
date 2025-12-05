@@ -46,9 +46,9 @@ public class FragmentActivity extends ComponentActivity implements ActivityCompa
     public boolean mResumed;
     public boolean mStopped;
 
-    /* renamed from: androidx.fragment.app.FragmentActivity$1, reason: invalid class name */
-    public class AnonymousClass1 implements SavedStateRegistry.SavedStateProvider {
-        public AnonymousClass1() {
+    /* renamed from: androidx.fragment.app.FragmentActivity$1 */
+    public class C03711 implements SavedStateRegistry.SavedStateProvider {
+        public C03711() {
         }
 
         @Override // androidx.savedstate.SavedStateRegistry.SavedStateProvider
@@ -65,9 +65,9 @@ public class FragmentActivity extends ComponentActivity implements ActivityCompa
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentActivity$2, reason: invalid class name */
-    public class AnonymousClass2 implements OnContextAvailableListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.fragment.app.FragmentActivity$2 */
+    public class C03722 implements OnContextAvailableListener {
+        public C03722() {
         }
 
         @Override // androidx.activity.contextaware.OnContextAvailableListener
@@ -186,8 +186,8 @@ public class FragmentActivity extends ComponentActivity implements ActivityCompa
     }
 
     private void init() {
-        getSavedStateRegistry().registerSavedStateProvider(FRAGMENTS_TAG, new AnonymousClass1());
-        addOnContextAvailableListener(new AnonymousClass2());
+        getSavedStateRegistry().registerSavedStateProvider(FRAGMENTS_TAG, new C03711());
+        addOnContextAvailableListener(new C03722());
     }
 
     private static boolean markState(FragmentManager fragmentManager, Lifecycle.State state) {

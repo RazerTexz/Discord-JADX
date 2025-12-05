@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackVoiceAudioOutputModeSelected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVoiceAudioOutputModeSelected implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackVoiceAudioOutputModeSelected implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long channelType = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackVoiceAudioOutputModeSelected implements Analy
             return false;
         }
         TrackVoiceAudioOutputModeSelected trackVoiceAudioOutputModeSelected = (TrackVoiceAudioOutputModeSelected) other;
-        return m.areEqual(this.channelId, trackVoiceAudioOutputModeSelected.channelId) && m.areEqual(this.channelType, trackVoiceAudioOutputModeSelected.channelType) && m.areEqual(this.guildId, trackVoiceAudioOutputModeSelected.guildId) && m.areEqual(this.rtcConnectionId, trackVoiceAudioOutputModeSelected.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackVoiceAudioOutputModeSelected.mediaSessionId) && m.areEqual(this.fromAudioOutputMode, trackVoiceAudioOutputModeSelected.fromAudioOutputMode) && m.areEqual(this.toAudioOutputMode, trackVoiceAudioOutputModeSelected.toAudioOutputMode);
+        return Intrinsics3.areEqual(this.channelId, trackVoiceAudioOutputModeSelected.channelId) && Intrinsics3.areEqual(this.channelType, trackVoiceAudioOutputModeSelected.channelType) && Intrinsics3.areEqual(this.guildId, trackVoiceAudioOutputModeSelected.guildId) && Intrinsics3.areEqual(this.rtcConnectionId, trackVoiceAudioOutputModeSelected.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackVoiceAudioOutputModeSelected.mediaSessionId) && Intrinsics3.areEqual(this.fromAudioOutputMode, trackVoiceAudioOutputModeSelected.fromAudioOutputMode) && Intrinsics3.areEqual(this.toAudioOutputMode, trackVoiceAudioOutputModeSelected.toAudioOutputMode);
     }
 
     public int hashCode() {
@@ -54,19 +54,19 @@ public final /* data */ class TrackVoiceAudioOutputModeSelected implements Analy
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackVoiceAudioOutputModeSelected(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", rtcConnectionId=");
-        sbU.append(this.rtcConnectionId);
-        sbU.append(", mediaSessionId=");
-        sbU.append(this.mediaSessionId);
-        sbU.append(", fromAudioOutputMode=");
-        sbU.append(this.fromAudioOutputMode);
-        sbU.append(", toAudioOutputMode=");
-        return a.E(sbU, this.toAudioOutputMode, ")");
+        StringBuilder sbM833U = outline.m833U("TrackVoiceAudioOutputModeSelected(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", rtcConnectionId=");
+        sbM833U.append(this.rtcConnectionId);
+        sbM833U.append(", mediaSessionId=");
+        sbM833U.append(this.mediaSessionId);
+        sbM833U.append(", fromAudioOutputMode=");
+        sbM833U.append(this.fromAudioOutputMode);
+        sbM833U.append(", toAudioOutputMode=");
+        return outline.m817E(sbM833U, this.toAudioOutputMode, ")");
     }
 }

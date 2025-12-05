@@ -2,7 +2,7 @@ package com.discord.widgets.servers.guild_role_subscription.model;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: PayoutStatusMedia.kt */
 /* loaded from: classes2.dex */
@@ -63,9 +63,9 @@ public final /* data */ class PayoutStatusMedia {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("PayoutStatusMedia(iconDrawableRes=");
-        sbU.append(this.iconDrawableRes);
-        sbU.append(", statusStringRes=");
-        return a.B(sbU, this.statusStringRes, ")");
+        StringBuilder sbM833U = outline.m833U("PayoutStatusMedia(iconDrawableRes=");
+        sbM833U.append(this.iconDrawableRes);
+        sbM833U.append(", statusStringRes=");
+        return outline.m814B(sbM833U, this.statusStringRes, ")");
     }
 }

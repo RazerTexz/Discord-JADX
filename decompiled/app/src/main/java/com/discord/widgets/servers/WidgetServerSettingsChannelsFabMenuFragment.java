@@ -6,25 +6,25 @@ import android.view.View;
 import android.widget.TableLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetServerSettingsChannelsSortFabMenuBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.utilities.views.FloatingButtonMenuInitializer;
 import com.discord.widgets.channels.WidgetCreateChannel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import d0.o;
-import d0.t.h0;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.functions.Action0;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.functions.Action0;
 
 /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsChannelsFabMenuFragment.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsChannelsSortFabMenuBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsChannelsFabMenuFragment.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsChannelsSortFabMenuBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -41,14 +41,14 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
 
         public final void show(long guildId, FragmentManager fragmentManager, Action0 dismissHandler) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
-            m.checkNotNullParameter(dismissHandler, "dismissHandler");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(dismissHandler, "dismissHandler");
             WidgetServerSettingsChannelsFabMenuFragment widgetServerSettingsChannelsFabMenuFragment = new WidgetServerSettingsChannelsFabMenuFragment();
             Bundle bundle = new Bundle();
             bundle.putLong("INTENT_EXTRA_GUILD_ID", guildId);
             widgetServerSettingsChannelsFabMenuFragment.setArguments(bundle);
             WidgetServerSettingsChannelsFabMenuFragment.access$setDismissHandler$p(widgetServerSettingsChannelsFabMenuFragment, dismissHandler);
-            fragmentManager.beginTransaction().setCustomAnimations(R.anim.anim_fade_in, R.anim.anim_fade_out).add(R.id.widget_server_settings_channels_container, widgetServerSettingsChannelsFabMenuFragment, WidgetServerSettingsChannelsFabMenuFragment.TAG).addToBackStack(WidgetServerSettingsChannelsFabMenuFragment.TAG).commit();
+            fragmentManager.beginTransaction().setCustomAnimations(C5419R.anim.anim_fade_in, C5419R.anim.anim_fade_out).add(C5419R.id.widget_server_settings_channels_container, widgetServerSettingsChannelsFabMenuFragment, WidgetServerSettingsChannelsFabMenuFragment.TAG).addToBackStack(WidgetServerSettingsChannelsFabMenuFragment.TAG).commit();
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -57,11 +57,11 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
     }
 
     /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$createListener$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$createListener$1 */
+    public static final class ViewOnClickListenerC92081 implements View.OnClickListener {
         public final /* synthetic */ View.OnClickListener $onClickListener;
 
-        public AnonymousClass1(View.OnClickListener onClickListener) {
+        public ViewOnClickListenerC92081(View.OnClickListener onClickListener) {
             this.$onClickListener = onClickListener;
         }
 
@@ -76,9 +76,9 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
     }
 
     /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$1 */
+    public static final class ViewOnClickListenerC92091 implements View.OnClickListener {
+        public ViewOnClickListenerC92091() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -88,11 +88,11 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
     }
 
     /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$2 */
+    public static final class ViewOnClickListenerC92102 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
-        public AnonymousClass2(long j) {
+        public ViewOnClickListenerC92102(long j) {
             this.$guildId = j;
         }
 
@@ -100,17 +100,17 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         public final void onClick(View view) {
             WidgetCreateChannel.Companion companion = WidgetCreateChannel.INSTANCE;
             Context contextRequireContext = WidgetServerSettingsChannelsFabMenuFragment.this.requireContext();
-            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetCreateChannel.Companion.show$default(companion, contextRequireContext, this.$guildId, 4, null, 8, null);
         }
     }
 
     /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$3 */
+    public static final class ViewOnClickListenerC92113 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
-        public AnonymousClass3(long j) {
+        public ViewOnClickListenerC92113(long j) {
             this.$guildId = j;
         }
 
@@ -118,17 +118,17 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         public final void onClick(View view) {
             WidgetCreateChannel.Companion companion = WidgetCreateChannel.INSTANCE;
             Context contextRequireContext = WidgetServerSettingsChannelsFabMenuFragment.this.requireContext();
-            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetCreateChannel.Companion.show$default(companion, contextRequireContext, this.$guildId, 2, null, 8, null);
         }
     }
 
     /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$4 */
+    public static final class ViewOnClickListenerC92124 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
-        public AnonymousClass4(long j) {
+        public ViewOnClickListenerC92124(long j) {
             this.$guildId = j;
         }
 
@@ -136,15 +136,15 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         public final void onClick(View view) {
             WidgetCreateChannel.Companion companion = WidgetCreateChannel.INSTANCE;
             Context contextRequireContext = WidgetServerSettingsChannelsFabMenuFragment.this.requireContext();
-            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetCreateChannel.Companion.show$default(companion, contextRequireContext, this.$guildId, 0, null, 8, null);
         }
     }
 
     /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
-        public static final AnonymousClass5 INSTANCE = new AnonymousClass5();
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$5 */
+    public static final class ViewOnClickListenerC92135 implements View.OnClickListener {
+        public static final ViewOnClickListenerC92135 INSTANCE = new ViewOnClickListenerC92135();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
@@ -152,9 +152,9 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
     }
 
     /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$6, reason: invalid class name */
-    public static final class AnonymousClass6 implements View.OnClickListener {
-        public AnonymousClass6() {
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$6 */
+    public static final class ViewOnClickListenerC92146 implements View.OnClickListener {
+        public ViewOnClickListenerC92146() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -164,8 +164,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
     }
 
     public WidgetServerSettingsChannelsFabMenuFragment() {
-        super(R.layout.widget_server_settings_channels_sort_fab_menu);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsChannelsFabMenuFragment$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_server_settings_channels_sort_fab_menu);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsChannelsFabMenuFragment2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$dismiss(WidgetServerSettingsChannelsFabMenuFragment widgetServerSettingsChannelsFabMenuFragment) {
@@ -181,7 +181,7 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
     }
 
     private final View.OnClickListener createListener(View.OnClickListener onClickListener) {
-        return new AnonymousClass1(onClickListener);
+        return new ViewOnClickListenerC92081(onClickListener);
     }
 
     private final void dismiss() {
@@ -210,17 +210,17 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
     public void onResume() {
         super.onResume();
         WidgetServerSettingsChannelsSortFabMenuBinding binding = getBinding();
-        m.checkNotNullExpressionValue(binding, "binding");
-        binding.a.setOnClickListener(new AnonymousClass1());
+        Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+        binding.f17573a.setOnClickListener(new ViewOnClickListenerC92091());
         Bundle arguments = getArguments();
         long j = arguments != null ? arguments.getLong("INTENT_EXTRA_GUILD_ID", 0L) : 0L;
         Context contextRequireContext = requireContext();
-        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-        FloatingButtonMenuInitializer floatingButtonMenuInitializer = new FloatingButtonMenuInitializer(contextRequireContext, h0.mapOf(o.to(Integer.valueOf(R.id.fab_menu_add_category), createListener(new AnonymousClass2(j))), o.to(Integer.valueOf(R.id.fab_menu_add_voice), createListener(new AnonymousClass3(j))), o.to(Integer.valueOf(R.id.fab_menu_add_text), createListener(new AnonymousClass4(j))), o.to(Integer.valueOf(R.id.fab_menu_main), createListener(AnonymousClass5.INSTANCE))));
-        TableLayout tableLayout = getBinding().c;
-        m.checkNotNullExpressionValue(tableLayout, "binding.fabMenuTable");
-        FloatingActionButton floatingActionButton = getBinding().f2552b;
-        m.checkNotNullExpressionValue(floatingActionButton, "binding.fabMenuMainFab");
-        floatingButtonMenuInitializer.initialize(tableLayout, floatingActionButton, new AnonymousClass6());
+        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        FloatingButtonMenuInitializer floatingButtonMenuInitializer = new FloatingButtonMenuInitializer(contextRequireContext, Maps6.mapOf(Tuples.m10073to(Integer.valueOf(C5419R.id.fab_menu_add_category), createListener(new ViewOnClickListenerC92102(j))), Tuples.m10073to(Integer.valueOf(C5419R.id.fab_menu_add_voice), createListener(new ViewOnClickListenerC92113(j))), Tuples.m10073to(Integer.valueOf(C5419R.id.fab_menu_add_text), createListener(new ViewOnClickListenerC92124(j))), Tuples.m10073to(Integer.valueOf(C5419R.id.fab_menu_main), createListener(ViewOnClickListenerC92135.INSTANCE))));
+        TableLayout tableLayout = getBinding().f17575c;
+        Intrinsics3.checkNotNullExpressionValue(tableLayout, "binding.fabMenuTable");
+        FloatingActionButton floatingActionButton = getBinding().f17574b;
+        Intrinsics3.checkNotNullExpressionValue(floatingActionButton, "binding.fabMenuMainFab");
+        floatingButtonMenuInitializer.initialize(tableLayout, floatingActionButton, new ViewOnClickListenerC92146());
     }
 }

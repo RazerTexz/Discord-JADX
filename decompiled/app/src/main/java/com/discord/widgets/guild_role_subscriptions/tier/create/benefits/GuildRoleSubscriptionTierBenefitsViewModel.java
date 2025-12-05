@@ -1,31 +1,31 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create.benefits;
 
 import android.content.Context;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.guildrolesubscription.SubscriptionTrialInterval;
 import com.discord.stores.StoreExperiments;
 import com.discord.stores.StoreGuildRoleSubscriptions;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.stores.updates.ObservationDeck4;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag;
 import com.discord.widgets.guild_role_subscriptions.tier.model.Benefit;
 import com.discord.widgets.guild_role_subscriptions.tier.model.GuildRoleSubscriptionTier;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewState> {
+public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewModel<ViewState> {
     private final GuildRoleSubscriptionTierBenefitListType benefitListType;
     private final StoreExperiments experimentsStore;
     private final long guildId;
@@ -36,22 +36,22 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
     private StoreState storeState;
 
     /* compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel$1 */
+    public static final class C85241 extends Lambda implements Function1<StoreState, Unit> {
+        public C85241() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             GuildRoleSubscriptionTierBenefitsViewModel guildRoleSubscriptionTierBenefitsViewModel = GuildRoleSubscriptionTierBenefitsViewModel.this;
-            m.checkNotNullExpressionValue(storeState, "storeState");
+            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
             GuildRoleSubscriptionTierBenefitsViewModel.access$handleStoreState(guildRoleSubscriptionTierBenefitsViewModel, storeState);
         }
     }
@@ -63,8 +63,8 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
         private final List<SubscriptionTrialInterval> trialIntervalOptions;
 
         public StoreState(boolean z2, List<Integer> list, List<SubscriptionTrialInterval> list2) {
-            m.checkNotNullParameter(list, "activeTrialUserLimitOptions");
-            m.checkNotNullParameter(list2, "trialIntervalOptions");
+            Intrinsics3.checkNotNullParameter(list, "activeTrialUserLimitOptions");
+            Intrinsics3.checkNotNullParameter(list2, "trialIntervalOptions");
             this.isGuildEligibleForTrials = z2;
             this.activeTrialUserLimitOptions = list;
             this.trialIntervalOptions = list2;
@@ -98,8 +98,8 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
         }
 
         public final StoreState copy(boolean isGuildEligibleForTrials, List<Integer> activeTrialUserLimitOptions, List<SubscriptionTrialInterval> trialIntervalOptions) {
-            m.checkNotNullParameter(activeTrialUserLimitOptions, "activeTrialUserLimitOptions");
-            m.checkNotNullParameter(trialIntervalOptions, "trialIntervalOptions");
+            Intrinsics3.checkNotNullParameter(activeTrialUserLimitOptions, "activeTrialUserLimitOptions");
+            Intrinsics3.checkNotNullParameter(trialIntervalOptions, "trialIntervalOptions");
             return new StoreState(isGuildEligibleForTrials, activeTrialUserLimitOptions, trialIntervalOptions);
         }
 
@@ -111,7 +111,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return this.isGuildEligibleForTrials == storeState.isGuildEligibleForTrials && m.areEqual(this.activeTrialUserLimitOptions, storeState.activeTrialUserLimitOptions) && m.areEqual(this.trialIntervalOptions, storeState.trialIntervalOptions);
+            return this.isGuildEligibleForTrials == storeState.isGuildEligibleForTrials && Intrinsics3.areEqual(this.activeTrialUserLimitOptions, storeState.activeTrialUserLimitOptions) && Intrinsics3.areEqual(this.trialIntervalOptions, storeState.trialIntervalOptions);
         }
 
         public final List<Integer> getActiveTrialUserLimitOptions() {
@@ -144,12 +144,12 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(isGuildEligibleForTrials=");
-            sbU.append(this.isGuildEligibleForTrials);
-            sbU.append(", activeTrialUserLimitOptions=");
-            sbU.append(this.activeTrialUserLimitOptions);
-            sbU.append(", trialIntervalOptions=");
-            return a.L(sbU, this.trialIntervalOptions, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(isGuildEligibleForTrials=");
+            sbM833U.append(this.isGuildEligibleForTrials);
+            sbM833U.append(", activeTrialUserLimitOptions=");
+            sbM833U.append(this.activeTrialUserLimitOptions);
+            sbM833U.append(", trialIntervalOptions=");
+            return outline.m824L(sbM833U, this.trialIntervalOptions, ")");
         }
     }
 
@@ -167,9 +167,9 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
 
         /* JADX WARN: Multi-variable type inference failed */
         public ViewState(boolean z2, List<? extends GuildRoleSubscriptionBenefitAdapterItem> list, Boolean bool, List<Integer> list2, List<SubscriptionTrialInterval> list3) {
-            m.checkNotNullParameter(list, "items");
-            m.checkNotNullParameter(list2, "activeTrialUserLimitOptions");
-            m.checkNotNullParameter(list3, "trialIntervalOptions");
+            Intrinsics3.checkNotNullParameter(list, "items");
+            Intrinsics3.checkNotNullParameter(list2, "activeTrialUserLimitOptions");
+            Intrinsics3.checkNotNullParameter(list3, "trialIntervalOptions");
             this.canChangeChannelSettings = z2;
             this.items = list;
             this.canAccessAllChannels = bool;
@@ -222,9 +222,9 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
         }
 
         public final ViewState copy(boolean canChangeChannelSettings, List<? extends GuildRoleSubscriptionBenefitAdapterItem> items, Boolean canAccessAllChannels, List<Integer> activeTrialUserLimitOptions, List<SubscriptionTrialInterval> trialIntervalOptions) {
-            m.checkNotNullParameter(items, "items");
-            m.checkNotNullParameter(activeTrialUserLimitOptions, "activeTrialUserLimitOptions");
-            m.checkNotNullParameter(trialIntervalOptions, "trialIntervalOptions");
+            Intrinsics3.checkNotNullParameter(items, "items");
+            Intrinsics3.checkNotNullParameter(activeTrialUserLimitOptions, "activeTrialUserLimitOptions");
+            Intrinsics3.checkNotNullParameter(trialIntervalOptions, "trialIntervalOptions");
             return new ViewState(canChangeChannelSettings, items, canAccessAllChannels, activeTrialUserLimitOptions, trialIntervalOptions);
         }
 
@@ -236,7 +236,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return this.canChangeChannelSettings == viewState.canChangeChannelSettings && m.areEqual(this.items, viewState.items) && m.areEqual(this.canAccessAllChannels, viewState.canAccessAllChannels) && m.areEqual(this.activeTrialUserLimitOptions, viewState.activeTrialUserLimitOptions) && m.areEqual(this.trialIntervalOptions, viewState.trialIntervalOptions);
+            return this.canChangeChannelSettings == viewState.canChangeChannelSettings && Intrinsics3.areEqual(this.items, viewState.items) && Intrinsics3.areEqual(this.canAccessAllChannels, viewState.canAccessAllChannels) && Intrinsics3.areEqual(this.activeTrialUserLimitOptions, viewState.activeTrialUserLimitOptions) && Intrinsics3.areEqual(this.trialIntervalOptions, viewState.trialIntervalOptions);
         }
 
         public final List<Integer> getActiveTrialUserLimitOptions() {
@@ -281,30 +281,30 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewState(canChangeChannelSettings=");
-            sbU.append(this.canChangeChannelSettings);
-            sbU.append(", items=");
-            sbU.append(this.items);
-            sbU.append(", canAccessAllChannels=");
-            sbU.append(this.canAccessAllChannels);
-            sbU.append(", activeTrialUserLimitOptions=");
-            sbU.append(this.activeTrialUserLimitOptions);
-            sbU.append(", trialIntervalOptions=");
-            return a.L(sbU, this.trialIntervalOptions, ")");
+            StringBuilder sbM833U = outline.m833U("ViewState(canChangeChannelSettings=");
+            sbM833U.append(this.canChangeChannelSettings);
+            sbM833U.append(", items=");
+            sbM833U.append(this.items);
+            sbM833U.append(", canAccessAllChannels=");
+            sbM833U.append(this.canAccessAllChannels);
+            sbM833U.append(", activeTrialUserLimitOptions=");
+            sbM833U.append(this.activeTrialUserLimitOptions);
+            sbM833U.append(", trialIntervalOptions=");
+            return outline.m824L(sbM833U, this.trialIntervalOptions, ")");
         }
 
         public /* synthetic */ ViewState(boolean z2, List list, Boolean bool, List list2, List list3, int i, DefaultConstructorMarker defaultConstructorMarker) {
-            this((i & 1) != 0 ? false : z2, (i & 2) != 0 ? n.emptyList() : list, (i & 4) != 0 ? null : bool, (i & 8) != 0 ? n.emptyList() : list2, (i & 16) != 0 ? n.emptyList() : list3);
+            this((i & 1) != 0 ? false : z2, (i & 2) != 0 ? Collections2.emptyList() : list, (i & 4) != 0 ? null : bool, (i & 8) != 0 ? Collections2.emptyList() : list2, (i & 16) != 0 ? Collections2.emptyList() : list3);
         }
     }
 
     /* compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel$observeStoreState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<StoreState> {
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel$observeStoreState$1 */
+    public static final class C85251 extends Lambda implements Function0<StoreState> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C85251(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -322,7 +322,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
     }
 
     public /* synthetic */ GuildRoleSubscriptionTierBenefitsViewModel(long j, GuildRoleSubscriptionTierBenefitListType guildRoleSubscriptionTierBenefitListType, StoreExperiments storeExperiments, StoreGuildRoleSubscriptions storeGuildRoleSubscriptions, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(j, guildRoleSubscriptionTierBenefitListType, (i & 4) != 0 ? StoreStream.INSTANCE.getExperiments() : storeExperiments, (i & 8) != 0 ? StoreStream.INSTANCE.getGuildRoleSubscriptions() : storeGuildRoleSubscriptions, (i & 16) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(j, guildRoleSubscriptionTierBenefitListType, (i & 4) != 0 ? StoreStream.INSTANCE.getExperiments() : storeExperiments, (i & 8) != 0 ? StoreStream.INSTANCE.getGuildRoleSubscriptions() : storeGuildRoleSubscriptions, (i & 16) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ StoreGuildRoleSubscriptions access$getGuildRoleSubscriptionsStore$p(GuildRoleSubscriptionTierBenefitsViewModel guildRoleSubscriptionTierBenefitsViewModel) {
@@ -339,7 +339,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
     }
 
     private final Observable<StoreState> observeStoreState(long guildId) {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this.experimentsStore, this.guildRoleSubscriptionsStore}, false, null, null, new AnonymousClass1(guildId), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this.experimentsStore, this.guildRoleSubscriptionsStore}, false, null, null, new C85251(guildId), 14, null);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x003e  */
@@ -368,22 +368,22 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
                 z2 = true;
             }
         }
-        List<GuildRoleSubscriptionBenefitAdapterItem> listGenerateGuildRoleSubscriptionBenefitListItems = GuildRoleSubscriptionBenefitListItemGeneratorKt.generateGuildRoleSubscriptionBenefitListItems(channelBenefits, intangibleBenefits, guildRoleSubscriptionTierBenefitListType, j, name, boolValueOf, z2, guildRoleSubscriptionTier.getTrialInterval(), guildRoleSubscriptionTier.getActiveTrialUserLimit());
-        boolean z3 = m.areEqual(this.isFullServerGating, Boolean.TRUE) && this.benefitListType != GuildRoleSubscriptionTierBenefitListType.INTANGIBLE;
+        List<GuildRoleSubscriptionBenefitAdapterItem> listGenerateGuildRoleSubscriptionBenefitListItems = GuildRoleSubscriptionBenefitListItemGenerator.generateGuildRoleSubscriptionBenefitListItems(channelBenefits, intangibleBenefits, guildRoleSubscriptionTierBenefitListType, j, name, boolValueOf, z2, guildRoleSubscriptionTier.getTrialInterval(), guildRoleSubscriptionTier.getActiveTrialUserLimit());
+        boolean z3 = Intrinsics3.areEqual(this.isFullServerGating, Boolean.TRUE) && this.benefitListType != GuildRoleSubscriptionTierBenefitListType.INTANGIBLE;
         Boolean boolValueOf2 = Boolean.valueOf(guildRoleSubscriptionTier.canAccessAllChannelsOrDefault(this.isFullServerGating));
         StoreState storeState2 = this.storeState;
         if (storeState2 == null || (listEmptyList = storeState2.getActiveTrialUserLimitOptions()) == null) {
-            listEmptyList = n.emptyList();
+            listEmptyList = Collections2.emptyList();
         }
         StoreState storeState3 = this.storeState;
         if (storeState3 == null || (listEmptyList2 = storeState3.getTrialIntervalOptions()) == null) {
-            listEmptyList2 = n.emptyList();
+            listEmptyList2 = Collections2.emptyList();
         }
         updateViewState(new ViewState(z3, listGenerateGuildRoleSubscriptionBenefitListItems, boolValueOf2, listEmptyList, listEmptyList2));
     }
 
     public final void updateBenefits(GuildRoleSubscriptionTier guildRoleSubscriptionTier, Boolean isFullServerGating) {
-        m.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
+        Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
         this.guildRoleSubscriptionTier = guildRoleSubscriptionTier;
         this.isFullServerGating = isFullServerGating;
         updateList();
@@ -392,17 +392,17 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends d0<ViewSta
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildRoleSubscriptionTierBenefitsViewModel(long j, GuildRoleSubscriptionTierBenefitListType guildRoleSubscriptionTierBenefitListType, StoreExperiments storeExperiments, StoreGuildRoleSubscriptions storeGuildRoleSubscriptions, ObservationDeck observationDeck) {
         super(null, 1, null);
-        m.checkNotNullParameter(guildRoleSubscriptionTierBenefitListType, "benefitListType");
-        m.checkNotNullParameter(storeExperiments, "experimentsStore");
-        m.checkNotNullParameter(storeGuildRoleSubscriptions, "guildRoleSubscriptionsStore");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTierBenefitListType, "benefitListType");
+        Intrinsics3.checkNotNullParameter(storeExperiments, "experimentsStore");
+        Intrinsics3.checkNotNullParameter(storeGuildRoleSubscriptions, "guildRoleSubscriptionsStore");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.guildId = j;
         this.benefitListType = guildRoleSubscriptionTierBenefitListType;
         this.experimentsStore = storeExperiments;
         this.guildRoleSubscriptionsStore = storeGuildRoleSubscriptions;
         this.observationDeck = observationDeck;
-        Observable<StoreState> observableR = observeStoreState(j).r();
-        m.checkNotNullExpressionValue(observableR, "observeStoreState(guildI…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), GuildRoleSubscriptionTierBenefitsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable<StoreState> observableM11112r = observeStoreState(j).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observeStoreState(guildI…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableM11112r), this, null, 2, null), GuildRoleSubscriptionTierBenefitsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85241(), 62, (Object) null);
     }
 }

@@ -1,26 +1,29 @@
 package com.fasterxml.jackson.core;
 
-import b.g.a.b.e;
+import p007b.p195g.p196a.p198b.JsonLocation;
 
 /* loaded from: classes3.dex */
 public class JsonProcessingException extends JacksonException {
     private static final long serialVersionUID = 123;
-    public e _location;
+    public JsonLocation _location;
 
-    public JsonProcessingException(String str, e eVar) {
+    public JsonProcessingException(String str, JsonLocation jsonLocation) {
         super(str, null);
         this._location = null;
     }
 
-    public String a() {
+    /* renamed from: a */
+    public String mo8739a() {
         return null;
     }
 
-    public String b() {
+    /* renamed from: b */
+    public String m8740b() {
         return super.getMessage();
     }
 
-    public Object c() {
+    /* renamed from: c */
+    public Object mo8737c() {
         return null;
     }
 
@@ -30,20 +33,20 @@ public class JsonProcessingException extends JacksonException {
         if (message == null) {
             message = "N/A";
         }
-        e eVar = this._location;
-        String strA = a();
-        if (eVar == null && strA == null) {
+        JsonLocation jsonLocation = this._location;
+        String strMo8739a = mo8739a();
+        if (jsonLocation == null && strMo8739a == null) {
             return message;
         }
         StringBuilder sb = new StringBuilder(100);
         sb.append(message);
-        if (strA != null) {
-            sb.append(strA);
+        if (strMo8739a != null) {
+            sb.append(strMo8739a);
         }
-        if (eVar != null) {
+        if (jsonLocation != null) {
             sb.append('\n');
             sb.append(" at ");
-            sb.append(eVar.toString());
+            sb.append(jsonLocation.toString());
         }
         return sb.toString();
     }

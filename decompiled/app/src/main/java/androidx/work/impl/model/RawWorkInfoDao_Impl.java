@@ -7,7 +7,7 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.room.util.StringUtil;
-import androidx.sqlite.db.SupportSQLiteQuery;
+import androidx.sqlite.p006db.SupportSQLiteQuery;
 import androidx.view.LiveData;
 import androidx.work.Data;
 import androidx.work.impl.model.WorkSpec;
@@ -21,11 +21,11 @@ import java.util.concurrent.Callable;
 public final class RawWorkInfoDao_Impl implements RawWorkInfoDao {
     private final RoomDatabase __db;
 
-    /* renamed from: androidx.work.impl.model.RawWorkInfoDao_Impl$1, reason: invalid class name */
-    public class AnonymousClass1 implements Callable<List<WorkSpec.WorkInfoPojo>> {
+    /* renamed from: androidx.work.impl.model.RawWorkInfoDao_Impl$1 */
+    public class CallableC07491 implements Callable<List<WorkSpec.WorkInfoPojo>> {
         public final /* synthetic */ SupportSQLiteQuery val$_internalQuery;
 
-        public AnonymousClass1(SupportSQLiteQuery supportSQLiteQuery) {
+        public CallableC07491(SupportSQLiteQuery supportSQLiteQuery) {
             this.val$_internalQuery = supportSQLiteQuery;
         }
 
@@ -75,7 +75,7 @@ public final class RawWorkInfoDao_Impl implements RawWorkInfoDao {
                     }
                     WorkSpec.WorkInfoPojo workInfoPojo = new WorkSpec.WorkInfoPojo();
                     if (columnIndex != -1) {
-                        workInfoPojo.f40id = cursorQuery.getString(columnIndex);
+                        workInfoPojo.f165id = cursorQuery.getString(columnIndex);
                     }
                     if (columnIndex2 != -1) {
                         workInfoPojo.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndex2));
@@ -275,7 +275,7 @@ public final class RawWorkInfoDao_Impl implements RawWorkInfoDao {
                 }
                 WorkSpec.WorkInfoPojo workInfoPojo = new WorkSpec.WorkInfoPojo();
                 if (columnIndex != -1) {
-                    workInfoPojo.f40id = cursorQuery.getString(columnIndex);
+                    workInfoPojo.f165id = cursorQuery.getString(columnIndex);
                 }
                 if (columnIndex2 != -1) {
                     workInfoPojo.state = WorkTypeConverters.intToState(cursorQuery.getInt(columnIndex2));
@@ -298,6 +298,6 @@ public final class RawWorkInfoDao_Impl implements RawWorkInfoDao {
 
     @Override // androidx.work.impl.model.RawWorkInfoDao
     public LiveData<List<WorkSpec.WorkInfoPojo>> getWorkInfoPojosLiveData(SupportSQLiteQuery supportSQLiteQuery) {
-        return this.__db.getInvalidationTracker().createLiveData(new String[]{"WorkTag", "WorkProgress"}, false, new AnonymousClass1(supportSQLiteQuery));
+        return this.__db.getInvalidationTracker().createLiveData(new String[]{"WorkTag", "WorkProgress"}, false, new CallableC07491(supportSQLiteQuery));
     }
 }

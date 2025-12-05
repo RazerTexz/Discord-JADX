@@ -1,32 +1,33 @@
 package com.discord.stores;
 
-import a0.a.a.b;
 import android.content.Context;
-import b.d.b.a.a;
 import com.discord.stores.StoreV2;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.networking.NetworkMonitor;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
-import d0.d0.f;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
-import d0.z.d.s;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p508a0.MathJVM;
+import p507d0.p512d0._Ranges;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.MutablePropertyReference1Impl;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: StoreConnectivity.kt */
 /* loaded from: classes2.dex */
 public final class StoreConnectivity extends StoreV2 {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a0.mutableProperty1(new s(StoreConnectivity.class, "state", "getState()Lcom/discord/stores/StoreConnectivity$DelayedState;", 0))};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {Reflection2.mutableProperty1(new MutablePropertyReference1Impl(StoreConnectivity.class, "state", "getState()Lcom/discord/stores/StoreConnectivity$DelayedState;", 0))};
     private static final Companion Companion = new Companion(null);
 
     @Deprecated
@@ -65,7 +66,7 @@ public final class StoreConnectivity extends StoreV2 {
         private final State state;
 
         public DelayedState(State state, long j) {
-            m.checkNotNullParameter(state, "state");
+            Intrinsics3.checkNotNullParameter(state, "state");
             this.state = state;
             this.delay = j;
         }
@@ -91,7 +92,7 @@ public final class StoreConnectivity extends StoreV2 {
         }
 
         public final DelayedState copy(State state, long delay) {
-            m.checkNotNullParameter(state, "state");
+            Intrinsics3.checkNotNullParameter(state, "state");
             return new DelayedState(state, delay);
         }
 
@@ -103,7 +104,7 @@ public final class StoreConnectivity extends StoreV2 {
                 return false;
             }
             DelayedState delayedState = (DelayedState) other;
-            return m.areEqual(this.state, delayedState.state) && this.delay == delayedState.delay;
+            return Intrinsics3.areEqual(this.state, delayedState.state) && this.delay == delayedState.delay;
         }
 
         public final long getDelay() {
@@ -116,14 +117,14 @@ public final class StoreConnectivity extends StoreV2 {
 
         public int hashCode() {
             State state = this.state;
-            return b.a(this.delay) + ((state != null ? state.hashCode() : 0) * 31);
+            return C0002b.m3a(this.delay) + ((state != null ? state.hashCode() : 0) * 31);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("DelayedState(state=");
-            sbU.append(this.state);
-            sbU.append(", delay=");
-            return a.C(sbU, this.delay, ")");
+            StringBuilder sbM833U = outline.m833U("DelayedState(state=");
+            sbM833U.append(this.state);
+            sbM833U.append(", delay=");
+            return outline.m815C(sbM833U, this.delay, ")");
         }
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -159,12 +160,12 @@ public final class StoreConnectivity extends StoreV2 {
     }
 
     /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$handleChannelMessagesLoading$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreConnectivity$handleChannelMessagesLoading$1 */
+    public static final class C58531 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $channelMessagesLoading;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2) {
+        public C58531(boolean z2) {
             super(0);
             this.$channelMessagesLoading = z2;
         }
@@ -172,7 +173,7 @@ public final class StoreConnectivity extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -183,12 +184,12 @@ public final class StoreConnectivity extends StoreV2 {
     }
 
     /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$handleDeviceNetworkStateUpdated$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreConnectivity$handleDeviceNetworkStateUpdated$1 */
+    public static final class C58541 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ NetworkMonitor.State $state;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(NetworkMonitor.State state) {
+        public C58541(NetworkMonitor.State state) {
             super(0);
             this.$state = state;
         }
@@ -196,7 +197,7 @@ public final class StoreConnectivity extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -207,36 +208,36 @@ public final class StoreConnectivity extends StoreV2 {
     }
 
     /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$init$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<NetworkMonitor.State, Unit> {
-        public AnonymousClass1(StoreConnectivity storeConnectivity) {
+    /* renamed from: com.discord.stores.StoreConnectivity$init$1 */
+    public static final /* synthetic */ class C58551 extends FunctionReferenceImpl implements Function1<NetworkMonitor.State, Unit> {
+        public C58551(StoreConnectivity storeConnectivity) {
             super(1, storeConnectivity, StoreConnectivity.class, "handleDeviceNetworkStateUpdated", "handleDeviceNetworkStateUpdated(Lcom/discord/utilities/networking/NetworkMonitor$State;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(NetworkMonitor.State state) {
             invoke2(state);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(NetworkMonitor.State state) {
-            m.checkNotNullParameter(state, "p1");
+            Intrinsics3.checkNotNullParameter(state, "p1");
             StoreConnectivity.access$handleDeviceNetworkStateUpdated((StoreConnectivity) this.receiver, state);
         }
     }
 
     /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$init$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<Boolean, Unit> {
-        public AnonymousClass2(StoreConnectivity storeConnectivity) {
+    /* renamed from: com.discord.stores.StoreConnectivity$init$2 */
+    public static final /* synthetic */ class C58562 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
+        public C58562(StoreConnectivity storeConnectivity) {
             super(1, storeConnectivity, StoreConnectivity.class, "handleChannelMessagesLoading", "handleChannelMessagesLoading(Z)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
             invoke(bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(boolean z2) {
@@ -245,9 +246,9 @@ public final class StoreConnectivity extends StoreV2 {
     }
 
     /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$observeState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<DelayedState> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreConnectivity$observeState$1 */
+    public static final class C58571 extends Lambda implements Function0<DelayedState> {
+        public C58571() {
             super(0);
         }
 
@@ -264,9 +265,9 @@ public final class StoreConnectivity extends StoreV2 {
     }
 
     public StoreConnectivity(StoreStream storeStream, Dispatcher dispatcher, Clock clock) {
-        m.checkNotNullParameter(storeStream, "stream");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
         this.stream = storeStream;
         this.dispatcher = dispatcher;
         this.clock = clock;
@@ -347,15 +348,15 @@ public final class StoreConnectivity extends StoreV2 {
     }
 
     private final long getStateDelay(long defaultDelay) {
-        return f.coerceAtLeast(d0.a0.a.roundToInt((defaultDelay - getStateActiveMillis()) / 100) * 100, 0L);
+        return _Ranges.coerceAtLeast(MathJVM.roundToInt((defaultDelay - getStateActiveMillis()) / 100) * 100, 0L);
     }
 
     private final void handleChannelMessagesLoading(boolean channelMessagesLoading) {
-        this.dispatcher.schedule(new AnonymousClass1(channelMessagesLoading));
+        this.dispatcher.schedule(new C58531(channelMessagesLoading));
     }
 
     private final void handleDeviceNetworkStateUpdated(NetworkMonitor.State state) {
-        this.dispatcher.schedule(new AnonymousClass1(state));
+        this.dispatcher.schedule(new C58541(state));
     }
 
     private final void setState(DelayedState delayedState) {
@@ -372,7 +373,7 @@ public final class StoreConnectivity extends StoreV2 {
         setState(new DelayedState(state2, getStateDelay(this.stateTriggeredDelay)));
     }
 
-    @StoreThread
+    @Store3
     public final void handleBackgrounded(boolean backgrounded) {
         if (backgrounded) {
             this.stateTriggeredDelay -= getStateActiveMillis();
@@ -383,7 +384,7 @@ public final class StoreConnectivity extends StoreV2 {
         updateConnectivityState();
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnected(boolean connected) {
         if (connected) {
             return;
@@ -392,17 +393,17 @@ public final class StoreConnectivity extends StoreV2 {
         updateConnectivityState();
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionReady(boolean connectionReady) {
         this.isReadyPayloadReceived = connectionReady;
         updateConnectivityState();
     }
 
-    @StoreThread
+    @Store3
     public final void init(NetworkMonitor networkMonitor) {
-        m.checkNotNullParameter(networkMonitor, "networkMonitor");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(networkMonitor.observeState()), StoreConnectivity.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(this.stream.getMessagesLoader().observeChannelMessagesLoading(), StoreConnectivity.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(networkMonitor, "networkMonitor");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(networkMonitor.observeState()), StoreConnectivity.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C58551(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(this.stream.getMessagesLoader().observeChannelMessagesLoading(), StoreConnectivity.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C58562(this), 62, (Object) null);
     }
 
     public final boolean isConnected() {
@@ -410,8 +411,8 @@ public final class StoreConnectivity extends StoreV2 {
     }
 
     public final Observable<DelayedState> observeState() {
-        Observable<DelayedState> observableR = ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "ObservationDeckProvider\n…  .distinctUntilChanged()");
-        return observableR;
+        Observable<DelayedState> observableM11112r = ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{this}, false, null, null, new C58571(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "ObservationDeckProvider\n…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 }

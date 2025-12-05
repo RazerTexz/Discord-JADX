@@ -1,12 +1,9 @@
 package com.discord.widgets.guilds.profile;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.emoji.GuildEmoji;
 import com.discord.api.guild.GuildFeature;
 import com.discord.api.guild.preview.GuildPreview;
@@ -27,14 +24,11 @@ import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserGuildSettings;
 import com.discord.stores.StoreUserSettings;
 import com.discord.utilities.channel.GuildChannelsInfo;
-import com.discord.utilities.guilds.GuildUtilsKt;
-import com.discord.utilities.permissions.ManageGuildContext;
+import com.discord.utilities.guilds.GuildUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.permissions.PermissionsContexts;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -42,12 +36,19 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetGuildProfileSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
+public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -61,21 +62,21 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
     private final boolean viewingGuild;
 
     /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$1 */
+    public static final class C88031 extends Lambda implements Function1<StoreState, Unit> {
+        public C88031() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetGuildProfileSheetViewModel.access$handleStoreState(WidgetGuildProfileSheetViewModel.this, storeState);
         }
     }
@@ -100,7 +101,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
             Code decompiled incorrectly, please refer to instructions dump.
         */
         public Actions(boolean z2, boolean z3, boolean z4, boolean z5, String str, String str2, boolean z6, boolean z7, boolean z8, boolean z9, String str3) {
-            m.checkNotNullParameter(str3, "username");
+            Intrinsics3.checkNotNullParameter(str3, "username");
             this.isUnread = z2;
             this.canManageChannels = z3;
             this.canManageEvents = z4;
@@ -182,7 +183,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public final Actions copy(boolean isUnread, boolean canManageChannels, boolean canManageEvents, boolean canChangeNickname, String nick, String guildAvatar, boolean isAllowDMChecked, boolean hideMutedChannels, boolean canLeaveGuild, boolean isDeveloper, String username) {
-            m.checkNotNullParameter(username, "username");
+            Intrinsics3.checkNotNullParameter(username, "username");
             return new Actions(isUnread, canManageChannels, canManageEvents, canChangeNickname, nick, guildAvatar, isAllowDMChecked, hideMutedChannels, canLeaveGuild, isDeveloper, username);
         }
 
@@ -194,7 +195,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
                 return false;
             }
             Actions actions = (Actions) other;
-            return this.isUnread == actions.isUnread && this.canManageChannels == actions.canManageChannels && this.canManageEvents == actions.canManageEvents && this.canChangeNickname == actions.canChangeNickname && m.areEqual(this.nick, actions.nick) && m.areEqual(this.guildAvatar, actions.guildAvatar) && this.isAllowDMChecked == actions.isAllowDMChecked && this.hideMutedChannels == actions.hideMutedChannels && this.canLeaveGuild == actions.canLeaveGuild && this.isDeveloper == actions.isDeveloper && m.areEqual(this.username, actions.username);
+            return this.isUnread == actions.isUnread && this.canManageChannels == actions.canManageChannels && this.canManageEvents == actions.canManageEvents && this.canChangeNickname == actions.canChangeNickname && Intrinsics3.areEqual(this.nick, actions.nick) && Intrinsics3.areEqual(this.guildAvatar, actions.guildAvatar) && this.isAllowDMChecked == actions.isAllowDMChecked && this.hideMutedChannels == actions.hideMutedChannels && this.canLeaveGuild == actions.canLeaveGuild && this.isDeveloper == actions.isDeveloper && Intrinsics3.areEqual(this.username, actions.username);
         }
 
         public final boolean getCanChangeNickname() {
@@ -309,28 +310,28 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Actions(isUnread=");
-            sbU.append(this.isUnread);
-            sbU.append(", canManageChannels=");
-            sbU.append(this.canManageChannels);
-            sbU.append(", canManageEvents=");
-            sbU.append(this.canManageEvents);
-            sbU.append(", canChangeNickname=");
-            sbU.append(this.canChangeNickname);
-            sbU.append(", nick=");
-            sbU.append(this.nick);
-            sbU.append(", guildAvatar=");
-            sbU.append(this.guildAvatar);
-            sbU.append(", isAllowDMChecked=");
-            sbU.append(this.isAllowDMChecked);
-            sbU.append(", hideMutedChannels=");
-            sbU.append(this.hideMutedChannels);
-            sbU.append(", canLeaveGuild=");
-            sbU.append(this.canLeaveGuild);
-            sbU.append(", isDeveloper=");
-            sbU.append(this.isDeveloper);
-            sbU.append(", username=");
-            return a.J(sbU, this.username, ")");
+            StringBuilder sbM833U = outline.m833U("Actions(isUnread=");
+            sbM833U.append(this.isUnread);
+            sbM833U.append(", canManageChannels=");
+            sbM833U.append(this.canManageChannels);
+            sbM833U.append(", canManageEvents=");
+            sbM833U.append(this.canManageEvents);
+            sbM833U.append(", canChangeNickname=");
+            sbM833U.append(this.canChangeNickname);
+            sbM833U.append(", nick=");
+            sbM833U.append(this.nick);
+            sbM833U.append(", guildAvatar=");
+            sbM833U.append(this.guildAvatar);
+            sbM833U.append(", isAllowDMChecked=");
+            sbM833U.append(this.isAllowDMChecked);
+            sbM833U.append(", hideMutedChannels=");
+            sbM833U.append(this.hideMutedChannels);
+            sbM833U.append(", canLeaveGuild=");
+            sbM833U.append(this.canLeaveGuild);
+            sbM833U.append(", isDeveloper=");
+            sbM833U.append(this.isDeveloper);
+            sbM833U.append(", username=");
+            return outline.m822J(sbM833U, this.username, ")");
         }
     }
 
@@ -347,7 +348,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public Banner(long j, String str, Type type) {
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(type, "type");
             this.guildId = j;
             this.hash = str;
             this.type = type;
@@ -382,7 +383,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public final Banner copy(long guildId, String hash, Type type) {
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(type, "type");
             return new Banner(guildId, hash, type);
         }
 
@@ -394,7 +395,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
                 return false;
             }
             Banner banner = (Banner) other;
-            return this.guildId == banner.guildId && m.areEqual(this.hash, banner.hash) && m.areEqual(this.type, banner.type);
+            return this.guildId == banner.guildId && Intrinsics3.areEqual(this.hash, banner.hash) && Intrinsics3.areEqual(this.type, banner.type);
         }
 
         public final long getGuildId() {
@@ -410,22 +411,22 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public int hashCode() {
-            int iA = b.a(this.guildId) * 31;
+            int iM3a = C0002b.m3a(this.guildId) * 31;
             String str = this.hash;
-            int iHashCode = (iA + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
             Type type = this.type;
             return iHashCode + (type != null ? type.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Banner(guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", hash=");
-            sbU.append(this.hash);
-            sbU.append(", type=");
-            sbU.append(this.type);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Banner(guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", hash=");
+            sbM833U.append(this.hash);
+            sbM833U.append(", type=");
+            sbM833U.append(this.type);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -519,12 +520,12 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("BottomActions(showUploadEmoji=");
-            sbU.append(this.showUploadEmoji);
-            sbU.append(", showJoinServer=");
-            sbU.append(this.showJoinServer);
-            sbU.append(", showViewServer=");
-            return a.O(sbU, this.showViewServer, ")");
+            StringBuilder sbM833U = outline.m833U("BottomActions(showUploadEmoji=");
+            sbM833U.append(this.showUploadEmoji);
+            sbM833U.append(", showJoinServer=");
+            sbM833U.append(this.showJoinServer);
+            sbM833U.append(", showViewServer=");
+            return outline.m827O(sbM833U, this.showViewServer, ")");
         }
     }
 
@@ -535,9 +536,9 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
 
         public final Observable<StoreState> observeStores(long guildId) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable<StoreState> observableC = Observable.c(companion.getGuilds().observeGuild(guildId), companion.getGuildProfiles().observeGuildProfile(guildId), companion.getReadStates().getIsUnread(guildId), StoreUser.observeMe$default(companion.getUsers(), false, 1, null), StoreUser.observeMe$default(companion.getUsers(), false, 1, null).Y(new WidgetGuildProfileSheetViewModel$Companion$observeStores$1(guildId)), companion.getUserSettings().observeRestrictedGuildIds(), companion.getEmojis().getEmojiSet(new StoreEmoji.EmojiContext.GuildProfile(guildId), true, false).G(new WidgetGuildProfileSheetViewModel$Companion$observeStores$2(guildId)), companion.getLurking().isLurkingObs(guildId), GuildChannelsInfo.INSTANCE.get(guildId), WidgetGuildProfileSheetViewModel$Companion$observeStores$3.INSTANCE);
-            m.checkNotNullExpressionValue(observableC, "Observable.combineLatest…ead\n          )\n        }");
-            return observableC;
+            Observable<StoreState> observableM11066c = Observable.m11066c(companion.getGuilds().observeGuild(guildId), companion.getGuildProfiles().observeGuildProfile(guildId), companion.getReadStates().getIsUnread(guildId), StoreUser.observeMe$default(companion.getUsers(), false, 1, null), StoreUser.observeMe$default(companion.getUsers(), false, 1, null).m11099Y(new WidgetGuildProfileSheetViewModel2(guildId)), companion.getUserSettings().observeRestrictedGuildIds(), companion.getEmojis().getEmojiSet(new StoreEmoji.EmojiContext.GuildProfile(guildId), true, false).m11083G(new WidgetGuildProfileSheetViewModel3(guildId)), companion.getLurking().isLurkingObs(guildId), GuildChannelsInfo.INSTANCE.get(guildId), WidgetGuildProfileSheetViewModel4.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11066c, "Observable.combineLatest…ead\n          )\n        }");
+            return observableM11066c;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -553,7 +554,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public EmojisData(boolean z2, boolean z3, List<? extends Emoji> list) {
-            m.checkNotNullParameter(list, "emojis");
+            Intrinsics3.checkNotNullParameter(list, "emojis");
             this.isPremium = z2;
             this.isExpanded = z3;
             this.emojis = list;
@@ -588,7 +589,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public final EmojisData copy(boolean isPremium, boolean isExpanded, List<? extends Emoji> emojis) {
-            m.checkNotNullParameter(emojis, "emojis");
+            Intrinsics3.checkNotNullParameter(emojis, "emojis");
             return new EmojisData(isPremium, isExpanded, emojis);
         }
 
@@ -600,7 +601,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
                 return false;
             }
             EmojisData emojisData = (EmojisData) other;
-            return this.isPremium == emojisData.isPremium && this.isExpanded == emojisData.isExpanded && m.areEqual(this.emojis, emojisData.emojis);
+            return this.isPremium == emojisData.isPremium && this.isExpanded == emojisData.isExpanded && Intrinsics3.areEqual(this.emojis, emojisData.emojis);
         }
 
         public final List<Emoji> getEmojis() {
@@ -633,12 +634,12 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("EmojisData(isPremium=");
-            sbU.append(this.isPremium);
-            sbU.append(", isExpanded=");
-            sbU.append(this.isExpanded);
-            sbU.append(", emojis=");
-            return a.L(sbU, this.emojis, ")");
+            StringBuilder sbM833U = outline.m833U("EmojisData(isPremium=");
+            sbM833U.append(this.isPremium);
+            sbM833U.append(", isExpanded=");
+            sbM833U.append(this.isExpanded);
+            sbM833U.append(", emojis=");
+            return outline.m824L(sbM833U, this.emojis, ")");
         }
     }
 
@@ -686,7 +687,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.B(a.U("DismissAndShowToast(stringRes="), this.stringRes, ")");
+                return outline.m814B(outline.m833U("DismissAndShowToast(stringRes="), this.stringRes, ")");
             }
         }
 
@@ -713,10 +714,10 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(Guild guild, StoreGuildProfiles.GuildProfileData guildProfileData, GuildChannelsInfo guildChannelsInfo, MeUser meUser, GuildMember guildMember, List<Long> list, boolean z2, List<? extends Emoji> list2, boolean z3, boolean z4) {
-            m.checkNotNullParameter(guildChannelsInfo, "guildChannelsInfo");
-            m.checkNotNullParameter(meUser, "me");
-            m.checkNotNullParameter(list, "restrictedGuildIds");
-            m.checkNotNullParameter(list2, "emojis");
+            Intrinsics3.checkNotNullParameter(guildChannelsInfo, "guildChannelsInfo");
+            Intrinsics3.checkNotNullParameter(meUser, "me");
+            Intrinsics3.checkNotNullParameter(list, "restrictedGuildIds");
+            Intrinsics3.checkNotNullParameter(list2, "emojis");
             this.guild = guild;
             this.guildProfile = guildProfileData;
             this.guildChannelsInfo = guildChannelsInfo;
@@ -782,10 +783,10 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public final StoreState copy(Guild guild, StoreGuildProfiles.GuildProfileData guildProfile, GuildChannelsInfo guildChannelsInfo, MeUser me2, GuildMember computedMe, List<Long> restrictedGuildIds, boolean isDeveloper, List<? extends Emoji> emojis, boolean isLurking, boolean isUnread) {
-            m.checkNotNullParameter(guildChannelsInfo, "guildChannelsInfo");
-            m.checkNotNullParameter(me2, "me");
-            m.checkNotNullParameter(restrictedGuildIds, "restrictedGuildIds");
-            m.checkNotNullParameter(emojis, "emojis");
+            Intrinsics3.checkNotNullParameter(guildChannelsInfo, "guildChannelsInfo");
+            Intrinsics3.checkNotNullParameter(me2, "me");
+            Intrinsics3.checkNotNullParameter(restrictedGuildIds, "restrictedGuildIds");
+            Intrinsics3.checkNotNullParameter(emojis, "emojis");
             return new StoreState(guild, guildProfile, guildChannelsInfo, me2, computedMe, restrictedGuildIds, isDeveloper, emojis, isLurking, isUnread);
         }
 
@@ -797,7 +798,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.guild, storeState.guild) && m.areEqual(this.guildProfile, storeState.guildProfile) && m.areEqual(this.guildChannelsInfo, storeState.guildChannelsInfo) && m.areEqual(this.me, storeState.me) && m.areEqual(this.computedMe, storeState.computedMe) && m.areEqual(this.restrictedGuildIds, storeState.restrictedGuildIds) && this.isDeveloper == storeState.isDeveloper && m.areEqual(this.emojis, storeState.emojis) && this.isLurking == storeState.isLurking && this.isUnread == storeState.isUnread;
+            return Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.guildProfile, storeState.guildProfile) && Intrinsics3.areEqual(this.guildChannelsInfo, storeState.guildChannelsInfo) && Intrinsics3.areEqual(this.me, storeState.me) && Intrinsics3.areEqual(this.computedMe, storeState.computedMe) && Intrinsics3.areEqual(this.restrictedGuildIds, storeState.restrictedGuildIds) && this.isDeveloper == storeState.isDeveloper && Intrinsics3.areEqual(this.emojis, storeState.emojis) && this.isLurking == storeState.isLurking && this.isUnread == storeState.isUnread;
         }
 
         public final GuildMember getComputedMe() {
@@ -873,26 +874,26 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(guild=");
-            sbU.append(this.guild);
-            sbU.append(", guildProfile=");
-            sbU.append(this.guildProfile);
-            sbU.append(", guildChannelsInfo=");
-            sbU.append(this.guildChannelsInfo);
-            sbU.append(", me=");
-            sbU.append(this.me);
-            sbU.append(", computedMe=");
-            sbU.append(this.computedMe);
-            sbU.append(", restrictedGuildIds=");
-            sbU.append(this.restrictedGuildIds);
-            sbU.append(", isDeveloper=");
-            sbU.append(this.isDeveloper);
-            sbU.append(", emojis=");
-            sbU.append(this.emojis);
-            sbU.append(", isLurking=");
-            sbU.append(this.isLurking);
-            sbU.append(", isUnread=");
-            return a.O(sbU, this.isUnread, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", guildProfile=");
+            sbM833U.append(this.guildProfile);
+            sbM833U.append(", guildChannelsInfo=");
+            sbM833U.append(this.guildChannelsInfo);
+            sbM833U.append(", me=");
+            sbM833U.append(this.me);
+            sbM833U.append(", computedMe=");
+            sbM833U.append(this.computedMe);
+            sbM833U.append(", restrictedGuildIds=");
+            sbM833U.append(this.restrictedGuildIds);
+            sbM833U.append(", isDeveloper=");
+            sbM833U.append(this.isDeveloper);
+            sbM833U.append(", emojis=");
+            sbM833U.append(this.emojis);
+            sbM833U.append(", isLurking=");
+            sbM833U.append(this.isLurking);
+            sbM833U.append(", isUnread=");
+            return outline.m827O(sbM833U, this.isUnread, ")");
         }
     }
 
@@ -979,12 +980,12 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("TabItems(canAccessSettings=");
-            sbU.append(this.canAccessSettings);
-            sbU.append(", ableToInstantInvite=");
-            sbU.append(this.ableToInstantInvite);
-            sbU.append(", premiumSubscriptionCount=");
-            return a.B(sbU, this.premiumSubscriptionCount, ")");
+            StringBuilder sbM833U = outline.m833U("TabItems(canAccessSettings=");
+            sbM833U.append(this.canAccessSettings);
+            sbM833U.append(", ableToInstantInvite=");
+            sbM833U.append(this.ableToInstantInvite);
+            sbM833U.append(", premiumSubscriptionCount=");
+            return outline.m814B(sbM833U, this.premiumSubscriptionCount, ")");
         }
     }
 
@@ -1021,12 +1022,12 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(long j, String str, String str2, String str3, String str4, Integer num, Banner banner, Integer num2, Integer num3, TabItems tabItems, Actions actions, EmojisData emojisData, BottomActions bottomActions, boolean z2, MeUser meUser) {
                 super(null);
-                m.checkNotNullParameter(str, "guildName");
-                m.checkNotNullParameter(str2, "guildShortName");
-                m.checkNotNullParameter(banner, "banner");
-                m.checkNotNullParameter(emojisData, "emojisData");
-                m.checkNotNullParameter(bottomActions, "bottomActions");
-                m.checkNotNullParameter(meUser, "meUser");
+                Intrinsics3.checkNotNullParameter(str, "guildName");
+                Intrinsics3.checkNotNullParameter(str2, "guildShortName");
+                Intrinsics3.checkNotNullParameter(banner, "banner");
+                Intrinsics3.checkNotNullParameter(emojisData, "emojisData");
+                Intrinsics3.checkNotNullParameter(bottomActions, "bottomActions");
+                Intrinsics3.checkNotNullParameter(meUser, "meUser");
                 this.guildId = j;
                 this.guildName = str;
                 this.guildShortName = str2;
@@ -1124,12 +1125,12 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(long guildId, String guildName, String guildShortName, String guildIcon, String guildDescription, Integer verifiedPartneredIconRes, Banner banner, Integer onlineCount, Integer memberCount, TabItems tabItems, Actions actions, EmojisData emojisData, BottomActions bottomActions, boolean isGuildHub, MeUser meUser) {
-                m.checkNotNullParameter(guildName, "guildName");
-                m.checkNotNullParameter(guildShortName, "guildShortName");
-                m.checkNotNullParameter(banner, "banner");
-                m.checkNotNullParameter(emojisData, "emojisData");
-                m.checkNotNullParameter(bottomActions, "bottomActions");
-                m.checkNotNullParameter(meUser, "meUser");
+                Intrinsics3.checkNotNullParameter(guildName, "guildName");
+                Intrinsics3.checkNotNullParameter(guildShortName, "guildShortName");
+                Intrinsics3.checkNotNullParameter(banner, "banner");
+                Intrinsics3.checkNotNullParameter(emojisData, "emojisData");
+                Intrinsics3.checkNotNullParameter(bottomActions, "bottomActions");
+                Intrinsics3.checkNotNullParameter(meUser, "meUser");
                 return new Loaded(guildId, guildName, guildShortName, guildIcon, guildDescription, verifiedPartneredIconRes, banner, onlineCount, memberCount, tabItems, actions, emojisData, bottomActions, isGuildHub, meUser);
             }
 
@@ -1141,7 +1142,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return this.guildId == loaded.guildId && m.areEqual(this.guildName, loaded.guildName) && m.areEqual(this.guildShortName, loaded.guildShortName) && m.areEqual(this.guildIcon, loaded.guildIcon) && m.areEqual(this.guildDescription, loaded.guildDescription) && m.areEqual(this.verifiedPartneredIconRes, loaded.verifiedPartneredIconRes) && m.areEqual(this.banner, loaded.banner) && m.areEqual(this.onlineCount, loaded.onlineCount) && m.areEqual(this.memberCount, loaded.memberCount) && m.areEqual(this.tabItems, loaded.tabItems) && m.areEqual(this.actions, loaded.actions) && m.areEqual(this.emojisData, loaded.emojisData) && m.areEqual(this.bottomActions, loaded.bottomActions) && this.isGuildHub == loaded.isGuildHub && m.areEqual(this.meUser, loaded.meUser);
+                return this.guildId == loaded.guildId && Intrinsics3.areEqual(this.guildName, loaded.guildName) && Intrinsics3.areEqual(this.guildShortName, loaded.guildShortName) && Intrinsics3.areEqual(this.guildIcon, loaded.guildIcon) && Intrinsics3.areEqual(this.guildDescription, loaded.guildDescription) && Intrinsics3.areEqual(this.verifiedPartneredIconRes, loaded.verifiedPartneredIconRes) && Intrinsics3.areEqual(this.banner, loaded.banner) && Intrinsics3.areEqual(this.onlineCount, loaded.onlineCount) && Intrinsics3.areEqual(this.memberCount, loaded.memberCount) && Intrinsics3.areEqual(this.tabItems, loaded.tabItems) && Intrinsics3.areEqual(this.actions, loaded.actions) && Intrinsics3.areEqual(this.emojisData, loaded.emojisData) && Intrinsics3.areEqual(this.bottomActions, loaded.bottomActions) && this.isGuildHub == loaded.isGuildHub && Intrinsics3.areEqual(this.meUser, loaded.meUser);
             }
 
             public final Actions getActions() {
@@ -1202,9 +1203,9 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
 
             /* JADX WARN: Multi-variable type inference failed */
             public int hashCode() {
-                int iA = b.a(this.guildId) * 31;
+                int iM3a = C0002b.m3a(this.guildId) * 31;
                 String str = this.guildName;
-                int iHashCode = (iA + (str != null ? str.hashCode() : 0)) * 31;
+                int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
                 String str2 = this.guildShortName;
                 int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
                 String str3 = this.guildIcon;
@@ -1242,38 +1243,38 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(guildId=");
-                sbU.append(this.guildId);
-                sbU.append(", guildName=");
-                sbU.append(this.guildName);
-                sbU.append(", guildShortName=");
-                sbU.append(this.guildShortName);
-                sbU.append(", guildIcon=");
-                sbU.append(this.guildIcon);
-                sbU.append(", guildDescription=");
-                sbU.append(this.guildDescription);
-                sbU.append(", verifiedPartneredIconRes=");
-                sbU.append(this.verifiedPartneredIconRes);
-                sbU.append(", banner=");
-                sbU.append(this.banner);
-                sbU.append(", onlineCount=");
-                sbU.append(this.onlineCount);
-                sbU.append(", memberCount=");
-                sbU.append(this.memberCount);
-                sbU.append(", tabItems=");
-                sbU.append(this.tabItems);
-                sbU.append(", actions=");
-                sbU.append(this.actions);
-                sbU.append(", emojisData=");
-                sbU.append(this.emojisData);
-                sbU.append(", bottomActions=");
-                sbU.append(this.bottomActions);
-                sbU.append(", isGuildHub=");
-                sbU.append(this.isGuildHub);
-                sbU.append(", meUser=");
-                sbU.append(this.meUser);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Loaded(guildId=");
+                sbM833U.append(this.guildId);
+                sbM833U.append(", guildName=");
+                sbM833U.append(this.guildName);
+                sbM833U.append(", guildShortName=");
+                sbM833U.append(this.guildShortName);
+                sbM833U.append(", guildIcon=");
+                sbM833U.append(this.guildIcon);
+                sbM833U.append(", guildDescription=");
+                sbM833U.append(this.guildDescription);
+                sbM833U.append(", verifiedPartneredIconRes=");
+                sbM833U.append(this.verifiedPartneredIconRes);
+                sbM833U.append(", banner=");
+                sbM833U.append(this.banner);
+                sbM833U.append(", onlineCount=");
+                sbM833U.append(this.onlineCount);
+                sbM833U.append(", memberCount=");
+                sbM833U.append(this.memberCount);
+                sbM833U.append(", tabItems=");
+                sbM833U.append(this.tabItems);
+                sbM833U.append(", actions=");
+                sbM833U.append(this.actions);
+                sbM833U.append(", emojisData=");
+                sbM833U.append(this.emojisData);
+                sbM833U.append(", bottomActions=");
+                sbM833U.append(this.bottomActions);
+                sbM833U.append(", isGuildHub=");
+                sbM833U.append(this.isGuildHub);
+                sbM833U.append(", meUser=");
+                sbM833U.append(this.meUser);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -1295,12 +1296,12 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickLeaveServer$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickLeaveServer$1 */
+    public static final class C88051 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Function0 function0) {
+        public C88051(Function0 function0) {
             super(1);
             this.$onSuccess = function0;
         }
@@ -1308,7 +1309,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -1318,32 +1319,32 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickMarkAsRead$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickMarkAsRead$1 */
+    public static final class C88061 extends Lambda implements Function1<Void, Unit> {
+        public C88061() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r3) {
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetGuildProfileSheetViewModel.access$getEventSubject$p(WidgetGuildProfileSheetViewModel.this);
-            publishSubjectAccess$getEventSubject$p.k.onNext(new Event.DismissAndShowToast(R.string.marked_as_read));
+            publishSubjectAccess$getEventSubject$p.f27650k.onNext(new Event.DismissAndShowToast(C5419R.string.marked_as_read));
         }
     }
 
     /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickResetNickname$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickResetNickname$1 */
+    public static final class C88071 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Function0 function0) {
+        public C88071(Function0 function0) {
             super(1);
             this.$onSuccess = function0;
         }
@@ -1351,7 +1352,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -1361,12 +1362,12 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickSaveNickname$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickSaveNickname$1 */
+    public static final class C88081 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Function0 function0) {
+        public C88081(Function0 function0) {
             super(1);
             this.$onSuccess = function0;
         }
@@ -1374,7 +1375,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -1414,14 +1415,14 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
         Integer numValueOf;
         Actions actions;
         List<? extends Emoji> listEmptyList;
-        List<GuildEmoji> listD;
+        List<GuildEmoji> listM7887d;
         if (guild.getFeatures().contains(GuildFeature.VERIFIED)) {
-            numValueOf = Integer.valueOf(R.drawable.ic_verified_badge);
+            numValueOf = Integer.valueOf(C5419R.drawable.ic_verified_badge);
         } else {
             if (!guild.getFeatures().contains(GuildFeature.PARTNERED)) {
                 num = null;
                 Banner banner = new Banner(guild.getId(), guild.getBanner(), Banner.Type.BANNER);
-                ManageGuildContext manageGuildContext = guildChannelsInfo.getManageGuildContext();
+                PermissionsContexts manageGuildContext = guildChannelsInfo.getManageGuildContext();
                 TabItems tabItems = isLurking ? new TabItems(manageGuildContext.canManage(), guildChannelsInfo.getAbleToInstantInvite(), guild.getPremiumSubscriptionCount()) : null;
                 if (isLurking) {
                     actions = new Actions(isUnread, manageGuildContext.getCanManageChannels(), manageGuildContext.getCanManageEvents(), guildChannelsInfo.getCanChangeNickname(), computedMe != null ? computedMe.getNick() : null, computedMe != null ? computedMe.getAvatarHash() : null, !restrictedGuildIds.contains(Long.valueOf(guild.getId())), guildChannelsInfo.getHideMutedChannels(), !guild.isOwner(me2.getId()), isDeveloper, me2.getUsername());
@@ -1430,11 +1431,11 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
                 }
                 if (isLurking) {
                     listEmptyList = emojis;
-                } else if (guildPreview == null || (listD = guildPreview.d()) == null) {
+                } else if (guildPreview == null || (listM7887d = guildPreview.m7887d()) == null) {
                     listEmptyList = null;
                 } else {
-                    listEmptyList = new ArrayList<>(d0.t.o.collectionSizeOrDefault(listD, 10));
-                    Iterator<T> it = listD.iterator();
+                    listEmptyList = new ArrayList<>(Iterables2.collectionSizeOrDefault(listM7887d, 10));
+                    Iterator<T> it = listM7887d.iterator();
                     while (it.hasNext()) {
                         listEmptyList.add(new ModelEmojiCustom((GuildEmoji) it.next(), guildPreview.getId()));
                     }
@@ -1451,15 +1452,15 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
                 boolean zIsPremium = UserUtils.INSTANCE.isPremium(me2);
                 boolean z2 = this.isEmojiSectionExpanded;
                 if (listEmptyList == null) {
-                    listEmptyList = n.emptyList();
+                    listEmptyList = Collections2.emptyList();
                 }
                 updateViewState(new ViewState.Loaded(id2, name, shortName, icon, description, num, banner, approximatePresenceCount, approximateMemberCount, tabItems2, actions, new EmojisData(zIsPremium, z2, listEmptyList), bottomActions, guild.isHub(), me2));
             }
-            numValueOf = Integer.valueOf(R.drawable.ic_partnered_badge);
+            numValueOf = Integer.valueOf(C5419R.drawable.ic_partnered_badge);
         }
         num = numValueOf;
         Banner banner2 = new Banner(guild.getId(), guild.getBanner(), Banner.Type.BANNER);
-        ManageGuildContext manageGuildContext2 = guildChannelsInfo.getManageGuildContext();
+        PermissionsContexts manageGuildContext2 = guildChannelsInfo.getManageGuildContext();
         if (isLurking) {
         }
         if (isLurking) {
@@ -1485,28 +1486,28 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
     }
 
     private final void handleLoadedGuildPreview(GuildPreview guildPreview, MeUser meUser) {
-        Integer numValueOf = guildPreview.f().contains(GuildFeature.VERIFIED) ? Integer.valueOf(R.drawable.ic_verified_badge) : guildPreview.f().contains(GuildFeature.PARTNERED) ? Integer.valueOf(R.drawable.ic_partnered_badge) : null;
+        Integer numValueOf = guildPreview.m7889f().contains(GuildFeature.VERIFIED) ? Integer.valueOf(C5419R.drawable.ic_verified_badge) : guildPreview.m7889f().contains(GuildFeature.PARTNERED) ? Integer.valueOf(C5419R.drawable.ic_partnered_badge) : null;
         Banner banner = new Banner(guildPreview.getId(), guildPreview.getSplash(), Banner.Type.SPLASH);
         BottomActions bottomActions = new BottomActions(false, true, !this.viewingGuild);
         long id2 = guildPreview.getId();
         String name = guildPreview.getName();
-        String strComputeShortName = GuildUtilsKt.computeShortName(guildPreview.getName());
+        String strComputeShortName = GuildUtils.computeShortName(guildPreview.getName());
         String icon = guildPreview.getIcon();
         String description = guildPreview.getDescription();
         Integer approximatePresenceCount = guildPreview.getApproximatePresenceCount();
         Integer approximateMemberCount = guildPreview.getApproximateMemberCount();
         boolean zIsPremium = UserUtils.INSTANCE.isPremium(meUser);
         boolean z2 = this.isEmojiSectionExpanded;
-        List<GuildEmoji> listD = guildPreview.d();
-        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listD, 10));
-        Iterator it = listD.iterator();
+        List<GuildEmoji> listM7887d = guildPreview.m7887d();
+        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listM7887d, 10));
+        Iterator it = listM7887d.iterator();
         while (it.hasNext()) {
             arrayList.add(new ModelEmojiCustom((GuildEmoji) it.next(), guildPreview.getId()));
             it = it;
             approximatePresenceCount = approximatePresenceCount;
             approximateMemberCount = approximateMemberCount;
         }
-        updateViewState(new ViewState.Loaded(id2, name, strComputeShortName, icon, description, numValueOf, banner, approximatePresenceCount, approximateMemberCount, null, null, new EmojisData(zIsPremium, z2, arrayList), bottomActions, guildPreview.f().contains(GuildFeature.HUB), meUser));
+        updateViewState(new ViewState.Loaded(id2, name, strComputeShortName, icon, description, numValueOf, banner, approximatePresenceCount, approximateMemberCount, null, null, new EmojisData(zIsPremium, z2, arrayList), bottomActions, guildPreview.m7889f().contains(GuildFeature.HUB), meUser));
     }
 
     private final void handleStoreState(StoreState storeState) {
@@ -1541,7 +1542,7 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -1559,33 +1560,33 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
     }
 
     public final void onClickJoinServer(long guildId, Fragment fragment) {
-        m.checkNotNullParameter(fragment, "fragment");
+        Intrinsics3.checkNotNullParameter(fragment, "fragment");
         Context context = fragment.getContext();
         if (context != null) {
             StoreLurking storeLurking = this.storeLurking;
-            m.checkNotNullExpressionValue(context, "it");
+            Intrinsics3.checkNotNullExpressionValue(context, "it");
             storeLurking.postJoinGuildAsMember(guildId, context);
         }
     }
 
     public final void onClickLeaveServer(long guildId, Function0<Unit> onSuccess) {
-        m.checkNotNullParameter(onSuccess, "onSuccess");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.leaveGuild(guildId), false, 1, null), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(onSuccess), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.leaveGuild(guildId), false, 1, null), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C88051(onSuccess), 62, (Object) null);
     }
 
     public final void onClickMarkAsRead(long guildId) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.ackGuild(guildId), false, 1, null), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.ackGuild(guildId), false, 1, null), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C88061(), 62, (Object) null);
     }
 
     public final void onClickResetNickname(long guildId, Function0<Unit> onSuccess) {
-        m.checkNotNullParameter(onSuccess, "onSuccess");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.changeGuildNickname(guildId, new RestAPIParams.Nick("")), false, 1, null), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(onSuccess), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.changeGuildNickname(guildId, new RestAPIParams.Nick("")), false, 1, null), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C88071(onSuccess), 62, (Object) null);
     }
 
     public final void onClickSaveNickname(long guildId, String nick, Function0<Unit> onSuccess) {
-        m.checkNotNullParameter(nick, ModelAuditLogEntry.CHANGE_KEY_NICK);
-        m.checkNotNullParameter(onSuccess, "onSuccess");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.changeGuildNickname(guildId, new RestAPIParams.Nick(nick)), false, 1, null), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(onSuccess), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(nick, ModelAuditLogEntry.CHANGE_KEY_NICK);
+        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.changeGuildNickname(guildId, new RestAPIParams.Nick(nick)), false, 1, null), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C88081(onSuccess), 62, (Object) null);
     }
 
     public final void onClickViewServer(long guildId, Long channelId) {
@@ -1603,20 +1604,20 @@ public final class WidgetGuildProfileSheetViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGuildProfileSheetViewModel(StoreUserSettings storeUserSettings, StoreUserGuildSettings storeUserGuildSettings, boolean z2, RestAPI restAPI, StoreLurking storeLurking, StoreAnalytics storeAnalytics, long j, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        m.checkNotNullParameter(storeUserSettings, "storeUserSettings");
-        m.checkNotNullParameter(storeUserGuildSettings, "storeUserGuildSettings");
-        m.checkNotNullParameter(restAPI, "restAPI");
-        m.checkNotNullParameter(storeLurking, "storeLurking");
-        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        m.checkNotNullParameter(observable, "storeObservable");
+        Intrinsics3.checkNotNullParameter(storeUserSettings, "storeUserSettings");
+        Intrinsics3.checkNotNullParameter(storeUserGuildSettings, "storeUserGuildSettings");
+        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
+        Intrinsics3.checkNotNullParameter(storeLurking, "storeLurking");
+        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
         this.storeUserSettings = storeUserSettings;
         this.storeUserGuildSettings = storeUserGuildSettings;
         this.viewingGuild = z2;
         this.restAPI = restAPI;
         this.storeLurking = storeLurking;
         this.guildId = j;
-        this.eventSubject = PublishSubject.k0();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        this.eventSubject = PublishSubject.m11133k0();
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetGuildProfileSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C88031(), 62, (Object) null);
         storeAnalytics.trackGuildProfileOpened(j);
     }
 }

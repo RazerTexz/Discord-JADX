@@ -41,12 +41,12 @@ public final class LocationManagerCompat {
     @GuardedBy("sGnssStatusListeners")
     private static final SimpleArrayMap<Object, Object> sGnssStatusListeners = new SimpleArrayMap<>();
 
-    /* renamed from: androidx.core.location.LocationManagerCompat$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.core.location.LocationManagerCompat$1 */
+    public class RunnableC02311 implements Runnable {
         public final /* synthetic */ Consumer val$consumer;
         public final /* synthetic */ Location val$location;
 
-        public AnonymousClass1(Consumer consumer, Location location) {
+        public RunnableC02311(Consumer consumer, Location location) {
             this.val$consumer = consumer;
             this.val$location = location;
         }
@@ -57,11 +57,11 @@ public final class LocationManagerCompat {
         }
     }
 
-    /* renamed from: androidx.core.location.LocationManagerCompat$2, reason: invalid class name */
-    public class AnonymousClass2 implements CancellationSignal.OnCancelListener {
+    /* renamed from: androidx.core.location.LocationManagerCompat$2 */
+    public class C02322 implements CancellationSignal.OnCancelListener {
         public final /* synthetic */ CancellableLocationListener val$listener;
 
-        public AnonymousClass2(CancellableLocationListener cancellableLocationListener) {
+        public C02322(CancellableLocationListener cancellableLocationListener) {
             this.val$listener = cancellableLocationListener;
         }
 
@@ -72,12 +72,12 @@ public final class LocationManagerCompat {
         }
     }
 
-    /* renamed from: androidx.core.location.LocationManagerCompat$3, reason: invalid class name */
-    public class AnonymousClass3 implements Callable<Boolean> {
+    /* renamed from: androidx.core.location.LocationManagerCompat$3 */
+    public class CallableC02333 implements Callable<Boolean> {
         public final /* synthetic */ LocationManager val$locationManager;
         public final /* synthetic */ GpsStatusTransport val$myTransport;
 
-        public AnonymousClass3(LocationManager locationManager, GpsStatusTransport gpsStatusTransport) {
+        public CallableC02333(LocationManager locationManager, GpsStatusTransport gpsStatusTransport) {
             this.val$locationManager = locationManager;
             this.val$myTransport = gpsStatusTransport;
         }
@@ -120,11 +120,11 @@ public final class LocationManagerCompat {
     @RequiresApi(30)
     public static class Api30Impl {
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$Api30Impl$1, reason: invalid class name */
-        public class AnonymousClass1 implements java.util.function.Consumer<Location> {
+        /* renamed from: androidx.core.location.LocationManagerCompat$Api30Impl$1 */
+        public class C02341 implements java.util.function.Consumer<Location> {
             public final /* synthetic */ Consumer val$consumer;
 
-            public AnonymousClass1(Consumer consumer) {
+            public C02341(Consumer consumer) {
                 this.val$consumer = consumer;
             }
 
@@ -145,7 +145,7 @@ public final class LocationManagerCompat {
         @RequiresPermission(anyOf = {"android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"})
         @DoNotInline
         public static void getCurrentLocation(LocationManager locationManager, @NonNull String str, @Nullable CancellationSignal cancellationSignal, @NonNull Executor executor, @NonNull Consumer<Location> consumer) {
-            locationManager.getCurrentLocation(str, cancellationSignal != null ? (android.os.CancellationSignal) cancellationSignal.getCancellationSignalObject() : null, executor, new AnonymousClass1(consumer));
+            locationManager.getCurrentLocation(str, cancellationSignal != null ? (android.os.CancellationSignal) cancellationSignal.getCancellationSignalObject() : null, executor, new C02341(consumer));
         }
     }
 
@@ -161,9 +161,9 @@ public final class LocationManagerCompat {
         @GuardedBy("this")
         private boolean mTriggered;
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$CancellableLocationListener$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
-            public AnonymousClass1() {
+        /* renamed from: androidx.core.location.LocationManagerCompat$CancellableLocationListener$1 */
+        public class RunnableC02351 implements Runnable {
+            public RunnableC02351() {
             }
 
             @Override // java.lang.Runnable
@@ -175,12 +175,12 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$CancellableLocationListener$2, reason: invalid class name */
-        public class AnonymousClass2 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$CancellableLocationListener$2 */
+        public class RunnableC02362 implements Runnable {
             public final /* synthetic */ Consumer val$consumer;
             public final /* synthetic */ Location val$location;
 
-            public AnonymousClass2(Consumer consumer, Location location) {
+            public RunnableC02362(Consumer consumer, Location location) {
                 this.val$consumer = consumer;
                 this.val$location = location;
             }
@@ -227,7 +227,7 @@ public final class LocationManagerCompat {
                     return;
                 }
                 this.mTriggered = true;
-                this.mExecutor.execute(new AnonymousClass2(this.mConsumer, location));
+                this.mExecutor.execute(new RunnableC02362(this.mConsumer, location));
                 cleanup();
             }
         }
@@ -251,9 +251,9 @@ public final class LocationManagerCompat {
                 if (this.mTriggered) {
                     return;
                 }
-                AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-                this.mTimeoutRunnable = anonymousClass1;
-                this.mTimeoutHandler.postDelayed(anonymousClass1, j);
+                RunnableC02351 runnableC02351 = new RunnableC02351();
+                this.mTimeoutRunnable = runnableC02351;
+                this.mTimeoutHandler.postDelayed(runnableC02351, j);
             }
         }
     }
@@ -295,11 +295,11 @@ public final class LocationManagerCompat {
         public volatile Executor mExecutor;
         private final LocationManager mLocationManager;
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$1 */
+        public class RunnableC02371 implements Runnable {
             public final /* synthetic */ Executor val$executor;
 
-            public AnonymousClass1(Executor executor) {
+            public RunnableC02371(Executor executor) {
                 this.val$executor = executor;
             }
 
@@ -312,11 +312,11 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$2, reason: invalid class name */
-        public class AnonymousClass2 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$2 */
+        public class RunnableC02382 implements Runnable {
             public final /* synthetic */ Executor val$executor;
 
-            public AnonymousClass2(Executor executor) {
+            public RunnableC02382(Executor executor) {
                 this.val$executor = executor;
             }
 
@@ -329,12 +329,12 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$3, reason: invalid class name */
-        public class AnonymousClass3 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$3 */
+        public class RunnableC02393 implements Runnable {
             public final /* synthetic */ Executor val$executor;
             public final /* synthetic */ int val$ttff;
 
-            public AnonymousClass3(Executor executor, int i) {
+            public RunnableC02393(Executor executor, int i) {
                 this.val$executor = executor;
                 this.val$ttff = i;
             }
@@ -348,12 +348,12 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$4, reason: invalid class name */
-        public class AnonymousClass4 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$4 */
+        public class RunnableC02404 implements Runnable {
             public final /* synthetic */ Executor val$executor;
             public final /* synthetic */ GnssStatusCompat val$gnssStatus;
 
-            public AnonymousClass4(Executor executor, GnssStatusCompat gnssStatusCompat) {
+            public RunnableC02404(Executor executor, GnssStatusCompat gnssStatusCompat) {
                 this.val$executor = executor;
                 this.val$gnssStatus = gnssStatusCompat;
             }
@@ -382,23 +382,23 @@ public final class LocationManagerCompat {
                 return;
             }
             if (i == 1) {
-                executor.execute(new AnonymousClass1(executor));
+                executor.execute(new RunnableC02371(executor));
                 return;
             }
             if (i == 2) {
-                executor.execute(new AnonymousClass2(executor));
+                executor.execute(new RunnableC02382(executor));
                 return;
             }
             if (i != 3) {
                 if (i == 4 && (gpsStatus = this.mLocationManager.getGpsStatus(null)) != null) {
-                    executor.execute(new AnonymousClass4(executor, GnssStatusCompat.wrap(gpsStatus)));
+                    executor.execute(new RunnableC02404(executor, GnssStatusCompat.wrap(gpsStatus)));
                     return;
                 }
                 return;
             }
             GpsStatus gpsStatus2 = this.mLocationManager.getGpsStatus(null);
             if (gpsStatus2 != null) {
-                executor.execute(new AnonymousClass3(executor, gpsStatus2.getTimeToFirstFix()));
+                executor.execute(new RunnableC02393(executor, gpsStatus2.getTimeToFirstFix()));
             }
         }
 
@@ -439,11 +439,11 @@ public final class LocationManagerCompat {
         @Nullable
         public volatile Executor mExecutor;
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$1 */
+        public class RunnableC02411 implements Runnable {
             public final /* synthetic */ Executor val$executor;
 
-            public AnonymousClass1(Executor executor) {
+            public RunnableC02411(Executor executor) {
                 this.val$executor = executor;
             }
 
@@ -456,11 +456,11 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$2, reason: invalid class name */
-        public class AnonymousClass2 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$2 */
+        public class RunnableC02422 implements Runnable {
             public final /* synthetic */ Executor val$executor;
 
-            public AnonymousClass2(Executor executor) {
+            public RunnableC02422(Executor executor) {
                 this.val$executor = executor;
             }
 
@@ -473,12 +473,12 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$3, reason: invalid class name */
-        public class AnonymousClass3 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$3 */
+        public class RunnableC02433 implements Runnable {
             public final /* synthetic */ Executor val$executor;
             public final /* synthetic */ int val$ttffMillis;
 
-            public AnonymousClass3(Executor executor, int i) {
+            public RunnableC02433(Executor executor, int i) {
                 this.val$executor = executor;
                 this.val$ttffMillis = i;
             }
@@ -492,12 +492,12 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$4, reason: invalid class name */
-        public class AnonymousClass4 implements Runnable {
+        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$4 */
+        public class RunnableC02444 implements Runnable {
             public final /* synthetic */ Executor val$executor;
             public final /* synthetic */ GnssStatus val$status;
 
-            public AnonymousClass4(Executor executor, GnssStatus gnssStatus) {
+            public RunnableC02444(Executor executor, GnssStatus gnssStatus) {
                 this.val$executor = executor;
                 this.val$status = gnssStatus;
             }
@@ -522,7 +522,7 @@ public final class LocationManagerCompat {
             if (executor == null) {
                 return;
             }
-            executor.execute(new AnonymousClass3(executor, i));
+            executor.execute(new RunnableC02433(executor, i));
         }
 
         @Override // android.location.GnssStatus.Callback
@@ -531,7 +531,7 @@ public final class LocationManagerCompat {
             if (executor == null) {
                 return;
             }
-            executor.execute(new AnonymousClass4(executor, gnssStatus));
+            executor.execute(new RunnableC02444(executor, gnssStatus));
         }
 
         @Override // android.location.GnssStatus.Callback
@@ -540,7 +540,7 @@ public final class LocationManagerCompat {
             if (executor == null) {
                 return;
             }
-            executor.execute(new AnonymousClass1(executor));
+            executor.execute(new RunnableC02411(executor));
         }
 
         @Override // android.location.GnssStatus.Callback
@@ -549,7 +549,7 @@ public final class LocationManagerCompat {
             if (executor == null) {
                 return;
             }
-            executor.execute(new AnonymousClass2(executor));
+            executor.execute(new RunnableC02422(executor));
         }
 
         public void register(Executor executor) {
@@ -577,13 +577,13 @@ public final class LocationManagerCompat {
         }
         Location lastKnownLocation = locationManager.getLastKnownLocation(str);
         if (lastKnownLocation != null && SystemClock.elapsedRealtime() - LocationCompat.getElapsedRealtimeMillis(lastKnownLocation) < 10000) {
-            executor.execute(new AnonymousClass1(consumer, lastKnownLocation));
+            executor.execute(new RunnableC02311(consumer, lastKnownLocation));
             return;
         }
         CancellableLocationListener cancellableLocationListener = new CancellableLocationListener(locationManager, executor, consumer);
         locationManager.requestLocationUpdates(str, 0L, 0.0f, cancellableLocationListener, Looper.getMainLooper());
         if (cancellationSignal != null) {
-            cancellationSignal.setOnCancelListener(new AnonymousClass2(cancellableLocationListener));
+            cancellationSignal.setOnCancelListener(new C02322(cancellableLocationListener));
         }
         cancellableLocationListener.startTimeout(30000L);
     }
@@ -708,7 +708,7 @@ public final class LocationManagerCompat {
                 gpsStatusTransport.unregister();
             }
             gpsStatusTransport.register(executor);
-            FutureTask futureTask = new FutureTask(new AnonymousClass3(locationManager, gpsStatusTransport));
+            FutureTask futureTask = new FutureTask(new CallableC02333(locationManager, gpsStatusTransport));
             if (Looper.myLooper() == handler.getLooper()) {
                 futureTask.run();
             } else if (!handler.post(futureTask)) {

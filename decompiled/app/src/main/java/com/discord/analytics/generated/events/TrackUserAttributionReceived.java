@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackUserAttributionReceived.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserAttributionReceived implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackUserAttributionReceived implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence adjustTrackerToken = null;
     private final CharSequence adjustTrackerName = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackUserAttributionReceived implements AnalyticsS
             return false;
         }
         TrackUserAttributionReceived trackUserAttributionReceived = (TrackUserAttributionReceived) other;
-        return m.areEqual(this.adjustTrackerToken, trackUserAttributionReceived.adjustTrackerToken) && m.areEqual(this.adjustTrackerName, trackUserAttributionReceived.adjustTrackerName) && m.areEqual(this.attributionNetwork, trackUserAttributionReceived.attributionNetwork) && m.areEqual(this.attributionCampaign, trackUserAttributionReceived.attributionCampaign) && m.areEqual(this.attributionAdgroup, trackUserAttributionReceived.attributionAdgroup) && m.areEqual(this.attributionCreative, trackUserAttributionReceived.attributionCreative) && m.areEqual(this.adjustAdid, trackUserAttributionReceived.adjustAdid);
+        return Intrinsics3.areEqual(this.adjustTrackerToken, trackUserAttributionReceived.adjustTrackerToken) && Intrinsics3.areEqual(this.adjustTrackerName, trackUserAttributionReceived.adjustTrackerName) && Intrinsics3.areEqual(this.attributionNetwork, trackUserAttributionReceived.attributionNetwork) && Intrinsics3.areEqual(this.attributionCampaign, trackUserAttributionReceived.attributionCampaign) && Intrinsics3.areEqual(this.attributionAdgroup, trackUserAttributionReceived.attributionAdgroup) && Intrinsics3.areEqual(this.attributionCreative, trackUserAttributionReceived.attributionCreative) && Intrinsics3.areEqual(this.adjustAdid, trackUserAttributionReceived.adjustAdid);
     }
 
     public int hashCode() {
@@ -54,19 +54,19 @@ public final /* data */ class TrackUserAttributionReceived implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackUserAttributionReceived(adjustTrackerToken=");
-        sbU.append(this.adjustTrackerToken);
-        sbU.append(", adjustTrackerName=");
-        sbU.append(this.adjustTrackerName);
-        sbU.append(", attributionNetwork=");
-        sbU.append(this.attributionNetwork);
-        sbU.append(", attributionCampaign=");
-        sbU.append(this.attributionCampaign);
-        sbU.append(", attributionAdgroup=");
-        sbU.append(this.attributionAdgroup);
-        sbU.append(", attributionCreative=");
-        sbU.append(this.attributionCreative);
-        sbU.append(", adjustAdid=");
-        return a.E(sbU, this.adjustAdid, ")");
+        StringBuilder sbM833U = outline.m833U("TrackUserAttributionReceived(adjustTrackerToken=");
+        sbM833U.append(this.adjustTrackerToken);
+        sbM833U.append(", adjustTrackerName=");
+        sbM833U.append(this.adjustTrackerName);
+        sbM833U.append(", attributionNetwork=");
+        sbM833U.append(this.attributionNetwork);
+        sbM833U.append(", attributionCampaign=");
+        sbM833U.append(this.attributionCampaign);
+        sbM833U.append(", attributionAdgroup=");
+        sbM833U.append(this.attributionAdgroup);
+        sbM833U.append(", attributionCreative=");
+        sbM833U.append(this.attributionCreative);
+        sbM833U.append(", adjustAdid=");
+        return outline.m817E(sbM833U, this.adjustAdid, ")");
     }
 }

@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.Size;
-import b.d.b.a.a;
 import java.util.Locale;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public final class LocaleListCompat {
@@ -51,7 +51,7 @@ public final class LocaleListCompat {
                 return new Locale(strArrSplit2[0]);
             }
         }
-        throw new IllegalArgumentException(a.y("Can not parse language tag: [", str, "]"));
+        throw new IllegalArgumentException(outline.m886y("Can not parse language tag: [", str, "]"));
     }
 
     @NonNull

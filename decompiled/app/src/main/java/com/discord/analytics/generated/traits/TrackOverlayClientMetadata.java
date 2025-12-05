@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackOverlayClientMetadata.kt */
 /* loaded from: classes.dex */
@@ -18,7 +18,7 @@ public final /* data */ class TrackOverlayClientMetadata {
             return false;
         }
         TrackOverlayClientMetadata trackOverlayClientMetadata = (TrackOverlayClientMetadata) other;
-        return m.areEqual(this.overlayGameId, trackOverlayClientMetadata.overlayGameId) && m.areEqual(this.overlayGameName, trackOverlayClientMetadata.overlayGameName) && m.areEqual(this.overlayAppId, trackOverlayClientMetadata.overlayAppId);
+        return Intrinsics3.areEqual(this.overlayGameId, trackOverlayClientMetadata.overlayGameId) && Intrinsics3.areEqual(this.overlayGameName, trackOverlayClientMetadata.overlayGameName) && Intrinsics3.areEqual(this.overlayAppId, trackOverlayClientMetadata.overlayAppId);
     }
 
     public int hashCode() {
@@ -31,11 +31,11 @@ public final /* data */ class TrackOverlayClientMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackOverlayClientMetadata(overlayGameId=");
-        sbU.append(this.overlayGameId);
-        sbU.append(", overlayGameName=");
-        sbU.append(this.overlayGameName);
-        sbU.append(", overlayAppId=");
-        return a.G(sbU, this.overlayAppId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackOverlayClientMetadata(overlayGameId=");
+        sbM833U.append(this.overlayGameId);
+        sbM833U.append(", overlayGameName=");
+        sbM833U.append(this.overlayGameName);
+        sbM833U.append(", overlayAppId=");
+        return outline.m819G(sbM833U, this.overlayAppId, ")");
     }
 }

@@ -1,10 +1,9 @@
 package com.discord.widgets.channels.list;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
-import com.discord.api.directory.DirectoryEntryEvent;
 import com.discord.api.directory.DirectoryEntryGuild;
+import com.discord.api.directory.DirectoryEntryGuild2;
 import com.discord.api.guild.GuildFeature;
 import com.discord.api.guildjoinrequest.ApplicationStatus;
 import com.discord.api.guildjoinrequest.GuildJoinRequest;
@@ -38,20 +37,20 @@ import com.discord.stores.StoreUserConnections;
 import com.discord.stores.StoreUserGuildSettings;
 import com.discord.stores.StoreUserPresence;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.stores.utilities.RestCallState;
 import com.discord.utilities.SnowflakeUtils;
 import com.discord.utilities.channel.GuildChannelsInfo;
-import com.discord.utilities.directories.DirectoryUtilsKt;
+import com.discord.utilities.directories.DirectoryUtils2;
 import com.discord.utilities.features.GrowthTeamFeatures;
 import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities;
+import com.discord.utilities.p501rx.ObservableCombineLatestOverloads2;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.permissions.PermissionUtils;
-import com.discord.utilities.rx.ObservableCombineLatestOverloadsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.widgets.channels.list.items.ChannelListItem;
 import com.discord.widgets.channels.list.items.ChannelListItemActiveEvent;
-import com.discord.widgets.channels.list.items.ChannelListItemActiveEventData;
+import com.discord.widgets.channels.list.items.ChannelListItemActiveEvent2;
 import com.discord.widgets.channels.list.items.ChannelListItemAddServer;
 import com.discord.widgets.channels.list.items.ChannelListItemCategory;
 import com.discord.widgets.channels.list.items.ChannelListItemDirectory;
@@ -70,11 +69,6 @@ import com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatur
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventLocationInfo;
 import com.discord.widgets.stage.StageRoles;
 import com.discord.widgets.stage.model.StageChannel;
-import d0.f0.q;
-import d0.t.n;
-import d0.t.o;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -86,7 +80,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p578f0._Sequences2;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.MutableCollectionsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
@@ -232,16 +233,16 @@ public final /* data */ class WidgetChannelListModel {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("TextLikeChannelData(selected=");
-                sbU.append(this.selected);
-                sbU.append(", mentionCount=");
-                sbU.append(this.mentionCount);
-                sbU.append(", unread=");
-                sbU.append(this.unread);
-                sbU.append(", locked=");
-                sbU.append(this.locked);
-                sbU.append(", hide=");
-                return a.O(sbU, this.hide, ")");
+                StringBuilder sbM833U = outline.m833U("TextLikeChannelData(selected=");
+                sbM833U.append(this.selected);
+                sbM833U.append(", mentionCount=");
+                sbM833U.append(this.mentionCount);
+                sbM833U.append(", unread=");
+                sbM833U.append(this.unread);
+                sbM833U.append(", locked=");
+                sbM833U.append(this.locked);
+                sbM833U.append(", hide=");
+                return outline.m827O(sbM833U, this.hide, ")");
             }
         }
 
@@ -337,7 +338,7 @@ public final /* data */ class WidgetChannelListModel {
                     return false;
                 }
                 VocalChannelData vocalChannelData = (VocalChannelData) other;
-                return this.voiceChannelSelected == vocalChannelData.voiceChannelSelected && this.textChannelSelected == vocalChannelData.textChannelSelected && this.mentionCount == vocalChannelData.mentionCount && this.unread == vocalChannelData.unread && this.locked == vocalChannelData.locked && this.nsfw == vocalChannelData.nsfw && m.areEqual(this.permission, vocalChannelData.permission) && this.numUsersConnected == vocalChannelData.numUsersConnected && this.isGuildRoleSubscriptionLockedChannel == vocalChannelData.isGuildRoleSubscriptionLockedChannel && this.isGuildRoleSubscriptionChannel == vocalChannelData.isGuildRoleSubscriptionChannel;
+                return this.voiceChannelSelected == vocalChannelData.voiceChannelSelected && this.textChannelSelected == vocalChannelData.textChannelSelected && this.mentionCount == vocalChannelData.mentionCount && this.unread == vocalChannelData.unread && this.locked == vocalChannelData.locked && this.nsfw == vocalChannelData.nsfw && Intrinsics3.areEqual(this.permission, vocalChannelData.permission) && this.numUsersConnected == vocalChannelData.numUsersConnected && this.isGuildRoleSubscriptionLockedChannel == vocalChannelData.isGuildRoleSubscriptionLockedChannel && this.isGuildRoleSubscriptionChannel == vocalChannelData.isGuildRoleSubscriptionChannel;
             }
 
             public final boolean getLocked() {
@@ -433,26 +434,26 @@ public final /* data */ class WidgetChannelListModel {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("VocalChannelData(voiceChannelSelected=");
-                sbU.append(this.voiceChannelSelected);
-                sbU.append(", textChannelSelected=");
-                sbU.append(this.textChannelSelected);
-                sbU.append(", mentionCount=");
-                sbU.append(this.mentionCount);
-                sbU.append(", unread=");
-                sbU.append(this.unread);
-                sbU.append(", locked=");
-                sbU.append(this.locked);
-                sbU.append(", nsfw=");
-                sbU.append(this.nsfw);
-                sbU.append(", permission=");
-                sbU.append(this.permission);
-                sbU.append(", numUsersConnected=");
-                sbU.append(this.numUsersConnected);
-                sbU.append(", isGuildRoleSubscriptionLockedChannel=");
-                sbU.append(this.isGuildRoleSubscriptionLockedChannel);
-                sbU.append(", isGuildRoleSubscriptionChannel=");
-                return a.O(sbU, this.isGuildRoleSubscriptionChannel, ")");
+                StringBuilder sbM833U = outline.m833U("VocalChannelData(voiceChannelSelected=");
+                sbM833U.append(this.voiceChannelSelected);
+                sbM833U.append(", textChannelSelected=");
+                sbM833U.append(this.textChannelSelected);
+                sbM833U.append(", mentionCount=");
+                sbM833U.append(this.mentionCount);
+                sbM833U.append(", unread=");
+                sbM833U.append(this.unread);
+                sbM833U.append(", locked=");
+                sbM833U.append(this.locked);
+                sbM833U.append(", nsfw=");
+                sbM833U.append(this.nsfw);
+                sbM833U.append(", permission=");
+                sbM833U.append(this.permission);
+                sbM833U.append(", numUsersConnected=");
+                sbM833U.append(this.numUsersConnected);
+                sbM833U.append(", isGuildRoleSubscriptionLockedChannel=");
+                sbM833U.append(this.isGuildRoleSubscriptionLockedChannel);
+                sbM833U.append(", isGuildRoleSubscriptionChannel=");
+                return outline.m827O(sbM833U, this.isGuildRoleSubscriptionChannel, ")");
             }
         }
 
@@ -477,7 +478,7 @@ public final /* data */ class WidgetChannelListModel {
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        private final ChannelListItemActiveEventData getChannelEventNoticeData(GuildChannelsInfo guildChannelsInfo, Map<Long, StageChannel> stageChannels, List<GuildScheduledEvent> guildScheduledEvents, Map<Long, ? extends Collection<ChannelListItemVoiceUser>> voiceStates, Map<Long, Channel> guildChannels, long selectedVoiceChannelId) {
+        private final ChannelListItemActiveEvent2 getChannelEventNoticeData(GuildChannelsInfo guildChannelsInfo, Map<Long, StageChannel> stageChannels, List<GuildScheduledEvent> guildScheduledEvents, Map<Long, ? extends Collection<ChannelListItemVoiceUser>> voiceStates, Map<Long, Channel> guildChannels, long selectedVoiceChannelId) {
             Object next;
             Object next2;
             GuildScheduledEventEntityMetadata entityMetadata;
@@ -489,16 +490,16 @@ public final /* data */ class WidgetChannelListModel {
             Object next3;
             Channel channel2;
             Long channelId;
-            StageChannel stageChannel = (StageChannel) q.firstOrNull(q.filter(u.asSequence(stageChannels.values()), WidgetChannelListModel$Companion$getChannelEventNoticeData$1.INSTANCE));
+            StageChannel stageChannel = (StageChannel) _Sequences2.firstOrNull(_Sequences2.filter(_Collections.asSequence(stageChannels.values()), WidgetChannelListModel$Companion$getChannelEventNoticeData$1.INSTANCE));
             if (stageChannel != null) {
                 GuildScheduledEventLocationInfo.ChannelLocation channelLocation = new GuildScheduledEventLocationInfo.ChannelLocation(stageChannel.getChannel());
                 int audienceSize = stageChannel.getAudienceSize();
                 List<UserGuildMember> speakers = stageChannel.getSpeakers();
                 boolean containsMe = stageChannel.getContainsMe();
-                StageRoles stageRolesM46getMyRolestwRsX0 = stageChannel.m46getMyRolestwRsX0();
-                boolean z3 = stageRolesM46getMyRolestwRsX0 != null && StageRoles.m33isSpeakerimpl(stageRolesM46getMyRolestwRsX0.m35unboximpl());
+                StageRoles stageRolesM11423getMyRolestwRsX0 = stageChannel.m11423getMyRolestwRsX0();
+                boolean z3 = stageRolesM11423getMyRolestwRsX0 != null && StageRoles.m11410isSpeakerimpl(stageRolesM11423getMyRolestwRsX0.m11412unboximpl());
                 StageInstance stageInstance = stageChannel.getStageInstance();
-                return new ChannelListItemActiveEventData(stageInstance != null ? stageInstance.getTopic() : null, channelLocation, audienceSize, speakers, containsMe, z3, null);
+                return new ChannelListItemActiveEvent2(stageInstance != null ? stageInstance.getTopic() : null, channelLocation, audienceSize, speakers, containsMe, z3, null);
             }
             Iterator<T> it = guildScheduledEvents.iterator();
             while (true) {
@@ -516,7 +517,7 @@ public final /* data */ class WidgetChannelListModel {
             if (guildScheduledEvent2 != null && (channel = guildChannels.get(guildScheduledEvent2.getChannelId())) != null) {
                 Collection<ChannelListItemVoiceUser> collection = voiceStates.get(guildScheduledEvent2.getChannelId());
                 if (collection != null) {
-                    listEmptyList = new ArrayList(o.collectionSizeOrDefault(collection, 10));
+                    listEmptyList = new ArrayList(Iterables2.collectionSizeOrDefault(collection, 10));
                     for (ChannelListItemVoiceUser channelListItemVoiceUser2 : collection) {
                         listEmptyList.add(new UserGuildMember(channelListItemVoiceUser2.getUser(), channelListItemVoiceUser2.getComputed()));
                     }
@@ -545,9 +546,9 @@ public final /* data */ class WidgetChannelListModel {
                 if (!z4) {
                     GuildScheduledEventLocationInfo.ChannelLocation channelLocation2 = new GuildScheduledEventLocationInfo.ChannelLocation(channel);
                     if (listEmptyList == null) {
-                        listEmptyList = n.emptyList();
+                        listEmptyList = Collections2.emptyList();
                     }
-                    return new ChannelListItemActiveEventData(guildScheduledEvent2.getName(), channelLocation2, 0, listEmptyList, z4, z4, null);
+                    return new ChannelListItemActiveEvent2(guildScheduledEvent2.getName(), channelLocation2, 0, listEmptyList, z4, z4, null);
                 }
             }
             Iterator<T> it3 = guildScheduledEvents.iterator();
@@ -573,7 +574,7 @@ public final /* data */ class WidgetChannelListModel {
                 }
             }
             GuildScheduledEvent guildScheduledEvent4 = (GuildScheduledEvent) next2;
-            return (guildScheduledEvent4 == null || (entityMetadata = guildScheduledEvent4.getEntityMetadata()) == null || (location = entityMetadata.getLocation()) == null) ? (ChannelListItemActiveEventData) null : new ChannelListItemActiveEventData(guildScheduledEvent4.getName(), new GuildScheduledEventLocationInfo.ExternalLocation(location), 0, n.emptyList(), false, false, Long.valueOf(guildScheduledEvent4.getId()));
+            return (guildScheduledEvent4 == null || (entityMetadata = guildScheduledEvent4.getEntityMetadata()) == null || (location = entityMetadata.getLocation()) == null) ? (ChannelListItemActiveEvent2) null : new ChannelListItemActiveEvent2(guildScheduledEvent4.getName(), new GuildScheduledEventLocationInfo.ExternalLocation(location), 0, Collections2.emptyList(), false, false, Long.valueOf(guildScheduledEvent4.getId()));
         }
 
         private final Observable<WidgetChannelListModel> getPrivateChannelList() {
@@ -587,9 +588,9 @@ public final /* data */ class WidgetChannelListModel {
             StoreUserGuildSettings userGuildSettings = companion.getUserGuildSettings();
             StoreExperiments experiments = companion.getExperiments();
             StoreUserConnections userConnections = companion.getUserConnections();
-            Observable<WidgetChannelListModel> observableG = ObservableExtensionsKt.leadingEdgeThrottle(ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{channels, channelsSelected, presences, messagesMostRecent, mentions, applicationStreaming, userGuildSettings, experiments, userConnections}, false, null, null, 14, null), 250L, TimeUnit.MILLISECONDS).G(new WidgetChannelListModel$Companion$getPrivateChannelList$1(channels, messagesMostRecent, channelsSelected, presences, mentions, applicationStreaming, userGuildSettings, experiments, userConnections));
-            m.checkNotNullExpressionValue(observableG, "ObservationDeckProvider\n…            )\n          }");
-            return observableG;
+            Observable<WidgetChannelListModel> observableM11083G = ObservableExtensionsKt.leadingEdgeThrottle(ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{channels, channelsSelected, presences, messagesMostRecent, mentions, applicationStreaming, userGuildSettings, experiments, userConnections}, false, null, null, 14, null), 250L, TimeUnit.MILLISECONDS).m11083G(new WidgetChannelListModel$Companion$getPrivateChannelList$1(channels, messagesMostRecent, channelsSelected, presences, mentions, applicationStreaming, userGuildSettings, experiments, userConnections));
+            Intrinsics3.checkNotNullExpressionValue(observableM11083G, "ObservationDeckProvider\n…            )\n          }");
+            return observableM11083G;
         }
 
         private final Observable<WidgetChannelListModel> getSelectedGuildChannelList(long selectedGuildId) {
@@ -614,11 +615,11 @@ public final /* data */ class WidgetChannelListModel {
             Observable<Boolean> observableObserveCanGuildSeeGuildRoleSubscriptions = GuildRoleSubscriptionsFeatureFlag.INSTANCE.getINSTANCE().observeCanGuildSeeGuildRoleSubscriptions(selectedGuildId);
             Observable<Map<Long, RestCallState<List<DirectoryEntryGuild>>>> observableObserveDirectories = companion.getDirectories().observeDirectories();
             Observable<Map<Long, StoreMessageAck.Ack>> observableObserveAll = companion.getMessageAck().observeAll();
-            Observable<Map<Long, RestCallState<List<DirectoryEntryEvent>>>> observableObserveDirectoryGuildScheduledEvents = companion.getDirectories().observeDirectoryGuildScheduledEvents();
+            Observable<Map<Long, RestCallState<List<DirectoryEntryGuild2>>>> observableObserveDirectoryGuildScheduledEvents = companion.getDirectories().observeDirectoryGuildScheduledEvents();
             Observable<GuildJoinRequest> observableObserveGuildJoinRequest = companion.getGuildJoinRequests().observeGuildJoinRequest(selectedGuildId);
             Observable<GuildMember> observableObserveGuildMember = companion.getGuilds().observeGuildMember(selectedGuildId, id2);
-            m.checkNotNullExpressionValue(observableObserveGuildMember, "StoreStream\n            …er(selectedGuildId, meId)");
-            return ObservableCombineLatestOverloadsKt.combineLatest(observable, observableObserveChannelsForGuild$default, observableObserveJoinedThreads, observableObserveActiveJoinedThreadsForGuild, observableObserveChannelsWithActiveThreadsByGuild, observableObserveSelectedChannel, observableObserveSelectedVoiceChannelId, observable2, observableObserveMentionCounts, unreadChannelIds, observableObserveCollapsedCategories, nuxState, observableObserveGuildStageChannels, observableObserveStageInstancesForGuild, observableObserveGuildScheduledEvents$default, observableObserveCanCreateAnyEvent$default, observableObserveCanGuildSeeGuildRoleSubscriptions, observableObserveDirectories, observableObserveAll, observableObserveDirectoryGuildScheduledEvents, observableObserveGuildJoinRequest, observableObserveGuildMember, new WidgetChannelListModel$Companion$getSelectedGuildChannelList$1(selectedGuildId));
+            Intrinsics3.checkNotNullExpressionValue(observableObserveGuildMember, "StoreStream\n            …er(selectedGuildId, meId)");
+            return ObservableCombineLatestOverloads2.combineLatest(observable, observableObserveChannelsForGuild$default, observableObserveJoinedThreads, observableObserveActiveJoinedThreadsForGuild, observableObserveChannelsWithActiveThreadsByGuild, observableObserveSelectedChannel, observableObserveSelectedVoiceChannelId, observable2, observableObserveMentionCounts, unreadChannelIds, observableObserveCollapsedCategories, nuxState, observableObserveGuildStageChannels, observableObserveStageInstancesForGuild, observableObserveGuildScheduledEvents$default, observableObserveCanCreateAnyEvent$default, observableObserveCanGuildSeeGuildRoleSubscriptions, observableObserveDirectories, observableObserveAll, observableObserveDirectoryGuildScheduledEvents, observableObserveGuildJoinRequest, observableObserveGuildMember, new WidgetChannelListModel$Companion$getSelectedGuildChannelList$1(selectedGuildId));
         }
 
         /* JADX WARN: Failed to find 'out' block for switch in B:67:0x03d0. Please report as an issue. */
@@ -631,7 +632,7 @@ public final /* data */ class WidgetChannelListModel {
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        private final List<ChannelListItem> guildListBuilder(long selectedGuildId, GuildChannelsInfo guild, Map<Long, Channel> guildChannels, Map<Long, ? extends Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>> activeJoinedGuildThreads, Map<Long, StoreThreadsJoined.JoinedThread> joinedThreads, Set<Long> channelsWithActiveThreads, Channel selectedChannel, long selectedVoiceChannelId, Map<Long, ? extends Collection<ChannelListItemVoiceUser>> voiceStates, Map<Long, Integer> mentionCounts, Set<Long> unreadChannelIds, Set<Long> collapsedCategories, Map<Long, StageChannel> stageChannels, Map<Long, StageInstance> stageInstances, List<GuildScheduledEvent> guildScheduledEvents, boolean canCreateAnyEvent, boolean canSeeGuildRoleSubscriptions, Map<Long, ? extends RestCallState<? extends List<DirectoryEntryGuild>>> directories, Map<Long, StoreMessageAck.Ack> messageAcks, Map<Long, ? extends RestCallState<? extends List<DirectoryEntryEvent>>> directoryEvents, GuildJoinRequest guildJoinRequest, GuildMember member) {
+        private final List<ChannelListItem> guildListBuilder(long selectedGuildId, GuildChannelsInfo guild, Map<Long, Channel> guildChannels, Map<Long, ? extends Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>> activeJoinedGuildThreads, Map<Long, StoreThreadsJoined.JoinedThread> joinedThreads, Set<Long> channelsWithActiveThreads, Channel selectedChannel, long selectedVoiceChannelId, Map<Long, ? extends Collection<ChannelListItemVoiceUser>> voiceStates, Map<Long, Integer> mentionCounts, Set<Long> unreadChannelIds, Set<Long> collapsedCategories, Map<Long, StageChannel> stageChannels, Map<Long, StageInstance> stageInstances, List<GuildScheduledEvent> guildScheduledEvents, boolean canCreateAnyEvent, boolean canSeeGuildRoleSubscriptions, Map<Long, ? extends RestCallState<? extends List<DirectoryEntryGuild>>> directories, Map<Long, StoreMessageAck.Ack> messageAcks, Map<Long, ? extends RestCallState<? extends List<DirectoryEntryGuild2>>> directoryEvents, GuildJoinRequest guildJoinRequest, GuildMember member) {
             boolean z2;
             WidgetChannelListModel$Companion$guildListBuilder$3 widgetChannelListModel$Companion$guildListBuilder$3;
             WidgetChannelListModel$Companion$guildListBuilder$2 widgetChannelListModel$Companion$guildListBuilder$2;
@@ -657,7 +658,7 @@ public final /* data */ class WidgetChannelListModel {
             if (guild.getUnelevated()) {
                 arrayList2.add(new ChannelListItemMfaNotice());
             }
-            ChannelListItemActiveEventData channelEventNoticeData = getChannelEventNoticeData(guild, stageChannels, guildScheduledEvents, voiceStates, guildChannels, selectedVoiceChannelId);
+            ChannelListItemActiveEvent2 channelEventNoticeData = getChannelEventNoticeData(guild, stageChannels, guildScheduledEvents, voiceStates, guildChannels, selectedVoiceChannelId);
             if (channelEventNoticeData != null) {
                 arrayList2.add(new ChannelListItemEventsSeparator(true));
                 arrayList2.add(new ChannelListItemActiveEvent(channelEventNoticeData));
@@ -743,14 +744,14 @@ public final /* data */ class WidgetChannelListModel {
                     ArrayList arrayList4 = arrayList3;
                     widgetChannelListModel$Companion$guildListBuilder$5 = widgetChannelListModel$Companion$guildListBuilder$52;
                     widgetChannelListModel$Companion$guildListBuilder$4 = widgetChannelListModel$Companion$guildListBuilder$42;
-                    WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1 widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1 = new WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1(z7, guild, hashSet2, z6, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$52, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$42, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
-                    WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$2 widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$2 = new WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$2(id2, channel2, l, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
-                    WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3 widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3 = new WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3(channel2, l, widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1, z9, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
-                    WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$4 widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$4 = new WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$4(widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
-                    WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$5 widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$5 = new WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$5(widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$2, channel2, l, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
-                    WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$6 widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$6 = new WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$6(widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$2, channel2, l, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
-                    WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$7 widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$7 = new WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$7(widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$4, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
-                    WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$8 widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$8 = new WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$8(id2, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
+                    C7413x4d8eedc1 c7413x4d8eedc1 = new C7413x4d8eedc1(z7, guild, hashSet2, z6, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$52, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$42, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
+                    C7414x4d8eedc2 c7414x4d8eedc2 = new C7414x4d8eedc2(id2, channel2, l, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
+                    C7415x4d8eedc3 c7415x4d8eedc3 = new C7415x4d8eedc3(channel2, l, c7413x4d8eedc1, z9, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
+                    C7416x4d8eedc4 c7416x4d8eedc4 = new C7416x4d8eedc4(c7413x4d8eedc1, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
+                    C7417x4d8eedc5 c7417x4d8eedc5 = new C7417x4d8eedc5(c7414x4d8eedc2, channel2, l, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
+                    C7418x4d8eedc6 c7418x4d8eedc6 = new C7418x4d8eedc6(c7414x4d8eedc2, channel2, l, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
+                    C7419x4d8eedc7 c7419x4d8eedc7 = new C7419x4d8eedc7(c7416x4d8eedc4, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
+                    C7420x4d8eedc8 c7420x4d8eedc8 = new C7420x4d8eedc8(id2, guild, hashSet, z10, selectedChannel, mentionCounts, unreadChannelIds, selectedGuildId, widgetChannelListModel$Companion$guildListBuilder$5, collapsedCategories, widgetChannelListModel$Companion$guildListBuilder$3, hashSet3, widgetChannelListModel$Companion$guildListBuilder$4, selectedVoiceChannelId, voiceStates, canSeeGuildRoleSubscriptions, channelsWithActiveThreads, guildScheduledEvents, stageInstances, stageChannels, map, joinedThreads, arrayList4, widgetChannelListModel$Companion$guildListBuilder$2, messageAcks, directories, directoryEvents);
                     int type = channel2.getType();
                     if (type == 0) {
                         z3 = z10;
@@ -758,22 +759,22 @@ public final /* data */ class WidgetChannelListModel {
                         channel = channel2;
                         arrayList = arrayList4;
                         z4 = z11;
-                        channelListItemTextChannelInvoke = widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3.invoke();
+                        channelListItemTextChannelInvoke = c7415x4d8eedc3.invoke();
                         if (channelListItemTextChannelInvoke == null) {
                             arrayList.add(channelListItemTextChannelInvoke);
-                            arrayList.addAll(widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$7.invoke2(channel));
+                            arrayList.addAll(c7419x4d8eedc7.invoke2(channel));
                         }
                     } else if (type == 2) {
                         z3 = z10;
                         set = collapsedCategories;
                         arrayList = arrayList4;
                         z4 = z11;
-                        ChannelListItemVoiceChannel channelListItemVoiceChannelInvoke = widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$5.invoke();
+                        ChannelListItemVoiceChannel channelListItemVoiceChannelInvoke = c7417x4d8eedc5.invoke();
                         if (channelListItemVoiceChannelInvoke != null) {
                             arrayList.add(channelListItemVoiceChannelInvoke);
                             Collection<ChannelListItemVoiceUser> collectionEmptyList = voiceStates.get(Long.valueOf(id2));
                             if (collectionEmptyList == null) {
-                                collectionEmptyList = n.emptyList();
+                                collectionEmptyList = Collections2.emptyList();
                             }
                             arrayList.addAll(collectionEmptyList);
                         }
@@ -791,10 +792,10 @@ public final /* data */ class WidgetChannelListModel {
                             case 13:
                                 z3 = z10;
                                 arrayList = arrayList4;
-                                ChannelListItemStageVoiceChannel channelListItemStageVoiceChannelInvoke = widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$6.invoke();
+                                ChannelListItemStageVoiceChannel channelListItemStageVoiceChannelInvoke = c7418x4d8eedc6.invoke();
                                 if (channelListItemStageVoiceChannelInvoke != null) {
                                     arrayList.add(channelListItemStageVoiceChannelInvoke);
-                                    arrayList.addAll(widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$8.invoke2());
+                                    arrayList.addAll(c7420x4d8eedc8.invoke2());
                                     StageChannel stageChannel = stageChannels.get(Long.valueOf(id2));
                                     Integer numValueOf = stageChannel != null ? Integer.valueOf(stageChannel.getAudienceSize()) : null;
                                     if (numValueOf != null && (numValueOf.intValue() > 0 || channelListItemStageVoiceChannelInvoke.getHasActiveEvent() || channelListItemStageVoiceChannelInvoke.getHasSpeakers())) {
@@ -814,38 +815,38 @@ public final /* data */ class WidgetChannelListModel {
                                         map2 = directories;
                                         messageId = 0;
                                     }
-                                    RestCallState restCallState = (RestCallState) a.d(channel2, map2);
+                                    RestCallState restCallState = (RestCallState) outline.m845d(channel2, map2);
                                     List listEmptyList2 = restCallState != null ? (List) restCallState.invoke() : null;
                                     if (listEmptyList2 == null) {
-                                        listEmptyList2 = n.emptyList();
+                                        listEmptyList2 = Collections2.emptyList();
                                     }
                                     ArrayList arrayList5 = new ArrayList();
                                     for (Object obj : listEmptyList2) {
                                         DirectoryEntryGuild directoryEntryGuild = (DirectoryEntryGuild) obj;
-                                        if (messageId != 0 && DirectoryUtilsKt.hasMinimumMemberCount(directoryEntryGuild) && ((directoryEntryGuild.getCreatedAt().getDateTimeMillis() - SnowflakeUtils.DISCORD_EPOCH) << 22) > messageId) {
+                                        if (messageId != 0 && DirectoryUtils2.hasMinimumMemberCount(directoryEntryGuild) && ((directoryEntryGuild.getCreatedAt().getDateTimeMillis() - SnowflakeUtils.DISCORD_EPOCH) << 22) > messageId) {
                                             arrayList5.add(obj);
                                         }
                                     }
                                     ChannelListItemDirectory channelListItemDirectory = new ChannelListItemDirectory(channel2, selectedChannel != null && channel2.getId() == selectedChannel.getId(), Math.min(5, arrayList5.size()));
                                     z3 = z10;
                                     if (z3 && GrowthTeamFeatures.INSTANCE.isHubEnabled()) {
-                                        RestCallState restCallState2 = (RestCallState) a.d(channel2, directoryEvents);
+                                        RestCallState restCallState2 = (RestCallState) outline.m845d(channel2, directoryEvents);
                                         if (restCallState2 == null || (list = (List) restCallState2.invoke()) == null) {
                                             listEmptyList = null;
                                         } else {
-                                            listEmptyList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+                                            listEmptyList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                                             Iterator it = list.iterator();
                                             while (it.hasNext()) {
-                                                listEmptyList.add(((DirectoryEntryEvent) it.next()).getGuildScheduledEvent());
+                                                listEmptyList.add(((DirectoryEntryGuild2) it.next()).getGuildScheduledEvent());
                                             }
                                         }
                                         if (listEmptyList == null) {
-                                            listEmptyList = n.emptyList();
+                                            listEmptyList = Collections2.emptyList();
                                         }
                                         ChannelListItem[] channelListItemArr = new ChannelListItem[4];
                                         Guild guild4 = guild.getGuild();
                                         if (guild4 != null) {
-                                            if (ChannelUtils.x(channel2)) {
+                                            if (ChannelUtils.m7700x(channel2)) {
                                                 c = 1;
                                             } else {
                                                 c = 1;
@@ -868,7 +869,7 @@ public final /* data */ class WidgetChannelListModel {
                                         channelListItemArr[c] = channelListItemDirectory;
                                         channelListItemArr[2] = new ChannelListItemAddServer();
                                         channelListItemArr[3] = new ChannelListItemInvite(selectedGuildId, z3);
-                                        List listListOfNotNull = n.listOfNotNull((Object[]) channelListItemArr);
+                                        List listListOfNotNull = Collections2.listOfNotNull((Object[]) channelListItemArr);
                                         arrayList = arrayList4;
                                         arrayList.addAll(listListOfNotNull);
                                     } else {
@@ -897,7 +898,7 @@ public final /* data */ class WidgetChannelListModel {
                         arrayList = arrayList4;
                         set = collapsedCategories;
                         z4 = z11;
-                        channelListItemTextChannelInvoke = widgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3.invoke();
+                        channelListItemTextChannelInvoke = c7415x4d8eedc3.invoke();
                         if (channelListItemTextChannelInvoke == null) {
                         }
                     }
@@ -937,9 +938,9 @@ public final /* data */ class WidgetChannelListModel {
         }
 
         public final Observable<WidgetChannelListModel> get() {
-            Observable<WidgetChannelListModel> observableR = StoreStream.INSTANCE.getGuildSelected().observeSelectedGuildId().Y(WidgetChannelListModel$Companion$get$1.INSTANCE).r();
-            m.checkNotNullExpressionValue(observableR, "StoreStream\n          .g…  .distinctUntilChanged()");
-            return observableR;
+            Observable<WidgetChannelListModel> observableM11112r = StoreStream.INSTANCE.getGuildSelected().observeSelectedGuildId().m11099Y(WidgetChannelListModel$Companion$get$1.INSTANCE).m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r, "StoreStream\n          .g…  .distinctUntilChanged()");
+            return observableM11112r;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -1030,7 +1031,7 @@ public final /* data */ class WidgetChannelListModel {
             }
             Iterator it = map.entrySet().iterator();
             while (it.hasNext()) {
-                d0.t.q.sortWith((List) ((Map.Entry) it.next()).getValue(), voiceUserComparator);
+                MutableCollectionsJVM.sortWith((List) ((Map.Entry) it.next()).getValue(), voiceUserComparator);
             }
             return map;
         }
@@ -1048,20 +1049,20 @@ public final /* data */ class WidgetChannelListModel {
         }
 
         public final Observable<Map<Long, List<ChannelListItemVoiceUser>>> get(long guildId, Comparator<ChannelListItemVoiceUser> voiceUserComparator) {
-            m.checkNotNullParameter(voiceUserComparator, "voiceUserComparator");
+            Intrinsics3.checkNotNullParameter(voiceUserComparator, "voiceUserComparator");
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable observableF = Observable.f(companion.getApplicationStreaming().observeStreamsForGuild(guildId), ObservableExtensionsKt.leadingEdgeThrottle(companion.getVoiceStates().observe(guildId), 200L, TimeUnit.MILLISECONDS), companion.getUsers().observeAllUsers(), companion.getGuilds().observeComputed(guildId), StoreChannels.observeChannelsForGuild$default(companion.getChannels(), guildId, null, 2, null), companion.getPermissions().observeChannelPermissionsForGuild(guildId), new WidgetChannelListModel$VoiceStates$get$1(voiceUserComparator));
-            m.checkNotNullExpressionValue(observableF, "Observable\n          .co…            )\n          }");
-            Observable<Map<Long, List<ChannelListItemVoiceUser>>> observableR = ObservableExtensionsKt.computationLatest(observableF).r();
-            m.checkNotNullExpressionValue(observableR, "Observable\n          .co…  .distinctUntilChanged()");
-            return observableR;
+            Observable observableM11071f = Observable.m11071f(companion.getApplicationStreaming().observeStreamsForGuild(guildId), ObservableExtensionsKt.leadingEdgeThrottle(companion.getVoiceStates().observe(guildId), 200L, TimeUnit.MILLISECONDS), companion.getUsers().observeAllUsers(), companion.getGuilds().observeComputed(guildId), StoreChannels.observeChannelsForGuild$default(companion.getChannels(), guildId, null, 2, null), companion.getPermissions().observeChannelPermissionsForGuild(guildId), new WidgetChannelListModel$VoiceStates$get$1(voiceUserComparator));
+            Intrinsics3.checkNotNullExpressionValue(observableM11071f, "Observable\n          .co…            )\n          }");
+            Observable<Map<Long, List<ChannelListItemVoiceUser>>> observableM11112r = ObservableExtensionsKt.computationLatest(observableM11071f).m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r, "Observable\n          .co…  .distinctUntilChanged()");
+            return observableM11112r;
         }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public WidgetChannelListModel(Guild guild, List<? extends ChannelListItem> list, boolean z2, boolean z3, boolean z4, List<GuildScheduledEvent> list2) {
-        m.checkNotNullParameter(list, "items");
-        m.checkNotNullParameter(list2, "guildScheduledEvents");
+        Intrinsics3.checkNotNullParameter(list, "items");
+        Intrinsics3.checkNotNullParameter(list2, "guildScheduledEvents");
         this.selectedGuild = guild;
         this.items = list;
         this.isGuildSelected = z2;
@@ -1125,8 +1126,8 @@ public final /* data */ class WidgetChannelListModel {
     }
 
     public final WidgetChannelListModel copy(Guild selectedGuild, List<? extends ChannelListItem> items, boolean isGuildSelected, boolean showPremiumGuildHint, boolean showEmptyState, List<GuildScheduledEvent> guildScheduledEvents) {
-        m.checkNotNullParameter(items, "items");
-        m.checkNotNullParameter(guildScheduledEvents, "guildScheduledEvents");
+        Intrinsics3.checkNotNullParameter(items, "items");
+        Intrinsics3.checkNotNullParameter(guildScheduledEvents, "guildScheduledEvents");
         return new WidgetChannelListModel(selectedGuild, items, isGuildSelected, showPremiumGuildHint, showEmptyState, guildScheduledEvents);
     }
 
@@ -1138,7 +1139,7 @@ public final /* data */ class WidgetChannelListModel {
             return false;
         }
         WidgetChannelListModel widgetChannelListModel = (WidgetChannelListModel) other;
-        return m.areEqual(this.selectedGuild, widgetChannelListModel.selectedGuild) && m.areEqual(this.items, widgetChannelListModel.items) && this.isGuildSelected == widgetChannelListModel.isGuildSelected && this.showPremiumGuildHint == widgetChannelListModel.showPremiumGuildHint && this.showEmptyState == widgetChannelListModel.showEmptyState && m.areEqual(this.guildScheduledEvents, widgetChannelListModel.guildScheduledEvents);
+        return Intrinsics3.areEqual(this.selectedGuild, widgetChannelListModel.selectedGuild) && Intrinsics3.areEqual(this.items, widgetChannelListModel.items) && this.isGuildSelected == widgetChannelListModel.isGuildSelected && this.showPremiumGuildHint == widgetChannelListModel.showPremiumGuildHint && this.showEmptyState == widgetChannelListModel.showEmptyState && Intrinsics3.areEqual(this.guildScheduledEvents, widgetChannelListModel.guildScheduledEvents);
     }
 
     public final List<GuildScheduledEvent> getGuildScheduledEvents() {
@@ -1162,7 +1163,7 @@ public final /* data */ class WidgetChannelListModel {
     }
 
     public final boolean getStartsWithPaddedElement() {
-        ChannelListItem channelListItem = (ChannelListItem) u.firstOrNull((List) this.items);
+        ChannelListItem channelListItem = (ChannelListItem) _Collections.firstOrNull((List) this.items);
         if (channelListItem != null) {
             return (channelListItem instanceof ChannelListItemInvite) || (channelListItem instanceof ChannelListItemMfaNotice) || (channelListItem instanceof ChannelListItemCategory) || (channelListItem instanceof ChannelListItemEventsSeparator) || (channelListItem instanceof ChannelListItemGuildJoinRequest);
         }
@@ -1198,21 +1199,21 @@ public final /* data */ class WidgetChannelListModel {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("WidgetChannelListModel(selectedGuild=");
-        sbU.append(this.selectedGuild);
-        sbU.append(", items=");
-        sbU.append(this.items);
-        sbU.append(", isGuildSelected=");
-        sbU.append(this.isGuildSelected);
-        sbU.append(", showPremiumGuildHint=");
-        sbU.append(this.showPremiumGuildHint);
-        sbU.append(", showEmptyState=");
-        sbU.append(this.showEmptyState);
-        sbU.append(", guildScheduledEvents=");
-        return a.L(sbU, this.guildScheduledEvents, ")");
+        StringBuilder sbM833U = outline.m833U("WidgetChannelListModel(selectedGuild=");
+        sbM833U.append(this.selectedGuild);
+        sbM833U.append(", items=");
+        sbM833U.append(this.items);
+        sbM833U.append(", isGuildSelected=");
+        sbM833U.append(this.isGuildSelected);
+        sbM833U.append(", showPremiumGuildHint=");
+        sbM833U.append(this.showPremiumGuildHint);
+        sbM833U.append(", showEmptyState=");
+        sbM833U.append(this.showEmptyState);
+        sbM833U.append(", guildScheduledEvents=");
+        return outline.m824L(sbM833U, this.guildScheduledEvents, ")");
     }
 
     public /* synthetic */ WidgetChannelListModel(Guild guild, List list, boolean z2, boolean z3, boolean z4, List list2, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(guild, list, (i & 4) != 0 ? false : z2, (i & 8) != 0 ? false : z3, (i & 16) != 0 ? false : z4, (i & 32) != 0 ? n.emptyList() : list2);
+        this(guild, list, (i & 4) != 0 ? false : z2, (i & 8) != 0 ? false : z3, (i & 16) != 0 ? false : z4, (i & 32) != 0 ? Collections2.emptyList() : list2);
     }
 }

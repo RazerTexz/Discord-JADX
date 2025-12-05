@@ -2,10 +2,10 @@ package androidx.transition;
 
 import android.view.View;
 import androidx.annotation.NonNull;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class TransitionValues {
@@ -30,17 +30,17 @@ public class TransitionValues {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TransitionValues@");
-        sbU.append(Integer.toHexString(hashCode()));
-        sbU.append(":\n");
-        StringBuilder sbX = a.X(sbU.toString(), "    view = ");
-        sbX.append(this.view);
-        sbX.append("\n");
-        String strW = a.w(sbX.toString(), "    values:");
+        StringBuilder sbM833U = outline.m833U("TransitionValues@");
+        sbM833U.append(Integer.toHexString(hashCode()));
+        sbM833U.append(":\n");
+        StringBuilder sbM836X = outline.m836X(sbM833U.toString(), "    view = ");
+        sbM836X.append(this.view);
+        sbM836X.append("\n");
+        String strM883w = outline.m883w(sbM836X.toString(), "    values:");
         for (String str : this.values.keySet()) {
-            strW = strW + "    " + str + ": " + this.values.get(str) + "\n";
+            strM883w = strM883w + "    " + str + ": " + this.values.get(str) + "\n";
         }
-        return strW;
+        return strM883w;
     }
 
     public TransitionValues(@NonNull View view) {

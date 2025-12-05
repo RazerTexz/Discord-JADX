@@ -27,12 +27,12 @@ public class TooltipCompatHandler implements View.OnLongClickListener, View.OnHo
     private final int mHoverSlop;
     private TooltipPopup mPopup;
     private final CharSequence mTooltipText;
-    private final Runnable mShowRunnable = new AnonymousClass1();
-    private final Runnable mHideRunnable = new AnonymousClass2();
+    private final Runnable mShowRunnable = new RunnableC01351();
+    private final Runnable mHideRunnable = new RunnableC01362();
 
-    /* renamed from: androidx.appcompat.widget.TooltipCompatHandler$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.widget.TooltipCompatHandler$1 */
+    public class RunnableC01351 implements Runnable {
+        public RunnableC01351() {
         }
 
         @Override // java.lang.Runnable
@@ -41,9 +41,9 @@ public class TooltipCompatHandler implements View.OnLongClickListener, View.OnHo
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.TooltipCompatHandler$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.widget.TooltipCompatHandler$2 */
+    public class RunnableC01362 implements Runnable {
+        public RunnableC01362() {
         }
 
         @Override // java.lang.Runnable

@@ -1,6 +1,6 @@
 package org.webrtc;
 
-import h0.c.p;
+import p617h0.p628c.RunnableC12480p;
 
 /* loaded from: classes3.dex */
 public class MediaSource {
@@ -20,7 +20,7 @@ public class MediaSource {
     }
 
     public MediaSource(long j) {
-        this.refCountDelegate = new RefCountDelegate(new p(j));
+        this.refCountDelegate = new RefCountDelegate(new RunnableC12480p(j));
         this.nativeSource = j;
     }
 

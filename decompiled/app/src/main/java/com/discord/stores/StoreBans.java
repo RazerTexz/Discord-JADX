@@ -3,10 +3,8 @@ package com.discord.stores;
 import android.content.Context;
 import com.discord.models.domain.ModelBan;
 import com.discord.stores.updates.ObservationDeck;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -14,7 +12,9 @@ import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import rx.Observable;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreBans.kt */
 /* loaded from: classes2.dex */
@@ -25,17 +25,17 @@ public final class StoreBans extends StoreV2 {
     private final ObservationDeck observationDeck;
 
     /* compiled from: StoreBans.kt */
-    /* renamed from: com.discord.stores.StoreBans$observeBans$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<List<? extends ModelBan>, Unit> {
+    /* renamed from: com.discord.stores.StoreBans$observeBans$1 */
+    public static final class C57941 extends Lambda implements Function1<List<? extends ModelBan>, Unit> {
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreBans.kt */
-        /* renamed from: com.discord.stores.StoreBans$observeBans$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02141 extends o implements Function0<Unit> {
+        /* renamed from: com.discord.stores.StoreBans$observeBans$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $bans;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C02141(List list) {
+            public AnonymousClass1(List list) {
                 super(0);
                 this.$bans = list;
             }
@@ -43,13 +43,13 @@ public final class StoreBans extends StoreV2 {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 HashMap mapAccess$getBannedUsers$p = StoreBans.access$getBannedUsers$p(StoreBans.this);
-                Long lValueOf = Long.valueOf(AnonymousClass1.this.$guildId);
+                Long lValueOf = Long.valueOf(C57941.this.$guildId);
                 Object map = mapAccess$getBannedUsers$p.get(lValueOf);
                 if (map == null) {
                     map = new HashMap();
@@ -64,7 +64,7 @@ public final class StoreBans extends StoreV2 {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C57941(long j) {
             super(1);
             this.$guildId = j;
         }
@@ -72,23 +72,23 @@ public final class StoreBans extends StoreV2 {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends ModelBan> list) {
             invoke2(list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ModelBan> list) {
-            m.checkNotNullParameter(list, "bans");
-            StoreBans.access$getDispatcher$p(StoreBans.this).schedule(new C02141(list));
+            Intrinsics3.checkNotNullParameter(list, "bans");
+            StoreBans.access$getDispatcher$p(StoreBans.this).schedule(new AnonymousClass1(list));
         }
     }
 
     /* compiled from: StoreBans.kt */
-    /* renamed from: com.discord.stores.StoreBans$observeBans$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function0<Map<Long, ? extends ModelBan>> {
+    /* renamed from: com.discord.stores.StoreBans$observeBans$2 */
+    public static final class C57952 extends Lambda implements Function0<Map<Long, ? extends ModelBan>> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(long j) {
+        public C57952(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -106,8 +106,8 @@ public final class StoreBans extends StoreV2 {
     }
 
     public StoreBans(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.bannedUsers = new HashMap<>();
@@ -130,9 +130,9 @@ public final class StoreBans extends StoreV2 {
         storeBans.bannedUsersSnapshot = map;
     }
 
-    @StoreThread
+    @Store3
     public final void handleBanAdd(ModelBan ban) {
-        m.checkNotNullParameter(ban, "ban");
+        Intrinsics3.checkNotNullParameter(ban, "ban");
         if (this.bannedUsers.get(Long.valueOf(ban.getGuildId())) != null) {
             HashMap<Long, ModelBan> map = this.bannedUsers.get(Long.valueOf(ban.getGuildId()));
             if (map != null) {
@@ -142,9 +142,9 @@ public final class StoreBans extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleBanRemove(ModelBan ban) {
-        m.checkNotNullParameter(ban, "ban");
+        Intrinsics3.checkNotNullParameter(ban, "ban");
         if (this.bannedUsers.get(Long.valueOf(ban.getGuildId())) != null) {
             HashMap<Long, ModelBan> map = this.bannedUsers.get(Long.valueOf(ban.getGuildId()));
             if (map != null) {
@@ -155,8 +155,8 @@ public final class StoreBans extends StoreV2 {
     }
 
     public final Observable<Map<Long, ModelBan>> observeBans(long guildId) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getBans(guildId), false, 1, null), StoreBans.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(guildId), 62, (Object) null);
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass2(guildId), 14, null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getBans(guildId), false, 1, null), StoreBans.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C57941(guildId), 62, (Object) null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C57952(guildId), 14, null);
     }
 
     /* JADX WARN: Multi-variable type inference failed */

@@ -15,9 +15,9 @@ public abstract class BroadcastReceiverConstraintTracker<T> extends ConstraintTr
     private static final String TAG = Logger.tagWithPrefix("BrdcstRcvrCnstrntTrckr");
     private final BroadcastReceiver mBroadcastReceiver;
 
-    /* renamed from: androidx.work.impl.constraints.trackers.BroadcastReceiverConstraintTracker$1, reason: invalid class name */
-    public class AnonymousClass1 extends BroadcastReceiver {
-        public AnonymousClass1() {
+    /* renamed from: androidx.work.impl.constraints.trackers.BroadcastReceiverConstraintTracker$1 */
+    public class C07391 extends BroadcastReceiver {
+        public C07391() {
         }
 
         @Override // android.content.BroadcastReceiver
@@ -30,7 +30,7 @@ public abstract class BroadcastReceiverConstraintTracker<T> extends ConstraintTr
 
     public BroadcastReceiverConstraintTracker(@NonNull Context context, @NonNull TaskExecutor taskExecutor) {
         super(context, taskExecutor);
-        this.mBroadcastReceiver = new AnonymousClass1();
+        this.mBroadcastReceiver = new C07391();
     }
 
     public abstract IntentFilter getIntentFilter();

@@ -2,8 +2,6 @@ package com.discord.widgets.servers.member_verification;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.guild.GuildVerificationLevel;
 import com.discord.api.guildjoinrequest.ApplicationStatus;
 import com.discord.api.role.GuildRole;
@@ -20,8 +18,8 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserSettings;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.textprocessing.DiscordParser;
 import com.discord.utilities.textprocessing.MessageParseState;
 import com.discord.utilities.textprocessing.MessageRenderContext;
@@ -33,9 +31,6 @@ import com.discord.widgets.servers.member_verification.form_fields.MemberVerific
 import com.discord.widgets.servers.member_verification.form_fields.MemberVerificationItemTerm;
 import com.discord.widgets.servers.member_verification.form_fields.MemberVerificationItemTermsHeader;
 import com.discord.widgets.servers.member_verification.form_fields.MemberVerificationItemTextInput;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -45,12 +40,17 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetMemberVerificationViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
+public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -63,21 +63,21 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
     private final Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState> rulesParser;
 
     /* compiled from: WidgetMemberVerificationViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$1 */
+    public static final class C95651 extends Lambda implements Function1<StoreState, Unit> {
+        public C95651() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetMemberVerificationViewModel.access$handleStoreState(WidgetMemberVerificationViewModel.this, storeState);
         }
     }
@@ -89,9 +89,9 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
 
         public final Observable<StoreState> observeStores(long guildId, Guild inviteGuild) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable<StoreState> observableF = Observable.f(companion.getUsers().observeMe(true), companion.getGuilds().observeGuild(guildId), companion.getMemberVerificationForms().observeMemberVerificationFormData(guildId), companion.getChannels().observeNames(), companion.getGuilds().observeRoles(guildId), StoreUserSettings.observeIsAnimatedEmojisEnabled$default(companion.getUserSettings(), false, 1, null), new WidgetMemberVerificationViewModel$Companion$observeStores$1(inviteGuild));
-            m.checkNotNullExpressionValue(observableF, "Observable\n            .…          )\n            }");
-            return observableF;
+            Observable<StoreState> observableM11071f = Observable.m11071f(companion.getUsers().observeMe(true), companion.getGuilds().observeGuild(guildId), companion.getMemberVerificationForms().observeMemberVerificationFormData(guildId), companion.getChannels().observeNames(), companion.getGuilds().observeRoles(guildId), StoreUserSettings.observeIsAnimatedEmojisEnabled$default(companion.getUserSettings(), false, 1, null), new WidgetMemberVerificationViewModel2(inviteGuild));
+            Intrinsics3.checkNotNullExpressionValue(observableM11071f, "Observable\n            .…          )\n            }");
+            return observableM11071f;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -121,7 +121,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Success(Long l, String str, ApplicationStatus applicationStatus, String str2) {
                 super(null);
-                m.checkNotNullParameter(applicationStatus, "applicationStatus");
+                Intrinsics3.checkNotNullParameter(applicationStatus, "applicationStatus");
                 this.guildId = l;
                 this.guildName = str;
                 this.applicationStatus = applicationStatus;
@@ -165,7 +165,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             }
 
             public final Success copy(Long guildId, String guildName, ApplicationStatus applicationStatus, String lastSeen) {
-                m.checkNotNullParameter(applicationStatus, "applicationStatus");
+                Intrinsics3.checkNotNullParameter(applicationStatus, "applicationStatus");
                 return new Success(guildId, guildName, applicationStatus, lastSeen);
             }
 
@@ -177,7 +177,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
                     return false;
                 }
                 Success success = (Success) other;
-                return m.areEqual(this.guildId, success.guildId) && m.areEqual(this.guildName, success.guildName) && m.areEqual(this.applicationStatus, success.applicationStatus) && m.areEqual(this.lastSeen, success.lastSeen);
+                return Intrinsics3.areEqual(this.guildId, success.guildId) && Intrinsics3.areEqual(this.guildName, success.guildName) && Intrinsics3.areEqual(this.applicationStatus, success.applicationStatus) && Intrinsics3.areEqual(this.lastSeen, success.lastSeen);
             }
 
             public final ApplicationStatus getApplicationStatus() {
@@ -208,14 +208,14 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Success(guildId=");
-                sbU.append(this.guildId);
-                sbU.append(", guildName=");
-                sbU.append(this.guildName);
-                sbU.append(", applicationStatus=");
-                sbU.append(this.applicationStatus);
-                sbU.append(", lastSeen=");
-                return a.J(sbU, this.lastSeen, ")");
+                StringBuilder sbM833U = outline.m833U("Success(guildId=");
+                sbM833U.append(this.guildId);
+                sbM833U.append(", guildName=");
+                sbM833U.append(this.guildName);
+                sbM833U.append(", applicationStatus=");
+                sbM833U.append(this.applicationStatus);
+                sbM833U.append(", lastSeen=");
+                return outline.m822J(sbM833U, this.lastSeen, ")");
             }
         }
 
@@ -237,9 +237,9 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
         private final Map<Long, GuildRole> roles;
 
         public StoreState(MeUser meUser, Guild guild, StoreGuildMemberVerificationForm.MemberVerificationFormData memberVerificationFormData, Map<Long, String> map, Map<Long, GuildRole> map2, boolean z2) {
-            m.checkNotNullParameter(meUser, "me");
-            m.checkNotNullParameter(map, "channels");
-            m.checkNotNullParameter(map2, "roles");
+            Intrinsics3.checkNotNullParameter(meUser, "me");
+            Intrinsics3.checkNotNullParameter(map, "channels");
+            Intrinsics3.checkNotNullParameter(map2, "roles");
             this.me = meUser;
             this.guild = guild;
             this.memberVerificationFormData = memberVerificationFormData;
@@ -303,9 +303,9 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
         }
 
         public final StoreState copy(MeUser me2, Guild guild, StoreGuildMemberVerificationForm.MemberVerificationFormData memberVerificationFormData, Map<Long, String> channels, Map<Long, GuildRole> roles, boolean allowAnimatedEmojis) {
-            m.checkNotNullParameter(me2, "me");
-            m.checkNotNullParameter(channels, "channels");
-            m.checkNotNullParameter(roles, "roles");
+            Intrinsics3.checkNotNullParameter(me2, "me");
+            Intrinsics3.checkNotNullParameter(channels, "channels");
+            Intrinsics3.checkNotNullParameter(roles, "roles");
             return new StoreState(me2, guild, memberVerificationFormData, channels, roles, allowAnimatedEmojis);
         }
 
@@ -317,7 +317,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.me, storeState.me) && m.areEqual(this.guild, storeState.guild) && m.areEqual(this.memberVerificationFormData, storeState.memberVerificationFormData) && m.areEqual(this.channels, storeState.channels) && m.areEqual(this.roles, storeState.roles) && this.allowAnimatedEmojis == storeState.allowAnimatedEmojis;
+            return Intrinsics3.areEqual(this.me, storeState.me) && Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.memberVerificationFormData, storeState.memberVerificationFormData) && Intrinsics3.areEqual(this.channels, storeState.channels) && Intrinsics3.areEqual(this.roles, storeState.roles) && this.allowAnimatedEmojis == storeState.allowAnimatedEmojis;
         }
 
         public final boolean getAllowAnimatedEmojis() {
@@ -365,18 +365,18 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(me=");
-            sbU.append(this.me);
-            sbU.append(", guild=");
-            sbU.append(this.guild);
-            sbU.append(", memberVerificationFormData=");
-            sbU.append(this.memberVerificationFormData);
-            sbU.append(", channels=");
-            sbU.append(this.channels);
-            sbU.append(", roles=");
-            sbU.append(this.roles);
-            sbU.append(", allowAnimatedEmojis=");
-            return a.O(sbU, this.allowAnimatedEmojis, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(me=");
+            sbM833U.append(this.me);
+            sbM833U.append(", guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", memberVerificationFormData=");
+            sbM833U.append(this.memberVerificationFormData);
+            sbM833U.append(", channels=");
+            sbM833U.append(this.channels);
+            sbM833U.append(", roles=");
+            sbM833U.append(this.roles);
+            sbM833U.append(", allowAnimatedEmojis=");
+            return outline.m827O(sbM833U, this.allowAnimatedEmojis, ")");
         }
     }
 
@@ -418,9 +418,9 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(boolean z2, boolean z3, boolean z4, VerificationType verificationType, boolean z5, List<? extends MemberVerificationItem> list, ModelMemberVerificationForm modelMemberVerificationForm, Map<Long, String> map, Map<Long, GuildRole> map2, boolean z6, boolean z7, boolean z8, Guild guild) {
                 super(null);
-                m.checkNotNullParameter(list, "formItems");
-                m.checkNotNullParameter(map, "channelNames");
-                m.checkNotNullParameter(map2, "roles");
+                Intrinsics3.checkNotNullParameter(list, "formItems");
+                Intrinsics3.checkNotNullParameter(map, "channelNames");
+                Intrinsics3.checkNotNullParameter(map2, "roles");
                 this.isRulesListVisible = z2;
                 this.submitting = z3;
                 this.disabled = z4;
@@ -503,9 +503,9 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(boolean isRulesListVisible, boolean submitting, boolean disabled, VerificationType verificationType, boolean needsAdditionalVerification, List<? extends MemberVerificationItem> formItems, ModelMemberVerificationForm form, Map<Long, String> channelNames, Map<Long, GuildRole> roles, boolean allowAnimatedEmojis, boolean isFormValid, boolean isTermsApproved, Guild guild) {
-                m.checkNotNullParameter(formItems, "formItems");
-                m.checkNotNullParameter(channelNames, "channelNames");
-                m.checkNotNullParameter(roles, "roles");
+                Intrinsics3.checkNotNullParameter(formItems, "formItems");
+                Intrinsics3.checkNotNullParameter(channelNames, "channelNames");
+                Intrinsics3.checkNotNullParameter(roles, "roles");
                 return new Loaded(isRulesListVisible, submitting, disabled, verificationType, needsAdditionalVerification, formItems, form, channelNames, roles, allowAnimatedEmojis, isFormValid, isTermsApproved, guild);
             }
 
@@ -517,7 +517,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return this.isRulesListVisible == loaded.isRulesListVisible && this.submitting == loaded.submitting && this.disabled == loaded.disabled && m.areEqual(this.verificationType, loaded.verificationType) && this.needsAdditionalVerification == loaded.needsAdditionalVerification && m.areEqual(this.formItems, loaded.formItems) && m.areEqual(this.form, loaded.form) && m.areEqual(this.channelNames, loaded.channelNames) && m.areEqual(this.roles, loaded.roles) && this.allowAnimatedEmojis == loaded.allowAnimatedEmojis && this.isFormValid == loaded.isFormValid && this.isTermsApproved == loaded.isTermsApproved && m.areEqual(this.guild, loaded.guild);
+                return this.isRulesListVisible == loaded.isRulesListVisible && this.submitting == loaded.submitting && this.disabled == loaded.disabled && Intrinsics3.areEqual(this.verificationType, loaded.verificationType) && this.needsAdditionalVerification == loaded.needsAdditionalVerification && Intrinsics3.areEqual(this.formItems, loaded.formItems) && Intrinsics3.areEqual(this.form, loaded.form) && Intrinsics3.areEqual(this.channelNames, loaded.channelNames) && Intrinsics3.areEqual(this.roles, loaded.roles) && this.allowAnimatedEmojis == loaded.allowAnimatedEmojis && this.isFormValid == loaded.isFormValid && this.isTermsApproved == loaded.isTermsApproved && Intrinsics3.areEqual(this.guild, loaded.guild);
             }
 
             public final boolean getAllowAnimatedEmojis() {
@@ -635,34 +635,34 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(isRulesListVisible=");
-                sbU.append(this.isRulesListVisible);
-                sbU.append(", submitting=");
-                sbU.append(this.submitting);
-                sbU.append(", disabled=");
-                sbU.append(this.disabled);
-                sbU.append(", verificationType=");
-                sbU.append(this.verificationType);
-                sbU.append(", needsAdditionalVerification=");
-                sbU.append(this.needsAdditionalVerification);
-                sbU.append(", formItems=");
-                sbU.append(this.formItems);
-                sbU.append(", form=");
-                sbU.append(this.form);
-                sbU.append(", channelNames=");
-                sbU.append(this.channelNames);
-                sbU.append(", roles=");
-                sbU.append(this.roles);
-                sbU.append(", allowAnimatedEmojis=");
-                sbU.append(this.allowAnimatedEmojis);
-                sbU.append(", isFormValid=");
-                sbU.append(this.isFormValid);
-                sbU.append(", isTermsApproved=");
-                sbU.append(this.isTermsApproved);
-                sbU.append(", guild=");
-                sbU.append(this.guild);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Loaded(isRulesListVisible=");
+                sbM833U.append(this.isRulesListVisible);
+                sbM833U.append(", submitting=");
+                sbM833U.append(this.submitting);
+                sbM833U.append(", disabled=");
+                sbM833U.append(this.disabled);
+                sbM833U.append(", verificationType=");
+                sbM833U.append(this.verificationType);
+                sbM833U.append(", needsAdditionalVerification=");
+                sbM833U.append(this.needsAdditionalVerification);
+                sbM833U.append(", formItems=");
+                sbM833U.append(this.formItems);
+                sbM833U.append(", form=");
+                sbM833U.append(this.form);
+                sbM833U.append(", channelNames=");
+                sbM833U.append(this.channelNames);
+                sbM833U.append(", roles=");
+                sbM833U.append(this.roles);
+                sbM833U.append(", allowAnimatedEmojis=");
+                sbM833U.append(this.allowAnimatedEmojis);
+                sbM833U.append(", isFormValid=");
+                sbM833U.append(this.isFormValid);
+                sbM833U.append(", isTermsApproved=");
+                sbM833U.append(this.isTermsApproved);
+                sbM833U.append(", guild=");
+                sbM833U.append(this.guild);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -705,32 +705,32 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetMemberVerificationViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$applyToJoinGuild$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$applyToJoinGuild$3 */
+    public static final class C95663 extends Lambda implements Function1<Error, Unit> {
+        public C95663() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             WidgetMemberVerificationViewModel.access$handleGuildUpdateError(WidgetMemberVerificationViewModel.this);
         }
     }
 
     /* compiled from: WidgetMemberVerificationViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$applyToJoinGuild$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<ModelMemberVerificationFormResponse, Unit> {
+    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$applyToJoinGuild$4 */
+    public static final class C95674 extends Lambda implements Function1<ModelMemberVerificationFormResponse, Unit> {
         public final /* synthetic */ ViewState.Loaded $currentViewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass4(ViewState.Loaded loaded) {
+        public C95674(ViewState.Loaded loaded) {
             super(1);
             this.$currentViewState = loaded;
         }
@@ -738,18 +738,18 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelMemberVerificationFormResponse modelMemberVerificationFormResponse) {
             invoke2(modelMemberVerificationFormResponse);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelMemberVerificationFormResponse modelMemberVerificationFormResponse) {
-            m.checkNotNullParameter(modelMemberVerificationFormResponse, "it");
+            Intrinsics3.checkNotNullParameter(modelMemberVerificationFormResponse, "it");
             WidgetMemberVerificationViewModel.access$updateViewState(WidgetMemberVerificationViewModel.this, ViewState.Loaded.copy$default(this.$currentViewState, false, false, false, null, false, null, null, null, null, false, false, false, null, 8189, null));
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetMemberVerificationViewModel.access$getEventSubject$p(WidgetMemberVerificationViewModel.this);
             Guild guild = this.$currentViewState.getGuild();
             Long lValueOf = guild != null ? Long.valueOf(guild.getId()) : null;
             Guild guild2 = this.$currentViewState.getGuild();
-            publishSubjectAccess$getEventSubject$p.k.onNext(new Event.Success(lValueOf, guild2 != null ? guild2.getName() : null, modelMemberVerificationFormResponse.getApplicationStatus(), modelMemberVerificationFormResponse.getLastSeen()));
+            publishSubjectAccess$getEventSubject$p.f27650k.onNext(new Event.Success(lValueOf, guild2 != null ? guild2.getName() : null, modelMemberVerificationFormResponse.getApplicationStatus(), modelMemberVerificationFormResponse.getLastSeen()));
         }
     }
 
@@ -777,7 +777,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
 
     private final List<MemberVerificationItem> createFormItems(List<ModelMemberVerificationForm.FormField> formFields, boolean isTermsApproved, Map<Long, String> channelNames, Map<Long, GuildRole> roles, boolean allowAnimatedEmojis) {
         if (formFields == null || formFields.isEmpty()) {
-            return n.emptyList();
+            return Collections2.emptyList();
         }
         ArrayList arrayList = new ArrayList();
         for (ModelMemberVerificationForm.FormField formField : formFields) {
@@ -824,7 +824,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
         if (loaded != null) {
             updateViewState(ViewState.Loaded.copy$default(loaded, false, false, false, null, false, null, null, null, null, false, false, false, null, 8189, null));
             PublishSubject<Event> publishSubject = this.eventSubject;
-            publishSubject.k.onNext(Event.Error.INSTANCE);
+            publishSubject.f27650k.onNext(Event.Error.INSTANCE);
         }
     }
 
@@ -898,7 +898,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
         }
         ViewState.Loaded loaded = (ViewState.Loaded) viewState;
         List<ModelMemberVerificationForm.FormField> formFields2 = (loaded == null || (form = loaded.getForm()) == null) ? null : form.getFormFields();
-        if (formFields == null || !(!m.areEqual(formFields2, formFields))) {
+        if (formFields == null || !(!Intrinsics3.areEqual(formFields2, formFields))) {
             z3 = false;
         } else {
             this.formUserInputDataMap.clear();
@@ -907,7 +907,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             for (Object obj : formFields) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    n.throwIndexOverflow();
+                    Collections2.throwIndexOverflow();
                 }
                 if (((ModelMemberVerificationForm.FormField) obj).getMemberVerificationFieldType() != ModelMemberVerificationForm.MemberVerificationFieldType.TERMS) {
                     this.formUserInputDataMap.put(Integer.valueOf(i), null);
@@ -971,7 +971,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             updateViewState(ViewState.Loaded.copy$default(loaded, false, true, false, null, false, null, null, null, null, false, false, false, null, 8189, null));
             ModelMemberVerificationForm form = loaded.getForm();
             if (form == null || (listEmptyList = form.getFormFields()) == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             for (Map.Entry<Integer, Object> entry : this.formUserInputDataMap.entrySet()) {
                 int iIntValue = entry.getKey().intValue();
@@ -984,7 +984,7 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             for (Object obj : listEmptyList) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    n.throwIndexOverflow();
+                    Collections2.throwIndexOverflow();
                 }
                 if (((ModelMemberVerificationForm.FormField) obj).getMemberVerificationFieldType() == ModelMemberVerificationForm.MemberVerificationFieldType.TERMS) {
                     listEmptyList.get(i).setResponse(Boolean.valueOf(loaded.isTermsApproved()));
@@ -994,17 +994,17 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
             RestAPI restAPI = this.restAPI;
             long j = this.guildId;
             ModelMemberVerificationForm form2 = loaded.getForm();
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(restAPI.createGuildJoinRequest(j, new RestAPIParams.MemberVerificationForm(listEmptyList, form2 != null ? form2.getVersion() : null)), false, 1, null), this, null, 2, null), WidgetMemberVerificationViewModel.class, (Context) null, (Function1) null, new AnonymousClass3(), (Function0) null, (Function0) null, new AnonymousClass4(loaded), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(restAPI.createGuildJoinRequest(j, new RestAPIParams.MemberVerificationForm(listEmptyList, form2 != null ? form2.getVersion() : null)), false, 1, null), this, null, 2, null), WidgetMemberVerificationViewModel.class, (Context) null, (Function1) null, new C95663(), (Function0) null, (Function0) null, new C95674(loaded), 54, (Object) null);
         }
     }
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
-    @Override // b.a.d.d0, androidx.view.ViewModel
+    @Override // p007b.p008a.p018d.AppViewModel, androidx.view.ViewModel
     public void onCleared() {
         super.onCleared();
         AnalyticsTracker.INSTANCE.dismissModal("Membership Gating", this.location, "dismissed", Long.valueOf(this.guildId));
@@ -1042,20 +1042,20 @@ public final class WidgetMemberVerificationViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetMemberVerificationViewModel(long j, String str, Guild guild, StoreGuildMemberVerificationForm storeGuildMemberVerificationForm, RestAPI restAPI, Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState> parser, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
-        m.checkNotNullParameter(storeGuildMemberVerificationForm, "storeGuildMemberVerificationForm");
-        m.checkNotNullParameter(restAPI, "restAPI");
-        m.checkNotNullParameter(parser, "rulesParser");
-        m.checkNotNullParameter(observable, "storeObservable");
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
+        Intrinsics3.checkNotNullParameter(storeGuildMemberVerificationForm, "storeGuildMemberVerificationForm");
+        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
+        Intrinsics3.checkNotNullParameter(parser, "rulesParser");
+        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
         this.guildId = j;
         this.location = str;
         this.inviteGuild = guild;
         this.restAPI = restAPI;
         this.rulesParser = parser;
-        this.eventSubject = PublishSubject.k0();
+        this.eventSubject = PublishSubject.m11133k0();
         this.formUserInputDataMap = new HashMap();
         AnalyticsTracker.openModal("Membership Gating", str, Long.valueOf(j));
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetMemberVerificationViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetMemberVerificationViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C95651(), 62, (Object) null);
         storeGuildMemberVerificationForm.fetchMemberVerificationForm(j);
     }
 }

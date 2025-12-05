@@ -50,11 +50,11 @@ public class FrameMetricsAggregator {
         public int mTrackingFlags;
         public SparseIntArray[] mMetrics = new SparseIntArray[9];
         private ArrayList<WeakReference<Activity>> mActivities = new ArrayList<>();
-        public Window.OnFrameMetricsAvailableListener mListener = new AnonymousClass1();
+        public Window.OnFrameMetricsAvailableListener mListener = new WindowOnFrameMetricsAvailableListenerC02181();
 
-        /* renamed from: androidx.core.app.FrameMetricsAggregator$FrameMetricsApi24Impl$1, reason: invalid class name */
-        public class AnonymousClass1 implements Window.OnFrameMetricsAvailableListener {
-            public AnonymousClass1() {
+        /* renamed from: androidx.core.app.FrameMetricsAggregator$FrameMetricsApi24Impl$1 */
+        public class WindowOnFrameMetricsAvailableListenerC02181 implements Window.OnFrameMetricsAvailableListener {
+            public WindowOnFrameMetricsAvailableListenerC02181() {
             }
 
             @Override // android.view.Window.OnFrameMetricsAvailableListener

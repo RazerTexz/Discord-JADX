@@ -1,0 +1,105 @@
+package p007b.p225i.p414e.p418n;
+
+/* compiled from: PerspectiveTransform.java */
+/* renamed from: b.i.e.n.i, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class PerspectiveTransform {
+
+    /* renamed from: a */
+    public final float f13281a;
+
+    /* renamed from: b */
+    public final float f13282b;
+
+    /* renamed from: c */
+    public final float f13283c;
+
+    /* renamed from: d */
+    public final float f13284d;
+
+    /* renamed from: e */
+    public final float f13285e;
+
+    /* renamed from: f */
+    public final float f13286f;
+
+    /* renamed from: g */
+    public final float f13287g;
+
+    /* renamed from: h */
+    public final float f13288h;
+
+    /* renamed from: i */
+    public final float f13289i;
+
+    public PerspectiveTransform(float f, float f2, float f3, float f4, float f5, float f6, float f7, float f8, float f9) {
+        this.f13281a = f;
+        this.f13282b = f4;
+        this.f13283c = f7;
+        this.f13284d = f2;
+        this.f13285e = f5;
+        this.f13286f = f8;
+        this.f13287g = f3;
+        this.f13288h = f6;
+        this.f13289i = f9;
+    }
+
+    /* renamed from: a */
+    public static PerspectiveTransform m6954a(float f, float f2, float f3, float f4, float f5, float f6, float f7, float f8, float f9, float f10, float f11, float f12, float f13, float f14, float f15, float f16) {
+        PerspectiveTransform perspectiveTransformM6955b = m6955b(f, f2, f3, f4, f5, f6, f7, f8);
+        float f17 = perspectiveTransformM6955b.f13285e;
+        float f18 = perspectiveTransformM6955b.f13289i;
+        float f19 = perspectiveTransformM6955b.f13286f;
+        float f20 = perspectiveTransformM6955b.f13288h;
+        float f21 = (f17 * f18) - (f19 * f20);
+        float f22 = perspectiveTransformM6955b.f13287g;
+        float f23 = perspectiveTransformM6955b.f13284d;
+        float f24 = (f19 * f22) - (f23 * f18);
+        float f25 = (f23 * f20) - (f17 * f22);
+        float f26 = perspectiveTransformM6955b.f13283c;
+        float f27 = perspectiveTransformM6955b.f13282b;
+        float f28 = (f26 * f20) - (f27 * f18);
+        float f29 = perspectiveTransformM6955b.f13281a;
+        float f30 = (f18 * f29) - (f26 * f22);
+        float f31 = (f22 * f27) - (f20 * f29);
+        float f32 = (f27 * f19) - (f26 * f17);
+        float f33 = (f26 * f23) - (f19 * f29);
+        float f34 = (f29 * f17) - (f27 * f23);
+        PerspectiveTransform perspectiveTransformM6955b2 = m6955b(f9, f10, f11, f12, f13, f14, f15, f16);
+        float f35 = perspectiveTransformM6955b2.f13281a;
+        float f36 = perspectiveTransformM6955b2.f13284d;
+        float f37 = perspectiveTransformM6955b2.f13287g;
+        float f38 = (f36 * f28) + (f35 * f21) + (f37 * f32);
+        float f39 = (f37 * f33) + (f36 * f30) + (f35 * f24);
+        float f40 = f37 * f34;
+        float f41 = f40 + (f36 * f31) + (f35 * f25);
+        float f42 = perspectiveTransformM6955b2.f13282b;
+        float f43 = perspectiveTransformM6955b2.f13285e;
+        float f44 = perspectiveTransformM6955b2.f13288h;
+        float f45 = (f44 * f32) + (f43 * f28) + (f42 * f21);
+        float f46 = (f44 * f33) + (f43 * f30) + (f42 * f24);
+        float f47 = (f43 * f31) + (f42 * f25) + (f44 * f34);
+        float f48 = perspectiveTransformM6955b2.f13283c;
+        float f49 = perspectiveTransformM6955b2.f13286f;
+        float f50 = f28 * f49;
+        float f51 = perspectiveTransformM6955b2.f13289i;
+        return new PerspectiveTransform(f38, f39, f41, f45, f46, f47, (f32 * f51) + f50 + (f21 * f48), (f30 * f49) + (f24 * f48) + (f33 * f51), (f51 * f34) + (f49 * f31) + (f48 * f25));
+    }
+
+    /* renamed from: b */
+    public static PerspectiveTransform m6955b(float f, float f2, float f3, float f4, float f5, float f6, float f7, float f8) {
+        float f9 = ((f - f3) + f5) - f7;
+        float f10 = ((f2 - f4) + f6) - f8;
+        if (f9 == 0.0f && f10 == 0.0f) {
+            return new PerspectiveTransform(f3 - f, f5 - f3, f, f4 - f2, f6 - f4, f2, 0.0f, 0.0f, 1.0f);
+        }
+        float f11 = f3 - f5;
+        float f12 = f7 - f5;
+        float f13 = f4 - f6;
+        float f14 = f8 - f6;
+        float f15 = (f11 * f14) - (f12 * f13);
+        float f16 = ((f14 * f9) - (f12 * f10)) / f15;
+        float f17 = ((f11 * f10) - (f9 * f13)) / f15;
+        return new PerspectiveTransform((f16 * f3) + (f3 - f), (f17 * f7) + (f7 - f), f, (f16 * f4) + (f4 - f2), (f17 * f8) + (f8 - f2), f2, f16, f17, 1.0f);
+    }
+}

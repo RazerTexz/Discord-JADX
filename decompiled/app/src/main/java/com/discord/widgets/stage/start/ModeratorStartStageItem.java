@@ -3,15 +3,15 @@ package com.discord.widgets.stage.start;
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.models.guild.UserGuildMember;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModeratorStartStageItem.kt */
 /* loaded from: classes2.dex */
@@ -55,7 +55,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
 
         public final Continue copy(int type, String key) {
-            m.checkNotNullParameter(key, "key");
+            Intrinsics3.checkNotNullParameter(key, "key");
             return new Continue(type, key);
         }
 
@@ -67,7 +67,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 return false;
             }
             Continue r3 = (Continue) other;
-            return getType() == r3.getType() && m.areEqual(getKey(), r3.getKey());
+            return getType() == r3.getType() && Intrinsics3.areEqual(getKey(), r3.getKey());
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -87,18 +87,18 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Continue(type=");
-            sbU.append(getType());
-            sbU.append(", key=");
-            sbU.append(getKey());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Continue(type=");
+            sbM833U.append(getType());
+            sbM833U.append(", key=");
+            sbM833U.append(getKey());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Continue(int i, String str) {
             super(null);
-            m.checkNotNullParameter(str, "key");
+            Intrinsics3.checkNotNullParameter(str, "key");
             this.type = i;
             this.key = str;
         }
@@ -136,7 +136,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
 
         public final Header copy(int type, String key) {
-            m.checkNotNullParameter(key, "key");
+            Intrinsics3.checkNotNullParameter(key, "key");
             return new Header(type, key);
         }
 
@@ -148,7 +148,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 return false;
             }
             Header header = (Header) other;
-            return getType() == header.getType() && m.areEqual(getKey(), header.getKey());
+            return getType() == header.getType() && Intrinsics3.areEqual(getKey(), header.getKey());
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -168,18 +168,18 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Header(type=");
-            sbU.append(getType());
-            sbU.append(", key=");
-            sbU.append(getKey());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Header(type=");
+            sbM833U.append(getType());
+            sbM833U.append(", key=");
+            sbM833U.append(getKey());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Header(int i, String str) {
             super(null);
-            m.checkNotNullParameter(str, "key");
+            Intrinsics3.checkNotNullParameter(str, "key");
             this.type = i;
             this.key = str;
         }
@@ -198,8 +198,8 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Event(GuildScheduledEvent guildScheduledEvent) {
-                super(0, String.valueOf(guildScheduledEvent.getId()), R.drawable.ic_event_20dp, R.color.status_green_600, 1, null);
-                m.checkNotNullParameter(guildScheduledEvent, "event");
+                super(0, String.valueOf(guildScheduledEvent.getId()), C5419R.drawable.ic_event_20dp, C5419R.color.status_green_600, 1, null);
+                Intrinsics3.checkNotNullParameter(guildScheduledEvent, "event");
                 this.event = guildScheduledEvent;
             }
 
@@ -216,13 +216,13 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
             }
 
             public final Event copy(GuildScheduledEvent event) {
-                m.checkNotNullParameter(event, "event");
+                Intrinsics3.checkNotNullParameter(event, "event");
                 return new Event(event);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Event) && m.areEqual(this.event, ((Event) other).event);
+                    return (other instanceof Event) && Intrinsics3.areEqual(this.event, ((Event) other).event);
                 }
                 return true;
             }
@@ -240,10 +240,10 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Event(event=");
-                sbU.append(this.event);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Event(event=");
+                sbM833U.append(this.event);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -279,13 +279,13 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 }
 
                 public final ScheduleEvent copy(String key) {
-                    m.checkNotNullParameter(key, "key");
+                    Intrinsics3.checkNotNullParameter(key, "key");
                     return new ScheduleEvent(key);
                 }
 
                 public boolean equals(Object other) {
                     if (this != other) {
-                        return (other instanceof ScheduleEvent) && m.areEqual(getKey(), ((ScheduleEvent) other).getKey());
+                        return (other instanceof ScheduleEvent) && Intrinsics3.areEqual(getKey(), ((ScheduleEvent) other).getKey());
                     }
                     return true;
                 }
@@ -304,16 +304,16 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("ScheduleEvent(key=");
-                    sbU.append(getKey());
-                    sbU.append(")");
-                    return sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("ScheduleEvent(key=");
+                    sbM833U.append(getKey());
+                    sbM833U.append(")");
+                    return sbM833U.toString();
                 }
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 public ScheduleEvent(String str) {
-                    super(str, R.drawable.ic_event_20dp, R.color.brand_new_500, R.string.schedule_event, R.string.schedule_event_description, null);
-                    m.checkNotNullParameter(str, "key");
+                    super(str, C5419R.drawable.ic_event_20dp, C5419R.color.brand_new_500, C5419R.string.schedule_event, C5419R.string.schedule_event_description, null);
+                    Intrinsics3.checkNotNullParameter(str, "key");
                     this.key = str;
                 }
             }
@@ -342,13 +342,13 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 }
 
                 public final StartStage copy(String key) {
-                    m.checkNotNullParameter(key, "key");
+                    Intrinsics3.checkNotNullParameter(key, "key");
                     return new StartStage(key);
                 }
 
                 public boolean equals(Object other) {
                     if (this != other) {
-                        return (other instanceof StartStage) && m.areEqual(getKey(), ((StartStage) other).getKey());
+                        return (other instanceof StartStage) && Intrinsics3.areEqual(getKey(), ((StartStage) other).getKey());
                     }
                     return true;
                 }
@@ -367,16 +367,16 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("StartStage(key=");
-                    sbU.append(getKey());
-                    sbU.append(")");
-                    return sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("StartStage(key=");
+                    sbM833U.append(getKey());
+                    sbM833U.append(")");
+                    return sbM833U.toString();
                 }
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 public StartStage(String str) {
-                    super(str, R.drawable.ic_channel_stage_24dp, R.color.status_green_600, R.string.stage_channel_start_title, R.string.stage_channel_start_subtitle, null);
-                    m.checkNotNullParameter(str, "key");
+                    super(str, C5419R.drawable.ic_channel_stage_24dp, C5419R.color.status_green_600, C5419R.string.stage_channel_start_title, C5419R.string.stage_channel_start_subtitle, null);
+                    Intrinsics3.checkNotNullParameter(str, "key");
                     this.key = str;
                 }
             }
@@ -486,8 +486,8 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
 
         public final Waiting copy(int type, String key, List<UserGuildMember> users) {
-            m.checkNotNullParameter(key, "key");
-            m.checkNotNullParameter(users, "users");
+            Intrinsics3.checkNotNullParameter(key, "key");
+            Intrinsics3.checkNotNullParameter(users, "users");
             return new Waiting(type, key, users);
         }
 
@@ -499,7 +499,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 return false;
             }
             Waiting waiting = (Waiting) other;
-            return getType() == waiting.getType() && m.areEqual(getKey(), waiting.getKey()) && m.areEqual(this.users, waiting.users);
+            return getType() == waiting.getType() && Intrinsics3.areEqual(getKey(), waiting.getKey()) && Intrinsics3.areEqual(this.users, waiting.users);
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -525,19 +525,19 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Waiting(type=");
-            sbU.append(getType());
-            sbU.append(", key=");
-            sbU.append(getKey());
-            sbU.append(", users=");
-            return a.L(sbU, this.users, ")");
+            StringBuilder sbM833U = outline.m833U("Waiting(type=");
+            sbM833U.append(getType());
+            sbM833U.append(", key=");
+            sbM833U.append(getKey());
+            sbM833U.append(", users=");
+            return outline.m824L(sbM833U, this.users, ")");
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Waiting(int i, String str, List<UserGuildMember> list) {
             super(null);
-            m.checkNotNullParameter(str, "key");
-            m.checkNotNullParameter(list, "users");
+            Intrinsics3.checkNotNullParameter(str, "key");
+            Intrinsics3.checkNotNullParameter(list, "users");
             this.type = i;
             this.key = str;
             this.users = list;

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackUpdateRelationship.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean isInitiator = null;
     private final Long mutualGuilds = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema
             return false;
         }
         TrackUpdateRelationship trackUpdateRelationship = (TrackUpdateRelationship) other;
-        return m.areEqual(this.isInitiator, trackUpdateRelationship.isInitiator) && m.areEqual(this.mutualGuilds, trackUpdateRelationship.mutualGuilds) && m.areEqual(this.otherUser, trackUpdateRelationship.otherUser) && m.areEqual(this.type, trackUpdateRelationship.type) && m.areEqual(this.userGuilds, trackUpdateRelationship.userGuilds);
+        return Intrinsics3.areEqual(this.isInitiator, trackUpdateRelationship.isInitiator) && Intrinsics3.areEqual(this.mutualGuilds, trackUpdateRelationship.mutualGuilds) && Intrinsics3.areEqual(this.otherUser, trackUpdateRelationship.otherUser) && Intrinsics3.areEqual(this.type, trackUpdateRelationship.type) && Intrinsics3.areEqual(this.userGuilds, trackUpdateRelationship.userGuilds);
     }
 
     public int hashCode() {
@@ -48,15 +48,15 @@ public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackUpdateRelationship(isInitiator=");
-        sbU.append(this.isInitiator);
-        sbU.append(", mutualGuilds=");
-        sbU.append(this.mutualGuilds);
-        sbU.append(", otherUser=");
-        sbU.append(this.otherUser);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", userGuilds=");
-        return a.G(sbU, this.userGuilds, ")");
+        StringBuilder sbM833U = outline.m833U("TrackUpdateRelationship(isInitiator=");
+        sbM833U.append(this.isInitiator);
+        sbM833U.append(", mutualGuilds=");
+        sbM833U.append(this.mutualGuilds);
+        sbM833U.append(", otherUser=");
+        sbM833U.append(this.otherUser);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", userGuilds=");
+        return outline.m819G(sbM833U, this.userGuilds, ")");
     }
 }

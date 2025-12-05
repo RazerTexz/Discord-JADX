@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackPaymentMetadata;
-import com.discord.analytics.generated.traits.TrackPaymentMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackPaymentMetadata2;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStoreDirectoryHeroViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStoreDirectoryHeroViewed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackStoreSkuMetadataReceiver, TrackPaymentMetadataReceiver {
+public final /* data */ class TrackStoreDirectoryHeroViewed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackStoreSkuMetadata2, TrackPaymentMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackPaymentMetadata trackPaymentMetadata;
@@ -38,7 +38,7 @@ public final /* data */ class TrackStoreDirectoryHeroViewed implements Analytics
             return false;
         }
         TrackStoreDirectoryHeroViewed trackStoreDirectoryHeroViewed = (TrackStoreDirectoryHeroViewed) other;
-        return m.areEqual(this.loadId, trackStoreDirectoryHeroViewed.loadId) && m.areEqual(this.cardIndex, trackStoreDirectoryHeroViewed.cardIndex) && m.areEqual(this.cardType, trackStoreDirectoryHeroViewed.cardType);
+        return Intrinsics3.areEqual(this.loadId, trackStoreDirectoryHeroViewed.loadId) && Intrinsics3.areEqual(this.cardIndex, trackStoreDirectoryHeroViewed.cardIndex) && Intrinsics3.areEqual(this.cardType, trackStoreDirectoryHeroViewed.cardType);
     }
 
     public int hashCode() {
@@ -51,11 +51,11 @@ public final /* data */ class TrackStoreDirectoryHeroViewed implements Analytics
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStoreDirectoryHeroViewed(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", cardIndex=");
-        sbU.append(this.cardIndex);
-        sbU.append(", cardType=");
-        return a.E(sbU, this.cardType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStoreDirectoryHeroViewed(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", cardIndex=");
+        sbM833U.append(this.cardIndex);
+        sbM833U.append(", cardType=");
+        return outline.m817E(sbM833U, this.cardType, ")");
     }
 }

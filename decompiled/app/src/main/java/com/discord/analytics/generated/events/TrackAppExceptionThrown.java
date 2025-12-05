@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAppExceptionThrown.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAppExceptionThrown implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackAppExceptionThrown implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence stacktrace = null;
     private final transient String analyticsSchemaTypeName = "app_exception_thrown";
@@ -21,7 +21,7 @@ public final /* data */ class TrackAppExceptionThrown implements AnalyticsSchema
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackAppExceptionThrown) && m.areEqual(this.stacktrace, ((TrackAppExceptionThrown) other).stacktrace);
+            return (other instanceof TrackAppExceptionThrown) && Intrinsics3.areEqual(this.stacktrace, ((TrackAppExceptionThrown) other).stacktrace);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackAppExceptionThrown implements AnalyticsSchema
     }
 
     public String toString() {
-        return a.E(a.U("TrackAppExceptionThrown(stacktrace="), this.stacktrace, ")");
+        return outline.m817E(outline.m833U("TrackAppExceptionThrown(stacktrace="), this.stacktrace, ")");
     }
 }

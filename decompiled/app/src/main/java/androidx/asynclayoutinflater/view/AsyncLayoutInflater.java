@@ -21,13 +21,13 @@ import java.util.concurrent.ArrayBlockingQueue;
 public final class AsyncLayoutInflater {
     private static final String TAG = "AsyncLayoutInflater";
     public LayoutInflater mInflater;
-    private Handler.Callback mHandlerCallback = new AnonymousClass1();
+    private Handler.Callback mHandlerCallback = new C01421();
     public Handler mHandler = new Handler(this.mHandlerCallback);
     public InflateThread mInflateThread = InflateThread.getInstance();
 
-    /* renamed from: androidx.asynclayoutinflater.view.AsyncLayoutInflater$1, reason: invalid class name */
-    public class AnonymousClass1 implements Handler.Callback {
-        public AnonymousClass1() {
+    /* renamed from: androidx.asynclayoutinflater.view.AsyncLayoutInflater$1 */
+    public class C01421 implements Handler.Callback {
+        public C01421() {
         }
 
         @Override // android.os.Handler.Callback

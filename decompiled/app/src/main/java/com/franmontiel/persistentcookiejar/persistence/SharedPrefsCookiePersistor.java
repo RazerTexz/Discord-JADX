@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 import com.adjust.sdk.Constants;
-import f0.n;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -16,35 +15,40 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import p600f0.Cookie;
 
 @SuppressLint({"CommitPrefEdits"})
 /* loaded from: classes3.dex */
 public class SharedPrefsCookiePersistor implements CookiePersistor {
-    public final SharedPreferences a;
+
+    /* renamed from: a */
+    public final SharedPreferences f19672a;
 
     public SharedPrefsCookiePersistor(Context context) {
-        this.a = context.getSharedPreferences("CookiePersistence", 0);
+        this.f19672a = context.getSharedPreferences("CookiePersistence", 0);
     }
 
-    public static String b(n nVar) {
+    /* renamed from: b */
+    public static String m8748b(Cookie cookie) {
         StringBuilder sb = new StringBuilder();
-        sb.append(nVar.k ? Constants.SCHEME : "http");
+        sb.append(cookie.f25952k ? Constants.SCHEME : "http");
         sb.append("://");
-        sb.append(nVar.i);
-        sb.append(nVar.j);
+        sb.append(cookie.f25950i);
+        sb.append(cookie.f25951j);
         sb.append("|");
-        sb.append(nVar.f);
+        sb.append(cookie.f25947f);
         return sb.toString();
     }
 
     @Override // com.franmontiel.persistentcookiejar.persistence.CookiePersistor
-    public void a(Collection<n> collection) throws Throwable {
+    /* renamed from: a */
+    public void mo8747a(Collection<Cookie> collection) throws Throwable {
         ObjectOutputStream objectOutputStream;
-        SharedPreferences.Editor editorEdit = this.a.edit();
-        for (n nVar : collection) {
-            String strB = b(nVar);
+        SharedPreferences.Editor editorEdit = this.f19672a.edit();
+        for (Cookie cookie : collection) {
+            String strM8748b = m8748b(cookie);
             SerializableCookie serializableCookie = new SerializableCookie();
-            serializableCookie.k = nVar;
+            serializableCookie.f19671k = cookie;
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             ObjectOutputStream objectOutputStream2 = null;
             string = null;
@@ -58,7 +62,7 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
                         try {
                             objectOutputStream.close();
                         } catch (IOException e) {
-                            Log.d(SerializableCookie.j, "Stream not closed in encodeCookie", e);
+                            Log.d(SerializableCookie.f19670j, "Stream not closed in encodeCookie", e);
                         }
                         byte[] byteArray = byteArrayOutputStream.toByteArray();
                         StringBuilder sb = new StringBuilder(byteArray.length * 2);
@@ -72,15 +76,15 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
                         string = sb.toString();
                     } catch (IOException e2) {
                         e = e2;
-                        Log.d(SerializableCookie.j, "IOException in encodeCookie", e);
+                        Log.d(SerializableCookie.f19670j, "IOException in encodeCookie", e);
                         if (objectOutputStream != null) {
                             try {
                                 objectOutputStream.close();
                             } catch (IOException e3) {
-                                Log.d(SerializableCookie.j, "Stream not closed in encodeCookie", e3);
+                                Log.d(SerializableCookie.f19670j, "Stream not closed in encodeCookie", e3);
                             }
                         }
-                        editorEdit.putString(strB, string);
+                        editorEdit.putString(strM8748b, string);
                     }
                 } catch (Throwable th) {
                     th = th;
@@ -89,7 +93,7 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
                         try {
                             objectOutputStream2.close();
                         } catch (IOException e4) {
-                            Log.d(SerializableCookie.j, "Stream not closed in encodeCookie", e4);
+                            Log.d(SerializableCookie.f19670j, "Stream not closed in encodeCookie", e4);
                         }
                     }
                     throw th;
@@ -100,20 +104,21 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
             } catch (Throwable th2) {
                 th = th2;
             }
-            editorEdit.putString(strB, string);
+            editorEdit.putString(strM8748b, string);
         }
         editorEdit.commit();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:52:0x00a1 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:54:0x001d A[SYNTHETIC] */
+    /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public List<n> c() throws Throwable {
+    public List<Cookie> m8749c() throws Throwable {
         ObjectInputStream objectInputStream;
-        ArrayList arrayList = new ArrayList(this.a.getAll().size());
-        Iterator<Map.Entry<String, ?>> it = this.a.getAll().entrySet().iterator();
+        ArrayList arrayList = new ArrayList(this.f19672a.getAll().size());
+        Iterator<Map.Entry<String, ?>> it = this.f19672a.getAll().entrySet().iterator();
         while (it.hasNext()) {
             String str = (String) it.next().getValue();
             new SerializableCookie();
@@ -123,15 +128,15 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
                 bArr[i / 2] = (byte) (Character.digit(str.charAt(i + 1), 16) + (Character.digit(str.charAt(i), 16) << 4));
             }
             ObjectInputStream objectInputStream2 = null;
-            nVar = null;
-            nVar = null;
-            nVar = null;
-            n nVar = null;
+            cookie = null;
+            cookie = null;
+            cookie = null;
+            Cookie cookie = null;
             try {
                 objectInputStream = new ObjectInputStream(new ByteArrayInputStream(bArr));
                 try {
                     try {
-                        nVar = ((SerializableCookie) objectInputStream.readObject()).k;
+                        cookie = ((SerializableCookie) objectInputStream.readObject()).f19671k;
                     } catch (Throwable th) {
                         th = th;
                         objectInputStream2 = objectInputStream;
@@ -139,26 +144,26 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
                             try {
                                 objectInputStream2.close();
                             } catch (IOException e) {
-                                Log.d(SerializableCookie.j, "Stream not closed in decodeCookie", e);
+                                Log.d(SerializableCookie.f19670j, "Stream not closed in decodeCookie", e);
                             }
                         }
                         throw th;
                     }
                 } catch (IOException e2) {
                     e = e2;
-                    Log.d(SerializableCookie.j, "IOException in decodeCookie", e);
+                    Log.d(SerializableCookie.f19670j, "IOException in decodeCookie", e);
                     if (objectInputStream != null) {
                         objectInputStream.close();
                     }
-                    if (nVar != null) {
+                    if (cookie != null) {
                     }
                 } catch (ClassNotFoundException e3) {
                     e = e3;
-                    Log.d(SerializableCookie.j, "ClassNotFoundException in decodeCookie", e);
+                    Log.d(SerializableCookie.f19670j, "ClassNotFoundException in decodeCookie", e);
                     if (objectInputStream != null) {
                         objectInputStream.close();
                     }
-                    if (nVar != null) {
+                    if (cookie != null) {
                     }
                 }
             } catch (IOException e4) {
@@ -173,21 +178,21 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
             try {
                 objectInputStream.close();
             } catch (IOException e6) {
-                Log.d(SerializableCookie.j, "Stream not closed in decodeCookie", e6);
+                Log.d(SerializableCookie.f19670j, "Stream not closed in decodeCookie", e6);
             }
-            if (nVar != null) {
-                arrayList.add(nVar);
+            if (cookie != null) {
+                arrayList.add(cookie);
             }
         }
         return arrayList;
     }
 
     @Override // com.franmontiel.persistentcookiejar.persistence.CookiePersistor
-    public void removeAll(Collection<n> collection) {
-        SharedPreferences.Editor editorEdit = this.a.edit();
-        Iterator<n> it = collection.iterator();
+    public void removeAll(Collection<Cookie> collection) {
+        SharedPreferences.Editor editorEdit = this.f19672a.edit();
+        Iterator<Cookie> it = collection.iterator();
         while (it.hasNext()) {
-            editorEdit.remove(b(it.next()));
+            editorEdit.remove(m8748b(it.next()));
         }
         editorEdit.commit();
     }

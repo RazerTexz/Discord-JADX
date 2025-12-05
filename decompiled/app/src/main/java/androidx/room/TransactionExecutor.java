@@ -10,11 +10,11 @@ public class TransactionExecutor implements Executor {
     private final Executor mExecutor;
     private final ArrayDeque<Runnable> mTasks = new ArrayDeque<>();
 
-    /* renamed from: androidx.room.TransactionExecutor$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.room.TransactionExecutor$1 */
+    public class RunnableC05971 implements Runnable {
         public final /* synthetic */ Runnable val$command;
 
-        public AnonymousClass1(Runnable runnable) {
+        public RunnableC05971(Runnable runnable) {
             this.val$command = runnable;
         }
 
@@ -34,7 +34,7 @@ public class TransactionExecutor implements Executor {
 
     @Override // java.util.concurrent.Executor
     public synchronized void execute(Runnable runnable) {
-        this.mTasks.offer(new AnonymousClass1(runnable));
+        this.mTasks.offer(new RunnableC05971(runnable));
         if (this.mActive == null) {
             scheduleNext();
         }

@@ -5,7 +5,7 @@ import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.DBUtil;
-import androidx.sqlite.db.SupportSQLiteStatement;
+import androidx.sqlite.p006db.SupportSQLiteStatement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +14,9 @@ public final class WorkNameDao_Impl implements WorkNameDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<WorkName> __insertionAdapterOfWorkName;
 
-    /* renamed from: androidx.work.impl.model.WorkNameDao_Impl$1, reason: invalid class name */
-    public class AnonymousClass1 extends EntityInsertionAdapter<WorkName> {
-        public AnonymousClass1(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkNameDao_Impl$1 */
+    public class C07521 extends EntityInsertionAdapter<WorkName> {
+        public C07521(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -49,7 +49,7 @@ public final class WorkNameDao_Impl implements WorkNameDao {
 
     public WorkNameDao_Impl(RoomDatabase roomDatabase) {
         this.__db = roomDatabase;
-        this.__insertionAdapterOfWorkName = new AnonymousClass1(roomDatabase);
+        this.__insertionAdapterOfWorkName = new C07521(roomDatabase);
     }
 
     @Override // androidx.work.impl.model.WorkNameDao

@@ -1,17 +1,17 @@
 package com.discord.models.thread.dto;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.message.Message;
 import com.discord.api.thread.ThreadMember;
 import com.discord.models.domain.Model;
-import d0.t.n;
-import d0.z.d.m;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.jvm.internal.Ref$LongRef;
 import kotlin.jvm.internal.Ref$ObjectRef;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelThreadListSync.kt */
 /* loaded from: classes.dex */
@@ -37,7 +37,7 @@ public final /* data */ class ModelThreadListSync {
         /* JADX WARN: Type inference failed for: r2v0, types: [T, java.util.ArrayList] */
         @Override // com.discord.models.domain.Model.Parser
         public ModelThreadListSync parse(Model.JsonReader reader) throws IOException {
-            m.checkNotNullParameter(reader, "reader");
+            Intrinsics3.checkNotNullParameter(reader, "reader");
             Ref$LongRef ref$LongRef = new Ref$LongRef();
             ref$LongRef.element = -1L;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
@@ -46,11 +46,11 @@ public final /* data */ class ModelThreadListSync {
             ref$ObjectRef2.element = new ArrayList();
             Ref$ObjectRef ref$ObjectRef3 = new Ref$ObjectRef();
             ref$ObjectRef3.element = null;
-            reader.nextObject(new ModelThreadListSync$Parser$parse$1(ref$LongRef, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3));
+            reader.nextObject(new ModelThreadListSync2(ref$LongRef, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3));
             long j = ref$LongRef.element;
             List listEmptyList = (List) ref$ObjectRef.element;
             if (listEmptyList == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             return new ModelThreadListSync(j, listEmptyList, (List) ref$ObjectRef2.element, (List) ref$ObjectRef3.element);
         }
@@ -58,7 +58,7 @@ public final /* data */ class ModelThreadListSync {
 
     /* JADX WARN: Multi-variable type inference failed */
     public ModelThreadListSync(long j, List<Channel> list, List<? extends ThreadMember> list2, List<Message> list3) {
-        m.checkNotNullParameter(list, "threads");
+        Intrinsics3.checkNotNullParameter(list, "threads");
         this.guildId = j;
         this.threads = list;
         this.members = list2;
@@ -102,7 +102,7 @@ public final /* data */ class ModelThreadListSync {
     }
 
     public final ModelThreadListSync copy(long guildId, List<Channel> threads, List<? extends ThreadMember> members, List<Message> mostRecentMessages) {
-        m.checkNotNullParameter(threads, "threads");
+        Intrinsics3.checkNotNullParameter(threads, "threads");
         return new ModelThreadListSync(guildId, threads, members, mostRecentMessages);
     }
 
@@ -114,7 +114,7 @@ public final /* data */ class ModelThreadListSync {
             return false;
         }
         ModelThreadListSync modelThreadListSync = (ModelThreadListSync) other;
-        return this.guildId == modelThreadListSync.guildId && m.areEqual(this.threads, modelThreadListSync.threads) && m.areEqual(this.members, modelThreadListSync.members) && m.areEqual(this.mostRecentMessages, modelThreadListSync.mostRecentMessages);
+        return this.guildId == modelThreadListSync.guildId && Intrinsics3.areEqual(this.threads, modelThreadListSync.threads) && Intrinsics3.areEqual(this.members, modelThreadListSync.members) && Intrinsics3.areEqual(this.mostRecentMessages, modelThreadListSync.mostRecentMessages);
     }
 
     public final long getGuildId() {
@@ -145,13 +145,13 @@ public final /* data */ class ModelThreadListSync {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelThreadListSync(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", threads=");
-        sbU.append(this.threads);
-        sbU.append(", members=");
-        sbU.append(this.members);
-        sbU.append(", mostRecentMessages=");
-        return a.L(sbU, this.mostRecentMessages, ")");
+        StringBuilder sbM833U = outline.m833U("ModelThreadListSync(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", threads=");
+        sbM833U.append(this.threads);
+        sbM833U.append(", members=");
+        sbM833U.append(this.members);
+        sbM833U.append(", mostRecentMessages=");
+        return outline.m824L(sbM833U, this.mostRecentMessages, ")");
     }
 }

@@ -3,9 +3,9 @@ package androidx.work;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.view.LiveData;
-import b.i.b.d.a.a;
 import java.util.Collections;
 import java.util.List;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 /* loaded from: classes.dex */
 public abstract class WorkContinuation {
@@ -22,7 +22,7 @@ public abstract class WorkContinuation {
     public abstract Operation enqueue();
 
     @NonNull
-    public abstract a<List<WorkInfo>> getWorkInfos();
+    public abstract ListenableFuture8<List<WorkInfo>> getWorkInfos();
 
     @NonNull
     public abstract LiveData<List<WorkInfo>> getWorkInfosLiveData();

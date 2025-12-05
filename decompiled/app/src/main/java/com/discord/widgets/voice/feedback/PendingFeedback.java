@@ -1,12 +1,12 @@
 package com.discord.widgets.voice.feedback;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.models.domain.ModelApplicationStream;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: PendingFeedback.kt */
 /* loaded from: classes.dex */
@@ -62,7 +62,7 @@ public abstract class PendingFeedback implements Serializable {
                 return false;
             }
             GuildDeleteFeedback guildDeleteFeedback = (GuildDeleteFeedback) other;
-            return this.guildId == guildDeleteFeedback.guildId && m.areEqual(this.reason, guildDeleteFeedback.reason) && m.areEqual(this.issueDetails, guildDeleteFeedback.issueDetails);
+            return this.guildId == guildDeleteFeedback.guildId && Intrinsics3.areEqual(this.reason, guildDeleteFeedback.reason) && Intrinsics3.areEqual(this.issueDetails, guildDeleteFeedback.issueDetails);
         }
 
         public final long getGuildId() {
@@ -78,20 +78,20 @@ public abstract class PendingFeedback implements Serializable {
         }
 
         public int hashCode() {
-            int iA = b.a(this.guildId) * 31;
+            int iM3a = C0002b.m3a(this.guildId) * 31;
             FeedbackIssue feedbackIssue = this.reason;
-            int iHashCode = (iA + (feedbackIssue != null ? feedbackIssue.hashCode() : 0)) * 31;
+            int iHashCode = (iM3a + (feedbackIssue != null ? feedbackIssue.hashCode() : 0)) * 31;
             String str = this.issueDetails;
             return iHashCode + (str != null ? str.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("GuildDeleteFeedback(guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", reason=");
-            sbU.append(this.reason);
-            sbU.append(", issueDetails=");
-            return a.J(sbU, this.issueDetails, ")");
+            StringBuilder sbM833U = outline.m833U("GuildDeleteFeedback(guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", reason=");
+            sbM833U.append(this.reason);
+            sbM833U.append(", issueDetails=");
+            return outline.m822J(sbM833U, this.issueDetails, ")");
         }
 
         public GuildDeleteFeedback(long j, FeedbackIssue feedbackIssue, String str) {
@@ -165,7 +165,7 @@ public abstract class PendingFeedback implements Serializable {
         }
 
         public final CallFeedback copy(long channelId, String rtcConnectionId, Long durationMs, String mediaSessionId, FeedbackRating feedbackRating, Integer reasonCode, String reasonDescription, String issueDetails) {
-            m.checkNotNullParameter(feedbackRating, "feedbackRating");
+            Intrinsics3.checkNotNullParameter(feedbackRating, "feedbackRating");
             return new CallFeedback(channelId, rtcConnectionId, durationMs, mediaSessionId, feedbackRating, reasonCode, reasonDescription, issueDetails);
         }
 
@@ -177,7 +177,7 @@ public abstract class PendingFeedback implements Serializable {
                 return false;
             }
             CallFeedback callFeedback = (CallFeedback) other;
-            return this.channelId == callFeedback.channelId && m.areEqual(this.rtcConnectionId, callFeedback.rtcConnectionId) && m.areEqual(this.durationMs, callFeedback.durationMs) && m.areEqual(this.mediaSessionId, callFeedback.mediaSessionId) && m.areEqual(this.feedbackRating, callFeedback.feedbackRating) && m.areEqual(this.reasonCode, callFeedback.reasonCode) && m.areEqual(this.reasonDescription, callFeedback.reasonDescription) && m.areEqual(this.issueDetails, callFeedback.issueDetails);
+            return this.channelId == callFeedback.channelId && Intrinsics3.areEqual(this.rtcConnectionId, callFeedback.rtcConnectionId) && Intrinsics3.areEqual(this.durationMs, callFeedback.durationMs) && Intrinsics3.areEqual(this.mediaSessionId, callFeedback.mediaSessionId) && Intrinsics3.areEqual(this.feedbackRating, callFeedback.feedbackRating) && Intrinsics3.areEqual(this.reasonCode, callFeedback.reasonCode) && Intrinsics3.areEqual(this.reasonDescription, callFeedback.reasonDescription) && Intrinsics3.areEqual(this.issueDetails, callFeedback.issueDetails);
         }
 
         public final long getChannelId() {
@@ -213,9 +213,9 @@ public abstract class PendingFeedback implements Serializable {
         }
 
         public int hashCode() {
-            int iA = b.a(this.channelId) * 31;
+            int iM3a = C0002b.m3a(this.channelId) * 31;
             String str = this.rtcConnectionId;
-            int iHashCode = (iA + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
             Long l = this.durationMs;
             int iHashCode2 = (iHashCode + (l != null ? l.hashCode() : 0)) * 31;
             String str2 = this.mediaSessionId;
@@ -231,28 +231,28 @@ public abstract class PendingFeedback implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("CallFeedback(channelId=");
-            sbU.append(this.channelId);
-            sbU.append(", rtcConnectionId=");
-            sbU.append(this.rtcConnectionId);
-            sbU.append(", durationMs=");
-            sbU.append(this.durationMs);
-            sbU.append(", mediaSessionId=");
-            sbU.append(this.mediaSessionId);
-            sbU.append(", feedbackRating=");
-            sbU.append(this.feedbackRating);
-            sbU.append(", reasonCode=");
-            sbU.append(this.reasonCode);
-            sbU.append(", reasonDescription=");
-            sbU.append(this.reasonDescription);
-            sbU.append(", issueDetails=");
-            return a.J(sbU, this.issueDetails, ")");
+            StringBuilder sbM833U = outline.m833U("CallFeedback(channelId=");
+            sbM833U.append(this.channelId);
+            sbM833U.append(", rtcConnectionId=");
+            sbM833U.append(this.rtcConnectionId);
+            sbM833U.append(", durationMs=");
+            sbM833U.append(this.durationMs);
+            sbM833U.append(", mediaSessionId=");
+            sbM833U.append(this.mediaSessionId);
+            sbM833U.append(", feedbackRating=");
+            sbM833U.append(this.feedbackRating);
+            sbM833U.append(", reasonCode=");
+            sbM833U.append(this.reasonCode);
+            sbM833U.append(", reasonDescription=");
+            sbM833U.append(this.reasonDescription);
+            sbM833U.append(", issueDetails=");
+            return outline.m822J(sbM833U, this.issueDetails, ")");
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public CallFeedback(long j, String str, Long l, String str2, FeedbackRating feedbackRating, Integer num, String str3, String str4) {
             super(null);
-            m.checkNotNullParameter(feedbackRating, "feedbackRating");
+            Intrinsics3.checkNotNullParameter(feedbackRating, "feedbackRating");
             this.channelId = j;
             this.rtcConnectionId = str;
             this.durationMs = l;
@@ -324,8 +324,8 @@ public abstract class PendingFeedback implements Serializable {
         }
 
         public final StreamFeedback copy(ModelApplicationStream stream, FeedbackRating feedbackRating, FeedbackIssue issue, String mediaSessionId, String issueDetails) {
-            m.checkNotNullParameter(stream, "stream");
-            m.checkNotNullParameter(feedbackRating, "feedbackRating");
+            Intrinsics3.checkNotNullParameter(stream, "stream");
+            Intrinsics3.checkNotNullParameter(feedbackRating, "feedbackRating");
             return new StreamFeedback(stream, feedbackRating, issue, mediaSessionId, issueDetails);
         }
 
@@ -337,7 +337,7 @@ public abstract class PendingFeedback implements Serializable {
                 return false;
             }
             StreamFeedback streamFeedback = (StreamFeedback) other;
-            return m.areEqual(this.stream, streamFeedback.stream) && m.areEqual(this.feedbackRating, streamFeedback.feedbackRating) && m.areEqual(this.issue, streamFeedback.issue) && m.areEqual(this.mediaSessionId, streamFeedback.mediaSessionId) && m.areEqual(this.issueDetails, streamFeedback.issueDetails);
+            return Intrinsics3.areEqual(this.stream, streamFeedback.stream) && Intrinsics3.areEqual(this.feedbackRating, streamFeedback.feedbackRating) && Intrinsics3.areEqual(this.issue, streamFeedback.issue) && Intrinsics3.areEqual(this.mediaSessionId, streamFeedback.mediaSessionId) && Intrinsics3.areEqual(this.issueDetails, streamFeedback.issueDetails);
         }
 
         public final FeedbackRating getFeedbackRating() {
@@ -374,23 +374,23 @@ public abstract class PendingFeedback implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StreamFeedback(stream=");
-            sbU.append(this.stream);
-            sbU.append(", feedbackRating=");
-            sbU.append(this.feedbackRating);
-            sbU.append(", issue=");
-            sbU.append(this.issue);
-            sbU.append(", mediaSessionId=");
-            sbU.append(this.mediaSessionId);
-            sbU.append(", issueDetails=");
-            return a.J(sbU, this.issueDetails, ")");
+            StringBuilder sbM833U = outline.m833U("StreamFeedback(stream=");
+            sbM833U.append(this.stream);
+            sbM833U.append(", feedbackRating=");
+            sbM833U.append(this.feedbackRating);
+            sbM833U.append(", issue=");
+            sbM833U.append(this.issue);
+            sbM833U.append(", mediaSessionId=");
+            sbM833U.append(this.mediaSessionId);
+            sbM833U.append(", issueDetails=");
+            return outline.m822J(sbM833U, this.issueDetails, ")");
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public StreamFeedback(ModelApplicationStream modelApplicationStream, FeedbackRating feedbackRating, FeedbackIssue feedbackIssue, String str, String str2) {
             super(null);
-            m.checkNotNullParameter(modelApplicationStream, "stream");
-            m.checkNotNullParameter(feedbackRating, "feedbackRating");
+            Intrinsics3.checkNotNullParameter(modelApplicationStream, "stream");
+            Intrinsics3.checkNotNullParameter(feedbackRating, "feedbackRating");
             this.stream = modelApplicationStream;
             this.feedbackRating = feedbackRating;
             this.issue = feedbackIssue;

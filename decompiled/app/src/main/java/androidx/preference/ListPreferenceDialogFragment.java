@@ -15,9 +15,9 @@ public class ListPreferenceDialogFragment extends PreferenceDialogFragment {
     private CharSequence[] mEntries;
     private CharSequence[] mEntryValues;
 
-    /* renamed from: androidx.preference.ListPreferenceDialogFragment$1, reason: invalid class name */
-    public class AnonymousClass1 implements DialogInterface.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.preference.ListPreferenceDialogFragment$1 */
+    public class DialogInterfaceOnClickListenerC05051 implements DialogInterface.OnClickListener {
+        public DialogInterfaceOnClickListenerC05051() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -81,7 +81,7 @@ public class ListPreferenceDialogFragment extends PreferenceDialogFragment {
     @Override // androidx.preference.PreferenceDialogFragment
     public void onPrepareDialogBuilder(AlertDialog.Builder builder) {
         super.onPrepareDialogBuilder(builder);
-        builder.setSingleChoiceItems(this.mEntries, this.mClickedDialogEntryIndex, new AnonymousClass1());
+        builder.setSingleChoiceItems(this.mEntries, this.mClickedDialogEntryIndex, new DialogInterfaceOnClickListenerC05051());
         builder.setPositiveButton((CharSequence) null, (DialogInterface.OnClickListener) null);
     }
 

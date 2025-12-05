@@ -79,12 +79,12 @@ public class WrapMethodCallScript extends MethodLevelPatchScript {
         this.extraRequests = extraRequests;
     }
 
-    /* renamed from: lombok.patcher.scripts.WrapMethodCallScript$1, reason: invalid class name */
+    /* renamed from: lombok.patcher.scripts.WrapMethodCallScript$1 */
     /* loaded from: discord-126021.apk:lombok/patcher/scripts/WrapMethodCallScript$1.SCL.lombok */
-    class AnonymousClass1 implements PatchScript.MethodPatcherFactory {
+    class C129201 implements PatchScript.MethodPatcherFactory {
         private final /* synthetic */ String val$classSpec;
 
-        AnonymousClass1(String str) {
+        C129201(String str) {
             this.val$classSpec = str;
         }
 
@@ -96,7 +96,7 @@ public class WrapMethodCallScript extends MethodLevelPatchScript {
 
     @Override // lombok.patcher.scripts.MethodLevelPatchScript
     protected PatchScript.MethodPatcher createPatcher(ClassWriter writer, String classSpec, TransplantMapper transplantMapper) {
-        PatchScript.MethodPatcher patcher = new PatchScript.MethodPatcher(writer, transplantMapper, new AnonymousClass1(classSpec));
+        PatchScript.MethodPatcher patcher = new PatchScript.MethodPatcher(writer, transplantMapper, new C129201(classSpec));
         if (this.transplant) {
             patcher.addTransplant(this.wrapper);
         }
@@ -120,21 +120,21 @@ public class WrapMethodCallScript extends MethodLevelPatchScript {
             if (WrapMethodCallScript.access$0(WrapMethodCallScript.this).getClassSpec().equals(owner) && WrapMethodCallScript.access$0(WrapMethodCallScript.this).getMethodName().equals(name) && WrapMethodCallScript.access$0(WrapMethodCallScript.this).getMethodDescriptor().equals(desc)) {
                 if (WrapMethodCallScript.access$1(WrapMethodCallScript.this)) {
                     if (WrapMethodCallScript.access$0(WrapMethodCallScript.this).isConstructor()) {
-                        this.mv.visitInsn(89);
+                        this.f27600mv.visitInsn(89);
                     } else {
-                        MethodLogistics.generateDupForType(MethodTarget.decomposeFullDesc(WrapMethodCallScript.access$0(WrapMethodCallScript.this).getMethodDescriptor()).get(0), this.mv);
+                        MethodLogistics.generateDupForType(MethodTarget.decomposeFullDesc(WrapMethodCallScript.access$0(WrapMethodCallScript.this).getMethodDescriptor()).get(0), this.f27600mv);
                     }
                 }
                 if (WrapMethodCallScript.access$2(WrapMethodCallScript.this).contains(StackRequest.THIS)) {
-                    this.logistics.generateLoadOpcodeForThis(this.mv);
+                    this.logistics.generateLoadOpcodeForThis(this.f27600mv);
                 }
                 for (StackRequest param : StackRequest.PARAMS_IN_ORDER) {
                     if (WrapMethodCallScript.access$2(WrapMethodCallScript.this).contains(param)) {
-                        this.logistics.generateLoadOpcodeForParam(param.getParamPos(), this.mv);
+                        this.logistics.generateLoadOpcodeForParam(param.getParamPos(), this.f27600mv);
                     }
                 }
                 if (WrapMethodCallScript.access$3(WrapMethodCallScript.this)) {
-                    WrapMethodCallScript.access$5(WrapMethodCallScript.access$4(WrapMethodCallScript.this), this.mv);
+                    WrapMethodCallScript.access$5(WrapMethodCallScript.access$4(WrapMethodCallScript.this), this.f27600mv);
                 } else {
                     super.visitMethodInsn(Opcodes.INVOKESTATIC, WrapMethodCallScript.access$6(WrapMethodCallScript.this) ? this.ownClassSpec : WrapMethodCallScript.access$4(WrapMethodCallScript.this).getClassSpec(), WrapMethodCallScript.access$4(WrapMethodCallScript.this).getMethodName(), WrapMethodCallScript.access$4(WrapMethodCallScript.this).getMethodDescriptor(), false);
                 }

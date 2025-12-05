@@ -11,7 +11,7 @@ public final class CryptoOptions {
         private boolean enableGcmCryptoSuites;
         private boolean requireFrameEncryption;
 
-        public /* synthetic */ Builder(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ Builder(C129601 c129601) {
             this();
         }
 
@@ -46,7 +46,7 @@ public final class CryptoOptions {
     public final class SFrame {
         private final boolean requireFrameEncryption;
 
-        public /* synthetic */ SFrame(CryptoOptions cryptoOptions, boolean z2, AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ SFrame(CryptoOptions cryptoOptions, boolean z2, C129601 c129601) {
             this(z2);
         }
 
@@ -65,7 +65,7 @@ public final class CryptoOptions {
         private final boolean enableEncryptedRtpHeaderExtensions;
         private final boolean enableGcmCryptoSuites;
 
-        public /* synthetic */ Srtp(CryptoOptions cryptoOptions, boolean z2, boolean z3, boolean z4, AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ Srtp(CryptoOptions cryptoOptions, boolean z2, boolean z3, boolean z4, C129601 c129601) {
             this(z2, z3, z4);
         }
 
@@ -91,7 +91,7 @@ public final class CryptoOptions {
         }
     }
 
-    public /* synthetic */ CryptoOptions(boolean z2, boolean z3, boolean z4, boolean z5, AnonymousClass1 anonymousClass1) {
+    public /* synthetic */ CryptoOptions(boolean z2, boolean z3, boolean z4, boolean z5, C129601 c129601) {
         this(z2, z3, z4, z5);
     }
 

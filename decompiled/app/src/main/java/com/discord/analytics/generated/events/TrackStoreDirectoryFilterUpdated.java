@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStoreDirectoryFilterUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStoreDirectoryFilterUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackStoreDirectoryFilterUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final CharSequence sort = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackStoreDirectoryFilterUpdated implements Analyt
             return false;
         }
         TrackStoreDirectoryFilterUpdated trackStoreDirectoryFilterUpdated = (TrackStoreDirectoryFilterUpdated) other;
-        return m.areEqual(this.loadId, trackStoreDirectoryFilterUpdated.loadId) && m.areEqual(this.sort, trackStoreDirectoryFilterUpdated.sort);
+        return Intrinsics3.areEqual(this.loadId, trackStoreDirectoryFilterUpdated.loadId) && Intrinsics3.areEqual(this.sort, trackStoreDirectoryFilterUpdated.sort);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackStoreDirectoryFilterUpdated implements Analyt
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStoreDirectoryFilterUpdated(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", sort=");
-        return a.E(sbU, this.sort, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStoreDirectoryFilterUpdated(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", sort=");
+        return outline.m817E(sbM833U, this.sort, ")");
     }
 }

@@ -1,9 +1,9 @@
 package com.discord.api.guildmember;
 
-import b.d.b.a.a;
 import com.discord.api.presence.Presence;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildMembersChunk.kt */
 /* loaded from: classes.dex */
@@ -18,15 +18,18 @@ public final /* data */ class GuildMembersChunk {
         return this.guildId;
     }
 
-    public final List<GuildMember> b() {
+    /* renamed from: b */
+    public final List<GuildMember> m7932b() {
         return this.members;
     }
 
-    public final List<Long> c() {
+    /* renamed from: c */
+    public final List<Long> m7933c() {
         return this.notFound;
     }
 
-    public final List<Presence> d() {
+    /* renamed from: d */
+    public final List<Presence> m7934d() {
         return this.presences;
     }
 
@@ -38,7 +41,7 @@ public final /* data */ class GuildMembersChunk {
             return false;
         }
         GuildMembersChunk guildMembersChunk = (GuildMembersChunk) other;
-        return this.guildId == guildMembersChunk.guildId && m.areEqual(this.members, guildMembersChunk.members) && m.areEqual(this.presences, guildMembersChunk.presences) && m.areEqual(this.notFound, guildMembersChunk.notFound);
+        return this.guildId == guildMembersChunk.guildId && Intrinsics3.areEqual(this.members, guildMembersChunk.members) && Intrinsics3.areEqual(this.presences, guildMembersChunk.presences) && Intrinsics3.areEqual(this.notFound, guildMembersChunk.notFound);
     }
 
     public int hashCode() {
@@ -53,13 +56,13 @@ public final /* data */ class GuildMembersChunk {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildMembersChunk(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", members=");
-        sbU.append(this.members);
-        sbU.append(", presences=");
-        sbU.append(this.presences);
-        sbU.append(", notFound=");
-        return a.L(sbU, this.notFound, ")");
+        StringBuilder sbM833U = outline.m833U("GuildMembersChunk(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", members=");
+        sbM833U.append(this.members);
+        sbM833U.append(", presences=");
+        sbM833U.append(this.presences);
+        sbM833U.append(", notFound=");
+        return outline.m824L(sbM833U, this.notFound, ")");
     }
 }

@@ -5,18 +5,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.DirectoryAddServerListItemBinding;
 import com.discord.databinding.DirectoryEntryListItemBinding;
 import com.discord.databinding.DirectorySectionHeaderListItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.views.directories.ServerDiscoveryItem;
 import com.discord.widgets.directories.DirectoryChannelItem;
-import d0.t.n;
-import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetDirectoryChannelAdapter.kt */
 /* loaded from: classes2.dex */
@@ -38,9 +38,9 @@ public final class WidgetDirectoryChannelAdapter extends RecyclerView.Adapter<Re
     }
 
     public WidgetDirectoryChannelAdapter(DirectoryChannelItemClickInterface directoryChannelItemClickInterface) {
-        m.checkNotNullParameter(directoryChannelItemClickInterface, "clickListener");
+        Intrinsics3.checkNotNullParameter(directoryChannelItemClickInterface, "clickListener");
         this.clickListener = directoryChannelItemClickInterface;
-        this.directoryChannelItems = n.emptyList();
+        this.directoryChannelItems = Collections2.emptyList();
     }
 
     public final DirectoryChannelItemClickInterface getClickListener() {
@@ -64,7 +64,7 @@ public final class WidgetDirectoryChannelAdapter extends RecyclerView.Adapter<Re
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        m.checkNotNullParameter(holder, "holder");
+        Intrinsics3.checkNotNullParameter(holder, "holder");
         if (!(holder instanceof DirectoryChannelViewHolder)) {
             holder = null;
         }
@@ -76,37 +76,37 @@ public final class WidgetDirectoryChannelAdapter extends RecyclerView.Adapter<Re
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         int iOrdinal = DirectoryChannelItem.ViewType.INSTANCE.findType(viewType).ordinal();
         if (iOrdinal == 0) {
-            View viewInflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.directory_entry_list_item, parent, false);
+            View viewInflate = LayoutInflater.from(parent.getContext()).inflate(C5419R.layout.directory_entry_list_item, parent, false);
             Objects.requireNonNull(viewInflate, "rootView");
             ServerDiscoveryItem serverDiscoveryItem = (ServerDiscoveryItem) viewInflate;
             DirectoryEntryListItemBinding directoryEntryListItemBinding = new DirectoryEntryListItemBinding(serverDiscoveryItem, serverDiscoveryItem);
-            m.checkNotNullExpressionValue(directoryEntryListItemBinding, "DirectoryEntryListItemBi…          false\n        )");
+            Intrinsics3.checkNotNullExpressionValue(directoryEntryListItemBinding, "DirectoryEntryListItemBi…          false\n        )");
             return new DirectoryEntryViewHolder(directoryEntryListItemBinding);
         }
         if (iOrdinal == 1) {
-            View viewInflate2 = LayoutInflater.from(parent.getContext()).inflate(R.layout.directory_add_server_list_item, parent, false);
+            View viewInflate2 = LayoutInflater.from(parent.getContext()).inflate(C5419R.layout.directory_add_server_list_item, parent, false);
             Objects.requireNonNull(viewInflate2, "rootView");
             TextView textView = (TextView) viewInflate2;
             DirectoryAddServerListItemBinding directoryAddServerListItemBinding = new DirectoryAddServerListItemBinding(textView, textView);
-            m.checkNotNullExpressionValue(directoryAddServerListItemBinding, "DirectoryAddServerListIt…          false\n        )");
+            Intrinsics3.checkNotNullExpressionValue(directoryAddServerListItemBinding, "DirectoryAddServerListIt…          false\n        )");
             return new AddServerViewHolder(directoryAddServerListItemBinding);
         }
         if (iOrdinal != 2) {
             throw new NoWhenBranchMatchedException();
         }
-        View viewInflate3 = LayoutInflater.from(parent.getContext()).inflate(R.layout.directory_section_header_list_item, parent, false);
+        View viewInflate3 = LayoutInflater.from(parent.getContext()).inflate(C5419R.layout.directory_section_header_list_item, parent, false);
         Objects.requireNonNull(viewInflate3, "rootView");
         TextView textView2 = (TextView) viewInflate3;
         DirectorySectionHeaderListItemBinding directorySectionHeaderListItemBinding = new DirectorySectionHeaderListItemBinding(textView2, textView2);
-        m.checkNotNullExpressionValue(directorySectionHeaderListItemBinding, "DirectorySectionHeaderLi…          false\n        )");
+        Intrinsics3.checkNotNullExpressionValue(directorySectionHeaderListItemBinding, "DirectorySectionHeaderLi…          false\n        )");
         return new SectionHeaderViewHolder(directorySectionHeaderListItemBinding);
     }
 
     public final void setDirectoryChannelItems(List<? extends DirectoryChannelItem> list) {
-        m.checkNotNullParameter(list, "value");
+        Intrinsics3.checkNotNullParameter(list, "value");
         this.directoryChannelItems = list;
         notifyDataSetChanged();
     }

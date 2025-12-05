@@ -1,14 +1,8 @@
 package com.discord.stores;
 
-import b.d.b.a.a;
 import com.android.billingclient.api.SkuDetails;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.utilities.billing.GooglePlayInAppSkus;
-import d0.d0.f;
-import d0.t.g0;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.utilities.billing.GooglePlayInAppSku3;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -17,7 +11,14 @@ import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p512d0._Ranges;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreGooglePlaySkuDetails.kt */
 /* loaded from: classes2.dex */
@@ -47,7 +48,7 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(Map<String, ? extends SkuDetails> map) {
                 super(null);
-                m.checkNotNullParameter(map, "skuDetails");
+                Intrinsics3.checkNotNullParameter(map, "skuDetails");
                 this.skuDetails = map;
             }
 
@@ -64,13 +65,13 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
             }
 
             public final Loaded copy(Map<String, ? extends SkuDetails> skuDetails) {
-                m.checkNotNullParameter(skuDetails, "skuDetails");
+                Intrinsics3.checkNotNullParameter(skuDetails, "skuDetails");
                 return new Loaded(skuDetails);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && m.areEqual(this.skuDetails, ((Loaded) other).skuDetails);
+                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.skuDetails, ((Loaded) other).skuDetails);
                 }
                 return true;
             }
@@ -88,7 +89,7 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
             }
 
             public String toString() {
-                return a.M(a.U("Loaded(skuDetails="), this.skuDetails, ")");
+                return outline.m825M(outline.m833U("Loaded(skuDetails="), this.skuDetails, ")");
             }
         }
 
@@ -110,16 +111,16 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
     }
 
     /* compiled from: StoreGooglePlaySkuDetails.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$handleError$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$handleError$1 */
+    public static final class C60141 extends Lambda implements Function0<Unit> {
+        public C60141() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -129,9 +130,9 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
     }
 
     /* compiled from: StoreGooglePlaySkuDetails.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$observeState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<State> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$observeState$1 */
+    public static final class C60151 extends Lambda implements Function0<State> {
+        public C60151() {
             super(0);
         }
 
@@ -148,12 +149,12 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
     }
 
     /* compiled from: StoreGooglePlaySkuDetails.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$updateSkuDetails$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$updateSkuDetails$1 */
+    public static final class C60161 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $skuDetails;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(List list) {
+        public C60161(List list) {
             super(0);
             this.$skuDetails = list;
         }
@@ -161,7 +162,7 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -171,8 +172,8 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
     }
 
     public StoreGooglePlaySkuDetails(ObservationDeck observationDeck, Dispatcher dispatcher) {
-        m.checkNotNullParameter(observationDeck, "observationDeck");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
         this.observationDeck = observationDeck;
         this.dispatcher = dispatcher;
         State.Uninitialized uninitialized = State.Uninitialized.INSTANCE;
@@ -186,18 +187,18 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
     }
 
     public final void handleError() {
-        this.dispatcher.schedule(new AnonymousClass1());
+        this.dispatcher.schedule(new C60141());
     }
 
-    @StoreThread
+    @Store3
     public final void handleFetchError() {
         this.skuState = State.Failure.INSTANCE;
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleFetchSuccess(List<? extends SkuDetails> newSkuDetails) {
-        m.checkNotNullParameter(newSkuDetails, "newSkuDetails");
+        Intrinsics3.checkNotNullParameter(newSkuDetails, "newSkuDetails");
         State state = this.skuState;
         if (!(state instanceof State.Loaded)) {
             state = null;
@@ -205,23 +206,23 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
         State.Loaded loaded = (State.Loaded) state;
         Map<String, SkuDetails> skuDetails = loaded != null ? loaded.getSkuDetails() : null;
         if (skuDetails == null) {
-            skuDetails = h0.emptyMap();
+            skuDetails = Maps6.emptyMap();
         }
-        Map<String, ? extends SkuDetails> mutableMap = h0.toMutableMap(skuDetails);
-        LinkedHashMap linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(newSkuDetails, 10)), 16));
+        Map<String, ? extends SkuDetails> mutableMap = Maps6.toMutableMap(skuDetails);
+        LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(newSkuDetails, 10)), 16));
         for (Object obj : newSkuDetails) {
-            linkedHashMap.put(((SkuDetails) obj).d(), obj);
+            linkedHashMap.put(((SkuDetails) obj).m7503d(), obj);
         }
         mutableMap.putAll(linkedHashMap);
-        GooglePlayInAppSkus.INSTANCE.populateSkuDetails(mutableMap);
+        GooglePlayInAppSku3.INSTANCE.populateSkuDetails(mutableMap);
         this.skuState = new State.Loaded(mutableMap);
         markChanged();
     }
 
     public final Observable<State> observeState() {
-        Observable<State> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
-        return observableR;
+        Observable<State> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C60151(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2
@@ -231,14 +232,14 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
         if (stateCopy instanceof State.Loaded) {
             State.Loaded loaded = (State.Loaded) stateCopy;
             stateCopy = loaded.copy(new HashMap(loaded.getSkuDetails()));
-        } else if (!m.areEqual(stateCopy, State.Uninitialized.INSTANCE) && !m.areEqual(stateCopy, State.Failure.INSTANCE)) {
+        } else if (!Intrinsics3.areEqual(stateCopy, State.Uninitialized.INSTANCE) && !Intrinsics3.areEqual(stateCopy, State.Failure.INSTANCE)) {
             throw new NoWhenBranchMatchedException();
         }
         this.skuStateSnapshot = stateCopy;
     }
 
     public final void updateSkuDetails(List<? extends SkuDetails> skuDetails) {
-        m.checkNotNullParameter(skuDetails, "skuDetails");
-        this.dispatcher.schedule(new AnonymousClass1(skuDetails));
+        Intrinsics3.checkNotNullParameter(skuDetails, "skuDetails");
+        this.dispatcher.schedule(new C60161(skuDetails));
     }
 }

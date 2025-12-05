@@ -1,0 +1,168 @@
+package p630i0;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.concurrent.CompletableFuture;
+import org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement;
+import p630i0.CallAdapter;
+import retrofit2.HttpException;
+import retrofit2.Response;
+
+/* compiled from: CompletableFutureCallAdapterFactory.java */
+@IgnoreJRERequirement
+/* renamed from: i0.g, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class CompletableFutureCallAdapterFactory extends CallAdapter.a {
+
+    /* renamed from: a */
+    public static final CallAdapter.a f26528a = new CompletableFutureCallAdapterFactory();
+
+    /* compiled from: CompletableFutureCallAdapterFactory.java */
+    @IgnoreJRERequirement
+    /* renamed from: i0.g$a */
+    public static final class a<R> implements CallAdapter<R, CompletableFuture<R>> {
+
+        /* renamed from: a */
+        public final Type f26529a;
+
+        /* compiled from: CompletableFutureCallAdapterFactory.java */
+        @IgnoreJRERequirement
+        /* renamed from: i0.g$a$a, reason: collision with other inner class name */
+        public class C13346a implements Callback3<R> {
+
+            /* renamed from: a */
+            public final CompletableFuture<R> f26530a;
+
+            public C13346a(a aVar, CompletableFuture<R> completableFuture) {
+                this.f26530a = completableFuture;
+            }
+
+            @Override // p630i0.Callback3
+            /* renamed from: a */
+            public void mo10708a(Call3<R> call3, Throwable th) {
+                this.f26530a.completeExceptionally(th);
+            }
+
+            @Override // p630i0.Callback3
+            /* renamed from: b */
+            public void mo10709b(Call3<R> call3, Response<R> response) {
+                if (response.m11057a()) {
+                    this.f26530a.complete(response.f27632b);
+                } else {
+                    this.f26530a.completeExceptionally(new HttpException(response));
+                }
+            }
+        }
+
+        public a(Type type) {
+            this.f26529a = type;
+        }
+
+        @Override // p630i0.CallAdapter
+        /* renamed from: a */
+        public Type mo10705a() {
+            return this.f26529a;
+        }
+
+        @Override // p630i0.CallAdapter
+        /* renamed from: b */
+        public Object mo10706b(Call3 call3) {
+            b bVar = new b(call3);
+            call3.mo10697C(new C13346a(this, bVar));
+            return bVar;
+        }
+    }
+
+    /* compiled from: CompletableFutureCallAdapterFactory.java */
+    @IgnoreJRERequirement
+    /* renamed from: i0.g$b */
+    public static final class b<T> extends CompletableFuture<T> {
+
+        /* renamed from: j */
+        public final Call3<?> f26531j;
+
+        public b(Call3<?> call3) {
+            this.f26531j = call3;
+        }
+
+        @Override // java.util.concurrent.CompletableFuture, java.util.concurrent.Future
+        public boolean cancel(boolean z2) {
+            if (z2) {
+                this.f26531j.cancel();
+            }
+            return super.cancel(z2);
+        }
+    }
+
+    /* compiled from: CompletableFutureCallAdapterFactory.java */
+    @IgnoreJRERequirement
+    /* renamed from: i0.g$c */
+    public static final class c<R> implements CallAdapter<R, CompletableFuture<Response<R>>> {
+
+        /* renamed from: a */
+        public final Type f26532a;
+
+        /* compiled from: CompletableFutureCallAdapterFactory.java */
+        @IgnoreJRERequirement
+        /* renamed from: i0.g$c$a */
+        public class a implements Callback3<R> {
+
+            /* renamed from: a */
+            public final CompletableFuture<Response<R>> f26533a;
+
+            public a(c cVar, CompletableFuture<Response<R>> completableFuture) {
+                this.f26533a = completableFuture;
+            }
+
+            @Override // p630i0.Callback3
+            /* renamed from: a */
+            public void mo10708a(Call3<R> call3, Throwable th) {
+                this.f26533a.completeExceptionally(th);
+            }
+
+            @Override // p630i0.Callback3
+            /* renamed from: b */
+            public void mo10709b(Call3<R> call3, Response<R> response) {
+                this.f26533a.complete(response);
+            }
+        }
+
+        public c(Type type) {
+            this.f26532a = type;
+        }
+
+        @Override // p630i0.CallAdapter
+        /* renamed from: a */
+        public Type mo10705a() {
+            return this.f26532a;
+        }
+
+        @Override // p630i0.CallAdapter
+        /* renamed from: b */
+        public Object mo10706b(Call3 call3) {
+            b bVar = new b(call3);
+            call3.mo10697C(new a(this, bVar));
+            return bVar;
+        }
+    }
+
+    @Override // p630i0.CallAdapter.a
+    /* renamed from: a */
+    public CallAdapter<?, ?> mo10707a(Type type, Annotation[] annotationArr, Retrofit2 retrofit22) {
+        if (Utils8.m10686f(type) != CompletableFuture.class) {
+            return null;
+        }
+        if (!(type instanceof ParameterizedType)) {
+            throw new IllegalStateException("CompletableFuture return type must be parameterized as CompletableFuture<Foo> or CompletableFuture<? extends Foo>");
+        }
+        Type typeM10685e = Utils8.m10685e(0, (ParameterizedType) type);
+        if (Utils8.m10686f(typeM10685e) != Response.class) {
+            return new a(typeM10685e);
+        }
+        if (typeM10685e instanceof ParameterizedType) {
+            return new c(Utils8.m10685e(0, (ParameterizedType) typeM10685e));
+        }
+        throw new IllegalStateException("Response must be parameterized as Response<Foo> or Response<? extends Foo>");
+    }
+}

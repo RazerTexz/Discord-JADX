@@ -4,14 +4,14 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.text.SpannableStringBuilder;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.font.FontUtils;
 import com.discord.utilities.search.query.FilterType;
 import com.discord.utilities.search.query.node.QueryNode;
 import com.discord.utilities.spans.TypefaceSpanCompat;
-import com.discord.widgets.chat.input.MentionUtilsKt;
-import d0.z.d.m;
+import com.discord.widgets.chat.input.MentionUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: FilterNode.kt */
 /* loaded from: classes2.dex */
@@ -20,8 +20,8 @@ public final /* data */ class FilterNode extends QueryNode {
     private final CharSequence text;
 
     public FilterNode(FilterType filterType, CharSequence charSequence) {
-        m.checkNotNullParameter(filterType, "filterType");
-        m.checkNotNullParameter(charSequence, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        Intrinsics3.checkNotNullParameter(filterType, "filterType");
+        Intrinsics3.checkNotNullParameter(charSequence, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         this.filterType = filterType;
         this.text = charSequence;
     }
@@ -46,8 +46,8 @@ public final /* data */ class FilterNode extends QueryNode {
     }
 
     public final FilterNode copy(FilterType filterType, CharSequence text) {
-        m.checkNotNullParameter(filterType, "filterType");
-        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        Intrinsics3.checkNotNullParameter(filterType, "filterType");
+        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         return new FilterNode(filterType, text);
     }
 
@@ -59,7 +59,7 @@ public final /* data */ class FilterNode extends QueryNode {
             return false;
         }
         FilterNode filterNode = (FilterNode) other;
-        return m.areEqual(this.filterType, filterNode.filterType) && m.areEqual(getText(), filterNode.getText());
+        return Intrinsics3.areEqual(this.filterType, filterNode.filterType) && Intrinsics3.areEqual(getText(), filterNode.getText());
     }
 
     public final FilterType getFilterType() {
@@ -84,24 +84,24 @@ public final /* data */ class FilterNode extends QueryNode {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("FilterNode(filterType=");
-        sbU.append(this.filterType);
-        sbU.append(", text=");
-        sbU.append(getText());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("FilterNode(filterType=");
+        sbM833U.append(this.filterType);
+        sbM833U.append(", text=");
+        sbM833U.append(getText());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     /* renamed from: render, reason: avoid collision after fix types in other method */
     public void render2(SpannableStringBuilder builder, Context renderContext) {
-        m.checkNotNullParameter(builder, "builder");
-        m.checkNotNullParameter(renderContext, "renderContext");
-        Typeface themedFont = FontUtils.INSTANCE.getThemedFont(renderContext, R.attr.font_primary_bold);
+        Intrinsics3.checkNotNullParameter(builder, "builder");
+        Intrinsics3.checkNotNullParameter(renderContext, "renderContext");
+        Typeface themedFont = FontUtils.INSTANCE.getThemedFont(renderContext, C5419R.attr.font_primary_bold);
         TypefaceSpanCompat typefaceSpanCompat = themedFont != null ? new TypefaceSpanCompat(themedFont) : null;
         int length = builder.length();
         StringBuilder sb = new StringBuilder();
         sb.append(getText());
-        sb.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
+        sb.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
         builder.append((CharSequence) sb.toString());
         builder.setSpan(typefaceSpanCompat, length, builder.length(), 33);
     }

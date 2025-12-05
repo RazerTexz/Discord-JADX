@@ -23,8 +23,8 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 import androidx.core.content.IntentCompat;
 import androidx.core.util.Preconditions;
-import b.d.b.a.a;
 import java.util.ArrayList;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public final class ShareCompat {
@@ -500,11 +500,11 @@ public final class ShareCompat {
             if (i == 0) {
                 return (Uri) this.mIntent.getParcelableExtra("android.intent.extra.STREAM");
             }
-            StringBuilder sbU = a.U("Stream items available: ");
-            sbU.append(getStreamCount());
-            sbU.append(" index requested: ");
-            sbU.append(i);
-            throw new IndexOutOfBoundsException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Stream items available: ");
+            sbM833U.append(getStreamCount());
+            sbM833U.append(" index requested: ");
+            sbM833U.append(i);
+            throw new IndexOutOfBoundsException(sbM833U.toString());
         }
     }
 
@@ -515,9 +515,9 @@ public final class ShareCompat {
     public static void configureMenuItem(@NonNull MenuItem menuItem, @NonNull IntentBuilder intentBuilder) {
         ActionProvider actionProvider = menuItem.getActionProvider();
         ShareActionProvider shareActionProvider = !(actionProvider instanceof ShareActionProvider) ? new ShareActionProvider(intentBuilder.getContext()) : (ShareActionProvider) actionProvider;
-        StringBuilder sbU = a.U(HISTORY_FILENAME_PREFIX);
-        sbU.append(intentBuilder.getContext().getClass().getName());
-        shareActionProvider.setShareHistoryFileName(sbU.toString());
+        StringBuilder sbM833U = outline.m833U(HISTORY_FILENAME_PREFIX);
+        sbM833U.append(intentBuilder.getContext().getClass().getName());
+        shareActionProvider.setShareHistoryFileName(sbM833U.toString());
         shareActionProvider.setShareIntent(intentBuilder.getIntent());
         menuItem.setActionProvider(shareActionProvider);
     }
@@ -555,6 +555,6 @@ public final class ShareCompat {
             configureMenuItem(menuItemFindItem, intentBuilder);
             return;
         }
-        throw new IllegalArgumentException(a.r("Could not find menu item with id ", i, " in the supplied menu"));
+        throw new IllegalArgumentException(outline.m873r("Could not find menu item with id ", i, " in the supplied menu"));
     }
 }

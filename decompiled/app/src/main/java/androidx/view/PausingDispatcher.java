@@ -1,10 +1,10 @@
 package androidx.view;
 
-import d0.z.d.m;
 import kotlin.coroutines.CoroutineContext;
 import kotlinx.coroutines.CoroutineDispatcher;
-import s.a.a.n;
-import s.a.k0;
+import p507d0.p592z.p594d.Intrinsics3;
+import p659s.p660a.Dispatchers;
+import p659s.p660a.p661a.MainDispatchers;
 
 /* compiled from: PausingDispatcher.kt */
 /* loaded from: classes.dex */
@@ -13,16 +13,16 @@ public final class PausingDispatcher extends CoroutineDispatcher {
 
     @Override // kotlinx.coroutines.CoroutineDispatcher
     public void dispatch(CoroutineContext context, Runnable block) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(block, "block");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(block, "block");
         this.dispatchQueue.dispatchAndEnqueue(context, block);
     }
 
     @Override // kotlinx.coroutines.CoroutineDispatcher
     public boolean isDispatchNeeded(CoroutineContext context) {
-        m.checkNotNullParameter(context, "context");
-        CoroutineDispatcher coroutineDispatcher = k0.a;
-        if (n.f3830b.H().isDispatchNeeded(context)) {
+        Intrinsics3.checkNotNullParameter(context, "context");
+        CoroutineDispatcher coroutineDispatcher = Dispatchers.f27866a;
+        if (MainDispatchers.f27700b.mo11194H().isDispatchNeeded(context)) {
             return true;
         }
         return !this.dispatchQueue.canRun();

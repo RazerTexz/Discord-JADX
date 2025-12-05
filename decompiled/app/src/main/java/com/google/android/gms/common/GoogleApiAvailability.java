@@ -25,59 +25,72 @@ import androidx.collection.SimpleArrayMap;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import b.c.a.a0.d;
-import b.i.a.f.e.b;
-import b.i.a.f.e.c;
-import b.i.a.f.e.e;
-import b.i.a.f.e.g;
-import b.i.a.f.e.h.j.b0;
-import b.i.a.f.e.h.j.j;
-import b.i.a.f.e.k.l;
-import b.i.a.f.e.k.m;
-import b.i.a.f.e.k.n;
-import b.i.a.f.e.k.o;
-import b.i.a.f.e.o.f;
+import com.google.android.gms.base.C10796R;
 import com.google.android.gms.common.api.internal.LifecycleCallback;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
 import java.util.concurrent.atomic.AtomicBoolean;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.C3256c;
+import p007b.p225i.p226a.p288f.p299e.C3260e;
+import p007b.p225i.p226a.p288f.p299e.C3264g;
+import p007b.p225i.p226a.p288f.p299e.DialogFragmentC3254b;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3279b0;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3299j;
+import p007b.p225i.p226a.p288f.p299e.p304k.AbstractDialogInterfaceOnClickListenerC3369n;
+import p007b.p225i.p226a.p288f.p299e.p304k.C3365l;
+import p007b.p225i.p226a.p288f.p299e.p304k.C3367m;
+import p007b.p225i.p226a.p288f.p299e.p304k.C3371o;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p007b.p225i.p226a.p288f.p313h.p318e.HandlerC3479c;
 
 /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
 /* loaded from: classes3.dex */
-public class GoogleApiAvailability extends c {
-    public static final Object c = new Object();
-    public static final GoogleApiAvailability d = new GoogleApiAvailability();
-    public static final int e = c.a;
+public class GoogleApiAvailability extends C3256c {
+
+    /* renamed from: c */
+    public static final Object f20480c = new Object();
+
+    /* renamed from: d */
+    public static final GoogleApiAvailability f20481d = new GoogleApiAvailability();
+
+    /* renamed from: e */
+    public static final int f20482e = C3256c.f9306a;
 
     /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     @SuppressLint({"HandlerLeak"})
-    public class a extends b.i.a.f.h.e.c {
-        public final Context a;
+    /* renamed from: com.google.android.gms.common.GoogleApiAvailability$a */
+    public class HandlerC10799a extends HandlerC3479c {
 
-        public a(Context context) {
+        /* renamed from: a */
+        public final Context f20483a;
+
+        public HandlerC10799a(Context context) {
             super(Looper.myLooper() == null ? Looper.getMainLooper() : Looper.myLooper());
-            this.a = context.getApplicationContext();
+            this.f20483a = context.getApplicationContext();
         }
 
         @Override // android.os.Handler
         public final void handleMessage(Message message) throws Resources.NotFoundException {
             int i = message.what;
             if (i != 1) {
-                b.d.b.a.a.g0(50, "Don't know how to handle this message: ", i, "GoogleApiAvailability");
+                outline.m852g0(50, "Don't know how to handle this message: ", i, "GoogleApiAvailability");
                 return;
             }
-            int iC = GoogleApiAvailability.this.c(this.a);
-            if (GoogleApiAvailability.this.d(iC)) {
+            int iM9024c = GoogleApiAvailability.this.m9024c(this.f20483a);
+            if (GoogleApiAvailability.this.m9025d(iM9024c)) {
                 GoogleApiAvailability googleApiAvailability = GoogleApiAvailability.this;
-                Context context = this.a;
-                Intent intentA = googleApiAvailability.a(context, iC, "n");
-                googleApiAvailability.i(context, iC, intentA == null ? null : PendingIntent.getActivity(context, 0, intentA, 134217728));
+                Context context = this.f20483a;
+                Intent intentMo4017a = googleApiAvailability.mo4017a(context, iM9024c, "n");
+                googleApiAvailability.m9028i(context, iM9024c, intentMo4017a == null ? null : PendingIntent.getActivity(context, 0, intentMo4017a, 134217728));
             }
         }
     }
 
     @Nullable
-    public static Dialog g(@NonNull Context context, int i, n nVar, @Nullable DialogInterface.OnCancelListener onCancelListener) {
+    /* renamed from: g */
+    public static Dialog m9022g(@NonNull Context context, int i, AbstractDialogInterfaceOnClickListenerC3369n abstractDialogInterfaceOnClickListenerC3369n, @Nullable DialogInterface.OnCancelListener onCancelListener) {
         if (i == 0) {
             return null;
         }
@@ -87,103 +100,111 @@ public class GoogleApiAvailability extends c {
         if (builder == null) {
             builder = new AlertDialog.Builder(context);
         }
-        builder.setMessage(l.e(context, i));
+        builder.setMessage(C3365l.m4170e(context, i));
         if (onCancelListener != null) {
             builder.setOnCancelListener(onCancelListener);
         }
         Resources resources = context.getResources();
-        String string = i != 1 ? i != 2 ? i != 3 ? resources.getString(android.R.string.ok) : resources.getString(com.google.android.gms.base.R.b.common_google_play_services_enable_button) : resources.getString(com.google.android.gms.base.R.b.common_google_play_services_update_button) : resources.getString(com.google.android.gms.base.R.b.common_google_play_services_install_button);
+        String string = i != 1 ? i != 2 ? i != 3 ? resources.getString(android.R.string.ok) : resources.getString(C10796R.b.common_google_play_services_enable_button) : resources.getString(C10796R.b.common_google_play_services_update_button) : resources.getString(C10796R.b.common_google_play_services_install_button);
         if (string != null) {
-            builder.setPositiveButton(string, nVar);
+            builder.setPositiveButton(string, abstractDialogInterfaceOnClickListenerC3369n);
         }
-        String strA = l.a(context, i);
-        if (strA != null) {
-            builder.setTitle(strA);
+        String strM4166a = C3365l.m4166a(context, i);
+        if (strM4166a != null) {
+            builder.setTitle(strM4166a);
         }
         return builder.create();
     }
 
-    public static void h(Activity activity, Dialog dialog, String str, @Nullable DialogInterface.OnCancelListener onCancelListener) {
+    /* renamed from: h */
+    public static void m9023h(Activity activity, Dialog dialog, String str, @Nullable DialogInterface.OnCancelListener onCancelListener) {
         if (activity instanceof FragmentActivity) {
             FragmentManager supportFragmentManager = ((FragmentActivity) activity).getSupportFragmentManager();
-            g gVar = new g();
-            d.z(dialog, "Cannot display null dialog");
+            C3264g c3264g = new C3264g();
+            AnimatableValueParser.m595z(dialog, "Cannot display null dialog");
             dialog.setOnCancelListener(null);
             dialog.setOnDismissListener(null);
-            gVar.j = dialog;
+            c3264g.f9317j = dialog;
             if (onCancelListener != null) {
-                gVar.k = onCancelListener;
+                c3264g.f9318k = onCancelListener;
             }
-            gVar.show(supportFragmentManager, str);
+            c3264g.show(supportFragmentManager, str);
             return;
         }
         android.app.FragmentManager fragmentManager = activity.getFragmentManager();
-        b bVar = new b();
-        d.z(dialog, "Cannot display null dialog");
+        DialogFragmentC3254b dialogFragmentC3254b = new DialogFragmentC3254b();
+        AnimatableValueParser.m595z(dialog, "Cannot display null dialog");
         dialog.setOnCancelListener(null);
         dialog.setOnDismissListener(null);
-        bVar.j = dialog;
+        dialogFragmentC3254b.f9299j = dialog;
         if (onCancelListener != null) {
-            bVar.k = onCancelListener;
+            dialogFragmentC3254b.f9300k = onCancelListener;
         }
-        bVar.show(fragmentManager, str);
+        dialogFragmentC3254b.show(fragmentManager, str);
     }
 
-    @Override // b.i.a.f.e.c
+    @Override // p007b.p225i.p226a.p288f.p299e.C3256c
     @Nullable
-    public Intent a(Context context, int i, @Nullable String str) {
-        return super.a(context, i, str);
+    /* renamed from: a */
+    public Intent mo4017a(Context context, int i, @Nullable String str) {
+        return super.mo4017a(context, i, str);
     }
 
-    @Override // b.i.a.f.e.c
-    public int b(Context context, int i) {
-        return super.b(context, i);
+    @Override // p007b.p225i.p226a.p288f.p299e.C3256c
+    /* renamed from: b */
+    public int mo4018b(Context context, int i) {
+        return super.mo4018b(context, i);
     }
 
-    public int c(Context context) {
-        return b(context, c.a);
+    /* renamed from: c */
+    public int m9024c(Context context) {
+        return mo4018b(context, C3256c.f9306a);
     }
 
-    public final boolean d(int i) {
-        AtomicBoolean atomicBoolean = e.a;
+    /* renamed from: d */
+    public final boolean m9025d(int i) {
+        AtomicBoolean atomicBoolean = C3260e.f9309a;
         return i == 1 || i == 2 || i == 3 || i == 9;
     }
 
     @NonNull
     @MainThread
-    public Task<Void> e(Activity activity) throws PackageManager.NameNotFoundException {
-        int i = e;
-        d.u("makeGooglePlayServicesAvailable must be called from the main thread");
-        int iB = super.b(activity, i);
-        if (iB == 0) {
-            return f.Z(null);
+    /* renamed from: e */
+    public Task<Void> m9026e(Activity activity) throws PackageManager.NameNotFoundException {
+        int i = f20482e;
+        AnimatableValueParser.m575u("makeGooglePlayServicesAvailable must be called from the main thread");
+        int iMo4018b = super.mo4018b(activity, i);
+        if (iMo4018b == 0) {
+            return C3404f.m4264Z(null);
         }
-        j jVarC = LifecycleCallback.c(activity);
-        b0 b0Var = (b0) jVarC.d("GmsAvailabilityHelper", b0.class);
-        if (b0Var == null) {
-            b0Var = new b0(jVarC);
-        } else if (b0Var.o.a.o()) {
-            b0Var.o = new TaskCompletionSource<>();
+        InterfaceC3299j interfaceC3299jM9038c = LifecycleCallback.m9038c(activity);
+        C3279b0 c3279b0 = (C3279b0) interfaceC3299jM9038c.mo4070d("GmsAvailabilityHelper", C3279b0.class);
+        if (c3279b0 == null) {
+            c3279b0 = new C3279b0(interfaceC3299jM9038c);
+        } else if (c3279b0.f9348o.f20845a.mo6020o()) {
+            c3279b0.f9348o = new TaskCompletionSource<>();
         }
-        b0Var.n(new ConnectionResult(iB, null), 0);
-        return b0Var.o.a;
+        c3279b0.m4119n(new ConnectionResult(iMo4018b, null), 0);
+        return c3279b0.f9348o.f20845a;
     }
 
-    public boolean f(Activity activity, int i, int i2, @Nullable DialogInterface.OnCancelListener onCancelListener) {
-        Dialog dialogG = g(activity, i, new m(super.a(activity, i, "d"), activity, i2), onCancelListener);
-        if (dialogG == null) {
+    /* renamed from: f */
+    public boolean m9027f(Activity activity, int i, int i2, @Nullable DialogInterface.OnCancelListener onCancelListener) {
+        Dialog dialogM9022g = m9022g(activity, i, new C3367m(super.mo4017a(activity, i, "d"), activity, i2), onCancelListener);
+        if (dialogM9022g == null) {
             return false;
         }
-        h(activity, dialogG, "GooglePlayServicesErrorDialog", onCancelListener);
+        m9023h(activity, dialogM9022g, "GooglePlayServicesErrorDialog", onCancelListener);
         return true;
     }
 
     @TargetApi(20)
-    public final void i(Context context, int i, PendingIntent pendingIntent) throws Resources.NotFoundException {
+    /* renamed from: i */
+    public final void m9028i(Context context, int i, PendingIntent pendingIntent) throws Resources.NotFoundException {
         int i2;
         Log.w("GoogleApiAvailability", String.format("GMS core API Availability. ConnectionResult=%s, tag=%s", Integer.valueOf(i), null), new IllegalArgumentException());
         if (i == 18) {
-            new a(context).sendEmptyMessageDelayed(1, 120000L);
+            new HandlerC10799a(context).sendEmptyMessageDelayed(1, 120000L);
             return;
         }
         if (pendingIntent == null) {
@@ -193,32 +214,32 @@ public class GoogleApiAvailability extends c {
             }
             return;
         }
-        String strB = i == 6 ? l.b(context, "common_google_play_services_resolution_required_title") : l.a(context, i);
-        if (strB == null) {
-            strB = context.getResources().getString(com.google.android.gms.base.R.b.common_google_play_services_notification_ticker);
+        String strM4167b = i == 6 ? C3365l.m4167b(context, "common_google_play_services_resolution_required_title") : C3365l.m4166a(context, i);
+        if (strM4167b == null) {
+            strM4167b = context.getResources().getString(C10796R.b.common_google_play_services_notification_ticker);
         }
-        String strC = (i == 6 || i == 19) ? l.c(context, "common_google_play_services_resolution_required_text", l.d(context)) : l.e(context, i);
+        String strM4168c = (i == 6 || i == 19) ? C3365l.m4168c(context, "common_google_play_services_resolution_required_text", C3365l.m4169d(context)) : C3365l.m4170e(context, i);
         Resources resources = context.getResources();
         NotificationManager notificationManager = (NotificationManager) context.getSystemService("notification");
-        NotificationCompat.Builder style = new NotificationCompat.Builder(context).setLocalOnly(true).setAutoCancel(true).setContentTitle(strB).setStyle(new NotificationCompat.BigTextStyle().bigText(strC));
-        if (d.Z0(context)) {
-            d.F(true);
+        NotificationCompat.Builder style = new NotificationCompat.Builder(context).setLocalOnly(true).setAutoCancel(true).setContentTitle(strM4167b).setStyle(new NotificationCompat.BigTextStyle().bigText(strM4168c));
+        if (AnimatableValueParser.m493Z0(context)) {
+            AnimatableValueParser.m432F(true);
             style.setSmallIcon(context.getApplicationInfo().icon).setPriority(2);
-            if (d.a1(context)) {
-                style.addAction(com.google.android.gms.base.R.a.common_full_open_on_phone, resources.getString(com.google.android.gms.base.R.b.common_open_on_phone), pendingIntent);
+            if (AnimatableValueParser.m497a1(context)) {
+                style.addAction(C10796R.a.common_full_open_on_phone, resources.getString(C10796R.b.common_open_on_phone), pendingIntent);
             } else {
                 style.setContentIntent(pendingIntent);
             }
         } else {
-            style.setSmallIcon(android.R.drawable.stat_sys_warning).setTicker(resources.getString(com.google.android.gms.base.R.b.common_google_play_services_notification_ticker)).setWhen(System.currentTimeMillis()).setContentIntent(pendingIntent).setContentText(strC);
+            style.setSmallIcon(android.R.drawable.stat_sys_warning).setTicker(resources.getString(C10796R.b.common_google_play_services_notification_ticker)).setWhen(System.currentTimeMillis()).setContentIntent(pendingIntent).setContentText(strM4168c);
         }
-        if (f.A0()) {
-            d.F(f.A0());
-            synchronized (c) {
+        if (C3404f.m4190A0()) {
+            AnimatableValueParser.m432F(C3404f.m4190A0());
+            synchronized (f20480c) {
             }
             NotificationChannel notificationChannel = notificationManager.getNotificationChannel("com.google.android.gms.availability");
-            SimpleArrayMap<String, String> simpleArrayMap = l.a;
-            String string = context.getResources().getString(com.google.android.gms.base.R.b.common_google_play_services_notification_channel_name);
+            SimpleArrayMap<String, String> simpleArrayMap = C3365l.f9534a;
+            String string = context.getResources().getString(C10796R.b.common_google_play_services_notification_channel_name);
             if (notificationChannel == null) {
                 notificationManager.createNotificationChannel(new NotificationChannel("com.google.android.gms.availability", string, 4));
             } else if (!string.contentEquals(notificationChannel.getName())) {
@@ -230,19 +251,20 @@ public class GoogleApiAvailability extends c {
         Notification notificationBuild = style.build();
         if (i == 1 || i == 2 || i == 3) {
             i2 = 10436;
-            e.a.set(false);
+            C3260e.f9309a.set(false);
         } else {
             i2 = 39789;
         }
         notificationManager.notify(i2, notificationBuild);
     }
 
-    public final boolean j(@NonNull Activity activity, @NonNull j jVar, int i, @Nullable DialogInterface.OnCancelListener onCancelListener) {
-        Dialog dialogG = g(activity, i, new o(super.a(activity, i, "d"), jVar, 2), onCancelListener);
-        if (dialogG == null) {
+    /* renamed from: j */
+    public final boolean m9029j(@NonNull Activity activity, @NonNull InterfaceC3299j interfaceC3299j, int i, @Nullable DialogInterface.OnCancelListener onCancelListener) {
+        Dialog dialogM9022g = m9022g(activity, i, new C3371o(super.mo4017a(activity, i, "d"), interfaceC3299j, 2), onCancelListener);
+        if (dialogM9022g == null) {
             return false;
         }
-        h(activity, dialogG, "GooglePlayServicesErrorDialog", onCancelListener);
+        m9023h(activity, dialogM9022g, "GooglePlayServicesErrorDialog", onCancelListener);
         return true;
     }
 }

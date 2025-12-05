@@ -325,13 +325,13 @@ public class Javac {
             dct.putComment(node, newCmt);
         }
 
-        /* renamed from: lombok.javac.Javac$JavadocOps_8$1, reason: invalid class name */
+        /* renamed from: lombok.javac.Javac$JavadocOps_8$1 */
         /* loaded from: discord-126021.apk:lombok/javac/Javac$JavadocOps_8$1.SCL.lombok */
-        class AnonymousClass1 implements Tokens.Comment {
+        class C128871 implements Tokens.Comment {
             private final /* synthetic */ String val$text;
             private final /* synthetic */ JCTree val$field;
 
-            AnonymousClass1(String str, JCTree jCTree) {
+            C128871(String str, JCTree jCTree) {
                 this.val$text = str;
                 this.val$field = jCTree;
             }
@@ -354,7 +354,7 @@ public class Javac {
         }
 
         private static Tokens.Comment createJavadocComment(String text, JCTree field) {
-            return new AnonymousClass1(text, field);
+            return new C128871(text, field);
         }
     }
 

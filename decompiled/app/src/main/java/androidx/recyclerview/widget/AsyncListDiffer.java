@@ -28,23 +28,23 @@ public class AsyncListDiffer<T> {
     private List<T> mReadOnlyList;
     private final ListUpdateCallback mUpdateCallback;
 
-    /* renamed from: androidx.recyclerview.widget.AsyncListDiffer$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.recyclerview.widget.AsyncListDiffer$1 */
+    public class RunnableC05351 implements Runnable {
         public final /* synthetic */ Runnable val$commitCallback;
         public final /* synthetic */ List val$newList;
         public final /* synthetic */ List val$oldList;
         public final /* synthetic */ int val$runGeneration;
 
-        /* renamed from: androidx.recyclerview.widget.AsyncListDiffer$1$1, reason: invalid class name and collision with other inner class name */
-        public class C00041 extends DiffUtil.Callback {
-            public C00041() {
+        /* renamed from: androidx.recyclerview.widget.AsyncListDiffer$1$1, reason: invalid class name */
+        public class AnonymousClass1 extends DiffUtil.Callback {
+            public AnonymousClass1() {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
             @Override // androidx.recyclerview.widget.DiffUtil.Callback
             public boolean areContentsTheSame(int i, int i2) {
-                Object obj = AnonymousClass1.this.val$oldList.get(i);
-                Object obj2 = AnonymousClass1.this.val$newList.get(i2);
+                Object obj = RunnableC05351.this.val$oldList.get(i);
+                Object obj2 = RunnableC05351.this.val$newList.get(i2);
                 if (obj != null && obj2 != null) {
                     return AsyncListDiffer.this.mConfig.getDiffCallback().areContentsTheSame(obj, obj2);
                 }
@@ -57,8 +57,8 @@ public class AsyncListDiffer<T> {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // androidx.recyclerview.widget.DiffUtil.Callback
             public boolean areItemsTheSame(int i, int i2) {
-                Object obj = AnonymousClass1.this.val$oldList.get(i);
-                Object obj2 = AnonymousClass1.this.val$newList.get(i2);
+                Object obj = RunnableC05351.this.val$oldList.get(i);
+                Object obj2 = RunnableC05351.this.val$newList.get(i2);
                 return (obj == null || obj2 == null) ? obj == null && obj2 == null : AsyncListDiffer.this.mConfig.getDiffCallback().areItemsTheSame(obj, obj2);
             }
 
@@ -66,8 +66,8 @@ public class AsyncListDiffer<T> {
             @Override // androidx.recyclerview.widget.DiffUtil.Callback
             @Nullable
             public Object getChangePayload(int i, int i2) {
-                Object obj = AnonymousClass1.this.val$oldList.get(i);
-                Object obj2 = AnonymousClass1.this.val$newList.get(i2);
+                Object obj = RunnableC05351.this.val$oldList.get(i);
+                Object obj2 = RunnableC05351.this.val$newList.get(i2);
                 if (obj == null || obj2 == null) {
                     throw new AssertionError();
                 }
@@ -76,12 +76,12 @@ public class AsyncListDiffer<T> {
 
             @Override // androidx.recyclerview.widget.DiffUtil.Callback
             public int getNewListSize() {
-                return AnonymousClass1.this.val$newList.size();
+                return RunnableC05351.this.val$newList.size();
             }
 
             @Override // androidx.recyclerview.widget.DiffUtil.Callback
             public int getOldListSize() {
-                return AnonymousClass1.this.val$oldList.size();
+                return RunnableC05351.this.val$oldList.size();
             }
         }
 
@@ -95,15 +95,15 @@ public class AsyncListDiffer<T> {
 
             @Override // java.lang.Runnable
             public void run() {
-                AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
+                RunnableC05351 runnableC05351 = RunnableC05351.this;
                 AsyncListDiffer asyncListDiffer = AsyncListDiffer.this;
-                if (asyncListDiffer.mMaxScheduledGeneration == anonymousClass1.val$runGeneration) {
-                    asyncListDiffer.latchList(anonymousClass1.val$newList, this.val$result, anonymousClass1.val$commitCallback);
+                if (asyncListDiffer.mMaxScheduledGeneration == runnableC05351.val$runGeneration) {
+                    asyncListDiffer.latchList(runnableC05351.val$newList, this.val$result, runnableC05351.val$commitCallback);
                 }
             }
         }
 
-        public AnonymousClass1(List list, List list2, int i, Runnable runnable) {
+        public RunnableC05351(List list, List list2, int i, Runnable runnable) {
             this.val$oldList = list;
             this.val$newList = list2;
             this.val$runGeneration = i;
@@ -112,7 +112,7 @@ public class AsyncListDiffer<T> {
 
         @Override // java.lang.Runnable
         public void run() {
-            AsyncListDiffer.this.mMainThreadExecutor.execute(new AnonymousClass2(DiffUtil.calculateDiff(new C00041())));
+            AsyncListDiffer.this.mMainThreadExecutor.execute(new AnonymousClass2(DiffUtil.calculateDiff(new AnonymousClass1())));
         }
     }
 
@@ -189,7 +189,7 @@ public class AsyncListDiffer<T> {
             return;
         }
         if (list2 != null) {
-            this.mConfig.getBackgroundThreadExecutor().execute(new AnonymousClass1(list2, list, i, runnable));
+            this.mConfig.getBackgroundThreadExecutor().execute(new RunnableC05351(list2, list, i, runnable));
             return;
         }
         this.mList = list;

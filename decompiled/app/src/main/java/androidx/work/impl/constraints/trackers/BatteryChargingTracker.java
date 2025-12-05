@@ -63,11 +63,7 @@ public class BatteryChargingTracker extends BroadcastReceiverConstraintTracker<B
         Logger.get().debug(TAG, String.format("Received %s", action), new Throwable[0]);
         switch (action.hashCode()) {
             case -1886648615:
-                if (!action.equals("android.intent.action.ACTION_POWER_DISCONNECTED")) {
-                    c = 65535;
-                } else {
-                    c = 0;
-                }
+                c = !action.equals("android.intent.action.ACTION_POWER_DISCONNECTED") ? (char) 65535 : (char) 0;
                 break;
             case -54942926:
                 if (!action.equals("android.os.action.DISCHARGING")) {

@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPaymentMetadata.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackPaymentMetadata {
             return false;
         }
         TrackPaymentMetadata trackPaymentMetadata = (TrackPaymentMetadata) other;
-        return m.areEqual(this.paymentType, trackPaymentMetadata.paymentType) && m.areEqual(this.price, trackPaymentMetadata.price) && m.areEqual(this.regularPrice, trackPaymentMetadata.regularPrice) && m.areEqual(this.currency, trackPaymentMetadata.currency) && m.areEqual(this.isGift, trackPaymentMetadata.isGift);
+        return Intrinsics3.areEqual(this.paymentType, trackPaymentMetadata.paymentType) && Intrinsics3.areEqual(this.price, trackPaymentMetadata.price) && Intrinsics3.areEqual(this.regularPrice, trackPaymentMetadata.regularPrice) && Intrinsics3.areEqual(this.currency, trackPaymentMetadata.currency) && Intrinsics3.areEqual(this.isGift, trackPaymentMetadata.isGift);
     }
 
     public int hashCode() {
@@ -37,15 +37,15 @@ public final /* data */ class TrackPaymentMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPaymentMetadata(paymentType=");
-        sbU.append(this.paymentType);
-        sbU.append(", price=");
-        sbU.append(this.price);
-        sbU.append(", regularPrice=");
-        sbU.append(this.regularPrice);
-        sbU.append(", currency=");
-        sbU.append(this.currency);
-        sbU.append(", isGift=");
-        return a.D(sbU, this.isGift, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPaymentMetadata(paymentType=");
+        sbM833U.append(this.paymentType);
+        sbM833U.append(", price=");
+        sbM833U.append(this.price);
+        sbM833U.append(", regularPrice=");
+        sbM833U.append(this.regularPrice);
+        sbM833U.append(", currency=");
+        sbM833U.append(this.currency);
+        sbM833U.append(", isGift=");
+        return outline.m816D(sbM833U, this.isGift, ")");
     }
 }

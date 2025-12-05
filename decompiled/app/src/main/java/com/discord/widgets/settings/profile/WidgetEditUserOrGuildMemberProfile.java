@@ -20,15 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.a.b.c;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.a.k.b;
-import b.a.y.b0;
-import b.a.y.c0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppTransitionActivity;
 import com.discord.databinding.ViewDialogConfirmationBinding;
@@ -39,29 +31,23 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.dimmer.DimmerView;
-import com.discord.utilities.file.FileUtilsKt;
+import com.discord.utilities.file.FileUtils2;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.textprocessing.AstRenderer;
 import com.discord.utilities.textprocessing.MessageRenderContext;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import com.discord.widgets.settings.profile.SettingsUserProfileViewModel;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.widgets.settings.profile.EditUserOrGuildMemberProfileViewModel2;
 import com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet;
 import com.discord.widgets.user.Badge;
 import com.discord.widgets.user.profile.UserProfileHeaderView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g;
-import d0.g0.t;
-import d0.t.n;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.Lazy;
@@ -70,15 +56,30 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
-import rx.functions.Action1;
-import rx.functions.Func0;
-import rx.subjects.BehaviorSubject;
+import p007b.p008a.p009a.p012b.MultiValuePropPremiumUpsellDialog;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p008a.p062y.SelectorBottomSheet;
+import p007b.p008a.p062y.SelectorBottomSheet2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
+import p658rx.functions.Action1;
+import p658rx.functions.Func0;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
 /* loaded from: classes2.dex */
 public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetEditUserOrGuildMemberProfile.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsUserProfileBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEditUserOrGuildMemberProfile.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsUserProfileBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -116,7 +117,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
 
         public final void launch(Context context, AppTransitionActivity.Transition transition, Long guildId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             if (transition != null) {
                 intent.putExtra("transition", transition);
@@ -124,7 +125,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             if (guildId != null) {
                 intent.putExtra("com.discord.intent.extra.EXTRA_GUILD_ID", guildId.longValue());
             }
-            j.d(context, WidgetEditUserOrGuildMemberProfile.class, intent);
+            AppScreen2.m156d(context, WidgetEditUserOrGuildMemberProfile.class, intent);
             StoreAnalytics.onUserSettingsPaneViewed$default(StoreStream.INSTANCE.getAnalytics(), "User Profile", null, 2, null);
         }
 
@@ -134,12 +135,12 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
-        public final /* synthetic */ SettingsUserProfileViewModel.ViewState.Loaded $viewState;
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$1 */
+    public static final class C99691 extends Lambda implements Function1<String, Unit> {
+        public final /* synthetic */ EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(SettingsUserProfileViewModel.ViewState.Loaded loaded) {
+        public C99691(EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded loaded) {
             super(1);
             this.$viewState = loaded;
         }
@@ -147,31 +148,31 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            m.checkNotNullParameter(str, "dataUrl");
+            Intrinsics3.checkNotNullParameter(str, "dataUrl");
             if (this.$viewState.getCanHaveAnimatedAvatars() || !IconUtils.INSTANCE.isDataUrlForGif(str)) {
                 WidgetEditUserOrGuildMemberProfile.access$getViewModel$p(WidgetEditUserOrGuildMemberProfile.this).updateAvatar(str);
                 return;
             }
-            c.Companion companion = c.INSTANCE;
+            MultiValuePropPremiumUpsellDialog.Companion companion = MultiValuePropPremiumUpsellDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetEditUserOrGuildMemberProfile.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-            c.Companion.a(companion, parentFragmentManager, 4, WidgetEditUserOrGuildMemberProfile.this.getString(R.string.premium_upsell_animated_avatar_active_mobile), null, Traits.Location.Page.USER_SETTINGS, "User Profile", null, null, false, false, 968);
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            MultiValuePropPremiumUpsellDialog.Companion.m114a(companion, parentFragmentManager, 4, WidgetEditUserOrGuildMemberProfile.this.getString(C5419R.string.premium_upsell_animated_avatar_active_mobile), null, Traits.Location.Page.USER_SETTINGS, "User Profile", null, null, false, false, 968);
         }
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$2 */
+    public static final class C99702 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $avatarSheetOptions;
 
         /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
         /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function1<Integer, Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
@@ -179,7 +180,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
                 invoke(num.intValue());
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             public final void invoke(int i) {
@@ -197,7 +198,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(List list) {
+        public C99702(List list) {
             super(0);
             this.$avatarSheetOptions = list;
         }
@@ -205,58 +206,58 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            b0.Companion aVar = b0.INSTANCE;
+            SelectorBottomSheet.Companion aVar = SelectorBottomSheet.INSTANCE;
             FragmentManager childFragmentManager = WidgetEditUserOrGuildMemberProfile.this.getChildFragmentManager();
-            m.checkNotNullExpressionValue(childFragmentManager, "childFragmentManager");
-            aVar.a(childFragmentManager, "", this.$avatarSheetOptions, false, new AnonymousClass1());
+            Intrinsics3.checkNotNullExpressionValue(childFragmentManager, "childFragmentManager");
+            aVar.m379a(childFragmentManager, "", this.$avatarSheetOptions, false, new AnonymousClass1());
         }
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$1 */
+    public static final class C99711 extends Lambda implements Function1<String, Unit> {
+        public C99711() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            m.checkNotNullParameter(str, "dataUrl");
+            Intrinsics3.checkNotNullParameter(str, "dataUrl");
             WidgetEditUserOrGuildMemberProfile.access$getViewModel$p(WidgetEditUserOrGuildMemberProfile.this).updateBannerImage(str);
         }
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function0<Unit> {
-        public final /* synthetic */ SettingsUserProfileViewModel.ViewState.Loaded $viewState;
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2 */
+    public static final class C99722 extends Lambda implements Function0<Unit> {
+        public final /* synthetic */ EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded $viewState;
 
         /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
         /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function1<String, Unit> {
 
             /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
             /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C04591 extends o implements Function0<Unit> {
-                public C04591() {
+            public static final class C132931 extends Lambda implements Function0<Unit> {
+                public C132931() {
                     super(0);
                 }
 
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -268,16 +269,16 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             }
 
             /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-            /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$2, reason: invalid class name and collision with other inner class name */
-            public static final class C04602 extends o implements Function0<Unit> {
-                public C04602() {
+            /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$2, reason: invalid class name */
+            public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+                public AnonymousClass2() {
                     super(0);
                 }
 
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -288,7 +289,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
 
             /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
             /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$3, reason: invalid class name */
-            public static final class AnonymousClass3 extends o implements Function1<Integer, Unit> {
+            public static final class AnonymousClass3 extends Lambda implements Function1<Integer, Unit> {
                 public AnonymousClass3() {
                     super(1);
                 }
@@ -296,7 +297,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
                 @Override // kotlin.jvm.functions.Function1
                 public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
                     invoke2(num);
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -318,24 +319,24 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(String str) {
                 invoke2(str);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(String str) {
                 WidgetEditProfileBannerSheet.Companion companion = WidgetEditProfileBannerSheet.INSTANCE;
                 Long lAccess$getGuildId$p = WidgetEditUserOrGuildMemberProfile.access$getGuildId$p(WidgetEditUserOrGuildMemberProfile.this);
-                m.checkNotNullExpressionValue(str, "avatarRepresentativeColorHex");
-                String nonDefaultColorPreviewHex = AnonymousClass2.this.$viewState.getNonDefaultColorPreviewHex();
-                boolean hasBannerImageForDisplay = AnonymousClass2.this.$viewState.getHasBannerImageForDisplay();
+                Intrinsics3.checkNotNullExpressionValue(str, "avatarRepresentativeColorHex");
+                String nonDefaultColorPreviewHex = C99722.this.$viewState.getNonDefaultColorPreviewHex();
+                boolean hasBannerImageForDisplay = C99722.this.$viewState.getHasBannerImageForDisplay();
                 FragmentManager parentFragmentManager = WidgetEditUserOrGuildMemberProfile.this.getParentFragmentManager();
-                m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-                companion.show(lAccess$getGuildId$p, str, nonDefaultColorPreviewHex, hasBannerImageForDisplay, parentFragmentManager, new C04591(), new C04602(), new AnonymousClass3());
+                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                companion.show(lAccess$getGuildId$p, str, nonDefaultColorPreviewHex, hasBannerImageForDisplay, parentFragmentManager, new C132931(), new AnonymousClass2(), new AnonymousClass3());
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(SettingsUserProfileViewModel.ViewState.Loaded loaded) {
+        public C99722(EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded loaded) {
             super(0);
             this.$viewState = loaded;
         }
@@ -343,43 +344,43 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            Observable observableL = WidgetEditUserOrGuildMemberProfile.access$getAvatarRepresentativeColorHexSubject$p(WidgetEditUserOrGuildMemberProfile.this).Z(1).L();
-            m.checkNotNullExpressionValue(observableL, "avatarRepresentativeColo…  .onBackpressureLatest()");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableL, WidgetEditUserOrGuildMemberProfile.this, null, 2, null), WidgetEditUserOrGuildMemberProfile.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+            Observable observableM11086L = WidgetEditUserOrGuildMemberProfile.access$getAvatarRepresentativeColorHexSubject$p(WidgetEditUserOrGuildMemberProfile.this).m11100Z(1).m11086L();
+            Intrinsics3.checkNotNullExpressionValue(observableM11086L, "avatarRepresentativeColo…  .onBackpressureLatest()");
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11086L, WidgetEditUserOrGuildMemberProfile.this, null, 2, null), WidgetEditUserOrGuildMemberProfile.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
         }
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureUI$3, reason: invalid class name */
-    public static final class AnonymousClass3<R> implements Func0<Boolean> {
-        public final /* synthetic */ SettingsUserProfileViewModel.ViewState $viewState;
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureUI$3 */
+    public static final class C99753<R> implements Func0<Boolean> {
+        public final /* synthetic */ EditUserOrGuildMemberProfileViewModel2.ViewState $viewState;
 
-        public AnonymousClass3(SettingsUserProfileViewModel.ViewState viewState) {
+        public C99753(EditUserOrGuildMemberProfileViewModel2.ViewState viewState) {
             this.$viewState = viewState;
         }
 
-        @Override // rx.functions.Func0, java.util.concurrent.Callable
+        @Override // p658rx.functions.Func0, java.util.concurrent.Callable
         public /* bridge */ /* synthetic */ Object call() {
             return call();
         }
 
-        @Override // rx.functions.Func0, java.util.concurrent.Callable
+        @Override // p658rx.functions.Func0, java.util.concurrent.Callable
         public final Boolean call() {
-            return Boolean.valueOf(WidgetEditUserOrGuildMemberProfile.access$handleBackPressed(WidgetEditUserOrGuildMemberProfile.this, (SettingsUserProfileViewModel.ViewState.Loaded) this.$viewState));
+            return Boolean.valueOf(WidgetEditUserOrGuildMemberProfile.access$handleBackPressed(WidgetEditUserOrGuildMemberProfile.this, (EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded) this.$viewState));
         }
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$handleBackPressed$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$handleBackPressed$1 */
+    public static final class ViewOnClickListenerC99761 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
-        public AnonymousClass1(AlertDialog alertDialog) {
+        public ViewOnClickListenerC99761(AlertDialog alertDialog) {
             this.$dialog = alertDialog;
         }
 
@@ -390,11 +391,11 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$handleBackPressed$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$handleBackPressed$2 */
+    public static final class ViewOnClickListenerC99772 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
-        public AnonymousClass2(AlertDialog alertDialog) {
+        public ViewOnClickListenerC99772(AlertDialog alertDialog) {
             this.$dialog = alertDialog;
         }
 
@@ -410,28 +411,28 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$1 */
+    public static final class ViewOnClickListenerC99781 implements View.OnClickListener {
         public final /* synthetic */ View $view;
 
-        public AnonymousClass1(View view) {
+        public ViewOnClickListenerC99781(View view) {
             this.$view = view;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            SettingsUserProfileViewModel settingsUserProfileViewModelAccess$getViewModel$p = WidgetEditUserOrGuildMemberProfile.access$getViewModel$p(WidgetEditUserOrGuildMemberProfile.this);
+            EditUserOrGuildMemberProfileViewModel2 editUserOrGuildMemberProfileViewModel2Access$getViewModel$p = WidgetEditUserOrGuildMemberProfile.access$getViewModel$p(WidgetEditUserOrGuildMemberProfile.this);
             Context context = this.$view.getContext();
-            m.checkNotNullExpressionValue(context, "view.context");
-            settingsUserProfileViewModelAccess$getViewModel$p.saveChanges(context);
-            DimmerView.setDimmed$default(WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).i, true, false, 2, null);
+            Intrinsics3.checkNotNullExpressionValue(context, "view.context");
+            editUserOrGuildMemberProfileViewModel2Access$getViewModel$p.saveChanges(context);
+            DimmerView.setDimmed$default(WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).f18084i, true, false, 2, null);
         }
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<MotionEvent, Boolean> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$2 */
+    public static final class C99792 extends Lambda implements Function1<MotionEvent, Boolean> {
+        public C99792() {
             super(1);
         }
 
@@ -449,19 +450,19 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             if (actionMasked == 1 || actionMasked == 3) {
                 float rawX = motionEvent.getRawX();
                 float rawY = motionEvent.getRawY();
-                TextInputLayout textInputLayout = WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).d;
-                m.checkNotNullExpressionValue(textInputLayout, "binding.bioEditorTextInputFieldWrap");
+                TextInputLayout textInputLayout = WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).f18079d;
+                Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.bioEditorTextInputFieldWrap");
                 int width = textInputLayout.getWidth();
-                TextInputLayout textInputLayout2 = WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).d;
-                m.checkNotNullExpressionValue(textInputLayout2, "binding.bioEditorTextInputFieldWrap");
+                TextInputLayout textInputLayout2 = WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).f18079d;
+                Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.bioEditorTextInputFieldWrap");
                 int height = textInputLayout2.getHeight();
                 int[] iArr = new int[2];
-                WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).d.getLocationOnScreen(iArr);
+                WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).f18079d.getLocationOnScreen(iArr);
                 int i = iArr[0];
                 int i2 = iArr[1];
                 if (rawX < ((float) i) || rawX > ((float) (i + width)) || rawY < ((float) i2) || rawY > ((float) (i2 + height))) {
-                    CardView cardView = WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).f2640b;
-                    m.checkNotNullExpressionValue(cardView, "binding.bioEditorCard");
+                    CardView cardView = WidgetEditUserOrGuildMemberProfile.access$getBinding$p(WidgetEditUserOrGuildMemberProfile.this).f18077b;
+                    Intrinsics3.checkNotNullExpressionValue(cardView, "binding.bioEditorCard");
                     if (cardView.getVisibility() == 0) {
                         WidgetEditUserOrGuildMemberProfile.access$setCurrentBioFromEditor(WidgetEditUserOrGuildMemberProfile.this);
                     }
@@ -472,9 +473,9 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$3 */
+    public static final class ViewOnClickListenerC99803 implements View.OnClickListener {
+        public ViewOnClickListenerC99803() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -484,16 +485,16 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<Integer, Unit> {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$4 */
+    public static final class C99814 extends Lambda implements Function1<Integer, Unit> {
+        public C99814() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
             invoke(num.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(int i) {
@@ -502,84 +503,84 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends o implements Function1<Badge, Unit> {
-        public AnonymousClass5() {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$5 */
+    public static final class C99825 extends Lambda implements Function1<Badge, Unit> {
+        public C99825() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Badge badge) {
             invoke2(badge);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Badge badge) {
-            m.checkNotNullParameter(badge, "it");
+            Intrinsics3.checkNotNullParameter(badge, "it");
             Badge.Companion companion = Badge.INSTANCE;
             FragmentManager parentFragmentManager = WidgetEditUserOrGuildMemberProfile.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.onBadgeClick(parentFragmentManager, WidgetEditUserOrGuildMemberProfile.this.requireContext());
         }
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<SettingsUserProfileViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBoundOrOnResume$1 */
+    public static final class C99831 extends Lambda implements Function1<EditUserOrGuildMemberProfileViewModel2.ViewState, Unit> {
+        public C99831() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(SettingsUserProfileViewModel.ViewState viewState) {
+        public /* bridge */ /* synthetic */ Unit invoke(EditUserOrGuildMemberProfileViewModel2.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(SettingsUserProfileViewModel.ViewState viewState) {
+        public final void invoke2(EditUserOrGuildMemberProfileViewModel2.ViewState viewState) {
             WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile = WidgetEditUserOrGuildMemberProfile.this;
-            m.checkNotNullExpressionValue(viewState, "viewState");
+            Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
             WidgetEditUserOrGuildMemberProfile.access$configureUI(widgetEditUserOrGuildMemberProfile, viewState);
         }
     }
 
     /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<SettingsUserProfileViewModel.Event, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBoundOrOnResume$2 */
+    public static final class C99842 extends Lambda implements Function1<EditUserOrGuildMemberProfileViewModel2.Event, Unit> {
+        public C99842() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(SettingsUserProfileViewModel.Event event) {
+        public /* bridge */ /* synthetic */ Unit invoke(EditUserOrGuildMemberProfileViewModel2.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(SettingsUserProfileViewModel.Event event) {
-            m.checkNotNullParameter(event, "event");
+        public final void invoke2(EditUserOrGuildMemberProfileViewModel2.Event event) {
+            Intrinsics3.checkNotNullParameter(event, "event");
             WidgetEditUserOrGuildMemberProfile.access$handleEvent(WidgetEditUserOrGuildMemberProfile.this, event);
         }
     }
 
     public WidgetEditUserOrGuildMemberProfile() {
-        super(R.layout.widget_settings_user_profile);
+        super(C5419R.layout.widget_settings_user_profile);
         this.avatarSelectedResult = WidgetEditUserOrGuildMemberProfile$avatarSelectedResult$1.INSTANCE;
         this.bannerSelectedResult = WidgetEditUserOrGuildMemberProfile$bannerSelectedResult$1.INSTANCE;
         this.imageSelectedResult = WidgetEditUserOrGuildMemberProfile$imageSelectedResult$1.INSTANCE;
-        this.guildId = g.lazy(new WidgetEditUserOrGuildMemberProfile$guildId$2(this));
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetEditUserOrGuildMemberProfile$binding$2.INSTANCE, null, 2, null);
+        this.guildId = LazyJVM.lazy(new WidgetEditUserOrGuildMemberProfile$guildId$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetEditUserOrGuildMemberProfile$binding$2.INSTANCE, null, 2, null);
         WidgetEditUserOrGuildMemberProfile$viewModel$2 widgetEditUserOrGuildMemberProfile$viewModel$2 = new WidgetEditUserOrGuildMemberProfile$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(SettingsUserProfileViewModel.class), new WidgetEditUserOrGuildMemberProfile$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetEditUserOrGuildMemberProfile$viewModel$2));
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(EditUserOrGuildMemberProfileViewModel2.class), new C9968xa4470a79(appViewModelDelegates3), new AppViewModelDelegates5(widgetEditUserOrGuildMemberProfile$viewModel$2));
         this.discardConfirmed = new AtomicBoolean(false);
-        this.avatarRepresentativeColorHexSubject = BehaviorSubject.k0();
+        this.avatarRepresentativeColorHexSubject = BehaviorSubject.m11129k0();
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile, SettingsUserProfileViewModel.ViewState viewState) {
+    public static final /* synthetic */ void access$configureUI(WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile, EditUserOrGuildMemberProfileViewModel2.ViewState viewState) {
         widgetEditUserOrGuildMemberProfile.configureUI(viewState);
     }
 
@@ -611,15 +612,15 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         return widgetEditUserOrGuildMemberProfile.imageSelectedResult;
     }
 
-    public static final /* synthetic */ SettingsUserProfileViewModel access$getViewModel$p(WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile) {
+    public static final /* synthetic */ EditUserOrGuildMemberProfileViewModel2 access$getViewModel$p(WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile) {
         return widgetEditUserOrGuildMemberProfile.getViewModel();
     }
 
-    public static final /* synthetic */ boolean access$handleBackPressed(WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile, SettingsUserProfileViewModel.ViewState.Loaded loaded) {
+    public static final /* synthetic */ boolean access$handleBackPressed(WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile, EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded loaded) {
         return widgetEditUserOrGuildMemberProfile.handleBackPressed(loaded);
     }
 
-    public static final /* synthetic */ void access$handleEvent(WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile, SettingsUserProfileViewModel.Event event) {
+    public static final /* synthetic */ void access$handleEvent(WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile, EditUserOrGuildMemberProfileViewModel2.Event event) {
         widgetEditUserOrGuildMemberProfile.handleEvent(event);
     }
 
@@ -639,98 +640,98 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         widgetEditUserOrGuildMemberProfile.imageSelectedResult = function1;
     }
 
-    private final void configureAvatarSelect(SettingsUserProfileViewModel.ViewState.Loaded viewState) {
-        this.avatarSelectedResult = new AnonymousClass1(viewState);
-        c0[] c0VarArr = new c0[1];
-        c0VarArr[0] = new c0(viewState.getMeMember() != null ? viewState.getHasAvatarForDisplay() ? getString(R.string.change_guild_member_avatar) : getString(R.string.upload_guild_member_avatar) : viewState.getHasAvatarForDisplay() ? getString(R.string.user_settings_change_avatar) : getString(R.string.user_settings_upload_avatar), null, null, null, null, null, null, 116);
-        List listMutableListOf = n.mutableListOf(c0VarArr);
+    private final void configureAvatarSelect(EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded viewState) {
+        this.avatarSelectedResult = new C99691(viewState);
+        SelectorBottomSheet2[] selectorBottomSheet2Arr = new SelectorBottomSheet2[1];
+        selectorBottomSheet2Arr[0] = new SelectorBottomSheet2(viewState.getMeMember() != null ? viewState.getHasAvatarForDisplay() ? getString(C5419R.string.change_guild_member_avatar) : getString(C5419R.string.upload_guild_member_avatar) : viewState.getHasAvatarForDisplay() ? getString(C5419R.string.user_settings_change_avatar) : getString(C5419R.string.user_settings_upload_avatar), null, null, null, null, null, null, 116);
+        List listMutableListOf = Collections2.mutableListOf(selectorBottomSheet2Arr);
         if (viewState.getHasAvatarForDisplay()) {
-            listMutableListOf.add(new c0(viewState.getMeMember() != null ? getString(R.string.change_identity_modal_reset_primary_avatar) : getString(R.string.user_settings_remove_avatar), null, null, null, null, Integer.valueOf(ColorCompat.getColor(requireContext(), R.color.status_red_500)), null, 84));
+            listMutableListOf.add(new SelectorBottomSheet2(viewState.getMeMember() != null ? getString(C5419R.string.change_identity_modal_reset_primary_avatar) : getString(C5419R.string.user_settings_remove_avatar), null, null, null, null, Integer.valueOf(ColorCompat.getColor(requireContext(), C5419R.color.status_red_500)), null, 84));
         }
-        getBinding().o.setOnAvatarEdit(new AnonymousClass2(listMutableListOf));
+        getBinding().f18090o.setOnAvatarEdit(new C99702(listMutableListOf));
     }
 
-    private final void configureBannerSelect(SettingsUserProfileViewModel.ViewState.Loaded viewState) {
-        this.bannerSelectedResult = new AnonymousClass1();
-        getBinding().o.setOnBannerPress(new AnonymousClass2(viewState));
+    private final void configureBannerSelect(EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded viewState) {
+        this.bannerSelectedResult = new C99711();
+        getBinding().f18090o.setOnBannerPress(new C99722(viewState));
     }
 
-    private final void configureBio(SettingsUserProfileViewModel.ViewState.Loaded viewState) {
+    private final void configureBio(EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded viewState) {
         Drawable drawable;
         List<Node<MessageRenderContext>> bioAst = viewState.getBioAst();
         boolean showBioEditor = viewState.getShowBioEditor();
-        CardView cardView = getBinding().f2640b;
-        m.checkNotNullExpressionValue(cardView, "binding.bioEditorCard");
+        CardView cardView = getBinding().f18077b;
+        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.bioEditorCard");
         boolean z2 = cardView.getVisibility() == 0;
-        TextView textView = getBinding().f;
-        m.checkNotNullExpressionValue(textView, "binding.bioHelpText");
+        TextView textView = getBinding().f18081f;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.bioHelpText");
         textView.setVisibility(viewState.getMeMember() != null ? 0 : 8);
-        TextView textView2 = getBinding().e;
+        TextView textView2 = getBinding().f18080e;
         Drawable drawable2 = null;
-        textView2.setText(viewState.getMeMember() != null ? b.j(textView2, R.string.change_identity_bio_header, new Object[0], null, 4) : b.j(textView2, R.string.user_profile_about_me, new Object[0], null, 4));
-        if (viewState.getMeMember() != null && (drawable = ContextCompat.getDrawable(textView2.getContext(), R.drawable.ic_nitro_wheel_16dp)) != null) {
-            TextView textView3 = getBinding().e;
-            m.checkNotNullExpressionValue(textView3, "binding.bioHeader");
-            DrawableCompat.setTint(drawable, ColorCompat.getThemedColor(textView3, R.attr.colorHeaderSecondary));
+        textView2.setText(viewState.getMeMember() != null ? FormatUtils.m218j(textView2, C5419R.string.change_identity_bio_header, new Object[0], null, 4) : FormatUtils.m218j(textView2, C5419R.string.user_profile_about_me, new Object[0], null, 4));
+        if (viewState.getMeMember() != null && (drawable = ContextCompat.getDrawable(textView2.getContext(), C5419R.drawable.ic_nitro_wheel_16dp)) != null) {
+            TextView textView3 = getBinding().f18080e;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.bioHeader");
+            DrawableCompat.setTint(drawable, ColorCompat.getThemedColor(textView3, C5419R.attr.colorHeaderSecondary));
             drawable2 = drawable;
         }
         com.discord.utilities.drawable.DrawableCompat.setCompoundDrawablesCompat$default(textView2, (Drawable) null, (Drawable) null, drawable2, (Drawable) null, 11, (Object) null);
-        CardView cardView2 = getBinding().g;
-        m.checkNotNullExpressionValue(cardView2, "binding.bioPreviewCard");
+        CardView cardView2 = getBinding().f18082g;
+        Intrinsics3.checkNotNullExpressionValue(cardView2, "binding.bioPreviewCard");
         cardView2.setVisibility(showBioEditor ^ true ? 0 : 8);
-        CardView cardView3 = getBinding().f2640b;
-        m.checkNotNullExpressionValue(cardView3, "binding.bioEditorCard");
+        CardView cardView3 = getBinding().f18077b;
+        Intrinsics3.checkNotNullExpressionValue(cardView3, "binding.bioEditorCard");
         cardView3.setVisibility(showBioEditor ? 0 : 8);
         if (!showBioEditor) {
             if (bioAst != null) {
-                LinkifiedTextView linkifiedTextView = getBinding().h;
-                m.checkNotNullExpressionValue(linkifiedTextView, "binding.bioPreviewText");
+                LinkifiedTextView linkifiedTextView = getBinding().f18083h;
+                Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.bioPreviewText");
                 Context context = linkifiedTextView.getContext();
-                m.checkNotNullExpressionValue(context, "binding.bioPreviewText.context");
-                getBinding().h.setDraweeSpanStringBuilder(AstRenderer.render(bioAst, new MessageRenderContext(context, 0L, false, null, null, null, 0, null, null, 0, 0, new WidgetEditUserOrGuildMemberProfile$configureBio$renderContext$1(getViewModel()), null, null, 14328, null)));
+                Intrinsics3.checkNotNullExpressionValue(context, "binding.bioPreviewText.context");
+                getBinding().f18083h.setDraweeSpanStringBuilder(AstRenderer.render(bioAst, new MessageRenderContext(context, 0L, false, null, null, null, 0, null, null, 0, 0, new WidgetEditUserOrGuildMemberProfile$configureBio$renderContext$1(getViewModel()), null, null, 14328, null)));
                 return;
             }
             return;
         }
-        TextInputLayout textInputLayout = getBinding().d;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.bioEditorTextInputFieldWrap");
+        TextInputLayout textInputLayout = getBinding().f18079d;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.bioEditorTextInputFieldWrap");
         ViewExtensions.setText(textInputLayout, viewState.getCurrentBio());
         if (z2) {
             return;
         }
-        getBinding().d.requestFocus();
-        TextInputLayout textInputLayout2 = getBinding().d;
-        m.checkNotNullExpressionValue(textInputLayout2, "binding.bioEditorTextInputFieldWrap");
+        getBinding().f18079d.requestFocus();
+        TextInputLayout textInputLayout2 = getBinding().f18079d;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.bioEditorTextInputFieldWrap");
         ViewExtensions.moveCursorToEnd(textInputLayout2);
-        TextInputLayout textInputLayout3 = getBinding().d;
-        m.checkNotNullExpressionValue(textInputLayout3, "binding.bioEditorTextInputFieldWrap");
+        TextInputLayout textInputLayout3 = getBinding().f18079d;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.bioEditorTextInputFieldWrap");
         showKeyboard(textInputLayout3);
     }
 
-    private final void configureFab(SettingsUserProfileViewModel.ViewState.Loaded viewState) {
-        FloatingActionButton floatingActionButton = getBinding().m;
-        m.checkNotNullExpressionValue(floatingActionButton, "binding.saveFab");
+    private final void configureFab(EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded viewState) {
+        FloatingActionButton floatingActionButton = getBinding().f18088m;
+        Intrinsics3.checkNotNullExpressionValue(floatingActionButton, "binding.saveFab");
         floatingActionButton.setVisibility(viewState.getShowSaveFab() ? 0 : 8);
     }
 
-    private final void configureNick(SettingsUserProfileViewModel.ViewState.Loaded viewState) {
+    private final void configureNick(EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded viewState) {
         boolean z2 = viewState.getGuild() != null;
-        LinearLayout linearLayout = getBinding().l;
-        m.checkNotNullExpressionValue(linearLayout, "binding.nickContainer");
+        LinearLayout linearLayout = getBinding().f18087l;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.nickContainer");
         linearLayout.setVisibility(z2 ? 0 : 8);
-        TextInputLayout textInputLayout = getBinding().n;
-        m.checkNotNullExpressionValue(textInputLayout, "textInputLayout");
+        TextInputLayout textInputLayout = getBinding().f18089n;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "textInputLayout");
         String currentNickname = viewState.getCurrentNickname();
         textInputLayout.setEndIconVisible(!(currentNickname == null || currentNickname.length() == 0));
         ViewExtensions.setEnabledAndAlpha$default(textInputLayout, viewState.getCanEditNickname(), 0.0f, 2, null);
-        textInputLayout.setHint(viewState.getCanEditNickname() ? getString(R.string.nickname) : getString(R.string.change_identity_modal_change_nickname_disabled));
+        textInputLayout.setHint(viewState.getCanEditNickname() ? getString(C5419R.string.nickname) : getString(C5419R.string.change_identity_modal_change_nickname_disabled));
         textInputLayout.setPlaceholderText(viewState.getUser().getUsername());
-        ViewExtensions.addBindedTextWatcher(textInputLayout, this, new WidgetEditUserOrGuildMemberProfile$configureNick$$inlined$also$lambda$1(this, viewState));
-        textInputLayout.setEndIconOnClickListener(new WidgetEditUserOrGuildMemberProfile$configureNick$$inlined$also$lambda$2(this, viewState));
-        TextInputLayout textInputLayout2 = getBinding().n;
-        m.checkNotNullExpressionValue(textInputLayout2, "binding.setNicknameText");
+        ViewExtensions.addBindedTextWatcher(textInputLayout, this, new C9973x9758651b(this, viewState));
+        textInputLayout.setEndIconOnClickListener(new ViewOnClickListenerC9974x9758651c(this, viewState));
+        TextInputLayout textInputLayout2 = getBinding().f18089n;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.setNicknameText");
         String textOrEmpty = ViewExtensions.getTextOrEmpty(textInputLayout2);
-        if (!m.areEqual(viewState.getCurrentNickname(), textOrEmpty)) {
+        if (!Intrinsics3.areEqual(viewState.getCurrentNickname(), textOrEmpty)) {
             ViewExtensions.setText(textInputLayout, viewState.getCurrentNickname());
             if (textOrEmpty.length() == 0) {
                 EditText editText = textInputLayout.getEditText();
@@ -739,24 +740,24 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    private final void configureUI(SettingsUserProfileViewModel.ViewState viewState) {
-        if (viewState instanceof SettingsUserProfileViewModel.ViewState.Loaded) {
-            SettingsUserProfileViewModel.ViewState.Loaded loaded = (SettingsUserProfileViewModel.ViewState.Loaded) viewState;
+    private final void configureUI(EditUserOrGuildMemberProfileViewModel2.ViewState viewState) {
+        if (viewState instanceof EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded) {
+            EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded loaded = (EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded) viewState;
             if (loaded.getGuild() != null) {
                 setActionBarSubtitle(loaded.getGuild().getName());
             }
             configureNick(loaded);
-            getBinding().k.setVisibility(loaded.getGuild() != null ? 0 : 8);
+            getBinding().f18086k.setVisibility(loaded.getGuild() != null ? 0 : 8);
             if (loaded.getGuild() != null) {
-                TextView textView = getBinding().j;
-                m.checkNotNullExpressionValue(textView, "binding.guildMemberProfileHelpTextOverall");
-                textView.setText(b.k(this, R.string.change_identity_help_text_overall, new Object[]{loaded.getGuild().getName()}, null, 4));
+                TextView textView = getBinding().f18085j;
+                Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildMemberProfileHelpTextOverall");
+                textView.setText(FormatUtils.m219k(this, C5419R.string.change_identity_help_text_overall, new Object[]{loaded.getGuild().getName()}, null, 4));
             }
             configureBio(loaded);
             configureAvatarSelect(loaded);
             configureBannerSelect(loaded);
             configureFab(loaded);
-            AppFragment.setOnBackPressed$default(this, new AnonymousClass3(viewState), 0, 2, null);
+            AppFragment.setOnBackPressed$default(this, new C99753(viewState), 0, 2, null);
         }
     }
 
@@ -768,11 +769,11 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         return (Long) this.guildId.getValue();
     }
 
-    private final SettingsUserProfileViewModel getViewModel() {
-        return (SettingsUserProfileViewModel) this.viewModel.getValue();
+    private final EditUserOrGuildMemberProfileViewModel2 getViewModel() {
+        return (EditUserOrGuildMemberProfileViewModel2) this.viewModel.getValue();
     }
 
-    private final boolean handleBackPressed(SettingsUserProfileViewModel.ViewState.Loaded viewState) {
+    private final boolean handleBackPressed(EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded viewState) {
         if (viewState.isEditingBio()) {
             setCurrentBioFromEditor();
             return true;
@@ -780,52 +781,52 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         if (!viewState.getIsDirty() || this.discardConfirmed.get()) {
             return false;
         }
-        ViewDialogConfirmationBinding viewDialogConfirmationBindingB = ViewDialogConfirmationBinding.b(LayoutInflater.from(getActivity()));
-        m.checkNotNullExpressionValue(viewDialogConfirmationBindingB, "ViewDialogConfirmationBi…tInflater.from(activity))");
-        AlertDialog alertDialogCreate = new AlertDialog.Builder(requireContext()).setView(viewDialogConfirmationBindingB.a).create();
-        m.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(requ…logBinding.root).create()");
-        viewDialogConfirmationBindingB.d.setText(R.string.discard_changes);
-        viewDialogConfirmationBindingB.e.setText(R.string.discard_changes_description);
-        viewDialogConfirmationBindingB.f2185b.setOnClickListener(new AnonymousClass1(alertDialogCreate));
-        viewDialogConfirmationBindingB.c.setText(R.string.okay);
-        viewDialogConfirmationBindingB.c.setOnClickListener(new AnonymousClass2(alertDialogCreate));
+        ViewDialogConfirmationBinding viewDialogConfirmationBindingM8394b = ViewDialogConfirmationBinding.m8394b(LayoutInflater.from(getActivity()));
+        Intrinsics3.checkNotNullExpressionValue(viewDialogConfirmationBindingM8394b, "ViewDialogConfirmationBi…tInflater.from(activity))");
+        AlertDialog alertDialogCreate = new AlertDialog.Builder(requireContext()).setView(viewDialogConfirmationBindingM8394b.f15420a).create();
+        Intrinsics3.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(requ…logBinding.root).create()");
+        viewDialogConfirmationBindingM8394b.f15423d.setText(C5419R.string.discard_changes);
+        viewDialogConfirmationBindingM8394b.f15424e.setText(C5419R.string.discard_changes_description);
+        viewDialogConfirmationBindingM8394b.f15421b.setOnClickListener(new ViewOnClickListenerC99761(alertDialogCreate));
+        viewDialogConfirmationBindingM8394b.f15422c.setText(C5419R.string.okay);
+        viewDialogConfirmationBindingM8394b.f15422c.setOnClickListener(new ViewOnClickListenerC99772(alertDialogCreate));
         alertDialogCreate.show();
         return true;
     }
 
-    private final void handleEvent(SettingsUserProfileViewModel.Event event) {
-        if (m.areEqual(event, SettingsUserProfileViewModel.Event.UserUpdateRequestCompleted.INSTANCE)) {
-            DimmerView.setDimmed$default(getBinding().i, false, false, 2, null);
+    private final void handleEvent(EditUserOrGuildMemberProfileViewModel2.Event event) {
+        if (Intrinsics3.areEqual(event, EditUserOrGuildMemberProfileViewModel2.Event.UserUpdateRequestCompleted.INSTANCE)) {
+            DimmerView.setDimmed$default(getBinding().f18084i, false, false, 2, null);
         }
     }
 
     private final void setCurrentBioFromEditor() {
-        TextInputEditText textInputEditText = getBinding().c;
-        m.checkNotNullExpressionValue(textInputEditText, "binding.bioEditorTextInputField");
+        TextInputEditText textInputEditText = getBinding().f18078c;
+        Intrinsics3.checkNotNullExpressionValue(textInputEditText, "binding.bioEditorTextInputField");
         getViewModel().updateBio(String.valueOf(textInputEditText.getText()));
         getViewModel().updateIsEditingBio(false);
-        getBinding().d.clearFocus();
-        hideKeyboard(getBinding().d);
+        getBinding().f18079d.clearFocus();
+        hideKeyboard(getBinding().f18079d);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r2v3, types: [com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
     public void onImageChosen(Uri uri, String mimeType) {
-        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        m.checkNotNullParameter(mimeType, "mimeType");
+        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
         super.onImageChosen(uri, mimeType);
-        if (!t.startsWith$default(mimeType, "image", false, 2, null)) {
-            b.a.d.m.g(getContext(), R.string.user_settings_image_upload_filetype_error, 0, null, 12);
+        if (!StringsJVM.startsWith$default(mimeType, "image", false, 2, null)) {
+            AppToast.m169g(getContext(), C5419R.string.user_settings_image_upload_filetype_error, 0, null, 12);
             return;
         }
-        if (!m.areEqual(mimeType, "image/gif")) {
-            MGImages.requestImageCrop(requireContext(), this, uri, m.areEqual(this.imageSelectedResult, this.bannerSelectedResult) ? 5.0f : 1.0f, m.areEqual(this.imageSelectedResult, this.bannerSelectedResult) ? 2.0f : 1.0f, m.areEqual(this.imageSelectedResult, this.bannerSelectedResult) ? MAX_BANNER_IMAGE_SIZE : 1024);
+        if (!Intrinsics3.areEqual(mimeType, "image/gif")) {
+            MGImages.requestImageCrop(requireContext(), this, uri, Intrinsics3.areEqual(this.imageSelectedResult, this.bannerSelectedResult) ? 5.0f : 1.0f, Intrinsics3.areEqual(this.imageSelectedResult, this.bannerSelectedResult) ? 2.0f : 1.0f, Intrinsics3.areEqual(this.imageSelectedResult, this.bannerSelectedResult) ? MAX_BANNER_IMAGE_SIZE : 1024);
             return;
         }
-        Long fileSizeBytes = FileUtilsKt.getFileSizeBytes(requireContext(), uri);
+        Long fileSizeBytes = FileUtils2.getFileSizeBytes(requireContext(), uri);
         if (fileSizeBytes != null && fileSizeBytes.longValue() >= 31457280) {
-            b.a.d.m.h(requireContext(), b.k(this, R.string.user_settings_image_upload_file_too_large, new Object[]{30}, null, 4), 0, null, 12);
+            AppToast.m170h(requireContext(), FormatUtils.m219k(this, C5419R.string.user_settings_image_upload_file_too_large, new Object[]{30}, null, 4), 0, null, 12);
             return;
         }
         Context context = getContext();
@@ -840,8 +841,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     /* JADX WARN: Type inference failed for: r2v0, types: [com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
     public void onImageCropped(Uri uri, String mimeType) {
-        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        m.checkNotNullParameter(mimeType, "mimeType");
+        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
         super.onImageCropped(uri, mimeType);
         Context context = getContext();
         Function1<? super String, Unit> widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = this.imageSelectedResult;
@@ -853,33 +854,33 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         if (getGuildId() != null) {
-            setActionBarTitle(R.string.change_identity);
+            setActionBarTitle(C5419R.string.change_identity);
         } else {
-            setActionBarTitle(R.string.user_settings_user_profile);
-            setActionBarSubtitle(R.string.user_settings);
+            setActionBarTitle(C5419R.string.user_settings_user_profile);
+            setActionBarSubtitle(C5419R.string.user_settings);
         }
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
-        getBinding().m.setOnClickListener(new AnonymousClass1(view));
-        ((TouchInterceptingCoordinatorLayout) view).setOnInterceptTouchEvent(new AnonymousClass2());
-        getBinding().c.setRawInputType(1);
-        getBinding().g.setOnClickListener(new AnonymousClass3());
-        getBinding().o.setOnAvatarRepresentativeColorUpdated(new AnonymousClass4());
-        getBinding().o.setOnBadgeClick(new AnonymousClass5());
+        getBinding().f18088m.setOnClickListener(new ViewOnClickListenerC99781(view));
+        ((TouchInterceptingCoordinatorLayout) view).setOnInterceptTouchEvent(new C99792());
+        getBinding().f18078c.setRawInputType(1);
+        getBinding().f18082g.setOnClickListener(new ViewOnClickListenerC99803());
+        getBinding().f18090o.setOnAvatarRepresentativeColorUpdated(new C99814());
+        getBinding().f18090o.setOnBadgeClick(new C99825());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        Observable<SettingsUserProfileViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        m.checkNotNullExpressionValue(observableR, "viewModel.observeViewSta…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetEditUserOrGuildMemberProfile.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable<EditUserOrGuildMemberProfileViewModel2.ViewState> observableM11112r = getViewModel().observeViewState().m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "viewModel.observeViewSta…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11112r, this, null, 2, null), WidgetEditUserOrGuildMemberProfile.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C99831(), 62, (Object) null);
         UserProfileHeaderView.Companion companion = UserProfileHeaderView.INSTANCE;
-        UserProfileHeaderView userProfileHeaderView = getBinding().o;
-        m.checkNotNullExpressionValue(userProfileHeaderView, "binding.userSettingsProfileHeaderView");
+        UserProfileHeaderView userProfileHeaderView = getBinding().f18090o;
+        Intrinsics3.checkNotNullExpressionValue(userProfileHeaderView, "binding.userSettingsProfileHeaderView");
         companion.bind(userProfileHeaderView, this, getViewModel().observeHeaderViewState());
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetEditUserOrGuildMemberProfile.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetEditUserOrGuildMemberProfile.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C99842(), 62, (Object) null);
     }
 }

@@ -6,19 +6,19 @@ import androidx.work.BackoffPolicy;
 import androidx.work.ContentUriTriggers;
 import androidx.work.NetworkType;
 import androidx.work.WorkInfo;
-import b.d.b.a.a;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Iterator;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class WorkTypeConverters {
 
-    /* renamed from: androidx.work.impl.model.WorkTypeConverters$1, reason: invalid class name */
-    public static /* synthetic */ class AnonymousClass1 {
+    /* renamed from: androidx.work.impl.model.WorkTypeConverters$1 */
+    public static /* synthetic */ class C07701 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$work$BackoffPolicy;
         public static final /* synthetic */ int[] $SwitchMap$androidx$work$NetworkType;
         public static final /* synthetic */ int[] $SwitchMap$androidx$work$WorkInfo$State;
@@ -291,7 +291,7 @@ public class WorkTypeConverters {
         if (i == 1) {
             return BackoffPolicy.LINEAR;
         }
-        throw new IllegalArgumentException(a.r("Could not convert ", i, " to BackoffPolicy"));
+        throw new IllegalArgumentException(outline.m873r("Could not convert ", i, " to BackoffPolicy"));
     }
 
     @TypeConverter
@@ -311,7 +311,7 @@ public class WorkTypeConverters {
         if (i == 4) {
             return NetworkType.METERED;
         }
-        throw new IllegalArgumentException(a.r("Could not convert ", i, " to NetworkType"));
+        throw new IllegalArgumentException(outline.m873r("Could not convert ", i, " to NetworkType"));
     }
 
     @TypeConverter
@@ -334,7 +334,7 @@ public class WorkTypeConverters {
         if (i == 5) {
             return WorkInfo.State.CANCELLED;
         }
-        throw new IllegalArgumentException(a.r("Could not convert ", i, " to State"));
+        throw new IllegalArgumentException(outline.m873r("Could not convert ", i, " to State"));
     }
 
     @TypeConverter

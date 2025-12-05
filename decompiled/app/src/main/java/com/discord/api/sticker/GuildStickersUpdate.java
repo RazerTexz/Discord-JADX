@@ -1,9 +1,9 @@
 package com.discord.api.sticker;
 
-import b.d.b.a.a;
 import com.discord.api.guildhash.GuildHashes;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildStickersUpdate.kt */
 /* loaded from: classes.dex */
@@ -22,7 +22,8 @@ public final /* data */ class GuildStickersUpdate {
         return this.guildId;
     }
 
-    public final List<Sticker> c() {
+    /* renamed from: c */
+    public final List<Sticker> m8233c() {
         return this.stickers;
     }
 
@@ -34,7 +35,7 @@ public final /* data */ class GuildStickersUpdate {
             return false;
         }
         GuildStickersUpdate guildStickersUpdate = (GuildStickersUpdate) other;
-        return this.guildId == guildStickersUpdate.guildId && m.areEqual(this.stickers, guildStickersUpdate.stickers) && m.areEqual(this.guildHashes, guildStickersUpdate.guildHashes);
+        return this.guildId == guildStickersUpdate.guildId && Intrinsics3.areEqual(this.stickers, guildStickersUpdate.stickers) && Intrinsics3.areEqual(this.guildHashes, guildStickersUpdate.guildHashes);
     }
 
     public int hashCode() {
@@ -47,13 +48,13 @@ public final /* data */ class GuildStickersUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildStickersUpdate(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", stickers=");
-        sbU.append(this.stickers);
-        sbU.append(", guildHashes=");
-        sbU.append(this.guildHashes);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("GuildStickersUpdate(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", stickers=");
+        sbM833U.append(this.stickers);
+        sbM833U.append(", guildHashes=");
+        sbM833U.append(this.guildHashes);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

@@ -2,7 +2,6 @@ package com.discord.stores;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.api.user.User;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -12,13 +11,9 @@ import com.discord.restapi.RestAPIParams;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.logging.Logger;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.widgets.chat.input.MentionUtilsKt;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -30,8 +25,15 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p637j0.p653p.Schedulers2;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: StoreGifting.kt */
 /* loaded from: classes2.dex */
@@ -51,7 +53,7 @@ public final class StoreGifting {
         public final String makeComboId(long skuId, Long planId) {
             StringBuilder sb = new StringBuilder();
             sb.append(skuId);
-            sb.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
+            sb.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
             sb.append(planId);
             return sb.toString();
         }
@@ -100,7 +102,7 @@ public final class StoreGifting {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public RedeemedFailed(ModelGift modelGift, boolean z2, Integer num) {
                 super(null);
-                m.checkNotNullParameter(modelGift, "gift");
+                Intrinsics3.checkNotNullParameter(modelGift, "gift");
                 this.gift = modelGift;
                 this.canRetry = z2;
                 this.errorCode = num;
@@ -134,7 +136,7 @@ public final class StoreGifting {
             }
 
             public final RedeemedFailed copy(ModelGift gift, boolean canRetry, Integer errorCode) {
-                m.checkNotNullParameter(gift, "gift");
+                Intrinsics3.checkNotNullParameter(gift, "gift");
                 return new RedeemedFailed(gift, canRetry, errorCode);
             }
 
@@ -146,7 +148,7 @@ public final class StoreGifting {
                     return false;
                 }
                 RedeemedFailed redeemedFailed = (RedeemedFailed) other;
-                return m.areEqual(getGift(), redeemedFailed.getGift()) && this.canRetry == redeemedFailed.canRetry && m.areEqual(this.errorCode, redeemedFailed.errorCode);
+                return Intrinsics3.areEqual(getGift(), redeemedFailed.getGift()) && this.canRetry == redeemedFailed.canRetry && Intrinsics3.areEqual(this.errorCode, redeemedFailed.errorCode);
             }
 
             public final boolean getCanRetry() {
@@ -177,12 +179,12 @@ public final class StoreGifting {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("RedeemedFailed(gift=");
-                sbU.append(getGift());
-                sbU.append(", canRetry=");
-                sbU.append(this.canRetry);
-                sbU.append(", errorCode=");
-                return a.F(sbU, this.errorCode, ")");
+                StringBuilder sbM833U = outline.m833U("RedeemedFailed(gift=");
+                sbM833U.append(getGift());
+                sbM833U.append(", canRetry=");
+                sbM833U.append(this.canRetry);
+                sbM833U.append(", errorCode=");
+                return outline.m818F(sbM833U, this.errorCode, ")");
             }
         }
 
@@ -193,7 +195,7 @@ public final class StoreGifting {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Redeeming(ModelGift modelGift) {
                 super(null);
-                m.checkNotNullParameter(modelGift, "gift");
+                Intrinsics3.checkNotNullParameter(modelGift, "gift");
                 this.gift = modelGift;
             }
 
@@ -209,13 +211,13 @@ public final class StoreGifting {
             }
 
             public final Redeeming copy(ModelGift gift) {
-                m.checkNotNullParameter(gift, "gift");
+                Intrinsics3.checkNotNullParameter(gift, "gift");
                 return new Redeeming(gift);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Redeeming) && m.areEqual(getGift(), ((Redeeming) other).getGift());
+                    return (other instanceof Redeeming) && Intrinsics3.areEqual(getGift(), ((Redeeming) other).getGift());
                 }
                 return true;
             }
@@ -234,10 +236,10 @@ public final class StoreGifting {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Redeeming(gift=");
-                sbU.append(getGift());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Redeeming(gift=");
+                sbM833U.append(getGift());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -248,7 +250,7 @@ public final class StoreGifting {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Resolved(ModelGift modelGift) {
                 super(null);
-                m.checkNotNullParameter(modelGift, "gift");
+                Intrinsics3.checkNotNullParameter(modelGift, "gift");
                 this.gift = modelGift;
             }
 
@@ -264,13 +266,13 @@ public final class StoreGifting {
             }
 
             public final Resolved copy(ModelGift gift) {
-                m.checkNotNullParameter(gift, "gift");
+                Intrinsics3.checkNotNullParameter(gift, "gift");
                 return new Resolved(gift);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Resolved) && m.areEqual(getGift(), ((Resolved) other).getGift());
+                    return (other instanceof Resolved) && Intrinsics3.areEqual(getGift(), ((Resolved) other).getGift());
                 }
                 return true;
             }
@@ -289,10 +291,10 @@ public final class StoreGifting {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Resolved(gift=");
-                sbU.append(getGift());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Resolved(gift=");
+                sbM833U.append(getGift());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -303,7 +305,7 @@ public final class StoreGifting {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Revoking(ModelGift modelGift) {
                 super(null);
-                m.checkNotNullParameter(modelGift, "gift");
+                Intrinsics3.checkNotNullParameter(modelGift, "gift");
                 this.gift = modelGift;
             }
 
@@ -319,13 +321,13 @@ public final class StoreGifting {
             }
 
             public final Revoking copy(ModelGift gift) {
-                m.checkNotNullParameter(gift, "gift");
+                Intrinsics3.checkNotNullParameter(gift, "gift");
                 return new Revoking(gift);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Revoking) && m.areEqual(getGift(), ((Revoking) other).getGift());
+                    return (other instanceof Revoking) && Intrinsics3.areEqual(getGift(), ((Revoking) other).getGift());
                 }
                 return true;
             }
@@ -344,10 +346,10 @@ public final class StoreGifting {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Revoking(gift=");
-                sbU.append(getGift());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Revoking(gift=");
+                sbM833U.append(getGift());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -391,21 +393,21 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$acceptGift$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$acceptGift$1 */
+    public static final class C59871 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelGift $gift;
 
         /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02321 extends o implements Function1<Error, Unit> {
+        /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
 
             /* compiled from: StoreGifting.kt */
             /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02331 extends o implements Function0<Unit> {
+            public static final class C132531 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ Error $error;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C02331(Error error) {
+                public C132531(Error error) {
                     super(0);
                     this.$error = error;
                 }
@@ -413,81 +415,81 @@ public final class StoreGifting {
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     if (this.$error.getType() != Error.Type.DISCORD_BAD_REQUEST) {
-                        AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                        StoreGifting.access$setGifts(StoreGifting.this, anonymousClass1.$gift.getCode(), new GiftState.RedeemedFailed(AnonymousClass1.this.$gift, true, null));
+                        C59871 c59871 = C59871.this;
+                        StoreGifting.access$setGifts(StoreGifting.this, c59871.$gift.getCode(), new GiftState.RedeemedFailed(C59871.this.$gift, true, null));
                     }
                     this.$error.setShowErrorToasts(false);
                     Error.Response response = this.$error.getResponse();
-                    m.checkNotNullExpressionValue(response, "error.response");
+                    Intrinsics3.checkNotNullExpressionValue(response, "error.response");
                     switch (response.getCode()) {
                         case RestAPIAbortCodes.GIFTING_ALREADY_USED_ERROR_CODE /* 50050 */:
-                            AnonymousClass1 anonymousClass12 = AnonymousClass1.this;
+                            C59871 c598712 = C59871.this;
                             StoreGifting storeGifting = StoreGifting.this;
-                            String code = anonymousClass12.$gift.getCode();
-                            ModelGift modelGift = AnonymousClass1.this.$gift;
+                            String code = c598712.$gift.getCode();
+                            ModelGift modelGift = C59871.this.$gift;
                             StoreGifting.access$setGifts(storeGifting, code, new GiftState.Resolved(ModelGift.copy$default(modelGift, 0L, false, null, null, modelGift.getMaxUses(), null, 0, null, null, null, null, 2031, null)));
                             break;
                         case RestAPIAbortCodes.GIFTING_ALREADY_OWNED_ERROR_CODE /* 50051 */:
-                            AnonymousClass1 anonymousClass13 = AnonymousClass1.this;
-                            StoreGifting.access$setGifts(StoreGifting.this, anonymousClass13.$gift.getCode(), new GiftState.Resolved(ModelGift.copy$default(AnonymousClass1.this.$gift, 0L, true, null, null, 0, null, 0, null, null, null, null, 2045, null)));
+                            C59871 c598713 = C59871.this;
+                            StoreGifting.access$setGifts(StoreGifting.this, c598713.$gift.getCode(), new GiftState.Resolved(ModelGift.copy$default(C59871.this.$gift, 0L, true, null, null, 0, null, 0, null, null, null, null, 2045, null)));
                             break;
                         default:
-                            AnonymousClass1 anonymousClass14 = AnonymousClass1.this;
+                            C59871 c598714 = C59871.this;
                             StoreGifting storeGifting2 = StoreGifting.this;
-                            String code2 = anonymousClass14.$gift.getCode();
-                            ModelGift modelGift2 = AnonymousClass1.this.$gift;
+                            String code2 = c598714.$gift.getCode();
+                            ModelGift modelGift2 = C59871.this.$gift;
                             Error.Response response2 = this.$error.getResponse();
-                            m.checkNotNullExpressionValue(response2, "error.response");
+                            Intrinsics3.checkNotNullExpressionValue(response2, "error.response");
                             StoreGifting.access$setGifts(storeGifting2, code2, new GiftState.RedeemedFailed(modelGift2, false, Integer.valueOf(response2.getCode())));
                             break;
                     }
                 }
             }
 
-            public C02321() {
+            public AnonymousClass1() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Error error) {
                 invoke2(error);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                m.checkNotNullParameter(error, "error");
-                StoreGifting.this.getDispatcher().schedule(new C02331(error));
+                Intrinsics3.checkNotNullParameter(error, "error");
+                StoreGifting.this.getDispatcher().schedule(new C132531(error));
             }
         }
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
+        public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
 
             /* compiled from: StoreGifting.kt */
-            /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02341 extends o implements Function0<Unit> {
-                public C02341() {
+            /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$2$1, reason: invalid class name */
+            public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+                public AnonymousClass1() {
                     super(0);
                 }
 
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
-                    AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass1.$gift.getCode(), new GiftState.Resolved(ModelGift.copy$default(AnonymousClass1.this.$gift, 0L, true, null, null, 0, null, 0, null, null, null, null, 2045, null)));
+                    C59871 c59871 = C59871.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c59871.$gift.getCode(), new GiftState.Resolved(ModelGift.copy$default(C59871.this.$gift, 0L, true, null, null, 0, null, 0, null, null, null, null, 2045, null)));
                 }
             }
 
@@ -498,18 +500,18 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
                 invoke2(r1);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r2) {
-                StoreGifting.this.getDispatcher().schedule(new C02341());
+                StoreGifting.this.getDispatcher().schedule(new AnonymousClass1());
                 StoreStream.INSTANCE.getLibrary().fetchApplications();
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ModelGift modelGift) {
+        public C59871(ModelGift modelGift) {
             super(0);
             this.$gift = modelGift;
         }
@@ -517,30 +519,30 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifting.access$setGifts(StoreGifting.this, this.$gift.getCode(), new GiftState.Redeeming(this.$gift));
-            Observable<Void> observableX = RestAPI.INSTANCE.getApi().acceptGift(this.$gift.getCode()).X(j0.p.a.c());
-            m.checkNotNullExpressionValue(observableX, "RestAPI\n        .api\n   …scribeOn(Schedulers.io())");
-            ObservableExtensionsKt.appSubscribe$default(observableX, StoreGifting.this.getClass(), (Context) null, (Function1) null, new C02321(), (Function0) null, (Function0) null, new AnonymousClass2(), 54, (Object) null);
+            Observable<Void> observableM11098X = RestAPI.INSTANCE.getApi().acceptGift(this.$gift.getCode()).m11098X(Schedulers2.m10875c());
+            Intrinsics3.checkNotNullExpressionValue(observableM11098X, "RestAPI\n        .api\n   …scribeOn(Schedulers.io())");
+            ObservableExtensionsKt.appSubscribe$default(observableM11098X, StoreGifting.this.getClass(), (Context) null, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchGift$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ModelGift, Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$fetchGift$1 */
+    public static final class C59881 extends Lambda implements Function1<ModelGift, Unit> {
         public final /* synthetic */ String $giftCode;
 
         /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$fetchGift$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02351 extends o implements Function0<Unit> {
+        /* renamed from: com.discord.stores.StoreGifting$fetchGift$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelGift $gift;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C02351(ModelGift modelGift) {
+            public AnonymousClass1(ModelGift modelGift) {
                 super(0);
                 this.$gift = modelGift;
             }
@@ -548,19 +550,19 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AnalyticsTracker.INSTANCE.giftResolved(this.$gift);
-                AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                StoreGifting.access$setGifts(StoreGifting.this, anonymousClass1.$giftCode, new GiftState.Resolved(this.$gift));
+                C59881 c59881 = C59881.this;
+                StoreGifting.access$setGifts(StoreGifting.this, c59881.$giftCode, new GiftState.Resolved(this.$gift));
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C59881(String str) {
             super(1);
             this.$giftCode = str;
         }
@@ -568,24 +570,24 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelGift modelGift) {
             invoke2(modelGift);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
-            m.checkNotNullParameter(modelGift, "gift");
-            StoreGifting.this.getDispatcher().schedule(new C02351(modelGift));
+            Intrinsics3.checkNotNullParameter(modelGift, "gift");
+            StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(modelGift));
         }
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchGift$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$fetchGift$2 */
+    public static final class C59892 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $giftCode;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$fetchGift$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -597,29 +599,29 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnalyticsTracker.INSTANCE.giftResolvedFailed(AnonymousClass2.this.$giftCode);
+                AnalyticsTracker.INSTANCE.giftResolvedFailed(C59892.this.$giftCode);
                 int iOrdinal = this.$error.getType().ordinal();
                 if (iOrdinal == 3) {
                     this.$error.setShowErrorToasts(false);
-                    AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass2.$giftCode, GiftState.Invalid.INSTANCE);
+                    C59892 c59892 = C59892.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c59892.$giftCode, GiftState.Invalid.INSTANCE);
                 } else if (iOrdinal != 11) {
-                    AnonymousClass2 anonymousClass22 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass22.$giftCode, GiftState.LoadFailed.INSTANCE);
+                    C59892 c598922 = C59892.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c598922.$giftCode, GiftState.LoadFailed.INSTANCE);
                 } else {
-                    AnonymousClass2 anonymousClass23 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass23.$giftCode, GiftState.LoadFailed.INSTANCE);
+                    C59892 c598923 = C59892.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c598923.$giftCode, GiftState.LoadFailed.INSTANCE);
                 }
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str) {
+        public C59892(String str) {
             super(1);
             this.$giftCode = str;
         }
@@ -627,23 +629,23 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$1 */
+    public static final class C59901 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $comboId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C59901(String str) {
             super(0);
             this.$comboId = str;
         }
@@ -651,7 +653,7 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -661,13 +663,13 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2 */
+    public static final class C59912 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $comboId;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -679,7 +681,7 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -687,21 +689,21 @@ public final class StoreGifting {
                 int iOrdinal = this.$error.getType().ordinal();
                 if (iOrdinal == 3) {
                     this.$error.setShowErrorToasts(false);
-                    AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass2.$comboId, GiftState.Invalid.INSTANCE);
+                    C59912 c59912 = C59912.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c59912.$comboId, GiftState.Invalid.INSTANCE);
                 } else if (iOrdinal == 11) {
-                    AnonymousClass2 anonymousClass22 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass22.$comboId, GiftState.LoadFailed.INSTANCE);
+                    C59912 c599122 = C59912.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c599122.$comboId, GiftState.LoadFailed.INSTANCE);
                 } else {
-                    Logger.e$default(AppLog.g, "Fetching Gift Error", new Exception(String.valueOf(this.$error.getType())), null, 4, null);
-                    AnonymousClass2 anonymousClass23 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass23.$comboId, GiftState.LoadFailed.INSTANCE);
+                    Logger.e$default(AppLog.f14950g, "Fetching Gift Error", new Exception(String.valueOf(this.$error.getType())), null, 4, null);
+                    C59912 c599123 = C59912.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c599123.$comboId, GiftState.LoadFailed.INSTANCE);
                 }
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str) {
+        public C59912(String str) {
             super(1);
             this.$comboId = str;
         }
@@ -709,26 +711,26 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<List<? extends ModelGift>, Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3 */
+    public static final class C59923 extends Lambda implements Function1<List<? extends ModelGift>, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Long $planId;
         public final /* synthetic */ long $skuId;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $gifts;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -740,15 +742,15 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnonymousClass3 anonymousClass3 = AnonymousClass3.this;
-                StoreGifting.access$removeGiftCode(StoreGifting.this, anonymousClass3.$comboId);
-                AnonymousClass3 anonymousClass32 = AnonymousClass3.this;
-                StoreGifting.access$clearGiftsForSku(StoreGifting.this, anonymousClass32.$skuId, anonymousClass32.$planId);
+                C59923 c59923 = C59923.this;
+                StoreGifting.access$removeGiftCode(StoreGifting.this, c59923.$comboId);
+                C59923 c599232 = C59923.this;
+                StoreGifting.access$clearGiftsForSku(StoreGifting.this, c599232.$skuId, c599232.$planId);
                 for (ModelGift modelGift : this.$gifts) {
                     StoreGifting.access$setGifts(StoreGifting.this, modelGift.getCode(), new GiftState.Resolved(modelGift));
                 }
@@ -756,7 +758,7 @@ public final class StoreGifting {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(String str, long j, Long l) {
+        public C59923(String str, long j, Long l) {
             super(1);
             this.$comboId = str;
             this.$skuId = j;
@@ -766,23 +768,23 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends ModelGift> list) {
             invoke2((List<ModelGift>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelGift> list) {
-            m.checkNotNullParameter(list, "gifts");
+            Intrinsics3.checkNotNullParameter(list, "gifts");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(list));
         }
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$1 */
+    public static final class C59931 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $comboId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C59931(String str) {
             super(0);
             this.$comboId = str;
         }
@@ -790,7 +792,7 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -800,14 +802,14 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$2 */
+    public static final class C59942 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Function1 $onError;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -819,7 +821,7 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -827,23 +829,23 @@ public final class StoreGifting {
                 int iOrdinal = this.$error.getType().ordinal();
                 if (iOrdinal == 3) {
                     this.$error.setShowErrorToasts(false);
-                    AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass2.$comboId, GiftState.Invalid.INSTANCE);
+                    C59942 c59942 = C59942.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c59942.$comboId, GiftState.Invalid.INSTANCE);
                 } else if (iOrdinal != 11) {
-                    Logger.e$default(AppLog.g, "Generate Gift Code Error", new Exception(String.valueOf(this.$error.getType())), null, 4, null);
-                    AnonymousClass2 anonymousClass22 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass22.$comboId, GiftState.LoadFailed.INSTANCE);
+                    Logger.e$default(AppLog.f14950g, "Generate Gift Code Error", new Exception(String.valueOf(this.$error.getType())), null, 4, null);
+                    C59942 c599422 = C59942.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c599422.$comboId, GiftState.LoadFailed.INSTANCE);
                 } else {
-                    AnonymousClass2 anonymousClass23 = AnonymousClass2.this;
-                    StoreGifting.access$setGifts(StoreGifting.this, anonymousClass23.$comboId, GiftState.LoadFailed.INSTANCE);
+                    C59942 c599423 = C59942.this;
+                    StoreGifting.access$setGifts(StoreGifting.this, c599423.$comboId, GiftState.LoadFailed.INSTANCE);
                 }
-                AnonymousClass2 anonymousClass24 = AnonymousClass2.this;
-                StoreGifting.access$setGifts(StoreGifting.this, anonymousClass24.$comboId, GiftState.LoadFailed.INSTANCE);
+                C59942 c599424 = C59942.this;
+                StoreGifting.access$setGifts(StoreGifting.this, c599424.$comboId, GiftState.LoadFailed.INSTANCE);
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str, Function1 function1) {
+        public C59942(String str, Function1 function1) {
             super(1);
             this.$comboId = str;
             this.$onError = function1;
@@ -852,12 +854,12 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
             Function1 function1 = this.$onError;
             if (function1 != null) {
@@ -866,14 +868,14 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<ModelGift, Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$3 */
+    public static final class C59953 extends Lambda implements Function1<ModelGift, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Function1 $onSuccess;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelGift $newGift;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -885,19 +887,19 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnonymousClass3 anonymousClass3 = AnonymousClass3.this;
-                StoreGifting.access$removeGiftCode(StoreGifting.this, anonymousClass3.$comboId);
+                C59953 c59953 = C59953.this;
+                StoreGifting.access$removeGiftCode(StoreGifting.this, c59953.$comboId);
                 StoreGifting.access$setGifts(StoreGifting.this, this.$newGift.getCode(), new GiftState.Resolved(this.$newGift));
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(String str, Function1 function1) {
+        public C59953(String str, Function1 function1) {
             super(1);
             this.$comboId = str;
             this.$onSuccess = function1;
@@ -906,12 +908,12 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelGift modelGift) {
             invoke2(modelGift);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
-            m.checkNotNullParameter(modelGift, "newGift");
+            Intrinsics3.checkNotNullParameter(modelGift, "newGift");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(modelGift));
             Function1 function1 = this.$onSuccess;
             if (function1 != null) {
@@ -920,15 +922,15 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$getMyResolvedGifts$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Map<String, ? extends GiftState>, List<? extends ModelGift>> {
+    /* renamed from: com.discord.stores.StoreGifting$getMyResolvedGifts$1 */
+    public static final class C59961<T, R> implements Func1<Map<String, ? extends GiftState>, List<? extends ModelGift>> {
         public final /* synthetic */ long $userId;
 
-        public AnonymousClass1(long j) {
+        public C59961(long j) {
             this.$userId = j;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ List<? extends ModelGift> call(Map<String, ? extends GiftState> map) {
             return call2(map);
         }
@@ -944,7 +946,7 @@ public final class StoreGifting {
                     arrayList.add(t);
                 }
             }
-            ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
+            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
             for (GiftState giftState2 : arrayList) {
                 Objects.requireNonNull(giftState2, "null cannot be cast to non-null type com.discord.stores.StoreGifting.GiftState.Resolved");
                 arrayList2.add(((GiftState.Resolved) giftState2).getGift());
@@ -954,12 +956,12 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$requestGift$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$requestGift$1 */
+    public static final class C59971 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $giftCode;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C59971(String str) {
             super(0);
             this.$giftCode = str;
         }
@@ -967,7 +969,7 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -977,15 +979,15 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$requestGift$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements b<Map<String, ? extends GiftState>, GiftState> {
+    /* renamed from: com.discord.stores.StoreGifting$requestGift$2 */
+    public static final class C59982<T, R> implements Func1<Map<String, ? extends GiftState>, GiftState> {
         public final /* synthetic */ String $giftCode;
 
-        public AnonymousClass2(String str) {
+        public C59982(String str) {
             this.$giftCode = str;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ GiftState call(Map<String, ? extends GiftState> map) {
             return call2(map);
         }
@@ -998,12 +1000,12 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$1 */
+    public static final class C59991 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelGift $gift;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ModelGift modelGift) {
+        public C59991(ModelGift modelGift) {
             super(0);
             this.$gift = modelGift;
         }
@@ -1011,7 +1013,7 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -1021,13 +1023,13 @@ public final class StoreGifting {
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2 */
+    public static final class C60002 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ ModelGift $gift;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1039,19 +1041,19 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                Logger.e$default(AppLog.g, "Revoking Gift Error", new Exception(String.valueOf(this.$error.getType())), null, 4, null);
-                AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
-                StoreGifting.access$setGifts(StoreGifting.this, anonymousClass2.$gift.getCode(), new GiftState.Resolved(AnonymousClass2.this.$gift));
+                Logger.e$default(AppLog.f14950g, "Revoking Gift Error", new Exception(String.valueOf(this.$error.getType())), null, 4, null);
+                C60002 c60002 = C60002.this;
+                StoreGifting.access$setGifts(StoreGifting.this, c60002.$gift.getCode(), new GiftState.Resolved(C60002.this.$gift));
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(ModelGift modelGift) {
+        public C60002(ModelGift modelGift) {
             super(1);
             this.$gift = modelGift;
         }
@@ -1059,24 +1061,24 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
     /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3 */
+    public static final class C60013 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ ModelGift $gift;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -1084,18 +1086,18 @@ public final class StoreGifting {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnonymousClass3 anonymousClass3 = AnonymousClass3.this;
-                StoreGifting.access$removeGiftCode(StoreGifting.this, anonymousClass3.$gift.getCode());
+                C60013 c60013 = C60013.this;
+                StoreGifting.access$removeGiftCode(StoreGifting.this, c60013.$gift.getCode());
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(ModelGift modelGift) {
+        public C60013(ModelGift modelGift) {
             super(1);
             this.$gift = modelGift;
         }
@@ -1103,7 +1105,7 @@ public final class StoreGifting {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -1113,10 +1115,10 @@ public final class StoreGifting {
     }
 
     public StoreGifting(Dispatcher dispatcher) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
         this.dispatcher = dispatcher;
         this.knownGifts = new HashMap<>();
-        this.knownGiftsSubject = BehaviorSubject.l0(h0.emptyMap());
+        this.knownGiftsSubject = BehaviorSubject.m11130l0(Maps6.emptyMap());
     }
 
     public static final /* synthetic */ void access$clearGiftsForSku(StoreGifting storeGifting, long j, Long l) {
@@ -1135,7 +1137,7 @@ public final class StoreGifting {
         storeGifting.setGifts(str, giftState);
     }
 
-    @StoreThread
+    @Store3
     private final void clearGiftsForSku(long skuId, Long subscriptionPlanId) {
         HashMap<String, GiftState> map = this.knownGifts;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -1143,7 +1145,7 @@ public final class StoreGifting {
             GiftState value = entry.getValue();
             boolean z2 = true;
             if (value instanceof GiftState.Resolved) {
-                if (((GiftState.Resolved) value).getGift().getSkuId() == skuId && subscriptionPlanId != null && !(!m.areEqual(r3.getGift().getSubscriptionPlanId(), subscriptionPlanId))) {
+                if (((GiftState.Resolved) value).getGift().getSkuId() == skuId && subscriptionPlanId != null && !(!Intrinsics3.areEqual(r3.getGift().getSubscriptionPlanId(), subscriptionPlanId))) {
                     z2 = false;
                 }
             }
@@ -1155,7 +1157,7 @@ public final class StoreGifting {
         this.knownGiftsSubject.onNext(new HashMap(this.knownGifts));
     }
 
-    @StoreThread
+    @Store3
     private final void fetchGift(String giftCode) {
         if (this.knownGifts.containsKey(giftCode) && !(this.knownGifts.get(giftCode) instanceof GiftState.LoadFailed)) {
             if (!(this.knownGifts.get(giftCode) instanceof GiftState.Resolved)) {
@@ -1168,35 +1170,35 @@ public final class StoreGifting {
             }
         }
         setGifts(giftCode, GiftState.Loading.INSTANCE);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().resolveGiftCode(giftCode, true, true), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new AnonymousClass2(giftCode), (Function0) null, (Function0) null, new AnonymousClass1(giftCode), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().resolveGiftCode(giftCode, true, true), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new C59892(giftCode), (Function0) null, (Function0) null, new C59881(giftCode), 54, (Object) null);
     }
 
     public static /* synthetic */ void generateGiftCode$default(StoreGifting storeGifting, long j, Long l, Function1 function1, Function1 function12, int i, Object obj) {
         storeGifting.generateGiftCode(j, (i & 2) != 0 ? null : l, (i & 4) != 0 ? null : function1, (i & 8) != 0 ? null : function12);
     }
 
-    @StoreThread
+    @Store3
     private final void removeGiftCode(String code) {
         this.knownGifts.remove(code);
         this.knownGiftsSubject.onNext(new HashMap(this.knownGifts));
     }
 
-    @StoreThread
+    @Store3
     private final void setGifts(String code, GiftState giftState) {
         this.knownGifts.put(code, giftState);
         this.knownGiftsSubject.onNext(new HashMap(this.knownGifts));
     }
 
     public final void acceptGift(ModelGift gift) {
-        m.checkNotNullParameter(gift, "gift");
-        this.dispatcher.schedule(new AnonymousClass1(gift));
+        Intrinsics3.checkNotNullParameter(gift, "gift");
+        this.dispatcher.schedule(new C59871(gift));
     }
 
     public final void fetchMyGiftsForSku(long skuId, Long planId) {
         String strMakeComboId = INSTANCE.makeComboId(skuId, planId);
         if (!this.knownGifts.containsKey(strMakeComboId) || (this.knownGifts.get(strMakeComboId) instanceof GiftState.LoadFailed)) {
-            this.dispatcher.schedule(new AnonymousClass1(strMakeComboId));
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().resolveSkuIdGift(skuId, planId), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new AnonymousClass2(strMakeComboId), (Function0) null, (Function0) null, new AnonymousClass3(strMakeComboId, skuId, planId), 54, (Object) null);
+            this.dispatcher.schedule(new C59901(strMakeComboId));
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().resolveSkuIdGift(skuId, planId), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new C59912(strMakeComboId), (Function0) null, (Function0) null, new C59923(strMakeComboId, skuId, planId), 54, (Object) null);
         }
     }
 
@@ -1205,8 +1207,8 @@ public final class StoreGifting {
         if (this.knownGifts.get(strMakeComboId) instanceof GiftState.Loading) {
             return;
         }
-        this.dispatcher.schedule(new AnonymousClass1(strMakeComboId));
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().generateGiftCode(new RestAPIParams.GenerateGiftCode(skuId, planId)), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new AnonymousClass2(strMakeComboId, onError), (Function0) null, (Function0) null, new AnonymousClass3(strMakeComboId, onSuccess), 54, (Object) null);
+        this.dispatcher.schedule(new C59931(strMakeComboId));
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().generateGiftCode(new RestAPIParams.GenerateGiftCode(skuId, planId)), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new C59942(strMakeComboId, onError), (Function0) null, (Function0) null, new C59953(strMakeComboId, onSuccess), 54, (Object) null);
     }
 
     public final Dispatcher getDispatcher() {
@@ -1218,35 +1220,35 @@ public final class StoreGifting {
     }
 
     public final Observable<List<ModelGift>> getMyResolvedGifts(long userId) {
-        Observable observableG = this.knownGiftsSubject.G(new AnonymousClass1(userId));
-        m.checkNotNullExpressionValue(observableG, "knownGiftsSubject\n      …              }\n        }");
-        return observableG;
+        Observable observableM11083G = this.knownGiftsSubject.m11083G(new C59961(userId));
+        Intrinsics3.checkNotNullExpressionValue(observableM11083G, "knownGiftsSubject\n      …              }\n        }");
+        return observableM11083G;
     }
 
-    @StoreThread
+    @Store3
     public final void handlePreLogout() {
         this.knownGifts.clear();
     }
 
     public final Observable<GiftState> requestGift(String giftCode) {
-        m.checkNotNullParameter(giftCode, "giftCode");
-        this.dispatcher.schedule(new AnonymousClass1(giftCode));
-        Observable<GiftState> observableR = this.knownGiftsSubject.G(new AnonymousClass2(giftCode)).r();
-        m.checkNotNullExpressionValue(observableR, "knownGiftsSubject\n      …  .distinctUntilChanged()");
-        return observableR;
+        Intrinsics3.checkNotNullParameter(giftCode, "giftCode");
+        this.dispatcher.schedule(new C59971(giftCode));
+        Observable<GiftState> observableM11112r = this.knownGiftsSubject.m11083G(new C59982(giftCode)).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "knownGiftsSubject\n      …  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final void revokeGiftCode(ModelGift gift) {
-        m.checkNotNullParameter(gift, "gift");
+        Intrinsics3.checkNotNullParameter(gift, "gift");
         if (this.knownGifts.containsKey(gift.getCode()) && (this.knownGifts.get(gift.getCode()) instanceof GiftState.Revoking)) {
             return;
         }
-        this.dispatcher.schedule(new AnonymousClass1(gift));
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().revokeGiftCode(gift.getCode()), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new AnonymousClass2(gift), (Function0) null, (Function0) null, new AnonymousClass3(gift), 54, (Object) null);
+        this.dispatcher.schedule(new C59991(gift));
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().revokeGiftCode(gift.getCode()), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new C60002(gift), (Function0) null, (Function0) null, new C60013(gift), 54, (Object) null);
     }
 
     public final void setKnownGifts(HashMap<String, GiftState> map) {
-        m.checkNotNullParameter(map, "<set-?>");
+        Intrinsics3.checkNotNullParameter(map, "<set-?>");
         this.knownGifts = map;
     }
 }

@@ -2,7 +2,7 @@ package com.discord.widgets.chat.input.autocomplete.adapter;
 
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.databinding.WidgetChatInputSlashLoadingItemBinding;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ApplicationCommandLoadingViewHolder.kt */
 /* loaded from: classes2.dex */
@@ -11,8 +11,8 @@ public final class ApplicationCommandLoadingViewHolder extends RecyclerView.View
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ApplicationCommandLoadingViewHolder(WidgetChatInputSlashLoadingItemBinding widgetChatInputSlashLoadingItemBinding) {
-        super(widgetChatInputSlashLoadingItemBinding.a);
-        m.checkNotNullParameter(widgetChatInputSlashLoadingItemBinding, "binding");
+        super(widgetChatInputSlashLoadingItemBinding.f16120a);
+        Intrinsics3.checkNotNullParameter(widgetChatInputSlashLoadingItemBinding, "binding");
         this.binding = widgetChatInputSlashLoadingItemBinding;
     }
 }

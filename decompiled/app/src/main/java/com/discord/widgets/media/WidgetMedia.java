@@ -18,19 +18,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.a.k.b;
-import b.a.p.i;
-import b.c.a.a0.d;
-import b.d.b.a.a;
-import b.f.g.c.c;
-import b.f.g.e.v;
-import b.f.l.b.e;
-import b.i.a.c.k2;
-import b.i.a.c.u0;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.message.attachment.MessageAttachment;
 import com.discord.api.message.attachment.MessageAttachmentType;
 import com.discord.api.message.embed.EmbedType;
@@ -49,23 +37,19 @@ import com.discord.utilities.display.DisplayUtils;
 import com.discord.utilities.embed.EmbedResourceUtils;
 import com.discord.utilities.images.MGImages;
 import com.discord.utilities.intent.IntentUtils;
-import com.discord.utilities.io.NetworkUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.utilities.string.StringUtilsKt;
+import com.discord.utilities.p500io.NetworkUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.string.StringUtils2;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.facebook.drawee.drawable.ScalingUtils$ScaleType;
 import com.facebook.imagepipeline.image.ImageInfo;
 import com.facebook.samples.zoomable.ZoomableDraweeView;
-import com.google.android.exoplayer2.ui.PlayerControlView;
-import com.google.android.exoplayer2.ui.PlayerView;
+import com.google.android.exoplayer2.p505ui.PlayerControlView;
+import com.google.android.exoplayer2.p505ui.PlayerView;
 import com.google.android.material.appbar.AppBarLayout;
-import d0.g0.t;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import kotlin.Lazy;
@@ -75,14 +59,33 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
-import rx.Subscription;
-import rx.functions.Action2;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p008a.p040p.AppMediaPlayerFactory;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p109f.p132g.p139c.BaseControllerListener;
+import p007b.p109f.p132g.p142e.C1788v;
+import p007b.p109f.p187l.p189b.AbstractAnimatedZoomableController;
+import p007b.p109f.p187l.p189b.ZoomableController;
+import p007b.p225i.p226a.p242c.BasePlayer;
+import p007b.p225i.p226a.p242c.SimpleExoPlayer;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
+import p658rx.Subscription;
+import p658rx.functions.Action2;
 
 /* compiled from: WidgetMedia.kt */
 /* loaded from: classes2.dex */
 public final class WidgetMedia extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetMedia.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMediaBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetMedia.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMediaBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -135,10 +138,10 @@ public final class WidgetMedia extends AppFragment {
         }
 
         public final void launch(Context context, MessageAttachment attachment) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(attachment, "attachment");
-            MessageAttachmentType messageAttachmentTypeE = attachment.e();
-            launch(context, attachment.getFilename(), attachment.getProxyUrl(), messageAttachmentTypeE.ordinal() != 0 ? null : attachment.getProxyUrl(), attachment.getProxyUrl(), attachment.getWidth(), attachment.getHeight(), messageAttachmentTypeE == MessageAttachmentType.VIDEO ? MediaType.VIDEO : null);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(attachment, "attachment");
+            MessageAttachmentType messageAttachmentTypeM8068e = attachment.m8068e();
+            launch(context, attachment.getFilename(), attachment.getProxyUrl(), messageAttachmentTypeM8068e.ordinal() != 0 ? null : attachment.getProxyUrl(), attachment.getProxyUrl(), attachment.getWidth(), attachment.getHeight(), messageAttachmentTypeM8068e == MessageAttachmentType.VIDEO ? MediaType.VIDEO : null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -149,8 +152,8 @@ public final class WidgetMedia extends AppFragment {
             String str;
             int iOrdinal;
             String url;
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(embed, "embed");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(embed, "embed");
             EmbedType type = embed.getType();
             if (type != null && ((iOrdinal = type.ordinal()) == 2 || iOrdinal == 7)) {
                 EmbedVideo video = embed.getVideo();
@@ -170,14 +173,14 @@ public final class WidgetMedia extends AppFragment {
         }
 
         private final void launch(Context context, String title, String uri, String progressiveMediaUri, String previewImageUri, Integer width, Integer height, MediaType mediaType) {
-            MediaSource mediaSourceP = (progressiveMediaUri == null || mediaType == null) ? null : d.P(mediaType, progressiveMediaUri, "javaClass");
+            MediaSource mediaSourceM462P = (progressiveMediaUri == null || mediaType == null) ? null : AnimatableValueParser.m462P(mediaType, progressiveMediaUri, "javaClass");
             Intent intentPutExtra = new Intent().putExtra(WidgetMedia.INTENT_TITLE, title);
             if (uri == null) {
                 uri = previewImageUri;
             }
-            Intent intentPutExtra2 = intentPutExtra.putExtra(WidgetMedia.INTENT_URL, uri).putExtra(WidgetMedia.INTENT_IMAGE_URL, previewImageUri).putExtra(WidgetMedia.INTENT_WIDTH, width).putExtra(WidgetMedia.INTENT_HEIGHT, height).putExtra(WidgetMedia.INTENT_MEDIA_SOURCE, mediaSourceP);
-            m.checkNotNullExpressionValue(intentPutExtra2, "Intent()\n          .putE…EDIA_SOURCE, mediaSource)");
-            j.d(context, WidgetMedia.class, intentPutExtra2);
+            Intent intentPutExtra2 = intentPutExtra.putExtra(WidgetMedia.INTENT_URL, uri).putExtra(WidgetMedia.INTENT_IMAGE_URL, previewImageUri).putExtra(WidgetMedia.INTENT_WIDTH, width).putExtra(WidgetMedia.INTENT_HEIGHT, height).putExtra(WidgetMedia.INTENT_MEDIA_SOURCE, mediaSourceM462P);
+            Intrinsics3.checkNotNullExpressionValue(intentPutExtra2, "Intent()\n          .putE…EDIA_SOURCE, mediaSource)");
+            AppScreen2.m156d(context, WidgetMedia.class, intentPutExtra2);
         }
     }
 
@@ -188,8 +191,8 @@ public final class WidgetMedia extends AppFragment {
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$configureMediaImage$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends GestureDetector.SimpleOnGestureListener {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$configureMediaImage$1 */
+    public static final class C90591 extends GestureDetector.SimpleOnGestureListener {
         private boolean mDoubleTapScroll;
         private final long DURATION_MS = 300;
         private final long DOUBLE_TAP_SCROLL_THRESHOLD = 20;
@@ -197,7 +200,7 @@ public final class WidgetMedia extends AppFragment {
         private final PointF mDoubleTapImagePoint = new PointF();
         private float mDoubleTapScale = 1.0f;
 
-        public AnonymousClass1() {
+        public C90591() {
         }
 
         private final float calcScale(PointF currentViewPoint) {
@@ -230,27 +233,27 @@ public final class WidgetMedia extends AppFragment {
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnDoubleTapListener
         public boolean onDoubleTapEvent(MotionEvent e) {
-            m.checkNotNullParameter(e, "e");
-            ZoomableDraweeView zoomableDraweeView = WidgetMedia.access$getBinding$p(WidgetMedia.this).d;
-            m.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
-            e zoomableController = zoomableDraweeView.getZoomableController();
+            Intrinsics3.checkNotNullParameter(e, "e");
+            ZoomableDraweeView zoomableDraweeView = WidgetMedia.access$getBinding$p(WidgetMedia.this).f17231d;
+            Intrinsics3.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
+            ZoomableController zoomableController = zoomableDraweeView.getZoomableController();
             Objects.requireNonNull(zoomableController, "null cannot be cast to non-null type com.facebook.samples.zoomable.AbstractAnimatedZoomableController");
-            b.f.l.b.a aVar = (b.f.l.b.a) zoomableController;
+            AbstractAnimatedZoomableController abstractAnimatedZoomableController = (AbstractAnimatedZoomableController) zoomableController;
             PointF pointF = new PointF(e.getX(), e.getY());
-            float[] fArr = aVar.j;
+            float[] fArr = abstractAnimatedZoomableController.f4308j;
             fArr[0] = pointF.x;
             fArr[1] = pointF.y;
-            aVar.h.invert(aVar.i);
-            aVar.i.mapPoints(fArr, 0, fArr, 0, 1);
+            abstractAnimatedZoomableController.f4306h.invert(abstractAnimatedZoomableController.f4307i);
+            abstractAnimatedZoomableController.f4307i.mapPoints(fArr, 0, fArr, 0, 1);
             for (int i = 0; i < 1; i++) {
                 int i2 = i * 2;
                 int i3 = i2 + 0;
                 float f = fArr[i3];
-                RectF rectF = aVar.e;
+                RectF rectF = abstractAnimatedZoomableController.f4303e;
                 fArr[i3] = (f - rectF.left) / rectF.width();
                 int i4 = i2 + 1;
                 float f2 = fArr[i4];
-                RectF rectF2 = aVar.e;
+                RectF rectF2 = abstractAnimatedZoomableController.f4303e;
                 fArr[i4] = (f2 - rectF2.top) / rectF2.height();
             }
             PointF pointF2 = new PointF(fArr[0], fArr[1]);
@@ -258,21 +261,21 @@ public final class WidgetMedia extends AppFragment {
             if (actionMasked == 0) {
                 this.mDoubleTapViewPoint.set(pointF);
                 this.mDoubleTapImagePoint.set(pointF2);
-                this.mDoubleTapScale = aVar.e();
+                this.mDoubleTapScale = abstractAnimatedZoomableController.m1559e();
             } else if (actionMasked == 1) {
                 if (this.mDoubleTapScroll) {
-                    aVar.p(calcScale(pointF), this.mDoubleTapImagePoint, this.mDoubleTapViewPoint, 7, 0L, null);
-                } else if (aVar.e() < 3.0f / 2) {
-                    aVar.p(2.0f, pointF2, pointF, 7, this.DURATION_MS, null);
+                    abstractAnimatedZoomableController.m1556p(calcScale(pointF), this.mDoubleTapImagePoint, this.mDoubleTapViewPoint, 7, 0L, null);
+                } else if (abstractAnimatedZoomableController.m1559e() < 3.0f / 2) {
+                    abstractAnimatedZoomableController.m1556p(2.0f, pointF2, pointF, 7, this.DURATION_MS, null);
                 } else {
-                    aVar.p(1.0f, pointF2, pointF, 7, this.DURATION_MS, null);
+                    abstractAnimatedZoomableController.m1556p(1.0f, pointF2, pointF, 7, this.DURATION_MS, null);
                 }
                 this.mDoubleTapScroll = false;
             } else if (actionMasked == 2) {
                 boolean z2 = this.mDoubleTapScroll || shouldStartDoubleTapScroll(pointF);
                 this.mDoubleTapScroll = z2;
                 if (z2) {
-                    aVar.p(calcScale(pointF), this.mDoubleTapImagePoint, this.mDoubleTapViewPoint, 7, 0L, null);
+                    abstractAnimatedZoomableController.m1556p(calcScale(pointF), this.mDoubleTapImagePoint, this.mDoubleTapViewPoint, 7, 0L, null);
                 }
             }
             return true;
@@ -280,7 +283,7 @@ public final class WidgetMedia extends AppFragment {
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnDoubleTapListener
         public boolean onSingleTapConfirmed(MotionEvent e) {
-            m.checkNotNullParameter(e, "e");
+            Intrinsics3.checkNotNullParameter(e, "e");
             WidgetMedia.access$onMediaClick(WidgetMedia.this);
             return true;
         }
@@ -295,18 +298,18 @@ public final class WidgetMedia extends AppFragment {
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$configureMediaImage$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends c<ImageInfo> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$configureMediaImage$2 */
+    public static final class C90602 extends BaseControllerListener<ImageInfo> {
+        public C90602() {
         }
 
-        @Override // b.f.g.c.c, com.facebook.drawee.controller.ControllerListener
+        @Override // p007b.p109f.p132g.p139c.BaseControllerListener, com.facebook.drawee.controller.ControllerListener
         public void onFailure(String id2, Throwable throwable) {
             super.onFailure(id2, throwable);
             WidgetMedia.access$handleImageProgressComplete(WidgetMedia.this);
         }
 
-        @Override // b.f.g.c.c, com.facebook.drawee.controller.ControllerListener
+        @Override // p007b.p109f.p132g.p139c.BaseControllerListener, com.facebook.drawee.controller.ControllerListener
         public /* bridge */ /* synthetic */ void onFinalImageSet(String str, Object obj, Animatable animatable) {
             onFinalImageSet(str, (ImageInfo) obj, animatable);
         }
@@ -318,9 +321,9 @@ public final class WidgetMedia extends AppFragment {
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$1 */
+    public static final class ViewOnClickListenerC90611 implements View.OnClickListener {
+        public ViewOnClickListenerC90611() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -330,9 +333,9 @@ public final class WidgetMedia extends AppFragment {
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$2 */
+    public static final class ViewOnClickListenerC90622 implements View.OnClickListener {
+        public ViewOnClickListenerC90622() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -342,16 +345,16 @@ public final class WidgetMedia extends AppFragment {
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function2<Integer, Integer, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$3 */
+    public static final class C90633 extends Lambda implements Function2<Integer, Integer, Unit> {
+        public C90633() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Integer num, Integer num2) {
             invoke(num.intValue(), num2.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(int i, int i2) {
@@ -360,16 +363,16 @@ public final class WidgetMedia extends AppFragment {
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function2<Integer, Integer, Unit> {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$4 */
+    public static final class C90644 extends Lambda implements Function2<Integer, Integer, Unit> {
+        public C90644() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Integer num, Integer num2) {
             invoke(num.intValue(), num2.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(int i, int i2) {
@@ -378,47 +381,47 @@ public final class WidgetMedia extends AppFragment {
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2> implements Action2<MenuItem, Context> {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1 */
+    public static final class C90651<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ Uri $downloadUri;
         public final /* synthetic */ Uri $sourceUri;
         public final /* synthetic */ String $title;
         public final /* synthetic */ String $titleSubtext;
 
         /* compiled from: WidgetMedia.kt */
-        /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C04201 extends o implements Function0<Unit> {
+        /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Context $context;
 
             /* compiled from: WidgetMedia.kt */
             /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C04211 extends o implements Function1<String, Unit> {
-                public C04211() {
+            public static final class C132871 extends Lambda implements Function1<String, Unit> {
+                public C132871() {
                     super(1);
                 }
 
                 @Override // kotlin.jvm.functions.Function1
                 public /* bridge */ /* synthetic */ Unit invoke(String str) {
                     invoke2(str);
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(String str) {
-                    m.checkNotNullParameter(str, "it");
+                    Intrinsics3.checkNotNullParameter(str, "it");
                     if (WidgetMedia.this.isAdded()) {
-                        C04201 c04201 = C04201.this;
+                        AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
                         WidgetMedia widgetMedia = WidgetMedia.this;
-                        Context context = c04201.$context;
-                        m.checkNotNullExpressionValue(context, "context");
-                        b.a.d.m.j(widgetMedia, b.h(context, R.string.download_file_complete, new Object[]{str}, null, 4), 0, 4);
+                        Context context = anonymousClass1.$context;
+                        Intrinsics3.checkNotNullExpressionValue(context, "context");
+                        AppToast.m172j(widgetMedia, FormatUtils.m216h(context, C5419R.string.download_file_complete, new Object[]{str}, null, 4), 0, 4);
                     }
                 }
             }
 
             /* compiled from: WidgetMedia.kt */
             /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1$2, reason: invalid class name */
-            public static final class AnonymousClass2 extends o implements Function1<Throwable, Unit> {
+            public static final class AnonymousClass2 extends Lambda implements Function1<Throwable, Unit> {
                 public AnonymousClass2() {
                     super(1);
                 }
@@ -426,21 +429,21 @@ public final class WidgetMedia extends AppFragment {
                 @Override // kotlin.jvm.functions.Function1
                 public /* bridge */ /* synthetic */ Unit invoke(Throwable th) {
                     invoke2(th);
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(Throwable th) {
-                    m.checkNotNullParameter(th, "it");
+                    Intrinsics3.checkNotNullParameter(th, "it");
                     if (WidgetMedia.this.isAdded()) {
                         WidgetMedia widgetMedia = WidgetMedia.this;
-                        b.a.d.m.j(widgetMedia, widgetMedia.getString(R.string.download_failed), 0, 4);
+                        AppToast.m172j(widgetMedia, widgetMedia.getString(C5419R.string.download_failed), 0, 4);
                     }
                 }
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C04201(Context context) {
+            public AnonymousClass1(Context context) {
                 super(0);
                 this.$context = context;
             }
@@ -448,48 +451,48 @@ public final class WidgetMedia extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Context context = this.$context;
-                Uri uri = AnonymousClass1.this.$downloadUri;
-                m.checkNotNullExpressionValue(uri, "downloadUri");
-                AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                NetworkUtils.downloadFile(context, uri, anonymousClass1.$title, anonymousClass1.$titleSubtext, new C04211(), new AnonymousClass2());
+                Uri uri = C90651.this.$downloadUri;
+                Intrinsics3.checkNotNullExpressionValue(uri, "downloadUri");
+                C90651 c90651 = C90651.this;
+                NetworkUtils.downloadFile(context, uri, c90651.$title, c90651.$titleSubtext, new C132871(), new AnonymousClass2());
             }
         }
 
-        public AnonymousClass1(Uri uri, Uri uri2, String str, String str2) {
+        public C90651(Uri uri, Uri uri2, String str, String str2) {
             this.$sourceUri = uri;
             this.$downloadUri = uri2;
             this.$title = str;
             this.$titleSubtext = str2;
         }
 
-        @Override // rx.functions.Action2
+        @Override // p658rx.functions.Action2
         public /* bridge */ /* synthetic */ void call(MenuItem menuItem, Context context) {
             call2(menuItem, context);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
-            m.checkNotNullExpressionValue(menuItem, "menuItem");
+            Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             switch (menuItem.getItemId()) {
-                case R.id.menu_media_browser /* 2131364395 */:
-                    m.checkNotNullExpressionValue(context, "context");
+                case C5419R.id.menu_media_browser /* 2131364395 */:
+                    Intrinsics3.checkNotNullExpressionValue(context, "context");
                     String string = this.$sourceUri.toString();
-                    m.checkNotNullExpressionValue(string, "sourceUri.toString()");
+                    Intrinsics3.checkNotNullExpressionValue(string, "sourceUri.toString()");
                     UriHandler.handleOrUntrusted$default(context, string, null, 4, null);
                     break;
-                case R.id.menu_media_download /* 2131364396 */:
-                    WidgetMedia.this.requestMediaDownload(new C04201(context));
+                case C5419R.id.menu_media_download /* 2131364396 */:
+                    WidgetMedia.this.requestMediaDownload(new AnonymousClass1(context));
                     break;
-                case R.id.menu_media_share /* 2131364397 */:
-                    m.checkNotNullExpressionValue(context, "context");
+                case C5419R.id.menu_media_share /* 2131364397 */:
+                    Intrinsics3.checkNotNullExpressionValue(context, "context");
                     String string2 = this.$sourceUri.toString();
-                    m.checkNotNullExpressionValue(string2, "sourceUri.toString()");
+                    Intrinsics3.checkNotNullExpressionValue(string2, "sourceUri.toString()");
                     IntentUtils.performChooserSendIntent$default(context, string2, null, 4, null);
                     break;
             }
@@ -497,36 +500,36 @@ public final class WidgetMedia extends AppFragment {
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$showControls$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Subscription, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$showControls$1 */
+    public static final class C90661 extends Lambda implements Function1<Subscription, Unit> {
+        public C90661() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             WidgetMedia.access$setControlsVisibilitySubscription$p(WidgetMedia.this, subscription);
         }
     }
 
     /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$showControls$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Long, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.media.WidgetMedia$showControls$2 */
+    public static final class C90672 extends Lambda implements Function1<Long, Unit> {
+        public C90672() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke2(l);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -536,11 +539,11 @@ public final class WidgetMedia extends AppFragment {
     }
 
     public WidgetMedia() {
-        super(R.layout.widget_media);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding(this, WidgetMedia$binding$2.INSTANCE, new WidgetMedia$binding$3(this));
-        WidgetMedia$viewModel$2 widgetMedia$viewModel$2 = WidgetMedia$viewModel$2.INSTANCE;
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetMediaViewModel.class), new WidgetMedia$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetMedia$viewModel$2));
+        super(C5419R.layout.widget_media);
+        this.binding = FragmentViewBindingDelegate3.viewBinding(this, WidgetMedia2.INSTANCE, new WidgetMedia3(this));
+        WidgetMedia7 widgetMedia7 = WidgetMedia7.INSTANCE;
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetMediaViewModel.class), new WidgetMedia$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetMedia7));
     }
 
     public static final /* synthetic */ WidgetMediaBinding access$getBinding$p(WidgetMedia widgetMedia) {
@@ -606,31 +609,31 @@ public final class WidgetMedia extends AppFragment {
     private final void configureAndStartControlsAnimation(ValueAnimator animator) {
         animator.setInterpolator(new FastOutSlowInInterpolator());
         animator.setDuration(VERTICAL_CONTROLS_ANIMATION_DURATION_MS);
-        animator.addUpdateListener(new WidgetMedia$configureAndStartControlsAnimation$$inlined$apply$lambda$1(this));
-        animator.addListener(new WidgetMedia$configureAndStartControlsAnimation$$inlined$apply$lambda$2(this));
+        animator.addUpdateListener(new WidgetMedia4(this));
+        animator.addListener(new WidgetMedia5(this));
         animator.start();
     }
 
     private final void configureMediaImage() {
-        getBinding().d.setIsLongpressEnabled(false);
-        getBinding().d.setTapListener(new AnonymousClass1());
-        ZoomableDraweeView zoomableDraweeView = getBinding().d;
-        m.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
-        ScalingUtils$ScaleType scalingUtils$ScaleType = ScalingUtils$ScaleType.a;
-        ScalingUtils$ScaleType scalingUtils$ScaleType2 = v.l;
-        m.checkNotNullExpressionValue(scalingUtils$ScaleType2, "ScalingUtils.ScaleType.FIT_CENTER");
+        getBinding().f17231d.setIsLongpressEnabled(false);
+        getBinding().f17231d.setTapListener(new C90591());
+        ZoomableDraweeView zoomableDraweeView = getBinding().f17231d;
+        Intrinsics3.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
+        ScalingUtils$ScaleType scalingUtils$ScaleType = ScalingUtils$ScaleType.f19495a;
+        ScalingUtils$ScaleType scalingUtils$ScaleType2 = C1788v.f3446l;
+        Intrinsics3.checkNotNullExpressionValue(scalingUtils$ScaleType2, "ScalingUtils.ScaleType.FIT_CENTER");
         MGImages.setScaleType(zoomableDraweeView, scalingUtils$ScaleType2);
-        ZoomableDraweeView zoomableDraweeView2 = getBinding().d;
-        m.checkNotNullExpressionValue(zoomableDraweeView2, "binding.mediaImage");
-        ZoomableDraweeView zoomableDraweeView3 = getBinding().d;
-        m.checkNotNullExpressionValue(zoomableDraweeView3, "binding.mediaImage");
+        ZoomableDraweeView zoomableDraweeView2 = getBinding().f17231d;
+        Intrinsics3.checkNotNullExpressionValue(zoomableDraweeView2, "binding.mediaImage");
+        ZoomableDraweeView zoomableDraweeView3 = getBinding().f17231d;
+        Intrinsics3.checkNotNullExpressionValue(zoomableDraweeView3, "binding.mediaImage");
         Context context = zoomableDraweeView3.getContext();
-        m.checkNotNullExpressionValue(context, "binding.mediaImage.context");
+        Intrinsics3.checkNotNullExpressionValue(context, "binding.mediaImage.context");
         Uri uri = this.imageUri;
         if (uri == null) {
-            m.throwUninitializedPropertyAccessException("imageUri");
+            Intrinsics3.throwUninitializedPropertyAccessException("imageUri");
         }
-        MGImages.setImage$default(zoomableDraweeView2, d0.t.m.listOf(getFormattedUrl(context, uri)), 0, 0, false, null, null, new AnonymousClass2(), 124, null);
+        MGImages.setImage$default(zoomableDraweeView2, CollectionsJVM.listOf(getFormattedUrl(context, uri)), 0, 0, false, null, null, new C90602(), 124, null);
     }
 
     private final WidgetMediaBinding getBinding() {
@@ -641,10 +644,10 @@ public final class WidgetMedia extends AppFragment {
         String string;
         Rect rectResizeToFitScreen = DisplayUtils.resizeToFitScreen(context, new Rect(0, 0, getMostRecentIntent().getIntExtra(INTENT_WIDTH, 0), getMostRecentIntent().getIntExtra(INTENT_HEIGHT, 0)));
         String lastPathSegment = uri.getLastPathSegment();
-        if (lastPathSegment == null || !t.endsWith$default(lastPathSegment, ".gif", false, 2, null)) {
-            StringBuilder sbU = a.U("&format=");
-            sbU.append(StringUtilsKt.getSTATIC_IMAGE_EXTENSION());
-            string = sbU.toString();
+        if (lastPathSegment == null || !StringsJVM.endsWith$default(lastPathSegment, ".gif", false, 2, null)) {
+            StringBuilder sbM833U = outline.m833U("&format=");
+            sbM833U.append(StringUtils2.getSTATIC_IMAGE_EXTENSION());
+            string = sbM833U.toString();
         } else {
             string = "";
         }
@@ -652,8 +655,8 @@ public final class WidgetMedia extends AppFragment {
     }
 
     private final float getToolbarTranslationY() {
-        AppBarLayout appBarLayout = getBinding().f2486b;
-        m.checkNotNullExpressionValue(appBarLayout, "binding.actionBarToolbarLayout");
+        AppBarLayout appBarLayout = getBinding().f17229b;
+        Intrinsics3.checkNotNullExpressionValue(appBarLayout, "binding.actionBarToolbarLayout");
         return appBarLayout.getTranslationY();
     }
 
@@ -668,30 +671,30 @@ public final class WidgetMedia extends AppFragment {
     }
 
     private final void handlePlayerEvent(AppMediaPlayer.Event event) {
-        if (m.areEqual(event, AppMediaPlayer.Event.b.a)) {
+        if (Intrinsics3.areEqual(event, AppMediaPlayer.Event.C5584b.f18655a)) {
             showLoadingIndicator();
             return;
         }
-        if (m.areEqual(event, AppMediaPlayer.Event.a.a)) {
-            ZoomableDraweeView zoomableDraweeView = getBinding().d;
-            m.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
+        if (Intrinsics3.areEqual(event, AppMediaPlayer.Event.C5583a.f18654a)) {
+            ZoomableDraweeView zoomableDraweeView = getBinding().f17231d;
+            Intrinsics3.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
             zoomableDraweeView.setVisibility(8);
             getViewModel().setShowCoverFrame(false);
             hideLoadingIndicator();
             return;
         }
-        if (event instanceof AppMediaPlayer.Event.c) {
-            getViewModel().setCurrentPlayerPositionMs(((AppMediaPlayer.Event.c) event).a);
+        if (event instanceof AppMediaPlayer.Event.C5585c) {
+            getViewModel().setCurrentPlayerPositionMs(((AppMediaPlayer.Event.C5585c) event).f18656a);
             return;
         }
-        if (m.areEqual(event, AppMediaPlayer.Event.d.a)) {
+        if (Intrinsics3.areEqual(event, AppMediaPlayer.Event.C5586d.f18657a)) {
             if (this.playerPausedByFragmentLifecycle) {
                 return;
             }
             getViewModel().setPlaying(false);
-        } else if (m.areEqual(event, AppMediaPlayer.Event.f.a)) {
+        } else if (Intrinsics3.areEqual(event, AppMediaPlayer.Event.C5588f.f18659a)) {
             getViewModel().setPlaying(true);
-        } else if (m.areEqual(event, AppMediaPlayer.Event.e.a)) {
+        } else if (Intrinsics3.areEqual(event, AppMediaPlayer.Event.C5587e.f18658a)) {
             hideLoadingIndicator();
         }
     }
@@ -708,14 +711,14 @@ public final class WidgetMedia extends AppFragment {
             valueAnimator.cancel();
         }
         ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(getToolbarTranslationY(), -this.toolbarHeight);
-        m.checkNotNullExpressionValue(valueAnimatorOfFloat, "this");
+        Intrinsics3.checkNotNullExpressionValue(valueAnimatorOfFloat, "this");
         configureAndStartControlsAnimation(valueAnimatorOfFloat);
         this.controlsAnimator = valueAnimatorOfFloat;
     }
 
     private final void hideLoadingIndicator() {
-        ProgressBar progressBar = getBinding().e;
-        m.checkNotNullExpressionValue(progressBar, "binding.mediaLoadingIndicator");
+        ProgressBar progressBar = getBinding().f17232e;
+        Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.mediaLoadingIndicator");
         progressBar.setVisibility(8);
     }
 
@@ -737,25 +740,25 @@ public final class WidgetMedia extends AppFragment {
         if (valueAnimator != null) {
             valueAnimator.cancel();
         }
-        binding.d.setTapListener(null);
+        binding.f17231d.setTapListener(null);
         MGImages mGImages = MGImages.INSTANCE;
-        ZoomableDraweeView zoomableDraweeView = binding.d;
-        m.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
+        ZoomableDraweeView zoomableDraweeView = binding.f17231d;
+        Intrinsics3.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
         mGImages.cancelImageRequests(zoomableDraweeView);
     }
 
     private final void showControls() {
         if (isVideo()) {
-            getBinding().f.i();
+            getBinding().f17233f.m8901i();
             Subscription subscription = this.controlsVisibilitySubscription;
             if (subscription != null) {
                 subscription.unsubscribe();
             }
-            Observable<Long> observableD0 = Observable.d0(SHOW_CONTROLS_TIMEOUT_MS, TimeUnit.MILLISECONDS);
-            m.checkNotNullExpressionValue(observableD0, "Observable.timer(SHOW_CO…S, TimeUnit.MILLISECONDS)");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableD0, this, null, 2, null), WidgetMedia.class, (Context) null, new AnonymousClass1(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 58, (Object) null);
+            Observable<Long> observableM11068d0 = Observable.m11068d0(SHOW_CONTROLS_TIMEOUT_MS, TimeUnit.MILLISECONDS);
+            Intrinsics3.checkNotNullExpressionValue(observableM11068d0, "Observable.timer(SHOW_CO…S, TimeUnit.MILLISECONDS)");
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableM11068d0, this, null, 2, null), WidgetMedia.class, (Context) null, new C90661(), (Function1) null, (Function0) null, (Function0) null, new C90672(), 58, (Object) null);
         } else {
-            getBinding().f.c();
+            getBinding().f17233f.m8895c();
         }
         ControlsAnimationAction controlsAnimationAction = this.controlsAnimationAction;
         ControlsAnimationAction controlsAnimationAction2 = ControlsAnimationAction.SHOW;
@@ -768,14 +771,14 @@ public final class WidgetMedia extends AppFragment {
             valueAnimator.cancel();
         }
         ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(getToolbarTranslationY(), 0.0f);
-        m.checkNotNullExpressionValue(valueAnimatorOfFloat, "this");
+        Intrinsics3.checkNotNullExpressionValue(valueAnimatorOfFloat, "this");
         configureAndStartControlsAnimation(valueAnimatorOfFloat);
         this.controlsAnimator = valueAnimatorOfFloat;
     }
 
     private final void showLoadingIndicator() {
-        ProgressBar progressBar = getBinding().e;
-        m.checkNotNullExpressionValue(progressBar, "binding.mediaLoadingIndicator");
+        ProgressBar progressBar = getBinding().f17232e;
+        Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.mediaLoadingIndicator");
         progressBar.setVisibility(0);
     }
 
@@ -783,9 +786,9 @@ public final class WidgetMedia extends AppFragment {
     public void onDestroy() {
         AppMediaPlayer appMediaPlayer = this.appMediaPlayer;
         if (appMediaPlayer == null) {
-            m.throwUninitializedPropertyAccessException("appMediaPlayer");
+            Intrinsics3.throwUninitializedPropertyAccessException("appMediaPlayer");
         }
-        appMediaPlayer.c();
+        appMediaPlayer.m8440c();
         super.onDestroy();
     }
 
@@ -794,38 +797,38 @@ public final class WidgetMedia extends AppFragment {
         super.onPause();
         AppMediaPlayer appMediaPlayer = this.appMediaPlayer;
         if (appMediaPlayer == null) {
-            m.throwUninitializedPropertyAccessException("appMediaPlayer");
+            Intrinsics3.throwUninitializedPropertyAccessException("appMediaPlayer");
         }
-        if (((u0) appMediaPlayer.exoPlayer).z()) {
+        if (((BasePlayer) appMediaPlayer.exoPlayer).mo3534z()) {
             this.playerPausedByFragmentLifecycle = true;
             AppMediaPlayer appMediaPlayer2 = this.appMediaPlayer;
             if (appMediaPlayer2 == null) {
-                m.throwUninitializedPropertyAccessException("appMediaPlayer");
+                Intrinsics3.throwUninitializedPropertyAccessException("appMediaPlayer");
             }
-            ((k2) appMediaPlayer2.exoPlayer).u(false);
+            ((SimpleExoPlayer) appMediaPlayer2.exoPlayer).mo2926u(false);
         }
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        this.appMediaPlayer = i.a(requireContext());
-        ColorCompat.getThemedColor(this, R.attr.primary_900);
-        ColorCompat.setStatusBarColor$default((Fragment) this, ColorCompat.getThemedColor(this, R.attr.primary_900), false, 4, (Object) null);
-        PlayerView playerView = getBinding().g;
-        m.checkNotNullExpressionValue(playerView, "binding.mediaPlayerView");
+        this.appMediaPlayer = AppMediaPlayerFactory.m233a(requireContext());
+        ColorCompat.getThemedColor(this, C5419R.attr.primary_900);
+        ColorCompat.setStatusBarColor$default((Fragment) this, ColorCompat.getThemedColor(this, C5419R.attr.primary_900), false, 4, (Object) null);
+        PlayerView playerView = getBinding().f17234g;
+        Intrinsics3.checkNotNullExpressionValue(playerView, "binding.mediaPlayerView");
         View videoSurfaceView = playerView.getVideoSurfaceView();
         if (videoSurfaceView != null) {
-            videoSurfaceView.setOnClickListener(new AnonymousClass1());
+            videoSurfaceView.setOnClickListener(new ViewOnClickListenerC90611());
         }
-        getBinding().c.setOnClickListener(new AnonymousClass2());
-        AppBarLayout appBarLayout = getBinding().f2486b;
-        m.checkNotNullExpressionValue(appBarLayout, "binding.actionBarToolbarLayout");
-        ViewExtensions.addOnHeightChangedListener(appBarLayout, new AnonymousClass3());
-        PlayerControlView playerControlView = getBinding().f;
-        m.checkNotNullExpressionValue(playerControlView, "binding.mediaPlayerControlView");
-        ViewExtensions.addOnHeightChangedListener(playerControlView, new AnonymousClass4());
+        getBinding().f17230c.setOnClickListener(new ViewOnClickListenerC90622());
+        AppBarLayout appBarLayout = getBinding().f17229b;
+        Intrinsics3.checkNotNullExpressionValue(appBarLayout, "binding.actionBarToolbarLayout");
+        ViewExtensions.addOnHeightChangedListener(appBarLayout, new C90633());
+        PlayerControlView playerControlView = getBinding().f17233f;
+        Intrinsics3.checkNotNullExpressionValue(playerControlView, "binding.mediaPlayerControlView");
+        ViewExtensions.addOnHeightChangedListener(playerControlView, new C90644());
     }
 
     @Override // com.discord.app.AppFragment
@@ -834,15 +837,15 @@ public final class WidgetMedia extends AppFragment {
         String str;
         Uri uri2;
         super.onViewBoundOrOnResume();
-        ZoomableDraweeView zoomableDraweeView = getBinding().d;
-        m.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
+        ZoomableDraweeView zoomableDraweeView = getBinding().f17231d;
+        Intrinsics3.checkNotNullExpressionValue(zoomableDraweeView, "binding.mediaImage");
         zoomableDraweeView.setVisibility(getViewModel().getShowCoverFrame() ? 0 : 8);
-        ProgressBar progressBar = getBinding().e;
-        m.checkNotNullExpressionValue(progressBar, "binding.mediaLoadingIndicator");
+        ProgressBar progressBar = getBinding().f17232e;
+        Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.mediaLoadingIndicator");
         progressBar.setVisibility(getViewModel().getShowCoverFrame() ? 0 : 8);
         Uri uri3 = Uri.parse(getMostRecentIntent().getStringExtra(INTENT_URL));
         Uri uri4 = Uri.parse(getMostRecentIntent().getStringExtra(INTENT_IMAGE_URL));
-        m.checkNotNullExpressionValue(uri4, "Uri.parse(mostRecentInte…gExtra(INTENT_IMAGE_URL))");
+        Intrinsics3.checkNotNullExpressionValue(uri4, "Uri.parse(mostRecentInte…gExtra(INTENT_IMAGE_URL))");
         this.imageUri = uri4;
         Parcelable parcelableExtra = getMostRecentIntent().getParcelableExtra(INTENT_MEDIA_SOURCE);
         if (!(parcelableExtra instanceof MediaSource)) {
@@ -857,22 +860,22 @@ public final class WidgetMedia extends AppFragment {
         } else {
             uri = this.imageUri;
             if (uri == null) {
-                m.throwUninitializedPropertyAccessException("imageUri");
+                Intrinsics3.throwUninitializedPropertyAccessException("imageUri");
             }
         }
         Uri uri5 = uri;
         String stringExtra = getMostRecentIntent().getStringExtra(INTENT_TITLE);
-        if (stringExtra == null || t.isBlank(stringExtra)) {
+        if (stringExtra == null || StringsJVM.isBlank(stringExtra)) {
             String string2 = uri3.toString();
-            m.checkNotNullExpressionValue(string2, "sourceUri.toString()");
+            Intrinsics3.checkNotNullExpressionValue(string2, "sourceUri.toString()");
             str = string2;
         } else {
             str = stringExtra;
         }
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
-        setActionBarTitle(R.string.view_embed);
+        setActionBarTitle(C5419R.string.view_embed);
         setActionBarSubtitle(str);
-        AppFragment.setActionBarOptionsMenu$default(this, R.menu.menu_media, new AnonymousClass1(uri3, uri5, stringExtra, str), null, 4, null);
+        AppFragment.setActionBarOptionsMenu$default(this, C5419R.menu.menu_media, new C90651(uri3, uri5, stringExtra, str), null, 4, null);
         configureMediaImage();
         showControls();
         this.playerPausedByFragmentLifecycle = false;
@@ -881,33 +884,33 @@ public final class WidgetMedia extends AppFragment {
             boolean z2 = mediaSource2.mediaType == MediaType.GIFV;
             AppMediaPlayer appMediaPlayer = this.appMediaPlayer;
             if (appMediaPlayer == null) {
-                m.throwUninitializedPropertyAccessException("appMediaPlayer");
+                Intrinsics3.throwUninitializedPropertyAccessException("appMediaPlayer");
             }
             boolean isPlaying = getViewModel().getIsPlaying();
             long currentPlayerPositionMs = getViewModel().getCurrentPlayerPositionMs();
-            PlayerView playerView = getBinding().g;
-            m.checkNotNullExpressionValue(playerView, "binding.mediaPlayerView");
-            appMediaPlayer.a(mediaSource2, isPlaying, z2, currentPlayerPositionMs, playerView, getBinding().f);
+            PlayerView playerView = getBinding().f17234g;
+            Intrinsics3.checkNotNullExpressionValue(playerView, "binding.mediaPlayerView");
+            appMediaPlayer.m8439a(mediaSource2, isPlaying, z2, currentPlayerPositionMs, playerView, getBinding().f17233f);
             if (z2) {
                 AppMediaPlayer appMediaPlayer2 = this.appMediaPlayer;
                 if (appMediaPlayer2 == null) {
-                    m.throwUninitializedPropertyAccessException("appMediaPlayer");
+                    Intrinsics3.throwUninitializedPropertyAccessException("appMediaPlayer");
                 }
-                appMediaPlayer2.d(0.0f);
+                appMediaPlayer2.m8441d(0.0f);
             } else {
                 AppMediaPlayer appMediaPlayer3 = this.appMediaPlayer;
                 if (appMediaPlayer3 == null) {
-                    m.throwUninitializedPropertyAccessException("appMediaPlayer");
+                    Intrinsics3.throwUninitializedPropertyAccessException("appMediaPlayer");
                 }
-                appMediaPlayer3.d(1.0f);
+                appMediaPlayer3.m8441d(1.0f);
             }
             AppMediaPlayer appMediaPlayer4 = this.appMediaPlayer;
             if (appMediaPlayer4 == null) {
-                m.throwUninitializedPropertyAccessException("appMediaPlayer");
+                Intrinsics3.throwUninitializedPropertyAccessException("appMediaPlayer");
             }
-            Observable<AppMediaPlayer.Event> observableK = appMediaPlayer4.eventSubject.K();
-            m.checkNotNullExpressionValue(observableK, "eventSubject.onBackpressureBuffer()");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableK, this, null, 2, null), WidgetMedia.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new WidgetMedia$onViewBoundOrOnResume$$inlined$let$lambda$1(this), 62, (Object) null);
+            Observable<AppMediaPlayer.Event> observableM11085K = appMediaPlayer4.eventSubject.m11085K();
+            Intrinsics3.checkNotNullExpressionValue(observableM11085K, "eventSubject.onBackpressureBuffer()");
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11085K, this, null, 2, null), WidgetMedia.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new WidgetMedia6(this), 62, (Object) null);
         }
     }
 }

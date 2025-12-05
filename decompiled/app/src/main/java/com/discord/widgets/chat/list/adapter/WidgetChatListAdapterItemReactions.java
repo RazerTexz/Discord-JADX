@@ -7,8 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
-import b.a.i.h1;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.message.reaction.MessageReaction;
 import com.discord.databinding.WidgetChatListAdapterItemReactionsBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -20,12 +19,13 @@ import com.discord.views.ReactionView;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.ReactionsEntry;
 import com.google.android.flexbox.FlexboxLayout;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Collection;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p007b.p008a.p025i.ReactionQuickAddBinding;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetChatListAdapterItemReactions.kt */
 /* loaded from: classes2.dex */
@@ -37,13 +37,13 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
     private static final int REACTION_VIEW_HEIGHT = DimenUtils.dpToPixels(26);
 
     /* compiled from: WidgetChatListAdapterItemReactions.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$1 */
+    public static final class ViewOnClickListenerC81121 implements View.OnClickListener {
         public final /* synthetic */ boolean $canAddReactions;
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ MessageReaction $reaction;
 
-        public AnonymousClass1(long j, MessageReaction messageReaction, boolean z2) {
+        public ViewOnClickListenerC81121(long j, MessageReaction messageReaction, boolean z2) {
             this.$messageId = j;
             this.$reaction = messageReaction;
             this.$canAddReactions = z2;
@@ -56,13 +56,13 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
     }
 
     /* compiled from: WidgetChatListAdapterItemReactions.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$2 */
+    public static final class C81132 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ MessageReaction $reaction;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(long j, MessageReaction messageReaction) {
+        public C81132(long j, MessageReaction messageReaction) {
             super(1);
             this.$messageId = j;
             this.$reaction = messageReaction;
@@ -71,22 +71,22 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapterItemReactions.access$getAdapter$p(WidgetChatListAdapterItemReactions.this).onReactionLongClicked(this.$messageId, this.$reaction);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemReactions.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$3 */
+    public static final class ViewOnClickListenerC81143 implements View.OnClickListener {
         public final /* synthetic */ long $messageId;
 
-        public AnonymousClass3(long j) {
+        public ViewOnClickListenerC81143(long j) {
             this.$messageId = j;
         }
 
@@ -98,28 +98,28 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemReactions(WidgetChatListAdapter widgetChatListAdapter) {
-        super(R.layout.widget_chat_list_adapter_item_reactions, widgetChatListAdapter);
-        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        super(C5419R.layout.widget_chat_list_adapter_item_reactions, widgetChatListAdapter);
+        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
-        int i = R.id.chat_list_adapter_item_gutter_bg;
-        View viewFindViewById = view.findViewById(R.id.chat_list_adapter_item_gutter_bg);
+        int i = C5419R.id.chat_list_adapter_item_gutter_bg;
+        View viewFindViewById = view.findViewById(C5419R.id.chat_list_adapter_item_gutter_bg);
         if (viewFindViewById != null) {
-            i = R.id.chat_list_adapter_item_highlighted_bg;
-            View viewFindViewById2 = view.findViewById(R.id.chat_list_adapter_item_highlighted_bg);
+            i = C5419R.id.chat_list_adapter_item_highlighted_bg;
+            View viewFindViewById2 = view.findViewById(C5419R.id.chat_list_adapter_item_highlighted_bg);
             if (viewFindViewById2 != null) {
-                i = R.id.chat_list_item_reactions;
-                FlexboxLayout flexboxLayout = (FlexboxLayout) view.findViewById(R.id.chat_list_item_reactions);
+                i = C5419R.id.chat_list_item_reactions;
+                FlexboxLayout flexboxLayout = (FlexboxLayout) view.findViewById(C5419R.id.chat_list_item_reactions);
                 if (flexboxLayout != null) {
                     ConstraintLayout constraintLayout = (ConstraintLayout) view;
                     WidgetChatListAdapterItemReactionsBinding widgetChatListAdapterItemReactionsBinding = new WidgetChatListAdapterItemReactionsBinding(constraintLayout, viewFindViewById, viewFindViewById2, flexboxLayout);
-                    m.checkNotNullExpressionValue(widgetChatListAdapterItemReactionsBinding, "WidgetChatListAdapterIte…onsBinding.bind(itemView)");
+                    Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemReactionsBinding, "WidgetChatListAdapterIte…onsBinding.bind(itemView)");
                     this.binding = widgetChatListAdapterItemReactionsBinding;
-                    m.checkNotNullExpressionValue(constraintLayout, "binding.root");
-                    View viewInflate = LayoutInflater.from(constraintLayout.getContext()).inflate(R.layout.reaction_quick_add, (ViewGroup) null, false);
+                    Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.root");
+                    View viewInflate = LayoutInflater.from(constraintLayout.getContext()).inflate(C5419R.layout.reaction_quick_add, (ViewGroup) null, false);
                     Objects.requireNonNull(viewInflate, "rootView");
                     ImageView imageView = (ImageView) viewInflate;
-                    m.checkNotNullExpressionValue(new h1(imageView, imageView), "ReactionQuickAddBinding.…ot.context), null, false)");
-                    m.checkNotNullExpressionValue(imageView, "ReactionQuickAddBinding.…ntext), null, false).root");
+                    Intrinsics3.checkNotNullExpressionValue(new ReactionQuickAddBinding(imageView, imageView), "ReactionQuickAddBinding.…ot.context), null, false)");
+                    Intrinsics3.checkNotNullExpressionValue(imageView, "ReactionQuickAddBinding.…ntext), null, false).root");
                     this.quickAddReactionView = imageView;
                     return;
                 }
@@ -135,74 +135,74 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
     private final void displayReactions(Collection<MessageReaction> reactions, long messageId, boolean canAddReactions, boolean canCreateReactions, boolean animateEmojis) {
         ReactionView reactionView;
         removeQuickAddReactionView();
-        FlexboxLayout flexboxLayout = this.binding.d;
-        m.checkNotNullExpressionValue(flexboxLayout, "binding.chatListItemReactions");
+        FlexboxLayout flexboxLayout = this.binding.f16271d;
+        Intrinsics3.checkNotNullExpressionValue(flexboxLayout, "binding.chatListItemReactions");
         int childCount = flexboxLayout.getChildCount();
         for (int size = reactions.size(); size < childCount; size++) {
-            View childAt = this.binding.d.getChildAt(size);
-            m.checkNotNullExpressionValue(childAt, "binding.chatListItemReactions.getChildAt(i)");
+            View childAt = this.binding.f16271d.getChildAt(size);
+            Intrinsics3.checkNotNullExpressionValue(childAt, "binding.chatListItemReactions.getChildAt(i)");
             childAt.setVisibility(8);
         }
-        FlexboxLayout flexboxLayout2 = this.binding.d;
-        m.checkNotNullExpressionValue(flexboxLayout2, "binding.chatListItemReactions");
+        FlexboxLayout flexboxLayout2 = this.binding.f16271d;
+        Intrinsics3.checkNotNullExpressionValue(flexboxLayout2, "binding.chatListItemReactions");
         int childCount2 = flexboxLayout2.getChildCount();
         int i = 0;
         int i2 = 0;
         for (MessageReaction messageReaction : reactions) {
             if (i2 < childCount2) {
-                View childAt2 = this.binding.d.getChildAt(i2);
+                View childAt2 = this.binding.f16271d.getChildAt(i2);
                 Objects.requireNonNull(childAt2, "null cannot be cast to non-null type com.discord.views.ReactionView");
                 reactionView = (ReactionView) childAt2;
                 reactionView.setVisibility(i);
                 i2++;
             } else {
-                FlexboxLayout flexboxLayout3 = this.binding.d;
-                m.checkNotNullExpressionValue(flexboxLayout3, "binding.chatListItemReactions");
+                FlexboxLayout flexboxLayout3 = this.binding.f16271d;
+                Intrinsics3.checkNotNullExpressionValue(flexboxLayout3, "binding.chatListItemReactions");
                 Context context = flexboxLayout3.getContext();
-                m.checkNotNullExpressionValue(context, "binding.chatListItemReactions.context");
+                Intrinsics3.checkNotNullExpressionValue(context, "binding.chatListItemReactions.context");
                 reactionView = new ReactionView(context, null, i, 6);
                 int i3 = REACTION_HORIZONTAL_PADDING;
                 reactionView.setPadding(i3, reactionView.getPaddingTop(), i3, reactionView.getPaddingBottom());
                 Context context2 = reactionView.getContext();
                 Context context3 = reactionView.getContext();
-                m.checkNotNullExpressionValue(context3, "view.context");
-                reactionView.setBackground(ContextCompat.getDrawable(context2, DrawableCompat.getThemedDrawableRes$default(context3, R.attr.theme_chat_reaction_background, i, 2, (Object) null)));
+                Intrinsics3.checkNotNullExpressionValue(context3, "view.context");
+                reactionView.setBackground(ContextCompat.getDrawable(context2, DrawableCompat.getThemedDrawableRes$default(context3, C5419R.attr.theme_chat_reaction_background, i, 2, (Object) null)));
                 reactionView.setGravity(17);
-                this.binding.d.addView(reactionView);
+                this.binding.f16271d.addView(reactionView);
                 reactionView.getLayoutParams().height = REACTION_VIEW_HEIGHT;
             }
             ReactionView reactionView2 = reactionView;
-            reactionView2.setOnClickListener(new AnonymousClass1(messageId, messageReaction, canAddReactions));
-            ViewExtensions.setOnLongClickListenerConsumeClick(reactionView2, new AnonymousClass2(messageId, messageReaction));
-            reactionView2.a(messageReaction, messageId, animateEmojis);
+            reactionView2.setOnClickListener(new ViewOnClickListenerC81121(messageId, messageReaction, canAddReactions));
+            ViewExtensions.setOnLongClickListenerConsumeClick(reactionView2, new C81132(messageId, messageReaction));
+            reactionView2.m8552a(messageReaction, messageId, animateEmojis);
             i2 = i2;
             i = 0;
         }
         if (reactions.size() >= 20 || !canCreateReactions) {
             return;
         }
-        this.quickAddReactionView.setOnClickListener(new AnonymousClass3(messageId));
-        this.binding.d.addView(this.quickAddReactionView);
+        this.quickAddReactionView.setOnClickListener(new ViewOnClickListenerC81143(messageId));
+        this.binding.f16271d.addView(this.quickAddReactionView);
     }
 
     private final void processReactions(ReactionsEntry data) {
         Message message = data.getMessage();
-        View view = this.binding.c;
-        m.checkNotNullExpressionValue(view, "binding.chatListAdapterItemHighlightedBg");
-        View view2 = this.binding.f2329b;
-        m.checkNotNullExpressionValue(view2, "binding.chatListAdapterItemGutterBg");
+        View view = this.binding.f16270c;
+        Intrinsics3.checkNotNullExpressionValue(view, "binding.chatListAdapterItemHighlightedBg");
+        View view2 = this.binding.f16269b;
+        Intrinsics3.checkNotNullExpressionValue(view2, "binding.chatListAdapterItemGutterBg");
         configureCellHighlight(message, view, view2);
         displayReactions(data.getMessage().getReactionsMap().values(), data.getMessage().getId(), data.getCanAddReactions(), data.getCanCreateReactions(), data.getAnimateEmojis());
     }
 
     private final void removeQuickAddReactionView() {
-        FlexboxLayout flexboxLayout = this.binding.d;
-        m.checkNotNullExpressionValue(flexboxLayout, "binding.chatListItemReactions");
+        FlexboxLayout flexboxLayout = this.binding.f16271d;
+        Intrinsics3.checkNotNullExpressionValue(flexboxLayout, "binding.chatListItemReactions");
         int childCount = flexboxLayout.getChildCount();
         if (childCount > 0) {
             int i = childCount - 1;
-            if (this.binding.d.getChildAt(i) == this.quickAddReactionView) {
-                this.binding.d.removeViewAt(i);
+            if (this.binding.f16271d.getChildAt(i) == this.quickAddReactionView) {
+                this.binding.f16271d.removeViewAt(i);
             }
         }
     }
@@ -215,7 +215,7 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         processReactions((ReactionsEntry) data);
     }

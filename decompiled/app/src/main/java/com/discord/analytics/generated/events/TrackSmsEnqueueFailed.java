@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSmsEnqueueFailed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSmsEnqueueFailed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackSmsEnqueueFailed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence phoneNumber = null;
     private final CharSequence reason = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackSmsEnqueueFailed implements AnalyticsSchema, 
             return false;
         }
         TrackSmsEnqueueFailed trackSmsEnqueueFailed = (TrackSmsEnqueueFailed) other;
-        return m.areEqual(this.phoneNumber, trackSmsEnqueueFailed.phoneNumber) && m.areEqual(this.reason, trackSmsEnqueueFailed.reason) && m.areEqual(this.phoneCountry, trackSmsEnqueueFailed.phoneCountry) && m.areEqual(this.carrierName, trackSmsEnqueueFailed.carrierName) && m.areEqual(this.carrierType, trackSmsEnqueueFailed.carrierType) && m.areEqual(this.source, trackSmsEnqueueFailed.source);
+        return Intrinsics3.areEqual(this.phoneNumber, trackSmsEnqueueFailed.phoneNumber) && Intrinsics3.areEqual(this.reason, trackSmsEnqueueFailed.reason) && Intrinsics3.areEqual(this.phoneCountry, trackSmsEnqueueFailed.phoneCountry) && Intrinsics3.areEqual(this.carrierName, trackSmsEnqueueFailed.carrierName) && Intrinsics3.areEqual(this.carrierType, trackSmsEnqueueFailed.carrierType) && Intrinsics3.areEqual(this.source, trackSmsEnqueueFailed.source);
     }
 
     public int hashCode() {
@@ -52,17 +52,17 @@ public final /* data */ class TrackSmsEnqueueFailed implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSmsEnqueueFailed(phoneNumber=");
-        sbU.append(this.phoneNumber);
-        sbU.append(", reason=");
-        sbU.append(this.reason);
-        sbU.append(", phoneCountry=");
-        sbU.append(this.phoneCountry);
-        sbU.append(", carrierName=");
-        sbU.append(this.carrierName);
-        sbU.append(", carrierType=");
-        sbU.append(this.carrierType);
-        sbU.append(", source=");
-        return a.E(sbU, this.source, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSmsEnqueueFailed(phoneNumber=");
+        sbM833U.append(this.phoneNumber);
+        sbM833U.append(", reason=");
+        sbM833U.append(this.reason);
+        sbM833U.append(", phoneCountry=");
+        sbM833U.append(this.phoneCountry);
+        sbM833U.append(", carrierName=");
+        sbM833U.append(this.carrierName);
+        sbM833U.append(", carrierType=");
+        sbM833U.append(this.carrierType);
+        sbM833U.append(", source=");
+        return outline.m817E(sbM833U, this.source, ")");
     }
 }

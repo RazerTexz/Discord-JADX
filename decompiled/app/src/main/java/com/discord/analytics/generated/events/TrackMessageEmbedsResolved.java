@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMessageEmbedsResolved.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMessageEmbedsResolved implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver {
+public final /* data */ class TrackMessageEmbedsResolved implements AnalyticsSchema, TrackBase2, TrackChannel2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private final Long messageId = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackMessageEmbedsResolved implements AnalyticsSch
             return false;
         }
         TrackMessageEmbedsResolved trackMessageEmbedsResolved = (TrackMessageEmbedsResolved) other;
-        return m.areEqual(this.messageId, trackMessageEmbedsResolved.messageId) && m.areEqual(this.numEmbeds, trackMessageEmbedsResolved.numEmbeds);
+        return Intrinsics3.areEqual(this.messageId, trackMessageEmbedsResolved.messageId) && Intrinsics3.areEqual(this.numEmbeds, trackMessageEmbedsResolved.numEmbeds);
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class TrackMessageEmbedsResolved implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMessageEmbedsResolved(messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", numEmbeds=");
-        return a.G(sbU, this.numEmbeds, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMessageEmbedsResolved(messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", numEmbeds=");
+        return outline.m819G(sbM833U, this.numEmbeds, ")");
     }
 }

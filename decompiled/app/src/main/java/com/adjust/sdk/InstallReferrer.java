@@ -27,9 +27,9 @@ public class InstallReferrer implements InvocationHandler {
     private int retryWaitTime = PathInterpolatorCompat.MAX_NUM_POINTS;
     private final AtomicBoolean shouldTryToRead;
 
-    /* renamed from: com.adjust.sdk.InstallReferrer$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: com.adjust.sdk.InstallReferrer$1 */
+    public class RunnableC53791 implements Runnable {
+        public RunnableC53791() {
         }
 
         @Override // java.lang.Runnable
@@ -45,7 +45,7 @@ public class InstallReferrer implements InvocationHandler {
         this.context = context;
         this.shouldTryToRead = new AtomicBoolean(true);
         this.retries = 0;
-        this.retryTimer = new TimerOnce(new AnonymousClass1(), "InstallReferrer");
+        this.retryTimer = new TimerOnce(new RunnableC53791(), "InstallReferrer");
         this.referrerCallback = installReferrerReadListener;
     }
 

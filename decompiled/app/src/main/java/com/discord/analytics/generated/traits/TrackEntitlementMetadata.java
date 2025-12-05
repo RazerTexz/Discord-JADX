@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackEntitlementMetadata.kt */
 /* loaded from: classes.dex */
@@ -21,7 +21,7 @@ public final /* data */ class TrackEntitlementMetadata {
             return false;
         }
         TrackEntitlementMetadata trackEntitlementMetadata = (TrackEntitlementMetadata) other;
-        return m.areEqual(this.entitlementId, trackEntitlementMetadata.entitlementId) && m.areEqual(this.entitlementCreatorId, trackEntitlementMetadata.entitlementCreatorId) && m.areEqual(this.entitlementSubscriptionPlanId, trackEntitlementMetadata.entitlementSubscriptionPlanId) && m.areEqual(this.entitlementPaymentId, trackEntitlementMetadata.entitlementPaymentId) && m.areEqual(this.giftCodeBatchId, trackEntitlementMetadata.giftCodeBatchId) && m.areEqual(this.giftStyle, trackEntitlementMetadata.giftStyle);
+        return Intrinsics3.areEqual(this.entitlementId, trackEntitlementMetadata.entitlementId) && Intrinsics3.areEqual(this.entitlementCreatorId, trackEntitlementMetadata.entitlementCreatorId) && Intrinsics3.areEqual(this.entitlementSubscriptionPlanId, trackEntitlementMetadata.entitlementSubscriptionPlanId) && Intrinsics3.areEqual(this.entitlementPaymentId, trackEntitlementMetadata.entitlementPaymentId) && Intrinsics3.areEqual(this.giftCodeBatchId, trackEntitlementMetadata.giftCodeBatchId) && Intrinsics3.areEqual(this.giftStyle, trackEntitlementMetadata.giftStyle);
     }
 
     public int hashCode() {
@@ -40,17 +40,17 @@ public final /* data */ class TrackEntitlementMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackEntitlementMetadata(entitlementId=");
-        sbU.append(this.entitlementId);
-        sbU.append(", entitlementCreatorId=");
-        sbU.append(this.entitlementCreatorId);
-        sbU.append(", entitlementSubscriptionPlanId=");
-        sbU.append(this.entitlementSubscriptionPlanId);
-        sbU.append(", entitlementPaymentId=");
-        sbU.append(this.entitlementPaymentId);
-        sbU.append(", giftCodeBatchId=");
-        sbU.append(this.giftCodeBatchId);
-        sbU.append(", giftStyle=");
-        return a.G(sbU, this.giftStyle, ")");
+        StringBuilder sbM833U = outline.m833U("TrackEntitlementMetadata(entitlementId=");
+        sbM833U.append(this.entitlementId);
+        sbM833U.append(", entitlementCreatorId=");
+        sbM833U.append(this.entitlementCreatorId);
+        sbM833U.append(", entitlementSubscriptionPlanId=");
+        sbM833U.append(this.entitlementSubscriptionPlanId);
+        sbM833U.append(", entitlementPaymentId=");
+        sbM833U.append(this.entitlementPaymentId);
+        sbM833U.append(", giftCodeBatchId=");
+        sbM833U.append(this.giftCodeBatchId);
+        sbM833U.append(", giftStyle=");
+        return outline.m819G(sbM833U, this.giftStyle, ")");
     }
 }

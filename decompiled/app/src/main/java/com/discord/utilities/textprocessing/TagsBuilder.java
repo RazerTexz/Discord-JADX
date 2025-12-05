@@ -1,21 +1,21 @@
 package com.discord.utilities.textprocessing;
 
-import b.a.t.b.c.a;
-import b.c.a.a0.d;
 import com.discord.simpleast.core.node.Node;
 import com.discord.utilities.textprocessing.node.ChannelMentionNode;
 import com.discord.utilities.textprocessing.node.RoleMentionNode;
 import com.discord.utilities.textprocessing.node.UserMentionNode;
-import d0.z.d.m;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p050t.p052b.p055c.NodeProcessor;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TagsBuilder.kt */
 /* loaded from: classes2.dex */
-public final class TagsBuilder implements a {
+public final class TagsBuilder implements NodeProcessor {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -28,8 +28,8 @@ public final class TagsBuilder implements a {
         private Companion() {
         }
 
-        public final Tags extractTags(Collection<? extends Node<?>> ast) {
-            m.checkNotNullParameter(ast, "ast");
+        public final TagsBuilder2 extractTags(Collection<? extends Node<?>> ast) {
+            Intrinsics3.checkNotNullParameter(ast, "ast");
             TagsBuilder tagsBuilder = new TagsBuilder();
             tagsBuilder.processAst(ast);
             return tagsBuilder.build();
@@ -67,31 +67,31 @@ public final class TagsBuilder implements a {
         this.taggedUserIds = hashSet;
     }
 
-    public final Tags build() {
+    public final TagsBuilder2 build() {
         Set<Long> setEmptySet = this.taggedUserIds;
         if (setEmptySet == null) {
             setEmptySet = Collections.emptySet();
-            m.checkNotNullExpressionValue(setEmptySet, "Collections.emptySet()");
+            Intrinsics3.checkNotNullExpressionValue(setEmptySet, "Collections.emptySet()");
         }
         Set<Long> setEmptySet2 = this.taggedChannelIds;
         if (setEmptySet2 == null) {
             setEmptySet2 = Collections.emptySet();
-            m.checkNotNullExpressionValue(setEmptySet2, "Collections.emptySet()");
+            Intrinsics3.checkNotNullExpressionValue(setEmptySet2, "Collections.emptySet()");
         }
         Set<Long> setEmptySet3 = this.taggedRoleIds;
         if (setEmptySet3 == null) {
             setEmptySet3 = Collections.emptySet();
-            m.checkNotNullExpressionValue(setEmptySet3, "Collections.emptySet()");
+            Intrinsics3.checkNotNullExpressionValue(setEmptySet3, "Collections.emptySet()");
         }
-        return new Tags(setEmptySet, setEmptySet2, setEmptySet3);
+        return new TagsBuilder2(setEmptySet, setEmptySet2, setEmptySet3);
     }
 
     public final void processAst(Collection<? extends Node<?>> ast) {
-        m.checkNotNullParameter(ast, "ast");
-        d.i2(ast, this);
+        Intrinsics3.checkNotNullParameter(ast, "ast");
+        AnimatableValueParser.m530i2(ast, this);
     }
 
-    @Override // b.a.t.b.c.a
+    @Override // p007b.p008a.p050t.p052b.p055c.NodeProcessor
     public void processNode(Node<?> node) {
         if (node instanceof UserMentionNode) {
             UserMentionNode userMentionNode = (UserMentionNode) node;

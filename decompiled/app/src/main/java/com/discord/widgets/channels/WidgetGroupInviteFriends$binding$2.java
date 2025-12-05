@@ -5,18 +5,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppViewFlipper;
 import com.discord.chips_view.ChipsView;
 import com.discord.databinding.WidgetGroupInviteFriendsBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import d0.z.d.k;
-import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetGroupInviteFriends.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetGroupInviteFriends$binding$2 extends k implements Function1<View, WidgetGroupInviteFriendsBinding> {
+public final /* synthetic */ class WidgetGroupInviteFriends$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetGroupInviteFriendsBinding> {
     public static final WidgetGroupInviteFriends$binding$2 INSTANCE = new WidgetGroupInviteFriends$binding$2();
 
     public WidgetGroupInviteFriends$binding$2() {
@@ -30,24 +30,24 @@ public final /* synthetic */ class WidgetGroupInviteFriends$binding$2 extends k 
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGroupInviteFriendsBinding invoke2(View view) {
-        m.checkNotNullParameter(view, "p1");
-        int i = R.id.group_invite_friends_chips;
-        ChipsView chipsView = (ChipsView) view.findViewById(R.id.group_invite_friends_chips);
+        Intrinsics3.checkNotNullParameter(view, "p1");
+        int i = C5419R.id.group_invite_friends_chips;
+        ChipsView chipsView = (ChipsView) view.findViewById(C5419R.id.group_invite_friends_chips);
         if (chipsView != null) {
-            i = R.id.group_invite_friends_recipients_container;
-            RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.group_invite_friends_recipients_container);
+            i = C5419R.id.group_invite_friends_recipients_container;
+            RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(C5419R.id.group_invite_friends_recipients_container);
             if (relativeLayout != null) {
-                i = R.id.group_invite_friends_recycler;
-                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.group_invite_friends_recycler);
+                i = C5419R.id.group_invite_friends_recycler;
+                RecyclerView recyclerView = (RecyclerView) view.findViewById(C5419R.id.group_invite_friends_recycler);
                 if (recyclerView != null) {
-                    i = R.id.group_invite_friends_save_fab;
-                    FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.group_invite_friends_save_fab);
+                    i = C5419R.id.group_invite_friends_save_fab;
+                    FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(C5419R.id.group_invite_friends_save_fab);
                     if (floatingActionButton != null) {
-                        i = R.id.group_invite_friends_text_to;
-                        TextView textView = (TextView) view.findViewById(R.id.group_invite_friends_text_to);
+                        i = C5419R.id.group_invite_friends_text_to;
+                        TextView textView = (TextView) view.findViewById(C5419R.id.group_invite_friends_text_to);
                         if (textView != null) {
-                            i = R.id.group_invite_friends_view_flipper;
-                            AppViewFlipper appViewFlipper = (AppViewFlipper) view.findViewById(R.id.group_invite_friends_view_flipper);
+                            i = C5419R.id.group_invite_friends_view_flipper;
+                            AppViewFlipper appViewFlipper = (AppViewFlipper) view.findViewById(C5419R.id.group_invite_friends_view_flipper);
                             if (appViewFlipper != null) {
                                 return new WidgetGroupInviteFriendsBinding((CoordinatorLayout) view, chipsView, relativeLayout, recyclerView, floatingActionButton, textView, appViewFlipper);
                             }

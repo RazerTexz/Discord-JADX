@@ -1,0 +1,167 @@
+package p007b.p452o.p453a.p470u;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
+import com.otaliastudios.cameraview.C11196R;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p452o.p453a.CameraLogger;
+import p007b.p452o.p453a.p470u.Overlay;
+
+/* compiled from: OverlayLayout.java */
+@SuppressLint({"CustomViewStyleable"})
+/* renamed from: b.o.a.u.c, reason: use source file name */
+/* loaded from: classes3.dex */
+public class OverlayLayout extends FrameLayout implements Overlay {
+
+    /* renamed from: j */
+    public static final String f14154j;
+
+    /* renamed from: k */
+    public static final CameraLogger f14155k;
+
+    /* renamed from: l */
+    @VisibleForTesting
+    public Overlay.a f14156l;
+
+    /* renamed from: m */
+    public boolean f14157m;
+
+    /* compiled from: OverlayLayout.java */
+    /* renamed from: b.o.a.u.c$a */
+    public static class a extends FrameLayout.LayoutParams {
+
+        /* renamed from: a */
+        public boolean f14158a;
+
+        /* renamed from: b */
+        public boolean f14159b;
+
+        /* renamed from: c */
+        public boolean f14160c;
+
+        public a(@NonNull Context context, @NonNull AttributeSet attributeSet) {
+            super(context, attributeSet);
+            this.f14158a = false;
+            this.f14159b = false;
+            this.f14160c = false;
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C11196R.c.CameraView_Layout);
+            try {
+                this.f14158a = typedArrayObtainStyledAttributes.getBoolean(C11196R.c.CameraView_Layout_layout_drawOnPreview, false);
+                this.f14159b = typedArrayObtainStyledAttributes.getBoolean(C11196R.c.CameraView_Layout_layout_drawOnPictureSnapshot, false);
+                this.f14160c = typedArrayObtainStyledAttributes.getBoolean(C11196R.c.CameraView_Layout_layout_drawOnVideoSnapshot, false);
+            } finally {
+                typedArrayObtainStyledAttributes.recycle();
+            }
+        }
+
+        @VisibleForTesting
+        /* renamed from: a */
+        public boolean m7415a(@NonNull Overlay.a aVar) {
+            return (aVar == Overlay.a.PREVIEW && this.f14158a) || (aVar == Overlay.a.VIDEO_SNAPSHOT && this.f14160c) || (aVar == Overlay.a.PICTURE_SNAPSHOT && this.f14159b);
+        }
+
+        @NonNull
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            outline.m860k0(a.class, sb, "[drawOnPreview:");
+            sb.append(this.f14158a);
+            sb.append(",drawOnPictureSnapshot:");
+            sb.append(this.f14159b);
+            sb.append(",drawOnVideoSnapshot:");
+            return outline.m827O(sb, this.f14160c, "]");
+        }
+    }
+
+    static {
+        String simpleName = OverlayLayout.class.getSimpleName();
+        f14154j = simpleName;
+        f14155k = new CameraLogger(simpleName);
+    }
+
+    public OverlayLayout(@NonNull Context context) {
+        super(context);
+        this.f14156l = Overlay.a.PREVIEW;
+        setWillNotDraw(false);
+    }
+
+    /* renamed from: a */
+    public void m7412a(@NonNull Overlay.a aVar, @NonNull Canvas canvas) {
+        synchronized (this) {
+            this.f14156l = aVar;
+            int iOrdinal = aVar.ordinal();
+            if (iOrdinal == 0) {
+                super.draw(canvas);
+            } else if (iOrdinal == 1 || iOrdinal == 2) {
+                canvas.save();
+                float width = canvas.getWidth() / getWidth();
+                float height = canvas.getHeight() / getHeight();
+                f14155k.m7159a(0, "draw", "target:", aVar, "canvas:", canvas.getWidth() + "x" + canvas.getHeight(), "view:", getWidth() + "x" + getHeight(), "widthScale:", Float.valueOf(width), "heightScale:", Float.valueOf(height), "hardwareCanvasMode:", Boolean.valueOf(this.f14157m));
+                canvas.scale(width, height);
+                dispatchDraw(canvas);
+                canvas.restore();
+            }
+        }
+    }
+
+    /* renamed from: b */
+    public boolean m7413b(@NonNull Overlay.a aVar) {
+        for (int i = 0; i < getChildCount(); i++) {
+            if (((a) getChildAt(i).getLayoutParams()).m7415a(aVar)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /* renamed from: c */
+    public a m7414c(AttributeSet attributeSet) {
+        return new a(getContext(), attributeSet);
+    }
+
+    @Override // android.view.View
+    @SuppressLint({"MissingSuperCall"})
+    public void draw(Canvas canvas) {
+        f14155k.m7159a(1, "normal draw called.");
+        Overlay.a aVar = Overlay.a.PREVIEW;
+        if (m7413b(aVar)) {
+            m7412a(aVar, canvas);
+        }
+    }
+
+    @Override // android.view.ViewGroup
+    public boolean drawChild(Canvas canvas, View view, long j) {
+        a aVar = (a) view.getLayoutParams();
+        if (aVar.m7415a(this.f14156l)) {
+            f14155k.m7159a(0, "Performing drawing for view:", view.getClass().getSimpleName(), "target:", this.f14156l, "params:", aVar);
+            return super.drawChild(canvas, view, j);
+        }
+        f14155k.m7159a(0, "Skipping drawing for view:", view.getClass().getSimpleName(), "target:", this.f14156l, "params:", aVar);
+        return false;
+    }
+
+    @Override // android.widget.FrameLayout, android.view.ViewGroup
+    public /* bridge */ /* synthetic */ ViewGroup.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
+        return m7414c(attributeSet);
+    }
+
+    public boolean getHardwareCanvasEnabled() {
+        return this.f14157m;
+    }
+
+    public void setHardwareCanvasEnabled(boolean z2) {
+        this.f14157m = z2;
+    }
+
+    @Override // android.widget.FrameLayout, android.view.ViewGroup
+    public /* bridge */ /* synthetic */ FrameLayout.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
+        return m7414c(attributeSet);
+    }
+}

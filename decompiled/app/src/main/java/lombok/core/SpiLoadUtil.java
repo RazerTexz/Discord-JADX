@@ -47,31 +47,31 @@ public class SpiLoadUtil {
         }
         Iterator<String> names = entries.iterator();
         ClassLoader fLoader = loader;
-        return new AnonymousClass1(names, target, fLoader);
+        return new C128181(names, target, fLoader);
     }
 
     /* JADX INFO: Add missing generic type declarations: [C] */
-    /* renamed from: lombok.core.SpiLoadUtil$1, reason: invalid class name */
+    /* renamed from: lombok.core.SpiLoadUtil$1 */
     /* loaded from: discord-126021.apk:lombok/core/SpiLoadUtil$1.SCL.lombok */
-    class AnonymousClass1<C> implements Iterable<C> {
+    class C128181<C> implements Iterable<C> {
         private final /* synthetic */ Iterator val$names;
         private final /* synthetic */ Class val$target;
         private final /* synthetic */ ClassLoader val$fLoader;
 
-        AnonymousClass1(Iterator it, Class cls, ClassLoader classLoader) {
+        C128181(Iterator it, Class cls, ClassLoader classLoader) {
             this.val$names = it;
             this.val$target = cls;
             this.val$fLoader = classLoader;
         }
 
-        /* renamed from: lombok.core.SpiLoadUtil$1$1, reason: invalid class name and collision with other inner class name */
+        /* renamed from: lombok.core.SpiLoadUtil$1$1, reason: invalid class name */
         /* loaded from: discord-126021.apk:lombok/core/SpiLoadUtil$1$1.SCL.lombok */
-        class C06411 implements Iterator<C> {
+        class AnonymousClass1 implements Iterator<C> {
             private final /* synthetic */ Iterator val$names;
             private final /* synthetic */ Class val$target;
             private final /* synthetic */ ClassLoader val$fLoader;
 
-            C06411(Iterator it, Class cls, ClassLoader classLoader) {
+            AnonymousClass1(Iterator it, Class cls, ClassLoader classLoader) {
                 this.val$names = it;
                 this.val$target = cls;
                 this.val$fLoader = classLoader;
@@ -109,7 +109,7 @@ public class SpiLoadUtil {
 
         @Override // java.lang.Iterable
         public Iterator<C> iterator() {
-            return new C06411(this.val$names, this.val$target, this.val$fLoader);
+            return new AnonymousClass1(this.val$names, this.val$target, this.val$fLoader);
         }
     }
 

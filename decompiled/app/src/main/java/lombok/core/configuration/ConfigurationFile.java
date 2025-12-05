@@ -22,7 +22,7 @@ public abstract class ConfigurationFile {
     private final String identifier;
     private static final Pattern VARIABLE = Pattern.compile("\\<(.+?)\\>");
     private static final Map<String, String> ENV = new HashMap(System.getenv());
-    private static final ThreadLocal<byte[]> buffers = new AnonymousClass1();
+    private static final ThreadLocal<byte[]> buffers = new C128301();
 
     abstract long getLastModifiedOrMissing();
 
@@ -42,15 +42,15 @@ public abstract class ConfigurationFile {
         return ENV;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationFile$1, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationFile$1 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationFile$1.SCL.lombok */
-    class AnonymousClass1 extends ThreadLocal<byte[]> {
+    class C128301 extends ThreadLocal<byte[]> {
         @Override // java.lang.ThreadLocal
         protected /* bridge */ /* synthetic */ byte[] initialValue() {
             return initialValue();
         }
 
-        AnonymousClass1() {
+        C128301() {
         }
 
         /* JADX WARN: Can't rename method to resolve collision */

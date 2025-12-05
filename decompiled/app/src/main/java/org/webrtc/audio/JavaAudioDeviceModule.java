@@ -113,30 +113,30 @@ public class JavaAudioDeviceModule implements AudioDeviceModule {
         private boolean useStereoInput;
         private boolean useStereoOutput;
 
-        public /* synthetic */ Builder(Context context, AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ Builder(Context context, C129991 c129991) {
             this(context);
         }
 
         public JavaAudioDeviceModule createAudioDeviceModule() {
-            Logging.d(JavaAudioDeviceModule.TAG, "createAudioDeviceModule");
+            Logging.m11027d(JavaAudioDeviceModule.TAG, "createAudioDeviceModule");
             if (this.useHardwareNoiseSuppressor) {
-                Logging.d(JavaAudioDeviceModule.TAG, "HW NS will be used.");
+                Logging.m11027d(JavaAudioDeviceModule.TAG, "HW NS will be used.");
             } else {
                 if (JavaAudioDeviceModule.isBuiltInNoiseSuppressorSupported()) {
-                    Logging.d(JavaAudioDeviceModule.TAG, "Overriding default behavior; now using WebRTC NS!");
+                    Logging.m11027d(JavaAudioDeviceModule.TAG, "Overriding default behavior; now using WebRTC NS!");
                 }
-                Logging.d(JavaAudioDeviceModule.TAG, "HW NS will not be used.");
+                Logging.m11027d(JavaAudioDeviceModule.TAG, "HW NS will not be used.");
             }
             if (this.useHardwareAcousticEchoCanceler) {
-                Logging.d(JavaAudioDeviceModule.TAG, "HW AEC will be used.");
+                Logging.m11027d(JavaAudioDeviceModule.TAG, "HW AEC will be used.");
             } else {
                 if (JavaAudioDeviceModule.isBuiltInAcousticEchoCancelerSupported()) {
-                    Logging.d(JavaAudioDeviceModule.TAG, "Overriding default behavior; now using WebRTC AEC!");
+                    Logging.m11027d(JavaAudioDeviceModule.TAG, "Overriding default behavior; now using WebRTC AEC!");
                 }
-                Logging.d(JavaAudioDeviceModule.TAG, "HW AEC will not be used.");
+                Logging.m11027d(JavaAudioDeviceModule.TAG, "HW AEC will not be used.");
             }
             if (this.useLowLatency && Build.VERSION.SDK_INT >= 26) {
-                Logging.d(JavaAudioDeviceModule.TAG, "Low latency mode will be used.");
+                Logging.m11027d(JavaAudioDeviceModule.TAG, "Low latency mode will be used.");
             }
             ScheduledExecutorService scheduledExecutorServiceNewDefaultScheduler = this.scheduler;
             if (scheduledExecutorServiceNewDefaultScheduler == null) {
@@ -181,19 +181,19 @@ public class JavaAudioDeviceModule implements AudioDeviceModule {
         }
 
         public Builder setInputSampleRate(int i) {
-            Logging.d(JavaAudioDeviceModule.TAG, "Input sample rate overridden to: " + i);
+            Logging.m11027d(JavaAudioDeviceModule.TAG, "Input sample rate overridden to: " + i);
             this.inputSampleRate = i;
             return this;
         }
 
         public Builder setOutputSampleRate(int i) {
-            Logging.d(JavaAudioDeviceModule.TAG, "Output sample rate overridden to: " + i);
+            Logging.m11027d(JavaAudioDeviceModule.TAG, "Output sample rate overridden to: " + i);
             this.outputSampleRate = i;
             return this;
         }
 
         public Builder setSampleRate(int i) {
-            Logging.d(JavaAudioDeviceModule.TAG, "Input/Output sample rate overridden to: " + i);
+            Logging.m11027d(JavaAudioDeviceModule.TAG, "Input/Output sample rate overridden to: " + i);
             this.inputSampleRate = i;
             this.outputSampleRate = i;
             return this;
@@ -211,7 +211,7 @@ public class JavaAudioDeviceModule implements AudioDeviceModule {
 
         public Builder setUseHardwareAcousticEchoCanceler(boolean z2) {
             if (z2 && !JavaAudioDeviceModule.isBuiltInAcousticEchoCancelerSupported()) {
-                Logging.e(JavaAudioDeviceModule.TAG, "HW AEC not supported");
+                Logging.m11028e(JavaAudioDeviceModule.TAG, "HW AEC not supported");
                 z2 = false;
             }
             this.useHardwareAcousticEchoCanceler = z2;
@@ -220,7 +220,7 @@ public class JavaAudioDeviceModule implements AudioDeviceModule {
 
         public Builder setUseHardwareNoiseSuppressor(boolean z2) {
             if (z2 && !JavaAudioDeviceModule.isBuiltInNoiseSuppressorSupported()) {
-                Logging.e(JavaAudioDeviceModule.TAG, "HW NS not supported");
+                Logging.m11028e(JavaAudioDeviceModule.TAG, "HW NS not supported");
                 z2 = false;
             }
             this.useHardwareNoiseSuppressor = z2;
@@ -260,7 +260,7 @@ public class JavaAudioDeviceModule implements AudioDeviceModule {
         void onWebRtcAudioRecordSamplesReady(AudioSamples audioSamples);
     }
 
-    public /* synthetic */ JavaAudioDeviceModule(Context context, AudioManager audioManager, WebRtcAudioRecord webRtcAudioRecord, WebRtcAudioTrack webRtcAudioTrack, int i, int i2, boolean z2, boolean z3, AnonymousClass1 anonymousClass1) {
+    public /* synthetic */ JavaAudioDeviceModule(Context context, AudioManager audioManager, WebRtcAudioRecord webRtcAudioRecord, WebRtcAudioTrack webRtcAudioTrack, int i, int i2, boolean z2, boolean z3, C129991 c129991) {
         this(context, audioManager, webRtcAudioRecord, webRtcAudioTrack, i, i2, z2, z3);
     }
 
@@ -303,19 +303,19 @@ public class JavaAudioDeviceModule implements AudioDeviceModule {
 
     @Override // org.webrtc.audio.AudioDeviceModule
     public void setMicrophoneMute(boolean z2) {
-        Logging.d(TAG, "setMicrophoneMute: " + z2);
+        Logging.m11027d(TAG, "setMicrophoneMute: " + z2);
         this.audioInput.setMicrophoneMute(z2);
     }
 
     @RequiresApi(23)
     public void setPreferredInputDevice(AudioDeviceInfo audioDeviceInfo) {
-        Logging.d(TAG, "setPreferredInputDevice: " + audioDeviceInfo);
+        Logging.m11027d(TAG, "setPreferredInputDevice: " + audioDeviceInfo);
         this.audioInput.setPreferredDevice(audioDeviceInfo);
     }
 
     @Override // org.webrtc.audio.AudioDeviceModule
     public void setSpeakerMute(boolean z2) {
-        Logging.d(TAG, "setSpeakerMute: " + z2);
+        Logging.m11027d(TAG, "setSpeakerMute: " + z2);
         this.audioOutput.setSpeakerMute(z2);
     }
 

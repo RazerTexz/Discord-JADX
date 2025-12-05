@@ -9,25 +9,27 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetVoiceCallInlineBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f18455a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final LinearLayout f2701b;
+    public final LinearLayout f18456b;
 
+    /* renamed from: c */
     @NonNull
-    public final MaterialButton c;
+    public final MaterialButton f18457c;
 
     public WidgetVoiceCallInlineBinding(@NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2, @NonNull MaterialButton materialButton) {
-        this.a = linearLayout;
-        this.f2701b = linearLayout2;
-        this.c = materialButton;
+        this.f18455a = linearLayout;
+        this.f18456b = linearLayout2;
+        this.f18457c = materialButton;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18455a;
     }
 }

@@ -1,8 +1,8 @@
 package com.discord.api.interaction;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: InteractionStateUpdate.kt */
 /* loaded from: classes.dex */
@@ -11,7 +11,7 @@ public final /* data */ class InteractionStateUpdate {
     private final String nonce;
 
     public InteractionStateUpdate(Long l, String str) {
-        m.checkNotNullParameter(str, "nonce");
+        Intrinsics3.checkNotNullParameter(str, "nonce");
         this.id = l;
         this.nonce = str;
     }
@@ -34,7 +34,7 @@ public final /* data */ class InteractionStateUpdate {
             return false;
         }
         InteractionStateUpdate interactionStateUpdate = (InteractionStateUpdate) other;
-        return m.areEqual(this.id, interactionStateUpdate.id) && m.areEqual(this.nonce, interactionStateUpdate.nonce);
+        return Intrinsics3.areEqual(this.id, interactionStateUpdate.id) && Intrinsics3.areEqual(this.nonce, interactionStateUpdate.nonce);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class InteractionStateUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("InteractionStateUpdate(id=");
-        sbU.append(this.id);
-        sbU.append(", nonce=");
-        return a.J(sbU, this.nonce, ")");
+        StringBuilder sbM833U = outline.m833U("InteractionStateUpdate(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", nonce=");
+        return outline.m822J(sbM833U, this.nonce, ")");
     }
 }

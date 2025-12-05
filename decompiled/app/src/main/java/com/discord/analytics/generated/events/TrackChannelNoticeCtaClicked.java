@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackChannelNoticeCtaClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackChannelNoticeCtaClicked implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackChannelNoticeCtaClicked implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence source = null;
     private final Long guildId = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackChannelNoticeCtaClicked implements AnalyticsS
             return false;
         }
         TrackChannelNoticeCtaClicked trackChannelNoticeCtaClicked = (TrackChannelNoticeCtaClicked) other;
-        return m.areEqual(this.source, trackChannelNoticeCtaClicked.source) && m.areEqual(this.guildId, trackChannelNoticeCtaClicked.guildId) && m.areEqual(this.noticeType, trackChannelNoticeCtaClicked.noticeType);
+        return Intrinsics3.areEqual(this.source, trackChannelNoticeCtaClicked.source) && Intrinsics3.areEqual(this.guildId, trackChannelNoticeCtaClicked.guildId) && Intrinsics3.areEqual(this.noticeType, trackChannelNoticeCtaClicked.noticeType);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackChannelNoticeCtaClicked implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackChannelNoticeCtaClicked(source=");
-        sbU.append(this.source);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", noticeType=");
-        return a.E(sbU, this.noticeType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackChannelNoticeCtaClicked(source=");
+        sbM833U.append(this.source);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", noticeType=");
+        return outline.m817E(sbM833U, this.noticeType, ")");
     }
 }

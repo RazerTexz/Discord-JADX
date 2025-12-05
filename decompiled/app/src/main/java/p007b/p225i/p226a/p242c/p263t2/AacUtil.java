@@ -1,0 +1,137 @@
+package p007b.p225i.p226a.p242c.p263t2;
+
+import android.util.Log;
+import com.google.android.exoplayer2.ParserException;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p242c.p259f3.ParsableBitArray;
+
+/* compiled from: AacUtil.java */
+/* renamed from: b.i.a.c.t2.l, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class AacUtil {
+
+    /* renamed from: a */
+    public static final int[] f7764a = {96000, 88200, 64000, 48000, 44100, 32000, 24000, 22050, 16000, 12000, 11025, 8000, 7350};
+
+    /* renamed from: b */
+    public static final int[] f7765b = {0, 1, 2, 3, 4, 5, 6, 8, -1, -1, -1, 7, 8, -1, 8, -1};
+
+    /* compiled from: AacUtil.java */
+    /* renamed from: b.i.a.c.t2.l$b */
+    public static final class b {
+
+        /* renamed from: a */
+        public final int f7766a;
+
+        /* renamed from: b */
+        public final int f7767b;
+
+        /* renamed from: c */
+        public final String f7768c;
+
+        public b(int i, int i2, String str, a aVar) {
+            this.f7766a = i;
+            this.f7767b = i2;
+            this.f7768c = str;
+        }
+    }
+
+    /* renamed from: a */
+    public static int m3488a(ParsableBitArray parsableBitArray) throws ParserException {
+        int iM3067g = parsableBitArray.m3067g(4);
+        if (iM3067g == 15) {
+            return parsableBitArray.m3067g(24);
+        }
+        if (iM3067g < 13) {
+            return f7764a[iM3067g];
+        }
+        throw ParserException.m8755a(null, null);
+    }
+
+    /* renamed from: b */
+    public static b m3489b(ParsableBitArray parsableBitArray, boolean z2) throws ParserException {
+        int iM3067g = parsableBitArray.m3067g(5);
+        if (iM3067g == 31) {
+            iM3067g = parsableBitArray.m3067g(6) + 32;
+        }
+        int iM3488a = m3488a(parsableBitArray);
+        int iM3067g2 = parsableBitArray.m3067g(4);
+        String strM851g = outline.m851g(19, "mp4a.40.", iM3067g);
+        if (iM3067g == 5 || iM3067g == 29) {
+            iM3488a = m3488a(parsableBitArray);
+            int iM3067g3 = parsableBitArray.m3067g(5);
+            if (iM3067g3 == 31) {
+                iM3067g3 = parsableBitArray.m3067g(6) + 32;
+            }
+            iM3067g = iM3067g3;
+            if (iM3067g == 22) {
+                iM3067g2 = parsableBitArray.m3067g(4);
+            }
+        }
+        if (z2) {
+            if (iM3067g != 1 && iM3067g != 2 && iM3067g != 3 && iM3067g != 4 && iM3067g != 6 && iM3067g != 7 && iM3067g != 17) {
+                switch (iM3067g) {
+                    case 19:
+                    case 20:
+                    case 21:
+                    case 22:
+                    case 23:
+                        break;
+                    default:
+                        StringBuilder sb = new StringBuilder(42);
+                        sb.append("Unsupported audio object type: ");
+                        sb.append(iM3067g);
+                        throw ParserException.m8756b(sb.toString());
+                }
+            }
+            if (parsableBitArray.m3066f()) {
+                Log.w("AacUtil", "Unexpected frameLengthFlag = 1");
+            }
+            if (parsableBitArray.m3066f()) {
+                parsableBitArray.m3073m(14);
+            }
+            boolean zM3066f = parsableBitArray.m3066f();
+            if (iM3067g2 == 0) {
+                throw new UnsupportedOperationException();
+            }
+            if (iM3067g == 6 || iM3067g == 20) {
+                parsableBitArray.m3073m(3);
+            }
+            if (zM3066f) {
+                if (iM3067g == 22) {
+                    parsableBitArray.m3073m(16);
+                }
+                if (iM3067g == 17 || iM3067g == 19 || iM3067g == 20 || iM3067g == 23) {
+                    parsableBitArray.m3073m(3);
+                }
+                parsableBitArray.m3073m(1);
+            }
+            switch (iM3067g) {
+                case 17:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                    int iM3067g4 = parsableBitArray.m3067g(2);
+                    if (iM3067g4 == 2 || iM3067g4 == 3) {
+                        StringBuilder sb2 = new StringBuilder(33);
+                        sb2.append("Unsupported epConfig: ");
+                        sb2.append(iM3067g4);
+                        throw ParserException.m8756b(sb2.toString());
+                    }
+                    break;
+            }
+        }
+        int i = f7765b[iM3067g2];
+        if (i != -1) {
+            return new b(iM3488a, i, strM851g, null);
+        }
+        throw ParserException.m8755a(null, null);
+    }
+
+    /* renamed from: c */
+    public static b m3490c(byte[] bArr) throws ParserException {
+        return m3489b(new ParsableBitArray(bArr), false);
+    }
+}

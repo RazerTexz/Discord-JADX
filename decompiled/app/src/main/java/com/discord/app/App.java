@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
-import b.a.k.a;
 import com.discord.BuildConfig;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.models.domain.emoji.ModelEmojiCustom;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.stores.StoreStream;
@@ -18,7 +17,7 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.buildutils.BuildUtils;
 import com.discord.utilities.cache.SharedPreferencesProvider;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.debug.DebugPrintableCollection;
+import com.discord.utilities.debug.DebugPrintable3;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.fcm.NotificationClient;
 import com.discord.utilities.images.MGImagesConfig;
@@ -26,19 +25,15 @@ import com.discord.utilities.lifecycle.ActivityProvider;
 import com.discord.utilities.lifecycle.ApplicationProvider;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.logging.LoggingProvider;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.persister.PersisterConfig;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.surveys.SurveyUtils;
 import com.discord.utilities.systemlog.SystemLogUtils;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import d0.g0.w;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Map;
 import java.util.Objects;
 import kotlin.Unit;
@@ -47,7 +42,17 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p008a.p018d.App2;
+import p007b.p008a.p020e.Backgrounded2;
+import p007b.p008a.p020e.Backgrounded4;
+import p007b.p008a.p027k.Format;
+import p007b.p008a.p027k.p030g.FormattingParserProvider2;
+import p007b.p225i.p361c.FirebaseApp2;
+import p507d0.p579g0.Strings4;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: App.kt */
 /* loaded from: classes.dex */
@@ -55,7 +60,7 @@ public class App extends Application {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final boolean IS_LOCAL = w.contains$default((CharSequence) BuildConfig.FLAVOR, (CharSequence) "local", false, 2, (Object) null);
+    private static final boolean IS_LOCAL = Strings4.contains$default((CharSequence) BuildConfig.FLAVOR, (CharSequence) "local", false, 2, (Object) null);
     private final boolean isUnderTest;
 
     /* compiled from: App.kt */
@@ -66,41 +71,50 @@ public class App extends Application {
     }
 
     /* compiled from: App.kt */
-    public static final class b extends o implements Function1<Throwable, Unit> {
-        public static final b j = new b();
+    /* renamed from: com.discord.app.App$b */
+    public static final class C5425b extends Lambda implements Function1<Throwable, Unit> {
 
-        public b() {
+        /* renamed from: j */
+        public static final C5425b f14903j = new C5425b();
+
+        public C5425b() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(Throwable th) {
             Throwable th2 = th;
-            m.checkNotNullParameter(th2, "throwable");
-            Logger.e$default(AppLog.g, "Subscription error in backgrounded delay, " + th2, null, null, 6, null);
-            return Unit.a;
+            Intrinsics3.checkNotNullParameter(th2, "throwable");
+            Logger.e$default(AppLog.f14950g, "Subscription error in backgrounded delay, " + th2, null, null, 6, null);
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: App.kt */
-    public static final class c extends o implements Function0<Integer> {
-        public static final c j = new c();
+    /* renamed from: com.discord.app.App$c */
+    public static final class C5426c extends Lambda implements Function0<Integer> {
 
-        public c() {
+        /* renamed from: j */
+        public static final C5426c f14904j = new C5426c();
+
+        public C5426c() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public Integer invoke() {
-            return Integer.valueOf(ColorCompat.getThemedColor(ActivityProvider.INSTANCE.getActivity(), R.attr.colorTextLink));
+            return Integer.valueOf(ColorCompat.getThemedColor(ActivityProvider.INSTANCE.getActivity(), C5419R.attr.colorTextLink));
         }
     }
 
     /* compiled from: App.kt */
-    public static final class d extends o implements Function2<String, View, Unit> {
-        public static final d j = new d();
+    /* renamed from: com.discord.app.App$d */
+    public static final class C5427d extends Lambda implements Function2<String, View, Unit> {
 
-        public d() {
+        /* renamed from: j */
+        public static final C5427d f14905j = new C5427d();
+
+        public C5427d() {
             super(2);
         }
 
@@ -108,19 +122,20 @@ public class App extends Application {
         public Unit invoke(String str, View view) {
             String str2 = str;
             View view2 = view;
-            m.checkNotNullParameter(str2, "url");
-            m.checkNotNullParameter(view2, "view");
+            Intrinsics3.checkNotNullParameter(str2, "url");
+            Intrinsics3.checkNotNullParameter(view2, "view");
             UriHandler uriHandler = UriHandler.INSTANCE;
             Context context = view2.getContext();
-            m.checkNotNullExpressionValue(context, "view.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "view.context");
             UriHandler.handle$default(uriHandler, context, str2, false, false, null, 28, null);
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: App.kt */
-    public static final /* synthetic */ class e extends k implements Function3<String, Throwable, Map<String, ? extends String>, Unit> {
-        public e(AppLog appLog) {
+    /* renamed from: com.discord.app.App$e */
+    public static final /* synthetic */ class C5428e extends FunctionReferenceImpl implements Function3<String, Throwable, Map<String, ? extends String>, Unit> {
+        public C5428e(AppLog appLog) {
             super(3, appLog, AppLog.class, "e", "e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V", 0);
         }
 
@@ -128,17 +143,20 @@ public class App extends Application {
         @Override // kotlin.jvm.functions.Function3
         public Unit invoke(String str, Throwable th, Map<String, ? extends String> map) {
             String str2 = str;
-            m.checkNotNullParameter(str2, "p1");
-            ((AppLog) this.receiver).e(str2, th, map);
-            return Unit.a;
+            Intrinsics3.checkNotNullParameter(str2, "p1");
+            ((AppLog) this.receiver).mo8364e(str2, th, map);
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: App.kt */
-    public static final class f extends o implements Function2<View, String, Unit> {
-        public static final f j = new f();
+    /* renamed from: com.discord.app.App$f */
+    public static final class C5429f extends Lambda implements Function2<View, String, Unit> {
 
-        public f() {
+        /* renamed from: j */
+        public static final C5429f f14906j = new C5429f();
+
+        public C5429f() {
             super(2);
         }
 
@@ -146,27 +164,30 @@ public class App extends Application {
         public Unit invoke(View view, String str) {
             View view2 = view;
             String str2 = str;
-            m.checkNotNullParameter(view2, "textView");
-            m.checkNotNullParameter(str2, "url");
+            Intrinsics3.checkNotNullParameter(view2, "textView");
+            Intrinsics3.checkNotNullParameter(str2, "url");
             UriHandler uriHandler = UriHandler.INSTANCE;
             Context context = view2.getContext();
-            m.checkNotNullExpressionValue(context, "textView.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "textView.context");
             UriHandler.handle$default(uriHandler, context, str2, false, false, null, 28, null);
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: App.kt */
-    public static final class g extends o implements Function1<Experiment, Unit> {
-        public static final g j = new g();
+    /* renamed from: com.discord.app.App$g */
+    public static final class C5430g extends Lambda implements Function1<Experiment, Unit> {
 
-        public g() {
+        /* renamed from: j */
+        public static final C5430g f14907j = new C5430g();
+
+        public C5430g() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(Experiment experiment) {
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
@@ -175,7 +196,7 @@ public class App extends Application {
     }
 
     public void initializeFlipper() {
-        m.checkNotNullParameter(this, "context");
+        Intrinsics3.checkNotNullParameter(this, "context");
     }
 
     public void initializeRLottie() {
@@ -195,14 +216,14 @@ public class App extends Application {
         ActivityProvider.INSTANCE.init(this);
         ClockFactory.INSTANCE.init(this);
         int i = AppLog.minLoggingPriority;
-        m.checkNotNullParameter(this, "application");
+        Intrinsics3.checkNotNullParameter(this, "application");
         AppLog.initCalled = true;
         AppLog.minLoggingPriority = 0;
         AppLog.cache = PreferenceManager.getDefaultSharedPreferences(this);
         LoggingProvider loggingProvider = LoggingProvider.INSTANCE;
-        AppLog appLog = AppLog.g;
+        AppLog appLog = AppLog.f14950g;
         loggingProvider.init(appLog);
-        b.i.c.c.e(this);
+        FirebaseApp2.m6328e(this);
         if (BuildUtils.INSTANCE.isValidBuildVersionName(BuildConfig.VERSION_NAME)) {
             FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
         } else {
@@ -217,33 +238,33 @@ public class App extends Application {
             string = "Unknown";
         }
         appLog.recordBreadcrumb(string, "libdiscord_version");
-        DebugPrintableCollection.INSTANCE.initialize(string);
+        DebugPrintable3.INSTANCE.initialize(string);
         AdjustConfig.INSTANCE.init(this, getIsUnderTest());
-        b.a.e.d dVar = b.a.e.d.d;
-        b bVar = b.j;
-        m.checkNotNullParameter(this, "application");
-        m.checkNotNullParameter(bVar, "onError");
-        registerActivityLifecycleCallbacks(new b.a.e.b(bVar));
+        Backgrounded4 backgrounded4 = Backgrounded4.f600d;
+        C5425b c5425b = C5425b.f14903j;
+        Intrinsics3.checkNotNullParameter(this, "application");
+        Intrinsics3.checkNotNullParameter(c5425b, "onError");
+        registerActivityLifecycleCallbacks(new Backgrounded2(c5425b));
         PersisterConfig.INSTANCE.init(this, ClockFactory.get());
-        b.a.k.g.d dVar2 = b.a.k.g.d.f247b;
-        b.a.k.g.d dVar3 = (b.a.k.g.d) b.a.k.g.d.a.getValue();
-        c cVar = c.j;
-        d dVar4 = d.j;
-        m.checkNotNullParameter(dVar3, "formattingParserProvider");
-        m.checkNotNullParameter(cVar, "defaultClickableTextColorProvider");
-        m.checkNotNullParameter(dVar4, "defaultUrlOnClick");
-        a aVar = a.d;
-        m.checkNotNullParameter(dVar3, "formattingParserProvider");
-        m.checkNotNullParameter(cVar, "defaultClickableTextColorProvider");
-        m.checkNotNullParameter(dVar4, "defaultUrlOnClick");
-        a.a = dVar3;
-        a.f245b = cVar;
-        a.c = dVar4;
+        FormattingParserProvider2 formattingParserProvider2 = FormattingParserProvider2.f1504b;
+        FormattingParserProvider2 formattingParserProvider22 = (FormattingParserProvider2) FormattingParserProvider2.f1503a.getValue();
+        C5426c c5426c = C5426c.f14904j;
+        C5427d c5427d = C5427d.f14905j;
+        Intrinsics3.checkNotNullParameter(formattingParserProvider22, "formattingParserProvider");
+        Intrinsics3.checkNotNullParameter(c5426c, "defaultClickableTextColorProvider");
+        Intrinsics3.checkNotNullParameter(c5427d, "defaultUrlOnClick");
+        Format format = Format.f1486d;
+        Intrinsics3.checkNotNullParameter(formattingParserProvider22, "formattingParserProvider");
+        Intrinsics3.checkNotNullParameter(c5426c, "defaultClickableTextColorProvider");
+        Intrinsics3.checkNotNullParameter(c5427d, "defaultUrlOnClick");
+        Format.f1483a = formattingParserProvider22;
+        Format.f1484b = c5426c;
+        Format.f1485c = c5427d;
         RestAPI.INSTANCE.init(this);
         NotificationClient.INSTANCE.init(this);
         MGImagesConfig.INSTANCE.init(this);
-        Error.init(new b.a.d.a(new e(appLog)));
-        LinkifiedTextView.INSTANCE.init(f.j);
+        Error.init(new App2(new C5428e(appLog)));
+        LinkifiedTextView.INSTANCE.init(C5429f.f14906j);
         ModelEmojiCustom.setCdnUri(BuildConfig.HOST_CDN);
         SurveyUtils.INSTANCE.init(this);
         AppCompatDelegate.setDefaultNightMode(1);
@@ -254,12 +275,12 @@ public class App extends Application {
             AnalyticsTracker.INSTANCE.appCrashed();
         }
         AnalyticsDeviceResourceUsageMonitor.INSTANCE.start();
-        Observable<R> observableG = StoreStream.INSTANCE.getExperiments().observeUserExperiment("2022-01_rna_rollout_experiment_validation", true).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-        m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
-        Observable observableZ = observableG.Z(1);
-        m.checkNotNullExpressionValue(observableZ, "StoreStream.getExperimen…erNull()\n        .take(1)");
-        ObservableExtensionsKt.appSubscribe$default(observableZ, getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, g.j, 62, (Object) null);
-        AppLog.i("Application initialized.");
+        Observable<R> observableM11083G = StoreStream.INSTANCE.getExperiments().observeUserExperiment("2022-01_rna_rollout_experiment_validation", true).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
+        Observable observableM11100Z = observableM11083G.m11100Z(1);
+        Intrinsics3.checkNotNullExpressionValue(observableM11100Z, "StoreStream.getExperimen…erNull()\n        .take(1)");
+        ObservableExtensionsKt.appSubscribe$default(observableM11100Z, getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C5430g.f14907j, 62, (Object) null);
+        AppLog.m8358i("Application initialized.");
     }
 
     @Override // android.app.Application, android.content.ComponentCallbacks2

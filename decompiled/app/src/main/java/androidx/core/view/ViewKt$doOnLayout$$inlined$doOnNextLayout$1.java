@@ -1,8 +1,8 @@
 package androidx.core.view;
 
 import android.view.View;
-import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: View.kt */
 /* loaded from: classes.dex */
@@ -15,7 +15,7 @@ public final class ViewKt$doOnLayout$$inlined$doOnNextLayout$1 implements View.O
 
     @Override // android.view.View.OnLayoutChangeListener
     public void onLayoutChange(View view, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         view.removeOnLayoutChangeListener(this);
         this.$action$inlined.invoke(view);
     }

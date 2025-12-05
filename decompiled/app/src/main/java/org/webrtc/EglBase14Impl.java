@@ -11,10 +11,10 @@ import android.opengl.EGLSurface;
 import android.os.Build;
 import android.view.Surface;
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
-import h0.c.n0;
 import org.webrtc.EglBase;
 import org.webrtc.EglBase14;
+import p007b.p100d.p104b.p105a.outline;
+import p617h0.p628c.EglBase2;
 
 @TargetApi(18)
 /* loaded from: classes3.dex */
@@ -52,9 +52,9 @@ public class EglBase14Impl implements EglBase14 {
         EGLDisplay eglDisplay = getEglDisplay();
         this.eglDisplay = eglDisplay;
         this.eglConfig = getEglConfig(eglDisplay, iArr);
-        int iC = n0.c(iArr);
-        Logging.d(TAG, "Using OpenGL ES version " + iC);
-        this.eglContext = createEglContext(eGLContext, this.eglDisplay, this.eglConfig, iC);
+        int iM10664c = EglBase2.m10664c(iArr);
+        Logging.m11027d(TAG, "Using OpenGL ES version " + iM10664c);
+        this.eglContext = createEglContext(eGLContext, this.eglDisplay, this.eglConfig, iM10664c);
     }
 
     public static /* synthetic */ int access$000() {
@@ -82,9 +82,9 @@ public class EglBase14Impl implements EglBase14 {
         if (eGLContextEglCreateContext != EGL14.EGL_NO_CONTEXT) {
             return eGLContextEglCreateContext;
         }
-        StringBuilder sbU = a.U("Failed to create EGL context: 0x");
-        sbU.append(Integer.toHexString(EGL14.eglGetError()));
-        throw new RuntimeException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Failed to create EGL context: 0x");
+        sbM833U.append(Integer.toHexString(EGL14.eglGetError()));
+        throw new RuntimeException(sbM833U.toString());
     }
 
     private void createSurfaceInternal(Object obj) {
@@ -100,18 +100,18 @@ public class EglBase14Impl implements EglBase14 {
         if (eGLSurfaceEglCreateWindowSurface != EGL14.EGL_NO_SURFACE) {
             return;
         }
-        StringBuilder sbU = a.U("Failed to create window surface: 0x");
-        sbU.append(Integer.toHexString(EGL14.eglGetError()));
-        throw new RuntimeException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Failed to create window surface: 0x");
+        sbM833U.append(Integer.toHexString(EGL14.eglGetError()));
+        throw new RuntimeException(sbM833U.toString());
     }
 
     private static EGLConfig getEglConfig(EGLDisplay eGLDisplay, int[] iArr) {
         EGLConfig[] eGLConfigArr = new EGLConfig[1];
         int[] iArr2 = new int[1];
         if (!EGL14.eglChooseConfig(eGLDisplay, iArr, 0, eGLConfigArr, 0, 1, iArr2, 0)) {
-            StringBuilder sbU = a.U("eglChooseConfig failed: 0x");
-            sbU.append(Integer.toHexString(EGL14.eglGetError()));
-            throw new RuntimeException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("eglChooseConfig failed: 0x");
+            sbM833U.append(Integer.toHexString(EGL14.eglGetError()));
+            throw new RuntimeException(sbM833U.toString());
         }
         if (iArr2[0] <= 0) {
             throw new RuntimeException("Unable to find any matching EGL config");
@@ -126,26 +126,26 @@ public class EglBase14Impl implements EglBase14 {
     private static EGLDisplay getEglDisplay() {
         EGLDisplay eGLDisplayEglGetDisplay = EGL14.eglGetDisplay(0);
         if (eGLDisplayEglGetDisplay == EGL14.EGL_NO_DISPLAY) {
-            StringBuilder sbU = a.U("Unable to get EGL14 display: 0x");
-            sbU.append(Integer.toHexString(EGL14.eglGetError()));
-            throw new RuntimeException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Unable to get EGL14 display: 0x");
+            sbM833U.append(Integer.toHexString(EGL14.eglGetError()));
+            throw new RuntimeException(sbM833U.toString());
         }
         int[] iArr = new int[2];
         if (EGL14.eglInitialize(eGLDisplayEglGetDisplay, iArr, 0, iArr, 1)) {
             return eGLDisplayEglGetDisplay;
         }
-        StringBuilder sbU2 = a.U("Unable to initialize EGL14: 0x");
-        sbU2.append(Integer.toHexString(EGL14.eglGetError()));
-        throw new RuntimeException(sbU2.toString());
+        StringBuilder sbM833U2 = outline.m833U("Unable to initialize EGL14: 0x");
+        sbM833U2.append(Integer.toHexString(EGL14.eglGetError()));
+        throw new RuntimeException(sbM833U2.toString());
     }
 
     public static boolean isEGL14Supported() {
-        StringBuilder sbU = a.U("SDK version: ");
+        StringBuilder sbM833U = outline.m833U("SDK version: ");
         int i = CURRENT_SDK_VERSION;
-        sbU.append(i);
-        sbU.append(". isEGL14Supported: ");
-        sbU.append(i >= 18);
-        Logging.d(TAG, sbU.toString());
+        sbM833U.append(i);
+        sbM833U.append(". isEGL14Supported: ");
+        sbM833U.append(i >= 18);
+        Logging.m11027d(TAG, sbM833U.toString());
         return i >= 18;
     }
 
@@ -165,9 +165,9 @@ public class EglBase14Impl implements EglBase14 {
         if (eGLSurfaceEglCreatePbufferSurface != EGL14.EGL_NO_SURFACE) {
             return;
         }
-        StringBuilder sbW = a.W("Failed to create pixel buffer surface with size ", i, "x", i2, ": 0x");
-        sbW.append(Integer.toHexString(EGL14.eglGetError()));
-        throw new RuntimeException(sbW.toString());
+        StringBuilder sbM835W = outline.m835W("Failed to create pixel buffer surface with size ", i, "x", i2, ": 0x");
+        sbM835W.append(Integer.toHexString(EGL14.eglGetError()));
+        throw new RuntimeException(sbM835W.toString());
     }
 
     @Override // org.webrtc.EglBase

@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStartCall.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStartCall implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackStartCall implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long channelType = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackStartCall implements AnalyticsSchema, TrackBa
             return false;
         }
         TrackStartCall trackStartCall = (TrackStartCall) other;
-        return m.areEqual(this.channelId, trackStartCall.channelId) && m.areEqual(this.channelType, trackStartCall.channelType) && m.areEqual(this.messageId, trackStartCall.messageId) && m.areEqual(this.recipientIds, trackStartCall.recipientIds);
+        return Intrinsics3.areEqual(this.channelId, trackStartCall.channelId) && Intrinsics3.areEqual(this.channelType, trackStartCall.channelType) && Intrinsics3.areEqual(this.messageId, trackStartCall.messageId) && Intrinsics3.areEqual(this.recipientIds, trackStartCall.recipientIds);
     }
 
     public int hashCode() {
@@ -46,13 +46,13 @@ public final /* data */ class TrackStartCall implements AnalyticsSchema, TrackBa
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStartCall(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", recipientIds=");
-        return a.L(sbU, this.recipientIds, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStartCall(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", recipientIds=");
+        return outline.m824L(sbM833U, this.recipientIds, ")");
     }
 }

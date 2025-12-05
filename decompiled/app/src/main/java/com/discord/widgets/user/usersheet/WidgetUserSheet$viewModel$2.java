@@ -1,14 +1,14 @@
 package com.discord.widgets.user.usersheet;
 
 import com.discord.widgets.user.usersheet.WidgetUserSheet;
-import d0.z.d.o;
 import java.io.Serializable;
 import java.util.Objects;
 import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetUserSheet.kt */
 /* loaded from: classes.dex */
-public final class WidgetUserSheet$viewModel$2 extends o implements Function0<WidgetUserSheetViewModel> {
+public final class WidgetUserSheet$viewModel$2 extends Lambda implements Function0<WidgetUserSheetViewModel> {
     public final /* synthetic */ WidgetUserSheet this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

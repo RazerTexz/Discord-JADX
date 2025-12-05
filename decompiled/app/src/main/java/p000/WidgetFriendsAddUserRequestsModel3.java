@@ -1,0 +1,22 @@
+package p000;
+
+import kotlin.jvm.functions.Function2;
+import p658rx.functions.Func2;
+
+/* compiled from: WidgetFriendsAddUserRequestsModel.kt */
+/* renamed from: w, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class WidgetFriendsAddUserRequestsModel3 implements Func2 {
+
+    /* renamed from: j */
+    public final /* synthetic */ Function2 f27930j;
+
+    public WidgetFriendsAddUserRequestsModel3(Function2 function2) {
+        this.f27930j = function2;
+    }
+
+    @Override // p658rx.functions.Func2
+    public final /* synthetic */ Object call(Object obj, Object obj2) {
+        return this.f27930j.invoke(obj, obj2);
+    }
+}

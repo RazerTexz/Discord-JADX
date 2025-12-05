@@ -2,16 +2,16 @@ package lombok.core;
 
 /* loaded from: discord-126021.apk:lombok/core/DiagnosticsReceiver.SCL.lombok */
 public interface DiagnosticsReceiver {
-    public static final DiagnosticsReceiver CONSOLE = new AnonymousClass1();
+    public static final DiagnosticsReceiver CONSOLE = new C128121();
 
     void addError(String str);
 
     void addWarning(String str);
 
-    /* renamed from: lombok.core.DiagnosticsReceiver$1, reason: invalid class name */
+    /* renamed from: lombok.core.DiagnosticsReceiver$1 */
     /* loaded from: discord-126021.apk:lombok/core/DiagnosticsReceiver$1.SCL.lombok */
-    class AnonymousClass1 implements DiagnosticsReceiver {
-        AnonymousClass1() {
+    class C128121 implements DiagnosticsReceiver {
+        C128121() {
         }
 
         @Override // lombok.core.DiagnosticsReceiver

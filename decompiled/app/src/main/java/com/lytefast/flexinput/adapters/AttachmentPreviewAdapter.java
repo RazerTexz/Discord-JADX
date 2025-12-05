@@ -8,43 +8,49 @@ import android.view.ViewGroup;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.recyclerview.widget.RecyclerView;
-import b.b.a.d.i;
-import b.f.g.a.a.d;
-import b.f.j.d.e;
-import b.f.j.d.f;
 import com.discord.utilities.drawable.DrawableCompat;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
-import com.lytefast.flexinput.R;
+import com.lytefast.flexinput.C11170R;
 import com.lytefast.flexinput.model.Attachment;
 import com.lytefast.flexinput.model.Media;
 import com.lytefast.flexinput.utils.SelectionAggregator;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
+import p000.ViewOnClickListenerC12252e;
+import p007b.p076b.p077a.p079d.ThumbnailViewHolder;
+import p007b.p076b.p077a.p080e.ViewAttachmentPreviewItemBinding;
+import p007b.p109f.p132g.p133a.p134a.Fresco;
+import p007b.p109f.p132g.p133a.p134a.PipelineDraweeControllerBuilder;
+import p007b.p109f.p161j.p169d.ResizeOptions;
+import p007b.p109f.p161j.p169d.RotationOptions;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: AttachmentPreviewAdapter.kt */
 /* loaded from: classes3.dex */
-public final class AttachmentPreviewAdapter<T extends Attachment<? extends Object>> extends RecyclerView.Adapter<AttachmentPreviewAdapter<T>.b> {
+public final class AttachmentPreviewAdapter<T extends Attachment<? extends Object>> extends RecyclerView.Adapter<AttachmentPreviewAdapter<T>.C11172b> {
 
     /* renamed from: a, reason: from kotlin metadata */
     public final SelectionAggregator<T> selectionAggregator;
 
-    /* renamed from: b, reason: collision with root package name and from kotlin metadata */
+    /* renamed from: b, reason: from kotlin metadata */
     public final boolean useBottomSheet;
 
     /* renamed from: c, reason: from kotlin metadata */
     public final Function2<SelectionAggregator<T>, T, Unit> onAttachmentSelected;
 
     /* compiled from: AttachmentPreviewAdapter.kt */
-    public static final class a extends o implements Function2<SelectionAggregator<T>, T, Unit> {
-        public static final a j = new a();
+    /* renamed from: com.lytefast.flexinput.adapters.AttachmentPreviewAdapter$a */
+    public static final class C11171a extends Lambda implements Function2<SelectionAggregator<T>, T, Unit> {
 
-        public a() {
+        /* renamed from: j */
+        public static final C11171a f22017j = new C11171a();
+
+        public C11171a() {
             super(2);
         }
 
@@ -53,40 +59,48 @@ public final class AttachmentPreviewAdapter<T extends Attachment<? extends Objec
         public Unit invoke(Object obj, Object obj2) {
             SelectionAggregator selectionAggregator = (SelectionAggregator) obj;
             Attachment attachment = (Attachment) obj2;
-            m.checkNotNullParameter(selectionAggregator, "aggregator");
-            m.checkNotNullParameter(attachment, "attachment");
+            Intrinsics3.checkNotNullParameter(selectionAggregator, "aggregator");
+            Intrinsics3.checkNotNullParameter(attachment, "attachment");
             selectionAggregator.unselectItem(attachment);
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: AttachmentPreviewAdapter.kt */
-    public final class b extends i {
-        public final b.b.a.e.b p;
-        public final Function2<SelectionAggregator<T>, T, Unit> q;
-        public final /* synthetic */ AttachmentPreviewAdapter r;
+    /* renamed from: com.lytefast.flexinput.adapters.AttachmentPreviewAdapter$b */
+    public final class C11172b extends ThumbnailViewHolder {
+
+        /* renamed from: p */
+        public final ViewAttachmentPreviewItemBinding f22018p;
+
+        /* renamed from: q */
+        public final Function2<SelectionAggregator<T>, T, Unit> f22019q;
+
+        /* renamed from: r */
+        public final /* synthetic */ AttachmentPreviewAdapter f22020r;
 
         /* JADX WARN: Illegal instructions before constructor call */
         /* JADX WARN: Multi-variable type inference failed */
-        public b(AttachmentPreviewAdapter attachmentPreviewAdapter, b.b.a.e.b bVar, Function2<? super SelectionAggregator<T>, ? super T, Unit> function2) {
-            m.checkNotNullParameter(bVar, "binding");
-            m.checkNotNullParameter(function2, "onAttachmentSelected");
-            this.r = attachmentPreviewAdapter;
-            ConstraintLayout constraintLayout = bVar.a;
-            m.checkNotNullExpressionValue(constraintLayout, "binding.root");
+        public C11172b(AttachmentPreviewAdapter attachmentPreviewAdapter, ViewAttachmentPreviewItemBinding viewAttachmentPreviewItemBinding, Function2<? super SelectionAggregator<T>, ? super T, Unit> function2) {
+            Intrinsics3.checkNotNullParameter(viewAttachmentPreviewItemBinding, "binding");
+            Intrinsics3.checkNotNullParameter(function2, "onAttachmentSelected");
+            this.f22020r = attachmentPreviewAdapter;
+            ConstraintLayout constraintLayout = viewAttachmentPreviewItemBinding.f2189a;
+            Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.root");
             super(constraintLayout);
-            this.p = bVar;
-            this.q = function2;
-            GenericDraweeHierarchy hierarchy = a().getHierarchy();
-            Context context = a().getContext();
-            m.checkNotNullExpressionValue(context, "imageView.context");
-            hierarchy.p(DrawableCompat.getThemedDrawableRes$default(context, R.b.ic_flex_input_file, 0, 2, (Object) null));
+            this.f22018p = viewAttachmentPreviewItemBinding;
+            this.f22019q = function2;
+            GenericDraweeHierarchy hierarchy = mo401a().getHierarchy();
+            Context context = mo401a().getContext();
+            Intrinsics3.checkNotNullExpressionValue(context, "imageView.context");
+            hierarchy.m8680p(DrawableCompat.getThemedDrawableRes$default(context, C11170R.b.ic_flex_input_file, 0, 2, (Object) null));
         }
 
-        @Override // b.b.a.d.i
-        public SimpleDraweeView a() {
-            SimpleDraweeView simpleDraweeView = this.p.f323b;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.attachmentItem");
+        @Override // p007b.p076b.p077a.p079d.ThumbnailViewHolder
+        /* renamed from: a */
+        public SimpleDraweeView mo401a() {
+            SimpleDraweeView simpleDraweeView = this.f22018p.f2190b;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.attachmentItem");
             return simpleDraweeView;
         }
     }
@@ -98,9 +112,9 @@ public final class AttachmentPreviewAdapter<T extends Attachment<? extends Objec
     /* JADX WARN: Illegal instructions before constructor call */
     public /* synthetic */ AttachmentPreviewAdapter(boolean z2, Function2 function2, Function1 function1, int i) {
         z2 = (i & 1) != 0 ? false : z2;
-        a aVar = (i & 2) != 0 ? a.j : null;
+        C11171a c11171a = (i & 2) != 0 ? C11171a.f22017j : null;
         int i2 = i & 4;
-        this(z2, aVar, null);
+        this(z2, c11171a, null);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -111,60 +125,60 @@ public final class AttachmentPreviewAdapter<T extends Attachment<? extends Objec
     /* JADX WARN: Type inference failed for: r2v3, types: [REQUEST, com.facebook.imagepipeline.request.ImageRequest] */
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) throws Resources.NotFoundException {
-        b bVar = (b) viewHolder;
-        m.checkNotNullParameter(bVar, "holder");
+        C11172b c11172b = (C11172b) viewHolder;
+        Intrinsics3.checkNotNullParameter(c11172b, "holder");
         Attachment attachment = this.selectionAggregator.get(i);
-        Objects.requireNonNull(bVar);
-        m.checkNotNullParameter(attachment, "item");
+        Objects.requireNonNull(c11172b);
+        Intrinsics3.checkNotNullParameter(attachment, "item");
         if (attachment instanceof Media) {
-            bVar.a().setController(null);
-            bVar.c((Media) attachment, null, null);
+            c11172b.mo401a().setController(null);
+            c11172b.m405c((Media) attachment, null, null);
         } else {
-            int dimensionPixelSize = bVar.a().getResources().getDimensionPixelSize(R.d.attachment_preview_dimen);
-            ImageRequestBuilder imageRequestBuilderB = ImageRequestBuilder.b(attachment.getUri());
-            imageRequestBuilderB.e = f.a;
-            imageRequestBuilderB.d = new e(dimensionPixelSize, dimensionPixelSize);
-            d dVarA = b.f.g.a.a.b.a();
-            dVarA.n = bVar.a().getController();
-            dVarA.m = true;
-            dVarA.h = imageRequestBuilderB.a();
-            bVar.a().setController(dVarA.a());
+            int dimensionPixelSize = c11172b.mo401a().getResources().getDimensionPixelSize(C11170R.d.attachment_preview_dimen);
+            ImageRequestBuilder imageRequestBuilderM8723b = ImageRequestBuilder.m8723b(attachment.getUri());
+            imageRequestBuilderM8723b.f19616e = RotationOptions.f3721a;
+            imageRequestBuilderM8723b.f19615d = new ResizeOptions(dimensionPixelSize, dimensionPixelSize);
+            PipelineDraweeControllerBuilder pipelineDraweeControllerBuilderM1037a = Fresco.m1037a();
+            pipelineDraweeControllerBuilderM1037a.f19490n = c11172b.mo401a().getController();
+            pipelineDraweeControllerBuilderM1037a.f19489m = true;
+            pipelineDraweeControllerBuilderM1037a.f19484h = imageRequestBuilderM8723b.m8724a();
+            c11172b.mo401a().setController(pipelineDraweeControllerBuilderM1037a.m8667a());
         }
-        if (!bVar.r.useBottomSheet) {
-            SimpleDraweeView simpleDraweeView = bVar.p.c;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.attachmentRemove");
+        if (!c11172b.f22020r.useBottomSheet) {
+            SimpleDraweeView simpleDraweeView = c11172b.f22018p.f2191c;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.attachmentRemove");
             simpleDraweeView.setVisibility(8);
-            bVar.p.f323b.setOnClickListener(new defpackage.e(2, bVar, attachment));
+            c11172b.f22018p.f2190b.setOnClickListener(new ViewOnClickListenerC12252e(2, c11172b, attachment));
             return;
         }
         boolean spoiler = attachment.getSpoiler();
-        View view = bVar.p.d;
-        m.checkNotNullExpressionValue(view, "binding.attachmentSpoilerCover");
+        View view = c11172b.f22018p.f2192d;
+        Intrinsics3.checkNotNullExpressionValue(view, "binding.attachmentSpoilerCover");
         view.setVisibility(spoiler ? 0 : 8);
-        SimpleDraweeView simpleDraweeView2 = bVar.p.e;
-        m.checkNotNullExpressionValue(simpleDraweeView2, "binding.attachmentSpoilerIcon");
+        SimpleDraweeView simpleDraweeView2 = c11172b.f22018p.f2193e;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.attachmentSpoilerIcon");
         simpleDraweeView2.setVisibility(spoiler ? 0 : 8);
-        bVar.p.c.setOnClickListener(new defpackage.e(0, bVar, attachment));
-        bVar.p.f323b.setOnClickListener(new defpackage.e(1, bVar, attachment));
+        c11172b.f22018p.f2191c.setOnClickListener(new ViewOnClickListenerC12252e(0, c11172b, attachment));
+        c11172b.f22018p.f2190b.setOnClickListener(new ViewOnClickListenerC12252e(1, c11172b, attachment));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View viewFindViewById;
-        m.checkNotNullParameter(viewGroup, "parent");
-        View viewInflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.g.view_attachment_preview_item, viewGroup, false);
-        int i2 = R.f.attachment_item;
+        Intrinsics3.checkNotNullParameter(viewGroup, "parent");
+        View viewInflate = LayoutInflater.from(viewGroup.getContext()).inflate(C11170R.g.view_attachment_preview_item, viewGroup, false);
+        int i2 = C11170R.f.attachment_item;
         SimpleDraweeView simpleDraweeView = (SimpleDraweeView) viewInflate.findViewById(i2);
         if (simpleDraweeView != null) {
-            i2 = R.f.attachment_remove;
+            i2 = C11170R.f.attachment_remove;
             SimpleDraweeView simpleDraweeView2 = (SimpleDraweeView) viewInflate.findViewById(i2);
-            if (simpleDraweeView2 != null && (viewFindViewById = viewInflate.findViewById((i2 = R.f.attachment_spoiler_cover))) != null) {
-                i2 = R.f.attachment_spoiler_icon;
+            if (simpleDraweeView2 != null && (viewFindViewById = viewInflate.findViewById((i2 = C11170R.f.attachment_spoiler_cover))) != null) {
+                i2 = C11170R.f.attachment_spoiler_icon;
                 SimpleDraweeView simpleDraweeView3 = (SimpleDraweeView) viewInflate.findViewById(i2);
                 if (simpleDraweeView3 != null) {
-                    b.b.a.e.b bVar = new b.b.a.e.b((ConstraintLayout) viewInflate, simpleDraweeView, simpleDraweeView2, viewFindViewById, simpleDraweeView3);
-                    m.checkNotNullExpressionValue(bVar, "ViewAttachmentPreviewIte….context), parent, false)");
-                    return new b(this, bVar, this.onAttachmentSelected);
+                    ViewAttachmentPreviewItemBinding viewAttachmentPreviewItemBinding = new ViewAttachmentPreviewItemBinding((ConstraintLayout) viewInflate, simpleDraweeView, simpleDraweeView2, viewFindViewById, simpleDraweeView3);
+                    Intrinsics3.checkNotNullExpressionValue(viewAttachmentPreviewItemBinding, "ViewAttachmentPreviewIte….context), parent, false)");
+                    return new C11172b(this, viewAttachmentPreviewItemBinding, this.onAttachmentSelected);
                 }
             }
         }
@@ -173,16 +187,16 @@ public final class AttachmentPreviewAdapter<T extends Attachment<? extends Objec
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onViewRecycled(RecyclerView.ViewHolder viewHolder) {
-        b bVar = (b) viewHolder;
-        m.checkNotNullParameter(bVar, "holder");
-        super.onViewRecycled(bVar);
-        bVar.b();
+        C11172b c11172b = (C11172b) viewHolder;
+        Intrinsics3.checkNotNullParameter(c11172b, "holder");
+        super.onViewRecycled(c11172b);
+        c11172b.m404b();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public AttachmentPreviewAdapter(boolean z2, Function2<? super SelectionAggregator<T>, ? super T, Unit> function2, Function1<? super AttachmentPreviewAdapter<T>, ? extends SelectionAggregator<T>> function1) {
         SelectionAggregator<T> selectionAggregatorInvoke;
-        m.checkNotNullParameter(function2, "onAttachmentSelected");
+        Intrinsics3.checkNotNullParameter(function2, "onAttachmentSelected");
         this.useBottomSheet = z2;
         this.onAttachmentSelected = function2;
         this.selectionAggregator = (function1 == null || (selectionAggregatorInvoke = function1.invoke(this)) == null) ? new SelectionAggregator<>(this, null, null, null, 14, null) : selectionAggregatorInvoke;

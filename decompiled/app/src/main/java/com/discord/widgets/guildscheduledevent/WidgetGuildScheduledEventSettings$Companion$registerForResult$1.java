@@ -2,8 +2,8 @@ package com.discord.widgets.guildscheduledevent;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
-import d0.z.d.m;
 import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetGuildScheduledEventSettings.kt */
 /* loaded from: classes2.dex */
@@ -23,7 +23,7 @@ public final class WidgetGuildScheduledEventSettings$Companion$registerForResult
 
     /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
-        m.checkNotNullExpressionValue(activityResult, "result");
+        Intrinsics3.checkNotNullExpressionValue(activityResult, "result");
         int resultCode = activityResult.getResultCode();
         if (resultCode == -1) {
             this.$onFinished.invoke();

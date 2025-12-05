@@ -3,16 +3,16 @@ package org.webrtc;
 import android.graphics.Matrix;
 import android.os.Handler;
 import androidx.annotation.Nullable;
-import h0.c.a0;
-import h0.c.z;
 import org.webrtc.VideoFrame;
+import p617h0.p628c.CallableC12451a0;
+import p617h0.p628c.RunnableC12496z;
 
 /* loaded from: classes3.dex */
 public class TextureBufferImpl implements VideoFrame.TextureBuffer {
     private final int height;
 
-    /* renamed from: id, reason: collision with root package name */
-    private final int f3823id;
+    /* renamed from: id */
+    private final int f27617id;
     private final RefCountDelegate refCountDelegate;
     private final RefCountMonitor refCountMonitor;
     private final Handler toI420Handler;
@@ -23,11 +23,11 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
     private final int width;
     private final YuvConverter yuvConverter;
 
-    /* renamed from: org.webrtc.TextureBufferImpl$1, reason: invalid class name */
-    public class AnonymousClass1 implements RefCountMonitor {
+    /* renamed from: org.webrtc.TextureBufferImpl$1 */
+    public class C129891 implements RefCountMonitor {
         public final /* synthetic */ Runnable val$releaseCallback;
 
-        public AnonymousClass1(Runnable runnable) {
+        public C129891(Runnable runnable) {
             this.val$releaseCallback = runnable;
         }
 
@@ -48,9 +48,9 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
         }
     }
 
-    /* renamed from: org.webrtc.TextureBufferImpl$2, reason: invalid class name */
-    public class AnonymousClass2 implements RefCountMonitor {
-        public AnonymousClass2() {
+    /* renamed from: org.webrtc.TextureBufferImpl$2 */
+    public class C129902 implements RefCountMonitor {
+        public C129902() {
         }
 
         @Override // org.webrtc.TextureBufferImpl.RefCountMonitor
@@ -78,14 +78,15 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
     }
 
     public TextureBufferImpl(int i, int i2, VideoFrame.TextureBuffer.Type type, int i3, Matrix matrix, Handler handler, YuvConverter yuvConverter, @Nullable Runnable runnable) {
-        this(i, i2, i, i2, type, i3, matrix, handler, yuvConverter, new AnonymousClass1(runnable));
+        this(i, i2, i, i2, type, i3, matrix, handler, yuvConverter, new C129891(runnable));
     }
 
     public static /* synthetic */ RefCountMonitor access$000(TextureBufferImpl textureBufferImpl) {
         return textureBufferImpl.refCountMonitor;
     }
 
-    public /* synthetic */ VideoFrame.I420Buffer a() {
+    /* renamed from: a */
+    public /* synthetic */ VideoFrame.I420Buffer m11048a() {
         return this.yuvConverter.convert(this);
     }
 
@@ -108,7 +109,7 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
 
     @Override // org.webrtc.VideoFrame.TextureBuffer
     public int getTextureId() {
-        return this.f3823id;
+        return this.f27617id;
     }
 
     public Handler getToI420Handler() {
@@ -156,7 +157,7 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
 
     @Override // org.webrtc.VideoFrame.Buffer
     public VideoFrame.I420Buffer toI420() {
-        return (VideoFrame.I420Buffer) ThreadUtils.invokeAtFrontUninterruptibly(this.toI420Handler, new a0(this));
+        return (VideoFrame.I420Buffer) ThreadUtils.invokeAtFrontUninterruptibly(this.toI420Handler, new CallableC12451a0(this));
     }
 
     public TextureBufferImpl(int i, int i2, VideoFrame.TextureBuffer.Type type, int i3, Matrix matrix, Handler handler, YuvConverter yuvConverter, RefCountMonitor refCountMonitor) {
@@ -167,7 +168,7 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
         Matrix matrix2 = new Matrix(this.transformMatrix);
         matrix2.preConcat(matrix);
         retain();
-        return new TextureBufferImpl(i, i2, i3, i4, this.type, this.f3823id, matrix2, this.toI420Handler, this.yuvConverter, new AnonymousClass2());
+        return new TextureBufferImpl(i, i2, i3, i4, this.type, this.f27617id, matrix2, this.toI420Handler, this.yuvConverter, new C129902());
     }
 
     private TextureBufferImpl(int i, int i2, int i3, int i4, VideoFrame.TextureBuffer.Type type, int i5, Matrix matrix, Handler handler, YuvConverter yuvConverter, RefCountMonitor refCountMonitor) {
@@ -176,11 +177,11 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
         this.width = i3;
         this.height = i4;
         this.type = type;
-        this.f3823id = i5;
+        this.f27617id = i5;
         this.transformMatrix = matrix;
         this.toI420Handler = handler;
         this.yuvConverter = yuvConverter;
-        this.refCountDelegate = new RefCountDelegate(new z(this, refCountMonitor));
+        this.refCountDelegate = new RefCountDelegate(new RunnableC12496z(this, refCountMonitor));
         this.refCountMonitor = refCountMonitor;
     }
 }

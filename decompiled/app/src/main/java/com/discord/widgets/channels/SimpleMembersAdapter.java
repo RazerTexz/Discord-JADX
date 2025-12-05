@@ -4,8 +4,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.SimpleMemberListItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.member.GuildMember;
@@ -14,10 +13,11 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.views.user.SettingsMemberView;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SimpleMembersAdapter.kt */
 /* loaded from: classes2.dex */
@@ -30,15 +30,15 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public MemberAdapterItem(SimpleMembersAdapter simpleMembersAdapter) {
-            super(R.layout.simple_member_list_item, simpleMembersAdapter);
-            m.checkNotNullParameter(simpleMembersAdapter, "adapter");
+            super(C5419R.layout.simple_member_list_item, simpleMembersAdapter);
+            Intrinsics3.checkNotNullParameter(simpleMembersAdapter, "adapter");
             View view = this.itemView;
-            SettingsMemberView settingsMemberView = (SettingsMemberView) view.findViewById(R.id.member_view);
+            SettingsMemberView settingsMemberView = (SettingsMemberView) view.findViewById(C5419R.id.member_view);
             if (settingsMemberView == null) {
-                throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.member_view)));
+                throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(C5419R.id.member_view)));
             }
             SimpleMemberListItemBinding simpleMemberListItemBinding = new SimpleMemberListItemBinding((FrameLayout) view, settingsMemberView);
-            m.checkNotNullExpressionValue(simpleMemberListItemBinding, "SimpleMemberListItemBinding.bind(itemView)");
+            Intrinsics3.checkNotNullExpressionValue(simpleMemberListItemBinding, "SimpleMemberListItemBinding.bind(itemView)");
             this.binding = simpleMemberListItemBinding;
         }
 
@@ -53,11 +53,11 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MemberItem data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             User user = data.getUser();
-            this.binding.f2142b.a(user, data.getGuildMember());
-            this.binding.a.setOnClickListener(new SimpleMembersAdapter$MemberAdapterItem$onConfigure$1(this, user));
+            this.binding.f15239b.m8621a(user, data.getGuildMember());
+            this.binding.f15238a.setOnClickListener(new SimpleMembersAdapter2(this, user));
         }
     }
 
@@ -70,7 +70,7 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
         private final User user;
 
         public MemberItem(User user, GuildMember guildMember) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             this.user = user;
             this.guildMember = guildMember;
             this.key = String.valueOf(user.getId());
@@ -97,7 +97,7 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
         }
 
         public final MemberItem copy(User user, GuildMember guildMember) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             return new MemberItem(user, guildMember);
         }
 
@@ -109,7 +109,7 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
                 return false;
             }
             MemberItem memberItem = (MemberItem) other;
-            return m.areEqual(this.user, memberItem.user) && m.areEqual(this.guildMember, memberItem.guildMember);
+            return Intrinsics3.areEqual(this.user, memberItem.user) && Intrinsics3.areEqual(this.guildMember, memberItem.guildMember);
         }
 
         public final GuildMember getGuildMember() {
@@ -138,19 +138,19 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("MemberItem(user=");
-            sbU.append(this.user);
-            sbU.append(", guildMember=");
-            sbU.append(this.guildMember);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("MemberItem(user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", guildMember=");
+            sbM833U.append(this.guildMember);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SimpleMembersAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
     }
 
     public static final /* synthetic */ Function1 access$getOnUserClickedListener$p(SimpleMembersAdapter simpleMembersAdapter) {
@@ -167,15 +167,15 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
     }
 
     public final void setData(List<MemberItem> data, Function1<? super User, Unit> onUserClickedListener) {
-        m.checkNotNullParameter(data, "data");
-        m.checkNotNullParameter(onUserClickedListener, "onUserClickedListener");
+        Intrinsics3.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(onUserClickedListener, "onUserClickedListener");
         super.setData(data);
         this.onUserClickedListener = onUserClickedListener;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MemberAdapterItem onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new MemberAdapterItem(this);
         }

@@ -6,57 +6,65 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.f6;
 import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import com.discord.views.StatusView;
 import com.facebook.drawee.view.SimpleDraweeView;
+import p007b.p008a.p025i.WidgetUserProfileAdapterItemFriendMutualServerBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetUserProfileAdapterItemFriendBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final RelativeLayout a;
+    public final RelativeLayout f18362a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final f6 f2690b;
+    public final WidgetUserProfileAdapterItemFriendMutualServerBinding f18363b;
 
+    /* renamed from: c */
     @NonNull
-    public final f6 c;
+    public final WidgetUserProfileAdapterItemFriendMutualServerBinding f18364c;
 
+    /* renamed from: d */
     @NonNull
-    public final f6 d;
+    public final WidgetUserProfileAdapterItemFriendMutualServerBinding f18365d;
 
+    /* renamed from: e */
     @NonNull
-    public final f6 e;
+    public final WidgetUserProfileAdapterItemFriendMutualServerBinding f18366e;
 
+    /* renamed from: f */
     @NonNull
-    public final SimpleDraweeView f;
+    public final SimpleDraweeView f18367f;
 
+    /* renamed from: g */
     @NonNull
-    public final StatusView g;
+    public final StatusView f18368g;
 
+    /* renamed from: h */
     @NonNull
-    public final SimpleDraweeSpanTextView h;
+    public final SimpleDraweeSpanTextView f18369h;
 
+    /* renamed from: i */
     @NonNull
-    public final TextView i;
+    public final TextView f18370i;
 
-    public WidgetUserProfileAdapterItemFriendBinding(@NonNull RelativeLayout relativeLayout, @NonNull f6 f6Var, @NonNull f6 f6Var2, @NonNull f6 f6Var3, @NonNull f6 f6Var4, @NonNull SimpleDraweeView simpleDraweeView, @NonNull LinearLayout linearLayout, @NonNull StatusView statusView, @NonNull SimpleDraweeSpanTextView simpleDraweeSpanTextView, @NonNull TextView textView) {
-        this.a = relativeLayout;
-        this.f2690b = f6Var;
-        this.c = f6Var2;
-        this.d = f6Var3;
-        this.e = f6Var4;
-        this.f = simpleDraweeView;
-        this.g = statusView;
-        this.h = simpleDraweeSpanTextView;
-        this.i = textView;
+    public WidgetUserProfileAdapterItemFriendBinding(@NonNull RelativeLayout relativeLayout, @NonNull WidgetUserProfileAdapterItemFriendMutualServerBinding widgetUserProfileAdapterItemFriendMutualServerBinding, @NonNull WidgetUserProfileAdapterItemFriendMutualServerBinding widgetUserProfileAdapterItemFriendMutualServerBinding2, @NonNull WidgetUserProfileAdapterItemFriendMutualServerBinding widgetUserProfileAdapterItemFriendMutualServerBinding3, @NonNull WidgetUserProfileAdapterItemFriendMutualServerBinding widgetUserProfileAdapterItemFriendMutualServerBinding4, @NonNull SimpleDraweeView simpleDraweeView, @NonNull LinearLayout linearLayout, @NonNull StatusView statusView, @NonNull SimpleDraweeSpanTextView simpleDraweeSpanTextView, @NonNull TextView textView) {
+        this.f18362a = relativeLayout;
+        this.f18363b = widgetUserProfileAdapterItemFriendMutualServerBinding;
+        this.f18364c = widgetUserProfileAdapterItemFriendMutualServerBinding2;
+        this.f18365d = widgetUserProfileAdapterItemFriendMutualServerBinding3;
+        this.f18366e = widgetUserProfileAdapterItemFriendMutualServerBinding4;
+        this.f18367f = simpleDraweeView;
+        this.f18368g = statusView;
+        this.f18369h = simpleDraweeSpanTextView;
+        this.f18370i = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18362a;
     }
 }

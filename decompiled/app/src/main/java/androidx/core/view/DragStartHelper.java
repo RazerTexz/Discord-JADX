@@ -10,13 +10,13 @@ public class DragStartHelper {
     private int mLastTouchX;
     private int mLastTouchY;
     private final OnDragStartListener mListener;
-    private final View.OnLongClickListener mLongClickListener = new AnonymousClass1();
-    private final View.OnTouchListener mTouchListener = new AnonymousClass2();
+    private final View.OnLongClickListener mLongClickListener = new ViewOnLongClickListenerC02771();
+    private final View.OnTouchListener mTouchListener = new ViewOnTouchListenerC02782();
     private final View mView;
 
-    /* renamed from: androidx.core.view.DragStartHelper$1, reason: invalid class name */
-    public class AnonymousClass1 implements View.OnLongClickListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.core.view.DragStartHelper$1 */
+    public class ViewOnLongClickListenerC02771 implements View.OnLongClickListener {
+        public ViewOnLongClickListenerC02771() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -25,9 +25,9 @@ public class DragStartHelper {
         }
     }
 
-    /* renamed from: androidx.core.view.DragStartHelper$2, reason: invalid class name */
-    public class AnonymousClass2 implements View.OnTouchListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.core.view.DragStartHelper$2 */
+    public class ViewOnTouchListenerC02782 implements View.OnTouchListener {
+        public ViewOnTouchListenerC02782() {
         }
 
         @Override // android.view.View.OnTouchListener

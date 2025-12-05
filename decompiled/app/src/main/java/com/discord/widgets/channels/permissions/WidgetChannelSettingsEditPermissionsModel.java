@@ -1,7 +1,5 @@
 package com.discord.widgets.channels.permissions;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.permission.Permission;
 import com.discord.api.role.GuildRole;
@@ -15,14 +13,16 @@ import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.permissions.PermissionUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.list.NewThreadsPermissionsFeatureFlag;
-import d0.z.d.m;
-import j0.l.e.k;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
 
 /* compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
 /* loaded from: classes2.dex */
@@ -46,17 +46,17 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
 
         private final Observable<WidgetChannelSettingsEditPermissionsModel> getForRole(long guildId, long channelId, long targetRoleId) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable observableE = Observable.e(companion.getChannels().observeChannel(channelId), StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getGuilds().observeGuild(guildId), companion.getPermissions().observePermissionsForChannel(channelId), companion.getGuilds().observeRoles(guildId), companion.getGuilds().observeComputed(guildId), NewThreadsPermissionsFeatureFlag.INSTANCE.getINSTANCE().observeEnabled(guildId), new WidgetChannelSettingsEditPermissionsModel$Companion$getForRole$1(targetRoleId));
-            m.checkNotNullExpressionValue(observableE, "Observable\n            .…          }\n            }");
-            Observable<WidgetChannelSettingsEditPermissionsModel> observableR = ObservableExtensionsKt.computationLatest(observableE).r();
-            m.checkNotNullExpressionValue(observableR, "Observable\n            .…  .distinctUntilChanged()");
-            return observableR;
+            Observable observableM11069e = Observable.m11069e(companion.getChannels().observeChannel(channelId), StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getGuilds().observeGuild(guildId), companion.getPermissions().observePermissionsForChannel(channelId), companion.getGuilds().observeRoles(guildId), companion.getGuilds().observeComputed(guildId), NewThreadsPermissionsFeatureFlag.INSTANCE.getINSTANCE().observeEnabled(guildId), new WidgetChannelSettingsEditPermissionsModel2(targetRoleId));
+            Intrinsics3.checkNotNullExpressionValue(observableM11069e, "Observable\n            .…          }\n            }");
+            Observable<WidgetChannelSettingsEditPermissionsModel> observableM11112r = ObservableExtensionsKt.computationLatest(observableM11069e).m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r, "Observable\n            .…  .distinctUntilChanged()");
+            return observableM11112r;
         }
 
         private final Observable<WidgetChannelSettingsEditPermissionsModel> getForUser(long guildId, long channelId, long targetUserId, StoreChannels storeChannels, StoreUser storeUser, StoreGuilds storeGuilds, StorePermissions storePermissions) {
-            Observable<WidgetChannelSettingsEditPermissionsModel> observableR = ObservableExtensionsKt.computationLatest(ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{storeChannels, storeUser, storeGuilds, storePermissions}, false, null, null, new WidgetChannelSettingsEditPermissionsModel$Companion$getForUser$1(storeChannels, channelId, storeUser, targetUserId, storeGuilds, guildId, storePermissions), 14, null)).r();
-            m.checkNotNullExpressionValue(observableR, "ObservationDeckProvider.…  .distinctUntilChanged()");
-            return observableR;
+            Observable<WidgetChannelSettingsEditPermissionsModel> observableM11112r = ObservableExtensionsKt.computationLatest(ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{storeChannels, storeUser, storeGuilds, storePermissions}, false, null, null, new WidgetChannelSettingsEditPermissionsModel3(storeChannels, channelId, storeUser, targetUserId, storeGuilds, guildId, storePermissions), 14, null)).m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r, "ObservationDeckProvider.…  .distinctUntilChanged()");
+            return observableM11112r;
         }
 
         public static /* synthetic */ Observable getForUser$default(Companion companion, long j, long j2, long j3, StoreChannels storeChannels, StoreUser storeUser, StoreGuilds storeGuilds, StorePermissions storePermissions, int i, Object obj) {
@@ -74,9 +74,9 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
             if (type == 1) {
                 return getForRole(guildId, channelId, targetId);
             }
-            k kVar = new k(null);
-            m.checkNotNullExpressionValue(kVar, "Observable\n              .just(null)");
-            return kVar;
+            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(null);
+            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable\n              .just(null)");
+            return scalarSynchronousObservable;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -99,8 +99,8 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ModelForRole(Channel channel, long j, GuildRole guildRole, long j2, long j3, long j4, boolean z2, boolean z3, boolean z4) {
             super(channel, j2, 1, z4, null);
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(guildRole, "guildRole");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(guildRole, "guildRole");
             this.channel = channel;
             this.myPermissionsForChannel = j;
             this.guildRole = guildRole;
@@ -167,8 +167,8 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         }
 
         public final ModelForRole copy(Channel channel, long myPermissionsForChannel, GuildRole guildRole, long targetId, long myPermissionsWithRoleNeutral, long myPermissionsWithRoleDenied, boolean meHasRole, boolean isEveryoneRole, boolean useNewThreadsPermissions) {
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(guildRole, "guildRole");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(guildRole, "guildRole");
             return new ModelForRole(channel, myPermissionsForChannel, guildRole, targetId, myPermissionsWithRoleNeutral, myPermissionsWithRoleDenied, meHasRole, isEveryoneRole, useNewThreadsPermissions);
         }
 
@@ -180,7 +180,7 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
                 return false;
             }
             ModelForRole modelForRole = (ModelForRole) other;
-            return m.areEqual(getChannel(), modelForRole.getChannel()) && this.myPermissionsForChannel == modelForRole.myPermissionsForChannel && m.areEqual(this.guildRole, modelForRole.guildRole) && getTargetId() == modelForRole.getTargetId() && this.myPermissionsWithRoleNeutral == modelForRole.myPermissionsWithRoleNeutral && this.myPermissionsWithRoleDenied == modelForRole.myPermissionsWithRoleDenied && this.meHasRole == modelForRole.meHasRole && this.isEveryoneRole == modelForRole.isEveryoneRole && getUseNewThreadsPermissions() == modelForRole.getUseNewThreadsPermissions();
+            return Intrinsics3.areEqual(getChannel(), modelForRole.getChannel()) && this.myPermissionsForChannel == modelForRole.myPermissionsForChannel && Intrinsics3.areEqual(this.guildRole, modelForRole.guildRole) && getTargetId() == modelForRole.getTargetId() && this.myPermissionsWithRoleNeutral == modelForRole.myPermissionsWithRoleNeutral && this.myPermissionsWithRoleDenied == modelForRole.myPermissionsWithRoleDenied && this.meHasRole == modelForRole.meHasRole && this.isEveryoneRole == modelForRole.isEveryoneRole && getUseNewThreadsPermissions() == modelForRole.getUseNewThreadsPermissions();
         }
 
         @Override // com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel
@@ -221,15 +221,15 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         /* JADX WARN: Multi-variable type inference failed */
         public int hashCode() {
             Channel channel = getChannel();
-            int iA = (b.a(this.myPermissionsForChannel) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.myPermissionsForChannel) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
             GuildRole guildRole = this.guildRole;
-            int iA2 = (b.a(this.myPermissionsWithRoleDenied) + ((b.a(this.myPermissionsWithRoleNeutral) + ((b.a(getTargetId()) + ((iA + (guildRole != null ? guildRole.hashCode() : 0)) * 31)) * 31)) * 31)) * 31;
+            int iM3a2 = (C0002b.m3a(this.myPermissionsWithRoleDenied) + ((C0002b.m3a(this.myPermissionsWithRoleNeutral) + ((C0002b.m3a(getTargetId()) + ((iM3a + (guildRole != null ? guildRole.hashCode() : 0)) * 31)) * 31)) * 31)) * 31;
             boolean z2 = this.meHasRole;
             int i = z2;
             if (z2 != 0) {
                 i = 1;
             }
-            int i2 = (iA2 + i) * 31;
+            int i2 = (iM3a2 + i) * 31;
             boolean z3 = this.isEveryoneRole;
             int i3 = z3;
             if (z3 != 0) {
@@ -245,26 +245,26 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelForRole(channel=");
-            sbU.append(getChannel());
-            sbU.append(", myPermissionsForChannel=");
-            sbU.append(this.myPermissionsForChannel);
-            sbU.append(", guildRole=");
-            sbU.append(this.guildRole);
-            sbU.append(", targetId=");
-            sbU.append(getTargetId());
-            sbU.append(", myPermissionsWithRoleNeutral=");
-            sbU.append(this.myPermissionsWithRoleNeutral);
-            sbU.append(", myPermissionsWithRoleDenied=");
-            sbU.append(this.myPermissionsWithRoleDenied);
-            sbU.append(", meHasRole=");
-            sbU.append(this.meHasRole);
-            sbU.append(", isEveryoneRole=");
-            sbU.append(this.isEveryoneRole);
-            sbU.append(", useNewThreadsPermissions=");
-            sbU.append(getUseNewThreadsPermissions());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelForRole(channel=");
+            sbM833U.append(getChannel());
+            sbM833U.append(", myPermissionsForChannel=");
+            sbM833U.append(this.myPermissionsForChannel);
+            sbM833U.append(", guildRole=");
+            sbM833U.append(this.guildRole);
+            sbM833U.append(", targetId=");
+            sbM833U.append(getTargetId());
+            sbM833U.append(", myPermissionsWithRoleNeutral=");
+            sbM833U.append(this.myPermissionsWithRoleNeutral);
+            sbM833U.append(", myPermissionsWithRoleDenied=");
+            sbM833U.append(this.myPermissionsWithRoleDenied);
+            sbM833U.append(", meHasRole=");
+            sbM833U.append(this.meHasRole);
+            sbM833U.append(", isEveryoneRole=");
+            sbM833U.append(this.isEveryoneRole);
+            sbM833U.append(", useNewThreadsPermissions=");
+            sbM833U.append(getUseNewThreadsPermissions());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -280,8 +280,8 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ModelForUser(Channel channel, long j, boolean z2, User user, GuildMember guildMember, boolean z3) {
             super(channel, user.getId(), 0, z3, null);
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(user, "user");
             this.channel = channel;
             this.myPermissionsForChannel = j;
             this.isMe = z2;
@@ -345,8 +345,8 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         }
 
         public final ModelForUser copy(Channel channel, long myPermissionsForChannel, boolean isMe, User user, GuildMember guildMember, boolean useNewThreadsPermissions) {
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(user, "user");
             return new ModelForUser(channel, myPermissionsForChannel, isMe, user, guildMember, useNewThreadsPermissions);
         }
 
@@ -358,7 +358,7 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
                 return false;
             }
             ModelForUser modelForUser = (ModelForUser) other;
-            return m.areEqual(getChannel(), modelForUser.getChannel()) && this.myPermissionsForChannel == modelForUser.myPermissionsForChannel && this.isMe == modelForUser.isMe && m.areEqual(this.user, modelForUser.user) && m.areEqual(this.guildMember, modelForUser.guildMember) && getUseNewThreadsPermissions() == modelForUser.getUseNewThreadsPermissions();
+            return Intrinsics3.areEqual(getChannel(), modelForUser.getChannel()) && this.myPermissionsForChannel == modelForUser.myPermissionsForChannel && this.isMe == modelForUser.isMe && Intrinsics3.areEqual(this.user, modelForUser.user) && Intrinsics3.areEqual(this.guildMember, modelForUser.guildMember) && getUseNewThreadsPermissions() == modelForUser.getUseNewThreadsPermissions();
         }
 
         @Override // com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel
@@ -386,13 +386,13 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         /* JADX WARN: Multi-variable type inference failed */
         public int hashCode() {
             Channel channel = getChannel();
-            int iA = (b.a(this.myPermissionsForChannel) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.myPermissionsForChannel) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
             boolean z2 = this.isMe;
             int i = z2;
             if (z2 != 0) {
                 i = 1;
             }
-            int i2 = (iA + i) * 31;
+            int i2 = (iM3a + i) * 31;
             User user = this.user;
             int iHashCode = (i2 + (user != null ? user.hashCode() : 0)) * 31;
             GuildMember guildMember = this.guildMember;
@@ -406,20 +406,20 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelForUser(channel=");
-            sbU.append(getChannel());
-            sbU.append(", myPermissionsForChannel=");
-            sbU.append(this.myPermissionsForChannel);
-            sbU.append(", isMe=");
-            sbU.append(this.isMe);
-            sbU.append(", user=");
-            sbU.append(this.user);
-            sbU.append(", guildMember=");
-            sbU.append(this.guildMember);
-            sbU.append(", useNewThreadsPermissions=");
-            sbU.append(getUseNewThreadsPermissions());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelForUser(channel=");
+            sbM833U.append(getChannel());
+            sbM833U.append(", myPermissionsForChannel=");
+            sbM833U.append(this.myPermissionsForChannel);
+            sbM833U.append(", isMe=");
+            sbM833U.append(this.isMe);
+            sbM833U.append(", user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", guildMember=");
+            sbM833U.append(this.guildMember);
+            sbM833U.append(", useNewThreadsPermissions=");
+            sbM833U.append(getUseNewThreadsPermissions());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 

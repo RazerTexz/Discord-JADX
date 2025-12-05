@@ -11,25 +11,27 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetHubDomainsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f17170a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final RecyclerView f2472b;
+    public final RecyclerView f17171b;
 
+    /* renamed from: c */
     @NonNull
-    public final MaterialButton c;
+    public final MaterialButton f17172c;
 
     public WidgetHubDomainsBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull RecyclerView recyclerView, @NonNull MaterialButton materialButton) {
-        this.a = linearLayout;
-        this.f2472b = recyclerView;
-        this.c = materialButton;
+        this.f17170a = linearLayout;
+        this.f17171b = recyclerView;
+        this.f17172c = materialButton;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17170a;
     }
 }

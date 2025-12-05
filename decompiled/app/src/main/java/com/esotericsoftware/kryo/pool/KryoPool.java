@@ -1,9 +1,9 @@
 package com.esotericsoftware.kryo.pool;
 
-import b.d.b.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public interface KryoPool {
@@ -43,7 +43,7 @@ public interface KryoPool {
             sb.append("[queue.class=");
             sb.append(this.queue.getClass());
             sb.append(", softReferences=");
-            return a.O(sb, this.softReferences, "]");
+            return outline.m827O(sb, this.softReferences, "]");
         }
     }
 

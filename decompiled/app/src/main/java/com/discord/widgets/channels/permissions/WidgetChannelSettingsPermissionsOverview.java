@@ -1,17 +1,12 @@
 package com.discord.widgets.channels.permissions;
 
-import a0.a.a.b;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
@@ -22,15 +17,12 @@ import com.discord.databinding.WidgetChannelSettingsPermissionsOverviewBinding;
 import com.discord.models.guild.Guild;
 import com.discord.models.user.MeUser;
 import com.discord.stores.StoreStream;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.permissions.PermissionUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.segmentedcontrol.SegmentedControlContainer;
 import com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverviewViewModel;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Map;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
@@ -39,12 +31,20 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChannelSettingsPermissionsOverview extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChannelSettingsPermissionsOverview.class, "viewBinding", "getViewBinding()Lcom/discord/databinding/WidgetChannelSettingsPermissionsOverviewBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSettingsPermissionsOverview.class, "viewBinding", "getViewBinding()Lcom/discord/databinding/WidgetChannelSettingsPermissionsOverviewBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -65,10 +65,10 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
         }
 
         public final void launch(Context context, long channelId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra("com.discord.intent.extra.EXTRA_CHANNEL_ID", channelId);
-            j.d(context, WidgetChannelSettingsPermissionsOverview.class, intent);
+            AppScreen2.m156d(context, WidgetChannelSettingsPermissionsOverview.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -94,9 +94,9 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
             }
 
             public final Observable<Model> get(long channelId) {
-                Observable observableY = StoreStream.INSTANCE.getChannels().observeChannel(channelId).Y(new WidgetChannelSettingsPermissionsOverview$Model$Companion$get$1(channelId));
-                m.checkNotNullExpressionValue(observableY, "StoreStream.getChannels(…          }\n            }");
-                return observableY;
+                Observable observableM11099Y = StoreStream.INSTANCE.getChannels().observeChannel(channelId).m11099Y(new WidgetChannelSettingsPermissionsOverview2(channelId));
+                Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "StoreStream.getChannels(…          }\n            }");
+                return observableM11099Y;
             }
 
             public final boolean isValid(MeUser me2, Guild guild, Channel channel, Long myPermissionsForChannel) {
@@ -109,10 +109,10 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
         }
 
         public Model(MeUser meUser, Guild guild, Channel channel, long j, Map<Long, GuildRole> map) {
-            m.checkNotNullParameter(meUser, "me");
-            m.checkNotNullParameter(guild, "guild");
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(map, "guildRoles");
+            Intrinsics3.checkNotNullParameter(meUser, "me");
+            Intrinsics3.checkNotNullParameter(guild, "guild");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(map, "guildRoles");
             this.me = meUser;
             this.guild = guild;
             this.channel = channel;
@@ -168,10 +168,10 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
         }
 
         public final Model copy(MeUser me2, Guild guild, Channel channel, long myPermissions, Map<Long, GuildRole> guildRoles) {
-            m.checkNotNullParameter(me2, "me");
-            m.checkNotNullParameter(guild, "guild");
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(guildRoles, "guildRoles");
+            Intrinsics3.checkNotNullParameter(me2, "me");
+            Intrinsics3.checkNotNullParameter(guild, "guild");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(guildRoles, "guildRoles");
             return new Model(me2, guild, channel, myPermissions, guildRoles);
         }
 
@@ -183,7 +183,7 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
                 return false;
             }
             Model model = (Model) other;
-            return m.areEqual(this.me, model.me) && m.areEqual(this.guild, model.guild) && m.areEqual(this.channel, model.channel) && this.myPermissions == model.myPermissions && m.areEqual(this.guildRoles, model.guildRoles);
+            return Intrinsics3.areEqual(this.me, model.me) && Intrinsics3.areEqual(this.guild, model.guild) && Intrinsics3.areEqual(this.channel, model.channel) && this.myPermissions == model.myPermissions && Intrinsics3.areEqual(this.guildRoles, model.guildRoles);
         }
 
         public final boolean getCanManage() {
@@ -216,22 +216,22 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
             Guild guild = this.guild;
             int iHashCode2 = (iHashCode + (guild != null ? guild.hashCode() : 0)) * 31;
             Channel channel = this.channel;
-            int iA = (b.a(this.myPermissions) + ((iHashCode2 + (channel != null ? channel.hashCode() : 0)) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.myPermissions) + ((iHashCode2 + (channel != null ? channel.hashCode() : 0)) * 31)) * 31;
             Map<Long, GuildRole> map = this.guildRoles;
-            return iA + (map != null ? map.hashCode() : 0);
+            return iM3a + (map != null ? map.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Model(me=");
-            sbU.append(this.me);
-            sbU.append(", guild=");
-            sbU.append(this.guild);
-            sbU.append(", channel=");
-            sbU.append(this.channel);
-            sbU.append(", myPermissions=");
-            sbU.append(this.myPermissions);
-            sbU.append(", guildRoles=");
-            return a.M(sbU, this.guildRoles, ")");
+            StringBuilder sbM833U = outline.m833U("Model(me=");
+            sbM833U.append(this.me);
+            sbM833U.append(", guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", myPermissions=");
+            sbM833U.append(this.myPermissions);
+            sbM833U.append(", guildRoles=");
+            return outline.m825M(sbM833U, this.guildRoles, ")");
         }
     }
 
@@ -256,16 +256,16 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
     }
 
     /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$configureTabs$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Integer, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$configureTabs$1 */
+    public static final class C75541 extends Lambda implements Function1<Integer, Unit> {
+        public C75541() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
             invoke(num.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(int i) {
@@ -274,7 +274,7 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
                 tab = WidgetChannelSettingsPermissionsOverviewViewModel.Tab.MODERATOR;
             } else {
                 if (i != 1) {
-                    throw new IllegalArgumentException(a.q("illegal index: ", i));
+                    throw new IllegalArgumentException(outline.m871q("illegal index: ", i));
                 }
                 tab = WidgetChannelSettingsPermissionsOverviewViewModel.Tab.ADVANCED;
             }
@@ -283,16 +283,16 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
     }
 
     /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Model, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$onViewBoundOrOnResume$1 */
+    public static final class C75551 extends Lambda implements Function1<Model, Unit> {
+        public C75551() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -302,31 +302,31 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
     }
 
     /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<WidgetChannelSettingsPermissionsOverviewViewModel.ViewState, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$onViewBoundOrOnResume$2 */
+    public static final class C75562 extends Lambda implements Function1<WidgetChannelSettingsPermissionsOverviewViewModel.ViewState, Unit> {
+        public C75562() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetChannelSettingsPermissionsOverviewViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelSettingsPermissionsOverviewViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "viewState");
+            Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetChannelSettingsPermissionsOverview.access$configureTabs(WidgetChannelSettingsPermissionsOverview.this, viewState);
         }
     }
 
     public WidgetChannelSettingsPermissionsOverview() {
-        super(R.layout.widget_channel_settings_permissions_overview);
-        this.viewBinding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChannelSettingsPermissionsOverview$viewBinding$2.INSTANCE, null, 2, null);
-        WidgetChannelSettingsPermissionsOverview$viewModel$2 widgetChannelSettingsPermissionsOverview$viewModel$2 = new WidgetChannelSettingsPermissionsOverview$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetChannelSettingsPermissionsOverviewViewModel.class), new WidgetChannelSettingsPermissionsOverview$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetChannelSettingsPermissionsOverview$viewModel$2));
+        super(C5419R.layout.widget_channel_settings_permissions_overview);
+        this.viewBinding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelSettingsPermissionsOverview3.INSTANCE, null, 2, null);
+        WidgetChannelSettingsPermissionsOverview4 widgetChannelSettingsPermissionsOverview4 = new WidgetChannelSettingsPermissionsOverview4(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetChannelSettingsPermissionsOverviewViewModel.class), new C7553x17255b9c(appViewModelDelegates3), new AppViewModelDelegates5(widgetChannelSettingsPermissionsOverview4));
     }
 
     public static final /* synthetic */ void access$configureTabs(WidgetChannelSettingsPermissionsOverview widgetChannelSettingsPermissionsOverview, WidgetChannelSettingsPermissionsOverviewViewModel.ViewState viewState) {
@@ -349,15 +349,15 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
         int i;
         int iOrdinal = viewState.getSelectedTab().ordinal();
         if (iOrdinal == 0) {
-            AppViewFlipper appViewFlipper = getViewBinding().f2279b;
-            m.checkNotNullExpressionValue(appViewFlipper, "viewBinding.flipper");
+            AppViewFlipper appViewFlipper = getViewBinding().f15956b;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "viewBinding.flipper");
             appViewFlipper.setDisplayedChild(0);
         } else if (iOrdinal == 1) {
-            AppViewFlipper appViewFlipper2 = getViewBinding().f2279b;
-            m.checkNotNullExpressionValue(appViewFlipper2, "viewBinding.flipper");
+            AppViewFlipper appViewFlipper2 = getViewBinding().f15956b;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "viewBinding.flipper");
             appViewFlipper2.setDisplayedChild(1);
         }
-        SegmentedControlContainer segmentedControlContainer = getViewBinding().c;
+        SegmentedControlContainer segmentedControlContainer = getViewBinding().f15957c;
         int iOrdinal2 = viewState.getSelectedTab().ordinal();
         if (iOrdinal2 == 0) {
             i = 0;
@@ -367,16 +367,16 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
             }
             i = 1;
         }
-        segmentedControlContainer.a(i);
-        getViewBinding().c.setOnSegmentSelectedChangeListener(new AnonymousClass1());
-        SegmentedControlContainer segmentedControlContainer2 = getViewBinding().c;
-        m.checkNotNullExpressionValue(segmentedControlContainer2, "viewBinding.segmentedControl");
+        segmentedControlContainer.m8607a(i);
+        getViewBinding().f15957c.setOnSegmentSelectedChangeListener(new C75541());
+        SegmentedControlContainer segmentedControlContainer2 = getViewBinding().f15957c;
+        Intrinsics3.checkNotNullExpressionValue(segmentedControlContainer2, "viewBinding.segmentedControl");
         segmentedControlContainer2.setVisibility(viewState.getAvailableTabs().size() > 1 ? 0 : 8);
     }
 
     private final void configureToolbar(Channel channel) {
-        setActionBarTitle(ChannelUtils.k(channel) ? R.string.category_settings : R.string.channel_settings);
-        setActionBarSubtitle(ChannelUtils.d(channel, requireContext(), true));
+        setActionBarTitle(ChannelUtils.m7687k(channel) ? C5419R.string.category_settings : C5419R.string.channel_settings);
+        setActionBarSubtitle(ChannelUtils.m7680d(channel, requireContext(), true));
     }
 
     private final void configureUI(Model model) {
@@ -401,7 +401,7 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
     }
@@ -409,9 +409,9 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        Observable<Model> observableR = Model.INSTANCE.get(getMostRecentIntent().getLongExtra("com.discord.intent.extra.EXTRA_CHANNEL_ID", -1L)).r();
-        m.checkNotNullExpressionValue(observableR, "Model\n        .get(chann…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetChannelSettingsPermissionsOverview.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetChannelSettingsPermissionsOverview.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        Observable<Model> observableM11112r = Model.INSTANCE.get(getMostRecentIntent().getLongExtra("com.discord.intent.extra.EXTRA_CHANNEL_ID", -1L)).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "Model\n        .get(chann…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableM11112r), this, null, 2, null), WidgetChannelSettingsPermissionsOverview.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75551(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetChannelSettingsPermissionsOverview.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75562(), 62, (Object) null);
     }
 }

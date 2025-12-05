@@ -12,41 +12,47 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetGuildInviteShareEmptySuggestionsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f16825a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final View f2420b;
+    public final View f16826b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f16827c;
 
+    /* renamed from: d */
     @NonNull
-    public final MaterialButton d;
+    public final MaterialButton f16828d;
 
+    /* renamed from: e */
     @NonNull
-    public final ImageButton e;
+    public final ImageButton f16829e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextView f;
+    public final TextView f16830f;
 
+    /* renamed from: g */
     @NonNull
-    public final ViewInviteSettingsSheet g;
+    public final ViewInviteSettingsSheet f16831g;
 
     public WidgetGuildInviteShareEmptySuggestionsBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View view, @NonNull TextView textView, @NonNull MaterialButton materialButton, @NonNull ImageButton imageButton, @NonNull TextView textView2, @NonNull ViewInviteSettingsSheet viewInviteSettingsSheet) {
-        this.a = coordinatorLayout;
-        this.f2420b = view;
-        this.c = textView;
-        this.d = materialButton;
-        this.e = imageButton;
-        this.f = textView2;
-        this.g = viewInviteSettingsSheet;
+        this.f16825a = coordinatorLayout;
+        this.f16826b = view;
+        this.f16827c = textView;
+        this.f16828d = materialButton;
+        this.f16829e = imageButton;
+        this.f16830f = textView2;
+        this.f16831g = viewInviteSettingsSheet;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16825a;
     }
 }

@@ -41,24 +41,30 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
     private final ArrayList<OnAnimationUpdateListener> mUpdateListeners;
     public float mValue;
     public float mVelocity;
-    public static final ViewProperty TRANSLATION_X = new AnonymousClass1(Key.TRANSLATION_X);
-    public static final ViewProperty TRANSLATION_Y = new AnonymousClass2(Key.TRANSLATION_Y);
-    public static final ViewProperty TRANSLATION_Z = new AnonymousClass3(Key.TRANSLATION_Z);
-    public static final ViewProperty SCALE_X = new AnonymousClass4(Key.SCALE_X);
-    public static final ViewProperty SCALE_Y = new AnonymousClass5(Key.SCALE_Y);
-    public static final ViewProperty ROTATION = new AnonymousClass6(Key.ROTATION);
-    public static final ViewProperty ROTATION_X = new AnonymousClass7(Key.ROTATION_X);
-    public static final ViewProperty ROTATION_Y = new AnonymousClass8(Key.ROTATION_Y);
-    public static final ViewProperty X = new AnonymousClass9("x");
-    public static final ViewProperty Y = new AnonymousClass10("y");
-    public static final ViewProperty Z = new AnonymousClass11("z");
-    public static final ViewProperty ALPHA = new AnonymousClass12(Key.ALPHA);
-    public static final ViewProperty SCROLL_X = new AnonymousClass13("scrollX");
-    public static final ViewProperty SCROLL_Y = new AnonymousClass14("scrollY");
+    public static final ViewProperty TRANSLATION_X = new C03261(Key.TRANSLATION_X);
+    public static final ViewProperty TRANSLATION_Y = new C03332(Key.TRANSLATION_Y);
+    public static final ViewProperty TRANSLATION_Z = new C03343(Key.TRANSLATION_Z);
+    public static final ViewProperty SCALE_X = new C03354(Key.SCALE_X);
+    public static final ViewProperty SCALE_Y = new C03365(Key.SCALE_Y);
+    public static final ViewProperty ROTATION = new C03376(Key.ROTATION);
+    public static final ViewProperty ROTATION_X = new C03387(Key.ROTATION_X);
+    public static final ViewProperty ROTATION_Y = new C03398(Key.ROTATION_Y);
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$1, reason: invalid class name */
-    public static class AnonymousClass1 extends ViewProperty {
-        public AnonymousClass1(String str) {
+    /* renamed from: X */
+    public static final ViewProperty f139X = new C03409("x");
+
+    /* renamed from: Y */
+    public static final ViewProperty f140Y = new C032710("y");
+
+    /* renamed from: Z */
+    public static final ViewProperty f141Z = new C032811("z");
+    public static final ViewProperty ALPHA = new C032912(Key.ALPHA);
+    public static final ViewProperty SCROLL_X = new C033013("scrollX");
+    public static final ViewProperty SCROLL_Y = new C033114("scrollY");
+
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$1 */
+    public static class C03261 extends ViewProperty {
+        public C03261(String str) {
             super(str, null);
         }
 
@@ -83,9 +89,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$10, reason: invalid class name */
-    public static class AnonymousClass10 extends ViewProperty {
-        public AnonymousClass10(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$10 */
+    public static class C032710 extends ViewProperty {
+        public C032710(String str) {
             super(str, null);
         }
 
@@ -110,9 +116,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$11, reason: invalid class name */
-    public static class AnonymousClass11 extends ViewProperty {
-        public AnonymousClass11(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$11 */
+    public static class C032811 extends ViewProperty {
+        public C032811(String str) {
             super(str, null);
         }
 
@@ -137,9 +143,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$12, reason: invalid class name */
-    public static class AnonymousClass12 extends ViewProperty {
-        public AnonymousClass12(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$12 */
+    public static class C032912 extends ViewProperty {
+        public C032912(String str) {
             super(str, null);
         }
 
@@ -164,9 +170,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$13, reason: invalid class name */
-    public static class AnonymousClass13 extends ViewProperty {
-        public AnonymousClass13(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$13 */
+    public static class C033013 extends ViewProperty {
+        public C033013(String str) {
             super(str, null);
         }
 
@@ -191,9 +197,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$14, reason: invalid class name */
-    public static class AnonymousClass14 extends ViewProperty {
-        public AnonymousClass14(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$14 */
+    public static class C033114 extends ViewProperty {
+        public C033114(String str) {
             super(str, null);
         }
 
@@ -218,12 +224,12 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$15, reason: invalid class name */
-    public class AnonymousClass15 extends FloatPropertyCompat {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$15 */
+    public class C033215 extends FloatPropertyCompat {
         public final /* synthetic */ FloatValueHolder val$floatValueHolder;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass15(String str, FloatValueHolder floatValueHolder) {
+        public C033215(String str, FloatValueHolder floatValueHolder) {
             super(str);
             this.val$floatValueHolder = floatValueHolder;
         }
@@ -239,9 +245,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$2, reason: invalid class name */
-    public static class AnonymousClass2 extends ViewProperty {
-        public AnonymousClass2(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$2 */
+    public static class C03332 extends ViewProperty {
+        public C03332(String str) {
             super(str, null);
         }
 
@@ -266,9 +272,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$3, reason: invalid class name */
-    public static class AnonymousClass3 extends ViewProperty {
-        public AnonymousClass3(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$3 */
+    public static class C03343 extends ViewProperty {
+        public C03343(String str) {
             super(str, null);
         }
 
@@ -293,9 +299,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$4, reason: invalid class name */
-    public static class AnonymousClass4 extends ViewProperty {
-        public AnonymousClass4(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$4 */
+    public static class C03354 extends ViewProperty {
+        public C03354(String str) {
             super(str, null);
         }
 
@@ -320,9 +326,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$5, reason: invalid class name */
-    public static class AnonymousClass5 extends ViewProperty {
-        public AnonymousClass5(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$5 */
+    public static class C03365 extends ViewProperty {
+        public C03365(String str) {
             super(str, null);
         }
 
@@ -347,9 +353,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$6, reason: invalid class name */
-    public static class AnonymousClass6 extends ViewProperty {
-        public AnonymousClass6(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$6 */
+    public static class C03376 extends ViewProperty {
+        public C03376(String str) {
             super(str, null);
         }
 
@@ -374,9 +380,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$7, reason: invalid class name */
-    public static class AnonymousClass7 extends ViewProperty {
-        public AnonymousClass7(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$7 */
+    public static class C03387 extends ViewProperty {
+        public C03387(String str) {
             super(str, null);
         }
 
@@ -401,9 +407,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$8, reason: invalid class name */
-    public static class AnonymousClass8 extends ViewProperty {
-        public AnonymousClass8(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$8 */
+    public static class C03398 extends ViewProperty {
+        public C03398(String str) {
             super(str, null);
         }
 
@@ -428,9 +434,9 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$9, reason: invalid class name */
-    public static class AnonymousClass9 extends ViewProperty {
-        public AnonymousClass9(String str) {
+    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$9 */
+    public static class C03409 extends ViewProperty {
+        public C03409(String str) {
             super(str, null);
         }
 
@@ -469,7 +475,7 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
     }
 
     public static abstract class ViewProperty extends FloatPropertyCompat<View> {
-        public /* synthetic */ ViewProperty(String str, AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ ViewProperty(String str, C03261 c03261) {
             this(str);
         }
 
@@ -489,7 +495,7 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         this.mEndListeners = new ArrayList<>();
         this.mUpdateListeners = new ArrayList<>();
         this.mTarget = null;
-        this.mProperty = new AnonymousClass15("FloatValueHolder", floatValueHolder);
+        this.mProperty = new C033215("FloatValueHolder", floatValueHolder);
         this.mMinVisibleChange = 1.0f;
     }
 

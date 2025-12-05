@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackApplicationSettingsUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationSettingsUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackApplicationSettingsUpdated implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final Boolean hiddenEnabled = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackApplicationSettingsUpdated implements Analyti
             return false;
         }
         TrackApplicationSettingsUpdated trackApplicationSettingsUpdated = (TrackApplicationSettingsUpdated) other;
-        return m.areEqual(this.hiddenEnabled, trackApplicationSettingsUpdated.hiddenEnabled) && m.areEqual(this.overlayDisabled, trackApplicationSettingsUpdated.overlayDisabled) && m.areEqual(this.privateEnabled, trackApplicationSettingsUpdated.privateEnabled) && m.areEqual(this.applicationId, trackApplicationSettingsUpdated.applicationId) && m.areEqual(this.applicationName, trackApplicationSettingsUpdated.applicationName) && m.areEqual(this.skuId, trackApplicationSettingsUpdated.skuId) && m.areEqual(this.launcherPlatform, trackApplicationSettingsUpdated.launcherPlatform);
+        return Intrinsics3.areEqual(this.hiddenEnabled, trackApplicationSettingsUpdated.hiddenEnabled) && Intrinsics3.areEqual(this.overlayDisabled, trackApplicationSettingsUpdated.overlayDisabled) && Intrinsics3.areEqual(this.privateEnabled, trackApplicationSettingsUpdated.privateEnabled) && Intrinsics3.areEqual(this.applicationId, trackApplicationSettingsUpdated.applicationId) && Intrinsics3.areEqual(this.applicationName, trackApplicationSettingsUpdated.applicationName) && Intrinsics3.areEqual(this.skuId, trackApplicationSettingsUpdated.skuId) && Intrinsics3.areEqual(this.launcherPlatform, trackApplicationSettingsUpdated.launcherPlatform);
     }
 
     public int hashCode() {
@@ -57,19 +57,19 @@ public final /* data */ class TrackApplicationSettingsUpdated implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackApplicationSettingsUpdated(hiddenEnabled=");
-        sbU.append(this.hiddenEnabled);
-        sbU.append(", overlayDisabled=");
-        sbU.append(this.overlayDisabled);
-        sbU.append(", privateEnabled=");
-        sbU.append(this.privateEnabled);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", applicationName=");
-        sbU.append(this.applicationName);
-        sbU.append(", skuId=");
-        sbU.append(this.skuId);
-        sbU.append(", launcherPlatform=");
-        return a.E(sbU, this.launcherPlatform, ")");
+        StringBuilder sbM833U = outline.m833U("TrackApplicationSettingsUpdated(hiddenEnabled=");
+        sbM833U.append(this.hiddenEnabled);
+        sbM833U.append(", overlayDisabled=");
+        sbM833U.append(this.overlayDisabled);
+        sbM833U.append(", privateEnabled=");
+        sbM833U.append(this.privateEnabled);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", applicationName=");
+        sbM833U.append(this.applicationName);
+        sbM833U.append(", skuId=");
+        sbM833U.append(this.skuId);
+        sbM833U.append(", launcherPlatform=");
+        return outline.m817E(sbM833U, this.launcherPlatform, ")");
     }
 }

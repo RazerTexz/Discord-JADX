@@ -16,15 +16,15 @@ class AsmUtil {
     static byte[] fixJSRInlining(byte[] byteCode) {
         ClassReader reader = new ClassReader(byteCode);
         ClassWriter writer = new FixedClassWriter(reader, 0);
-        ClassVisitor visitor = new AnonymousClass1(Opcodes.ASM7, writer);
+        ClassVisitor visitor = new C128081(Opcodes.ASM7, writer);
         reader.accept(visitor, 0);
         return writer.toByteArray();
     }
 
-    /* renamed from: lombok.bytecode.AsmUtil$1, reason: invalid class name */
+    /* renamed from: lombok.bytecode.AsmUtil$1 */
     /* loaded from: discord-126021.apk:lombok/bytecode/AsmUtil$1.SCL.lombok */
-    class AnonymousClass1 extends ClassVisitor {
-        AnonymousClass1(int $anonymous0, ClassVisitor $anonymous1) {
+    class C128081 extends ClassVisitor {
+        C128081(int $anonymous0, ClassVisitor $anonymous1) {
             super($anonymous0, $anonymous1);
         }
 

@@ -21,12 +21,12 @@ import java.util.UUID;
 public abstract class CancelWorkRunnable implements Runnable {
     private final OperationImpl mOperation = new OperationImpl();
 
-    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$1, reason: invalid class name */
-    public class AnonymousClass1 extends CancelWorkRunnable {
+    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$1 */
+    public class C07711 extends CancelWorkRunnable {
         public final /* synthetic */ UUID val$id;
         public final /* synthetic */ WorkManagerImpl val$workManagerImpl;
 
-        public AnonymousClass1(WorkManagerImpl workManagerImpl, UUID uuid) {
+        public C07711(WorkManagerImpl workManagerImpl, UUID uuid) {
             this.val$workManagerImpl = workManagerImpl;
             this.val$id = uuid;
         }
@@ -48,12 +48,12 @@ public abstract class CancelWorkRunnable implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$2, reason: invalid class name */
-    public class AnonymousClass2 extends CancelWorkRunnable {
+    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$2 */
+    public class C07722 extends CancelWorkRunnable {
         public final /* synthetic */ String val$tag;
         public final /* synthetic */ WorkManagerImpl val$workManagerImpl;
 
-        public AnonymousClass2(WorkManagerImpl workManagerImpl, String str) {
+        public C07722(WorkManagerImpl workManagerImpl, String str) {
             this.val$workManagerImpl = workManagerImpl;
             this.val$tag = str;
         }
@@ -78,13 +78,13 @@ public abstract class CancelWorkRunnable implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$3, reason: invalid class name */
-    public class AnonymousClass3 extends CancelWorkRunnable {
+    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$3 */
+    public class C07733 extends CancelWorkRunnable {
         public final /* synthetic */ boolean val$allowReschedule;
         public final /* synthetic */ String val$name;
         public final /* synthetic */ WorkManagerImpl val$workManagerImpl;
 
-        public AnonymousClass3(WorkManagerImpl workManagerImpl, String str, boolean z2) {
+        public C07733(WorkManagerImpl workManagerImpl, String str, boolean z2) {
             this.val$workManagerImpl = workManagerImpl;
             this.val$name = str;
             this.val$allowReschedule = z2;
@@ -112,11 +112,11 @@ public abstract class CancelWorkRunnable implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$4, reason: invalid class name */
-    public class AnonymousClass4 extends CancelWorkRunnable {
+    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$4 */
+    public class C07744 extends CancelWorkRunnable {
         public final /* synthetic */ WorkManagerImpl val$workManagerImpl;
 
-        public AnonymousClass4(WorkManagerImpl workManagerImpl) {
+        public C07744(WorkManagerImpl workManagerImpl) {
             this.val$workManagerImpl = workManagerImpl;
         }
 
@@ -139,19 +139,19 @@ public abstract class CancelWorkRunnable implements Runnable {
     }
 
     public static CancelWorkRunnable forAll(@NonNull WorkManagerImpl workManagerImpl) {
-        return new AnonymousClass4(workManagerImpl);
+        return new C07744(workManagerImpl);
     }
 
     public static CancelWorkRunnable forId(@NonNull UUID uuid, @NonNull WorkManagerImpl workManagerImpl) {
-        return new AnonymousClass1(workManagerImpl, uuid);
+        return new C07711(workManagerImpl, uuid);
     }
 
     public static CancelWorkRunnable forName(@NonNull String str, @NonNull WorkManagerImpl workManagerImpl, boolean z2) {
-        return new AnonymousClass3(workManagerImpl, str, z2);
+        return new C07733(workManagerImpl, str, z2);
     }
 
     public static CancelWorkRunnable forTag(@NonNull String str, @NonNull WorkManagerImpl workManagerImpl) {
-        return new AnonymousClass2(workManagerImpl, str);
+        return new C07722(workManagerImpl, str);
     }
 
     private void iterativelyCancelWorkAndDependents(WorkDatabase workDatabase, String str) {

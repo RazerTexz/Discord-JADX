@@ -15,11 +15,11 @@ public final class GuildExperimentFilter$Parser$parseFilters$1<T> implements Mod
     public final /* synthetic */ Model.JsonReader $reader;
 
     /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseFilters$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseFilters$1$1 */
+    public static final class RunnableC55491 implements Runnable {
         public final /* synthetic */ Ref$ObjectRef $filterHash;
 
-        public AnonymousClass1(Ref$ObjectRef ref$ObjectRef) {
+        public RunnableC55491(Ref$ObjectRef ref$ObjectRef) {
             this.$filterHash = ref$ObjectRef;
         }
 
@@ -30,11 +30,11 @@ public final class GuildExperimentFilter$Parser$parseFilters$1<T> implements Mod
     }
 
     /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseFilters$1$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements Runnable {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseFilters$1$2 */
+    public static final class RunnableC55502 implements Runnable {
         public final /* synthetic */ Ref$ObjectRef $filterHash;
 
-        public AnonymousClass2(Ref$ObjectRef ref$ObjectRef) {
+        public RunnableC55502(Ref$ObjectRef ref$ObjectRef) {
             this.$filterHash = ref$ObjectRef;
         }
 
@@ -57,13 +57,13 @@ public final class GuildExperimentFilter$Parser$parseFilters$1<T> implements Mod
     @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
     public /* bridge */ /* synthetic */ Unit get() throws IOException {
         get2();
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     /* renamed from: get, reason: avoid collision after fix types in other method */
     public final void get2() throws IOException {
         Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
         ref$ObjectRef.element = null;
-        this.$reader.nextListIndexed(new AnonymousClass1(ref$ObjectRef), new AnonymousClass2(ref$ObjectRef));
+        this.$reader.nextListIndexed(new RunnableC55491(ref$ObjectRef), new RunnableC55502(ref$ObjectRef));
     }
 }

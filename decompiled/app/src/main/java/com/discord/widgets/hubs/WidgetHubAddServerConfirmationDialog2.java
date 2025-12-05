@@ -1,0 +1,117 @@
+package com.discord.widgets.hubs;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: WidgetHubAddServerConfirmationDialog.kt */
+/* renamed from: com.discord.widgets.hubs.AddServerConfirmationArgs, reason: use source file name */
+/* loaded from: classes2.dex */
+public final /* data */ class WidgetHubAddServerConfirmationDialog2 implements Parcelable {
+    public static final Parcelable.Creator<WidgetHubAddServerConfirmationDialog2> CREATOR = new Creator();
+    private final long guildId;
+    private final String hubName;
+
+    /* renamed from: com.discord.widgets.hubs.AddServerConfirmationArgs$Creator */
+    public static class Creator implements Parcelable.Creator<WidgetHubAddServerConfirmationDialog2> {
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final WidgetHubAddServerConfirmationDialog2 createFromParcel(Parcel parcel) {
+            Intrinsics3.checkNotNullParameter(parcel, "in");
+            return new WidgetHubAddServerConfirmationDialog2(parcel.readLong(), parcel.readString());
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ WidgetHubAddServerConfirmationDialog2 createFromParcel(Parcel parcel) {
+            return createFromParcel(parcel);
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final WidgetHubAddServerConfirmationDialog2[] newArray(int i) {
+            return new WidgetHubAddServerConfirmationDialog2[i];
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ WidgetHubAddServerConfirmationDialog2[] newArray(int i) {
+            return newArray(i);
+        }
+    }
+
+    public WidgetHubAddServerConfirmationDialog2(long j, String str) {
+        Intrinsics3.checkNotNullParameter(str, "hubName");
+        this.guildId = j;
+        this.hubName = str;
+    }
+
+    public static /* synthetic */ WidgetHubAddServerConfirmationDialog2 copy$default(WidgetHubAddServerConfirmationDialog2 widgetHubAddServerConfirmationDialog2, long j, String str, int i, Object obj) {
+        if ((i & 1) != 0) {
+            j = widgetHubAddServerConfirmationDialog2.guildId;
+        }
+        if ((i & 2) != 0) {
+            str = widgetHubAddServerConfirmationDialog2.hubName;
+        }
+        return widgetHubAddServerConfirmationDialog2.copy(j, str);
+    }
+
+    /* renamed from: component1, reason: from getter */
+    public final long getGuildId() {
+        return this.guildId;
+    }
+
+    /* renamed from: component2, reason: from getter */
+    public final String getHubName() {
+        return this.hubName;
+    }
+
+    public final WidgetHubAddServerConfirmationDialog2 copy(long guildId, String hubName) {
+        Intrinsics3.checkNotNullParameter(hubName, "hubName");
+        return new WidgetHubAddServerConfirmationDialog2(guildId, hubName);
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof WidgetHubAddServerConfirmationDialog2)) {
+            return false;
+        }
+        WidgetHubAddServerConfirmationDialog2 widgetHubAddServerConfirmationDialog2 = (WidgetHubAddServerConfirmationDialog2) other;
+        return this.guildId == widgetHubAddServerConfirmationDialog2.guildId && Intrinsics3.areEqual(this.hubName, widgetHubAddServerConfirmationDialog2.hubName);
+    }
+
+    public final long getGuildId() {
+        return this.guildId;
+    }
+
+    public final String getHubName() {
+        return this.hubName;
+    }
+
+    public int hashCode() {
+        int iM3a = C0002b.m3a(this.guildId) * 31;
+        String str = this.hubName;
+        return iM3a + (str != null ? str.hashCode() : 0);
+    }
+
+    public String toString() {
+        StringBuilder sbM833U = outline.m833U("AddServerConfirmationArgs(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", hubName=");
+        return outline.m822J(sbM833U, this.hubName, ")");
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel parcel, int flags) {
+        Intrinsics3.checkNotNullParameter(parcel, "parcel");
+        parcel.writeLong(this.guildId);
+        parcel.writeString(this.hubName);
+    }
+}

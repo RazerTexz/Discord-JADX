@@ -8,8 +8,8 @@ import androidx.room.RoomMasterTable;
 import androidx.room.RoomOpenHelper;
 import androidx.room.util.DBUtil;
 import androidx.room.util.TableInfo;
-import androidx.sqlite.db.SupportSQLiteDatabase;
-import androidx.sqlite.db.SupportSQLiteOpenHelper;
+import androidx.sqlite.p006db.SupportSQLiteDatabase;
+import androidx.sqlite.p006db.SupportSQLiteOpenHelper;
 import androidx.work.impl.model.DependencyDao;
 import androidx.work.impl.model.DependencyDao_Impl;
 import androidx.work.impl.model.PreferenceDao;
@@ -43,9 +43,9 @@ public final class WorkDatabase_Impl extends WorkDatabase {
     private volatile WorkSpecDao _workSpecDao;
     private volatile WorkTagDao _workTagDao;
 
-    /* renamed from: androidx.work.impl.WorkDatabase_Impl$1, reason: invalid class name */
-    public class AnonymousClass1 extends RoomOpenHelper.Delegate {
-        public AnonymousClass1(int i) {
+    /* renamed from: androidx.work.impl.WorkDatabase_Impl$1 */
+    public class C07301 extends RoomOpenHelper.Delegate {
+        public C07301(int i) {
             super(i);
         }
 
@@ -307,7 +307,7 @@ public final class WorkDatabase_Impl extends WorkDatabase {
 
     @Override // androidx.room.RoomDatabase
     public SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration databaseConfiguration) {
-        return databaseConfiguration.sqliteOpenHelperFactory.create(SupportSQLiteOpenHelper.Configuration.builder(databaseConfiguration.context).name(databaseConfiguration.name).callback(new RoomOpenHelper(databaseConfiguration, new AnonymousClass1(11), "cf029002fffdcadf079e8d0a1c9a70ac", "8aff2efc47fafe870c738f727dfcfc6e")).build());
+        return databaseConfiguration.sqliteOpenHelperFactory.create(SupportSQLiteOpenHelper.Configuration.builder(databaseConfiguration.context).name(databaseConfiguration.name).callback(new RoomOpenHelper(databaseConfiguration, new C07301(11), "cf029002fffdcadf079e8d0a1c9a70ac", "8aff2efc47fafe870c738f727dfcfc6e")).build());
     }
 
     @Override // androidx.work.impl.WorkDatabase

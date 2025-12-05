@@ -1,0 +1,59 @@
+package com.discord.widgets.guildscheduledevent;
+
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.core.widget.NestedScrollView;
+import com.discord.C5419R;
+import com.discord.databinding.WidgetGuildScheduledEventUpsellBottomSheetBinding;
+import com.google.android.material.button.MaterialButton;
+import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
+/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$binding$2, reason: use source file name */
+/* loaded from: classes2.dex */
+public final /* synthetic */ class WidgetGuildScheduledEventUpsellBottomSheet2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildScheduledEventUpsellBottomSheetBinding> {
+    public static final WidgetGuildScheduledEventUpsellBottomSheet2 INSTANCE = new WidgetGuildScheduledEventUpsellBottomSheet2();
+
+    public WidgetGuildScheduledEventUpsellBottomSheet2() {
+        super(1, WidgetGuildScheduledEventUpsellBottomSheetBinding.class, "bind", "bind(Landroid/view/View;)Lcom/discord/databinding/WidgetGuildScheduledEventUpsellBottomSheetBinding;", 0);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ WidgetGuildScheduledEventUpsellBottomSheetBinding invoke(View view) {
+        return invoke2(view);
+    }
+
+    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final WidgetGuildScheduledEventUpsellBottomSheetBinding invoke2(View view) {
+        Intrinsics3.checkNotNullParameter(view, "p1");
+        int i = C5419R.id.cancel_button;
+        MaterialButton materialButton = (MaterialButton) view.findViewById(C5419R.id.cancel_button);
+        if (materialButton != null) {
+            i = C5419R.id.confirm_button;
+            MaterialButton materialButton2 = (MaterialButton) view.findViewById(C5419R.id.confirm_button);
+            if (materialButton2 != null) {
+                i = C5419R.id.upsell_body;
+                TextView textView = (TextView) view.findViewById(C5419R.id.upsell_body);
+                if (textView != null) {
+                    i = C5419R.id.upsell_header_part_1;
+                    TextView textView2 = (TextView) view.findViewById(C5419R.id.upsell_header_part_1);
+                    if (textView2 != null) {
+                        i = C5419R.id.upsell_header_part_2;
+                        TextView textView3 = (TextView) view.findViewById(C5419R.id.upsell_header_part_2);
+                        if (textView3 != null) {
+                            i = C5419R.id.upsell_image;
+                            ImageView imageView = (ImageView) view.findViewById(C5419R.id.upsell_image);
+                            if (imageView != null) {
+                                return new WidgetGuildScheduledEventUpsellBottomSheetBinding((NestedScrollView) view, materialButton, materialButton2, textView, textView2, textView3, imageView);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i)));
+    }
+}

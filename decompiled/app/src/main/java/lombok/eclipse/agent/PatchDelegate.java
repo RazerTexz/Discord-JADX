@@ -77,7 +77,7 @@ import org.eclipse.jdt.internal.core.SourceTypeElementInfo;
 public class PatchDelegate {
     private static final String LEGALITY_OF_DELEGATE = "@Delegate is legal only on instance fields or no-argument instance methods.";
     private static final String RECURSION_NOT_ALLOWED = "@Delegate does not support recursion (delegating to a type that itself has @Delegate members). Member \"%s\" is @Delegate in type \"%s\"";
-    private static ThreadLocal<List<ClassScopeEntry>> visited = new AnonymousClass1();
+    private static ThreadLocal<List<ClassScopeEntry>> visited = new C128541();
     private static boolean javaModelManagerAvailable = true;
     private static final char[] STRING_LOMBOK = {'l', 'o', 'm', 'b', 'o', 'k'};
     private static final char[] STRING_EXPERIMENTAL = {'e', 'x', 'p', 'e', 'r', 'i', 'm', 'e', 'n', 't', 'a', 'l'};
@@ -99,15 +99,15 @@ public class PatchDelegate {
         }
     }
 
-    /* renamed from: lombok.eclipse.agent.PatchDelegate$1, reason: invalid class name */
+    /* renamed from: lombok.eclipse.agent.PatchDelegate$1 */
     /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchDelegate$1.SCL.lombok */
-    class AnonymousClass1 extends ThreadLocal<List<ClassScopeEntry>> {
+    class C128541 extends ThreadLocal<List<ClassScopeEntry>> {
         @Override // java.lang.ThreadLocal
         protected /* bridge */ /* synthetic */ List<ClassScopeEntry> initialValue() {
             return initialValue();
         }
 
-        AnonymousClass1() {
+        C128541() {
         }
 
         /* JADX WARN: Can't rename method to resolve collision */
@@ -392,7 +392,7 @@ public class PatchDelegate {
 
     private static void generateDelegateMethods(EclipseNode typeNode, List<BindingTuple> methods, DelegateReceiver delegateReceiver) {
         CompilationUnitDeclaration top = typeNode.top().get();
-        String qualifiedName = new String(CharOperation.concatWith(EclipseHandlerUtil.getQualifiedInnerName(typeNode.up(), typeNode.getName().toCharArray()), '$'));
+        String qualifiedName = new String(CharOperation.concatWith(EclipseHandlerUtil.getQualifiedInnerName(typeNode.m10925up(), typeNode.getName().toCharArray()), '$'));
         SourceType sourceType = getSourceType(top, qualifiedName);
         List<SourceMethod> delegateSourceMethods = getDelegateMethods(sourceType);
         for (BindingTuple pair : methods) {
@@ -429,7 +429,7 @@ public class PatchDelegate {
                     }
                 }
             }
-            eclipseNodeUp = enclosingType.up();
+            eclipseNodeUp = enclosingType.m10925up();
         }
         Set<String> usedInMethodSig = new HashSet<>();
         for (TypeVariableBinding var : typeVars) {
@@ -1050,8 +1050,8 @@ public class PatchDelegate {
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
     /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchDelegate$DelegateReceiver.SCL.lombok */
     private static abstract class DelegateReceiver {
-        public static final DelegateReceiver METHOD = new AnonymousClass1("METHOD", 0);
-        public static final DelegateReceiver FIELD = new AnonymousClass2("FIELD", 1);
+        public static final DelegateReceiver METHOD = new C128551("METHOD", 0);
+        public static final DelegateReceiver FIELD = new C128562("FIELD", 1);
         private static final /* synthetic */ DelegateReceiver[] ENUM$VALUES = {METHOD, FIELD};
 
         public abstract Expression get(ASTNode aSTNode, char[] cArr);
@@ -1068,10 +1068,10 @@ public class PatchDelegate {
             return (DelegateReceiver) Enum.valueOf(DelegateReceiver.class, str);
         }
 
-        /* renamed from: lombok.eclipse.agent.PatchDelegate$DelegateReceiver$1, reason: invalid class name */
+        /* renamed from: lombok.eclipse.agent.PatchDelegate$DelegateReceiver$1 */
         /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchDelegate$DelegateReceiver$1.SCL.lombok */
-        enum AnonymousClass1 extends DelegateReceiver {
-            AnonymousClass1(String str, int i) {
+        enum C128551 extends DelegateReceiver {
+            C128551(String str, int i) {
                 super(str, i, null);
             }
 
@@ -1096,10 +1096,10 @@ public class PatchDelegate {
             this(str, i);
         }
 
-        /* renamed from: lombok.eclipse.agent.PatchDelegate$DelegateReceiver$2, reason: invalid class name */
+        /* renamed from: lombok.eclipse.agent.PatchDelegate$DelegateReceiver$2 */
         /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchDelegate$DelegateReceiver$2.SCL.lombok */
-        enum AnonymousClass2 extends DelegateReceiver {
-            AnonymousClass2(String str, int i) {
+        enum C128562 extends DelegateReceiver {
+            C128562(String str, int i) {
                 super(str, i, null);
             }
 

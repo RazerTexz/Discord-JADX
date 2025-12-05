@@ -1,14 +1,14 @@
 package com.discord.widgets.hubs.events;
 
 import android.os.Bundle;
-import b.d.b.a.a;
 import com.discord.app.AppBottomSheet;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: ArgUtils.kt */
 /* loaded from: classes2.dex */
-public final class WidgetHubEventsPage$$special$$inlined$args$1 extends o implements Function0<HubEventsArgs> {
+public final class WidgetHubEventsPage$$special$$inlined$args$1 extends Lambda implements Function0<WidgetHubEventsPage2> {
     public final /* synthetic */ String $argsKey;
     public final /* synthetic */ AppBottomSheet $this_args;
 
@@ -21,21 +21,21 @@ public final class WidgetHubEventsPage$$special$$inlined$args$1 extends o implem
 
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // kotlin.jvm.functions.Function0
-    public final HubEventsArgs invoke() {
+    public final WidgetHubEventsPage2 invoke() {
         Bundle arguments = this.$this_args.getArguments();
         Object obj = arguments != null ? arguments.get(this.$argsKey) : null;
-        HubEventsArgs hubEventsArgs = (HubEventsArgs) (obj instanceof HubEventsArgs ? obj : null);
-        if (hubEventsArgs != null) {
-            return hubEventsArgs;
+        WidgetHubEventsPage2 widgetHubEventsPage2 = (WidgetHubEventsPage2) (obj instanceof WidgetHubEventsPage2 ? obj : null);
+        if (widgetHubEventsPage2 != null) {
+            return widgetHubEventsPage2;
         }
-        StringBuilder sbU = a.U("Missing args for class type ");
-        a.l0(HubEventsArgs.class, sbU, " + key ");
-        throw new IllegalStateException(a.H(sbU, this.$argsKey, '!'));
+        StringBuilder sbM833U = outline.m833U("Missing args for class type ");
+        outline.m862l0(WidgetHubEventsPage2.class, sbM833U, " + key ");
+        throw new IllegalStateException(outline.m820H(sbM833U, this.$argsKey, '!'));
     }
 
     /* JADX WARN: Type inference failed for: r0v0, types: [android.os.Parcelable, com.discord.widgets.hubs.events.HubEventsArgs] */
     @Override // kotlin.jvm.functions.Function0
-    public /* bridge */ /* synthetic */ HubEventsArgs invoke() {
+    public /* bridge */ /* synthetic */ WidgetHubEventsPage2 invoke() {
         return invoke();
     }
 }

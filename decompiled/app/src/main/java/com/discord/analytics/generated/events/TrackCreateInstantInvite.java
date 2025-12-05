@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackCreateInstantInvite.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean temporary = null;
     private final Long maxUses = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchem
             return false;
         }
         TrackCreateInstantInvite trackCreateInstantInvite = (TrackCreateInstantInvite) other;
-        return m.areEqual(this.temporary, trackCreateInstantInvite.temporary) && m.areEqual(this.maxUses, trackCreateInstantInvite.maxUses) && m.areEqual(this.maxAge, trackCreateInstantInvite.maxAge) && m.areEqual(this.regenerate, trackCreateInstantInvite.regenerate) && m.areEqual(this.unique, trackCreateInstantInvite.unique) && m.areEqual(this.code, trackCreateInstantInvite.code) && m.areEqual(this.guildId, trackCreateInstantInvite.guildId) && m.areEqual(this.channelId, trackCreateInstantInvite.channelId) && m.areEqual(this.channelType, trackCreateInstantInvite.channelType) && m.areEqual(this.inviteType, trackCreateInstantInvite.inviteType);
+        return Intrinsics3.areEqual(this.temporary, trackCreateInstantInvite.temporary) && Intrinsics3.areEqual(this.maxUses, trackCreateInstantInvite.maxUses) && Intrinsics3.areEqual(this.maxAge, trackCreateInstantInvite.maxAge) && Intrinsics3.areEqual(this.regenerate, trackCreateInstantInvite.regenerate) && Intrinsics3.areEqual(this.unique, trackCreateInstantInvite.unique) && Intrinsics3.areEqual(this.code, trackCreateInstantInvite.code) && Intrinsics3.areEqual(this.guildId, trackCreateInstantInvite.guildId) && Intrinsics3.areEqual(this.channelId, trackCreateInstantInvite.channelId) && Intrinsics3.areEqual(this.channelType, trackCreateInstantInvite.channelType) && Intrinsics3.areEqual(this.inviteType, trackCreateInstantInvite.inviteType);
     }
 
     public int hashCode() {
@@ -64,25 +64,25 @@ public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackCreateInstantInvite(temporary=");
-        sbU.append(this.temporary);
-        sbU.append(", maxUses=");
-        sbU.append(this.maxUses);
-        sbU.append(", maxAge=");
-        sbU.append(this.maxAge);
-        sbU.append(", regenerate=");
-        sbU.append(this.regenerate);
-        sbU.append(", unique=");
-        sbU.append(this.unique);
-        sbU.append(", code=");
-        sbU.append(this.code);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", inviteType=");
-        return a.G(sbU, this.inviteType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackCreateInstantInvite(temporary=");
+        sbM833U.append(this.temporary);
+        sbM833U.append(", maxUses=");
+        sbM833U.append(this.maxUses);
+        sbM833U.append(", maxAge=");
+        sbM833U.append(this.maxAge);
+        sbM833U.append(", regenerate=");
+        sbM833U.append(this.regenerate);
+        sbM833U.append(", unique=");
+        sbM833U.append(this.unique);
+        sbM833U.append(", code=");
+        sbM833U.append(this.code);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", inviteType=");
+        return outline.m819G(sbM833U, this.inviteType, ")");
     }
 }

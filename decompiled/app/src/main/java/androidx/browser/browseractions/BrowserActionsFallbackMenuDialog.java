@@ -16,11 +16,11 @@ public class BrowserActionsFallbackMenuDialog extends Dialog {
     private static final long EXIT_ANIMATION_DURATION_MS = 150;
     private final View mContentView;
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuDialog$1, reason: invalid class name */
-    public class AnonymousClass1 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuDialog$1 */
+    public class C01461 extends AnimatorListenerAdapter {
         public final /* synthetic */ boolean val$isEnterAnimation;
 
-        public AnonymousClass1(boolean z2) {
+        public C01461(boolean z2) {
             this.val$isEnterAnimation = z2;
         }
 
@@ -48,7 +48,7 @@ public class BrowserActionsFallbackMenuDialog extends Dialog {
         long j = z2 ? ENTER_ANIMATION_DURATION_MS : 150L;
         this.mContentView.setScaleX(f);
         this.mContentView.setScaleY(f);
-        this.mContentView.animate().scaleX(f2).scaleY(f2).setDuration(j).setInterpolator(new LinearOutSlowInInterpolator()).setListener(new AnonymousClass1(z2)).start();
+        this.mContentView.animate().scaleX(f2).scaleY(f2).setDuration(j).setInterpolator(new LinearOutSlowInInterpolator()).setListener(new C01461(z2)).start();
     }
 
     @Override // android.app.Dialog, android.content.DialogInterface

@@ -3,33 +3,35 @@ package com.discord.widgets.stage.sheet;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import androidx.core.os.BundleKt;
+import androidx.core.os.Bundle2;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetStageModeratorJoinBottomSheetBinding;
 import com.discord.stores.StoreStream;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import d0.g;
-import d0.o;
-import d0.z.d.m;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppToast;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.Tuples;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetStageModeratorJoinBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageModeratorJoinBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStageModeratorJoinBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageModeratorJoinBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -46,9 +48,9 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, long channelId) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetStageModeratorJoinBottomSheet widgetStageModeratorJoinBottomSheet = new WidgetStageModeratorJoinBottomSheet();
-            widgetStageModeratorJoinBottomSheet.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId))));
+            widgetStageModeratorJoinBottomSheet.setArguments(Bundle2.bundleOf(Tuples.m10073to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId))));
             widgetStageModeratorJoinBottomSheet.show(fragmentManager, WidgetStageModeratorJoinBottomSheet.class.getSimpleName());
         }
 
@@ -58,31 +60,31 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1 */
+    public static final class ViewOnClickListenerC100271 implements View.OnClickListener {
 
         /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C04641 extends d0.z.d.o implements Function0<Unit> {
-            public C04641() {
+        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+            public AnonymousClass1() {
                 super(0);
             }
 
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                b.a.d.m.g(WidgetStageModeratorJoinBottomSheet.this.getContext(), R.string.stage_channel_permission_microphone_denied, 0, null, 12);
+                AppToast.m169g(WidgetStageModeratorJoinBottomSheet.this.getContext(), C5419R.string.stage_channel_permission_microphone_denied, 0, null, 12);
             }
         }
 
         /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
         /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends d0.z.d.o implements Function0<Unit> {
+        public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
             }
@@ -90,7 +92,7 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -99,19 +101,19 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
             }
         }
 
-        public AnonymousClass1() {
+        public ViewOnClickListenerC100271() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetStageModeratorJoinBottomSheet.this.requestMicrophone(new C04641(), new AnonymousClass2());
+            WidgetStageModeratorJoinBottomSheet.this.requestMicrophone(new AnonymousClass1(), new AnonymousClass2());
         }
     }
 
     /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$2 */
+    public static final class ViewOnClickListenerC100282 implements View.OnClickListener {
+        public ViewOnClickListenerC100282() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -121,16 +123,16 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$setSelfSpeaker$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Void, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$setSelfSpeaker$1 */
+    public static final class C100291 extends Lambda implements Function1<Void, Unit> {
+        public C100291() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -141,8 +143,8 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
 
     public WidgetStageModeratorJoinBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetStageModeratorJoinBottomSheet$binding$2.INSTANCE, null, 2, null);
-        this.channelId = g.lazy(new WidgetStageModeratorJoinBottomSheet$channelId$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetStageModeratorJoinBottomSheet2.INSTANCE, null, 2, null);
+        this.channelId = LazyJVM.lazy(new WidgetStageModeratorJoinBottomSheet3(this));
     }
 
     public static final /* synthetic */ Bundle access$getArgumentsOrDefault$p(WidgetStageModeratorJoinBottomSheet widgetStageModeratorJoinBottomSheet) {
@@ -164,20 +166,20 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
     private final void setSelfSpeaker() {
         Channel channel = StoreStream.INSTANCE.getChannels().getChannel(getChannelId());
         if (channel != null) {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApiSerializeNulls().setMeSuppressed(channel, false), false, 1, null), this, null, 2, null), WidgetStageModeratorJoinBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApiSerializeNulls().setMeSuppressed(channel, false), false, 1, null), this, null, 2, null), WidgetStageModeratorJoinBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C100291(), 62, (Object) null);
         }
     }
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_stage_moderator_join_bottom_sheet;
+        return C5419R.layout.widget_stage_moderator_join_bottom_sheet;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
-        getBinding().c.setOnClickListener(new AnonymousClass1());
-        getBinding().f2656b.setOnClickListener(new AnonymousClass2());
+        getBinding().f18164c.setOnClickListener(new ViewOnClickListenerC100271());
+        getBinding().f18163b.setOnClickListener(new ViewOnClickListenerC100282());
     }
 }

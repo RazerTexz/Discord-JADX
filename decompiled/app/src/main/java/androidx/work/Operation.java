@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.view.LiveData;
-import b.i.b.d.a.a;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 /* loaded from: classes.dex */
 public interface Operation {
@@ -38,7 +38,7 @@ public interface Operation {
         }
 
         public static final class IN_PROGRESS extends State {
-            public /* synthetic */ IN_PROGRESS(AnonymousClass1 anonymousClass1) {
+            public /* synthetic */ IN_PROGRESS(C07181 c07181) {
                 this();
             }
 
@@ -52,7 +52,7 @@ public interface Operation {
         }
 
         public static final class SUCCESS extends State {
-            public /* synthetic */ SUCCESS(AnonymousClass1 anonymousClass1) {
+            public /* synthetic */ SUCCESS(C07181 c07181) {
                 this();
             }
 
@@ -71,7 +71,7 @@ public interface Operation {
     }
 
     @NonNull
-    a<State.SUCCESS> getResult();
+    ListenableFuture8<State.SUCCESS> getResult();
 
     @NonNull
     LiveData<State> getState();

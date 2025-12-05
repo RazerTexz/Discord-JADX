@@ -56,7 +56,7 @@ public class EclipseSingularsRecipes {
     /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$StatementMaker.SCL.lombok */
     public interface StatementMaker {
         /* renamed from: make */
-        Statement mo186make();
+        Statement mo11563make();
     }
 
     /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$TypeReferenceMaker.SCL.lombok */
@@ -305,12 +305,12 @@ public class EclipseSingularsRecipes {
             return Arrays.equals(p, s2) ? Collections.singletonList(p) : Arrays.asList(new char[]{p, s2});
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseSingularsRecipes$EclipseSingularizer$1, reason: invalid class name */
+        /* renamed from: lombok.eclipse.handlers.EclipseSingularsRecipes$EclipseSingularizer$1 */
         /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$EclipseSingularizer$1.SCL.lombok */
-        class AnonymousClass1 implements TypeReferenceMaker {
+        class C128641 implements TypeReferenceMaker {
             private final /* synthetic */ HandleBuilder.BuilderJob val$job;
 
-            AnonymousClass1(HandleBuilder.BuilderJob builderJob) {
+            C128641(HandleBuilder.BuilderJob builderJob) {
                 this.val$job = builderJob;
             }
 
@@ -321,23 +321,23 @@ public class EclipseSingularsRecipes {
         }
 
         public void generateMethods(HandleBuilder.BuilderJob job, SingularData data, boolean deprecate) {
-            TypeReferenceMaker returnTypeMaker = new AnonymousClass1(job);
-            StatementMaker returnStatementMaker = new AnonymousClass2(job);
+            TypeReferenceMaker returnTypeMaker = new C128641(job);
+            StatementMaker returnStatementMaker = new C128652(job);
             generateMethods(job.checkerFramework, data, deprecate, job.builderType, job.oldFluent, returnTypeMaker, returnStatementMaker, job.accessInners);
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseSingularsRecipes$EclipseSingularizer$2, reason: invalid class name */
+        /* renamed from: lombok.eclipse.handlers.EclipseSingularsRecipes$EclipseSingularizer$2 */
         /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$EclipseSingularizer$2.SCL.lombok */
-        class AnonymousClass2 implements StatementMaker {
+        class C128652 implements StatementMaker {
             private final /* synthetic */ HandleBuilder.BuilderJob val$job;
 
             @Override // lombok.eclipse.handlers.EclipseSingularsRecipes.StatementMaker
             /* renamed from: make, reason: collision with other method in class */
-            public /* bridge */ /* synthetic */ Statement mo186make() {
+            public /* bridge */ /* synthetic */ Statement mo11563make() {
                 return make();
             }
 
-            AnonymousClass2(HandleBuilder.BuilderJob builderJob) {
+            C128652(HandleBuilder.BuilderJob builderJob) {
                 this.val$job = builderJob;
             }
 

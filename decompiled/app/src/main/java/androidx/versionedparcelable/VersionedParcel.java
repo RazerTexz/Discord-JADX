@@ -14,7 +14,6 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.collection.ArrayMap;
 import androidx.collection.ArraySet;
-import b.d.b.a.a;
 import com.discord.api.message.MessageTypes;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -32,6 +31,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
@@ -56,9 +56,9 @@ public abstract class VersionedParcel {
     public final ArrayMap<String, Method> mReadCache;
     public final ArrayMap<String, Method> mWriteCache;
 
-    /* renamed from: androidx.versionedparcelable.VersionedParcel$1, reason: invalid class name */
-    public class AnonymousClass1 extends ObjectInputStream {
-        public AnonymousClass1(InputStream inputStream) {
+    /* renamed from: androidx.versionedparcelable.VersionedParcel$1 */
+    public class C06821 extends ObjectInputStream {
+        public C06821(InputStream inputStream) {
             super(inputStream);
         }
 
@@ -392,11 +392,11 @@ public abstract class VersionedParcel {
             return null;
         }
         try {
-            return (Serializable) new AnonymousClass1(new ByteArrayInputStream(readByteArray())).readObject();
+            return (Serializable) new C06821(new ByteArrayInputStream(readByteArray())).readObject();
         } catch (IOException e) {
-            throw new RuntimeException(a.y("VersionedParcelable encountered IOException reading a Serializable object (name = ", string, ")"), e);
+            throw new RuntimeException(outline.m886y("VersionedParcelable encountered IOException reading a Serializable object (name = ", string, ")"), e);
         } catch (ClassNotFoundException e2) {
-            throw new RuntimeException(a.y("VersionedParcelable encountered ClassNotFoundException reading a Serializable object (name = ", string, ")"), e2);
+            throw new RuntimeException(outline.m886y("VersionedParcelable encountered ClassNotFoundException reading a Serializable object (name = ", string, ")"), e2);
         }
     }
 
@@ -798,7 +798,7 @@ public abstract class VersionedParcel {
             objectOutputStream.close();
             writeByteArray(byteArrayOutputStream.toByteArray());
         } catch (IOException e) {
-            throw new RuntimeException(a.y("VersionedParcelable encountered IOException writing serializable object (name = ", name, ")"), e);
+            throw new RuntimeException(outline.m886y("VersionedParcelable encountered IOException writing serializable object (name = ", name, ")"), e);
         }
     }
 

@@ -1,10 +1,11 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import b.d.b.a.a;
 import com.discord.models.commands.Application;
 import com.discord.models.commands.ApplicationCommand;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Autocompletable.kt */
 /* loaded from: classes2.dex */
@@ -18,12 +19,12 @@ public final /* data */ class ApplicationCommandAutocompletable extends Autocomp
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ApplicationCommandAutocompletable(Application application, ApplicationCommand applicationCommand, boolean z2, boolean z3) {
         super(null);
-        m.checkNotNullParameter(applicationCommand, "command");
+        Intrinsics3.checkNotNullParameter(applicationCommand, "command");
         this.application = application;
         this.command = applicationCommand;
         this.hasPermissionToUse = z2;
         this.showAvatar = z3;
-        this.textMatchers = d0.t.m.listOf(leadingIdentifier().getIdentifier() + applicationCommand.getName());
+        this.textMatchers = CollectionsJVM.listOf(leadingIdentifier().getIdentifier() + applicationCommand.getName());
     }
 
     public static /* synthetic */ ApplicationCommandAutocompletable copy$default(ApplicationCommandAutocompletable applicationCommandAutocompletable, Application application, ApplicationCommand applicationCommand, boolean z2, boolean z3, int i, Object obj) {
@@ -63,7 +64,7 @@ public final /* data */ class ApplicationCommandAutocompletable extends Autocomp
     }
 
     public final ApplicationCommandAutocompletable copy(Application application, ApplicationCommand command, boolean hasPermissionToUse, boolean showAvatar) {
-        m.checkNotNullParameter(command, "command");
+        Intrinsics3.checkNotNullParameter(command, "command");
         return new ApplicationCommandAutocompletable(application, command, hasPermissionToUse, showAvatar);
     }
 
@@ -75,7 +76,7 @@ public final /* data */ class ApplicationCommandAutocompletable extends Autocomp
             return false;
         }
         ApplicationCommandAutocompletable applicationCommandAutocompletable = (ApplicationCommandAutocompletable) other;
-        return m.areEqual(this.application, applicationCommandAutocompletable.application) && m.areEqual(this.command, applicationCommandAutocompletable.command) && this.hasPermissionToUse == applicationCommandAutocompletable.hasPermissionToUse && this.showAvatar == applicationCommandAutocompletable.showAvatar;
+        return Intrinsics3.areEqual(this.application, applicationCommandAutocompletable.application) && Intrinsics3.areEqual(this.command, applicationCommandAutocompletable.command) && this.hasPermissionToUse == applicationCommandAutocompletable.hasPermissionToUse && this.showAvatar == applicationCommandAutocompletable.showAvatar;
     }
 
     public final Application getApplication() {
@@ -130,13 +131,13 @@ public final /* data */ class ApplicationCommandAutocompletable extends Autocomp
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ApplicationCommandAutocompletable(application=");
-        sbU.append(this.application);
-        sbU.append(", command=");
-        sbU.append(this.command);
-        sbU.append(", hasPermissionToUse=");
-        sbU.append(this.hasPermissionToUse);
-        sbU.append(", showAvatar=");
-        return a.O(sbU, this.showAvatar, ")");
+        StringBuilder sbM833U = outline.m833U("ApplicationCommandAutocompletable(application=");
+        sbM833U.append(this.application);
+        sbM833U.append(", command=");
+        sbM833U.append(this.command);
+        sbM833U.append(", hasPermissionToUse=");
+        sbM833U.append(this.hasPermissionToUse);
+        sbM833U.append(", showAvatar=");
+        return outline.m827O(sbM833U, this.showAvatar, ")");
     }
 }

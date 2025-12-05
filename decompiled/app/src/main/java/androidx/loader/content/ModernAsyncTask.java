@@ -7,7 +7,6 @@ import android.os.Message;
 import android.os.Process;
 import android.util.Log;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.a;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CancellationException;
@@ -21,6 +20,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class ModernAsyncTask<Params, Progress, Result> {
@@ -41,21 +41,21 @@ public abstract class ModernAsyncTask<Params, Progress, Result> {
     public final AtomicBoolean mCancelled = new AtomicBoolean();
     public final AtomicBoolean mTaskInvoked = new AtomicBoolean();
 
-    /* renamed from: androidx.loader.content.ModernAsyncTask$1, reason: invalid class name */
-    public static class AnonymousClass1 implements ThreadFactory {
+    /* renamed from: androidx.loader.content.ModernAsyncTask$1 */
+    public static class ThreadFactoryC04701 implements ThreadFactory {
         private final AtomicInteger mCount = new AtomicInteger(1);
 
         @Override // java.util.concurrent.ThreadFactory
         public Thread newThread(Runnable runnable) {
-            StringBuilder sbU = a.U("ModernAsyncTask #");
-            sbU.append(this.mCount.getAndIncrement());
-            return new Thread(runnable, sbU.toString());
+            StringBuilder sbM833U = outline.m833U("ModernAsyncTask #");
+            sbM833U.append(this.mCount.getAndIncrement());
+            return new Thread(runnable, sbM833U.toString());
         }
     }
 
-    /* renamed from: androidx.loader.content.ModernAsyncTask$2, reason: invalid class name */
-    public class AnonymousClass2 extends WorkerRunnable<Params, Result> {
-        public AnonymousClass2() {
+    /* renamed from: androidx.loader.content.ModernAsyncTask$2 */
+    public class C04712 extends WorkerRunnable<Params, Result> {
+        public C04712() {
         }
 
         @Override // java.util.concurrent.Callable
@@ -72,9 +72,9 @@ public abstract class ModernAsyncTask<Params, Progress, Result> {
         }
     }
 
-    /* renamed from: androidx.loader.content.ModernAsyncTask$3, reason: invalid class name */
-    public class AnonymousClass3 extends FutureTask<Result> {
-        public AnonymousClass3(Callable callable) {
+    /* renamed from: androidx.loader.content.ModernAsyncTask$3 */
+    public class C04723 extends FutureTask<Result> {
+        public C04723(Callable callable) {
             super(callable);
         }
 
@@ -94,8 +94,8 @@ public abstract class ModernAsyncTask<Params, Progress, Result> {
         }
     }
 
-    /* renamed from: androidx.loader.content.ModernAsyncTask$4, reason: invalid class name */
-    public static /* synthetic */ class AnonymousClass4 {
+    /* renamed from: androidx.loader.content.ModernAsyncTask$4 */
+    public static /* synthetic */ class C04734 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$loader$content$ModernAsyncTask$Status;
 
         static {
@@ -155,19 +155,19 @@ public abstract class ModernAsyncTask<Params, Progress, Result> {
     }
 
     static {
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-        sThreadFactory = anonymousClass1;
+        ThreadFactoryC04701 threadFactoryC04701 = new ThreadFactoryC04701();
+        sThreadFactory = threadFactoryC04701;
         LinkedBlockingQueue linkedBlockingQueue = new LinkedBlockingQueue(10);
         sPoolWorkQueue = linkedBlockingQueue;
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 128, 1L, TimeUnit.SECONDS, linkedBlockingQueue, anonymousClass1);
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 128, 1L, TimeUnit.SECONDS, linkedBlockingQueue, threadFactoryC04701);
         THREAD_POOL_EXECUTOR = threadPoolExecutor;
         sDefaultExecutor = threadPoolExecutor;
     }
 
     public ModernAsyncTask() {
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-        this.mWorker = anonymousClass2;
-        this.mFuture = new AnonymousClass3(anonymousClass2);
+        C04712 c04712 = new C04712();
+        this.mWorker = c04712;
+        this.mFuture = new C04723(c04712);
     }
 
     private static Handler getHandler() {

@@ -4,28 +4,29 @@ import android.content.Intent;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
-import b.c.a.a0.d;
-import b.i.a.f.d.c;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p298d.C3228c;
 
 /* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
 /* loaded from: classes3.dex */
 public final class CloudMessage extends AbstractSafeParcelable {
 
     @NonNull
-    public static final Parcelable.Creator<CloudMessage> CREATOR = new c();
+    public static final Parcelable.Creator<CloudMessage> CREATOR = new C3228c();
 
+    /* renamed from: j */
     @NonNull
-    public Intent j;
+    public Intent f20470j;
 
     public CloudMessage(@NonNull Intent intent) {
-        this.j = intent;
+        this.f20470j = intent;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i) {
-        int iY2 = d.y2(parcel, 20293);
-        d.s2(parcel, 1, this.j, i, false);
-        d.A2(parcel, iY2);
+        int iM594y2 = AnimatableValueParser.m594y2(parcel, 20293);
+        AnimatableValueParser.m570s2(parcel, 1, this.f20470j, i, false);
+        AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 }

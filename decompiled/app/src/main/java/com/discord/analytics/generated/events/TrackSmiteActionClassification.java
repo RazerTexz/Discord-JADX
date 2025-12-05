@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSmiteActionClassification.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSmiteActionClassification implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackSmiteActionClassification implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence actionName = null;
     private final CharSequence actionId = null;
@@ -41,7 +41,7 @@ public final /* data */ class TrackSmiteActionClassification implements Analytic
             return false;
         }
         TrackSmiteActionClassification trackSmiteActionClassification = (TrackSmiteActionClassification) other;
-        return m.areEqual(this.actionName, trackSmiteActionClassification.actionName) && m.areEqual(this.actionId, trackSmiteActionClassification.actionId) && m.areEqual(this.rulesGitSha, trackSmiteActionClassification.rulesGitSha) && m.areEqual(this.rulesSourceSha, trackSmiteActionClassification.rulesSourceSha) && m.areEqual(this.labels, trackSmiteActionClassification.labels) && m.areEqual(this.labelStatuses, trackSmiteActionClassification.labelStatuses) && m.areEqual(this.labelReasons, trackSmiteActionClassification.labelReasons) && m.areEqual(this.labelReasonsShas, trackSmiteActionClassification.labelReasonsShas) && m.areEqual(this.guildId, trackSmiteActionClassification.guildId) && m.areEqual(this.channelId, trackSmiteActionClassification.channelId) && m.areEqual(this.locationGuildId, trackSmiteActionClassification.locationGuildId) && m.areEqual(this.locationChannelId, trackSmiteActionClassification.locationChannelId) && m.areEqual(this.locationChannelType, trackSmiteActionClassification.locationChannelType) && m.areEqual(this.locationMessageId, trackSmiteActionClassification.locationMessageId);
+        return Intrinsics3.areEqual(this.actionName, trackSmiteActionClassification.actionName) && Intrinsics3.areEqual(this.actionId, trackSmiteActionClassification.actionId) && Intrinsics3.areEqual(this.rulesGitSha, trackSmiteActionClassification.rulesGitSha) && Intrinsics3.areEqual(this.rulesSourceSha, trackSmiteActionClassification.rulesSourceSha) && Intrinsics3.areEqual(this.labels, trackSmiteActionClassification.labels) && Intrinsics3.areEqual(this.labelStatuses, trackSmiteActionClassification.labelStatuses) && Intrinsics3.areEqual(this.labelReasons, trackSmiteActionClassification.labelReasons) && Intrinsics3.areEqual(this.labelReasonsShas, trackSmiteActionClassification.labelReasonsShas) && Intrinsics3.areEqual(this.guildId, trackSmiteActionClassification.guildId) && Intrinsics3.areEqual(this.channelId, trackSmiteActionClassification.channelId) && Intrinsics3.areEqual(this.locationGuildId, trackSmiteActionClassification.locationGuildId) && Intrinsics3.areEqual(this.locationChannelId, trackSmiteActionClassification.locationChannelId) && Intrinsics3.areEqual(this.locationChannelType, trackSmiteActionClassification.locationChannelType) && Intrinsics3.areEqual(this.locationMessageId, trackSmiteActionClassification.locationMessageId);
     }
 
     public int hashCode() {
@@ -76,33 +76,33 @@ public final /* data */ class TrackSmiteActionClassification implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSmiteActionClassification(actionName=");
-        sbU.append(this.actionName);
-        sbU.append(", actionId=");
-        sbU.append(this.actionId);
-        sbU.append(", rulesGitSha=");
-        sbU.append(this.rulesGitSha);
-        sbU.append(", rulesSourceSha=");
-        sbU.append(this.rulesSourceSha);
-        sbU.append(", labels=");
-        sbU.append(this.labels);
-        sbU.append(", labelStatuses=");
-        sbU.append(this.labelStatuses);
-        sbU.append(", labelReasons=");
-        sbU.append(this.labelReasons);
-        sbU.append(", labelReasonsShas=");
-        sbU.append(this.labelReasonsShas);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", locationGuildId=");
-        sbU.append(this.locationGuildId);
-        sbU.append(", locationChannelId=");
-        sbU.append(this.locationChannelId);
-        sbU.append(", locationChannelType=");
-        sbU.append(this.locationChannelType);
-        sbU.append(", locationMessageId=");
-        return a.G(sbU, this.locationMessageId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSmiteActionClassification(actionName=");
+        sbM833U.append(this.actionName);
+        sbM833U.append(", actionId=");
+        sbM833U.append(this.actionId);
+        sbM833U.append(", rulesGitSha=");
+        sbM833U.append(this.rulesGitSha);
+        sbM833U.append(", rulesSourceSha=");
+        sbM833U.append(this.rulesSourceSha);
+        sbM833U.append(", labels=");
+        sbM833U.append(this.labels);
+        sbM833U.append(", labelStatuses=");
+        sbM833U.append(this.labelStatuses);
+        sbM833U.append(", labelReasons=");
+        sbM833U.append(this.labelReasons);
+        sbM833U.append(", labelReasonsShas=");
+        sbM833U.append(this.labelReasonsShas);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", locationGuildId=");
+        sbM833U.append(this.locationGuildId);
+        sbM833U.append(", locationChannelId=");
+        sbM833U.append(this.locationChannelId);
+        sbM833U.append(", locationChannelType=");
+        sbM833U.append(this.locationChannelType);
+        sbM833U.append(", locationMessageId=");
+        return outline.m819G(sbM833U, this.locationMessageId, ")");
     }
 }

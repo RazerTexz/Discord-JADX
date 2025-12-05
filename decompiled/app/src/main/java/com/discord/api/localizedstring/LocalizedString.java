@@ -1,9 +1,9 @@
 package com.discord.api.localizedstring;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.io.Serializable;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: LocalizedString.kt */
 /* loaded from: classes.dex */
@@ -12,8 +12,8 @@ public final /* data */ class LocalizedString implements Serializable {
     private final Map<String, String> localizations;
 
     public LocalizedString(String str, Map<String, String> map) {
-        m.checkNotNullParameter(str, "default");
-        m.checkNotNullParameter(map, "localizations");
+        Intrinsics3.checkNotNullParameter(str, "default");
+        Intrinsics3.checkNotNullParameter(map, "localizations");
         this.default = str;
         this.localizations = map;
     }
@@ -23,7 +23,8 @@ public final /* data */ class LocalizedString implements Serializable {
         return this.default;
     }
 
-    public final Map<String, String> b() {
+    /* renamed from: b */
+    public final Map<String, String> m8017b() {
         return this.localizations;
     }
 
@@ -35,7 +36,7 @@ public final /* data */ class LocalizedString implements Serializable {
             return false;
         }
         LocalizedString localizedString = (LocalizedString) other;
-        return m.areEqual(this.default, localizedString.default) && m.areEqual(this.localizations, localizedString.localizations);
+        return Intrinsics3.areEqual(this.default, localizedString.default) && Intrinsics3.areEqual(this.localizations, localizedString.localizations);
     }
 
     public int hashCode() {
@@ -46,9 +47,9 @@ public final /* data */ class LocalizedString implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("LocalizedString(default=");
-        sbU.append(this.default);
-        sbU.append(", localizations=");
-        return a.M(sbU, this.localizations, ")");
+        StringBuilder sbM833U = outline.m833U("LocalizedString(default=");
+        sbM833U.append(this.default);
+        sbM833U.append(", localizations=");
+        return outline.m825M(sbM833U, this.localizations, ")");
     }
 }

@@ -43,9 +43,9 @@ public class SystemAlarmDispatcher implements ExecutionListener {
     private final WorkManagerImpl mWorkManager;
     private final WorkTimer mWorkTimer;
 
-    /* renamed from: androidx.work.impl.background.systemalarm.SystemAlarmDispatcher$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.work.impl.background.systemalarm.SystemAlarmDispatcher$1 */
+    public class RunnableC07371 implements Runnable {
+        public RunnableC07371() {
         }
 
         @Override // java.lang.Runnable
@@ -159,7 +159,7 @@ public class SystemAlarmDispatcher implements ExecutionListener {
         PowerManager.WakeLock wakeLockNewWakeLock = WakeLocks.newWakeLock(this.mContext, PROCESS_COMMAND_TAG);
         try {
             wakeLockNewWakeLock.acquire();
-            this.mWorkManager.getWorkTaskExecutor().executeOnBackgroundThread(new AnonymousClass1());
+            this.mWorkManager.getWorkTaskExecutor().executeOnBackgroundThread(new RunnableC07371());
         } finally {
             wakeLockNewWakeLock.release();
         }

@@ -1,0 +1,527 @@
+package p007b.p225i.p226a.p242c;
+
+import android.net.Uri;
+import android.util.Pair;
+import androidx.annotation.Nullable;
+import com.google.errorprone.annotations.InlineMe;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p242c.Bundleable;
+import p007b.p225i.p226a.p242c.MediaItem2;
+import p007b.p225i.p226a.p242c.p243a3.p244p0.AdPlaybackState;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
+import p007b.p225i.p355b.p357b.ImmutableList2;
+import p007b.p225i.p355b.p357b.RegularImmutableList;
+
+/* compiled from: Timeline.java */
+/* renamed from: b.i.a.c.o2, reason: use source file name */
+/* loaded from: classes3.dex */
+public abstract class Timeline implements Bundleable {
+
+    /* renamed from: j */
+    public static final Timeline f7337j = new a();
+
+    /* compiled from: Timeline.java */
+    /* renamed from: b.i.a.c.o2$a */
+    public class a extends Timeline {
+        @Override // p007b.p225i.p226a.p242c.Timeline
+        /* renamed from: b */
+        public int mo2554b(Object obj) {
+            return -1;
+        }
+
+        @Override // p007b.p225i.p226a.p242c.Timeline
+        /* renamed from: g */
+        public b mo2513g(int i, b bVar, boolean z2) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        @Override // p007b.p225i.p226a.p242c.Timeline
+        /* renamed from: i */
+        public int mo2555i() {
+            return 0;
+        }
+
+        @Override // p007b.p225i.p226a.p242c.Timeline
+        /* renamed from: m */
+        public Object mo2556m(int i) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        @Override // p007b.p225i.p226a.p242c.Timeline
+        /* renamed from: o */
+        public c mo2514o(int i, c cVar, long j) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        @Override // p007b.p225i.p226a.p242c.Timeline
+        /* renamed from: p */
+        public int mo2557p() {
+            return 0;
+        }
+    }
+
+    /* compiled from: Timeline.java */
+    /* renamed from: b.i.a.c.o2$b */
+    public static final class b implements Bundleable {
+
+        /* renamed from: j */
+        @Nullable
+        public Object f7338j;
+
+        /* renamed from: k */
+        @Nullable
+        public Object f7339k;
+
+        /* renamed from: l */
+        public int f7340l;
+
+        /* renamed from: m */
+        public long f7341m;
+
+        /* renamed from: n */
+        public long f7342n;
+
+        /* renamed from: o */
+        public boolean f7343o;
+
+        /* renamed from: p */
+        public AdPlaybackState f7344p = AdPlaybackState.f5680j;
+
+        /* renamed from: a */
+        public long m3332a(int i, int i2) {
+            AdPlaybackState.a aVarM2578a = this.f7344p.m2578a(i);
+            if (aVarM2578a.f5691l != -1) {
+                return aVarM2578a.f5694o[i2];
+            }
+            return -9223372036854775807L;
+        }
+
+        /* renamed from: b */
+        public int m3333b(long j) {
+            AdPlaybackState adPlaybackState = this.f7344p;
+            long j2 = this.f7341m;
+            Objects.requireNonNull(adPlaybackState);
+            if (j == Long.MIN_VALUE) {
+                return -1;
+            }
+            if (j2 != -9223372036854775807L && j >= j2) {
+                return -1;
+            }
+            int i = adPlaybackState.f5687q;
+            while (i < adPlaybackState.f5684n) {
+                if (adPlaybackState.m2578a(i).f5690k == Long.MIN_VALUE || adPlaybackState.m2578a(i).f5690k > j) {
+                    AdPlaybackState.a aVarM2578a = adPlaybackState.m2578a(i);
+                    if (aVarM2578a.f5691l == -1 || aVarM2578a.m2580a(-1) < aVarM2578a.f5691l) {
+                        break;
+                    }
+                }
+                i++;
+            }
+            if (i < adPlaybackState.f5684n) {
+                return i;
+            }
+            return -1;
+        }
+
+        /* renamed from: c */
+        public long m3334c(int i) {
+            return this.f7344p.m2578a(i).f5690k;
+        }
+
+        /* renamed from: d */
+        public int m3335d(int i) {
+            return this.f7344p.m2578a(i).m2580a(-1);
+        }
+
+        /* renamed from: e */
+        public boolean m3336e(int i) {
+            return this.f7344p.m2578a(i).f5696q;
+        }
+
+        public boolean equals(@Nullable Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (obj == null || !b.class.equals(obj.getClass())) {
+                return false;
+            }
+            b bVar = (b) obj;
+            return Util2.m2993a(this.f7338j, bVar.f7338j) && Util2.m2993a(this.f7339k, bVar.f7339k) && this.f7340l == bVar.f7340l && this.f7341m == bVar.f7341m && this.f7342n == bVar.f7342n && this.f7343o == bVar.f7343o && Util2.m2993a(this.f7344p, bVar.f7344p);
+        }
+
+        /* renamed from: f */
+        public b m3337f(@Nullable Object obj, @Nullable Object obj2, int i, long j, long j2, AdPlaybackState adPlaybackState, boolean z2) {
+            this.f7338j = obj;
+            this.f7339k = obj2;
+            this.f7340l = i;
+            this.f7341m = j;
+            this.f7342n = j2;
+            this.f7344p = adPlaybackState;
+            this.f7343o = z2;
+            return this;
+        }
+
+        public int hashCode() {
+            Object obj = this.f7338j;
+            int iHashCode = (217 + (obj == null ? 0 : obj.hashCode())) * 31;
+            Object obj2 = this.f7339k;
+            int iHashCode2 = (((iHashCode + (obj2 != null ? obj2.hashCode() : 0)) * 31) + this.f7340l) * 31;
+            long j = this.f7341m;
+            int i = (iHashCode2 + ((int) (j ^ (j >>> 32)))) * 31;
+            long j2 = this.f7342n;
+            return this.f7344p.hashCode() + ((((i + ((int) (j2 ^ (j2 >>> 32)))) * 31) + (this.f7343o ? 1 : 0)) * 31);
+        }
+    }
+
+    /* compiled from: Timeline.java */
+    /* renamed from: b.i.a.c.o2$c */
+    public static final class c implements Bundleable {
+
+        /* renamed from: j */
+        public static final Object f7345j = new Object();
+
+        /* renamed from: k */
+        public static final Object f7346k = new Object();
+
+        /* renamed from: l */
+        public static final MediaItem2 f7347l;
+
+        /* renamed from: m */
+        public static final Bundleable.a<c> f7348m;
+
+        /* renamed from: A */
+        public long f7349A;
+
+        /* renamed from: B */
+        public int f7350B;
+
+        /* renamed from: C */
+        public int f7351C;
+
+        /* renamed from: D */
+        public long f7352D;
+
+        /* renamed from: o */
+        @Nullable
+        @Deprecated
+        public Object f7354o;
+
+        /* renamed from: q */
+        @Nullable
+        public Object f7356q;
+
+        /* renamed from: r */
+        public long f7357r;
+
+        /* renamed from: s */
+        public long f7358s;
+
+        /* renamed from: t */
+        public long f7359t;
+
+        /* renamed from: u */
+        public boolean f7360u;
+
+        /* renamed from: v */
+        public boolean f7361v;
+
+        /* renamed from: w */
+        @Deprecated
+        public boolean f7362w;
+
+        /* renamed from: x */
+        @Nullable
+        public MediaItem2.g f7363x;
+
+        /* renamed from: y */
+        public boolean f7364y;
+
+        /* renamed from: z */
+        public long f7365z;
+
+        /* renamed from: n */
+        public Object f7353n = f7345j;
+
+        /* renamed from: p */
+        public MediaItem2 f7355p = f7347l;
+
+        static {
+            MediaItem2.i iVar;
+            MediaItem2.d.a aVar = new MediaItem2.d.a();
+            MediaItem2.f.a aVar2 = new MediaItem2.f.a(null);
+            List listEmptyList = Collections.emptyList();
+            ImmutableList2<Object> immutableList2 = RegularImmutableList.f12012l;
+            MediaItem2.g.a aVar3 = new MediaItem2.g.a();
+            Uri uri = Uri.EMPTY;
+            AnimatableValueParser.m426D(aVar2.f7299b == null || aVar2.f7298a != null);
+            if (uri != null) {
+                iVar = new MediaItem2.i(uri, null, aVar2.f7298a != null ? new MediaItem2.f(aVar2, null) : null, null, listEmptyList, null, immutableList2, null, null);
+            } else {
+                iVar = null;
+            }
+            f7347l = new MediaItem2("com.google.android.exoplayer2.Timeline", aVar.m3322a(), iVar, new MediaItem2.g(aVar3, null), MediaMetadata.f7368j, null);
+            f7348m = C2838q0.f7441a;
+        }
+
+        /* renamed from: d */
+        public static String m3338d(int i) {
+            return Integer.toString(i, 36);
+        }
+
+        /* renamed from: a */
+        public long m3339a() {
+            return Util2.m2992M(this.f7365z);
+        }
+
+        /* renamed from: b */
+        public long m3340b() {
+            return Util2.m2992M(this.f7349A);
+        }
+
+        /* renamed from: c */
+        public boolean m3341c() {
+            AnimatableValueParser.m426D(this.f7362w == (this.f7363x != null));
+            return this.f7363x != null;
+        }
+
+        /* renamed from: e */
+        public c m3342e(Object obj, @Nullable MediaItem2 mediaItem2, @Nullable Object obj2, long j, long j2, long j3, boolean z2, boolean z3, @Nullable MediaItem2.g gVar, long j4, long j5, int i, int i2, long j6) {
+            MediaItem2.h hVar;
+            this.f7353n = obj;
+            this.f7355p = mediaItem2 != null ? mediaItem2 : f7347l;
+            this.f7354o = (mediaItem2 == null || (hVar = mediaItem2.f7263l) == null) ? null : hVar.f7324g;
+            this.f7356q = obj2;
+            this.f7357r = j;
+            this.f7358s = j2;
+            this.f7359t = j3;
+            this.f7360u = z2;
+            this.f7361v = z3;
+            this.f7362w = gVar != null;
+            this.f7363x = gVar;
+            this.f7365z = j4;
+            this.f7349A = j5;
+            this.f7350B = i;
+            this.f7351C = i2;
+            this.f7352D = j6;
+            this.f7364y = false;
+            return this;
+        }
+
+        public boolean equals(@Nullable Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (obj == null || !c.class.equals(obj.getClass())) {
+                return false;
+            }
+            c cVar = (c) obj;
+            return Util2.m2993a(this.f7353n, cVar.f7353n) && Util2.m2993a(this.f7355p, cVar.f7355p) && Util2.m2993a(this.f7356q, cVar.f7356q) && Util2.m2993a(this.f7363x, cVar.f7363x) && this.f7357r == cVar.f7357r && this.f7358s == cVar.f7358s && this.f7359t == cVar.f7359t && this.f7360u == cVar.f7360u && this.f7361v == cVar.f7361v && this.f7364y == cVar.f7364y && this.f7365z == cVar.f7365z && this.f7349A == cVar.f7349A && this.f7350B == cVar.f7350B && this.f7351C == cVar.f7351C && this.f7352D == cVar.f7352D;
+        }
+
+        public int hashCode() {
+            int iHashCode = (this.f7355p.hashCode() + ((this.f7353n.hashCode() + 217) * 31)) * 31;
+            Object obj = this.f7356q;
+            int iHashCode2 = (iHashCode + (obj == null ? 0 : obj.hashCode())) * 31;
+            MediaItem2.g gVar = this.f7363x;
+            int iHashCode3 = (iHashCode2 + (gVar != null ? gVar.hashCode() : 0)) * 31;
+            long j = this.f7357r;
+            int i = (iHashCode3 + ((int) (j ^ (j >>> 32)))) * 31;
+            long j2 = this.f7358s;
+            int i2 = (i + ((int) (j2 ^ (j2 >>> 32)))) * 31;
+            long j3 = this.f7359t;
+            int i3 = (((((((i2 + ((int) (j3 ^ (j3 >>> 32)))) * 31) + (this.f7360u ? 1 : 0)) * 31) + (this.f7361v ? 1 : 0)) * 31) + (this.f7364y ? 1 : 0)) * 31;
+            long j4 = this.f7365z;
+            int i4 = (i3 + ((int) (j4 ^ (j4 >>> 32)))) * 31;
+            long j5 = this.f7349A;
+            int i5 = (((((i4 + ((int) (j5 ^ (j5 >>> 32)))) * 31) + this.f7350B) * 31) + this.f7351C) * 31;
+            long j6 = this.f7352D;
+            return i5 + ((int) (j6 ^ (j6 >>> 32)));
+        }
+    }
+
+    /* renamed from: a */
+    public int mo2582a(boolean z2) {
+        return m3331q() ? -1 : 0;
+    }
+
+    /* renamed from: b */
+    public abstract int mo2554b(Object obj);
+
+    /* renamed from: c */
+    public int mo2583c(boolean z2) {
+        if (m3331q()) {
+            return -1;
+        }
+        return mo2557p() - 1;
+    }
+
+    /* renamed from: d */
+    public final int m3325d(int i, b bVar, c cVar, int i2, boolean z2) {
+        int i3 = mo2513g(i, bVar, false).f7340l;
+        if (m3330n(i3, cVar).f7351C != i) {
+            return i + 1;
+        }
+        int iMo2584e = mo2584e(i3, i2, z2);
+        if (iMo2584e == -1) {
+            return -1;
+        }
+        return m3330n(iMo2584e, cVar).f7350B;
+    }
+
+    /* renamed from: e */
+    public int mo2584e(int i, int i2, boolean z2) {
+        if (i2 == 0) {
+            if (i == mo2583c(z2)) {
+                return -1;
+            }
+            return i + 1;
+        }
+        if (i2 == 1) {
+            return i;
+        }
+        if (i2 == 2) {
+            return i == mo2583c(z2) ? mo2582a(z2) : i + 1;
+        }
+        throw new IllegalStateException();
+    }
+
+    public boolean equals(@Nullable Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Timeline)) {
+            return false;
+        }
+        Timeline timeline = (Timeline) obj;
+        if (timeline.mo2557p() != mo2557p() || timeline.mo2555i() != mo2555i()) {
+            return false;
+        }
+        c cVar = new c();
+        b bVar = new b();
+        c cVar2 = new c();
+        b bVar2 = new b();
+        for (int i = 0; i < mo2557p(); i++) {
+            if (!m3330n(i, cVar).equals(timeline.m3330n(i, cVar2))) {
+                return false;
+            }
+        }
+        for (int i2 = 0; i2 < mo2555i(); i2++) {
+            if (!mo2513g(i2, bVar, true).equals(timeline.mo2513g(i2, bVar2, true))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /* renamed from: f */
+    public final b m3326f(int i, b bVar) {
+        return mo2513g(i, bVar, false);
+    }
+
+    /* renamed from: g */
+    public abstract b mo2513g(int i, b bVar, boolean z2);
+
+    /* renamed from: h */
+    public b mo3327h(Object obj, b bVar) {
+        return mo2513g(mo2554b(obj), bVar, true);
+    }
+
+    public int hashCode() {
+        c cVar = new c();
+        b bVar = new b();
+        int iMo2557p = mo2557p() + 217;
+        for (int i = 0; i < mo2557p(); i++) {
+            iMo2557p = (iMo2557p * 31) + m3330n(i, cVar).hashCode();
+        }
+        int iMo2555i = mo2555i() + (iMo2557p * 31);
+        for (int i2 = 0; i2 < mo2555i(); i2++) {
+            iMo2555i = (iMo2555i * 31) + mo2513g(i2, bVar, true).hashCode();
+        }
+        return iMo2555i;
+    }
+
+    /* renamed from: i */
+    public abstract int mo2555i();
+
+    @InlineMe(replacement = "this.getPeriodPositionUs(window, period, windowIndex, windowPositionUs)")
+    @Deprecated
+    /* renamed from: j */
+    public final Pair<Object, Long> m3328j(c cVar, b bVar, int i, long j) {
+        Pair<Object, Long> pairM3329k = m3329k(cVar, bVar, i, j, 0L);
+        Objects.requireNonNull(pairM3329k);
+        return pairM3329k;
+    }
+
+    @Nullable
+    @InlineMe(replacement = "this.getPeriodPositionUs(window, period, windowIndex, windowPositionUs, defaultPositionProjectionUs)")
+    @Deprecated
+    /* renamed from: k */
+    public final Pair<Object, Long> m3329k(c cVar, b bVar, int i, long j, long j2) {
+        AnimatableValueParser.m571t(i, 0, mo2557p());
+        mo2514o(i, cVar, j2);
+        if (j == -9223372036854775807L) {
+            j = cVar.f7365z;
+            if (j == -9223372036854775807L) {
+                return null;
+            }
+        }
+        int i2 = cVar.f7350B;
+        m3326f(i2, bVar);
+        while (i2 < cVar.f7351C && bVar.f7342n != j) {
+            int i3 = i2 + 1;
+            if (m3326f(i3, bVar).f7342n > j) {
+                break;
+            }
+            i2 = i3;
+        }
+        mo2513g(i2, bVar, true);
+        long jMin = j - bVar.f7342n;
+        long j3 = bVar.f7341m;
+        if (j3 != -9223372036854775807L) {
+            jMin = Math.min(jMin, j3 - 1);
+        }
+        long jMax = Math.max(0L, jMin);
+        Object obj = bVar.f7339k;
+        Objects.requireNonNull(obj);
+        return Pair.create(obj, Long.valueOf(jMax));
+    }
+
+    /* renamed from: l */
+    public int mo2585l(int i, int i2, boolean z2) {
+        if (i2 == 0) {
+            if (i == mo2582a(z2)) {
+                return -1;
+            }
+            return i - 1;
+        }
+        if (i2 == 1) {
+            return i;
+        }
+        if (i2 == 2) {
+            return i == mo2582a(z2) ? mo2583c(z2) : i - 1;
+        }
+        throw new IllegalStateException();
+    }
+
+    /* renamed from: m */
+    public abstract Object mo2556m(int i);
+
+    /* renamed from: n */
+    public final c m3330n(int i, c cVar) {
+        return mo2514o(i, cVar, 0L);
+    }
+
+    /* renamed from: o */
+    public abstract c mo2514o(int i, c cVar, long j);
+
+    /* renamed from: p */
+    public abstract int mo2557p();
+
+    /* renamed from: q */
+    public final boolean m3331q() {
+        return mo2557p() == 0;
+    }
+}

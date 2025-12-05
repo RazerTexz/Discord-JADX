@@ -14,13 +14,16 @@ public interface PooledByteBuffer extends Closeable {
 
     ByteBuffer getByteBuffer();
 
-    byte h(int i);
+    /* renamed from: h */
+    byte mo1395h(int i);
 
-    int i(int i, byte[] bArr, int i2, int i3);
+    /* renamed from: i */
+    int mo1396i(int i, byte[] bArr, int i2, int i3);
 
     boolean isClosed();
 
-    long k();
+    /* renamed from: k */
+    long mo1397k();
 
     int size();
 }

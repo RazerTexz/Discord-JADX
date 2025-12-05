@@ -1,9 +1,7 @@
 package com.discord.models.member;
 
-import a0.a.a.b;
 import androidx.annotation.ColorInt;
 import androidx.core.view.ViewCompat;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelRecipientNick;
 import com.discord.api.role.GuildRole;
@@ -14,12 +12,14 @@ import com.discord.stores.StoreGuilds;
 import com.discord.utilities.guilds.RoleUtils;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.user.UserUtils;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildMember.kt */
 /* loaded from: classes.dex */
@@ -66,9 +66,9 @@ public final /* data */ class GuildMember {
         public final GuildMember from(com.discord.api.guildmember.GuildMember apiGuildMember, long guildId, Map<Long, GuildRole> guildRoles, StoreGuilds storeGuilds) {
             Map<Long, Map<Long, GuildRole>> roles;
             GuildRole guildRole;
-            m.checkNotNullParameter(apiGuildMember, "apiGuildMember");
-            List<Long> listL = apiGuildMember.l();
-            Iterator<Long> it = listL.iterator();
+            Intrinsics3.checkNotNullParameter(apiGuildMember, "apiGuildMember");
+            List<Long> listM7926l = apiGuildMember.m7926l();
+            Iterator<Long> it = listM7926l.iterator();
             GuildRole guildRole2 = null;
             GuildRole guildRole3 = null;
             while (it.hasNext()) {
@@ -83,7 +83,7 @@ public final /* data */ class GuildMember {
                     }
                 }
             }
-            return new GuildMember(RoleUtils.getOpaqueColor(guildRole2), guildRole3 != null ? guildRole3.getId() : 0L, listL.isEmpty() ^ true ? listL : null, apiGuildMember.getNick(), apiGuildMember.getPremiumSince(), apiGuildMember.getPending(), apiGuildMember.getJoinedAt(), guildId, apiGuildMember.getUser().getId(), apiGuildMember.getAvatar(), apiGuildMember.getBanner(), apiGuildMember.getBio(), apiGuildMember.getCommunicationDisabledUntil());
+            return new GuildMember(RoleUtils.getOpaqueColor(guildRole2), guildRole3 != null ? guildRole3.getId() : 0L, listM7926l.isEmpty() ^ true ? listM7926l : null, apiGuildMember.getNick(), apiGuildMember.getPremiumSince(), apiGuildMember.getPending(), apiGuildMember.getJoinedAt(), guildId, apiGuildMember.getUser().getId(), apiGuildMember.getAvatar(), apiGuildMember.getBanner(), apiGuildMember.getBio(), apiGuildMember.getCommunicationDisabledUntil());
         }
 
         public final int getColor(@ColorInt int color, @ColorInt int defaultColor) {
@@ -96,7 +96,7 @@ public final /* data */ class GuildMember {
 
         public final GuildRole getHighestRoleIconRole(List<Long> roles, Map<Long, GuildRole> guildRoles) {
             GuildRole guildRole;
-            m.checkNotNullParameter(roles, "roles");
+            Intrinsics3.checkNotNullParameter(roles, "roles");
             Iterator<Long> it = roles.iterator();
             GuildRole guildRole2 = null;
             while (it.hasNext()) {
@@ -111,7 +111,7 @@ public final /* data */ class GuildMember {
         }
 
         public final String getNickOrUsername(GuildMember member, User user) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             return getNickOrUsername(user, member, null, null);
         }
 
@@ -123,10 +123,10 @@ public final /* data */ class GuildMember {
             ChannelRecipientNick channelRecipientNick;
             String nick;
             Object next;
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             String nick2 = null;
             if (nicks == null) {
-                nicks = channel != null ? channel.q() : null;
+                nicks = channel != null ? channel.m7650q() : null;
             }
             if (nicks != null) {
                 Iterator<T> it = nicks.iterator();
@@ -136,7 +136,7 @@ public final /* data */ class GuildMember {
                         break;
                     }
                     next = it.next();
-                    if (((ChannelRecipientNick) next).b() == user.getId()) {
+                    if (((ChannelRecipientNick) next).m7664b() == user.getId()) {
                         break;
                     }
                 }
@@ -265,7 +265,7 @@ public final /* data */ class GuildMember {
             return false;
         }
         GuildMember guildMember = (GuildMember) other;
-        return this.color == guildMember.color && this.hoistRoleId == guildMember.hoistRoleId && m.areEqual(this.roles, guildMember.roles) && m.areEqual(this.nick, guildMember.nick) && m.areEqual(this.premiumSince, guildMember.premiumSince) && this.pending == guildMember.pending && m.areEqual(this.joinedAt, guildMember.joinedAt) && this.guildId == guildMember.guildId && this.userId == guildMember.userId && m.areEqual(this.avatarHash, guildMember.avatarHash) && m.areEqual(this.bannerHash, guildMember.bannerHash) && m.areEqual(this.bio, guildMember.bio) && m.areEqual(this.communicationDisabledUntil, guildMember.communicationDisabledUntil);
+        return this.color == guildMember.color && this.hoistRoleId == guildMember.hoistRoleId && Intrinsics3.areEqual(this.roles, guildMember.roles) && Intrinsics3.areEqual(this.nick, guildMember.nick) && Intrinsics3.areEqual(this.premiumSince, guildMember.premiumSince) && this.pending == guildMember.pending && Intrinsics3.areEqual(this.joinedAt, guildMember.joinedAt) && this.guildId == guildMember.guildId && this.userId == guildMember.userId && Intrinsics3.areEqual(this.avatarHash, guildMember.avatarHash) && Intrinsics3.areEqual(this.bannerHash, guildMember.bannerHash) && Intrinsics3.areEqual(this.bio, guildMember.bio) && Intrinsics3.areEqual(this.communicationDisabledUntil, guildMember.communicationDisabledUntil);
     }
 
     public final String getAvatarHash() {
@@ -339,9 +339,9 @@ public final /* data */ class GuildMember {
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        int iA = (b.a(this.hoistRoleId) + (this.color * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.hoistRoleId) + (this.color * 31)) * 31;
         List<Long> list = this.roles;
-        int iHashCode = (iA + (list != null ? list.hashCode() : 0)) * 31;
+        int iHashCode = (iM3a + (list != null ? list.hashCode() : 0)) * 31;
         String str = this.nick;
         int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
         String str2 = this.premiumSince;
@@ -353,9 +353,9 @@ public final /* data */ class GuildMember {
         }
         int i2 = (iHashCode3 + i) * 31;
         UtcDateTime utcDateTime = this.joinedAt;
-        int iA2 = (b.a(this.userId) + ((b.a(this.guildId) + ((i2 + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31)) * 31)) * 31;
+        int iM3a2 = (C0002b.m3a(this.userId) + ((C0002b.m3a(this.guildId) + ((i2 + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31)) * 31)) * 31;
         String str3 = this.avatarHash;
-        int iHashCode4 = (iA2 + (str3 != null ? str3.hashCode() : 0)) * 31;
+        int iHashCode4 = (iM3a2 + (str3 != null ? str3.hashCode() : 0)) * 31;
         String str4 = this.bannerHash;
         int iHashCode5 = (iHashCode4 + (str4 != null ? str4.hashCode() : 0)) * 31;
         String str5 = this.bio;
@@ -370,34 +370,34 @@ public final /* data */ class GuildMember {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildMember(color=");
-        sbU.append(this.color);
-        sbU.append(", hoistRoleId=");
-        sbU.append(this.hoistRoleId);
-        sbU.append(", roles=");
-        sbU.append(this.roles);
-        sbU.append(", nick=");
-        sbU.append(this.nick);
-        sbU.append(", premiumSince=");
-        sbU.append(this.premiumSince);
-        sbU.append(", pending=");
-        sbU.append(this.pending);
-        sbU.append(", joinedAt=");
-        sbU.append(this.joinedAt);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", userId=");
-        sbU.append(this.userId);
-        sbU.append(", avatarHash=");
-        sbU.append(this.avatarHash);
-        sbU.append(", bannerHash=");
-        sbU.append(this.bannerHash);
-        sbU.append(", bio=");
-        sbU.append(this.bio);
-        sbU.append(", communicationDisabledUntil=");
-        sbU.append(this.communicationDisabledUntil);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("GuildMember(color=");
+        sbM833U.append(this.color);
+        sbM833U.append(", hoistRoleId=");
+        sbM833U.append(this.hoistRoleId);
+        sbM833U.append(", roles=");
+        sbM833U.append(this.roles);
+        sbM833U.append(", nick=");
+        sbM833U.append(this.nick);
+        sbM833U.append(", premiumSince=");
+        sbM833U.append(this.premiumSince);
+        sbM833U.append(", pending=");
+        sbM833U.append(this.pending);
+        sbM833U.append(", joinedAt=");
+        sbM833U.append(this.joinedAt);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", userId=");
+        sbM833U.append(this.userId);
+        sbM833U.append(", avatarHash=");
+        sbM833U.append(this.avatarHash);
+        sbM833U.append(", bannerHash=");
+        sbM833U.append(this.bannerHash);
+        sbM833U.append(", bio=");
+        sbM833U.append(this.bio);
+        sbM833U.append(", communicationDisabledUntil=");
+        sbM833U.append(this.communicationDisabledUntil);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public /* synthetic */ GuildMember(int i, long j, List list, String str, String str2, boolean z2, UtcDateTime utcDateTime, long j2, long j3, String str3, String str4, String str5, UtcDateTime utcDateTime2, int i2, DefaultConstructorMarker defaultConstructorMarker) {

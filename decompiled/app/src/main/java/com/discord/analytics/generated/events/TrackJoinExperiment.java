@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackJoinExperiment.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackJoinExperiment implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackJoinExperiment implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence type = null;
     private final CharSequence name = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackJoinExperiment implements AnalyticsSchema, Tr
             return false;
         }
         TrackJoinExperiment trackJoinExperiment = (TrackJoinExperiment) other;
-        return m.areEqual(this.type, trackJoinExperiment.type) && m.areEqual(this.name, trackJoinExperiment.name) && m.areEqual(this.bucket, trackJoinExperiment.bucket) && m.areEqual(this.revision, trackJoinExperiment.revision);
+        return Intrinsics3.areEqual(this.type, trackJoinExperiment.type) && Intrinsics3.areEqual(this.name, trackJoinExperiment.name) && Intrinsics3.areEqual(this.bucket, trackJoinExperiment.bucket) && Intrinsics3.areEqual(this.revision, trackJoinExperiment.revision);
     }
 
     public int hashCode() {
@@ -46,13 +46,13 @@ public final /* data */ class TrackJoinExperiment implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackJoinExperiment(type=");
-        sbU.append(this.type);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", bucket=");
-        sbU.append(this.bucket);
-        sbU.append(", revision=");
-        return a.G(sbU, this.revision, ")");
+        StringBuilder sbM833U = outline.m833U("TrackJoinExperiment(type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", bucket=");
+        sbM833U.append(this.bucket);
+        sbM833U.append(", revision=");
+        return outline.m819G(sbM833U, this.revision, ")");
     }
 }

@@ -57,6 +57,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
 import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.view.ActionMode;
@@ -95,12 +96,12 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.core.widget.PopupWindowCompat;
 import androidx.view.Lifecycle;
 import androidx.view.LifecycleOwner;
-import b.d.b.a.a;
 import java.lang.Thread;
 import java.util.List;
 import org.objectweb.asm.Opcodes;
 import org.webrtc.MediaStreamTrack;
 import org.xmlpull.v1.XmlPullParser;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 /* loaded from: classes.dex */
@@ -162,11 +163,11 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     private static final boolean sCanReturnDifferentContext = !"robolectric".equals(Build.FINGERPRINT);
     private static final boolean sCanApplyOverrideConfiguration = true;
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$1, reason: invalid class name */
-    public class AnonymousClass1 implements Thread.UncaughtExceptionHandler {
+    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$1 */
+    public class C00621 implements Thread.UncaughtExceptionHandler {
         public final /* synthetic */ Thread.UncaughtExceptionHandler val$defHandler;
 
-        public AnonymousClass1(Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
+        public C00621(Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
             this.val$defHandler = uncaughtExceptionHandler;
         }
 
@@ -191,9 +192,9 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$2 */
+    public class RunnableC00632 implements Runnable {
+        public RunnableC00632() {
         }
 
         @Override // java.lang.Runnable
@@ -212,9 +213,9 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$3, reason: invalid class name */
-    public class AnonymousClass3 implements OnApplyWindowInsetsListener {
-        public AnonymousClass3() {
+    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$3 */
+    public class C00643 implements OnApplyWindowInsetsListener {
+        public C00643() {
         }
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
@@ -228,9 +229,9 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$4, reason: invalid class name */
-    public class AnonymousClass4 implements FitWindowsViewGroup.OnFitSystemWindowsListener {
-        public AnonymousClass4() {
+    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$4 */
+    public class C00654 implements FitWindowsViewGroup.OnFitSystemWindowsListener {
+        public C00654() {
         }
 
         @Override // androidx.appcompat.widget.FitWindowsViewGroup.OnFitSystemWindowsListener
@@ -239,9 +240,9 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$5, reason: invalid class name */
-    public class AnonymousClass5 implements ContentFrameLayout.OnAttachListener {
-        public AnonymousClass5() {
+    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$5 */
+    public class C00665 implements ContentFrameLayout.OnAttachListener {
+        public C00665() {
         }
 
         @Override // androidx.appcompat.widget.ContentFrameLayout.OnAttachListener
@@ -254,8 +255,8 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$6, reason: invalid class name */
-    public class AnonymousClass6 implements Runnable {
+    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$6 */
+    public class RunnableC00676 implements Runnable {
 
         /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$6$1, reason: invalid class name */
         public class AnonymousClass1 extends ViewPropertyAnimatorListenerAdapter {
@@ -275,7 +276,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
             }
         }
 
-        public AnonymousClass6() {
+        public RunnableC00676() {
         }
 
         @Override // java.lang.Runnable
@@ -295,9 +296,9 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$7, reason: invalid class name */
-    public class AnonymousClass7 extends ViewPropertyAnimatorListenerAdapter {
-        public AnonymousClass7() {
+    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$7 */
+    public class C00687 extends ViewPropertyAnimatorListenerAdapter {
+        public C00687() {
         }
 
         @Override // androidx.core.view.ViewPropertyAnimatorListenerAdapter, androidx.core.view.ViewPropertyAnimatorListener
@@ -328,7 +329,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
 
         @Override // androidx.appcompat.app.ActionBarDrawerToggle.Delegate
         public Drawable getThemeUpIndicator() {
-            TintTypedArray tintTypedArrayObtainStyledAttributes = TintTypedArray.obtainStyledAttributes(getActionBarThemedContext(), (AttributeSet) null, new int[]{androidx.appcompat.R.attr.homeAsUpIndicator});
+            TintTypedArray tintTypedArrayObtainStyledAttributes = TintTypedArray.obtainStyledAttributes(getActionBarThemedContext(), (AttributeSet) null, new int[]{C0051R.attr.homeAsUpIndicator});
             Drawable drawable = tintTypedArrayObtainStyledAttributes.getDrawable(0);
             tintTypedArrayObtainStyledAttributes.recycle();
             return drawable;
@@ -381,9 +382,9 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     public class ActionModeCallbackWrapperV9 implements ActionMode.Callback {
         private ActionMode.Callback mWrapped;
 
-        /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$ActionModeCallbackWrapperV9$1, reason: invalid class name */
-        public class AnonymousClass1 extends ViewPropertyAnimatorListenerAdapter {
-            public AnonymousClass1() {
+        /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$ActionModeCallbackWrapperV9$1 */
+        public class C00691 extends ViewPropertyAnimatorListenerAdapter {
+            public C00691() {
             }
 
             @Override // androidx.core.view.ViewPropertyAnimatorListenerAdapter, androidx.core.view.ViewPropertyAnimatorListener
@@ -430,7 +431,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
                 appCompatDelegateImpl2.endOnGoingFadeAnimation();
                 AppCompatDelegateImpl appCompatDelegateImpl3 = AppCompatDelegateImpl.this;
                 appCompatDelegateImpl3.mFadeAnim = ViewCompat.animate(appCompatDelegateImpl3.mActionModeView).alpha(0.0f);
-                AppCompatDelegateImpl.this.mFadeAnim.setListener(new AnonymousClass1());
+                AppCompatDelegateImpl.this.mFadeAnim.setListener(new C00691());
             }
             AppCompatDelegateImpl appCompatDelegateImpl4 = AppCompatDelegateImpl.this;
             AppCompatCallback appCompatCallback = appCompatDelegateImpl4.mAppCompatCallback;
@@ -480,9 +481,9 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     public abstract class AutoNightModeManager {
         private BroadcastReceiver mReceiver;
 
-        /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$AutoNightModeManager$1, reason: invalid class name */
-        public class AnonymousClass1 extends BroadcastReceiver {
-            public AnonymousClass1() {
+        /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$AutoNightModeManager$1 */
+        public class C00701 extends BroadcastReceiver {
+            public C00701() {
             }
 
             @Override // android.content.BroadcastReceiver
@@ -523,7 +524,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
                 return;
             }
             if (this.mReceiver == null) {
-                this.mReceiver = new AnonymousClass1();
+                this.mReceiver = new C00701();
             }
             AppCompatDelegateImpl.this.mContext.registerReceiver(this.mReceiver, intentFilterCreateIntentFilterForBroadcastReceiver);
         }
@@ -666,21 +667,21 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         public boolean wasLastOpen;
         public int windowAnimations;
 
-        /* renamed from: x, reason: collision with root package name */
-        public int f23x;
+        /* renamed from: x */
+        public int f82x;
 
-        /* renamed from: y, reason: collision with root package name */
-        public int f24y;
+        /* renamed from: y */
+        public int f83y;
 
         @SuppressLint({"BanParcelableUsage"})
         public static class SavedState implements Parcelable {
-            public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+            public static final Parcelable.Creator<SavedState> CREATOR = new C00711();
             public int featureId;
             public boolean isOpen;
             public Bundle menuState;
 
-            /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$PanelFeatureState$SavedState$1, reason: invalid class name */
-            public class AnonymousClass1 implements Parcelable.ClassLoaderCreator<SavedState> {
+            /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$PanelFeatureState$SavedState$1 */
+            public class C00711 implements Parcelable.ClassLoaderCreator<SavedState> {
                 @Override // android.os.Parcelable.Creator
                 public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
                     return createFromParcel(parcel);
@@ -766,7 +767,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
                 return null;
             }
             if (this.listMenuPresenter == null) {
-                ListMenuPresenter listMenuPresenter = new ListMenuPresenter(this.listPresenterContext, androidx.appcompat.R.layout.abc_list_menu_item_layout);
+                ListMenuPresenter listMenuPresenter = new ListMenuPresenter(this.listPresenterContext, C0051R.layout.abc_list_menu_item_layout);
                 this.listMenuPresenter = listMenuPresenter;
                 listMenuPresenter.setCallback(callback);
                 this.menu.addMenuPresenter(this.listMenuPresenter);
@@ -822,24 +823,24 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
             TypedValue typedValue = new TypedValue();
             Resources.Theme themeNewTheme = context.getResources().newTheme();
             themeNewTheme.setTo(context.getTheme());
-            themeNewTheme.resolveAttribute(androidx.appcompat.R.attr.actionBarPopupTheme, typedValue, true);
+            themeNewTheme.resolveAttribute(C0051R.attr.actionBarPopupTheme, typedValue, true);
             int i = typedValue.resourceId;
             if (i != 0) {
                 themeNewTheme.applyStyle(i, true);
             }
-            themeNewTheme.resolveAttribute(androidx.appcompat.R.attr.panelMenuListTheme, typedValue, true);
+            themeNewTheme.resolveAttribute(C0051R.attr.panelMenuListTheme, typedValue, true);
             int i2 = typedValue.resourceId;
             if (i2 != 0) {
                 themeNewTheme.applyStyle(i2, true);
             } else {
-                themeNewTheme.applyStyle(androidx.appcompat.R.style.Theme_AppCompat_CompactMenu, true);
+                themeNewTheme.applyStyle(C0051R.style.Theme_AppCompat_CompactMenu, true);
             }
             androidx.appcompat.view.ContextThemeWrapper contextThemeWrapper = new androidx.appcompat.view.ContextThemeWrapper(context, 0);
             contextThemeWrapper.getTheme().setTo(themeNewTheme);
             this.listPresenterContext = contextThemeWrapper;
-            TypedArray typedArrayObtainStyledAttributes = contextThemeWrapper.obtainStyledAttributes(androidx.appcompat.R.styleable.AppCompatTheme);
-            this.background = typedArrayObtainStyledAttributes.getResourceId(androidx.appcompat.R.styleable.AppCompatTheme_panelBackground, 0);
-            this.windowAnimations = typedArrayObtainStyledAttributes.getResourceId(androidx.appcompat.R.styleable.AppCompatTheme_android_windowAnimationStyle, 0);
+            TypedArray typedArrayObtainStyledAttributes = contextThemeWrapper.obtainStyledAttributes(C0051R.styleable.AppCompatTheme);
+            this.background = typedArrayObtainStyledAttributes.getResourceId(C0051R.styleable.AppCompatTheme_panelBackground, 0);
+            this.windowAnimations = typedArrayObtainStyledAttributes.getResourceId(C0051R.styleable.AppCompatTheme_android_windowAnimationStyle, 0);
             typedArrayObtainStyledAttributes.recycle();
         }
     }
@@ -890,22 +891,22 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         ContentFrameLayout contentFrameLayout = (ContentFrameLayout) this.mSubDecor.findViewById(R.id.content);
         View decorView = this.mWindow.getDecorView();
         contentFrameLayout.setDecorPadding(decorView.getPaddingLeft(), decorView.getPaddingTop(), decorView.getPaddingRight(), decorView.getPaddingBottom());
-        TypedArray typedArrayObtainStyledAttributes = this.mContext.obtainStyledAttributes(androidx.appcompat.R.styleable.AppCompatTheme);
-        typedArrayObtainStyledAttributes.getValue(androidx.appcompat.R.styleable.AppCompatTheme_windowMinWidthMajor, contentFrameLayout.getMinWidthMajor());
-        typedArrayObtainStyledAttributes.getValue(androidx.appcompat.R.styleable.AppCompatTheme_windowMinWidthMinor, contentFrameLayout.getMinWidthMinor());
-        int i = androidx.appcompat.R.styleable.AppCompatTheme_windowFixedWidthMajor;
+        TypedArray typedArrayObtainStyledAttributes = this.mContext.obtainStyledAttributes(C0051R.styleable.AppCompatTheme);
+        typedArrayObtainStyledAttributes.getValue(C0051R.styleable.AppCompatTheme_windowMinWidthMajor, contentFrameLayout.getMinWidthMajor());
+        typedArrayObtainStyledAttributes.getValue(C0051R.styleable.AppCompatTheme_windowMinWidthMinor, contentFrameLayout.getMinWidthMinor());
+        int i = C0051R.styleable.AppCompatTheme_windowFixedWidthMajor;
         if (typedArrayObtainStyledAttributes.hasValue(i)) {
             typedArrayObtainStyledAttributes.getValue(i, contentFrameLayout.getFixedWidthMajor());
         }
-        int i2 = androidx.appcompat.R.styleable.AppCompatTheme_windowFixedWidthMinor;
+        int i2 = C0051R.styleable.AppCompatTheme_windowFixedWidthMinor;
         if (typedArrayObtainStyledAttributes.hasValue(i2)) {
             typedArrayObtainStyledAttributes.getValue(i2, contentFrameLayout.getFixedWidthMinor());
         }
-        int i3 = androidx.appcompat.R.styleable.AppCompatTheme_windowFixedHeightMajor;
+        int i3 = C0051R.styleable.AppCompatTheme_windowFixedHeightMajor;
         if (typedArrayObtainStyledAttributes.hasValue(i3)) {
             typedArrayObtainStyledAttributes.getValue(i3, contentFrameLayout.getFixedHeightMajor());
         }
-        int i4 = androidx.appcompat.R.styleable.AppCompatTheme_windowFixedHeightMinor;
+        int i4 = C0051R.styleable.AppCompatTheme_windowFixedHeightMinor;
         if (typedArrayObtainStyledAttributes.hasValue(i4)) {
             typedArrayObtainStyledAttributes.getValue(i4, contentFrameLayout.getFixedHeightMinor());
         }
@@ -963,39 +964,39 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
 
     private ViewGroup createSubDecor() throws SecurityException, IllegalArgumentException {
         ViewGroup viewGroup;
-        TypedArray typedArrayObtainStyledAttributes = this.mContext.obtainStyledAttributes(androidx.appcompat.R.styleable.AppCompatTheme);
-        int i = androidx.appcompat.R.styleable.AppCompatTheme_windowActionBar;
+        TypedArray typedArrayObtainStyledAttributes = this.mContext.obtainStyledAttributes(C0051R.styleable.AppCompatTheme);
+        int i = C0051R.styleable.AppCompatTheme_windowActionBar;
         if (!typedArrayObtainStyledAttributes.hasValue(i)) {
             typedArrayObtainStyledAttributes.recycle();
             throw new IllegalStateException("You need to use a Theme.AppCompat theme (or descendant) with this activity.");
         }
-        if (typedArrayObtainStyledAttributes.getBoolean(androidx.appcompat.R.styleable.AppCompatTheme_windowNoTitle, false)) {
+        if (typedArrayObtainStyledAttributes.getBoolean(C0051R.styleable.AppCompatTheme_windowNoTitle, false)) {
             requestWindowFeature(1);
         } else if (typedArrayObtainStyledAttributes.getBoolean(i, false)) {
             requestWindowFeature(108);
         }
-        if (typedArrayObtainStyledAttributes.getBoolean(androidx.appcompat.R.styleable.AppCompatTheme_windowActionBarOverlay, false)) {
+        if (typedArrayObtainStyledAttributes.getBoolean(C0051R.styleable.AppCompatTheme_windowActionBarOverlay, false)) {
             requestWindowFeature(109);
         }
-        if (typedArrayObtainStyledAttributes.getBoolean(androidx.appcompat.R.styleable.AppCompatTheme_windowActionModeOverlay, false)) {
+        if (typedArrayObtainStyledAttributes.getBoolean(C0051R.styleable.AppCompatTheme_windowActionModeOverlay, false)) {
             requestWindowFeature(10);
         }
-        this.mIsFloating = typedArrayObtainStyledAttributes.getBoolean(androidx.appcompat.R.styleable.AppCompatTheme_android_windowIsFloating, false);
+        this.mIsFloating = typedArrayObtainStyledAttributes.getBoolean(C0051R.styleable.AppCompatTheme_android_windowIsFloating, false);
         typedArrayObtainStyledAttributes.recycle();
         ensureWindow();
         this.mWindow.getDecorView();
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(this.mContext);
         if (this.mWindowNoTitle) {
-            viewGroup = this.mOverlayActionMode ? (ViewGroup) layoutInflaterFrom.inflate(androidx.appcompat.R.layout.abc_screen_simple_overlay_action_mode, (ViewGroup) null) : (ViewGroup) layoutInflaterFrom.inflate(androidx.appcompat.R.layout.abc_screen_simple, (ViewGroup) null);
+            viewGroup = this.mOverlayActionMode ? (ViewGroup) layoutInflaterFrom.inflate(C0051R.layout.abc_screen_simple_overlay_action_mode, (ViewGroup) null) : (ViewGroup) layoutInflaterFrom.inflate(C0051R.layout.abc_screen_simple, (ViewGroup) null);
         } else if (this.mIsFloating) {
-            viewGroup = (ViewGroup) layoutInflaterFrom.inflate(androidx.appcompat.R.layout.abc_dialog_title_material, (ViewGroup) null);
+            viewGroup = (ViewGroup) layoutInflaterFrom.inflate(C0051R.layout.abc_dialog_title_material, (ViewGroup) null);
             this.mOverlayActionBar = false;
             this.mHasActionBar = false;
         } else if (this.mHasActionBar) {
             TypedValue typedValue = new TypedValue();
-            this.mContext.getTheme().resolveAttribute(androidx.appcompat.R.attr.actionBarTheme, typedValue, true);
-            viewGroup = (ViewGroup) LayoutInflater.from(typedValue.resourceId != 0 ? new androidx.appcompat.view.ContextThemeWrapper(this.mContext, typedValue.resourceId) : this.mContext).inflate(androidx.appcompat.R.layout.abc_screen_toolbar, (ViewGroup) null);
-            DecorContentParent decorContentParent = (DecorContentParent) viewGroup.findViewById(androidx.appcompat.R.id.decor_content_parent);
+            this.mContext.getTheme().resolveAttribute(C0051R.attr.actionBarTheme, typedValue, true);
+            viewGroup = (ViewGroup) LayoutInflater.from(typedValue.resourceId != 0 ? new androidx.appcompat.view.ContextThemeWrapper(this.mContext, typedValue.resourceId) : this.mContext).inflate(C0051R.layout.abc_screen_toolbar, (ViewGroup) null);
+            DecorContentParent decorContentParent = (DecorContentParent) viewGroup.findViewById(C0051R.id.decor_content_parent);
             this.mDecorContentParent = decorContentParent;
             decorContentParent.setWindowCallback(getWindowCallback());
             if (this.mOverlayActionBar) {
@@ -1011,23 +1012,23 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
             viewGroup = null;
         }
         if (viewGroup == null) {
-            StringBuilder sbU = a.U("AppCompat does not support the current theme features: { windowActionBar: ");
-            sbU.append(this.mHasActionBar);
-            sbU.append(", windowActionBarOverlay: ");
-            sbU.append(this.mOverlayActionBar);
-            sbU.append(", android:windowIsFloating: ");
-            sbU.append(this.mIsFloating);
-            sbU.append(", windowActionModeOverlay: ");
-            sbU.append(this.mOverlayActionMode);
-            sbU.append(", windowNoTitle: ");
-            throw new IllegalArgumentException(a.O(sbU, this.mWindowNoTitle, " }"));
+            StringBuilder sbM833U = outline.m833U("AppCompat does not support the current theme features: { windowActionBar: ");
+            sbM833U.append(this.mHasActionBar);
+            sbM833U.append(", windowActionBarOverlay: ");
+            sbM833U.append(this.mOverlayActionBar);
+            sbM833U.append(", android:windowIsFloating: ");
+            sbM833U.append(this.mIsFloating);
+            sbM833U.append(", windowActionModeOverlay: ");
+            sbM833U.append(this.mOverlayActionMode);
+            sbM833U.append(", windowNoTitle: ");
+            throw new IllegalArgumentException(outline.m827O(sbM833U, this.mWindowNoTitle, " }"));
         }
-        ViewCompat.setOnApplyWindowInsetsListener(viewGroup, new AnonymousClass3());
+        ViewCompat.setOnApplyWindowInsetsListener(viewGroup, new C00643());
         if (this.mDecorContentParent == null) {
-            this.mTitleView = (TextView) viewGroup.findViewById(androidx.appcompat.R.id.title);
+            this.mTitleView = (TextView) viewGroup.findViewById(C0051R.id.title);
         }
         ViewUtils.makeOptionalFitsSystemWindows(viewGroup);
-        ContentFrameLayout contentFrameLayout = (ContentFrameLayout) viewGroup.findViewById(androidx.appcompat.R.id.action_bar_activity_content);
+        ContentFrameLayout contentFrameLayout = (ContentFrameLayout) viewGroup.findViewById(C0051R.id.action_bar_activity_content);
         ViewGroup viewGroup2 = (ViewGroup) this.mWindow.findViewById(R.id.content);
         if (viewGroup2 != null) {
             while (viewGroup2.getChildCount() > 0) {
@@ -1042,7 +1043,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
             }
         }
         this.mWindow.setContentView(viewGroup);
-        contentFrameLayout.setAttachListener(new AnonymousClass5());
+        contentFrameLayout.setAttachListener(new C00665());
         return viewGroup;
     }
 
@@ -1251,15 +1252,15 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         if ((i == 0 || i == 108) && this.mDecorContentParent != null) {
             TypedValue typedValue = new TypedValue();
             Resources.Theme theme = context.getTheme();
-            theme.resolveAttribute(androidx.appcompat.R.attr.actionBarTheme, typedValue, true);
+            theme.resolveAttribute(C0051R.attr.actionBarTheme, typedValue, true);
             Resources.Theme themeNewTheme = null;
             if (typedValue.resourceId != 0) {
                 themeNewTheme = context.getResources().newTheme();
                 themeNewTheme.setTo(theme);
                 themeNewTheme.applyStyle(typedValue.resourceId, true);
-                themeNewTheme.resolveAttribute(androidx.appcompat.R.attr.actionBarWidgetTheme, typedValue, true);
+                themeNewTheme.resolveAttribute(C0051R.attr.actionBarWidgetTheme, typedValue, true);
             } else {
-                theme.resolveAttribute(androidx.appcompat.R.attr.actionBarWidgetTheme, typedValue, true);
+                theme.resolveAttribute(C0051R.attr.actionBarWidgetTheme, typedValue, true);
             }
             if (typedValue.resourceId != 0) {
                 if (themeNewTheme == null) {
@@ -1390,7 +1391,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
                     i = -1;
                 }
                 panelFeatureState.isHandled = false;
-                WindowManager.LayoutParams layoutParams2 = new WindowManager.LayoutParams(i, -2, panelFeatureState.f23x, panelFeatureState.f24y, PointerIconCompat.TYPE_HAND, 8519680, -3);
+                WindowManager.LayoutParams layoutParams2 = new WindowManager.LayoutParams(i, -2, panelFeatureState.f82x, panelFeatureState.f83y, PointerIconCompat.TYPE_HAND, 8519680, -3);
                 layoutParams2.gravity = panelFeatureState.gravity;
                 layoutParams2.windowAnimations = panelFeatureState.windowAnimations;
                 windowManager.addView(panelFeatureState.decorView, layoutParams2);
@@ -1422,7 +1423,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
             }
             i = -2;
             panelFeatureState.isHandled = false;
-            WindowManager.LayoutParams layoutParams22 = new WindowManager.LayoutParams(i, -2, panelFeatureState.f23x, panelFeatureState.f24y, PointerIconCompat.TYPE_HAND, 8519680, -3);
+            WindowManager.LayoutParams layoutParams22 = new WindowManager.LayoutParams(i, -2, panelFeatureState.f82x, panelFeatureState.f83y, PointerIconCompat.TYPE_HAND, 8519680, -3);
             layoutParams22.gravity = panelFeatureState.gravity;
             layoutParams22.windowAnimations = panelFeatureState.windowAnimations;
             windowManager.addView(panelFeatureState.decorView, layoutParams22);
@@ -1663,7 +1664,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     }
 
     private void updateStatusGuardColor(View view) {
-        view.setBackgroundColor((ViewCompat.getWindowSystemUiVisibility(view) & 8192) != 0 ? ContextCompat.getColor(this.mContext, androidx.appcompat.R.color.abc_decor_view_status_guard_light) : ContextCompat.getColor(this.mContext, androidx.appcompat.R.color.abc_decor_view_status_guard));
+        view.setBackgroundColor((ViewCompat.getWindowSystemUiVisibility(view) & 8192) != 0 ? ContextCompat.getColor(this.mContext, C0051R.color.abc_decor_view_status_guard_light) : ContextCompat.getColor(this.mContext, C0051R.color.abc_decor_view_status_guard));
     }
 
     @Override // androidx.appcompat.app.AppCompatDelegate
@@ -1705,7 +1706,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
             Configuration configuration = context.getPackageManager().getResourcesForApplication(context.getApplicationInfo()).getConfiguration();
             Configuration configuration2 = context.getResources().getConfiguration();
             Configuration configurationCreateOverrideConfigurationForDayNight = createOverrideConfigurationForDayNight(context, iMapNightMode, configuration.equals(configuration2) ? null : generateConfigDelta(configuration, configuration2));
-            androidx.appcompat.view.ContextThemeWrapper contextThemeWrapper = new androidx.appcompat.view.ContextThemeWrapper(context, androidx.appcompat.R.style.Theme_AppCompat_Empty);
+            androidx.appcompat.view.ContextThemeWrapper contextThemeWrapper = new androidx.appcompat.view.ContextThemeWrapper(context, C0051R.style.Theme_AppCompat_Empty);
             contextThemeWrapper.applyOverrideConfiguration(configurationCreateOverrideConfigurationForDayNight);
             boolean z2 = false;
             try {
@@ -1761,7 +1762,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         boolean z2;
         boolean zShouldInheritContext = false;
         if (this.mAppCompatViewInflater == null) {
-            String string = this.mContext.obtainStyledAttributes(androidx.appcompat.R.styleable.AppCompatTheme).getString(androidx.appcompat.R.styleable.AppCompatTheme_viewInflaterClass);
+            String string = this.mContext.obtainStyledAttributes(C0051R.styleable.AppCompatTheme).getString(C0051R.styleable.AppCompatTheme_viewInflaterClass);
             if (string == null) {
                 this.mAppCompatViewInflater = new AppCompatViewInflater();
             } else {
@@ -2380,7 +2381,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
                 if (this.mIsFloating) {
                     TypedValue typedValue = new TypedValue();
                     Resources.Theme theme = this.mContext.getTheme();
-                    theme.resolveAttribute(androidx.appcompat.R.attr.actionBarTheme, typedValue, true);
+                    theme.resolveAttribute(C0051R.attr.actionBarTheme, typedValue, true);
                     if (typedValue.resourceId != 0) {
                         Resources.Theme themeNewTheme = this.mContext.getResources().newTheme();
                         themeNewTheme.setTo(theme);
@@ -2391,17 +2392,17 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
                         contextThemeWrapper = this.mContext;
                     }
                     this.mActionModeView = new ActionBarContextView(contextThemeWrapper);
-                    PopupWindow popupWindow = new PopupWindow(contextThemeWrapper, (AttributeSet) null, androidx.appcompat.R.attr.actionModePopupWindowStyle);
+                    PopupWindow popupWindow = new PopupWindow(contextThemeWrapper, (AttributeSet) null, C0051R.attr.actionModePopupWindowStyle);
                     this.mActionModePopup = popupWindow;
                     PopupWindowCompat.setWindowLayoutType(popupWindow, 2);
                     this.mActionModePopup.setContentView(this.mActionModeView);
                     this.mActionModePopup.setWidth(-1);
-                    contextThemeWrapper.getTheme().resolveAttribute(androidx.appcompat.R.attr.actionBarSize, typedValue, true);
+                    contextThemeWrapper.getTheme().resolveAttribute(C0051R.attr.actionBarSize, typedValue, true);
                     this.mActionModeView.setContentHeight(TypedValue.complexToDimensionPixelSize(typedValue.data, contextThemeWrapper.getResources().getDisplayMetrics()));
                     this.mActionModePopup.setHeight(-2);
-                    this.mShowActionModePopup = new AnonymousClass6();
+                    this.mShowActionModePopup = new RunnableC00676();
                 } else {
-                    ViewStubCompat viewStubCompat = (ViewStubCompat) this.mSubDecor.findViewById(androidx.appcompat.R.id.action_mode_bar_stub);
+                    ViewStubCompat viewStubCompat = (ViewStubCompat) this.mSubDecor.findViewById(C0051R.id.action_mode_bar_stub);
                     if (viewStubCompat != null) {
                         viewStubCompat.setLayoutInflater(LayoutInflater.from(getActionBarThemedContext()));
                         this.mActionModeView = (ActionBarContextView) viewStubCompat.inflate();
@@ -2420,7 +2421,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
                         this.mActionModeView.setAlpha(0.0f);
                         ViewPropertyAnimatorCompat viewPropertyAnimatorCompatAlpha = ViewCompat.animate(this.mActionModeView).alpha(1.0f);
                         this.mFadeAnim = viewPropertyAnimatorCompatAlpha;
-                        viewPropertyAnimatorCompatAlpha.setListener(new AnonymousClass7());
+                        viewPropertyAnimatorCompatAlpha.setListener(new C00687());
                     } else {
                         this.mActionModeView.setAlpha(1.0f);
                         this.mActionModeView.setVisibility(0);
@@ -2705,7 +2706,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         this.mFadeAnim = null;
         this.mHandleNativeActionModes = true;
         this.mLocalNightMode = -100;
-        this.mInvalidatePanelMenuRunnable = new AnonymousClass2();
+        this.mInvalidatePanelMenuRunnable = new RunnableC00632();
         this.mContext = context;
         this.mAppCompatCallback = appCompatCallback;
         this.mHost = obj;

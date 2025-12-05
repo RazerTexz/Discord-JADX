@@ -22,9 +22,9 @@ public class GhostViewPort extends ViewGroup implements GhostView {
     public View mStartView;
     public final View mView;
 
-    /* renamed from: androidx.transition.GhostViewPort$1, reason: invalid class name */
-    public class AnonymousClass1 implements ViewTreeObserver.OnPreDrawListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.transition.GhostViewPort$1 */
+    public class ViewTreeObserverOnPreDrawListenerC06561 implements ViewTreeObserver.OnPreDrawListener {
+        public ViewTreeObserverOnPreDrawListenerC06561() {
         }
 
         @Override // android.view.ViewTreeObserver.OnPreDrawListener
@@ -47,7 +47,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
 
     public GhostViewPort(View view) {
         super(view.getContext());
-        this.mOnPreDrawListener = new AnonymousClass1();
+        this.mOnPreDrawListener = new ViewTreeObserverOnPreDrawListenerC06561();
         this.mView = view;
         setWillNotDraw(false);
         setLayerType(2, null);
@@ -102,7 +102,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
     }
 
     public static GhostViewPort getGhostView(View view) {
-        return (GhostViewPort) view.getTag(R.id.ghost_view);
+        return (GhostViewPort) view.getTag(C0658R.id.ghost_view);
     }
 
     public static void removeGhost(View view) {
@@ -117,7 +117,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
     }
 
     public static void setGhostView(@NonNull View view, @Nullable GhostViewPort ghostViewPort) {
-        view.setTag(R.id.ghost_view, ghostViewPort);
+        view.setTag(C0658R.id.ghost_view, ghostViewPort);
     }
 
     @Override // android.view.ViewGroup, android.view.View

@@ -2,19 +2,21 @@ package com.discord.models.domain;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.a.m.a.i;
-import b.a.m.a.j;
-import b.d.b.a.a;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.models.domain.Model;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import p007b.p008a.p033m.p034a.C1148i;
+import p007b.p008a.p033m.p034a.C1149j;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ModelCall implements Model {
     private static final List<Long> EMPTY_RINGING = new ArrayList();
-    public static final /* synthetic */ int j = 0;
+
+    /* renamed from: j */
+    public static final /* synthetic */ int f18564j = 0;
     private long channelId;
     private long messageId;
     private String region;
@@ -62,10 +64,10 @@ public class ModelCall implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelCall.Ringable(ringable=");
-            sbU.append(isRingable());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelCall.Ringable(ringable=");
+            sbM833U.append(isRingable());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -87,10 +89,10 @@ public class ModelCall implements Model {
                 this.unavailable = jsonReader.nextBoolean(this.unavailable);
                 break;
             case "voice_states":
-                this.voiceStates = jsonReader.nextList(new j(jsonReader));
+                this.voiceStates = jsonReader.nextList(new C1149j(jsonReader));
                 break;
             case "ringing":
-                this.ringing = jsonReader.nextList(new i(jsonReader));
+                this.ringing = jsonReader.nextList(new C1148i(jsonReader));
                 break;
             default:
                 jsonReader.skipValue();
@@ -168,19 +170,19 @@ public class ModelCall implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelCall(channelId=");
-        sbU.append(getChannelId());
-        sbU.append(", messageId=");
-        sbU.append(getMessageId());
-        sbU.append(", region=");
-        sbU.append(getRegion());
-        sbU.append(", unavailable=");
-        sbU.append(isUnavailable());
-        sbU.append(", ringing=");
-        sbU.append(getRinging());
-        sbU.append(", voiceStates=");
-        sbU.append(getVoiceStates());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ModelCall(channelId=");
+        sbM833U.append(getChannelId());
+        sbM833U.append(", messageId=");
+        sbM833U.append(getMessageId());
+        sbM833U.append(", region=");
+        sbM833U.append(getRegion());
+        sbM833U.append(", unavailable=");
+        sbM833U.append(isUnavailable());
+        sbM833U.append(", ringing=");
+        sbM833U.append(getRinging());
+        sbM833U.append(", voiceStates=");
+        sbM833U.append(getVoiceStates());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

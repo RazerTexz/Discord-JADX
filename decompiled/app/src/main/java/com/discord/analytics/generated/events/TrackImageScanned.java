@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackImageScanned.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackImageScanned implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackImageScanned implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence scanUuid = null;
     private final CharSequence provider = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackImageScanned implements AnalyticsSchema, Trac
             return false;
         }
         TrackImageScanned trackImageScanned = (TrackImageScanned) other;
-        return m.areEqual(this.scanUuid, trackImageScanned.scanUuid) && m.areEqual(this.provider, trackImageScanned.provider) && m.areEqual(this.safeSearchAdultLikelihood, trackImageScanned.safeSearchAdultLikelihood) && m.areEqual(this.safeSearchMedicalLikelihood, trackImageScanned.safeSearchMedicalLikelihood) && m.areEqual(this.safeSearchRacyLikelihood, trackImageScanned.safeSearchRacyLikelihood) && m.areEqual(this.safeSearchSpoofLikelihood, trackImageScanned.safeSearchSpoofLikelihood) && m.areEqual(this.safeSearchViolenceLikelihood, trackImageScanned.safeSearchViolenceLikelihood) && m.areEqual(this.openNsfwSfw, trackImageScanned.openNsfwSfw) && m.areEqual(this.openNsfwNsfw, trackImageScanned.openNsfwNsfw) && m.areEqual(this.guildId, trackImageScanned.guildId);
+        return Intrinsics3.areEqual(this.scanUuid, trackImageScanned.scanUuid) && Intrinsics3.areEqual(this.provider, trackImageScanned.provider) && Intrinsics3.areEqual(this.safeSearchAdultLikelihood, trackImageScanned.safeSearchAdultLikelihood) && Intrinsics3.areEqual(this.safeSearchMedicalLikelihood, trackImageScanned.safeSearchMedicalLikelihood) && Intrinsics3.areEqual(this.safeSearchRacyLikelihood, trackImageScanned.safeSearchRacyLikelihood) && Intrinsics3.areEqual(this.safeSearchSpoofLikelihood, trackImageScanned.safeSearchSpoofLikelihood) && Intrinsics3.areEqual(this.safeSearchViolenceLikelihood, trackImageScanned.safeSearchViolenceLikelihood) && Intrinsics3.areEqual(this.openNsfwSfw, trackImageScanned.openNsfwSfw) && Intrinsics3.areEqual(this.openNsfwNsfw, trackImageScanned.openNsfwNsfw) && Intrinsics3.areEqual(this.guildId, trackImageScanned.guildId);
     }
 
     public int hashCode() {
@@ -63,25 +63,25 @@ public final /* data */ class TrackImageScanned implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackImageScanned(scanUuid=");
-        sbU.append(this.scanUuid);
-        sbU.append(", provider=");
-        sbU.append(this.provider);
-        sbU.append(", safeSearchAdultLikelihood=");
-        sbU.append(this.safeSearchAdultLikelihood);
-        sbU.append(", safeSearchMedicalLikelihood=");
-        sbU.append(this.safeSearchMedicalLikelihood);
-        sbU.append(", safeSearchRacyLikelihood=");
-        sbU.append(this.safeSearchRacyLikelihood);
-        sbU.append(", safeSearchSpoofLikelihood=");
-        sbU.append(this.safeSearchSpoofLikelihood);
-        sbU.append(", safeSearchViolenceLikelihood=");
-        sbU.append(this.safeSearchViolenceLikelihood);
-        sbU.append(", openNsfwSfw=");
-        sbU.append(this.openNsfwSfw);
-        sbU.append(", openNsfwNsfw=");
-        sbU.append(this.openNsfwNsfw);
-        sbU.append(", guildId=");
-        return a.G(sbU, this.guildId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackImageScanned(scanUuid=");
+        sbM833U.append(this.scanUuid);
+        sbM833U.append(", provider=");
+        sbM833U.append(this.provider);
+        sbM833U.append(", safeSearchAdultLikelihood=");
+        sbM833U.append(this.safeSearchAdultLikelihood);
+        sbM833U.append(", safeSearchMedicalLikelihood=");
+        sbM833U.append(this.safeSearchMedicalLikelihood);
+        sbM833U.append(", safeSearchRacyLikelihood=");
+        sbM833U.append(this.safeSearchRacyLikelihood);
+        sbM833U.append(", safeSearchSpoofLikelihood=");
+        sbM833U.append(this.safeSearchSpoofLikelihood);
+        sbM833U.append(", safeSearchViolenceLikelihood=");
+        sbM833U.append(this.safeSearchViolenceLikelihood);
+        sbM833U.append(", openNsfwSfw=");
+        sbM833U.append(this.openNsfwSfw);
+        sbM833U.append(", openNsfwNsfw=");
+        sbM833U.append(this.openNsfwNsfw);
+        sbM833U.append(", guildId=");
+        return outline.m819G(sbM833U, this.guildId, ")");
     }
 }

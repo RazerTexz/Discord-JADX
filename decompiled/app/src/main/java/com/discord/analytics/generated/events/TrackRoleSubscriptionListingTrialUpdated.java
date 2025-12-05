@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackRoleSubscriptionListingTrialUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackRoleSubscriptionListingTrialUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
+public final /* data */ class TrackRoleSubscriptionListingTrialUpdated implements AnalyticsSchema, TrackBase2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final Long roleSubscriptionListingId = null;
@@ -19,14 +19,15 @@ public final /* data */ class TrackRoleSubscriptionListingTrialUpdated implement
     private final Long activeTrialUserLimit = null;
     private final transient String analyticsSchemaTypeName = "role_subscription_listing_trial_updated";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -44,7 +45,7 @@ public final /* data */ class TrackRoleSubscriptionListingTrialUpdated implement
             return false;
         }
         TrackRoleSubscriptionListingTrialUpdated trackRoleSubscriptionListingTrialUpdated = (TrackRoleSubscriptionListingTrialUpdated) other;
-        return m.areEqual(this.roleSubscriptionListingId, trackRoleSubscriptionListingTrialUpdated.roleSubscriptionListingId) && m.areEqual(this.trialInterval, trackRoleSubscriptionListingTrialUpdated.trialInterval) && m.areEqual(this.trialIntervalCount, trackRoleSubscriptionListingTrialUpdated.trialIntervalCount) && m.areEqual(this.activeTrialUserLimit, trackRoleSubscriptionListingTrialUpdated.activeTrialUserLimit);
+        return Intrinsics3.areEqual(this.roleSubscriptionListingId, trackRoleSubscriptionListingTrialUpdated.roleSubscriptionListingId) && Intrinsics3.areEqual(this.trialInterval, trackRoleSubscriptionListingTrialUpdated.trialInterval) && Intrinsics3.areEqual(this.trialIntervalCount, trackRoleSubscriptionListingTrialUpdated.trialIntervalCount) && Intrinsics3.areEqual(this.activeTrialUserLimit, trackRoleSubscriptionListingTrialUpdated.activeTrialUserLimit);
     }
 
     public int hashCode() {
@@ -59,13 +60,13 @@ public final /* data */ class TrackRoleSubscriptionListingTrialUpdated implement
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackRoleSubscriptionListingTrialUpdated(roleSubscriptionListingId=");
-        sbU.append(this.roleSubscriptionListingId);
-        sbU.append(", trialInterval=");
-        sbU.append(this.trialInterval);
-        sbU.append(", trialIntervalCount=");
-        sbU.append(this.trialIntervalCount);
-        sbU.append(", activeTrialUserLimit=");
-        return a.G(sbU, this.activeTrialUserLimit, ")");
+        StringBuilder sbM833U = outline.m833U("TrackRoleSubscriptionListingTrialUpdated(roleSubscriptionListingId=");
+        sbM833U.append(this.roleSubscriptionListingId);
+        sbM833U.append(", trialInterval=");
+        sbM833U.append(this.trialInterval);
+        sbM833U.append(", trialIntervalCount=");
+        sbM833U.append(this.trialIntervalCount);
+        sbM833U.append(", activeTrialUserLimit=");
+        return outline.m819G(sbM833U, this.activeTrialUserLimit, ")");
     }
 }

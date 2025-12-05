@@ -1,11 +1,11 @@
 package com.discord.widgets.chat.list.entries;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.api.message.embed.MessageEmbed;
 import com.discord.models.message.Message;
 import com.discord.stores.StoreMessageState;
-import d0.z.d.m;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: EmbedEntry.kt */
 /* loaded from: classes2.dex */
@@ -23,8 +23,8 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
     private final int type;
 
     public EmbedEntry(int i, long j, Message message, StoreMessageState.State state, MessageEmbed messageEmbed, boolean z2, boolean z3, boolean z4, boolean z5) {
-        m.checkNotNullParameter(message, "message");
-        m.checkNotNullParameter(messageEmbed, "embed");
+        Intrinsics3.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(messageEmbed, "embed");
         this.embedIndex = i;
         this.guildId = j;
         this.message = message;
@@ -91,8 +91,8 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
     }
 
     public final EmbedEntry copy(int embedIndex, long guildId, Message message, StoreMessageState.State messageState, MessageEmbed embed, boolean isBlockedExpanded, boolean allowAnimatedEmojis, boolean autoPlayGifs, boolean isThreadStarterMessage) {
-        m.checkNotNullParameter(message, "message");
-        m.checkNotNullParameter(embed, "embed");
+        Intrinsics3.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(embed, "embed");
         return new EmbedEntry(embedIndex, guildId, message, messageState, embed, isBlockedExpanded, allowAnimatedEmojis, autoPlayGifs, isThreadStarterMessage);
     }
 
@@ -104,7 +104,7 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
             return false;
         }
         EmbedEntry embedEntry = (EmbedEntry) other;
-        return this.embedIndex == embedEntry.embedIndex && this.guildId == embedEntry.guildId && m.areEqual(this.message, embedEntry.message) && m.areEqual(this.messageState, embedEntry.messageState) && m.areEqual(this.embed, embedEntry.embed) && this.isBlockedExpanded == embedEntry.isBlockedExpanded && this.allowAnimatedEmojis == embedEntry.allowAnimatedEmojis && this.autoPlayGifs == embedEntry.autoPlayGifs && this.isThreadStarterMessage == embedEntry.isThreadStarterMessage;
+        return this.embedIndex == embedEntry.embedIndex && this.guildId == embedEntry.guildId && Intrinsics3.areEqual(this.message, embedEntry.message) && Intrinsics3.areEqual(this.messageState, embedEntry.messageState) && Intrinsics3.areEqual(this.embed, embedEntry.embed) && this.isBlockedExpanded == embedEntry.isBlockedExpanded && this.allowAnimatedEmojis == embedEntry.allowAnimatedEmojis && this.autoPlayGifs == embedEntry.autoPlayGifs && this.isThreadStarterMessage == embedEntry.isThreadStarterMessage;
     }
 
     public final boolean getAllowAnimatedEmojis() {
@@ -147,9 +147,9 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        int iA = (b.a(this.guildId) + (this.embedIndex * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.guildId) + (this.embedIndex * 31)) * 31;
         Message message = this.message;
-        int iHashCode = (iA + (message != null ? message.hashCode() : 0)) * 31;
+        int iHashCode = (iM3a + (message != null ? message.hashCode() : 0)) * 31;
         StoreMessageState.State state = this.messageState;
         int iHashCode2 = (iHashCode + (state != null ? state.hashCode() : 0)) * 31;
         MessageEmbed messageEmbed = this.embed;
@@ -190,23 +190,23 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("EmbedEntry(embedIndex=");
-        sbU.append(this.embedIndex);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", message=");
-        sbU.append(this.message);
-        sbU.append(", messageState=");
-        sbU.append(this.messageState);
-        sbU.append(", embed=");
-        sbU.append(this.embed);
-        sbU.append(", isBlockedExpanded=");
-        sbU.append(this.isBlockedExpanded);
-        sbU.append(", allowAnimatedEmojis=");
-        sbU.append(this.allowAnimatedEmojis);
-        sbU.append(", autoPlayGifs=");
-        sbU.append(this.autoPlayGifs);
-        sbU.append(", isThreadStarterMessage=");
-        return a.O(sbU, this.isThreadStarterMessage, ")");
+        StringBuilder sbM833U = outline.m833U("EmbedEntry(embedIndex=");
+        sbM833U.append(this.embedIndex);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", message=");
+        sbM833U.append(this.message);
+        sbM833U.append(", messageState=");
+        sbM833U.append(this.messageState);
+        sbM833U.append(", embed=");
+        sbM833U.append(this.embed);
+        sbM833U.append(", isBlockedExpanded=");
+        sbM833U.append(this.isBlockedExpanded);
+        sbM833U.append(", allowAnimatedEmojis=");
+        sbM833U.append(this.allowAnimatedEmojis);
+        sbM833U.append(", autoPlayGifs=");
+        sbM833U.append(this.autoPlayGifs);
+        sbM833U.append(", isThreadStarterMessage=");
+        return outline.m827O(sbM833U, this.isThreadStarterMessage, ")");
     }
 }

@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelApplicationStreamPreview.kt */
 /* loaded from: classes.dex */
@@ -9,7 +9,7 @@ public final /* data */ class ModelApplicationStreamPreview {
     private final String url;
 
     public ModelApplicationStreamPreview(String str) {
-        m.checkNotNullParameter(str, "url");
+        Intrinsics3.checkNotNullParameter(str, "url");
         this.url = str;
     }
 
@@ -26,13 +26,13 @@ public final /* data */ class ModelApplicationStreamPreview {
     }
 
     public final ModelApplicationStreamPreview copy(String url) {
-        m.checkNotNullParameter(url, "url");
+        Intrinsics3.checkNotNullParameter(url, "url");
         return new ModelApplicationStreamPreview(url);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ModelApplicationStreamPreview) && m.areEqual(this.url, ((ModelApplicationStreamPreview) other).url);
+            return (other instanceof ModelApplicationStreamPreview) && Intrinsics3.areEqual(this.url, ((ModelApplicationStreamPreview) other).url);
         }
         return true;
     }
@@ -50,6 +50,6 @@ public final /* data */ class ModelApplicationStreamPreview {
     }
 
     public String toString() {
-        return a.J(a.U("ModelApplicationStreamPreview(url="), this.url, ")");
+        return outline.m822J(outline.m833U("ModelApplicationStreamPreview(url="), this.url, ")");
     }
 }

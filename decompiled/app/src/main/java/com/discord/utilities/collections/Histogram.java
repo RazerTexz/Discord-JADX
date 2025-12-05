@@ -1,14 +1,15 @@
 package com.discord.utilities.collections;
 
-import a0.a.a.a;
-import a0.a.a.b;
 import androidx.annotation.VisibleForTesting;
-import d0.t.n;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import kotlin.collections.ArrayDeque;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0001a;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
 
 /* compiled from: Histogram.kt */
 /* loaded from: classes2.dex */
@@ -158,30 +159,30 @@ public final class Histogram {
         }
 
         public int hashCode() {
-            return b.a(this.percentile95) + ((b.a(this.percentile90) + ((b.a(this.percentile75) + ((b.a(this.percentile50) + ((b.a(this.percentile25) + ((((b.a(this.count) + ((a.a(this.average) + ((b.a(this.max) + (b.a(this.min) * 31)) * 31)) * 31)) * 31) + this.bucketCount) * 31)) * 31)) * 31)) * 31)) * 31);
+            return C0002b.m3a(this.percentile95) + ((C0002b.m3a(this.percentile90) + ((C0002b.m3a(this.percentile75) + ((C0002b.m3a(this.percentile50) + ((C0002b.m3a(this.percentile25) + ((((C0002b.m3a(this.count) + ((C0001a.m2a(this.average) + ((C0002b.m3a(this.max) + (C0002b.m3a(this.min) * 31)) * 31)) * 31)) * 31) + this.bucketCount) * 31)) * 31)) * 31)) * 31)) * 31);
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("Report(min=");
-            sbU.append(this.min);
-            sbU.append(", max=");
-            sbU.append(this.max);
-            sbU.append(", average=");
-            sbU.append(this.average);
-            sbU.append(", count=");
-            sbU.append(this.count);
-            sbU.append(", bucketCount=");
-            sbU.append(this.bucketCount);
-            sbU.append(", percentile25=");
-            sbU.append(this.percentile25);
-            sbU.append(", percentile50=");
-            sbU.append(this.percentile50);
-            sbU.append(", percentile75=");
-            sbU.append(this.percentile75);
-            sbU.append(", percentile90=");
-            sbU.append(this.percentile90);
-            sbU.append(", percentile95=");
-            return b.d.b.a.a.C(sbU, this.percentile95, ")");
+            StringBuilder sbM833U = outline.m833U("Report(min=");
+            sbM833U.append(this.min);
+            sbM833U.append(", max=");
+            sbM833U.append(this.max);
+            sbM833U.append(", average=");
+            sbM833U.append(this.average);
+            sbM833U.append(", count=");
+            sbM833U.append(this.count);
+            sbM833U.append(", bucketCount=");
+            sbM833U.append(this.bucketCount);
+            sbM833U.append(", percentile25=");
+            sbM833U.append(this.percentile25);
+            sbM833U.append(", percentile50=");
+            sbM833U.append(this.percentile50);
+            sbM833U.append(", percentile75=");
+            sbM833U.append(this.percentile75);
+            sbM833U.append(", percentile90=");
+            sbM833U.append(this.percentile90);
+            sbM833U.append(", percentile95=");
+            return outline.m815C(sbM833U, this.percentile95, ")");
         }
     }
 
@@ -215,7 +216,7 @@ public final class Histogram {
         long jLongValue;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         Integer num2 = 50;
-        ArrayDeque arrayDeque = new ArrayDeque(n.listOf((Object[]) new Integer[]{25, num2, 75, 90, 95}));
+        ArrayDeque arrayDeque = new ArrayDeque(Collections2.listOf((Object[]) new Integer[]{25, num2, 75, 90, 95}));
         long j = 0;
         for (Map.Entry<Long, Long> entry : this.histogram.entrySet()) {
             long jLongValue2 = entry.getKey().longValue();

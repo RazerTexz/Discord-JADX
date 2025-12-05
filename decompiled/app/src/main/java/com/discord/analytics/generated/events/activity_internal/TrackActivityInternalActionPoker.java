@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackActivityInternalActionPoker.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalActionPoker implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
+public final /* data */ class TrackActivityInternalActionPoker implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence actionName = null;
@@ -45,7 +45,7 @@ public final /* data */ class TrackActivityInternalActionPoker implements Analyt
             return false;
         }
         TrackActivityInternalActionPoker trackActivityInternalActionPoker = (TrackActivityInternalActionPoker) other;
-        return m.areEqual(this.actionName, trackActivityInternalActionPoker.actionName) && m.areEqual(this.numBots, trackActivityInternalActionPoker.numBots) && m.areEqual(this.numPlayers, trackActivityInternalActionPoker.numPlayers) && m.areEqual(this.numSpectators, trackActivityInternalActionPoker.numSpectators) && m.areEqual(this.phase, trackActivityInternalActionPoker.phase) && m.areEqual(this.turnDurationS, trackActivityInternalActionPoker.turnDurationS) && m.areEqual(this.betAction, trackActivityInternalActionPoker.betAction) && m.areEqual(this.betAmount, trackActivityInternalActionPoker.betAmount) && m.areEqual(this.winnings, trackActivityInternalActionPoker.winnings) && m.areEqual(this.startingWallet, trackActivityInternalActionPoker.startingWallet) && m.areEqual(this.currentWallet, trackActivityInternalActionPoker.currentWallet) && m.areEqual(this.potSize, trackActivityInternalActionPoker.potSize) && m.areEqual(this.tableRank, trackActivityInternalActionPoker.tableRank) && m.areEqual(this.cosmeticType, trackActivityInternalActionPoker.cosmeticType) && m.areEqual(this.cosmeticId, trackActivityInternalActionPoker.cosmeticId) && m.areEqual(this.cosmeticLocked, trackActivityInternalActionPoker.cosmeticLocked);
+        return Intrinsics3.areEqual(this.actionName, trackActivityInternalActionPoker.actionName) && Intrinsics3.areEqual(this.numBots, trackActivityInternalActionPoker.numBots) && Intrinsics3.areEqual(this.numPlayers, trackActivityInternalActionPoker.numPlayers) && Intrinsics3.areEqual(this.numSpectators, trackActivityInternalActionPoker.numSpectators) && Intrinsics3.areEqual(this.phase, trackActivityInternalActionPoker.phase) && Intrinsics3.areEqual(this.turnDurationS, trackActivityInternalActionPoker.turnDurationS) && Intrinsics3.areEqual(this.betAction, trackActivityInternalActionPoker.betAction) && Intrinsics3.areEqual(this.betAmount, trackActivityInternalActionPoker.betAmount) && Intrinsics3.areEqual(this.winnings, trackActivityInternalActionPoker.winnings) && Intrinsics3.areEqual(this.startingWallet, trackActivityInternalActionPoker.startingWallet) && Intrinsics3.areEqual(this.currentWallet, trackActivityInternalActionPoker.currentWallet) && Intrinsics3.areEqual(this.potSize, trackActivityInternalActionPoker.potSize) && Intrinsics3.areEqual(this.tableRank, trackActivityInternalActionPoker.tableRank) && Intrinsics3.areEqual(this.cosmeticType, trackActivityInternalActionPoker.cosmeticType) && Intrinsics3.areEqual(this.cosmeticId, trackActivityInternalActionPoker.cosmeticId) && Intrinsics3.areEqual(this.cosmeticLocked, trackActivityInternalActionPoker.cosmeticLocked);
     }
 
     public int hashCode() {
@@ -84,37 +84,37 @@ public final /* data */ class TrackActivityInternalActionPoker implements Analyt
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackActivityInternalActionPoker(actionName=");
-        sbU.append(this.actionName);
-        sbU.append(", numBots=");
-        sbU.append(this.numBots);
-        sbU.append(", numPlayers=");
-        sbU.append(this.numPlayers);
-        sbU.append(", numSpectators=");
-        sbU.append(this.numSpectators);
-        sbU.append(", phase=");
-        sbU.append(this.phase);
-        sbU.append(", turnDurationS=");
-        sbU.append(this.turnDurationS);
-        sbU.append(", betAction=");
-        sbU.append(this.betAction);
-        sbU.append(", betAmount=");
-        sbU.append(this.betAmount);
-        sbU.append(", winnings=");
-        sbU.append(this.winnings);
-        sbU.append(", startingWallet=");
-        sbU.append(this.startingWallet);
-        sbU.append(", currentWallet=");
-        sbU.append(this.currentWallet);
-        sbU.append(", potSize=");
-        sbU.append(this.potSize);
-        sbU.append(", tableRank=");
-        sbU.append(this.tableRank);
-        sbU.append(", cosmeticType=");
-        sbU.append(this.cosmeticType);
-        sbU.append(", cosmeticId=");
-        sbU.append(this.cosmeticId);
-        sbU.append(", cosmeticLocked=");
-        return a.D(sbU, this.cosmeticLocked, ")");
+        StringBuilder sbM833U = outline.m833U("TrackActivityInternalActionPoker(actionName=");
+        sbM833U.append(this.actionName);
+        sbM833U.append(", numBots=");
+        sbM833U.append(this.numBots);
+        sbM833U.append(", numPlayers=");
+        sbM833U.append(this.numPlayers);
+        sbM833U.append(", numSpectators=");
+        sbM833U.append(this.numSpectators);
+        sbM833U.append(", phase=");
+        sbM833U.append(this.phase);
+        sbM833U.append(", turnDurationS=");
+        sbM833U.append(this.turnDurationS);
+        sbM833U.append(", betAction=");
+        sbM833U.append(this.betAction);
+        sbM833U.append(", betAmount=");
+        sbM833U.append(this.betAmount);
+        sbM833U.append(", winnings=");
+        sbM833U.append(this.winnings);
+        sbM833U.append(", startingWallet=");
+        sbM833U.append(this.startingWallet);
+        sbM833U.append(", currentWallet=");
+        sbM833U.append(this.currentWallet);
+        sbM833U.append(", potSize=");
+        sbM833U.append(this.potSize);
+        sbM833U.append(", tableRank=");
+        sbM833U.append(this.tableRank);
+        sbM833U.append(", cosmeticType=");
+        sbM833U.append(this.cosmeticType);
+        sbM833U.append(", cosmeticId=");
+        sbM833U.append(this.cosmeticId);
+        sbM833U.append(", cosmeticLocked=");
+        return outline.m816D(sbM833U, this.cosmeticLocked, ")");
     }
 }

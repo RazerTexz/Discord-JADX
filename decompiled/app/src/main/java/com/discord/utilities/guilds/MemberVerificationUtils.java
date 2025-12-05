@@ -14,13 +14,13 @@ import com.discord.stores.StoreStream;
 import com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog;
 import com.discord.widgets.servers.member_verification.MemberVerificationSuccessDialog;
 import com.discord.widgets.servers.member_verification.WidgetMemberVerification;
-import d0.j;
-import d0.t.n0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Collection;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p507d0.Standard2;
+import p507d0.p580t.Sets5;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: MemberVerificationUtils.kt */
 /* loaded from: classes2.dex */
@@ -43,18 +43,18 @@ public final class MemberVerificationUtils {
     }
 
     /* compiled from: MemberVerificationUtils.kt */
-    /* renamed from: com.discord.utilities.guilds.MemberVerificationUtils$maybeShowVerificationGate$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.guilds.MemberVerificationUtils$maybeShowVerificationGate$1 */
+    public static final class C67681 extends Lambda implements Function0<Unit> {
+        public static final C67681 INSTANCE = new C67681();
 
-        public AnonymousClass1() {
+        public C67681() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -76,7 +76,7 @@ public final class MemberVerificationUtils {
     }
 
     public static /* synthetic */ void maybeShowVerificationGate$default(MemberVerificationUtils memberVerificationUtils, Context context, FragmentManager fragmentManager, long j, String str, ModelInvite modelInvite, Function0 function0, Function0 function02, int i, Object obj) {
-        memberVerificationUtils.maybeShowVerificationGate(context, fragmentManager, j, str, (i & 16) != 0 ? null : modelInvite, (i & 32) != 0 ? AnonymousClass1.INSTANCE : function0, function02);
+        memberVerificationUtils.maybeShowVerificationGate(context, fragmentManager, j, str, (i & 16) != 0 ? null : modelInvite, (i & 32) != 0 ? C67681.INSTANCE : function0, function02);
     }
 
     private final void showMemberVerificationPendingDialog(FragmentManager fragmentManager, long guildId) {
@@ -114,24 +114,24 @@ public final class MemberVerificationUtils {
     }
 
     public final boolean hasVerificationGate(Guild guild, ModelInvite invite) {
-        Collection collectionM;
+        Collection collectionM7866m;
         com.discord.api.guild.Guild guild2;
-        if (guild == null || (collectionM = guild.getFeatures()) == null) {
-            collectionM = (invite == null || (guild2 = invite.guild) == null) ? null : guild2.m();
+        if (guild == null || (collectionM7866m = guild.getFeatures()) == null) {
+            collectionM7866m = (invite == null || (guild2 = invite.guild) == null) ? null : guild2.m7866m();
         }
-        if (collectionM == null) {
-            collectionM = n0.emptySet();
+        if (collectionM7866m == null) {
+            collectionM7866m = Sets5.emptySet();
         }
-        return collectionM.contains(GuildFeature.MEMBER_VERIFICATION_GATE_ENABLED) && collectionM.contains(GuildFeature.COMMUNITY);
+        return collectionM7866m.contains(GuildFeature.MEMBER_VERIFICATION_GATE_ENABLED) && collectionM7866m.contains(GuildFeature.COMMUNITY);
     }
 
     public final void maybeShowVerificationGate(Context context, FragmentManager fragmentManager, long guildId, String location, ModelInvite invite, Function0<Unit> onMembershipGated, Function0<Unit> onFullMembership) {
         int iOrdinal;
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(fragmentManager, "fragmentManager");
-        m.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
-        m.checkNotNullParameter(onMembershipGated, "onMembershipGated");
-        m.checkNotNullParameter(onFullMembership, "onFullMembership");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        Intrinsics3.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
+        Intrinsics3.checkNotNullParameter(onMembershipGated, "onMembershipGated");
+        Intrinsics3.checkNotNullParameter(onFullMembership, "onFullMembership");
         StoreStream.Companion companion = StoreStream.INSTANCE;
         StoreGuilds guilds = companion.getGuilds();
         GuildMember member = guilds.getMember(guildId, companion.getUsers().getMeSnapshot().getId());
@@ -159,7 +159,7 @@ public final class MemberVerificationUtils {
             showMemberVerificationPendingDialog(fragmentManager, guildId);
         } else if (iOrdinal != 3) {
             if (iOrdinal == 4) {
-                throw new j(null, 1, null);
+                throw new Standard2(null, 1, null);
             }
         } else {
             onFullMembership.invoke();

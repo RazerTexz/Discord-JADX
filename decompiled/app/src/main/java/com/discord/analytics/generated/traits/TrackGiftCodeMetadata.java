@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGiftCodeMetadata.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackGiftCodeMetadata {
             return false;
         }
         TrackGiftCodeMetadata trackGiftCodeMetadata = (TrackGiftCodeMetadata) other;
-        return m.areEqual(this.giftCode, trackGiftCodeMetadata.giftCode) && m.areEqual(this.giftCodeSkuId, trackGiftCodeMetadata.giftCodeSkuId) && m.areEqual(this.giftCodeMaxUses, trackGiftCodeMetadata.giftCodeMaxUses) && m.areEqual(this.giftCodeMaxAge, trackGiftCodeMetadata.giftCodeMaxAge) && m.areEqual(this.giftCodeSubscriptionPlanId, trackGiftCodeMetadata.giftCodeSubscriptionPlanId);
+        return Intrinsics3.areEqual(this.giftCode, trackGiftCodeMetadata.giftCode) && Intrinsics3.areEqual(this.giftCodeSkuId, trackGiftCodeMetadata.giftCodeSkuId) && Intrinsics3.areEqual(this.giftCodeMaxUses, trackGiftCodeMetadata.giftCodeMaxUses) && Intrinsics3.areEqual(this.giftCodeMaxAge, trackGiftCodeMetadata.giftCodeMaxAge) && Intrinsics3.areEqual(this.giftCodeSubscriptionPlanId, trackGiftCodeMetadata.giftCodeSubscriptionPlanId);
     }
 
     public int hashCode() {
@@ -37,15 +37,15 @@ public final /* data */ class TrackGiftCodeMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGiftCodeMetadata(giftCode=");
-        sbU.append(this.giftCode);
-        sbU.append(", giftCodeSkuId=");
-        sbU.append(this.giftCodeSkuId);
-        sbU.append(", giftCodeMaxUses=");
-        sbU.append(this.giftCodeMaxUses);
-        sbU.append(", giftCodeMaxAge=");
-        sbU.append(this.giftCodeMaxAge);
-        sbU.append(", giftCodeSubscriptionPlanId=");
-        return a.G(sbU, this.giftCodeSubscriptionPlanId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGiftCodeMetadata(giftCode=");
+        sbM833U.append(this.giftCode);
+        sbM833U.append(", giftCodeSkuId=");
+        sbM833U.append(this.giftCodeSkuId);
+        sbM833U.append(", giftCodeMaxUses=");
+        sbM833U.append(this.giftCodeMaxUses);
+        sbM833U.append(", giftCodeMaxAge=");
+        sbM833U.append(this.giftCodeMaxAge);
+        sbM833U.append(", giftCodeSubscriptionPlanId=");
+        return outline.m819G(sbM833U, this.giftCodeSubscriptionPlanId, ")");
     }
 }

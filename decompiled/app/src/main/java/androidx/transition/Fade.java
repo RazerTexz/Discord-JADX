@@ -16,16 +16,18 @@ import androidx.core.view.ViewCompat;
 
 /* loaded from: classes.dex */
 public class Fade extends Visibility {
-    public static final int IN = 1;
+
+    /* renamed from: IN */
+    public static final int f159IN = 1;
     private static final String LOG_TAG = "Fade";
     public static final int OUT = 2;
     private static final String PROPNAME_TRANSITION_ALPHA = "android:fade:transitionAlpha";
 
-    /* renamed from: androidx.transition.Fade$1, reason: invalid class name */
-    public class AnonymousClass1 extends TransitionListenerAdapter {
+    /* renamed from: androidx.transition.Fade$1 */
+    public class C06511 extends TransitionListenerAdapter {
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass1(View view) {
+        public C06511(View view) {
             this.val$view = view;
         }
 
@@ -73,7 +75,7 @@ public class Fade extends Visibility {
         ViewUtils.setTransitionAlpha(view, f);
         ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(view, ViewUtils.TRANSITION_ALPHA, f2);
         objectAnimatorOfFloat.addListener(new FadeAnimatorListener(view));
-        addListener(new AnonymousClass1(view));
+        addListener(new C06511(view));
         return objectAnimatorOfFloat;
     }
 

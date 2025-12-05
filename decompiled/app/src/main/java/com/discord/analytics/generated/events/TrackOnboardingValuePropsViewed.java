@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackOnboardingValuePropsViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOnboardingValuePropsViewed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackOnboardingValuePropsViewed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean skip = null;
     private final Long propsViewed = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackOnboardingValuePropsViewed implements Analyti
             return false;
         }
         TrackOnboardingValuePropsViewed trackOnboardingValuePropsViewed = (TrackOnboardingValuePropsViewed) other;
-        return m.areEqual(this.skip, trackOnboardingValuePropsViewed.skip) && m.areEqual(this.propsViewed, trackOnboardingValuePropsViewed.propsViewed) && m.areEqual(this.bucket, trackOnboardingValuePropsViewed.bucket);
+        return Intrinsics3.areEqual(this.skip, trackOnboardingValuePropsViewed.skip) && Intrinsics3.areEqual(this.propsViewed, trackOnboardingValuePropsViewed.propsViewed) && Intrinsics3.areEqual(this.bucket, trackOnboardingValuePropsViewed.bucket);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackOnboardingValuePropsViewed implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackOnboardingValuePropsViewed(skip=");
-        sbU.append(this.skip);
-        sbU.append(", propsViewed=");
-        sbU.append(this.propsViewed);
-        sbU.append(", bucket=");
-        return a.G(sbU, this.bucket, ")");
+        StringBuilder sbM833U = outline.m833U("TrackOnboardingValuePropsViewed(skip=");
+        sbM833U.append(this.skip);
+        sbM833U.append(", propsViewed=");
+        sbM833U.append(this.propsViewed);
+        sbM833U.append(", bucket=");
+        return outline.m819G(sbM833U, this.bucket, ")");
     }
 }

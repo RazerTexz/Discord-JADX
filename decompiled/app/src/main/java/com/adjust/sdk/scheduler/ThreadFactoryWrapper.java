@@ -1,19 +1,19 @@
 package com.adjust.sdk.scheduler;
 
-import b.d.b.a.a;
 import com.adjust.sdk.AdjustFactory;
 import com.adjust.sdk.Constants;
 import java.lang.Thread;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ThreadFactoryWrapper implements ThreadFactory {
     private String source;
 
-    /* renamed from: com.adjust.sdk.scheduler.ThreadFactoryWrapper$1, reason: invalid class name */
-    public class AnonymousClass1 implements Thread.UncaughtExceptionHandler {
-        public AnonymousClass1() {
+    /* renamed from: com.adjust.sdk.scheduler.ThreadFactoryWrapper$1 */
+    public class C54031 implements Thread.UncaughtExceptionHandler {
+        public C54031() {
         }
 
         @Override // java.lang.Thread.UncaughtExceptionHandler
@@ -30,13 +30,13 @@ public class ThreadFactoryWrapper implements ThreadFactory {
     public Thread newThread(Runnable runnable) {
         Thread threadNewThread = Executors.defaultThreadFactory().newThread(runnable);
         threadNewThread.setPriority(9);
-        StringBuilder sbU = a.U(Constants.THREAD_PREFIX);
-        sbU.append(threadNewThread.getName());
-        sbU.append("-");
-        sbU.append(this.source);
-        threadNewThread.setName(sbU.toString());
+        StringBuilder sbM833U = outline.m833U(Constants.THREAD_PREFIX);
+        sbM833U.append(threadNewThread.getName());
+        sbM833U.append("-");
+        sbM833U.append(this.source);
+        threadNewThread.setName(sbM833U.toString());
         threadNewThread.setDaemon(true);
-        threadNewThread.setUncaughtExceptionHandler(new AnonymousClass1());
+        threadNewThread.setUncaughtExceptionHandler(new C54031());
         return threadNewThread;
     }
 }

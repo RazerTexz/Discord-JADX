@@ -4,46 +4,51 @@ import android.view.View;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.e5;
-import b.a.i.o5;
-import b.a.i.p5;
 import com.discord.views.LoadingButton;
 import com.google.android.material.button.MaterialButton;
+import p007b.p008a.p025i.WidgetDiscordHubEmailInputBinding;
+import p007b.p008a.p025i.WidgetHubEmailFlowConfirmationBinding;
+import p007b.p008a.p025i.WidgetHubEmailFlowWaitlistBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetHubEmailFlowBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f17173a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final o5 f2473b;
+    public final WidgetHubEmailFlowConfirmationBinding f17174b;
 
+    /* renamed from: c */
     @NonNull
-    public final e5 c;
+    public final WidgetDiscordHubEmailInputBinding f17175c;
 
+    /* renamed from: d */
     @NonNull
-    public final MaterialButton d;
+    public final MaterialButton f17176d;
 
+    /* renamed from: e */
     @NonNull
-    public final LoadingButton e;
+    public final LoadingButton f17177e;
 
+    /* renamed from: f */
     @NonNull
-    public final p5 f;
+    public final WidgetHubEmailFlowWaitlistBinding f17178f;
 
-    public WidgetHubEmailFlowBinding(@NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2, @NonNull o5 o5Var, @NonNull e5 e5Var, @NonNull MaterialButton materialButton, @NonNull LoadingButton loadingButton, @NonNull p5 p5Var) {
-        this.a = linearLayout;
-        this.f2473b = o5Var;
-        this.c = e5Var;
-        this.d = materialButton;
-        this.e = loadingButton;
-        this.f = p5Var;
+    public WidgetHubEmailFlowBinding(@NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2, @NonNull WidgetHubEmailFlowConfirmationBinding widgetHubEmailFlowConfirmationBinding, @NonNull WidgetDiscordHubEmailInputBinding widgetDiscordHubEmailInputBinding, @NonNull MaterialButton materialButton, @NonNull LoadingButton loadingButton, @NonNull WidgetHubEmailFlowWaitlistBinding widgetHubEmailFlowWaitlistBinding) {
+        this.f17173a = linearLayout;
+        this.f17174b = widgetHubEmailFlowConfirmationBinding;
+        this.f17175c = widgetDiscordHubEmailInputBinding;
+        this.f17176d = materialButton;
+        this.f17177e = loadingButton;
+        this.f17178f = widgetHubEmailFlowWaitlistBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17173a;
     }
 }

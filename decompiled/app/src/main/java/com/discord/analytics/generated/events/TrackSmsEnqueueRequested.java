@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSmsEnqueueRequested.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSmsEnqueueRequested implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackSmsEnqueueRequested implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence phoneNumber = null;
     private final CharSequence phoneCountry = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackSmsEnqueueRequested implements AnalyticsSchem
             return false;
         }
         TrackSmsEnqueueRequested trackSmsEnqueueRequested = (TrackSmsEnqueueRequested) other;
-        return m.areEqual(this.phoneNumber, trackSmsEnqueueRequested.phoneNumber) && m.areEqual(this.phoneCountry, trackSmsEnqueueRequested.phoneCountry) && m.areEqual(this.carrierName, trackSmsEnqueueRequested.carrierName) && m.areEqual(this.carrierType, trackSmsEnqueueRequested.carrierType) && m.areEqual(this.source, trackSmsEnqueueRequested.source);
+        return Intrinsics3.areEqual(this.phoneNumber, trackSmsEnqueueRequested.phoneNumber) && Intrinsics3.areEqual(this.phoneCountry, trackSmsEnqueueRequested.phoneCountry) && Intrinsics3.areEqual(this.carrierName, trackSmsEnqueueRequested.carrierName) && Intrinsics3.areEqual(this.carrierType, trackSmsEnqueueRequested.carrierType) && Intrinsics3.areEqual(this.source, trackSmsEnqueueRequested.source);
     }
 
     public int hashCode() {
@@ -48,15 +48,15 @@ public final /* data */ class TrackSmsEnqueueRequested implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSmsEnqueueRequested(phoneNumber=");
-        sbU.append(this.phoneNumber);
-        sbU.append(", phoneCountry=");
-        sbU.append(this.phoneCountry);
-        sbU.append(", carrierName=");
-        sbU.append(this.carrierName);
-        sbU.append(", carrierType=");
-        sbU.append(this.carrierType);
-        sbU.append(", source=");
-        return a.E(sbU, this.source, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSmsEnqueueRequested(phoneNumber=");
+        sbM833U.append(this.phoneNumber);
+        sbM833U.append(", phoneCountry=");
+        sbM833U.append(this.phoneCountry);
+        sbM833U.append(", carrierName=");
+        sbM833U.append(this.carrierName);
+        sbM833U.append(", carrierType=");
+        sbM833U.append(this.carrierType);
+        sbM833U.append(", source=");
+        return outline.m817E(sbM833U, this.source, ")");
     }
 }

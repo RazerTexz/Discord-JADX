@@ -10,25 +10,27 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetUserProfileAdapterItemEmptyBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f18359a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ImageView f2689b;
+    public final ImageView f18360b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f18361c;
 
     public WidgetUserProfileAdapterItemEmptyBinding(@NonNull LinearLayout linearLayout, @NonNull ImageView imageView, @NonNull TextView textView) {
-        this.a = linearLayout;
-        this.f2689b = imageView;
-        this.c = textView;
+        this.f18359a = linearLayout;
+        this.f18360b = imageView;
+        this.f18361c = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18359a;
     }
 }

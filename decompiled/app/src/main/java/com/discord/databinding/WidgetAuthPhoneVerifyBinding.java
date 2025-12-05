@@ -11,41 +11,47 @@ import com.discord.views.CodeVerificationView;
 /* loaded from: classes.dex */
 public final class WidgetAuthPhoneVerifyBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f15695a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2235b;
+    public final TextView f15696b;
 
+    /* renamed from: c */
     @NonNull
-    public final CodeVerificationView c;
+    public final CodeVerificationView f15697c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f15698d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f15699e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextView f;
+    public final TextView f15700f;
 
+    /* renamed from: g */
     @NonNull
-    public final DimmerView g;
+    public final DimmerView f15701g;
 
     public WidgetAuthPhoneVerifyBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull TextView textView, @NonNull CodeVerificationView codeVerificationView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4, @NonNull DimmerView dimmerView) {
-        this.a = coordinatorLayout;
-        this.f2235b = textView;
-        this.c = codeVerificationView;
-        this.d = textView2;
-        this.e = textView3;
-        this.f = textView4;
-        this.g = dimmerView;
+        this.f15695a = coordinatorLayout;
+        this.f15696b = textView;
+        this.f15697c = codeVerificationView;
+        this.f15698d = textView2;
+        this.f15699e = textView3;
+        this.f15700f = textView4;
+        this.f15701g = dimmerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15695a;
     }
 }

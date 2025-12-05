@@ -1,9 +1,9 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
 import com.discord.api.guild.Guild;
 import com.discord.api.user.User;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelGuildTemplate.kt */
 /* loaded from: classes.dex */
@@ -20,11 +20,11 @@ public final /* data */ class ModelGuildTemplate {
     private final int usageCount;
 
     public ModelGuildTemplate(long j, User user, long j2, Guild guild, String str, String str2, int i, String str3, String str4, String str5) {
-        m.checkNotNullParameter(str, "createdAt");
-        m.checkNotNullParameter(str2, "updatedAt");
-        m.checkNotNullParameter(str3, ModelAuditLogEntry.CHANGE_KEY_CODE);
-        m.checkNotNullParameter(str4, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        m.checkNotNullParameter(str5, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        Intrinsics3.checkNotNullParameter(str, "createdAt");
+        Intrinsics3.checkNotNullParameter(str2, "updatedAt");
+        Intrinsics3.checkNotNullParameter(str3, ModelAuditLogEntry.CHANGE_KEY_CODE);
+        Intrinsics3.checkNotNullParameter(str4, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(str5, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
         this.creatorId = j;
         this.creator = user;
         this.sourceGuildId = j2;
@@ -92,11 +92,11 @@ public final /* data */ class ModelGuildTemplate {
     }
 
     public final ModelGuildTemplate copy(long creatorId, User creator, long sourceGuildId, Guild serializedSourceGuild, String createdAt, String updatedAt, int usageCount, String code, String name, String description) {
-        m.checkNotNullParameter(createdAt, "createdAt");
-        m.checkNotNullParameter(updatedAt, "updatedAt");
-        m.checkNotNullParameter(code, ModelAuditLogEntry.CHANGE_KEY_CODE);
-        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        m.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        Intrinsics3.checkNotNullParameter(createdAt, "createdAt");
+        Intrinsics3.checkNotNullParameter(updatedAt, "updatedAt");
+        Intrinsics3.checkNotNullParameter(code, ModelAuditLogEntry.CHANGE_KEY_CODE);
+        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
         return new ModelGuildTemplate(creatorId, creator, sourceGuildId, serializedSourceGuild, createdAt, updatedAt, usageCount, code, name, description);
     }
 
@@ -108,7 +108,7 @@ public final /* data */ class ModelGuildTemplate {
             return false;
         }
         ModelGuildTemplate modelGuildTemplate = (ModelGuildTemplate) other;
-        return this.creatorId == modelGuildTemplate.creatorId && m.areEqual(this.creator, modelGuildTemplate.creator) && this.sourceGuildId == modelGuildTemplate.sourceGuildId && m.areEqual(this.serializedSourceGuild, modelGuildTemplate.serializedSourceGuild) && m.areEqual(this.createdAt, modelGuildTemplate.createdAt) && m.areEqual(this.updatedAt, modelGuildTemplate.updatedAt) && this.usageCount == modelGuildTemplate.usageCount && m.areEqual(this.code, modelGuildTemplate.code) && m.areEqual(this.name, modelGuildTemplate.name) && m.areEqual(this.description, modelGuildTemplate.description);
+        return this.creatorId == modelGuildTemplate.creatorId && Intrinsics3.areEqual(this.creator, modelGuildTemplate.creator) && this.sourceGuildId == modelGuildTemplate.sourceGuildId && Intrinsics3.areEqual(this.serializedSourceGuild, modelGuildTemplate.serializedSourceGuild) && Intrinsics3.areEqual(this.createdAt, modelGuildTemplate.createdAt) && Intrinsics3.areEqual(this.updatedAt, modelGuildTemplate.updatedAt) && this.usageCount == modelGuildTemplate.usageCount && Intrinsics3.areEqual(this.code, modelGuildTemplate.code) && Intrinsics3.areEqual(this.name, modelGuildTemplate.name) && Intrinsics3.areEqual(this.description, modelGuildTemplate.description);
     }
 
     public final String getCode() {
@@ -173,25 +173,25 @@ public final /* data */ class ModelGuildTemplate {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelGuildTemplate(creatorId=");
-        sbU.append(this.creatorId);
-        sbU.append(", creator=");
-        sbU.append(this.creator);
-        sbU.append(", sourceGuildId=");
-        sbU.append(this.sourceGuildId);
-        sbU.append(", serializedSourceGuild=");
-        sbU.append(this.serializedSourceGuild);
-        sbU.append(", createdAt=");
-        sbU.append(this.createdAt);
-        sbU.append(", updatedAt=");
-        sbU.append(this.updatedAt);
-        sbU.append(", usageCount=");
-        sbU.append(this.usageCount);
-        sbU.append(", code=");
-        sbU.append(this.code);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", description=");
-        return a.J(sbU, this.description, ")");
+        StringBuilder sbM833U = outline.m833U("ModelGuildTemplate(creatorId=");
+        sbM833U.append(this.creatorId);
+        sbM833U.append(", creator=");
+        sbM833U.append(this.creator);
+        sbM833U.append(", sourceGuildId=");
+        sbM833U.append(this.sourceGuildId);
+        sbM833U.append(", serializedSourceGuild=");
+        sbM833U.append(this.serializedSourceGuild);
+        sbM833U.append(", createdAt=");
+        sbM833U.append(this.createdAt);
+        sbM833U.append(", updatedAt=");
+        sbM833U.append(this.updatedAt);
+        sbM833U.append(", usageCount=");
+        sbM833U.append(this.usageCount);
+        sbM833U.append(", code=");
+        sbM833U.append(this.code);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", description=");
+        return outline.m822J(sbM833U, this.description, ")");
     }
 }

@@ -9,21 +9,22 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetChannelPinnedMessagesBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f15887a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final RecyclerView f2265b;
+    public final RecyclerView f15888b;
 
     public WidgetChannelPinnedMessagesBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull RecyclerView recyclerView) {
-        this.a = coordinatorLayout;
-        this.f2265b = recyclerView;
+        this.f15887a = coordinatorLayout;
+        this.f15888b = recyclerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15887a;
     }
 }

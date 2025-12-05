@@ -1,0 +1,1206 @@
+package p007b.p225i.p355b.p357b;
+
+import java.io.Serializable;
+import java.util.AbstractCollection;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.ConcurrentModificationException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Map;
+import java.util.NavigableMap;
+import java.util.NavigableSet;
+import java.util.Objects;
+import java.util.RandomAccess;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.SortedSet;
+import org.checkerframework.checker.nullness.compatqual.MonotonicNonNullDecl;
+import org.checkerframework.checker.nullness.compatqual.NullableDecl;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+
+/* compiled from: AbstractMapBasedMultimap.java */
+/* renamed from: b.i.b.b.e, reason: use source file name */
+/* loaded from: classes3.dex */
+public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K, V> implements Serializable {
+    private static final long serialVersionUID = 2447537837011683357L;
+
+    /* renamed from: m */
+    public transient Map<K, Collection<V>> f11973m;
+
+    /* renamed from: n */
+    public transient int f11974n;
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$a */
+    public class a extends Maps<K, Collection<V>> {
+
+        /* renamed from: l */
+        public final transient Map<K, Collection<V>> f11975l;
+
+        /* compiled from: AbstractMapBasedMultimap.java */
+        /* renamed from: b.i.b.b.e$a$a, reason: collision with other inner class name */
+        public class C13230a extends Maps3<K, Collection<V>> {
+            public C13230a() {
+            }
+
+            @Override // p007b.p225i.p355b.p357b.Maps3, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            public boolean contains(Object obj) {
+                Set<Map.Entry<K, Collection<V>>> setEntrySet = a.this.f11975l.entrySet();
+                Objects.requireNonNull(setEntrySet);
+                try {
+                    return setEntrySet.contains(obj);
+                } catch (ClassCastException | NullPointerException unused) {
+                    return false;
+                }
+            }
+
+            @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+            public Iterator<Map.Entry<K, Collection<V>>> iterator() {
+                return a.this.new b();
+            }
+
+            @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+            public boolean remove(Object obj) {
+                Collection<V> collectionRemove;
+                if (!contains(obj)) {
+                    return false;
+                }
+                AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+                Object key = ((Map.Entry) obj).getKey();
+                Map<K, Collection<V>> map = abstractMapBasedMultimap2.f11973m;
+                Objects.requireNonNull(map);
+                try {
+                    collectionRemove = map.remove(key);
+                } catch (ClassCastException | NullPointerException unused) {
+                    collectionRemove = null;
+                }
+                Collection<V> collection = collectionRemove;
+                if (collection == null) {
+                    return true;
+                }
+                int size = collection.size();
+                collection.clear();
+                abstractMapBasedMultimap2.f11974n -= size;
+                return true;
+            }
+        }
+
+        /* compiled from: AbstractMapBasedMultimap.java */
+        /* renamed from: b.i.b.b.e$a$b */
+        public class b implements Iterator<Map.Entry<K, Collection<V>>> {
+
+            /* renamed from: j */
+            public final Iterator<Map.Entry<K, Collection<V>>> f11978j;
+
+            /* renamed from: k */
+            @NullableDecl
+            public Collection<V> f11979k;
+
+            public b() {
+                this.f11978j = a.this.f11975l.entrySet().iterator();
+            }
+
+            @Override // java.util.Iterator
+            public boolean hasNext() {
+                return this.f11978j.hasNext();
+            }
+
+            @Override // java.util.Iterator
+            public Object next() {
+                Map.Entry<K, Collection<V>> next = this.f11978j.next();
+                this.f11979k = next.getValue();
+                return a.this.m6221a(next);
+            }
+
+            @Override // java.util.Iterator
+            public void remove() {
+                C3404f.m4201E(this.f11979k != null);
+                this.f11978j.remove();
+                AbstractMapBasedMultimap2.this.f11974n -= this.f11979k.size();
+                this.f11979k.clear();
+                this.f11979k = null;
+            }
+        }
+
+        public a(Map<K, Collection<V>> map) {
+            this.f11975l = map;
+        }
+
+        /* renamed from: a */
+        public Map.Entry<K, Collection<V>> m6221a(Map.Entry<K, Collection<V>> entry) {
+            K key = entry.getKey();
+            AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+            Collection<V> value = entry.getValue();
+            AbstractListMultimap abstractListMultimap = (AbstractListMultimap) abstractMapBasedMultimap2;
+            Objects.requireNonNull(abstractListMultimap);
+            List list = (List) value;
+            return new ImmutableEntry(key, list instanceof RandomAccess ? new f(abstractListMultimap, key, list, null) : new j(key, list, null));
+        }
+
+        @Override // java.util.AbstractMap, java.util.Map
+        public void clear() {
+            Map<K, Collection<V>> map = this.f11975l;
+            AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+            if (map == abstractMapBasedMultimap2.f11973m) {
+                abstractMapBasedMultimap2.m6220d();
+                return;
+            }
+            b bVar = new b();
+            while (bVar.hasNext()) {
+                bVar.next();
+                bVar.remove();
+            }
+        }
+
+        @Override // java.util.AbstractMap, java.util.Map
+        public boolean containsKey(Object obj) {
+            Map<K, Collection<V>> map = this.f11975l;
+            Objects.requireNonNull(map);
+            try {
+                return map.containsKey(obj);
+            } catch (ClassCastException | NullPointerException unused) {
+                return false;
+            }
+        }
+
+        @Override // java.util.AbstractMap, java.util.Map
+        public boolean equals(@NullableDecl Object obj) {
+            return this == obj || this.f11975l.equals(obj);
+        }
+
+        @Override // java.util.AbstractMap, java.util.Map
+        public Object get(Object obj) {
+            Collection<V> collection;
+            Map<K, Collection<V>> map = this.f11975l;
+            Objects.requireNonNull(map);
+            try {
+                collection = map.get(obj);
+            } catch (ClassCastException | NullPointerException unused) {
+                collection = null;
+            }
+            Collection<V> collection2 = collection;
+            if (collection2 == null) {
+                return null;
+            }
+            AbstractListMultimap abstractListMultimap = (AbstractListMultimap) AbstractMapBasedMultimap2.this;
+            Objects.requireNonNull(abstractListMultimap);
+            List list = (List) collection2;
+            return list instanceof RandomAccess ? new f(abstractListMultimap, obj, list, null) : new j(obj, list, null);
+        }
+
+        @Override // java.util.AbstractMap, java.util.Map
+        public int hashCode() {
+            return this.f11975l.hashCode();
+        }
+
+        @Override // java.util.AbstractMap, java.util.Map
+        public Set<K> keySet() {
+            AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+            Set<K> eVar = abstractMapBasedMultimap2.f12006j;
+            if (eVar == null) {
+                Multimaps multimaps = (Multimaps) abstractMapBasedMultimap2;
+                Map<K, Collection<V>> map = multimaps.f11973m;
+                eVar = map instanceof NavigableMap ? new e((NavigableMap) multimaps.f11973m) : map instanceof SortedMap ? new h((SortedMap) multimaps.f11973m) : new c(multimaps.f11973m);
+                abstractMapBasedMultimap2.f12006j = eVar;
+            }
+            return eVar;
+        }
+
+        @Override // java.util.AbstractMap, java.util.Map
+        public Object remove(Object obj) {
+            Collection<V> collectionRemove = this.f11975l.remove(obj);
+            if (collectionRemove == null) {
+                return null;
+            }
+            Collection<V> collectionMo6217e = AbstractMapBasedMultimap2.this.mo6217e();
+            collectionMo6217e.addAll(collectionRemove);
+            AbstractMapBasedMultimap2.this.f11974n -= collectionRemove.size();
+            collectionRemove.clear();
+            return collectionMo6217e;
+        }
+
+        @Override // java.util.AbstractMap, java.util.Map
+        public int size() {
+            return this.f11975l.size();
+        }
+
+        @Override // java.util.AbstractMap
+        public String toString() {
+            return this.f11975l.toString();
+        }
+    }
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$b */
+    public abstract class b<T> implements Iterator<T> {
+
+        /* renamed from: j */
+        public final Iterator<Map.Entry<K, Collection<V>>> f11981j;
+
+        /* renamed from: k */
+        @NullableDecl
+        public K f11982k = null;
+
+        /* renamed from: l */
+        @MonotonicNonNullDecl
+        public Collection<V> f11983l = null;
+
+        /* renamed from: m */
+        public Iterator<V> f11984m = Iterators2.INSTANCE;
+
+        public b() {
+            this.f11981j = AbstractMapBasedMultimap2.this.f11973m.entrySet().iterator();
+        }
+
+        @Override // java.util.Iterator
+        public boolean hasNext() {
+            return this.f11981j.hasNext() || this.f11984m.hasNext();
+        }
+
+        @Override // java.util.Iterator
+        public T next() {
+            if (!this.f11984m.hasNext()) {
+                Map.Entry<K, Collection<V>> next = this.f11981j.next();
+                this.f11982k = next.getKey();
+                Collection<V> value = next.getValue();
+                this.f11983l = value;
+                this.f11984m = value.iterator();
+            }
+            return this.f11984m.next();
+        }
+
+        @Override // java.util.Iterator
+        public void remove() {
+            this.f11984m.remove();
+            if (this.f11983l.isEmpty()) {
+                this.f11981j.remove();
+            }
+            AbstractMapBasedMultimap2.m6219c(AbstractMapBasedMultimap2.this);
+        }
+    }
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$c */
+    public class c extends Maps4<K, Collection<V>> {
+
+        /* compiled from: AbstractMapBasedMultimap.java */
+        /* renamed from: b.i.b.b.e$c$a */
+        public class a implements Iterator<K> {
+
+            /* renamed from: j */
+            @NullableDecl
+            public Map.Entry<K, Collection<V>> f11987j;
+
+            /* renamed from: k */
+            public final /* synthetic */ Iterator f11988k;
+
+            public a(Iterator it) {
+                this.f11988k = it;
+            }
+
+            @Override // java.util.Iterator
+            public boolean hasNext() {
+                return this.f11988k.hasNext();
+            }
+
+            @Override // java.util.Iterator
+            public K next() {
+                Map.Entry<K, Collection<V>> entry = (Map.Entry) this.f11988k.next();
+                this.f11987j = entry;
+                return entry.getKey();
+            }
+
+            @Override // java.util.Iterator
+            public void remove() {
+                C3404f.m4201E(this.f11987j != null);
+                Collection<V> value = this.f11987j.getValue();
+                this.f11988k.remove();
+                AbstractMapBasedMultimap2.this.f11974n -= value.size();
+                value.clear();
+                this.f11987j = null;
+            }
+        }
+
+        public c(Map<K, Collection<V>> map) {
+            super(map);
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+        public void clear() {
+            Iterator<K> it = iterator();
+            while (true) {
+                a aVar = (a) it;
+                if (!aVar.hasNext()) {
+                    return;
+                }
+                aVar.next();
+                aVar.remove();
+            }
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+        public boolean containsAll(Collection<?> collection) {
+            return this.f12111j.keySet().containsAll(collection);
+        }
+
+        @Override // java.util.AbstractSet, java.util.Collection, java.util.Set
+        public boolean equals(@NullableDecl Object obj) {
+            return this == obj || this.f12111j.keySet().equals(obj);
+        }
+
+        @Override // java.util.AbstractSet, java.util.Collection, java.util.Set
+        public int hashCode() {
+            return this.f12111j.keySet().hashCode();
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+        public Iterator<K> iterator() {
+            return new a(this.f12111j.entrySet().iterator());
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+        public boolean remove(Object obj) {
+            int size;
+            Collection collection = (Collection) this.f12111j.remove(obj);
+            if (collection != null) {
+                size = collection.size();
+                collection.clear();
+                AbstractMapBasedMultimap2.this.f11974n -= size;
+            } else {
+                size = 0;
+            }
+            return size > 0;
+        }
+    }
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$d */
+    public class d extends AbstractMapBasedMultimap2<K, V>.g implements NavigableMap<K, Collection<V>> {
+        public d(NavigableMap<K, Collection<V>> navigableMap) {
+            super(navigableMap);
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g
+        /* renamed from: b */
+        public SortedSet mo6222b() {
+            return new e(m6227g());
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g
+        /* renamed from: c */
+        public /* bridge */ /* synthetic */ SortedSet mo6223c() {
+            return m6225e();
+        }
+
+        @Override // java.util.NavigableMap
+        public Map.Entry<K, Collection<V>> ceilingEntry(K k) {
+            Map.Entry<K, Collection<V>> entryCeilingEntry = m6227g().ceilingEntry(k);
+            if (entryCeilingEntry == null) {
+                return null;
+            }
+            return m6221a(entryCeilingEntry);
+        }
+
+        @Override // java.util.NavigableMap
+        public K ceilingKey(K k) {
+            return m6227g().ceilingKey(k);
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g
+        /* renamed from: d */
+        public /* bridge */ /* synthetic */ SortedMap mo6224d() {
+            return m6227g();
+        }
+
+        @Override // java.util.NavigableMap
+        public NavigableSet<K> descendingKeySet() {
+            return ((d) descendingMap()).navigableKeySet();
+        }
+
+        @Override // java.util.NavigableMap
+        public NavigableMap<K, Collection<V>> descendingMap() {
+            return new d(m6227g().descendingMap());
+        }
+
+        /* renamed from: e */
+        public NavigableSet<K> m6225e() {
+            SortedSet<K> sortedSetMo6222b = this.f11992n;
+            if (sortedSetMo6222b == null) {
+                sortedSetMo6222b = mo6222b();
+                this.f11992n = sortedSetMo6222b;
+            }
+            return (NavigableSet) sortedSetMo6222b;
+        }
+
+        /* renamed from: f */
+        public Map.Entry<K, Collection<V>> m6226f(Iterator<Map.Entry<K, Collection<V>>> it) {
+            if (!it.hasNext()) {
+                return null;
+            }
+            Map.Entry<K, Collection<V>> next = it.next();
+            Collection<V> collectionMo6217e = AbstractMapBasedMultimap2.this.mo6217e();
+            collectionMo6217e.addAll(next.getValue());
+            it.remove();
+            K key = next.getKey();
+            Objects.requireNonNull((AbstractListMultimap) AbstractMapBasedMultimap2.this);
+            return new ImmutableEntry(key, Collections.unmodifiableList((List) collectionMo6217e));
+        }
+
+        @Override // java.util.NavigableMap
+        public Map.Entry<K, Collection<V>> firstEntry() {
+            Map.Entry<K, Collection<V>> entryFirstEntry = m6227g().firstEntry();
+            if (entryFirstEntry == null) {
+                return null;
+            }
+            return m6221a(entryFirstEntry);
+        }
+
+        @Override // java.util.NavigableMap
+        public Map.Entry<K, Collection<V>> floorEntry(K k) {
+            Map.Entry<K, Collection<V>> entryFloorEntry = m6227g().floorEntry(k);
+            if (entryFloorEntry == null) {
+                return null;
+            }
+            return m6221a(entryFloorEntry);
+        }
+
+        @Override // java.util.NavigableMap
+        public K floorKey(K k) {
+            return m6227g().floorKey(k);
+        }
+
+        /* renamed from: g */
+        public NavigableMap<K, Collection<V>> m6227g() {
+            return (NavigableMap) ((SortedMap) this.f11975l);
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g, java.util.SortedMap, java.util.NavigableMap
+        public SortedMap headMap(Object obj) {
+            return headMap(obj, false);
+        }
+
+        @Override // java.util.NavigableMap
+        public Map.Entry<K, Collection<V>> higherEntry(K k) {
+            Map.Entry<K, Collection<V>> entryHigherEntry = m6227g().higherEntry(k);
+            if (entryHigherEntry == null) {
+                return null;
+            }
+            return m6221a(entryHigherEntry);
+        }
+
+        @Override // java.util.NavigableMap
+        public K higherKey(K k) {
+            return m6227g().higherKey(k);
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g, p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.a, java.util.AbstractMap, java.util.Map
+        public /* bridge */ /* synthetic */ Set keySet() {
+            return m6225e();
+        }
+
+        @Override // java.util.NavigableMap
+        public Map.Entry<K, Collection<V>> lastEntry() {
+            Map.Entry<K, Collection<V>> entryLastEntry = m6227g().lastEntry();
+            if (entryLastEntry == null) {
+                return null;
+            }
+            return m6221a(entryLastEntry);
+        }
+
+        @Override // java.util.NavigableMap
+        public Map.Entry<K, Collection<V>> lowerEntry(K k) {
+            Map.Entry<K, Collection<V>> entryLowerEntry = m6227g().lowerEntry(k);
+            if (entryLowerEntry == null) {
+                return null;
+            }
+            return m6221a(entryLowerEntry);
+        }
+
+        @Override // java.util.NavigableMap
+        public K lowerKey(K k) {
+            return m6227g().lowerKey(k);
+        }
+
+        @Override // java.util.NavigableMap
+        public NavigableSet<K> navigableKeySet() {
+            return m6225e();
+        }
+
+        @Override // java.util.NavigableMap
+        public Map.Entry<K, Collection<V>> pollFirstEntry() {
+            return m6226f(entrySet().iterator());
+        }
+
+        @Override // java.util.NavigableMap
+        public Map.Entry<K, Collection<V>> pollLastEntry() {
+            return m6226f(((Maps) descendingMap()).entrySet().iterator());
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g, java.util.SortedMap, java.util.NavigableMap
+        public SortedMap subMap(Object obj, Object obj2) {
+            return subMap(obj, true, obj2, false);
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g, java.util.SortedMap, java.util.NavigableMap
+        public SortedMap tailMap(Object obj) {
+            return tailMap(obj, true);
+        }
+
+        @Override // java.util.NavigableMap
+        public NavigableMap<K, Collection<V>> headMap(K k, boolean z2) {
+            return new d(m6227g().headMap(k, z2));
+        }
+
+        @Override // java.util.NavigableMap
+        public NavigableMap<K, Collection<V>> subMap(K k, boolean z2, K k2, boolean z3) {
+            return new d(m6227g().subMap(k, z2, k2, z3));
+        }
+
+        @Override // java.util.NavigableMap
+        public NavigableMap<K, Collection<V>> tailMap(K k, boolean z2) {
+            return new d(m6227g().tailMap(k, z2));
+        }
+    }
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$e */
+    public class e extends AbstractMapBasedMultimap2<K, V>.h implements NavigableSet<K> {
+        public e(NavigableMap<K, Collection<V>> navigableMap) {
+            super(navigableMap);
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.h
+        /* renamed from: c */
+        public /* bridge */ /* synthetic */ SortedMap mo6228c() {
+            return m6229d();
+        }
+
+        @Override // java.util.NavigableSet
+        public K ceiling(K k) {
+            return m6229d().ceilingKey(k);
+        }
+
+        /* renamed from: d */
+        public NavigableMap<K, Collection<V>> m6229d() {
+            return (NavigableMap) ((SortedMap) this.f12111j);
+        }
+
+        @Override // java.util.NavigableSet
+        public Iterator<K> descendingIterator() {
+            return ((c) descendingSet()).iterator();
+        }
+
+        @Override // java.util.NavigableSet
+        public NavigableSet<K> descendingSet() {
+            return new e(m6229d().descendingMap());
+        }
+
+        @Override // java.util.NavigableSet
+        public K floor(K k) {
+            return m6229d().floorKey(k);
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.h, java.util.SortedSet, java.util.NavigableSet
+        public SortedSet headSet(Object obj) {
+            return headSet(obj, false);
+        }
+
+        @Override // java.util.NavigableSet
+        public K higher(K k) {
+            return m6229d().higherKey(k);
+        }
+
+        @Override // java.util.NavigableSet
+        public K lower(K k) {
+            return m6229d().lowerKey(k);
+        }
+
+        @Override // java.util.NavigableSet
+        public K pollFirst() {
+            c.a aVar = (c.a) iterator();
+            if (!aVar.hasNext()) {
+                return null;
+            }
+            K k = (K) aVar.next();
+            aVar.remove();
+            return k;
+        }
+
+        @Override // java.util.NavigableSet
+        public K pollLast() {
+            Iterator<K> itDescendingIterator = descendingIterator();
+            if (!itDescendingIterator.hasNext()) {
+                return null;
+            }
+            K next = itDescendingIterator.next();
+            itDescendingIterator.remove();
+            return next;
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.h, java.util.SortedSet, java.util.NavigableSet
+        public SortedSet subSet(Object obj, Object obj2) {
+            return subSet(obj, true, obj2, false);
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.h, java.util.SortedSet, java.util.NavigableSet
+        public SortedSet tailSet(Object obj) {
+            return tailSet(obj, true);
+        }
+
+        @Override // java.util.NavigableSet
+        public NavigableSet<K> headSet(K k, boolean z2) {
+            return new e(m6229d().headMap(k, z2));
+        }
+
+        @Override // java.util.NavigableSet
+        public NavigableSet<K> subSet(K k, boolean z2, K k2, boolean z3) {
+            return new e(m6229d().subMap(k, z2, k2, z3));
+        }
+
+        @Override // java.util.NavigableSet
+        public NavigableSet<K> tailSet(K k, boolean z2) {
+            return new e(m6229d().tailMap(k, z2));
+        }
+    }
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$f */
+    public class f extends AbstractMapBasedMultimap2<K, V>.j implements RandomAccess {
+        public f(@NullableDecl AbstractMapBasedMultimap2 abstractMapBasedMultimap2, K k, @NullableDecl List<V> list, AbstractMapBasedMultimap2<K, V>.i iVar) {
+            super(k, list, iVar);
+        }
+    }
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$g */
+    public class g extends AbstractMapBasedMultimap2<K, V>.a implements SortedMap<K, Collection<V>> {
+
+        /* renamed from: n */
+        @MonotonicNonNullDecl
+        public SortedSet<K> f11992n;
+
+        public g(SortedMap<K, Collection<V>> sortedMap) {
+            super(sortedMap);
+        }
+
+        /* renamed from: b */
+        public SortedSet<K> mo6222b() {
+            return new h(mo6224d());
+        }
+
+        /* renamed from: c */
+        public SortedSet<K> mo6223c() {
+            SortedSet<K> sortedSet = this.f11992n;
+            if (sortedSet != null) {
+                return sortedSet;
+            }
+            SortedSet<K> sortedSetMo6222b = mo6222b();
+            this.f11992n = sortedSetMo6222b;
+            return sortedSetMo6222b;
+        }
+
+        @Override // java.util.SortedMap
+        public Comparator<? super K> comparator() {
+            return mo6224d().comparator();
+        }
+
+        /* renamed from: d */
+        public SortedMap<K, Collection<V>> mo6224d() {
+            return (SortedMap) this.f11975l;
+        }
+
+        @Override // java.util.SortedMap
+        public K firstKey() {
+            return mo6224d().firstKey();
+        }
+
+        public SortedMap<K, Collection<V>> headMap(K k) {
+            return new g(mo6224d().headMap(k));
+        }
+
+        @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.a, java.util.AbstractMap, java.util.Map
+        public /* bridge */ /* synthetic */ Set keySet() {
+            return mo6223c();
+        }
+
+        @Override // java.util.SortedMap
+        public K lastKey() {
+            return mo6224d().lastKey();
+        }
+
+        public SortedMap<K, Collection<V>> subMap(K k, K k2) {
+            return new g(mo6224d().subMap(k, k2));
+        }
+
+        public SortedMap<K, Collection<V>> tailMap(K k) {
+            return new g(mo6224d().tailMap(k));
+        }
+    }
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$h */
+    public class h extends AbstractMapBasedMultimap2<K, V>.c implements SortedSet<K> {
+        public h(SortedMap<K, Collection<V>> sortedMap) {
+            super(sortedMap);
+        }
+
+        /* renamed from: c */
+        public SortedMap<K, Collection<V>> mo6228c() {
+            return (SortedMap) this.f12111j;
+        }
+
+        @Override // java.util.SortedSet
+        public Comparator<? super K> comparator() {
+            return mo6228c().comparator();
+        }
+
+        @Override // java.util.SortedSet
+        public K first() {
+            return mo6228c().firstKey();
+        }
+
+        public SortedSet<K> headSet(K k) {
+            return new h(mo6228c().headMap(k));
+        }
+
+        @Override // java.util.SortedSet
+        public K last() {
+            return mo6228c().lastKey();
+        }
+
+        public SortedSet<K> subSet(K k, K k2) {
+            return new h(mo6228c().subMap(k, k2));
+        }
+
+        public SortedSet<K> tailSet(K k) {
+            return new h(mo6228c().tailMap(k));
+        }
+    }
+
+    public AbstractMapBasedMultimap2(Map<K, Collection<V>> map) {
+        C3404f.m4351v(map.isEmpty());
+        this.f11973m = map;
+    }
+
+    /* renamed from: b */
+    public static /* synthetic */ int m6218b(AbstractMapBasedMultimap2 abstractMapBasedMultimap2) {
+        int i2 = abstractMapBasedMultimap2.f11974n;
+        abstractMapBasedMultimap2.f11974n = i2 + 1;
+        return i2;
+    }
+
+    /* renamed from: c */
+    public static /* synthetic */ int m6219c(AbstractMapBasedMultimap2 abstractMapBasedMultimap2) {
+        int i2 = abstractMapBasedMultimap2.f11974n;
+        abstractMapBasedMultimap2.f11974n = i2 - 1;
+        return i2;
+    }
+
+    /* renamed from: d */
+    public void m6220d() {
+        Iterator<Collection<V>> it = this.f11973m.values().iterator();
+        while (it.hasNext()) {
+            it.next().clear();
+        }
+        this.f11973m.clear();
+        this.f11974n = 0;
+    }
+
+    /* renamed from: e */
+    public abstract Collection<V> mo6217e();
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$j */
+    public class j extends AbstractMapBasedMultimap2<K, V>.i implements List<V> {
+
+        /* compiled from: AbstractMapBasedMultimap.java */
+        /* renamed from: b.i.b.b.e$j$a */
+        public class a extends AbstractMapBasedMultimap2<K, V>.i.a implements ListIterator<V> {
+            public a() {
+                super();
+            }
+
+            @Override // java.util.ListIterator
+            public void add(V v) {
+                boolean zIsEmpty = j.this.isEmpty();
+                m6234b().add(v);
+                AbstractMapBasedMultimap2.m6218b(AbstractMapBasedMultimap2.this);
+                if (zIsEmpty) {
+                    j.this.m6230c();
+                }
+            }
+
+            /* renamed from: b */
+            public final ListIterator<V> m6234b() {
+                m6233a();
+                return (ListIterator) this.f12000j;
+            }
+
+            @Override // java.util.ListIterator
+            public boolean hasPrevious() {
+                return m6234b().hasPrevious();
+            }
+
+            @Override // java.util.ListIterator
+            public int nextIndex() {
+                return m6234b().nextIndex();
+            }
+
+            @Override // java.util.ListIterator
+            public V previous() {
+                return m6234b().previous();
+            }
+
+            @Override // java.util.ListIterator
+            public int previousIndex() {
+                return m6234b().previousIndex();
+            }
+
+            @Override // java.util.ListIterator
+            public void set(V v) {
+                m6234b().set(v);
+            }
+
+            public a(int i) {
+                super(((List) j.this.f11996k).listIterator(i));
+            }
+        }
+
+        public j(@NullableDecl K k, List<V> list, @NullableDecl AbstractMapBasedMultimap2<K, V>.i iVar) {
+            super(k, list, iVar);
+        }
+
+        @Override // java.util.List
+        public void add(int i, V v) {
+            m6231d();
+            boolean zIsEmpty = this.f11996k.isEmpty();
+            ((List) this.f11996k).add(i, v);
+            AbstractMapBasedMultimap2.m6218b(AbstractMapBasedMultimap2.this);
+            if (zIsEmpty) {
+                m6230c();
+            }
+        }
+
+        @Override // java.util.List
+        public boolean addAll(int i, Collection<? extends V> collection) {
+            if (collection.isEmpty()) {
+                return false;
+            }
+            int size = size();
+            boolean zAddAll = ((List) this.f11996k).addAll(i, collection);
+            if (zAddAll) {
+                int size2 = this.f11996k.size();
+                AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+                abstractMapBasedMultimap2.f11974n = (size2 - size) + abstractMapBasedMultimap2.f11974n;
+                if (size == 0) {
+                    m6230c();
+                }
+            }
+            return zAddAll;
+        }
+
+        @Override // java.util.List
+        public V get(int i) {
+            m6231d();
+            return (V) ((List) this.f11996k).get(i);
+        }
+
+        @Override // java.util.List
+        public int indexOf(Object obj) {
+            m6231d();
+            return ((List) this.f11996k).indexOf(obj);
+        }
+
+        @Override // java.util.List
+        public int lastIndexOf(Object obj) {
+            m6231d();
+            return ((List) this.f11996k).lastIndexOf(obj);
+        }
+
+        @Override // java.util.List
+        public ListIterator<V> listIterator() {
+            m6231d();
+            return new a();
+        }
+
+        @Override // java.util.List
+        public V remove(int i) {
+            m6231d();
+            V v = (V) ((List) this.f11996k).remove(i);
+            AbstractMapBasedMultimap2.m6219c(AbstractMapBasedMultimap2.this);
+            m6232e();
+            return v;
+        }
+
+        @Override // java.util.List
+        public V set(int i, V v) {
+            m6231d();
+            return (V) ((List) this.f11996k).set(i, v);
+        }
+
+        @Override // java.util.List
+        public List<V> subList(int i, int i2) {
+            m6231d();
+            AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+            K k = this.f11995j;
+            List listSubList = ((List) this.f11996k).subList(i, i2);
+            AbstractMapBasedMultimap2<K, V>.i iVar = this.f11997l;
+            if (iVar == null) {
+                iVar = this;
+            }
+            Objects.requireNonNull(abstractMapBasedMultimap2);
+            return listSubList instanceof RandomAccess ? new f(abstractMapBasedMultimap2, k, listSubList, iVar) : new j(k, listSubList, iVar);
+        }
+
+        @Override // java.util.List
+        public ListIterator<V> listIterator(int i) {
+            m6231d();
+            return new a(i);
+        }
+    }
+
+    /* compiled from: AbstractMapBasedMultimap.java */
+    /* renamed from: b.i.b.b.e$i */
+    public class i extends AbstractCollection<V> {
+
+        /* renamed from: j */
+        @NullableDecl
+        public final K f11995j;
+
+        /* renamed from: k */
+        public Collection<V> f11996k;
+
+        /* renamed from: l */
+        @NullableDecl
+        public final AbstractMapBasedMultimap2<K, V>.i f11997l;
+
+        /* renamed from: m */
+        @NullableDecl
+        public final Collection<V> f11998m;
+
+        public i(@NullableDecl K k, Collection<V> collection, @NullableDecl AbstractMapBasedMultimap2<K, V>.i iVar) {
+            this.f11995j = k;
+            this.f11996k = collection;
+            this.f11997l = iVar;
+            this.f11998m = iVar == null ? null : iVar.f11996k;
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public boolean add(V v) {
+            m6231d();
+            boolean zIsEmpty = this.f11996k.isEmpty();
+            boolean zAdd = this.f11996k.add(v);
+            if (zAdd) {
+                AbstractMapBasedMultimap2.m6218b(AbstractMapBasedMultimap2.this);
+                if (zIsEmpty) {
+                    m6230c();
+                }
+            }
+            return zAdd;
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public boolean addAll(Collection<? extends V> collection) {
+            if (collection.isEmpty()) {
+                return false;
+            }
+            int size = size();
+            boolean zAddAll = this.f11996k.addAll(collection);
+            if (zAddAll) {
+                int size2 = this.f11996k.size();
+                AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+                abstractMapBasedMultimap2.f11974n = (size2 - size) + abstractMapBasedMultimap2.f11974n;
+                if (size == 0) {
+                    m6230c();
+                }
+            }
+            return zAddAll;
+        }
+
+        /* renamed from: c */
+        public void m6230c() {
+            AbstractMapBasedMultimap2<K, V>.i iVar = this.f11997l;
+            if (iVar != null) {
+                iVar.m6230c();
+            } else {
+                AbstractMapBasedMultimap2.this.f11973m.put(this.f11995j, this.f11996k);
+            }
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public void clear() {
+            int size = size();
+            if (size == 0) {
+                return;
+            }
+            this.f11996k.clear();
+            AbstractMapBasedMultimap2.this.f11974n -= size;
+            m6232e();
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public boolean contains(Object obj) {
+            m6231d();
+            return this.f11996k.contains(obj);
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public boolean containsAll(Collection<?> collection) {
+            m6231d();
+            return this.f11996k.containsAll(collection);
+        }
+
+        /* renamed from: d */
+        public void m6231d() {
+            Collection<V> collection;
+            AbstractMapBasedMultimap2<K, V>.i iVar = this.f11997l;
+            if (iVar != null) {
+                iVar.m6231d();
+                if (this.f11997l.f11996k != this.f11998m) {
+                    throw new ConcurrentModificationException();
+                }
+            } else {
+                if (!this.f11996k.isEmpty() || (collection = AbstractMapBasedMultimap2.this.f11973m.get(this.f11995j)) == null) {
+                    return;
+                }
+                this.f11996k = collection;
+            }
+        }
+
+        /* renamed from: e */
+        public void m6232e() {
+            AbstractMapBasedMultimap2<K, V>.i iVar = this.f11997l;
+            if (iVar != null) {
+                iVar.m6232e();
+            } else if (this.f11996k.isEmpty()) {
+                AbstractMapBasedMultimap2.this.f11973m.remove(this.f11995j);
+            }
+        }
+
+        @Override // java.util.Collection
+        public boolean equals(@NullableDecl Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            m6231d();
+            return this.f11996k.equals(obj);
+        }
+
+        @Override // java.util.Collection
+        public int hashCode() {
+            m6231d();
+            return this.f11996k.hashCode();
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
+        public Iterator<V> iterator() {
+            m6231d();
+            return new a();
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public boolean remove(Object obj) {
+            m6231d();
+            boolean zRemove = this.f11996k.remove(obj);
+            if (zRemove) {
+                AbstractMapBasedMultimap2.m6219c(AbstractMapBasedMultimap2.this);
+                m6232e();
+            }
+            return zRemove;
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public boolean removeAll(Collection<?> collection) {
+            if (collection.isEmpty()) {
+                return false;
+            }
+            int size = size();
+            boolean zRemoveAll = this.f11996k.removeAll(collection);
+            if (zRemoveAll) {
+                int size2 = this.f11996k.size();
+                AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+                abstractMapBasedMultimap2.f11974n = (size2 - size) + abstractMapBasedMultimap2.f11974n;
+                m6232e();
+            }
+            return zRemoveAll;
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public boolean retainAll(Collection<?> collection) {
+            Objects.requireNonNull(collection);
+            int size = size();
+            boolean zRetainAll = this.f11996k.retainAll(collection);
+            if (zRetainAll) {
+                int size2 = this.f11996k.size();
+                AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
+                abstractMapBasedMultimap2.f11974n = (size2 - size) + abstractMapBasedMultimap2.f11974n;
+                m6232e();
+            }
+            return zRetainAll;
+        }
+
+        @Override // java.util.AbstractCollection, java.util.Collection
+        public int size() {
+            m6231d();
+            return this.f11996k.size();
+        }
+
+        @Override // java.util.AbstractCollection
+        public String toString() {
+            m6231d();
+            return this.f11996k.toString();
+        }
+
+        /* compiled from: AbstractMapBasedMultimap.java */
+        /* renamed from: b.i.b.b.e$i$a */
+        public class a implements Iterator<V> {
+
+            /* renamed from: j */
+            public final Iterator<V> f12000j;
+
+            /* renamed from: k */
+            public final Collection<V> f12001k;
+
+            public a() {
+                Collection<V> collection = i.this.f11996k;
+                this.f12001k = collection;
+                this.f12000j = collection instanceof List ? ((List) collection).listIterator() : collection.iterator();
+            }
+
+            /* renamed from: a */
+            public void m6233a() {
+                i.this.m6231d();
+                if (i.this.f11996k != this.f12001k) {
+                    throw new ConcurrentModificationException();
+                }
+            }
+
+            @Override // java.util.Iterator
+            public boolean hasNext() {
+                m6233a();
+                return this.f12000j.hasNext();
+            }
+
+            @Override // java.util.Iterator
+            public V next() {
+                m6233a();
+                return this.f12000j.next();
+            }
+
+            @Override // java.util.Iterator
+            public void remove() {
+                this.f12000j.remove();
+                AbstractMapBasedMultimap2.m6219c(AbstractMapBasedMultimap2.this);
+                i.this.m6232e();
+            }
+
+            public a(Iterator<V> it) {
+                this.f12001k = i.this.f11996k;
+                this.f12000j = it;
+            }
+        }
+    }
+}

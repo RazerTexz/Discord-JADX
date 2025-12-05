@@ -1,18 +1,18 @@
 package com.discord.models.domain;
 
-import b.a.m.a.b;
-import b.a.m.a.c;
-import b.a.m.a.d;
-import b.a.m.a.e;
-import b.a.m.a.f;
-import b.a.m.a.g;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.user.User;
 import com.discord.models.domain.Model;
 import java.io.IOException;
 import java.util.List;
+import p007b.p008a.p033m.p034a.C1132b;
+import p007b.p008a.p033m.p034a.C1134c;
+import p007b.p008a.p033m.p034a.C1136d;
+import p007b.p008a.p033m.p034a.C1138e;
+import p007b.p008a.p033m.p034a.C1140f;
+import p007b.p008a.p033m.p034a.C1142g;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ModelAuditLog implements Model {
@@ -29,22 +29,22 @@ public class ModelAuditLog implements Model {
         strNextName.hashCode();
         switch (strNextName) {
             case "threads":
-                this.threads = jsonReader.nextList(new f(jsonReader));
+                this.threads = jsonReader.nextList(new C1140f(jsonReader));
                 break;
             case "guild_scheduled_events":
-                this.guildScheduledEvents = jsonReader.nextList(new c(jsonReader));
+                this.guildScheduledEvents = jsonReader.nextList(new C1134c(jsonReader));
                 break;
             case "webhooks":
-                this.webhooks = jsonReader.nextList(new e(jsonReader));
+                this.webhooks = jsonReader.nextList(new C1138e(jsonReader));
                 break;
             case "audit_log_entries":
-                this.auditLogEntries = jsonReader.nextList(new b(jsonReader));
+                this.auditLogEntries = jsonReader.nextList(new C1132b(jsonReader));
                 break;
             case "users":
-                this.users = jsonReader.nextList(new g(jsonReader));
+                this.users = jsonReader.nextList(new C1142g(jsonReader));
                 break;
             case "integrations":
-                this.integrations = jsonReader.nextList(new d(jsonReader));
+                this.integrations = jsonReader.nextList(new C1136d(jsonReader));
                 break;
             default:
                 jsonReader.skipValue();
@@ -137,19 +137,19 @@ public class ModelAuditLog implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelAuditLog(users=");
-        sbU.append(getUsers());
-        sbU.append(", webhooks=");
-        sbU.append(getWebhooks());
-        sbU.append(", integrations=");
-        sbU.append(getIntegrations());
-        sbU.append(", auditLogEntries=");
-        sbU.append(getAuditLogEntries());
-        sbU.append(", guildScheduledEvents=");
-        sbU.append(getGuildScheduledEvents());
-        sbU.append(", threads=");
-        sbU.append(getThreads());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ModelAuditLog(users=");
+        sbM833U.append(getUsers());
+        sbM833U.append(", webhooks=");
+        sbM833U.append(getWebhooks());
+        sbM833U.append(", integrations=");
+        sbM833U.append(getIntegrations());
+        sbM833U.append(", auditLogEntries=");
+        sbM833U.append(getAuditLogEntries());
+        sbM833U.append(", guildScheduledEvents=");
+        sbM833U.append(getGuildScheduledEvents());
+        sbM833U.append(", threads=");
+        sbM833U.append(getThreads());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

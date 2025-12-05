@@ -1,9 +1,10 @@
 package com.discord.nullserializable;
 
 import androidx.exifinterface.media.ExifInterface;
-import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: NullSerializable.kt */
 /* loaded from: classes.dex */
@@ -11,28 +12,30 @@ public abstract class NullSerializable<T> implements Serializable {
     private final T value;
 
     /* compiled from: NullSerializable.kt */
-    public static final class a<T> extends NullSerializable<T> {
+    /* renamed from: com.discord.nullserializable.NullSerializable$a */
+    public static final class C5565a<T> extends NullSerializable<T> {
         private final T value;
 
-        public a() {
+        public C5565a() {
             this(null, 1);
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public a(Object obj, int i) {
+        public C5565a(Object obj, int i) {
             super(null, null);
             int i2 = i & 1;
             this.value = null;
         }
 
         @Override // com.discord.nullserializable.NullSerializable
-        public T a() {
+        /* renamed from: a */
+        public T mo8429a() {
             return this.value;
         }
 
         public boolean equals(Object obj) {
             if (this != obj) {
-                return (obj instanceof a) && m.areEqual(this.value, ((a) obj).value);
+                return (obj instanceof C5565a) && Intrinsics3.areEqual(this.value, ((C5565a) obj).value);
             }
             return true;
         }
@@ -46,30 +49,32 @@ public abstract class NullSerializable<T> implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("Null(value=");
-            sbU.append(this.value);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Null(value=");
+            sbM833U.append(this.value);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     /* compiled from: NullSerializable.kt */
-    public static final class b<T> extends NullSerializable<T> {
+    /* renamed from: com.discord.nullserializable.NullSerializable$b */
+    public static final class C5566b<T> extends NullSerializable<T> {
         private final T value;
 
-        public b(T t) {
+        public C5566b(T t) {
             super(t, null);
             this.value = t;
         }
 
         @Override // com.discord.nullserializable.NullSerializable
-        public T a() {
+        /* renamed from: a */
+        public T mo8429a() {
             return this.value;
         }
 
         public boolean equals(Object obj) {
             if (this != obj) {
-                return (obj instanceof b) && m.areEqual(this.value, ((b) obj).value);
+                return (obj instanceof C5566b) && Intrinsics3.areEqual(this.value, ((C5566b) obj).value);
             }
             return true;
         }
@@ -83,10 +88,10 @@ public abstract class NullSerializable<T> implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("Value(value=");
-            sbU.append(this.value);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Value(value=");
+            sbM833U.append(this.value);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -95,7 +100,8 @@ public abstract class NullSerializable<T> implements Serializable {
         this.value = obj;
     }
 
-    public T a() {
+    /* renamed from: a */
+    public T mo8429a() {
         return this.value;
     }
 }

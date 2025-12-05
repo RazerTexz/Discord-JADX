@@ -1,23 +1,23 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.a;
 import com.discord.models.domain.ModelMemberVerificationForm;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreGuildMemberVerificationForm.kt */
 /* loaded from: classes2.dex */
@@ -41,7 +41,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
         private final ModelMemberVerificationForm form;
 
         public MemberVerificationFormData(FetchStates fetchStates, ModelMemberVerificationForm modelMemberVerificationForm) {
-            m.checkNotNullParameter(fetchStates, "fetchState");
+            Intrinsics3.checkNotNullParameter(fetchStates, "fetchState");
             this.fetchState = fetchStates;
             this.form = modelMemberVerificationForm;
         }
@@ -67,7 +67,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
         }
 
         public final MemberVerificationFormData copy(FetchStates fetchState, ModelMemberVerificationForm form) {
-            m.checkNotNullParameter(fetchState, "fetchState");
+            Intrinsics3.checkNotNullParameter(fetchState, "fetchState");
             return new MemberVerificationFormData(fetchState, form);
         }
 
@@ -79,7 +79,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
                 return false;
             }
             MemberVerificationFormData memberVerificationFormData = (MemberVerificationFormData) other;
-            return m.areEqual(this.fetchState, memberVerificationFormData.fetchState) && m.areEqual(this.form, memberVerificationFormData.form);
+            return Intrinsics3.areEqual(this.fetchState, memberVerificationFormData.fetchState) && Intrinsics3.areEqual(this.form, memberVerificationFormData.form);
         }
 
         public final FetchStates getFetchState() {
@@ -98,31 +98,31 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("MemberVerificationFormData(fetchState=");
-            sbU.append(this.fetchState);
-            sbU.append(", form=");
-            sbU.append(this.form);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("MemberVerificationFormData(fetchState=");
+            sbM833U.append(this.fetchState);
+            sbM833U.append(", form=");
+            sbM833U.append(this.form);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     /* compiled from: StoreGuildMemberVerificationForm.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1 */
+    public static final class C60351 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreGuildMemberVerificationForm.kt */
-        /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02411 extends o implements Function1<ModelMemberVerificationForm, Unit> {
+        /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<ModelMemberVerificationForm, Unit> {
 
             /* compiled from: StoreGuildMemberVerificationForm.kt */
             /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02421 extends o implements Function0<Unit> {
+            public static final class C132551 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ ModelMemberVerificationForm $memberVerificationForm;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C02421(ModelMemberVerificationForm modelMemberVerificationForm) {
+                public C132551(ModelMemberVerificationForm modelMemberVerificationForm) {
                     super(0);
                     this.$memberVerificationForm = modelMemberVerificationForm;
                 }
@@ -130,54 +130,54 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
-                    AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                    StoreGuildMemberVerificationForm.access$handleMemberVerificationFormFetchSuccess(StoreGuildMemberVerificationForm.this, anonymousClass1.$guildId, this.$memberVerificationForm);
+                    C60351 c60351 = C60351.this;
+                    StoreGuildMemberVerificationForm.access$handleMemberVerificationFormFetchSuccess(StoreGuildMemberVerificationForm.this, c60351.$guildId, this.$memberVerificationForm);
                 }
             }
 
-            public C02411() {
+            public AnonymousClass1() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(ModelMemberVerificationForm modelMemberVerificationForm) {
                 invoke2(modelMemberVerificationForm);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelMemberVerificationForm modelMemberVerificationForm) {
-                m.checkNotNullParameter(modelMemberVerificationForm, "memberVerificationForm");
-                StoreGuildMemberVerificationForm.access$getDispatcher$p(StoreGuildMemberVerificationForm.this).schedule(new C02421(modelMemberVerificationForm));
+                Intrinsics3.checkNotNullParameter(modelMemberVerificationForm, "memberVerificationForm");
+                StoreGuildMemberVerificationForm.access$getDispatcher$p(StoreGuildMemberVerificationForm.this).schedule(new C132551(modelMemberVerificationForm));
             }
         }
 
         /* compiled from: StoreGuildMemberVerificationForm.kt */
         /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
             /* compiled from: StoreGuildMemberVerificationForm.kt */
-            /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02431 extends o implements Function0<Unit> {
-                public C02431() {
+            /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$2$1, reason: invalid class name */
+            public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+                public AnonymousClass1() {
                     super(0);
                 }
 
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
-                    AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                    StoreGuildMemberVerificationForm.access$handleMemberVerificationFormFetchFailed(StoreGuildMemberVerificationForm.this, anonymousClass1.$guildId);
+                    C60351 c60351 = C60351.this;
+                    StoreGuildMemberVerificationForm.access$handleMemberVerificationFormFetchFailed(StoreGuildMemberVerificationForm.this, c60351.$guildId);
                 }
             }
 
@@ -188,18 +188,18 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Error error) {
                 invoke2(error);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                m.checkNotNullParameter(error, "it");
-                StoreGuildMemberVerificationForm.access$getDispatcher$p(StoreGuildMemberVerificationForm.this).schedule(new C02431());
+                Intrinsics3.checkNotNullParameter(error, "it");
+                StoreGuildMemberVerificationForm.access$getDispatcher$p(StoreGuildMemberVerificationForm.this).schedule(new AnonymousClass1());
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C60351(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -207,7 +207,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -217,17 +217,17 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
                 return;
             }
             StoreGuildMemberVerificationForm.access$handleMemberVerificationFormFetchStart(StoreGuildMemberVerificationForm.this, this.$guildId);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreGuildMemberVerificationForm.access$getRestAPI$p(StoreGuildMemberVerificationForm.this).getGuildMemberVerificationForm(this.$guildId), false, 1, null), StoreGuildMemberVerificationForm.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C02411(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreGuildMemberVerificationForm.access$getRestAPI$p(StoreGuildMemberVerificationForm.this).getGuildMemberVerificationForm(this.$guildId), false, 1, null), StoreGuildMemberVerificationForm.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreGuildMemberVerificationForm.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$observeMemberVerificationFormData$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<MemberVerificationFormData> {
+    /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$observeMemberVerificationFormData$1 */
+    public static final class C60361 extends Lambda implements Function0<MemberVerificationFormData> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C60361(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -245,7 +245,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
     }
 
     public /* synthetic */ StoreGuildMemberVerificationForm(Dispatcher dispatcher, RestAPI restAPI, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(StoreGuildMemberVerificationForm storeGuildMemberVerificationForm) {
@@ -272,26 +272,26 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
         storeGuildMemberVerificationForm.handleMemberVerificationFormFetchSuccess(j, modelMemberVerificationForm);
     }
 
-    @StoreThread
+    @Store3
     private final void handleMemberVerificationFormFetchFailed(long guildId) {
         this.memberVerificationFormState.put(Long.valueOf(guildId), new MemberVerificationFormData(FetchStates.FAILED, null));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void handleMemberVerificationFormFetchStart(long guildId) {
         this.memberVerificationFormState.put(Long.valueOf(guildId), new MemberVerificationFormData(FetchStates.FETCHING, null));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void handleMemberVerificationFormFetchSuccess(long guildId, ModelMemberVerificationForm memberVerificationForm) {
         this.memberVerificationFormState.put(Long.valueOf(guildId), new MemberVerificationFormData(FetchStates.SUCCEEDED, memberVerificationForm));
         markChanged();
     }
 
     public final void fetchMemberVerificationForm(long guildId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId));
+        this.dispatcher.schedule(new C60351(guildId));
     }
 
     public final MemberVerificationFormData getMemberVerificationFormData(long guildId) {
@@ -299,26 +299,26 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
     }
 
     public final Observable<MemberVerificationFormData> observeMemberVerificationFormData(long guildId) {
-        Observable<MemberVerificationFormData> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(guildId), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
-        return observableR;
+        Observable<MemberVerificationFormData> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C60361(guildId), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         super.snapshotData();
         this.memberVerificationFormSnapshot = new HashMap(this.memberVerificationFormState);
     }
 
     public StoreGuildMemberVerificationForm(Dispatcher dispatcher, RestAPI restAPI, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(restAPI, "restAPI");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.restAPI = restAPI;
         this.observationDeck = observationDeck;
-        this.memberVerificationFormSnapshot = h0.emptyMap();
+        this.memberVerificationFormSnapshot = Maps6.emptyMap();
         this.memberVerificationFormState = new HashMap<>();
     }
 }

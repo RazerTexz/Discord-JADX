@@ -1,16 +1,16 @@
 package com.discord.widgets.voice.controls;
 
 import androidx.annotation.DrawableRes;
-import com.discord.R;
+import com.discord.C5419R;
 
 /* compiled from: VoiceControlsOutputSelectorState.kt */
 /* loaded from: classes.dex */
 public enum VoiceControlsOutputSelectorState {
-    SPEAKER_ON(R.drawable.ic_sound_24dp, true, false),
-    SPEAKER_OFF(R.drawable.ic_sound_quiet_24dp, false, false),
-    BLUETOOTH_ON_AND_MORE(R.drawable.ic_sound_bluetooth_24dp, true, true),
-    SPEAKER_ON_AND_MORE(R.drawable.ic_sound_24dp, true, true),
-    SPEAKER_OFF_AND_MORE(R.drawable.ic_sound_quiet_24dp, false, true);
+    SPEAKER_ON(C5419R.drawable.ic_sound_24dp, true, false),
+    SPEAKER_OFF(C5419R.drawable.ic_sound_quiet_24dp, false, false),
+    BLUETOOTH_ON_AND_MORE(C5419R.drawable.ic_sound_bluetooth_24dp, true, true),
+    SPEAKER_ON_AND_MORE(C5419R.drawable.ic_sound_24dp, true, true),
+    SPEAKER_OFF_AND_MORE(C5419R.drawable.ic_sound_quiet_24dp, false, true);
 
     private final int audioOutputIconRes;
     private final boolean isButtonActive;

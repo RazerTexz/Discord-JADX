@@ -1,8 +1,8 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SubscriptionTrial.kt */
 /* loaded from: classes.dex */
@@ -30,7 +30,7 @@ public final /* data */ class SubscriptionTrial {
             return false;
         }
         SubscriptionTrial subscriptionTrial = (SubscriptionTrial) other;
-        return this.id == subscriptionTrial.id && m.areEqual(this.interval, subscriptionTrial.interval) && this.intervalCount == subscriptionTrial.intervalCount && this.skuId == subscriptionTrial.skuId;
+        return this.id == subscriptionTrial.id && Intrinsics3.areEqual(this.interval, subscriptionTrial.interval) && this.intervalCount == subscriptionTrial.intervalCount && this.skuId == subscriptionTrial.skuId;
     }
 
     public int hashCode() {
@@ -43,13 +43,13 @@ public final /* data */ class SubscriptionTrial {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("SubscriptionTrial(id=");
-        sbU.append(this.id);
-        sbU.append(", interval=");
-        sbU.append(this.interval);
-        sbU.append(", intervalCount=");
-        sbU.append(this.intervalCount);
-        sbU.append(", skuId=");
-        return a.C(sbU, this.skuId, ")");
+        StringBuilder sbM833U = outline.m833U("SubscriptionTrial(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", interval=");
+        sbM833U.append(this.interval);
+        sbM833U.append(", intervalCount=");
+        sbM833U.append(this.intervalCount);
+        sbM833U.append(", skuId=");
+        return outline.m815C(sbM833U, this.skuId, ")");
     }
 }

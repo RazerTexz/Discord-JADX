@@ -16,12 +16,12 @@ public final class ViewPropertyAnimatorCompat {
     public Runnable mEndAction = null;
     public int mOldLayerType = -1;
 
-    /* renamed from: androidx.core.view.ViewPropertyAnimatorCompat$1, reason: invalid class name */
-    public class AnonymousClass1 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.core.view.ViewPropertyAnimatorCompat$1 */
+    public class C02931 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewPropertyAnimatorListener val$listener;
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass1(ViewPropertyAnimatorListener viewPropertyAnimatorListener, View view) {
+        public C02931(ViewPropertyAnimatorListener viewPropertyAnimatorListener, View view) {
             this.val$listener = viewPropertyAnimatorListener;
             this.val$view = view;
         }
@@ -42,12 +42,12 @@ public final class ViewPropertyAnimatorCompat {
         }
     }
 
-    /* renamed from: androidx.core.view.ViewPropertyAnimatorCompat$2, reason: invalid class name */
-    public class AnonymousClass2 implements ValueAnimator.AnimatorUpdateListener {
+    /* renamed from: androidx.core.view.ViewPropertyAnimatorCompat$2 */
+    public class C02942 implements ValueAnimator.AnimatorUpdateListener {
         public final /* synthetic */ ViewPropertyAnimatorUpdateListener val$listener;
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass2(ViewPropertyAnimatorUpdateListener viewPropertyAnimatorUpdateListener, View view) {
+        public C02942(ViewPropertyAnimatorUpdateListener viewPropertyAnimatorUpdateListener, View view) {
             this.val$listener = viewPropertyAnimatorUpdateListener;
             this.val$view = view;
         }
@@ -123,7 +123,7 @@ public final class ViewPropertyAnimatorCompat {
 
     private void setListenerInternal(View view, ViewPropertyAnimatorListener viewPropertyAnimatorListener) {
         if (viewPropertyAnimatorListener != null) {
-            view.animate().setListener(new AnonymousClass1(viewPropertyAnimatorListener, view));
+            view.animate().setListener(new C02931(viewPropertyAnimatorListener, view));
         } else {
             view.animate().setListener(null);
         }
@@ -291,7 +291,7 @@ public final class ViewPropertyAnimatorCompat {
     public ViewPropertyAnimatorCompat setUpdateListener(ViewPropertyAnimatorUpdateListener viewPropertyAnimatorUpdateListener) {
         View view = this.mView.get();
         if (view != null) {
-            view.animate().setUpdateListener(viewPropertyAnimatorUpdateListener != null ? new AnonymousClass2(viewPropertyAnimatorUpdateListener, view) : null);
+            view.animate().setUpdateListener(viewPropertyAnimatorUpdateListener != null ? new C02942(viewPropertyAnimatorUpdateListener, view) : null);
         }
         return this;
     }
@@ -376,7 +376,8 @@ public final class ViewPropertyAnimatorCompat {
         return this;
     }
 
-    public ViewPropertyAnimatorCompat x(float f) {
+    /* renamed from: x */
+    public ViewPropertyAnimatorCompat m90x(float f) {
         View view = this.mView.get();
         if (view != null) {
             view.animate().x(f);
@@ -392,7 +393,8 @@ public final class ViewPropertyAnimatorCompat {
         return this;
     }
 
-    public ViewPropertyAnimatorCompat y(float f) {
+    /* renamed from: y */
+    public ViewPropertyAnimatorCompat m91y(float f) {
         View view = this.mView.get();
         if (view != null) {
             view.animate().y(f);
@@ -408,7 +410,8 @@ public final class ViewPropertyAnimatorCompat {
         return this;
     }
 
-    public ViewPropertyAnimatorCompat z(float f) {
+    /* renamed from: z */
+    public ViewPropertyAnimatorCompat m92z(float f) {
         View view = this.mView.get();
         if (view != null) {
             view.animate().z(f);

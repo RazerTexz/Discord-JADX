@@ -1,10 +1,10 @@
 package com.discord.api.voice.state;
 
-import b.d.b.a.a;
 import com.discord.api.guildmember.GuildMember;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: VoiceState.kt */
 /* loaded from: classes.dex */
@@ -56,7 +56,7 @@ public final /* data */ class VoiceState {
             return false;
         }
         VoiceState voiceState = (VoiceState) other;
-        return this.userId == voiceState.userId && this.suppress == voiceState.suppress && m.areEqual(this.sessionId, voiceState.sessionId) && this.selfMute == voiceState.selfMute && this.selfDeaf == voiceState.selfDeaf && this.selfVideo == voiceState.selfVideo && this.selfStream == voiceState.selfStream && this.mute == voiceState.mute && this.guildId == voiceState.guildId && this.deaf == voiceState.deaf && m.areEqual(this.member, voiceState.member) && m.areEqual(this.requestToSpeakTimestamp, voiceState.requestToSpeakTimestamp) && m.areEqual(this.channelId, voiceState.channelId);
+        return this.userId == voiceState.userId && this.suppress == voiceState.suppress && Intrinsics3.areEqual(this.sessionId, voiceState.sessionId) && this.selfMute == voiceState.selfMute && this.selfDeaf == voiceState.selfDeaf && this.selfVideo == voiceState.selfVideo && this.selfStream == voiceState.selfStream && this.mute == voiceState.mute && this.guildId == voiceState.guildId && this.deaf == voiceState.deaf && Intrinsics3.areEqual(this.member, voiceState.member) && Intrinsics3.areEqual(this.requestToSpeakTimestamp, voiceState.requestToSpeakTimestamp) && Intrinsics3.areEqual(this.channelId, voiceState.channelId);
     }
 
     /* renamed from: f, reason: from getter */
@@ -153,31 +153,31 @@ public final /* data */ class VoiceState {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("VoiceState(userId=");
-        sbU.append(this.userId);
-        sbU.append(", suppress=");
-        sbU.append(this.suppress);
-        sbU.append(", sessionId=");
-        sbU.append(this.sessionId);
-        sbU.append(", selfMute=");
-        sbU.append(this.selfMute);
-        sbU.append(", selfDeaf=");
-        sbU.append(this.selfDeaf);
-        sbU.append(", selfVideo=");
-        sbU.append(this.selfVideo);
-        sbU.append(", selfStream=");
-        sbU.append(this.selfStream);
-        sbU.append(", mute=");
-        sbU.append(this.mute);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", deaf=");
-        sbU.append(this.deaf);
-        sbU.append(", member=");
-        sbU.append(this.member);
-        sbU.append(", requestToSpeakTimestamp=");
-        sbU.append(this.requestToSpeakTimestamp);
-        sbU.append(", channelId=");
-        return a.G(sbU, this.channelId, ")");
+        StringBuilder sbM833U = outline.m833U("VoiceState(userId=");
+        sbM833U.append(this.userId);
+        sbM833U.append(", suppress=");
+        sbM833U.append(this.suppress);
+        sbM833U.append(", sessionId=");
+        sbM833U.append(this.sessionId);
+        sbM833U.append(", selfMute=");
+        sbM833U.append(this.selfMute);
+        sbM833U.append(", selfDeaf=");
+        sbM833U.append(this.selfDeaf);
+        sbM833U.append(", selfVideo=");
+        sbM833U.append(this.selfVideo);
+        sbM833U.append(", selfStream=");
+        sbM833U.append(this.selfStream);
+        sbM833U.append(", mute=");
+        sbM833U.append(this.mute);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", deaf=");
+        sbM833U.append(this.deaf);
+        sbM833U.append(", member=");
+        sbM833U.append(this.member);
+        sbM833U.append(", requestToSpeakTimestamp=");
+        sbM833U.append(this.requestToSpeakTimestamp);
+        sbM833U.append(", channelId=");
+        return outline.m819G(sbM833U, this.channelId, ")");
     }
 }

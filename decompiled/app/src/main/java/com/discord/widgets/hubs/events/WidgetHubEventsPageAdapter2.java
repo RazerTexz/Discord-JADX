@@ -1,0 +1,154 @@
+package com.discord.widgets.hubs.events;
+
+import com.discord.api.directory.DirectoryEntryGuild2;
+import com.discord.stores.utilities.RestCallState;
+import com.discord.utilities.analytics.Traits;
+import java.util.List;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: WidgetHubEventsPageAdapter.kt */
+/* renamed from: com.discord.widgets.hubs.events.HubEventsPage, reason: use source file name */
+/* loaded from: classes2.dex */
+public abstract class WidgetHubEventsPageAdapter2 {
+    public static final int ENTRY = 2;
+    public static final int FOOTER = 1;
+    public static final int HEADER = 0;
+    private final int viewType;
+
+    /* compiled from: WidgetHubEventsPageAdapter.kt */
+    /* renamed from: com.discord.widgets.hubs.events.HubEventsPage$Event */
+    public static final /* data */ class Event extends WidgetHubEventsPageAdapter2 {
+        private final WidgetHubEventsViewModel2 guildScheduledEventData;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        public Event(WidgetHubEventsViewModel2 widgetHubEventsViewModel2) {
+            super(2, null);
+            Intrinsics3.checkNotNullParameter(widgetHubEventsViewModel2, "guildScheduledEventData");
+            this.guildScheduledEventData = widgetHubEventsViewModel2;
+        }
+
+        public static /* synthetic */ Event copy$default(Event event, WidgetHubEventsViewModel2 widgetHubEventsViewModel2, int i, Object obj) {
+            if ((i & 1) != 0) {
+                widgetHubEventsViewModel2 = event.guildScheduledEventData;
+            }
+            return event.copy(widgetHubEventsViewModel2);
+        }
+
+        /* renamed from: component1, reason: from getter */
+        public final WidgetHubEventsViewModel2 getGuildScheduledEventData() {
+            return this.guildScheduledEventData;
+        }
+
+        public final Event copy(WidgetHubEventsViewModel2 guildScheduledEventData) {
+            Intrinsics3.checkNotNullParameter(guildScheduledEventData, "guildScheduledEventData");
+            return new Event(guildScheduledEventData);
+        }
+
+        public boolean equals(Object other) {
+            if (this != other) {
+                return (other instanceof Event) && Intrinsics3.areEqual(this.guildScheduledEventData, ((Event) other).guildScheduledEventData);
+            }
+            return true;
+        }
+
+        public final WidgetHubEventsViewModel2 getGuildScheduledEventData() {
+            return this.guildScheduledEventData;
+        }
+
+        public int hashCode() {
+            WidgetHubEventsViewModel2 widgetHubEventsViewModel2 = this.guildScheduledEventData;
+            if (widgetHubEventsViewModel2 != null) {
+                return widgetHubEventsViewModel2.hashCode();
+            }
+            return 0;
+        }
+
+        public String toString() {
+            StringBuilder sbM833U = outline.m833U("Event(guildScheduledEventData=");
+            sbM833U.append(this.guildScheduledEventData);
+            sbM833U.append(")");
+            return sbM833U.toString();
+        }
+    }
+
+    /* compiled from: WidgetHubEventsPageAdapter.kt */
+    /* renamed from: com.discord.widgets.hubs.events.HubEventsPage$Footer */
+    public static final /* data */ class Footer extends WidgetHubEventsPageAdapter2 {
+        private final RestCallState<List<DirectoryEntryGuild2>> eventsAsync;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        /* JADX WARN: Multi-variable type inference failed */
+        public Footer(RestCallState<? extends List<DirectoryEntryGuild2>> restCallState) {
+            super(1, null);
+            Intrinsics3.checkNotNullParameter(restCallState, "eventsAsync");
+            this.eventsAsync = restCallState;
+        }
+
+        /* JADX WARN: Multi-variable type inference failed */
+        public static /* synthetic */ Footer copy$default(Footer footer, RestCallState restCallState, int i, Object obj) {
+            if ((i & 1) != 0) {
+                restCallState = footer.eventsAsync;
+            }
+            return footer.copy(restCallState);
+        }
+
+        public final RestCallState<List<DirectoryEntryGuild2>> component1() {
+            return this.eventsAsync;
+        }
+
+        public final Footer copy(RestCallState<? extends List<DirectoryEntryGuild2>> eventsAsync) {
+            Intrinsics3.checkNotNullParameter(eventsAsync, "eventsAsync");
+            return new Footer(eventsAsync);
+        }
+
+        public boolean equals(Object other) {
+            if (this != other) {
+                return (other instanceof Footer) && Intrinsics3.areEqual(this.eventsAsync, ((Footer) other).eventsAsync);
+            }
+            return true;
+        }
+
+        public final RestCallState<List<DirectoryEntryGuild2>> getEventsAsync() {
+            return this.eventsAsync;
+        }
+
+        public int hashCode() {
+            RestCallState<List<DirectoryEntryGuild2>> restCallState = this.eventsAsync;
+            if (restCallState != null) {
+                return restCallState.hashCode();
+            }
+            return 0;
+        }
+
+        public String toString() {
+            StringBuilder sbM833U = outline.m833U("Footer(eventsAsync=");
+            sbM833U.append(this.eventsAsync);
+            sbM833U.append(")");
+            return sbM833U.toString();
+        }
+    }
+
+    /* compiled from: WidgetHubEventsPageAdapter.kt */
+    /* renamed from: com.discord.widgets.hubs.events.HubEventsPage$Header */
+    public static final class Header extends WidgetHubEventsPageAdapter2 {
+        public static final Header INSTANCE = new Header();
+
+        private Header() {
+            super(0, null);
+        }
+    }
+
+    private WidgetHubEventsPageAdapter2(int i) {
+        this.viewType = i;
+    }
+
+    public final int getViewType() {
+        return this.viewType;
+    }
+
+    public /* synthetic */ WidgetHubEventsPageAdapter2(int i, DefaultConstructorMarker defaultConstructorMarker) {
+        this(i);
+    }
+}

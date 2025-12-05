@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackKeyboardModeToggled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackKeyboardModeToggled implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackKeyboardModeToggled implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean enabled = null;
     private final transient String analyticsSchemaTypeName = "keyboard_mode_toggled";
@@ -21,7 +21,7 @@ public final /* data */ class TrackKeyboardModeToggled implements AnalyticsSchem
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackKeyboardModeToggled) && m.areEqual(this.enabled, ((TrackKeyboardModeToggled) other).enabled);
+            return (other instanceof TrackKeyboardModeToggled) && Intrinsics3.areEqual(this.enabled, ((TrackKeyboardModeToggled) other).enabled);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackKeyboardModeToggled implements AnalyticsSchem
     }
 
     public String toString() {
-        return a.D(a.U("TrackKeyboardModeToggled(enabled="), this.enabled, ")");
+        return outline.m816D(outline.m833U("TrackKeyboardModeToggled(enabled="), this.enabled, ")");
     }
 }

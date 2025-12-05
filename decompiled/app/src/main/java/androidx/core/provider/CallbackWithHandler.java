@@ -15,12 +15,12 @@ public class CallbackWithHandler {
     @NonNull
     private final Handler mCallbackHandler;
 
-    /* renamed from: androidx.core.provider.CallbackWithHandler$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.core.provider.CallbackWithHandler$1 */
+    public class RunnableC02451 implements Runnable {
         public final /* synthetic */ FontsContractCompat.FontRequestCallback val$callback;
         public final /* synthetic */ Typeface val$typeface;
 
-        public AnonymousClass1(FontsContractCompat.FontRequestCallback fontRequestCallback, Typeface typeface) {
+        public RunnableC02451(FontsContractCompat.FontRequestCallback fontRequestCallback, Typeface typeface) {
             this.val$callback = fontRequestCallback;
             this.val$typeface = typeface;
         }
@@ -31,12 +31,12 @@ public class CallbackWithHandler {
         }
     }
 
-    /* renamed from: androidx.core.provider.CallbackWithHandler$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.core.provider.CallbackWithHandler$2 */
+    public class RunnableC02462 implements Runnable {
         public final /* synthetic */ FontsContractCompat.FontRequestCallback val$callback;
         public final /* synthetic */ int val$reason;
 
-        public AnonymousClass2(FontsContractCompat.FontRequestCallback fontRequestCallback, int i) {
+        public RunnableC02462(FontsContractCompat.FontRequestCallback fontRequestCallback, int i) {
             this.val$callback = fontRequestCallback;
             this.val$reason = i;
         }
@@ -53,11 +53,11 @@ public class CallbackWithHandler {
     }
 
     private void onTypefaceRequestFailed(int i) {
-        this.mCallbackHandler.post(new AnonymousClass2(this.mCallback, i));
+        this.mCallbackHandler.post(new RunnableC02462(this.mCallback, i));
     }
 
     private void onTypefaceRetrieved(@NonNull Typeface typeface) {
-        this.mCallbackHandler.post(new AnonymousClass1(this.mCallback, typeface));
+        this.mCallbackHandler.post(new RunnableC02451(this.mCallback, typeface));
     }
 
     public void onTypefaceResult(@NonNull FontRequestWorker.TypefaceResult typefaceResult) {

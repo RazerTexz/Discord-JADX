@@ -3,6 +3,7 @@ package com.hcaptcha.sdk;
 import java.io.Serializable;
 import java.util.Locale;
 import java.util.Objects;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class HCaptchaConfig implements Serializable {
@@ -19,55 +20,90 @@ public class HCaptchaConfig implements Serializable {
     private HCaptchaSize size;
     private HCaptchaTheme theme;
 
-    public static class a {
-        public String a;
+    /* renamed from: com.hcaptcha.sdk.HCaptchaConfig$a */
+    public static class C11151a {
 
-        /* renamed from: b, reason: collision with root package name */
-        public boolean f3141b;
-        public Boolean c;
-        public boolean d;
-        public Boolean e;
-        public String f;
-        public boolean g;
-        public String h;
-        public String i;
-        public String j;
-        public String k;
-        public String l;
-        public boolean m;
-        public String n;
-        public boolean o;
-        public HCaptchaSize p;
-        public boolean q;
-        public HCaptchaTheme r;
+        /* renamed from: a */
+        public String f21674a;
+
+        /* renamed from: b */
+        public boolean f21675b;
+
+        /* renamed from: c */
+        public Boolean f21676c;
+
+        /* renamed from: d */
+        public boolean f21677d;
+
+        /* renamed from: e */
+        public Boolean f21678e;
+
+        /* renamed from: f */
+        public String f21679f;
+
+        /* renamed from: g */
+        public boolean f21680g;
+
+        /* renamed from: h */
+        public String f21681h;
+
+        /* renamed from: i */
+        public String f21682i;
+
+        /* renamed from: j */
+        public String f21683j;
+
+        /* renamed from: k */
+        public String f21684k;
+
+        /* renamed from: l */
+        public String f21685l;
+
+        /* renamed from: m */
+        public boolean f21686m;
+
+        /* renamed from: n */
+        public String f21687n;
+
+        /* renamed from: o */
+        public boolean f21688o;
+
+        /* renamed from: p */
+        public HCaptchaSize f21689p;
+
+        /* renamed from: q */
+        public boolean f21690q;
+
+        /* renamed from: r */
+        public HCaptchaTheme f21691r;
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("HCaptchaConfig.HCaptchaConfigBuilder(siteKey=");
-            sbU.append(this.a);
-            sbU.append(", sentry$value=");
-            sbU.append(this.c);
-            sbU.append(", loading$value=");
-            sbU.append(this.e);
-            sbU.append(", rqdata=");
-            sbU.append(this.f);
-            sbU.append(", apiEndpoint$value=");
-            sbU.append(this.h);
-            sbU.append(", endpoint=");
-            sbU.append(this.i);
-            sbU.append(", reportapi=");
-            sbU.append(this.j);
-            sbU.append(", assethost=");
-            sbU.append(this.k);
-            sbU.append(", imghost=");
-            sbU.append(this.l);
-            sbU.append(", locale$value=");
-            sbU.append(this.n);
-            sbU.append(", size$value=");
-            sbU.append(this.p);
-            sbU.append(", theme$value=");
-            sbU.append(this.r);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("HCaptchaConfig.HCaptchaConfigBuilder(siteKey=");
+            sbM833U.append(this.f21674a);
+            sbM833U.append(", sentry$value=");
+            sbM833U.append(this.f21676c);
+            sbM833U.append(", loading$value=");
+            sbM833U.append(this.f21678e);
+            sbM833U.append(", rqdata=");
+            sbM833U.append(this.f21679f);
+            sbM833U.append(", apiEndpoint$value=");
+            sbM833U.append(this.f21681h);
+            sbM833U.append(", endpoint=");
+            sbM833U.append(this.f21682i);
+            sbM833U.append(", reportapi=");
+            sbM833U.append(this.f21683j);
+            sbM833U.append(", assethost=");
+            sbM833U.append(this.f21684k);
+            sbM833U.append(", imghost=");
+            sbM833U.append(this.f21685l);
+            sbM833U.append(", locale$value=");
+            sbM833U.append(this.f21687n);
+            sbM833U.append(", size$value=");
+            sbM833U.append(this.f21689p);
+            sbM833U.append(", theme$value=");
+            sbM833U.append(this.f21691r);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -135,8 +171,8 @@ public class HCaptchaConfig implements Serializable {
         return $default$theme();
     }
 
-    public static a builder() {
-        return new a();
+    public static C11151a builder() {
+        return new C11151a();
     }
 
     public boolean canEqual(Object obj) {
@@ -338,57 +374,57 @@ public class HCaptchaConfig implements Serializable {
         this.theme = hCaptchaTheme;
     }
 
-    public a toBuilder() {
-        a aVar = new a();
+    public C11151a toBuilder() {
+        C11151a c11151a = new C11151a();
         String str = this.siteKey;
         Objects.requireNonNull(str, "siteKey is marked non-null but is null");
-        aVar.a = str;
-        aVar.c = this.sentry;
-        aVar.f3141b = true;
-        aVar.e = this.loading;
-        aVar.d = true;
-        aVar.f = this.rqdata;
-        aVar.h = this.apiEndpoint;
-        aVar.g = true;
-        aVar.i = this.endpoint;
-        aVar.j = this.reportapi;
-        aVar.k = this.assethost;
-        aVar.l = this.imghost;
-        aVar.n = this.locale;
-        aVar.m = true;
-        aVar.p = this.size;
-        aVar.o = true;
-        aVar.r = this.theme;
-        aVar.q = true;
-        return aVar;
+        c11151a.f21674a = str;
+        c11151a.f21676c = this.sentry;
+        c11151a.f21675b = true;
+        c11151a.f21678e = this.loading;
+        c11151a.f21677d = true;
+        c11151a.f21679f = this.rqdata;
+        c11151a.f21681h = this.apiEndpoint;
+        c11151a.f21680g = true;
+        c11151a.f21682i = this.endpoint;
+        c11151a.f21683j = this.reportapi;
+        c11151a.f21684k = this.assethost;
+        c11151a.f21685l = this.imghost;
+        c11151a.f21687n = this.locale;
+        c11151a.f21686m = true;
+        c11151a.f21689p = this.size;
+        c11151a.f21688o = true;
+        c11151a.f21691r = this.theme;
+        c11151a.f21690q = true;
+        return c11151a;
     }
 
     public String toString() {
-        StringBuilder sbU = b.d.b.a.a.U("HCaptchaConfig(siteKey=");
-        sbU.append(getSiteKey());
-        sbU.append(", sentry=");
-        sbU.append(getSentry());
-        sbU.append(", loading=");
-        sbU.append(getLoading());
-        sbU.append(", rqdata=");
-        sbU.append(getRqdata());
-        sbU.append(", apiEndpoint=");
-        sbU.append(getApiEndpoint());
-        sbU.append(", endpoint=");
-        sbU.append(getEndpoint());
-        sbU.append(", reportapi=");
-        sbU.append(getReportapi());
-        sbU.append(", assethost=");
-        sbU.append(getAssethost());
-        sbU.append(", imghost=");
-        sbU.append(getImghost());
-        sbU.append(", locale=");
-        sbU.append(getLocale());
-        sbU.append(", size=");
-        sbU.append(getSize());
-        sbU.append(", theme=");
-        sbU.append(getTheme());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("HCaptchaConfig(siteKey=");
+        sbM833U.append(getSiteKey());
+        sbM833U.append(", sentry=");
+        sbM833U.append(getSentry());
+        sbM833U.append(", loading=");
+        sbM833U.append(getLoading());
+        sbM833U.append(", rqdata=");
+        sbM833U.append(getRqdata());
+        sbM833U.append(", apiEndpoint=");
+        sbM833U.append(getApiEndpoint());
+        sbM833U.append(", endpoint=");
+        sbM833U.append(getEndpoint());
+        sbM833U.append(", reportapi=");
+        sbM833U.append(getReportapi());
+        sbM833U.append(", assethost=");
+        sbM833U.append(getAssethost());
+        sbM833U.append(", imghost=");
+        sbM833U.append(getImghost());
+        sbM833U.append(", locale=");
+        sbM833U.append(getLocale());
+        sbM833U.append(", size=");
+        sbM833U.append(getSize());
+        sbM833U.append(", theme=");
+        sbM833U.append(getTheme());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

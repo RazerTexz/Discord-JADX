@@ -1,0 +1,14 @@
+package p637j0.p652o;
+
+import java.util.Objects;
+import p658rx.functions.Action1;
+
+/* compiled from: RxJavaHooks.java */
+/* renamed from: j0.o.f */
+/* loaded from: classes3.dex */
+public final class C12768f implements Action1<Throwable> {
+    @Override // p658rx.functions.Action1
+    public void call(Throwable th) {
+        Objects.requireNonNull(RxJavaPlugins.f27384a.m10869b());
+    }
+}

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackCloseTutorial.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCloseTutorial implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackCloseTutorial implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean acknowledged = null;
     private final CharSequence tutorial = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackCloseTutorial implements AnalyticsSchema, Tra
             return false;
         }
         TrackCloseTutorial trackCloseTutorial = (TrackCloseTutorial) other;
-        return m.areEqual(this.acknowledged, trackCloseTutorial.acknowledged) && m.areEqual(this.tutorial, trackCloseTutorial.tutorial) && m.areEqual(this.applicationId, trackCloseTutorial.applicationId);
+        return Intrinsics3.areEqual(this.acknowledged, trackCloseTutorial.acknowledged) && Intrinsics3.areEqual(this.tutorial, trackCloseTutorial.tutorial) && Intrinsics3.areEqual(this.applicationId, trackCloseTutorial.applicationId);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackCloseTutorial implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackCloseTutorial(acknowledged=");
-        sbU.append(this.acknowledged);
-        sbU.append(", tutorial=");
-        sbU.append(this.tutorial);
-        sbU.append(", applicationId=");
-        return a.G(sbU, this.applicationId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackCloseTutorial(acknowledged=");
+        sbM833U.append(this.acknowledged);
+        sbM833U.append(", tutorial=");
+        sbM833U.append(this.tutorial);
+        sbM833U.append(", applicationId=");
+        return outline.m819G(sbM833U, this.applicationId, ")");
     }
 }

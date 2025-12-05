@@ -5,30 +5,32 @@ import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import androidx.constraintlayout.solver.widgets.Helper;
 import androidx.constraintlayout.solver.widgets.analyzer.DependencyNode;
 import androidx.constraintlayout.solver.widgets.analyzer.WidgetRun;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class HorizontalWidgetRun extends WidgetRun {
     private static int[] tempDimensions = new int[2];
 
-    /* renamed from: androidx.constraintlayout.solver.widgets.analyzer.HorizontalWidgetRun$1, reason: invalid class name */
-    public static /* synthetic */ class AnonymousClass1 {
-        public static final /* synthetic */ int[] $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType;
+    /* renamed from: androidx.constraintlayout.solver.widgets.analyzer.HorizontalWidgetRun$1 */
+    public static /* synthetic */ class C01921 {
+
+        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType */
+        public static final /* synthetic */ int[] f121xbf6f0c8e;
 
         static {
             WidgetRun.RunType.values();
             int[] iArr = new int[4];
-            $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType = iArr;
+            f121xbf6f0c8e = iArr;
             try {
                 iArr[WidgetRun.RunType.START.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType[WidgetRun.RunType.END.ordinal()] = 2;
+                f121xbf6f0c8e[WidgetRun.RunType.END.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType[WidgetRun.RunType.CENTER.ordinal()] = 3;
+                f121xbf6f0c8e[WidgetRun.RunType.CENTER.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -279,9 +281,9 @@ public class HorizontalWidgetRun extends WidgetRun {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("HorizontalRun ");
-        sbU.append(this.widget.getDebugName());
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("HorizontalRun ");
+        sbM833U.append(this.widget.getDebugName());
+        return sbM833U.toString();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:124:0x02e0  */

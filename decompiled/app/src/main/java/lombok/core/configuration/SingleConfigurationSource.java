@@ -16,18 +16,18 @@ public final class SingleConfigurationSource implements ConfigurationSource {
     public static ConfigurationSource parse(ConfigurationFile context, ConfigurationParser parser) {
         Map<ConfigurationKey<?>, ConfigurationSource.Result> values = new HashMap<>();
         List<ConfigurationFile> imports = new ArrayList<>();
-        ConfigurationParser.Collector collector = new AnonymousClass1(imports, values);
+        ConfigurationParser.Collector collector = new C128381(imports, values);
         parser.parse(context, collector);
         return new SingleConfigurationSource(values, imports);
     }
 
-    /* renamed from: lombok.core.configuration.SingleConfigurationSource$1, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.SingleConfigurationSource$1 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/SingleConfigurationSource$1.SCL.lombok */
-    class AnonymousClass1 implements ConfigurationParser.Collector {
+    class C128381 implements ConfigurationParser.Collector {
         private final /* synthetic */ List val$imports;
         private final /* synthetic */ Map val$values;
 
-        AnonymousClass1(List list, Map map) {
+        C128381(List list, Map map) {
             this.val$imports = list;
             this.val$values = map;
         }

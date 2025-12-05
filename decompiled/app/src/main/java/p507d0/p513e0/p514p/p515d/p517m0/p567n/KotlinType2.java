@@ -1,0 +1,19 @@
+package p507d0.p513e0.p514p.p515d.p517m0.p567n;
+
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: KotlinType.kt */
+/* renamed from: d0.e0.p.d.m0.n.e0, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class KotlinType2 {
+    public static final boolean isError(KotlinType kotlinType) {
+        Intrinsics3.checkNotNullParameter(kotlinType, "<this>");
+        KotlinType3 kotlinType3Unwrap = kotlinType.unwrap();
+        return (kotlinType3Unwrap instanceof ErrorType2) || ((kotlinType3Unwrap instanceof KotlinType6) && (((KotlinType6) kotlinType3Unwrap).getDelegate() instanceof ErrorType2));
+    }
+
+    public static final boolean isNullable(KotlinType kotlinType) {
+        Intrinsics3.checkNotNullParameter(kotlinType, "<this>");
+        return TypeUtils.isNullableType(kotlinType);
+    }
+}

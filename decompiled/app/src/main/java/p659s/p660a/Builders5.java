@@ -1,0 +1,135 @@
+package p659s.p660a;
+
+import kotlin.coroutines.Continuation;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Ref$ObjectRef;
+import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.Timeout3;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.Result3;
+import p507d0.p584w.p585h.Intrinsics2;
+import p507d0.p584w.p586i.p587a.ContinuationImpl3;
+import p507d0.p584w.p586i.p587a.DebugMetadata;
+import p507d0.p584w.p586i.p587a.DebugProbes;
+import p507d0.p592z.p594d.TypeIntrinsics;
+
+/* compiled from: Builders.kt */
+/* renamed from: s.a.h, reason: use source file name */
+/* loaded from: classes3.dex */
+public final /* synthetic */ class Builders5 {
+
+    /* compiled from: Timeout.kt */
+    @DebugMetadata(m10084c = "kotlinx.coroutines.TimeoutKt", m10085f = "Timeout.kt", m10086l = {101}, m10087m = "withTimeoutOrNull")
+    /* renamed from: s.a.h$a */
+    public static final class a extends ContinuationImpl3 {
+        public long J$0;
+        public Object L$0;
+        public Object L$1;
+        public int label;
+        public /* synthetic */ Object result;
+
+        public a(Continuation continuation) {
+            super(continuation);
+        }
+
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
+        public final Object invokeSuspend(Object obj) {
+            this.result = obj;
+            this.label |= Integer.MIN_VALUE;
+            return Builders5.m11283b(0L, null, this);
+        }
+    }
+
+    /* renamed from: a */
+    public static final <U, T extends U> Object m11282a(Timeout4<U, ? super T> timeout4, Function2<? super CoroutineScope, ? super Continuation<? super T>, ? extends Object> function2) throws Throwable {
+        Object completionState2;
+        Object objM11295R;
+        timeout4.mo10913n(false, true, new C13136o0(timeout4, C3404f.m4300i0(timeout4.f27702m.getContext()).mo11196x(timeout4.f27920n, timeout4, timeout4.f27714k)));
+        timeout4.m11187f0();
+        try {
+        } catch (Throwable th) {
+            completionState2 = new CompletionState2(th, false, 2);
+        }
+        if (function2 == null) {
+            throw new NullPointerException("null cannot be cast to non-null type (R, kotlin.coroutines.Continuation<T>) -> kotlin.Any?");
+        }
+        completionState2 = ((Function2) TypeIntrinsics.beforeCheckcastToFunctionOfArity(function2, 2)).invoke(timeout4, timeout4);
+        if (completionState2 != Intrinsics2.getCOROUTINE_SUSPENDED() && (objM11295R = timeout4.m11295R(completionState2)) != C13119i1.f27858b) {
+            if (!(objM11295R instanceof CompletionState2)) {
+                return C13119i1.m11314a(objM11295R);
+            }
+            Throwable th2 = ((CompletionState2) objM11295R).f27913b;
+            if (((th2 instanceof Timeout3) && ((Timeout3) th2).coroutine == timeout4) ? false : true) {
+                throw th2;
+            }
+            if (completionState2 instanceof CompletionState2) {
+                throw ((CompletionState2) completionState2).f27913b;
+            }
+            return completionState2;
+        }
+        return Intrinsics2.getCOROUTINE_SUSPENDED();
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
+    /* JADX WARN: Type inference failed for: r2v1, types: [T, s.a.x1] */
+    /* renamed from: b */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public static final <T> Object m11283b(long j, Function2<? super CoroutineScope, ? super Continuation<? super T>, ? extends Object> function2, Continuation<? super T> continuation) {
+        a aVar;
+        Timeout3 e;
+        Ref$ObjectRef ref$ObjectRef;
+        if (continuation instanceof a) {
+            aVar = (a) continuation;
+            int i = aVar.label;
+            if ((i & Integer.MIN_VALUE) != 0) {
+                aVar.label = i - Integer.MIN_VALUE;
+            } else {
+                aVar = new a(continuation);
+            }
+        }
+        Object obj = aVar.result;
+        Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+        int i2 = aVar.label;
+        if (i2 == 0) {
+            Result3.throwOnFailure(obj);
+            if (j <= 0) {
+                return null;
+            }
+            Ref$ObjectRef ref$ObjectRef2 = new Ref$ObjectRef();
+            ref$ObjectRef2.element = null;
+            try {
+                aVar.J$0 = j;
+                aVar.L$0 = function2;
+                aVar.L$1 = ref$ObjectRef2;
+                aVar.label = 1;
+                ?? r2 = (T) new Timeout4(j, aVar);
+                ref$ObjectRef2.element = r2;
+                Object objM11282a = m11282a(r2, function2);
+                if (objM11282a == Intrinsics2.getCOROUTINE_SUSPENDED()) {
+                    DebugProbes.probeCoroutineSuspended(aVar);
+                }
+                return objM11282a == coroutine_suspended ? coroutine_suspended : objM11282a;
+            } catch (Timeout3 e2) {
+                e = e2;
+                ref$ObjectRef = ref$ObjectRef2;
+            }
+        } else {
+            if (i2 != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            ref$ObjectRef = (Ref$ObjectRef) aVar.L$1;
+            try {
+                Result3.throwOnFailure(obj);
+                return obj;
+            } catch (Timeout3 e3) {
+                e = e3;
+            }
+        }
+        if (e.coroutine == ((Timeout4) ref$ObjectRef.element)) {
+            return null;
+        }
+        throw e;
+    }
+}

@@ -1,17 +1,17 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildDiscoveryExited.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildDiscoveryExited implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackGuildDiscoveryExited implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence loadId = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackGuildDiscoveryExited implements AnalyticsSche
             return false;
         }
         TrackGuildDiscoveryExited trackGuildDiscoveryExited = (TrackGuildDiscoveryExited) other;
-        return m.areEqual(this.loadId, trackGuildDiscoveryExited.loadId) && m.areEqual(this.guildIdsViewed, trackGuildDiscoveryExited.guildIdsViewed) && m.areEqual(this.recommendationsSource, trackGuildDiscoveryExited.recommendationsSource);
+        return Intrinsics3.areEqual(this.loadId, trackGuildDiscoveryExited.loadId) && Intrinsics3.areEqual(this.guildIdsViewed, trackGuildDiscoveryExited.guildIdsViewed) && Intrinsics3.areEqual(this.recommendationsSource, trackGuildDiscoveryExited.recommendationsSource);
     }
 
     public int hashCode() {
@@ -46,11 +46,11 @@ public final /* data */ class TrackGuildDiscoveryExited implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildDiscoveryExited(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", guildIdsViewed=");
-        sbU.append(this.guildIdsViewed);
-        sbU.append(", recommendationsSource=");
-        return a.E(sbU, this.recommendationsSource, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildDiscoveryExited(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", guildIdsViewed=");
+        sbM833U.append(this.guildIdsViewed);
+        sbM833U.append(", recommendationsSource=");
+        return outline.m817E(sbM833U, this.recommendationsSource, ")");
     }
 }

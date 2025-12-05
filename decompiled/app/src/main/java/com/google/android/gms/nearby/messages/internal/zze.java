@@ -3,35 +3,41 @@ package com.google.android.gms.nearby.messages.internal;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
-import b.c.a.a0.d;
-import b.i.a.f.j.b.e.m0;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.nearby.messages.Distance;
 import java.util.Arrays;
 import java.util.Locale;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4295m0;
 
 /* loaded from: classes3.dex */
 public final class zze extends AbstractSafeParcelable implements Distance {
-    public static final Parcelable.Creator<zze> CREATOR = new m0();
-    public final int j;
-    public final int k;
-    public final double l;
+    public static final Parcelable.Creator<zze> CREATOR = new C4295m0();
+
+    /* renamed from: j */
+    public final int f20812j;
+
+    /* renamed from: k */
+    public final int f20813k;
+
+    /* renamed from: l */
+    public final double f20814l;
 
     public zze() {
-        this.j = 1;
-        this.k = 1;
-        this.l = Double.NaN;
+        this.f20812j = 1;
+        this.f20813k = 1;
+        this.f20814l = Double.NaN;
     }
 
     public zze(int i, int i2, double d) {
-        this.j = i;
-        this.k = i2;
-        this.l = d;
+        this.f20812j = i;
+        this.f20813k = i2;
+        this.f20814l = d;
     }
 
     @Override // java.lang.Comparable
     public final /* bridge */ /* synthetic */ int compareTo(@NonNull Distance distance) {
-        return w0(distance);
+        return m9124w0(distance);
     }
 
     public final boolean equals(Object obj) {
@@ -42,45 +48,47 @@ public final class zze extends AbstractSafeParcelable implements Distance {
             return false;
         }
         zze zzeVar = (zze) obj;
-        return this.k == zzeVar.k && w0(zzeVar) == 0;
+        return this.f20813k == zzeVar.f20813k && m9124w0(zzeVar) == 0;
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(new Object[]{Integer.valueOf(this.k), Double.valueOf(this.l)});
+        return Arrays.hashCode(new Object[]{Integer.valueOf(this.f20813k), Double.valueOf(this.f20814l)});
     }
 
     @Override // com.google.android.gms.nearby.messages.Distance
-    public final double r0() {
-        return this.l;
+    /* renamed from: r0 */
+    public final double mo9120r0() {
+        return this.f20814l;
     }
 
     public final String toString() {
         Locale locale = Locale.US;
         Object[] objArr = new Object[2];
-        objArr[0] = Double.valueOf(this.l);
-        objArr[1] = this.k != 1 ? "UNKNOWN" : "LOW";
+        objArr[0] = Double.valueOf(this.f20814l);
+        objArr[1] = this.f20813k != 1 ? "UNKNOWN" : "LOW";
         return String.format(locale, "(%.1fm, %s)", objArr);
     }
 
-    public final int w0(@NonNull Distance distance) {
-        if (Double.isNaN(this.l) && Double.isNaN(distance.r0())) {
+    /* renamed from: w0 */
+    public final int m9124w0(@NonNull Distance distance) {
+        if (Double.isNaN(this.f20814l) && Double.isNaN(distance.mo9120r0())) {
             return 0;
         }
-        return Double.compare(this.l, distance.r0());
+        return Double.compare(this.f20814l, distance.mo9120r0());
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = d.y2(parcel, 20293);
-        int i2 = this.j;
+        int iM594y2 = AnimatableValueParser.m594y2(parcel, 20293);
+        int i2 = this.f20812j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
-        int i3 = this.k;
+        int i3 = this.f20813k;
         parcel.writeInt(262146);
         parcel.writeInt(i3);
-        double d = this.l;
+        double d = this.f20814l;
         parcel.writeInt(524291);
         parcel.writeDouble(d);
-        d.A2(parcel, iY2);
+        AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 }

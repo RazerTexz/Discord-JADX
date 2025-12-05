@@ -7,9 +7,9 @@ import com.discord.models.domain.ModelPayload;
 import com.discord.stores.StoreNotices;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.time.Clock;
-import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: StoreReviewRequest.kt */
 /* loaded from: classes2.dex */
@@ -23,21 +23,21 @@ public final class StoreReviewRequest extends Store {
     private final StoreStream stream;
 
     public StoreReviewRequest(Clock clock, StoreStream storeStream) {
-        m.checkNotNullParameter(clock, "clock");
-        m.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
         this.clock = clock;
         this.stream = storeStream;
         this.requestedReviewRevision = -1;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:18:0x0035  */
-    @StoreThread
+    @Store3
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final void handleConnectionOpen(ModelPayload payload) {
         boolean z2;
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         List<Guild> guilds = payload.getGuilds();
         boolean z3 = true;
         if (guilds == null) {
@@ -71,7 +71,7 @@ public final class StoreReviewRequest extends Store {
 
     @Override // com.discord.stores.Store
     public void init(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         super.init(context);
         this.requestedReviewRevision = getPrefsSessionDurable().getInt("CACHE_KEY_VIEWED_REVIEW_REQUEST_REVISION", this.requestedReviewRevision);
         this.hasUserAcceptedReviewRequest = getPrefsSessionDurable().getBoolean("CACHE_KEY_HAS_ACCEPTED_REVIEW_REQUEST", this.hasUserAcceptedReviewRequest);
@@ -80,7 +80,7 @@ public final class StoreReviewRequest extends Store {
     public final void onReviewRequestShown() {
         this.requestedReviewRevision = REVIEW_REQUEST_REVISION;
         SharedPreferences.Editor editorEdit = getPrefsSessionDurable().edit();
-        m.checkNotNullExpressionValue(editorEdit, "editor");
+        Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
         editorEdit.putInt("CACHE_KEY_VIEWED_REVIEW_REQUEST_REVISION", REVIEW_REQUEST_REVISION);
         editorEdit.apply();
         this.stream.getNotices().markSeen(StoreNotices.Dialog.Type.REQUEST_RATING_MODAL);
@@ -90,7 +90,7 @@ public final class StoreReviewRequest extends Store {
     public final void onUserAcceptedRequest() {
         this.hasUserAcceptedReviewRequest = true;
         SharedPreferences.Editor editorEdit = getPrefsSessionDurable().edit();
-        m.checkNotNullExpressionValue(editorEdit, "editor");
+        Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
         editorEdit.putBoolean("CACHE_KEY_HAS_ACCEPTED_REVIEW_REQUEST", true);
         editorEdit.apply();
         AnalyticsTracker.INSTANCE.reviewRequestAccepted();

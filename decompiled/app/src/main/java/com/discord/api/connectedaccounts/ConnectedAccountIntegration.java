@@ -1,8 +1,8 @@
 package com.discord.api.connectedaccounts;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ConnectedAccountIntegration.kt */
 /* loaded from: classes.dex */
@@ -40,7 +40,7 @@ public final /* data */ class ConnectedAccountIntegration {
             return false;
         }
         ConnectedAccountIntegration connectedAccountIntegration = (ConnectedAccountIntegration) other;
-        return m.areEqual(this.id, connectedAccountIntegration.id) && m.areEqual(this.type, connectedAccountIntegration.type) && m.areEqual(this.account, connectedAccountIntegration.account) && m.areEqual(this.guild, connectedAccountIntegration.guild);
+        return Intrinsics3.areEqual(this.id, connectedAccountIntegration.id) && Intrinsics3.areEqual(this.type, connectedAccountIntegration.type) && Intrinsics3.areEqual(this.account, connectedAccountIntegration.account) && Intrinsics3.areEqual(this.guild, connectedAccountIntegration.guild);
     }
 
     public int hashCode() {
@@ -55,15 +55,15 @@ public final /* data */ class ConnectedAccountIntegration {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ConnectedAccountIntegration(id=");
-        sbU.append(this.id);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", account=");
-        sbU.append(this.account);
-        sbU.append(", guild=");
-        sbU.append(this.guild);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ConnectedAccountIntegration(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", account=");
+        sbM833U.append(this.account);
+        sbM833U.append(", guild=");
+        sbM833U.append(this.guild);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

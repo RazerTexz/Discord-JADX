@@ -2,8 +2,8 @@ package com.discord.widgets.channels.invite;
 
 import android.view.View;
 import android.view.ViewGroup;
-import d0.z.d.m;
 import java.util.Objects;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: View.kt */
 /* loaded from: classes2.dex */
@@ -16,11 +16,11 @@ public final class GroupInviteFriendsSheet$resizeSheetHeight$$inlined$doOnLayout
 
     @Override // android.view.View.OnLayoutChangeListener
     public void onLayoutChange(View view, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         view.removeOnLayoutChangeListener(this);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
         Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
-        m.checkNotNullExpressionValue(this.this$0.getResources(), "resources");
+        Intrinsics3.checkNotNullExpressionValue(this.this$0.getResources(), "resources");
         layoutParams.height = (int) (r3.getDisplayMetrics().heightPixels * 0.9f);
         view.setLayoutParams(layoutParams);
     }

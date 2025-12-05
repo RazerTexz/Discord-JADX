@@ -10,9 +10,9 @@ import androidx.cardview.widget.RoundRectDrawableWithShadow;
 /* loaded from: classes.dex */
 public class CardViewApi17Impl extends CardViewBaseImpl {
 
-    /* renamed from: androidx.cardview.widget.CardViewApi17Impl$1, reason: invalid class name */
-    public class AnonymousClass1 implements RoundRectDrawableWithShadow.RoundRectHelper {
-        public AnonymousClass1() {
+    /* renamed from: androidx.cardview.widget.CardViewApi17Impl$1 */
+    public class C01611 implements RoundRectDrawableWithShadow.RoundRectHelper {
+        public C01611() {
         }
 
         @Override // androidx.cardview.widget.RoundRectDrawableWithShadow.RoundRectHelper
@@ -23,6 +23,6 @@ public class CardViewApi17Impl extends CardViewBaseImpl {
 
     @Override // androidx.cardview.widget.CardViewBaseImpl, androidx.cardview.widget.CardViewImpl
     public void initStatic() {
-        RoundRectDrawableWithShadow.sRoundRectHelper = new AnonymousClass1();
+        RoundRectDrawableWithShadow.sRoundRectHelper = new C01611();
     }
 }

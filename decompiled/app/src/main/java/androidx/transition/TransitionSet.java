@@ -15,9 +15,9 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.transition.Transition;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Iterator;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class TransitionSet extends Transition {
@@ -33,11 +33,11 @@ public class TransitionSet extends Transition {
     public boolean mStarted;
     private ArrayList<Transition> mTransitions;
 
-    /* renamed from: androidx.transition.TransitionSet$1, reason: invalid class name */
-    public class AnonymousClass1 extends TransitionListenerAdapter {
+    /* renamed from: androidx.transition.TransitionSet$1 */
+    public class C06691 extends TransitionListenerAdapter {
         public final /* synthetic */ Transition val$nextTransition;
 
-        public AnonymousClass1(Transition transition) {
+        public C06691(Transition transition) {
             this.val$nextTransition = transition;
         }
 
@@ -178,7 +178,7 @@ public class TransitionSet extends Transition {
 
     @Override // androidx.transition.Transition
     /* renamed from: clone */
-    public /* bridge */ /* synthetic */ Object mo5clone() throws CloneNotSupportedException {
+    public /* bridge */ /* synthetic */ Object mo11382clone() throws CloneNotSupportedException {
         return clone();
     }
 
@@ -292,7 +292,7 @@ public class TransitionSet extends Transition {
             return;
         }
         for (int i = 1; i < this.mTransitions.size(); i++) {
-            this.mTransitions.get(i - 1).addListener(new AnonymousClass1(this.mTransitions.get(i)));
+            this.mTransitions.get(i - 1).addListener(new C06691(this.mTransitions.get(i)));
         }
         Transition transition = this.mTransitions.get(0);
         if (transition != null) {
@@ -337,7 +337,7 @@ public class TransitionSet extends Transition {
             this.mPlayTogether = true;
         } else {
             if (i != 1) {
-                throw new AndroidRuntimeException(a.q("Invalid parameter for TransitionSet ordering: ", i));
+                throw new AndroidRuntimeException(outline.m871q("Invalid parameter for TransitionSet ordering: ", i));
             }
             this.mPlayTogether = false;
         }
@@ -380,9 +380,9 @@ public class TransitionSet extends Transition {
     public String toString(String str) {
         String string = super.toString(str);
         for (int i = 0; i < this.mTransitions.size(); i++) {
-            StringBuilder sbX = a.X(string, "\n");
-            sbX.append(this.mTransitions.get(i).toString(str + "  "));
-            string = sbX.toString();
+            StringBuilder sbM836X = outline.m836X(string, "\n");
+            sbM836X.append(this.mTransitions.get(i).toString(str + "  "));
+            string = sbM836X.toString();
         }
         return string;
     }

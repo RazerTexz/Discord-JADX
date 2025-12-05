@@ -1,7 +1,7 @@
 package com.discord.api.presence;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ClientStatuses.kt */
 /* loaded from: classes.dex */
@@ -16,17 +16,20 @@ public final /* data */ class ClientStatuses {
         this.mobile = clientStatus3;
     }
 
-    public final ClientStatus a() {
+    /* renamed from: a */
+    public final ClientStatus m8149a() {
         ClientStatus clientStatus = this.desktop;
         return clientStatus != null ? clientStatus : ClientStatus.OFFLINE;
     }
 
-    public final ClientStatus b() {
+    /* renamed from: b */
+    public final ClientStatus m8150b() {
         ClientStatus clientStatus = this.mobile;
         return clientStatus != null ? clientStatus : ClientStatus.OFFLINE;
     }
 
-    public final ClientStatus c() {
+    /* renamed from: c */
+    public final ClientStatus m8151c() {
         ClientStatus clientStatus = this.web;
         return clientStatus != null ? clientStatus : ClientStatus.OFFLINE;
     }
@@ -39,7 +42,7 @@ public final /* data */ class ClientStatuses {
             return false;
         }
         ClientStatuses clientStatuses = (ClientStatuses) other;
-        return m.areEqual(this.desktop, clientStatuses.desktop) && m.areEqual(this.web, clientStatuses.web) && m.areEqual(this.mobile, clientStatuses.mobile);
+        return Intrinsics3.areEqual(this.desktop, clientStatuses.desktop) && Intrinsics3.areEqual(this.web, clientStatuses.web) && Intrinsics3.areEqual(this.mobile, clientStatuses.mobile);
     }
 
     public int hashCode() {
@@ -52,13 +55,13 @@ public final /* data */ class ClientStatuses {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ClientStatuses(desktop=");
-        sbU.append(this.desktop);
-        sbU.append(", web=");
-        sbU.append(this.web);
-        sbU.append(", mobile=");
-        sbU.append(this.mobile);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ClientStatuses(desktop=");
+        sbM833U.append(this.desktop);
+        sbM833U.append(", web=");
+        sbM833U.append(this.web);
+        sbM833U.append(", mobile=");
+        sbM833U.append(this.mobile);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

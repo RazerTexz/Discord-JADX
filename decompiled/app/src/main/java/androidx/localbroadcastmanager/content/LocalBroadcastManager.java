@@ -27,9 +27,9 @@ public final class LocalBroadcastManager {
     private final HashMap<String, ArrayList<ReceiverRecord>> mActions = new HashMap<>();
     private final ArrayList<BroadcastRecord> mPendingBroadcasts = new ArrayList<>();
 
-    /* renamed from: androidx.localbroadcastmanager.content.LocalBroadcastManager$1, reason: invalid class name */
-    public class AnonymousClass1 extends Handler {
-        public AnonymousClass1(Looper looper) {
+    /* renamed from: androidx.localbroadcastmanager.content.LocalBroadcastManager$1 */
+    public class HandlerC04751 extends Handler {
+        public HandlerC04751(Looper looper) {
             super(looper);
         }
 
@@ -80,7 +80,7 @@ public final class LocalBroadcastManager {
 
     private LocalBroadcastManager(Context context) {
         this.mAppContext = context;
-        this.mHandler = new AnonymousClass1(context.getMainLooper());
+        this.mHandler = new HandlerC04751(context.getMainLooper());
     }
 
     @NonNull

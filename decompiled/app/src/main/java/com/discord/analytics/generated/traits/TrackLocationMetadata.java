@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackLocationMetadata.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackLocationMetadata {
             return false;
         }
         TrackLocationMetadata trackLocationMetadata = (TrackLocationMetadata) other;
-        return m.areEqual(this.locationPage, trackLocationMetadata.locationPage) && m.areEqual(this.locationSection, trackLocationMetadata.locationSection) && m.areEqual(this.locationObject, trackLocationMetadata.locationObject) && m.areEqual(this.locationObjectType, trackLocationMetadata.locationObjectType) && m.areEqual(this.locationPromotionId, trackLocationMetadata.locationPromotionId);
+        return Intrinsics3.areEqual(this.locationPage, trackLocationMetadata.locationPage) && Intrinsics3.areEqual(this.locationSection, trackLocationMetadata.locationSection) && Intrinsics3.areEqual(this.locationObject, trackLocationMetadata.locationObject) && Intrinsics3.areEqual(this.locationObjectType, trackLocationMetadata.locationObjectType) && Intrinsics3.areEqual(this.locationPromotionId, trackLocationMetadata.locationPromotionId);
     }
 
     public int hashCode() {
@@ -37,15 +37,15 @@ public final /* data */ class TrackLocationMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackLocationMetadata(locationPage=");
-        sbU.append(this.locationPage);
-        sbU.append(", locationSection=");
-        sbU.append(this.locationSection);
-        sbU.append(", locationObject=");
-        sbU.append(this.locationObject);
-        sbU.append(", locationObjectType=");
-        sbU.append(this.locationObjectType);
-        sbU.append(", locationPromotionId=");
-        return a.G(sbU, this.locationPromotionId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackLocationMetadata(locationPage=");
+        sbM833U.append(this.locationPage);
+        sbM833U.append(", locationSection=");
+        sbM833U.append(this.locationSection);
+        sbM833U.append(", locationObject=");
+        sbM833U.append(this.locationObject);
+        sbM833U.append(", locationObjectType=");
+        sbM833U.append(this.locationObjectType);
+        sbM833U.append(", locationPromotionId=");
+        return outline.m819G(sbM833U, this.locationPromotionId, ")");
     }
 }

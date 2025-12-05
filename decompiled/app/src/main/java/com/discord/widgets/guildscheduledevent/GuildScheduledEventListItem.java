@@ -1,12 +1,12 @@
 package com.discord.widgets.guildscheduledevent;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.models.guild.UserGuildMember;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildScheduledEventListItem.kt */
 /* loaded from: classes2.dex */
@@ -29,7 +29,7 @@ public abstract class GuildScheduledEventListItem implements MGRecyclerDataPaylo
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Event(GuildScheduledEvent guildScheduledEvent, Channel channel, UserGuildMember userGuildMember, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6) {
             super(null);
-            m.checkNotNullParameter(guildScheduledEvent, "event");
+            Intrinsics3.checkNotNullParameter(guildScheduledEvent, "event");
             this.event = guildScheduledEvent;
             this.channel = channel;
             this.creator = userGuildMember;
@@ -86,7 +86,7 @@ public abstract class GuildScheduledEventListItem implements MGRecyclerDataPaylo
         }
 
         public final Event copy(GuildScheduledEvent event, Channel channel, UserGuildMember creator, boolean isRsvped, boolean canStartEvent, boolean canShare, boolean isConnected, boolean canConnect) {
-            m.checkNotNullParameter(event, "event");
+            Intrinsics3.checkNotNullParameter(event, "event");
             return new Event(event, channel, creator, isRsvped, canStartEvent, canShare, isConnected, canConnect);
         }
 
@@ -98,7 +98,7 @@ public abstract class GuildScheduledEventListItem implements MGRecyclerDataPaylo
                 return false;
             }
             Event event = (Event) other;
-            return m.areEqual(this.event, event.event) && m.areEqual(this.channel, event.channel) && m.areEqual(this.creator, event.creator) && this.isRsvped == event.isRsvped && this.canStartEvent == event.canStartEvent && this.canShare == event.canShare && this.isConnected == event.isConnected && this.canConnect == event.canConnect;
+            return Intrinsics3.areEqual(this.event, event.event) && Intrinsics3.areEqual(this.channel, event.channel) && Intrinsics3.areEqual(this.creator, event.creator) && this.isRsvped == event.isRsvped && this.canStartEvent == event.canStartEvent && this.canShare == event.canShare && this.isConnected == event.isConnected && this.canConnect == event.canConnect;
         }
 
         public final boolean getCanConnect() {
@@ -180,22 +180,22 @@ public abstract class GuildScheduledEventListItem implements MGRecyclerDataPaylo
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Event(event=");
-            sbU.append(this.event);
-            sbU.append(", channel=");
-            sbU.append(this.channel);
-            sbU.append(", creator=");
-            sbU.append(this.creator);
-            sbU.append(", isRsvped=");
-            sbU.append(this.isRsvped);
-            sbU.append(", canStartEvent=");
-            sbU.append(this.canStartEvent);
-            sbU.append(", canShare=");
-            sbU.append(this.canShare);
-            sbU.append(", isConnected=");
-            sbU.append(this.isConnected);
-            sbU.append(", canConnect=");
-            return a.O(sbU, this.canConnect, ")");
+            StringBuilder sbM833U = outline.m833U("Event(event=");
+            sbM833U.append(this.event);
+            sbM833U.append(", channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", creator=");
+            sbM833U.append(this.creator);
+            sbM833U.append(", isRsvped=");
+            sbM833U.append(this.isRsvped);
+            sbM833U.append(", canStartEvent=");
+            sbM833U.append(this.canStartEvent);
+            sbM833U.append(", canShare=");
+            sbM833U.append(this.canShare);
+            sbM833U.append(", isConnected=");
+            sbM833U.append(this.isConnected);
+            sbM833U.append(", canConnect=");
+            return outline.m827O(sbM833U, this.canConnect, ")");
         }
     }
 

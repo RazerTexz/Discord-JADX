@@ -18,94 +18,112 @@ import com.google.android.material.card.MaterialCardView;
 /* loaded from: classes.dex */
 public final class WidgetChatListAdapterItemEmbedBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f16180a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final View f2315b;
+    public final View f16181b;
 
+    /* renamed from: c */
     @NonNull
-    public final View c;
+    public final View f16182c;
 
+    /* renamed from: d */
     @NonNull
-    public final SimpleDraweeView d;
+    public final SimpleDraweeView f16183d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16184e;
 
+    /* renamed from: f */
     @NonNull
-    public final MaterialCardView f;
+    public final MaterialCardView f16185f;
 
+    /* renamed from: g */
     @NonNull
-    public final ConstraintLayout g;
+    public final ConstraintLayout f16186g;
 
+    /* renamed from: h */
     @NonNull
-    public final LinkifiedTextView h;
+    public final LinkifiedTextView f16187h;
 
+    /* renamed from: i */
     @NonNull
-    public final View i;
+    public final View f16188i;
 
+    /* renamed from: j */
     @NonNull
-    public final LinearLayout j;
+    public final LinearLayout f16189j;
 
+    /* renamed from: k */
     @NonNull
-    public final SimpleDraweeView k;
+    public final SimpleDraweeView f16190k;
 
+    /* renamed from: l */
     @NonNull
-    public final TextView l;
+    public final TextView f16191l;
 
+    /* renamed from: m */
     @NonNull
-    public final SimpleDraweeView m;
+    public final SimpleDraweeView f16192m;
 
+    /* renamed from: n */
     @NonNull
-    public final ImageView n;
+    public final ImageView f16193n;
 
+    /* renamed from: o */
     @NonNull
-    public final SimpleDraweeView o;
+    public final SimpleDraweeView f16194o;
 
+    /* renamed from: p */
     @NonNull
-    public final TextView p;
+    public final TextView f16195p;
 
+    /* renamed from: q */
     @NonNull
-    public final FrameLayout q;
+    public final FrameLayout f16196q;
 
+    /* renamed from: r */
     @NonNull
-    public final LinkifiedTextView r;
+    public final LinkifiedTextView f16197r;
 
-    /* renamed from: s, reason: collision with root package name */
+    /* renamed from: s */
     @NonNull
-    public final CardView f2316s;
+    public final CardView f16198s;
 
+    /* renamed from: t */
     @NonNull
-    public final InlineMediaView t;
+    public final InlineMediaView f16199t;
 
     public WidgetChatListAdapterItemEmbedBinding(@NonNull ConstraintLayout constraintLayout, @NonNull View view, @NonNull View view2, @NonNull SimpleDraweeView simpleDraweeView, @NonNull TextView textView, @NonNull Barrier barrier, @NonNull Barrier barrier2, @NonNull MaterialCardView materialCardView, @NonNull ConstraintLayout constraintLayout2, @NonNull LinkifiedTextView linkifiedTextView, @NonNull View view3, @NonNull LinearLayout linearLayout, @NonNull SimpleDraweeView simpleDraweeView2, @NonNull TextView textView2, @NonNull SimpleDraweeView simpleDraweeView3, @NonNull ImageView imageView, @NonNull SimpleDraweeView simpleDraweeView4, @NonNull TextView textView3, @NonNull FrameLayout frameLayout, @NonNull LinkifiedTextView linkifiedTextView2, @NonNull CardView cardView, @NonNull InlineMediaView inlineMediaView) {
-        this.a = constraintLayout;
-        this.f2315b = view;
-        this.c = view2;
-        this.d = simpleDraweeView;
-        this.e = textView;
-        this.f = materialCardView;
-        this.g = constraintLayout2;
-        this.h = linkifiedTextView;
-        this.i = view3;
-        this.j = linearLayout;
-        this.k = simpleDraweeView2;
-        this.l = textView2;
-        this.m = simpleDraweeView3;
-        this.n = imageView;
-        this.o = simpleDraweeView4;
-        this.p = textView3;
-        this.q = frameLayout;
-        this.r = linkifiedTextView2;
-        this.f2316s = cardView;
-        this.t = inlineMediaView;
+        this.f16180a = constraintLayout;
+        this.f16181b = view;
+        this.f16182c = view2;
+        this.f16183d = simpleDraweeView;
+        this.f16184e = textView;
+        this.f16185f = materialCardView;
+        this.f16186g = constraintLayout2;
+        this.f16187h = linkifiedTextView;
+        this.f16188i = view3;
+        this.f16189j = linearLayout;
+        this.f16190k = simpleDraweeView2;
+        this.f16191l = textView2;
+        this.f16192m = simpleDraweeView3;
+        this.f16193n = imageView;
+        this.f16194o = simpleDraweeView4;
+        this.f16195p = textView3;
+        this.f16196q = frameLayout;
+        this.f16197r = linkifiedTextView2;
+        this.f16198s = cardView;
+        this.f16199t = inlineMediaView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16180a;
     }
 }

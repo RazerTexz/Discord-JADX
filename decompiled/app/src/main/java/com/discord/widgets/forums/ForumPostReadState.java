@@ -1,8 +1,8 @@
 package com.discord.widgets.forums;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: ForumPostReadState.kt */
 /* loaded from: classes2.dex */
@@ -91,23 +91,23 @@ public final /* data */ class ForumPostReadState {
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        int iA = b.a(this.channelId) * 31;
+        int iM3a = C0002b.m3a(this.channelId) * 31;
         boolean z2 = this.hasSeenBefore;
         int i = z2;
         if (z2 != 0) {
             i = 1;
         }
-        int i2 = (iA + i) * 31;
+        int i2 = (iM3a + i) * 31;
         boolean z3 = this.hasUnread;
         return i2 + (z3 ? 1 : z3 ? 1 : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ForumPostReadState(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", hasSeenBefore=");
-        sbU.append(this.hasSeenBefore);
-        sbU.append(", hasUnread=");
-        return a.O(sbU, this.hasUnread, ")");
+        StringBuilder sbM833U = outline.m833U("ForumPostReadState(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", hasSeenBefore=");
+        sbM833U.append(this.hasSeenBefore);
+        sbM833U.append(", hasUnread=");
+        return outline.m827O(sbM833U, this.hasUnread, ")");
     }
 }

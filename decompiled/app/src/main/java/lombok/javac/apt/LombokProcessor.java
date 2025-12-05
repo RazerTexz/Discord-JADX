@@ -203,12 +203,12 @@ public class LombokProcessor extends AbstractProcessor {
         }
     }
 
-    /* renamed from: lombok.javac.apt.LombokProcessor$1, reason: invalid class name */
+    /* renamed from: lombok.javac.apt.LombokProcessor$1 */
     /* loaded from: discord-126021.apk:lombok/javac/apt/LombokProcessor$1.SCL.lombok */
-    class AnonymousClass1 extends ClassLoader {
+    class C128911 extends ClassLoader {
         private final /* synthetic */ ClassLoader val$parent;
 
-        AnonymousClass1(ClassLoader classLoader) {
+        C128911(ClassLoader classLoader) {
             this.val$parent = classLoader;
         }
 
@@ -258,7 +258,7 @@ public class LombokProcessor extends AbstractProcessor {
     }
 
     private static ClassLoader wrapClassLoader(ClassLoader parent) {
-        return new AnonymousClass1(parent);
+        return new C128911(parent);
     }
 
     private void stopJavacProcessingEnvironmentFromClosingOurClassloader() {

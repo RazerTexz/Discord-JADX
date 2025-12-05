@@ -16,9 +16,9 @@ import androidx.work.impl.constraints.WorkConstraintsTracker;
 import androidx.work.impl.model.WorkSpec;
 import androidx.work.impl.utils.futures.SettableFuture;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
-import b.i.b.d.a.a;
 import java.util.Collections;
 import java.util.List;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -33,9 +33,9 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
     public final Object mLock;
     private WorkerParameters mWorkerParameters;
 
-    /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$1 */
+    public class RunnableC07881 implements Runnable {
+        public RunnableC07881() {
         }
 
         @Override // java.lang.Runnable
@@ -44,12 +44,12 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
         }
     }
 
-    /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public final /* synthetic */ a val$innerFuture;
+    /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$2 */
+    public class RunnableC07892 implements Runnable {
+        public final /* synthetic */ ListenableFuture8 val$innerFuture;
 
-        public AnonymousClass2(a aVar) {
-            this.val$innerFuture = aVar;
+        public RunnableC07892(ListenableFuture8 listenableFuture8) {
+            this.val$innerFuture = listenableFuture8;
         }
 
         @Override // java.lang.Runnable
@@ -157,8 +157,8 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
         }
         Logger.get().debug(TAG, String.format("Constraints met for delegate %s", string), new Throwable[0]);
         try {
-            a<ListenableWorker.Result> aVarStartWork = this.mDelegate.startWork();
-            aVarStartWork.addListener(new AnonymousClass2(aVarStartWork), getBackgroundExecutor());
+            ListenableFuture8<ListenableWorker.Result> listenableFuture8StartWork = this.mDelegate.startWork();
+            listenableFuture8StartWork.addListener(new RunnableC07892(listenableFuture8StartWork), getBackgroundExecutor());
         } catch (Throwable th) {
             Logger logger = Logger.get();
             String str = TAG;
@@ -176,8 +176,8 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
 
     @Override // androidx.work.ListenableWorker
     @NonNull
-    public a<ListenableWorker.Result> startWork() {
-        getBackgroundExecutor().execute(new AnonymousClass1());
+    public ListenableFuture8<ListenableWorker.Result> startWork() {
+        getBackgroundExecutor().execute(new RunnableC07881());
         return this.mFuture;
     }
 }

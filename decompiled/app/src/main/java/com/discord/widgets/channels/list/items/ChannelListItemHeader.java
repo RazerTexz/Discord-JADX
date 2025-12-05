@@ -1,8 +1,8 @@
 package com.discord.widgets.channels.list.items;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: ChannelListItemHeader.kt */
 /* loaded from: classes2.dex */
@@ -108,23 +108,23 @@ public final /* data */ class ChannelListItemHeader implements ChannelListItem {
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        int iA = ((b.a(this.id) * 31) + this.textResId) * 31;
+        int iM3a = ((C0002b.m3a(this.id) * 31) + this.textResId) * 31;
         boolean z2 = this.ableToManageChannel;
         int i = z2;
         if (z2 != 0) {
             i = 1;
         }
-        return b.a(this.selectedGuildId) + ((iA + i) * 31);
+        return C0002b.m3a(this.selectedGuildId) + ((iM3a + i) * 31);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelListItemHeader(id=");
-        sbU.append(this.id);
-        sbU.append(", textResId=");
-        sbU.append(this.textResId);
-        sbU.append(", ableToManageChannel=");
-        sbU.append(this.ableToManageChannel);
-        sbU.append(", selectedGuildId=");
-        return a.C(sbU, this.selectedGuildId, ")");
+        StringBuilder sbM833U = outline.m833U("ChannelListItemHeader(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", textResId=");
+        sbM833U.append(this.textResId);
+        sbM833U.append(", ableToManageChannel=");
+        sbM833U.append(this.ableToManageChannel);
+        sbM833U.append(", selectedGuildId=");
+        return outline.m815C(sbM833U, this.selectedGuildId, ")");
     }
 }

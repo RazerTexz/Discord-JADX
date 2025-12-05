@@ -6,13 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import androidx.core.os.BundleKt;
+import androidx.core.os.Bundle2;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.PermissionOverwrite;
@@ -20,13 +19,10 @@ import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetChannelSettingsAddMemberSheetBinding;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.channel.permissions.ChannelPermissionsAddMemberUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import d0.g;
-import d0.o;
-import d0.z.d.m;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import java.util.List;
 import java.util.Map;
 import kotlin.Lazy;
@@ -35,12 +31,17 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.subjects.BehaviorSubject;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.Tuples;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChannelSettingsAddMemberSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSettingsAddMemberSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSettingsAddMemberSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSettingsAddMemberSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -58,9 +59,9 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, long channelId) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetChannelSettingsAddMemberSheet widgetChannelSettingsAddMemberSheet = new WidgetChannelSettingsAddMemberSheet();
-            widgetChannelSettingsAddMemberSheet.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId))));
+            widgetChannelSettingsAddMemberSheet.setArguments(Bundle2.bundleOf(Tuples.m10073to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId))));
             widgetChannelSettingsAddMemberSheet.show(fragmentManager, WidgetChannelSettingsAddMemberSheet.class.getName());
         }
 
@@ -70,29 +71,29 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$addPermissionOverwrites$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<List<? extends Void>, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$addPermissionOverwrites$1 */
+    public static final class C75311 extends Lambda implements Function1<List<? extends Void>, Unit> {
+        public C75311() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends Void> list) {
             invoke2((List<Void>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<Void> list) {
-            m.checkNotNullParameter(list, "it");
+            Intrinsics3.checkNotNullParameter(list, "it");
             WidgetChannelSettingsAddMemberSheet.this.dismiss();
         }
     }
 
     /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$configureUI$1 */
+    public static final class ViewOnClickListenerC75321 implements View.OnClickListener {
+        public ViewOnClickListenerC75321() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -102,16 +103,16 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Channel, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onResume$1 */
+    public static final class C75331 extends Lambda implements Function1<Channel, Unit> {
+        public C75331() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Channel channel) {
             invoke2(channel);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -125,33 +126,33 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<Map<Long, ? extends PermissionOverwrite.Type>, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onResume$2 */
+    public static final class C75342 extends Lambda implements Function1<Map<Long, ? extends PermissionOverwrite.Type>, Unit> {
+        public C75342() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Map<Long, ? extends PermissionOverwrite.Type> map) {
             invoke2(map);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, ? extends PermissionOverwrite.Type> map) {
-            TextView textView = WidgetChannelSettingsAddMemberSheet.access$getBinding$p(WidgetChannelSettingsAddMemberSheet.this).f2272b;
-            m.checkNotNullExpressionValue(textView, "binding.addButton");
-            m.checkNotNullExpressionValue(map, "selected");
+            TextView textView = WidgetChannelSettingsAddMemberSheet.access$getBinding$p(WidgetChannelSettingsAddMemberSheet.this).f15905b;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.addButton");
+            Intrinsics3.checkNotNullExpressionValue(map, "selected");
             ViewExtensions.setEnabledAndAlpha$default(textView, !map.isEmpty(), 0.0f, 2, null);
         }
     }
 
     /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onViewCreated$1 */
+    public static final class RunnableC75351 implements Runnable {
         public final /* synthetic */ View $view;
 
-        public AnonymousClass1(View view) {
+        public RunnableC75351(View view) {
             this.$view = view;
         }
 
@@ -159,7 +160,7 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
         public final void run() {
             ViewGroup.LayoutParams layoutParams = this.$view.getLayoutParams();
             if (layoutParams != null) {
-                m.checkNotNullExpressionValue(WidgetChannelSettingsAddMemberSheet.this.getResources(), "resources");
+                Intrinsics3.checkNotNullExpressionValue(WidgetChannelSettingsAddMemberSheet.this.getResources(), "resources");
                 layoutParams.height = (int) (r1.getDisplayMetrics().heightPixels * 0.9d);
             }
         }
@@ -167,8 +168,8 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
 
     public WidgetChannelSettingsAddMemberSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChannelSettingsAddMemberSheet$binding$2.INSTANCE, null, 2, null);
-        this.channelId = g.lazy(new WidgetChannelSettingsAddMemberSheet$channelId$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelSettingsAddMemberSheet2.INSTANCE, null, 2, null);
+        this.channelId = LazyJVM.lazy(new WidgetChannelSettingsAddMemberSheet3(this));
     }
 
     public static final /* synthetic */ void access$addPermissionOverwrites(WidgetChannelSettingsAddMemberSheet widgetChannelSettingsAddMemberSheet) {
@@ -192,23 +193,23 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
         long channelId = getChannelId();
         WidgetChannelSettingsAddMemberFragment widgetChannelSettingsAddMemberFragment = this.fragment;
         if (widgetChannelSettingsAddMemberFragment == null) {
-            m.throwUninitializedPropertyAccessException("fragment");
+            Intrinsics3.throwUninitializedPropertyAccessException("fragment");
         }
         BehaviorSubject<Map<Long, PermissionOverwrite.Type>> selectedItemsSubject = widgetChannelSettingsAddMemberFragment.getSelectedItemsSubject();
-        m.checkNotNullExpressionValue(selectedItemsSubject, "fragment.getSelectedItemsSubject()");
-        Map<Long, PermissionOverwrite.Type> mapN0 = selectedItemsSubject.n0();
-        m.checkNotNullExpressionValue(mapN0, "fragment.getSelectedItemsSubject().value");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(channelPermissionsAddMemberUtils.addPermissionOverwrites(channelId, mapN0, 20971536L), this, null, 2, null), WidgetChannelSettingsAddMemberSheet.class, getContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 60, (Object) null);
+        Intrinsics3.checkNotNullExpressionValue(selectedItemsSubject, "fragment.getSelectedItemsSubject()");
+        Map<Long, PermissionOverwrite.Type> mapM11132n0 = selectedItemsSubject.m11132n0();
+        Intrinsics3.checkNotNullExpressionValue(mapM11132n0, "fragment.getSelectedItemsSubject().value");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(channelPermissionsAddMemberUtils.addPermissionOverwrites(channelId, mapM11132n0, 20971536L), this, null, 2, null), WidgetChannelSettingsAddMemberSheet.class, getContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75311(), 60, (Object) null);
     }
 
     @SuppressLint({"SetTextI18n"})
     private final void configureUI(Channel channel) {
-        TextView textView = getBinding().d;
-        m.checkNotNullExpressionValue(textView, "binding.subtitle");
+        TextView textView = getBinding().f15907d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.subtitle");
         Context contextRequireContext = requireContext();
-        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-        textView.setText(ChannelUtils.e(channel, contextRequireContext, false, 2));
-        getBinding().f2272b.setOnClickListener(new AnonymousClass1());
+        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        textView.setText(ChannelUtils.m7681e(channel, contextRequireContext, false, 2));
+        getBinding().f15905b.setOnClickListener(new ViewOnClickListenerC75321());
     }
 
     private final WidgetChannelSettingsAddMemberSheetBinding getBinding() {
@@ -221,39 +222,39 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_channel_settings_add_member_sheet;
+        return C5419R.layout.widget_channel_settings_add_member_sheet;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onResume() {
         super.onResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getChannels().observeChannel(getChannelId()), this, null, 2, null), WidgetChannelSettingsAddMemberSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getChannels().observeChannel(getChannelId()), this, null, 2, null), WidgetChannelSettingsAddMemberSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75331(), 62, (Object) null);
         WidgetChannelSettingsAddMemberFragment widgetChannelSettingsAddMemberFragment = this.fragment;
         if (widgetChannelSettingsAddMemberFragment == null) {
-            m.throwUninitializedPropertyAccessException("fragment");
+            Intrinsics3.throwUninitializedPropertyAccessException("fragment");
         }
         BehaviorSubject<Map<Long, PermissionOverwrite.Type>> selectedItemsSubject = widgetChannelSettingsAddMemberFragment.getSelectedItemsSubject();
-        m.checkNotNullExpressionValue(selectedItemsSubject, "fragment.getSelectedItemsSubject()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(selectedItemsSubject, this, null, 2, null), WidgetChannelSettingsAddMemberSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        Intrinsics3.checkNotNullExpressionValue(selectedItemsSubject, "fragment.getSelectedItemsSubject()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(selectedItemsSubject, this, null, 2, null), WidgetChannelSettingsAddMemberSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75342(), 62, (Object) null);
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         this.fragment = WidgetChannelSettingsAddMemberFragment.INSTANCE.create(getChannelId(), false);
         FragmentTransaction fragmentTransactionBeginTransaction = getChildFragmentManager().beginTransaction();
-        FragmentContainerView fragmentContainerView = getBinding().c;
-        m.checkNotNullExpressionValue(fragmentContainerView, "binding.content");
+        FragmentContainerView fragmentContainerView = getBinding().f15906c;
+        Intrinsics3.checkNotNullExpressionValue(fragmentContainerView, "binding.content");
         int id2 = fragmentContainerView.getId();
         WidgetChannelSettingsAddMemberFragment widgetChannelSettingsAddMemberFragment = this.fragment;
         if (widgetChannelSettingsAddMemberFragment == null) {
-            m.throwUninitializedPropertyAccessException("fragment");
+            Intrinsics3.throwUninitializedPropertyAccessException("fragment");
         }
         WidgetChannelSettingsAddMemberFragment widgetChannelSettingsAddMemberFragment2 = this.fragment;
         if (widgetChannelSettingsAddMemberFragment2 == null) {
-            m.throwUninitializedPropertyAccessException("fragment");
+            Intrinsics3.throwUninitializedPropertyAccessException("fragment");
         }
-        fragmentTransactionBeginTransaction.replace(id2, widgetChannelSettingsAddMemberFragment, widgetChannelSettingsAddMemberFragment2.getClass().getSimpleName()).runOnCommit(new AnonymousClass1(view)).commit();
+        fragmentTransactionBeginTransaction.replace(id2, widgetChannelSettingsAddMemberFragment, widgetChannelSettingsAddMemberFragment2.getClass().getSimpleName()).runOnCommit(new RunnableC75351(view)).commit();
     }
 }

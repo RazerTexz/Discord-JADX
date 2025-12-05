@@ -7,7 +7,8 @@ import android.util.AttributeSet;
 import android.widget.Checkable;
 import android.widget.ImageView;
 import androidx.appcompat.widget.AppCompatImageView;
-import d0.z.d.m;
+import com.discord.C5419R;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: CheckableImageView.kt */
 /* loaded from: classes2.dex */
@@ -22,11 +23,11 @@ public final class CheckableImageView extends AppCompatImageView implements Chec
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CheckableImageView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         this.checkedStateSet = new int[]{R.attr.state_checked};
         if (attributeSet != null) {
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, com.discord.R.a.CheckableImageView, 0, 0);
-            m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…CheckableImageView, 0, 0)");
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C5419R.a.CheckableImageView, 0, 0);
+            Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…CheckableImageView, 0, 0)");
             try {
                 this.checked = typedArrayObtainStyledAttributes.getBoolean(0, this.checked);
             } finally {
@@ -43,7 +44,7 @@ public final class CheckableImageView extends AppCompatImageView implements Chec
     @Override // android.widget.ImageView, android.view.View
     public int[] onCreateDrawableState(int extraSpace) {
         int[] iArrOnCreateDrawableState = super.onCreateDrawableState(extraSpace + 1);
-        m.checkNotNullExpressionValue(iArrOnCreateDrawableState, "super.onCreateDrawableState(extraSpace + 1)");
+        Intrinsics3.checkNotNullExpressionValue(iArrOnCreateDrawableState, "super.onCreateDrawableState(extraSpace + 1)");
         if (this.checked) {
             ImageView.mergeDrawableStates(iArrOnCreateDrawableState, this.checkedStateSet);
         }

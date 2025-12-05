@@ -1,12 +1,13 @@
 package com.esotericsoftware.kryo.util;
 
-import b.e.a.a;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p106e.p107a.Log;
 import sun.misc.Cleaner;
 import sun.misc.Unsafe;
 import sun.nio.ch.DirectBuffer;
@@ -23,8 +24,8 @@ public class UnsafeUtil {
     public static final long longArrayBaseOffset;
     public static final long shortArrayBaseOffset;
 
-    /* renamed from: com.esotericsoftware.kryo.util.UnsafeUtil$1, reason: invalid class name */
-    public static class AnonymousClass1 implements Comparator<Field> {
+    /* renamed from: com.esotericsoftware.kryo.util.UnsafeUtil$1 */
+    public static class C106291 implements Comparator<Field> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Field field, Field field2) {
             return compare2(field, field2);
@@ -57,7 +58,7 @@ public class UnsafeUtil {
         long j4;
         try {
             if (Util.IS_ANDROID) {
-                a.C0064a c0064a = a.a;
+                Log.a aVar = Log.f3007a;
                 jArrayBaseOffset7 = 0;
                 j3 = 0;
                 j2 = 0;
@@ -80,7 +81,7 @@ public class UnsafeUtil {
                         jArrayBaseOffset4 = 0;
                         jArrayBaseOffset5 = 0;
                         jArrayBaseOffset6 = 0;
-                        a.C0064a c0064a2 = a.a;
+                        Log.a aVar2 = Log.f3007a;
                         j = 0;
                         unsafe2 = unsafe;
                         j2 = jArrayBaseOffset;
@@ -104,7 +105,7 @@ public class UnsafeUtil {
                         jArrayBaseOffset4 = 0;
                         jArrayBaseOffset5 = 0;
                         jArrayBaseOffset6 = 0;
-                        a.C0064a c0064a22 = a.a;
+                        Log.a aVar22 = Log.f3007a;
                         j = 0;
                         unsafe2 = unsafe;
                         j2 = jArrayBaseOffset;
@@ -127,7 +128,7 @@ public class UnsafeUtil {
                         jArrayBaseOffset = 0;
                         jArrayBaseOffset5 = 0;
                         jArrayBaseOffset6 = 0;
-                        a.C0064a c0064a222 = a.a;
+                        Log.a aVar222 = Log.f3007a;
                         j = 0;
                         unsafe2 = unsafe;
                         j2 = jArrayBaseOffset;
@@ -155,7 +156,7 @@ public class UnsafeUtil {
                                 j2 = jArrayBaseOffset;
                                 j3 = jArrayBaseOffset2;
                             } catch (Exception unused4) {
-                                a.C0064a c0064a2222 = a.a;
+                                Log.a aVar2222 = Log.f3007a;
                                 j = 0;
                                 unsafe2 = unsafe;
                                 j2 = jArrayBaseOffset;
@@ -178,7 +179,7 @@ public class UnsafeUtil {
                     } catch (Exception unused6) {
                         jArrayBaseOffset = 0;
                         jArrayBaseOffset6 = 0;
-                        a.C0064a c0064a22222 = a.a;
+                        Log.a aVar22222 = Log.f3007a;
                         j = 0;
                         unsafe2 = unsafe;
                         j2 = jArrayBaseOffset;
@@ -202,7 +203,7 @@ public class UnsafeUtil {
                     jArrayBaseOffset4 = 0;
                     jArrayBaseOffset5 = 0;
                     jArrayBaseOffset6 = 0;
-                    a.C0064a c0064a222222 = a.a;
+                    Log.a aVar222222 = Log.f3007a;
                     j = 0;
                     unsafe2 = unsafe;
                     j2 = jArrayBaseOffset;
@@ -251,7 +252,7 @@ public class UnsafeUtil {
         try {
             return constructor.newInstance(Long.valueOf(j), Integer.valueOf(i), null);
         } catch (Exception e) {
-            throw new RuntimeException(b.d.b.a.a.t("Cannot allocate ByteBuffer at a given address: ", j), e);
+            throw new RuntimeException(outline.m877t("Cannot allocate ByteBuffer at a given address: ", j), e);
         }
     }
 
@@ -265,9 +266,9 @@ public class UnsafeUtil {
 
     public static Field[] sortFieldsByOffset(List<Field> list) {
         Field[] fieldArr = (Field[]) list.toArray(new Field[0]);
-        Arrays.sort(fieldArr, new AnonymousClass1());
+        Arrays.sort(fieldArr, new C106291());
         for (Field field : list) {
-            a.C0064a c0064a = a.a;
+            Log.a aVar = Log.f3007a;
         }
         return fieldArr;
     }

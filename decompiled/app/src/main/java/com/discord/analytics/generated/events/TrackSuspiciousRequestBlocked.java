@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSuspiciousRequestBlocked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSuspiciousRequestBlocked implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackSuspiciousRequestBlocked implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence email = null;
     private final CharSequence headers = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackSuspiciousRequestBlocked implements Analytics
             return false;
         }
         TrackSuspiciousRequestBlocked trackSuspiciousRequestBlocked = (TrackSuspiciousRequestBlocked) other;
-        return m.areEqual(this.email, trackSuspiciousRequestBlocked.email) && m.areEqual(this.headers, trackSuspiciousRequestBlocked.headers) && m.areEqual(this.path, trackSuspiciousRequestBlocked.path) && m.areEqual(this.host, trackSuspiciousRequestBlocked.host) && m.areEqual(this.endpoint, trackSuspiciousRequestBlocked.endpoint) && m.areEqual(this.wasVerified, trackSuspiciousRequestBlocked.wasVerified) && m.areEqual(this.wasEmailVerificationNeeded, trackSuspiciousRequestBlocked.wasEmailVerificationNeeded);
+        return Intrinsics3.areEqual(this.email, trackSuspiciousRequestBlocked.email) && Intrinsics3.areEqual(this.headers, trackSuspiciousRequestBlocked.headers) && Intrinsics3.areEqual(this.path, trackSuspiciousRequestBlocked.path) && Intrinsics3.areEqual(this.host, trackSuspiciousRequestBlocked.host) && Intrinsics3.areEqual(this.endpoint, trackSuspiciousRequestBlocked.endpoint) && Intrinsics3.areEqual(this.wasVerified, trackSuspiciousRequestBlocked.wasVerified) && Intrinsics3.areEqual(this.wasEmailVerificationNeeded, trackSuspiciousRequestBlocked.wasEmailVerificationNeeded);
     }
 
     public int hashCode() {
@@ -55,19 +55,19 @@ public final /* data */ class TrackSuspiciousRequestBlocked implements Analytics
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSuspiciousRequestBlocked(email=");
-        sbU.append(this.email);
-        sbU.append(", headers=");
-        sbU.append(this.headers);
-        sbU.append(", path=");
-        sbU.append(this.path);
-        sbU.append(", host=");
-        sbU.append(this.host);
-        sbU.append(", endpoint=");
-        sbU.append(this.endpoint);
-        sbU.append(", wasVerified=");
-        sbU.append(this.wasVerified);
-        sbU.append(", wasEmailVerificationNeeded=");
-        return a.D(sbU, this.wasEmailVerificationNeeded, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSuspiciousRequestBlocked(email=");
+        sbM833U.append(this.email);
+        sbM833U.append(", headers=");
+        sbM833U.append(this.headers);
+        sbM833U.append(", path=");
+        sbM833U.append(this.path);
+        sbM833U.append(", host=");
+        sbM833U.append(this.host);
+        sbM833U.append(", endpoint=");
+        sbM833U.append(this.endpoint);
+        sbM833U.append(", wasVerified=");
+        sbM833U.append(this.wasVerified);
+        sbM833U.append(", wasEmailVerificationNeeded=");
+        return outline.m816D(sbM833U, this.wasEmailVerificationNeeded, ")");
     }
 }

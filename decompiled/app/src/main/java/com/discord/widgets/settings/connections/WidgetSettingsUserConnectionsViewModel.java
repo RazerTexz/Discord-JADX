@@ -2,8 +2,6 @@ package com.discord.widgets.settings.connections;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.connectedaccounts.ConnectedAccount;
 import com.discord.api.connectedaccounts.ConnectedAccountIntegration;
 import com.discord.api.connectedaccounts.ConnectedIntegrationGuild;
@@ -11,11 +9,8 @@ import com.discord.models.guild.Guild;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserConnections;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -24,13 +19,18 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.functions.Func2;
-import rx.subjects.BehaviorSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.functions.Func2;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> {
+public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -39,12 +39,12 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
     private final RestAPI restApi;
 
     /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2, R> implements Func2<StoreState, Map<String, ? extends JoinStatus>, List<? extends ConnectionState>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$1 */
+    public static final class C98401<T1, T2, R> implements Func2<StoreState, Map<String, ? extends JoinStatus>, List<? extends ConnectionState>> {
+        public C98401() {
         }
 
-        @Override // rx.functions.Func2
+        @Override // p658rx.functions.Func2
         public /* bridge */ /* synthetic */ List<? extends ConnectionState> call(StoreState storeState, Map<String, ? extends JoinStatus> map) {
             return call2(storeState, map);
         }
@@ -52,29 +52,29 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final List<ConnectionState> call2(StoreState storeState, Map<String, ? extends JoinStatus> map) {
             WidgetSettingsUserConnectionsViewModel widgetSettingsUserConnectionsViewModel = WidgetSettingsUserConnectionsViewModel.this;
-            m.checkNotNullExpressionValue(storeState, "storeState");
-            m.checkNotNullExpressionValue(map, "joinMap");
+            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
+            Intrinsics3.checkNotNullExpressionValue(map, "joinMap");
             return WidgetSettingsUserConnectionsViewModel.access$combineState(widgetSettingsUserConnectionsViewModel, storeState, map);
         }
     }
 
     /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<List<? extends ConnectionState>, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$2 */
+    public static final class C98412 extends Lambda implements Function1<List<? extends ConnectionState>, Unit> {
+        public C98412() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends ConnectionState> list) {
             invoke2((List<ConnectionState>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ConnectionState> list) {
             WidgetSettingsUserConnectionsViewModel widgetSettingsUserConnectionsViewModel = WidgetSettingsUserConnectionsViewModel.this;
-            m.checkNotNullExpressionValue(list, "storeState");
+            Intrinsics3.checkNotNullExpressionValue(list, "storeState");
             WidgetSettingsUserConnectionsViewModel.access$handleConnectionsState(widgetSettingsUserConnectionsViewModel, list);
         }
     }
@@ -90,9 +90,9 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
 
         private final Observable<StoreState> observeStores() {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable<StoreState> observableJ = Observable.j(companion.getUserConnections().observeConnectedAccounts(), companion.getGuilds().observeGuilds(), WidgetSettingsUserConnectionsViewModel$Companion$observeStores$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…= \"contacts\" }, guilds) }");
-            return observableJ;
+            Observable<StoreState> observableM11076j = Observable.m11076j(companion.getUserConnections().observeConnectedAccounts(), companion.getGuilds().observeGuilds(), WidgetSettingsUserConnectionsViewModel2.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable.combineLatest…= \"contacts\" }, guilds) }");
+            return observableM11076j;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -107,8 +107,8 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
 
         /* JADX WARN: Multi-variable type inference failed */
         public ConnectionState(ConnectedAccount connectedAccount, Map<String, ? extends JoinStatus> map) {
-            m.checkNotNullParameter(connectedAccount, "connection");
-            m.checkNotNullParameter(map, "integrationGuildJoinStatus");
+            Intrinsics3.checkNotNullParameter(connectedAccount, "connection");
+            Intrinsics3.checkNotNullParameter(map, "integrationGuildJoinStatus");
             this.connection = connectedAccount;
             this.integrationGuildJoinStatus = map;
         }
@@ -134,8 +134,8 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         }
 
         public final ConnectionState copy(ConnectedAccount connection, Map<String, ? extends JoinStatus> integrationGuildJoinStatus) {
-            m.checkNotNullParameter(connection, "connection");
-            m.checkNotNullParameter(integrationGuildJoinStatus, "integrationGuildJoinStatus");
+            Intrinsics3.checkNotNullParameter(connection, "connection");
+            Intrinsics3.checkNotNullParameter(integrationGuildJoinStatus, "integrationGuildJoinStatus");
             return new ConnectionState(connection, integrationGuildJoinStatus);
         }
 
@@ -147,7 +147,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
                 return false;
             }
             ConnectionState connectionState = (ConnectionState) other;
-            return m.areEqual(this.connection, connectionState.connection) && m.areEqual(this.integrationGuildJoinStatus, connectionState.integrationGuildJoinStatus);
+            return Intrinsics3.areEqual(this.connection, connectionState.connection) && Intrinsics3.areEqual(this.integrationGuildJoinStatus, connectionState.integrationGuildJoinStatus);
         }
 
         public final ConnectedAccount getConnection() {
@@ -166,10 +166,10 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ConnectionState(connection=");
-            sbU.append(this.connection);
-            sbU.append(", integrationGuildJoinStatus=");
-            return a.M(sbU, this.integrationGuildJoinStatus, ")");
+            StringBuilder sbM833U = outline.m833U("ConnectionState(connection=");
+            sbM833U.append(this.connection);
+            sbM833U.append(", integrationGuildJoinStatus=");
+            return outline.m825M(sbM833U, this.integrationGuildJoinStatus, ")");
         }
     }
 
@@ -217,8 +217,8 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         private final Map<Long, Guild> guilds;
 
         public StoreState(List<ConnectedAccount> list, Map<Long, Guild> map) {
-            m.checkNotNullParameter(list, "connectedAccounts");
-            m.checkNotNullParameter(map, "guilds");
+            Intrinsics3.checkNotNullParameter(list, "connectedAccounts");
+            Intrinsics3.checkNotNullParameter(map, "guilds");
             this.connectedAccounts = list;
             this.guilds = map;
         }
@@ -243,8 +243,8 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         }
 
         public final StoreState copy(List<ConnectedAccount> connectedAccounts, Map<Long, Guild> guilds) {
-            m.checkNotNullParameter(connectedAccounts, "connectedAccounts");
-            m.checkNotNullParameter(guilds, "guilds");
+            Intrinsics3.checkNotNullParameter(connectedAccounts, "connectedAccounts");
+            Intrinsics3.checkNotNullParameter(guilds, "guilds");
             return new StoreState(connectedAccounts, guilds);
         }
 
@@ -256,7 +256,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.connectedAccounts, storeState.connectedAccounts) && m.areEqual(this.guilds, storeState.guilds);
+            return Intrinsics3.areEqual(this.connectedAccounts, storeState.connectedAccounts) && Intrinsics3.areEqual(this.guilds, storeState.guilds);
         }
 
         public final List<ConnectedAccount> getConnectedAccounts() {
@@ -275,10 +275,10 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(connectedAccounts=");
-            sbU.append(this.connectedAccounts);
-            sbU.append(", guilds=");
-            return a.M(sbU, this.guilds, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(connectedAccounts=");
+            sbM833U.append(this.connectedAccounts);
+            sbM833U.append(", guilds=");
+            return outline.m825M(sbM833U, this.guilds, ")");
         }
     }
 
@@ -301,7 +301,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(List<ConnectionState> list) {
                 super(null);
-                m.checkNotNullParameter(list, "data");
+                Intrinsics3.checkNotNullParameter(list, "data");
                 this.data = list;
             }
 
@@ -318,13 +318,13 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
             }
 
             public final Loaded copy(List<ConnectionState> data) {
-                m.checkNotNullParameter(data, "data");
+                Intrinsics3.checkNotNullParameter(data, "data");
                 return new Loaded(data);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && m.areEqual(this.data, ((Loaded) other).data);
+                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.data, ((Loaded) other).data);
                 }
                 return true;
             }
@@ -342,7 +342,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
             }
 
             public String toString() {
-                return a.L(a.U("Loaded(data="), this.data, ")");
+                return outline.m824L(outline.m833U("Loaded(data="), this.data, ")");
             }
         }
 
@@ -364,12 +364,12 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
     }
 
     /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$joinConnectionIntegrationGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$joinConnectionIntegrationGuild$1 */
+    public static final class C98421 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $integrationId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C98421(String str) {
             super(1);
             this.$integrationId = str;
         }
@@ -377,24 +377,24 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             WidgetSettingsUserConnectionsViewModel.access$getJoinStatusMap$p(WidgetSettingsUserConnectionsViewModel.this).put(this.$integrationId, JoinStatus.JoinFailed.INSTANCE);
             WidgetSettingsUserConnectionsViewModel.access$getJoinStateSubject$p(WidgetSettingsUserConnectionsViewModel.this).onNext(WidgetSettingsUserConnectionsViewModel.access$getJoinStatusMap$p(WidgetSettingsUserConnectionsViewModel.this));
         }
     }
 
     /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$joinConnectionIntegrationGuild$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$joinConnectionIntegrationGuild$2 */
+    public static final class C98432 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $integrationId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str) {
+        public C98432(String str) {
             super(1);
             this.$integrationId = str;
         }
@@ -402,7 +402,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -440,9 +440,9 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
         ArrayList arrayList = new ArrayList();
         for (ConnectedAccount connectedAccount : storeState.getConnectedAccounts()) {
             LinkedHashMap linkedHashMap = new LinkedHashMap();
-            List<ConnectedAccountIntegration> listC = connectedAccount.c();
-            if (listC != null) {
-                for (ConnectedAccountIntegration connectedAccountIntegration : listC) {
+            List<ConnectedAccountIntegration> listM7751c = connectedAccount.m7751c();
+            if (listM7751c != null) {
+                for (ConnectedAccountIntegration connectedAccountIntegration : listM7751c) {
                     ConnectedIntegrationGuild guild = connectedAccountIntegration.getGuild();
                     if (guild != null) {
                         if (storeState.getGuilds().containsKey(Long.valueOf(guild.getId()))) {
@@ -469,25 +469,25 @@ public final class WidgetSettingsUserConnectionsViewModel extends d0<ViewState> 
     }
 
     public final void joinConnectionIntegrationGuild(String integrationId) {
-        m.checkNotNullParameter(integrationId, "integrationId");
+        Intrinsics3.checkNotNullParameter(integrationId, "integrationId");
         this.joinStatusMap.put(integrationId, JoinStatus.Joining.INSTANCE);
         this.joinStateSubject.onNext(this.joinStatusMap);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restApi.joinGuildFromIntegration(integrationId), false, 1, null), WidgetSettingsUserConnectionsViewModel.class, (Context) null, (Function1) null, new AnonymousClass1(integrationId), (Function0) null, (Function0) null, new AnonymousClass2(integrationId), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restApi.joinGuildFromIntegration(integrationId), false, 1, null), WidgetSettingsUserConnectionsViewModel.class, (Context) null, (Function1) null, new C98421(integrationId), (Function0) null, (Function0) null, new C98432(integrationId), 54, (Object) null);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetSettingsUserConnectionsViewModel(Observable<StoreState> observable, StoreUserConnections storeUserConnections, RestAPI restAPI) {
         super(ViewState.Uninitialized.INSTANCE);
-        m.checkNotNullParameter(observable, "storeStateObservable");
-        m.checkNotNullParameter(storeUserConnections, "storeUserConnections");
-        m.checkNotNullParameter(restAPI, "restApi");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(storeUserConnections, "storeUserConnections");
+        Intrinsics3.checkNotNullParameter(restAPI, "restApi");
         this.restApi = restAPI;
         this.joinStatusMap = new LinkedHashMap();
-        BehaviorSubject<Map<String, JoinStatus>> behaviorSubjectL0 = BehaviorSubject.l0(h0.emptyMap());
-        this.joinStateSubject = behaviorSubjectL0;
+        BehaviorSubject<Map<String, JoinStatus>> behaviorSubjectM11130l0 = BehaviorSubject.m11130l0(Maps6.emptyMap());
+        this.joinStateSubject = behaviorSubjectM11130l0;
         storeUserConnections.fetchConnectedAccounts();
-        Observable observableJ = Observable.j(observable, behaviorSubjectL0, new AnonymousClass1());
-        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…te(storeState, joinMap) }");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableJ), this, null, 2, null), WidgetSettingsUserConnectionsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        Observable observableM11076j = Observable.m11076j(observable, behaviorSubjectM11130l0, new C98401());
+        Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable.combineLatest…te(storeState, joinMap) }");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableM11076j), this, null, 2, null), WidgetSettingsUserConnectionsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C98412(), 62, (Object) null);
     }
 }

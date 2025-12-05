@@ -4,14 +4,14 @@ import java.security.ProtectionDomain;
 
 /* loaded from: discord-126021.apk:lombok/patcher/Filter.SCL.lombok */
 public interface Filter {
-    public static final Filter ALWAYS = new AnonymousClass1();
+    public static final Filter ALWAYS = new C129101();
 
     boolean shouldTransform(ClassLoader classLoader, String str, Class<?> cls, ProtectionDomain protectionDomain, byte[] bArr);
 
-    /* renamed from: lombok.patcher.Filter$1, reason: invalid class name */
+    /* renamed from: lombok.patcher.Filter$1 */
     /* loaded from: discord-126021.apk:lombok/patcher/Filter$1.SCL.lombok */
-    class AnonymousClass1 implements Filter {
-        AnonymousClass1() {
+    class C129101 implements Filter {
+        C129101() {
         }
 
         @Override // lombok.patcher.Filter

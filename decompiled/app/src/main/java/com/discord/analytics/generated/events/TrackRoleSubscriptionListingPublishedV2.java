@@ -1,30 +1,31 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackRoleSubscriptionListingPublishedV2.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackRoleSubscriptionListingPublishedV2 implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
+public final /* data */ class TrackRoleSubscriptionListingPublishedV2 implements AnalyticsSchema, TrackBase2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final Long roleSubscriptionListingId = null;
     private final Long roleSubscriptionGroupListingId = null;
     private final transient String analyticsSchemaTypeName = "role_subscription_listing_published_v2";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -42,7 +43,7 @@ public final /* data */ class TrackRoleSubscriptionListingPublishedV2 implements
             return false;
         }
         TrackRoleSubscriptionListingPublishedV2 trackRoleSubscriptionListingPublishedV2 = (TrackRoleSubscriptionListingPublishedV2) other;
-        return m.areEqual(this.roleSubscriptionListingId, trackRoleSubscriptionListingPublishedV2.roleSubscriptionListingId) && m.areEqual(this.roleSubscriptionGroupListingId, trackRoleSubscriptionListingPublishedV2.roleSubscriptionGroupListingId);
+        return Intrinsics3.areEqual(this.roleSubscriptionListingId, trackRoleSubscriptionListingPublishedV2.roleSubscriptionListingId) && Intrinsics3.areEqual(this.roleSubscriptionGroupListingId, trackRoleSubscriptionListingPublishedV2.roleSubscriptionGroupListingId);
     }
 
     public int hashCode() {
@@ -53,9 +54,9 @@ public final /* data */ class TrackRoleSubscriptionListingPublishedV2 implements
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackRoleSubscriptionListingPublishedV2(roleSubscriptionListingId=");
-        sbU.append(this.roleSubscriptionListingId);
-        sbU.append(", roleSubscriptionGroupListingId=");
-        return a.G(sbU, this.roleSubscriptionGroupListingId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackRoleSubscriptionListingPublishedV2(roleSubscriptionListingId=");
+        sbM833U.append(this.roleSubscriptionListingId);
+        sbM833U.append(", roleSubscriptionGroupListingId=");
+        return outline.m819G(sbM833U, this.roleSubscriptionGroupListingId, ")");
     }
 }

@@ -10,101 +10,119 @@ import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.t4;
-import b.a.i.u4;
-import b.a.i.v4;
+import p007b.p008a.p025i.WidgetChatInputCommunicationDisabledGuardBinding;
+import p007b.p008a.p025i.WidgetChatInputGuardBinding;
+import p007b.p008a.p025i.WidgetChatInputMemberVerificationGuardBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetChatInputBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f16094a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final WidgetChatInputApplicationCommandsBinding f2303b;
+    public final WidgetChatInputApplicationCommandsBinding f16095b;
 
+    /* renamed from: c */
     @NonNull
-    public final RecyclerView c;
+    public final RecyclerView f16096c;
 
+    /* renamed from: d */
     @NonNull
-    public final LinearLayout d;
+    public final LinearLayout f16097d;
 
+    /* renamed from: e */
     @NonNull
-    public final RelativeLayout e;
+    public final RelativeLayout f16098e;
 
+    /* renamed from: f */
     @NonNull
-    public final AppCompatImageButton f;
+    public final AppCompatImageButton f16099f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f16100g;
 
+    /* renamed from: h */
     @NonNull
-    public final LinearLayout h;
+    public final LinearLayout f16101h;
 
+    /* renamed from: i */
     @NonNull
-    public final ImageView i;
+    public final ImageView f16102i;
 
+    /* renamed from: j */
     @NonNull
-    public final TextView j;
+    public final TextView f16103j;
 
+    /* renamed from: k */
     @NonNull
-    public final TextView k;
+    public final TextView f16104k;
 
+    /* renamed from: l */
     @NonNull
-    public final RecyclerView l;
+    public final RecyclerView f16105l;
 
+    /* renamed from: m */
     @NonNull
-    public final LinearLayout m;
+    public final LinearLayout f16106m;
 
+    /* renamed from: n */
     @NonNull
-    public final TextView n;
+    public final TextView f16107n;
 
+    /* renamed from: o */
     @NonNull
-    public final RecyclerView o;
+    public final RecyclerView f16108o;
 
+    /* renamed from: p */
     @NonNull
-    public final FragmentContainerView p;
+    public final FragmentContainerView f16109p;
 
+    /* renamed from: q */
     @NonNull
-    public final LinearLayout q;
+    public final LinearLayout f16110q;
 
+    /* renamed from: r */
     @NonNull
-    public final u4 r;
+    public final WidgetChatInputGuardBinding f16111r;
 
-    /* renamed from: s, reason: collision with root package name */
+    /* renamed from: s */
     @NonNull
-    public final t4 f2304s;
+    public final WidgetChatInputCommunicationDisabledGuardBinding f16112s;
 
+    /* renamed from: t */
     @NonNull
-    public final v4 t;
+    public final WidgetChatInputMemberVerificationGuardBinding f16113t;
 
-    public WidgetChatInputBinding(@NonNull LinearLayout linearLayout, @NonNull WidgetChatInputApplicationCommandsBinding widgetChatInputApplicationCommandsBinding, @NonNull RecyclerView recyclerView, @NonNull LinearLayout linearLayout2, @NonNull RelativeLayout relativeLayout, @NonNull AppCompatImageButton appCompatImageButton, @NonNull TextView textView, @NonNull LinearLayout linearLayout3, @NonNull ImageView imageView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull RecyclerView recyclerView2, @NonNull LinearLayout linearLayout4, @NonNull TextView textView4, @NonNull RecyclerView recyclerView3, @NonNull FragmentContainerView fragmentContainerView, @NonNull LinearLayout linearLayout5, @NonNull u4 u4Var, @NonNull t4 t4Var, @NonNull v4 v4Var) {
-        this.a = linearLayout;
-        this.f2303b = widgetChatInputApplicationCommandsBinding;
-        this.c = recyclerView;
-        this.d = linearLayout2;
-        this.e = relativeLayout;
-        this.f = appCompatImageButton;
-        this.g = textView;
-        this.h = linearLayout3;
-        this.i = imageView;
-        this.j = textView2;
-        this.k = textView3;
-        this.l = recyclerView2;
-        this.m = linearLayout4;
-        this.n = textView4;
-        this.o = recyclerView3;
-        this.p = fragmentContainerView;
-        this.q = linearLayout5;
-        this.r = u4Var;
-        this.f2304s = t4Var;
-        this.t = v4Var;
+    public WidgetChatInputBinding(@NonNull LinearLayout linearLayout, @NonNull WidgetChatInputApplicationCommandsBinding widgetChatInputApplicationCommandsBinding, @NonNull RecyclerView recyclerView, @NonNull LinearLayout linearLayout2, @NonNull RelativeLayout relativeLayout, @NonNull AppCompatImageButton appCompatImageButton, @NonNull TextView textView, @NonNull LinearLayout linearLayout3, @NonNull ImageView imageView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull RecyclerView recyclerView2, @NonNull LinearLayout linearLayout4, @NonNull TextView textView4, @NonNull RecyclerView recyclerView3, @NonNull FragmentContainerView fragmentContainerView, @NonNull LinearLayout linearLayout5, @NonNull WidgetChatInputGuardBinding widgetChatInputGuardBinding, @NonNull WidgetChatInputCommunicationDisabledGuardBinding widgetChatInputCommunicationDisabledGuardBinding, @NonNull WidgetChatInputMemberVerificationGuardBinding widgetChatInputMemberVerificationGuardBinding) {
+        this.f16094a = linearLayout;
+        this.f16095b = widgetChatInputApplicationCommandsBinding;
+        this.f16096c = recyclerView;
+        this.f16097d = linearLayout2;
+        this.f16098e = relativeLayout;
+        this.f16099f = appCompatImageButton;
+        this.f16100g = textView;
+        this.f16101h = linearLayout3;
+        this.f16102i = imageView;
+        this.f16103j = textView2;
+        this.f16104k = textView3;
+        this.f16105l = recyclerView2;
+        this.f16106m = linearLayout4;
+        this.f16107n = textView4;
+        this.f16108o = recyclerView3;
+        this.f16109p = fragmentContainerView;
+        this.f16110q = linearLayout5;
+        this.f16111r = widgetChatInputGuardBinding;
+        this.f16112s = widgetChatInputCommunicationDisabledGuardBinding;
+        this.f16113t = widgetChatInputMemberVerificationGuardBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16094a;
     }
 }

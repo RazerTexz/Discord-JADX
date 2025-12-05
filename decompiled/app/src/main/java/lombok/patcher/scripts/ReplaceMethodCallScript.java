@@ -72,12 +72,12 @@ public class ReplaceMethodCallScript extends MethodLevelPatchScript {
         this.extraRequests = extraRequests;
     }
 
-    /* renamed from: lombok.patcher.scripts.ReplaceMethodCallScript$1, reason: invalid class name */
+    /* renamed from: lombok.patcher.scripts.ReplaceMethodCallScript$1 */
     /* loaded from: discord-126021.apk:lombok/patcher/scripts/ReplaceMethodCallScript$1.SCL.lombok */
-    class AnonymousClass1 implements PatchScript.MethodPatcherFactory {
+    class C129171 implements PatchScript.MethodPatcherFactory {
         private final /* synthetic */ String val$classSpec;
 
-        AnonymousClass1(String str) {
+        C129171(String str) {
             this.val$classSpec = str;
         }
 
@@ -89,7 +89,7 @@ public class ReplaceMethodCallScript extends MethodLevelPatchScript {
 
     @Override // lombok.patcher.scripts.MethodLevelPatchScript
     protected PatchScript.MethodPatcher createPatcher(ClassWriter writer, String classSpec, TransplantMapper transplantMapper) {
-        PatchScript.MethodPatcher patcher = new PatchScript.MethodPatcher(writer, transplantMapper, new AnonymousClass1(classSpec));
+        PatchScript.MethodPatcher patcher = new PatchScript.MethodPatcher(writer, transplantMapper, new C129171(classSpec));
         if (this.transplant) {
             patcher.addTransplant(this.wrapper);
         }
@@ -111,18 +111,18 @@ public class ReplaceMethodCallScript extends MethodLevelPatchScript {
         public void visitMethodInsn(int opcode, String owner, String name, String desc, boolean itf) {
             if (ReplaceMethodCallScript.access$0(ReplaceMethodCallScript.this).getClassSpec().equals(owner) && ReplaceMethodCallScript.access$0(ReplaceMethodCallScript.this).getMethodName().equals(name) && ReplaceMethodCallScript.access$0(ReplaceMethodCallScript.this).getMethodDescriptor().equals(desc)) {
                 if (ReplaceMethodCallScript.access$1(ReplaceMethodCallScript.this).contains(StackRequest.THIS)) {
-                    this.logistics.generateLoadOpcodeForThis(this.mv);
+                    this.logistics.generateLoadOpcodeForThis(this.f27600mv);
                 }
                 for (StackRequest param : StackRequest.PARAMS_IN_ORDER) {
                     if (ReplaceMethodCallScript.access$1(ReplaceMethodCallScript.this).contains(param)) {
-                        this.logistics.generateLoadOpcodeForParam(param.getParamPos(), this.mv);
+                        this.logistics.generateLoadOpcodeForParam(param.getParamPos(), this.f27600mv);
                     }
                 }
                 if (!ReplaceMethodCallScript.access$2(ReplaceMethodCallScript.this)) {
                     super.visitMethodInsn(Opcodes.INVOKESTATIC, ReplaceMethodCallScript.access$5(ReplaceMethodCallScript.this) ? this.ownClassSpec : ReplaceMethodCallScript.access$3(ReplaceMethodCallScript.this).getClassSpec(), ReplaceMethodCallScript.access$3(ReplaceMethodCallScript.this).getMethodName(), ReplaceMethodCallScript.access$3(ReplaceMethodCallScript.this).getMethodDescriptor(), itf);
                     return;
                 } else {
-                    ReplaceMethodCallScript.access$4(ReplaceMethodCallScript.access$3(ReplaceMethodCallScript.this), this.mv);
+                    ReplaceMethodCallScript.access$4(ReplaceMethodCallScript.access$3(ReplaceMethodCallScript.this), this.f27600mv);
                     return;
                 }
             }

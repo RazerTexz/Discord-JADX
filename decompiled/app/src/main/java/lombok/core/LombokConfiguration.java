@@ -13,14 +13,14 @@ import lombok.core.configuration.FileSystemSourceCache;
 
 /* loaded from: discord-126021.apk:lombok/core/LombokConfiguration.SCL.lombok */
 public class LombokConfiguration {
-    private static final ConfigurationResolver NULL_RESOLVER = new AnonymousClass1();
+    private static final ConfigurationResolver NULL_RESOLVER = new C128131();
     private static FileSystemSourceCache cache = new FileSystemSourceCache();
     private static ConfigurationResolverFactory configurationResolverFactory;
 
-    /* renamed from: lombok.core.LombokConfiguration$1, reason: invalid class name */
+    /* renamed from: lombok.core.LombokConfiguration$1 */
     /* loaded from: discord-126021.apk:lombok/core/LombokConfiguration$1.SCL.lombok */
-    class AnonymousClass1 implements ConfigurationResolver {
-        AnonymousClass1() {
+    class C128131 implements ConfigurationResolver {
+        C128131() {
         }
 
         @Override // lombok.core.configuration.ConfigurationResolver
@@ -34,7 +34,7 @@ public class LombokConfiguration {
 
     static {
         if (System.getProperty("lombok.disableConfig") != null) {
-            configurationResolverFactory = new AnonymousClass2();
+            configurationResolverFactory = new C128142();
         } else {
             configurationResolverFactory = createFileSystemBubblingResolverFactory();
         }
@@ -48,10 +48,10 @@ public class LombokConfiguration {
         return cache;
     }
 
-    /* renamed from: lombok.core.LombokConfiguration$2, reason: invalid class name */
+    /* renamed from: lombok.core.LombokConfiguration$2 */
     /* loaded from: discord-126021.apk:lombok/core/LombokConfiguration$2.SCL.lombok */
-    class AnonymousClass2 implements ConfigurationResolverFactory {
-        AnonymousClass2() {
+    class C128142 implements ConfigurationResolverFactory {
+        C128142() {
         }
 
         @Override // lombok.core.configuration.ConfigurationResolverFactory
@@ -75,12 +75,12 @@ public class LombokConfiguration {
         return (T) configurationResolverFactory.createResolver(uri).resolve(configurationKey);
     }
 
-    /* renamed from: lombok.core.LombokConfiguration$3, reason: invalid class name */
+    /* renamed from: lombok.core.LombokConfiguration$3 */
     /* loaded from: discord-126021.apk:lombok/core/LombokConfiguration$3.SCL.lombok */
-    class AnonymousClass3 implements ConfigurationResolverFactory {
+    class C128153 implements ConfigurationResolverFactory {
         private final /* synthetic */ ConfigurationFileToSource val$fileToSource;
 
-        AnonymousClass3(ConfigurationFileToSource configurationFileToSource) {
+        C128153(ConfigurationFileToSource configurationFileToSource) {
             this.val$fileToSource = configurationFileToSource;
         }
 
@@ -92,6 +92,6 @@ public class LombokConfiguration {
 
     private static ConfigurationResolverFactory createFileSystemBubblingResolverFactory() {
         ConfigurationFileToSource fileToSource = cache.fileToSource(new ConfigurationParser(ConfigurationProblemReporter.CONSOLE));
-        return new AnonymousClass3(fileToSource);
+        return new C128153(fileToSource);
     }
 }

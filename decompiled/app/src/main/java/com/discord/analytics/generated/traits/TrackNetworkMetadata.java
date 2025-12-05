@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackNetworkMetadata.kt */
 /* loaded from: classes.dex */
@@ -32,7 +32,7 @@ public final /* data */ class TrackNetworkMetadata {
             return false;
         }
         TrackNetworkMetadata trackNetworkMetadata = (TrackNetworkMetadata) other;
-        return m.areEqual(this.url, trackNetworkMetadata.url) && m.areEqual(this.requestMethod, trackNetworkMetadata.requestMethod) && m.areEqual(this.statusCode, trackNetworkMetadata.statusCode) && m.areEqual(this.errorCode, trackNetworkMetadata.errorCode) && m.areEqual(this.errorMessage, trackNetworkMetadata.errorMessage);
+        return Intrinsics3.areEqual(this.url, trackNetworkMetadata.url) && Intrinsics3.areEqual(this.requestMethod, trackNetworkMetadata.requestMethod) && Intrinsics3.areEqual(this.statusCode, trackNetworkMetadata.statusCode) && Intrinsics3.areEqual(this.errorCode, trackNetworkMetadata.errorCode) && Intrinsics3.areEqual(this.errorMessage, trackNetworkMetadata.errorMessage);
     }
 
     public int hashCode() {
@@ -49,16 +49,16 @@ public final /* data */ class TrackNetworkMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackNetworkMetadata(url=");
-        sbU.append(this.url);
-        sbU.append(", requestMethod=");
-        sbU.append(this.requestMethod);
-        sbU.append(", statusCode=");
-        sbU.append(this.statusCode);
-        sbU.append(", errorCode=");
-        sbU.append(this.errorCode);
-        sbU.append(", errorMessage=");
-        return a.E(sbU, this.errorMessage, ")");
+        StringBuilder sbM833U = outline.m833U("TrackNetworkMetadata(url=");
+        sbM833U.append(this.url);
+        sbM833U.append(", requestMethod=");
+        sbM833U.append(this.requestMethod);
+        sbM833U.append(", statusCode=");
+        sbM833U.append(this.statusCode);
+        sbM833U.append(", errorCode=");
+        sbM833U.append(this.errorCode);
+        sbM833U.append(", errorMessage=");
+        return outline.m817E(sbM833U, this.errorMessage, ")");
     }
 
     public TrackNetworkMetadata(CharSequence charSequence, CharSequence charSequence2, Long l, Long l2, CharSequence charSequence3, int i) {

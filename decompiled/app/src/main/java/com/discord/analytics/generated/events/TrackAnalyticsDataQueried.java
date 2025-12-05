@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAnalyticsDataQueried.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAnalyticsDataQueried implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackAnalyticsDataQueried implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final Long guildId = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackAnalyticsDataQueried implements AnalyticsSche
             return false;
         }
         TrackAnalyticsDataQueried trackAnalyticsDataQueried = (TrackAnalyticsDataQueried) other;
-        return m.areEqual(this.applicationId, trackAnalyticsDataQueried.applicationId) && m.areEqual(this.guildId, trackAnalyticsDataQueried.guildId) && m.areEqual(this.tableName, trackAnalyticsDataQueried.tableName) && m.areEqual(this.dateRangeStart, trackAnalyticsDataQueried.dateRangeStart) && m.areEqual(this.dateRangeEnd, trackAnalyticsDataQueried.dateRangeEnd) && m.areEqual(this.interval, trackAnalyticsDataQueried.interval) && m.areEqual(this.responseIsSuccessful, trackAnalyticsDataQueried.responseIsSuccessful) && m.areEqual(this.responseHasData, trackAnalyticsDataQueried.responseHasData);
+        return Intrinsics3.areEqual(this.applicationId, trackAnalyticsDataQueried.applicationId) && Intrinsics3.areEqual(this.guildId, trackAnalyticsDataQueried.guildId) && Intrinsics3.areEqual(this.tableName, trackAnalyticsDataQueried.tableName) && Intrinsics3.areEqual(this.dateRangeStart, trackAnalyticsDataQueried.dateRangeStart) && Intrinsics3.areEqual(this.dateRangeEnd, trackAnalyticsDataQueried.dateRangeEnd) && Intrinsics3.areEqual(this.interval, trackAnalyticsDataQueried.interval) && Intrinsics3.areEqual(this.responseIsSuccessful, trackAnalyticsDataQueried.responseIsSuccessful) && Intrinsics3.areEqual(this.responseHasData, trackAnalyticsDataQueried.responseHasData);
     }
 
     public int hashCode() {
@@ -57,21 +57,21 @@ public final /* data */ class TrackAnalyticsDataQueried implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAnalyticsDataQueried(applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", tableName=");
-        sbU.append(this.tableName);
-        sbU.append(", dateRangeStart=");
-        sbU.append(this.dateRangeStart);
-        sbU.append(", dateRangeEnd=");
-        sbU.append(this.dateRangeEnd);
-        sbU.append(", interval=");
-        sbU.append(this.interval);
-        sbU.append(", responseIsSuccessful=");
-        sbU.append(this.responseIsSuccessful);
-        sbU.append(", responseHasData=");
-        return a.D(sbU, this.responseHasData, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAnalyticsDataQueried(applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", tableName=");
+        sbM833U.append(this.tableName);
+        sbM833U.append(", dateRangeStart=");
+        sbM833U.append(this.dateRangeStart);
+        sbM833U.append(", dateRangeEnd=");
+        sbM833U.append(this.dateRangeEnd);
+        sbM833U.append(", interval=");
+        sbM833U.append(this.interval);
+        sbM833U.append(", responseIsSuccessful=");
+        sbM833U.append(this.responseIsSuccessful);
+        sbM833U.append(", responseHasData=");
+        return outline.m816D(sbM833U, this.responseHasData, ")");
     }
 }

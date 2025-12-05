@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackWebhookDeleted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackWebhookDeleted implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackWebhookDeleted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long webhookId = null;
     private final CharSequence webhookName = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackWebhookDeleted implements AnalyticsSchema, Tr
             return false;
         }
         TrackWebhookDeleted trackWebhookDeleted = (TrackWebhookDeleted) other;
-        return m.areEqual(this.webhookId, trackWebhookDeleted.webhookId) && m.areEqual(this.webhookName, trackWebhookDeleted.webhookName) && m.areEqual(this.type, trackWebhookDeleted.type) && m.areEqual(this.channelId, trackWebhookDeleted.channelId) && m.areEqual(this.channelType, trackWebhookDeleted.channelType) && m.areEqual(this.guildId, trackWebhookDeleted.guildId) && m.areEqual(this.webhookSourceChannelId, trackWebhookDeleted.webhookSourceChannelId) && m.areEqual(this.webhookSourceGuildId, trackWebhookDeleted.webhookSourceGuildId) && m.areEqual(this.webhookSourceChannelType, trackWebhookDeleted.webhookSourceChannelType);
+        return Intrinsics3.areEqual(this.webhookId, trackWebhookDeleted.webhookId) && Intrinsics3.areEqual(this.webhookName, trackWebhookDeleted.webhookName) && Intrinsics3.areEqual(this.type, trackWebhookDeleted.type) && Intrinsics3.areEqual(this.channelId, trackWebhookDeleted.channelId) && Intrinsics3.areEqual(this.channelType, trackWebhookDeleted.channelType) && Intrinsics3.areEqual(this.guildId, trackWebhookDeleted.guildId) && Intrinsics3.areEqual(this.webhookSourceChannelId, trackWebhookDeleted.webhookSourceChannelId) && Intrinsics3.areEqual(this.webhookSourceGuildId, trackWebhookDeleted.webhookSourceGuildId) && Intrinsics3.areEqual(this.webhookSourceChannelType, trackWebhookDeleted.webhookSourceChannelType);
     }
 
     public int hashCode() {
@@ -60,23 +60,23 @@ public final /* data */ class TrackWebhookDeleted implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackWebhookDeleted(webhookId=");
-        sbU.append(this.webhookId);
-        sbU.append(", webhookName=");
-        sbU.append(this.webhookName);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", webhookSourceChannelId=");
-        sbU.append(this.webhookSourceChannelId);
-        sbU.append(", webhookSourceGuildId=");
-        sbU.append(this.webhookSourceGuildId);
-        sbU.append(", webhookSourceChannelType=");
-        return a.G(sbU, this.webhookSourceChannelType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackWebhookDeleted(webhookId=");
+        sbM833U.append(this.webhookId);
+        sbM833U.append(", webhookName=");
+        sbM833U.append(this.webhookName);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", webhookSourceChannelId=");
+        sbM833U.append(this.webhookSourceChannelId);
+        sbM833U.append(", webhookSourceGuildId=");
+        sbM833U.append(this.webhookSourceGuildId);
+        sbM833U.append(", webhookSourceChannelType=");
+        return outline.m819G(sbM833U, this.webhookSourceChannelType, ")");
     }
 }

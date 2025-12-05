@@ -18,9 +18,9 @@ public class TimerCycle {
     private FutureScheduler scheduler;
     private ScheduledFuture waitingTask;
 
-    /* renamed from: com.adjust.sdk.scheduler.TimerCycle$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: com.adjust.sdk.scheduler.TimerCycle$1 */
+    public class RunnableC54041 implements Runnable {
+        public RunnableC54041() {
         }
 
         @Override // java.lang.Runnable
@@ -66,7 +66,7 @@ public class TimerCycle {
             return;
         }
         this.logger.verbose("%s starting", this.name);
-        this.waitingTask = this.scheduler.scheduleFutureWithFixedDelay(new AnonymousClass1(), this.initialDelay, this.cycleDelay);
+        this.waitingTask = this.scheduler.scheduleFutureWithFixedDelay(new RunnableC54041(), this.initialDelay, this.cycleDelay);
         this.isPaused = false;
     }
 

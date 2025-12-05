@@ -103,9 +103,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     private static final String LOG_TAG = SwipeRefreshLayout.class.getSimpleName();
     private static final int[] LAYOUT_ATTRS = {R.attr.enabled};
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$1, reason: invalid class name */
-    public class AnonymousClass1 implements Animation.AnimationListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$1 */
+    public class AnimationAnimationListenerC06241 implements Animation.AnimationListener {
+        public AnimationAnimationListenerC06241() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -135,9 +135,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$2, reason: invalid class name */
-    public class AnonymousClass2 extends Animation {
-        public AnonymousClass2() {
+    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$2 */
+    public class C06252 extends Animation {
+        public C06252() {
         }
 
         @Override // android.view.animation.Animation
@@ -146,9 +146,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$3, reason: invalid class name */
-    public class AnonymousClass3 extends Animation {
-        public AnonymousClass3() {
+    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$3 */
+    public class C06263 extends Animation {
+        public C06263() {
         }
 
         @Override // android.view.animation.Animation
@@ -157,12 +157,12 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$4, reason: invalid class name */
-    public class AnonymousClass4 extends Animation {
+    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$4 */
+    public class C06274 extends Animation {
         public final /* synthetic */ int val$endingAlpha;
         public final /* synthetic */ int val$startingAlpha;
 
-        public AnonymousClass4(int i, int i2) {
+        public C06274(int i, int i2) {
             this.val$startingAlpha = i;
             this.val$endingAlpha = i2;
         }
@@ -173,9 +173,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$5, reason: invalid class name */
-    public class AnonymousClass5 implements Animation.AnimationListener {
-        public AnonymousClass5() {
+    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$5 */
+    public class AnimationAnimationListenerC06285 implements Animation.AnimationListener {
+        public AnimationAnimationListenerC06285() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -196,9 +196,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$6, reason: invalid class name */
-    public class AnonymousClass6 extends Animation {
-        public AnonymousClass6() {
+    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$6 */
+    public class C06296 extends Animation {
+        public C06296() {
         }
 
         @Override // android.view.animation.Animation
@@ -211,9 +211,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$7, reason: invalid class name */
-    public class AnonymousClass7 extends Animation {
-        public AnonymousClass7() {
+    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$7 */
+    public class C06307 extends Animation {
+        public C06307() {
         }
 
         @Override // android.view.animation.Animation
@@ -222,9 +222,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$8, reason: invalid class name */
-    public class AnonymousClass8 extends Animation {
-        public AnonymousClass8() {
+    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$8 */
+    public class C06318 extends Animation {
+        public C06318() {
         }
 
         @Override // android.view.animation.Animation
@@ -305,7 +305,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
         this.mRefreshing = false;
         this.mProgress.setStartEndTrim(0.0f, 0.0f);
-        animateOffsetToStartPosition(this.mCurrentTargetOffsetTop, this.mScale ? null : new AnonymousClass5());
+        animateOffsetToStartPosition(this.mCurrentTargetOffsetTop, this.mScale ? null : new AnimationAnimationListenerC06285());
         this.mProgress.setArrowEnabled(false);
     }
 
@@ -362,12 +362,12 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     private Animation startAlphaAnimation(int i, int i2) {
-        AnonymousClass4 anonymousClass4 = new AnonymousClass4(i, i2);
-        anonymousClass4.setDuration(300L);
+        C06274 c06274 = new C06274(i, i2);
+        c06274.setDuration(300L);
         this.mCircleView.setAnimationListener(null);
         this.mCircleView.clearAnimation();
-        this.mCircleView.startAnimation(anonymousClass4);
-        return anonymousClass4;
+        this.mCircleView.startAnimation(c06274);
+        return c06274;
     }
 
     private void startDragging(float f) {
@@ -393,9 +393,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     private void startScaleDownReturnToStartAnimation(int i, Animation.AnimationListener animationListener) {
         this.mFrom = i;
         this.mStartingScale = this.mCircleView.getScaleX();
-        AnonymousClass8 anonymousClass8 = new AnonymousClass8();
-        this.mScaleDownToStartAnimation = anonymousClass8;
-        anonymousClass8.setDuration(150L);
+        C06318 c06318 = new C06318();
+        this.mScaleDownToStartAnimation = c06318;
+        c06318.setDuration(150L);
         if (animationListener != null) {
             this.mCircleView.setAnimationListener(animationListener);
         }
@@ -406,9 +406,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     private void startScaleUpAnimation(Animation.AnimationListener animationListener) {
         this.mCircleView.setVisibility(0);
         this.mProgress.setAlpha(255);
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-        this.mScaleAnimation = anonymousClass2;
-        anonymousClass2.setDuration(this.mMediumAnimationDuration);
+        C06252 c06252 = new C06252();
+        this.mScaleAnimation = c06252;
+        c06252.setDuration(this.mMediumAnimationDuration);
         if (animationListener != null) {
             this.mCircleView.setAnimationListener(animationListener);
         }
@@ -867,9 +867,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     public void startScaleDownAnimation(Animation.AnimationListener animationListener) {
-        AnonymousClass3 anonymousClass3 = new AnonymousClass3();
-        this.mScaleDownAnimation = anonymousClass3;
-        anonymousClass3.setDuration(150L);
+        C06263 c06263 = new C06263();
+        this.mScaleDownAnimation = c06263;
+        c06263.setDuration(150L);
         this.mCircleView.setAnimationListener(animationListener);
         this.mCircleView.clearAnimation();
         this.mCircleView.startAnimation(this.mScaleDownAnimation);
@@ -883,11 +883,11 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
     public static class SavedState extends View.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C06321();
         public final boolean mRefreshing;
 
-        /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$SavedState$1, reason: invalid class name */
-        public class AnonymousClass1 implements Parcelable.Creator<SavedState> {
+        /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$SavedState$1 */
+        public class C06321 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -937,9 +937,9 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         this.mNestedScrollingV2ConsumedCompat = new int[2];
         this.mActivePointerId = -1;
         this.mCircleViewIndex = -1;
-        this.mRefreshListener = new AnonymousClass1();
-        this.mAnimateToCorrectPosition = new AnonymousClass6();
-        this.mAnimateToStartPosition = new AnonymousClass7();
+        this.mRefreshListener = new AnimationAnimationListenerC06241();
+        this.mAnimateToCorrectPosition = new C06296();
+        this.mAnimateToStartPosition = new C06307();
         this.mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         this.mMediumAnimationDuration = getResources().getInteger(R.integer.config_mediumAnimTime);
         setWillNotDraw(false);

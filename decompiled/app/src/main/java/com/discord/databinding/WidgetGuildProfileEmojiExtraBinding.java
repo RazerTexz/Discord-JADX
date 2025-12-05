@@ -8,16 +8,17 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetGuildProfileEmojiExtraBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final TextView a;
+    public final TextView f16886a;
 
     public WidgetGuildProfileEmojiExtraBinding(@NonNull TextView textView) {
-        this.a = textView;
+        this.f16886a = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16886a;
     }
 }

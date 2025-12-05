@@ -1,9 +1,10 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import b.d.b.a.a;
 import com.discord.api.role.GuildRole;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Autocompletable.kt */
 /* loaded from: classes2.dex */
@@ -15,10 +16,10 @@ public final /* data */ class RoleAutocompletable extends Autocompletable {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public RoleAutocompletable(GuildRole guildRole, boolean z2) {
         super(null);
-        m.checkNotNullParameter(guildRole, "role");
+        Intrinsics3.checkNotNullParameter(guildRole, "role");
         this.role = guildRole;
         this.canMention = z2;
-        this.textMatchers = d0.t.m.listOf(leadingIdentifier().getIdentifier() + guildRole.getName());
+        this.textMatchers = CollectionsJVM.listOf(leadingIdentifier().getIdentifier() + guildRole.getName());
     }
 
     public static /* synthetic */ RoleAutocompletable copy$default(RoleAutocompletable roleAutocompletable, GuildRole guildRole, boolean z2, int i, Object obj) {
@@ -42,7 +43,7 @@ public final /* data */ class RoleAutocompletable extends Autocompletable {
     }
 
     public final RoleAutocompletable copy(GuildRole role, boolean canMention) {
-        m.checkNotNullParameter(role, "role");
+        Intrinsics3.checkNotNullParameter(role, "role");
         return new RoleAutocompletable(role, canMention);
     }
 
@@ -54,7 +55,7 @@ public final /* data */ class RoleAutocompletable extends Autocompletable {
             return false;
         }
         RoleAutocompletable roleAutocompletable = (RoleAutocompletable) other;
-        return m.areEqual(this.role, roleAutocompletable.role) && this.canMention == roleAutocompletable.canMention;
+        return Intrinsics3.areEqual(this.role, roleAutocompletable.role) && this.canMention == roleAutocompletable.canMention;
     }
 
     public final boolean getCanMention() {
@@ -63,12 +64,12 @@ public final /* data */ class RoleAutocompletable extends Autocompletable {
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable
     public String getInputReplacement() {
-        StringBuilder sbQ = a.Q('<');
-        sbQ.append(leadingIdentifier().getIdentifier());
-        sbQ.append('&');
-        sbQ.append(this.role.getId());
-        sbQ.append('>');
-        return sbQ.toString();
+        StringBuilder sbM829Q = outline.m829Q('<');
+        sbM829Q.append(leadingIdentifier().getIdentifier());
+        sbM829Q.append('&');
+        sbM829Q.append(this.role.getId());
+        sbM829Q.append('>');
+        return sbM829Q.toString();
     }
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable
@@ -102,9 +103,9 @@ public final /* data */ class RoleAutocompletable extends Autocompletable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("RoleAutocompletable(role=");
-        sbU.append(this.role);
-        sbU.append(", canMention=");
-        return a.O(sbU, this.canMention, ")");
+        StringBuilder sbM833U = outline.m833U("RoleAutocompletable(role=");
+        sbM833U.append(this.role);
+        sbM833U.append(", canMention=");
+        return outline.m827O(sbM833U, this.canMention, ")");
     }
 }

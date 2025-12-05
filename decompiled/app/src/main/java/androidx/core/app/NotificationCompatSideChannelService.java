@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 import android.os.RemoteException;
-import x.a.b.a.a;
+import p668x.p669a.p672b.p673a.INotificationSideChannel;
 
 /* loaded from: classes.dex */
 public abstract class NotificationCompatSideChannelService extends Service {
 
-    public class NotificationSideChannelStub extends a.AbstractBinderC0657a {
+    public class NotificationSideChannelStub extends INotificationSideChannel.a {
         public NotificationSideChannelStub() {
         }
 
-        @Override // x.a.b.a.a
+        @Override // p668x.p669a.p672b.p673a.INotificationSideChannel
         public void cancel(String str, int i, String str2) throws RemoteException {
             NotificationCompatSideChannelService.this.checkPermission(Binder.getCallingUid(), str);
             long jClearCallingIdentity = Binder.clearCallingIdentity();
@@ -26,7 +26,7 @@ public abstract class NotificationCompatSideChannelService extends Service {
             }
         }
 
-        @Override // x.a.b.a.a
+        @Override // p668x.p669a.p672b.p673a.INotificationSideChannel
         public void cancelAll(String str) {
             NotificationCompatSideChannelService.this.checkPermission(Binder.getCallingUid(), str);
             long jClearCallingIdentity = Binder.clearCallingIdentity();
@@ -37,7 +37,7 @@ public abstract class NotificationCompatSideChannelService extends Service {
             }
         }
 
-        @Override // x.a.b.a.a
+        @Override // p668x.p669a.p672b.p673a.INotificationSideChannel
         public void notify(String str, int i, String str2, Notification notification) throws RemoteException {
             NotificationCompatSideChannelService.this.checkPermission(Binder.getCallingUid(), str);
             long jClearCallingIdentity = Binder.clearCallingIdentity();

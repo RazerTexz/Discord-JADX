@@ -1,133 +1,151 @@
 package com.facebook.drawee.view;
 
 import android.graphics.drawable.Drawable;
-import b.c.a.a0.d;
-import b.f.d.d.i;
-import b.f.g.b.c;
-import b.f.g.e.f0;
-import b.f.g.e.g0;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.interfaces.DraweeHierarchy;
 import java.util.Objects;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p115d.p119d.Objects2;
+import p007b.p109f.p132g.p138b.DraweeEventTracker;
+import p007b.p109f.p132g.p142e.VisibilityAwareDrawable;
+import p007b.p109f.p132g.p142e.VisibilityCallback;
 
 /* loaded from: classes.dex */
-public class DraweeHolder<DH extends DraweeHierarchy> implements g0 {
-    public DH d;
-    public final c f;
-    public boolean a = false;
+public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallback {
 
-    /* renamed from: b, reason: collision with root package name */
-    public boolean f2893b = false;
-    public boolean c = true;
-    public DraweeController e = null;
+    /* renamed from: d */
+    public DH f19528d;
+
+    /* renamed from: f */
+    public final DraweeEventTracker f19530f;
+
+    /* renamed from: a */
+    public boolean f19525a = false;
+
+    /* renamed from: b */
+    public boolean f19526b = false;
+
+    /* renamed from: c */
+    public boolean f19527c = true;
+
+    /* renamed from: e */
+    public DraweeController f19529e = null;
 
     public DraweeHolder(DH dh) {
-        this.f = c.f494b ? new c() : c.a;
+        this.f19530f = DraweeEventTracker.f3261b ? new DraweeEventTracker() : DraweeEventTracker.f3260a;
         if (dh != null) {
-            h(dh);
+            m8694h(dh);
         }
     }
 
-    public final void a() {
-        if (this.a) {
+    /* renamed from: a */
+    public final void m8687a() {
+        if (this.f19525a) {
             return;
         }
-        this.f.a(c.a.ON_ATTACH_CONTROLLER);
-        this.a = true;
-        DraweeController draweeController = this.e;
-        if (draweeController == null || draweeController.b() == null) {
+        this.f19530f.m1084a(DraweeEventTracker.a.ON_ATTACH_CONTROLLER);
+        this.f19525a = true;
+        DraweeController draweeController = this.f19529e;
+        if (draweeController == null || draweeController.mo8653b() == null) {
             return;
         }
-        this.e.d();
+        this.f19529e.mo8655d();
     }
 
-    public final void b() {
-        if (this.f2893b && this.c) {
-            a();
+    /* renamed from: b */
+    public final void m8688b() {
+        if (this.f19526b && this.f19527c) {
+            m8687a();
         } else {
-            c();
+            m8689c();
         }
     }
 
-    public final void c() {
-        if (this.a) {
-            this.f.a(c.a.ON_DETACH_CONTROLLER);
-            this.a = false;
-            if (e()) {
-                this.e.a();
+    /* renamed from: c */
+    public final void m8689c() {
+        if (this.f19525a) {
+            this.f19530f.m1084a(DraweeEventTracker.a.ON_DETACH_CONTROLLER);
+            this.f19525a = false;
+            if (m8691e()) {
+                this.f19529e.mo8652a();
             }
         }
     }
 
-    public Drawable d() {
-        DH dh = this.d;
+    /* renamed from: d */
+    public Drawable m8690d() {
+        DH dh = this.f19528d;
         if (dh == null) {
             return null;
         }
-        return dh.e();
+        return dh.mo8670e();
     }
 
-    public boolean e() {
-        DraweeController draweeController = this.e;
-        return draweeController != null && draweeController.b() == this.d;
+    /* renamed from: e */
+    public boolean m8691e() {
+        DraweeController draweeController = this.f19529e;
+        return draweeController != null && draweeController.mo8653b() == this.f19528d;
     }
 
-    public void f(boolean z2) {
-        if (this.c == z2) {
+    /* renamed from: f */
+    public void m8692f(boolean z2) {
+        if (this.f19527c == z2) {
             return;
         }
-        this.f.a(z2 ? c.a.ON_DRAWABLE_SHOW : c.a.ON_DRAWABLE_HIDE);
-        this.c = z2;
-        b();
+        this.f19530f.m1084a(z2 ? DraweeEventTracker.a.ON_DRAWABLE_SHOW : DraweeEventTracker.a.ON_DRAWABLE_HIDE);
+        this.f19527c = z2;
+        m8688b();
     }
 
-    public void g(DraweeController draweeController) {
-        boolean z2 = this.a;
+    /* renamed from: g */
+    public void m8693g(DraweeController draweeController) {
+        boolean z2 = this.f19525a;
         if (z2) {
-            c();
+            m8689c();
         }
-        if (e()) {
-            this.f.a(c.a.ON_CLEAR_OLD_CONTROLLER);
-            this.e.e(null);
+        if (m8691e()) {
+            this.f19530f.m1084a(DraweeEventTracker.a.ON_CLEAR_OLD_CONTROLLER);
+            this.f19529e.mo1045e(null);
         }
-        this.e = draweeController;
+        this.f19529e = draweeController;
         if (draweeController != null) {
-            this.f.a(c.a.ON_SET_CONTROLLER);
-            this.e.e(this.d);
+            this.f19530f.m1084a(DraweeEventTracker.a.ON_SET_CONTROLLER);
+            this.f19529e.mo1045e(this.f19528d);
         } else {
-            this.f.a(c.a.ON_CLEAR_CONTROLLER);
+            this.f19530f.m1084a(DraweeEventTracker.a.ON_CLEAR_CONTROLLER);
         }
         if (z2) {
-            a();
+            m8687a();
         }
     }
 
-    public void h(DH dh) {
-        this.f.a(c.a.ON_SET_HIERARCHY);
-        boolean zE = e();
-        Object objD = d();
-        if (objD instanceof f0) {
-            ((f0) objD).k(null);
+    /* renamed from: h */
+    public void m8694h(DH dh) {
+        this.f19530f.m1084a(DraweeEventTracker.a.ON_SET_HIERARCHY);
+        boolean zM8691e = m8691e();
+        Object objM8690d = m8690d();
+        if (objM8690d instanceof VisibilityAwareDrawable) {
+            ((VisibilityAwareDrawable) objM8690d).mo1102k(null);
         }
         Objects.requireNonNull(dh);
-        this.d = dh;
-        Drawable drawableE = dh.e();
-        f(drawableE == null || drawableE.isVisible());
-        Object objD2 = d();
-        if (objD2 instanceof f0) {
-            ((f0) objD2).k(this);
+        this.f19528d = dh;
+        Drawable drawableMo8670e = dh.mo8670e();
+        m8692f(drawableMo8670e == null || drawableMo8670e.isVisible());
+        Object objM8690d2 = m8690d();
+        if (objM8690d2 instanceof VisibilityAwareDrawable) {
+            ((VisibilityAwareDrawable) objM8690d2).mo1102k(this);
         }
-        if (zE) {
-            this.e.e(dh);
+        if (zM8691e) {
+            this.f19529e.mo1045e(dh);
         }
     }
 
     public String toString() {
-        i iVarH2 = d.h2(this);
-        iVarH2.b("controllerAttached", this.a);
-        iVarH2.b("holderAttached", this.f2893b);
-        iVarH2.b("drawableVisible", this.c);
-        iVarH2.c("events", this.f.toString());
-        return iVarH2.toString();
+        Objects2 objects2M526h2 = AnimatableValueParser.m526h2(this);
+        objects2M526h2.m970b("controllerAttached", this.f19525a);
+        objects2M526h2.m970b("holderAttached", this.f19526b);
+        objects2M526h2.m970b("drawableVisible", this.f19527c);
+        objects2M526h2.m971c("events", this.f19530f.toString());
+        return objects2M526h2.toString();
     }
 }

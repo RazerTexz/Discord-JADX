@@ -10,29 +10,32 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class StickerPremiumUpsellDialogBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final RelativeLayout a;
+    public final RelativeLayout f15277a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2154b;
+    public final TextView f15278b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f15279c;
 
+    /* renamed from: d */
     @NonNull
-    public final MaterialButton d;
+    public final MaterialButton f15280d;
 
     public StickerPremiumUpsellDialogBinding(@NonNull RelativeLayout relativeLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull MaterialButton materialButton) {
-        this.a = relativeLayout;
-        this.f2154b = textView;
-        this.c = textView2;
-        this.d = materialButton;
+        this.f15277a = relativeLayout;
+        this.f15278b = textView;
+        this.f15279c = textView2;
+        this.f15280d = materialButton;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15277a;
     }
 }

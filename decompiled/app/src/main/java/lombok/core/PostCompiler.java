@@ -51,14 +51,14 @@ public final class PostCompiler {
         }
     }
 
-    /* renamed from: lombok.core.PostCompiler$1, reason: invalid class name */
+    /* renamed from: lombok.core.PostCompiler$1 */
     /* loaded from: discord-126021.apk:lombok/core/PostCompiler$1.SCL.lombok */
-    class AnonymousClass1 extends ByteArrayOutputStream {
+    class C128171 extends ByteArrayOutputStream {
         private final /* synthetic */ String val$fileName;
         private final /* synthetic */ DiagnosticsReceiver val$diagnostics;
         private final /* synthetic */ OutputStream val$originalStream;
 
-        AnonymousClass1(String str, DiagnosticsReceiver diagnosticsReceiver, OutputStream outputStream) {
+        C128171(String str, DiagnosticsReceiver diagnosticsReceiver, OutputStream outputStream) {
             this.val$fileName = str;
             this.val$diagnostics = diagnosticsReceiver;
             this.val$originalStream = outputStream;
@@ -84,6 +84,6 @@ public final class PostCompiler {
     }
 
     public static OutputStream wrapOutputStream(OutputStream originalStream, String fileName, DiagnosticsReceiver diagnostics) throws IOException {
-        return System.getProperty("lombok.disablePostCompiler", null) != null ? originalStream : new AnonymousClass1(fileName, diagnostics, originalStream);
+        return System.getProperty("lombok.disablePostCompiler", null) != null ? originalStream : new C128171(fileName, diagnostics, originalStream);
     }
 }

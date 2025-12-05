@@ -14,9 +14,9 @@ public class TimerOnce {
     private FutureScheduler scheduler;
     private ScheduledFuture waitingTask;
 
-    /* renamed from: com.adjust.sdk.scheduler.TimerOnce$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: com.adjust.sdk.scheduler.TimerOnce$1 */
+    public class RunnableC54051 implements Runnable {
+        public RunnableC54051() {
         }
 
         @Override // java.lang.Runnable
@@ -70,7 +70,7 @@ public class TimerOnce {
     public void startIn(long j) {
         cancel(false);
         this.logger.verbose("%s starting. Launching in %s seconds", this.name, Util.SecondsDisplayFormat.format(j / 1000.0d));
-        this.waitingTask = this.scheduler.scheduleFuture(new AnonymousClass1(), j);
+        this.waitingTask = this.scheduler.scheduleFuture(new RunnableC54051(), j);
     }
 
     public void teardown() {

@@ -26,9 +26,9 @@ public class TypefaceCompatBaseImpl {
     @SuppressLint({"BanConcurrentHashMap"})
     private ConcurrentHashMap<Long, FontResourcesParserCompat.FontFamilyFilesResourceEntry> mFontFamilies = new ConcurrentHashMap<>();
 
-    /* renamed from: androidx.core.graphics.TypefaceCompatBaseImpl$1, reason: invalid class name */
-    public class AnonymousClass1 implements StyleExtractor<FontsContractCompat.FontInfo> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.core.graphics.TypefaceCompatBaseImpl$1 */
+    public class C02271 implements StyleExtractor<FontsContractCompat.FontInfo> {
+        public C02271() {
         }
 
         @Override // androidx.core.graphics.TypefaceCompatBaseImpl.StyleExtractor
@@ -52,9 +52,9 @@ public class TypefaceCompatBaseImpl {
         }
     }
 
-    /* renamed from: androidx.core.graphics.TypefaceCompatBaseImpl$2, reason: invalid class name */
-    public class AnonymousClass2 implements StyleExtractor<FontResourcesParserCompat.FontFileResourceEntry> {
-        public AnonymousClass2() {
+    /* renamed from: androidx.core.graphics.TypefaceCompatBaseImpl$2 */
+    public class C02282 implements StyleExtractor<FontResourcesParserCompat.FontFileResourceEntry> {
+        public C02282() {
         }
 
         @Override // androidx.core.graphics.TypefaceCompatBaseImpl.StyleExtractor
@@ -92,7 +92,7 @@ public class TypefaceCompatBaseImpl {
     }
 
     private FontResourcesParserCompat.FontFileResourceEntry findBestEntry(FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, int i) {
-        return (FontResourcesParserCompat.FontFileResourceEntry) findBestFont(fontFamilyFilesResourceEntry.getEntries(), i, new AnonymousClass2());
+        return (FontResourcesParserCompat.FontFileResourceEntry) findBestFont(fontFamilyFilesResourceEntry.getEntries(), i, new C02282());
     }
 
     private static <T> T findBestFont(T[] tArr, int i, StyleExtractor<T> styleExtractor) {
@@ -203,7 +203,7 @@ public class TypefaceCompatBaseImpl {
     }
 
     public FontsContractCompat.FontInfo findBestInfo(FontsContractCompat.FontInfo[] fontInfoArr, int i) {
-        return (FontsContractCompat.FontInfo) findBestFont(fontInfoArr, i, new AnonymousClass1());
+        return (FontsContractCompat.FontInfo) findBestFont(fontInfoArr, i, new C02271());
     }
 
     @Nullable

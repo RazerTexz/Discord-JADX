@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackLfgDirectoryViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLfgDirectoryViewed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackLfgDirectoryViewed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long guildId = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackLfgDirectoryViewed implements AnalyticsSchema
             return false;
         }
         TrackLfgDirectoryViewed trackLfgDirectoryViewed = (TrackLfgDirectoryViewed) other;
-        return m.areEqual(this.channelId, trackLfgDirectoryViewed.channelId) && m.areEqual(this.guildId, trackLfgDirectoryViewed.guildId) && m.areEqual(this.numGroupsTotal, trackLfgDirectoryViewed.numGroupsTotal) && m.areEqual(this.numGroupsOpen, trackLfgDirectoryViewed.numGroupsOpen) && m.areEqual(this.numGroupsFull, trackLfgDirectoryViewed.numGroupsFull);
+        return Intrinsics3.areEqual(this.channelId, trackLfgDirectoryViewed.channelId) && Intrinsics3.areEqual(this.guildId, trackLfgDirectoryViewed.guildId) && Intrinsics3.areEqual(this.numGroupsTotal, trackLfgDirectoryViewed.numGroupsTotal) && Intrinsics3.areEqual(this.numGroupsOpen, trackLfgDirectoryViewed.numGroupsOpen) && Intrinsics3.areEqual(this.numGroupsFull, trackLfgDirectoryViewed.numGroupsFull);
     }
 
     public int hashCode() {
@@ -48,15 +48,15 @@ public final /* data */ class TrackLfgDirectoryViewed implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackLfgDirectoryViewed(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", numGroupsTotal=");
-        sbU.append(this.numGroupsTotal);
-        sbU.append(", numGroupsOpen=");
-        sbU.append(this.numGroupsOpen);
-        sbU.append(", numGroupsFull=");
-        return a.G(sbU, this.numGroupsFull, ")");
+        StringBuilder sbM833U = outline.m833U("TrackLfgDirectoryViewed(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", numGroupsTotal=");
+        sbM833U.append(this.numGroupsTotal);
+        sbM833U.append(", numGroupsOpen=");
+        sbM833U.append(this.numGroupsOpen);
+        sbM833U.append(", numGroupsFull=");
+        return outline.m819G(sbM833U, this.numGroupsFull, ")");
     }
 }

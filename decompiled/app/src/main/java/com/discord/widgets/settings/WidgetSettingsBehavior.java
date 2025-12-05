@@ -4,22 +4,22 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
-import b.a.d.j;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsBehaviorBinding;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserSettings;
 import com.discord.utilities.accessibility.AccessibilityUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
-import d0.t.n;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetSettingsBehavior.kt */
 /* loaded from: classes2.dex */
@@ -28,7 +28,7 @@ public final class WidgetSettingsBehavior extends AppFragment {
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsBehavior.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsBehaviorBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsBehavior.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsBehaviorBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -39,8 +39,8 @@ public final class WidgetSettingsBehavior extends AppFragment {
         }
 
         public final void launch(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetSettingsBehavior.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetSettingsBehavior.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -49,8 +49,8 @@ public final class WidgetSettingsBehavior extends AppFragment {
     }
 
     public WidgetSettingsBehavior() {
-        super(R.layout.widget_settings_behavior);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsBehavior$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_settings_behavior);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsBehavior2.INSTANCE, null, 2, null);
     }
 
     private final WidgetSettingsBehaviorBinding getBinding() {
@@ -63,31 +63,31 @@ public final class WidgetSettingsBehavior extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        setActionBarSubtitle(R.string.user_settings);
-        setActionBarTitle(R.string.form_label_mobile_notifications_behavior);
+        setActionBarSubtitle(C5419R.string.user_settings);
+        setActionBarTitle(C5419R.string.form_label_mobile_notifications_behavior);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         StoreUserSettings userSettings = StoreStream.INSTANCE.getUserSettings();
-        CheckedSetting checkedSetting = getBinding().f;
+        CheckedSetting checkedSetting = getBinding().f17877f;
         checkedSetting.setChecked(userSettings.getIsShiftEnterToSendEnabled());
-        checkedSetting.setOnCheckedListener(new WidgetSettingsBehavior$onViewBound$$inlined$apply$lambda$1(userSettings));
-        CheckedSetting checkedSetting2 = getBinding().d;
+        checkedSetting.setOnCheckedListener(new WidgetSettingsBehavior3(userSettings));
+        CheckedSetting checkedSetting2 = getBinding().f17875d;
         checkedSetting2.setChecked(userSettings.getIsDeveloperMode());
         Context context = checkedSetting2.getContext();
-        m.checkNotNullExpressionValue(context, "context");
-        b.h(context, R.string.developer_mode_help_text, new Object[]{API_LINK}, null, 4);
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        FormatUtils.m216h(context, C5419R.string.developer_mode_help_text, new Object[]{API_LINK}, null, 4);
         Context context2 = checkedSetting2.getContext();
-        m.checkNotNullExpressionValue(context2, "context");
-        checkedSetting2.h(b.h(context2, R.string.developer_mode_help_text, new Object[]{API_LINK}, null, 4), false);
-        checkedSetting2.setSubtextOnClickListener(new WidgetSettingsBehavior$onViewBound$2$1(checkedSetting2));
-        checkedSetting2.setOnCheckedListener(new WidgetSettingsBehavior$onViewBound$$inlined$apply$lambda$2(this, userSettings));
-        CheckedSetting checkedSetting3 = getBinding().f2605b;
+        Intrinsics3.checkNotNullExpressionValue(context2, "context");
+        checkedSetting2.m8530h(FormatUtils.m216h(context2, C5419R.string.developer_mode_help_text, new Object[]{API_LINK}, null, 4), false);
+        checkedSetting2.setSubtextOnClickListener(new WidgetSettingsBehavior6(checkedSetting2));
+        checkedSetting2.setOnCheckedListener(new WidgetSettingsBehavior4(this, userSettings));
+        CheckedSetting checkedSetting3 = getBinding().f17873b;
         checkedSetting3.setChecked(userSettings.getIsChromeCustomTabsEnabled());
-        checkedSetting3.setOnCheckedListener(new WidgetSettingsBehavior$onViewBound$$inlined$apply$lambda$3(userSettings));
-        for (TextView textView : n.listOf((Object[]) new TextView[]{getBinding().e, getBinding().c})) {
+        checkedSetting3.setOnCheckedListener(new WidgetSettingsBehavior5(userSettings));
+        for (TextView textView : Collections2.listOf((Object[]) new TextView[]{getBinding().f17876e, getBinding().f17874c})) {
             AccessibilityUtils accessibilityUtils = AccessibilityUtils.INSTANCE;
-            m.checkNotNullExpressionValue(textView, "header");
+            Intrinsics3.checkNotNullExpressionValue(textView, "header");
             accessibilityUtils.setViewIsHeading(textView);
         }
     }

@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackAfCard;
-import com.discord.analytics.generated.traits.TrackAfCardReceiver;
+import com.discord.analytics.generated.traits.TrackAfCard2;
 import com.discord.analytics.generated.traits.TrackAfGame;
-import com.discord.analytics.generated.traits.TrackAfGameReceiver;
+import com.discord.analytics.generated.traits.TrackAfGame2;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAfNewsViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAfNewsViewed implements AnalyticsSchema, TrackBaseReceiver, TrackAfCardReceiver, TrackAfGameReceiver {
+public final /* data */ class TrackAfNewsViewed implements AnalyticsSchema, TrackBase2, TrackAfCard2, TrackAfGame2 {
     private TrackAfCard trackAfCard;
     private TrackAfGame trackAfGame;
     private TrackBase trackBase;
@@ -34,7 +34,7 @@ public final /* data */ class TrackAfNewsViewed implements AnalyticsSchema, Trac
             return false;
         }
         TrackAfNewsViewed trackAfNewsViewed = (TrackAfNewsViewed) other;
-        return m.areEqual(this.newsUrl, trackAfNewsViewed.newsUrl) && m.areEqual(this.newsIndex, trackAfNewsViewed.newsIndex);
+        return Intrinsics3.areEqual(this.newsUrl, trackAfNewsViewed.newsUrl) && Intrinsics3.areEqual(this.newsIndex, trackAfNewsViewed.newsIndex);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class TrackAfNewsViewed implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAfNewsViewed(newsUrl=");
-        sbU.append(this.newsUrl);
-        sbU.append(", newsIndex=");
-        return a.G(sbU, this.newsIndex, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAfNewsViewed(newsUrl=");
+        sbM833U.append(this.newsUrl);
+        sbM833U.append(", newsIndex=");
+        return outline.m819G(sbM833U, this.newsIndex, ")");
     }
 }

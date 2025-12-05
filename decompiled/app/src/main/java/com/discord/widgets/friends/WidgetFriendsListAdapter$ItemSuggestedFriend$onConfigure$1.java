@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.models.user.User;
 import com.discord.widgets.friends.FriendsListViewModel;
 import com.discord.widgets.friends.WidgetFriendsListAdapter;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetFriendsListAdapter.kt */
 /* loaded from: classes2.dex */
@@ -22,7 +22,7 @@ public final class WidgetFriendsListAdapter$ItemSuggestedFriend$onConfigure$1 im
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
         Function2<View, User, Unit> onClickUserProfile = WidgetFriendsListAdapter.ItemSuggestedFriend.access$getAdapter$p(this.this$0).getOnClickUserProfile();
-        m.checkNotNullExpressionValue(view, "view");
+        Intrinsics3.checkNotNullExpressionValue(view, "view");
         onClickUserProfile.invoke(view, ((FriendsListViewModel.Item.SuggestedFriend) this.$data).getSuggestion().getUser());
     }
 }

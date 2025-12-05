@@ -1,8 +1,8 @@
 package com.discord.utilities;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ShareUtils.kt */
 /* loaded from: classes2.dex */
@@ -12,7 +12,7 @@ public final /* data */ class ChannelShortcutInfo {
     private final int rank;
 
     public ChannelShortcutInfo(Channel channel, int i, boolean z2) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         this.channel = channel;
         this.rank = i;
         this.isPinnedOnly = z2;
@@ -47,7 +47,7 @@ public final /* data */ class ChannelShortcutInfo {
     }
 
     public final ChannelShortcutInfo copy(Channel channel, int rank, boolean isPinnedOnly) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         return new ChannelShortcutInfo(channel, rank, isPinnedOnly);
     }
 
@@ -59,7 +59,7 @@ public final /* data */ class ChannelShortcutInfo {
             return false;
         }
         ChannelShortcutInfo channelShortcutInfo = (ChannelShortcutInfo) other;
-        return m.areEqual(this.channel, channelShortcutInfo.channel) && this.rank == channelShortcutInfo.rank && this.isPinnedOnly == channelShortcutInfo.isPinnedOnly;
+        return Intrinsics3.areEqual(this.channel, channelShortcutInfo.channel) && this.rank == channelShortcutInfo.rank && this.isPinnedOnly == channelShortcutInfo.isPinnedOnly;
     }
 
     public final Channel getChannel() {
@@ -87,11 +87,11 @@ public final /* data */ class ChannelShortcutInfo {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelShortcutInfo(channel=");
-        sbU.append(this.channel);
-        sbU.append(", rank=");
-        sbU.append(this.rank);
-        sbU.append(", isPinnedOnly=");
-        return a.O(sbU, this.isPinnedOnly, ")");
+        StringBuilder sbM833U = outline.m833U("ChannelShortcutInfo(channel=");
+        sbM833U.append(this.channel);
+        sbM833U.append(", rank=");
+        sbM833U.append(this.rank);
+        sbM833U.append(", isPinnedOnly=");
+        return outline.m827O(sbM833U, this.isPinnedOnly, ")");
     }
 }

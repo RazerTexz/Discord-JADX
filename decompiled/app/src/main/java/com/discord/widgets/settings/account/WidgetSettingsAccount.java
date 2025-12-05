@@ -10,12 +10,8 @@ import androidx.core.widget.NestedScrollView;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.d.j;
-import b.a.k.b;
-import b.d.b.a.a;
-import b.i.a.f.e.o.f;
 import com.airbnb.lottie.LottieAnimationView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.auth.mfa.DisableMfaRequestBody;
 import com.discord.api.auth.mfa.DisableMfaResponse;
 import com.discord.api.connectedaccounts.ConnectedAccount;
@@ -31,13 +27,13 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.accessibility.AccessibilityUtils;
 import com.discord.utilities.auth.GoogleSmartLockManager;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import com.discord.utilities.views.ViewCoroutineScopeKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.views.ViewCoroutineScope;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog;
@@ -53,13 +49,6 @@ import com.discord.widgets.user.account.WidgetUserAccountVerifyBase;
 import com.discord.widgets.user.email.WidgetUserEmailVerify;
 import com.discord.widgets.user.phone.WidgetUserPhoneManage;
 import com.google.android.material.button.MaterialButton;
-import d0.l;
-import d0.t.n;
-import d0.w.h.c;
-import d0.w.i.a.e;
-import d0.w.i.a.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function0;
@@ -68,12 +57,24 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 import kotlinx.coroutines.CoroutineScope;
-import rx.Observable;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.Result3;
+import p507d0.p580t.Collections2;
+import p507d0.p584w.p585h.Intrinsics2;
+import p507d0.p584w.p586i.p587a.ContinuationImpl6;
+import p507d0.p584w.p586i.p587a.DebugMetadata;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetSettingsAccount.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsAccount extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsAccount.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccount.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -109,7 +110,7 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
 
         public final void launch(Context context, boolean hintDataManagement, Redirect redirect) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra(WidgetSettingsAccount.EXTRA_HINT_DATA_MANAGEMENT, hintDataManagement);
             intent.putExtra(WidgetSettingsAccount.EXTRA_REDIRECT, redirect);
@@ -117,7 +118,7 @@ public final class WidgetSettingsAccount extends AppFragment {
                 intent.addFlags(268435456);
                 intent.addFlags(67108864);
             }
-            j.d(context, WidgetSettingsAccount.class, intent);
+            AppScreen2.m156d(context, WidgetSettingsAccount.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -142,9 +143,9 @@ public final class WidgetSettingsAccount extends AppFragment {
 
             public final Observable<Model> get() {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
-                Observable<Model> observableG = Observable.g(StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getMFA().observeState(), companion.getGuilds().observeGuilds(), companion.getUserConnections().observeConnectedAccounts(), companion.getExperiments().observeUserExperiment("2021-04_contact_sync_android_main", true), WidgetSettingsAccount$Model$Companion$get$1.INSTANCE);
-                m.checkNotNullExpressionValue(observableG, "Observable.combineLatest…            )\n          }");
-                return observableG;
+                Observable<Model> observableM11072g = Observable.m11072g(StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getMFA().observeState(), companion.getGuilds().observeGuilds(), companion.getUserConnections().observeConnectedAccounts(), companion.getExperiments().observeUserExperiment("2021-04_contact_sync_android_main", true), WidgetSettingsAccount2.INSTANCE);
+                Intrinsics3.checkNotNullExpressionValue(observableM11072g, "Observable.combineLatest…            )\n          }");
+                return observableM11072g;
             }
 
             public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -153,8 +154,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
 
         public Model(MeUser meUser, StoreMFA.State state, boolean z2, ConnectedAccount connectedAccount) {
-            m.checkNotNullParameter(meUser, "meUser");
-            m.checkNotNullParameter(state, "pendingMFAState");
+            Intrinsics3.checkNotNullParameter(meUser, "meUser");
+            Intrinsics3.checkNotNullParameter(state, "pendingMFAState");
             this.meUser = meUser;
             this.pendingMFAState = state;
             this.ownsAnyGuilds = z2;
@@ -198,8 +199,8 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
 
         public final Model copy(MeUser meUser, StoreMFA.State pendingMFAState, boolean ownsAnyGuilds, ConnectedAccount contactSyncConnection) {
-            m.checkNotNullParameter(meUser, "meUser");
-            m.checkNotNullParameter(pendingMFAState, "pendingMFAState");
+            Intrinsics3.checkNotNullParameter(meUser, "meUser");
+            Intrinsics3.checkNotNullParameter(pendingMFAState, "pendingMFAState");
             return new Model(meUser, pendingMFAState, ownsAnyGuilds, contactSyncConnection);
         }
 
@@ -211,7 +212,7 @@ public final class WidgetSettingsAccount extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return m.areEqual(this.meUser, model.meUser) && m.areEqual(this.pendingMFAState, model.pendingMFAState) && this.ownsAnyGuilds == model.ownsAnyGuilds && m.areEqual(this.contactSyncConnection, model.contactSyncConnection);
+            return Intrinsics3.areEqual(this.meUser, model.meUser) && Intrinsics3.areEqual(this.pendingMFAState, model.pendingMFAState) && this.ownsAnyGuilds == model.ownsAnyGuilds && Intrinsics3.areEqual(this.contactSyncConnection, model.contactSyncConnection);
         }
 
         public final ConnectedAccount getContactSyncConnection() {
@@ -247,16 +248,16 @@ public final class WidgetSettingsAccount extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Model(meUser=");
-            sbU.append(this.meUser);
-            sbU.append(", pendingMFAState=");
-            sbU.append(this.pendingMFAState);
-            sbU.append(", ownsAnyGuilds=");
-            sbU.append(this.ownsAnyGuilds);
-            sbU.append(", contactSyncConnection=");
-            sbU.append(this.contactSyncConnection);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Model(meUser=");
+            sbM833U.append(this.meUser);
+            sbM833U.append(", pendingMFAState=");
+            sbM833U.append(this.pendingMFAState);
+            sbM833U.append(", ownsAnyGuilds=");
+            sbM833U.append(this.ownsAnyGuilds);
+            sbM833U.append(", contactSyncConnection=");
+            sbM833U.append(this.contactSyncConnection);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -266,39 +267,39 @@ public final class WidgetSettingsAccount extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureAccountVerificationBanner$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureAccountVerificationBanner$1 */
+    public static final class ViewOnClickListenerC97171 implements View.OnClickListener {
+        public static final ViewOnClickListenerC97171 INSTANCE = new ViewOnClickListenerC97171();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetUserEmailVerify.INSTANCE.launch(a.x(view, "v", "v.context"), WidgetUserAccountVerifyBase.Mode.UNFORCED);
+            WidgetUserEmailVerify.INSTANCE.launch(outline.m885x(view, "v", "v.context"), WidgetUserAccountVerifyBase.Mode.UNFORCED);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$1 */
+    public static final class ViewOnClickListenerC97181 implements View.OnClickListener {
+        public ViewOnClickListenerC97181() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetSettingsAccountChangePassword.Companion companion = WidgetSettingsAccountChangePassword.INSTANCE;
-            TextView textView = WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).d;
-            m.checkNotNullExpressionValue(textView, "binding.settingsAccountChangePassword");
+            TextView textView = WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).f17795d;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.settingsAccountChangePassword");
             Context context = textView.getContext();
-            m.checkNotNullExpressionValue(context, "binding.settingsAccountChangePassword.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "binding.settingsAccountChangePassword.context");
             companion.launch(context);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$10, reason: invalid class name */
-    public static final class AnonymousClass10 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$10 */
+    public static final class ViewOnClickListenerC971910 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
-        public AnonymousClass10(Model model) {
+        public ViewOnClickListenerC971910(Model model) {
             this.$model = model;
         }
 
@@ -310,17 +311,17 @@ public final class WidgetSettingsAccount extends AppFragment {
             }
             WidgetDisableDeleteAccountDialog.Companion companion = WidgetDisableDeleteAccountDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetSettingsAccount.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(parentFragmentManager, WidgetDisableDeleteAccountDialog.Mode.DISABLE);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$11, reason: invalid class name */
-    public static final class AnonymousClass11 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$11 */
+    public static final class ViewOnClickListenerC972011 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
-        public AnonymousClass11(Model model) {
+        public ViewOnClickListenerC972011(Model model) {
             this.$model = model;
         }
 
@@ -332,17 +333,17 @@ public final class WidgetSettingsAccount extends AppFragment {
             }
             WidgetDisableDeleteAccountDialog.Companion companion = WidgetDisableDeleteAccountDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetSettingsAccount.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(parentFragmentManager, WidgetDisableDeleteAccountDialog.Mode.DELETE);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$12, reason: invalid class name */
-    public static final class AnonymousClass12 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$12 */
+    public static final class ViewOnClickListenerC972112 implements View.OnClickListener {
         public final /* synthetic */ MeUser $user;
 
-        public AnonymousClass12(MeUser meUser) {
+        public ViewOnClickListenerC972112(MeUser meUser) {
             this.$user = meUser;
         }
 
@@ -352,57 +353,57 @@ public final class WidgetSettingsAccount extends AppFragment {
             if (userUtils.isMfaSMSEnabled(this.$user)) {
                 WidgetEnableSMSBackupDialog.Companion companion = WidgetEnableSMSBackupDialog.INSTANCE;
                 FragmentManager parentFragmentManager = WidgetSettingsAccount.this.getParentFragmentManager();
-                m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                 companion.show(parentFragmentManager, false);
                 return;
             }
             if (userUtils.isMfaSMSEnabled(this.$user) || !userUtils.getHasPhone(this.$user)) {
-                WidgetUserPhoneManage.INSTANCE.launch(a.x(view, "it", "it.context"), WidgetUserAccountVerifyBase.Mode.NO_HISTORY_FROM_USER_SETTINGS, WidgetUserPhoneManage.Companion.Source.MFA_PHONE_UPDATE);
+                WidgetUserPhoneManage.INSTANCE.launch(outline.m885x(view, "it", "it.context"), WidgetUserAccountVerifyBase.Mode.NO_HISTORY_FROM_USER_SETTINGS, WidgetUserPhoneManage.Companion.Source.MFA_PHONE_UPDATE);
                 return;
             }
             WidgetEnableSMSBackupDialog.Companion companion2 = WidgetEnableSMSBackupDialog.INSTANCE;
             FragmentManager parentFragmentManager2 = WidgetSettingsAccount.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
             companion2.show(parentFragmentManager2, true);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$2 */
+    public static final class ViewOnClickListenerC97222 implements View.OnClickListener {
+        public static final ViewOnClickListenerC97222 INSTANCE = new ViewOnClickListenerC97222();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetSettingsAccountUsernameEdit.Companion companion = WidgetSettingsAccountUsernameEdit.INSTANCE;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             companion.launch(context);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$3 */
+    public static final class ViewOnClickListenerC97233 implements View.OnClickListener {
+        public static final ViewOnClickListenerC97233 INSTANCE = new ViewOnClickListenerC97233();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetSettingsAccountContactsNameEdit.Companion companion = WidgetSettingsAccountContactsNameEdit.INSTANCE;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             companion.launch(context);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$4 */
+    public static final class ViewOnClickListenerC97244 implements View.OnClickListener {
         public final /* synthetic */ MeUser $user;
 
-        public AnonymousClass4(MeUser meUser) {
+        public ViewOnClickListenerC97244(MeUser meUser) {
             this.$user = meUser;
         }
 
@@ -412,58 +413,58 @@ public final class WidgetSettingsAccount extends AppFragment {
             Experiment userExperiment = StoreStream.INSTANCE.getExperiments().getUserExperiment("2022-01_email_change_confirmation", zIsVerified);
             boolean z2 = userExperiment != null && userExperiment.getBucket() == 1 && zIsVerified;
             WidgetSettingsAccountEmailEdit.Companion companion = WidgetSettingsAccountEmailEdit.INSTANCE;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             companion.launch(context, z2);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
-        public static final AnonymousClass5 INSTANCE = new AnonymousClass5();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$5 */
+    public static final class ViewOnClickListenerC97255 implements View.OnClickListener {
+        public static final ViewOnClickListenerC97255 INSTANCE = new ViewOnClickListenerC97255();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetUserPhoneManage.INSTANCE.launch(a.x(view, "it", "it.context"), WidgetUserAccountVerifyBase.Mode.UNFORCED, WidgetUserPhoneManage.Companion.Source.USER_SETTINGS_UPDATE);
+            WidgetUserPhoneManage.INSTANCE.launch(outline.m885x(view, "it", "it.context"), WidgetUserAccountVerifyBase.Mode.UNFORCED, WidgetUserPhoneManage.Companion.Source.USER_SETTINGS_UPDATE);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$6, reason: invalid class name */
-    public static final class AnonymousClass6 implements View.OnClickListener {
-        public static final AnonymousClass6 INSTANCE = new AnonymousClass6();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$6 */
+    public static final class ViewOnClickListenerC97266 implements View.OnClickListener {
+        public static final ViewOnClickListenerC97266 INSTANCE = new ViewOnClickListenerC97266();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetEnableMFASteps.Companion companion = WidgetEnableMFASteps.INSTANCE;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             companion.launch(context);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$7, reason: invalid class name */
-    public static final class AnonymousClass7 implements View.OnClickListener {
-        public static final AnonymousClass7 INSTANCE = new AnonymousClass7();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$7 */
+    public static final class ViewOnClickListenerC97277 implements View.OnClickListener {
+        public static final ViewOnClickListenerC97277 INSTANCE = new ViewOnClickListenerC97277();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetSettingsAccountBackupCodes.Companion companion = WidgetSettingsAccountBackupCodes.INSTANCE;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             companion.launch(context);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$8, reason: invalid class name */
-    public static final class AnonymousClass8 implements View.OnClickListener {
-        public AnonymousClass8() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$8 */
+    public static final class ViewOnClickListenerC97288 implements View.OnClickListener {
+        public ViewOnClickListenerC97288() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -473,137 +474,137 @@ public final class WidgetSettingsAccount extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$9, reason: invalid class name */
-    public static final class AnonymousClass9 implements View.OnClickListener {
-        public static final AnonymousClass9 INSTANCE = new AnonymousClass9();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$configureUI$9 */
+    public static final class ViewOnClickListenerC97299 implements View.OnClickListener {
+        public static final ViewOnClickListenerC97299 INSTANCE = new ViewOnClickListenerC97299();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetSettingsBlockedUsers.Companion companion = WidgetSettingsBlockedUsers.INSTANCE;
-            m.checkNotNullExpressionValue(view, "view");
+            Intrinsics3.checkNotNullExpressionValue(view, "view");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "view.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "view.context");
             companion.launch(context);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    @e(c = "com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBound$1", f = "WidgetSettingsAccount.kt", l = {65}, m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    @DebugMetadata(m10084c = "com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBound$1", m10085f = "WidgetSettingsAccount.kt", m10086l = {65}, m10087m = "invokeSuspend")
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBound$1 */
+    public static final class C97301 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
-        public AnonymousClass1(Continuation continuation) {
+        public C97301(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            m.checkNotNullParameter(continuation, "completion");
-            return WidgetSettingsAccount.this.new AnonymousClass1(continuation);
+            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            return WidgetSettingsAccount.this.new C97301(continuation);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
-            return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
+            return ((C97301) create(coroutineScope, continuation)).invokeSuspend(Unit.f27425a);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Object invokeSuspend(Object obj) {
-            Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
+            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
             int i = this.label;
             if (i == 0) {
-                l.throwOnFailure(obj);
+                Result3.throwOnFailure(obj);
                 this.label = 1;
-                if (f.P(500L, this) == coroutine_suspended) {
+                if (C3404f.m4234P(500L, this) == coroutine_suspended) {
                     return coroutine_suspended;
                 }
             } else {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                l.throwOnFailure(obj);
+                Result3.throwOnFailure(obj);
             }
-            NestedScrollView nestedScrollView = WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).f2593x;
-            LinearLayout linearLayout = WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).v;
-            m.checkNotNullExpressionValue(linearLayout, "binding.settingsAccountPrivateDataWrap");
+            NestedScrollView nestedScrollView = WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).f17815x;
+            LinearLayout linearLayout = WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).f17813v;
+            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.settingsAccountPrivateDataWrap");
             nestedScrollView.smoothScrollTo(0, linearLayout.getBottom());
-            TextView textView = WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).u;
-            m.checkNotNullExpressionValue(textView, "binding.settingsAccountPrivateDataDisable");
+            TextView textView = WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).f17812u;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.settingsAccountPrivateDataDisable");
             ViewExtensions.hintWithRipple$default(textView, 0L, 1, null);
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Model, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$onViewBoundOrOnResume$1 */
+    public static final class C97311 extends Lambda implements Function1<Model, Unit> {
+        public C97311() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetSettingsAccount widgetSettingsAccount = WidgetSettingsAccount.this;
-            m.checkNotNullExpressionValue(model, "it");
+            Intrinsics3.checkNotNullExpressionValue(model, "it");
             WidgetSettingsAccount.access$configureUI(widgetSettingsAccount, model);
         }
     }
 
     /* compiled from: WidgetSettingsAccount.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$showRemove2FAModal$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function2<Context, String, Unit> {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$showRemove2FAModal$1 */
+    public static final class C97321 extends Lambda implements Function2<Context, String, Unit> {
 
         /* compiled from: WidgetSettingsAccount.kt */
-        /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$showRemove2FAModal$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C04541 extends o implements Function1<DisableMfaResponse, Unit> {
-            public C04541() {
+        /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$showRemove2FAModal$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<DisableMfaResponse, Unit> {
+            public AnonymousClass1() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(DisableMfaResponse disableMfaResponse) {
                 invoke2(disableMfaResponse);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(DisableMfaResponse disableMfaResponse) {
-                m.checkNotNullParameter(disableMfaResponse, "it");
-                b.a.d.m.h(WidgetSettingsAccount.this.requireContext(), WidgetSettingsAccount.this.requireContext().getString(R.string.user_settings_mfa_removed), 0, null, 12);
+                Intrinsics3.checkNotNullParameter(disableMfaResponse, "it");
+                AppToast.m170h(WidgetSettingsAccount.this.requireContext(), WidgetSettingsAccount.this.requireContext().getString(C5419R.string.user_settings_mfa_removed), 0, null, 12);
                 StoreStream.Companion companion = StoreStream.INSTANCE;
                 companion.getAuthentication().setAuthed(disableMfaResponse.getToken());
                 companion.getMFA().updatePendingMFAState(StoreMFA.MFAActivationState.PENDING_DISABLED);
             }
         }
 
-        public AnonymousClass1() {
+        public C97321() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Context context, String str) {
             invoke2(context, str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str) {
-            m.checkNotNullParameter(context, "<anonymous parameter 0>");
-            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(RestAPI.INSTANCE.getApi().disableMFA(new DisableMfaRequestBody(str)), WidgetSettingsAccount.this, null, 2, null), WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).f2591b, 0L, 2, null), false, 1, null), WidgetSettingsAccount.class, WidgetSettingsAccount.this.requireContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C04541(), 60, (Object) null);
+            Intrinsics3.checkNotNullParameter(context, "<anonymous parameter 0>");
+            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(RestAPI.INSTANCE.getApi().disableMFA(new DisableMfaRequestBody(str)), WidgetSettingsAccount.this, null, 2, null), WidgetSettingsAccount.access$getBinding$p(WidgetSettingsAccount.this).f17793b, 0L, 2, null), false, 1, null), WidgetSettingsAccount.class, WidgetSettingsAccount.this.requireContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 60, (Object) null);
         }
     }
 
     public WidgetSettingsAccount() {
-        super(R.layout.widget_settings_account);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsAccount$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_settings_account);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsAccount3.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetSettingsAccount widgetSettingsAccount, Model model) {
@@ -623,57 +624,57 @@ public final class WidgetSettingsAccount extends AppFragment {
     }
 
     private final void configureAccountVerificationBanner(MeUser user) {
-        RelativeLayout relativeLayout = getBinding().C;
-        m.checkNotNullExpressionValue(relativeLayout, "binding.settingsAccountVerification");
+        RelativeLayout relativeLayout = getBinding().f17787C;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.settingsAccountVerification");
         relativeLayout.setVisibility(user.isVerified() ^ true ? 0 : 8);
         if (user.getEmail() == null) {
-            TextView textView = getBinding().E;
-            m.checkNotNullExpressionValue(textView, "binding.settingsAccountVerificationTitle");
-            textView.setText(getString(R.string.add_email_banner_title));
-            MaterialButton materialButton = getBinding().D;
-            m.checkNotNullExpressionValue(materialButton, "binding.settingsAccountVerificationButton");
-            materialButton.setText(getString(R.string.add_email_short));
+            TextView textView = getBinding().f17789E;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.settingsAccountVerificationTitle");
+            textView.setText(getString(C5419R.string.add_email_banner_title));
+            MaterialButton materialButton = getBinding().f17788D;
+            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.settingsAccountVerificationButton");
+            materialButton.setText(getString(C5419R.string.add_email_short));
         } else {
-            TextView textView2 = getBinding().E;
-            m.checkNotNullExpressionValue(textView2, "binding.settingsAccountVerificationTitle");
-            textView2.setText(getString(R.string.verify_your_email));
-            MaterialButton materialButton2 = getBinding().D;
-            m.checkNotNullExpressionValue(materialButton2, "binding.settingsAccountVerificationButton");
-            materialButton2.setText(getString(R.string.verify));
+            TextView textView2 = getBinding().f17789E;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.settingsAccountVerificationTitle");
+            textView2.setText(getString(C5419R.string.verify_your_email));
+            MaterialButton materialButton2 = getBinding().f17788D;
+            Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.settingsAccountVerificationButton");
+            materialButton2.setText(getString(C5419R.string.verify));
         }
-        getBinding().D.setOnClickListener(AnonymousClass1.INSTANCE);
+        getBinding().f17788D.setOnClickListener(ViewOnClickListenerC97171.INSTANCE);
     }
 
     private final void configureMFA(boolean enabled, boolean pending) {
-        TextView textView = getBinding().l;
-        m.checkNotNullExpressionValue(textView, "binding.settingsAccountMfaEnabledHeader");
+        TextView textView = getBinding().f17803l;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.settingsAccountMfaEnabledHeader");
         textView.setVisibility(enabled ? 0 : 8);
-        AppViewFlipper appViewFlipper = getBinding().m;
-        m.checkNotNullExpressionValue(appViewFlipper, "binding.settingsAccountMfaFlipper");
+        AppViewFlipper appViewFlipper = getBinding().f17804m;
+        Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.settingsAccountMfaFlipper");
         appViewFlipper.setDisplayedChild(!enabled ? 1 : 0);
-        LottieAnimationView lottieAnimationView = getBinding().n;
-        m.checkNotNullExpressionValue(lottieAnimationView, "binding.settingsAccountMfaLottie");
+        LottieAnimationView lottieAnimationView = getBinding().f17805n;
+        Intrinsics3.checkNotNullExpressionValue(lottieAnimationView, "binding.settingsAccountMfaLottie");
         lottieAnimationView.setVisibility((!enabled ? 1 : 0) != 0 ? 0 : 8);
-        TextView textView2 = getBinding().o;
-        m.checkNotNullExpressionValue(textView2, "binding.settingsAccountMfaSalesPitch");
+        TextView textView2 = getBinding().f17806o;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.settingsAccountMfaSalesPitch");
         textView2.setVisibility((!enabled ? 1 : 0) != 0 ? 0 : 8);
-        MaterialButton materialButton = getBinding().j;
-        m.checkNotNullExpressionValue(materialButton, "binding.settingsAccountMfaEnable");
+        MaterialButton materialButton = getBinding().f17801j;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.settingsAccountMfaEnable");
         materialButton.setVisibility((!enabled ? 1 : 0) == 0 ? 8 : 0);
-        MaterialButton materialButton2 = getBinding().j;
-        m.checkNotNullExpressionValue(materialButton2, "binding.settingsAccountMfaEnable");
+        MaterialButton materialButton2 = getBinding().f17801j;
+        Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.settingsAccountMfaEnable");
         materialButton2.setEnabled(!pending);
-        TextView textView3 = getBinding().F;
-        m.checkNotNullExpressionValue(textView3, "binding.settingsAccountViewBackupCodes");
+        TextView textView3 = getBinding().f17790F;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.settingsAccountViewBackupCodes");
         textView3.setEnabled(!pending);
-        TextView textView4 = getBinding().w;
-        m.checkNotNullExpressionValue(textView4, "binding.settingsAccountRemoveTwoFa");
+        TextView textView4 = getBinding().f17814w;
+        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.settingsAccountRemoveTwoFa");
         textView4.setEnabled(!pending);
-        LinearLayout linearLayout = getBinding().i;
-        m.checkNotNullExpressionValue(linearLayout, "binding.settingsAccountMfaDisabledContainer");
+        LinearLayout linearLayout = getBinding().f17800i;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.settingsAccountMfaDisabledContainer");
         ViewExtensions.setEnabledAlpha$default(linearLayout, !pending, 0.0f, 2, null);
-        LinearLayout linearLayout2 = getBinding().k;
-        m.checkNotNullExpressionValue(linearLayout2, "binding.settingsAccountMfaEnabledContainer");
+        LinearLayout linearLayout2 = getBinding().f17802k;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout2, "binding.settingsAccountMfaEnabledContainer");
         ViewExtensions.setEnabledAlpha$default(linearLayout2, !pending, 0.0f, 2, null);
     }
 
@@ -683,90 +684,90 @@ public final class WidgetSettingsAccount extends AppFragment {
         StoreMFA.State pendingMFAState = model.getPendingMFAState();
         ConnectedAccount contactSyncConnection = model.getContactSyncConnection();
         configureAccountVerificationBanner(meUser);
-        LinearLayout linearLayout = getBinding().p;
-        m.checkNotNullExpressionValue(linearLayout, "binding.settingsAccountNameContainer");
+        LinearLayout linearLayout = getBinding().f17807p;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.settingsAccountNameContainer");
         linearLayout.setVisibility(contactSyncConnection != null ? 0 : 8);
-        TextView textView = getBinding().q;
-        m.checkNotNullExpressionValue(textView, "binding.settingsAccountNameText");
+        TextView textView = getBinding().f17808q;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.settingsAccountNameText");
         if (contactSyncConnection == null || (name = contactSyncConnection.getName()) == null) {
             name = "";
         }
         textView.setText(name);
-        TextView textView2 = getBinding().B;
-        m.checkNotNullExpressionValue(textView2, "binding.settingsAccountTagText");
+        TextView textView2 = getBinding().f17786B;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.settingsAccountTagText");
         UserUtils userUtils = UserUtils.INSTANCE;
         textView2.setText(UserUtils.getUserNameWithDiscriminator$default(userUtils, meUser, null, null, 3, null));
-        TextView textView3 = getBinding().f;
-        m.checkNotNullExpressionValue(textView3, "binding.settingsAccountEmailText");
+        TextView textView3 = getBinding().f17797f;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.settingsAccountEmailText");
         textView3.setText(meUser.getEmail());
-        TextView textView4 = getBinding().f2592s;
-        m.checkNotNullExpressionValue(textView4, "binding.settingsAccountPhoneText");
+        TextView textView4 = getBinding().f17810s;
+        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.settingsAccountPhoneText");
         textView4.setText(meUser.getPhoneNumber());
-        getBinding().d.setOnClickListener(new AnonymousClass1());
-        getBinding().A.setOnClickListener(AnonymousClass2.INSTANCE);
-        getBinding().p.setOnClickListener(AnonymousClass3.INSTANCE);
-        getBinding().e.setOnClickListener(new AnonymousClass4(meUser));
-        getBinding().r.setOnClickListener(AnonymousClass5.INSTANCE);
-        TextView textView5 = getBinding().l;
-        m.checkNotNullExpressionValue(textView5, "binding.settingsAccountMfaEnabledHeader");
+        getBinding().f17795d.setOnClickListener(new ViewOnClickListenerC97181());
+        getBinding().f17785A.setOnClickListener(ViewOnClickListenerC97222.INSTANCE);
+        getBinding().f17807p.setOnClickListener(ViewOnClickListenerC97233.INSTANCE);
+        getBinding().f17796e.setOnClickListener(new ViewOnClickListenerC97244(meUser));
+        getBinding().f17809r.setOnClickListener(ViewOnClickListenerC97255.INSTANCE);
+        TextView textView5 = getBinding().f17803l;
+        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.settingsAccountMfaEnabledHeader");
         textView5.setVisibility(meUser.getMfaEnabled() ? 0 : 8);
-        AppViewFlipper appViewFlipper = getBinding().m;
-        m.checkNotNullExpressionValue(appViewFlipper, "binding.settingsAccountMfaFlipper");
+        AppViewFlipper appViewFlipper = getBinding().f17804m;
+        Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.settingsAccountMfaFlipper");
         appViewFlipper.setDisplayedChild(!meUser.getMfaEnabled() ? 1 : 0);
-        LottieAnimationView lottieAnimationView = getBinding().n;
-        m.checkNotNullExpressionValue(lottieAnimationView, "binding.settingsAccountMfaLottie");
+        LottieAnimationView lottieAnimationView = getBinding().f17805n;
+        Intrinsics3.checkNotNullExpressionValue(lottieAnimationView, "binding.settingsAccountMfaLottie");
         lottieAnimationView.setVisibility(meUser.getMfaEnabled() ^ true ? 0 : 8);
-        TextView textView6 = getBinding().o;
-        m.checkNotNullExpressionValue(textView6, "binding.settingsAccountMfaSalesPitch");
+        TextView textView6 = getBinding().f17806o;
+        Intrinsics3.checkNotNullExpressionValue(textView6, "binding.settingsAccountMfaSalesPitch");
         textView6.setVisibility(meUser.getMfaEnabled() ^ true ? 0 : 8);
-        MaterialButton materialButton = getBinding().j;
-        m.checkNotNullExpressionValue(materialButton, "binding.settingsAccountMfaEnable");
+        MaterialButton materialButton = getBinding().f17801j;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.settingsAccountMfaEnable");
         materialButton.setVisibility(meUser.getMfaEnabled() ^ true ? 0 : 8);
         if (pendingMFAState.getActivationState() != StoreMFA.MFAActivationState.NONE) {
             configureMFA(pendingMFAState.getActivationState() == StoreMFA.MFAActivationState.PENDING_ENABLED, true);
         } else {
             configureMFA(meUser.getMfaEnabled(), false);
         }
-        getBinding().j.setOnClickListener(AnonymousClass6.INSTANCE);
-        getBinding().F.setOnClickListener(AnonymousClass7.INSTANCE);
-        getBinding().w.setOnClickListener(new AnonymousClass8());
-        getBinding().G.setOnClickListener(AnonymousClass9.INSTANCE);
-        getBinding().u.setOnClickListener(new AnonymousClass10(model));
-        getBinding().t.setOnClickListener(new AnonymousClass11(model));
+        getBinding().f17801j.setOnClickListener(ViewOnClickListenerC97266.INSTANCE);
+        getBinding().f17790F.setOnClickListener(ViewOnClickListenerC97277.INSTANCE);
+        getBinding().f17814w.setOnClickListener(new ViewOnClickListenerC97288());
+        getBinding().f17791G.setOnClickListener(ViewOnClickListenerC97299.INSTANCE);
+        getBinding().f17812u.setOnClickListener(new ViewOnClickListenerC971910(model));
+        getBinding().f17811t.setOnClickListener(new ViewOnClickListenerC972011(model));
         String sMSBackupDisabledMessage = getSMSBackupDisabledMessage(meUser);
         if (sMSBackupDisabledMessage != null || pendingMFAState.isTogglingSMSBackup()) {
-            CheckedSetting.d(getBinding().f2594y, null, 1);
-            TextView textView7 = getBinding().f2595z;
-            m.checkNotNullExpressionValue(textView7, "binding.settingsAccountSmsPhone");
+            CheckedSetting.m8523d(getBinding().f17816y, null, 1);
+            TextView textView7 = getBinding().f17817z;
+            Intrinsics3.checkNotNullExpressionValue(textView7, "binding.settingsAccountSmsPhone");
             ViewExtensions.setEnabledAlpha$default(textView7, false, 0.0f, 2, null);
         } else {
-            TextView textView8 = getBinding().f2595z;
-            m.checkNotNullExpressionValue(textView8, "binding.settingsAccountSmsPhone");
+            TextView textView8 = getBinding().f17817z;
+            Intrinsics3.checkNotNullExpressionValue(textView8, "binding.settingsAccountSmsPhone");
             ViewExtensions.setEnabledAlpha$default(textView8, true, 0.0f, 2, null);
-            getBinding().f2594y.e(new AnonymousClass12(meUser));
+            getBinding().f17816y.m8527e(new ViewOnClickListenerC972112(meUser));
         }
-        TextView textView9 = getBinding().f2595z;
-        m.checkNotNullExpressionValue(textView9, "binding.settingsAccountSmsPhone");
-        ViewExtensions.setTextAndVisibilityBy(textView9, meUser.getPhoneNumber() != null ? b.h(a.I(getBinding().f2595z, "binding.settingsAccountSmsPhone", "binding.settingsAccountSmsPhone.context"), R.string.mfa_sms_auth_current_phone, new Object[]{meUser.getPhoneNumber()}, null, 4) : null);
-        CheckedSetting checkedSetting = getBinding().f2594y;
-        m.checkNotNullExpressionValue(checkedSetting, "binding.settingsAccountSmsBackup");
+        TextView textView9 = getBinding().f17817z;
+        Intrinsics3.checkNotNullExpressionValue(textView9, "binding.settingsAccountSmsPhone");
+        ViewExtensions.setTextAndVisibilityBy(textView9, meUser.getPhoneNumber() != null ? FormatUtils.m216h(outline.m821I(getBinding().f17817z, "binding.settingsAccountSmsPhone", "binding.settingsAccountSmsPhone.context"), C5419R.string.mfa_sms_auth_current_phone, new Object[]{meUser.getPhoneNumber()}, null, 4) : null);
+        CheckedSetting checkedSetting = getBinding().f17816y;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsAccountSmsBackup");
         checkedSetting.setChecked(userUtils.isMfaSMSEnabled(meUser));
-        CheckedSetting checkedSetting2 = getBinding().f2594y;
+        CheckedSetting checkedSetting2 = getBinding().f17816y;
         if (sMSBackupDisabledMessage == null) {
-            sMSBackupDisabledMessage = getString(R.string.mfa_sms_auth_sales_pitch);
-            m.checkNotNullExpressionValue(sMSBackupDisabledMessage, "getString(R.string.mfa_sms_auth_sales_pitch)");
+            sMSBackupDisabledMessage = getString(C5419R.string.mfa_sms_auth_sales_pitch);
+            Intrinsics3.checkNotNullExpressionValue(sMSBackupDisabledMessage, "getString(R.string.mfa_sms_auth_sales_pitch)");
         }
-        CheckedSetting.i(checkedSetting2, sMSBackupDisabledMessage, false, 2);
+        CheckedSetting.m8524i(checkedSetting2, sMSBackupDisabledMessage, false, 2);
         if (getMostRecentIntent().getSerializableExtra(EXTRA_REDIRECT) == Redirect.SMS_BACKUP) {
             getMostRecentIntent().removeExtra(EXTRA_REDIRECT);
             WidgetEnableSMSBackupDialog.Companion companion = WidgetEnableSMSBackupDialog.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(parentFragmentManager, true);
         }
-        for (TextView textView10 : n.listOf((Object[]) new TextView[]{getBinding().g, getBinding().c, getBinding().h})) {
+        for (TextView textView10 : Collections2.listOf((Object[]) new TextView[]{getBinding().f17798g, getBinding().f17794c, getBinding().f17799h})) {
             AccessibilityUtils accessibilityUtils = AccessibilityUtils.INSTANCE;
-            m.checkNotNullExpressionValue(textView10, "header");
+            Intrinsics3.checkNotNullExpressionValue(textView10, "header");
             accessibilityUtils.setViewIsHeading(textView10);
         }
     }
@@ -778,10 +779,10 @@ public final class WidgetSettingsAccount extends AppFragment {
     private final String getSMSBackupDisabledMessage(MeUser user) {
         UserUtils userUtils = UserUtils.INSTANCE;
         if (userUtils.isPartner(user) || userUtils.isStaff(user)) {
-            return getString(R.string.mfa_sms_disabled_partner);
+            return getString(C5419R.string.mfa_sms_disabled_partner);
         }
         if (user.getEmail() == null) {
-            return getString(R.string.mfa_sms_disabled_no_email);
+            return getString(C5419R.string.mfa_sms_disabled_no_email);
         }
         return null;
     }
@@ -799,9 +800,9 @@ public final class WidgetSettingsAccount extends AppFragment {
     }
 
     private final void showOwnsGuildModal() {
-        WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(new WidgetNoticeDialog.Builder(requireContext()).setTitle(R.string.delete_account_transfer_ownership).setMessage(R.string.delete_account_transfer_ownership_body), R.string.okay, (Function1) null, 2, (Object) null);
+        WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(new WidgetNoticeDialog.Builder(requireContext()).setTitle(C5419R.string.delete_account_transfer_ownership).setMessage(C5419R.string.delete_account_transfer_ownership_body), C5419R.string.okay, (Function1) null, 2, (Object) null);
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         positiveButton$default.show(parentFragmentManager);
     }
 
@@ -809,13 +810,13 @@ public final class WidgetSettingsAccount extends AppFragment {
         WidgetNoticeDialog.Companion companion = WidgetNoticeDialog.INSTANCE;
         AppActivity appActivity = getAppActivity();
         if (appActivity != null) {
-            String string = requireContext().getString(R.string.two_fa_remove);
-            m.checkNotNullExpressionValue(string, "requireContext().getString(R.string.two_fa_remove)");
-            String string2 = requireContext().getString(R.string.user_settings_mfa_enable_code_body);
-            m.checkNotNullExpressionValue(string2, "requireContext().getStri…ngs_mfa_enable_code_body)");
-            String string3 = requireContext().getString(R.string.two_fa_auth_code);
-            m.checkNotNullExpressionValue(string3, "requireContext().getStri….string.two_fa_auth_code)");
-            WidgetNoticeDialog.Companion.showInputModal$default(companion, appActivity, string, string2, string3, new AnonymousClass1(), null, null, null, null, false, 992, null);
+            String string = requireContext().getString(C5419R.string.two_fa_remove);
+            Intrinsics3.checkNotNullExpressionValue(string, "requireContext().getString(R.string.two_fa_remove)");
+            String string2 = requireContext().getString(C5419R.string.user_settings_mfa_enable_code_body);
+            Intrinsics3.checkNotNullExpressionValue(string2, "requireContext().getStri…ngs_mfa_enable_code_body)");
+            String string3 = requireContext().getString(C5419R.string.two_fa_auth_code);
+            Intrinsics3.checkNotNullExpressionValue(string3, "requireContext().getStri….string.two_fa_auth_code)");
+            WidgetNoticeDialog.Companion.showInputModal$default(companion, appActivity, string, string2, string3, new C97321(), null, null, null, null, false, 992, null);
         }
     }
 
@@ -829,18 +830,18 @@ public final class WidgetSettingsAccount extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        setActionBarSubtitle(R.string.user_settings);
-        setActionBarTitle(R.string.user_settings_my_account);
+        setActionBarSubtitle(C5419R.string.user_settings);
+        setActionBarTitle(C5419R.string.user_settings_my_account);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         setRetainInstance(true);
         if (getMostRecentIntent().getBooleanExtra(EXTRA_HINT_DATA_MANAGEMENT, false)) {
-            LinearLayout linearLayout = getBinding().v;
-            m.checkNotNullExpressionValue(linearLayout, "binding.settingsAccountPrivateDataWrap");
-            CoroutineScope coroutineScope = ViewCoroutineScopeKt.getCoroutineScope(linearLayout);
+            LinearLayout linearLayout = getBinding().f17813v;
+            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.settingsAccountPrivateDataWrap");
+            CoroutineScope coroutineScope = ViewCoroutineScope.getCoroutineScope(linearLayout);
             if (coroutineScope != null) {
-                f.H0(coroutineScope, null, null, new AnonymousClass1(null), 3, null);
+                C3404f.m4211H0(coroutineScope, null, null, new C97301(null), 3, null);
             }
         }
     }
@@ -848,8 +849,8 @@ public final class WidgetSettingsAccount extends AppFragment {
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        Observable<Model> observableR = Model.INSTANCE.get().r();
-        m.checkNotNullExpressionValue(observableR, "Model\n        .get()\n   …  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetSettingsAccount.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable<Model> observableM11112r = Model.INSTANCE.get().m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "Model\n        .get()\n   …  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableM11112r), this, null, 2, null), WidgetSettingsAccount.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C97311(), 62, (Object) null);
     }
 }

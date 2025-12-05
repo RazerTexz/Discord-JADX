@@ -1,0 +1,93 @@
+package p007b.p109f.p115d.p119d;
+
+import java.util.Arrays;
+import java.util.Objects;
+
+/* compiled from: Objects.java */
+/* renamed from: b.f.d.d.i, reason: use source file name */
+/* loaded from: classes.dex */
+public final class Objects2 {
+
+    /* renamed from: a */
+    public final String f3094a;
+
+    /* renamed from: b */
+    public final a f3095b;
+
+    /* renamed from: c */
+    public a f3096c;
+
+    /* compiled from: Objects.java */
+    /* renamed from: b.f.d.d.i$a */
+    public static final class a {
+
+        /* renamed from: a */
+        public String f3097a;
+
+        /* renamed from: b */
+        public Object f3098b;
+
+        /* renamed from: c */
+        public a f3099c;
+
+        public a(Objects objects) {
+        }
+    }
+
+    public Objects2(String str, Objects objects) {
+        a aVar = new a(null);
+        this.f3095b = aVar;
+        this.f3096c = aVar;
+        this.f3094a = str;
+    }
+
+    /* renamed from: a */
+    public Objects2 m969a(String str, int i) {
+        m971c(str, String.valueOf(i));
+        return this;
+    }
+
+    /* renamed from: b */
+    public Objects2 m970b(String str, boolean z2) {
+        m971c(str, String.valueOf(z2));
+        return this;
+    }
+
+    /* renamed from: c */
+    public final Objects2 m971c(String str, Object obj) {
+        a aVar = new a(null);
+        this.f3096c.f3099c = aVar;
+        this.f3096c = aVar;
+        aVar.f3098b = obj;
+        Objects.requireNonNull(str);
+        aVar.f3097a = str;
+        return this;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder(32);
+        sb.append(this.f3094a);
+        sb.append('{');
+        a aVar = this.f3095b.f3099c;
+        String str = "";
+        while (aVar != null) {
+            Object obj = aVar.f3098b;
+            sb.append(str);
+            String str2 = aVar.f3097a;
+            if (str2 != null) {
+                sb.append(str2);
+                sb.append('=');
+            }
+            if (obj == null || !obj.getClass().isArray()) {
+                sb.append(obj);
+            } else {
+                String strDeepToString = Arrays.deepToString(new Object[]{obj});
+                sb.append((CharSequence) strDeepToString, 1, strDeepToString.length() - 1);
+            }
+            aVar = aVar.f3099c;
+            str = ", ";
+        }
+        sb.append('}');
+        return sb.toString();
+    }
+}

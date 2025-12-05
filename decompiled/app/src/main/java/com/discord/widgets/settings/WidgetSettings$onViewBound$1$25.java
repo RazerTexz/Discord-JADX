@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 import com.discord.stores.StoreChangeLog;
 import com.discord.stores.StoreStream;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetSettings.kt */
 /* loaded from: classes2.dex */
@@ -14,9 +14,9 @@ public final class WidgetSettings$onViewBound$1$25 implements View.OnClickListen
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
         StoreChangeLog changeLog = StoreStream.INSTANCE.getChangeLog();
-        m.checkNotNullExpressionValue(view, "it");
+        Intrinsics3.checkNotNullExpressionValue(view, "it");
         Context context = view.getContext();
-        m.checkNotNullExpressionValue(context, "it.context");
+        Intrinsics3.checkNotNullExpressionValue(context, "it.context");
         changeLog.openChangeLog(context, true);
     }
 }

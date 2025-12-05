@@ -7,12 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.Fragment2;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentKt;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppBottomSheet;
 import com.discord.app.AppFragment;
@@ -23,15 +21,11 @@ import com.discord.utilities.captcha.CaptchaErrorBody;
 import com.discord.utilities.captcha.CaptchaHelper;
 import com.discord.utilities.captcha.CaptchaService;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.tabs.WidgetTabsHost;
 import com.google.android.material.button.MaterialButton;
-import d0.g;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -39,6 +33,14 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
 /* loaded from: classes2.dex */
@@ -56,7 +58,7 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
 
     /* renamed from: requestCode$delegate, reason: from kotlin metadata */
     private final Lazy requestCode;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildJoinCaptchaBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildJoinCaptchaBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildJoinCaptchaBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildJoinCaptchaBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -67,21 +69,21 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
         }
 
         public final void enqueue(String requestKey, Function2<? super AppFragment, ? super CaptchaHelper.CaptchaPayload, Unit> onCaptchaPayloadReceived, CaptchaErrorBody error) {
-            m.checkNotNullParameter(requestKey, "requestKey");
-            m.checkNotNullParameter(onCaptchaPayloadReceived, "onCaptchaPayloadReceived");
-            StoreStream.INSTANCE.getNotices().requestToShow(new StoreNotices.Notice(WidgetGuildJoinCaptchaBottomSheet.NOTICE_NAME, null, 0L, 0, false, d0.t.m.listOf(a0.getOrCreateKotlinClass(WidgetTabsHost.class)), 0L, false, 0L, new WidgetGuildJoinCaptchaBottomSheet$Companion$enqueue$guildCaptchaNotice$1(requestKey, error, onCaptchaPayloadReceived), 150, null));
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(onCaptchaPayloadReceived, "onCaptchaPayloadReceived");
+            StoreStream.INSTANCE.getNotices().requestToShow(new StoreNotices.Notice(WidgetGuildJoinCaptchaBottomSheet.NOTICE_NAME, null, 0L, 0, false, CollectionsJVM.listOf(Reflection2.getOrCreateKotlinClass(WidgetTabsHost.class)), 0L, false, 0L, new C8719xce82ae71(requestKey, error, onCaptchaPayloadReceived), 150, null));
         }
 
         public final void registerForResult(AppFragment fragment, String requestKey, Function2<? super AppFragment, ? super CaptchaHelper.CaptchaPayload, Unit> onCaptchaPayloadReceived) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(requestKey, "requestKey");
-            m.checkNotNullParameter(onCaptchaPayloadReceived, "onCaptchaPayloadReceived");
-            FragmentKt.setFragmentResultListener(fragment, requestKey, new WidgetGuildJoinCaptchaBottomSheet$Companion$registerForResult$1(requestKey, onCaptchaPayloadReceived, fragment));
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(onCaptchaPayloadReceived, "onCaptchaPayloadReceived");
+            Fragment2.setFragmentResultListener(fragment, requestKey, new WidgetGuildJoinCaptchaBottomSheet$Companion$registerForResult$1(requestKey, onCaptchaPayloadReceived, fragment));
         }
 
         public final void show(FragmentManager fragmentManager, String requestKey, CaptchaErrorBody error) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
-            m.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
             WidgetGuildJoinCaptchaBottomSheet widgetGuildJoinCaptchaBottomSheet = new WidgetGuildJoinCaptchaBottomSheet();
             Bundle bundle = new Bundle();
             bundle.putSerializable("INTENT_EXTRA_CAPTCHA_ERROR_BODY", error);
@@ -96,9 +98,9 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildJoinCaptchaBottomSheet$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildJoinCaptchaBottomSheet$configureUI$1 */
+    public static final class ViewOnClickListenerC87201 implements View.OnClickListener {
+        public ViewOnClickListenerC87201() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -108,16 +110,16 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildJoinCaptchaBottomSheet$openCaptcha$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildJoinCaptchaBottomSheet$openCaptcha$1 */
+    public static final class C87211 extends Lambda implements Function1<String, Unit> {
+        public C87211() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -131,37 +133,37 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildJoinCaptchaBottomSheet$openCaptcha$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildJoinCaptchaBottomSheet$openCaptcha$2 */
+    public static final class C87222 extends Lambda implements Function1<Error, Unit> {
+        public C87222() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             Throwable throwable = error.getThrowable();
             if (!(throwable instanceof CaptchaHelper.Failure)) {
                 throwable = null;
             }
             CaptchaHelper.Failure failure = (CaptchaHelper.Failure) throwable;
             if (failure != null) {
-                b.a.d.m.g(WidgetGuildJoinCaptchaBottomSheet.this.getAppActivity(), failure.getErrorStringId(), 0, null, 12);
+                AppToast.m169g(WidgetGuildJoinCaptchaBottomSheet.this.getAppActivity(), failure.getErrorStringId(), 0, null, 12);
             }
         }
     }
 
     public WidgetGuildJoinCaptchaBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildJoinCaptchaBottomSheet$binding$2.INSTANCE, null, 2, null);
-        this.requestCode = g.lazy(new WidgetGuildJoinCaptchaBottomSheet$requestCode$2(this));
-        this.captchaErrorBody = g.lazy(new WidgetGuildJoinCaptchaBottomSheet$captchaErrorBody$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildJoinCaptchaBottomSheet$binding$2.INSTANCE, null, 2, null);
+        this.requestCode = LazyJVM.lazy(new WidgetGuildJoinCaptchaBottomSheet$requestCode$2(this));
+        this.captchaErrorBody = LazyJVM.lazy(new WidgetGuildJoinCaptchaBottomSheet$captchaErrorBody$2(this));
     }
 
     public static final /* synthetic */ void access$finishIfCaptchaTokenReceived(WidgetGuildJoinCaptchaBottomSheet widgetGuildJoinCaptchaBottomSheet, Activity activity) {
@@ -177,16 +179,16 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
     }
 
     private final void configureUI() {
-        TextView textView = getBinding().d;
-        m.checkNotNullExpressionValue(textView, "binding.guildJoinCaptchaTitle");
-        b.n(textView, R.string.guild_join_captcha_header, new Object[0], null, 4);
-        TextView textView2 = getBinding().f2424b;
-        m.checkNotNullExpressionValue(textView2, "binding.guildJoinCaptchaBody");
-        b.n(textView2, R.string.guild_join_captcha_description, new Object[0], null, 4);
-        MaterialButton materialButton = getBinding().c;
-        m.checkNotNullExpressionValue(materialButton, "binding.guildJoinCaptchaButton");
-        b.n(materialButton, R.string.confirm, new Object[0], null, 4);
-        getBinding().c.setOnClickListener(new AnonymousClass1());
+        TextView textView = getBinding().f16857d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildJoinCaptchaTitle");
+        FormatUtils.m222n(textView, C5419R.string.guild_join_captcha_header, new Object[0], null, 4);
+        TextView textView2 = getBinding().f16855b;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildJoinCaptchaBody");
+        FormatUtils.m222n(textView2, C5419R.string.guild_join_captcha_description, new Object[0], null, 4);
+        MaterialButton materialButton = getBinding().f16856c;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.guildJoinCaptchaButton");
+        FormatUtils.m222n(materialButton, C5419R.string.confirm, new Object[0], null, 4);
+        getBinding().f16856c.setOnClickListener(new ViewOnClickListenerC87201());
     }
 
     private final void finishIfCaptchaTokenReceived(Activity activity) {
@@ -200,7 +202,7 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
             Bundle bundle = new Bundle();
             bundle.putString(RESULT_EXTRA_CAPTCHA_TOKEN, captchaToken);
             bundle.putString(RESULT_EXTRA_CAPTCHA_RQTOKEN, captchaRqtoken);
-            FragmentKt.setFragmentResult(this, requestCode, bundle);
+            Fragment2.setFragmentResult(this, requestCode, bundle);
             dismiss();
         }
     }
@@ -227,14 +229,14 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
         captchaHelper.setCaptchaRqtoken(captchaRqtoken);
         if (captchaSitekey == null || captchaService != CaptchaService.HCAPTCHA) {
             FragmentActivity fragmentActivityRequireActivity = requireActivity();
-            m.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
+            Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
             reCaptcha = new CaptchaHelper.CaptchaRequest.ReCaptcha(fragmentActivityRequireActivity);
         } else {
             FragmentActivity fragmentActivityRequireActivity2 = requireActivity();
-            m.checkNotNullExpressionValue(fragmentActivityRequireActivity2, "requireActivity()");
+            Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity2, "requireActivity()");
             reCaptcha = new CaptchaHelper.CaptchaRequest.HCaptcha(captchaSitekey, fragmentActivityRequireActivity2, captchaRqdata);
         }
-        ObservableExtensionsKt.appSubscribe$default(captchaHelper.tryShowCaptcha(reCaptcha), WidgetGuildJoinCaptchaBottomSheet.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(captchaHelper.tryShowCaptcha(reCaptcha), WidgetGuildJoinCaptchaBottomSheet.class, (Context) null, (Function1) null, new C87222(), (Function0) null, (Function0) null, new C87211(), 54, (Object) null);
     }
 
     public static final void show(FragmentManager fragmentManager, String str, CaptchaErrorBody captchaErrorBody) {
@@ -243,12 +245,12 @@ public final class WidgetGuildJoinCaptchaBottomSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_guild_join_captcha_bottom_sheet;
+        return C5419R.layout.widget_guild_join_captcha_bottom_sheet;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         configureUI();
     }

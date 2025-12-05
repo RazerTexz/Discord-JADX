@@ -1,9 +1,9 @@
 package com.discord.widgets.directories;
 
 import androidx.annotation.StringRes;
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetDirectoryEntryViewHolder.kt */
 /* loaded from: classes2.dex */
@@ -26,7 +26,7 @@ public abstract class DirectoryChannelItem {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public DirectoryItem(DirectoryEntryData directoryEntryData) {
             super(ViewType.Item, null);
-            m.checkNotNullParameter(directoryEntryData, "directoryEntryData");
+            Intrinsics3.checkNotNullParameter(directoryEntryData, "directoryEntryData");
             this.directoryEntryData = directoryEntryData;
         }
 
@@ -43,13 +43,13 @@ public abstract class DirectoryChannelItem {
         }
 
         public final DirectoryItem copy(DirectoryEntryData directoryEntryData) {
-            m.checkNotNullParameter(directoryEntryData, "directoryEntryData");
+            Intrinsics3.checkNotNullParameter(directoryEntryData, "directoryEntryData");
             return new DirectoryItem(directoryEntryData);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof DirectoryItem) && m.areEqual(this.directoryEntryData, ((DirectoryItem) other).directoryEntryData);
+                return (other instanceof DirectoryItem) && Intrinsics3.areEqual(this.directoryEntryData, ((DirectoryItem) other).directoryEntryData);
             }
             return true;
         }
@@ -67,10 +67,10 @@ public abstract class DirectoryChannelItem {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("DirectoryItem(directoryEntryData=");
-            sbU.append(this.directoryEntryData);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("DirectoryItem(directoryEntryData=");
+            sbM833U.append(this.directoryEntryData);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -115,7 +115,7 @@ public abstract class DirectoryChannelItem {
         }
 
         public String toString() {
-            return a.B(a.U("SectionHeader(textRes="), this.textRes, ")");
+            return outline.m814B(outline.m833U("SectionHeader(textRes="), this.textRes, ")");
         }
     }
 

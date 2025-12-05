@@ -6,32 +6,45 @@ import android.os.Parcelable;
 import android.text.format.DateUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.i.a.g.d.l;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
+import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
 /* loaded from: classes3.dex */
 public final class Month implements Comparable<Month>, Parcelable {
-    public static final Parcelable.Creator<Month> CREATOR = new a();
+    public static final Parcelable.Creator<Month> CREATOR = new C10902a();
 
+    /* renamed from: j */
     @NonNull
-    public final Calendar j;
-    public final int k;
-    public final int l;
-    public final int m;
-    public final int n;
-    public final long o;
+    public final Calendar f20984j;
 
+    /* renamed from: k */
+    public final int f20985k;
+
+    /* renamed from: l */
+    public final int f20986l;
+
+    /* renamed from: m */
+    public final int f20987m;
+
+    /* renamed from: n */
+    public final int f20988n;
+
+    /* renamed from: o */
+    public final long f20989o;
+
+    /* renamed from: p */
     @Nullable
-    public String p;
+    public String f20990p;
 
-    public static class a implements Parcelable.Creator<Month> {
+    /* renamed from: com.google.android.material.datepicker.Month$a */
+    public static class C10902a implements Parcelable.Creator<Month> {
         @Override // android.os.Parcelable.Creator
         @NonNull
         public Month createFromParcel(@NonNull Parcel parcel) {
-            return Month.g(parcel.readInt(), parcel.readInt());
+            return Month.m9131g(parcel.readInt(), parcel.readInt());
         }
 
         @Override // android.os.Parcelable.Creator
@@ -43,38 +56,41 @@ public final class Month implements Comparable<Month>, Parcelable {
 
     public Month(@NonNull Calendar calendar) {
         calendar.set(5, 1);
-        Calendar calendarD = l.d(calendar);
-        this.j = calendarD;
-        this.k = calendarD.get(2);
-        this.l = calendarD.get(1);
-        this.m = calendarD.getMaximum(7);
-        this.n = calendarD.getActualMaximum(5);
-        this.o = calendarD.getTimeInMillis();
+        Calendar calendarM6071d = UtcDates.m6071d(calendar);
+        this.f20984j = calendarM6071d;
+        this.f20985k = calendarM6071d.get(2);
+        this.f20986l = calendarM6071d.get(1);
+        this.f20987m = calendarM6071d.getMaximum(7);
+        this.f20988n = calendarM6071d.getActualMaximum(5);
+        this.f20989o = calendarM6071d.getTimeInMillis();
     }
 
     @NonNull
-    public static Month g(int i, int i2) {
-        Calendar calendarI = l.i();
-        calendarI.set(1, i);
-        calendarI.set(2, i2);
-        return new Month(calendarI);
+    /* renamed from: g */
+    public static Month m9131g(int i, int i2) {
+        Calendar calendarM6076i = UtcDates.m6076i();
+        calendarM6076i.set(1, i);
+        calendarM6076i.set(2, i2);
+        return new Month(calendarM6076i);
     }
 
     @NonNull
-    public static Month h(long j) {
-        Calendar calendarI = l.i();
-        calendarI.setTimeInMillis(j);
-        return new Month(calendarI);
+    /* renamed from: h */
+    public static Month m9132h(long j) {
+        Calendar calendarM6076i = UtcDates.m6076i();
+        calendarM6076i.setTimeInMillis(j);
+        return new Month(calendarM6076i);
     }
 
     @NonNull
-    public static Month i() {
-        return new Month(l.h());
+    /* renamed from: i */
+    public static Month m9133i() {
+        return new Month(UtcDates.m6075h());
     }
 
     @Override // java.lang.Comparable
     public /* bridge */ /* synthetic */ int compareTo(@NonNull Month month) {
-        return f(month);
+        return m9134f(month);
     }
 
     @Override // android.os.Parcelable
@@ -90,53 +106,59 @@ public final class Month implements Comparable<Month>, Parcelable {
             return false;
         }
         Month month = (Month) obj;
-        return this.k == month.k && this.l == month.l;
+        return this.f20985k == month.f20985k && this.f20986l == month.f20986l;
     }
 
-    public int f(@NonNull Month month) {
-        return this.j.compareTo(month.j);
+    /* renamed from: f */
+    public int m9134f(@NonNull Month month) {
+        return this.f20984j.compareTo(month.f20984j);
     }
 
     public int hashCode() {
-        return Arrays.hashCode(new Object[]{Integer.valueOf(this.k), Integer.valueOf(this.l)});
+        return Arrays.hashCode(new Object[]{Integer.valueOf(this.f20985k), Integer.valueOf(this.f20986l)});
     }
 
-    public int j() {
-        int firstDayOfWeek = this.j.get(7) - this.j.getFirstDayOfWeek();
-        return firstDayOfWeek < 0 ? firstDayOfWeek + this.m : firstDayOfWeek;
+    /* renamed from: j */
+    public int m9135j() {
+        int firstDayOfWeek = this.f20984j.get(7) - this.f20984j.getFirstDayOfWeek();
+        return firstDayOfWeek < 0 ? firstDayOfWeek + this.f20987m : firstDayOfWeek;
     }
 
-    public long k(int i) {
-        Calendar calendarD = l.d(this.j);
-        calendarD.set(5, i);
-        return calendarD.getTimeInMillis();
+    /* renamed from: k */
+    public long m9136k(int i) {
+        Calendar calendarM6071d = UtcDates.m6071d(this.f20984j);
+        calendarM6071d.set(5, i);
+        return calendarM6071d.getTimeInMillis();
     }
 
     @NonNull
-    public String l(Context context) {
-        if (this.p == null) {
-            this.p = DateUtils.formatDateTime(context, this.j.getTimeInMillis() - TimeZone.getDefault().getOffset(r0), 36);
+    /* renamed from: l */
+    public String m9137l(Context context) {
+        if (this.f20990p == null) {
+            this.f20990p = DateUtils.formatDateTime(context, this.f20984j.getTimeInMillis() - TimeZone.getDefault().getOffset(r0), 36);
         }
-        return this.p;
+        return this.f20990p;
     }
 
     @NonNull
-    public Month m(int i) {
-        Calendar calendarD = l.d(this.j);
-        calendarD.add(2, i);
-        return new Month(calendarD);
+    /* renamed from: m */
+    public Month m9138m(int i) {
+        Calendar calendarM6071d = UtcDates.m6071d(this.f20984j);
+        calendarM6071d.add(2, i);
+        return new Month(calendarM6071d);
     }
 
-    public int o(@NonNull Month month) {
-        if (!(this.j instanceof GregorianCalendar)) {
+    /* renamed from: o */
+    public int m9139o(@NonNull Month month) {
+        if (!(this.f20984j instanceof GregorianCalendar)) {
             throw new IllegalArgumentException("Only Gregorian calendars are supported.");
         }
-        return (month.k - this.k) + ((month.l - this.l) * 12);
+        return (month.f20985k - this.f20985k) + ((month.f20986l - this.f20986l) * 12);
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i) {
-        parcel.writeInt(this.l);
-        parcel.writeInt(this.k);
+        parcel.writeInt(this.f20986l);
+        parcel.writeInt(this.f20985k);
     }
 }

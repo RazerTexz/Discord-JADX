@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackVoiceQuality.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVoiceQuality implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackVoiceQuality implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long averagePing = null;
     private final Long channelId = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackVoiceQuality implements AnalyticsSchema, Trac
             return false;
         }
         TrackVoiceQuality trackVoiceQuality = (TrackVoiceQuality) other;
-        return m.areEqual(this.averagePing, trackVoiceQuality.averagePing) && m.areEqual(this.channelId, trackVoiceQuality.channelId) && m.areEqual(this.duration, trackVoiceQuality.duration) && m.areEqual(this.guildId, trackVoiceQuality.guildId) && m.areEqual(this.maximumPing, trackVoiceQuality.maximumPing) && m.areEqual(this.minimumPing, trackVoiceQuality.minimumPing) && m.areEqual(this.previousTier, trackVoiceQuality.previousTier) && m.areEqual(this.quality, trackVoiceQuality.quality) && m.areEqual(this.sessionId, trackVoiceQuality.sessionId) && m.areEqual(this.speaker, trackVoiceQuality.speaker) && m.areEqual(this.tier, trackVoiceQuality.tier);
+        return Intrinsics3.areEqual(this.averagePing, trackVoiceQuality.averagePing) && Intrinsics3.areEqual(this.channelId, trackVoiceQuality.channelId) && Intrinsics3.areEqual(this.duration, trackVoiceQuality.duration) && Intrinsics3.areEqual(this.guildId, trackVoiceQuality.guildId) && Intrinsics3.areEqual(this.maximumPing, trackVoiceQuality.maximumPing) && Intrinsics3.areEqual(this.minimumPing, trackVoiceQuality.minimumPing) && Intrinsics3.areEqual(this.previousTier, trackVoiceQuality.previousTier) && Intrinsics3.areEqual(this.quality, trackVoiceQuality.quality) && Intrinsics3.areEqual(this.sessionId, trackVoiceQuality.sessionId) && Intrinsics3.areEqual(this.speaker, trackVoiceQuality.speaker) && Intrinsics3.areEqual(this.tier, trackVoiceQuality.tier);
     }
 
     public int hashCode() {
@@ -66,27 +66,27 @@ public final /* data */ class TrackVoiceQuality implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackVoiceQuality(averagePing=");
-        sbU.append(this.averagePing);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", duration=");
-        sbU.append(this.duration);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", maximumPing=");
-        sbU.append(this.maximumPing);
-        sbU.append(", minimumPing=");
-        sbU.append(this.minimumPing);
-        sbU.append(", previousTier=");
-        sbU.append(this.previousTier);
-        sbU.append(", quality=");
-        sbU.append(this.quality);
-        sbU.append(", sessionId=");
-        sbU.append(this.sessionId);
-        sbU.append(", speaker=");
-        sbU.append(this.speaker);
-        sbU.append(", tier=");
-        return a.G(sbU, this.tier, ")");
+        StringBuilder sbM833U = outline.m833U("TrackVoiceQuality(averagePing=");
+        sbM833U.append(this.averagePing);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", duration=");
+        sbM833U.append(this.duration);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", maximumPing=");
+        sbM833U.append(this.maximumPing);
+        sbM833U.append(", minimumPing=");
+        sbM833U.append(this.minimumPing);
+        sbM833U.append(", previousTier=");
+        sbM833U.append(this.previousTier);
+        sbM833U.append(", quality=");
+        sbM833U.append(this.quality);
+        sbM833U.append(", sessionId=");
+        sbM833U.append(this.sessionId);
+        sbM833U.append(", speaker=");
+        sbM833U.append(this.speaker);
+        sbM833U.append(", tier=");
+        return outline.m819G(sbM833U, this.tier, ")");
     }
 }

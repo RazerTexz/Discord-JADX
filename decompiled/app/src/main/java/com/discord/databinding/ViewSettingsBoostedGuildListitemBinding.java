@@ -11,41 +11,47 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /* loaded from: classes.dex */
 public final class ViewSettingsBoostedGuildListitemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f15573a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final SimpleDraweeView f2213b;
+    public final SimpleDraweeView f15574b;
 
+    /* renamed from: c */
     @NonNull
-    public final View c;
+    public final View f15575c;
 
+    /* renamed from: d */
     @NonNull
-    public final GuildBoostProgressView d;
+    public final GuildBoostProgressView f15576d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f15577e;
 
+    /* renamed from: f */
     @NonNull
-    public final SimpleDraweeView f;
+    public final SimpleDraweeView f15578f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f15579g;
 
     public ViewSettingsBoostedGuildListitemBinding(@NonNull LinearLayout linearLayout, @NonNull SimpleDraweeView simpleDraweeView, @NonNull View view, @NonNull GuildBoostProgressView guildBoostProgressView, @NonNull TextView textView, @NonNull SimpleDraweeView simpleDraweeView2, @NonNull TextView textView2) {
-        this.a = linearLayout;
-        this.f2213b = simpleDraweeView;
-        this.c = view;
-        this.d = guildBoostProgressView;
-        this.e = textView;
-        this.f = simpleDraweeView2;
-        this.g = textView2;
+        this.f15573a = linearLayout;
+        this.f15574b = simpleDraweeView;
+        this.f15575c = view;
+        this.f15576d = guildBoostProgressView;
+        this.f15577e = textView;
+        this.f15578f = simpleDraweeView2;
+        this.f15579g = textView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15573a;
     }
 }

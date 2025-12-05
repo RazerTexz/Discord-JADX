@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackCaptchaServed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCaptchaServed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackCaptchaServed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence captchaService = null;
     private final CharSequence sitekey = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackCaptchaServed implements AnalyticsSchema, Tra
             return false;
         }
         TrackCaptchaServed trackCaptchaServed = (TrackCaptchaServed) other;
-        return m.areEqual(this.captchaService, trackCaptchaServed.captchaService) && m.areEqual(this.sitekey, trackCaptchaServed.sitekey) && m.areEqual(this.userFlow, trackCaptchaServed.userFlow) && m.areEqual(this.forceBad, trackCaptchaServed.forceBad) && m.areEqual(this.captchaRequired, trackCaptchaServed.captchaRequired) && m.areEqual(this.locationGuildId, trackCaptchaServed.locationGuildId) && m.areEqual(this.locationChannelId, trackCaptchaServed.locationChannelId) && m.areEqual(this.locationChannelType, trackCaptchaServed.locationChannelType) && m.areEqual(this.locationMessageId, trackCaptchaServed.locationMessageId);
+        return Intrinsics3.areEqual(this.captchaService, trackCaptchaServed.captchaService) && Intrinsics3.areEqual(this.sitekey, trackCaptchaServed.sitekey) && Intrinsics3.areEqual(this.userFlow, trackCaptchaServed.userFlow) && Intrinsics3.areEqual(this.forceBad, trackCaptchaServed.forceBad) && Intrinsics3.areEqual(this.captchaRequired, trackCaptchaServed.captchaRequired) && Intrinsics3.areEqual(this.locationGuildId, trackCaptchaServed.locationGuildId) && Intrinsics3.areEqual(this.locationChannelId, trackCaptchaServed.locationChannelId) && Intrinsics3.areEqual(this.locationChannelType, trackCaptchaServed.locationChannelType) && Intrinsics3.areEqual(this.locationMessageId, trackCaptchaServed.locationMessageId);
     }
 
     public int hashCode() {
@@ -60,23 +60,23 @@ public final /* data */ class TrackCaptchaServed implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackCaptchaServed(captchaService=");
-        sbU.append(this.captchaService);
-        sbU.append(", sitekey=");
-        sbU.append(this.sitekey);
-        sbU.append(", userFlow=");
-        sbU.append(this.userFlow);
-        sbU.append(", forceBad=");
-        sbU.append(this.forceBad);
-        sbU.append(", captchaRequired=");
-        sbU.append(this.captchaRequired);
-        sbU.append(", locationGuildId=");
-        sbU.append(this.locationGuildId);
-        sbU.append(", locationChannelId=");
-        sbU.append(this.locationChannelId);
-        sbU.append(", locationChannelType=");
-        sbU.append(this.locationChannelType);
-        sbU.append(", locationMessageId=");
-        return a.G(sbU, this.locationMessageId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackCaptchaServed(captchaService=");
+        sbM833U.append(this.captchaService);
+        sbM833U.append(", sitekey=");
+        sbM833U.append(this.sitekey);
+        sbM833U.append(", userFlow=");
+        sbM833U.append(this.userFlow);
+        sbM833U.append(", forceBad=");
+        sbM833U.append(this.forceBad);
+        sbM833U.append(", captchaRequired=");
+        sbM833U.append(this.captchaRequired);
+        sbM833U.append(", locationGuildId=");
+        sbM833U.append(this.locationGuildId);
+        sbM833U.append(", locationChannelId=");
+        sbM833U.append(this.locationChannelId);
+        sbM833U.append(", locationChannelType=");
+        sbM833U.append(this.locationChannelType);
+        sbM833U.append(", locationMessageId=");
+        return outline.m819G(sbM833U, this.locationMessageId, ")");
     }
 }

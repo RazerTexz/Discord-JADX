@@ -2,51 +2,59 @@ package com.google.firebase;
 
 import android.content.Context;
 import android.os.Build;
-import b.i.a.f.e.o.f;
-import b.i.c.l.d;
-import b.i.c.l.g;
-import b.i.c.l.o;
-import b.i.c.x.b;
-import b.i.c.x.e;
-import b.i.c.x.h;
-import com.discord.widgets.chat.input.MentionUtilsKt;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.util.ArrayList;
 import java.util.List;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p007b.p225i.p361c.FirebaseCommonRegistrar2;
+import p007b.p225i.p361c.FirebaseCommonRegistrar3;
+import p007b.p225i.p361c.FirebaseCommonRegistrar4;
+import p007b.p225i.p361c.FirebaseCommonRegistrar5;
+import p007b.p225i.p361c.p368l.Component4;
+import p007b.p225i.p361c.p368l.ComponentRegistrar;
+import p007b.p225i.p361c.p368l.Dependency2;
+import p007b.p225i.p361c.p397r.DefaultHeartBeatInfo2;
+import p007b.p225i.p361c.p397r.HeartBeatInfo;
+import p007b.p225i.p361c.p407x.DefaultUserAgentPublisher;
+import p007b.p225i.p361c.p407x.LibraryVersion;
+import p007b.p225i.p361c.p407x.UserAgentPublisher;
+import p507d0.KotlinVersion;
 
 /* loaded from: classes3.dex */
-public class FirebaseCommonRegistrar implements g {
-    public static String a(String str) {
-        return str.replace(' ', '_').replace(MentionUtilsKt.SLASH_CHAR, '_');
+public class FirebaseCommonRegistrar implements ComponentRegistrar {
+    /* renamed from: a */
+    public static String m9175a(String str) {
+        return str.replace(' ', '_').replace(MentionUtils.SLASH_CHAR, '_');
     }
 
-    @Override // b.i.c.l.g
-    public List<d<?>> getComponents() {
+    @Override // p007b.p225i.p361c.p368l.ComponentRegistrar
+    public List<Component4<?>> getComponents() {
         String string;
         ArrayList arrayList = new ArrayList();
-        d.b bVarA = d.a(h.class);
-        bVarA.a(new o(e.class, 2, 0));
-        bVarA.c(b.a);
-        arrayList.add(bVarA.b());
-        d.b bVarA2 = d.a(b.i.c.r.d.class);
-        bVarA2.a(new o(Context.class, 1, 0));
-        bVarA2.c(b.i.c.r.b.a);
-        arrayList.add(bVarA2.b());
-        arrayList.add(f.N("fire-android", String.valueOf(Build.VERSION.SDK_INT)));
-        arrayList.add(f.N("fire-core", "19.4.0"));
-        arrayList.add(f.N("device-name", a(Build.PRODUCT)));
-        arrayList.add(f.N("device-model", a(Build.DEVICE)));
-        arrayList.add(f.N("device-brand", a(Build.BRAND)));
-        arrayList.add(f.b0("android-target-sdk", b.i.c.d.a));
-        arrayList.add(f.b0("android-min-sdk", b.i.c.e.a));
-        arrayList.add(f.b0("android-platform", b.i.c.f.a));
-        arrayList.add(f.b0("android-installer", b.i.c.g.a));
+        Component4.b bVarM6348a = Component4.m6348a(UserAgentPublisher.class);
+        bVarM6348a.m6351a(new Dependency2(LibraryVersion.class, 2, 0));
+        bVarM6348a.m6353c(DefaultUserAgentPublisher.f13081a);
+        arrayList.add(bVarM6348a.m6352b());
+        Component4.b bVarM6348a2 = Component4.m6348a(HeartBeatInfo.class);
+        bVarM6348a2.m6351a(new Dependency2(Context.class, 1, 0));
+        bVarM6348a2.m6353c(DefaultHeartBeatInfo2.f12834a);
+        arrayList.add(bVarM6348a2.m6352b());
+        arrayList.add(C3404f.m4228N("fire-android", String.valueOf(Build.VERSION.SDK_INT)));
+        arrayList.add(C3404f.m4228N("fire-core", "19.4.0"));
+        arrayList.add(C3404f.m4228N("device-name", m9175a(Build.PRODUCT)));
+        arrayList.add(C3404f.m4228N("device-model", m9175a(Build.DEVICE)));
+        arrayList.add(C3404f.m4228N("device-brand", m9175a(Build.BRAND)));
+        arrayList.add(C3404f.m4272b0("android-target-sdk", FirebaseCommonRegistrar2.f12130a));
+        arrayList.add(C3404f.m4272b0("android-min-sdk", FirebaseCommonRegistrar3.f12131a));
+        arrayList.add(C3404f.m4272b0("android-platform", FirebaseCommonRegistrar4.f12132a));
+        arrayList.add(C3404f.m4272b0("android-installer", FirebaseCommonRegistrar5.f12133a));
         try {
-            string = d0.e.j.toString();
+            string = KotlinVersion.f22290j.toString();
         } catch (NoClassDefFoundError unused) {
             string = null;
         }
         if (string != null) {
-            arrayList.add(f.N("kotlin", string));
+            arrayList.add(C3404f.m4228N("kotlin", string));
         }
         return arrayList;
     }

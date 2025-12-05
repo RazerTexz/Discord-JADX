@@ -6,42 +6,43 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.core.os.BundleKt;
+import androidx.core.os.Bundle2;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.f0;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetGuildRoleSubscriptionTierBenefitsBinding;
 import com.discord.utilities.dimen.DimenUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.recycler.SelfHealingLinearLayoutManager;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.recycler.PaddedItemDecorator;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.utilities.views.StickyHeaderItemDecoration;
 import com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscriptionTierViewModel;
 import com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel;
 import com.google.android.material.radiobutton.MaterialRadioButton;
-import d0.g;
-import d0.o;
-import d0.z.d.a0;
-import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppViewModelDelegates2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.Tuples;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildRoleSubscriptionTierBenefits.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionTierBenefitsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionTierBenefits.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionTierBenefitsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -83,9 +84,9 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
         }
 
         public final WidgetGuildRoleSubscriptionTierBenefits newInstance(long guildId, GuildRoleSubscriptionTierBenefitListType benefitListType, boolean hideHeader) {
-            m.checkNotNullParameter(benefitListType, "benefitListType");
+            Intrinsics3.checkNotNullParameter(benefitListType, "benefitListType");
             WidgetGuildRoleSubscriptionTierBenefits widgetGuildRoleSubscriptionTierBenefits = new WidgetGuildRoleSubscriptionTierBenefits();
-            widgetGuildRoleSubscriptionTierBenefits.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_GUILD_ID", Long.valueOf(guildId)), o.to("INTENT_EXTRA_BENEFITS_HIDE_HEADER", Boolean.valueOf(hideHeader)), o.to(WidgetGuildRoleSubscriptionTierBenefits.INTENT_EXTRA_BENEFIT_LIST_TYPE, benefitListType)));
+            widgetGuildRoleSubscriptionTierBenefits.setArguments(Bundle2.bundleOf(Tuples.m10073to("com.discord.intent.extra.EXTRA_GUILD_ID", Long.valueOf(guildId)), Tuples.m10073to("INTENT_EXTRA_BENEFITS_HIDE_HEADER", Boolean.valueOf(hideHeader)), Tuples.m10073to(WidgetGuildRoleSubscriptionTierBenefits.INTENT_EXTRA_BENEFIT_LIST_TYPE, benefitListType)));
             return widgetGuildRoleSubscriptionTierBenefits;
         }
 
@@ -108,58 +109,58 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
     }
 
     /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$onViewBoundOrOnResume$1 */
+    public static final class C85501 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
+        public C85501() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "it");
+            Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionTierBenefits.access$getBenefitsViewModel$p(WidgetGuildRoleSubscriptionTierBenefits.this).updateBenefits(viewState.getGuildRoleSubscriptionTier(), viewState.isFullServerGating());
         }
     }
 
     /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<GuildRoleSubscriptionTierBenefitsViewModel.ViewState, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$onViewBoundOrOnResume$2 */
+    public static final class C85512 extends Lambda implements Function1<GuildRoleSubscriptionTierBenefitsViewModel.ViewState, Unit> {
+        public C85512() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "it");
+            Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionTierBenefits.access$configureUI(WidgetGuildRoleSubscriptionTierBenefits.this, viewState);
         }
     }
 
     public WidgetGuildRoleSubscriptionTierBenefits() {
-        super(R.layout.widget_guild_role_subscription_tier_benefits);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildRoleSubscriptionTierBenefits$binding$2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildRoleSubscriptionTierViewModel.class), new WidgetGuildRoleSubscriptionTierBenefits$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(WidgetGuildRoleSubscriptionTierBenefits$viewModel$2.INSTANCE));
-        this.guildId = g.lazy(new WidgetGuildRoleSubscriptionTierBenefits$guildId$2(this));
-        this.hideHeader = g.lazy(new WidgetGuildRoleSubscriptionTierBenefits$hideHeader$2(this));
+        super(C5419R.layout.widget_guild_role_subscription_tier_benefits);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildRoleSubscriptionTierBenefits$binding$2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildRoleSubscriptionTierViewModel.class), new C8539x18a0931f(this), new AppViewModelDelegates2(WidgetGuildRoleSubscriptionTierBenefits$viewModel$2.INSTANCE));
+        this.guildId = LazyJVM.lazy(new WidgetGuildRoleSubscriptionTierBenefits$guildId$2(this));
+        this.hideHeader = LazyJVM.lazy(new WidgetGuildRoleSubscriptionTierBenefits$hideHeader$2(this));
         WidgetGuildRoleSubscriptionTierBenefits$benefitsViewModel$2 widgetGuildRoleSubscriptionTierBenefits$benefitsViewModel$2 = new WidgetGuildRoleSubscriptionTierBenefits$benefitsViewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.benefitsViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildRoleSubscriptionTierBenefitsViewModel.class), new WidgetGuildRoleSubscriptionTierBenefits$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildRoleSubscriptionTierBenefits$benefitsViewModel$2));
-        this.benefitListType = g.lazy(new WidgetGuildRoleSubscriptionTierBenefits$benefitListType$2(this));
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.benefitsViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildRoleSubscriptionTierBenefitsViewModel.class), new C8541x17397041(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildRoleSubscriptionTierBenefits$benefitsViewModel$2));
+        this.benefitListType = LazyJVM.lazy(new WidgetGuildRoleSubscriptionTierBenefits$benefitListType$2(this));
         this.benefitLauncher = WidgetGuildRoleSubscriptionTierBenefit.INSTANCE.registerForResult(this, new WidgetGuildRoleSubscriptionTierBenefits$benefitLauncher$1(this));
         this.itemClickListener = new WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1(this);
-        this.channelBenefitSettingsCheckedChangeListener = new WidgetGuildRoleSubscriptionTierBenefits$channelBenefitSettingsCheckedChangeListener$1(this);
+        this.channelBenefitSettingsCheckedChangeListener = new C8542xe408467d(this);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetGuildRoleSubscriptionTierBenefits widgetGuildRoleSubscriptionTierBenefits, GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
@@ -193,26 +194,26 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
     private final void configureUI(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
         GuildRoleSubscriptionBenefitAdapter guildRoleSubscriptionBenefitAdapter = this.benefitsAdapter;
         if (guildRoleSubscriptionBenefitAdapter == null) {
-            m.throwUninitializedPropertyAccessException("benefitsAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("benefitsAdapter");
         }
         guildRoleSubscriptionBenefitAdapter.setItems(viewState.getItems());
-        RadioGroup radioGroup = getBinding().f;
-        m.checkNotNullExpressionValue(radioGroup, "binding.guildRoleSubscri…TierChannelBenefitSetting");
+        RadioGroup radioGroup = getBinding().f16960f;
+        Intrinsics3.checkNotNullExpressionValue(radioGroup, "binding.guildRoleSubscri…TierChannelBenefitSetting");
         radioGroup.setVisibility(viewState.getCanChangeChannelSettings() ? 0 : 8);
         if (viewState.getCanAccessAllChannels() == null) {
             return;
         }
-        getBinding().f.setOnCheckedChangeListener(null);
+        getBinding().f16960f.setOnCheckedChangeListener(null);
         if (viewState.getCanAccessAllChannels().booleanValue()) {
-            MaterialRadioButton materialRadioButton = getBinding().f2439b;
-            m.checkNotNullExpressionValue(materialRadioButton, "binding.guildRoleSubscriptionTierAllChannels");
+            MaterialRadioButton materialRadioButton = getBinding().f16956b;
+            Intrinsics3.checkNotNullExpressionValue(materialRadioButton, "binding.guildRoleSubscriptionTierAllChannels");
             materialRadioButton.setChecked(true);
         } else {
-            MaterialRadioButton materialRadioButton2 = getBinding().g;
-            m.checkNotNullExpressionValue(materialRadioButton2, "binding.guildRoleSubscriptionTierManualChannels");
+            MaterialRadioButton materialRadioButton2 = getBinding().f16961g;
+            Intrinsics3.checkNotNullExpressionValue(materialRadioButton2, "binding.guildRoleSubscriptionTierManualChannels");
             materialRadioButton2.setChecked(true);
         }
-        getBinding().f.setOnCheckedChangeListener(this.channelBenefitSettingsCheckedChangeListener);
+        getBinding().f16960f.setOnCheckedChangeListener(this.channelBenefitSettingsCheckedChangeListener);
     }
 
     private final GuildRoleSubscriptionTierBenefitListType getBenefitListType() {
@@ -242,22 +243,22 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
     private final void setUpBenefitsRecycler() {
         this.benefitsAdapter = new GuildRoleSubscriptionBenefitAdapter(this.itemClickListener, this, null, 4, null);
         PaddedItemDecorator paddedItemDecorator = new PaddedItemDecorator(1, 0, DimenUtils.dpToPixels(8), true);
-        RecyclerView recyclerView = getBinding().h;
-        RecyclerView recyclerView2 = getBinding().h;
-        m.checkNotNullExpressionValue(recyclerView2, "binding.subscriptionTierBenefitsRecycler");
+        RecyclerView recyclerView = getBinding().f16962h;
+        RecyclerView recyclerView2 = getBinding().f16962h;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.subscriptionTierBenefitsRecycler");
         GuildRoleSubscriptionBenefitAdapter guildRoleSubscriptionBenefitAdapter = this.benefitsAdapter;
         if (guildRoleSubscriptionBenefitAdapter == null) {
-            m.throwUninitializedPropertyAccessException("benefitsAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("benefitsAdapter");
         }
         recyclerView.setLayoutManager(new SelfHealingLinearLayoutManager(recyclerView2, guildRoleSubscriptionBenefitAdapter, 0, false, 12, null));
         GuildRoleSubscriptionBenefitAdapter guildRoleSubscriptionBenefitAdapter2 = this.benefitsAdapter;
         if (guildRoleSubscriptionBenefitAdapter2 == null) {
-            m.throwUninitializedPropertyAccessException("benefitsAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("benefitsAdapter");
         }
         recyclerView.setAdapter(guildRoleSubscriptionBenefitAdapter2);
         GuildRoleSubscriptionBenefitAdapter guildRoleSubscriptionBenefitAdapter3 = this.benefitsAdapter;
         if (guildRoleSubscriptionBenefitAdapter3 == null) {
-            m.throwUninitializedPropertyAccessException("benefitsAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("benefitsAdapter");
         }
         StickyHeaderItemDecoration stickyHeaderItemDecoration = new StickyHeaderItemDecoration(guildRoleSubscriptionBenefitAdapter3);
         recyclerView.addItemDecoration(paddedItemDecorator);
@@ -265,43 +266,43 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
     }
 
     private final void setupUIForChannelBenefits() {
-        TextView textView = getBinding().e;
-        m.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierBenefitsTitle");
-        textView.setText(getString(R.string.guild_role_subscription_create_tier_channel_benefits_title));
-        TextView textView2 = getBinding().d;
-        m.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscriptionTierBenefitsSubTitle");
-        textView2.setText(getString(R.string.guild_role_subscription_create_tier_channel_benefits_description));
-        RadioGroup radioGroup = getBinding().f;
-        m.checkNotNullExpressionValue(radioGroup, "binding.guildRoleSubscri…TierChannelBenefitSetting");
+        TextView textView = getBinding().f16959e;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierBenefitsTitle");
+        textView.setText(getString(C5419R.string.guild_role_subscription_create_tier_channel_benefits_title));
+        TextView textView2 = getBinding().f16958d;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscriptionTierBenefitsSubTitle");
+        textView2.setText(getString(C5419R.string.guild_role_subscription_create_tier_channel_benefits_description));
+        RadioGroup radioGroup = getBinding().f16960f;
+        Intrinsics3.checkNotNullExpressionValue(radioGroup, "binding.guildRoleSubscri…TierChannelBenefitSetting");
         radioGroup.setVisibility(0);
-        getBinding().f.setOnCheckedChangeListener(this.channelBenefitSettingsCheckedChangeListener);
+        getBinding().f16960f.setOnCheckedChangeListener(this.channelBenefitSettingsCheckedChangeListener);
     }
 
     private final void setupUIForIntangibleBenefits() {
-        TextView textView = getBinding().e;
-        m.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierBenefitsTitle");
-        textView.setText(getString(R.string.guild_role_subscription_create_tier_intangible_benefits_title));
-        TextView textView2 = getBinding().d;
-        m.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscriptionTierBenefitsSubTitle");
-        textView2.setText(getString(R.string.guild_role_subscription_create_tier_intangible_benefits_description));
-        RadioGroup radioGroup = getBinding().f;
-        m.checkNotNullExpressionValue(radioGroup, "binding.guildRoleSubscri…TierChannelBenefitSetting");
+        TextView textView = getBinding().f16959e;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierBenefitsTitle");
+        textView.setText(getString(C5419R.string.guild_role_subscription_create_tier_intangible_benefits_title));
+        TextView textView2 = getBinding().f16958d;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscriptionTierBenefitsSubTitle");
+        textView2.setText(getString(C5419R.string.f14671x2e4f7edc));
+        RadioGroup radioGroup = getBinding().f16960f;
+        Intrinsics3.checkNotNullExpressionValue(radioGroup, "binding.guildRoleSubscri…TierChannelBenefitSetting");
         radioGroup.setVisibility(8);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setUpBenefitsRecycler();
-        TextView textView = getBinding().e;
-        m.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierBenefitsTitle");
+        TextView textView = getBinding().f16959e;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierBenefitsTitle");
         textView.setVisibility(getHideHeader() ^ true ? 0 : 8);
-        TextView textView2 = getBinding().d;
-        m.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscriptionTierBenefitsSubTitle");
+        TextView textView2 = getBinding().f16958d;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscriptionTierBenefitsSubTitle");
         textView2.setVisibility(getHideHeader() ^ true ? 0 : 8);
-        View view2 = getBinding().c;
-        m.checkNotNullExpressionValue(view2, "binding.guildRoleSubscriptionTierBenefitsDivider");
+        View view2 = getBinding().f16957c;
+        Intrinsics3.checkNotNullExpressionValue(view2, "binding.guildRoleSubscriptionTierBenefitsDivider");
         view2.setVisibility(getHideHeader() ^ true ? 0 : 8);
         int iOrdinal = getBenefitListType().ordinal();
         if (iOrdinal == 0) {
@@ -322,7 +323,7 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetGuildRoleSubscriptionTierBenefits.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getBenefitsViewModel().observeViewState(), this, null, 2, null), WidgetGuildRoleSubscriptionTierBenefits.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetGuildRoleSubscriptionTierBenefits.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85501(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getBenefitsViewModel().observeViewState(), this, null, 2, null), WidgetGuildRoleSubscriptionTierBenefits.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85512(), 62, (Object) null);
     }
 }

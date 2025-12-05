@@ -1,19 +1,19 @@
 package com.discord.widgets.settings.premium;
 
 import android.content.Context;
-import b.d.b.a.a;
 import com.discord.i18n.RenderContext;
-import com.discord.utilities.resources.StringResourceUtilsKt;
+import com.discord.utilities.resources.StringResourceUtils;
 import com.discord.widgets.settings.premium.WidgetSettingsGiftingAdapter;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetSettingsGiftingAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSettingsGiftingAdapter$SkuListItem$onConfigure$1 extends o implements Function1<RenderContext, Unit> {
+public final class WidgetSettingsGiftingAdapter$SkuListItem$onConfigure$1 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ WidgetSettingsGiftingAdapter.GiftItem $data;
     public final /* synthetic */ int $numMonthsOrYears;
     public final /* synthetic */ int $quantityString;
@@ -30,18 +30,18 @@ public final class WidgetSettingsGiftingAdapter$SkuListItem$onConfigure$1 extend
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
-        m.checkNotNullParameter(renderContext, "$receiver");
+        Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.args.put("skuName", this.$data.getSku().getName());
         Map<String, String> map = renderContext.args;
-        Context contextX = a.x(this.this$0.itemView, "itemView", "itemView.context");
+        Context contextM885x = outline.m885x(this.this$0.itemView, "itemView", "itemView.context");
         int i = this.$quantityString;
         int i2 = this.$numMonthsOrYears;
-        map.put("intervalCount", StringResourceUtilsKt.getI18nPluralString(contextX, i, i2, Integer.valueOf(i2)).toString());
+        map.put("intervalCount", StringResourceUtils.getI18nPluralString(contextM885x, i, i2, Integer.valueOf(i2)).toString());
     }
 
     @Override // kotlin.jvm.functions.Function1
     public /* bridge */ /* synthetic */ Unit invoke(RenderContext renderContext) {
         invoke2(renderContext);
-        return Unit.a;
+        return Unit.f27425a;
     }
 }

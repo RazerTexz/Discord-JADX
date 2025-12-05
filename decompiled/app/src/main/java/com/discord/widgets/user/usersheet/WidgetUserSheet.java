@@ -19,12 +19,7 @@ import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.a.d.a;
-import b.a.d.i0;
-import b.a.k.b;
-import b.c.a.a0.d;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.activity.Activity;
 import com.discord.api.channel.Channel;
 import com.discord.api.role.GuildRole;
@@ -47,13 +42,13 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.application.ApplicationUtils;
 import com.discord.utilities.channel.ChannelSelector;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.guilds.GuildUtilsKt;
+import com.discord.utilities.guilds.GuildUtils;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
-import com.discord.utilities.presence.ActivityUtilsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.presence.ActivityUtils;
 import com.discord.utilities.presence.PresenceUtils;
 import com.discord.utilities.rest.RestAPIAbortMessages;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.streams.StreamContext;
 import com.discord.utilities.textprocessing.AstRenderer;
 import com.discord.utilities.textprocessing.MessageRenderContext;
@@ -61,7 +56,7 @@ import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.channels.WidgetChannelSelector;
 import com.discord.widgets.guildcommunicationdisabled.start.WidgetDisableGuildCommunication;
 import com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication;
@@ -88,14 +83,6 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.t.g0;
-import d0.t.h0;
-import d0.t.n;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
-import defpackage.l;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Lazy;
@@ -108,7 +95,24 @@ import kotlin.jvm.functions.Function5;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 import org.objectweb.asm.Opcodes;
-import rx.subscriptions.CompositeSubscription;
+import p000.C12807l;
+import p007b.p008a.p009a.FriendRequestDialogs;
+import p007b.p008a.p009a.p013d.UserActionsDialog;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.subscriptions.CompositeSubscription;
 
 /* compiled from: WidgetUserSheet.kt */
 /* loaded from: classes.dex */
@@ -131,7 +135,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
 
     /* renamed from: viewModelUserProfileHeader$delegate, reason: from kotlin metadata */
     private final Lazy viewModelUserProfileHeader;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetUserSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -150,7 +154,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
 
         private final String getNoticeName(long userId) {
             String str = "User Sheet Notice for user ID: " + userId;
-            m.checkNotNullExpressionValue(str, "StringBuilder(\"User Shee…)\n            .toString()");
+            Intrinsics3.checkNotNullExpressionValue(str, "StringBuilder(\"User Shee…)\n            .toString()");
             return str;
         }
 
@@ -185,22 +189,22 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
 
         public final void show(long userId, Long channelId, FragmentManager fragmentManager, Long guildId, Boolean isVoiceContext, StreamPreviewClickBehavior streamPreviewClickBehavior, String friendToken) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
-            m.checkNotNullParameter(streamPreviewClickBehavior, "streamPreviewClickBehavior");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(streamPreviewClickBehavior, "streamPreviewClickBehavior");
             WidgetUserSheet widgetUserSheet = new WidgetUserSheet();
-            Bundle bundleT = a.T(WidgetUserSheet.ARG_USER_ID, userId);
+            Bundle bundleM832T = outline.m832T(WidgetUserSheet.ARG_USER_ID, userId);
             if (channelId != null) {
-                bundleT.putLong(WidgetUserSheet.ARG_CHANNEL_ID, channelId.longValue());
+                bundleM832T.putLong(WidgetUserSheet.ARG_CHANNEL_ID, channelId.longValue());
             }
             if (friendToken != null) {
-                bundleT.putString(WidgetUserSheet.ARG_FRIEND_TOKEN, friendToken);
+                bundleM832T.putString(WidgetUserSheet.ARG_FRIEND_TOKEN, friendToken);
             }
             if (guildId != null) {
-                bundleT.putLong(WidgetUserSheet.ARG_GUILD_ID, guildId.longValue());
+                bundleM832T.putLong(WidgetUserSheet.ARG_GUILD_ID, guildId.longValue());
             }
-            bundleT.putBoolean(WidgetUserSheet.ARG_IS_VOICE_CONTEXT, isVoiceContext != null ? isVoiceContext.booleanValue() : false);
-            bundleT.putSerializable(WidgetUserSheet.ARG_STREAM_PREVIEW_CLICK_BEHAVIOR, streamPreviewClickBehavior);
-            widgetUserSheet.setArguments(bundleT);
+            bundleM832T.putBoolean(WidgetUserSheet.ARG_IS_VOICE_CONTEXT, isVoiceContext != null ? isVoiceContext.booleanValue() : false);
+            bundleM832T.putSerializable(WidgetUserSheet.ARG_STREAM_PREVIEW_CLICK_BEHAVIOR, streamPreviewClickBehavior);
+            widgetUserSheet.setArguments(bundleM832T);
             widgetUserSheet.show(fragmentManager, WidgetUserSheet.class.getName());
         }
 
@@ -216,69 +220,69 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$bindSubscriptions$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetUserSheetViewModel.ViewState, Unit> {
-        public AnonymousClass1(WidgetUserSheet widgetUserSheet) {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$bindSubscriptions$1 */
+    public static final /* synthetic */ class C103411 extends FunctionReferenceImpl implements Function1<WidgetUserSheetViewModel.ViewState, Unit> {
+        public C103411(WidgetUserSheet widgetUserSheet) {
             super(1, widgetUserSheet, WidgetUserSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/user/usersheet/WidgetUserSheetViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetUserSheetViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetUserSheetViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "p1");
+            Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetUserSheet.access$configureUI((WidgetUserSheet) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$bindSubscriptions$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<WidgetUserSheetViewModel.Event, Unit> {
-        public AnonymousClass2(WidgetUserSheet widgetUserSheet) {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$bindSubscriptions$2 */
+    public static final /* synthetic */ class C103422 extends FunctionReferenceImpl implements Function1<WidgetUserSheetViewModel.Event, Unit> {
+        public C103422(WidgetUserSheet widgetUserSheet) {
             super(1, widgetUserSheet, WidgetUserSheet.class, "handleEvent", "handleEvent(Lcom/discord/widgets/user/usersheet/WidgetUserSheetViewModel$Event;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetUserSheetViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetUserSheetViewModel.Event event) {
-            m.checkNotNullParameter(event, "p1");
+            Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetUserSheet.access$handleEvent((WidgetUserSheet) this.receiver, event);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureAboutMe$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureAboutMe$1 */
+    public static final class ViewOnClickListenerC103431 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
-        public AnonymousClass1(WidgetUserSheetViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC103431(WidgetUserSheetViewModel.ViewState.Loaded loaded) {
             this.$viewState = loaded;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             if (this.$viewState.getHasGuildMemberBio()) {
-                m.checkNotNullExpressionValue(view, "it");
-                b.a.d.m.h(view.getContext(), b.k(WidgetUserSheet.this, R.string.guild_identity_bio_toast, new Object[]{this.$viewState.getGuildName()}, null, 4), 0, null, 12);
+                Intrinsics3.checkNotNullExpressionValue(view, "it");
+                AppToast.m170h(view.getContext(), FormatUtils.m219k(WidgetUserSheet.this, C5419R.string.guild_identity_bio_toast, new Object[]{this.$viewState.getGuildName()}, null, 4), 0, null, 12);
             }
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureIncomingFriendRequest$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureIncomingFriendRequest$1 */
+    public static final class ViewOnClickListenerC103481 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
-        public AnonymousClass1(WidgetUserSheetViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC103481(WidgetUserSheetViewModel.ViewState.Loaded loaded) {
             this.$viewState = loaded;
         }
 
@@ -289,9 +293,9 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureIncomingFriendRequest$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureIncomingFriendRequest$2 */
+    public static final class ViewOnClickListenerC103492 implements View.OnClickListener {
+        public ViewOnClickListenerC103492() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -301,11 +305,11 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$1 */
+    public static final class ViewOnClickListenerC103501 implements View.OnClickListener {
         public final /* synthetic */ UserProfile $userProfile;
 
-        public AnonymousClass1(UserProfile userProfile) {
+        public ViewOnClickListenerC103501(UserProfile userProfile) {
             this.$userProfile = userProfile;
         }
 
@@ -315,35 +319,35 @@ public final class WidgetUserSheet extends AppBottomSheet {
             UserProfile userProfile = this.$userProfile;
             Uri applicationUri = applicationUtils.getApplicationUri(userProfile != null ? userProfile.getApplication() : null);
             if (applicationUri != null) {
-                Context contextX = a.x(view, "view", "view.context");
+                Context contextM885x = outline.m885x(view, "view", "view.context");
                 String string = applicationUri.toString();
-                m.checkNotNullExpressionValue(string, "uri.toString()");
-                UriHandler.handleOrUntrusted$default(contextX, string, null, 4, null);
+                Intrinsics3.checkNotNullExpressionValue(string, "uri.toString()");
+                UriHandler.handleOrUntrusted$default(contextM885x, string, null, 4, null);
             }
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$2 */
+    public static final class ViewOnClickListenerC103512 implements View.OnClickListener {
+        public ViewOnClickListenerC103512() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetEditUserOrGuildMemberProfile.Companion companion = WidgetEditUserOrGuildMemberProfile.INSTANCE;
             Context contextRequireContext = WidgetUserSheet.this.requireContext();
-            m.checkNotNullExpressionValue(contextRequireContext, "this@WidgetUserSheet.requireContext()");
+            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "this@WidgetUserSheet.requireContext()");
             WidgetEditUserOrGuildMemberProfile.Companion.launch$default(companion, contextRequireContext, null, null, 6, null);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$3 */
+    public static final class ViewOnClickListenerC103523 implements View.OnClickListener {
         public final /* synthetic */ Long $guildId;
 
-        public AnonymousClass3(Long l) {
+        public ViewOnClickListenerC103523(Long l) {
             this.$guildId = l;
         }
 
@@ -352,25 +356,25 @@ public final class WidgetUserSheet extends AppBottomSheet {
             if (this.$guildId != null) {
                 Experiment userExperiment = StoreStream.INSTANCE.getExperiments().getUserExperiment("2021-10_premium_guild_member_profiles", true);
                 if (userExperiment != null && userExperiment.getBucket() == 1) {
-                    WidgetEditUserOrGuildMemberProfile.Companion.launch$default(WidgetEditUserOrGuildMemberProfile.INSTANCE, a.x(view, "it", "it.context"), null, this.$guildId, 2, null);
+                    WidgetEditUserOrGuildMemberProfile.Companion.launch$default(WidgetEditUserOrGuildMemberProfile.INSTANCE, outline.m885x(view, "it", "it.context"), null, this.$guildId, 2, null);
                     return;
                 }
                 WidgetChangeGuildIdentity.Companion companion = WidgetChangeGuildIdentity.INSTANCE;
                 long jLongValue = this.$guildId.longValue();
-                m.checkNotNullExpressionValue(view, "it");
+                Intrinsics3.checkNotNullExpressionValue(view, "it");
                 Context context = view.getContext();
-                m.checkNotNullExpressionValue(context, "it.context");
+                Intrinsics3.checkNotNullExpressionValue(context, "it.context");
                 companion.launch(jLongValue, "User Bottom Sheet", context);
             }
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$4 */
+    public static final class ViewOnClickListenerC103534 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
-        public AnonymousClass4(WidgetUserSheetViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC103534(WidgetUserSheetViewModel.ViewState.Loaded loaded) {
             this.$viewState = loaded;
         }
 
@@ -378,21 +382,21 @@ public final class WidgetUserSheet extends AppBottomSheet {
         public final void onClick(View view) {
             ChannelSelector companion = ChannelSelector.INSTANCE.getInstance();
             Context contextRequireContext = WidgetUserSheet.this.requireContext();
-            m.checkNotNullExpressionValue(contextRequireContext, "this@WidgetUserSheet.requireContext()");
+            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "this@WidgetUserSheet.requireContext()");
             companion.findAndSetDirectMessage(contextRequireContext, this.$viewState.getUser().getId());
             WidgetUserSheet.this.dismiss();
             StoreTabsNavigation.selectHomeTab$default(StoreStream.INSTANCE.getTabsNavigation(), StoreNavigation.PanelAction.CLOSE, false, 2, null);
             AppActivity appActivityRequireAppActivity = WidgetUserSheet.this.requireAppActivity();
             Context contextRequireContext2 = WidgetUserSheet.this.requireContext();
-            m.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
-            appActivityRequireAppActivity.j(contextRequireContext2);
+            Intrinsics3.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
+            appActivityRequireAppActivity.m8349j(contextRequireContext2);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
-        public AnonymousClass5() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$5 */
+    public static final class ViewOnClickListenerC103545 implements View.OnClickListener {
+        public ViewOnClickListenerC103545() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -402,9 +406,9 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$6, reason: invalid class name */
-    public static final class AnonymousClass6 implements View.OnClickListener {
-        public AnonymousClass6() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$6 */
+    public static final class ViewOnClickListenerC103556 implements View.OnClickListener {
+        public ViewOnClickListenerC103556() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -414,11 +418,11 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$7, reason: invalid class name */
-    public static final class AnonymousClass7 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$7 */
+    public static final class ViewOnClickListenerC103567 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
-        public AnonymousClass7(WidgetUserSheetViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC103567(WidgetUserSheetViewModel.ViewState.Loaded loaded) {
             this.$viewState = loaded;
         }
 
@@ -429,14 +433,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8, reason: invalid class name */
-    public static final class AnonymousClass8 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8 */
+    public static final class ViewOnClickListenerC103578 implements View.OnClickListener {
         public final /* synthetic */ int $userRelationshipType;
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
         /* compiled from: WidgetUserSheet.kt */
         /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$1, reason: invalid class name */
-        public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Integer, Unit> {
+        public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Integer, Unit> {
             public AnonymousClass1(WidgetUserSheetViewModel widgetUserSheetViewModel) {
                 super(1, widgetUserSheetViewModel, WidgetUserSheetViewModel.class, "removeRelationship", "removeRelationship(I)V", 0);
             }
@@ -444,7 +448,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
                 invoke(num.intValue());
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             public final void invoke(int i) {
@@ -454,7 +458,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
 
         /* compiled from: WidgetUserSheet.kt */
         /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends o implements Function0<Unit> {
+        public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
             }
@@ -462,19 +466,19 @@ public final class WidgetUserSheet extends AppBottomSheet {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnonymousClass8 anonymousClass8 = AnonymousClass8.this;
-                WidgetUserSheet.access$acceptFriendRequest(WidgetUserSheet.this, anonymousClass8.$viewState.getUser().getUsername());
+                ViewOnClickListenerC103578 viewOnClickListenerC103578 = ViewOnClickListenerC103578.this;
+                WidgetUserSheet.access$acceptFriendRequest(WidgetUserSheet.this, viewOnClickListenerC103578.$viewState.getUser().getUsername());
             }
         }
 
         /* compiled from: WidgetUserSheet.kt */
         /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$3, reason: invalid class name */
-        public static final class AnonymousClass3 extends o implements Function0<Unit> {
+        public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
             public AnonymousClass3() {
                 super(0);
             }
@@ -482,7 +486,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -491,7 +495,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
             }
         }
 
-        public AnonymousClass8(int i, WidgetUserSheetViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC103578(int i, WidgetUserSheetViewModel.ViewState.Loaded loaded) {
             this.$userRelationshipType = i;
             this.$viewState = loaded;
         }
@@ -499,19 +503,19 @@ public final class WidgetUserSheet extends AppBottomSheet {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             int i = this.$userRelationshipType;
-            Integer numValueOf = Integer.valueOf(R.id.notice_ok);
+            Integer numValueOf = Integer.valueOf(C5419R.id.notice_ok);
             if (i == 3) {
                 FragmentManager parentFragmentManager = WidgetUserSheet.this.getParentFragmentManager();
-                m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                 Context contextRequireContext = WidgetUserSheet.this.requireContext();
-                m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+                Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
                 AnonymousClass2 anonymousClass2 = new AnonymousClass2();
                 AnonymousClass3 anonymousClass3 = new AnonymousClass3();
-                m.checkNotNullParameter(parentFragmentManager, "fragmentManager");
-                m.checkNotNullParameter(contextRequireContext, "context");
-                m.checkNotNullParameter(anonymousClass2, "onAccept");
-                m.checkNotNullParameter(anonymousClass3, "onIgnore");
-                WidgetNoticeDialog.Companion.show$default(WidgetNoticeDialog.INSTANCE, parentFragmentManager, b.h(contextRequireContext, R.string.incoming_friend_request, new Object[0], null, 4), b.h(contextRequireContext, R.string.user_profile_incoming_friend_request_dialog_body, new Object[0], null, 4), b.h(contextRequireContext, R.string.friend_request_accept, new Object[0], null, 4), b.h(contextRequireContext, R.string.friend_request_ignore, new Object[0], null, 4), h0.mapOf(d0.o.to(numValueOf, new l(0, anonymousClass2)), d0.o.to(Integer.valueOf(R.id.notice_cancel), new l(1, anonymousClass3))), null, null, null, null, null, null, 0, null, 16320, null);
+                Intrinsics3.checkNotNullParameter(parentFragmentManager, "fragmentManager");
+                Intrinsics3.checkNotNullParameter(contextRequireContext, "context");
+                Intrinsics3.checkNotNullParameter(anonymousClass2, "onAccept");
+                Intrinsics3.checkNotNullParameter(anonymousClass3, "onIgnore");
+                WidgetNoticeDialog.Companion.show$default(WidgetNoticeDialog.INSTANCE, parentFragmentManager, FormatUtils.m216h(contextRequireContext, C5419R.string.incoming_friend_request, new Object[0], null, 4), FormatUtils.m216h(contextRequireContext, C5419R.string.user_profile_incoming_friend_request_dialog_body, new Object[0], null, 4), FormatUtils.m216h(contextRequireContext, C5419R.string.friend_request_accept, new Object[0], null, 4), FormatUtils.m216h(contextRequireContext, C5419R.string.friend_request_ignore, new Object[0], null, 4), Maps6.mapOf(Tuples.m10073to(numValueOf, new C12807l(0, anonymousClass2)), Tuples.m10073to(Integer.valueOf(C5419R.id.notice_cancel), new C12807l(1, anonymousClass3))), null, null, null, null, null, null, 0, null, 16320, null);
                 return;
             }
             if (i != 4) {
@@ -519,29 +523,29 @@ public final class WidgetUserSheet extends AppBottomSheet {
             }
             User user = this.$viewState.getUser();
             Context contextRequireContext2 = WidgetUserSheet.this.requireContext();
-            m.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
+            Intrinsics3.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
             FragmentManager parentFragmentManager2 = WidgetUserSheet.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
             AnonymousClass1 anonymousClass1 = new AnonymousClass1(WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this));
-            m.checkNotNullParameter(user, "user");
-            m.checkNotNullParameter(contextRequireContext2, "context");
-            m.checkNotNullParameter(parentFragmentManager2, "fragmentManager");
-            m.checkNotNullParameter(anonymousClass1, "onConfirm");
-            WidgetNoticeDialog.Companion.show$default(WidgetNoticeDialog.INSTANCE, parentFragmentManager2, b.h(contextRequireContext2, R.string.outgoing_friend_request, new Object[0], null, 4), b.h(contextRequireContext2, R.string.outgoing_friend_request_delete_msg, new Object[]{user.getUsername()}, null, 4), b.h(contextRequireContext2, R.string.delete, new Object[0], null, 4), b.h(contextRequireContext2, R.string.cancel, new Object[0], null, 4), g0.mapOf(d0.o.to(numValueOf, new b.a.a.l(anonymousClass1))), null, null, null, Integer.valueOf(R.attr.notice_theme_positive_red), null, null, 0, null, 15808, null);
+            Intrinsics3.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(contextRequireContext2, "context");
+            Intrinsics3.checkNotNullParameter(parentFragmentManager2, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(anonymousClass1, "onConfirm");
+            WidgetNoticeDialog.Companion.show$default(WidgetNoticeDialog.INSTANCE, parentFragmentManager2, FormatUtils.m216h(contextRequireContext2, C5419R.string.outgoing_friend_request, new Object[0], null, 4), FormatUtils.m216h(contextRequireContext2, C5419R.string.outgoing_friend_request_delete_msg, new Object[]{user.getUsername()}, null, 4), FormatUtils.m216h(contextRequireContext2, C5419R.string.delete, new Object[0], null, 4), FormatUtils.m216h(contextRequireContext2, C5419R.string.cancel, new Object[0], null, 4), MapsJVM.mapOf(Tuples.m10073to(numValueOf, new FriendRequestDialogs(anonymousClass1))), null, null, null, Integer.valueOf(C5419R.attr.notice_theme_positive_red), null, null, 0, null, 15808, null);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$1 */
+    public static final class C103581 extends Lambda implements Function0<Unit> {
+        public C103581() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -551,12 +555,12 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$3 */
+    public static final class C103593 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState $model;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(WidgetUserSheetViewModel.ViewState viewState) {
+        public C103593(WidgetUserSheetViewModel.ViewState viewState) {
             super(0);
             this.$model = viewState;
         }
@@ -564,7 +568,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -574,32 +578,32 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends k implements Function5<Context, Long, String, Long, Integer, Unit> {
-        public AnonymousClass4(WidgetUserSheetViewModel widgetUserSheetViewModel) {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$4 */
+    public static final /* synthetic */ class C103604 extends FunctionReferenceImpl implements Function5<Context, Long, String, Long, Integer, Unit> {
+        public C103604(WidgetUserSheetViewModel widgetUserSheetViewModel) {
             super(5, widgetUserSheetViewModel, WidgetUserSheetViewModel.class, "onActivityCustomButtonClicked", "onActivityCustomButtonClicked(Landroid/content/Context;JLjava/lang/String;JI)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function5
         public /* bridge */ /* synthetic */ Unit invoke(Context context, Long l, String str, Long l2, Integer num) {
             invoke(context, l.longValue(), str, l2.longValue(), num.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(Context context, long j, String str, long j2, int i) {
-            m.checkNotNullParameter(context, "p1");
-            m.checkNotNullParameter(str, "p3");
+            Intrinsics3.checkNotNullParameter(context, "p1");
+            Intrinsics3.checkNotNullParameter(str, "p3");
             ((WidgetUserSheetViewModel) this.receiver).onActivityCustomButtonClicked(context, j, str, j2, i);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$handleRequestPermissionsForSpectateStream$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$handleRequestPermissionsForSpectateStream$1 */
+    public static final class C103611 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ WidgetUserSheetViewModel.Event.RequestPermissionsForSpectateStream $event;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(WidgetUserSheetViewModel.Event.RequestPermissionsForSpectateStream requestPermissionsForSpectateStream) {
+        public C103611(WidgetUserSheetViewModel.Event.RequestPermissionsForSpectateStream requestPermissionsForSpectateStream) {
             super(0);
             this.$event = requestPermissionsForSpectateStream;
         }
@@ -607,7 +611,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -617,42 +621,42 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$1 */
+    public static final class ViewOnClickListenerC103621 implements View.OnClickListener {
         public final /* synthetic */ long $userId;
 
-        public AnonymousClass1(long j) {
+        public ViewOnClickListenerC103621(long j) {
             this.$userId = j;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            a.Companion bVar = b.a.a.d.a.INSTANCE;
+            UserActionsDialog.Companion bVar = UserActionsDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetUserSheet.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             long j = this.$userId;
             long j2 = WidgetUserSheet.access$getArgumentsOrDefault$p(WidgetUserSheet.this).getLong(WidgetUserSheet.ARG_CHANNEL_ID);
             Objects.requireNonNull(bVar);
-            m.checkNotNullParameter(parentFragmentManager, "fragmentManager");
-            b.a.a.d.a aVar = new b.a.a.d.a();
-            Bundle bundleT = b.d.b.a.a.T("com.discord.intent.extra.EXTRA_USER_ID", j);
-            bundleT.putLong("com.discord.intent.extra.EXTRA_CHANNEL_ID", j2);
-            aVar.setArguments(bundleT);
-            aVar.show(parentFragmentManager, b.a.a.d.a.class.getName());
+            Intrinsics3.checkNotNullParameter(parentFragmentManager, "fragmentManager");
+            UserActionsDialog userActionsDialog = new UserActionsDialog();
+            Bundle bundleM832T = outline.m832T("com.discord.intent.extra.EXTRA_USER_ID", j);
+            bundleM832T.putLong("com.discord.intent.extra.EXTRA_CHANNEL_ID", j2);
+            userActionsDialog.setArguments(bundleM832T);
+            userActionsDialog.show(parentFragmentManager, UserActionsDialog.class.getName());
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$10, reason: invalid class name */
-    public static final class AnonymousClass10 extends o implements Function0<Unit> {
-        public AnonymousClass10() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$10 */
+    public static final class C1036310 extends Lambda implements Function0<Unit> {
+        public C1036310() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -662,16 +666,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$11, reason: invalid class name */
-    public static final class AnonymousClass11 extends o implements Function0<Unit> {
-        public AnonymousClass11() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$11 */
+    public static final class C1036411 extends Lambda implements Function0<Unit> {
+        public C1036411() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -681,16 +685,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$12, reason: invalid class name */
-    public static final class AnonymousClass12 extends o implements Function0<Unit> {
-        public AnonymousClass12() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$12 */
+    public static final class C1036512 extends Lambda implements Function0<Unit> {
+        public C1036512() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -700,16 +704,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$13, reason: invalid class name */
-    public static final class AnonymousClass13 extends o implements Function0<Unit> {
-        public AnonymousClass13() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$13 */
+    public static final class C1036613 extends Lambda implements Function0<Unit> {
+        public C1036613() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -719,16 +723,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$14, reason: invalid class name */
-    public static final class AnonymousClass14 extends o implements Function0<Unit> {
-        public AnonymousClass14() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$14 */
+    public static final class C1036714 extends Lambda implements Function0<Unit> {
+        public C1036714() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -738,9 +742,9 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$15, reason: invalid class name */
-    public static final class AnonymousClass15 implements View.OnFocusChangeListener {
-        public AnonymousClass15() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$15 */
+    public static final class ViewOnFocusChangeListenerC1036815 implements View.OnFocusChangeListener {
+        public ViewOnFocusChangeListenerC1036815() {
         }
 
         @Override // android.view.View.OnFocusChangeListener
@@ -750,19 +754,19 @@ public final class WidgetUserSheet extends AppBottomSheet {
             }
             WidgetUserSheetViewModel widgetUserSheetViewModelAccess$getViewModel$p = WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this);
             Context context = WidgetUserSheet.this.getContext();
-            TextInputLayout textInputLayout = WidgetUserSheet.access$getBinding$p(WidgetUserSheet.this).B;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
+            TextInputLayout textInputLayout = WidgetUserSheet.access$getBinding$p(WidgetUserSheet.this).f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
             widgetUserSheetViewModelAccess$getViewModel$p.saveUserNote(context, ViewExtensions.getTextOrEmpty(textInputLayout));
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$16, reason: invalid class name */
-    public static final class AnonymousClass16 extends o implements Function1<TextView, Unit> {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$16 */
+    public static final class C1036916 extends Lambda implements Function1<TextView, Unit> {
         public final /* synthetic */ View $view;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass16(View view) {
+        public C1036916(View view) {
             super(1);
             this.$view = view;
         }
@@ -770,64 +774,64 @@ public final class WidgetUserSheet extends AppBottomSheet {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(TextView textView) {
             invoke2(textView);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            m.checkNotNullParameter(textView, "it");
+            Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetUserSheetViewModel widgetUserSheetViewModelAccess$getViewModel$p = WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this);
             Context context = WidgetUserSheet.this.getContext();
-            TextInputLayout textInputLayout = WidgetUserSheet.access$getBinding$p(WidgetUserSheet.this).B;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
+            TextInputLayout textInputLayout = WidgetUserSheet.access$getBinding$p(WidgetUserSheet.this).f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
             widgetUserSheetViewModelAccess$getViewModel$p.saveUserNote(context, ViewExtensions.getTextOrEmpty(textInputLayout));
-            WidgetUserSheet.access$getBinding$p(WidgetUserSheet.this).B.clearFocus();
+            WidgetUserSheet.access$getBinding$p(WidgetUserSheet.this).f18388B.clearFocus();
             WidgetUserSheet.this.hideKeyboard(this.$view);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$17, reason: invalid class name */
-    public static final class AnonymousClass17 extends AccessibilityDelegateCompat {
-        public AnonymousClass17() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$17 */
+    public static final class C1037017 extends AccessibilityDelegateCompat {
+        public C1037017() {
         }
 
         @Override // androidx.core.view.AccessibilityDelegateCompat
         public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfoCompat info) {
-            m.checkNotNullParameter(host, "host");
-            m.checkNotNullParameter(info, "info");
+            Intrinsics3.checkNotNullParameter(host, "host");
+            Intrinsics3.checkNotNullParameter(info, "info");
             super.onInitializeAccessibilityNodeInfo(host, info);
-            info.setTraversalAfter(WidgetUserSheet.access$getBinding$p(WidgetUserSheet.this).o);
+            info.setTraversalAfter(WidgetUserSheet.access$getBinding$p(WidgetUserSheet.this).f18419o);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$18, reason: invalid class name */
-    public static final class AnonymousClass18 extends o implements Function2<Long, String, Unit> {
-        public AnonymousClass18() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$18 */
+    public static final class C1037118 extends Lambda implements Function2<Long, String, Unit> {
+        public C1037118() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Long l, String str) {
             invoke(l.longValue(), str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j, String str) {
-            m.checkNotNullParameter(str, "<anonymous parameter 1>");
+            Intrinsics3.checkNotNullParameter(str, "<anonymous parameter 1>");
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).moveUserToChannel(j);
         }
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2 */
+    public static final class C103722 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $isMe;
 
         /* compiled from: WidgetUserSheet.kt */
         /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -835,26 +839,26 @@ public final class WidgetUserSheet extends AppBottomSheet {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                b.a.d.m.g(WidgetUserSheet.this.getContext(), R.string.stage_channel_permission_microphone_denied, 0, null, 12);
+                AppToast.m169g(WidgetUserSheet.this.getContext(), C5419R.string.stage_channel_permission_microphone_denied, 0, null, 12);
             }
         }
 
         /* compiled from: WidgetUserSheet.kt */
-        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2$2, reason: invalid class name and collision with other inner class name */
-        public static final class C04732 extends o implements Function0<Unit> {
-            public C04732() {
+        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2$2, reason: invalid class name */
+        public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+            public AnonymousClass2() {
                 super(0);
             }
 
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -864,7 +868,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(boolean z2) {
+        public C103722(boolean z2) {
             super(0);
             this.$isMe = z2;
         }
@@ -872,13 +876,13 @@ public final class WidgetUserSheet extends AppBottomSheet {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$isMe) {
-                WidgetUserSheet.this.requestMicrophone(new AnonymousClass1(), new C04732());
+                WidgetUserSheet.this.requestMicrophone(new AnonymousClass1(), new AnonymousClass2());
             } else {
                 WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).inviteUserToSpeak();
             }
@@ -886,16 +890,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function0<Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$3 */
+    public static final class C103733 extends Lambda implements Function0<Unit> {
+        public C103733() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -905,16 +909,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<Boolean, Unit> {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$4 */
+    public static final class C103744 extends Lambda implements Function1<Boolean, Unit> {
+        public C103744() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
             invoke(bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(boolean z2) {
@@ -923,16 +927,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends o implements Function1<Boolean, Unit> {
-        public AnonymousClass5() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$5 */
+    public static final class C103755 extends Lambda implements Function1<Boolean, Unit> {
+        public C103755() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
             invoke(bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(boolean z2) {
@@ -941,16 +945,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends o implements Function2<Float, Boolean, Unit> {
-        public AnonymousClass6() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$6 */
+    public static final class C103766 extends Lambda implements Function2<Float, Boolean, Unit> {
+        public C103766() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Float f, Boolean bool) {
             invoke(f.floatValue(), bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(float f, boolean z2) {
@@ -961,16 +965,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$7, reason: invalid class name */
-    public static final class AnonymousClass7 extends o implements Function0<Unit> {
-        public AnonymousClass7() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$7 */
+    public static final class C103777 extends Lambda implements Function0<Unit> {
+        public C103777() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -980,16 +984,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$8, reason: invalid class name */
-    public static final class AnonymousClass8 extends o implements Function0<Unit> {
-        public AnonymousClass8() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$8 */
+    public static final class C103788 extends Lambda implements Function0<Unit> {
+        public C103788() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -999,16 +1003,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$9, reason: invalid class name */
-    public static final class AnonymousClass9 extends o implements Function0<Unit> {
-        public AnonymousClass9() {
+    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$9 */
+    public static final class C103799 extends Lambda implements Function0<Unit> {
+        public C103799() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -1019,17 +1023,17 @@ public final class WidgetUserSheet extends AppBottomSheet {
 
     public WidgetUserSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetUserSheet$binding$2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetUserSheet$binding$2.INSTANCE, null, 2, null);
         WidgetUserSheet$viewModelUserProfileHeader$2 widgetUserSheet$viewModelUserProfileHeader$2 = new WidgetUserSheet$viewModelUserProfileHeader$2(this);
-        b.a.d.g0 g0Var = new b.a.d.g0(this);
-        this.viewModelUserProfileHeader = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(UserProfileHeaderViewModel.class), new WidgetUserSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetUserSheet$viewModelUserProfileHeader$2));
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModelUserProfileHeader = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(UserProfileHeaderViewModel.class), new WidgetUserSheet$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetUserSheet$viewModelUserProfileHeader$2));
         WidgetUserSheet$viewModel$2 widgetUserSheet$viewModel$2 = new WidgetUserSheet$viewModel$2(this);
-        b.a.d.g0 g0Var2 = new b.a.d.g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetUserSheetViewModel.class), new WidgetUserSheet$appViewModels$$inlined$viewModels$2(g0Var2), new i0(widgetUserSheet$viewModel$2));
+        AppViewModelDelegates3 appViewModelDelegates32 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetUserSheetViewModel.class), new WidgetUserSheet$appViewModels$$inlined$viewModels$2(appViewModelDelegates32), new AppViewModelDelegates5(widgetUserSheet$viewModel$2));
     }
 
     private final void acceptFriendRequest(String username) {
-        WidgetUserSheetViewModel.addRelationship$default(getViewModel(), null, username, R.string.accept_request_button_after, null, 8, null);
+        WidgetUserSheetViewModel.addRelationship$default(getViewModel(), null, username, C5419R.string.accept_request_button_after, null, 8, null);
     }
 
     public static final /* synthetic */ void access$acceptFriendRequest(WidgetUserSheet widgetUserSheet, String str) {
@@ -1073,76 +1077,76 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     private final void addFriend(String username) {
-        WidgetUserSheetViewModel.addRelationship$default(getViewModel(), null, username, R.string.friend_request_sent, null, 8, null);
+        WidgetUserSheetViewModel.addRelationship$default(getViewModel(), null, username, C5419R.string.friend_request_sent, null, 8, null);
     }
 
     private final void configureAboutMe(WidgetUserSheetViewModel.ViewState.Loaded viewState) {
         String strComputeShortName;
         List<Node<MessageRenderContext>> bioAst = viewState.getBioAst();
-        getBinding().f.setOnClickListener(new AnonymousClass1(viewState));
-        TextView textView = getBinding().e;
-        m.checkNotNullExpressionValue(textView, "binding.aboutMeHeader");
+        getBinding().f18410f.setOnClickListener(new ViewOnClickListenerC103431(viewState));
+        TextView textView = getBinding().f18409e;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.aboutMeHeader");
         textView.setVisibility(bioAst != null ? 0 : 8);
-        SimpleDraweeView simpleDraweeView = getBinding().c;
-        m.checkNotNullExpressionValue(simpleDraweeView, "binding.aboutMeGuildIcon");
+        SimpleDraweeView simpleDraweeView = getBinding().f18407c;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.aboutMeGuildIcon");
         simpleDraweeView.setVisibility(viewState.getHasGuildMemberBio() ? 0 : 8);
         String guildIconURL = viewState.getGuildIconURL();
         if (guildIconURL == null || guildIconURL.length() == 0) {
-            SimpleDraweeView simpleDraweeView2 = getBinding().c;
-            m.checkNotNullExpressionValue(simpleDraweeView2, "binding.aboutMeGuildIcon");
+            SimpleDraweeView simpleDraweeView2 = getBinding().f18407c;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.aboutMeGuildIcon");
             IconUtils.setIcon$default(simpleDraweeView2, IconUtils.DEFAULT_ICON_BLURPLE, 0, (Function1) null, (MGImages.ChangeDetector) null, 28, (Object) null);
-            TextView textView2 = getBinding().d;
-            m.checkNotNullExpressionValue(textView2, "binding.aboutMeGuildIconName");
+            TextView textView2 = getBinding().f18408d;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.aboutMeGuildIconName");
             textView2.setVisibility(0);
-            TextView textView3 = getBinding().d;
-            m.checkNotNullExpressionValue(textView3, "binding.aboutMeGuildIconName");
+            TextView textView3 = getBinding().f18408d;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.aboutMeGuildIconName");
             String guildName = viewState.getGuildName();
-            if (guildName == null || (strComputeShortName = GuildUtilsKt.computeShortName(guildName)) == null) {
+            if (guildName == null || (strComputeShortName = GuildUtils.computeShortName(guildName)) == null) {
                 strComputeShortName = "";
             }
             textView3.setText(strComputeShortName);
         } else {
-            SimpleDraweeView simpleDraweeView3 = getBinding().c;
-            m.checkNotNullExpressionValue(simpleDraweeView3, "binding.aboutMeGuildIcon");
+            SimpleDraweeView simpleDraweeView3 = getBinding().f18407c;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "binding.aboutMeGuildIcon");
             IconUtils.setIcon$default(simpleDraweeView3, viewState.getGuildIconURL(), 0, (Function1) null, (MGImages.ChangeDetector) null, 28, (Object) null);
-            TextView textView4 = getBinding().d;
-            m.checkNotNullExpressionValue(textView4, "binding.aboutMeGuildIconName");
+            TextView textView4 = getBinding().f18408d;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.aboutMeGuildIconName");
             textView4.setVisibility(8);
         }
-        CardView cardView = getBinding().f2693b;
-        m.checkNotNullExpressionValue(cardView, "binding.aboutMeCard");
+        CardView cardView = getBinding().f18406b;
+        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.aboutMeCard");
         cardView.setVisibility(bioAst != null ? 0 : 8);
         if (bioAst != null) {
-            LinkifiedTextView linkifiedTextView = getBinding().g;
-            m.checkNotNullExpressionValue(linkifiedTextView, "binding.aboutMeText");
+            LinkifiedTextView linkifiedTextView = getBinding().f18411g;
+            Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.aboutMeText");
             Context context = linkifiedTextView.getContext();
-            m.checkNotNullExpressionValue(context, "binding.aboutMeText.context");
-            getBinding().g.setDraweeSpanStringBuilder(AstRenderer.render(viewState.getBioAst(), new MessageRenderContext(context, 0L, false, null, null, null, 0, null, null, 0, 0, new WidgetUserSheet$configureAboutMe$renderContext$1(getViewModel()), null, null, 14328, null)));
+            Intrinsics3.checkNotNullExpressionValue(context, "binding.aboutMeText.context");
+            getBinding().f18411g.setDraweeSpanStringBuilder(AstRenderer.render(viewState.getBioAst(), new MessageRenderContext(context, 0L, false, null, null, null, 0, null, null, 0, 0, new WidgetUserSheet$configureAboutMe$renderContext$1(getViewModel()), null, null, 14328, null)));
         }
     }
 
     private final void configureConnectionsSection(WidgetUserSheetViewModel.ViewState.Loaded viewState) {
         UserProfileConnectionsView.ViewState connectionsViewState = viewState.getConnectionsViewState();
-        TextView textView = getBinding().m;
-        m.checkNotNullExpressionValue(textView, "binding.userSheetConnectionsHeader");
+        TextView textView = getBinding().f18417m;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.userSheetConnectionsHeader");
         textView.setVisibility(connectionsViewState.getShowConnectionsSection() ? 0 : 8);
-        UserProfileConnectionsView userProfileConnectionsView = getBinding().n;
-        m.checkNotNullExpressionValue(userProfileConnectionsView, "binding.userSheetConnectionsView");
+        UserProfileConnectionsView userProfileConnectionsView = getBinding().f18418n;
+        Intrinsics3.checkNotNullExpressionValue(userProfileConnectionsView, "binding.userSheetConnectionsView");
         userProfileConnectionsView.setVisibility(connectionsViewState.getShowConnectionsSection() ? 0 : 8);
-        WidgetUserSheet$configureConnectionsSection$onConnectedAccountClick$1 widgetUserSheet$configureConnectionsSection$onConnectedAccountClick$1 = new WidgetUserSheet$configureConnectionsSection$onConnectedAccountClick$1(this);
+        C10344xa5617a90 c10344xa5617a90 = new C10344xa5617a90(this);
         User user = viewState.getUser();
-        getBinding().n.updateViewState(connectionsViewState, widgetUserSheet$configureConnectionsSection$onConnectedAccountClick$1, new WidgetUserSheet$configureConnectionsSection$onMutualGuildsItemClick$1(this, user), new WidgetUserSheet$configureConnectionsSection$onMutualFriendsItemClick$1(this, user));
+        getBinding().f18418n.updateViewState(connectionsViewState, c10344xa5617a90, new C10346xf08aeacd(this, user), new C10345x54a729c2(this, user));
     }
 
     private final void configureDeveloperSection(WidgetUserSheetViewModel.ViewState.Loaded viewState) {
-        TextView textView = getBinding().o;
+        TextView textView = getBinding().f18419o;
         textView.setVisibility(StoreStream.INSTANCE.getUserSettings().getIsDeveloperMode() ? 0 : 8);
-        textView.setOnClickListener(new WidgetUserSheet$configureDeveloperSection$$inlined$apply$lambda$1(textView, this, viewState));
-        TextView textView2 = getBinding().o;
-        m.checkNotNullExpressionValue(textView2, "binding.userSheetCopyId");
+        textView.setOnClickListener(new ViewOnClickListenerC10347x347522d0(textView, this, viewState));
+        TextView textView2 = getBinding().f18419o;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.userSheetCopyId");
         boolean z2 = textView2.getVisibility() == 0;
-        TextView textView3 = getBinding().p;
-        m.checkNotNullExpressionValue(textView3, "binding.userSheetDeveloperHeader");
+        TextView textView3 = getBinding().f18420p;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.userSheetDeveloperHeader");
         textView3.setVisibility(z2 ? 0 : 8);
     }
 
@@ -1152,79 +1156,79 @@ public final class WidgetUserSheet extends AppBottomSheet {
         boolean zShouldShowRoles = viewState.shouldShowRoles();
         boolean z2 = true;
         boolean z3 = adminViewState != null && adminViewState.isAdminSectionEnabled();
-        LinearLayout linearLayout = getBinding().t;
-        m.checkNotNullExpressionValue(linearLayout, "binding.userSheetGuildContainer");
+        LinearLayout linearLayout = getBinding().f18424t;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.userSheetGuildContainer");
         if (!zShouldShowRoles && !z3) {
             z2 = false;
         }
         linearLayout.setVisibility(z2 ? 0 : 8);
-        RolesListView rolesListView = getBinding().P;
-        m.checkNotNullExpressionValue(rolesListView, "binding.userSheetRolesList");
+        RolesListView rolesListView = getBinding().f18402P;
+        Intrinsics3.checkNotNullExpressionValue(rolesListView, "binding.userSheetRolesList");
         rolesListView.setVisibility(zShouldShowRoles ? 0 : 8);
         Long guildId = viewState.getGuildId();
         if (zShouldShowRoles && guildId != null) {
-            RolesListView rolesListView2 = getBinding().P;
-            RolesListView rolesListView3 = getBinding().P;
-            m.checkNotNullExpressionValue(rolesListView3, "binding.userSheetRolesList");
-            rolesListView2.updateView(roleItems, ColorCompat.getThemedColor(rolesListView3.getContext(), R.attr.primary_300), guildId.longValue());
+            RolesListView rolesListView2 = getBinding().f18402P;
+            RolesListView rolesListView3 = getBinding().f18402P;
+            Intrinsics3.checkNotNullExpressionValue(rolesListView3, "binding.userSheetRolesList");
+            rolesListView2.updateView(roleItems, ColorCompat.getThemedColor(rolesListView3.getContext(), C5419R.attr.primary_300), guildId.longValue());
         }
         String guildSectionHeaderText = viewState.getGuildSectionHeaderText();
         if (guildSectionHeaderText != null) {
-            TextView textView = getBinding().u;
-            m.checkNotNullExpressionValue(textView, "binding.userSheetGuildHeader");
+            TextView textView = getBinding().f18425u;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.userSheetGuildHeader");
             textView.setText(guildSectionHeaderText);
         }
-        CardView cardView = getBinding().j;
-        m.checkNotNullExpressionValue(cardView, "binding.userSheetAdminCard");
+        CardView cardView = getBinding().f18414j;
+        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.userSheetAdminCard");
         cardView.setVisibility(z3 ? 0 : 8);
-        UserProfileAdminView userProfileAdminView = getBinding().k;
-        m.checkNotNullExpressionValue(userProfileAdminView, "binding.userSheetAdminView");
+        UserProfileAdminView userProfileAdminView = getBinding().f18415k;
+        Intrinsics3.checkNotNullExpressionValue(userProfileAdminView, "binding.userSheetAdminView");
         userProfileAdminView.setVisibility(z3 ? 0 : 8);
         if (adminViewState != null) {
-            getBinding().k.updateView(adminViewState);
+            getBinding().f18415k.updateView(adminViewState);
         }
     }
 
     private final void configureIncomingFriendRequest(WidgetUserSheetViewModel.ViewState.Loaded viewState) {
         boolean z2 = ModelUserRelationship.getType(Integer.valueOf(viewState.getUserRelationshipType())) == 3;
-        TextView textView = getBinding().v;
-        m.checkNotNullExpressionValue(textView, "binding.userSheetIncomingFriendRequestHeader");
+        TextView textView = getBinding().f18426v;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.userSheetIncomingFriendRequestHeader");
         textView.setVisibility(z2 ? 0 : 8);
-        LinearLayout linearLayout = getBinding().f2694s;
-        m.checkNotNullExpressionValue(linearLayout, "binding.userSheetFriendRequestIncomingContainer");
+        LinearLayout linearLayout = getBinding().f18423s;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.userSheetFriendRequestIncomingContainer");
         linearLayout.setVisibility(z2 ? 0 : 8);
-        getBinding().q.setOnClickListener(new AnonymousClass1(viewState));
-        getBinding().r.setOnClickListener(new AnonymousClass2());
+        getBinding().f18421q.setOnClickListener(new ViewOnClickListenerC103481(viewState));
+        getBinding().f18422r.setOnClickListener(new ViewOnClickListenerC103492());
     }
 
     private final void configureNote(WidgetUserSheetViewModel.ViewState.Loaded viewState) {
-        getBinding().A.setRawInputType(1);
+        getBinding().f18387A.setRawInputType(1);
         StoreUserNotes.UserNoteState userNoteFetchState = viewState.getUserNoteFetchState();
         if (userNoteFetchState instanceof StoreUserNotes.UserNoteState.Empty) {
-            TextInputLayout textInputLayout = getBinding().B;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
-            textInputLayout.setHint(getString(R.string.note_placeholder_mobile));
-            TextInputLayout textInputLayout2 = getBinding().B;
-            m.checkNotNullExpressionValue(textInputLayout2, "binding.userSheetNoteTextFieldWrap");
+            TextInputLayout textInputLayout = getBinding().f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
+            textInputLayout.setHint(getString(C5419R.string.note_placeholder_mobile));
+            TextInputLayout textInputLayout2 = getBinding().f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.userSheetNoteTextFieldWrap");
             textInputLayout2.setEnabled(true);
         } else if (userNoteFetchState instanceof StoreUserNotes.UserNoteState.Loading) {
-            TextInputLayout textInputLayout3 = getBinding().B;
-            m.checkNotNullExpressionValue(textInputLayout3, "binding.userSheetNoteTextFieldWrap");
-            textInputLayout3.setHint(getString(R.string.loading_note));
-            TextInputLayout textInputLayout4 = getBinding().B;
-            m.checkNotNullExpressionValue(textInputLayout4, "binding.userSheetNoteTextFieldWrap");
+            TextInputLayout textInputLayout3 = getBinding().f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.userSheetNoteTextFieldWrap");
+            textInputLayout3.setHint(getString(C5419R.string.loading_note));
+            TextInputLayout textInputLayout4 = getBinding().f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout4, "binding.userSheetNoteTextFieldWrap");
             textInputLayout4.setEnabled(false);
         } else if (userNoteFetchState instanceof StoreUserNotes.UserNoteState.Loaded) {
-            TextInputLayout textInputLayout5 = getBinding().B;
-            m.checkNotNullExpressionValue(textInputLayout5, "binding.userSheetNoteTextFieldWrap");
-            textInputLayout5.setHint(getString(R.string.note_placeholder_mobile));
-            TextInputLayout textInputLayout6 = getBinding().B;
-            m.checkNotNullExpressionValue(textInputLayout6, "binding.userSheetNoteTextFieldWrap");
+            TextInputLayout textInputLayout5 = getBinding().f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout5, "binding.userSheetNoteTextFieldWrap");
+            textInputLayout5.setHint(getString(C5419R.string.note_placeholder_mobile));
+            TextInputLayout textInputLayout6 = getBinding().f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout6, "binding.userSheetNoteTextFieldWrap");
             textInputLayout6.setEnabled(true);
         }
         if (viewState.getUserNote() != null) {
-            TextInputLayout textInputLayout7 = getBinding().B;
-            m.checkNotNullExpressionValue(textInputLayout7, "binding.userSheetNoteTextFieldWrap");
+            TextInputLayout textInputLayout7 = getBinding().f18388B;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout7, "binding.userSheetNoteTextFieldWrap");
             ViewExtensions.setTextIfDifferent(textInputLayout7, viewState.getUserNote());
         }
     }
@@ -1238,16 +1242,16 @@ public final class WidgetUserSheet extends AppBottomSheet {
         boolean zIsMe = viewState.isMe();
         Long currentGuildId = viewState.getCurrentGuildId();
         UserProfile userProfile = viewState.getUserProfile();
-        FrameLayout frameLayout = getBinding().G;
-        m.checkNotNullExpressionValue(frameLayout, "binding.userSheetProfileAddToServerContainer");
+        FrameLayout frameLayout = getBinding().f18393G;
+        Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.userSheetProfileAddToServerContainer");
         frameLayout.setVisibility(ApplicationUtils.INSTANCE.canInstallApplication(userProfile != null ? userProfile.getApplication() : null) ? 0 : 8);
-        getBinding().F.setOnClickListener(new AnonymousClass1(userProfile));
-        FlexboxLayout flexboxLayout = getBinding().I;
-        m.checkNotNullExpressionValue(flexboxLayout, "binding.userSheetProfileEditContainer");
+        getBinding().f18392F.setOnClickListener(new ViewOnClickListenerC103501(userProfile));
+        FlexboxLayout flexboxLayout = getBinding().f18395I;
+        Intrinsics3.checkNotNullExpressionValue(flexboxLayout, "binding.userSheetProfileEditContainer");
         flexboxLayout.setVisibility(zIsMe ? 0 : 8);
-        getBinding().H.setOnClickListener(new AnonymousClass2());
-        MaterialButton materialButton = getBinding().K;
-        m.checkNotNullExpressionValue(materialButton, "binding.userSheetProfileIdentityButton");
+        getBinding().f18394H.setOnClickListener(new ViewOnClickListenerC103512());
+        MaterialButton materialButton = getBinding().f18397K;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.userSheetProfileIdentityButton");
         if (zIsMe) {
             if ((currentGuildId != null ? currentGuildId.longValue() : 0L) > 0) {
                 z2 = true;
@@ -1256,77 +1260,77 @@ public final class WidgetUserSheet extends AppBottomSheet {
             z2 = false;
         }
         materialButton.setVisibility(z2 ? 0 : 8);
-        getBinding().K.setOnClickListener(new AnonymousClass3(currentGuildId));
+        getBinding().f18397K.setOnClickListener(new ViewOnClickListenerC103523(currentGuildId));
         boolean isBot = viewState.getUser().getIsBot();
         boolean isSystemUser = viewState.getUser().getIsSystemUser();
         int userRelationshipType = viewState.getUserRelationshipType();
         boolean z3 = (zIsMe || isSystemUser) ? false : true;
-        View view = getBinding().E;
-        m.checkNotNullExpressionValue(view, "binding.userSheetProfileActionsDivider");
+        View view = getBinding().f18391E;
+        Intrinsics3.checkNotNullExpressionValue(view, "binding.userSheetProfileActionsDivider");
         view.setVisibility(z3 ? 0 : 8);
-        LinearLayout linearLayout = getBinding().D;
-        m.checkNotNullExpressionValue(linearLayout, "binding.userSheetProfileActionsContainer");
+        LinearLayout linearLayout = getBinding().f18390D;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.userSheetProfileActionsContainer");
         linearLayout.setVisibility(z3 ? 0 : 8);
         if (z3) {
-            Button button = getBinding().f2695x;
-            m.checkNotNullExpressionValue(button, "binding.userSheetMessageActionButton");
+            Button button = getBinding().f18428x;
+            Intrinsics3.checkNotNullExpressionValue(button, "binding.userSheetMessageActionButton");
             Channel channel = viewState.getChannel();
             button.setVisibility(channel == null || channel.getType() != 1 ? 0 : 8);
-            getBinding().f2695x.setOnClickListener(new AnonymousClass4(viewState));
-            getBinding().l.setOnClickListener(new AnonymousClass5());
-            getBinding().Q.setOnClickListener(new AnonymousClass6());
+            getBinding().f18428x.setOnClickListener(new ViewOnClickListenerC103534(viewState));
+            getBinding().f18416l.setOnClickListener(new ViewOnClickListenerC103545());
+            getBinding().f18403Q.setOnClickListener(new ViewOnClickListenerC103556());
             if (userRelationshipType == 0) {
-                Button button2 = getBinding().i;
-                m.checkNotNullExpressionValue(button2, "binding.userSheetAddFriendActionButton");
+                Button button2 = getBinding().f18413i;
+                Intrinsics3.checkNotNullExpressionValue(button2, "binding.userSheetAddFriendActionButton");
                 button2.setVisibility(0);
-                Button button3 = getBinding().C;
-                m.checkNotNullExpressionValue(button3, "binding.userSheetPendingFriendRequestActionButton");
+                Button button3 = getBinding().f18389C;
+                Intrinsics3.checkNotNullExpressionValue(button3, "binding.userSheetPendingFriendRequestActionButton");
                 button3.setVisibility(8);
             } else if (userRelationshipType == 3 || userRelationshipType == 4) {
-                Button button4 = getBinding().i;
-                m.checkNotNullExpressionValue(button4, "binding.userSheetAddFriendActionButton");
+                Button button4 = getBinding().f18413i;
+                Intrinsics3.checkNotNullExpressionValue(button4, "binding.userSheetAddFriendActionButton");
                 button4.setVisibility(8);
-                Button button5 = getBinding().C;
-                m.checkNotNullExpressionValue(button5, "binding.userSheetPendingFriendRequestActionButton");
+                Button button5 = getBinding().f18389C;
+                Intrinsics3.checkNotNullExpressionValue(button5, "binding.userSheetPendingFriendRequestActionButton");
                 button5.setVisibility(0);
             } else {
-                Button button6 = getBinding().i;
-                m.checkNotNullExpressionValue(button6, "binding.userSheetAddFriendActionButton");
+                Button button6 = getBinding().f18413i;
+                Intrinsics3.checkNotNullExpressionValue(button6, "binding.userSheetAddFriendActionButton");
                 button6.setVisibility(8);
-                Button button7 = getBinding().C;
-                m.checkNotNullExpressionValue(button7, "binding.userSheetPendingFriendRequestActionButton");
+                Button button7 = getBinding().f18389C;
+                Intrinsics3.checkNotNullExpressionValue(button7, "binding.userSheetPendingFriendRequestActionButton");
                 button7.setVisibility(8);
             }
             boolean z4 = (zIsMe || isBot || userRelationshipType != 0) ? false : true;
-            Button button8 = getBinding().i;
-            m.checkNotNullExpressionValue(button8, "binding.userSheetAddFriendActionButton");
+            Button button8 = getBinding().f18413i;
+            Intrinsics3.checkNotNullExpressionValue(button8, "binding.userSheetAddFriendActionButton");
             button8.setVisibility(z4 ? 0 : 8);
-            getBinding().i.setOnClickListener(new AnonymousClass7(viewState));
-            getBinding().C.setOnClickListener(new AnonymousClass8(userRelationshipType, viewState));
+            getBinding().f18413i.setOnClickListener(new ViewOnClickListenerC103567(viewState));
+            getBinding().f18389C.setOnClickListener(new ViewOnClickListenerC103578(userRelationshipType, viewState));
         }
     }
 
     private final void configureStageActionsSection(WidgetUserSheetViewModel.ViewState.Loaded viewState) {
-        getBinding().M.updateView(viewState.getStageViewState());
-        CardView cardView = getBinding().L;
-        m.checkNotNullExpressionValue(cardView, "binding.userSheetProfileStageActionsCard");
-        UserProfileStageActionsView userProfileStageActionsView = getBinding().M;
-        m.checkNotNullExpressionValue(userProfileStageActionsView, "binding.userSheetProfileStageActionsView");
+        getBinding().f18399M.updateView(viewState.getStageViewState());
+        CardView cardView = getBinding().f18398L;
+        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.userSheetProfileStageActionsCard");
+        UserProfileStageActionsView userProfileStageActionsView = getBinding().f18399M;
+        Intrinsics3.checkNotNullExpressionValue(userProfileStageActionsView, "binding.userSheetProfileStageActionsView");
         cardView.setVisibility(userProfileStageActionsView.getVisibility() == 0 ? 0 : 8);
     }
 
     private final void configureUI(WidgetUserSheetViewModel.ViewState model) {
         if (model instanceof WidgetUserSheetViewModel.ViewState.Uninitialized) {
-            FrameLayout frameLayout = getBinding().w;
-            m.checkNotNullExpressionValue(frameLayout, "binding.userSheetLoadingContainer");
+            FrameLayout frameLayout = getBinding().f18427w;
+            Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.userSheetLoadingContainer");
             frameLayout.setVisibility(0);
             return;
         }
         if (!(model instanceof WidgetUserSheetViewModel.ViewState.Loaded)) {
             throw new NoWhenBranchMatchedException();
         }
-        FrameLayout frameLayout2 = getBinding().w;
-        m.checkNotNullExpressionValue(frameLayout2, "binding.userSheetLoadingContainer");
+        FrameLayout frameLayout2 = getBinding().f18427w;
+        Intrinsics3.checkNotNullExpressionValue(frameLayout2, "binding.userSheetLoadingContainer");
         frameLayout2.setVisibility(8);
         WidgetUserSheetViewModel.ViewState.Loaded loaded = (WidgetUserSheetViewModel.ViewState.Loaded) model;
         Presence presence = loaded.getPresence();
@@ -1334,37 +1338,37 @@ public final class WidgetUserSheet extends AppBottomSheet {
         boolean zIsMe = loaded.isMe();
         boolean isSystemUser = loaded.getUser().getIsSystemUser();
         if (!getViewModel().getOpenPopoutLogged() && loaded.getProfileLoaded()) {
-            AnalyticsTracker.INSTANCE.openUserSheet(loaded.getHasPremiumCustomization(), primaryActivity != null ? primaryActivity.getName() : null, primaryActivity != null ? ActivityUtilsKt.getGamePlatform(primaryActivity) : null, loaded.getGuildMember());
+            AnalyticsTracker.INSTANCE.openUserSheet(loaded.getHasPremiumCustomization(), primaryActivity != null ? primaryActivity.getName() : null, primaryActivity != null ? ActivityUtils.getGamePlatform(primaryActivity) : null, loaded.getGuildMember());
             getViewModel().setOpenPopoutLogged(true);
         }
-        getBinding().J.setOnBannerPress(new AnonymousClass1());
-        ImageView imageView = getBinding().f2696y;
-        m.checkNotNullExpressionValue(imageView, "binding.userSheetMoreButton");
+        getBinding().f18396J.setOnBannerPress(new C103581());
+        ImageView imageView = getBinding().f18429y;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.userSheetMoreButton");
         imageView.setVisibility((zIsMe || isSystemUser) ? false : true ? 0 : 8);
         if (loaded.getConnectionsViewState().getShowConnectionsSection()) {
-            setPeekHeightBottomView(getBinding().m);
+            setPeekHeightBottomView(getBinding().f18417m);
         }
         ViewHolderUserRichPresence.Companion companion = ViewHolderUserRichPresence.INSTANCE;
-        FrameLayout frameLayout3 = getBinding().h;
-        m.checkNotNullExpressionValue(frameLayout3, "binding.richPresenceContainer");
+        FrameLayout frameLayout3 = getBinding().f18412h;
+        Intrinsics3.checkNotNullExpressionValue(frameLayout3, "binding.richPresenceContainer");
         ViewHolderUserRichPresence richPresence = companion.setRichPresence(frameLayout3, primaryActivity, loaded.getStreamContext(), this.activityViewHolder);
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         StreamContext streamContext = loaded.getStreamContext();
         boolean zIsMe2 = loaded.isMe();
         User user = loaded.getUser();
         Context applicationContext = requireAppActivity().getApplicationContext();
-        m.checkNotNullExpressionValue(applicationContext, "requireAppActivity().applicationContext");
+        Intrinsics3.checkNotNullExpressionValue(applicationContext, "requireAppActivity().applicationContext");
         richPresence.configureUi(parentFragmentManager, streamContext, zIsMe2, user, applicationContext, loaded.getRichPresence(), loaded.getUserInSameVoiceChannel());
         richPresence.configureUiTimestamp(primaryActivity, this);
         this.activityViewHolder = richPresence;
         ViewHolderStreamRichPresence viewHolderStreamRichPresence = (ViewHolderStreamRichPresence) (richPresence instanceof ViewHolderStreamRichPresence ? richPresence : null);
         if (loaded.getStreamContext() != null && viewHolderStreamRichPresence != null) {
-            viewHolderStreamRichPresence.setOnStreamPreviewClicked(new AnonymousClass3(model));
+            viewHolderStreamRichPresence.setOnStreamPreviewClicked(new C103593(model));
         }
         ViewHolderUserRichPresence viewHolderUserRichPresence = this.activityViewHolder;
         if (viewHolderUserRichPresence != null) {
-            viewHolderUserRichPresence.setOnActivityCustomButtonClicked(new AnonymousClass4(getViewModel()));
+            viewHolderUserRichPresence.setOnActivityCustomButtonClicked(new C103604(getViewModel()));
         }
         configureProfileActionButtons(loaded);
         configureStageActionsSection(loaded);
@@ -1380,13 +1384,13 @@ public final class WidgetUserSheet extends AppBottomSheet {
     private final void configureVoiceSection(WidgetUserSheetViewModel.ViewState.Loaded viewState) {
         UserProfileVoiceSettingsView.ViewState voiceSettingsViewState = viewState.getVoiceSettingsViewState();
         boolean showVoiceSettings = viewState.getShowVoiceSettings();
-        TextView textView = getBinding().N;
-        m.checkNotNullExpressionValue(textView, "binding.userSheetProfileVoiceSettingsHeader");
+        TextView textView = getBinding().f18400N;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.userSheetProfileVoiceSettingsHeader");
         textView.setVisibility(showVoiceSettings ? 0 : 8);
-        CardView cardView = getBinding().R;
-        m.checkNotNullExpressionValue(cardView, "binding.voiceSettingsViewCard");
+        CardView cardView = getBinding().f18404R;
+        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.voiceSettingsViewCard");
         cardView.setVisibility(showVoiceSettings ? 0 : 8);
-        getBinding().O.updateView(voiceSettingsViewState);
+        getBinding().f18401O.updateView(voiceSettingsViewState);
     }
 
     private final WidgetUserSheetBinding getBinding() {
@@ -1410,11 +1414,11 @@ public final class WidgetUserSheet extends AppBottomSheet {
         long userId = event.getUserId();
         long guildId = event.getGuildId();
         WidgetUserSheetBinding binding = getBinding();
-        m.checkNotNullExpressionValue(binding, "binding");
-        NestedScrollView nestedScrollView = binding.a;
-        m.checkNotNullExpressionValue(nestedScrollView, "binding.root");
+        Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+        NestedScrollView nestedScrollView = binding.f18405a;
+        Intrinsics3.checkNotNullExpressionValue(nestedScrollView, "binding.root");
         Context context = nestedScrollView.getContext();
-        m.checkNotNullExpressionValue(context, "binding.root.context");
+        Intrinsics3.checkNotNullExpressionValue(context, "binding.root.context");
         companion.launch(userId, guildId, context);
     }
 
@@ -1427,7 +1431,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
         long userId = event.getUserId();
         long guildId = event.getGuildId();
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         companion.launch(userId, guildId, parentFragmentManager);
     }
 
@@ -1481,7 +1485,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return;
         }
         if (event instanceof WidgetUserSheetViewModel.Event.UserNotFound) {
-            b.a.d.m.i(this, R.string.user_profile_failure_to_open_message, 0, 4);
+            AppToast.m171i(this, C5419R.string.user_profile_failure_to_open_message, 0, 4);
             handleDismissSheet();
         } else {
             if (!(event instanceof WidgetUserSheetViewModel.Event.DismissSheet)) {
@@ -1497,7 +1501,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
         long guildId = event.getGuildId();
         long userId = event.getUserId();
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         companion.launch(username, guildId, userId, parentFragmentManager);
     }
 
@@ -1506,18 +1510,18 @@ public final class WidgetUserSheet extends AppBottomSheet {
         long guildId = event.getGuildId();
         long userId = event.getUserId();
         WidgetUserSheetBinding binding = getBinding();
-        m.checkNotNullExpressionValue(binding, "binding");
-        NestedScrollView nestedScrollView = binding.a;
-        m.checkNotNullExpressionValue(nestedScrollView, "binding.root");
+        Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+        NestedScrollView nestedScrollView = binding.f18405a;
+        Intrinsics3.checkNotNullExpressionValue(nestedScrollView, "binding.root");
         Context context = nestedScrollView.getContext();
-        m.checkNotNullExpressionValue(context, "binding.root.context");
+        Intrinsics3.checkNotNullExpressionValue(context, "binding.root.context");
         companion.launch(guildId, userId, context);
     }
 
     private final void handleLaunchSpectate(WidgetUserSheetViewModel.Event.LaunchSpectate event) {
         WidgetCallFullscreen.Companion companion = WidgetCallFullscreen.INSTANCE;
         Context contextRequireContext = requireContext();
-        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         WidgetCallFullscreen.Companion.launch$default(companion, contextRequireContext, event.getStream().getChannelId(), false, event.getStream().getEncodedStreamKey(), null, 20, null);
         dismiss();
     }
@@ -1525,7 +1529,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
     private final void handleLaunchVideoCall(WidgetUserSheetViewModel.Event.LaunchVideoCall event) {
         PrivateCallLauncher privateCallLauncher = this.privateCallLauncher;
         if (privateCallLauncher == null) {
-            m.throwUninitializedPropertyAccessException("privateCallLauncher");
+            Intrinsics3.throwUninitializedPropertyAccessException("privateCallLauncher");
         }
         privateCallLauncher.launchVideoCall(event.getChannelId());
     }
@@ -1533,7 +1537,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
     private final void handleLaunchVoiceCall(WidgetUserSheetViewModel.Event.LaunchVoiceCall event) {
         PrivateCallLauncher privateCallLauncher = this.privateCallLauncher;
         if (privateCallLauncher == null) {
-            m.throwUninitializedPropertyAccessException("privateCallLauncher");
+            Intrinsics3.throwUninitializedPropertyAccessException("privateCallLauncher");
         }
         privateCallLauncher.launchVoiceCall(event.getChannelId());
     }
@@ -1543,19 +1547,19 @@ public final class WidgetUserSheet extends AppBottomSheet {
     }
 
     private final void handleRequestPermissionsForSpectateStream(WidgetUserSheetViewModel.Event.RequestPermissionsForSpectateStream event) {
-        d.S1(this, null, new AnonymousClass1(event), 1, null);
+        AnimatableValueParser.m473S1(this, null, new C103611(event), 1, null);
     }
 
     private final void handleShowFriendRequestErrorToast(WidgetUserSheetViewModel.Event.ShowFriendRequestErrorToast event) {
-        b.a.d.m.j(this, RestAPIAbortMessages.ResponseResolver.INSTANCE.getRelationshipResponse(getContext(), event.getAbortCode(), event.getUsername()), 0, 4);
+        AppToast.m172j(this, RestAPIAbortMessages.ResponseResolver.INSTANCE.getRelationshipResponse(getContext(), event.getAbortCode(), event.getUsername()), 0, 4);
     }
 
     private final void handleShowToast(WidgetUserSheetViewModel.Event.ShowToast event) {
-        b.a.d.m.i(this, event.getStringRes(), 0, 4);
+        AppToast.m171i(this, event.getStringRes(), 0, 4);
     }
 
     private final void ignoreFriendRequest() {
-        getViewModel().removeRelationship(R.string.friend_request_ignored);
+        getViewModel().removeRelationship(C5419R.string.friend_request_ignored);
     }
 
     private final void onStreamPreviewClicked(StreamContext streamContext) {
@@ -1588,27 +1592,27 @@ public final class WidgetUserSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public void bindSubscriptions(CompositeSubscription compositeSubscription) {
-        m.checkNotNullParameter(compositeSubscription, "compositeSubscription");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetUserSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetUserSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(compositeSubscription, "compositeSubscription");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetUserSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C103411(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetUserSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C103422(this), 62, (Object) null);
         UserProfileHeaderView.Companion companion = UserProfileHeaderView.INSTANCE;
-        UserProfileHeaderView userProfileHeaderView = getBinding().J;
-        m.checkNotNullExpressionValue(userProfileHeaderView, "binding.userSheetProfileHeaderView");
+        UserProfileHeaderView userProfileHeaderView = getBinding().f18396J;
+        Intrinsics3.checkNotNullExpressionValue(userProfileHeaderView, "binding.userSheetProfileHeaderView");
         companion.bind(userProfileHeaderView, this, getViewModelUserProfileHeader().observeViewState());
     }
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_user_sheet;
+        return C5419R.layout.widget_user_sheet;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        m.checkNotNullParameter(inflater, "inflater");
+        Intrinsics3.checkNotNullParameter(inflater, "inflater");
         Context contextRequireContext = requireContext();
-        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         this.privateCallLauncher = new PrivateCallLauncher(this, this, contextRequireContext, parentFragmentManager);
         return super.onCreateView(inflater, container, savedInstanceState);
     }
@@ -1624,11 +1628,11 @@ public final class WidgetUserSheet extends AppBottomSheet {
         if (j > 0 && j2 > 0) {
             StoreStream.INSTANCE.getGuildSubscriptions().unsubscribeUser(j2, j);
         }
-        hideKeyboard(getBinding().B);
+        hideKeyboard(getBinding().f18388B);
         WidgetUserSheetViewModel viewModel = getViewModel();
         Context context = getContext();
-        TextInputLayout textInputLayout = getBinding().B;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
+        TextInputLayout textInputLayout = getBinding().f18388B;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
         viewModel.saveUserNote(context, ViewExtensions.getTextOrEmpty(textInputLayout));
         super.onPause();
     }
@@ -1647,43 +1651,43 @@ public final class WidgetUserSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         long j = getArgumentsOrDefault().getLong(ARG_USER_ID);
         boolean z2 = j == StoreStream.INSTANCE.getUsers().getMeSnapshot().getId();
-        getBinding().f2696y.setOnClickListener(new AnonymousClass1(j));
-        UserProfileHeaderView userProfileHeaderView = getBinding().J;
+        getBinding().f18429y.setOnClickListener(new ViewOnClickListenerC103621(j));
+        UserProfileHeaderView userProfileHeaderView = getBinding().f18396J;
         Badge.Companion companion = Badge.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         Context contextRequireContext = requireContext();
-        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         userProfileHeaderView.setOnBadgeClick(companion.onBadgeClick(parentFragmentManager, contextRequireContext));
-        getBinding().M.setOnInviteToSpeak(new AnonymousClass2(z2));
-        getBinding().M.setOnMoveToAudience(new AnonymousClass3());
-        getBinding().O.setOnMuteChecked(new AnonymousClass4());
-        getBinding().O.setOnDeafenChecked(new AnonymousClass5());
-        getBinding().O.setOnVolumeChange(new AnonymousClass6());
-        getBinding().k.setOnEditMember(new AnonymousClass7());
-        getBinding().k.setOnKick(new AnonymousClass8());
-        getBinding().k.setOnBan(new AnonymousClass9());
-        getBinding().k.setOnDisableCommunication(new AnonymousClass10());
-        getBinding().k.setOnServerMute(new AnonymousClass11());
-        getBinding().k.setOnServerDeafen(new AnonymousClass12());
-        getBinding().k.setOnServerMove(new AnonymousClass13());
-        getBinding().k.setOnDisconnect(new AnonymousClass14());
-        TextInputLayout textInputLayout = getBinding().B;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
-        ViewExtensions.setOnEditTextFocusChangeListener(textInputLayout, new AnonymousClass15());
-        TextInputLayout textInputLayout2 = getBinding().B;
-        m.checkNotNullExpressionValue(textInputLayout2, "binding.userSheetNoteTextFieldWrap");
-        ViewExtensions.setOnImeActionDone$default(textInputLayout2, false, new AnonymousClass16(view), 1, null);
-        ViewCompat.setAccessibilityDelegate(getBinding().f2696y, new AnonymousClass17());
-        for (TextView textView : n.listOf((Object[]) new TextView[]{getBinding().m, getBinding().u, getBinding().f2697z, getBinding().p, getBinding().v, getBinding().N})) {
+        getBinding().f18399M.setOnInviteToSpeak(new C103722(z2));
+        getBinding().f18399M.setOnMoveToAudience(new C103733());
+        getBinding().f18401O.setOnMuteChecked(new C103744());
+        getBinding().f18401O.setOnDeafenChecked(new C103755());
+        getBinding().f18401O.setOnVolumeChange(new C103766());
+        getBinding().f18415k.setOnEditMember(new C103777());
+        getBinding().f18415k.setOnKick(new C103788());
+        getBinding().f18415k.setOnBan(new C103799());
+        getBinding().f18415k.setOnDisableCommunication(new C1036310());
+        getBinding().f18415k.setOnServerMute(new C1036411());
+        getBinding().f18415k.setOnServerDeafen(new C1036512());
+        getBinding().f18415k.setOnServerMove(new C1036613());
+        getBinding().f18415k.setOnDisconnect(new C1036714());
+        TextInputLayout textInputLayout = getBinding().f18388B;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.userSheetNoteTextFieldWrap");
+        ViewExtensions.setOnEditTextFocusChangeListener(textInputLayout, new ViewOnFocusChangeListenerC1036815());
+        TextInputLayout textInputLayout2 = getBinding().f18388B;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.userSheetNoteTextFieldWrap");
+        ViewExtensions.setOnImeActionDone$default(textInputLayout2, false, new C1036916(view), 1, null);
+        ViewCompat.setAccessibilityDelegate(getBinding().f18429y, new C1037017());
+        for (TextView textView : Collections2.listOf((Object[]) new TextView[]{getBinding().f18417m, getBinding().f18425u, getBinding().f18430z, getBinding().f18420p, getBinding().f18426v, getBinding().f18400N})) {
             AccessibilityUtils accessibilityUtils = AccessibilityUtils.INSTANCE;
-            m.checkNotNullExpressionValue(textView, "header");
+            Intrinsics3.checkNotNullExpressionValue(textView, "header");
             accessibilityUtils.setViewIsHeading(textView);
         }
-        WidgetChannelSelector.Companion.registerForResult$default(WidgetChannelSelector.INSTANCE, this, REQUEST_KEY_MOVE_USER, false, new AnonymousClass18(), 4, null);
+        WidgetChannelSelector.Companion.registerForResult$default(WidgetChannelSelector.INSTANCE, this, REQUEST_KEY_MOVE_USER, false, new C1037118(), 4, null);
     }
 }

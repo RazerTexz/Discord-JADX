@@ -1,6 +1,5 @@
 package com.discord.widgets.chat.list.entries;
 
-import b.a.d.m0.a;
 import com.discord.api.application.Application;
 import com.discord.api.channel.Channel;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
@@ -23,16 +22,11 @@ import com.discord.utilities.embed.InviteEmbedModel;
 import com.discord.utilities.guilds.RoleUtils;
 import com.discord.utilities.message.MessageUtils;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
-import com.discord.widgets.botuikit.BotComponentExperiments;
 import com.discord.widgets.botuikit.ComponentChatListState;
+import com.discord.widgets.botuikit.ComponentExperiments2;
 import com.discord.widgets.botuikit.ComponentStateMapper;
-import com.discord.widgets.chat.AutocompleteSelectionTypes;
-import com.discord.widgets.chat.AutocompleteTypes;
-import d0.g0.s;
-import d0.t.h0;
-import d0.t.n;
-import d0.t.o;
-import d0.z.d.m;
+import com.discord.widgets.chat.AutocompleteUtils;
+import com.discord.widgets.chat.AutocompleteUtils2;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -42,6 +36,13 @@ import java.util.List;
 import java.util.Map;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.text.MatchResult;
+import p007b.p008a.p018d.p019m0.RoutingPatterns;
+import p507d0.p579g0.StringNumberConversions;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChatListEntry.kt */
 /* loaded from: classes2.dex */
@@ -106,22 +107,22 @@ public abstract class ChatListEntry implements MGRecyclerDataPayload {
                 ModelInvite modelInviteResolveInviteForGuildScheduledEvent = inviteEmbedModel.resolveInviteForGuildScheduledEvent(inviteCode, eventId);
                 if ((modelInviteResolveInviteForGuildScheduledEvent != null ? modelInviteResolveInviteForGuildScheduledEvent.getGuildScheduledEvent() : null) != null) {
                     GuildScheduledEvent guildScheduledEvent = modelInviteResolveInviteForGuildScheduledEvent.getGuildScheduledEvent();
-                    m.checkNotNull(guildScheduledEvent);
-                    m.checkNotNullExpressionValue(guildScheduledEvent, "eventInvite.guildScheduledEvent!!");
+                    Intrinsics3.checkNotNull(guildScheduledEvent);
+                    Intrinsics3.checkNotNullExpressionValue(guildScheduledEvent, "eventInvite.guildScheduledEvent!!");
                     return new GuildScheduledEventInviteEntry(modelInviteResolveInviteForGuildScheduledEvent, inviteCode, guildScheduledEvent);
                 }
             }
             ModelInvite modelInviteResolveInviteCodeForPublicStage = inviteEmbedModel.resolveInviteCodeForPublicStage(inviteCode);
             if (modelInviteResolveInviteCodeForPublicStage != null) {
                 User author = message.getAuthor();
-                m.checkNotNull(author);
+                Intrinsics3.checkNotNull(author);
                 long id2 = author.getId();
                 long id3 = message.getId();
                 Long guildId = message.getGuildId();
                 return new StageInviteEntry(id2, id3, inviteCode, modelInviteResolveInviteCodeForPublicStage, guildId != null ? guildId.longValue() : 0L);
             }
             User author2 = message.getAuthor();
-            m.checkNotNull(author2);
+            Intrinsics3.checkNotNull(author2);
             long id4 = author2.getId();
             long id5 = message.getId();
             Long guildId2 = message.getGuildId();
@@ -130,31 +131,31 @@ public abstract class ChatListEntry implements MGRecyclerDataPayload {
 
         public final Collection<ChatListEntry> createBotComponentEntries(Message message, long guildId, ComponentChatListState.ComponentStoreState componentStoreState, boolean animateEmojis) {
             long id2;
-            m.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(message, "message");
             if (message.getComponents() == null || !(!r0.isEmpty())) {
-                return n.emptyList();
+                return Collections2.emptyList();
             }
-            List<MessageComponent> listProcessComponentsToMessageComponents = ComponentStateMapper.INSTANCE.processComponentsToMessageComponents(message.getComponents(), componentStoreState, BotComponentExperiments.INSTANCE.get(StoreStream.INSTANCE.getExperiments()), animateEmojis);
+            List<MessageComponent> listProcessComponentsToMessageComponents = ComponentStateMapper.INSTANCE.processComponentsToMessageComponents(message.getComponents(), componentStoreState, ComponentExperiments2.INSTANCE.get(StoreStream.INSTANCE.getExperiments()), animateEmojis);
             Long applicationId = message.getApplicationId();
             if (applicationId != null) {
                 id2 = applicationId.longValue();
             } else {
                 User author = message.getAuthor();
-                m.checkNotNull(author);
+                Intrinsics3.checkNotNull(author);
                 id2 = author.getId();
             }
-            return d0.t.m.listOf(new BotUiComponentEntry(message, id2, Long.valueOf(guildId), listProcessComponentsToMessageComponents));
+            return CollectionsJVM.listOf(new BotUiComponentEntry(message, id2, Long.valueOf(guildId), listProcessComponentsToMessageComponents));
         }
 
         public final List<ChatListEntry> createEmbedEntries(Message message, StoreMessageState.State messageState, boolean blockedChunkExpanded, boolean allowAnimatedEmojis, boolean autoPlayGifs, boolean renderEmbeds, boolean isThreadStarterMessage, Channel channel, GuildMember author, Map<Long, GuildRole> roles, Map<Long, String> nickOrUsernames) {
             int i;
             int i2;
             Integer type;
-            m.checkNotNullParameter(message, "message");
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(nickOrUsernames, "nickOrUsernames");
+            Intrinsics3.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(nickOrUsernames, "nickOrUsernames");
             if (!message.hasAttachments() && (!message.hasEmbeds() || !renderEmbeds)) {
-                return n.emptyList();
+                return Collections2.emptyList();
             }
             HashSet hashSet = new HashSet();
             ArrayList<MessageEmbed> arrayList = new ArrayList();
@@ -200,104 +201,104 @@ public abstract class ChatListEntry implements MGRecyclerDataPayload {
         }
 
         public final List<ChatListEntry> createGameInviteEntries(Message message) {
-            m.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(message, "message");
             Application application = message.getApplication();
             MessageActivity activity = message.getActivity();
             if (application == null || activity == null) {
-                return n.emptyList();
+                return Collections2.emptyList();
             }
             User author = message.getAuthor();
-            m.checkNotNull(author);
-            return d0.t.m.listOf(new GameInviteEntry(author.getId(), message.getId(), activity, application));
+            Intrinsics3.checkNotNull(author);
+            return CollectionsJVM.listOf(new GameInviteEntry(author.getId(), message.getId(), activity, application));
         }
 
         public final Collection<ChatListEntry> createGiftEntries(Message message) {
-            m.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(message, "message");
             String content = message.getContent();
             if (content == null || content.length() == 0) {
-                return n.emptyList();
+                return Collections2.emptyList();
             }
             HashMap map = new HashMap();
-            Iterator<MatchResult> it = a.r.findAll(content, 0).iterator();
+            Iterator<MatchResult> it = RoutingPatterns.f556r.findAll(content, 0).iterator();
             while (it.hasNext()) {
                 List<String> groupValues = it.next().getGroupValues();
                 if (!groupValues.isEmpty()) {
                     String str = groupValues.get(groupValues.size() - 1);
                     User author = message.getAuthor();
-                    m.checkNotNull(author);
+                    Intrinsics3.checkNotNull(author);
                     map.put(str, new GiftEntry(author.getId(), message.getId(), message.getChannelId(), str));
                 }
             }
             Collection<ChatListEntry> collectionValues = map.values();
-            m.checkNotNullExpressionValue(collectionValues, "entries.values");
+            Intrinsics3.checkNotNullExpressionValue(collectionValues, "entries.values");
             return collectionValues;
         }
 
         public final Collection<ChatListEntry> createGuildTemplateEntries(Message message) {
-            m.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(message, "message");
             String content = message.getContent();
             if (content != null) {
                 if (!(content.length() == 0)) {
                     HashMap map = new HashMap();
-                    Iterator<MatchResult> it = a.q.findAll(content, 0).iterator();
+                    Iterator<MatchResult> it = RoutingPatterns.f555q.findAll(content, 0).iterator();
                     while (it.hasNext()) {
                         List<String> groupValues = it.next().getGroupValues();
                         if (!groupValues.isEmpty()) {
                             String str = groupValues.get(groupValues.size() - 1);
                             User author = message.getAuthor();
-                            m.checkNotNull(author);
+                            Intrinsics3.checkNotNull(author);
                             map.put(str, new GuildTemplateEntry(author.getId(), message.getId(), str));
                         }
                     }
                     Collection<ChatListEntry> collectionValues = map.values();
-                    m.checkNotNullExpressionValue(collectionValues, "entries.values");
+                    Intrinsics3.checkNotNullExpressionValue(collectionValues, "entries.values");
                     return collectionValues;
                 }
             }
-            return n.emptyList();
+            return Collections2.emptyList();
         }
 
         public final Collection<ChatListEntry> createInviteEntries(Message message, InviteEmbedModel inviteEmbedModel) {
-            m.checkNotNullParameter(message, "message");
-            m.checkNotNullParameter(inviteEmbedModel, "inviteEmbedModel");
+            Intrinsics3.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(inviteEmbedModel, "inviteEmbedModel");
             String content = message.getContent();
             if (content == null || content.length() == 0) {
-                return n.emptyList();
+                return Collections2.emptyList();
             }
             HashMap map = new HashMap();
-            Iterator<MatchResult> it = a.o.findAll(content, 0).iterator();
+            Iterator<MatchResult> it = RoutingPatterns.f553o.findAll(content, 0).iterator();
             while (it.hasNext()) {
                 List<String> groupValues = it.next().getGroupValues();
                 if (groupValues.size() == 3) {
                     String str = groupValues.get(1);
-                    Long longOrNull = s.toLongOrNull(groupValues.get(2));
+                    Long longOrNull = StringNumberConversions.toLongOrNull(groupValues.get(2));
                     map.put(str, createEntryForInvite(message, str, longOrNull != null ? String.valueOf(longOrNull.longValue()) : null, inviteEmbedModel));
                 }
             }
             Collection<ChatListEntry> collectionValues = map.values();
-            m.checkNotNullExpressionValue(collectionValues, "entries.values");
+            Intrinsics3.checkNotNullExpressionValue(collectionValues, "entries.values");
             return collectionValues;
         }
 
         public final List<ChatListEntry> createSpotifyListenTogetherEntries(Message message) {
-            m.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(message, "message");
             MessageActivity activity = message.getActivity();
             if (activity == null || !message.isSpotifyListeningActivity()) {
-                return n.emptyList();
+                return Collections2.emptyList();
             }
             User author = message.getAuthor();
-            m.checkNotNull(author);
-            return d0.t.m.listOf(new SpotifyListenTogetherEntry(author.getId(), message.getId(), activity));
+            Intrinsics3.checkNotNull(author);
+            return CollectionsJVM.listOf(new SpotifyListenTogetherEntry(author.getId(), message.getId(), activity));
         }
 
         public final List<ChatListEntry> createStickerEntries(Message message) {
             ArrayList arrayList;
-            m.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(message, "message");
             List<StickerPartial> stickerItems = message.getStickerItems();
             if (stickerItems == null || stickerItems.isEmpty()) {
                 List<Sticker> stickers = message.getStickers();
                 if (stickers != null) {
-                    arrayList = new ArrayList(o.collectionSizeOrDefault(stickers, 10));
+                    arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(stickers, 10));
                     Iterator<T> it = stickers.iterator();
                     while (it.hasNext()) {
                         arrayList.add(new StickerEntry(message, (Sticker) it.next()));
@@ -307,13 +308,13 @@ public abstract class ChatListEntry implements MGRecyclerDataPayload {
                 }
             } else {
                 List<StickerPartial> stickerItems2 = message.getStickerItems();
-                arrayList = new ArrayList(o.collectionSizeOrDefault(stickerItems2, 10));
+                arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(stickerItems2, 10));
                 Iterator<T> it2 = stickerItems2.iterator();
                 while (it2.hasNext()) {
                     arrayList.add(new StickerEntry(message, (StickerPartial) it2.next()));
                 }
             }
-            return arrayList != null ? arrayList : n.emptyList();
+            return arrayList != null ? arrayList : Collections2.emptyList();
         }
 
         public final Collection<ChatListEntry> createThreadEmbedEntries(Channel channel, Map<Long, GuildMember> channelMembers, Message message, Channel thread, StoreThreadMessages.ThreadState threadEmbedMetadata, Map<Long, GuildRole> guildRoles, boolean animateEmojis, boolean renderEmbeds) {
@@ -322,26 +323,26 @@ public abstract class ChatListEntry implements MGRecyclerDataPayload {
             User author;
             Message mostRecentMessage2;
             Message mostRecentMessage3;
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(channelMembers, "channelMembers");
-            m.checkNotNullParameter(message, "message");
-            m.checkNotNullParameter(thread, "thread");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(channelMembers, "channelMembers");
+            Intrinsics3.checkNotNullParameter(message, "message");
+            Intrinsics3.checkNotNullParameter(thread, "thread");
             if (!renderEmbeds) {
-                return n.emptyList();
+                return Collections2.emptyList();
             }
             long id2 = message.getId();
             int count = threadEmbedMetadata != null ? threadEmbedMetadata.getCount() : 0;
             Long lValueOf = null;
             Message mostRecentMessage4 = threadEmbedMetadata != null ? threadEmbedMetadata.getMostRecentMessage() : null;
             Map<Long, GuildRole> map = RoleUtils.containsRoleMentions((threadEmbedMetadata == null || (mostRecentMessage3 = threadEmbedMetadata.getMostRecentMessage()) == null) ? null : mostRecentMessage3.getContent()) ? guildRoles : null;
-            if (threadEmbedMetadata == null || (mostRecentMessage2 = threadEmbedMetadata.getMostRecentMessage()) == null || (mapEmptyMap = MessageUtils.getNickOrUsernames(mostRecentMessage2, channel, channelMembers, channel.q())) == null) {
-                mapEmptyMap = h0.emptyMap();
+            if (threadEmbedMetadata == null || (mostRecentMessage2 = threadEmbedMetadata.getMostRecentMessage()) == null || (mapEmptyMap = MessageUtils.getNickOrUsernames(mostRecentMessage2, channel, channelMembers, channel.m7650q())) == null) {
+                mapEmptyMap = Maps6.emptyMap();
             }
             Map<Long, String> map2 = mapEmptyMap;
             if (threadEmbedMetadata != null && (mostRecentMessage = threadEmbedMetadata.getMostRecentMessage()) != null && (author = mostRecentMessage.getAuthor()) != null) {
                 lValueOf = Long.valueOf(author.getId());
             }
-            return d0.t.m.listOf(new ThreadEmbedEntry(id2, thread, count, mostRecentMessage4, map, map2, animateEmojis, channelMembers.get(lValueOf), message));
+            return CollectionsJVM.listOf(new ThreadEmbedEntry(id2, thread, count, mostRecentMessage4, map, map2, animateEmojis, channelMembers.get(lValueOf), message));
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {

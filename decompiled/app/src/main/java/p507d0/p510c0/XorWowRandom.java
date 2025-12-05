@@ -1,0 +1,81 @@
+package p507d0.p510c0;
+
+import java.io.Serializable;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* compiled from: XorWowRandom.kt */
+/* renamed from: d0.c0.e, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class XorWowRandom extends Random implements Serializable {
+
+    @Deprecated
+    private static final long serialVersionUID = 0;
+    private int addend;
+
+    /* renamed from: v */
+    private int f22274v;
+
+    /* renamed from: w */
+    private int f22275w;
+
+    /* renamed from: x */
+    private int f22276x;
+
+    /* renamed from: y */
+    private int f22277y;
+
+    /* renamed from: z */
+    private int f22278z;
+
+    /* compiled from: XorWowRandom.kt */
+    /* renamed from: d0.c0.e$a */
+    public static final class a {
+        public a(DefaultConstructorMarker defaultConstructorMarker) {
+        }
+    }
+
+    static {
+        new a(null);
+    }
+
+    public XorWowRandom(int i, int i2, int i3, int i4, int i5, int i6) {
+        this.f22276x = i;
+        this.f22277y = i2;
+        this.f22278z = i3;
+        this.f22275w = i4;
+        this.f22274v = i5;
+        this.addend = i6;
+        int i7 = i | i2 | i3 | i4 | i5;
+        if (!(i7 != 0)) {
+            throw new IllegalArgumentException("Initial state must have at least one non-zero element.".toString());
+        }
+        for (int i8 = 0; i8 < 64; i8++) {
+            nextInt();
+        }
+    }
+
+    @Override // p507d0.p510c0.Random
+    public int nextBits(int i) {
+        return Random2.takeUpperBits(nextInt(), i);
+    }
+
+    @Override // p507d0.p510c0.Random
+    public int nextInt() {
+        int i = this.f22276x;
+        int i2 = i ^ (i >>> 2);
+        this.f22276x = this.f22277y;
+        this.f22277y = this.f22278z;
+        this.f22278z = this.f22275w;
+        int i3 = this.f22274v;
+        this.f22275w = i3;
+        int i4 = ((i2 ^ (i2 << 1)) ^ i3) ^ (i3 << 4);
+        this.f22274v = i4;
+        int i5 = this.addend + 362437;
+        this.addend = i5;
+        return i4 + i5;
+    }
+
+    public XorWowRandom(int i, int i2) {
+        this(i, i2, 0, 0, ~i, (i << 10) ^ (i2 >>> 4));
+    }
+}

@@ -52,9 +52,9 @@ public class AnimationHandler {
         public long mLastFrameTime;
         private final Runnable mRunnable;
 
-        /* renamed from: androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider14$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
-            public AnonymousClass1() {
+        /* renamed from: androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider14$1 */
+        public class RunnableC03241 implements Runnable {
+            public RunnableC03241() {
             }
 
             @Override // java.lang.Runnable
@@ -67,7 +67,7 @@ public class AnimationHandler {
         public FrameCallbackProvider14(AnimationCallbackDispatcher animationCallbackDispatcher) {
             super(animationCallbackDispatcher);
             this.mLastFrameTime = -1L;
-            this.mRunnable = new AnonymousClass1();
+            this.mRunnable = new RunnableC03241();
             this.mHandler = new Handler(Looper.myLooper());
         }
 
@@ -82,9 +82,9 @@ public class AnimationHandler {
         private final Choreographer mChoreographer;
         private final Choreographer.FrameCallback mChoreographerCallback;
 
-        /* renamed from: androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider16$1, reason: invalid class name */
-        public class AnonymousClass1 implements Choreographer.FrameCallback {
-            public AnonymousClass1() {
+        /* renamed from: androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider16$1 */
+        public class ChoreographerFrameCallbackC03251 implements Choreographer.FrameCallback {
+            public ChoreographerFrameCallbackC03251() {
             }
 
             @Override // android.view.Choreographer.FrameCallback
@@ -96,7 +96,7 @@ public class AnimationHandler {
         public FrameCallbackProvider16(AnimationCallbackDispatcher animationCallbackDispatcher) {
             super(animationCallbackDispatcher);
             this.mChoreographer = Choreographer.getInstance();
-            this.mChoreographerCallback = new AnonymousClass1();
+            this.mChoreographerCallback = new ChoreographerFrameCallbackC03251();
         }
 
         @Override // androidx.dynamicanimation.animation.AnimationHandler.AnimationFrameCallbackProvider

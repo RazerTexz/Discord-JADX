@@ -2,9 +2,9 @@ package com.discord.utilities.press;
 
 import android.view.MotionEvent;
 import android.view.View;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: OnPressListener.kt */
 /* loaded from: classes2.dex */
@@ -13,11 +13,11 @@ public final class OnPressListener implements View.OnTouchListener {
     private boolean pressed;
 
     /* compiled from: OnPressListener.kt */
-    /* renamed from: com.discord.utilities.press.OnPressListener$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements OnPress {
+    /* renamed from: com.discord.utilities.press.OnPressListener$1 */
+    public static final class C68421 implements OnPress {
         public final /* synthetic */ Function1 $onPress;
 
-        public AnonymousClass1(Function1 function1) {
+        public C68421(Function1 function1) {
             this.$onPress = function1;
         }
 
@@ -33,7 +33,7 @@ public final class OnPressListener implements View.OnTouchListener {
     }
 
     public OnPressListener(OnPress onPress) {
-        m.checkNotNullParameter(onPress, "onPress");
+        Intrinsics3.checkNotNullParameter(onPress, "onPress");
         this.onPress = onPress;
     }
 
@@ -55,8 +55,8 @@ public final class OnPressListener implements View.OnTouchListener {
     @Override // android.view.View.OnTouchListener
     public boolean onTouch(View view, MotionEvent event) {
         boolean zBooleanValue;
-        m.checkNotNullParameter(view, "view");
-        m.checkNotNullParameter(event, "event");
+        Intrinsics3.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(event, "event");
         Boolean boolIsPressed = isPressed(event);
         if (boolIsPressed == null || this.pressed == (zBooleanValue = boolIsPressed.booleanValue())) {
             return false;
@@ -68,7 +68,7 @@ public final class OnPressListener implements View.OnTouchListener {
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public OnPressListener(Function1<? super Boolean, Unit> function1) {
-        this(new AnonymousClass1(function1));
-        m.checkNotNullParameter(function1, "onPress");
+        this(new C68421(function1));
+        Intrinsics3.checkNotNullParameter(function1, "onPress");
     }
 }

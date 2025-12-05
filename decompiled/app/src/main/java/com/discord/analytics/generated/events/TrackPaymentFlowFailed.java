@@ -1,24 +1,24 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackPaymentMetadata;
-import com.discord.analytics.generated.traits.TrackPaymentMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackPaymentMetadata2;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackSourceMetadata2;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.analytics.generated.traits.TrackSubscriptionMetadata;
-import com.discord.analytics.generated.traits.TrackSubscriptionMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackSubscriptionMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPaymentFlowFailed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPaymentFlowFailed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackStoreSkuMetadataReceiver, TrackSubscriptionMetadataReceiver, TrackPaymentMetadataReceiver, TrackSourceMetadataReceiver {
+public final /* data */ class TrackPaymentFlowFailed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackStoreSkuMetadata2, TrackSubscriptionMetadata2, TrackPaymentMetadata2, TrackSourceMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackPaymentMetadata trackPaymentMetadata;
@@ -47,7 +47,7 @@ public final /* data */ class TrackPaymentFlowFailed implements AnalyticsSchema,
             return false;
         }
         TrackPaymentFlowFailed trackPaymentFlowFailed = (TrackPaymentFlowFailed) other;
-        return m.areEqual(this.loadId, trackPaymentFlowFailed.loadId) && m.areEqual(this.durationMs, trackPaymentFlowFailed.durationMs) && m.areEqual(this.paymentErrorCode, trackPaymentFlowFailed.paymentErrorCode) && m.areEqual(this.paymentSourceId, trackPaymentFlowFailed.paymentSourceId) && m.areEqual(this.paymentGateway, trackPaymentFlowFailed.paymentGateway) && m.areEqual(this.eligibleForTrial, trackPaymentFlowFailed.eligibleForTrial);
+        return Intrinsics3.areEqual(this.loadId, trackPaymentFlowFailed.loadId) && Intrinsics3.areEqual(this.durationMs, trackPaymentFlowFailed.durationMs) && Intrinsics3.areEqual(this.paymentErrorCode, trackPaymentFlowFailed.paymentErrorCode) && Intrinsics3.areEqual(this.paymentSourceId, trackPaymentFlowFailed.paymentSourceId) && Intrinsics3.areEqual(this.paymentGateway, trackPaymentFlowFailed.paymentGateway) && Intrinsics3.areEqual(this.eligibleForTrial, trackPaymentFlowFailed.eligibleForTrial);
     }
 
     public int hashCode() {
@@ -66,17 +66,17 @@ public final /* data */ class TrackPaymentFlowFailed implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPaymentFlowFailed(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", durationMs=");
-        sbU.append(this.durationMs);
-        sbU.append(", paymentErrorCode=");
-        sbU.append(this.paymentErrorCode);
-        sbU.append(", paymentSourceId=");
-        sbU.append(this.paymentSourceId);
-        sbU.append(", paymentGateway=");
-        sbU.append(this.paymentGateway);
-        sbU.append(", eligibleForTrial=");
-        return a.D(sbU, this.eligibleForTrial, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPaymentFlowFailed(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", durationMs=");
+        sbM833U.append(this.durationMs);
+        sbM833U.append(", paymentErrorCode=");
+        sbM833U.append(this.paymentErrorCode);
+        sbM833U.append(", paymentSourceId=");
+        sbM833U.append(this.paymentSourceId);
+        sbM833U.append(", paymentGateway=");
+        sbM833U.append(this.paymentGateway);
+        sbM833U.append(", eligibleForTrial=");
+        return outline.m816D(sbM833U, this.eligibleForTrial, ")");
     }
 }

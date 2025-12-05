@@ -1,12 +1,5 @@
 package com.discord.restapi.utils;
 
-import b.d.b.a.a;
-import d0.g0.c;
-import d0.z.d.m;
-import g0.e;
-import g0.i;
-import g0.q;
-import g0.v;
 import java.io.IOException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -15,8 +8,15 @@ import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import okio.BufferedSink;
 import okio.ByteString;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.Charsets2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p615g0.Buffer3;
+import p615g0.ForwardingSink;
+import p615g0.RealBufferedSink;
+import p615g0.Sink;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: CountingRequestBody.kt */
 /* loaded from: classes.dex */
@@ -28,22 +28,22 @@ public final class CountingRequestBody extends RequestBody {
     private int numWriteToCalls;
 
     /* compiled from: CountingRequestBody.kt */
-    public static final class CountingSink extends i {
+    public static final class CountingSink extends ForwardingSink {
         private long bytesWritten;
         private final Function1<Long, Unit> listener;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public CountingSink(v vVar, Function1<? super Long, Unit> function1) {
-            super(vVar);
-            m.checkNotNullParameter(vVar, "delegate");
-            m.checkNotNullParameter(function1, "listener");
+        public CountingSink(Sink sink, Function1<? super Long, Unit> function1) {
+            super(sink);
+            Intrinsics3.checkNotNullParameter(sink, "delegate");
+            Intrinsics3.checkNotNullParameter(function1, "listener");
             this.listener = function1;
         }
 
-        @Override // g0.i, g0.v
-        public void write(e source, long byteCount) throws IOException {
-            m.checkNotNullParameter(source, "source");
+        @Override // p615g0.ForwardingSink, p615g0.Sink
+        public void write(Buffer3 source, long byteCount) throws IOException {
+            Intrinsics3.checkNotNullParameter(source, "source");
             super.write(source, byteCount);
             long j = this.bytesWritten + byteCount;
             this.bytesWritten = j;
@@ -76,9 +76,9 @@ public final class CountingRequestBody extends RequestBody {
     }
 
     public final Observable<Long> getBytesWrittenObservable() {
-        Observable<Long> observableL = this.bytesWrittenSubject.r().L();
-        m.checkNotNullExpressionValue(observableL, "bytesWrittenSubject.dist…().onBackpressureLatest()");
-        return observableL;
+        Observable<Long> observableM11086L = this.bytesWrittenSubject.m11112r().m11086L();
+        Intrinsics3.checkNotNullExpressionValue(observableM11086L, "bytesWrittenSubject.dist…().onBackpressureLatest()");
+        return observableM11086L;
     }
 
     public final long getEstimatedContentLength() {
@@ -87,29 +87,29 @@ public final class CountingRequestBody extends RequestBody {
 
     @Override // okhttp3.RequestBody
     public void writeTo(BufferedSink sink) throws IOException {
-        m.checkNotNullParameter(sink, "sink");
+        Intrinsics3.checkNotNullParameter(sink, "sink");
         int i = this.numWriteToCalls;
         this.numWriteToCalls = i + 1;
         if (i < this.ignoreWriteToCount) {
             ByteString.Companion companion = ByteString.INSTANCE;
-            StringBuilder sbQ = a.Q('<');
-            sbQ.append(this.delegate);
-            sbQ.append('>');
-            sink.e0(companion.b(sbQ.toString(), c.a));
+            StringBuilder sbM829Q = outline.m829Q('<');
+            sbM829Q.append(this.delegate);
+            sbM829Q.append('>');
+            sink.mo10455e0(companion.m11011b(sbM829Q.toString(), Charsets2.f25136a));
             return;
         }
-        CountingSink countingSink = new CountingSink(sink, new CountingRequestBody$writeTo$countingSink$1(this));
-        m.checkParameterIsNotNull(countingSink, "$this$buffer");
-        q qVar = new q(countingSink);
-        this.delegate.writeTo(qVar);
-        qVar.flush();
+        CountingSink countingSink = new CountingSink(sink, new CountingRequestBody2(this));
+        Intrinsics3.checkParameterIsNotNull(countingSink, "$this$buffer");
+        RealBufferedSink realBufferedSink = new RealBufferedSink(countingSink);
+        this.delegate.writeTo(realBufferedSink);
+        realBufferedSink.flush();
     }
 
     public CountingRequestBody(RequestBody requestBody, int i) {
-        m.checkNotNullParameter(requestBody, "delegate");
+        Intrinsics3.checkNotNullParameter(requestBody, "delegate");
         this.delegate = requestBody;
         this.ignoreWriteToCount = i;
-        this.bytesWrittenSubject = BehaviorSubject.l0(0L);
+        this.bytesWrittenSubject = BehaviorSubject.m11130l0(0L);
         this.estimatedContentLength = requestBody.contentLength();
     }
 }

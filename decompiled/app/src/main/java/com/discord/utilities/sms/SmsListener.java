@@ -3,19 +3,19 @@ package com.discord.utilities.sms;
 import android.app.Application;
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
-import b.c.a.a0.d;
-import b.i.a.f.e.h.j.k0;
-import b.i.a.f.e.h.j.p;
-import b.i.a.f.h.b.b;
-import b.i.a.f.h.b.h;
-import b.i.a.f.h.b.j;
 import com.discord.utilities.lifecycle.ApplicationProvider;
 import com.discord.widgets.auth.SmsAuthCodeBroadcastReceiver;
 import com.google.android.gms.common.Feature;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.AbstractC3311p;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3302k0;
+import p007b.p225i.p226a.p288f.p313h.p315b.C3442b;
+import p007b.p225i.p226a.p288f.p313h.p315b.C3448h;
+import p007b.p225i.p226a.p288f.p313h.p315b.C3450j;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SmsListener.kt */
 /* loaded from: classes2.dex */
@@ -39,14 +39,14 @@ public final class SmsListener {
         }
 
         public final void startSmsListener(Function1<? super String, Unit> onSuccess) {
-            m.checkNotNullParameter(onSuccess, "onSuccess");
+            Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
             Application application = ApplicationProvider.INSTANCE.get();
-            h hVar = new h(application);
-            p.a aVar = new p.a(null);
-            aVar.a = new j(hVar);
-            aVar.f1370b = new Feature[]{b.f1404b};
-            d.o(true, "execute parameter required");
-            hVar.c(new k0(aVar, aVar.f1370b, true));
+            C3448h c3448h = new C3448h(application);
+            AbstractC3311p.a aVar = new AbstractC3311p.a(null);
+            aVar.f9440a = new C3450j(c3448h);
+            aVar.f9441b = new Feature[]{C3442b.f9626b};
+            AnimatableValueParser.m551o(true, "execute parameter required");
+            c3448h.m4046c(new C3302k0(aVar, aVar.f9441b, true));
             setBroadcastReceiver(new SmsAuthCodeBroadcastReceiver(onSuccess));
             application.registerReceiver(getBroadcastReceiver(), new IntentFilter("com.google.android.gms.auth.api.phone.SMS_RETRIEVED"));
         }

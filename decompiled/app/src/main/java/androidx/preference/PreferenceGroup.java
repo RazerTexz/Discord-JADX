@@ -32,9 +32,9 @@ public abstract class PreferenceGroup extends Preference {
     private boolean mOrderingAsAdded;
     private List<Preference> mPreferences;
 
-    /* renamed from: androidx.preference.PreferenceGroup$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.preference.PreferenceGroup$1 */
+    public class RunnableC05181 implements Runnable {
+        public RunnableC05181() {
         }
 
         @Override // java.lang.Runnable
@@ -65,12 +65,12 @@ public abstract class PreferenceGroup extends Preference {
         this.mAttachedToHierarchy = false;
         this.mInitialExpandedChildrenCount = Integer.MAX_VALUE;
         this.mOnExpandButtonClickListener = null;
-        this.mClearRecycleCacheRunnable = new AnonymousClass1();
+        this.mClearRecycleCacheRunnable = new RunnableC05181();
         this.mPreferences = new ArrayList();
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.PreferenceGroup, i, i2);
-        int i3 = R.styleable.PreferenceGroup_orderingFromXml;
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0525R.styleable.PreferenceGroup, i, i2);
+        int i3 = C0525R.styleable.PreferenceGroup_orderingFromXml;
         this.mOrderingAsAdded = TypedArrayUtils.getBoolean(typedArrayObtainStyledAttributes, i3, i3, true);
-        int i4 = R.styleable.PreferenceGroup_initialExpandedChildrenCount;
+        int i4 = C0525R.styleable.PreferenceGroup_initialExpandedChildrenCount;
         if (typedArrayObtainStyledAttributes.hasValue(i4)) {
             setInitialExpandedChildrenCount(TypedArrayUtils.getInt(typedArrayObtainStyledAttributes, i4, i4, Integer.MAX_VALUE));
         }
@@ -324,11 +324,11 @@ public abstract class PreferenceGroup extends Preference {
     }
 
     public static class SavedState extends Preference.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C05191();
         public int mInitialExpandedChildrenCount;
 
-        /* renamed from: androidx.preference.PreferenceGroup$SavedState$1, reason: invalid class name */
-        public static class AnonymousClass1 implements Parcelable.Creator<SavedState> {
+        /* renamed from: androidx.preference.PreferenceGroup$SavedState$1 */
+        public static class C05191 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);

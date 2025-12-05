@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackExpressionPickerCategorySelected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackExpressionPickerCategorySelected implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackExpressionPickerCategorySelected implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence tab = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackExpressionPickerCategorySelected implements A
             return false;
         }
         TrackExpressionPickerCategorySelected trackExpressionPickerCategorySelected = (TrackExpressionPickerCategorySelected) other;
-        return m.areEqual(this.tab, trackExpressionPickerCategorySelected.tab) && m.areEqual(this.guildId, trackExpressionPickerCategorySelected.guildId) && m.areEqual(this.stickerPackId, trackExpressionPickerCategorySelected.stickerPackId);
+        return Intrinsics3.areEqual(this.tab, trackExpressionPickerCategorySelected.tab) && Intrinsics3.areEqual(this.guildId, trackExpressionPickerCategorySelected.guildId) && Intrinsics3.areEqual(this.stickerPackId, trackExpressionPickerCategorySelected.stickerPackId);
     }
 
     public int hashCode() {
@@ -45,11 +45,11 @@ public final /* data */ class TrackExpressionPickerCategorySelected implements A
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackExpressionPickerCategorySelected(tab=");
-        sbU.append(this.tab);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", stickerPackId=");
-        return a.G(sbU, this.stickerPackId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackExpressionPickerCategorySelected(tab=");
+        sbM833U.append(this.tab);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", stickerPackId=");
+        return outline.m819G(sbM833U, this.stickerPackId, ")");
     }
 }

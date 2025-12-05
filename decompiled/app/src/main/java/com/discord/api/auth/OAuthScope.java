@@ -1,9 +1,9 @@
 package com.discord.api.auth;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: OAuthScope.kt */
 /* loaded from: classes.dex */
@@ -170,7 +170,7 @@ public abstract class OAuthScope {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Invalid(String str) {
             super("invalid", null);
-            m.checkNotNullParameter(str, "rawValue");
+            Intrinsics3.checkNotNullParameter(str, "rawValue");
             this.rawValue = str;
         }
 
@@ -181,7 +181,7 @@ public abstract class OAuthScope {
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Invalid) && m.areEqual(this.rawValue, ((Invalid) other).rawValue);
+                return (other instanceof Invalid) && Intrinsics3.areEqual(this.rawValue, ((Invalid) other).rawValue);
             }
             return true;
         }
@@ -195,7 +195,7 @@ public abstract class OAuthScope {
         }
 
         public String toString() {
-            return a.J(a.U("Invalid(rawValue="), this.rawValue, ")");
+            return outline.m822J(outline.m833U("Invalid(rawValue="), this.rawValue, ")");
         }
     }
 

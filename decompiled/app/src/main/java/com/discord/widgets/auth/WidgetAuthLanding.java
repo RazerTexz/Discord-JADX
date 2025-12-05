@@ -6,158 +6,158 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
+import com.discord.app.AppLogger2;
 import com.discord.app.AppViewFlipper;
-import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetAuthLandingBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.auth.GoogleSmartLockManager;
 import com.discord.utilities.auth.RegistrationFlowRepo;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.features.GrowthTeamFeatures;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.auth.WidgetAuthLandingViewModel;
 import com.discord.widgets.home.HomeConfig;
 import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetAuthLanding.kt */
 /* loaded from: classes2.dex */
 public final class WidgetAuthLanding extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetAuthLanding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthLandingBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthLanding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthLandingBinding;", 0)};
     private static final int VIEW_INDEX_HAS_INVITE = 1;
     private static final int VIEW_INDEX_NO_INVITE = 0;
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
-    private final LoggingConfig loggingConfig;
+    private final AppLogger2 loggingConfig;
 
     /* renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
     /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$configureRegisterButton$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$configureRegisterButton$1 */
+    public static final class ViewOnClickListenerC71731 implements View.OnClickListener {
         public final /* synthetic */ String $ageGateError;
 
-        public AnonymousClass1(String str) {
+        public ViewOnClickListenerC71731(String str) {
             this.$ageGateError = str;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetAuthAgeGated.INSTANCE.start(a.x(view, "it", "it.context"), this.$ageGateError);
+            WidgetAuthAgeGated.INSTANCE.start(outline.m885x(view, "it", "it.context"), this.$ageGateError);
         }
     }
 
     /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$configureRegisterButton$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$configureRegisterButton$2 */
+    public static final class ViewOnClickListenerC71742 implements View.OnClickListener {
+        public ViewOnClickListenerC71742() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetAuthLanding widgetAuthLanding = WidgetAuthLanding.this;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             WidgetAuthLanding.access$onRegisterPressed(widgetAuthLanding, context);
         }
     }
 
     /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetAuthLandingViewModel.ViewState, Unit> {
-        public AnonymousClass1(WidgetAuthLanding widgetAuthLanding) {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$1 */
+    public static final /* synthetic */ class C71751 extends FunctionReferenceImpl implements Function1<WidgetAuthLandingViewModel.ViewState, Unit> {
+        public C71751(WidgetAuthLanding widgetAuthLanding) {
             super(1, widgetAuthLanding, WidgetAuthLanding.class, "configureUI", "configureUI(Lcom/discord/widgets/auth/WidgetAuthLandingViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetAuthLandingViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetAuthLandingViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "p1");
+            Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetAuthLanding.access$configureUI((WidgetAuthLanding) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$2 */
+    public static final class ViewOnClickListenerC71762 implements View.OnClickListener {
+        public static final ViewOnClickListenerC71762 INSTANCE = new ViewOnClickListenerC71762();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
-            j.e(context, WidgetAuthLogin.class, null, 4);
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
+            AppScreen2.m157e(context, WidgetAuthLogin.class, null, 4);
         }
     }
 
     /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBound$3 */
+    public static final class ViewOnClickListenerC71773 implements View.OnClickListener {
+        public ViewOnClickListenerC71773() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetAuthLanding widgetAuthLanding = WidgetAuthLanding.this;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             WidgetAuthLanding.access$onRegisterPressed(widgetAuthLanding, context);
         }
     }
 
     /* compiled from: WidgetAuthLanding.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetAuthLandingViewModel.Event, Unit> {
-        public AnonymousClass1(WidgetAuthLanding widgetAuthLanding) {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLanding$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C71781 extends FunctionReferenceImpl implements Function1<WidgetAuthLandingViewModel.Event, Unit> {
+        public C71781(WidgetAuthLanding widgetAuthLanding) {
             super(1, widgetAuthLanding, WidgetAuthLanding.class, "handleEvent", "handleEvent(Lcom/discord/widgets/auth/WidgetAuthLandingViewModel$Event;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetAuthLandingViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetAuthLandingViewModel.Event event) {
-            m.checkNotNullParameter(event, "p1");
+            Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetAuthLanding.access$handleEvent((WidgetAuthLanding) this.receiver, event);
         }
     }
 
     public WidgetAuthLanding() {
-        super(R.layout.widget_auth_landing);
-        this.loggingConfig = new LoggingConfig(false, null, WidgetAuthLanding$loggingConfig$1.INSTANCE, 3);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetAuthLanding$binding$2.INSTANCE, null, 2, null);
-        WidgetAuthLanding$viewModel$2 widgetAuthLanding$viewModel$2 = new WidgetAuthLanding$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetAuthLandingViewModel.class), new WidgetAuthLanding$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetAuthLanding$viewModel$2));
+        super(C5419R.layout.widget_auth_landing);
+        this.loggingConfig = new AppLogger2(false, null, WidgetAuthLanding3.INSTANCE, 3);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetAuthLanding2.INSTANCE, null, 2, null);
+        WidgetAuthLanding4 widgetAuthLanding4 = new WidgetAuthLanding4(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetAuthLandingViewModel.class), new WidgetAuthLanding$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetAuthLanding4));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetAuthLanding widgetAuthLanding, WidgetAuthLandingViewModel.ViewState viewState) {
@@ -174,7 +174,7 @@ public final class WidgetAuthLanding extends AppFragment {
 
     private final void configureRegisterButton(String ageGateError) {
         if (ageGateError == null) {
-            getBinding().d.setOnClickListener(new AnonymousClass2());
+            getBinding().f15678d.setOnClickListener(new ViewOnClickListenerC71742());
             return;
         }
         Serializable serializableExtra = getMostRecentIntent().getSerializableExtra("com.discord.intent.extra.EXTRA_HOME_CONFIG");
@@ -185,25 +185,25 @@ public final class WidgetAuthLanding extends AppFragment {
         if (homeConfig != null && homeConfig.getAgeGated()) {
             WidgetAuthAgeGated.INSTANCE.start(requireContext(), ageGateError);
         }
-        getBinding().d.setOnClickListener(new AnonymousClass1(ageGateError));
+        getBinding().f15678d.setOnClickListener(new ViewOnClickListenerC71731(ageGateError));
     }
 
     private final void configureUI(WidgetAuthLandingViewModel.ViewState viewState) {
         if (viewState instanceof WidgetAuthLandingViewModel.ViewState.Empty) {
             WidgetAuthLandingBinding binding = getBinding();
-            m.checkNotNullExpressionValue(binding, "binding");
-            binding.a.setBackgroundColor(ColorCompat.getThemedColor(getContext(), R.attr.colorBackgroundPrimary));
-            AppViewFlipper appViewFlipper = getBinding().e;
-            m.checkNotNullExpressionValue(appViewFlipper, "binding.authLandingSwitchFlipper");
+            Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+            binding.f15675a.setBackgroundColor(ColorCompat.getThemedColor(getContext(), C5419R.attr.colorBackgroundPrimary));
+            AppViewFlipper appViewFlipper = getBinding().f15679e;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.authLandingSwitchFlipper");
             appViewFlipper.setDisplayedChild(0);
         } else {
-            AppViewFlipper appViewFlipper2 = getBinding().e;
-            m.checkNotNullExpressionValue(appViewFlipper2, "binding.authLandingSwitchFlipper");
+            AppViewFlipper appViewFlipper2 = getBinding().f15679e;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.authLandingSwitchFlipper");
             appViewFlipper2.setDisplayedChild(1);
             if (viewState instanceof WidgetAuthLandingViewModel.ViewState.Invite) {
-                getBinding().f2231b.configureInvite(((WidgetAuthLandingViewModel.ViewState.Invite) viewState).getInvite());
+                getBinding().f15676b.configureInvite(((WidgetAuthLandingViewModel.ViewState.Invite) viewState).getInvite());
             } else if (viewState instanceof WidgetAuthLandingViewModel.ViewState.GuildTemplate) {
-                getBinding().f2231b.configureGuildTemplate(((WidgetAuthLandingViewModel.ViewState.GuildTemplate) viewState).getGuildTemplate());
+                getBinding().f15676b.configureGuildTemplate(((WidgetAuthLandingViewModel.ViewState.GuildTemplate) viewState).getGuildTemplate());
             }
         }
         configureRegisterButton(viewState.getAgeGateError());
@@ -229,18 +229,18 @@ public final class WidgetAuthLanding extends AppFragment {
         Bundle bundle = new Bundle();
         bundle.putString(WidgetAuthLogin.GOOGLE_SMARTLOCK_LOGIN_EXTRA_ID, id2);
         bundle.putString(WidgetAuthLogin.GOOGLE_SMARTLOCK_LOGIN_EXTRA_PASSWORD, password);
-        j.d(requireContext(), WidgetAuthLogin.class, new Intent().putExtras(bundle));
+        AppScreen2.m156d(requireContext(), WidgetAuthLogin.class, new Intent().putExtras(bundle));
     }
 
     private final void onRegisterPressed(Context context) {
         RegistrationFlowRepo.Companion companion = RegistrationFlowRepo.INSTANCE;
         companion.getINSTANCE().setRegistering(true);
         companion.getINSTANCE().clear();
-        j.e(context, WidgetAuthRegisterIdentity.class, null, 4);
+        AppScreen2.m157e(context, WidgetAuthRegisterIdentity.class, null, 4);
     }
 
-    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public LoggingConfig getLoggingConfig() {
+    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.InterfaceC5455a
+    public AppLogger2 getLoggingConfig() {
         return this.loggingConfig;
     }
 
@@ -254,17 +254,17 @@ public final class WidgetAuthLanding extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetAuthLanding.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        getBinding().c.setOnClickListener(AnonymousClass2.INSTANCE);
-        getBinding().d.setOnClickListener(new AnonymousClass3());
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetAuthLanding.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C71751(this), 62, (Object) null);
+        getBinding().f15677c.setOnClickListener(ViewOnClickListenerC71762.INSTANCE);
+        getBinding().f15678d.setOnClickListener(new ViewOnClickListenerC71773());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetAuthLanding.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetAuthLanding.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C71781(this), 62, (Object) null);
         GrowthTeamFeatures.INSTANCE.imbalancedAndroidSplashNoop();
     }
 }

@@ -1,11 +1,5 @@
 package com.google.gson.internal.bind;
 
-import b.i.d.d;
-import b.i.d.o;
-import b.i.d.p.c;
-import b.i.d.q.g;
-import b.i.d.q.r;
-import b.i.d.q.y.b;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.internal.Excluder;
@@ -17,45 +11,66 @@ import java.lang.reflect.Field;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import p007b.p225i.p408d.ExclusionStrategy;
+import p007b.p225i.p408d.FieldAttributes;
+import p007b.p225i.p408d.FieldNamingStrategy;
+import p007b.p225i.p408d.TypeAdapterFactory2;
+import p007b.p225i.p408d.p409p.Since2;
+import p007b.p225i.p408d.p409p.Until;
+import p007b.p225i.p408d.p410q.C4922g;
+import p007b.p225i.p408d.p410q.ObjectConstructor;
+import p007b.p225i.p408d.p410q.p413y.ReflectionAccessor;
 
 /* loaded from: classes3.dex */
-public final class ReflectiveTypeAdapterFactory implements o {
-    public final g j;
-    public final d k;
-    public final Excluder l;
-    public final JsonAdapterAnnotationTypeAdapterFactory m;
-    public final b n = b.a;
+public final class ReflectiveTypeAdapterFactory implements TypeAdapterFactory2 {
+
+    /* renamed from: j */
+    public final C4922g f21527j;
+
+    /* renamed from: k */
+    public final FieldNamingStrategy f21528k;
+
+    /* renamed from: l */
+    public final Excluder f21529l;
+
+    /* renamed from: m */
+    public final JsonAdapterAnnotationTypeAdapterFactory f21530m;
+
+    /* renamed from: n */
+    public final ReflectionAccessor f21531n = ReflectionAccessor.f13148a;
 
     public static final class Adapter<T> extends TypeAdapter<T> {
-        public final r<T> a;
 
-        /* renamed from: b, reason: collision with root package name */
-        public final Map<String, a> f3122b;
+        /* renamed from: a */
+        public final ObjectConstructor<T> f21532a;
 
-        public Adapter(r<T> rVar, Map<String, a> map) {
-            this.a = rVar;
-            this.f3122b = map;
+        /* renamed from: b */
+        public final Map<String, AbstractC11109a> f21533b;
+
+        public Adapter(ObjectConstructor<T> objectConstructor, Map<String, AbstractC11109a> map) {
+            this.f21532a = objectConstructor;
+            this.f21533b = map;
         }
 
         @Override // com.google.gson.TypeAdapter
         public T read(JsonReader jsonReader) throws IOException {
-            if (jsonReader.N() == JsonToken.NULL) {
-                jsonReader.H();
+            if (jsonReader.mo6878N() == JsonToken.NULL) {
+                jsonReader.mo6876H();
                 return null;
             }
-            T tA = this.a.a();
+            T tMo6869a = this.f21532a.mo6869a();
             try {
-                jsonReader.b();
-                while (jsonReader.q()) {
-                    a aVar = this.f3122b.get(jsonReader.C());
-                    if (aVar == null || !aVar.c) {
-                        jsonReader.U();
+                jsonReader.mo6883b();
+                while (jsonReader.mo6888q()) {
+                    AbstractC11109a abstractC11109a = this.f21533b.get(jsonReader.mo6875C());
+                    if (abstractC11109a == null || !abstractC11109a.f21536c) {
+                        jsonReader.mo6879U();
                     } else {
-                        aVar.a(jsonReader, tA);
+                        abstractC11109a.mo6906a(jsonReader, tMo6869a);
                     }
                 }
-                jsonReader.f();
-                return tA;
+                jsonReader.mo6887f();
+                return tMo6869a;
             } catch (IllegalAccessException e) {
                 throw new AssertionError(e);
             } catch (IllegalStateException e2) {
@@ -66,67 +81,76 @@ public final class ReflectiveTypeAdapterFactory implements o {
         @Override // com.google.gson.TypeAdapter
         public void write(JsonWriter jsonWriter, T t) throws IOException {
             if (t == null) {
-                jsonWriter.s();
+                jsonWriter.mo6905s();
                 return;
             }
-            jsonWriter.c();
+            jsonWriter.mo6901c();
             try {
-                for (a aVar : this.f3122b.values()) {
-                    if (aVar.c(t)) {
-                        jsonWriter.n(aVar.a);
-                        aVar.b(jsonWriter, t);
+                for (AbstractC11109a abstractC11109a : this.f21533b.values()) {
+                    if (abstractC11109a.mo6908c(t)) {
+                        jsonWriter.mo6904n(abstractC11109a.f21534a);
+                        abstractC11109a.mo6907b(jsonWriter, t);
                     }
                 }
-                jsonWriter.f();
+                jsonWriter.mo6903f();
             } catch (IllegalAccessException e) {
                 throw new AssertionError(e);
             }
         }
     }
 
-    public static abstract class a {
-        public final String a;
+    /* renamed from: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$a */
+    public static abstract class AbstractC11109a {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final boolean f3123b;
-        public final boolean c;
+        /* renamed from: a */
+        public final String f21534a;
 
-        public a(String str, boolean z2, boolean z3) {
-            this.a = str;
-            this.f3123b = z2;
-            this.c = z3;
+        /* renamed from: b */
+        public final boolean f21535b;
+
+        /* renamed from: c */
+        public final boolean f21536c;
+
+        public AbstractC11109a(String str, boolean z2, boolean z3) {
+            this.f21534a = str;
+            this.f21535b = z2;
+            this.f21536c = z3;
         }
 
-        public abstract void a(JsonReader jsonReader, Object obj) throws IllegalAccessException, IOException;
+        /* renamed from: a */
+        public abstract void mo6906a(JsonReader jsonReader, Object obj) throws IllegalAccessException, IOException;
 
-        public abstract void b(JsonWriter jsonWriter, Object obj) throws IllegalAccessException, IOException;
+        /* renamed from: b */
+        public abstract void mo6907b(JsonWriter jsonWriter, Object obj) throws IllegalAccessException, IOException;
 
-        public abstract boolean c(Object obj) throws IllegalAccessException, IOException;
+        /* renamed from: c */
+        public abstract boolean mo6908c(Object obj) throws IllegalAccessException, IOException;
     }
 
-    public ReflectiveTypeAdapterFactory(g gVar, d dVar, Excluder excluder, JsonAdapterAnnotationTypeAdapterFactory jsonAdapterAnnotationTypeAdapterFactory) {
-        this.j = gVar;
-        this.k = dVar;
-        this.l = excluder;
-        this.m = jsonAdapterAnnotationTypeAdapterFactory;
+    public ReflectiveTypeAdapterFactory(C4922g c4922g, FieldNamingStrategy fieldNamingStrategy, Excluder excluder, JsonAdapterAnnotationTypeAdapterFactory jsonAdapterAnnotationTypeAdapterFactory) {
+        this.f21527j = c4922g;
+        this.f21528k = fieldNamingStrategy;
+        this.f21529l = excluder;
+        this.f21530m = jsonAdapterAnnotationTypeAdapterFactory;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:48:? A[RETURN, SYNTHETIC] */
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public boolean a(Field field, boolean z2) {
+    public boolean m9233a(Field field, boolean z2) {
         boolean z3;
-        Excluder excluder = this.l;
+        Excluder excluder = this.f21529l;
         Class<?> type = field.getType();
-        if (!(excluder.b(type) || excluder.f(type, z2))) {
-            if ((excluder.l & field.getModifiers()) == 0 && ((excluder.k == -1.0d || excluder.i((c) field.getAnnotation(c.class), (b.i.d.p.d) field.getAnnotation(b.i.d.p.d.class))) && !field.isSynthetic() && ((excluder.m || !excluder.h(field.getType())) && !excluder.g(field.getType())))) {
-                List<b.i.d.a> list = z2 ? excluder.n : excluder.o;
+        if (!(excluder.m9217b(type) || excluder.m9218f(type, z2))) {
+            if ((excluder.f21485l & field.getModifiers()) == 0 && ((excluder.f21484k == -1.0d || excluder.m9221i((Since2) field.getAnnotation(Since2.class), (Until) field.getAnnotation(Until.class))) && !field.isSynthetic() && ((excluder.f21486m || !excluder.m9220h(field.getType())) && !excluder.m9219g(field.getType())))) {
+                List<ExclusionStrategy> list = z2 ? excluder.f21487n : excluder.f21488o;
                 if (!list.isEmpty()) {
-                    b.i.d.b bVar = new b.i.d.b(field);
-                    Iterator<b.i.d.a> it = list.iterator();
+                    FieldAttributes fieldAttributes = new FieldAttributes(field);
+                    Iterator<ExclusionStrategy> it = list.iterator();
                     while (it.hasNext()) {
-                        if (it.next().a(bVar)) {
+                        if (it.next().m6846a(fieldAttributes)) {
                             z3 = true;
                             break;
                         }
@@ -151,7 +175,7 @@ public final class ReflectiveTypeAdapterFactory implements o {
         	at jadx.core.dex.visitors.MoveInlineVisitor.moveInline(MoveInlineVisitor.java:41)
         	at jadx.core.dex.visitors.ConstructorVisitor.visit(ConstructorVisitor.java:43)
         */
-    @Override // b.i.d.o
+    @Override // p007b.p225i.p408d.TypeAdapterFactory2
     public <T> com.google.gson.TypeAdapter<T> create(
     /*  JADX ERROR: Method generation error
         jadx.core.utils.exceptions.JadxRuntimeException: Code variable not set in r36v0 ??
@@ -182,9 +206,9 @@ public final class ReflectiveTypeAdapterFactory implements o {
         	at jadx.core.codegen.CodeGen.generate(CodeGen.java:22)
         	at jadx.core.ProcessClass.process(ProcessClass.java:82)
         	at jadx.core.ProcessClass.generateCode(ProcessClass.java:120)
-        	at jadx.core.dex.nodes.ClassNode.generateClassCode(ClassNode.java:403)
-        	at jadx.core.dex.nodes.ClassNode.decompile(ClassNode.java:391)
-        	at jadx.core.dex.nodes.ClassNode.getCode(ClassNode.java:341)
+        	at jadx.core.dex.nodes.ClassNode.generateClassCode(ClassNode.java:406)
+        	at jadx.core.dex.nodes.ClassNode.decompile(ClassNode.java:394)
+        	at jadx.core.dex.nodes.ClassNode.getCode(ClassNode.java:344)
         */
     /*  JADX ERROR: NullPointerException in pass: ConstructorVisitor
         java.lang.NullPointerException: Cannot invoke "jadx.core.dex.instructions.args.RegisterArg.sameRegAndSVar(jadx.core.dex.instructions.args.InsnArg)" because "resultArg" is null

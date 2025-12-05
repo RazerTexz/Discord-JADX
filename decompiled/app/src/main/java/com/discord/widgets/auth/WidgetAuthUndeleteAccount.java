@@ -6,20 +6,20 @@ import android.view.View;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetAuthUndeleteAccountBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.ScreenTitleView;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetAuthUndeleteAccount.kt */
 /* loaded from: classes2.dex */
@@ -29,7 +29,7 @@ public final class WidgetAuthUndeleteAccount extends AppFragment {
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetAuthUndeleteAccount.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthUndeleteAccountBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthUndeleteAccount.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthUndeleteAccountBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -40,18 +40,18 @@ public final class WidgetAuthUndeleteAccount extends AppFragment {
         }
 
         public final void launch(Context context, ActivityResultLauncher<Intent> launcher, boolean disabled) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(launcher, "launcher");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(launcher, "launcher");
             Intent intentPutExtra = new Intent().putExtra(WidgetAuthUndeleteAccount.ARG_DISABLED_KEY, disabled);
-            m.checkNotNullExpressionValue(intentPutExtra, "Intent().putExtra(ARG_DISABLED_KEY, disabled)");
-            j.g.f(context, launcher, WidgetAuthUndeleteAccount.class, intentPutExtra);
+            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent().putExtra(ARG_DISABLED_KEY, disabled)");
+            AppScreen2.f524g.m160f(context, launcher, WidgetAuthUndeleteAccount.class, intentPutExtra);
         }
 
         public final ActivityResultLauncher<Intent> registerForResult(AppFragment fragment, Function0<Unit> callback) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(callback, "callback");
-            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetAuthUndeleteAccount$Companion$registerForResult$1(callback));
-            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…k()\n          }\n        }");
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(callback, "callback");
+            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetAuthUndeleteAccount2(callback));
+            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…k()\n          }\n        }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
@@ -61,23 +61,23 @@ public final class WidgetAuthUndeleteAccount extends AppFragment {
     }
 
     /* compiled from: WidgetAuthUndeleteAccount.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthUndeleteAccount$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.auth.WidgetAuthUndeleteAccount$onViewBoundOrOnResume$1 */
+    public static final class ViewOnClickListenerC72391 implements View.OnClickListener {
+        public static final ViewOnClickListenerC72391 INSTANCE = new ViewOnClickListenerC72391();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
-            j.c(context, false, null, 4);
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
+            AppScreen2.m155c(context, false, null, 4);
         }
     }
 
     /* compiled from: WidgetAuthUndeleteAccount.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthUndeleteAccount$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthUndeleteAccount$onViewBoundOrOnResume$2 */
+    public static final class ViewOnClickListenerC72402 implements View.OnClickListener {
+        public ViewOnClickListenerC72402() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -96,8 +96,8 @@ public final class WidgetAuthUndeleteAccount extends AppFragment {
     }
 
     public WidgetAuthUndeleteAccount() {
-        super(R.layout.widget_auth_undelete_account);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetAuthUndeleteAccount$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_auth_undelete_account);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetAuthUndeleteAccount3.INSTANCE, null, 2, null);
     }
 
     private final WidgetAuthUndeleteAccountBinding getBinding() {
@@ -106,7 +106,7 @@ public final class WidgetAuthUndeleteAccount extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
     }
 
@@ -114,19 +114,19 @@ public final class WidgetAuthUndeleteAccount extends AppFragment {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         if (getMostRecentIntent().getBooleanExtra(ARG_DISABLED_KEY, false)) {
-            ScreenTitleView screenTitleView = getBinding().d;
-            String string = getString(R.string.account_disabled_title);
-            m.checkNotNullExpressionValue(string, "getString(R.string.account_disabled_title)");
+            ScreenTitleView screenTitleView = getBinding().f15722d;
+            String string = getString(C5419R.string.account_disabled_title);
+            Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.account_disabled_title)");
             screenTitleView.setTitle(string);
-            getBinding().d.setSubtitle(getString(R.string.account_disabled_description));
+            getBinding().f15722d.setSubtitle(getString(C5419R.string.account_disabled_description));
         } else {
-            ScreenTitleView screenTitleView2 = getBinding().d;
-            String string2 = getString(R.string.account_scheduled_for_deletion_title);
-            m.checkNotNullExpressionValue(string2, "getString(R.string.accou…duled_for_deletion_title)");
+            ScreenTitleView screenTitleView2 = getBinding().f15722d;
+            String string2 = getString(C5419R.string.account_scheduled_for_deletion_title);
+            Intrinsics3.checkNotNullExpressionValue(string2, "getString(R.string.accou…duled_for_deletion_title)");
             screenTitleView2.setTitle(string2);
-            getBinding().d.setSubtitle(getString(R.string.account_scheduled_for_deletion_description));
+            getBinding().f15722d.setSubtitle(getString(C5419R.string.account_scheduled_for_deletion_description));
         }
-        getBinding().c.setOnClickListener(AnonymousClass1.INSTANCE);
-        getBinding().f2239b.setOnClickListener(new AnonymousClass2());
+        getBinding().f15721c.setOnClickListener(ViewOnClickListenerC72391.INSTANCE);
+        getBinding().f15720b.setOnClickListener(new ViewOnClickListenerC72402());
     }
 }

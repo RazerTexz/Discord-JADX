@@ -3,29 +3,29 @@ package com.discord.widgets.user.search;
 import androidx.core.app.NotificationCompat;
 import com.discord.api.channel.Channel;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.t.h0;
-import j0.k.b;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import kotlin.jvm.functions.Function2;
+import p507d0.p580t.Maps6;
+import p637j0.p641k.Func1;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGlobalSearchModel$Companion$get$channelContextObservable$2<T, R> implements b<WidgetGlobalSearchModel.ChannelContext, WidgetGlobalSearchModel.ChannelContext> {
+public final class WidgetGlobalSearchModel$Companion$get$channelContextObservable$2<T, R> implements Func1<WidgetGlobalSearchModel.ChannelContext, WidgetGlobalSearchModel.ChannelContext> {
     public final /* synthetic */ Function2 $permissionsPredicate;
 
     public WidgetGlobalSearchModel$Companion$get$channelContextObservable$2(Function2 function2) {
         this.$permissionsPredicate = function2;
     }
 
-    @Override // j0.k.b
+    @Override // p637j0.p641k.Func1
     public /* bridge */ /* synthetic */ WidgetGlobalSearchModel.ChannelContext call(WidgetGlobalSearchModel.ChannelContext channelContext) {
         return call2(channelContext);
     }
 
     /* renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.ChannelContext call2(WidgetGlobalSearchModel.ChannelContext channelContext) {
-        Map mapPlus = h0.plus(channelContext.getChannels(), channelContext.getActiveJoinedThreads());
+        Map mapPlus = Maps6.plus(channelContext.getChannels(), channelContext.getActiveJoinedThreads());
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Map.Entry entry : mapPlus.entrySet()) {
             if (((Boolean) this.$permissionsPredicate.invoke((Channel) entry.getValue(), channelContext.getChannelPerms())).booleanValue()) {

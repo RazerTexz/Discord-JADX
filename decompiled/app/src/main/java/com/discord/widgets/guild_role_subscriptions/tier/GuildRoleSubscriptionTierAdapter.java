@@ -8,8 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppComponent;
 import com.discord.databinding.ViewGuildRoleSubscriptionPlanDetailsReviewBinding;
 import com.discord.databinding.ViewGuildRoleSubscriptionSectionHeaderItemBinding;
@@ -21,14 +20,15 @@ import com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTi
 import com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierViewHolder;
 import com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscriptionMemberPreview;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: GuildRoleSubscriptionTierAdapter.kt */
 /* loaded from: classes2.dex */
@@ -43,21 +43,21 @@ public final class GuildRoleSubscriptionTierAdapter extends RecyclerView.Adapter
     private List<? extends GuildRoleSubscriptionTierAdapterItem> items;
 
     /* compiled from: GuildRoleSubscriptionTierAdapter.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierAdapter$setItems$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<List<? extends GuildRoleSubscriptionTierAdapterItem>, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierAdapter$setItems$1 */
+    public static final class C84751 extends Lambda implements Function1<List<? extends GuildRoleSubscriptionTierAdapterItem>, Unit> {
+        public C84751() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends GuildRoleSubscriptionTierAdapterItem> list) {
             invoke2(list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends GuildRoleSubscriptionTierAdapterItem> list) {
-            m.checkNotNullParameter(list, "items");
+            Intrinsics3.checkNotNullParameter(list, "items");
             GuildRoleSubscriptionTierAdapter.access$setItems$p(GuildRoleSubscriptionTierAdapter.this, list);
         }
     }
@@ -115,47 +115,47 @@ public final class GuildRoleSubscriptionTierAdapter extends RecyclerView.Adapter
     }
 
     public final void setItems(List<? extends GuildRoleSubscriptionTierAdapterItem> newItems) {
-        m.checkNotNullParameter(newItems, "newItems");
-        this.diffCreator.dispatchDiffUpdatesAsync(this, new AnonymousClass1(), this.items, newItems);
+        Intrinsics3.checkNotNullParameter(newItems, "newItems");
+        this.diffCreator.dispatchDiffUpdatesAsync(this, new C84751(), this.items, newItems);
     }
 
     public GuildRoleSubscriptionTierAdapter(AppComponent appComponent, DiffCreator<List<GuildRoleSubscriptionTierAdapterItem>, GuildRoleSubscriptionTierViewHolder> diffCreator) {
-        m.checkNotNullParameter(appComponent, "appComponent");
-        m.checkNotNullParameter(diffCreator, "diffCreator");
+        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
+        Intrinsics3.checkNotNullParameter(diffCreator, "diffCreator");
         this.diffCreator = diffCreator;
-        this.items = n.emptyList();
+        this.items = Collections2.emptyList();
     }
 
     public void onBindViewHolder(GuildRoleSubscriptionTierViewHolder holder, int position) {
-        m.checkNotNullParameter(holder, "holder");
+        Intrinsics3.checkNotNullParameter(holder, "holder");
         holder.bind(this.items.get(position));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public GuildRoleSubscriptionTierViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
-            View viewInflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_guild_role_subscription_tier_header, parent, false);
-            int i = R.id.guild_role_subscription_tier_header_description;
-            TextView textView = (TextView) viewInflate.findViewById(R.id.guild_role_subscription_tier_header_description);
+            View viewInflate = LayoutInflater.from(parent.getContext()).inflate(C5419R.layout.view_guild_role_subscription_tier_header, parent, false);
+            int i = C5419R.id.guild_role_subscription_tier_header_description;
+            TextView textView = (TextView) viewInflate.findViewById(C5419R.id.guild_role_subscription_tier_header_description);
             if (textView != null) {
-                i = R.id.guild_role_subscription_tier_header_image;
-                SimpleDraweeView simpleDraweeView = (SimpleDraweeView) viewInflate.findViewById(R.id.guild_role_subscription_tier_header_image);
+                i = C5419R.id.guild_role_subscription_tier_header_image;
+                SimpleDraweeView simpleDraweeView = (SimpleDraweeView) viewInflate.findViewById(C5419R.id.guild_role_subscription_tier_header_image);
                 if (simpleDraweeView != null) {
-                    i = R.id.guild_role_subscription_tier_header_name;
-                    TextView textView2 = (TextView) viewInflate.findViewById(R.id.guild_role_subscription_tier_header_name);
+                    i = C5419R.id.guild_role_subscription_tier_header_name;
+                    TextView textView2 = (TextView) viewInflate.findViewById(C5419R.id.guild_role_subscription_tier_header_name);
                     if (textView2 != null) {
-                        i = R.id.guild_role_subscription_tier_header_price;
-                        TextView textView3 = (TextView) viewInflate.findViewById(R.id.guild_role_subscription_tier_header_price);
+                        i = C5419R.id.guild_role_subscription_tier_header_price;
+                        TextView textView3 = (TextView) viewInflate.findViewById(C5419R.id.guild_role_subscription_tier_header_price);
                         if (textView3 != null) {
-                            i = R.id.guild_role_subscription_tier_header_price_interval;
-                            TextView textView4 = (TextView) viewInflate.findViewById(R.id.guild_role_subscription_tier_header_price_interval);
+                            i = C5419R.id.guild_role_subscription_tier_header_price_interval;
+                            TextView textView4 = (TextView) viewInflate.findViewById(C5419R.id.guild_role_subscription_tier_header_price_interval);
                             if (textView4 != null) {
-                                i = R.id.guild_role_subscription_tier_header_subscribe;
-                                Button button = (Button) viewInflate.findViewById(R.id.guild_role_subscription_tier_header_subscribe);
+                                i = C5419R.id.guild_role_subscription_tier_header_subscribe;
+                                Button button = (Button) viewInflate.findViewById(C5419R.id.guild_role_subscription_tier_header_subscribe);
                                 if (button != null) {
                                     ViewGuildRoleSubscriptionTierHeaderBinding viewGuildRoleSubscriptionTierHeaderBinding = new ViewGuildRoleSubscriptionTierHeaderBinding((LinearLayout) viewInflate, textView, simpleDraweeView, textView2, textView3, textView4, button);
-                                    m.checkNotNullExpressionValue(viewGuildRoleSubscriptionTierHeaderBinding, "ViewGuildRoleSubscriptio…rent, false\n            )");
+                                    Intrinsics3.checkNotNullExpressionValue(viewGuildRoleSubscriptionTierHeaderBinding, "ViewGuildRoleSubscriptio…rent, false\n            )");
                                     return new GuildRoleSubscriptionTierViewHolder.TierHeaderViewHolder(viewGuildRoleSubscriptionTierHeaderBinding);
                                 }
                             }
@@ -167,38 +167,38 @@ public final class GuildRoleSubscriptionTierAdapter extends RecyclerView.Adapter
         }
         if (viewType == 1) {
             Context context = parent.getContext();
-            m.checkNotNullExpressionValue(context, "parent.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "parent.context");
             return new GuildRoleSubscriptionTierViewHolder.MemberPreviewViewHolder(new GuildRoleSubscriptionMemberPreview(context));
         }
         if (viewType == 2) {
-            ViewGuildRoleSubscriptionSectionHeaderItemBinding viewGuildRoleSubscriptionSectionHeaderItemBindingA = ViewGuildRoleSubscriptionSectionHeaderItemBinding.a(LayoutInflater.from(parent.getContext()), parent, false);
-            m.checkNotNullExpressionValue(viewGuildRoleSubscriptionSectionHeaderItemBindingA, "ViewGuildRoleSubscriptio…rent, false\n            )");
-            return new GuildRoleSubscriptionTierViewHolder.SectionHeaderViewHolder(viewGuildRoleSubscriptionSectionHeaderItemBindingA);
+            ViewGuildRoleSubscriptionSectionHeaderItemBinding viewGuildRoleSubscriptionSectionHeaderItemBindingM8399a = ViewGuildRoleSubscriptionSectionHeaderItemBinding.m8399a(LayoutInflater.from(parent.getContext()), parent, false);
+            Intrinsics3.checkNotNullExpressionValue(viewGuildRoleSubscriptionSectionHeaderItemBindingM8399a, "ViewGuildRoleSubscriptio…rent, false\n            )");
+            return new GuildRoleSubscriptionTierViewHolder.SectionHeaderViewHolder(viewGuildRoleSubscriptionSectionHeaderItemBindingM8399a);
         }
         if (viewType == 3) {
             Context context2 = parent.getContext();
-            m.checkNotNullExpressionValue(context2, "parent.context");
+            Intrinsics3.checkNotNullExpressionValue(context2, "parent.context");
             return new GuildRoleSubscriptionTierViewHolder.BenefitViewHolder(new GuildRoleSubscriptionBenefitItemView(context2));
         }
         if (viewType != 4) {
             if (viewType == 5) {
                 Context context3 = parent.getContext();
-                m.checkNotNullExpressionValue(context3, "parent.context");
+                Intrinsics3.checkNotNullExpressionValue(context3, "parent.context");
                 return new GuildRoleSubscriptionTierViewHolder.BenefitViewHolder(new GuildRoleSubscriptionBenefitItemView(context3));
             }
-            StringBuilder sbV = a.V("invalid viewType ", viewType, " for ");
-            sbV.append(GuildRoleSubscriptionTierAdapter.class.getSimpleName());
-            throw new IllegalArgumentException(sbV.toString());
+            StringBuilder sbM834V = outline.m834V("invalid viewType ", viewType, " for ");
+            sbM834V.append(GuildRoleSubscriptionTierAdapter.class.getSimpleName());
+            throw new IllegalArgumentException(sbM834V.toString());
         }
-        View viewInflate2 = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_guild_role_subscription_plan_details_review, parent, false);
-        int i2 = R.id.guild_role_subscription_plan_review_cover_image;
-        SimpleDraweeView simpleDraweeView2 = (SimpleDraweeView) viewInflate2.findViewById(R.id.guild_role_subscription_plan_review_cover_image);
+        View viewInflate2 = LayoutInflater.from(parent.getContext()).inflate(C5419R.layout.view_guild_role_subscription_plan_details_review, parent, false);
+        int i2 = C5419R.id.guild_role_subscription_plan_review_cover_image;
+        SimpleDraweeView simpleDraweeView2 = (SimpleDraweeView) viewInflate2.findViewById(C5419R.id.guild_role_subscription_plan_review_cover_image);
         if (simpleDraweeView2 != null) {
-            i2 = R.id.guild_role_subscription_plan_review_description;
-            TextView textView5 = (TextView) viewInflate2.findViewById(R.id.guild_role_subscription_plan_review_description);
+            i2 = C5419R.id.guild_role_subscription_plan_review_description;
+            TextView textView5 = (TextView) viewInflate2.findViewById(C5419R.id.guild_role_subscription_plan_review_description);
             if (textView5 != null) {
                 ViewGuildRoleSubscriptionPlanDetailsReviewBinding viewGuildRoleSubscriptionPlanDetailsReviewBinding = new ViewGuildRoleSubscriptionPlanDetailsReviewBinding((LinearLayout) viewInflate2, simpleDraweeView2, textView5);
-                m.checkNotNullExpressionValue(viewGuildRoleSubscriptionPlanDetailsReviewBinding, "ViewGuildRoleSubscriptio…rent, false\n            )");
+                Intrinsics3.checkNotNullExpressionValue(viewGuildRoleSubscriptionPlanDetailsReviewBinding, "ViewGuildRoleSubscriptio…rent, false\n            )");
                 return new GuildRoleSubscriptionTierViewHolder.PlanDetailsViewHolder(viewGuildRoleSubscriptionPlanDetailsReviewBinding);
             }
         }

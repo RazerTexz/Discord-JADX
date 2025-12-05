@@ -1,10 +1,10 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import b.d.b.a.a;
 import com.discord.models.commands.Application;
-import d0.t.n;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Autocompletable.kt */
 /* loaded from: classes2.dex */
@@ -14,7 +14,7 @@ public final /* data */ class ApplicationPlaceholder extends Autocompletable {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ApplicationPlaceholder(Application application) {
         super(null);
-        m.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(application, "application");
         this.application = application;
     }
 
@@ -31,13 +31,13 @@ public final /* data */ class ApplicationPlaceholder extends Autocompletable {
     }
 
     public final ApplicationPlaceholder copy(Application application) {
-        m.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(application, "application");
         return new ApplicationPlaceholder(application);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ApplicationPlaceholder) && m.areEqual(this.application, ((ApplicationPlaceholder) other).application);
+            return (other instanceof ApplicationPlaceholder) && Intrinsics3.areEqual(this.application, ((ApplicationPlaceholder) other).application);
         }
         return true;
     }
@@ -53,7 +53,7 @@ public final /* data */ class ApplicationPlaceholder extends Autocompletable {
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable
     public List<String> getInputTextMatchers() {
-        return n.emptyList();
+        return Collections2.emptyList();
     }
 
     public int hashCode() {
@@ -65,9 +65,9 @@ public final /* data */ class ApplicationPlaceholder extends Autocompletable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ApplicationPlaceholder(application=");
-        sbU.append(this.application);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ApplicationPlaceholder(application=");
+        sbM833U.append(this.application);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

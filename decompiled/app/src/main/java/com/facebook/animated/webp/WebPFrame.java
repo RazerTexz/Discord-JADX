@@ -1,16 +1,16 @@
 package com.facebook.animated.webp;
 
 import android.graphics.Bitmap;
-import b.f.d.d.c;
-import b.f.j.a.a.d;
+import p007b.p109f.p115d.p119d.DoNotStrip;
+import p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame;
 
 /* loaded from: classes.dex */
-public class WebPFrame implements d {
+public class WebPFrame implements AnimatedImageFrame {
 
-    @c
+    @DoNotStrip
     private long mNativeContext;
 
-    @c
+    @DoNotStrip
     public WebPFrame(long j) {
         this.mNativeContext = j;
     }
@@ -35,31 +35,36 @@ public class WebPFrame implements d {
 
     private native boolean nativeShouldDisposeToBackgroundColor();
 
-    @Override // b.f.j.a.a.d
-    public void a(int i, int i2, Bitmap bitmap) {
+    @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
+    /* renamed from: a */
+    public void mo1185a(int i, int i2, Bitmap bitmap) {
         nativeRenderFrame(i, i2, bitmap);
     }
 
-    @Override // b.f.j.a.a.d
-    public int b() {
+    @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
+    /* renamed from: b */
+    public int mo1186b() {
         return nativeGetXOffset();
     }
 
-    @Override // b.f.j.a.a.d
-    public int c() {
+    @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
+    /* renamed from: c */
+    public int mo1187c() {
         return nativeGetYOffset();
     }
 
-    public boolean d() {
+    /* renamed from: d */
+    public boolean m8630d() {
         return nativeIsBlendWithPreviousFrame();
     }
 
-    @Override // b.f.j.a.a.d
+    @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
     public void dispose() {
         nativeDispose();
     }
 
-    public boolean e() {
+    /* renamed from: e */
+    public boolean m8631e() {
         return nativeShouldDisposeToBackgroundColor();
     }
 
@@ -67,12 +72,12 @@ public class WebPFrame implements d {
         nativeFinalize();
     }
 
-    @Override // b.f.j.a.a.d
+    @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
     public int getHeight() {
         return nativeGetHeight();
     }
 
-    @Override // b.f.j.a.a.d
+    @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
     public int getWidth() {
         return nativeGetWidth();
     }

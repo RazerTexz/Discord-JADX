@@ -2,8 +2,8 @@ package com.discord.utilities.permissions;
 
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: VideoPermissionsManager.kt */
 /* loaded from: classes2.dex */
@@ -15,17 +15,17 @@ public final class VideoPermissionsManager {
     }
 
     public VideoPermissionsManager(PermissionsManager permissionsManager) {
-        m.checkNotNullParameter(permissionsManager, "permissionsManager");
+        Intrinsics3.checkNotNullParameter(permissionsManager, "permissionsManager");
         this.permissionsManager = permissionsManager;
     }
 
     public final boolean hasVideoPermission(Channel channel, Long channelIdAFK, Long computedPermissions) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         long id2 = channel.getId();
         if (channelIdAFK != null && id2 == channelIdAFK.longValue()) {
             return false;
         }
-        if (ChannelUtils.B(channel)) {
+        if (ChannelUtils.m7667B(channel)) {
             return true;
         }
         return this.permissionsManager.can(512L, computedPermissions);

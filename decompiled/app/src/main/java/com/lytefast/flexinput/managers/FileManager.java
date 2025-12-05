@@ -7,7 +7,9 @@ import java.io.File;
 /* compiled from: FileManager.kt */
 /* loaded from: classes3.dex */
 public interface FileManager {
-    Uri a(Context context, File file);
+    /* renamed from: a */
+    Uri mo408a(Context context, File file);
 
-    File b();
+    /* renamed from: b */
+    File mo409b();
 }

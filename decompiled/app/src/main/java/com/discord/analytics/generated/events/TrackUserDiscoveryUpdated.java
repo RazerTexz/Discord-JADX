@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackUserDiscoveryUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserDiscoveryUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackUserDiscoveryUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean hasName = null;
     private final Boolean discoverableEmail = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackUserDiscoveryUpdated implements AnalyticsSche
             return false;
         }
         TrackUserDiscoveryUpdated trackUserDiscoveryUpdated = (TrackUserDiscoveryUpdated) other;
-        return m.areEqual(this.hasName, trackUserDiscoveryUpdated.hasName) && m.areEqual(this.discoverableEmail, trackUserDiscoveryUpdated.discoverableEmail) && m.areEqual(this.discoverablePhone, trackUserDiscoveryUpdated.discoverablePhone) && m.areEqual(this.contactSyncEnabled, trackUserDiscoveryUpdated.contactSyncEnabled);
+        return Intrinsics3.areEqual(this.hasName, trackUserDiscoveryUpdated.hasName) && Intrinsics3.areEqual(this.discoverableEmail, trackUserDiscoveryUpdated.discoverableEmail) && Intrinsics3.areEqual(this.discoverablePhone, trackUserDiscoveryUpdated.discoverablePhone) && Intrinsics3.areEqual(this.contactSyncEnabled, trackUserDiscoveryUpdated.contactSyncEnabled);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackUserDiscoveryUpdated implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackUserDiscoveryUpdated(hasName=");
-        sbU.append(this.hasName);
-        sbU.append(", discoverableEmail=");
-        sbU.append(this.discoverableEmail);
-        sbU.append(", discoverablePhone=");
-        sbU.append(this.discoverablePhone);
-        sbU.append(", contactSyncEnabled=");
-        return a.D(sbU, this.contactSyncEnabled, ")");
+        StringBuilder sbM833U = outline.m833U("TrackUserDiscoveryUpdated(hasName=");
+        sbM833U.append(this.hasName);
+        sbM833U.append(", discoverableEmail=");
+        sbM833U.append(this.discoverableEmail);
+        sbM833U.append(", discoverablePhone=");
+        sbM833U.append(this.discoverablePhone);
+        sbM833U.append(", contactSyncEnabled=");
+        return outline.m816D(sbM833U, this.contactSyncEnabled, ")");
     }
 }

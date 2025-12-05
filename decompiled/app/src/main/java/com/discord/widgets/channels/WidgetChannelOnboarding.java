@@ -4,20 +4,20 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetChannelOnboardingBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import d0.z.d.m;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetChannelOnboarding.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChannelOnboarding extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChannelOnboarding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelOnboardingBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelOnboarding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelOnboardingBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -31,7 +31,7 @@ public final class WidgetChannelOnboarding extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             new WidgetChannelOnboarding().show(fragmentManager, "javaClass");
         }
 
@@ -41,9 +41,9 @@ public final class WidgetChannelOnboarding extends AppBottomSheet {
     }
 
     /* compiled from: WidgetChannelOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelOnboarding$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelOnboarding$onViewCreated$1 */
+    public static final class ViewOnClickListenerC73301 implements View.OnClickListener {
+        public ViewOnClickListenerC73301() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -54,7 +54,7 @@ public final class WidgetChannelOnboarding extends AppBottomSheet {
 
     public WidgetChannelOnboarding() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChannelOnboarding$binding$2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelOnboarding2.INSTANCE, null, 2, null);
     }
 
     private final WidgetChannelOnboardingBinding getBinding() {
@@ -63,14 +63,14 @@ public final class WidgetChannelOnboarding extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_channel_onboarding;
+        return C5419R.layout.widget_channel_onboarding;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         new ChannelOnboardingManager().markSeenUserChannelOnboarding();
-        getBinding().f2263b.setOnClickListener(new AnonymousClass1());
+        getBinding().f15882b.setOnClickListener(new ViewOnClickListenerC73301());
     }
 }

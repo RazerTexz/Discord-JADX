@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackUserPhoneUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserPhoneUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackUserPhoneUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean phoneNumberChanged = null;
     private final Boolean smsBackupEnabled = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackUserPhoneUpdated implements AnalyticsSchema, 
             return false;
         }
         TrackUserPhoneUpdated trackUserPhoneUpdated = (TrackUserPhoneUpdated) other;
-        return m.areEqual(this.phoneNumberChanged, trackUserPhoneUpdated.phoneNumberChanged) && m.areEqual(this.smsBackupEnabled, trackUserPhoneUpdated.smsBackupEnabled) && m.areEqual(this.didRequireVerifiedPhone, trackUserPhoneUpdated.didRequireVerifiedPhone);
+        return Intrinsics3.areEqual(this.phoneNumberChanged, trackUserPhoneUpdated.phoneNumberChanged) && Intrinsics3.areEqual(this.smsBackupEnabled, trackUserPhoneUpdated.smsBackupEnabled) && Intrinsics3.areEqual(this.didRequireVerifiedPhone, trackUserPhoneUpdated.didRequireVerifiedPhone);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackUserPhoneUpdated implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackUserPhoneUpdated(phoneNumberChanged=");
-        sbU.append(this.phoneNumberChanged);
-        sbU.append(", smsBackupEnabled=");
-        sbU.append(this.smsBackupEnabled);
-        sbU.append(", didRequireVerifiedPhone=");
-        return a.D(sbU, this.didRequireVerifiedPhone, ")");
+        StringBuilder sbM833U = outline.m833U("TrackUserPhoneUpdated(phoneNumberChanged=");
+        sbM833U.append(this.phoneNumberChanged);
+        sbM833U.append(", smsBackupEnabled=");
+        sbM833U.append(this.smsBackupEnabled);
+        sbM833U.append(", didRequireVerifiedPhone=");
+        return outline.m816D(sbM833U, this.didRequireVerifiedPhone, ")");
     }
 }

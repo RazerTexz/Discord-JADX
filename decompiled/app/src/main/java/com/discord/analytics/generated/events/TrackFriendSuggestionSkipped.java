@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackFriendSuggestionSkipped.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long suggestedUserId = null;
     private final CharSequence platformType = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsS
             return false;
         }
         TrackFriendSuggestionSkipped trackFriendSuggestionSkipped = (TrackFriendSuggestionSkipped) other;
-        return m.areEqual(this.suggestedUserId, trackFriendSuggestionSkipped.suggestedUserId) && m.areEqual(this.platformType, trackFriendSuggestionSkipped.platformType) && m.areEqual(this.isNonMutual, trackFriendSuggestionSkipped.isNonMutual) && m.areEqual(this.isReverseSuggestion, trackFriendSuggestionSkipped.isReverseSuggestion) && m.areEqual(this.existingRelationshipType, trackFriendSuggestionSkipped.existingRelationshipType) && m.areEqual(this.userAllowedInSuggestions, trackFriendSuggestionSkipped.userAllowedInSuggestions) && m.areEqual(this.userConsents, trackFriendSuggestionSkipped.userConsents) && m.areEqual(this.userIsDiscoverable, trackFriendSuggestionSkipped.userIsDiscoverable) && m.areEqual(this.otherUserAllowedInSuggestions, trackFriendSuggestionSkipped.otherUserAllowedInSuggestions) && m.areEqual(this.otherUserConsents, trackFriendSuggestionSkipped.otherUserConsents) && m.areEqual(this.otherUserDiscoverable, trackFriendSuggestionSkipped.otherUserDiscoverable);
+        return Intrinsics3.areEqual(this.suggestedUserId, trackFriendSuggestionSkipped.suggestedUserId) && Intrinsics3.areEqual(this.platformType, trackFriendSuggestionSkipped.platformType) && Intrinsics3.areEqual(this.isNonMutual, trackFriendSuggestionSkipped.isNonMutual) && Intrinsics3.areEqual(this.isReverseSuggestion, trackFriendSuggestionSkipped.isReverseSuggestion) && Intrinsics3.areEqual(this.existingRelationshipType, trackFriendSuggestionSkipped.existingRelationshipType) && Intrinsics3.areEqual(this.userAllowedInSuggestions, trackFriendSuggestionSkipped.userAllowedInSuggestions) && Intrinsics3.areEqual(this.userConsents, trackFriendSuggestionSkipped.userConsents) && Intrinsics3.areEqual(this.userIsDiscoverable, trackFriendSuggestionSkipped.userIsDiscoverable) && Intrinsics3.areEqual(this.otherUserAllowedInSuggestions, trackFriendSuggestionSkipped.otherUserAllowedInSuggestions) && Intrinsics3.areEqual(this.otherUserConsents, trackFriendSuggestionSkipped.otherUserConsents) && Intrinsics3.areEqual(this.otherUserDiscoverable, trackFriendSuggestionSkipped.otherUserDiscoverable);
     }
 
     public int hashCode() {
@@ -66,27 +66,27 @@ public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackFriendSuggestionSkipped(suggestedUserId=");
-        sbU.append(this.suggestedUserId);
-        sbU.append(", platformType=");
-        sbU.append(this.platformType);
-        sbU.append(", isNonMutual=");
-        sbU.append(this.isNonMutual);
-        sbU.append(", isReverseSuggestion=");
-        sbU.append(this.isReverseSuggestion);
-        sbU.append(", existingRelationshipType=");
-        sbU.append(this.existingRelationshipType);
-        sbU.append(", userAllowedInSuggestions=");
-        sbU.append(this.userAllowedInSuggestions);
-        sbU.append(", userConsents=");
-        sbU.append(this.userConsents);
-        sbU.append(", userIsDiscoverable=");
-        sbU.append(this.userIsDiscoverable);
-        sbU.append(", otherUserAllowedInSuggestions=");
-        sbU.append(this.otherUserAllowedInSuggestions);
-        sbU.append(", otherUserConsents=");
-        sbU.append(this.otherUserConsents);
-        sbU.append(", otherUserDiscoverable=");
-        return a.D(sbU, this.otherUserDiscoverable, ")");
+        StringBuilder sbM833U = outline.m833U("TrackFriendSuggestionSkipped(suggestedUserId=");
+        sbM833U.append(this.suggestedUserId);
+        sbM833U.append(", platformType=");
+        sbM833U.append(this.platformType);
+        sbM833U.append(", isNonMutual=");
+        sbM833U.append(this.isNonMutual);
+        sbM833U.append(", isReverseSuggestion=");
+        sbM833U.append(this.isReverseSuggestion);
+        sbM833U.append(", existingRelationshipType=");
+        sbM833U.append(this.existingRelationshipType);
+        sbM833U.append(", userAllowedInSuggestions=");
+        sbM833U.append(this.userAllowedInSuggestions);
+        sbM833U.append(", userConsents=");
+        sbM833U.append(this.userConsents);
+        sbM833U.append(", userIsDiscoverable=");
+        sbM833U.append(this.userIsDiscoverable);
+        sbM833U.append(", otherUserAllowedInSuggestions=");
+        sbM833U.append(this.otherUserAllowedInSuggestions);
+        sbM833U.append(", otherUserConsents=");
+        sbM833U.append(this.otherUserConsents);
+        sbM833U.append(", otherUserDiscoverable=");
+        return outline.m816D(sbM833U, this.otherUserDiscoverable, ")");
     }
 }

@@ -19,13 +19,14 @@ import androidx.annotation.UiThread;
 import androidx.concurrent.futures.ResolvableFuture;
 import androidx.core.content.FileProvider;
 import androidx.core.util.AtomicFile;
-import b.d.b.a.a;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 @Deprecated
@@ -41,13 +42,13 @@ public final class BrowserServiceFileProvider extends FileProvider {
     private static final String TAG = "BrowserServiceFP";
     public static Object sFileCleanupLock = new Object();
 
-    /* renamed from: androidx.browser.browseractions.BrowserServiceFileProvider$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.browser.browseractions.BrowserServiceFileProvider$1 */
+    public class RunnableC01501 implements Runnable {
         public final /* synthetic */ ContentResolver val$resolver;
         public final /* synthetic */ ResolvableFuture val$result;
         public final /* synthetic */ Uri val$uri;
 
-        public AnonymousClass1(ContentResolver contentResolver, Uri uri, ResolvableFuture resolvableFuture) {
+        public RunnableC01501(ContentResolver contentResolver, Uri uri, ResolvableFuture resolvableFuture) {
             this.val$resolver = contentResolver;
             this.val$uri = uri;
             this.val$result = resolvableFuture;
@@ -221,7 +222,7 @@ public final class BrowserServiceFileProvider extends FileProvider {
     }
 
     private static Uri generateUri(Context context, String str) {
-        return new Uri.Builder().scheme(CONTENT_SCHEME).authority(context.getPackageName() + AUTHORITY_SUFFIX).path(a.y(FILE_SUB_DIR_NAME, str, FILE_EXTENSION)).build();
+        return new Uri.Builder().scheme(CONTENT_SCHEME).authority(context.getPackageName() + AUTHORITY_SUFFIX).path(outline.m886y(FILE_SUB_DIR_NAME, str, FILE_EXTENSION)).build();
     }
 
     public static void grantReadPermission(@NonNull Intent intent, @Nullable List<Uri> list, @NonNull Context context) {
@@ -238,18 +239,18 @@ public final class BrowserServiceFileProvider extends FileProvider {
     }
 
     @NonNull
-    public static b.i.b.d.a.a<Bitmap> loadBitmap(@NonNull ContentResolver contentResolver, @NonNull Uri uri) {
+    public static ListenableFuture8<Bitmap> loadBitmap(@NonNull ContentResolver contentResolver, @NonNull Uri uri) {
         ResolvableFuture resolvableFutureCreate = ResolvableFuture.create();
-        AsyncTask.THREAD_POOL_EXECUTOR.execute(new AnonymousClass1(contentResolver, uri, resolvableFutureCreate));
+        AsyncTask.THREAD_POOL_EXECUTOR.execute(new RunnableC01501(contentResolver, uri, resolvableFutureCreate));
         return resolvableFutureCreate;
     }
 
     @NonNull
     @UiThread
     public static ResolvableFuture<Uri> saveBitmap(@NonNull Context context, @NonNull Bitmap bitmap, @NonNull String str, int i) {
-        StringBuilder sbX = a.X(str, "_");
-        sbX.append(Integer.toString(i));
-        String string = sbX.toString();
+        StringBuilder sbM836X = outline.m836X(str, "_");
+        sbM836X.append(Integer.toString(i));
+        String string = sbM836X.toString();
         Uri uriGenerateUri = generateUri(context, string);
         ResolvableFuture<Uri> resolvableFutureCreate = ResolvableFuture.create();
         new FileSaveTask(context, string, bitmap, uriGenerateUri, resolvableFutureCreate).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new String[0]);

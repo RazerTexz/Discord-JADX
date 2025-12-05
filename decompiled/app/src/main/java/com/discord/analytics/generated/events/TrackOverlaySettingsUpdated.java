@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackOverlaySettingsUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOverlaySettingsUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackOverlayClientMetadataReceiver {
+public final /* data */ class TrackOverlaySettingsUpdated implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
     private final Boolean enabled = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackOverlaySettingsUpdated implements AnalyticsSc
             return false;
         }
         TrackOverlaySettingsUpdated trackOverlaySettingsUpdated = (TrackOverlaySettingsUpdated) other;
-        return m.areEqual(this.enabled, trackOverlaySettingsUpdated.enabled) && m.areEqual(this.notificationsEnabled, trackOverlaySettingsUpdated.notificationsEnabled) && m.areEqual(this.notificationsPosition, trackOverlaySettingsUpdated.notificationsPosition) && m.areEqual(this.textNotificationsMode, trackOverlaySettingsUpdated.textNotificationsMode) && m.areEqual(this.hotkey, trackOverlaySettingsUpdated.hotkey) && m.areEqual(this.textActivationHotkey, trackOverlaySettingsUpdated.textActivationHotkey) && m.areEqual(this.textOpacitySlider, trackOverlaySettingsUpdated.textOpacitySlider);
+        return Intrinsics3.areEqual(this.enabled, trackOverlaySettingsUpdated.enabled) && Intrinsics3.areEqual(this.notificationsEnabled, trackOverlaySettingsUpdated.notificationsEnabled) && Intrinsics3.areEqual(this.notificationsPosition, trackOverlaySettingsUpdated.notificationsPosition) && Intrinsics3.areEqual(this.textNotificationsMode, trackOverlaySettingsUpdated.textNotificationsMode) && Intrinsics3.areEqual(this.hotkey, trackOverlaySettingsUpdated.hotkey) && Intrinsics3.areEqual(this.textActivationHotkey, trackOverlaySettingsUpdated.textActivationHotkey) && Intrinsics3.areEqual(this.textOpacitySlider, trackOverlaySettingsUpdated.textOpacitySlider);
     }
 
     public int hashCode() {
@@ -57,19 +57,19 @@ public final /* data */ class TrackOverlaySettingsUpdated implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackOverlaySettingsUpdated(enabled=");
-        sbU.append(this.enabled);
-        sbU.append(", notificationsEnabled=");
-        sbU.append(this.notificationsEnabled);
-        sbU.append(", notificationsPosition=");
-        sbU.append(this.notificationsPosition);
-        sbU.append(", textNotificationsMode=");
-        sbU.append(this.textNotificationsMode);
-        sbU.append(", hotkey=");
-        sbU.append(this.hotkey);
-        sbU.append(", textActivationHotkey=");
-        sbU.append(this.textActivationHotkey);
-        sbU.append(", textOpacitySlider=");
-        return a.G(sbU, this.textOpacitySlider, ")");
+        StringBuilder sbM833U = outline.m833U("TrackOverlaySettingsUpdated(enabled=");
+        sbM833U.append(this.enabled);
+        sbM833U.append(", notificationsEnabled=");
+        sbM833U.append(this.notificationsEnabled);
+        sbM833U.append(", notificationsPosition=");
+        sbM833U.append(this.notificationsPosition);
+        sbM833U.append(", textNotificationsMode=");
+        sbM833U.append(this.textNotificationsMode);
+        sbM833U.append(", hotkey=");
+        sbM833U.append(this.hotkey);
+        sbM833U.append(", textActivationHotkey=");
+        sbM833U.append(this.textActivationHotkey);
+        sbM833U.append(", textOpacitySlider=");
+        return outline.m819G(sbM833U, this.textOpacitySlider, ")");
     }
 }

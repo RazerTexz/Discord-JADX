@@ -1,21 +1,23 @@
 package com.discord.api.botuikit;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ActionRowComponent.kt */
 /* loaded from: classes.dex */
-public final /* data */ class ActionRowComponent extends LayoutComponent {
+public final /* data */ class ActionRowComponent extends Component8 {
     private final List<Component> components;
-    private final ComponentType type;
+    private final Component6 type;
 
-    @Override // com.discord.api.botuikit.LayoutComponent
-    public List<Component> a() {
+    @Override // com.discord.api.botuikit.Component8
+    /* renamed from: a */
+    public List<Component> mo7593a() {
         return this.components;
     }
 
-    public final List<Component> b() {
+    /* renamed from: b */
+    public final List<Component> m7594b() {
         return this.components;
     }
 
@@ -27,25 +29,25 @@ public final /* data */ class ActionRowComponent extends LayoutComponent {
             return false;
         }
         ActionRowComponent actionRowComponent = (ActionRowComponent) other;
-        return m.areEqual(this.type, actionRowComponent.type) && m.areEqual(this.components, actionRowComponent.components);
+        return Intrinsics3.areEqual(this.type, actionRowComponent.type) && Intrinsics3.areEqual(this.components, actionRowComponent.components);
     }
 
     @Override // com.discord.api.botuikit.Component
-    public ComponentType getType() {
+    public Component6 getType() {
         return this.type;
     }
 
     public int hashCode() {
-        ComponentType componentType = this.type;
-        int iHashCode = (componentType != null ? componentType.hashCode() : 0) * 31;
+        Component6 component6 = this.type;
+        int iHashCode = (component6 != null ? component6.hashCode() : 0) * 31;
         List<Component> list = this.components;
         return iHashCode + (list != null ? list.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ActionRowComponent(type=");
-        sbU.append(this.type);
-        sbU.append(", components=");
-        return a.L(sbU, this.components, ")");
+        StringBuilder sbM833U = outline.m833U("ActionRowComponent(type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", components=");
+        return outline.m824L(sbM833U, this.components, ")");
     }
 }

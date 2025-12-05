@@ -31,17 +31,17 @@ public class MultiInstanceInvalidationClient {
     public final ServiceConnection mServiceConnection;
     public final Runnable mSetUpRunnable;
     private final Runnable mTearDownRunnable;
-    public final IMultiInstanceInvalidationCallback mCallback = new AnonymousClass1();
+    public final IMultiInstanceInvalidationCallback mCallback = new BinderC05841();
     public final AtomicBoolean mStopped = new AtomicBoolean(false);
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$1, reason: invalid class name */
-    public class AnonymousClass1 extends IMultiInstanceInvalidationCallback.Stub {
+    /* renamed from: androidx.room.MultiInstanceInvalidationClient$1 */
+    public class BinderC05841 extends IMultiInstanceInvalidationCallback.Stub {
 
-        /* renamed from: androidx.room.MultiInstanceInvalidationClient$1$1, reason: invalid class name and collision with other inner class name */
-        public class RunnableC00061 implements Runnable {
+        /* renamed from: androidx.room.MultiInstanceInvalidationClient$1$1, reason: invalid class name */
+        public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ String[] val$tables;
 
-            public RunnableC00061(String[] strArr) {
+            public AnonymousClass1(String[] strArr) {
                 this.val$tables = strArr;
             }
 
@@ -51,18 +51,18 @@ public class MultiInstanceInvalidationClient {
             }
         }
 
-        public AnonymousClass1() {
+        public BinderC05841() {
         }
 
         @Override // androidx.room.IMultiInstanceInvalidationCallback
         public void onInvalidation(String[] strArr) {
-            MultiInstanceInvalidationClient.this.mExecutor.execute(new RunnableC00061(strArr));
+            MultiInstanceInvalidationClient.this.mExecutor.execute(new AnonymousClass1(strArr));
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$2, reason: invalid class name */
-    public class AnonymousClass2 implements ServiceConnection {
-        public AnonymousClass2() {
+    /* renamed from: androidx.room.MultiInstanceInvalidationClient$2 */
+    public class ServiceConnectionC05852 implements ServiceConnection {
+        public ServiceConnectionC05852() {
         }
 
         @Override // android.content.ServiceConnection
@@ -80,9 +80,9 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
-        public AnonymousClass3() {
+    /* renamed from: androidx.room.MultiInstanceInvalidationClient$3 */
+    public class RunnableC05863 implements Runnable {
+        public RunnableC05863() {
         }
 
         @Override // java.lang.Runnable
@@ -101,9 +101,9 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$4, reason: invalid class name */
-    public class AnonymousClass4 implements Runnable {
-        public AnonymousClass4() {
+    /* renamed from: androidx.room.MultiInstanceInvalidationClient$4 */
+    public class RunnableC05874 implements Runnable {
+        public RunnableC05874() {
         }
 
         @Override // java.lang.Runnable
@@ -113,9 +113,9 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$5, reason: invalid class name */
-    public class AnonymousClass5 implements Runnable {
-        public AnonymousClass5() {
+    /* renamed from: androidx.room.MultiInstanceInvalidationClient$5 */
+    public class RunnableC05885 implements Runnable {
+        public RunnableC05885() {
         }
 
         @Override // java.lang.Runnable
@@ -136,9 +136,9 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$6, reason: invalid class name */
-    public class AnonymousClass6 extends InvalidationTracker.Observer {
-        public AnonymousClass6(String[] strArr) {
+    /* renamed from: androidx.room.MultiInstanceInvalidationClient$6 */
+    public class C05896 extends InvalidationTracker.Observer {
+        public C05896(String[] strArr) {
             super(strArr);
         }
 
@@ -165,18 +165,18 @@ public class MultiInstanceInvalidationClient {
     }
 
     public MultiInstanceInvalidationClient(Context context, String str, InvalidationTracker invalidationTracker, Executor executor) {
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-        this.mServiceConnection = anonymousClass2;
-        this.mSetUpRunnable = new AnonymousClass3();
-        this.mRemoveObserverRunnable = new AnonymousClass4();
-        this.mTearDownRunnable = new AnonymousClass5();
+        ServiceConnectionC05852 serviceConnectionC05852 = new ServiceConnectionC05852();
+        this.mServiceConnection = serviceConnectionC05852;
+        this.mSetUpRunnable = new RunnableC05863();
+        this.mRemoveObserverRunnable = new RunnableC05874();
+        this.mTearDownRunnable = new RunnableC05885();
         Context applicationContext = context.getApplicationContext();
         this.mAppContext = applicationContext;
         this.mName = str;
         this.mInvalidationTracker = invalidationTracker;
         this.mExecutor = executor;
-        this.mObserver = new AnonymousClass6((String[]) invalidationTracker.mTableIdLookup.keySet().toArray(new String[0]));
-        applicationContext.bindService(new Intent(applicationContext, (Class<?>) MultiInstanceInvalidationService.class), anonymousClass2, 1);
+        this.mObserver = new C05896((String[]) invalidationTracker.mTableIdLookup.keySet().toArray(new String[0]));
+        applicationContext.bindService(new Intent(applicationContext, (Class<?>) MultiInstanceInvalidationService.class), serviceConnectionC05852, 1);
     }
 
     public void stop() {

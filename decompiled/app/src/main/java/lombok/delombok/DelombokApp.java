@@ -65,18 +65,18 @@ public class DelombokApp extends LombokApp {
             return null;
         }
         JarFile toolsJarFile = new JarFile(toolsJar);
-        ClassLoader loader = new AnonymousClass1(DelombokApp.class.getClassLoader(), toolsJarFile, toolsJar);
+        ClassLoader loader = new C128441(DelombokApp.class.getClassLoader(), toolsJarFile, toolsJar);
         return loader.loadClass("lombok.delombok.Delombok");
     }
 
-    /* renamed from: lombok.delombok.DelombokApp$1, reason: invalid class name */
+    /* renamed from: lombok.delombok.DelombokApp$1 */
     /* loaded from: discord-126021.apk:lombok/delombok/DelombokApp$1.SCL.lombok */
-    class AnonymousClass1 extends ClassLoader {
+    class C128441 extends ClassLoader {
         private final /* synthetic */ JarFile val$toolsJarFile;
         private final /* synthetic */ File val$toolsJar;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        AnonymousClass1(ClassLoader $anonymous0, JarFile jarFile, File file) {
+        C128441(ClassLoader $anonymous0, JarFile jarFile, File file) {
             super($anonymous0);
             this.val$toolsJarFile = jarFile;
             this.val$toolsJar = file;
@@ -149,12 +149,12 @@ public class DelombokApp extends LombokApp {
         public Enumeration<URL> getResources(String name) throws IOException {
             JarEntry entry = this.val$toolsJarFile.getJarEntry(name);
             Enumeration<URL> parent = super.getResources(name);
-            return entry == null ? super.getResources(name) : new C06421(parent, this.val$toolsJar, name);
+            return entry == null ? super.getResources(name) : new AnonymousClass1(parent, this.val$toolsJar, name);
         }
 
-        /* renamed from: lombok.delombok.DelombokApp$1$1, reason: invalid class name and collision with other inner class name */
+        /* renamed from: lombok.delombok.DelombokApp$1$1, reason: invalid class name */
         /* loaded from: discord-126021.apk:lombok/delombok/DelombokApp$1$1.SCL.lombok */
-        class C06421 implements Enumeration<URL> {
+        class AnonymousClass1 implements Enumeration<URL> {
             private boolean first = false;
             private final /* synthetic */ Enumeration val$parent;
             private final /* synthetic */ File val$toolsJar;
@@ -165,7 +165,7 @@ public class DelombokApp extends LombokApp {
                 return nextElement();
             }
 
-            C06421(Enumeration enumeration, File file, String str) {
+            AnonymousClass1(Enumeration enumeration, File file, String str) {
                 this.val$parent = enumeration;
                 this.val$toolsJar = file;
                 this.val$name = str;

@@ -5,9 +5,9 @@ import android.os.PowerManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.work.Logger;
-import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.WeakHashMap;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -33,11 +33,11 @@ public class WakeLocks {
 
     public static PowerManager.WakeLock newWakeLock(@NonNull Context context, @NonNull String str) {
         PowerManager powerManager = (PowerManager) context.getApplicationContext().getSystemService("power");
-        String strW = a.w("WorkManager: ", str);
-        PowerManager.WakeLock wakeLockNewWakeLock = powerManager.newWakeLock(1, strW);
+        String strM883w = outline.m883w("WorkManager: ", str);
+        PowerManager.WakeLock wakeLockNewWakeLock = powerManager.newWakeLock(1, strM883w);
         WeakHashMap<PowerManager.WakeLock, String> weakHashMap = sWakeLocks;
         synchronized (weakHashMap) {
-            weakHashMap.put(wakeLockNewWakeLock, strW);
+            weakHashMap.put(wakeLockNewWakeLock, strM883w);
         }
         return wakeLockNewWakeLock;
     }

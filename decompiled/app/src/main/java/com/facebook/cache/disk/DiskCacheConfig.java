@@ -1,98 +1,134 @@
 package com.facebook.cache.disk;
 
 import android.content.Context;
-import b.f.b.a.d;
-import b.f.b.a.e;
-import b.f.b.b.g;
 import com.discord.api.permission.Permission;
 import com.facebook.common.internal.Supplier;
 import java.io.File;
 import java.util.Objects;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p111b.p112a.CacheErrorLogger;
+import p007b.p109f.p111b.p112a.CacheEventListener;
+import p007b.p109f.p111b.p112a.NoOpCacheErrorLogger;
+import p007b.p109f.p111b.p112a.NoOpCacheEventListener;
+import p007b.p109f.p111b.p113b.DefaultEntryEvictionComparatorSupplier;
+import p007b.p109f.p111b.p113b.EntryEvictionComparatorSupplier;
+import p007b.p109f.p115d.p116a.DiskTrimmableRegistry;
+import p007b.p109f.p115d.p116a.NoOpDiskTrimmableRegistry;
 
 /* loaded from: classes.dex */
 public class DiskCacheConfig {
-    public final int a;
 
-    /* renamed from: b, reason: collision with root package name */
-    public final String f2882b;
-    public final Supplier<File> c;
-    public final long d;
-    public final long e;
-    public final long f;
-    public final g g;
-    public final b.f.b.a.a h;
-    public final b.f.b.a.b i;
-    public final b.f.d.a.a j;
-    public final Context k;
+    /* renamed from: a */
+    public final int f19421a;
 
-    public class a implements Supplier<File> {
-        public a() {
+    /* renamed from: b */
+    public final String f19422b;
+
+    /* renamed from: c */
+    public final Supplier<File> f19423c;
+
+    /* renamed from: d */
+    public final long f19424d;
+
+    /* renamed from: e */
+    public final long f19425e;
+
+    /* renamed from: f */
+    public final long f19426f;
+
+    /* renamed from: g */
+    public final EntryEvictionComparatorSupplier f19427g;
+
+    /* renamed from: h */
+    public final CacheErrorLogger f19428h;
+
+    /* renamed from: i */
+    public final CacheEventListener f19429i;
+
+    /* renamed from: j */
+    public final DiskTrimmableRegistry f19430j;
+
+    /* renamed from: k */
+    public final Context f19431k;
+
+    /* renamed from: com.facebook.cache.disk.DiskCacheConfig$a */
+    public class C10633a implements Supplier<File> {
+        public C10633a() {
         }
 
         @Override // com.facebook.common.internal.Supplier
         public File get() {
-            Objects.requireNonNull(DiskCacheConfig.this.k);
-            return DiskCacheConfig.this.k.getApplicationContext().getCacheDir();
+            Objects.requireNonNull(DiskCacheConfig.this.f19431k);
+            return DiskCacheConfig.this.f19431k.getApplicationContext().getCacheDir();
         }
     }
 
-    public static class b {
+    /* renamed from: com.facebook.cache.disk.DiskCacheConfig$b */
+    public static class C10634b {
 
-        /* renamed from: b, reason: collision with root package name */
-        public Supplier<File> f2883b;
-        public final Context e;
-        public String a = "image_cache";
-        public long c = 41943040;
-        public g d = new b.f.b.b.b();
+        /* renamed from: b */
+        public Supplier<File> f19434b;
 
-        public b(Context context, a aVar) {
-            this.e = context;
+        /* renamed from: e */
+        public final Context f19437e;
+
+        /* renamed from: a */
+        public String f19433a = "image_cache";
+
+        /* renamed from: c */
+        public long f19435c = 41943040;
+
+        /* renamed from: d */
+        public EntryEvictionComparatorSupplier f19436d = new DefaultEntryEvictionComparatorSupplier();
+
+        public C10634b(Context context, C10633a c10633a) {
+            this.f19437e = context;
         }
     }
 
-    public DiskCacheConfig(b bVar) {
-        d dVar;
-        e eVar;
-        b.f.d.a.b bVar2;
-        Context context = bVar.e;
-        this.k = context;
-        b.c.a.a0.d.C((bVar.f2883b == null && context == null) ? false : true, "Either a non-null context or a base directory path or supplier must be provided.");
-        if (bVar.f2883b == null && context != null) {
-            bVar.f2883b = new a();
+    public DiskCacheConfig(C10634b c10634b) {
+        NoOpCacheErrorLogger noOpCacheErrorLogger;
+        NoOpCacheEventListener noOpCacheEventListener;
+        NoOpDiskTrimmableRegistry noOpDiskTrimmableRegistry;
+        Context context = c10634b.f19437e;
+        this.f19431k = context;
+        AnimatableValueParser.m423C((c10634b.f19434b == null && context == null) ? false : true, "Either a non-null context or a base directory path or supplier must be provided.");
+        if (c10634b.f19434b == null && context != null) {
+            c10634b.f19434b = new C10633a();
         }
-        this.a = 1;
-        String str = bVar.a;
+        this.f19421a = 1;
+        String str = c10634b.f19433a;
         Objects.requireNonNull(str);
-        this.f2882b = str;
-        Supplier<File> supplier = bVar.f2883b;
+        this.f19422b = str;
+        Supplier<File> supplier = c10634b.f19434b;
         Objects.requireNonNull(supplier);
-        this.c = supplier;
-        this.d = bVar.c;
-        this.e = 10485760L;
-        this.f = Permission.SPEAK;
-        g gVar = bVar.d;
-        Objects.requireNonNull(gVar);
-        this.g = gVar;
-        synchronized (d.class) {
-            if (d.a == null) {
-                d.a = new d();
+        this.f19423c = supplier;
+        this.f19424d = c10634b.f19435c;
+        this.f19425e = 10485760L;
+        this.f19426f = Permission.SPEAK;
+        EntryEvictionComparatorSupplier entryEvictionComparatorSupplier = c10634b.f19436d;
+        Objects.requireNonNull(entryEvictionComparatorSupplier);
+        this.f19427g = entryEvictionComparatorSupplier;
+        synchronized (NoOpCacheErrorLogger.class) {
+            if (NoOpCacheErrorLogger.f3017a == null) {
+                NoOpCacheErrorLogger.f3017a = new NoOpCacheErrorLogger();
             }
-            dVar = d.a;
+            noOpCacheErrorLogger = NoOpCacheErrorLogger.f3017a;
         }
-        this.h = dVar;
-        synchronized (e.class) {
-            if (e.a == null) {
-                e.a = new e();
+        this.f19428h = noOpCacheErrorLogger;
+        synchronized (NoOpCacheEventListener.class) {
+            if (NoOpCacheEventListener.f3018a == null) {
+                NoOpCacheEventListener.f3018a = new NoOpCacheEventListener();
             }
-            eVar = e.a;
+            noOpCacheEventListener = NoOpCacheEventListener.f3018a;
         }
-        this.i = eVar;
-        synchronized (b.f.d.a.b.class) {
-            if (b.f.d.a.b.a == null) {
-                b.f.d.a.b.a = new b.f.d.a.b();
+        this.f19429i = noOpCacheEventListener;
+        synchronized (NoOpDiskTrimmableRegistry.class) {
+            if (NoOpDiskTrimmableRegistry.f3077a == null) {
+                NoOpDiskTrimmableRegistry.f3077a = new NoOpDiskTrimmableRegistry();
             }
-            bVar2 = b.f.d.a.b.a;
+            noOpDiskTrimmableRegistry = NoOpDiskTrimmableRegistry.f3077a;
         }
-        this.j = bVar2;
+        this.f19430j = noOpDiskTrimmableRegistry;
     }
 }

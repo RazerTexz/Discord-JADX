@@ -9,21 +9,22 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetSettingsAuthorizedAppsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f17861a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final RecyclerView f2603b;
+    public final RecyclerView f17862b;
 
     public WidgetSettingsAuthorizedAppsBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull RecyclerView recyclerView) {
-        this.a = coordinatorLayout;
-        this.f2603b = recyclerView;
+        this.f17861a = coordinatorLayout;
+        this.f17862b = recyclerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17861a;
     }
 }

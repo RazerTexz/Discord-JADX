@@ -1,8 +1,6 @@
 package com.discord.widgets.guildscheduledevent;
 
 import android.content.Context;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
@@ -16,22 +14,24 @@ import com.discord.stores.StoreGuildScheduledEvents;
 import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent;
 import com.discord.widgets.stage.StageChannelAPI;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: PreviewGuildScheduledEventViewModel.kt */
 /* loaded from: classes2.dex */
-public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
+public final class PreviewGuildScheduledEventViewModel extends AppViewModel<ViewState> {
     private final StoreChannels channelsStore;
     private ViewState currentViewState;
     private final GuildScheduledEventModel eventModel;
@@ -63,8 +63,8 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Initialized(boolean z2, WidgetPreviewGuildScheduledEvent.Companion.Action action, boolean z3, GuildScheduledEventLocationInfo guildScheduledEventLocationInfo, GuildScheduledEventModel guildScheduledEventModel) {
                 super(null);
-                m.checkNotNullParameter(guildScheduledEventLocationInfo, "locationInfo");
-                m.checkNotNullParameter(guildScheduledEventModel, "eventModel");
+                Intrinsics3.checkNotNullParameter(guildScheduledEventLocationInfo, "locationInfo");
+                Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "eventModel");
                 this.requestProcessing = z2;
                 this.existingEventAction = action;
                 this.canNotifyEveryone = z3;
@@ -121,8 +121,8 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
             }
 
             public final Initialized copy(boolean requestProcessing, WidgetPreviewGuildScheduledEvent.Companion.Action existingEventAction, boolean canNotifyEveryone, GuildScheduledEventLocationInfo locationInfo, GuildScheduledEventModel eventModel) {
-                m.checkNotNullParameter(locationInfo, "locationInfo");
-                m.checkNotNullParameter(eventModel, "eventModel");
+                Intrinsics3.checkNotNullParameter(locationInfo, "locationInfo");
+                Intrinsics3.checkNotNullParameter(eventModel, "eventModel");
                 return new Initialized(requestProcessing, existingEventAction, canNotifyEveryone, locationInfo, eventModel);
             }
 
@@ -134,7 +134,7 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
                     return false;
                 }
                 Initialized initialized = (Initialized) other;
-                return this.requestProcessing == initialized.requestProcessing && m.areEqual(this.existingEventAction, initialized.existingEventAction) && this.canNotifyEveryone == initialized.canNotifyEveryone && m.areEqual(this.locationInfo, initialized.locationInfo) && m.areEqual(this.eventModel, initialized.eventModel);
+                return this.requestProcessing == initialized.requestProcessing && Intrinsics3.areEqual(this.existingEventAction, initialized.existingEventAction) && this.canNotifyEveryone == initialized.canNotifyEveryone && Intrinsics3.areEqual(this.locationInfo, initialized.locationInfo) && Intrinsics3.areEqual(this.eventModel, initialized.eventModel);
             }
 
             public final boolean getCanNotifyEveryone() {
@@ -184,18 +184,18 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Initialized(requestProcessing=");
-                sbU.append(this.requestProcessing);
-                sbU.append(", existingEventAction=");
-                sbU.append(this.existingEventAction);
-                sbU.append(", canNotifyEveryone=");
-                sbU.append(this.canNotifyEveryone);
-                sbU.append(", locationInfo=");
-                sbU.append(this.locationInfo);
-                sbU.append(", eventModel=");
-                sbU.append(this.eventModel);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Initialized(requestProcessing=");
+                sbM833U.append(this.requestProcessing);
+                sbM833U.append(", existingEventAction=");
+                sbM833U.append(this.existingEventAction);
+                sbM833U.append(", canNotifyEveryone=");
+                sbM833U.append(this.canNotifyEveryone);
+                sbM833U.append(", locationInfo=");
+                sbM833U.append(this.locationInfo);
+                sbM833U.append(", eventModel=");
+                sbM833U.append(this.eventModel);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -228,32 +228,32 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
     }
 
     /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$createEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$createEvent$1 */
+    public static final class C88321 extends Lambda implements Function1<Error, Unit> {
+        public C88321() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
         }
     }
 
     /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$createEvent$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<GuildScheduledEvent, Unit> {
+    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$createEvent$2 */
+    public static final class C88332 extends Lambda implements Function1<GuildScheduledEvent, Unit> {
         public final /* synthetic */ Function1 $onRequestSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(Function1 function1) {
+        public C88332(Function1 function1) {
             super(1);
             this.$onRequestSuccess = function1;
         }
@@ -261,7 +261,7 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(GuildScheduledEvent guildScheduledEvent) {
             invoke2(guildScheduledEvent);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -272,33 +272,33 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
     }
 
     /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$editEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$editEvent$1 */
+    public static final class C88341 extends Lambda implements Function1<Error, Unit> {
+        public C88341() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
         }
     }
 
     /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$editEvent$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Unit, Unit> {
+    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$editEvent$2 */
+    public static final class C88352 extends Lambda implements Function1<Unit, Unit> {
         public final /* synthetic */ long $eventId;
         public final /* synthetic */ Function1 $onRequestSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(Function1 function1, long j) {
+        public C88352(Function1 function1, long j) {
             super(1);
             this.$onRequestSuccess = function1;
             this.$eventId = j;
@@ -307,45 +307,45 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Unit unit) {
             invoke2(unit);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
-            m.checkNotNullParameter(unit, "it");
+            Intrinsics3.checkNotNullParameter(unit, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
             this.$onRequestSuccess.invoke(Long.valueOf(this.$eventId));
         }
     }
 
     /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startEvent$1 */
+    public static final class C88361 extends Lambda implements Function1<Error, Unit> {
+        public C88361() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
         }
     }
 
     /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startEvent$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Unit, Unit> {
+    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startEvent$2 */
+    public static final class C88372 extends Lambda implements Function1<Unit, Unit> {
         public final /* synthetic */ long $eventId;
         public final /* synthetic */ Function1 $onRequestSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(Function1 function1, long j) {
+        public C88372(Function1 function1, long j) {
             super(1);
             this.$onRequestSuccess = function1;
             this.$eventId = j;
@@ -354,45 +354,45 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Unit unit) {
             invoke2(unit);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
-            m.checkNotNullParameter(unit, "it");
+            Intrinsics3.checkNotNullParameter(unit, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
             this.$onRequestSuccess.invoke(Long.valueOf(this.$eventId));
         }
     }
 
     /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startStageEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startStageEvent$1 */
+    public static final class C88381 extends Lambda implements Function1<Error, Unit> {
+        public C88381() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
         }
     }
 
     /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startStageEvent$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<StageInstance, Unit> {
+    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startStageEvent$2 */
+    public static final class C88392 extends Lambda implements Function1<StageInstance, Unit> {
         public final /* synthetic */ Long $eventId;
         public final /* synthetic */ Function1 $onRequestSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(Function1 function1, Long l) {
+        public C88392(Function1 function1, Long l) {
             super(1);
             this.$onRequestSuccess = function1;
             this.$eventId = l;
@@ -401,12 +401,12 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StageInstance stageInstance) {
             invoke2(stageInstance);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StageInstance stageInstance) {
-            m.checkNotNullParameter(stageInstance, "it");
+            Intrinsics3.checkNotNullParameter(stageInstance, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
             this.$onRequestSuccess.invoke(this.$eventId);
         }
@@ -422,7 +422,7 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
 
     private final boolean canNotifyEveryone(Channel channel) {
         Long l;
-        if (channel == null || !ChannelUtils.D(channel) || (l = (Long) a.d(channel, this.permissionsStore.getPermissionsByChannel())) == null) {
+        if (channel == null || !ChannelUtils.m7669D(channel) || (l = (Long) outline.m845d(channel, this.permissionsStore.getPermissionsByChannel())) == null) {
             return false;
         }
         return PermissionUtils.can(Permission.MENTION_EVERYONE, Long.valueOf(l.longValue()));
@@ -431,7 +431,7 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
     private final void createEvent(Context context, Function1<? super Long, Unit> onRequestSuccess) {
         RestAPIParams.CreateGuildScheduledEventBody createRequestBody = this.eventModel.toCreateRequestBody();
         if (createRequestBody != null) {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().createGuildScheduledEvent(this.eventModel.getGuildId(), createRequestBody), false, 1, null), this, null, 2, null), PreviewGuildScheduledEventViewModel.class, context, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(onRequestSuccess), 52, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().createGuildScheduledEvent(this.eventModel.getGuildId(), createRequestBody), false, 1, null), this, null, 2, null), PreviewGuildScheduledEventViewModel.class, context, (Function1) null, new C88321(), (Function0) null, (Function0) null, new C88332(onRequestSuccess), 52, (Object) null);
         }
     }
 
@@ -443,7 +443,7 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
         if (existingEventData == null || (guildScheduledEventFindEventFromStore = this.guildScheduledEventsStore.findEventFromStore((guildScheduledEventId = existingEventData.getGuildScheduledEventId()), Long.valueOf(this.eventModel.getGuildId()))) == null || (updateRequestBody = this.eventModel.toUpdateRequestBody(guildScheduledEventFindEventFromStore)) == null) {
             return;
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updateGuildScheduledEvent(guildScheduledEventFindEventFromStore.getGuildId(), guildScheduledEventId, updateRequestBody), false, 1, null), this, null, 2, null), PreviewGuildScheduledEventViewModel.class, context, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(onRequestSuccess, guildScheduledEventId), 52, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updateGuildScheduledEvent(guildScheduledEventFindEventFromStore.getGuildId(), guildScheduledEventId, updateRequestBody), false, 1, null), this, null, 2, null), PreviewGuildScheduledEventViewModel.class, context, (Function1) null, new C88341(), (Function0) null, (Function0) null, new C88352(onRequestSuccess, guildScheduledEventId), 52, (Object) null);
     }
 
     public static /* synthetic */ void onBottomButtonClicked$default(PreviewGuildScheduledEventViewModel previewGuildScheduledEventViewModel, Context context, boolean z2, Function1 function1, int i, Object obj) {
@@ -463,7 +463,7 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
         WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData existingEventData = this.existingEventData;
         if (existingEventData != null) {
             long guildScheduledEventId = existingEventData.getGuildScheduledEventId();
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(GuildScheduledEventAPI.INSTANCE.startEvent(this.eventModel.getGuildId(), guildScheduledEventId), false, 1, null), this, null, 2, null), PreviewGuildScheduledEventViewModel.class, context, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(onRequestSuccess, guildScheduledEventId), 52, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(GuildScheduledEventAPI.INSTANCE.startEvent(this.eventModel.getGuildId(), guildScheduledEventId), false, 1, null), this, null, 2, null), PreviewGuildScheduledEventViewModel.class, context, (Function1) null, new C88361(), (Function0) null, (Function0) null, new C88372(onRequestSuccess, guildScheduledEventId), 52, (Object) null);
         }
     }
 
@@ -473,7 +473,7 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
         }
         WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData existingEventData = this.existingEventData;
         Long lValueOf = existingEventData != null ? Long.valueOf(existingEventData.getGuildScheduledEventId()) : null;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(StageChannelAPI.INSTANCE.startStageInstance(this.eventModel.getChannelId().longValue(), this.eventModel.getName(), StageInstancePrivacyLevel.GUILD_ONLY, sendNotification, String.valueOf(lValueOf)), false, 1, null), this, null, 2, null), PreviewGuildScheduledEventViewModel.class, context, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(onRequestSuccess, lValueOf), 52, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(StageChannelAPI.INSTANCE.startStageInstance(this.eventModel.getChannelId().longValue(), this.eventModel.getName(), StageInstancePrivacyLevel.GUILD_ONLY, sendNotification, String.valueOf(lValueOf)), false, 1, null), this, null, 2, null), PreviewGuildScheduledEventViewModel.class, context, (Function1) null, new C88381(), (Function0) null, (Function0) null, new C88392(onRequestSuccess, lValueOf), 52, (Object) null);
     }
 
     public final ViewState getCurrentViewState() {
@@ -485,8 +485,8 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
     }
 
     public final void onBottomButtonClicked(Context context, boolean sendNotification, Function1<? super Long, Unit> onRequestSuccess) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(onRequestSuccess, "onRequestSuccess");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(onRequestSuccess, "onRequestSuccess");
         ViewState viewState = this.currentViewState;
         Objects.requireNonNull(viewState, "null cannot be cast to non-null type com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel.ViewState.Initialized");
         ViewState.Initialized initialized = (ViewState.Initialized) viewState;
@@ -509,17 +509,17 @@ public final class PreviewGuildScheduledEventViewModel extends d0<ViewState> {
     }
 
     public final void setCurrentViewState(ViewState viewState) {
-        m.checkNotNullParameter(viewState, "<set-?>");
+        Intrinsics3.checkNotNullParameter(viewState, "<set-?>");
         this.currentViewState = viewState;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public PreviewGuildScheduledEventViewModel(GuildScheduledEventModel guildScheduledEventModel, WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData existingEventData, StoreChannels storeChannels, StorePermissions storePermissions, StoreGuildScheduledEvents storeGuildScheduledEvents) {
         super(ViewState.Initial.INSTANCE);
-        m.checkNotNullParameter(guildScheduledEventModel, "eventModel");
-        m.checkNotNullParameter(storeChannels, "channelsStore");
-        m.checkNotNullParameter(storePermissions, "permissionsStore");
-        m.checkNotNullParameter(storeGuildScheduledEvents, "guildScheduledEventsStore");
+        Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "eventModel");
+        Intrinsics3.checkNotNullParameter(storeChannels, "channelsStore");
+        Intrinsics3.checkNotNullParameter(storePermissions, "permissionsStore");
+        Intrinsics3.checkNotNullParameter(storeGuildScheduledEvents, "guildScheduledEventsStore");
         this.eventModel = guildScheduledEventModel;
         this.existingEventData = existingEventData;
         this.channelsStore = storeChannels;

@@ -1,0 +1,52 @@
+package p007b.p008a.p041q;
+
+import com.discord.rtcconnection.MediaSinkWantsManager;
+import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Set;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Lambda;
+
+/* compiled from: MediaSinkWantsManager.kt */
+/* renamed from: b.a.q.i, reason: use source file name */
+/* loaded from: classes.dex */
+public final class MediaSinkWantsManager4 extends Lambda implements Function0<Unit> {
+    public final /* synthetic */ MediaEngineConnection $connection;
+    public final /* synthetic */ MediaSinkWantsManager this$0;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public MediaSinkWantsManager4(MediaSinkWantsManager mediaSinkWantsManager, MediaEngineConnection mediaEngineConnection) {
+        super(0);
+        this.this$0 = mediaSinkWantsManager;
+        this.$connection = mediaEngineConnection;
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    public Unit invoke() {
+        MediaSinkWantsManager mediaSinkWantsManager = this.this$0;
+        MediaEngineConnection mediaEngineConnection = mediaSinkWantsManager.f18745d;
+        if (mediaEngineConnection != null) {
+            mediaEngineConnection.mo309o(mediaSinkWantsManager);
+        }
+        MediaSinkWantsManager mediaSinkWantsManager2 = this.this$0;
+        MediaEngineConnection mediaEngineConnection2 = this.$connection;
+        mediaSinkWantsManager2.f18745d = mediaEngineConnection2;
+        if (mediaEngineConnection2 != null) {
+            mediaEngineConnection2.mo306l(mediaSinkWantsManager2);
+        }
+        if (this.$connection != null) {
+            MediaSinkWantsManager mediaSinkWantsManager3 = this.this$0;
+            Set<Long> setKeySet = mediaSinkWantsManager3.f18743b.keySet();
+            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(setKeySet, 10));
+            Iterator<T> it = setKeySet.iterator();
+            while (it.hasNext()) {
+                arrayList.add(String.valueOf(((Number) it.next()).longValue()));
+            }
+            mediaSinkWantsManager3.m8456d(arrayList);
+        }
+        return Unit.f27425a;
+    }
+}

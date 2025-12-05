@@ -17,34 +17,26 @@ import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.j;
-import b.a.i.k1;
-import b.a.i.l1;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.role.GuildRole;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
+import com.discord.app.AppLogger2;
 import com.discord.app.AppViewFlipper;
-import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetServerSettingsMembersBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.StoreGatewayConnection;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.guilds.RoleUtils;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.view.text.TextWatcher;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.servers.WidgetServerSettingsChannels;
 import com.discord.widgets.servers.WidgetServerSettingsEditMember;
 import com.discord.widgets.user.WidgetPruneUsers;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g;
-import d0.g0.s;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -57,16 +49,26 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
-import rx.functions.Action1;
-import rx.functions.Action2;
-import rx.subjects.BehaviorSubject;
-import rx.subjects.Subject;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p025i.ServerSettingsMembersRoleSpinnerItemBinding;
+import p007b.p008a.p025i.ServerSettingsMembersRoleSpinnerItemOpenBinding;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p579g0.StringNumberConversions;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.functions.Action1;
+import p658rx.functions.Action2;
+import p658rx.subjects.BehaviorSubject;
+import p658rx.subjects.Subject;
 
 /* compiled from: WidgetServerSettingsMembers.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsMembers extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsMembers.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsMembersBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsMembers.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsMembersBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -81,7 +83,7 @@ public final class WidgetServerSettingsMembers extends AppFragment {
     /* renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private Map<Long, GuildRole> guildRoles;
-    private final LoggingConfig loggingConfig;
+    private final AppLogger2 loggingConfig;
     private final Subject<String, String> nameFilterPublisher;
     private final Subject<Long, Long> roleFilterPublisher;
 
@@ -91,10 +93,10 @@ public final class WidgetServerSettingsMembers extends AppFragment {
         }
 
         public final void create(Context context, long guildId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intentPutExtra = new Intent().putExtra(WidgetServerSettingsMembers.INTENT_EXTRA_GUILD_ID, guildId);
-            m.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…_EXTRA_GUILD_ID, guildId)");
-            j.d(context, WidgetServerSettingsMembers.class, intentPutExtra);
+            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…_EXTRA_GUILD_ID, guildId)");
+            AppScreen2.m156d(context, WidgetServerSettingsMembers.class, intentPutExtra);
             StoreStream.INSTANCE.getAnalytics().onGuildSettingsPaneViewed("MEMBERS", guildId);
         }
 
@@ -109,16 +111,16 @@ public final class WidgetServerSettingsMembers extends AppFragment {
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RolesSpinnerAdapter(Context context, ArrayList<GuildRole> arrayList) {
-            super(context, R.layout.server_settings_members_role_spinner_item, arrayList);
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(arrayList, "roles");
+            super(context, C5419R.layout.server_settings_members_role_spinner_item, arrayList);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(arrayList, "roles");
             this.roles = arrayList;
         }
 
         private final void configureLabel(TextView label, int position) {
             GuildRole item = getItem(position);
             Context context = getContext();
-            m.checkNotNullExpressionValue(context, "context");
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
             label.setTextColor(RoleUtils.getRoleColor$default(item, context, null, 2, null));
             label.setText(item.getName());
         }
@@ -130,23 +132,23 @@ public final class WidgetServerSettingsMembers extends AppFragment {
 
         @Override // android.widget.ArrayAdapter, android.widget.BaseAdapter, android.widget.SpinnerAdapter
         public View getDropDownView(int position, View convertView, ViewGroup parent) {
-            l1 l1Var;
-            m.checkNotNullParameter(parent, "parent");
+            ServerSettingsMembersRoleSpinnerItemOpenBinding serverSettingsMembersRoleSpinnerItemOpenBinding;
+            Intrinsics3.checkNotNullParameter(parent, "parent");
             if (convertView == null) {
-                View viewInflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.server_settings_members_role_spinner_item_open, (ViewGroup) null, false);
+                View viewInflate = LayoutInflater.from(parent.getContext()).inflate(C5419R.layout.server_settings_members_role_spinner_item_open, (ViewGroup) null, false);
                 Objects.requireNonNull(viewInflate, "rootView");
                 TextView textView = (TextView) viewInflate;
-                l1Var = new l1(textView, textView);
+                serverSettingsMembersRoleSpinnerItemOpenBinding = new ServerSettingsMembersRoleSpinnerItemOpenBinding(textView, textView);
             } else {
                 TextView textView2 = (TextView) convertView;
-                l1Var = new l1(textView2, textView2);
+                serverSettingsMembersRoleSpinnerItemOpenBinding = new ServerSettingsMembersRoleSpinnerItemOpenBinding(textView2, textView2);
             }
-            m.checkNotNullExpressionValue(l1Var, "if (convertView == null)…bind(convertView)\n      }");
-            TextView textView3 = l1Var.f151b;
-            m.checkNotNullExpressionValue(textView3, "binding.roleSpinnerItemTextview");
+            Intrinsics3.checkNotNullExpressionValue(serverSettingsMembersRoleSpinnerItemOpenBinding, "if (convertView == null)…bind(convertView)\n      }");
+            TextView textView3 = serverSettingsMembersRoleSpinnerItemOpenBinding.f1018b;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.roleSpinnerItemTextview");
             configureLabel(textView3, position);
-            TextView textView4 = l1Var.a;
-            m.checkNotNullExpressionValue(textView4, "binding.root");
+            TextView textView4 = serverSettingsMembersRoleSpinnerItemOpenBinding.f1017a;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.root");
             return textView4;
         }
 
@@ -162,69 +164,69 @@ public final class WidgetServerSettingsMembers extends AppFragment {
 
         @Override // android.widget.ArrayAdapter, android.widget.Adapter
         public View getView(int position, View convertView, ViewGroup parent) {
-            k1 k1Var;
-            m.checkNotNullParameter(parent, "parent");
+            ServerSettingsMembersRoleSpinnerItemBinding serverSettingsMembersRoleSpinnerItemBinding;
+            Intrinsics3.checkNotNullParameter(parent, "parent");
             if (convertView == null) {
-                View viewInflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.server_settings_members_role_spinner_item, (ViewGroup) null, false);
+                View viewInflate = LayoutInflater.from(parent.getContext()).inflate(C5419R.layout.server_settings_members_role_spinner_item, (ViewGroup) null, false);
                 Objects.requireNonNull(viewInflate, "rootView");
                 TextView textView = (TextView) viewInflate;
-                k1Var = new k1(textView, textView);
+                serverSettingsMembersRoleSpinnerItemBinding = new ServerSettingsMembersRoleSpinnerItemBinding(textView, textView);
             } else {
                 TextView textView2 = (TextView) convertView;
-                k1Var = new k1(textView2, textView2);
+                serverSettingsMembersRoleSpinnerItemBinding = new ServerSettingsMembersRoleSpinnerItemBinding(textView2, textView2);
             }
-            m.checkNotNullExpressionValue(k1Var, "if (convertView == null)…bind(convertView)\n      }");
-            TextView textView3 = k1Var.f145b;
-            m.checkNotNullExpressionValue(textView3, "binding.roleSpinnerItemTextview");
+            Intrinsics3.checkNotNullExpressionValue(serverSettingsMembersRoleSpinnerItemBinding, "if (convertView == null)…bind(convertView)\n      }");
+            TextView textView3 = serverSettingsMembersRoleSpinnerItemBinding.f997b;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.roleSpinnerItemTextview");
             configureLabel(textView3, position);
-            TextView textView4 = k1Var.a;
-            m.checkNotNullExpressionValue(textView4, "binding.root");
+            TextView textView4 = serverSettingsMembersRoleSpinnerItemBinding.f996a;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.root");
             return textView4;
         }
 
         @Override // android.widget.ArrayAdapter, android.widget.Adapter
         public GuildRole getItem(int position) {
             GuildRole guildRole = this.roles.get(position);
-            m.checkNotNullExpressionValue(guildRole, "roles[position]");
+            Intrinsics3.checkNotNullExpressionValue(guildRole, "roles[position]");
             return guildRole;
         }
     }
 
     /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2> implements Action2<MenuItem, Context> {
+    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$configureUI$1 */
+    public static final class C95891<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ WidgetServerSettingsMembersModel $model;
 
-        public AnonymousClass1(WidgetServerSettingsMembersModel widgetServerSettingsMembersModel) {
+        public C95891(WidgetServerSettingsMembersModel widgetServerSettingsMembersModel) {
             this.$model = widgetServerSettingsMembersModel;
         }
 
-        @Override // rx.functions.Action2
+        @Override // p658rx.functions.Action2
         public /* bridge */ /* synthetic */ void call(MenuItem menuItem, Context context) {
             call2(menuItem, context);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
-            m.checkNotNullExpressionValue(menuItem, "menuItem");
-            if (menuItem.getItemId() != R.id.menu_server_settings_members_prune) {
+            Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
+            if (menuItem.getItemId() != C5419R.id.menu_server_settings_members_prune) {
                 return;
             }
             WidgetPruneUsers.Companion companion = WidgetPruneUsers.INSTANCE;
             long id2 = this.$model.getGuild().getId();
             FragmentManager parentFragmentManager = WidgetServerSettingsMembers.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.create(id2, parentFragmentManager);
         }
     }
 
     /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function2<Long, List<? extends Long>, Unit> {
+    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$configureUI$2 */
+    public static final class C95902 extends Lambda implements Function2<Long, List<? extends Long>, Unit> {
         public final /* synthetic */ WidgetServerSettingsMembersModel $model;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(WidgetServerSettingsMembersModel widgetServerSettingsMembersModel) {
+        public C95902(WidgetServerSettingsMembersModel widgetServerSettingsMembersModel) {
             super(2);
             this.$model = widgetServerSettingsMembersModel;
         }
@@ -232,45 +234,45 @@ public final class WidgetServerSettingsMembers extends AppFragment {
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Long l, List<? extends Long> list) {
             invoke(l.longValue(), (List<Long>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j, List<Long> list) {
-            m.checkNotNullParameter(list, "userRoles");
+            Intrinsics3.checkNotNullParameter(list, "userRoles");
             boolean z2 = j == this.$model.getMeUser().getId();
             if (this.$model.getGuild().getOwnerId() == j && !z2) {
-                b.a.d.m.i(WidgetServerSettingsMembers.this, R.string.cannot_manage_is_owner, 0, 4);
+                AppToast.m171i(WidgetServerSettingsMembers.this, C5419R.string.cannot_manage_is_owner, 0, 4);
                 return;
             }
             GuildRole highestRole = RoleUtils.getHighestRole(this.$model.getRoles(), list);
             if (!RoleUtils.rankIsHigher(this.$model.getMyHighestRole(), highestRole) && !this.$model.getGuild().isOwner(this.$model.getMeUser().getId()) && !z2) {
                 if (RoleUtils.rankEquals(this.$model.getMyHighestRole(), highestRole)) {
-                    b.a.d.m.i(WidgetServerSettingsMembers.this, R.string.cannot_manage_same_rank, 0, 4);
+                    AppToast.m171i(WidgetServerSettingsMembers.this, C5419R.string.cannot_manage_same_rank, 0, 4);
                     return;
                 } else {
-                    b.a.d.m.i(WidgetServerSettingsMembers.this, R.string.cannot_manage_higher_rank, 0, 4);
+                    AppToast.m171i(WidgetServerSettingsMembers.this, C5419R.string.cannot_manage_higher_rank, 0, 4);
                     return;
                 }
             }
             WidgetServerSettingsEditMember.Companion companion = WidgetServerSettingsEditMember.INSTANCE;
             long id2 = this.$model.getGuild().getId();
             WidgetServerSettingsMembersBinding widgetServerSettingsMembersBindingAccess$getBinding$p = WidgetServerSettingsMembers.access$getBinding$p(WidgetServerSettingsMembers.this);
-            m.checkNotNullExpressionValue(widgetServerSettingsMembersBindingAccess$getBinding$p, "binding");
-            CoordinatorLayout coordinatorLayout = widgetServerSettingsMembersBindingAccess$getBinding$p.a;
-            m.checkNotNullExpressionValue(coordinatorLayout, "binding.root");
+            Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsMembersBindingAccess$getBinding$p, "binding");
+            CoordinatorLayout coordinatorLayout = widgetServerSettingsMembersBindingAccess$getBinding$p.f17708a;
+            Intrinsics3.checkNotNullExpressionValue(coordinatorLayout, "binding.root");
             Context context = coordinatorLayout.getContext();
-            m.checkNotNullExpressionValue(context, "binding.root.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "binding.root.context");
             companion.launch(id2, j, context);
         }
     }
 
     /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Action1<String> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$1 */
+    public static final class C95911<T> implements Action1<String> {
+        public C95911() {
         }
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(String str) {
             call2(str);
         }
@@ -282,37 +284,37 @@ public final class WidgetServerSettingsMembers extends AppFragment {
     }
 
     /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<String, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$2 */
+    public static final class C95922 extends Lambda implements Function1<String, Unit> {
+        public C95922() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            m.checkNotNullExpressionValue(str, "filterString");
-            Long longOrNull = s.toLongOrNull(str);
-            StoreGatewayConnection.requestGuildMembers$default(StoreStream.INSTANCE.getGatewaySocket(), WidgetServerSettingsMembers.access$getGuildId$p(WidgetServerSettingsMembers.this), str, longOrNull != null ? d0.t.m.listOf(Long.valueOf(longOrNull.longValue())) : null, null, 8, null);
+            Intrinsics3.checkNotNullExpressionValue(str, "filterString");
+            Long longOrNull = StringNumberConversions.toLongOrNull(str);
+            StoreGatewayConnection.requestGuildMembers$default(StoreStream.INSTANCE.getGatewaySocket(), WidgetServerSettingsMembers.access$getGuildId$p(WidgetServerSettingsMembers.this), str, longOrNull != null ? CollectionsJVM.listOf(Long.valueOf(longOrNull.longValue())) : null, null, 8, null);
         }
     }
 
     /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<WidgetServerSettingsMembersModel, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$3 */
+    public static final class C95933 extends Lambda implements Function1<WidgetServerSettingsMembersModel, Unit> {
+        public C95933() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetServerSettingsMembersModel widgetServerSettingsMembersModel) throws Exception {
             invoke2(widgetServerSettingsMembersModel);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -322,17 +324,17 @@ public final class WidgetServerSettingsMembers extends AppFragment {
     }
 
     /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$setupRolesSpinner$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements AdapterView.OnItemSelectedListener {
+    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$setupRolesSpinner$1 */
+    public static final class C95941 implements AdapterView.OnItemSelectedListener {
         public final /* synthetic */ RolesSpinnerAdapter $rolesSpinnerAdapter;
 
-        public AnonymousClass1(RolesSpinnerAdapter rolesSpinnerAdapter) {
+        public C95941(RolesSpinnerAdapter rolesSpinnerAdapter) {
             this.$rolesSpinnerAdapter = rolesSpinnerAdapter;
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id2) {
-            m.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(view, "view");
             WidgetServerSettingsMembers.access$getRoleFilterPublisher$p(WidgetServerSettingsMembers.this).onNext(Long.valueOf(this.$rolesSpinnerAdapter.getItem(position).getId()));
         }
 
@@ -342,16 +344,16 @@ public final class WidgetServerSettingsMembers extends AppFragment {
     }
 
     public WidgetServerSettingsMembers() {
-        super(R.layout.widget_server_settings_members);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsMembers$binding$2.INSTANCE, null, 2, null);
-        BehaviorSubject behaviorSubjectL0 = BehaviorSubject.l0("");
-        m.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(\"\")");
-        this.nameFilterPublisher = behaviorSubjectL0;
-        BehaviorSubject behaviorSubjectL02 = BehaviorSubject.l0(-1L);
-        m.checkNotNullExpressionValue(behaviorSubjectL02, "BehaviorSubject.create(-1L)");
-        this.roleFilterPublisher = behaviorSubjectL02;
-        this.guildId = g.lazy(new WidgetServerSettingsMembers$guildId$2(this));
-        this.loggingConfig = new LoggingConfig(false, null, WidgetServerSettingsMembers$loggingConfig$1.INSTANCE, 3);
+        super(C5419R.layout.widget_server_settings_members);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsMembers2.INSTANCE, null, 2, null);
+        BehaviorSubject behaviorSubjectM11130l0 = BehaviorSubject.m11130l0("");
+        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectM11130l0, "BehaviorSubject.create(\"\")");
+        this.nameFilterPublisher = behaviorSubjectM11130l0;
+        BehaviorSubject behaviorSubjectM11130l02 = BehaviorSubject.m11130l0(-1L);
+        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectM11130l02, "BehaviorSubject.create(-1L)");
+        this.roleFilterPublisher = behaviorSubjectM11130l02;
+        this.guildId = LazyJVM.lazy(new WidgetServerSettingsMembers3(this));
+        this.loggingConfig = new AppLogger2(false, null, WidgetServerSettingsMembers4.INSTANCE, 3);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetServerSettingsMembers widgetServerSettingsMembers, WidgetServerSettingsMembersModel widgetServerSettingsMembersModel) throws Exception {
@@ -383,19 +385,19 @@ public final class WidgetServerSettingsMembers extends AppFragment {
             }
             return;
         }
-        AppFragment.setActionBarOptionsMenu$default(this, model.getCanKick() ? R.menu.menu_server_settings_members : R.menu.menu_empty, new AnonymousClass1(model), null, 4, null);
-        setActionBarTitle(R.string.member_list);
+        AppFragment.setActionBarOptionsMenu$default(this, model.getCanKick() ? C5419R.menu.menu_server_settings_members : C5419R.menu.menu_empty, new C95891(model), null, 4, null);
+        setActionBarTitle(C5419R.string.member_list);
         setActionBarSubtitle(model.getGuild().getName());
-        AppViewFlipper appViewFlipper = getBinding().e;
-        m.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsMembersViewFlipper");
+        AppViewFlipper appViewFlipper = getBinding().f17712e;
+        Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsMembersViewFlipper");
         appViewFlipper.setDisplayedChild((!model.getMemberItems().isEmpty() ? 1 : 0) ^ 1);
-        if (!m.areEqual(this.guildRoles, model.getRoles())) {
+        if (!Intrinsics3.areEqual(this.guildRoles, model.getRoles())) {
             this.guildRoles = model.getRoles();
             setupRolesSpinner(model.getGuild().getId(), model.getRoles());
         }
         WidgetServerSettingsMembersAdapter widgetServerSettingsMembersAdapter = this.adapter;
         if (widgetServerSettingsMembersAdapter != null) {
-            widgetServerSettingsMembersAdapter.configure(model, new AnonymousClass2(model));
+            widgetServerSettingsMembersAdapter.configure(model, new C95902(model));
         }
     }
 
@@ -417,27 +419,27 @@ public final class WidgetServerSettingsMembers extends AppFragment {
             }
         }
         RolesSpinnerAdapter rolesSpinnerAdapter = new RolesSpinnerAdapter(requireContext(), arrayList);
-        Spinner spinner = getBinding().d;
-        m.checkNotNullExpressionValue(spinner, "binding.serverSettingsMembersRolesSpinner");
+        Spinner spinner = getBinding().f17711d;
+        Intrinsics3.checkNotNullExpressionValue(spinner, "binding.serverSettingsMembersRolesSpinner");
         spinner.setAdapter((SpinnerAdapter) rolesSpinnerAdapter);
-        Spinner spinner2 = getBinding().d;
-        m.checkNotNullExpressionValue(spinner2, "binding.serverSettingsMembersRolesSpinner");
-        spinner2.setOnItemSelectedListener(new AnonymousClass1(rolesSpinnerAdapter));
+        Spinner spinner2 = getBinding().f17711d;
+        Intrinsics3.checkNotNullExpressionValue(spinner2, "binding.serverSettingsMembersRolesSpinner");
+        spinner2.setOnItemSelectedListener(new C95941(rolesSpinnerAdapter));
     }
 
-    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public LoggingConfig getLoggingConfig() {
+    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.InterfaceC5455a
+    public AppLogger2 getLoggingConfig() {
         return this.loggingConfig;
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        RecyclerView recyclerView = getBinding().c;
-        m.checkNotNullExpressionValue(recyclerView, "binding.serverSettingsMembersRecycler");
+        RecyclerView recyclerView = getBinding().f17710c;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.serverSettingsMembersRecycler");
         this.adapter = (WidgetServerSettingsMembersAdapter) companion.configure(new WidgetServerSettingsMembersAdapter(recyclerView));
         if (getIsRecreated()) {
             return;
@@ -449,20 +451,20 @@ public final class WidgetServerSettingsMembers extends AppFragment {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         TextWatcher.Companion companion = TextWatcher.INSTANCE;
-        TextInputLayout textInputLayout = getBinding().f2579b;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsMembersNameSearch");
+        TextInputLayout textInputLayout = getBinding().f17709b;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsMembersNameSearch");
         EditText editText = textInputLayout.getEditText();
-        m.checkNotNull(editText);
-        m.checkNotNullExpressionValue(editText, "binding.serverSettingsMembersNameSearch.editText!!");
-        companion.addBindedTextWatcher(this, editText, new AnonymousClass1());
+        Intrinsics3.checkNotNull(editText);
+        Intrinsics3.checkNotNullExpressionValue(editText, "binding.serverSettingsMembersNameSearch.editText!!");
+        companion.addBindedTextWatcher(this, editText, new C95911());
         Subject<String, String> subject = this.nameFilterPublisher;
-        TextInputLayout textInputLayout2 = getBinding().f2579b;
-        m.checkNotNullExpressionValue(textInputLayout2, "binding.serverSettingsMembersNameSearch");
+        TextInputLayout textInputLayout2 = getBinding().f17709b;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.serverSettingsMembersNameSearch");
         EditText editText2 = textInputLayout2.getEditText();
         subject.onNext(String.valueOf(editText2 != null ? editText2.getText() : null));
-        Observable<String> observableP = this.nameFilterPublisher.p(750L, TimeUnit.MILLISECONDS);
-        m.checkNotNullExpressionValue(observableP, "nameFilterPublisher\n    …0, TimeUnit.MILLISECONDS)");
-        ObservableExtensionsKt.appSubscribe$default(observableP, WidgetServerSettingsMembers.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(WidgetServerSettingsMembersModel.INSTANCE.get(getGuildId(), this.nameFilterPublisher, this.roleFilterPublisher), this, null, 2, null), WidgetServerSettingsMembers.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
+        Observable<String> observableM11110p = this.nameFilterPublisher.m11110p(750L, TimeUnit.MILLISECONDS);
+        Intrinsics3.checkNotNullExpressionValue(observableM11110p, "nameFilterPublisher\n    …0, TimeUnit.MILLISECONDS)");
+        ObservableExtensionsKt.appSubscribe$default(observableM11110p, WidgetServerSettingsMembers.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C95922(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(WidgetServerSettingsMembersModel.INSTANCE.get(getGuildId(), this.nameFilterPublisher, this.roleFilterPublisher), this, null, 2, null), WidgetServerSettingsMembers.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C95933(), 62, (Object) null);
     }
 }

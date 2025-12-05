@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import y.a.b.b;
+import p677y.p678a.p680b.C13188b;
 
 /* loaded from: classes.dex */
 public final class TokenContents {
@@ -29,7 +29,8 @@ public final class TokenContents {
         this.mContents = bArr;
     }
 
-    public static /* synthetic */ int a(byte[] bArr, byte[] bArr2) {
+    /* renamed from: a */
+    public static /* synthetic */ int m78a(byte[] bArr, byte[] bArr2) {
         return compareByteArrays(bArr, bArr2);
     }
 
@@ -2890,7 +2891,7 @@ public final class TokenContents {
 
     @NonNull
     private static byte[] createToken(@NonNull String str, @NonNull List<byte[]> list) throws IOException {
-        Collections.sort(list, b.j);
+        Collections.sort(list, C13188b.f27953j);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         DataOutputStream dataOutputStream = new DataOutputStream(byteArrayOutputStream);
         dataOutputStream.writeUTF(str);

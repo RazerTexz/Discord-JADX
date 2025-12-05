@@ -1,9 +1,7 @@
 package com.discord.stores;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.api.activity.ActivityType;
 import com.discord.api.connectedaccounts.ConnectedAccount;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -13,19 +11,13 @@ import com.discord.models.domain.spotify.ModelSpotifyTrack;
 import com.discord.stores.StoreUserConnections;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.integrations.SpotifyHelper;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.platform.Platform;
-import com.discord.utilities.presence.ActivityUtilsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.presence.ActivityUtils;
 import com.discord.utilities.spotify.SpotifyApiClient;
 import com.discord.utilities.time.Clock;
-import com.discord.widgets.chat.input.MentionUtilsKt;
+import com.discord.widgets.chat.input.MentionUtils;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
-import d0.g0.t;
-import d0.g0.w;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.l.e.k;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -34,10 +26,19 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Subscription;
-import rx.functions.Func2;
-import rx.subjects.BehaviorSubject;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.Strings4;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
+import p658rx.Subscription;
+import p658rx.functions.Func2;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: StoreSpotify.kt */
 /* loaded from: classes2.dex */
@@ -118,7 +119,7 @@ public final class StoreSpotify {
                 return false;
             }
             SpotifyState spotifyState = (SpotifyState) other;
-            return m.areEqual(this.track, spotifyState.track) && this.playing == spotifyState.playing && this.position == spotifyState.position && this.start == spotifyState.start;
+            return Intrinsics3.areEqual(this.track, spotifyState.track) && this.playing == spotifyState.playing && this.position == spotifyState.position && this.start == spotifyState.start;
         }
 
         public final boolean getPlaying() {
@@ -146,18 +147,18 @@ public final class StoreSpotify {
             if (z2 != 0) {
                 i = 1;
             }
-            return b.a(this.start) + ((((iHashCode + i) * 31) + this.position) * 31);
+            return C0002b.m3a(this.start) + ((((iHashCode + i) * 31) + this.position) * 31);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("SpotifyState(track=");
-            sbU.append(this.track);
-            sbU.append(", playing=");
-            sbU.append(this.playing);
-            sbU.append(", position=");
-            sbU.append(this.position);
-            sbU.append(", start=");
-            return a.C(sbU, this.start, ")");
+            StringBuilder sbM833U = outline.m833U("SpotifyState(track=");
+            sbM833U.append(this.track);
+            sbM833U.append(", playing=");
+            sbM833U.append(this.playing);
+            sbM833U.append(", position=");
+            sbM833U.append(this.position);
+            sbM833U.append(", start=");
+            return outline.m815C(sbM833U, this.start, ")");
         }
 
         public /* synthetic */ SpotifyState(ModelSpotifyTrack modelSpotifyTrack, boolean z2, int i, long j, int i2, DefaultConstructorMarker defaultConstructorMarker) {
@@ -166,16 +167,16 @@ public final class StoreSpotify {
     }
 
     /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$init$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements j0.k.b<ModelSpotifyTrack, Observable<? extends ModelSpotifyTrack>> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StoreSpotify$init$1 */
+    public static final class C64021<T, R> implements Func1<ModelSpotifyTrack, Observable<? extends ModelSpotifyTrack>> {
+        public static final C64021 INSTANCE = new C64021();
 
         /* compiled from: StoreSpotify.kt */
-        /* renamed from: com.discord.stores.StoreSpotify$init$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02921<T, R> implements j0.k.b {
-            public static final C02921 INSTANCE = new C02921();
+        /* renamed from: com.discord.stores.StoreSpotify$init$1$1, reason: invalid class name */
+        public static final class AnonymousClass1<T, R> implements Func1 {
+            public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-            @Override // j0.k.b
+            @Override // p637j0.p641k.Func1
             public /* bridge */ /* synthetic */ Object call(Object obj) {
                 return call((Long) obj);
             }
@@ -185,40 +186,40 @@ public final class StoreSpotify {
             }
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Observable<? extends ModelSpotifyTrack> call(ModelSpotifyTrack modelSpotifyTrack) {
             return call2(modelSpotifyTrack);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends ModelSpotifyTrack> call2(ModelSpotifyTrack modelSpotifyTrack) {
-            return modelSpotifyTrack != null ? new k(modelSpotifyTrack) : Observable.d0(1L, TimeUnit.SECONDS).G(C02921.INSTANCE);
+            return modelSpotifyTrack != null ? new ScalarSynchronousObservable(modelSpotifyTrack) : Observable.m11068d0(1L, TimeUnit.SECONDS).m11083G(AnonymousClass1.INSTANCE);
         }
     }
 
     /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$init$2, reason: invalid class name */
-    public static final class AnonymousClass2<T1, T2, R> implements Func2<Unit, ModelSpotifyTrack, ModelSpotifyTrack> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.stores.StoreSpotify$init$2 */
+    public static final class C64032<T1, T2, R> implements Func2<Unit, ModelSpotifyTrack, ModelSpotifyTrack> {
+        public static final C64032 INSTANCE = new C64032();
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final ModelSpotifyTrack call2(Unit unit, ModelSpotifyTrack modelSpotifyTrack) {
             return modelSpotifyTrack;
         }
 
-        @Override // rx.functions.Func2
+        @Override // p658rx.functions.Func2
         public /* bridge */ /* synthetic */ ModelSpotifyTrack call(Unit unit, ModelSpotifyTrack modelSpotifyTrack) {
             return call2(unit, modelSpotifyTrack);
         }
     }
 
     /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$init$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<ModelSpotifyTrack, Unit> {
+    /* renamed from: com.discord.stores.StoreSpotify$init$3 */
+    public static final class C64043 extends Lambda implements Function1<ModelSpotifyTrack, Unit> {
 
         /* compiled from: StoreSpotify.kt */
         /* renamed from: com.discord.stores.StoreSpotify$init$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelSpotifyTrack $track;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -230,7 +231,7 @@ public final class StoreSpotify {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -250,14 +251,14 @@ public final class StoreSpotify {
             }
         }
 
-        public AnonymousClass3() {
+        public C64043() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelSpotifyTrack modelSpotifyTrack) {
             invoke2(modelSpotifyTrack);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -267,13 +268,13 @@ public final class StoreSpotify {
     }
 
     /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$setPlayingStatus$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreSpotify$setPlayingStatus$1 */
+    public static final class C64051 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $playing;
         public final /* synthetic */ int $position;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2, int i) {
+        public C64051(boolean z2, int i) {
             super(0);
             this.$playing = z2;
             this.$position = i;
@@ -282,7 +283,7 @@ public final class StoreSpotify {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -293,37 +294,37 @@ public final class StoreSpotify {
             StoreSpotify storeSpotify = StoreSpotify.this;
             SpotifyState spotifyStateAccess$getSpotifyState$p = StoreSpotify.access$getSpotifyState$p(storeSpotify);
             StoreSpotify.access$setSpotifyState$p(storeSpotify, spotifyStateAccess$getSpotifyState$p != null ? SpotifyState.copy$default(spotifyStateAccess$getSpotifyState$p, null, this.$playing, this.$position, StoreSpotify.access$getClock$p(StoreSpotify.this).currentTimeMillis() - this.$position, 1, null) : null);
-            StoreSpotify.access$getPublishStateTrigger$p(StoreSpotify.this).onNext(Unit.a);
+            StoreSpotify.access$getPublishStateTrigger$p(StoreSpotify.this).onNext(Unit.f27425a);
         }
     }
 
     /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$startStateExpiration$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Subscription, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreSpotify$startStateExpiration$1 */
+    public static final class C64061 extends Lambda implements Function1<Subscription, Unit> {
+        public C64061() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            m.checkNotNullParameter(subscription, "it");
+            Intrinsics3.checkNotNullParameter(subscription, "it");
             StoreSpotify.access$setExpireStateSub$p(StoreSpotify.this, subscription);
         }
     }
 
     /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$startStateExpiration$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Long, Unit> {
+    /* renamed from: com.discord.stores.StoreSpotify$startStateExpiration$2 */
+    public static final class C64072 extends Lambda implements Function1<Long, Unit> {
 
         /* compiled from: StoreSpotify.kt */
         /* renamed from: com.discord.stores.StoreSpotify$startStateExpiration$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -331,7 +332,7 @@ public final class StoreSpotify {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -341,14 +342,14 @@ public final class StoreSpotify {
             }
         }
 
-        public AnonymousClass2() {
+        public C64072() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke2(l);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -358,13 +359,13 @@ public final class StoreSpotify {
     }
 
     public StoreSpotify(StoreStream storeStream, Dispatcher dispatcher, Clock clock) {
-        m.checkNotNullParameter(storeStream, "stream");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
         this.stream = storeStream;
         this.dispatcher = dispatcher;
         this.clock = clock;
-        this.publishStateTrigger = BehaviorSubject.k0();
+        this.publishStateTrigger = BehaviorSubject.m11129k0();
         this.spotifyApiClient = new SpotifyApiClient(clock);
     }
 
@@ -404,7 +405,7 @@ public final class StoreSpotify {
         storeSpotify.startStateExpiration(j);
     }
 
-    @StoreThread
+    @Store3
     private final void publishState() {
         boolean z2;
         List<ModelSpotifyAlbum.AlbumImage> images;
@@ -421,7 +422,7 @@ public final class StoreSpotify {
             z2 = false;
         } else {
             for (ConnectedAccount connectedAccount : stateSnapshot) {
-                if (m.areEqual(connectedAccount.getType(), Platform.SPOTIFY.getPlatformId()) && connectedAccount.getShowActivity()) {
+                if (Intrinsics3.areEqual(connectedAccount.getType(), Platform.SPOTIFY.getPlatformId()) && connectedAccount.getShowActivity()) {
                     z2 = true;
                     break;
                 }
@@ -430,7 +431,7 @@ public final class StoreSpotify {
         }
         if (z2) {
             SpotifyState spotifyState = this.spotifyState;
-            m.checkNotNull(spotifyState);
+            Intrinsics3.checkNotNull(spotifyState);
             ModelSpotifyTrack track = spotifyState.getTrack();
             boolean playing = spotifyState.getPlaying();
             long start = spotifyState.getStart();
@@ -439,15 +440,15 @@ public final class StoreSpotify {
                 return;
             }
             ModelSpotifyAlbum album = track.getAlbum();
-            String str = (album == null || (images2 = album.getImages()) == null || (albumImage = (ModelSpotifyAlbum.AlbumImage) u.firstOrNull((List) images2)) == null || (url = albumImage.getUrl()) == null || (listSplit$default = w.split$default((CharSequence) url, new String[]{AutocompleteViewModel.COMMAND_DISCOVER_TOKEN}, false, 0, 6, (Object) null)) == null) ? null : (String) u.last(listSplit$default);
-            String str2 = str != null ? Platform.SPOTIFY.getPlatformId() + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + str : null;
+            String str = (album == null || (images2 = album.getImages()) == null || (albumImage = (ModelSpotifyAlbum.AlbumImage) _Collections.firstOrNull((List) images2)) == null || (url = albumImage.getUrl()) == null || (listSplit$default = Strings4.split$default((CharSequence) url, new String[]{AutocompleteViewModel.COMMAND_DISCOVER_TOKEN}, false, 0, 6, (Object) null)) == null) ? null : (String) _Collections.last(listSplit$default);
+            String str2 = str != null ? Platform.SPOTIFY.getPlatformId() + MentionUtils.EMOJIS_AND_STICKERS_CHAR + str : null;
             long jCurrentTimeMillis = this.clock.currentTimeMillis();
             Platform platform = Platform.SPOTIFY;
             String properName = platform.getProperName();
             String name = track.getName();
             String id2 = track.getId();
             ModelSpotifyAlbum album2 = track.getAlbum();
-            this.stream.getPresences().updateActivity(ActivityType.LISTENING, ActivityUtilsKt.createSpotifyListeningActivity(jCurrentTimeMillis, properName, name, id2, album2 != null ? album2.getName() : null, str2, u.joinToString$default(track.getArtists(), null, null, null, 0, null, StoreSpotify$publishState$activity$1.INSTANCE, 31, null), start, track.getDurationMs() + start, platform.getPlatformId() + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + this.stream.getUsers().getMe().getId()), true);
+            this.stream.getPresences().updateActivity(ActivityType.LISTENING, ActivityUtils.createSpotifyListeningActivity(jCurrentTimeMillis, properName, name, id2, album2 != null ? album2.getName() : null, str2, _Collections.joinToString$default(track.getArtists(), null, null, null, 0, null, StoreSpotify2.INSTANCE, 31, null), start, track.getDurationMs() + start, platform.getPlatformId() + MentionUtils.EMOJIS_AND_STICKERS_CHAR + this.stream.getUsers().getMe().getId()), true);
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             String id3 = track.getId();
             ModelSpotifyAlbum album3 = track.getAlbum();
@@ -455,38 +456,38 @@ public final class StoreSpotify {
         }
     }
 
-    @StoreThread
+    @Store3
     private final void startStateExpiration(long timeLeftMs) {
-        Observable<Long> observableD0 = Observable.d0(timeLeftMs + 5000, TimeUnit.MILLISECONDS);
-        m.checkNotNullExpressionValue(observableD0, "Observable\n        .time…), TimeUnit.MILLISECONDS)");
-        ObservableExtensionsKt.appSubscribe$default(observableD0, StoreSpotify.class, (Context) null, new AnonymousClass1(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 58, (Object) null);
+        Observable<Long> observableM11068d0 = Observable.m11068d0(timeLeftMs + 5000, TimeUnit.MILLISECONDS);
+        Intrinsics3.checkNotNullExpressionValue(observableM11068d0, "Observable\n        .time…), TimeUnit.MILLISECONDS)");
+        ObservableExtensionsKt.appSubscribe$default(observableM11068d0, StoreSpotify.class, (Context) null, new C64061(), (Function1) null, (Function0) null, (Function0) null, new C64072(), 58, (Object) null);
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         List<ConnectedAccount> connectedAccounts = payload.getConnectedAccounts();
-        m.checkNotNullExpressionValue(connectedAccounts, "payload.connectedAccounts");
+        Intrinsics3.checkNotNullExpressionValue(connectedAccounts, "payload.connectedAccounts");
         handleUserConnections(connectedAccounts);
-        this.publishStateTrigger.onNext(Unit.a);
+        this.publishStateTrigger.onNext(Unit.f27425a);
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionReady(boolean ready) {
         if (ready) {
-            this.publishStateTrigger.onNext(Unit.a);
+            this.publishStateTrigger.onNext(Unit.f27425a);
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handlePreLogout() {
         this.spotifyState = null;
     }
 
-    @StoreThread
+    @Store3
     public final void handleUserConnections(List<ConnectedAccount> accounts) {
         Object next;
-        m.checkNotNullParameter(accounts, "accounts");
+        Intrinsics3.checkNotNullParameter(accounts, "accounts");
         Iterator<T> it = accounts.iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -494,7 +495,7 @@ public final class StoreSpotify {
                 break;
             } else {
                 next = it.next();
-                if (t.equals(Platform.SPOTIFY.name(), ((ConnectedAccount) next).getType(), true)) {
+                if (StringsJVM.equals(Platform.SPOTIFY.name(), ((ConnectedAccount) next).getType(), true)) {
                     break;
                 }
             }
@@ -504,19 +505,19 @@ public final class StoreSpotify {
     }
 
     public final void init(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         SpotifyHelper.registerSpotifyBroadcastReceivers(context);
-        Observable observableP = Observable.j(this.publishStateTrigger, this.spotifyApiClient.getSpotifyTrack().Y(AnonymousClass1.INSTANCE).r(), AnonymousClass2.INSTANCE).p(2L, TimeUnit.SECONDS);
-        m.checkNotNullExpressionValue(observableP, "Observable.combineLatest…unce(2, TimeUnit.SECONDS)");
-        ObservableExtensionsKt.appSubscribe$default(observableP, StoreSpotify.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
+        Observable observableM11110p = Observable.m11076j(this.publishStateTrigger, this.spotifyApiClient.getSpotifyTrack().m11099Y(C64021.INSTANCE).m11112r(), C64032.INSTANCE).m11110p(2L, TimeUnit.SECONDS);
+        Intrinsics3.checkNotNullExpressionValue(observableM11110p, "Observable.combineLatest…unce(2, TimeUnit.SECONDS)");
+        ObservableExtensionsKt.appSubscribe$default(observableM11110p, StoreSpotify.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C64043(), 62, (Object) null);
     }
 
     public final void setCurrentTrackId(String trackId) {
-        m.checkNotNullParameter(trackId, "trackId");
+        Intrinsics3.checkNotNullParameter(trackId, "trackId");
         this.spotifyApiClient.fetchSpotifyTrack(trackId);
     }
 
     public final void setPlayingStatus(boolean playing, int position) {
-        this.dispatcher.schedule(new AnonymousClass1(playing, position));
+        this.dispatcher.schedule(new C64051(playing, position));
     }
 }

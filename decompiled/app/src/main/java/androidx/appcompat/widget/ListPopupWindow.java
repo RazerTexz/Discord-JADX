@@ -25,14 +25,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
-import androidx.appcompat.R;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.view.menu.ShowableListMenu;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.view.PointerIconCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.PopupWindowCompat;
-import b.d.b.a.a;
 import java.lang.reflect.Method;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ListPopupWindow implements ShowableListMenu {
@@ -82,9 +82,9 @@ public class ListPopupWindow implements ShowableListMenu {
     private final Rect mTempRect;
     private final PopupTouchInterceptor mTouchInterceptor;
 
-    /* renamed from: androidx.appcompat.widget.ListPopupWindow$1, reason: invalid class name */
-    public class AnonymousClass1 extends ForwardingListener {
-        public AnonymousClass1(View view) {
+    /* renamed from: androidx.appcompat.widget.ListPopupWindow$1 */
+    public class C01091 extends ForwardingListener {
+        public C01091(View view) {
             super(view);
         }
 
@@ -99,9 +99,9 @@ public class ListPopupWindow implements ShowableListMenu {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ListPopupWindow$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.widget.ListPopupWindow$2 */
+    public class RunnableC01102 implements Runnable {
+        public RunnableC01102() {
         }
 
         @Override // java.lang.Runnable
@@ -114,9 +114,9 @@ public class ListPopupWindow implements ShowableListMenu {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ListPopupWindow$3, reason: invalid class name */
-    public class AnonymousClass3 implements AdapterView.OnItemSelectedListener {
-        public AnonymousClass3() {
+    /* renamed from: androidx.appcompat.widget.ListPopupWindow$3 */
+    public class C01113 implements AdapterView.OnItemSelectedListener {
+        public C01113() {
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
@@ -245,7 +245,7 @@ public class ListPopupWindow implements ShowableListMenu {
     }
 
     public ListPopupWindow(@NonNull Context context) {
-        this(context, null, R.attr.listPopupWindowStyle);
+        this(context, null, C0051R.attr.listPopupWindowStyle);
     }
 
     private int buildDropDown() {
@@ -255,7 +255,7 @@ public class ListPopupWindow implements ShowableListMenu {
         int i2;
         if (this.mDropDownList == null) {
             Context context = this.mContext;
-            this.mShowDropDownRunnable = new AnonymousClass2();
+            this.mShowDropDownRunnable = new RunnableC01102();
             DropDownListView dropDownListViewCreateDropDownListView = createDropDownListView(context, !this.mModal);
             this.mDropDownList = dropDownListViewCreateDropDownListView;
             Drawable drawable = this.mDropDownListHighlight;
@@ -266,7 +266,7 @@ public class ListPopupWindow implements ShowableListMenu {
             this.mDropDownList.setOnItemClickListener(this.mItemClickListener);
             this.mDropDownList.setFocusable(true);
             this.mDropDownList.setFocusableInTouchMode(true);
-            this.mDropDownList.setOnItemSelectedListener(new AnonymousClass3());
+            this.mDropDownList.setOnItemSelectedListener(new C01113());
             this.mDropDownList.setOnScrollListener(this.mScrollListener);
             AdapterView.OnItemSelectedListener onItemSelectedListener = this.mItemSelectedListener;
             if (onItemSelectedListener != null) {
@@ -283,9 +283,9 @@ public class ListPopupWindow implements ShowableListMenu {
                     linearLayout.addView(view2);
                     linearLayout.addView(view, layoutParams);
                 } else if (i3 != 1) {
-                    StringBuilder sbU = a.U("Invalid hint position ");
-                    sbU.append(this.mPromptPosition);
-                    Log.e(TAG, sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("Invalid hint position ");
+                    sbM833U.append(this.mPromptPosition);
+                    Log.e(TAG, sbM833U.toString());
                 } else {
                     linearLayout.addView(view, layoutParams);
                     linearLayout.addView(view2);
@@ -403,7 +403,7 @@ public class ListPopupWindow implements ShowableListMenu {
     }
 
     public View.OnTouchListener createDragToOpenListener(View view) {
-        return new AnonymousClass1(view);
+        return new C01091(view);
     }
 
     @NonNull
@@ -849,7 +849,7 @@ public class ListPopupWindow implements ShowableListMenu {
     }
 
     public ListPopupWindow(@NonNull Context context, @Nullable AttributeSet attributeSet) {
-        this(context, attributeSet, R.attr.listPopupWindowStyle);
+        this(context, attributeSet, C0051R.attr.listPopupWindowStyle);
     }
 
     public ListPopupWindow(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i) {
@@ -872,9 +872,9 @@ public class ListPopupWindow implements ShowableListMenu {
         this.mTempRect = new Rect();
         this.mContext = context;
         this.mHandler = new Handler(context.getMainLooper());
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.ListPopupWindow, i, i2);
-        this.mDropDownHorizontalOffset = typedArrayObtainStyledAttributes.getDimensionPixelOffset(R.styleable.ListPopupWindow_android_dropDownHorizontalOffset, 0);
-        int dimensionPixelOffset = typedArrayObtainStyledAttributes.getDimensionPixelOffset(R.styleable.ListPopupWindow_android_dropDownVerticalOffset, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0051R.styleable.ListPopupWindow, i, i2);
+        this.mDropDownHorizontalOffset = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C0051R.styleable.ListPopupWindow_android_dropDownHorizontalOffset, 0);
+        int dimensionPixelOffset = typedArrayObtainStyledAttributes.getDimensionPixelOffset(C0051R.styleable.ListPopupWindow_android_dropDownVerticalOffset, 0);
         this.mDropDownVerticalOffset = dimensionPixelOffset;
         if (dimensionPixelOffset != 0) {
             this.mDropDownVerticalOffsetSet = true;

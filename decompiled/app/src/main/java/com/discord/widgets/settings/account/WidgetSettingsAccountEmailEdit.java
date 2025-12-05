@@ -8,44 +8,45 @@ import android.widget.TextView;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.f;
-import b.a.d.j;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsAccountEmailEditBinding;
 import com.discord.models.user.MeUser;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.auth.GoogleSmartLockManager;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.stateful.StatefulViews;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.view.validators.ValidationManager;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.settings.account.WidgetSettingsAccountEmailEditConfirm;
 import com.discord.widgets.user.WidgetUserPasswordVerify;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.functions.Action1;
+import p007b.p008a.p018d.AppHelpDesk;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.C0879o;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.functions.Action1;
 
 /* compiled from: WidgetSettingsAccountEmailEdit.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsAccountEmailEdit extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsAccountEmailEdit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountEmailEditBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccountEmailEdit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountEmailEditBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -65,10 +66,10 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
         }
 
         public final void launch(Context context, boolean shouldConfirmEmail) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra(WidgetSettingsAccountEmailEdit.EXTRA_SHOULD_CONFIRM_EMAIL, shouldConfirmEmail);
-            j.d(context, WidgetSettingsAccountEmailEdit.class, intent);
+            AppScreen2.m156d(context, WidgetSettingsAccountEmailEdit.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -77,29 +78,29 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<TextView, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$1 */
+    public static final class C97561 extends Lambda implements Function1<TextView, Unit> {
+        public C97561() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(TextView textView) {
             invoke2(textView);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            m.checkNotNullParameter(textView, "it");
+            Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetSettingsAccountEmailEdit.access$showCodeVerification(WidgetSettingsAccountEmailEdit.this);
         }
     }
 
     /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$2 */
+    public static final class ViewOnClickListenerC97572 implements View.OnClickListener {
+        public ViewOnClickListenerC97572() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -109,29 +110,29 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<TextView, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$3 */
+    public static final class C97583 extends Lambda implements Function1<TextView, Unit> {
+        public C97583() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(TextView textView) {
             invoke2(textView);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            m.checkNotNullParameter(textView, "it");
+            Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetSettingsAccountEmailEdit.access$showPasswordVerification(WidgetSettingsAccountEmailEdit.this);
         }
     }
 
     /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$4 */
+    public static final class ViewOnClickListenerC97594 implements View.OnClickListener {
+        public ViewOnClickListenerC97594() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -141,33 +142,33 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<MeUser, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBoundOrOnResume$1 */
+    public static final class C97601 extends Lambda implements Function1<MeUser, Unit> {
+        public C97601() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(MeUser meUser) {
             invoke2(meUser);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
-            m.checkNotNullParameter(meUser, "it");
+            Intrinsics3.checkNotNullParameter(meUser, "it");
             WidgetSettingsAccountEmailEdit.access$configureUI(WidgetSettingsAccountEmailEdit.this, meUser);
             new GoogleSmartLockManager(WidgetSettingsAccountEmailEdit.this.requireContext(), null, 2, null).getSmartLockRepo().setPendingIdChange(meUser.getEmail());
         }
     }
 
     /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$showCodeVerification$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Action1<Void> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$showCodeVerification$1 */
+    public static final class C97611<T> implements Action1<Void> {
+        public C97611() {
         }
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Void r1) {
             call2(r1);
         }
@@ -177,18 +178,18 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
             WidgetSettingsAccountEmailEditConfirm.Companion companion = WidgetSettingsAccountEmailEditConfirm.INSTANCE;
             Context contextRequireContext = WidgetSettingsAccountEmailEdit.this.requireContext();
             ActivityResultLauncher<Intent> activityResultLauncherAccess$getNextScreenLauncher$p = WidgetSettingsAccountEmailEdit.access$getNextScreenLauncher$p(WidgetSettingsAccountEmailEdit.this);
-            TextInputLayout textInputLayout = WidgetSettingsAccountEmailEdit.access$getBinding$p(WidgetSettingsAccountEmailEdit.this).d;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.editAccountEmailWrap");
+            TextInputLayout textInputLayout = WidgetSettingsAccountEmailEdit.access$getBinding$p(WidgetSettingsAccountEmailEdit.this).f17837d;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.editAccountEmailWrap");
             companion.launch(contextRequireContext, activityResultLauncherAccess$getNextScreenLauncher$p, ViewExtensions.getTextOrEmpty(textInputLayout));
         }
     }
 
     public WidgetSettingsAccountEmailEdit() {
-        super(R.layout.widget_settings_account_email_edit);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsAccountEmailEdit$binding$2.INSTANCE, null, 2, null);
-        this.nextScreenLauncher = WidgetUserPasswordVerify.INSTANCE.registerForResult(this, new WidgetSettingsAccountEmailEdit$nextScreenLauncher$1(this));
-        this.state = new StatefulViews(R.id.edit_account_email_wrap);
-        this.validationManager = g.lazy(new WidgetSettingsAccountEmailEdit$validationManager$2(this));
+        super(C5419R.layout.widget_settings_account_email_edit);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsAccountEmailEdit2.INSTANCE, null, 2, null);
+        this.nextScreenLauncher = WidgetUserPasswordVerify.INSTANCE.registerForResult(this, new WidgetSettingsAccountEmailEdit3(this));
+        this.state = new StatefulViews(C5419R.id.edit_account_email_wrap);
+        this.validationManager = LazyJVM.lazy(new WidgetSettingsAccountEmailEdit4(this));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetSettingsAccountEmailEdit widgetSettingsAccountEmailEdit, MeUser meUser) {
@@ -216,11 +217,11 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
     }
 
     private final void configureUI(MeUser meUser) {
-        TextInputLayout textInputLayout = getBinding().d;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.editAccountEmailWrap");
+        TextInputLayout textInputLayout = getBinding().f17837d;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.editAccountEmailWrap");
         StatefulViews statefulViews = this.state;
-        TextInputLayout textInputLayout2 = getBinding().d;
-        m.checkNotNullExpressionValue(textInputLayout2, "binding.editAccountEmailWrap");
+        TextInputLayout textInputLayout2 = getBinding().f17837d;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.editAccountEmailWrap");
         ViewExtensions.setText(textInputLayout, (CharSequence) statefulViews.get(textInputLayout2.getId(), meUser.getEmail()));
     }
 
@@ -234,7 +235,7 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
 
     private final void showCodeVerification() {
         if (ValidationManager.validate$default(getValidationManager(), false, 1, null)) {
-            ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userEmail(), false, 1, null), this, null, 2, null), getBinding().f2599b, 0L, 2, null).k(b.a.d.o.j(new AnonymousClass1(), requireContext(), null, 4));
+            ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userEmail(), false, 1, null), this, null, 2, null), getBinding().f17835b, 0L, 2, null).m11108k(C0879o.m183j(new C97611(), requireContext(), null, 4));
         }
     }
 
@@ -243,51 +244,51 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
             WidgetUserPasswordVerify.Companion companion = WidgetUserPasswordVerify.INSTANCE;
             Context contextRequireContext = requireContext();
             ActivityResultLauncher<Intent> activityResultLauncher = this.nextScreenLauncher;
-            TextInputLayout textInputLayout = getBinding().d;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.editAccountEmailWrap");
+            TextInputLayout textInputLayout = getBinding().f17837d;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.editAccountEmailWrap");
             WidgetUserPasswordVerify.Companion.launchUpdateAccountSettings$default(companion, contextRequireContext, activityResultLauncher, ViewExtensions.getTextOrEmpty(textInputLayout), null, null, null, 56, null);
         }
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        setActionBarSubtitle(R.string.user_settings);
-        setActionBarTitle(R.string.user_settings_account_change_email_title);
+        setActionBarSubtitle(C5419R.string.user_settings);
+        setActionBarTitle(C5419R.string.user_settings_account_change_email_title);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         if (!getMostRecentIntent().getBooleanExtra(EXTRA_SHOULD_CONFIRM_EMAIL, false)) {
-            TextInputLayout textInputLayout = getBinding().d;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.editAccountEmailWrap");
-            ViewExtensions.setOnImeActionDone$default(textInputLayout, false, new AnonymousClass3(), 1, null);
-            getBinding().f.setOnClickListener(new AnonymousClass4());
+            TextInputLayout textInputLayout = getBinding().f17837d;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.editAccountEmailWrap");
+            ViewExtensions.setOnImeActionDone$default(textInputLayout, false, new C97583(), 1, null);
+            getBinding().f17839f.setOnClickListener(new ViewOnClickListenerC97594());
             StatefulViews statefulViews = this.state;
-            FloatingActionButton floatingActionButton = getBinding().f;
-            TextInputLayout textInputLayout2 = getBinding().d;
-            m.checkNotNullExpressionValue(textInputLayout2, "binding.editAccountEmailWrap");
+            FloatingActionButton floatingActionButton = getBinding().f17839f;
+            TextInputLayout textInputLayout2 = getBinding().f17837d;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.editAccountEmailWrap");
             statefulViews.setupTextWatcherWithSaveAction(this, floatingActionButton, textInputLayout2);
             return;
         }
-        TextInputLayout textInputLayout3 = getBinding().d;
-        m.checkNotNullExpressionValue(textInputLayout3, "binding.editAccountEmailWrap");
-        ViewExtensions.setOnImeActionDone$default(textInputLayout3, false, new AnonymousClass1(), 1, null);
-        getBinding().e.setOnClickListener(new AnonymousClass2());
+        TextInputLayout textInputLayout3 = getBinding().f17837d;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.editAccountEmailWrap");
+        ViewExtensions.setOnImeActionDone$default(textInputLayout3, false, new C97561(), 1, null);
+        getBinding().f17838e.setOnClickListener(new ViewOnClickListenerC97572());
         StatefulViews statefulViews2 = this.state;
-        Button button = getBinding().e;
-        TextInputLayout textInputLayout4 = getBinding().d;
-        m.checkNotNullExpressionValue(textInputLayout4, "binding.editAccountEmailWrap");
+        Button button = getBinding().f17838e;
+        TextInputLayout textInputLayout4 = getBinding().f17837d;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout4, "binding.editAccountEmailWrap");
         statefulViews2.setupTextWatcherWithSaveAction(this, button, textInputLayout4);
-        LinkifiedTextView linkifiedTextView = getBinding().c;
-        m.checkNotNullExpressionValue(linkifiedTextView, "binding.editAccountEmailDescription");
+        LinkifiedTextView linkifiedTextView = getBinding().f17836c;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.editAccountEmailDescription");
         linkifiedTextView.setVisibility(0);
-        LinkifiedTextView linkifiedTextView2 = getBinding().c;
-        m.checkNotNullExpressionValue(linkifiedTextView2, "binding.editAccountEmailDescription");
-        b.n(linkifiedTextView2, R.string.user_settings_account_email_description, new Object[]{f.c()}, null, 4);
+        LinkifiedTextView linkifiedTextView2 = getBinding().f17836c;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView2, "binding.editAccountEmailDescription");
+        FormatUtils.m222n(linkifiedTextView2, C5419R.string.user_settings_account_email_description, new Object[]{AppHelpDesk.m148c()}, null, 4);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreUser.observeMe$default(StoreStream.INSTANCE.getUsers(), false, 1, null), this, null, 2, null), WidgetSettingsAccountEmailEdit.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreUser.observeMe$default(StoreStream.INSTANCE.getUsers(), false, 1, null), this, null, 2, null), WidgetSettingsAccountEmailEdit.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C97601(), 62, (Object) null);
     }
 }

@@ -2,11 +2,11 @@ package com.google.android.exoplayer2.upstream.cache;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
-import b.i.a.c.e3.b0.h;
-import b.i.a.c.e3.b0.l;
-import b.i.a.c.e3.b0.m;
 import java.io.File;
 import java.io.IOException;
+import p007b.p225i.p226a.p242c.p257e3.p258b0.CacheSpan;
+import p007b.p225i.p226a.p242c.p257e3.p258b0.ContentMetadata2;
+import p007b.p225i.p226a.p242c.p257e3.p258b0.ContentMetadataMutations;
 
 /* loaded from: classes3.dex */
 public interface Cache {
@@ -25,36 +25,49 @@ public interface Cache {
         }
     }
 
-    public interface a {
-        void b(Cache cache, h hVar);
+    /* renamed from: com.google.android.exoplayer2.upstream.cache.Cache$a */
+    public interface InterfaceC10774a {
+        /* renamed from: b */
+        void mo2818b(Cache cache, CacheSpan cacheSpan);
 
-        void c(Cache cache, h hVar, h hVar2);
+        /* renamed from: c */
+        void mo2819c(Cache cache, CacheSpan cacheSpan, CacheSpan cacheSpan2);
 
-        void d(Cache cache, h hVar);
+        /* renamed from: d */
+        void mo2820d(Cache cache, CacheSpan cacheSpan);
     }
 
     @WorkerThread
-    File a(String str, long j, long j2) throws CacheException;
+    /* renamed from: a */
+    File mo2826a(String str, long j, long j2) throws CacheException;
 
-    l b(String str);
+    /* renamed from: b */
+    ContentMetadata2 mo2827b(String str);
 
     @WorkerThread
-    void c(String str, m mVar) throws CacheException;
+    /* renamed from: c */
+    void mo2828c(String str, ContentMetadataMutations contentMetadataMutations) throws CacheException;
 
     @WorkerThread
-    void d(h hVar);
+    /* renamed from: d */
+    void mo2829d(CacheSpan cacheSpan);
 
     @Nullable
     @WorkerThread
-    h e(String str, long j, long j2) throws CacheException;
+    /* renamed from: e */
+    CacheSpan mo2830e(String str, long j, long j2) throws CacheException;
 
     @WorkerThread
-    h f(String str, long j, long j2) throws InterruptedException, CacheException;
+    /* renamed from: f */
+    CacheSpan mo2831f(String str, long j, long j2) throws InterruptedException, CacheException;
 
     @WorkerThread
-    void g(File file, long j) throws CacheException;
+    /* renamed from: g */
+    void mo2832g(File file, long j) throws CacheException;
 
-    long h();
+    /* renamed from: h */
+    long mo2833h();
 
-    void i(h hVar);
+    /* renamed from: i */
+    void mo2834i(CacheSpan cacheSpan);
 }

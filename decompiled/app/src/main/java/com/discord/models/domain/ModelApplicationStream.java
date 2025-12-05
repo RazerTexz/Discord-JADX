@@ -1,15 +1,15 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
-import com.discord.widgets.chat.input.MentionUtilsKt;
-import d0.g;
-import d0.g0.w;
-import d0.z.d.m;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.io.Serializable;
 import java.util.List;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p579g0.Strings4;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelApplicationStream.kt */
 /* loaded from: classes.dex */
@@ -33,7 +33,7 @@ public abstract class ModelApplicationStream implements Serializable {
             super(j, j2, null);
             this.channelId = j;
             this.ownerId = j2;
-            this.type = StreamType.CALL.getSerializedRepresentation();
+            this.type = ModelApplicationStream9.CALL.getSerializedRepresentation();
         }
 
         public static /* synthetic */ CallStream copy$default(CallStream callStream, long j, long j2, int i, Object obj) {
@@ -60,7 +60,7 @@ public abstract class ModelApplicationStream implements Serializable {
 
         @Override // com.discord.models.domain.ModelApplicationStream
         public String encodeStreamKey() {
-            return StreamType.CALL.getSerializedRepresentation() + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + getChannelId() + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + getOwnerId();
+            return ModelApplicationStream9.CALL.getSerializedRepresentation() + MentionUtils.EMOJIS_AND_STICKERS_CHAR + getChannelId() + MentionUtils.EMOJIS_AND_STICKERS_CHAR + getOwnerId();
         }
 
         public boolean equals(Object other) {
@@ -97,12 +97,12 @@ public abstract class ModelApplicationStream implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("CallStream(channelId=");
-            sbU.append(getChannelId());
-            sbU.append(", ownerId=");
-            sbU.append(getOwnerId());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("CallStream(channelId=");
+            sbM833U.append(getChannelId());
+            sbM833U.append(", ownerId=");
+            sbM833U.append(getOwnerId());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -113,11 +113,11 @@ public abstract class ModelApplicationStream implements Serializable {
             public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
             static {
-                StreamType.values();
+                ModelApplicationStream9.values();
                 int[] iArr = new int[2];
                 $EnumSwitchMapping$0 = iArr;
-                iArr[StreamType.GUILD.ordinal()] = 1;
-                iArr[StreamType.CALL.ordinal()] = 2;
+                iArr[ModelApplicationStream9.GUILD.ordinal()] = 1;
+                iArr[ModelApplicationStream9.CALL.ordinal()] = 2;
             }
         }
 
@@ -125,9 +125,9 @@ public abstract class ModelApplicationStream implements Serializable {
         }
 
         public final ModelApplicationStream decodeStreamKey(String streamKey) {
-            m.checkNotNullParameter(streamKey, "streamKey");
-            List listSplit$default = w.split$default((CharSequence) streamKey, new String[]{":"}, false, 0, 6, (Object) null);
-            int iOrdinal = StreamType.INSTANCE.fromString((String) listSplit$default.get(0)).ordinal();
+            Intrinsics3.checkNotNullParameter(streamKey, "streamKey");
+            List listSplit$default = Strings4.split$default((CharSequence) streamKey, new String[]{":"}, false, 0, 6, (Object) null);
+            int iOrdinal = ModelApplicationStream9.INSTANCE.fromString((String) listSplit$default.get(0)).ordinal();
             if (iOrdinal == 0) {
                 return new GuildStream(Long.parseLong((String) listSplit$default.get(1)), Long.parseLong((String) listSplit$default.get(2)), Long.parseLong((String) listSplit$default.get(3)));
             }
@@ -154,7 +154,7 @@ public abstract class ModelApplicationStream implements Serializable {
             this.guildId = j;
             this.channelId = j2;
             this.ownerId = j3;
-            this.type = StreamType.GUILD.getSerializedRepresentation();
+            this.type = ModelApplicationStream9.GUILD.getSerializedRepresentation();
         }
 
         public static /* synthetic */ GuildStream copy$default(GuildStream guildStream, long j, long j2, long j3, int i, Object obj) {
@@ -191,7 +191,7 @@ public abstract class ModelApplicationStream implements Serializable {
 
         @Override // com.discord.models.domain.ModelApplicationStream
         public String encodeStreamKey() {
-            return StreamType.GUILD.getSerializedRepresentation() + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + this.guildId + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + getChannelId() + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + getOwnerId();
+            return ModelApplicationStream9.GUILD.getSerializedRepresentation() + MentionUtils.EMOJIS_AND_STICKERS_CHAR + this.guildId + MentionUtils.EMOJIS_AND_STICKERS_CHAR + getChannelId() + MentionUtils.EMOJIS_AND_STICKERS_CHAR + getOwnerId();
         }
 
         public boolean equals(Object other) {
@@ -233,21 +233,21 @@ public abstract class ModelApplicationStream implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("GuildStream(guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", channelId=");
-            sbU.append(getChannelId());
-            sbU.append(", ownerId=");
-            sbU.append(getOwnerId());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("GuildStream(guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", channelId=");
+            sbM833U.append(getChannelId());
+            sbM833U.append(", ownerId=");
+            sbM833U.append(getOwnerId());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     private ModelApplicationStream(long j, long j2) {
         this.channelId = j;
         this.ownerId = j2;
-        this.encodedStreamKey = g.lazy(new ModelApplicationStream$encodedStreamKey$2(this));
+        this.encodedStreamKey = LazyJVM.lazy(new ModelApplicationStream2(this));
     }
 
     public abstract String encodeStreamKey();

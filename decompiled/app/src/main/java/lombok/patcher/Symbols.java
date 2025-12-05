@@ -6,17 +6,17 @@ import java.util.List;
 
 /* loaded from: discord-126021.apk:lombok/patcher/Symbols.SCL.lombok */
 public class Symbols {
-    private static final ThreadLocal<LinkedList<String>> stack = new AnonymousClass1();
+    private static final ThreadLocal<LinkedList<String>> stack = new C129131();
 
-    /* renamed from: lombok.patcher.Symbols$1, reason: invalid class name */
+    /* renamed from: lombok.patcher.Symbols$1 */
     /* loaded from: discord-126021.apk:lombok/patcher/Symbols$1.SCL.lombok */
-    class AnonymousClass1 extends ThreadLocal<LinkedList<String>> {
+    class C129131 extends ThreadLocal<LinkedList<String>> {
         @Override // java.lang.ThreadLocal
         protected /* bridge */ /* synthetic */ LinkedList<String> initialValue() {
             return initialValue();
         }
 
-        AnonymousClass1() {
+        C129131() {
         }
 
         /* JADX WARN: Can't rename method to resolve collision */

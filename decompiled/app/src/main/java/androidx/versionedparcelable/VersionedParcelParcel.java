@@ -9,8 +9,8 @@ import android.text.TextUtils;
 import android.util.SparseIntArray;
 import androidx.annotation.RestrictTo;
 import androidx.collection.ArrayMap;
-import b.d.b.a.a;
 import java.lang.reflect.Method;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 /* loaded from: classes.dex */
@@ -50,7 +50,7 @@ public class VersionedParcelParcel extends VersionedParcel {
         if (i == this.mOffset) {
             i = this.mEnd;
         }
-        return new VersionedParcelParcel(parcel, iDataPosition, i, a.J(new StringBuilder(), this.mPrefix, "  "), this.mReadCache, this.mWriteCache, this.mParcelizerCache);
+        return new VersionedParcelParcel(parcel, iDataPosition, i, outline.m822J(new StringBuilder(), this.mPrefix, "  "), this.mReadCache, this.mWriteCache, this.mParcelizerCache);
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel

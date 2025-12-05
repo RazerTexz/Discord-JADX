@@ -2,15 +2,15 @@ package com.discord.stores;
 
 import com.discord.stores.StoreNavigation;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.widgets.tabs.NavigationTab;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: StoreTabsNavigation.kt */
 /* loaded from: classes2.dex */
@@ -22,9 +22,9 @@ public final class StoreTabsNavigation extends StoreV2 {
     private final StoreStream storeStream;
 
     /* compiled from: StoreTabsNavigation.kt */
-    /* renamed from: com.discord.stores.StoreTabsNavigation$observeSelectedTab$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<NavigationTab> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreTabsNavigation$observeSelectedTab$1 */
+    public static final class C65261 extends Lambda implements Function0<NavigationTab> {
+        public C65261() {
             super(0);
         }
 
@@ -41,13 +41,13 @@ public final class StoreTabsNavigation extends StoreV2 {
     }
 
     /* compiled from: StoreTabsNavigation.kt */
-    /* renamed from: com.discord.stores.StoreTabsNavigation$selectHomeTab$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreTabsNavigation$selectHomeTab$1 */
+    public static final class C65271 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $dismissTabsDialogs;
         public final /* synthetic */ StoreNavigation.PanelAction $panelAction;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(StoreNavigation.PanelAction panelAction, boolean z2) {
+        public C65271(StoreNavigation.PanelAction panelAction, boolean z2) {
             super(0);
             this.$panelAction = panelAction;
             this.$dismissTabsDialogs = z2;
@@ -56,7 +56,7 @@ public final class StoreTabsNavigation extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -70,13 +70,13 @@ public final class StoreTabsNavigation extends StoreV2 {
     }
 
     /* compiled from: StoreTabsNavigation.kt */
-    /* renamed from: com.discord.stores.StoreTabsNavigation$selectTab$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreTabsNavigation$selectTab$1 */
+    public static final class C65281 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $dismissTabsDialogs;
         public final /* synthetic */ NavigationTab $navigationTab;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(NavigationTab navigationTab, boolean z2) {
+        public C65281(NavigationTab navigationTab, boolean z2) {
             super(0);
             this.$navigationTab = navigationTab;
             this.$dismissTabsDialogs = z2;
@@ -85,7 +85,7 @@ public final class StoreTabsNavigation extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -95,7 +95,7 @@ public final class StoreTabsNavigation extends StoreV2 {
     }
 
     public /* synthetic */ StoreTabsNavigation(Dispatcher dispatcher, StoreStream storeStream, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, storeStream, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(dispatcher, storeStream, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ void access$dismissTabsDialogs(StoreTabsNavigation storeTabsNavigation) {
@@ -112,16 +112,16 @@ public final class StoreTabsNavigation extends StoreV2 {
 
     private final void dismissTabsDialogs() {
         PublishSubject<Unit> publishSubject = this.dismissTabsDialogEventSubject;
-        publishSubject.k.onNext(Unit.a);
+        publishSubject.f27650k.onNext(Unit.f27425a);
     }
 
-    @StoreThread
+    @Store3
     private final void handleTabSelection(NavigationTab navigationTab) {
         this.selectedTab = navigationTab;
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void notifyHomeTabSelected(StoreNavigation.PanelAction panelAction) {
         this.storeStream.handleHomeTabSelected(panelAction);
     }
@@ -151,36 +151,36 @@ public final class StoreTabsNavigation extends StoreV2 {
         return this.selectedTab;
     }
 
-    @StoreThread
+    @Store3
     public final void handlePreLogout() {
         selectTabInternal$app_productionGoogleRelease$default(this, NavigationTab.HOME, false, 2, null);
     }
 
     public final Observable<Unit> observeDismissTabsDialogEvent() {
         PublishSubject<Unit> publishSubject = this.dismissTabsDialogEventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "dismissTabsDialogEventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "dismissTabsDialogEventSubject");
         return publishSubject;
     }
 
     public final Observable<NavigationTab> observeSelectedTab() {
-        Observable<NavigationTab> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
-        return observableR;
+        Observable<NavigationTab> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C65261(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final void selectHomeTab(StoreNavigation.PanelAction panelAction, boolean dismissTabsDialogs) {
-        m.checkNotNullParameter(panelAction, "panelAction");
-        this.dispatcher.schedule(new AnonymousClass1(panelAction, dismissTabsDialogs));
+        Intrinsics3.checkNotNullParameter(panelAction, "panelAction");
+        this.dispatcher.schedule(new C65271(panelAction, dismissTabsDialogs));
     }
 
     public final void selectTab(NavigationTab navigationTab, boolean dismissTabsDialogs) {
-        m.checkNotNullParameter(navigationTab, "navigationTab");
-        this.dispatcher.schedule(new AnonymousClass1(navigationTab, dismissTabsDialogs));
+        Intrinsics3.checkNotNullParameter(navigationTab, "navigationTab");
+        this.dispatcher.schedule(new C65281(navigationTab, dismissTabsDialogs));
     }
 
-    @StoreThread
+    @Store3
     public final void selectTabInternal$app_productionGoogleRelease(NavigationTab navigationTab, boolean dismissTabsDialogs) {
-        m.checkNotNullParameter(navigationTab, "navigationTab");
+        Intrinsics3.checkNotNullParameter(navigationTab, "navigationTab");
         handleTabSelection(navigationTab);
         if (dismissTabsDialogs) {
             dismissTabsDialogs();
@@ -188,13 +188,13 @@ public final class StoreTabsNavigation extends StoreV2 {
     }
 
     public StoreTabsNavigation(Dispatcher dispatcher, StoreStream storeStream, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(storeStream, "storeStream");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(storeStream, "storeStream");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.storeStream = storeStream;
         this.observationDeck = observationDeck;
         this.selectedTab = NavigationTab.HOME;
-        this.dismissTabsDialogEventSubject = PublishSubject.k0();
+        this.dismissTabsDialogEventSubject = PublishSubject.m11133k0();
     }
 }

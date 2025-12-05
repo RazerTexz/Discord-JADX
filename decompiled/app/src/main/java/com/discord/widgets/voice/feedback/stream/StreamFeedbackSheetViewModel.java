@@ -1,38 +1,39 @@
 package com.discord.widgets.voice.feedback.stream;
 
 import android.content.Context;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.models.domain.ModelApplicationStream;
 import com.discord.stores.StoreAnalytics;
 import com.discord.stores.StoreExperiments;
 import com.discord.stores.StoreStream;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.feedback.FeedbackSheetViewModel;
 import com.discord.widgets.voice.feedback.FeedbackIssue;
 import com.discord.widgets.voice.feedback.FeedbackRating;
 import com.discord.widgets.voice.feedback.PendingFeedback;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Collection;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: StreamFeedbackSheetViewModel.kt */
 /* loaded from: classes.dex */
-public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewModel.ViewState> implements FeedbackSheetViewModel {
+public final class StreamFeedbackSheetViewModel extends AppViewModel<FeedbackSheetViewModel.ViewState> implements FeedbackSheetViewModel {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final List<FeedbackIssue> ISSUES_UI_OPTIONS = n.listOf((Object[]) new FeedbackIssue[]{FeedbackIssue.STREAM_REPORT_ENDED_BLACK, FeedbackIssue.STREAM_REPORT_ENDED_BLURRY, FeedbackIssue.STREAM_REPORT_ENDED_LAGGING, FeedbackIssue.STREAM_REPORT_ENDED_OUT_OF_SYNC, FeedbackIssue.STREAM_REPORT_ENDED_AUDIO_MISSING, FeedbackIssue.STREAM_REPORT_ENDED_AUDIO_POOR, FeedbackIssue.STREAM_REPORT_ENDED_STREAM_STOPPED_UNEXPECTEDLY});
+    private static final List<FeedbackIssue> ISSUES_UI_OPTIONS = Collections2.listOf((Object[]) new FeedbackIssue[]{FeedbackIssue.STREAM_REPORT_ENDED_BLACK, FeedbackIssue.STREAM_REPORT_ENDED_BLURRY, FeedbackIssue.STREAM_REPORT_ENDED_LAGGING, FeedbackIssue.STREAM_REPORT_ENDED_OUT_OF_SYNC, FeedbackIssue.STREAM_REPORT_ENDED_AUDIO_MISSING, FeedbackIssue.STREAM_REPORT_ENDED_AUDIO_POOR, FeedbackIssue.STREAM_REPORT_ENDED_STREAM_STOPPED_UNEXPECTEDLY});
     private final PublishSubject<FeedbackSheetViewModel.Event> eventSubject;
     private final List<FeedbackIssue> issuesUiOptions;
     private StoreState mostRecentStoreState;
@@ -44,21 +45,21 @@ public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewMode
     private boolean submitted;
 
     /* compiled from: StreamFeedbackSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.stream.StreamFeedbackSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.voice.feedback.stream.StreamFeedbackSheetViewModel$1 */
+    public static final class C104561 extends Lambda implements Function1<StoreState, Unit> {
+        public C104561() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             StreamFeedbackSheetViewModel.access$setMostRecentStoreState$p(StreamFeedbackSheetViewModel.this, storeState);
         }
     }
@@ -73,9 +74,9 @@ public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewMode
         }
 
         private final Observable<StoreState> observeStoreState(StoreExperiments storeExperiments) {
-            Observable observableG = storeExperiments.observeUserExperiment("2020-08_feedback_modal_helpdesk_link", true).G(StreamFeedbackSheetViewModel$Companion$observeStoreState$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableG, "storeExperiments\n       …            )\n          }");
-            return observableG;
+            Observable observableM11083G = storeExperiments.observeUserExperiment("2020-08_feedback_modal_helpdesk_link", true).m11083G(StreamFeedbackSheetViewModel2.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11083G, "storeExperiments\n       …            )\n          }");
+            return observableM11083G;
         }
 
         public final List<FeedbackIssue> getISSUES_UI_OPTIONS() {
@@ -131,7 +132,7 @@ public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewMode
         }
 
         public String toString() {
-            return a.O(a.U("StoreState(shouldShowCxLinkForIssueDetails="), this.shouldShowCxLinkForIssueDetails, ")");
+            return outline.m827O(outline.m833U("StoreState(shouldShowCxLinkForIssueDetails="), this.shouldShowCxLinkForIssueDetails, ")");
         }
     }
 
@@ -176,22 +177,22 @@ public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewMode
     }
 
     private final FeedbackSheetViewModel.ViewState createViewState(FeedbackRating selectedFeedbackRating, List<? extends FeedbackIssue> feedbackIssues) {
-        return new FeedbackSheetViewModel.ViewState(selectedFeedbackRating, feedbackIssues, R.string.stream_report_a_problem_post_stream, Integer.valueOf(R.string.stream_report_rating_body), R.string.stream_report_placeholder);
+        return new FeedbackSheetViewModel.ViewState(selectedFeedbackRating, feedbackIssues, C5419R.string.stream_report_a_problem_post_stream, Integer.valueOf(C5419R.string.stream_report_rating_body), C5419R.string.stream_report_placeholder);
     }
 
     private final void emitSubmittedEvent(boolean showConfirmation) {
         PublishSubject<FeedbackSheetViewModel.Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new FeedbackSheetViewModel.Event.Submitted(showConfirmation));
+        publishSubject.f27650k.onNext(new FeedbackSheetViewModel.Event.Submitted(showConfirmation));
     }
 
     @Override // com.discord.widgets.feedback.FeedbackSheetViewModel
     public Observable<FeedbackSheetViewModel.Event> observeEvents() {
         PublishSubject<FeedbackSheetViewModel.Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
-    @Override // b.a.d.d0, androidx.view.ViewModel
+    @Override // p007b.p008a.p018d.AppViewModel, androidx.view.ViewModel
     public void onCleared() {
         super.onCleared();
         if (this.submitOnDismiss) {
@@ -207,7 +208,7 @@ public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewMode
             this.submitOnDismiss = false;
             PublishSubject<FeedbackSheetViewModel.Event> publishSubject = this.eventSubject;
             StoreState storeState = this.mostRecentStoreState;
-            publishSubject.k.onNext(new FeedbackSheetViewModel.Event.NavigateToIssueDetails(streamFeedbackCopy$default, storeState != null ? storeState.getShouldShowCxLinkForIssueDetails() : false));
+            publishSubject.f27650k.onNext(new FeedbackSheetViewModel.Event.NavigateToIssueDetails(streamFeedbackCopy$default, storeState != null ? storeState.getShouldShowCxLinkForIssueDetails() : false));
             return;
         }
         int iOrdinal = requireViewState().getSelectedFeedbackRating().ordinal();
@@ -218,7 +219,7 @@ public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewMode
 
     @Override // com.discord.widgets.feedback.FeedbackSheetViewModel
     public void selectRating(FeedbackRating feedbackRating) {
-        m.checkNotNullParameter(feedbackRating, "feedbackRating");
+        Intrinsics3.checkNotNullParameter(feedbackRating, "feedbackRating");
         this.pendingStreamFeedback = PendingFeedback.StreamFeedback.copy$default(this.pendingStreamFeedback, null, feedbackRating, null, null, null, 29, null);
         int iOrdinal = feedbackRating.ordinal();
         if (iOrdinal != 0) {
@@ -230,7 +231,7 @@ public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewMode
             }
         }
         selectIssue(null, null);
-        updateViewState(createViewState(feedbackRating, n.emptyList()));
+        updateViewState(createViewState(feedbackRating, Collections2.emptyList()));
         submitForm();
     }
 
@@ -247,19 +248,19 @@ public final class StreamFeedbackSheetViewModel extends d0<FeedbackSheetViewMode
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public StreamFeedbackSheetViewModel(String str, String str2, StoreExperiments storeExperiments, StoreAnalytics storeAnalytics, Observable<StoreState> observable) {
-        super(new FeedbackSheetViewModel.ViewState(FeedbackRating.NO_RESPONSE, n.emptyList(), R.string.stream_report_a_problem_post_stream, Integer.valueOf(R.string.stream_report_rating_body), R.string.stream_report_placeholder));
-        m.checkNotNullParameter(str, "streamKey");
-        m.checkNotNullParameter(storeExperiments, "storeExperiments");
-        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        m.checkNotNullParameter(observable, "storeStateObservable");
+        super(new FeedbackSheetViewModel.ViewState(FeedbackRating.NO_RESPONSE, Collections2.emptyList(), C5419R.string.stream_report_a_problem_post_stream, Integer.valueOf(C5419R.string.stream_report_rating_body), C5419R.string.stream_report_placeholder));
+        Intrinsics3.checkNotNullParameter(str, "streamKey");
+        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
+        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
         this.storeExperiments = storeExperiments;
         this.storeAnalytics = storeAnalytics;
-        this.eventSubject = PublishSubject.k0();
+        this.eventSubject = PublishSubject.m11133k0();
         this.submitOnDismiss = true;
         ModelApplicationStream modelApplicationStreamDecodeStreamKey = ModelApplicationStream.INSTANCE.decodeStreamKey(str);
         this.stream = modelApplicationStreamDecodeStreamKey;
         this.pendingStreamFeedback = new PendingFeedback.StreamFeedback(modelApplicationStreamDecodeStreamKey, null, null, str2, null, 22, null);
-        this.issuesUiOptions = u.plus((Collection<? extends FeedbackIssue>) d0.t.m.shuffled(ISSUES_UI_OPTIONS), FeedbackIssue.OTHER);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), StreamFeedbackSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        this.issuesUiOptions = _Collections.plus((Collection<? extends FeedbackIssue>) CollectionsJVM.shuffled(ISSUES_UI_OPTIONS), FeedbackIssue.OTHER);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), StreamFeedbackSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C104561(), 62, (Object) null);
     }
 }

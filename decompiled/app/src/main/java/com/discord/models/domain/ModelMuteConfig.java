@@ -1,13 +1,13 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
 import com.discord.api.thread.MuteConfig;
 import com.discord.models.domain.Model;
 import com.discord.utilities.time.TimeUtils;
-import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Ref$ObjectRef;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelMuteConfig.kt */
 /* loaded from: classes.dex */
@@ -37,10 +37,10 @@ public final /* data */ class ModelMuteConfig {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.discord.models.domain.Model.Parser
         public ModelMuteConfig parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
-            ref$ObjectRefC0.element = null;
-            reader.nextObject(new ModelMuteConfig$Parser$parse$1(ref$ObjectRefC0, reader));
-            return new ModelMuteConfig((String) ref$ObjectRefC0.element);
+            Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(reader, "reader");
+            ref$ObjectRefM844c0.element = null;
+            reader.nextObject(new ModelMuteConfig2(ref$ObjectRefM844c0, reader));
+            return new ModelMuteConfig((String) ref$ObjectRefM844c0.element);
         }
     }
 
@@ -85,7 +85,7 @@ public final /* data */ class ModelMuteConfig {
             return false;
         }
         ModelMuteConfig modelMuteConfig = (ModelMuteConfig) other;
-        return m.areEqual(this.endTimeMs, modelMuteConfig.endTimeMs) && m.areEqual(this.endTime, modelMuteConfig.endTime);
+        return Intrinsics3.areEqual(this.endTimeMs, modelMuteConfig.endTimeMs) && Intrinsics3.areEqual(this.endTime, modelMuteConfig.endTime);
     }
 
     public final String getEndTime() {
@@ -104,10 +104,10 @@ public final /* data */ class ModelMuteConfig {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelMuteConfig(endTimeMs=");
-        sbU.append(this.endTimeMs);
-        sbU.append(", endTime=");
-        return a.J(sbU, this.endTime, ")");
+        StringBuilder sbM833U = outline.m833U("ModelMuteConfig(endTimeMs=");
+        sbM833U.append(this.endTimeMs);
+        sbM833U.append(", endTime=");
+        return outline.m822J(sbM833U, this.endTime, ")");
     }
 
     public ModelMuteConfig(Long l) {

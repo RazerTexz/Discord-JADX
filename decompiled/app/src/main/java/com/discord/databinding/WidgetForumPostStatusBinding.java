@@ -12,41 +12,47 @@ import com.discord.views.ReactionView;
 /* loaded from: classes.dex */
 public final class WidgetForumPostStatusBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f16643a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ProgressBar f2389b;
+    public final ProgressBar f16644b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f16645c;
 
+    /* renamed from: d */
     @NonNull
-    public final LinearLayout d;
+    public final LinearLayout f16646d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16647e;
 
+    /* renamed from: f */
     @NonNull
-    public final ReactionView f;
+    public final ReactionView f16648f;
 
+    /* renamed from: g */
     @NonNull
-    public final View g;
+    public final View f16649g;
 
     public WidgetForumPostStatusBinding(@NonNull ConstraintLayout constraintLayout, @NonNull ProgressBar progressBar, @NonNull TextView textView, @NonNull LinearLayout linearLayout, @NonNull TextView textView2, @NonNull LinearLayout linearLayout2, @NonNull ReactionView reactionView, @NonNull View view, @NonNull View view2) {
-        this.a = constraintLayout;
-        this.f2389b = progressBar;
-        this.c = textView;
-        this.d = linearLayout;
-        this.e = textView2;
-        this.f = reactionView;
-        this.g = view2;
+        this.f16643a = constraintLayout;
+        this.f16644b = progressBar;
+        this.f16645c = textView;
+        this.f16646d = linearLayout;
+        this.f16647e = textView2;
+        this.f16648f = reactionView;
+        this.f16649g = view2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16643a;
     }
 }

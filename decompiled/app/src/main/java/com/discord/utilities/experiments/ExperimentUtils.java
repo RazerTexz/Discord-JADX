@@ -9,14 +9,14 @@ import com.discord.models.experiments.dto.GuildExperimentFilter;
 import com.discord.models.experiments.dto.GuildExperimentOverridesDto;
 import com.discord.models.experiments.dto.GuildExperimentPopulationDto;
 import com.discord.models.guild.Guild;
-import com.discord.widgets.chat.input.MentionUtilsKt;
-import d0.d0.f;
-import d0.z.d.m;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import kotlin.ranges.IntRange;
+import kotlin.ranges.Ranges2;
+import p507d0.p512d0._Ranges;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ExperimentUtils.kt */
 /* loaded from: classes2.dex */
@@ -42,8 +42,8 @@ public final class ExperimentUtils {
         boolean z3;
         boolean z4;
         String str = experimentName;
-        m.checkNotNullParameter(str, "experimentName");
-        m.checkNotNullParameter(experiment, "experiment");
+        Intrinsics3.checkNotNullParameter(str, "experimentName");
+        Intrinsics3.checkNotNullParameter(experiment, "experiment");
         for (GuildExperimentOverridesDto guildExperimentOverridesDto : experiment.getOverrides()) {
             if (guildExperimentOverridesDto.getGuilds().contains(Long.valueOf(guildId))) {
                 return guildExperimentOverridesDto.getBucket();
@@ -55,7 +55,7 @@ public final class ExperimentUtils {
             str = hashKey;
         }
         sb.append(str);
-        sb.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
+        sb.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
         sb.append(guildId);
         long jFrom = ExperimentHash.INSTANCE.from(sb.toString()) % 10000;
         for (GuildExperimentPopulationDto guildExperimentPopulationDto : experiment.getPopulations()) {
@@ -76,7 +76,7 @@ public final class ExperimentUtils {
                         z5 = false;
                     }
                 } else if (next instanceof GuildExperimentFilter.GuildMemberCountRangeFilter) {
-                    if (!f.longRangeContains(((GuildExperimentFilter.GuildMemberCountRangeFilter) next).getRange(), guildMemberCount)) {
+                    if (!_Ranges.longRangeContains(((GuildExperimentFilter.GuildMemberCountRangeFilter) next).getRange(), guildMemberCount)) {
                         z5 = false;
                     }
                 } else if (next instanceof GuildExperimentFilter.GuildHasFeatureFilter) {
@@ -126,10 +126,10 @@ public final class ExperimentUtils {
                         break;
                     }
                     Object next2 = it4.next();
-                    List<IntRange> positions = ((GuildExperimentBucketDto) next2).getPositions();
+                    List<Ranges2> positions = ((GuildExperimentBucketDto) next2).getPositions();
                     if (!(positions instanceof Collection) || !positions.isEmpty()) {
-                        for (IntRange intRange : positions) {
-                            if (jFrom >= ((long) intRange.getFirst()) && jFrom < ((long) intRange.getLast())) {
+                        for (Ranges2 ranges2 : positions) {
+                            if (jFrom >= ((long) ranges2.getFirst()) && jFrom < ((long) ranges2.getLast())) {
                                 z2 = true;
                                 break;
                             }

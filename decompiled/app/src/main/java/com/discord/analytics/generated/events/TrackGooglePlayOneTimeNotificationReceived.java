@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGooglePlayOneTimeNotificationReceived.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGooglePlayOneTimeNotificationReceived implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackGooglePlayOneTimeNotificationReceived implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long paymentId = null;
     private final Long skuId = null;
@@ -38,7 +38,7 @@ public final /* data */ class TrackGooglePlayOneTimeNotificationReceived impleme
             return false;
         }
         TrackGooglePlayOneTimeNotificationReceived trackGooglePlayOneTimeNotificationReceived = (TrackGooglePlayOneTimeNotificationReceived) other;
-        return m.areEqual(this.paymentId, trackGooglePlayOneTimeNotificationReceived.paymentId) && m.areEqual(this.skuId, trackGooglePlayOneTimeNotificationReceived.skuId) && m.areEqual(this.oneTimePurchaseSkuId, trackGooglePlayOneTimeNotificationReceived.oneTimePurchaseSkuId) && m.areEqual(this.paymentGateway, trackGooglePlayOneTimeNotificationReceived.paymentGateway) && m.areEqual(this.messageId, trackGooglePlayOneTimeNotificationReceived.messageId) && m.areEqual(this.version, trackGooglePlayOneTimeNotificationReceived.version) && m.areEqual(this.packageName, trackGooglePlayOneTimeNotificationReceived.packageName) && m.areEqual(this.eventTime, trackGooglePlayOneTimeNotificationReceived.eventTime) && m.areEqual(this.notificationVersion, trackGooglePlayOneTimeNotificationReceived.notificationVersion) && m.areEqual(this.notificationType, trackGooglePlayOneTimeNotificationReceived.notificationType) && m.areEqual(this.purchaseToken, trackGooglePlayOneTimeNotificationReceived.purchaseToken) && m.areEqual(this.orderId, trackGooglePlayOneTimeNotificationReceived.orderId);
+        return Intrinsics3.areEqual(this.paymentId, trackGooglePlayOneTimeNotificationReceived.paymentId) && Intrinsics3.areEqual(this.skuId, trackGooglePlayOneTimeNotificationReceived.skuId) && Intrinsics3.areEqual(this.oneTimePurchaseSkuId, trackGooglePlayOneTimeNotificationReceived.oneTimePurchaseSkuId) && Intrinsics3.areEqual(this.paymentGateway, trackGooglePlayOneTimeNotificationReceived.paymentGateway) && Intrinsics3.areEqual(this.messageId, trackGooglePlayOneTimeNotificationReceived.messageId) && Intrinsics3.areEqual(this.version, trackGooglePlayOneTimeNotificationReceived.version) && Intrinsics3.areEqual(this.packageName, trackGooglePlayOneTimeNotificationReceived.packageName) && Intrinsics3.areEqual(this.eventTime, trackGooglePlayOneTimeNotificationReceived.eventTime) && Intrinsics3.areEqual(this.notificationVersion, trackGooglePlayOneTimeNotificationReceived.notificationVersion) && Intrinsics3.areEqual(this.notificationType, trackGooglePlayOneTimeNotificationReceived.notificationType) && Intrinsics3.areEqual(this.purchaseToken, trackGooglePlayOneTimeNotificationReceived.purchaseToken) && Intrinsics3.areEqual(this.orderId, trackGooglePlayOneTimeNotificationReceived.orderId);
     }
 
     public int hashCode() {
@@ -69,29 +69,29 @@ public final /* data */ class TrackGooglePlayOneTimeNotificationReceived impleme
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGooglePlayOneTimeNotificationReceived(paymentId=");
-        sbU.append(this.paymentId);
-        sbU.append(", skuId=");
-        sbU.append(this.skuId);
-        sbU.append(", oneTimePurchaseSkuId=");
-        sbU.append(this.oneTimePurchaseSkuId);
-        sbU.append(", paymentGateway=");
-        sbU.append(this.paymentGateway);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", version=");
-        sbU.append(this.version);
-        sbU.append(", packageName=");
-        sbU.append(this.packageName);
-        sbU.append(", eventTime=");
-        sbU.append(this.eventTime);
-        sbU.append(", notificationVersion=");
-        sbU.append(this.notificationVersion);
-        sbU.append(", notificationType=");
-        sbU.append(this.notificationType);
-        sbU.append(", purchaseToken=");
-        sbU.append(this.purchaseToken);
-        sbU.append(", orderId=");
-        return a.E(sbU, this.orderId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGooglePlayOneTimeNotificationReceived(paymentId=");
+        sbM833U.append(this.paymentId);
+        sbM833U.append(", skuId=");
+        sbM833U.append(this.skuId);
+        sbM833U.append(", oneTimePurchaseSkuId=");
+        sbM833U.append(this.oneTimePurchaseSkuId);
+        sbM833U.append(", paymentGateway=");
+        sbM833U.append(this.paymentGateway);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", version=");
+        sbM833U.append(this.version);
+        sbM833U.append(", packageName=");
+        sbM833U.append(this.packageName);
+        sbM833U.append(", eventTime=");
+        sbM833U.append(this.eventTime);
+        sbM833U.append(", notificationVersion=");
+        sbM833U.append(this.notificationVersion);
+        sbM833U.append(", notificationType=");
+        sbM833U.append(this.notificationType);
+        sbM833U.append(", purchaseToken=");
+        sbM833U.append(this.purchaseToken);
+        sbM833U.append(", orderId=");
+        return outline.m817E(sbM833U, this.orderId, ")");
     }
 }

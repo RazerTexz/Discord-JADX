@@ -1,43 +1,43 @@
 package com.discord.api.botuikit.gson;
 
-import b.c.a.a0.d;
-import com.discord.api.botuikit.ComponentType;
+import com.discord.api.botuikit.Component6;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import d0.z.d.m;
 import java.io.IOException;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ComponentTypeTypeAdapter.kt */
 /* loaded from: classes.dex */
-public final class ComponentTypeTypeAdapter extends TypeAdapter<ComponentType> {
+public final class ComponentTypeTypeAdapter extends TypeAdapter<Component6> {
     @Override // com.google.gson.TypeAdapter
-    public ComponentType read(JsonReader jsonReader) throws IOException {
-        ComponentType componentType;
-        m.checkNotNullParameter(jsonReader, "in");
-        Integer numN1 = d.n1(jsonReader);
-        ComponentType[] componentTypeArrValues = ComponentType.values();
+    public Component6 read(JsonReader jsonReader) throws IOException {
+        Component6 component6;
+        Intrinsics3.checkNotNullParameter(jsonReader, "in");
+        Integer numM549n1 = AnimatableValueParser.m549n1(jsonReader);
+        Component6[] component6ArrValues = Component6.values();
         int i = 0;
         while (true) {
             if (i >= 5) {
-                componentType = null;
+                component6 = null;
                 break;
             }
-            componentType = componentTypeArrValues[i];
-            if (numN1 != null && componentType.getType() == numN1.intValue()) {
+            component6 = component6ArrValues[i];
+            if (numM549n1 != null && component6.getType() == numM549n1.intValue()) {
                 break;
             }
             i++;
         }
-        return componentType != null ? componentType : ComponentType.UNKNOWN;
+        return component6 != null ? component6 : Component6.UNKNOWN;
     }
 
     @Override // com.google.gson.TypeAdapter
-    public void write(JsonWriter jsonWriter, ComponentType componentType) throws IOException {
-        ComponentType componentType2 = componentType;
-        m.checkNotNullParameter(jsonWriter, "out");
-        if (componentType2 != null) {
-            jsonWriter.D(Integer.valueOf(componentType2.getType()));
+    public void write(JsonWriter jsonWriter, Component6 component6) throws IOException {
+        Component6 component62 = component6;
+        Intrinsics3.checkNotNullParameter(jsonWriter, "out");
+        if (component62 != null) {
+            jsonWriter.mo6894D(Integer.valueOf(component62.getType()));
         }
     }
 }

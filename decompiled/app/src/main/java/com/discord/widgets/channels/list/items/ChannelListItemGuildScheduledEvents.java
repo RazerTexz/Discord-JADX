@@ -1,10 +1,10 @@
 package com.discord.widgets.channels.list.items;
 
-import b.d.b.a.a;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.models.guild.Guild;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChannelListItemGuildScheduledEvents.kt */
 /* loaded from: classes2.dex */
@@ -15,8 +15,8 @@ public final /* data */ class ChannelListItemGuildScheduledEvents implements Cha
     private final int type;
 
     public ChannelListItemGuildScheduledEvents(List<GuildScheduledEvent> list, Guild guild) {
-        m.checkNotNullParameter(list, "data");
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(list, "data");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         this.data = list;
         this.guild = guild;
         this.type = 19;
@@ -44,8 +44,8 @@ public final /* data */ class ChannelListItemGuildScheduledEvents implements Cha
     }
 
     public final ChannelListItemGuildScheduledEvents copy(List<GuildScheduledEvent> data, Guild guild) {
-        m.checkNotNullParameter(data, "data");
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         return new ChannelListItemGuildScheduledEvents(data, guild);
     }
 
@@ -57,7 +57,7 @@ public final /* data */ class ChannelListItemGuildScheduledEvents implements Cha
             return false;
         }
         ChannelListItemGuildScheduledEvents channelListItemGuildScheduledEvents = (ChannelListItemGuildScheduledEvents) other;
-        return m.areEqual(this.data, channelListItemGuildScheduledEvents.data) && m.areEqual(this.guild, channelListItemGuildScheduledEvents.guild);
+        return Intrinsics3.areEqual(this.data, channelListItemGuildScheduledEvents.data) && Intrinsics3.areEqual(this.guild, channelListItemGuildScheduledEvents.guild);
     }
 
     public final List<GuildScheduledEvent> getData() {
@@ -86,11 +86,11 @@ public final /* data */ class ChannelListItemGuildScheduledEvents implements Cha
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelListItemGuildScheduledEvents(data=");
-        sbU.append(this.data);
-        sbU.append(", guild=");
-        sbU.append(this.guild);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ChannelListItemGuildScheduledEvents(data=");
+        sbM833U.append(this.data);
+        sbM833U.append(", guild=");
+        sbM833U.append(this.guild);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

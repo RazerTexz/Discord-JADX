@@ -1,15 +1,15 @@
 package com.discord.widgets.voice.feedback;
 
-import b.a.d.d0;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: IssueDetailsFormViewModel.kt */
 /* loaded from: classes.dex */
-public final class IssueDetailsFormViewModel extends d0<Unit> {
+public final class IssueDetailsFormViewModel extends AppViewModel<Unit> {
     private final PublishSubject<Event> eventSubject;
     private final FeedbackSubmitter feedbackSubmitter;
     private final PendingFeedback pendingFeedback;
@@ -43,7 +43,7 @@ public final class IssueDetailsFormViewModel extends d0<Unit> {
         return this.eventSubject;
     }
 
-    @Override // b.a.d.d0, androidx.view.ViewModel
+    @Override // p007b.p008a.p018d.AppViewModel, androidx.view.ViewModel
     public void onCleared() {
         super.onCleared();
         submitForm(null);
@@ -56,18 +56,18 @@ public final class IssueDetailsFormViewModel extends d0<Unit> {
         this.submitted = true;
         this.feedbackSubmitter.submit(issueDetails);
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.Close.INSTANCE);
+        publishSubject.f27650k.onNext(Event.Close.INSTANCE);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public IssueDetailsFormViewModel(PendingFeedback pendingFeedback, FeedbackSubmitter feedbackSubmitter) {
-        super(Unit.a);
-        m.checkNotNullParameter(pendingFeedback, "pendingFeedback");
-        m.checkNotNullParameter(feedbackSubmitter, "feedbackSubmitter");
+        super(Unit.f27425a);
+        Intrinsics3.checkNotNullParameter(pendingFeedback, "pendingFeedback");
+        Intrinsics3.checkNotNullParameter(feedbackSubmitter, "feedbackSubmitter");
         this.pendingFeedback = pendingFeedback;
         this.feedbackSubmitter = feedbackSubmitter;
-        PublishSubject<Event> publishSubjectK0 = PublishSubject.k0();
-        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
-        this.eventSubject = publishSubjectK0;
+        PublishSubject<Event> publishSubjectM11133k0 = PublishSubject.m11133k0();
+        Intrinsics3.checkNotNullExpressionValue(publishSubjectM11133k0, "PublishSubject.create()");
+        this.eventSubject = publishSubjectM11133k0;
     }
 }

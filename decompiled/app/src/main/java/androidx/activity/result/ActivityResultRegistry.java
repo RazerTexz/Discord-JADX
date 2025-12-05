@@ -12,12 +12,12 @@ import androidx.core.app.ActivityOptionsCompat;
 import androidx.view.Lifecycle;
 import androidx.view.LifecycleEventObserver;
 import androidx.view.LifecycleOwner;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Random;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class ActivityResultRegistry {
@@ -35,13 +35,13 @@ public abstract class ActivityResultRegistry {
     public final Map<String, Object> mParsedPendingResults = new HashMap();
     public final Bundle mPendingResults = new Bundle();
 
-    /* renamed from: androidx.activity.result.ActivityResultRegistry$1, reason: invalid class name */
-    public class AnonymousClass1 implements LifecycleEventObserver {
+    /* renamed from: androidx.activity.result.ActivityResultRegistry$1 */
+    public class C00461 implements LifecycleEventObserver {
         public final /* synthetic */ ActivityResultCallback val$callback;
         public final /* synthetic */ ActivityResultContract val$contract;
         public final /* synthetic */ String val$key;
 
-        public AnonymousClass1(String str, ActivityResultCallback activityResultCallback, ActivityResultContract activityResultContract) {
+        public C00461(String str, ActivityResultCallback activityResultCallback, ActivityResultContract activityResultContract) {
             this.val$key = str;
             this.val$callback = activityResultCallback;
             this.val$contract = activityResultContract;
@@ -76,13 +76,13 @@ public abstract class ActivityResultRegistry {
     }
 
     /* JADX INFO: Add missing generic type declarations: [I] */
-    /* renamed from: androidx.activity.result.ActivityResultRegistry$2, reason: invalid class name */
-    public class AnonymousClass2<I> extends ActivityResultLauncher<I> {
+    /* renamed from: androidx.activity.result.ActivityResultRegistry$2 */
+    public class C00472<I> extends ActivityResultLauncher<I> {
         public final /* synthetic */ ActivityResultContract val$contract;
         public final /* synthetic */ String val$key;
         public final /* synthetic */ int val$requestCode;
 
-        public AnonymousClass2(int i, ActivityResultContract activityResultContract, String str) {
+        public C00472(int i, ActivityResultContract activityResultContract, String str) {
             this.val$requestCode = i;
             this.val$contract = activityResultContract;
             this.val$key = str;
@@ -106,13 +106,13 @@ public abstract class ActivityResultRegistry {
     }
 
     /* JADX INFO: Add missing generic type declarations: [I] */
-    /* renamed from: androidx.activity.result.ActivityResultRegistry$3, reason: invalid class name */
-    public class AnonymousClass3<I> extends ActivityResultLauncher<I> {
+    /* renamed from: androidx.activity.result.ActivityResultRegistry$3 */
+    public class C00483<I> extends ActivityResultLauncher<I> {
         public final /* synthetic */ ActivityResultContract val$contract;
         public final /* synthetic */ String val$key;
         public final /* synthetic */ int val$requestCode;
 
-        public AnonymousClass3(int i, ActivityResultContract activityResultContract, String str) {
+        public C00483(int i, ActivityResultContract activityResultContract, String str) {
             this.val$requestCode = i;
             this.val$contract = activityResultContract;
             this.val$key = str;
@@ -251,9 +251,9 @@ public abstract class ActivityResultRegistry {
         if (lifecycleContainer == null) {
             lifecycleContainer = new LifecycleContainer(lifecycle);
         }
-        lifecycleContainer.addObserver(new AnonymousClass1(str, activityResultCallback, activityResultContract));
+        lifecycleContainer.addObserver(new C00461(str, activityResultCallback, activityResultContract));
         this.mKeyToLifecycleContainers.put(str, lifecycleContainer);
-        return new AnonymousClass2(iRegisterKey, activityResultContract, str);
+        return new C00472(iRegisterKey, activityResultContract, str);
     }
 
     @MainThread
@@ -264,15 +264,15 @@ public abstract class ActivityResultRegistry {
         }
         this.mKeyToCallback.remove(str);
         if (this.mParsedPendingResults.containsKey(str)) {
-            StringBuilder sbY = a.Y("Dropping pending result for request ", str, ": ");
-            sbY.append(this.mParsedPendingResults.get(str));
-            Log.w(LOG_TAG, sbY.toString());
+            StringBuilder sbM837Y = outline.m837Y("Dropping pending result for request ", str, ": ");
+            sbM837Y.append(this.mParsedPendingResults.get(str));
+            Log.w(LOG_TAG, sbM837Y.toString());
             this.mParsedPendingResults.remove(str);
         }
         if (this.mPendingResults.containsKey(str)) {
-            StringBuilder sbY2 = a.Y("Dropping pending result for request ", str, ": ");
-            sbY2.append(this.mPendingResults.getParcelable(str));
-            Log.w(LOG_TAG, sbY2.toString());
+            StringBuilder sbM837Y2 = outline.m837Y("Dropping pending result for request ", str, ": ");
+            sbM837Y2.append(this.mPendingResults.getParcelable(str));
+            Log.w(LOG_TAG, sbM837Y2.toString());
             this.mPendingResults.remove(str);
         }
         LifecycleContainer lifecycleContainer = this.mKeyToLifecycleContainers.get(str);
@@ -314,6 +314,6 @@ public abstract class ActivityResultRegistry {
             this.mPendingResults.remove(str);
             activityResultCallback.onActivityResult(activityResultContract.parseResult(activityResult.getResultCode(), activityResult.getData()));
         }
-        return new AnonymousClass3(iRegisterKey, activityResultContract, str);
+        return new C00483(iRegisterKey, activityResultContract, str);
     }
 }

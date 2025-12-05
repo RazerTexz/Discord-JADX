@@ -1,0 +1,95 @@
+package p007b.p485q.p486a.p490k;
+
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+
+/* compiled from: FastBitmapDrawable.java */
+/* renamed from: b.q.a.k.a, reason: use source file name */
+/* loaded from: classes3.dex */
+public class FastBitmapDrawable extends Drawable {
+
+    /* renamed from: b */
+    public Bitmap f14436b;
+
+    /* renamed from: d */
+    public int f14438d;
+
+    /* renamed from: e */
+    public int f14439e;
+
+    /* renamed from: a */
+    public final Paint f14435a = new Paint(2);
+
+    /* renamed from: c */
+    public int f14437c = 255;
+
+    public FastBitmapDrawable(Bitmap bitmap) {
+        this.f14436b = bitmap;
+        if (bitmap != null) {
+            this.f14438d = bitmap.getWidth();
+            this.f14439e = this.f14436b.getHeight();
+        } else {
+            this.f14439e = 0;
+            this.f14438d = 0;
+        }
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void draw(Canvas canvas) {
+        Bitmap bitmap = this.f14436b;
+        if (bitmap == null || bitmap.isRecycled()) {
+            return;
+        }
+        canvas.drawBitmap(this.f14436b, (Rect) null, getBounds(), this.f14435a);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getAlpha() {
+        return this.f14437c;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getIntrinsicHeight() {
+        return this.f14439e;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getIntrinsicWidth() {
+        return this.f14438d;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getMinimumHeight() {
+        return this.f14439e;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getMinimumWidth() {
+        return this.f14438d;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getOpacity() {
+        return -3;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setAlpha(int i) {
+        this.f14437c = i;
+        this.f14435a.setAlpha(i);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setColorFilter(ColorFilter colorFilter) {
+        this.f14435a.setColorFilter(colorFilter);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setFilterBitmap(boolean z2) {
+        this.f14435a.setFilterBitmap(z2);
+    }
+}

@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 import com.discord.models.member.GuildMember;
 import com.discord.utilities.dimen.DimenUtils;
-import d0.g0.t;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: View.kt */
 /* loaded from: classes2.dex */
@@ -40,28 +40,28 @@ public final class UserAkaView$configure$$inlined$doOnPreDraw$1 implements Runna
         }
         ArrayList arrayList2 = new ArrayList();
         for (Object obj : arrayList) {
-            if (!t.isBlank((String) obj)) {
+            if (!StringsJVM.isBlank((String) obj)) {
                 arrayList2.add(obj);
             }
         }
         if (this.this$0.getPileItems().isEmpty()) {
-            m.checkNotNullExpressionValue(UserAkaView.access$getBinding$p(this.this$0).e, "binding.spaceForMeasuring");
+            Intrinsics3.checkNotNullExpressionValue(UserAkaView.access$getBinding$p(this.this$0).f15325e, "binding.spaceForMeasuring");
             numberValueOf = Float.valueOf(r1.getMeasuredWidth());
         } else {
             numberValueOf = Integer.valueOf(DimenUtils.dpToPixels(8));
         }
-        TextView textView = UserAkaView.access$getBinding$p(this.this$0).f2162b;
-        m.checkNotNullExpressionValue(textView, "binding.akaText");
+        TextView textView = UserAkaView.access$getBinding$p(this.this$0).f15322b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.akaText");
         float measuredWidth = textView.getMeasuredWidth();
-        m.checkNotNullExpressionValue(UserAkaView.access$getBinding$p(this.this$0).c, "binding.avatarsPileView");
+        Intrinsics3.checkNotNullExpressionValue(UserAkaView.access$getBinding$p(this.this$0).f15323c, "binding.avatarsPileView");
         float fFloatValue = numberValueOf.floatValue() + measuredWidth + r4.getMeasuredWidth();
-        SpannableString spannableString = new SpannableString(u.joinToString$default(arrayList2, ", ", null, null, 0, null, null, 62, null));
+        SpannableString spannableString = new SpannableString(_Collections.joinToString$default(arrayList2, ", ", null, null, 0, null, null, 62, null));
         spannableString.setSpan(new LeadingMarginSpan.Standard((int) fFloatValue, 0), 0, spannableString.length(), 33);
-        TextView textView2 = UserAkaView.access$getBinding$p(this.this$0).d;
-        m.checkNotNullExpressionValue(textView2, "binding.nicknames");
+        TextView textView2 = UserAkaView.access$getBinding$p(this.this$0).f15324d;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.nicknames");
         textView2.setText(spannableString);
-        TextView textView3 = UserAkaView.access$getBinding$p(this.this$0).d;
-        m.checkNotNullExpressionValue(textView3, "binding.nicknames");
+        TextView textView3 = UserAkaView.access$getBinding$p(this.this$0).f15324d;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.nicknames");
         textView3.setVisibility(arrayList2.isEmpty() ^ true ? 0 : 8);
     }
 }

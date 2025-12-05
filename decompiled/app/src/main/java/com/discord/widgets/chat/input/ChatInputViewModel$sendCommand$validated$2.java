@@ -1,14 +1,14 @@
 package com.discord.widgets.chat.input;
 
 import com.discord.utilities.error.Error;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$sendCommand$validated$2 extends o implements Function1<Error, Unit> {
+public final class ChatInputViewModel$sendCommand$validated$2 extends Lambda implements Function1<Error, Unit> {
     public static final ChatInputViewModel$sendCommand$validated$2 INSTANCE = new ChatInputViewModel$sendCommand$validated$2();
 
     public ChatInputViewModel$sendCommand$validated$2() {
@@ -18,11 +18,11 @@ public final class ChatInputViewModel$sendCommand$validated$2 extends o implemen
     @Override // kotlin.jvm.functions.Function1
     public /* bridge */ /* synthetic */ Unit invoke(Error error) {
         invoke2(error);
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Error error) {
-        m.checkNotNullParameter(error, "it");
+        Intrinsics3.checkNotNullParameter(error, "it");
     }
 }

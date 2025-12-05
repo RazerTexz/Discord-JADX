@@ -14,45 +14,52 @@ import com.google.android.material.textfield.TextInputLayout;
 /* loaded from: classes.dex */
 public final class WidgetChannelGroupDmSettingsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f15845a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextInputLayout f2257b;
+    public final TextInputLayout f15846b;
 
+    /* renamed from: c */
     @NonNull
-    public final FloatingActionButton c;
+    public final FloatingActionButton f15847c;
 
+    /* renamed from: d */
     @NonNull
-    public final NotificationMuteSettingsView d;
+    public final NotificationMuteSettingsView f15848d;
 
+    /* renamed from: e */
     @NonNull
-    public final NestedScrollView e;
+    public final NestedScrollView f15849e;
 
+    /* renamed from: f */
     @NonNull
-    public final SimpleDraweeView f;
+    public final SimpleDraweeView f15850f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f15851g;
 
+    /* renamed from: h */
     @NonNull
-    public final TextView h;
+    public final TextView f15852h;
 
     public WidgetChannelGroupDmSettingsBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull TextInputLayout textInputLayout, @NonNull FloatingActionButton floatingActionButton, @NonNull NotificationMuteSettingsView notificationMuteSettingsView, @NonNull NestedScrollView nestedScrollView, @NonNull SimpleDraweeView simpleDraweeView, @NonNull TextView textView, @NonNull TextView textView2) {
-        this.a = coordinatorLayout;
-        this.f2257b = textInputLayout;
-        this.c = floatingActionButton;
-        this.d = notificationMuteSettingsView;
-        this.e = nestedScrollView;
-        this.f = simpleDraweeView;
-        this.g = textView;
-        this.h = textView2;
+        this.f15845a = coordinatorLayout;
+        this.f15846b = textInputLayout;
+        this.f15847c = floatingActionButton;
+        this.f15848d = notificationMuteSettingsView;
+        this.f15849e = nestedScrollView;
+        this.f15850f = simpleDraweeView;
+        this.f15851g = textView;
+        this.f15852h = textView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15845a;
     }
 }

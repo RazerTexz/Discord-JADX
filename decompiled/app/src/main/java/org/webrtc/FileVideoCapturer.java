@@ -2,7 +2,6 @@ package org.webrtc;
 
 import android.content.Context;
 import android.os.SystemClock;
-import b.d.b.a.a;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
@@ -11,6 +10,7 @@ import java.nio.charset.Charset;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class FileVideoCapturer implements VideoCapturer {
@@ -18,11 +18,11 @@ public class FileVideoCapturer implements VideoCapturer {
     private CapturerObserver capturerObserver;
     private final VideoReader videoReader;
     private final Timer timer = new Timer();
-    private final TimerTask tickTask = new AnonymousClass1();
+    private final TimerTask tickTask = new C129641();
 
-    /* renamed from: org.webrtc.FileVideoCapturer$1, reason: invalid class name */
-    public class AnonymousClass1 extends TimerTask {
-        public AnonymousClass1() {
+    /* renamed from: org.webrtc.FileVideoCapturer$1 */
+    public class C129641 extends TimerTask {
+        public C129641() {
         }
 
         @Override // java.util.TimerTask, java.lang.Runnable
@@ -55,7 +55,7 @@ public class FileVideoCapturer implements VideoCapturer {
             while (true) {
                 int i = this.mediaFile.read();
                 if (i == -1) {
-                    throw new RuntimeException(a.w("Found end of file before end of header for file: ", str));
+                    throw new RuntimeException(outline.m883w("Found end of file before end of header for file: ", str));
                 }
                 if (i == 10) {
                     this.videoStart = this.mediaFileChannel.position();
@@ -72,7 +72,7 @@ public class FileVideoCapturer implements VideoCapturer {
                             i2 = Integer.parseInt(str2.substring(1));
                         }
                     }
-                    Logging.d(TAG, "Color space: " + strSubstring);
+                    Logging.m11027d(TAG, "Color space: " + strSubstring);
                     if (!strSubstring.equals("420") && !strSubstring.equals("420mpeg2")) {
                         throw new IllegalArgumentException("Does not support any other color space than I420 or I420mpeg2");
                     }
@@ -81,7 +81,7 @@ public class FileVideoCapturer implements VideoCapturer {
                     }
                     this.frameWidth = i2;
                     this.frameHeight = i3;
-                    Logging.d(TAG, "frame dim: (" + i2 + ", " + i3 + ")");
+                    Logging.m11027d(TAG, "frame dim: (" + i2 + ", " + i3 + ")");
                     return;
                 }
                 sb.append((char) i);
@@ -93,7 +93,7 @@ public class FileVideoCapturer implements VideoCapturer {
             try {
                 this.mediaFile.close();
             } catch (IOException e) {
-                Logging.e(TAG, "Problem closing file", e);
+                Logging.m11029e(TAG, "Problem closing file", e);
             }
         }
 
@@ -135,7 +135,7 @@ public class FileVideoCapturer implements VideoCapturer {
         try {
             this.videoReader = new VideoReaderY4M(str);
         } catch (IOException e) {
-            Logging.d(TAG, "Could not open video file: " + str);
+            Logging.m11027d(TAG, "Could not open video file: " + str);
             throw e;
         }
     }

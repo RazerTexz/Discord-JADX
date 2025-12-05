@@ -1,7 +1,7 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.a;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
+import p007b.p106e.p107a.Log;
 
 /* loaded from: classes.dex */
 public class FieldSerializerConfig implements Cloneable {
@@ -16,11 +16,11 @@ public class FieldSerializerConfig implements Cloneable {
     private boolean useAsm = true ^ FieldSerializer.unsafeAvailable;
 
     public FieldSerializerConfig() {
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     /* renamed from: clone, reason: collision with other method in class */
-    public /* bridge */ /* synthetic */ Object mo77clone() throws CloneNotSupportedException {
+    public /* bridge */ /* synthetic */ Object mo11454clone() throws CloneNotSupportedException {
         return clone();
     }
 
@@ -62,7 +62,7 @@ public class FieldSerializerConfig implements Cloneable {
 
     public void setCachedFieldNameStrategy(FieldSerializer.CachedFieldNameStrategy cachedFieldNameStrategy) {
         this.cachedFieldNameStrategy = cachedFieldNameStrategy;
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public void setCopyTransient(boolean z2) {
@@ -71,27 +71,27 @@ public class FieldSerializerConfig implements Cloneable {
 
     public void setFieldsAsAccessible(boolean z2) {
         this.setFieldsAsAccessible = z2;
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public void setFieldsCanBeNull(boolean z2) {
         this.fieldsCanBeNull = z2;
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public void setFixedFieldTypes(boolean z2) {
         this.fixedFieldTypes = z2;
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public void setIgnoreSyntheticFields(boolean z2) {
         this.ignoreSyntheticFields = z2;
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public void setOptimizedGenerics(boolean z2) {
         this.optimizedGenerics = z2;
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public void setSerializeTransient(boolean z2) {
@@ -102,9 +102,9 @@ public class FieldSerializerConfig implements Cloneable {
         this.useAsm = z2;
         if (!z2 && !FieldSerializer.unsafeAvailable) {
             this.useAsm = true;
-            a.C0064a c0064a = a.a;
+            Log.a aVar = Log.f3007a;
         }
-        a.C0064a c0064a2 = a.a;
+        Log.a aVar2 = Log.f3007a;
     }
 
     public FieldSerializerConfig clone() {

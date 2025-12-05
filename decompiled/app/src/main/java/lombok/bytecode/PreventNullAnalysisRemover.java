@@ -20,7 +20,7 @@ public class PreventNullAnalysisRemover implements PostCompilerTransformation {
         ClassReader reader = new ClassReader(fixedByteCode);
         ClassWriter writer = new FixedClassWriter(reader, 0);
         AtomicBoolean changesMade = new AtomicBoolean();
-        reader.accept(new AnonymousClass1(Opcodes.ASM7, writer, changesMade), 0);
+        reader.accept(new C128091(Opcodes.ASM7, writer, changesMade), 0);
         if (changesMade.get()) {
             return writer.toByteArray();
         }
@@ -65,13 +65,13 @@ public class PreventNullAnalysisRemover implements PostCompilerTransformation {
         }
     }
 
-    /* renamed from: lombok.bytecode.PreventNullAnalysisRemover$1, reason: invalid class name */
+    /* renamed from: lombok.bytecode.PreventNullAnalysisRemover$1 */
     /* loaded from: discord-126021.apk:lombok/bytecode/PreventNullAnalysisRemover$1.SCL.lombok */
-    class AnonymousClass1 extends ClassVisitor {
+    class C128091 extends ClassVisitor {
         private final /* synthetic */ AtomicBoolean val$changesMade;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        AnonymousClass1(int $anonymous0, ClassVisitor $anonymous1, AtomicBoolean atomicBoolean) {
+        C128091(int $anonymous0, ClassVisitor $anonymous1, AtomicBoolean atomicBoolean) {
             super($anonymous0, $anonymous1);
             this.val$changesMade = atomicBoolean;
         }

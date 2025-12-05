@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMediaDeviceChanged.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMediaDeviceChanged implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackMediaDeviceChanged implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence deviceFromName = null;
     private final CharSequence deviceToName = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackMediaDeviceChanged implements AnalyticsSchema
             return false;
         }
         TrackMediaDeviceChanged trackMediaDeviceChanged = (TrackMediaDeviceChanged) other;
-        return m.areEqual(this.deviceFromName, trackMediaDeviceChanged.deviceFromName) && m.areEqual(this.deviceToName, trackMediaDeviceChanged.deviceToName) && m.areEqual(this.deviceType, trackMediaDeviceChanged.deviceType) && m.areEqual(this.deviceIsCertified, trackMediaDeviceChanged.deviceIsCertified);
+        return Intrinsics3.areEqual(this.deviceFromName, trackMediaDeviceChanged.deviceFromName) && Intrinsics3.areEqual(this.deviceToName, trackMediaDeviceChanged.deviceToName) && Intrinsics3.areEqual(this.deviceType, trackMediaDeviceChanged.deviceType) && Intrinsics3.areEqual(this.deviceIsCertified, trackMediaDeviceChanged.deviceIsCertified);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackMediaDeviceChanged implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMediaDeviceChanged(deviceFromName=");
-        sbU.append(this.deviceFromName);
-        sbU.append(", deviceToName=");
-        sbU.append(this.deviceToName);
-        sbU.append(", deviceType=");
-        sbU.append(this.deviceType);
-        sbU.append(", deviceIsCertified=");
-        return a.D(sbU, this.deviceIsCertified, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMediaDeviceChanged(deviceFromName=");
+        sbM833U.append(this.deviceFromName);
+        sbM833U.append(", deviceToName=");
+        sbM833U.append(this.deviceToName);
+        sbM833U.append(", deviceType=");
+        sbM833U.append(this.deviceType);
+        sbM833U.append(", deviceIsCertified=");
+        return outline.m816D(sbM833U, this.deviceIsCertified, ")");
     }
 }

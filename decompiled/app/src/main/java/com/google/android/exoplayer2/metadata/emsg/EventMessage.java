@@ -3,25 +3,43 @@ package com.google.android.exoplayer2.metadata.emsg;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.i.a.c.f3.e0;
-import b.i.a.c.j1;
-import b.i.a.c.p1;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.Arrays;
+import p007b.p225i.p226a.p242c.Format2;
+import p007b.p225i.p226a.p242c.MediaMetadata;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
+import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
 /* loaded from: classes3.dex */
 public final class EventMessage implements Metadata.Entry {
     public static final Parcelable.Creator<EventMessage> CREATOR;
-    public static final j1 j;
-    public static final j1 k;
-    public final String l;
-    public final String m;
-    public final long n;
-    public final long o;
-    public final byte[] p;
-    public int q;
 
-    public class a implements Parcelable.Creator<EventMessage> {
+    /* renamed from: j */
+    public static final Format2 f19939j;
+
+    /* renamed from: k */
+    public static final Format2 f19940k;
+
+    /* renamed from: l */
+    public final String f19941l;
+
+    /* renamed from: m */
+    public final String f19942m;
+
+    /* renamed from: n */
+    public final long f19943n;
+
+    /* renamed from: o */
+    public final long f19944o;
+
+    /* renamed from: p */
+    public final byte[] f19945p;
+
+    /* renamed from: q */
+    public int f19946q;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.emsg.EventMessage$a */
+    public class C10721a implements Parcelable.Creator<EventMessage> {
         @Override // android.os.Parcelable.Creator
         public EventMessage createFromParcel(Parcel parcel) {
             return new EventMessage(parcel);
@@ -34,21 +52,21 @@ public final class EventMessage implements Metadata.Entry {
     }
 
     static {
-        j1.b bVar = new j1.b();
-        bVar.k = "application/id3";
-        j = bVar.a();
-        j1.b bVar2 = new j1.b();
-        bVar2.k = "application/x-scte35";
-        k = bVar2.a();
-        CREATOR = new a();
+        Format2.b bVar = new Format2.b();
+        bVar.f7173k = "application/id3";
+        f19939j = bVar.m3277a();
+        Format2.b bVar2 = new Format2.b();
+        bVar2.f7173k = "application/x-scte35";
+        f19940k = bVar2.m3277a();
+        CREATOR = new C10721a();
     }
 
-    public EventMessage(String str, String str2, long j2, long j3, byte[] bArr) {
-        this.l = str;
-        this.m = str2;
-        this.n = j2;
-        this.o = j3;
-        this.p = bArr;
+    public EventMessage(String str, String str2, long j, long j2, byte[] bArr) {
+        this.f19941l = str;
+        this.f19942m = str2;
+        this.f19943n = j;
+        this.f19944o = j2;
+        this.f19945p = bArr;
     }
 
     @Override // android.os.Parcelable
@@ -64,49 +82,51 @@ public final class EventMessage implements Metadata.Entry {
             return false;
         }
         EventMessage eventMessage = (EventMessage) obj;
-        return this.n == eventMessage.n && this.o == eventMessage.o && e0.a(this.l, eventMessage.l) && e0.a(this.m, eventMessage.m) && Arrays.equals(this.p, eventMessage.p);
+        return this.f19943n == eventMessage.f19943n && this.f19944o == eventMessage.f19944o && Util2.m2993a(this.f19941l, eventMessage.f19941l) && Util2.m2993a(this.f19942m, eventMessage.f19942m) && Arrays.equals(this.f19945p, eventMessage.f19945p);
     }
 
     public int hashCode() {
-        if (this.q == 0) {
-            String str = this.l;
+        if (this.f19946q == 0) {
+            String str = this.f19941l;
             int iHashCode = (527 + (str != null ? str.hashCode() : 0)) * 31;
-            String str2 = this.m;
+            String str2 = this.f19942m;
             int iHashCode2 = str2 != null ? str2.hashCode() : 0;
-            long j2 = this.n;
-            int i = (((iHashCode + iHashCode2) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31;
-            long j3 = this.o;
-            this.q = Arrays.hashCode(this.p) + ((i + ((int) (j3 ^ (j3 >>> 32)))) * 31);
+            long j = this.f19943n;
+            int i = (((iHashCode + iHashCode2) * 31) + ((int) (j ^ (j >>> 32)))) * 31;
+            long j2 = this.f19944o;
+            this.f19946q = Arrays.hashCode(this.f19945p) + ((i + ((int) (j2 ^ (j2 >>> 32)))) * 31);
         }
-        return this.q;
+        return this.f19946q;
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ void n(p1.b bVar) {
-        b.i.a.c.z2.a.c(this, bVar);
+    /* renamed from: n */
+    public /* synthetic */ void mo8878n(MediaMetadata.b bVar) {
+        Metadata2.m3894c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     @Nullable
-    public byte[] o0() {
-        if (y() != null) {
-            return this.p;
+    /* renamed from: o0 */
+    public byte[] mo8879o0() {
+        if (mo8880y() != null) {
+            return this.f19945p;
         }
         return null;
     }
 
     public String toString() {
-        String str = this.l;
-        long j2 = this.o;
-        long j3 = this.n;
-        String str2 = this.m;
+        String str = this.f19941l;
+        long j = this.f19944o;
+        long j2 = this.f19943n;
+        String str2 = this.f19942m;
         StringBuilder sb = new StringBuilder(String.valueOf(str2).length() + String.valueOf(str).length() + 79);
         sb.append("EMSG: scheme=");
         sb.append(str);
         sb.append(", id=");
-        sb.append(j2);
+        sb.append(j);
         sb.append(", durationMs=");
-        sb.append(j3);
+        sb.append(j2);
         sb.append(", value=");
         sb.append(str2);
         return sb.toString();
@@ -114,24 +134,25 @@ public final class EventMessage implements Metadata.Entry {
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.l);
-        parcel.writeString(this.m);
-        parcel.writeLong(this.n);
-        parcel.writeLong(this.o);
-        parcel.writeByteArray(this.p);
+        parcel.writeString(this.f19941l);
+        parcel.writeString(this.f19942m);
+        parcel.writeLong(this.f19943n);
+        parcel.writeLong(this.f19944o);
+        parcel.writeByteArray(this.f19945p);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     @Nullable
-    public j1 y() {
-        String str = this.l;
+    /* renamed from: y */
+    public Format2 mo8880y() {
+        String str = this.f19941l;
         str.hashCode();
         switch (str) {
             case "urn:scte:scte35:2014:bin":
-                return k;
+                return f19940k;
             case "https://aomedia.org/emsg/ID3":
             case "https://developer.apple.com/streaming/emsg-id3":
-                return j;
+                return f19939j;
             default:
                 return null;
         }
@@ -139,11 +160,11 @@ public final class EventMessage implements Metadata.Entry {
 
     public EventMessage(Parcel parcel) {
         String string = parcel.readString();
-        int i = e0.a;
-        this.l = string;
-        this.m = parcel.readString();
-        this.n = parcel.readLong();
-        this.o = parcel.readLong();
-        this.p = parcel.createByteArray();
+        int i = Util2.f6708a;
+        this.f19941l = string;
+        this.f19942m = parcel.readString();
+        this.f19943n = parcel.readLong();
+        this.f19944o = parcel.readLong();
+        this.f19945p = parcel.createByteArray();
     }
 }

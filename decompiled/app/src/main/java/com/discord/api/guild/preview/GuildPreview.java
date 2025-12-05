@@ -1,11 +1,11 @@
 package com.discord.api.guild.preview;
 
-import b.d.b.a.a;
 import com.discord.api.emoji.GuildEmoji;
 import com.discord.api.guild.GuildFeature;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildPreview.kt */
 /* loaded from: classes.dex */
@@ -37,7 +37,8 @@ public final /* data */ class GuildPreview {
         return this.description;
     }
 
-    public final List<GuildEmoji> d() {
+    /* renamed from: d */
+    public final List<GuildEmoji> m7887d() {
         return this.emojis;
     }
 
@@ -54,10 +55,11 @@ public final /* data */ class GuildPreview {
             return false;
         }
         GuildPreview guildPreview = (GuildPreview) other;
-        return this.id == guildPreview.id && m.areEqual(this.name, guildPreview.name) && m.areEqual(this.description, guildPreview.description) && m.areEqual(this.splash, guildPreview.splash) && m.areEqual(this.banner, guildPreview.banner) && m.areEqual(this.icon, guildPreview.icon) && m.areEqual(this.approximatePresenceCount, guildPreview.approximatePresenceCount) && m.areEqual(this.approximateMemberCount, guildPreview.approximateMemberCount) && m.areEqual(this.emojis, guildPreview.emojis) && m.areEqual(this.features, guildPreview.features) && m.areEqual(this.featurableInDirectory, guildPreview.featurableInDirectory);
+        return this.id == guildPreview.id && Intrinsics3.areEqual(this.name, guildPreview.name) && Intrinsics3.areEqual(this.description, guildPreview.description) && Intrinsics3.areEqual(this.splash, guildPreview.splash) && Intrinsics3.areEqual(this.banner, guildPreview.banner) && Intrinsics3.areEqual(this.icon, guildPreview.icon) && Intrinsics3.areEqual(this.approximatePresenceCount, guildPreview.approximatePresenceCount) && Intrinsics3.areEqual(this.approximateMemberCount, guildPreview.approximateMemberCount) && Intrinsics3.areEqual(this.emojis, guildPreview.emojis) && Intrinsics3.areEqual(this.features, guildPreview.features) && Intrinsics3.areEqual(this.featurableInDirectory, guildPreview.featurableInDirectory);
     }
 
-    public final List<GuildFeature> f() {
+    /* renamed from: f */
+    public final List<GuildFeature> m7889f() {
         return this.features;
     }
 
@@ -107,27 +109,27 @@ public final /* data */ class GuildPreview {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildPreview(id=");
-        sbU.append(this.id);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", description=");
-        sbU.append(this.description);
-        sbU.append(", splash=");
-        sbU.append(this.splash);
-        sbU.append(", banner=");
-        sbU.append(this.banner);
-        sbU.append(", icon=");
-        sbU.append(this.icon);
-        sbU.append(", approximatePresenceCount=");
-        sbU.append(this.approximatePresenceCount);
-        sbU.append(", approximateMemberCount=");
-        sbU.append(this.approximateMemberCount);
-        sbU.append(", emojis=");
-        sbU.append(this.emojis);
-        sbU.append(", features=");
-        sbU.append(this.features);
-        sbU.append(", featurableInDirectory=");
-        return a.D(sbU, this.featurableInDirectory, ")");
+        StringBuilder sbM833U = outline.m833U("GuildPreview(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", description=");
+        sbM833U.append(this.description);
+        sbM833U.append(", splash=");
+        sbM833U.append(this.splash);
+        sbM833U.append(", banner=");
+        sbM833U.append(this.banner);
+        sbM833U.append(", icon=");
+        sbM833U.append(this.icon);
+        sbM833U.append(", approximatePresenceCount=");
+        sbM833U.append(this.approximatePresenceCount);
+        sbM833U.append(", approximateMemberCount=");
+        sbM833U.append(this.approximateMemberCount);
+        sbM833U.append(", emojis=");
+        sbM833U.append(this.emojis);
+        sbM833U.append(", features=");
+        sbM833U.append(this.features);
+        sbM833U.append(", featurableInDirectory=");
+        return outline.m816D(sbM833U, this.featurableInDirectory, ")");
     }
 }

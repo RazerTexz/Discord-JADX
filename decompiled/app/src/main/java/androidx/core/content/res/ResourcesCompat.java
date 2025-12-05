@@ -26,12 +26,12 @@ import androidx.core.content.res.FontResourcesParserCompat;
 import androidx.core.graphics.TypefaceCompat;
 import androidx.core.util.ObjectsCompat;
 import androidx.core.util.Preconditions;
-import b.d.b.a.a;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.WeakHashMap;
 import org.xmlpull.v1.XmlPullParserException;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public final class ResourcesCompat {
@@ -82,11 +82,11 @@ public final class ResourcesCompat {
 
     public static abstract class FontCallback {
 
-        /* renamed from: androidx.core.content.res.ResourcesCompat$FontCallback$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
+        /* renamed from: androidx.core.content.res.ResourcesCompat$FontCallback$1 */
+        public class RunnableC02211 implements Runnable {
             public final /* synthetic */ Typeface val$typeface;
 
-            public AnonymousClass1(Typeface typeface) {
+            public RunnableC02211(Typeface typeface) {
                 this.val$typeface = typeface;
             }
 
@@ -96,11 +96,11 @@ public final class ResourcesCompat {
             }
         }
 
-        /* renamed from: androidx.core.content.res.ResourcesCompat$FontCallback$2, reason: invalid class name */
-        public class AnonymousClass2 implements Runnable {
+        /* renamed from: androidx.core.content.res.ResourcesCompat$FontCallback$2 */
+        public class RunnableC02222 implements Runnable {
             public final /* synthetic */ int val$reason;
 
-            public AnonymousClass2(int i) {
+            public RunnableC02222(int i) {
                 this.val$reason = i;
             }
 
@@ -118,12 +118,12 @@ public final class ResourcesCompat {
 
         @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
         public final void callbackFailAsync(int i, @Nullable Handler handler) {
-            getHandler(handler).post(new AnonymousClass2(i));
+            getHandler(handler).post(new RunnableC02222(i));
         }
 
         @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
         public final void callbackSuccessAsync(Typeface typeface, @Nullable Handler handler) {
-            getHandler(handler).post(new AnonymousClass1(typeface));
+            getHandler(handler).post(new RunnableC02211(typeface));
         }
 
         public abstract void onFontRetrievalFailed(int i);
@@ -289,12 +289,12 @@ public final class ResourcesCompat {
         if (typedValue.type == 4) {
             return typedValue.getFloat();
         }
-        StringBuilder sbU = a.U("Resource ID #0x");
-        sbU.append(Integer.toHexString(i));
-        sbU.append(" type #0x");
-        sbU.append(Integer.toHexString(typedValue.type));
-        sbU.append(" is not valid");
-        throw new Resources.NotFoundException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Resource ID #0x");
+        sbM833U.append(Integer.toHexString(i));
+        sbM833U.append(" type #0x");
+        sbM833U.append(Integer.toHexString(typedValue.type));
+        sbM833U.append(" is not valid");
+        throw new Resources.NotFoundException(sbM833U.toString());
     }
 
     @Nullable
@@ -344,10 +344,10 @@ public final class ResourcesCompat {
         if (typefaceLoadFont != null || fontCallback != null || z3) {
             return typefaceLoadFont;
         }
-        StringBuilder sbU = a.U("Font resource ID #0x");
-        sbU.append(Integer.toHexString(i));
-        sbU.append(" could not be retrieved.");
-        throw new Resources.NotFoundException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Font resource ID #0x");
+        sbM833U.append(Integer.toHexString(i));
+        sbM833U.append(" could not be retrieved.");
+        throw new Resources.NotFoundException(sbM833U.toString());
     }
 
     public static void getFont(@NonNull Context context, @FontRes int i, @NonNull FontCallback fontCallback, @Nullable Handler handler) throws Resources.NotFoundException {
@@ -417,13 +417,13 @@ public final class ResourcesCompat {
                 return null;
             }
         }
-        StringBuilder sbU = a.U("Resource \"");
-        sbU.append(resources.getResourceName(i));
-        sbU.append("\" (");
-        sbU.append(Integer.toHexString(i));
-        sbU.append(") is not a Font: ");
-        sbU.append(typedValue);
-        throw new Resources.NotFoundException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Resource \"");
+        sbM833U.append(resources.getResourceName(i));
+        sbM833U.append("\" (");
+        sbM833U.append(Integer.toHexString(i));
+        sbM833U.append(") is not a Font: ");
+        sbM833U.append(typedValue);
+        throw new Resources.NotFoundException(sbM833U.toString());
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})

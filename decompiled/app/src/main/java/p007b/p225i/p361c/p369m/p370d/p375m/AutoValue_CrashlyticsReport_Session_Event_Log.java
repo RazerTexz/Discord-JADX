@@ -1,0 +1,43 @@
+package p007b.p225i.p361c.p369m.p370d.p375m;
+
+import androidx.annotation.NonNull;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
+
+/* compiled from: AutoValue_CrashlyticsReport_Session_Event_Log.java */
+/* renamed from: b.i.c.m.d.m.s, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class AutoValue_CrashlyticsReport_Session_Event_Log extends CrashlyticsReport.d.AbstractC13233d.c {
+
+    /* renamed from: a */
+    public final String f12641a;
+
+    public AutoValue_CrashlyticsReport_Session_Event_Log(String str, a aVar) {
+        this.f12641a = str;
+    }
+
+    @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.c
+    @NonNull
+    /* renamed from: a */
+    public String mo6606a() {
+        return this.f12641a;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj instanceof CrashlyticsReport.d.AbstractC13233d.c) {
+            return this.f12641a.equals(((CrashlyticsReport.d.AbstractC13233d.c) obj).mo6606a());
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        return this.f12641a.hashCode() ^ 1000003;
+    }
+
+    public String toString() {
+        return outline.m822J(outline.m833U("Log{content="), this.f12641a, "}");
+    }
+}

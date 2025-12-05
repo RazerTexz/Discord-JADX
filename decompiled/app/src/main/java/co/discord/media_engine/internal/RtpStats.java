@@ -1,7 +1,7 @@
 package co.discord.media_engine.internal;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -11,9 +11,9 @@ public final /* data */ class RtpStats {
     private final PacketStats transmitted;
 
     public RtpStats(PacketStats packetStats, PacketStats packetStats2, PacketStats packetStats3) {
-        m.checkNotNullParameter(packetStats, "fec");
-        m.checkNotNullParameter(packetStats2, "retransmitted");
-        m.checkNotNullParameter(packetStats3, "transmitted");
+        Intrinsics3.checkNotNullParameter(packetStats, "fec");
+        Intrinsics3.checkNotNullParameter(packetStats2, "retransmitted");
+        Intrinsics3.checkNotNullParameter(packetStats3, "transmitted");
         this.fec = packetStats;
         this.retransmitted = packetStats2;
         this.transmitted = packetStats3;
@@ -48,9 +48,9 @@ public final /* data */ class RtpStats {
     }
 
     public final RtpStats copy(PacketStats fec, PacketStats retransmitted, PacketStats transmitted) {
-        m.checkNotNullParameter(fec, "fec");
-        m.checkNotNullParameter(retransmitted, "retransmitted");
-        m.checkNotNullParameter(transmitted, "transmitted");
+        Intrinsics3.checkNotNullParameter(fec, "fec");
+        Intrinsics3.checkNotNullParameter(retransmitted, "retransmitted");
+        Intrinsics3.checkNotNullParameter(transmitted, "transmitted");
         return new RtpStats(fec, retransmitted, transmitted);
     }
 
@@ -62,7 +62,7 @@ public final /* data */ class RtpStats {
             return false;
         }
         RtpStats rtpStats = (RtpStats) other;
-        return m.areEqual(this.fec, rtpStats.fec) && m.areEqual(this.retransmitted, rtpStats.retransmitted) && m.areEqual(this.transmitted, rtpStats.transmitted);
+        return Intrinsics3.areEqual(this.fec, rtpStats.fec) && Intrinsics3.areEqual(this.retransmitted, rtpStats.retransmitted) && Intrinsics3.areEqual(this.transmitted, rtpStats.transmitted);
     }
 
     public final PacketStats getFec() {
@@ -87,13 +87,13 @@ public final /* data */ class RtpStats {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("RtpStats(fec=");
-        sbU.append(this.fec);
-        sbU.append(", retransmitted=");
-        sbU.append(this.retransmitted);
-        sbU.append(", transmitted=");
-        sbU.append(this.transmitted);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("RtpStats(fec=");
+        sbM833U.append(this.fec);
+        sbM833U.append(", retransmitted=");
+        sbM833U.append(this.retransmitted);
+        sbM833U.append(", transmitted=");
+        sbM833U.append(this.transmitted);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

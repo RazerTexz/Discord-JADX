@@ -5,40 +5,44 @@ public interface Predicate<T> {
 
     /* renamed from: org.webrtc.Predicate$-CC, reason: invalid class name */
     public final /* synthetic */ class CC {
-        public static Predicate a(Predicate _this, Predicate predicate) {
-            return new AnonymousClass2(predicate);
+        /* renamed from: a */
+        public static Predicate m11035a(Predicate _this, Predicate predicate) {
+            return new C129812(predicate);
         }
 
-        public static Predicate b(Predicate _this) {
-            return new AnonymousClass3();
+        /* renamed from: b */
+        public static Predicate m11036b(Predicate _this) {
+            return new C129823();
         }
 
-        public static Predicate c(Predicate _this, Predicate predicate) {
-            return new AnonymousClass1(predicate);
+        /* renamed from: c */
+        public static Predicate m11037c(Predicate _this, Predicate predicate) {
+            return new C129801(predicate);
         }
     }
 
-    /* renamed from: org.webrtc.Predicate$1, reason: invalid class name */
-    public class AnonymousClass1 implements Predicate<T> {
+    /* renamed from: org.webrtc.Predicate$1 */
+    public class C129801 implements Predicate<T> {
         public final /* synthetic */ Predicate val$other;
 
-        public AnonymousClass1(Predicate predicate) {
+        public C129801(Predicate predicate) {
             this.val$other = predicate;
         }
 
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate and(Predicate predicate) {
-            return CC.a(this, predicate);
+            return CC.m11035a(this, predicate);
         }
 
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate negate() {
-            return CC.b(this);
+            return CC.m11036b(this);
         }
 
         @Override // org.webrtc.Predicate
-        public /* synthetic */ Predicate or(Predicate predicate) {
-            return CC.c(this, predicate);
+        /* renamed from: or */
+        public /* synthetic */ Predicate mo11025or(Predicate predicate) {
+            return CC.m11037c(this, predicate);
         }
 
         @Override // org.webrtc.Predicate
@@ -47,27 +51,28 @@ public interface Predicate<T> {
         }
     }
 
-    /* renamed from: org.webrtc.Predicate$2, reason: invalid class name */
-    public class AnonymousClass2 implements Predicate<T> {
+    /* renamed from: org.webrtc.Predicate$2 */
+    public class C129812 implements Predicate<T> {
         public final /* synthetic */ Predicate val$other;
 
-        public AnonymousClass2(Predicate predicate) {
+        public C129812(Predicate predicate) {
             this.val$other = predicate;
         }
 
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate and(Predicate predicate) {
-            return CC.a(this, predicate);
+            return CC.m11035a(this, predicate);
         }
 
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate negate() {
-            return CC.b(this);
+            return CC.m11036b(this);
         }
 
         @Override // org.webrtc.Predicate
-        public /* synthetic */ Predicate or(Predicate predicate) {
-            return CC.c(this, predicate);
+        /* renamed from: or */
+        public /* synthetic */ Predicate mo11025or(Predicate predicate) {
+            return CC.m11037c(this, predicate);
         }
 
         @Override // org.webrtc.Predicate
@@ -76,24 +81,25 @@ public interface Predicate<T> {
         }
     }
 
-    /* renamed from: org.webrtc.Predicate$3, reason: invalid class name */
-    public class AnonymousClass3 implements Predicate<T> {
-        public AnonymousClass3() {
+    /* renamed from: org.webrtc.Predicate$3 */
+    public class C129823 implements Predicate<T> {
+        public C129823() {
         }
 
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate and(Predicate predicate) {
-            return CC.a(this, predicate);
+            return CC.m11035a(this, predicate);
         }
 
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate negate() {
-            return CC.b(this);
+            return CC.m11036b(this);
         }
 
         @Override // org.webrtc.Predicate
-        public /* synthetic */ Predicate or(Predicate predicate) {
-            return CC.c(this, predicate);
+        /* renamed from: or */
+        public /* synthetic */ Predicate mo11025or(Predicate predicate) {
+            return CC.m11037c(this, predicate);
         }
 
         @Override // org.webrtc.Predicate
@@ -106,7 +112,8 @@ public interface Predicate<T> {
 
     Predicate<T> negate();
 
-    Predicate<T> or(Predicate<? super T> predicate);
+    /* renamed from: or */
+    Predicate<T> mo11025or(Predicate<? super T> predicate);
 
     boolean test(T t);
 }

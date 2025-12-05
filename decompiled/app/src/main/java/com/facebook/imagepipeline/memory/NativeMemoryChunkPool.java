@@ -1,26 +1,29 @@
 package com.facebook.imagepipeline.memory;
 
-import b.f.d.d.c;
-import b.f.j.l.r;
-import b.f.j.l.s;
-import b.f.j.l.y;
-import b.f.j.l.z;
+import p007b.p109f.p115d.p119d.DoNotStrip;
+import p007b.p109f.p115d.p122g.MemoryTrimmableRegistry;
+import p007b.p109f.p161j.p177l.MemoryChunk;
+import p007b.p109f.p161j.p177l.MemoryChunkPool;
+import p007b.p109f.p161j.p177l.PoolParams;
+import p007b.p109f.p161j.p177l.PoolStatsTracker;
 
-@c
+@DoNotStrip
 /* loaded from: classes3.dex */
-public class NativeMemoryChunkPool extends s {
-    @c
-    public NativeMemoryChunkPool(b.f.d.g.c cVar, y yVar, z zVar) {
-        super(cVar, yVar, zVar);
+public class NativeMemoryChunkPool extends MemoryChunkPool {
+    @DoNotStrip
+    public NativeMemoryChunkPool(MemoryTrimmableRegistry memoryTrimmableRegistry, PoolParams poolParams, PoolStatsTracker poolStatsTracker) {
+        super(memoryTrimmableRegistry, poolParams, poolStatsTracker);
     }
 
-    @Override // b.f.j.l.s, com.facebook.imagepipeline.memory.BasePool
-    public r e(int i) {
+    @Override // p007b.p109f.p161j.p177l.MemoryChunkPool, com.facebook.imagepipeline.memory.BasePool
+    /* renamed from: e */
+    public MemoryChunk mo1382e(int i) {
         return new NativeMemoryChunk(i);
     }
 
-    @Override // b.f.j.l.s
-    public r s(int i) {
+    @Override // p007b.p109f.p161j.p177l.MemoryChunkPool
+    /* renamed from: s */
+    public MemoryChunk mo1393s(int i) {
         return new NativeMemoryChunk(i);
     }
 }

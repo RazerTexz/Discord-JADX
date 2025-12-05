@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackOverlayToggled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOverlayToggled implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackOverlayToggled implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean enabled = null;
     private final CharSequence settingType = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackOverlayToggled implements AnalyticsSchema, Tr
             return false;
         }
         TrackOverlayToggled trackOverlayToggled = (TrackOverlayToggled) other;
-        return m.areEqual(this.enabled, trackOverlayToggled.enabled) && m.areEqual(this.settingType, trackOverlayToggled.settingType) && m.areEqual(this.applicationId, trackOverlayToggled.applicationId) && m.areEqual(this.applicationName, trackOverlayToggled.applicationName);
+        return Intrinsics3.areEqual(this.enabled, trackOverlayToggled.enabled) && Intrinsics3.areEqual(this.settingType, trackOverlayToggled.settingType) && Intrinsics3.areEqual(this.applicationId, trackOverlayToggled.applicationId) && Intrinsics3.areEqual(this.applicationName, trackOverlayToggled.applicationName);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackOverlayToggled implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackOverlayToggled(enabled=");
-        sbU.append(this.enabled);
-        sbU.append(", settingType=");
-        sbU.append(this.settingType);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", applicationName=");
-        return a.E(sbU, this.applicationName, ")");
+        StringBuilder sbM833U = outline.m833U("TrackOverlayToggled(enabled=");
+        sbM833U.append(this.enabled);
+        sbM833U.append(", settingType=");
+        sbM833U.append(this.settingType);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", applicationName=");
+        return outline.m817E(sbM833U, this.applicationName, ")");
     }
 }

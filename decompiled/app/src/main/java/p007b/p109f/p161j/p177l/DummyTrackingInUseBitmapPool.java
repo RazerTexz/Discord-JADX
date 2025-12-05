@@ -1,0 +1,31 @@
+package p007b.p109f.p161j.p177l;
+
+import android.graphics.Bitmap;
+import java.util.Collections;
+import java.util.IdentityHashMap;
+import java.util.Objects;
+import java.util.Set;
+
+/* compiled from: DummyTrackingInUseBitmapPool.java */
+/* renamed from: b.f.j.l.m, reason: use source file name */
+/* loaded from: classes3.dex */
+public class DummyTrackingInUseBitmapPool implements BitmapPool {
+
+    /* renamed from: a */
+    public final Set<Bitmap> f3943a = Collections.newSetFromMap(new IdentityHashMap());
+
+    @Override // p007b.p109f.p115d.p122g.Pool2
+    public Bitmap get(int i) {
+        Bitmap bitmapCreateBitmap = Bitmap.createBitmap(1, (int) Math.ceil(i / 2.0d), Bitmap.Config.RGB_565);
+        this.f3943a.add(bitmapCreateBitmap);
+        return bitmapCreateBitmap;
+    }
+
+    @Override // p007b.p109f.p115d.p122g.Pool2, p007b.p109f.p115d.p123h.ResourceReleaser
+    public void release(Object obj) {
+        Bitmap bitmap = (Bitmap) obj;
+        Objects.requireNonNull(bitmap);
+        this.f3943a.remove(bitmap);
+        bitmap.recycle();
+    }
+}

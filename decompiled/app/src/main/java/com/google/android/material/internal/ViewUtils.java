@@ -17,6 +17,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.google.android.material.C10817R;
+import p007b.p225i.p226a.p341g.p347f.ViewOverlayApi182;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes3.dex */
@@ -26,49 +28,59 @@ public class ViewUtils {
         WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat, RelativePadding relativePadding);
     }
 
-    public static class a implements Runnable {
-        public final /* synthetic */ View j;
+    /* renamed from: com.google.android.material.internal.ViewUtils$a */
+    public static class RunnableC10948a implements Runnable {
 
-        public a(View view) {
-            this.j = view;
+        /* renamed from: j */
+        public final /* synthetic */ View f21047j;
+
+        public RunnableC10948a(View view) {
+            this.f21047j = view;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            ((InputMethodManager) this.j.getContext().getSystemService("input_method")).showSoftInput(this.j, 1);
+            ((InputMethodManager) this.f21047j.getContext().getSystemService("input_method")).showSoftInput(this.f21047j, 1);
         }
     }
 
-    public static class b implements OnApplyWindowInsetsListener {
-        public final /* synthetic */ boolean a;
+    /* renamed from: com.google.android.material.internal.ViewUtils$b */
+    public static class C10949b implements OnApplyWindowInsetsListener {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final /* synthetic */ boolean f3048b;
-        public final /* synthetic */ boolean c;
-        public final /* synthetic */ OnApplyWindowInsetsListener d;
+        /* renamed from: a */
+        public final /* synthetic */ boolean f21048a;
 
-        public b(boolean z2, boolean z3, boolean z4, OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
-            this.a = z2;
-            this.f3048b = z3;
-            this.c = z4;
-            this.d = onApplyWindowInsetsListener;
+        /* renamed from: b */
+        public final /* synthetic */ boolean f21049b;
+
+        /* renamed from: c */
+        public final /* synthetic */ boolean f21050c;
+
+        /* renamed from: d */
+        public final /* synthetic */ OnApplyWindowInsetsListener f21051d;
+
+        public C10949b(boolean z2, boolean z3, boolean z4, OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
+            this.f21048a = z2;
+            this.f21049b = z3;
+            this.f21050c = z4;
+            this.f21051d = onApplyWindowInsetsListener;
         }
 
         @Override // com.google.android.material.internal.ViewUtils.OnApplyWindowInsetsListener
         @NonNull
         public WindowInsetsCompat onApplyWindowInsets(View view, @NonNull WindowInsetsCompat windowInsetsCompat, @NonNull RelativePadding relativePadding) {
-            if (this.a) {
+            if (this.f21048a) {
                 relativePadding.bottom = windowInsetsCompat.getSystemWindowInsetBottom() + relativePadding.bottom;
             }
             boolean zIsLayoutRtl = ViewUtils.isLayoutRtl(view);
-            if (this.f3048b) {
+            if (this.f21049b) {
                 if (zIsLayoutRtl) {
                     relativePadding.end = windowInsetsCompat.getSystemWindowInsetLeft() + relativePadding.end;
                 } else {
                     relativePadding.start = windowInsetsCompat.getSystemWindowInsetLeft() + relativePadding.start;
                 }
             }
-            if (this.c) {
+            if (this.f21050c) {
                 if (zIsLayoutRtl) {
                     relativePadding.start = windowInsetsCompat.getSystemWindowInsetRight() + relativePadding.start;
                 } else {
@@ -76,29 +88,33 @@ public class ViewUtils {
                 }
             }
             relativePadding.applyToView(view);
-            OnApplyWindowInsetsListener onApplyWindowInsetsListener = this.d;
+            OnApplyWindowInsetsListener onApplyWindowInsetsListener = this.f21051d;
             return onApplyWindowInsetsListener != null ? onApplyWindowInsetsListener.onApplyWindowInsets(view, windowInsetsCompat, relativePadding) : windowInsetsCompat;
         }
     }
 
-    public static class c implements androidx.core.view.OnApplyWindowInsetsListener {
-        public final /* synthetic */ OnApplyWindowInsetsListener a;
+    /* renamed from: com.google.android.material.internal.ViewUtils$c */
+    public static class C10950c implements androidx.core.view.OnApplyWindowInsetsListener {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final /* synthetic */ RelativePadding f3049b;
+        /* renamed from: a */
+        public final /* synthetic */ OnApplyWindowInsetsListener f21052a;
 
-        public c(OnApplyWindowInsetsListener onApplyWindowInsetsListener, RelativePadding relativePadding) {
-            this.a = onApplyWindowInsetsListener;
-            this.f3049b = relativePadding;
+        /* renamed from: b */
+        public final /* synthetic */ RelativePadding f21053b;
+
+        public C10950c(OnApplyWindowInsetsListener onApplyWindowInsetsListener, RelativePadding relativePadding) {
+            this.f21052a = onApplyWindowInsetsListener;
+            this.f21053b = relativePadding;
         }
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            return this.a.onApplyWindowInsets(view, windowInsetsCompat, new RelativePadding(this.f3049b));
+            return this.f21052a.onApplyWindowInsets(view, windowInsetsCompat, new RelativePadding(this.f21053b));
         }
     }
 
-    public static class d implements View.OnAttachStateChangeListener {
+    /* renamed from: com.google.android.material.internal.ViewUtils$d */
+    public static class ViewOnAttachStateChangeListenerC10951d implements View.OnAttachStateChangeListener {
         @Override // android.view.View.OnAttachStateChangeListener
         public void onViewAttachedToWindow(@NonNull View view) {
             view.removeOnAttachStateChangeListener(this);
@@ -153,7 +169,7 @@ public class ViewUtils {
         if (view == null) {
             return null;
         }
-        return new b.i.a.g.f.b(view);
+        return new ViewOverlayApi182(view);
     }
 
     public static float getParentAbsoluteElevation(@NonNull View view) {
@@ -200,22 +216,22 @@ public class ViewUtils {
         if (ViewCompat.isAttachedToWindow(view)) {
             ViewCompat.requestApplyInsets(view);
         } else {
-            view.addOnAttachStateChangeListener(new d());
+            view.addOnAttachStateChangeListener(new ViewOnAttachStateChangeListenerC10951d());
         }
     }
 
     public static void requestFocusAndShowKeyboard(@NonNull View view) {
         view.requestFocus();
-        view.post(new a(view));
+        view.post(new RunnableC10948a(view));
     }
 
     public static void doOnApplyWindowInsets(@NonNull View view, @Nullable AttributeSet attributeSet, int i, int i2, @Nullable OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
-        TypedArray typedArrayObtainStyledAttributes = view.getContext().obtainStyledAttributes(attributeSet, com.google.android.material.R.styleable.Insets, i, i2);
-        boolean z2 = typedArrayObtainStyledAttributes.getBoolean(com.google.android.material.R.styleable.Insets_paddingBottomSystemWindowInsets, false);
-        boolean z3 = typedArrayObtainStyledAttributes.getBoolean(com.google.android.material.R.styleable.Insets_paddingLeftSystemWindowInsets, false);
-        boolean z4 = typedArrayObtainStyledAttributes.getBoolean(com.google.android.material.R.styleable.Insets_paddingRightSystemWindowInsets, false);
+        TypedArray typedArrayObtainStyledAttributes = view.getContext().obtainStyledAttributes(attributeSet, C10817R.styleable.Insets, i, i2);
+        boolean z2 = typedArrayObtainStyledAttributes.getBoolean(C10817R.styleable.Insets_paddingBottomSystemWindowInsets, false);
+        boolean z3 = typedArrayObtainStyledAttributes.getBoolean(C10817R.styleable.Insets_paddingLeftSystemWindowInsets, false);
+        boolean z4 = typedArrayObtainStyledAttributes.getBoolean(C10817R.styleable.Insets_paddingRightSystemWindowInsets, false);
         typedArrayObtainStyledAttributes.recycle();
-        doOnApplyWindowInsets(view, new b(z2, z3, z4, onApplyWindowInsetsListener));
+        doOnApplyWindowInsets(view, new C10949b(z2, z3, z4, onApplyWindowInsetsListener));
     }
 
     public static void removeOnGlobalLayoutListener(@NonNull ViewTreeObserver viewTreeObserver, @NonNull ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener) {
@@ -248,7 +264,7 @@ public class ViewUtils {
     }
 
     public static void doOnApplyWindowInsets(@NonNull View view, @NonNull OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
-        ViewCompat.setOnApplyWindowInsetsListener(view, new c(onApplyWindowInsetsListener, new RelativePadding(ViewCompat.getPaddingStart(view), view.getPaddingTop(), ViewCompat.getPaddingEnd(view), view.getPaddingBottom())));
+        ViewCompat.setOnApplyWindowInsetsListener(view, new C10950c(onApplyWindowInsetsListener, new RelativePadding(ViewCompat.getPaddingStart(view), view.getPaddingTop(), ViewCompat.getPaddingEnd(view), view.getPaddingBottom())));
         requestApplyInsetsWhenAttached(view);
     }
 }

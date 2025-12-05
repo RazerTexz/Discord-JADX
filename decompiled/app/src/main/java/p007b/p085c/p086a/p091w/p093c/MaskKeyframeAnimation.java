@@ -1,0 +1,32 @@
+package p007b.p085c.p086a.p091w.p093c;
+
+import android.graphics.Path;
+import java.util.ArrayList;
+import java.util.List;
+import p007b.p085c.p086a.p095y.p097l.Mask;
+import p007b.p085c.p086a.p095y.p097l.ShapeData;
+
+/* compiled from: MaskKeyframeAnimation.java */
+/* renamed from: b.c.a.w.c.g, reason: use source file name */
+/* loaded from: classes.dex */
+public class MaskKeyframeAnimation {
+
+    /* renamed from: a */
+    public final List<BaseKeyframeAnimation<ShapeData, Path>> f2611a;
+
+    /* renamed from: b */
+    public final List<BaseKeyframeAnimation<Integer, Integer>> f2612b;
+
+    /* renamed from: c */
+    public final List<Mask> f2613c;
+
+    public MaskKeyframeAnimation(List<Mask> list) {
+        this.f2613c = list;
+        this.f2611a = new ArrayList(list.size());
+        this.f2612b = new ArrayList(list.size());
+        for (int i = 0; i < list.size(); i++) {
+            this.f2611a.add(list.get(i).f2768b.mo773a());
+            this.f2612b.add(list.get(i).f2769c.mo773a());
+        }
+    }
+}

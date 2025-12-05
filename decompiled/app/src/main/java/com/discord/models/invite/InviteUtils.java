@@ -1,10 +1,10 @@
 package com.discord.models.invite;
 
-import b.d.b.a.a;
 import com.discord.BuildConfig;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelInvite;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: InviteUtils.kt */
 /* loaded from: classes.dex */
@@ -15,7 +15,7 @@ public final class InviteUtils {
     }
 
     public final String createLinkFromCode(String code, Long guildScheduledEventId) {
-        m.checkNotNullParameter(code, ModelAuditLogEntry.CHANGE_KEY_CODE);
-        return guildScheduledEventId != null ? a.P(new Object[]{BuildConfig.HOST_INVITE, code, guildScheduledEventId}, 3, ModelInvite.URL_FORMAT_WITH_EVENT, "java.lang.String.format(format, *args)") : a.P(new Object[]{BuildConfig.HOST_INVITE, code}, 2, ModelInvite.URL_FORMAT, "java.lang.String.format(format, *args)");
+        Intrinsics3.checkNotNullParameter(code, ModelAuditLogEntry.CHANGE_KEY_CODE);
+        return guildScheduledEventId != null ? outline.m828P(new Object[]{BuildConfig.HOST_INVITE, code, guildScheduledEventId}, 3, ModelInvite.URL_FORMAT_WITH_EVENT, "java.lang.String.format(format, *args)") : outline.m828P(new Object[]{BuildConfig.HOST_INVITE, code}, 2, ModelInvite.URL_FORMAT, "java.lang.String.format(format, *args)");
     }
 }

@@ -4,16 +4,16 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import b.a.k.b;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.sticker.Sticker;
 import com.discord.databinding.WidgetChatListAdapterItemStickerGreetCompactBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.views.sticker.StickerView;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.StickerGreetCompactEntry;
-import d0.z.d.m;
-import rx.Subscription;
+import p007b.p008a.p027k.FormatUtils;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Subscription;
 
 /* compiled from: WidgetChatListAdapterItemStickerGreetCompact.kt */
 /* loaded from: classes2.dex */
@@ -21,13 +21,13 @@ public final class WidgetChatListAdapterItemStickerGreetCompact extends WidgetCh
     private final WidgetChatListAdapterItemStickerGreetCompactBinding binding;
 
     /* compiled from: WidgetChatListAdapterItemStickerGreetCompact.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStickerGreetCompact$onConfigure$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStickerGreetCompact$onConfigure$1 */
+    public static final class ViewOnClickListenerC81291 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ int $channelType;
         public final /* synthetic */ Sticker $sticker;
 
-        public AnonymousClass1(long j, int i, Sticker sticker) {
+        public ViewOnClickListenerC81291(long j, int i, Sticker sticker) {
             this.$channelId = j;
             this.$channelType = i;
             this.$sticker = sticker;
@@ -41,20 +41,20 @@ public final class WidgetChatListAdapterItemStickerGreetCompact extends WidgetCh
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemStickerGreetCompact(WidgetChatListAdapter widgetChatListAdapter) {
-        super(R.layout.widget_chat_list_adapter_item_sticker_greet_compact, widgetChatListAdapter);
-        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        super(C5419R.layout.widget_chat_list_adapter_item_sticker_greet_compact, widgetChatListAdapter);
+        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
-        int i = R.id.chat_list_adapter_item_sticker_greet;
-        StickerView stickerView = (StickerView) view.findViewById(R.id.chat_list_adapter_item_sticker_greet);
+        int i = C5419R.id.chat_list_adapter_item_sticker_greet;
+        StickerView stickerView = (StickerView) view.findViewById(C5419R.id.chat_list_adapter_item_sticker_greet);
         if (stickerView != null) {
-            i = R.id.chat_list_adapter_item_sticker_greet_text;
-            TextView textView = (TextView) view.findViewById(R.id.chat_list_adapter_item_sticker_greet_text);
+            i = C5419R.id.chat_list_adapter_item_sticker_greet_text;
+            TextView textView = (TextView) view.findViewById(C5419R.id.chat_list_adapter_item_sticker_greet_text);
             if (textView != null) {
-                i = R.id.send_sticker_greet_button;
-                LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.send_sticker_greet_button);
+                i = C5419R.id.send_sticker_greet_button;
+                LinearLayout linearLayout = (LinearLayout) view.findViewById(C5419R.id.send_sticker_greet_button);
                 if (linearLayout != null) {
                     WidgetChatListAdapterItemStickerGreetCompactBinding widgetChatListAdapterItemStickerGreetCompactBinding = new WidgetChatListAdapterItemStickerGreetCompactBinding((ConstraintLayout) view, stickerView, textView, linearLayout);
-                    m.checkNotNullExpressionValue(widgetChatListAdapterItemStickerGreetCompactBinding, "WidgetChatListAdapterIte…actBinding.bind(itemView)");
+                    Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemStickerGreetCompactBinding, "WidgetChatListAdapterIte…actBinding.bind(itemView)");
                     this.binding = widgetChatListAdapterItemStickerGreetCompactBinding;
                     return;
                 }
@@ -69,7 +69,7 @@ public final class WidgetChatListAdapterItemStickerGreetCompact extends WidgetCh
 
     @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
     public Subscription getSubscription() {
-        return this.binding.f2336b.getCom.discord.utilities.analytics.Traits.Payment.Type.SUBSCRIPTION java.lang.String();
+        return this.binding.f16303b.getCom.discord.utilities.analytics.Traits.Payment.Type.SUBSCRIPTION java.lang.String();
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
@@ -80,17 +80,17 @@ public final class WidgetChatListAdapterItemStickerGreetCompact extends WidgetCh
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         StickerGreetCompactEntry stickerGreetCompactEntry = (StickerGreetCompactEntry) data;
         Sticker stickerComponent1 = stickerGreetCompactEntry.getSticker();
         long jComponent2 = stickerGreetCompactEntry.getChannelId();
         String strComponent3 = stickerGreetCompactEntry.getChannelName();
         int iComponent4 = stickerGreetCompactEntry.getChannelType();
-        StickerView.e(this.binding.f2336b, stickerComponent1, null, 2);
-        this.binding.d.setOnClickListener(new AnonymousClass1(jComponent2, iComponent4, stickerComponent1));
-        TextView textView = this.binding.c;
-        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemStickerGreetText");
-        b.n(textView, R.string.wave_to, new Object[]{strComponent3}, null, 4);
+        StickerView.m8613e(this.binding.f16303b, stickerComponent1, null, 2);
+        this.binding.f16305d.setOnClickListener(new ViewOnClickListenerC81291(jComponent2, iComponent4, stickerComponent1));
+        TextView textView = this.binding.f16304c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemStickerGreetText");
+        FormatUtils.m222n(textView, C5419R.string.wave_to, new Object[]{strComponent3}, null, 4);
     }
 }

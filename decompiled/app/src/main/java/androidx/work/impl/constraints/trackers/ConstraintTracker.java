@@ -22,11 +22,11 @@ public abstract class ConstraintTracker<T> {
     private final Object mLock = new Object();
     private final Set<ConstraintListener<T>> mListeners = new LinkedHashSet();
 
-    /* renamed from: androidx.work.impl.constraints.trackers.ConstraintTracker$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.work.impl.constraints.trackers.ConstraintTracker$1 */
+    public class RunnableC07401 implements Runnable {
         public final /* synthetic */ List val$listenersList;
 
-        public AnonymousClass1(List list) {
+        public RunnableC07401(List list) {
             this.val$listenersList = list;
         }
 
@@ -72,7 +72,7 @@ public abstract class ConstraintTracker<T> {
             T t2 = this.mCurrentState;
             if (t2 != t && (t2 == null || !t2.equals(t))) {
                 this.mCurrentState = t;
-                this.mTaskExecutor.getMainThreadExecutor().execute(new AnonymousClass1(new ArrayList(this.mListeners)));
+                this.mTaskExecutor.getMainThreadExecutor().execute(new RunnableC07401(new ArrayList(this.mListeners)));
             }
         }
     }

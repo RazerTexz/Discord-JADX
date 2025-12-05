@@ -1,0 +1,46 @@
+package p007b.p225i.p361c.p369m.p370d.p384s.p385h;
+
+/* compiled from: AppRequestData.java */
+/* renamed from: b.i.c.m.d.s.h.a, reason: use source file name */
+/* loaded from: classes3.dex */
+public class AppRequestData {
+
+    /* renamed from: a */
+    public final String f12740a;
+
+    /* renamed from: b */
+    public final String f12741b;
+
+    /* renamed from: c */
+    public final String f12742c;
+
+    /* renamed from: d */
+    public final String f12743d;
+
+    /* renamed from: e */
+    public final String f12744e;
+
+    /* renamed from: f */
+    public final String f12745f;
+
+    /* renamed from: g */
+    public final String f12746g;
+
+    /* renamed from: h */
+    public final int f12747h;
+
+    /* renamed from: i */
+    public final String f12748i;
+
+    public AppRequestData(String str, String str2, String str3, String str4, String str5, String str6, String str7, int i, String str8, String str9) {
+        this.f12740a = str;
+        this.f12741b = str2;
+        this.f12742c = str3;
+        this.f12743d = str4;
+        this.f12744e = str5;
+        this.f12745f = str6;
+        this.f12746g = str7;
+        this.f12747h = i;
+        this.f12748i = str8;
+    }
+}

@@ -259,50 +259,47 @@ public final class BidiFormatter {
             int i2 = 0;
             while (this.charIndex > 0) {
                 byte bDirTypeBackward = dirTypeBackward();
-                if (bDirTypeBackward != 0) {
-                    if (bDirTypeBackward == 1 || bDirTypeBackward == 2) {
-                        if (i == 0) {
-                            return 1;
-                        }
-                        if (i2 == 0) {
-                            i2 = i;
-                        }
-                    } else if (bDirTypeBackward != 9) {
-                        switch (bDirTypeBackward) {
-                            case 14:
-                            case 15:
-                                if (i2 == i) {
-                                    return -1;
-                                }
-                                i--;
-                                break;
-                            case 16:
-                            case 17:
-                                if (i2 == i) {
-                                    return 1;
-                                }
-                                i--;
-                                break;
-                            case 18:
-                                i++;
-                                break;
-                            default:
-                                if (i2 != 0) {
-                                } else {
-                                    i2 = i;
-                                }
-                                break;
-                        }
-                    } else {
-                        continue;
-                    }
-                } else {
+                if (bDirTypeBackward == 0) {
                     if (i == 0) {
                         return -1;
                     }
                     if (i2 == 0) {
                         i2 = i;
                     }
+                } else if (bDirTypeBackward == 1 || bDirTypeBackward == 2) {
+                    if (i == 0) {
+                        return 1;
+                    }
+                    if (i2 == 0) {
+                        i2 = i;
+                    }
+                } else if (bDirTypeBackward != 9) {
+                    switch (bDirTypeBackward) {
+                        case 14:
+                        case 15:
+                            if (i2 == i) {
+                                return -1;
+                            }
+                            i--;
+                            break;
+                        case 16:
+                        case 17:
+                            if (i2 == i) {
+                                return 1;
+                            }
+                            i--;
+                            break;
+                        case 18:
+                            i++;
+                            break;
+                        default:
+                            if (i2 == 0) {
+                                i2 = i;
+                            }
+                            break;
+                    }
+                } else {
+                    continue;
                 }
             }
             return 0;

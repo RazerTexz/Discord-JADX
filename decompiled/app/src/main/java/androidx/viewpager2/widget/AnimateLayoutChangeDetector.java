@@ -14,9 +14,9 @@ public final class AnimateLayoutChangeDetector {
     private static final ViewGroup.MarginLayoutParams ZERO_MARGIN_LAYOUT_PARAMS;
     private LinearLayoutManager mLayoutManager;
 
-    /* renamed from: androidx.viewpager2.widget.AnimateLayoutChangeDetector$1, reason: invalid class name */
-    public class AnonymousClass1 implements Comparator<int[]> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.viewpager2.widget.AnimateLayoutChangeDetector$1 */
+    public class C07021 implements Comparator<int[]> {
+        public C07021() {
         }
 
         @Override // java.util.Comparator
@@ -77,7 +77,7 @@ public final class AnimateLayoutChangeDetector {
             }
             iArr3[1] = bottom + i2;
         }
-        Arrays.sort(iArr, new AnonymousClass1());
+        Arrays.sort(iArr, new C07021());
         for (int i4 = 1; i4 < childCount; i4++) {
             if (iArr[i4 - 1][1] != iArr[i4][0]) {
                 return false;

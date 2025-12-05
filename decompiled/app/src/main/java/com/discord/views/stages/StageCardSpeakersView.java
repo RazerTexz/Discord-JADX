@@ -8,35 +8,38 @@ import android.view.View;
 import android.widget.LinearLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.i.v3;
-import b.a.y.o0.c;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
-import d0.z.d.m;
+import p007b.p008a.p025i.ViewStageCardSpeakersBinding;
+import p007b.p008a.p062y.p068o0.SpeakersAdapter;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: StageCardSpeakersView.kt */
 /* loaded from: classes2.dex */
 public final class StageCardSpeakersView extends LinearLayout {
-    public static final RecyclerView.ItemDecoration j = new a();
+
+    /* renamed from: j */
+    public static final RecyclerView.ItemDecoration f19290j = new C7121a();
 
     /* renamed from: k, reason: from kotlin metadata */
-    public final v3 binding;
+    public final ViewStageCardSpeakersBinding binding;
 
     /* renamed from: l, reason: from kotlin metadata */
-    public final c speakersAdapter;
+    public final SpeakersAdapter speakersAdapter;
 
     /* renamed from: m, reason: from kotlin metadata */
     public final GridLayoutManager speakersLayoutManager;
 
     /* compiled from: StageCardSpeakersView.kt */
-    public static final class a extends RecyclerView.ItemDecoration {
+    /* renamed from: com.discord.views.stages.StageCardSpeakersView$a */
+    public static final class C7121a extends RecyclerView.ItemDecoration {
         @Override // androidx.recyclerview.widget.RecyclerView.ItemDecoration
         public void getItemOffsets(Rect rect, View view, RecyclerView recyclerView, RecyclerView.State state) {
-            m.checkNotNullParameter(rect, "outRect");
-            m.checkNotNullParameter(view, "view");
-            m.checkNotNullParameter(recyclerView, "parent");
-            m.checkNotNullParameter(state, "state");
+            Intrinsics3.checkNotNullParameter(rect, "outRect");
+            Intrinsics3.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(recyclerView, "parent");
+            Intrinsics3.checkNotNullParameter(state, "state");
             super.getItemOffsets(rect, view, recyclerView, state);
             boolean z2 = recyclerView.getChildAdapterPosition(view) >= state.getItemCount() + (-2);
             rect.left = DimenUtils.dpToPixels(4);
@@ -48,26 +51,26 @@ public final class StageCardSpeakersView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public StageCardSpeakersView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        LayoutInflater.from(context).inflate(R.layout.view_stage_card_speakers, this);
-        SpeakersRecyclerView speakersRecyclerView = (SpeakersRecyclerView) findViewById(R.id.discovery_speakers_recycler);
-        if (speakersRecyclerView == null) {
-            throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(R.id.discovery_speakers_recycler)));
+        Intrinsics3.checkNotNullParameter(context, "context");
+        LayoutInflater.from(context).inflate(C5419R.layout.view_stage_card_speakers, this);
+        SpeakersAdapter2 speakersAdapter2 = (SpeakersAdapter2) findViewById(C5419R.id.discovery_speakers_recycler);
+        if (speakersAdapter2 == null) {
+            throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(C5419R.id.discovery_speakers_recycler)));
         }
-        v3 v3Var = new v3(this, speakersRecyclerView);
-        m.checkNotNullExpressionValue(v3Var, "ViewStageCardSpeakersBin…ater.from(context), this)");
-        this.binding = v3Var;
+        ViewStageCardSpeakersBinding viewStageCardSpeakersBinding = new ViewStageCardSpeakersBinding(this, speakersAdapter2);
+        Intrinsics3.checkNotNullExpressionValue(viewStageCardSpeakersBinding, "ViewStageCardSpeakersBin…ater.from(context), this)");
+        this.binding = viewStageCardSpeakersBinding;
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        m.checkNotNullExpressionValue(speakersRecyclerView, "binding.discoverySpeakersRecycler");
-        c cVar = (c) companion.configure(new c(speakersRecyclerView));
-        this.speakersAdapter = cVar;
-        m.checkNotNullExpressionValue(speakersRecyclerView, "binding.discoverySpeakersRecycler");
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(speakersRecyclerView.getContext(), 2);
-        gridLayoutManager.setSpanSizeLookup(cVar.a);
+        Intrinsics3.checkNotNullExpressionValue(speakersAdapter2, "binding.discoverySpeakersRecycler");
+        SpeakersAdapter speakersAdapter = (SpeakersAdapter) companion.configure(new SpeakersAdapter(speakersAdapter2));
+        this.speakersAdapter = speakersAdapter;
+        Intrinsics3.checkNotNullExpressionValue(speakersAdapter2, "binding.discoverySpeakersRecycler");
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(speakersAdapter2.getContext(), 2);
+        gridLayoutManager.setSpanSizeLookup(speakersAdapter.f2054a);
         this.speakersLayoutManager = gridLayoutManager;
-        RecyclerView recycler = cVar.getRecycler();
+        RecyclerView recycler = speakersAdapter.getRecycler();
         recycler.setLayoutManager(gridLayoutManager);
-        recycler.addItemDecoration(j);
+        recycler.addItemDecoration(f19290j);
         recycler.setHasFixedSize(false);
     }
 }

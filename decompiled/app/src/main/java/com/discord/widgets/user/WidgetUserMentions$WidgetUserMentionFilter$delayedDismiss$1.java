@@ -1,21 +1,21 @@
 package com.discord.widgets.user;
 
-import b.i.a.f.e.o.f;
 import com.discord.widgets.user.WidgetUserMentions;
-import d0.l;
-import d0.w.h.c;
-import d0.w.i.a.e;
-import d0.w.i.a.k;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.CoroutineScope;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.Result3;
+import p507d0.p584w.p585h.Intrinsics2;
+import p507d0.p584w.p586i.p587a.ContinuationImpl6;
+import p507d0.p584w.p586i.p587a.DebugMetadata;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetUserMentions.kt */
-@e(c = "com.discord.widgets.user.WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1", f = "WidgetUserMentions.kt", l = {386}, m = "invokeSuspend")
+@DebugMetadata(m10084c = "com.discord.widgets.user.WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1", m10085f = "WidgetUserMentions.kt", m10086l = {386}, m10087m = "invokeSuspend")
 /* loaded from: classes.dex */
-public final class WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+public final class WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
     public int label;
     public final /* synthetic */ WidgetUserMentions.WidgetUserMentionFilter this$0;
 
@@ -25,34 +25,34 @@ public final class WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1 e
         this.this$0 = widgetUserMentionFilter;
     }
 
-    @Override // d0.w.i.a.a
+    @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
     public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-        m.checkNotNullParameter(continuation, "completion");
+        Intrinsics3.checkNotNullParameter(continuation, "completion");
         return new WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1(this.this$0, continuation);
     }
 
     @Override // kotlin.jvm.functions.Function2
     public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
-        return ((WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
+        return ((WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1) create(coroutineScope, continuation)).invokeSuspend(Unit.f27425a);
     }
 
-    @Override // d0.w.i.a.a
+    @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
     public final Object invokeSuspend(Object obj) {
-        Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
+        Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
         int i = this.label;
         if (i == 0) {
-            l.throwOnFailure(obj);
+            Result3.throwOnFailure(obj);
             this.label = 1;
-            if (f.P(600L, this) == coroutine_suspended) {
+            if (C3404f.m4234P(600L, this) == coroutine_suspended) {
                 return coroutine_suspended;
             }
         } else {
             if (i != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            l.throwOnFailure(obj);
+            Result3.throwOnFailure(obj);
         }
         this.this$0.dismiss();
-        return Unit.a;
+        return Unit.f27425a;
     }
 }

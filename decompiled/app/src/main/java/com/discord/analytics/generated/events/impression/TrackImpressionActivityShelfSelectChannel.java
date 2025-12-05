@@ -1,22 +1,22 @@
 package com.discord.analytics.generated.events.impression;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.analytics.generated.traits.TrackImpressionMetadata;
-import com.discord.analytics.generated.traits.TrackImpressionMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackImpressionMetadata2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackImpressionActivityShelfSelectChannel.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackImpressionActivityShelfSelectChannel implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver, TrackLocationMetadataReceiver, TrackImpressionMetadataReceiver {
+public final /* data */ class TrackImpressionActivityShelfSelectChannel implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2, TrackLocationMetadata2, TrackImpressionMetadata2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -26,14 +26,15 @@ public final /* data */ class TrackImpressionActivityShelfSelectChannel implemen
     private final CharSequence sourceSection = null;
     private final transient String analyticsSchemaTypeName = "impression_activity_shelf_select_channel";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -51,7 +52,7 @@ public final /* data */ class TrackImpressionActivityShelfSelectChannel implemen
             return false;
         }
         TrackImpressionActivityShelfSelectChannel trackImpressionActivityShelfSelectChannel = (TrackImpressionActivityShelfSelectChannel) other;
-        return m.areEqual(this.applicationId, trackImpressionActivityShelfSelectChannel.applicationId) && m.areEqual(this.sourceSection, trackImpressionActivityShelfSelectChannel.sourceSection);
+        return Intrinsics3.areEqual(this.applicationId, trackImpressionActivityShelfSelectChannel.applicationId) && Intrinsics3.areEqual(this.sourceSection, trackImpressionActivityShelfSelectChannel.sourceSection);
     }
 
     public int hashCode() {
@@ -62,9 +63,9 @@ public final /* data */ class TrackImpressionActivityShelfSelectChannel implemen
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackImpressionActivityShelfSelectChannel(applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", sourceSection=");
-        return a.E(sbU, this.sourceSection, ")");
+        StringBuilder sbM833U = outline.m833U("TrackImpressionActivityShelfSelectChannel(applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", sourceSection=");
+        return outline.m817E(sbM833U, this.sourceSection, ")");
     }
 }

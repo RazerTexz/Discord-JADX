@@ -5,10 +5,10 @@ import android.graphics.RectF;
 
 /* loaded from: classes.dex */
 public class MatrixUtils {
-    public static final Matrix IDENTITY_MATRIX = new AnonymousClass1();
+    public static final Matrix IDENTITY_MATRIX = new C06571();
 
-    /* renamed from: androidx.transition.MatrixUtils$1, reason: invalid class name */
-    public static class AnonymousClass1 extends Matrix {
+    /* renamed from: androidx.transition.MatrixUtils$1 */
+    public static class C06571 extends Matrix {
         public void oops() {
             throw new IllegalStateException("Matrix can not be modified");
         }

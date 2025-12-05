@@ -1,8 +1,8 @@
 package com.hcaptcha.sdk;
 
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
 import java.util.Objects;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class HCaptchaException extends Exception {
@@ -12,7 +12,8 @@ public class HCaptchaException extends Exception {
         this.hCaptchaError = hCaptchaError;
     }
 
-    public HCaptchaError a() {
+    /* renamed from: a */
+    public HCaptchaError m9265a() {
         return this.hCaptchaError;
     }
 
@@ -47,9 +48,9 @@ public class HCaptchaException extends Exception {
 
     @Override // java.lang.Throwable
     public String toString() {
-        StringBuilder sbU = a.U("HCaptchaException(hCaptchaError=");
-        sbU.append(this.hCaptchaError);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("HCaptchaException(hCaptchaError=");
+        sbM833U.append(this.hCaptchaError);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

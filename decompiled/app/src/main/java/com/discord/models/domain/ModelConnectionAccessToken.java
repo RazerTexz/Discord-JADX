@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelConnectionAccessToken.kt */
 /* loaded from: classes.dex */
@@ -9,7 +9,7 @@ public final /* data */ class ModelConnectionAccessToken {
     private final String accessToken;
 
     public ModelConnectionAccessToken(String str) {
-        m.checkNotNullParameter(str, "accessToken");
+        Intrinsics3.checkNotNullParameter(str, "accessToken");
         this.accessToken = str;
     }
 
@@ -26,13 +26,13 @@ public final /* data */ class ModelConnectionAccessToken {
     }
 
     public final ModelConnectionAccessToken copy(String accessToken) {
-        m.checkNotNullParameter(accessToken, "accessToken");
+        Intrinsics3.checkNotNullParameter(accessToken, "accessToken");
         return new ModelConnectionAccessToken(accessToken);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ModelConnectionAccessToken) && m.areEqual(this.accessToken, ((ModelConnectionAccessToken) other).accessToken);
+            return (other instanceof ModelConnectionAccessToken) && Intrinsics3.areEqual(this.accessToken, ((ModelConnectionAccessToken) other).accessToken);
         }
         return true;
     }
@@ -50,6 +50,6 @@ public final /* data */ class ModelConnectionAccessToken {
     }
 
     public String toString() {
-        return a.J(a.U("ModelConnectionAccessToken(accessToken="), this.accessToken, ")");
+        return outline.m822J(outline.m833U("ModelConnectionAccessToken(accessToken="), this.accessToken, ")");
     }
 }

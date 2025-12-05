@@ -1,14 +1,14 @@
 package com.discord.stores;
 
-import b.d.b.a.a;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: StoreNux.kt */
 /* loaded from: classes2.dex */
@@ -107,7 +107,7 @@ public final class StoreNux extends Store {
                 return false;
             }
             NuxState nuxState = (NuxState) other;
-            return this.postRegister == nuxState.postRegister && this.postRegisterWithInvite == nuxState.postRegisterWithInvite && this.contactSyncCompleted == nuxState.contactSyncCompleted && this.firstOpen == nuxState.firstOpen && this.addGuildHint == nuxState.addGuildHint && m.areEqual(this.guildBoostHintGuildId, nuxState.guildBoostHintGuildId);
+            return this.postRegister == nuxState.postRegister && this.postRegisterWithInvite == nuxState.postRegisterWithInvite && this.contactSyncCompleted == nuxState.contactSyncCompleted && this.firstOpen == nuxState.firstOpen && this.addGuildHint == nuxState.addGuildHint && Intrinsics3.areEqual(this.guildBoostHintGuildId, nuxState.guildBoostHintGuildId);
         }
 
         public final boolean getAddGuildHint() {
@@ -173,18 +173,18 @@ public final class StoreNux extends Store {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("NuxState(postRegister=");
-            sbU.append(this.postRegister);
-            sbU.append(", postRegisterWithInvite=");
-            sbU.append(this.postRegisterWithInvite);
-            sbU.append(", contactSyncCompleted=");
-            sbU.append(this.contactSyncCompleted);
-            sbU.append(", firstOpen=");
-            sbU.append(this.firstOpen);
-            sbU.append(", addGuildHint=");
-            sbU.append(this.addGuildHint);
-            sbU.append(", guildBoostHintGuildId=");
-            return a.G(sbU, this.guildBoostHintGuildId, ")");
+            StringBuilder sbM833U = outline.m833U("NuxState(postRegister=");
+            sbM833U.append(this.postRegister);
+            sbM833U.append(", postRegisterWithInvite=");
+            sbM833U.append(this.postRegisterWithInvite);
+            sbM833U.append(", contactSyncCompleted=");
+            sbM833U.append(this.contactSyncCompleted);
+            sbM833U.append(", firstOpen=");
+            sbM833U.append(this.firstOpen);
+            sbM833U.append(", addGuildHint=");
+            sbM833U.append(this.addGuildHint);
+            sbM833U.append(", guildBoostHintGuildId=");
+            return outline.m819G(sbM833U, this.guildBoostHintGuildId, ")");
         }
 
         public /* synthetic */ NuxState(boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, Long l, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -193,16 +193,16 @@ public final class StoreNux extends Store {
     }
 
     /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$clearNux$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreNux$clearNux$1 */
+    public static final class C63061 extends Lambda implements Function0<Unit> {
+        public C63061() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -214,12 +214,12 @@ public final class StoreNux extends Store {
     }
 
     /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setContactSyncCompleted$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<NuxState, NuxState> {
+    /* renamed from: com.discord.stores.StoreNux$setContactSyncCompleted$1 */
+    public static final class C63071 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ boolean $value;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2) {
+        public C63071(boolean z2) {
             super(1);
             this.$value = z2;
         }
@@ -231,18 +231,18 @@ public final class StoreNux extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
-            m.checkNotNullParameter(nuxState, "it");
+            Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, false, false, this.$value, false, false, null, 59, null);
         }
     }
 
     /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setFirstOpen$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<NuxState, NuxState> {
+    /* renamed from: com.discord.stores.StoreNux$setFirstOpen$1 */
+    public static final class C63081 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ boolean $value;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2) {
+        public C63081(boolean z2) {
             super(1);
             this.$value = z2;
         }
@@ -254,18 +254,18 @@ public final class StoreNux extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
-            m.checkNotNullParameter(nuxState, "it");
+            Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, false, false, false, this.$value, false, null, 55, null);
         }
     }
 
     /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setPostRegister$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<NuxState, NuxState> {
+    /* renamed from: com.discord.stores.StoreNux$setPostRegister$1 */
+    public static final class C63091 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ boolean $value;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2) {
+        public C63091(boolean z2) {
             super(1);
             this.$value = z2;
         }
@@ -277,18 +277,18 @@ public final class StoreNux extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
-            m.checkNotNullParameter(nuxState, "it");
+            Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, this.$value, false, false, false, false, null, 62, null);
         }
     }
 
     /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setPostRegisterWithInvite$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<NuxState, NuxState> {
+    /* renamed from: com.discord.stores.StoreNux$setPostRegisterWithInvite$1 */
+    public static final class C63101 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ boolean $value;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2) {
+        public C63101(boolean z2) {
             super(1);
             this.$value = z2;
         }
@@ -300,18 +300,18 @@ public final class StoreNux extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
-            m.checkNotNullParameter(nuxState, "it");
+            Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, false, this.$value, false, false, false, null, 61, null);
         }
     }
 
     /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setPremiumGuildHintGuildId$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<NuxState, NuxState> {
+    /* renamed from: com.discord.stores.StoreNux$setPremiumGuildHintGuildId$1 */
+    public static final class C63111 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ Long $value;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Long l) {
+        public C63111(Long l) {
             super(1);
             this.$value = l;
         }
@@ -323,18 +323,18 @@ public final class StoreNux extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
-            m.checkNotNullParameter(nuxState, "it");
+            Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, false, false, false, false, false, this.$value, 31, null);
         }
     }
 
     /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$updateNux$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreNux$updateNux$1 */
+    public static final class C63121 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Function1 $updateFunction;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Function1 function1) {
+        public C63121(Function1 function1) {
             super(0);
             this.$updateFunction = function1;
         }
@@ -342,7 +342,7 @@ public final class StoreNux extends Store {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -355,11 +355,11 @@ public final class StoreNux extends Store {
     }
 
     public StoreNux(Dispatcher dispatcher) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
         this.dispatcher = dispatcher;
         NuxState nuxState = new NuxState(false, false, false, false, false, null, 63, null);
         this.nuxState = nuxState;
-        this.nuxStateSubject = BehaviorSubject.l0(nuxState);
+        this.nuxStateSubject = BehaviorSubject.m11130l0(nuxState);
     }
 
     public static final /* synthetic */ NuxState access$getNuxState$p(StoreNux storeNux) {
@@ -379,16 +379,16 @@ public final class StoreNux extends Store {
     }
 
     public final void clearNux() {
-        this.dispatcher.schedule(new AnonymousClass1());
+        this.dispatcher.schedule(new C63061());
     }
 
     public final Observable<NuxState> getNuxState() {
-        Observable<NuxState> observableR = this.nuxStateSubject.r();
-        m.checkNotNullExpressionValue(observableR, "nuxStateSubject.distinctUntilChanged()");
-        return observableR;
+        Observable<NuxState> observableM11112r = this.nuxStateSubject.m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "nuxStateSubject.distinctUntilChanged()");
+        return observableM11112r;
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildSelected(long guildId) {
         Long guildBoostHintGuildId = this.nuxState.getGuildBoostHintGuildId();
         if (guildBoostHintGuildId != null && guildBoostHintGuildId.longValue() == guildId) {
@@ -399,7 +399,7 @@ public final class StoreNux extends Store {
         publishNuxUpdated(nuxStateCopy$default);
     }
 
-    @StoreThread
+    @Store3
     public final void handleSamplePremiumGuildSelected(long guildId) {
         NuxState nuxStateCopy$default = NuxState.copy$default(this.nuxState, false, false, false, false, false, Long.valueOf(guildId), 31, null);
         this.nuxState = nuxStateCopy$default;
@@ -407,27 +407,27 @@ public final class StoreNux extends Store {
     }
 
     public final void setContactSyncCompleted(boolean value) {
-        updateNux(new AnonymousClass1(value));
+        updateNux(new C63071(value));
     }
 
     public final void setFirstOpen(boolean value) {
-        updateNux(new AnonymousClass1(value));
+        updateNux(new C63081(value));
     }
 
     public final void setPostRegister(boolean value) {
-        updateNux(new AnonymousClass1(value));
+        updateNux(new C63091(value));
     }
 
     public final void setPostRegisterWithInvite(boolean value) {
-        updateNux(new AnonymousClass1(value));
+        updateNux(new C63101(value));
     }
 
     public final void setPremiumGuildHintGuildId(Long value) {
-        updateNux(new AnonymousClass1(value));
+        updateNux(new C63111(value));
     }
 
     public final void updateNux(Function1<? super NuxState, NuxState> updateFunction) {
-        m.checkNotNullParameter(updateFunction, "updateFunction");
-        this.dispatcher.schedule(new AnonymousClass1(updateFunction));
+        Intrinsics3.checkNotNullParameter(updateFunction, "updateFunction");
+        this.dispatcher.schedule(new C63121(updateFunction));
     }
 }

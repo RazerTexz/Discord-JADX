@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackChannel.kt */
 /* loaded from: classes.dex */
@@ -39,7 +39,7 @@ public final /* data */ class TrackChannel {
             return false;
         }
         TrackChannel trackChannel = (TrackChannel) other;
-        return m.areEqual(this.channelId, trackChannel.channelId) && m.areEqual(this.channelType, trackChannel.channelType) && m.areEqual(this.channelSizeTotal, trackChannel.channelSizeTotal) && m.areEqual(this.channelSizeOnline, trackChannel.channelSizeOnline) && m.areEqual(this.channelMemberPerms, trackChannel.channelMemberPerms) && m.areEqual(this.channelHidden, trackChannel.channelHidden);
+        return Intrinsics3.areEqual(this.channelId, trackChannel.channelId) && Intrinsics3.areEqual(this.channelType, trackChannel.channelType) && Intrinsics3.areEqual(this.channelSizeTotal, trackChannel.channelSizeTotal) && Intrinsics3.areEqual(this.channelSizeOnline, trackChannel.channelSizeOnline) && Intrinsics3.areEqual(this.channelMemberPerms, trackChannel.channelMemberPerms) && Intrinsics3.areEqual(this.channelHidden, trackChannel.channelHidden);
     }
 
     public int hashCode() {
@@ -58,17 +58,17 @@ public final /* data */ class TrackChannel {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackChannel(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", channelSizeTotal=");
-        sbU.append(this.channelSizeTotal);
-        sbU.append(", channelSizeOnline=");
-        sbU.append(this.channelSizeOnline);
-        sbU.append(", channelMemberPerms=");
-        sbU.append(this.channelMemberPerms);
-        sbU.append(", channelHidden=");
-        return a.D(sbU, this.channelHidden, ")");
+        StringBuilder sbM833U = outline.m833U("TrackChannel(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", channelSizeTotal=");
+        sbM833U.append(this.channelSizeTotal);
+        sbM833U.append(", channelSizeOnline=");
+        sbM833U.append(this.channelSizeOnline);
+        sbM833U.append(", channelMemberPerms=");
+        sbM833U.append(this.channelMemberPerms);
+        sbM833U.append(", channelHidden=");
+        return outline.m816D(sbM833U, this.channelHidden, ")");
     }
 }

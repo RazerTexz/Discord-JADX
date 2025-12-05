@@ -1,0 +1,35 @@
+package p507d0.p513e0.p514p.p515d.p517m0.p567n;
+
+/* compiled from: TypeProjectionBase.java */
+/* renamed from: d0.e0.p.d.m0.n.x0, reason: use source file name */
+/* loaded from: classes3.dex */
+public abstract class TypeProjectionBase implements TypeProjection {
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof TypeProjection)) {
+            return false;
+        }
+        TypeProjection typeProjection = (TypeProjection) obj;
+        return isStarProjection() == typeProjection.isStarProjection() && getProjectionKind() == typeProjection.getProjectionKind() && getType().equals(typeProjection.getType());
+    }
+
+    public int hashCode() {
+        int iHashCode = getProjectionKind().hashCode();
+        if (TypeUtils.noExpectedType(getType())) {
+            return (iHashCode * 31) + 19;
+        }
+        return (iHashCode * 31) + (isStarProjection() ? 17 : getType().hashCode());
+    }
+
+    public String toString() {
+        if (isStarProjection()) {
+            return "*";
+        }
+        if (getProjectionKind() == Variance.INVARIANT) {
+            return getType().toString();
+        }
+        return getProjectionKind() + " " + getType();
+    }
+}

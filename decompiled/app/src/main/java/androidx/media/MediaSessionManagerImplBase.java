@@ -10,7 +10,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.core.util.ObjectsCompat;
 import androidx.media.MediaSessionManager;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class MediaSessionManagerImplBase implements MediaSessionManager.MediaSessionManagerImpl {
@@ -100,10 +100,10 @@ public class MediaSessionManagerImplBase implements MediaSessionManager.MediaSes
             return isPermissionGranted(remoteUserInfoImpl, PERMISSION_STATUS_BAR_SERVICE) || isPermissionGranted(remoteUserInfoImpl, PERMISSION_MEDIA_CONTENT_CONTROL) || remoteUserInfoImpl.getUid() == 1000 || isEnabledNotificationListener(remoteUserInfoImpl);
         } catch (PackageManager.NameNotFoundException unused) {
             if (DEBUG) {
-                StringBuilder sbU = a.U("Package ");
-                sbU.append(remoteUserInfoImpl.getPackageName());
-                sbU.append(" doesn't exist");
-                Log.d("MediaSessionManager", sbU.toString());
+                StringBuilder sbM833U = outline.m833U("Package ");
+                sbM833U.append(remoteUserInfoImpl.getPackageName());
+                sbM833U.append(" doesn't exist");
+                Log.d("MediaSessionManager", sbM833U.toString());
             }
             return false;
         }

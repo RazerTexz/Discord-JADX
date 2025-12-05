@@ -166,17 +166,17 @@ public abstract class PatchScript {
     protected static void insertMethod(Hook methodToInsert, MethodVisitor target) {
         byte[] classData = readStream(AutocompleteViewModel.COMMAND_DISCOVER_TOKEN + methodToInsert.getClassSpec() + ".class");
         ClassReader reader = new ClassReader(classData);
-        ClassVisitor methodFinder = new AnonymousClass1(methodToInsert, target);
+        ClassVisitor methodFinder = new C129111(methodToInsert, target);
         reader.accept(methodFinder, 0);
     }
 
-    /* renamed from: lombok.patcher.PatchScript$1, reason: invalid class name */
+    /* renamed from: lombok.patcher.PatchScript$1 */
     /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$1.SCL.lombok */
-    class AnonymousClass1 extends NoopClassVisitor {
+    class C129111 extends NoopClassVisitor {
         private final /* synthetic */ Hook val$methodToInsert;
         private final /* synthetic */ MethodVisitor val$target;
 
-        AnonymousClass1(Hook hook, MethodVisitor methodVisitor) {
+        C129111(Hook hook, MethodVisitor methodVisitor) {
             this.val$methodToInsert = hook;
             this.val$target = methodVisitor;
         }
@@ -193,17 +193,17 @@ public abstract class PatchScript {
     protected static void transplantMethod(String resourceName, Hook methodToTransplant, ClassVisitor target) {
         byte[] classData = readStream(resourceName);
         ClassReader reader = new ClassReader(classData);
-        ClassVisitor methodFinder = new AnonymousClass2(methodToTransplant, target);
+        ClassVisitor methodFinder = new C129122(methodToTransplant, target);
         reader.accept(methodFinder, 0);
     }
 
-    /* renamed from: lombok.patcher.PatchScript$2, reason: invalid class name */
+    /* renamed from: lombok.patcher.PatchScript$2 */
     /* loaded from: discord-126021.apk:lombok/patcher/PatchScript$2.SCL.lombok */
-    class AnonymousClass2 extends NoopClassVisitor {
+    class C129122 extends NoopClassVisitor {
         private final /* synthetic */ Hook val$methodToTransplant;
         private final /* synthetic */ ClassVisitor val$target;
 
-        AnonymousClass2(Hook hook, ClassVisitor classVisitor) {
+        C129122(Hook hook, ClassVisitor classVisitor) {
             this.val$methodToTransplant = hook;
             this.val$target = classVisitor;
         }
@@ -318,7 +318,7 @@ public abstract class PatchScript {
         public void visitEnd() {
             for (Hook transplant : this.transplants) {
                 String resourceName = AutocompleteViewModel.COMMAND_DISCOVER_TOKEN + this.transplantMapper.mapResourceName(this.classFileFormatVersion, String.valueOf(transplant.getClassSpec()) + ".class");
-                PatchScript.transplantMethod(resourceName, transplant, this.cv);
+                PatchScript.transplantMethod(resourceName, transplant, this.f27598cv);
             }
         }
 

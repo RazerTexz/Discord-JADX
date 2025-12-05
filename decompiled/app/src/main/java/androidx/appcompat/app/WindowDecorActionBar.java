@@ -23,6 +23,7 @@ import android.view.animation.Interpolator;
 import android.widget.SpinnerAdapter;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.view.ActionBarPolicy;
@@ -45,9 +46,9 @@ import androidx.core.view.ViewPropertyAnimatorListenerAdapter;
 import androidx.core.view.ViewPropertyAnimatorUpdateListener;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
-import b.d.b.a.a;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
@@ -86,13 +87,13 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
     private int mCurWindowVisibility = 0;
     public boolean mContentAnimations = true;
     private boolean mNowShowing = true;
-    public final ViewPropertyAnimatorListener mHideListener = new AnonymousClass1();
-    public final ViewPropertyAnimatorListener mShowListener = new AnonymousClass2();
-    public final ViewPropertyAnimatorUpdateListener mUpdateListener = new AnonymousClass3();
+    public final ViewPropertyAnimatorListener mHideListener = new C00751();
+    public final ViewPropertyAnimatorListener mShowListener = new C00762();
+    public final ViewPropertyAnimatorUpdateListener mUpdateListener = new C00773();
 
-    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$1, reason: invalid class name */
-    public class AnonymousClass1 extends ViewPropertyAnimatorListenerAdapter {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$1 */
+    public class C00751 extends ViewPropertyAnimatorListenerAdapter {
+        public C00751() {
         }
 
         @Override // androidx.core.view.ViewPropertyAnimatorListenerAdapter, androidx.core.view.ViewPropertyAnimatorListener
@@ -115,9 +116,9 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
         }
     }
 
-    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$2, reason: invalid class name */
-    public class AnonymousClass2 extends ViewPropertyAnimatorListenerAdapter {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$2 */
+    public class C00762 extends ViewPropertyAnimatorListenerAdapter {
+        public C00762() {
         }
 
         @Override // androidx.core.view.ViewPropertyAnimatorListenerAdapter, androidx.core.view.ViewPropertyAnimatorListener
@@ -128,9 +129,9 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
         }
     }
 
-    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$3, reason: invalid class name */
-    public class AnonymousClass3 implements ViewPropertyAnimatorUpdateListener {
-        public AnonymousClass3() {
+    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$3 */
+    public class C00773 implements ViewPropertyAnimatorUpdateListener {
+        public C00773() {
         }
 
         @Override // androidx.core.view.ViewPropertyAnimatorUpdateListener
@@ -507,9 +508,9 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
         if (view instanceof Toolbar) {
             return ((Toolbar) view).getWrapper();
         }
-        StringBuilder sbU = a.U("Can't make a decor toolbar out of ");
-        sbU.append(view != 0 ? view.getClass().getSimpleName() : "null");
-        throw new IllegalStateException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Can't make a decor toolbar out of ");
+        sbM833U.append(view != 0 ? view.getClass().getSimpleName() : "null");
+        throw new IllegalStateException(sbM833U.toString());
     }
 
     private void hideForActionMode() {
@@ -524,14 +525,14 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
     }
 
     private void init(View view) {
-        ActionBarOverlayLayout actionBarOverlayLayout = (ActionBarOverlayLayout) view.findViewById(androidx.appcompat.R.id.decor_content_parent);
+        ActionBarOverlayLayout actionBarOverlayLayout = (ActionBarOverlayLayout) view.findViewById(C0051R.id.decor_content_parent);
         this.mOverlayLayout = actionBarOverlayLayout;
         if (actionBarOverlayLayout != null) {
             actionBarOverlayLayout.setActionBarVisibilityCallback(this);
         }
-        this.mDecorToolbar = getDecorToolbar(view.findViewById(androidx.appcompat.R.id.action_bar));
-        this.mContextView = (ActionBarContextView) view.findViewById(androidx.appcompat.R.id.action_context_bar);
-        ActionBarContainer actionBarContainer = (ActionBarContainer) view.findViewById(androidx.appcompat.R.id.action_bar_container);
+        this.mDecorToolbar = getDecorToolbar(view.findViewById(C0051R.id.action_bar));
+        this.mContextView = (ActionBarContextView) view.findViewById(C0051R.id.action_context_bar);
+        ActionBarContainer actionBarContainer = (ActionBarContainer) view.findViewById(C0051R.id.action_bar_container);
         this.mContainerView = actionBarContainer;
         DecorToolbar decorToolbar = this.mDecorToolbar;
         if (decorToolbar == null || this.mContextView == null || actionBarContainer == null) {
@@ -545,11 +546,11 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
         ActionBarPolicy actionBarPolicy = ActionBarPolicy.get(this.mContext);
         setHomeButtonEnabled(actionBarPolicy.enableHomeButtonByDefault() || z2);
         setHasEmbeddedTabs(actionBarPolicy.hasEmbeddedTabs());
-        TypedArray typedArrayObtainStyledAttributes = this.mContext.obtainStyledAttributes(null, androidx.appcompat.R.styleable.ActionBar, androidx.appcompat.R.attr.actionBarStyle, 0);
-        if (typedArrayObtainStyledAttributes.getBoolean(androidx.appcompat.R.styleable.ActionBar_hideOnContentScroll, false)) {
+        TypedArray typedArrayObtainStyledAttributes = this.mContext.obtainStyledAttributes(null, C0051R.styleable.ActionBar, C0051R.attr.actionBarStyle, 0);
+        if (typedArrayObtainStyledAttributes.getBoolean(C0051R.styleable.ActionBar_hideOnContentScroll, false)) {
             setHideOnContentScrollEnabled(true);
         }
-        int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(androidx.appcompat.R.styleable.ActionBar_elevation, 0);
+        int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(C0051R.styleable.ActionBar_elevation, 0);
         if (dimensionPixelSize != 0) {
             setElevation(dimensionPixelSize);
         }
@@ -843,7 +844,7 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
     public Context getThemedContext() {
         if (this.mThemedContext == null) {
             TypedValue typedValue = new TypedValue();
-            this.mContext.getTheme().resolveAttribute(androidx.appcompat.R.attr.actionBarWidgetTheme, typedValue, true);
+            this.mContext.getTheme().resolveAttribute(C0051R.attr.actionBarWidgetTheme, typedValue, true);
             int i = typedValue.resourceId;
             if (i != 0) {
                 this.mThemedContext = new ContextThemeWrapper(this.mContext, i);

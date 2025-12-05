@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackApplicationAssetCreated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationAssetCreated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackApplicationAssetCreated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long id = null;
     private final Long applicationId = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackApplicationAssetCreated implements AnalyticsS
             return false;
         }
         TrackApplicationAssetCreated trackApplicationAssetCreated = (TrackApplicationAssetCreated) other;
-        return m.areEqual(this.id, trackApplicationAssetCreated.id) && m.areEqual(this.applicationId, trackApplicationAssetCreated.applicationId) && m.areEqual(this.botId, trackApplicationAssetCreated.botId) && m.areEqual(this.applicationName, trackApplicationAssetCreated.applicationName) && m.areEqual(this.hasBot, trackApplicationAssetCreated.hasBot) && m.areEqual(this.hasRedirectUri, trackApplicationAssetCreated.hasRedirectUri) && m.areEqual(this.type, trackApplicationAssetCreated.type) && m.areEqual(this.name, trackApplicationAssetCreated.name);
+        return Intrinsics3.areEqual(this.id, trackApplicationAssetCreated.id) && Intrinsics3.areEqual(this.applicationId, trackApplicationAssetCreated.applicationId) && Intrinsics3.areEqual(this.botId, trackApplicationAssetCreated.botId) && Intrinsics3.areEqual(this.applicationName, trackApplicationAssetCreated.applicationName) && Intrinsics3.areEqual(this.hasBot, trackApplicationAssetCreated.hasBot) && Intrinsics3.areEqual(this.hasRedirectUri, trackApplicationAssetCreated.hasRedirectUri) && Intrinsics3.areEqual(this.type, trackApplicationAssetCreated.type) && Intrinsics3.areEqual(this.name, trackApplicationAssetCreated.name);
     }
 
     public int hashCode() {
@@ -58,21 +58,21 @@ public final /* data */ class TrackApplicationAssetCreated implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackApplicationAssetCreated(id=");
-        sbU.append(this.id);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", botId=");
-        sbU.append(this.botId);
-        sbU.append(", applicationName=");
-        sbU.append(this.applicationName);
-        sbU.append(", hasBot=");
-        sbU.append(this.hasBot);
-        sbU.append(", hasRedirectUri=");
-        sbU.append(this.hasRedirectUri);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", name=");
-        return a.E(sbU, this.name, ")");
+        StringBuilder sbM833U = outline.m833U("TrackApplicationAssetCreated(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", botId=");
+        sbM833U.append(this.botId);
+        sbM833U.append(", applicationName=");
+        sbM833U.append(this.applicationName);
+        sbM833U.append(", hasBot=");
+        sbM833U.append(this.hasBot);
+        sbM833U.append(", hasRedirectUri=");
+        sbM833U.append(this.hasRedirectUri);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", name=");
+        return outline.m817E(sbM833U, this.name, ")");
     }
 }

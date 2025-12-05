@@ -8,21 +8,22 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetSearchSuggestionsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final RecyclerView a;
+    public final RecyclerView f17430a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final RecyclerView f2526b;
+    public final RecyclerView f17431b;
 
     public WidgetSearchSuggestionsBinding(@NonNull RecyclerView recyclerView, @NonNull RecyclerView recyclerView2) {
-        this.a = recyclerView;
-        this.f2526b = recyclerView2;
+        this.f17430a = recyclerView;
+        this.f17431b = recyclerView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17430a;
     }
 }

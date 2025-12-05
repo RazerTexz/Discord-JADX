@@ -20,11 +20,11 @@ public class Lifecycling {
     private static Map<Class<?>, Integer> sCallbackCache = new HashMap();
     private static Map<Class<?>, List<Constructor<? extends GeneratedAdapter>>> sClassToAdapters = new HashMap();
 
-    /* renamed from: androidx.lifecycle.Lifecycling$1, reason: invalid class name */
-    public class AnonymousClass1 implements GenericLifecycleObserver {
+    /* renamed from: androidx.lifecycle.Lifecycling$1 */
+    public class C04421 implements GenericLifecycleObserver {
         public final /* synthetic */ LifecycleEventObserver val$observer;
 
-        public AnonymousClass1(LifecycleEventObserver lifecycleEventObserver) {
+        public C04421(LifecycleEventObserver lifecycleEventObserver) {
             this.val$observer = lifecycleEventObserver;
         }
 
@@ -81,7 +81,7 @@ public class Lifecycling {
     @NonNull
     @Deprecated
     public static GenericLifecycleObserver getCallback(Object obj) {
-        return new AnonymousClass1(lifecycleEventObserver(obj));
+        return new C04421(lifecycleEventObserver(obj));
     }
 
     private static int getObserverConstructorType(Class<?> cls) throws SecurityException {

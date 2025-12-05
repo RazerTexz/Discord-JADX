@@ -1,17 +1,17 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackKeyboardShortcutUsed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackKeyboardShortcutUsed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackKeyboardShortcutUsed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence shortcutName = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackKeyboardShortcutUsed implements AnalyticsSche
             return false;
         }
         TrackKeyboardShortcutUsed trackKeyboardShortcutUsed = (TrackKeyboardShortcutUsed) other;
-        return m.areEqual(this.shortcutName, trackKeyboardShortcutUsed.shortcutName) && m.areEqual(this.sourceClassList, trackKeyboardShortcutUsed.sourceClassList);
+        return Intrinsics3.areEqual(this.shortcutName, trackKeyboardShortcutUsed.shortcutName) && Intrinsics3.areEqual(this.sourceClassList, trackKeyboardShortcutUsed.sourceClassList);
     }
 
     public int hashCode() {
@@ -43,9 +43,9 @@ public final /* data */ class TrackKeyboardShortcutUsed implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackKeyboardShortcutUsed(shortcutName=");
-        sbU.append(this.shortcutName);
-        sbU.append(", sourceClassList=");
-        return a.L(sbU, this.sourceClassList, ")");
+        StringBuilder sbM833U = outline.m833U("TrackKeyboardShortcutUsed(shortcutName=");
+        sbM833U.append(this.shortcutName);
+        sbM833U.append(", sourceClassList=");
+        return outline.m824L(sbM833U, this.sourceClassList, ")");
     }
 }

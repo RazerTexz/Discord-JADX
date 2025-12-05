@@ -2,7 +2,7 @@ package org.objectweb.asm;
 
 import androidx.core.view.InputDeviceCompat;
 import androidx.core.view.ViewCompat;
-import com.discord.widgets.chat.input.MentionUtilsKt;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,9 +16,9 @@ public class ClassReader {
     static final int EXPAND_ASM_INSNS = 256;
     private static final int INPUT_STREAM_DATA_CHUNK_SIZE = 4096;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @Deprecated
-    public final byte[] f3818b;
+    public final byte[] f27597b;
     public final int header;
     final byte[] classFileBuffer;
     private final int[] cpInfoOffsets;
@@ -38,7 +38,7 @@ public class ClassReader {
     ClassReader(byte[] classFileBuffer, int classFileOffset, boolean checkClassVersion) {
         int cpInfoSize;
         this.classFileBuffer = classFileBuffer;
-        this.f3818b = classFileBuffer;
+        this.f27597b = classFileBuffer;
         if (checkClassVersion && readShort(classFileOffset + 6) > 60) {
             throw new IllegalArgumentException("Unsupported class file major version " + ((int) readShort(classFileOffset + 6)));
         }
@@ -57,8 +57,7 @@ public class ClassReader {
             switch (classFileBuffer[currentCpInfoOffset]) {
                 case 1:
                     cpInfoSize = 3 + readUnsignedShort(currentCpInfoOffset + 1);
-                    if (cpInfoSize <= currentMaxStringLength) {
-                    } else {
+                    if (cpInfoSize > currentMaxStringLength) {
                         currentMaxStringLength = cpInfoSize;
                     }
                     break;
@@ -113,7 +112,7 @@ public class ClassReader {
     }
 
     public ClassReader(String className) throws IOException {
-        this(readStream(ClassLoader.getSystemResourceAsStream(className.replace('.', MentionUtilsKt.SLASH_CHAR) + ".class"), true));
+        this(readStream(ClassLoader.getSystemResourceAsStream(className.replace('.', MentionUtils.SLASH_CHAR) + ".class"), true));
     }
 
     private static byte[] readStream(InputStream inputStream, boolean close) throws IOException {
@@ -1976,8 +1975,7 @@ public class ClassReader {
                     while (true) {
                         int i2 = tableLength;
                         tableLength--;
-                        if (i2 <= 0) {
-                        } else {
+                        if (i2 > 0) {
                             int startPc = readUnsignedShort(currentOffset);
                             int length = readUnsignedShort(currentOffset + 2);
                             currentOffset += 6;

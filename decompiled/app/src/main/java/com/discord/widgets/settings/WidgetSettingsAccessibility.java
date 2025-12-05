@@ -6,11 +6,7 @@ import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
-import b.a.d.f;
-import b.a.d.j;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsAccessibilityBinding;
@@ -18,28 +14,32 @@ import com.discord.stores.StoreAccessibility;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserSettings;
 import com.discord.utilities.accessibility.AccessibilityUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
 import com.discord.views.RadioManager;
-import d0.t.n;
-import d0.z.d.k;
-import d0.z.d.m;
 import java.util.Iterator;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
-import rx.functions.Action1;
+import p007b.p008a.p018d.AppHelpDesk;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
+import p658rx.functions.Action1;
 
 /* compiled from: WidgetSettingsAccessibility.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsAccessibility extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsAccessibility.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccessibilityBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccessibility.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccessibilityBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -54,8 +54,8 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
 
         public final void launch(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetSettingsAccessibility.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetSettingsAccessibility.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -80,9 +80,9 @@ public final class WidgetSettingsAccessibility extends AppFragment {
 
             public final Observable<Model> get() {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
-                Observable<Model> observableH = Observable.h(companion.getAccessibility().observeReducedMotionEnabled(), companion.getUserSettings().observeIsAnimatedEmojisEnabled(false), companion.getUserSettings().observeIsAutoPlayGifsEnabled(false), companion.getUserSettings().observeStickerAnimationSettings(false), WidgetSettingsAccessibility$Model$Companion$get$1.INSTANCE);
-                m.checkNotNullExpressionValue(observableH, "Observable.combineLatest…ngs\n          )\n        }");
-                return observableH;
+                Observable<Model> observableM11073h = Observable.m11073h(companion.getAccessibility().observeReducedMotionEnabled(), companion.getUserSettings().observeIsAnimatedEmojisEnabled(false), companion.getUserSettings().observeIsAutoPlayGifsEnabled(false), companion.getUserSettings().observeStickerAnimationSettings(false), WidgetSettingsAccessibility2.INSTANCE);
+                Intrinsics3.checkNotNullExpressionValue(observableM11073h, "Observable.combineLatest…ngs\n          )\n        }");
+                return observableM11073h;
             }
 
             public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -187,23 +187,23 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Model(reducedMotionEnabled=");
-            sbU.append(this.reducedMotionEnabled);
-            sbU.append(", allowAnimatedEmoji=");
-            sbU.append(this.allowAnimatedEmoji);
-            sbU.append(", autoPlayGifs=");
-            sbU.append(this.autoPlayGifs);
-            sbU.append(", currentStickerAnimationSettings=");
-            return a.B(sbU, this.currentStickerAnimationSettings, ")");
+            StringBuilder sbM833U = outline.m833U("Model(reducedMotionEnabled=");
+            sbM833U.append(this.reducedMotionEnabled);
+            sbM833U.append(", allowAnimatedEmoji=");
+            sbM833U.append(this.allowAnimatedEmoji);
+            sbM833U.append(", autoPlayGifs=");
+            sbM833U.append(this.autoPlayGifs);
+            sbM833U.append(", currentStickerAnimationSettings=");
+            return outline.m814B(sbM833U, this.currentStickerAnimationSettings, ")");
         }
     }
 
     /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureStickerAnimationRadio$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureStickerAnimationRadio$1 */
+    public static final class ViewOnClickListenerC96181 implements View.OnClickListener {
         public final /* synthetic */ int $stickerAnimationSetting;
 
-        public AnonymousClass1(int i) {
+        public ViewOnClickListenerC96181(int i) {
             this.$stickerAnimationSetting = i;
         }
 
@@ -214,59 +214,59 @@ public final class WidgetSettingsAccessibility extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureUI$1 */
+    public static final class ViewOnClickListenerC96191 implements View.OnClickListener {
+        public ViewOnClickListenerC96191() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            CheckedSetting checkedSetting = WidgetSettingsAccessibility.access$getBinding$p(WidgetSettingsAccessibility.this).f2589b;
-            m.checkNotNullExpressionValue(WidgetSettingsAccessibility.access$getBinding$p(WidgetSettingsAccessibility.this).f2589b, "binding.settingsAccessib…tyAllowAnimateEmojiSwitch");
-            checkedSetting.g(!r0.isChecked(), true);
+            CheckedSetting checkedSetting = WidgetSettingsAccessibility.access$getBinding$p(WidgetSettingsAccessibility.this).f17770b;
+            Intrinsics3.checkNotNullExpressionValue(WidgetSettingsAccessibility.access$getBinding$p(WidgetSettingsAccessibility.this).f17770b, "binding.settingsAccessib…tyAllowAnimateEmojiSwitch");
+            checkedSetting.m8529g(!r0.isChecked(), true);
         }
     }
 
     /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureUI$2 */
+    public static final class ViewOnClickListenerC96202 implements View.OnClickListener {
+        public ViewOnClickListenerC96202() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            CheckedSetting checkedSetting = WidgetSettingsAccessibility.access$getBinding$p(WidgetSettingsAccessibility.this).c;
-            m.checkNotNullExpressionValue(WidgetSettingsAccessibility.access$getBinding$p(WidgetSettingsAccessibility.this).c, "binding.settingsAccessib…ityAllowAutoplayGifSwitch");
-            checkedSetting.g(!r0.isChecked(), true);
+            CheckedSetting checkedSetting = WidgetSettingsAccessibility.access$getBinding$p(WidgetSettingsAccessibility.this).f17771c;
+            Intrinsics3.checkNotNullExpressionValue(WidgetSettingsAccessibility.access$getBinding$p(WidgetSettingsAccessibility.this).f17771c, "binding.settingsAccessib…ityAllowAutoplayGifSwitch");
+            checkedSetting.m8529g(!r0.isChecked(), true);
         }
     }
 
     /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
-        public AnonymousClass1(WidgetSettingsAccessibility widgetSettingsAccessibility) {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C96211 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+        public C96211(WidgetSettingsAccessibility widgetSettingsAccessibility) {
             super(1, widgetSettingsAccessibility, WidgetSettingsAccessibility.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/WidgetSettingsAccessibility$Model;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
-            m.checkNotNullParameter(model, "p1");
+            Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetSettingsAccessibility.access$configureUI((WidgetSettingsAccessibility) this.receiver, model);
         }
     }
 
     /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2<T> implements Action1<Boolean> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$2 */
+    public static final class C96222<T> implements Action1<Boolean> {
+        public static final C96222 INSTANCE = new C96222();
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Boolean bool) {
             call2(bool);
         }
@@ -274,18 +274,18 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreAccessibility accessibility = StoreStream.INSTANCE.getAccessibility();
-            m.checkNotNullExpressionValue(bool, "it");
+            Intrinsics3.checkNotNullExpressionValue(bool, "it");
             accessibility.setReducedMotionEnabled(bool.booleanValue());
         }
     }
 
     /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$3, reason: invalid class name */
-    public static final class AnonymousClass3<T> implements Action1<Boolean> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$3 */
+    public static final class C96233<T> implements Action1<Boolean> {
+        public C96233() {
         }
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Boolean bool) {
             call2(bool);
         }
@@ -294,17 +294,17 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         public final void call2(Boolean bool) {
             StoreUserSettings userSettings = StoreStream.INSTANCE.getUserSettings();
             AppActivity appActivity = WidgetSettingsAccessibility.this.getAppActivity();
-            m.checkNotNullExpressionValue(bool, "checked");
+            Intrinsics3.checkNotNullExpressionValue(bool, "checked");
             userSettings.setIsAnimatedEmojisEnabled(appActivity, bool.booleanValue());
         }
     }
 
     /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$4, reason: invalid class name */
-    public static final class AnonymousClass4<T> implements Action1<Boolean> {
-        public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$4 */
+    public static final class C96244<T> implements Action1<Boolean> {
+        public static final C96244 INSTANCE = new C96244();
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Boolean bool) {
             call2(bool);
         }
@@ -312,14 +312,14 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings userSettings = StoreStream.INSTANCE.getUserSettings();
-            m.checkNotNullExpressionValue(bool, "checked");
+            Intrinsics3.checkNotNullExpressionValue(bool, "checked");
             userSettings.setIsAutoPlayGifsEnabled(bool.booleanValue());
         }
     }
 
     public WidgetSettingsAccessibility() {
-        super(R.layout.widget_settings_accessibility);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsAccessibility$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_settings_accessibility);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsAccessibility3.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetSettingsAccessibility widgetSettingsAccessibility, Model model) {
@@ -331,68 +331,68 @@ public final class WidgetSettingsAccessibility extends AppFragment {
     }
 
     private final void configureStickerAnimationRadio(int currentStickerAnimationSettings, CheckedSetting radio, int stickerAnimationSetting) {
-        radio.e(new AnonymousClass1(stickerAnimationSetting));
+        radio.m8527e(new ViewOnClickListenerC96181(stickerAnimationSetting));
         RadioManager radioManager = this.stickersAnimationRadioManager;
         if (radioManager == null || currentStickerAnimationSettings != stickerAnimationSetting || radioManager == null) {
             return;
         }
-        radioManager.a(radio);
+        radioManager.m8550a(radio);
     }
 
     private final void configureUI(Model model) {
-        CheckedSetting checkedSetting = getBinding().g;
-        m.checkNotNullExpressionValue(checkedSetting, "binding.settingsAccessibilityReducedMotionSwitch");
+        CheckedSetting checkedSetting = getBinding().f17775g;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsAccessibilityReducedMotionSwitch");
         checkedSetting.setChecked(model.getReducedMotionEnabled());
         if (!model.getReducedMotionEnabled()) {
-            CheckedSetting checkedSetting2 = getBinding().f2589b;
-            m.checkNotNullExpressionValue(checkedSetting2, "binding.settingsAccessib…tyAllowAnimateEmojiSwitch");
+            CheckedSetting checkedSetting2 = getBinding().f17770b;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.settingsAccessib…tyAllowAnimateEmojiSwitch");
             checkedSetting2.setChecked(model.getAllowAnimatedEmoji());
             int currentStickerAnimationSettings = model.getCurrentStickerAnimationSettings();
-            CheckedSetting checkedSetting3 = getBinding().i;
-            m.checkNotNullExpressionValue(checkedSetting3, "binding.stickersAlwaysAnimate");
+            CheckedSetting checkedSetting3 = getBinding().f17777i;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.stickersAlwaysAnimate");
             configureStickerAnimationRadio(currentStickerAnimationSettings, checkedSetting3, 0);
             int currentStickerAnimationSettings2 = model.getCurrentStickerAnimationSettings();
-            CheckedSetting checkedSetting4 = getBinding().j;
-            m.checkNotNullExpressionValue(checkedSetting4, "binding.stickersAnimateOnInteraction");
+            CheckedSetting checkedSetting4 = getBinding().f17778j;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting4, "binding.stickersAnimateOnInteraction");
             configureStickerAnimationRadio(currentStickerAnimationSettings2, checkedSetting4, 1);
             int currentStickerAnimationSettings3 = model.getCurrentStickerAnimationSettings();
-            CheckedSetting checkedSetting5 = getBinding().k;
-            m.checkNotNullExpressionValue(checkedSetting5, "binding.stickersNeverAnimate");
+            CheckedSetting checkedSetting5 = getBinding().f17779k;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting5, "binding.stickersNeverAnimate");
             configureStickerAnimationRadio(currentStickerAnimationSettings3, checkedSetting5, 2);
-            CheckedSetting checkedSetting6 = getBinding().c;
-            m.checkNotNullExpressionValue(checkedSetting6, "binding.settingsAccessib…ityAllowAutoplayGifSwitch");
+            CheckedSetting checkedSetting6 = getBinding().f17771c;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting6, "binding.settingsAccessib…ityAllowAutoplayGifSwitch");
             checkedSetting6.setChecked(model.getAutoPlayGifs());
-            getBinding().f2589b.e(new AnonymousClass1());
-            getBinding().c.e(new AnonymousClass2());
+            getBinding().f17770b.m8527e(new ViewOnClickListenerC96191());
+            getBinding().f17771c.m8527e(new ViewOnClickListenerC96202());
             return;
         }
-        getBinding().f2589b.b(R.string.accessibility_reduced_motion_settings_override);
-        CheckedSetting checkedSetting7 = getBinding().f2589b;
-        m.checkNotNullExpressionValue(checkedSetting7, "binding.settingsAccessib…tyAllowAnimateEmojiSwitch");
+        getBinding().f17770b.m8525b(C5419R.string.accessibility_reduced_motion_settings_override);
+        CheckedSetting checkedSetting7 = getBinding().f17770b;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting7, "binding.settingsAccessib…tyAllowAnimateEmojiSwitch");
         checkedSetting7.setChecked(false);
-        Iterator it = n.listOf((Object[]) new CheckedSetting[]{getBinding().i, getBinding().j, getBinding().k}).iterator();
+        Iterator it = Collections2.listOf((Object[]) new CheckedSetting[]{getBinding().f17777i, getBinding().f17778j, getBinding().f17779k}).iterator();
         while (it.hasNext()) {
-            ((CheckedSetting) it.next()).b(R.string.stickers_auto_play_help_disabled);
+            ((CheckedSetting) it.next()).m8525b(C5419R.string.stickers_auto_play_help_disabled);
         }
         if (model.getCurrentStickerAnimationSettings() != 2) {
             RadioManager radioManager = this.stickersAnimationRadioManager;
             if (radioManager != null) {
-                CheckedSetting checkedSetting8 = getBinding().j;
-                m.checkNotNullExpressionValue(checkedSetting8, "binding.stickersAnimateOnInteraction");
-                radioManager.a(checkedSetting8);
+                CheckedSetting checkedSetting8 = getBinding().f17778j;
+                Intrinsics3.checkNotNullExpressionValue(checkedSetting8, "binding.stickersAnimateOnInteraction");
+                radioManager.m8550a(checkedSetting8);
             }
         } else {
             RadioManager radioManager2 = this.stickersAnimationRadioManager;
             if (radioManager2 != null) {
-                CheckedSetting checkedSetting9 = getBinding().k;
-                m.checkNotNullExpressionValue(checkedSetting9, "binding.stickersNeverAnimate");
-                radioManager2.a(checkedSetting9);
+                CheckedSetting checkedSetting9 = getBinding().f17779k;
+                Intrinsics3.checkNotNullExpressionValue(checkedSetting9, "binding.stickersNeverAnimate");
+                radioManager2.m8550a(checkedSetting9);
             }
         }
-        CheckedSetting checkedSetting10 = getBinding().c;
-        m.checkNotNullExpressionValue(checkedSetting10, "binding.settingsAccessib…ityAllowAutoplayGifSwitch");
+        CheckedSetting checkedSetting10 = getBinding().f17771c;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting10, "binding.settingsAccessib…ityAllowAutoplayGifSwitch");
         checkedSetting10.setChecked(false);
-        getBinding().c.b(R.string.accessibility_reduced_motion_settings_override);
+        getBinding().f17771c.m8525b(C5419R.string.accessibility_reduced_motion_settings_override);
     }
 
     private final WidgetSettingsAccessibilityBinding getBinding() {
@@ -402,20 +402,20 @@ public final class WidgetSettingsAccessibility extends AppFragment {
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(), this, null, 2, null), WidgetSettingsAccessibility.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        setActionBarTitle(R.string.accessibility);
-        setActionBarSubtitle(R.string.user_settings);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(), this, null, 2, null), WidgetSettingsAccessibility.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C96211(this), 62, (Object) null);
+        setActionBarTitle(C5419R.string.accessibility);
+        setActionBarSubtitle(C5419R.string.user_settings);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
-        getBinding().g.setOnCheckedListener(AnonymousClass2.INSTANCE);
-        LinkifiedTextView linkifiedTextView = getBinding().e;
-        m.checkNotNullExpressionValue(linkifiedTextView, "binding.settingsAccessib…yReducedMotionDescription");
-        b.n(linkifiedTextView, R.string.accessibility_prefers_reduced_motion_description, new Object[]{f.a.a(360040613412L, null)}, null, 4);
-        getBinding().f2589b.setOnCheckedListener(new AnonymousClass3());
-        getBinding().c.setOnCheckedListener(AnonymousClass4.INSTANCE);
-        this.stickersAnimationRadioManager = new RadioManager(n.listOf((Object[]) new CheckedSetting[]{getBinding().i, getBinding().j, getBinding().k}));
-        for (TextView textView : n.listOf((Object[]) new TextView[]{getBinding().f, getBinding().d, getBinding().h})) {
+        getBinding().f17775g.setOnCheckedListener(C96222.INSTANCE);
+        LinkifiedTextView linkifiedTextView = getBinding().f17773e;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.settingsAccessib…yReducedMotionDescription");
+        FormatUtils.m222n(linkifiedTextView, C5419R.string.accessibility_prefers_reduced_motion_description, new Object[]{AppHelpDesk.f507a.m149a(360040613412L, null)}, null, 4);
+        getBinding().f17770b.setOnCheckedListener(new C96233());
+        getBinding().f17771c.setOnCheckedListener(C96244.INSTANCE);
+        this.stickersAnimationRadioManager = new RadioManager(Collections2.listOf((Object[]) new CheckedSetting[]{getBinding().f17777i, getBinding().f17778j, getBinding().f17779k}));
+        for (TextView textView : Collections2.listOf((Object[]) new TextView[]{getBinding().f17774f, getBinding().f17772d, getBinding().f17776h})) {
             AccessibilityUtils accessibilityUtils = AccessibilityUtils.INSTANCE;
-            m.checkNotNullExpressionValue(textView, "header");
+            Intrinsics3.checkNotNullExpressionValue(textView, "header");
             accessibilityUtils.setViewIsHeading(textView);
         }
     }

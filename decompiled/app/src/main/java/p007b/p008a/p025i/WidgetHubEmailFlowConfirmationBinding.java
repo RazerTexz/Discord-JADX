@@ -1,0 +1,43 @@
+package p007b.p008a.p025i;
+
+import android.view.View;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.core.widget.NestedScrollView;
+import androidx.viewbinding.ViewBinding;
+import com.discord.utilities.view.text.LinkifiedTextView;
+
+/* compiled from: WidgetHubEmailFlowConfirmationBinding.java */
+/* renamed from: b.a.i.o5, reason: use source file name */
+/* loaded from: classes.dex */
+public final class WidgetHubEmailFlowConfirmationBinding implements ViewBinding {
+
+    /* renamed from: a */
+    @NonNull
+    public final NestedScrollView f1117a;
+
+    /* renamed from: b */
+    @NonNull
+    public final LinkifiedTextView f1118b;
+
+    /* renamed from: c */
+    @NonNull
+    public final TextView f1119c;
+
+    /* renamed from: d */
+    @NonNull
+    public final LinkifiedTextView f1120d;
+
+    public WidgetHubEmailFlowConfirmationBinding(@NonNull NestedScrollView nestedScrollView, @NonNull LinkifiedTextView linkifiedTextView, @NonNull TextView textView, @NonNull LinkifiedTextView linkifiedTextView2) {
+        this.f1117a = nestedScrollView;
+        this.f1118b = linkifiedTextView;
+        this.f1119c = textView;
+        this.f1120d = linkifiedTextView2;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return this.f1117a;
+    }
+}

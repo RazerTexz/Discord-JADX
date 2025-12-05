@@ -1,0 +1,31 @@
+package p507d0.p578f0;
+
+import java.util.Iterator;
+import kotlin.jvm.functions.Function1;
+import kotlin.sequences.Sequence;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: Sequences.kt */
+/* renamed from: d0.f0.c */
+/* loaded from: classes3.dex */
+public final class C12064c<T, K> implements Sequence<T> {
+
+    /* renamed from: a */
+    public final Sequence<T> f25075a;
+
+    /* renamed from: b */
+    public final Function1<T, K> f25076b;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public C12064c(Sequence<? extends T> sequence, Function1<? super T, ? extends K> function1) {
+        Intrinsics3.checkNotNullParameter(sequence, "source");
+        Intrinsics3.checkNotNullParameter(function1, "keySelector");
+        this.f25075a = sequence;
+        this.f25076b = function1;
+    }
+
+    @Override // kotlin.sequences.Sequence
+    public Iterator<T> iterator() {
+        return new C12063b(this.f25075a.iterator(), this.f25076b);
+    }
+}

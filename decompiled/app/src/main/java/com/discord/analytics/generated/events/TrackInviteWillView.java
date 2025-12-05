@@ -1,12 +1,12 @@
 package com.discord.analytics.generated.events;
 
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 
 /* compiled from: TrackInviteWillView.kt */
 /* loaded from: classes.dex */
-public final class TrackInviteWillView implements AnalyticsSchema, TrackBaseReceiver {
+public final class TrackInviteWillView implements AnalyticsSchema, TrackBase2 {
     private final transient String analyticsSchemaTypeName = "invite_will_view";
     private TrackBase trackBase;
 

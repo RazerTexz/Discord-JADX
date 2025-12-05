@@ -3,8 +3,8 @@ package com.discord.utilities.directories;
 import androidx.exifinterface.media.ExifInterface;
 import com.discord.models.hubs.DirectoryEntryCategory;
 import com.discord.widgets.directories.DirectoryEntryData;
-import d0.u.a;
 import java.util.Comparator;
+import p507d0.p582u.C12169a;
 
 /* compiled from: Comparisons.kt */
 /* loaded from: classes2.dex */
@@ -29,6 +29,6 @@ public final class DirectoryUtilsKt$rank$$inlined$sortedBy$1<T> implements Compa
         int iIntValue3 = num2 != null ? num2.intValue() : DirectoryEntryCategory.INSTANCE.findByKey(directoryEntryData2.getEntry().getPrimaryCategoryId(), false).getIdealSize();
         Integer approximateMemberCount2 = directoryEntryData2.getEntry().getGuild().getApproximateMemberCount();
         int iIntValue4 = approximateMemberCount2 != null ? approximateMemberCount2.intValue() : 0;
-        return a.compareValues(numValueOf, Integer.valueOf(iIntValue4 >= iIntValue3 ? (iIntValue4 - iIntValue3) / (200 - iIntValue4) : (iIntValue3 - iIntValue4) / (iIntValue3 - 5)));
+        return C12169a.compareValues(numValueOf, Integer.valueOf(iIntValue4 >= iIntValue3 ? (iIntValue4 - iIntValue3) / (200 - iIntValue4) : (iIntValue3 - iIntValue4) / (iIntValue3 - 5)));
     }
 }

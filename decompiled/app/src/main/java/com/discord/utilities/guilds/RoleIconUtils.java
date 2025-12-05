@@ -3,7 +3,7 @@ package com.discord.utilities.guilds;
 import com.discord.api.guild.GuildFeature;
 import com.discord.api.role.GuildRole;
 import com.discord.models.guild.Guild;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: RoleIconUtils.kt */
 /* loaded from: classes2.dex */
@@ -14,7 +14,7 @@ public final class RoleIconUtils {
     }
 
     public final boolean canUseRoleIcons(Guild guild, GuildRole guildRole) {
-        m.checkNotNullParameter(guild, "$this$canUseRoleIcons");
+        Intrinsics3.checkNotNullParameter(guild, "$this$canUseRoleIcons");
         if (guild.hasFeature(GuildFeature.ROLE_ICONS)) {
             return true;
         }

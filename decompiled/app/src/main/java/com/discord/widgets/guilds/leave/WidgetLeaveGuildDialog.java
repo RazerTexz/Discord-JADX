@@ -7,31 +7,31 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.LeaveGuildDialogBinding;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetLeaveGuildDialog.kt */
 /* loaded from: classes2.dex */
 public final class WidgetLeaveGuildDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetLeaveGuildDialog.class, "binding", "getBinding()Lcom/discord/databinding/LeaveGuildDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetLeaveGuildDialog.class, "binding", "getBinding()Lcom/discord/databinding/LeaveGuildDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -48,7 +48,7 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
         }
 
         public final void show(FragmentManager fragmentManager, long guildId) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             Bundle bundle = new Bundle();
             bundle.putLong("com.discord.intent.extra.EXTRA_GUILD_ID", guildId);
             WidgetLeaveGuildDialog widgetLeaveGuildDialog = new WidgetLeaveGuildDialog();
@@ -62,9 +62,9 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
     }
 
     /* compiled from: WidgetLeaveGuildDialog.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$1 */
+    public static final class ViewOnClickListenerC87301 implements View.OnClickListener {
+        public ViewOnClickListenerC87301() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -74,9 +74,9 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
     }
 
     /* compiled from: WidgetLeaveGuildDialog.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$2 */
+    public static final class ViewOnClickListenerC87312 implements View.OnClickListener {
+        public ViewOnClickListenerC87312() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -86,51 +86,51 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
     }
 
     /* compiled from: WidgetLeaveGuildDialog.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<LeaveGuildDialogViewModel.ViewState, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$3 */
+    public static final class C87323 extends Lambda implements Function1<LeaveGuildDialogViewModel.ViewState, Unit> {
+        public C87323() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(LeaveGuildDialogViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(LeaveGuildDialogViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "viewState");
+            Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetLeaveGuildDialog.access$configureUI(WidgetLeaveGuildDialog.this, viewState);
         }
     }
 
     /* compiled from: WidgetLeaveGuildDialog.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<LeaveGuildDialogViewModel.Event, Unit> {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$4 */
+    public static final class C87334 extends Lambda implements Function1<LeaveGuildDialogViewModel.Event, Unit> {
+        public C87334() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(LeaveGuildDialogViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(LeaveGuildDialogViewModel.Event event) {
-            m.checkNotNullParameter(event, "event");
+            Intrinsics3.checkNotNullParameter(event, "event");
             WidgetLeaveGuildDialog.access$handleEvent(WidgetLeaveGuildDialog.this, event);
         }
     }
 
     public WidgetLeaveGuildDialog() {
-        super(R.layout.leave_guild_dialog);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetLeaveGuildDialog$binding$2.INSTANCE, null, 2, null);
-        WidgetLeaveGuildDialog$viewModel$2 widgetLeaveGuildDialog$viewModel$2 = new WidgetLeaveGuildDialog$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(LeaveGuildDialogViewModel.class), new WidgetLeaveGuildDialog$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetLeaveGuildDialog$viewModel$2));
+        super(C5419R.layout.leave_guild_dialog);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetLeaveGuildDialog2.INSTANCE, null, 2, null);
+        WidgetLeaveGuildDialog3 widgetLeaveGuildDialog3 = new WidgetLeaveGuildDialog3(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(LeaveGuildDialogViewModel.class), new WidgetLeaveGuildDialog$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetLeaveGuildDialog3));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetLeaveGuildDialog widgetLeaveGuildDialog, LeaveGuildDialogViewModel.ViewState viewState) {
@@ -151,21 +151,21 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
 
     private final void configureUI(LeaveGuildDialogViewModel.ViewState viewState) {
         if (!(viewState instanceof LeaveGuildDialogViewModel.ViewState.Valid)) {
-            if (m.areEqual(viewState, LeaveGuildDialogViewModel.ViewState.Invalid.INSTANCE)) {
+            if (Intrinsics3.areEqual(viewState, LeaveGuildDialogViewModel.ViewState.Invalid.INSTANCE)) {
                 dismiss();
                 return;
             }
             return;
         }
-        TextView textView = getBinding().e;
-        m.checkNotNullExpressionValue(textView, "binding.leaveGuildDialogHeader");
+        TextView textView = getBinding().f15181e;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.leaveGuildDialogHeader");
         LeaveGuildDialogViewModel.ViewState.Valid valid = (LeaveGuildDialogViewModel.ViewState.Valid) viewState;
-        b.n(textView, R.string.leave_server_title, new Object[]{valid.getGuild().getName()}, null, 4);
-        TextView textView2 = getBinding().d;
-        m.checkNotNullExpressionValue(textView2, "binding.leaveGuildDialogBody");
-        b.n(textView2, valid.getGuild().isHub() ? R.string.leave_hub_body : R.string.leave_server_body_mobile, new Object[]{valid.getGuild().getName()}, null, 4);
-        getBinding().c.setText(getString(valid.getGuild().isHub() ? R.string.leave_hub : R.string.leave_server));
-        getBinding().c.setIsLoading(valid.isLoading());
+        FormatUtils.m222n(textView, C5419R.string.leave_server_title, new Object[]{valid.getGuild().getName()}, null, 4);
+        TextView textView2 = getBinding().f15180d;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.leaveGuildDialogBody");
+        FormatUtils.m222n(textView2, valid.getGuild().isHub() ? C5419R.string.leave_hub_body : C5419R.string.leave_server_body_mobile, new Object[]{valid.getGuild().getName()}, null, 4);
+        getBinding().f15179c.setText(getString(valid.getGuild().isHub() ? C5419R.string.leave_hub : C5419R.string.leave_server));
+        getBinding().f15179c.setIsLoading(valid.isLoading());
     }
 
     private final LeaveGuildDialogBinding getBinding() {
@@ -177,7 +177,7 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
     }
 
     private final void handleEvent(LeaveGuildDialogViewModel.Event event) {
-        if (m.areEqual(event, LeaveGuildDialogViewModel.Event.Dismiss.INSTANCE)) {
+        if (Intrinsics3.areEqual(event, LeaveGuildDialogViewModel.Event.Dismiss.INSTANCE)) {
             dismiss();
         }
     }
@@ -186,9 +186,9 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
     public void onResume() {
         super.onResume();
         requireDialog().setCanceledOnTouchOutside(true);
-        getBinding().c.setOnClickListener(new AnonymousClass1());
-        getBinding().f2128b.setOnClickListener(new AnonymousClass2());
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetLeaveGuildDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetLeaveGuildDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass4(), 62, (Object) null);
+        getBinding().f15179c.setOnClickListener(new ViewOnClickListenerC87301());
+        getBinding().f15178b.setOnClickListener(new ViewOnClickListenerC87312());
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetLeaveGuildDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C87323(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetLeaveGuildDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C87334(), 62, (Object) null);
     }
 }

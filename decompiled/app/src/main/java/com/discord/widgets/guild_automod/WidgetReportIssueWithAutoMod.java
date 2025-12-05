@@ -6,33 +6,33 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetReportIssueWithAutomodBinding;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.guild_automod.ReportIssueWithAutoModViewModel;
-import d0.g;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetReportIssueWithAutoMod.kt */
 /* loaded from: classes2.dex */
 public final class WidgetReportIssueWithAutoMod extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetReportIssueWithAutoMod.class, "binding", "getBinding()Lcom/discord/databinding/WidgetReportIssueWithAutomodBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetReportIssueWithAutoMod.class, "binding", "getBinding()Lcom/discord/databinding/WidgetReportIssueWithAutomodBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -55,11 +55,11 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
         }
 
         public final void launch(Context context, long channelId, long messageId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra("com.discord.intent.extra.EXTRA_CHANNEL_ID", channelId);
             intent.putExtra("com.discord.intent.extra.EXTRA_MESSAGE_ID", messageId);
-            j.d(context, WidgetReportIssueWithAutoMod.class, intent);
+            AppScreen2.m156d(context, WidgetReportIssueWithAutoMod.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -68,12 +68,12 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
     }
 
     /* compiled from: WidgetReportIssueWithAutoMod.kt */
-    /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$configureOption$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public final /* synthetic */ FeedbackType $settingValue;
+    /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$configureOption$1 */
+    public static final class ViewOnClickListenerC84151 implements View.OnClickListener {
+        public final /* synthetic */ ReportIssueWithAutoModViewModel2 $settingValue;
 
-        public AnonymousClass1(FeedbackType feedbackType) {
-            this.$settingValue = feedbackType;
+        public ViewOnClickListenerC84151(ReportIssueWithAutoModViewModel2 reportIssueWithAutoModViewModel2) {
+            this.$settingValue = reportIssueWithAutoModViewModel2;
         }
 
         @Override // android.view.View.OnClickListener
@@ -83,9 +83,9 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
     }
 
     /* compiled from: WidgetReportIssueWithAutoMod.kt */
-    /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$configureUI$1 */
+    public static final class ViewOnClickListenerC84161 implements View.OnClickListener {
+        public ViewOnClickListenerC84161() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -98,12 +98,12 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
     }
 
     /* compiled from: WidgetReportIssueWithAutoMod.kt */
-    /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$configureUI$2 */
+    public static final class ViewOnClickListenerC84172 implements View.OnClickListener {
 
         /* compiled from: WidgetReportIssueWithAutoMod.kt */
         /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$configureUI$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -111,7 +111,7 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -123,7 +123,7 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
             }
         }
 
-        public AnonymousClass2() {
+        public ViewOnClickListenerC84172() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -133,33 +133,33 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
     }
 
     /* compiled from: WidgetReportIssueWithAutoMod.kt */
-    /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ReportIssueWithAutoModViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod$onResume$1 */
+    public static final class C84181 extends Lambda implements Function1<ReportIssueWithAutoModViewModel.ViewState, Unit> {
+        public C84181() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ReportIssueWithAutoModViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ReportIssueWithAutoModViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "viewState");
+            Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetReportIssueWithAutoMod.this.configureUI(viewState);
         }
     }
 
     public WidgetReportIssueWithAutoMod() {
-        super(R.layout.widget_report_issue_with_automod);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetReportIssueWithAutoMod$binding$2.INSTANCE, null, 2, null);
-        this.channelId = g.lazy(new WidgetReportIssueWithAutoMod$channelId$2(this));
-        this.messageId = g.lazy(new WidgetReportIssueWithAutoMod$messageId$2(this));
-        WidgetReportIssueWithAutoMod$viewModel$2 widgetReportIssueWithAutoMod$viewModel$2 = new WidgetReportIssueWithAutoMod$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(ReportIssueWithAutoModViewModel.class), new WidgetReportIssueWithAutoMod$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetReportIssueWithAutoMod$viewModel$2));
+        super(C5419R.layout.widget_report_issue_with_automod);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetReportIssueWithAutoMod2.INSTANCE, null, 2, null);
+        this.channelId = LazyJVM.lazy(new WidgetReportIssueWithAutoMod3(this));
+        this.messageId = LazyJVM.lazy(new WidgetReportIssueWithAutoMod4(this));
+        WidgetReportIssueWithAutoMod5 widgetReportIssueWithAutoMod5 = new WidgetReportIssueWithAutoMod5(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(ReportIssueWithAutoModViewModel.class), new WidgetReportIssueWithAutoMod$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetReportIssueWithAutoMod5));
     }
 
     public static final /* synthetic */ long access$getChannelId$p(WidgetReportIssueWithAutoMod widgetReportIssueWithAutoMod) {
@@ -174,9 +174,9 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
         return widgetReportIssueWithAutoMod.getViewModel();
     }
 
-    private final void configureOption(ReportIssueWithAutoModViewModel.ViewState.Valid viewState, CheckedSetting setting, FeedbackType settingValue) {
-        setting.setChecked(m.areEqual(viewState.getSelectedOption(), settingValue.getValue()));
-        setting.e(new AnonymousClass1(settingValue));
+    private final void configureOption(ReportIssueWithAutoModViewModel.ViewState.Valid viewState, CheckedSetting setting, ReportIssueWithAutoModViewModel2 settingValue) {
+        setting.setChecked(Intrinsics3.areEqual(viewState.getSelectedOption(), settingValue.getValue()));
+        setting.m8527e(new ViewOnClickListenerC84151(settingValue));
     }
 
     private final WidgetReportIssueWithAutomodBinding getBinding() {
@@ -196,23 +196,23 @@ public final class WidgetReportIssueWithAutoMod extends AppFragment {
     }
 
     public final void configureUI(ReportIssueWithAutoModViewModel.ViewState viewState) {
-        m.checkNotNullParameter(viewState, "viewState");
-        getBinding().f2520b.setOnClickListener(new AnonymousClass1());
-        getBinding().e.setOnClickListener(new AnonymousClass2());
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
+        getBinding().f17412b.setOnClickListener(new ViewOnClickListenerC84161());
+        getBinding().f17415e.setOnClickListener(new ViewOnClickListenerC84172());
         if (viewState instanceof ReportIssueWithAutoModViewModel.ViewState.Valid) {
             ReportIssueWithAutoModViewModel.ViewState.Valid valid = (ReportIssueWithAutoModViewModel.ViewState.Valid) viewState;
-            CheckedSetting checkedSetting = getBinding().c;
-            m.checkNotNullExpressionValue(checkedSetting, "binding.option1");
-            configureOption(valid, checkedSetting, FeedbackType.ALLOWED);
-            CheckedSetting checkedSetting2 = getBinding().d;
-            m.checkNotNullExpressionValue(checkedSetting2, "binding.option2");
-            configureOption(valid, checkedSetting2, FeedbackType.BUG);
+            CheckedSetting checkedSetting = getBinding().f17413c;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.option1");
+            configureOption(valid, checkedSetting, ReportIssueWithAutoModViewModel2.ALLOWED);
+            CheckedSetting checkedSetting2 = getBinding().f17414d;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.option2");
+            configureOption(valid, checkedSetting2, ReportIssueWithAutoModViewModel2.BUG);
         }
     }
 
     @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
     public void onResume() {
         super.onResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetReportIssueWithAutoMod.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetReportIssueWithAutoMod.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C84181(), 62, (Object) null);
     }
 }

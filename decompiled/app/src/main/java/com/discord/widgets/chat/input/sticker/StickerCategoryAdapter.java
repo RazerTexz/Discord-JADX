@@ -5,8 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppComponent;
 import com.discord.databinding.StickerCategoryItemGuildBinding;
 import com.discord.databinding.StickerCategoryItemPackBinding;
@@ -17,9 +16,6 @@ import com.discord.views.sticker.StickerView;
 import com.discord.widgets.chat.input.emoji.GuildIcon;
 import com.discord.widgets.chat.input.sticker.StickerCategoryItem;
 import com.discord.widgets.chat.input.sticker.StickerCategoryViewHolder;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
@@ -27,6 +23,11 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p025i.ExpressionPickerCategorySelectionOverlineViewBinding;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: StickerCategoryAdapter.kt */
 /* loaded from: classes2.dex */
@@ -39,21 +40,21 @@ public final class StickerCategoryAdapter extends RecyclerView.Adapter<StickerCa
     private final Function1<Integer, Unit> onSelectedItemAdapterPositionUpdated;
 
     /* compiled from: StickerCategoryAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerCategoryAdapter$setItems$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<List<? extends StickerCategoryItem>, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.sticker.StickerCategoryAdapter$setItems$1 */
+    public static final class C78921 extends Lambda implements Function1<List<? extends StickerCategoryItem>, Unit> {
+        public C78921() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends StickerCategoryItem> list) {
             invoke2(list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends StickerCategoryItem> list) {
-            m.checkNotNullParameter(list, "items");
+            Intrinsics3.checkNotNullParameter(list, "items");
             StickerCategoryAdapter.access$setItems$p(StickerCategoryAdapter.this, list);
             Iterator<? extends StickerCategoryItem> it = list.iterator();
             int i = 0;
@@ -136,28 +137,28 @@ public final class StickerCategoryAdapter extends RecyclerView.Adapter<StickerCa
     }
 
     public final void setItems(List<? extends StickerCategoryItem> newItems) {
-        m.checkNotNullParameter(newItems, "newItems");
-        this.diffCreator.dispatchDiffUpdatesAsync(this, new AnonymousClass1(), this.items, newItems);
+        Intrinsics3.checkNotNullParameter(newItems, "newItems");
+        this.diffCreator.dispatchDiffUpdatesAsync(this, new C78921(), this.items, newItems);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public StickerCategoryAdapter(Function1<? super StickerCategoryItem.GuildItem, Unit> function1, Function1<? super StickerCategoryItem.PackItem, Unit> function12, Function0<Unit> function0, Function1<? super Integer, Unit> function13, AppComponent appComponent, DiffCreator<List<StickerCategoryItem>, StickerCategoryViewHolder> diffCreator) {
-        m.checkNotNullParameter(function1, "onGuildClicked");
-        m.checkNotNullParameter(function12, "onPackClicked");
-        m.checkNotNullParameter(function0, "onRecentClicked");
-        m.checkNotNullParameter(function13, "onSelectedItemAdapterPositionUpdated");
-        m.checkNotNullParameter(appComponent, "appComponent");
-        m.checkNotNullParameter(diffCreator, "diffCreator");
+        Intrinsics3.checkNotNullParameter(function1, "onGuildClicked");
+        Intrinsics3.checkNotNullParameter(function12, "onPackClicked");
+        Intrinsics3.checkNotNullParameter(function0, "onRecentClicked");
+        Intrinsics3.checkNotNullParameter(function13, "onSelectedItemAdapterPositionUpdated");
+        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
+        Intrinsics3.checkNotNullParameter(diffCreator, "diffCreator");
         this.onGuildClicked = function1;
         this.onPackClicked = function12;
         this.onRecentClicked = function0;
         this.onSelectedItemAdapterPositionUpdated = function13;
         this.diffCreator = diffCreator;
-        this.items = n.emptyList();
+        this.items = Collections2.emptyList();
     }
 
     public void onBindViewHolder(StickerCategoryViewHolder holder, int position) {
-        m.checkNotNullParameter(holder, "holder");
+        Intrinsics3.checkNotNullParameter(holder, "holder");
         StickerCategoryItem stickerCategoryItem = this.items.get(position);
         if (stickerCategoryItem instanceof StickerCategoryItem.RecentItem) {
             ((StickerCategoryViewHolder.Recent) holder).configure((StickerCategoryItem.RecentItem) stickerCategoryItem, this.onRecentClicked);
@@ -170,48 +171,48 @@ public final class StickerCategoryAdapter extends RecyclerView.Adapter<StickerCa
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public StickerCategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(parent.getContext());
-        int i = R.id.overline;
+        int i = C5419R.id.overline;
         if (viewType == 0) {
-            View viewInflate = layoutInflaterFrom.inflate(R.layout.sticker_category_item_recent, parent, false);
-            View viewFindViewById = viewInflate.findViewById(R.id.overline);
+            View viewInflate = layoutInflaterFrom.inflate(C5419R.layout.sticker_category_item_recent, parent, false);
+            View viewFindViewById = viewInflate.findViewById(C5419R.id.overline);
             if (viewFindViewById == null) {
-                throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(R.id.overline)));
+                throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(C5419R.id.overline)));
             }
-            StickerCategoryItemRecentBinding stickerCategoryItemRecentBinding = new StickerCategoryItemRecentBinding((FrameLayout) viewInflate, new b.a.i.n(viewFindViewById, viewFindViewById));
-            m.checkNotNullExpressionValue(stickerCategoryItemRecentBinding, "StickerCategoryItemRecen…(inflater, parent, false)");
+            StickerCategoryItemRecentBinding stickerCategoryItemRecentBinding = new StickerCategoryItemRecentBinding((FrameLayout) viewInflate, new ExpressionPickerCategorySelectionOverlineViewBinding(viewFindViewById, viewFindViewById));
+            Intrinsics3.checkNotNullExpressionValue(stickerCategoryItemRecentBinding, "StickerCategoryItemRecen…(inflater, parent, false)");
             return new StickerCategoryViewHolder.Recent(stickerCategoryItemRecentBinding);
         }
         if (viewType == 1) {
-            View viewInflate2 = layoutInflaterFrom.inflate(R.layout.sticker_category_item_pack, parent, false);
-            View viewFindViewById2 = viewInflate2.findViewById(R.id.overline);
+            View viewInflate2 = layoutInflaterFrom.inflate(C5419R.layout.sticker_category_item_pack, parent, false);
+            View viewFindViewById2 = viewInflate2.findViewById(C5419R.id.overline);
             if (viewFindViewById2 != null) {
-                b.a.i.n nVar = new b.a.i.n(viewFindViewById2, viewFindViewById2);
-                StickerView stickerView = (StickerView) viewInflate2.findViewById(R.id.sticker_category_item_pack_avatar);
+                ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding = new ExpressionPickerCategorySelectionOverlineViewBinding(viewFindViewById2, viewFindViewById2);
+                StickerView stickerView = (StickerView) viewInflate2.findViewById(C5419R.id.sticker_category_item_pack_avatar);
                 if (stickerView != null) {
-                    StickerCategoryItemPackBinding stickerCategoryItemPackBinding = new StickerCategoryItemPackBinding((FrameLayout) viewInflate2, nVar, stickerView);
-                    m.checkNotNullExpressionValue(stickerCategoryItemPackBinding, "StickerCategoryItemPackB…(inflater, parent, false)");
+                    StickerCategoryItemPackBinding stickerCategoryItemPackBinding = new StickerCategoryItemPackBinding((FrameLayout) viewInflate2, expressionPickerCategorySelectionOverlineViewBinding, stickerView);
+                    Intrinsics3.checkNotNullExpressionValue(stickerCategoryItemPackBinding, "StickerCategoryItemPackB…(inflater, parent, false)");
                     return new StickerCategoryViewHolder.Pack(stickerCategoryItemPackBinding);
                 }
-                i = R.id.sticker_category_item_pack_avatar;
+                i = C5419R.id.sticker_category_item_pack_avatar;
             }
             throw new NullPointerException("Missing required view with ID: ".concat(viewInflate2.getResources().getResourceName(i)));
         }
         if (viewType != 2) {
-            throw new IllegalStateException(a.q("Invalid Sticker Category Type: ", viewType));
+            throw new IllegalStateException(outline.m871q("Invalid Sticker Category Type: ", viewType));
         }
-        View viewInflate3 = layoutInflaterFrom.inflate(R.layout.sticker_category_item_guild, parent, false);
-        View viewFindViewById3 = viewInflate3.findViewById(R.id.overline);
+        View viewInflate3 = layoutInflaterFrom.inflate(C5419R.layout.sticker_category_item_guild, parent, false);
+        View viewFindViewById3 = viewInflate3.findViewById(C5419R.id.overline);
         if (viewFindViewById3 != null) {
-            b.a.i.n nVar2 = new b.a.i.n(viewFindViewById3, viewFindViewById3);
-            GuildIcon guildIcon = (GuildIcon) viewInflate3.findViewById(R.id.sticker_category_item_guild_icon);
+            ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding2 = new ExpressionPickerCategorySelectionOverlineViewBinding(viewFindViewById3, viewFindViewById3);
+            GuildIcon guildIcon = (GuildIcon) viewInflate3.findViewById(C5419R.id.sticker_category_item_guild_icon);
             if (guildIcon != null) {
-                StickerCategoryItemGuildBinding stickerCategoryItemGuildBinding = new StickerCategoryItemGuildBinding((FrameLayout) viewInflate3, nVar2, guildIcon);
-                m.checkNotNullExpressionValue(stickerCategoryItemGuildBinding, "StickerCategoryItemGuild…(inflater, parent, false)");
+                StickerCategoryItemGuildBinding stickerCategoryItemGuildBinding = new StickerCategoryItemGuildBinding((FrameLayout) viewInflate3, expressionPickerCategorySelectionOverlineViewBinding2, guildIcon);
+                Intrinsics3.checkNotNullExpressionValue(stickerCategoryItemGuildBinding, "StickerCategoryItemGuild…(inflater, parent, false)");
                 return new StickerCategoryViewHolder.Guild(stickerCategoryItemGuildBinding);
             }
-            i = R.id.sticker_category_item_guild_icon;
+            i = C5419R.id.sticker_category_item_guild_icon;
         }
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate3.getResources().getResourceName(i)));
     }

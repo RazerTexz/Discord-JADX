@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackPaymentMetadata;
-import com.discord.analytics.generated.traits.TrackPaymentMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackPaymentMetadata2;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStoreDirectoryCardInteracted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStoreDirectoryCardInteracted implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackStoreSkuMetadataReceiver, TrackPaymentMetadataReceiver {
+public final /* data */ class TrackStoreDirectoryCardInteracted implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackStoreSkuMetadata2, TrackPaymentMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackPaymentMetadata trackPaymentMetadata;
@@ -46,7 +46,7 @@ public final /* data */ class TrackStoreDirectoryCardInteracted implements Analy
             return false;
         }
         TrackStoreDirectoryCardInteracted trackStoreDirectoryCardInteracted = (TrackStoreDirectoryCardInteracted) other;
-        return m.areEqual(this.loadId, trackStoreDirectoryCardInteracted.loadId) && m.areEqual(this.audioEnabled, trackStoreDirectoryCardInteracted.audioEnabled) && m.areEqual(this.blogPostOpened, trackStoreDirectoryCardInteracted.blogPostOpened) && m.areEqual(this.isHero, trackStoreDirectoryCardInteracted.isHero) && m.areEqual(this.watchTrailer, trackStoreDirectoryCardInteracted.watchTrailer) && m.areEqual(this.nitroLearnMore, trackStoreDirectoryCardInteracted.nitroLearnMore) && m.areEqual(this.premiumLearnMore, trackStoreDirectoryCardInteracted.premiumLearnMore) && m.areEqual(this.listIndex, trackStoreDirectoryCardInteracted.listIndex) && m.areEqual(this.listSearched, trackStoreDirectoryCardInteracted.listSearched) && m.areEqual(this.listSort, trackStoreDirectoryCardInteracted.listSort) && m.areEqual(this.listFilterDistributionType, trackStoreDirectoryCardInteracted.listFilterDistributionType);
+        return Intrinsics3.areEqual(this.loadId, trackStoreDirectoryCardInteracted.loadId) && Intrinsics3.areEqual(this.audioEnabled, trackStoreDirectoryCardInteracted.audioEnabled) && Intrinsics3.areEqual(this.blogPostOpened, trackStoreDirectoryCardInteracted.blogPostOpened) && Intrinsics3.areEqual(this.isHero, trackStoreDirectoryCardInteracted.isHero) && Intrinsics3.areEqual(this.watchTrailer, trackStoreDirectoryCardInteracted.watchTrailer) && Intrinsics3.areEqual(this.nitroLearnMore, trackStoreDirectoryCardInteracted.nitroLearnMore) && Intrinsics3.areEqual(this.premiumLearnMore, trackStoreDirectoryCardInteracted.premiumLearnMore) && Intrinsics3.areEqual(this.listIndex, trackStoreDirectoryCardInteracted.listIndex) && Intrinsics3.areEqual(this.listSearched, trackStoreDirectoryCardInteracted.listSearched) && Intrinsics3.areEqual(this.listSort, trackStoreDirectoryCardInteracted.listSort) && Intrinsics3.areEqual(this.listFilterDistributionType, trackStoreDirectoryCardInteracted.listFilterDistributionType);
     }
 
     public int hashCode() {
@@ -75,27 +75,27 @@ public final /* data */ class TrackStoreDirectoryCardInteracted implements Analy
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStoreDirectoryCardInteracted(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", audioEnabled=");
-        sbU.append(this.audioEnabled);
-        sbU.append(", blogPostOpened=");
-        sbU.append(this.blogPostOpened);
-        sbU.append(", isHero=");
-        sbU.append(this.isHero);
-        sbU.append(", watchTrailer=");
-        sbU.append(this.watchTrailer);
-        sbU.append(", nitroLearnMore=");
-        sbU.append(this.nitroLearnMore);
-        sbU.append(", premiumLearnMore=");
-        sbU.append(this.premiumLearnMore);
-        sbU.append(", listIndex=");
-        sbU.append(this.listIndex);
-        sbU.append(", listSearched=");
-        sbU.append(this.listSearched);
-        sbU.append(", listSort=");
-        sbU.append(this.listSort);
-        sbU.append(", listFilterDistributionType=");
-        return a.E(sbU, this.listFilterDistributionType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStoreDirectoryCardInteracted(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", audioEnabled=");
+        sbM833U.append(this.audioEnabled);
+        sbM833U.append(", blogPostOpened=");
+        sbM833U.append(this.blogPostOpened);
+        sbM833U.append(", isHero=");
+        sbM833U.append(this.isHero);
+        sbM833U.append(", watchTrailer=");
+        sbM833U.append(this.watchTrailer);
+        sbM833U.append(", nitroLearnMore=");
+        sbM833U.append(this.nitroLearnMore);
+        sbM833U.append(", premiumLearnMore=");
+        sbM833U.append(this.premiumLearnMore);
+        sbM833U.append(", listIndex=");
+        sbM833U.append(this.listIndex);
+        sbM833U.append(", listSearched=");
+        sbM833U.append(this.listSearched);
+        sbM833U.append(", listSort=");
+        sbM833U.append(this.listSort);
+        sbM833U.append(", listFilterDistributionType=");
+        return outline.m817E(sbM833U, this.listFilterDistributionType, ")");
     }
 }

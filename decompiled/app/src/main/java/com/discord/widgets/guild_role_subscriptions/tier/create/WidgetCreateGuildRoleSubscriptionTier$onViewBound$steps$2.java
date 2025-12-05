@@ -1,14 +1,14 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create;
 
 import android.view.View;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
 /* loaded from: classes2.dex */
-public final class WidgetCreateGuildRoleSubscriptionTier$onViewBound$steps$2 extends o implements Function1<View, Unit> {
+public final class WidgetCreateGuildRoleSubscriptionTier$onViewBound$steps$2 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ WidgetCreateGuildRoleSubscriptionTier this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -20,12 +20,12 @@ public final class WidgetCreateGuildRoleSubscriptionTier$onViewBound$steps$2 ext
     @Override // kotlin.jvm.functions.Function1
     public /* bridge */ /* synthetic */ Unit invoke(View view) {
         invoke2(view);
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
-        m.checkNotNullParameter(view, "it");
+        Intrinsics3.checkNotNullParameter(view, "it");
         WidgetCreateGuildRoleSubscriptionTier.access$getCreateTierViewModel$p(this.this$0).goToNextStep();
     }
 }

@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStoreListingUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStoreListingUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackStoreListingUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long storeListingId = null;
     private final Long skuId = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackStoreListingUpdated implements AnalyticsSchem
             return false;
         }
         TrackStoreListingUpdated trackStoreListingUpdated = (TrackStoreListingUpdated) other;
-        return m.areEqual(this.storeListingId, trackStoreListingUpdated.storeListingId) && m.areEqual(this.skuId, trackStoreListingUpdated.skuId) && m.areEqual(this.updateFrom, trackStoreListingUpdated.updateFrom) && m.areEqual(this.updateType, trackStoreListingUpdated.updateType) && m.areEqual(this.guildId, trackStoreListingUpdated.guildId) && m.areEqual(this.childSkuIds, trackStoreListingUpdated.childSkuIds) && m.areEqual(this.isPublished, trackStoreListingUpdated.isPublished) && m.areEqual(this.tagline, trackStoreListingUpdated.tagline) && m.areEqual(this.flavorText, trackStoreListingUpdated.flavorText) && m.areEqual(this.thumbnailAssetId, trackStoreListingUpdated.thumbnailAssetId) && m.areEqual(this.previewVideoAssetId, trackStoreListingUpdated.previewVideoAssetId) && m.areEqual(this.carouselItems, trackStoreListingUpdated.carouselItems);
+        return Intrinsics3.areEqual(this.storeListingId, trackStoreListingUpdated.storeListingId) && Intrinsics3.areEqual(this.skuId, trackStoreListingUpdated.skuId) && Intrinsics3.areEqual(this.updateFrom, trackStoreListingUpdated.updateFrom) && Intrinsics3.areEqual(this.updateType, trackStoreListingUpdated.updateType) && Intrinsics3.areEqual(this.guildId, trackStoreListingUpdated.guildId) && Intrinsics3.areEqual(this.childSkuIds, trackStoreListingUpdated.childSkuIds) && Intrinsics3.areEqual(this.isPublished, trackStoreListingUpdated.isPublished) && Intrinsics3.areEqual(this.tagline, trackStoreListingUpdated.tagline) && Intrinsics3.areEqual(this.flavorText, trackStoreListingUpdated.flavorText) && Intrinsics3.areEqual(this.thumbnailAssetId, trackStoreListingUpdated.thumbnailAssetId) && Intrinsics3.areEqual(this.previewVideoAssetId, trackStoreListingUpdated.previewVideoAssetId) && Intrinsics3.areEqual(this.carouselItems, trackStoreListingUpdated.carouselItems);
     }
 
     public int hashCode() {
@@ -70,29 +70,29 @@ public final /* data */ class TrackStoreListingUpdated implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStoreListingUpdated(storeListingId=");
-        sbU.append(this.storeListingId);
-        sbU.append(", skuId=");
-        sbU.append(this.skuId);
-        sbU.append(", updateFrom=");
-        sbU.append(this.updateFrom);
-        sbU.append(", updateType=");
-        sbU.append(this.updateType);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", childSkuIds=");
-        sbU.append(this.childSkuIds);
-        sbU.append(", isPublished=");
-        sbU.append(this.isPublished);
-        sbU.append(", tagline=");
-        sbU.append(this.tagline);
-        sbU.append(", flavorText=");
-        sbU.append(this.flavorText);
-        sbU.append(", thumbnailAssetId=");
-        sbU.append(this.thumbnailAssetId);
-        sbU.append(", previewVideoAssetId=");
-        sbU.append(this.previewVideoAssetId);
-        sbU.append(", carouselItems=");
-        return a.L(sbU, this.carouselItems, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStoreListingUpdated(storeListingId=");
+        sbM833U.append(this.storeListingId);
+        sbM833U.append(", skuId=");
+        sbM833U.append(this.skuId);
+        sbM833U.append(", updateFrom=");
+        sbM833U.append(this.updateFrom);
+        sbM833U.append(", updateType=");
+        sbM833U.append(this.updateType);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", childSkuIds=");
+        sbM833U.append(this.childSkuIds);
+        sbM833U.append(", isPublished=");
+        sbM833U.append(this.isPublished);
+        sbM833U.append(", tagline=");
+        sbM833U.append(this.tagline);
+        sbM833U.append(", flavorText=");
+        sbM833U.append(this.flavorText);
+        sbM833U.append(", thumbnailAssetId=");
+        sbM833U.append(this.thumbnailAssetId);
+        sbM833U.append(", previewVideoAssetId=");
+        sbM833U.append(this.previewVideoAssetId);
+        sbM833U.append(", carouselItems=");
+        return outline.m824L(sbM833U, this.carouselItems, ")");
     }
 }

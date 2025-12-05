@@ -7,36 +7,36 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.cardview.widget.CardView;
-import b.a.i.b2;
-import com.discord.R;
-import d0.z.d.m;
+import com.discord.C5419R;
+import p007b.p008a.p025i.ViewChatActionItemBinding;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChatActionItem.kt */
 /* loaded from: classes2.dex */
 public final class ChatActionItem extends CardView {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final b2 binding;
+    public final ViewChatActionItemBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ChatActionItem(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        LayoutInflater.from(getContext()).inflate(R.layout.view_chat_action_item, this);
-        int i = R.id.chat_action_item_image;
-        ImageView imageView = (ImageView) findViewById(R.id.chat_action_item_image);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        LayoutInflater.from(getContext()).inflate(C5419R.layout.view_chat_action_item, this);
+        int i = C5419R.id.chat_action_item_image;
+        ImageView imageView = (ImageView) findViewById(C5419R.id.chat_action_item_image);
         if (imageView != null) {
-            i = R.id.chat_action_item_text;
-            TextView textView = (TextView) findViewById(R.id.chat_action_item_text);
+            i = C5419R.id.chat_action_item_text;
+            TextView textView = (TextView) findViewById(C5419R.id.chat_action_item_text);
             if (textView != null) {
-                b2 b2Var = new b2(this, imageView, textView);
-                m.checkNotNullExpressionValue(b2Var, "ViewChatActionItemBindin…ater.from(context), this)");
-                this.binding = b2Var;
-                TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.a.ChatActionItem, 0, 0);
-                m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…hatActionItem, 0, 0\n    )");
-                m.checkNotNullExpressionValue(textView, "binding.chatActionItemText");
+                ViewChatActionItemBinding viewChatActionItemBinding = new ViewChatActionItemBinding(this, imageView, textView);
+                Intrinsics3.checkNotNullExpressionValue(viewChatActionItemBinding, "ViewChatActionItemBindin…ater.from(context), this)");
+                this.binding = viewChatActionItemBinding;
+                TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C5419R.a.ChatActionItem, 0, 0);
+                Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…hatActionItem, 0, 0\n    )");
+                Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatActionItemText");
                 textView.setText(typedArrayObtainStyledAttributes.getString(1));
-                imageView.setImageResource(typedArrayObtainStyledAttributes.getResourceId(0, R.drawable.drawable_circle_white_1));
+                imageView.setImageResource(typedArrayObtainStyledAttributes.getResourceId(0, C5419R.drawable.drawable_circle_white_1));
                 typedArrayObtainStyledAttributes.recycle();
                 return;
             }

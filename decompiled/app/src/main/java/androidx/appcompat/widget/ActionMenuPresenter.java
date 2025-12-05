@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.R;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.view.ActionBarPolicy;
 import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.appcompat.view.menu.BaseMenuPresenter;
@@ -56,7 +56,7 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
 
     public class ActionButtonSubmenu extends MenuPopupHelper {
         public ActionButtonSubmenu(Context context, SubMenuBuilder subMenuBuilder, View view) {
-            super(context, subMenuBuilder, view, false, R.attr.actionOverflowMenuStyle);
+            super(context, subMenuBuilder, view, false, C0051R.attr.actionOverflowMenuStyle);
             if (!((MenuItemImpl) subMenuBuilder.getItem()).isActionButton()) {
                 View view2 = ActionMenuPresenter.this.mOverflowButton;
                 setAnchorView(view2 == null ? (View) ActionMenuPresenter.access$200(ActionMenuPresenter.this) : view2);
@@ -109,12 +109,12 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
 
     public class OverflowMenuButton extends AppCompatImageView implements ActionMenuView.ActionMenuChildView {
 
-        /* renamed from: androidx.appcompat.widget.ActionMenuPresenter$OverflowMenuButton$1, reason: invalid class name */
-        public class AnonymousClass1 extends ForwardingListener {
+        /* renamed from: androidx.appcompat.widget.ActionMenuPresenter$OverflowMenuButton$1 */
+        public class C00941 extends ForwardingListener {
             public final /* synthetic */ ActionMenuPresenter val$this$0;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public AnonymousClass1(View view, ActionMenuPresenter actionMenuPresenter) {
+            public C00941(View view, ActionMenuPresenter actionMenuPresenter) {
                 super(view);
                 this.val$this$0 = actionMenuPresenter;
             }
@@ -146,13 +146,13 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
         }
 
         public OverflowMenuButton(Context context) {
-            super(context, null, R.attr.actionOverflowButtonStyle);
+            super(context, null, C0051R.attr.actionOverflowButtonStyle);
             setClickable(true);
             setFocusable(true);
             setVisibility(0);
             setEnabled(true);
             TooltipCompat.setTooltipText(this, getContentDescription());
-            setOnTouchListener(new AnonymousClass1(this, ActionMenuPresenter.this));
+            setOnTouchListener(new C00941(this, ActionMenuPresenter.this));
         }
 
         @Override // androidx.appcompat.widget.ActionMenuView.ActionMenuChildView
@@ -194,7 +194,7 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
 
     public class OverflowPopup extends MenuPopupHelper {
         public OverflowPopup(Context context, MenuBuilder menuBuilder, View view, boolean z2) {
-            super(context, menuBuilder, view, z2, R.attr.actionOverflowMenuStyle);
+            super(context, menuBuilder, view, z2, C0051R.attr.actionOverflowMenuStyle);
             setGravity(GravityCompat.END);
             setPresenterCallback(ActionMenuPresenter.this.mPopupPresenterCallback);
         }
@@ -240,11 +240,11 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
 
     @SuppressLint({"BanParcelableUsage"})
     public static class SavedState implements Parcelable {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C00951();
         public int openSubMenuId;
 
-        /* renamed from: androidx.appcompat.widget.ActionMenuPresenter$SavedState$1, reason: invalid class name */
-        public class AnonymousClass1 implements Parcelable.Creator<SavedState> {
+        /* renamed from: androidx.appcompat.widget.ActionMenuPresenter$SavedState$1 */
+        public class C00951 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -287,7 +287,7 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
     }
 
     public ActionMenuPresenter(Context context) {
-        super(context, R.layout.abc_action_menu_layout, R.layout.abc_action_menu_item_layout);
+        super(context, C0051R.layout.abc_action_menu_layout, C0051R.layout.abc_action_menu_item_layout);
         this.mActionButtonGroups = new SparseBooleanArray();
         this.mPopupPresenterCallback = new PopupPresenterCallback();
     }

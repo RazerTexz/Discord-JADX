@@ -8,29 +8,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.a.a.c;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetServerBoostConfirmationBinding;
 import com.discord.utilities.dimmer.DimmerView;
-import com.discord.utilities.resources.StringResourceUtilsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.resources.StringResourceUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.servers.WidgetServerSettingsChannels;
 import com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel;
 import com.google.android.material.button.MaterialButton;
-import d0.g;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Lazy;
 import kotlin.Unit;
@@ -38,12 +27,23 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p008a.p009a.p010a.GuildBoostActivatedDialog;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: WidgetGuildBoostConfirmation.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildBoostConfirmation extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildBoostConfirmation.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerBoostConfirmationBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildBoostConfirmation.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerBoostConfirmationBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -68,10 +68,10 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
         }
 
         public final void create(Context context, long guildId, long slotId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intentPutExtra = new Intent().putExtra(WidgetGuildBoostConfirmation.INTENT_EXTRA_GUILD_ID, guildId).putExtra(WidgetGuildBoostConfirmation.INTENT_EXTRA_SLOT_ID, slotId);
-            m.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…NT_EXTRA_SLOT_ID, slotId)");
-            j.d(context, WidgetGuildBoostConfirmation.class, intentPutExtra);
+            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…NT_EXTRA_SLOT_ID, slotId)");
+            AppScreen2.m156d(context, WidgetGuildBoostConfirmation.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -94,16 +94,16 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
     }
 
     /* compiled from: WidgetGuildBoostConfirmation.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$configureUI$1 */
+    public static final class C95171 extends Lambda implements Function0<Unit> {
+        public C95171() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -116,29 +116,29 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
     }
 
     /* compiled from: WidgetGuildBoostConfirmation.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$onResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<GuildBoostInProgressViewModel.ViewState, Unit> {
-        public AnonymousClass1(WidgetGuildBoostConfirmation widgetGuildBoostConfirmation) {
+    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$onResume$1 */
+    public static final /* synthetic */ class C95181 extends FunctionReferenceImpl implements Function1<GuildBoostInProgressViewModel.ViewState, Unit> {
+        public C95181(WidgetGuildBoostConfirmation widgetGuildBoostConfirmation) {
             super(1, widgetGuildBoostConfirmation, WidgetGuildBoostConfirmation.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/guildboost/GuildBoostInProgressViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(GuildBoostInProgressViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildBoostInProgressViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "p1");
+            Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildBoostConfirmation.access$configureUI((WidgetGuildBoostConfirmation) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetGuildBoostConfirmation.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$onViewBound$1 */
+    public static final class ViewOnClickListenerC95191 implements View.OnClickListener {
+        public ViewOnClickListenerC95191() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -148,13 +148,13 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
     }
 
     public WidgetGuildBoostConfirmation() {
-        super(R.layout.widget_server_boost_confirmation);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildBoostConfirmation$binding$2.INSTANCE, null, 2, null);
-        WidgetGuildBoostConfirmation$viewModel$2 widgetGuildBoostConfirmation$viewModel$2 = new WidgetGuildBoostConfirmation$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildBoostInProgressViewModel.class), new WidgetGuildBoostConfirmation$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildBoostConfirmation$viewModel$2));
-        this.guildId = g.lazy(new WidgetGuildBoostConfirmation$guildId$2(this));
-        this.slotId = g.lazy(new WidgetGuildBoostConfirmation$slotId$2(this));
+        super(C5419R.layout.widget_server_boost_confirmation);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildBoostConfirmation2.INSTANCE, null, 2, null);
+        WidgetGuildBoostConfirmation5 widgetGuildBoostConfirmation5 = new WidgetGuildBoostConfirmation5(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildBoostInProgressViewModel.class), new WidgetGuildBoostConfirmation$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildBoostConfirmation5));
+        this.guildId = LazyJVM.lazy(new WidgetGuildBoostConfirmation3(this));
+        this.slotId = LazyJVM.lazy(new WidgetGuildBoostConfirmation4(this));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetGuildBoostConfirmation widgetGuildBoostConfirmation, GuildBoostInProgressViewModel.ViewState viewState) {
@@ -174,7 +174,7 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
     }
 
     private final void configureToolbar(String guildName) {
-        setActionBarTitle(R.string.premium_guild_perks_modal_header);
+        setActionBarTitle(C5419R.string.premium_guild_perks_modal_header);
         setActionBarSubtitle(guildName);
     }
 
@@ -189,19 +189,19 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
             return;
         }
         configureToolbar(loaded.getGuild().getName());
-        getBinding().f2534b.b(loaded.getGuild(), 1);
+        getBinding().f17462b.m8592b(loaded.getGuild(), 1);
         int iOrdinal = loaded.getGuildBoostState().ordinal();
         if (iOrdinal == 0) {
-            DimmerView.setDimmed$default(getBinding().f, false, false, 2, null);
-            TextView textView = getBinding().d;
-            m.checkNotNullExpressionValue(textView, "binding.boostConfirmationError");
+            DimmerView.setDimmed$default(getBinding().f17466f, false, false, 2, null);
+            TextView textView = getBinding().f17464d;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.boostConfirmationError");
             textView.setVisibility(4);
             return;
         }
         if (iOrdinal == 1) {
-            DimmerView.setDimmed$default(getBinding().f, true, false, 2, null);
-            TextView textView2 = getBinding().d;
-            m.checkNotNullExpressionValue(textView2, "binding.boostConfirmationError");
+            DimmerView.setDimmed$default(getBinding().f17466f, true, false, 2, null);
+            TextView textView2 = getBinding().f17464d;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.boostConfirmationError");
             textView2.setVisibility(4);
             return;
         }
@@ -209,17 +209,17 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
             if (iOrdinal != 3) {
                 return;
             }
-            DimmerView.setDimmed$default(getBinding().f, false, false, 2, null);
-            TextView textView3 = getBinding().d;
-            m.checkNotNullExpressionValue(textView3, "binding.boostConfirmationError");
+            DimmerView.setDimmed$default(getBinding().f17466f, false, false, 2, null);
+            TextView textView3 = getBinding().f17464d;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.boostConfirmationError");
             textView3.setVisibility(0);
             return;
         }
         if (loaded.getCanShowConfirmationDialog()) {
-            c.Companion aVar = c.INSTANCE;
+            GuildBoostActivatedDialog.Companion aVar = GuildBoostActivatedDialog.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-            aVar.a(parentFragmentManager, requireContext(), loaded.getGuild().getName(), loaded.getSubscriptionCount() + 1, false, new AnonymousClass1());
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            aVar.m101a(parentFragmentManager, requireContext(), loaded.getGuild().getName(), loaded.getSubscriptionCount() + 1, false, new C95171());
         }
     }
 
@@ -250,24 +250,24 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
         if ((getGuildId() == 0 || getGuildId() == -1) && (appActivity = getAppActivity()) != null) {
             appActivity.finish();
         }
-        Observable observableR = ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null).r();
-        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(observableR, WidgetGuildBoostConfirmation.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        Observable observableM11112r = ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "viewModel\n        .obser…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(observableM11112r, WidgetGuildBoostConfirmation.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C95181(this), 62, (Object) null);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
-        getBinding().e.setOnClickListener(new AnonymousClass1());
-        MaterialButton materialButton = getBinding().e;
-        m.checkNotNullExpressionValue(materialButton, "binding.boostConfirmationSelect");
-        materialButton.setText(b.k(this, R.string.premium_guild_subscribe_confirm_confirmation, new Object[]{StringResourceUtilsKt.getI18nPluralString(requireContext(), R.plurals.premium_guild_subscribe_confirm_confirmation_slotCount, 1, 1)}, null, 4));
-        CharSequence i18nPluralString = StringResourceUtilsKt.getI18nPluralString(requireContext(), R.plurals.premium_guild_subscribe_confirm_cooldown_warning_days, 7, 7);
-        CharSequence i18nPluralString2 = StringResourceUtilsKt.getI18nPluralString(requireContext(), R.plurals.premium_guild_subscribe_confirm_cooldown_warning_slotCount, 1, 1);
-        TextView textView = getBinding().c;
-        m.checkNotNullExpressionValue(textView, "binding.boostConfirmationCooldownWarning");
-        textView.setText(b.k(this, R.string.premium_guild_subscribe_confirm_cooldown_warning, new Object[]{i18nPluralString2, i18nPluralString}, null, 4));
+        getBinding().f17465e.setOnClickListener(new ViewOnClickListenerC95191());
+        MaterialButton materialButton = getBinding().f17465e;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.boostConfirmationSelect");
+        materialButton.setText(FormatUtils.m219k(this, C5419R.string.premium_guild_subscribe_confirm_confirmation, new Object[]{StringResourceUtils.getI18nPluralString(requireContext(), C5419R.plurals.premium_guild_subscribe_confirm_confirmation_slotCount, 1, 1)}, null, 4));
+        CharSequence i18nPluralString = StringResourceUtils.getI18nPluralString(requireContext(), C5419R.plurals.premium_guild_subscribe_confirm_cooldown_warning_days, 7, 7);
+        CharSequence i18nPluralString2 = StringResourceUtils.getI18nPluralString(requireContext(), C5419R.plurals.premium_guild_subscribe_confirm_cooldown_warning_slotCount, 1, 1);
+        TextView textView = getBinding().f17463c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.boostConfirmationCooldownWarning");
+        textView.setText(FormatUtils.m219k(this, C5419R.string.premium_guild_subscribe_confirm_cooldown_warning, new Object[]{i18nPluralString2, i18nPluralString}, null, 4));
     }
 }

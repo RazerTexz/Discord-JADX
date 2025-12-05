@@ -1,7 +1,7 @@
 package org.webrtc;
 
-import b.d.b.a.a;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class RTCStatsReport {
@@ -27,18 +27,18 @@ public class RTCStatsReport {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("{ timestampUs: ");
-        sbU.append(this.timestampUs);
-        sbU.append(", stats: [\n");
+        StringBuilder sbM833U = outline.m833U("{ timestampUs: ");
+        sbM833U.append(this.timestampUs);
+        sbM833U.append(", stats: [\n");
         boolean z2 = true;
         for (RTCStats rTCStats : this.stats.values()) {
             if (!z2) {
-                sbU.append(",\n");
+                sbM833U.append(",\n");
             }
-            sbU.append(rTCStats);
+            sbM833U.append(rTCStats);
             z2 = false;
         }
-        sbU.append(" ] }");
-        return sbU.toString();
+        sbM833U.append(" ] }");
+        return sbM833U.toString();
     }
 }

@@ -5,7 +5,7 @@ import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.DBUtil;
-import androidx.sqlite.db.SupportSQLiteStatement;
+import androidx.sqlite.p006db.SupportSQLiteStatement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +14,9 @@ public final class WorkTagDao_Impl implements WorkTagDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<WorkTag> __insertionAdapterOfWorkTag;
 
-    /* renamed from: androidx.work.impl.model.WorkTagDao_Impl$1, reason: invalid class name */
-    public class AnonymousClass1 extends EntityInsertionAdapter<WorkTag> {
-        public AnonymousClass1(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkTagDao_Impl$1 */
+    public class C07691 extends EntityInsertionAdapter<WorkTag> {
+        public C07691(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -49,7 +49,7 @@ public final class WorkTagDao_Impl implements WorkTagDao {
 
     public WorkTagDao_Impl(RoomDatabase roomDatabase) {
         this.__db = roomDatabase;
-        this.__insertionAdapterOfWorkTag = new AnonymousClass1(roomDatabase);
+        this.__insertionAdapterOfWorkTag = new C07691(roomDatabase);
     }
 
     @Override // androidx.work.impl.model.WorkTagDao

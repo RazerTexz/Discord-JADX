@@ -1,31 +1,34 @@
 package com.google.firebase.installations;
 
 import androidx.annotation.Keep;
-import b.i.c.c;
-import b.i.c.l.d;
-import b.i.c.l.e;
-import b.i.c.l.g;
-import b.i.c.l.o;
-import b.i.c.r.d;
-import b.i.c.u.f;
-import b.i.c.x.h;
 import java.util.Arrays;
 import java.util.List;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p007b.p225i.p361c.FirebaseApp2;
+import p007b.p225i.p361c.p368l.Component4;
+import p007b.p225i.p361c.p368l.ComponentContainer;
+import p007b.p225i.p361c.p368l.ComponentRegistrar;
+import p007b.p225i.p361c.p368l.Dependency2;
+import p007b.p225i.p361c.p397r.HeartBeatInfo;
+import p007b.p225i.p361c.p401u.FirebaseInstallations4;
+import p007b.p225i.p361c.p401u.FirebaseInstallationsRegistrar2;
+import p007b.p225i.p361c.p401u.InterfaceC4843g;
+import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
 @Keep
 /* loaded from: classes3.dex */
-public class FirebaseInstallationsRegistrar implements g {
-    public static /* synthetic */ b.i.c.u.g lambda$getComponents$0(e eVar) {
-        return new f((c) eVar.a(c.class), eVar.b(h.class), eVar.b(d.class));
+public class FirebaseInstallationsRegistrar implements ComponentRegistrar {
+    public static /* synthetic */ InterfaceC4843g lambda$getComponents$0(ComponentContainer componentContainer) {
+        return new FirebaseInstallations4((FirebaseApp2) componentContainer.mo6346a(FirebaseApp2.class), componentContainer.mo6355b(UserAgentPublisher.class), componentContainer.mo6355b(HeartBeatInfo.class));
     }
 
-    @Override // b.i.c.l.g
-    public List<b.i.c.l.d<?>> getComponents() {
-        d.b bVarA = b.i.c.l.d.a(b.i.c.u.g.class);
-        bVarA.a(new o(c.class, 1, 0));
-        bVarA.a(new o(b.i.c.r.d.class, 0, 1));
-        bVarA.a(new o(h.class, 0, 1));
-        bVarA.c(b.i.c.u.h.a);
-        return Arrays.asList(bVarA.b(), b.i.a.f.e.o.f.N("fire-installations", "16.3.4"));
+    @Override // p007b.p225i.p361c.p368l.ComponentRegistrar
+    public List<Component4<?>> getComponents() {
+        Component4.b bVarM6348a = Component4.m6348a(InterfaceC4843g.class);
+        bVarM6348a.m6351a(new Dependency2(FirebaseApp2.class, 1, 0));
+        bVarM6348a.m6351a(new Dependency2(HeartBeatInfo.class, 0, 1));
+        bVarM6348a.m6351a(new Dependency2(UserAgentPublisher.class, 0, 1));
+        bVarM6348a.m6353c(FirebaseInstallationsRegistrar2.f12942a);
+        return Arrays.asList(bVarM6348a.m6352b(), C3404f.m4228N("fire-installations", "16.3.4"));
     }
 }

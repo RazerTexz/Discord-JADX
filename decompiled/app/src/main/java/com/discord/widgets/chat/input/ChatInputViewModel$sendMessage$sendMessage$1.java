@@ -2,14 +2,14 @@ package com.discord.widgets.chat.input;
 
 import com.discord.widgets.chat.MessageContent;
 import com.discord.widgets.chat.MessageManager;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$sendMessage$sendMessage$1 extends o implements Function1<Long, Unit> {
+public final class ChatInputViewModel$sendMessage$sendMessage$1 extends Lambda implements Function1<Long, Unit> {
     public final /* synthetic */ MessageManager.AttachmentsRequest $attachmentsRequest;
     public final /* synthetic */ MessageContent $messageContent;
     public final /* synthetic */ MessageManager $messageManager;
@@ -33,10 +33,10 @@ public final class ChatInputViewModel$sendMessage$sendMessage$1 extends o implem
     @Override // kotlin.jvm.functions.Function1
     public /* bridge */ /* synthetic */ Unit invoke(Long l) {
         invoke(l.longValue());
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     public final void invoke(long j) {
-        this.$onValidationResult.invoke(Boolean.valueOf(MessageManager.sendMessage$default(this.$messageManager, this.$messageContent.getTextContent(), this.$messageContent.getMentionedUsers(), this.$attachmentsRequest, Long.valueOf(j), null, false, this.$onMessageTooLong, this.$onFilesTooLarge, new ChatInputViewModel$sendMessage$sendMessage$1$synchronousValidationSucceeded$1(this), 48, null)));
+        this.$onValidationResult.invoke(Boolean.valueOf(MessageManager.sendMessage$default(this.$messageManager, this.$messageContent.getTextContent(), this.$messageContent.getMentionedUsers(), this.$attachmentsRequest, Long.valueOf(j), null, false, this.$onMessageTooLong, this.$onFilesTooLarge, new C7699x68c0d97b(this), 48, null)));
     }
 }

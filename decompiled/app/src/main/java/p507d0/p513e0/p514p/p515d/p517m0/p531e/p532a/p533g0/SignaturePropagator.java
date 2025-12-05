@@ -1,0 +1,231 @@
+package p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p533g0;
+
+import java.util.Collections;
+import java.util.List;
+import p507d0.p513e0.p514p.p515d.p517m0.p521c.CallableMemberDescriptor;
+import p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassDescriptor;
+import p507d0.p513e0.p514p.p515d.p517m0.p521c.TypeParameterDescriptor;
+import p507d0.p513e0.p514p.p515d.p517m0.p521c.ValueParameterDescriptor;
+import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11585r;
+import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
+
+/* compiled from: SignaturePropagator.java */
+/* renamed from: d0.e0.p.d.m0.e.a.g0.j, reason: use source file name */
+/* loaded from: classes3.dex */
+public interface SignaturePropagator {
+
+    /* renamed from: a */
+    public static final SignaturePropagator f23249a = new a();
+
+    /* compiled from: SignaturePropagator.java */
+    /* renamed from: d0.e0.p.d.m0.e.a.g0.j$a */
+    public static class a implements SignaturePropagator {
+        /* renamed from: a */
+        public static /* synthetic */ void m9454a(int i) {
+            Object[] objArr = new Object[3];
+            switch (i) {
+                case 1:
+                    objArr[0] = "owner";
+                    break;
+                case 2:
+                    objArr[0] = "returnType";
+                    break;
+                case 3:
+                    objArr[0] = "valueParameters";
+                    break;
+                case 4:
+                    objArr[0] = "typeParameters";
+                    break;
+                case 5:
+                    objArr[0] = "descriptor";
+                    break;
+                case 6:
+                    objArr[0] = "signatureErrors";
+                    break;
+                default:
+                    objArr[0] = "method";
+                    break;
+            }
+            objArr[1] = "kotlin/reflect/jvm/internal/impl/load/java/components/SignaturePropagator$1";
+            if (i == 5 || i == 6) {
+                objArr[2] = "reportSignatureErrors";
+            } else {
+                objArr[2] = "resolvePropagatedSignature";
+            }
+            throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", objArr));
+        }
+
+        public void reportSignatureErrors(CallableMemberDescriptor callableMemberDescriptor, List<String> list) {
+            if (callableMemberDescriptor == null) {
+                m9454a(5);
+                throw null;
+            }
+            if (list != null) {
+                throw new UnsupportedOperationException("Should not be called");
+            }
+            m9454a(6);
+            throw null;
+        }
+
+        public b resolvePropagatedSignature(InterfaceC11585r interfaceC11585r, ClassDescriptor classDescriptor, KotlinType kotlinType, KotlinType kotlinType2, List<ValueParameterDescriptor> list, List<TypeParameterDescriptor> list2) {
+            if (interfaceC11585r == null) {
+                m9454a(0);
+                throw null;
+            }
+            if (classDescriptor == null) {
+                m9454a(1);
+                throw null;
+            }
+            if (kotlinType == null) {
+                m9454a(2);
+                throw null;
+            }
+            if (list == null) {
+                m9454a(3);
+                throw null;
+            }
+            if (list2 != null) {
+                return new b(kotlinType, kotlinType2, list, list2, Collections.emptyList(), false);
+            }
+            m9454a(4);
+            throw null;
+        }
+    }
+
+    /* compiled from: SignaturePropagator.java */
+    /* renamed from: d0.e0.p.d.m0.e.a.g0.j$b */
+    public static class b {
+
+        /* renamed from: a */
+        public final KotlinType f23250a;
+
+        /* renamed from: b */
+        public final KotlinType f23251b;
+
+        /* renamed from: c */
+        public final List<ValueParameterDescriptor> f23252c;
+
+        /* renamed from: d */
+        public final List<TypeParameterDescriptor> f23253d;
+
+        /* renamed from: e */
+        public final List<String> f23254e;
+
+        /* renamed from: f */
+        public final boolean f23255f;
+
+        public b(KotlinType kotlinType, KotlinType kotlinType2, List<ValueParameterDescriptor> list, List<TypeParameterDescriptor> list2, List<String> list3, boolean z2) {
+            if (kotlinType == null) {
+                m9455a(0);
+                throw null;
+            }
+            if (list == null) {
+                m9455a(1);
+                throw null;
+            }
+            if (list2 == null) {
+                m9455a(2);
+                throw null;
+            }
+            if (list3 == null) {
+                m9455a(3);
+                throw null;
+            }
+            this.f23250a = kotlinType;
+            this.f23251b = kotlinType2;
+            this.f23252c = list;
+            this.f23253d = list2;
+            this.f23254e = list3;
+            this.f23255f = z2;
+        }
+
+        /* renamed from: a */
+        public static /* synthetic */ void m9455a(int i) {
+            String str = (i == 4 || i == 5 || i == 6 || i == 7) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
+            Object[] objArr = new Object[(i == 4 || i == 5 || i == 6 || i == 7) ? 2 : 3];
+            switch (i) {
+                case 1:
+                    objArr[0] = "valueParameters";
+                    break;
+                case 2:
+                    objArr[0] = "typeParameters";
+                    break;
+                case 3:
+                    objArr[0] = "signatureErrors";
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                    objArr[0] = "kotlin/reflect/jvm/internal/impl/load/java/components/SignaturePropagator$PropagatedSignature";
+                    break;
+                default:
+                    objArr[0] = "returnType";
+                    break;
+            }
+            if (i == 4) {
+                objArr[1] = "getReturnType";
+            } else if (i == 5) {
+                objArr[1] = "getValueParameters";
+            } else if (i == 6) {
+                objArr[1] = "getTypeParameters";
+            } else if (i != 7) {
+                objArr[1] = "kotlin/reflect/jvm/internal/impl/load/java/components/SignaturePropagator$PropagatedSignature";
+            } else {
+                objArr[1] = "getErrors";
+            }
+            if (i != 4 && i != 5 && i != 6 && i != 7) {
+                objArr[2] = "<init>";
+            }
+            String str2 = String.format(str, objArr);
+            if (i != 4 && i != 5 && i != 6 && i != 7) {
+                throw new IllegalArgumentException(str2);
+            }
+            throw new IllegalStateException(str2);
+        }
+
+        public List<String> getErrors() {
+            List<String> list = this.f23254e;
+            if (list != null) {
+                return list;
+            }
+            m9455a(7);
+            throw null;
+        }
+
+        public KotlinType getReceiverType() {
+            return this.f23251b;
+        }
+
+        public KotlinType getReturnType() {
+            KotlinType kotlinType = this.f23250a;
+            if (kotlinType != null) {
+                return kotlinType;
+            }
+            m9455a(4);
+            throw null;
+        }
+
+        public List<TypeParameterDescriptor> getTypeParameters() {
+            List<TypeParameterDescriptor> list = this.f23253d;
+            if (list != null) {
+                return list;
+            }
+            m9455a(6);
+            throw null;
+        }
+
+        public List<ValueParameterDescriptor> getValueParameters() {
+            List<ValueParameterDescriptor> list = this.f23252c;
+            if (list != null) {
+                return list;
+            }
+            m9455a(5);
+            throw null;
+        }
+
+        public boolean hasStableParameterNames() {
+            return this.f23255f;
+        }
+    }
+}

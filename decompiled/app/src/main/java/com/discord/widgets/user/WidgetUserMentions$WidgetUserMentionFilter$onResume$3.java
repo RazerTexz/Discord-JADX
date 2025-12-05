@@ -3,8 +3,8 @@ package com.discord.widgets.user;
 import androidx.core.app.NotificationCompat;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.user.WidgetUserMentions;
-import d0.z.d.m;
-import rx.functions.Action1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.functions.Action1;
 
 /* compiled from: WidgetUserMentions.kt */
 /* loaded from: classes.dex */
@@ -15,7 +15,7 @@ public final class WidgetUserMentions$WidgetUserMentionFilter$onResume$3<T> impl
         this.this$0 = widgetUserMentionFilter;
     }
 
-    @Override // rx.functions.Action1
+    @Override // p658rx.functions.Action1
     public /* bridge */ /* synthetic */ void call(Boolean bool) {
         call2(bool);
     }
@@ -24,8 +24,8 @@ public final class WidgetUserMentions$WidgetUserMentionFilter$onResume$3<T> impl
     public final void call2(Boolean bool) {
         WidgetUserMentions.WidgetUserMentionFilter widgetUserMentionFilter = this.this$0;
         WidgetUserMentions.Model.MessageLoader.Filters filtersAccess$getFilters$p = WidgetUserMentions.WidgetUserMentionFilter.access$getFilters$p(widgetUserMentionFilter);
-        CheckedSetting checkedSetting = WidgetUserMentions.WidgetUserMentionFilter.access$getBinding$p(this.this$0).c;
-        m.checkNotNullExpressionValue(checkedSetting, "binding.userMentionsFilterIncludeRoles");
+        CheckedSetting checkedSetting = WidgetUserMentions.WidgetUserMentionFilter.access$getBinding$p(this.this$0).f18338c;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.userMentionsFilterIncludeRoles");
         WidgetUserMentions.WidgetUserMentionFilter.access$updateFilters(widgetUserMentionFilter, WidgetUserMentions.Model.MessageLoader.Filters.copy$default(filtersAccess$getFilters$p, 0L, false, false, checkedSetting.isChecked(), 7, null));
         WidgetUserMentions.WidgetUserMentionFilter.access$delayedDismiss(this.this$0);
     }

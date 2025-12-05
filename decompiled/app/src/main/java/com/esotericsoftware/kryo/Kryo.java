@@ -1,12 +1,10 @@
 package com.esotericsoftware.kryo;
 
-import b.e.a.a;
-import b.e.b.b;
 import com.esotericsoftware.kryo.factories.PseudoSerializerFactory;
 import com.esotericsoftware.kryo.factories.ReflectionSerializerFactory;
 import com.esotericsoftware.kryo.factories.SerializerFactory;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.p502io.Input;
+import com.esotericsoftware.kryo.p502io.Output;
 import com.esotericsoftware.kryo.serializers.ClosureSerializer;
 import com.esotericsoftware.kryo.serializers.CollectionSerializer;
 import com.esotericsoftware.kryo.serializers.DefaultArraySerializers;
@@ -25,7 +23,6 @@ import com.esotericsoftware.kryo.util.IntArray;
 import com.esotericsoftware.kryo.util.MapReferenceResolver;
 import com.esotericsoftware.kryo.util.ObjectMap;
 import com.esotericsoftware.kryo.util.Util;
-import h0.b.b.a;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Modifier;
@@ -46,6 +43,11 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p106e.p107a.Log;
+import p007b.p106e.p108b.ConstructorAccess;
+import p617h0.p620b.p621a.ObjectInstantiator;
+import p617h0.p620b.p627b.InstantiatorStrategy;
 
 /* loaded from: classes.dex */
 public class Kryo {
@@ -76,55 +78,55 @@ public class Kryo {
     private ReferenceResolver referenceResolver;
     private boolean references;
     private boolean registrationRequired;
-    private a strategy;
+    private InstantiatorStrategy strategy;
     private StreamFactory streamFactory;
     private TaggedFieldSerializerConfig taggedFieldSerializerConfig;
     private volatile Thread thread;
     private boolean warnUnregisteredClasses;
 
-    public static class DefaultInstantiatorStrategy implements a {
-        private a fallbackStrategy;
+    public static class DefaultInstantiatorStrategy implements InstantiatorStrategy {
+        private InstantiatorStrategy fallbackStrategy;
 
-        /* renamed from: com.esotericsoftware.kryo.Kryo$DefaultInstantiatorStrategy$1, reason: invalid class name */
-        public class AnonymousClass1 implements h0.b.a.a {
-            public final /* synthetic */ b val$access;
+        /* renamed from: com.esotericsoftware.kryo.Kryo$DefaultInstantiatorStrategy$1 */
+        public class C106201 implements ObjectInstantiator {
+            public final /* synthetic */ ConstructorAccess val$access;
             public final /* synthetic */ Class val$type;
 
-            public AnonymousClass1(b bVar, Class cls) {
-                this.val$access = bVar;
+            public C106201(ConstructorAccess constructorAccess, Class cls) {
+                this.val$access = constructorAccess;
                 this.val$type = cls;
             }
 
-            @Override // h0.b.a.a
+            @Override // p617h0.p620b.p621a.ObjectInstantiator
             public Object newInstance() {
                 try {
-                    return this.val$access.c();
+                    return this.val$access.m894c();
                 } catch (Exception e) {
-                    StringBuilder sbU = b.d.b.a.a.U("Error constructing instance of class: ");
-                    sbU.append(Util.className(this.val$type));
-                    throw new KryoException(sbU.toString(), e);
+                    StringBuilder sbM833U = outline.m833U("Error constructing instance of class: ");
+                    sbM833U.append(Util.className(this.val$type));
+                    throw new KryoException(sbM833U.toString(), e);
                 }
             }
         }
 
-        /* renamed from: com.esotericsoftware.kryo.Kryo$DefaultInstantiatorStrategy$2, reason: invalid class name */
-        public class AnonymousClass2 implements h0.b.a.a {
+        /* renamed from: com.esotericsoftware.kryo.Kryo$DefaultInstantiatorStrategy$2 */
+        public class C106212 implements ObjectInstantiator {
             public final /* synthetic */ Constructor val$constructor;
             public final /* synthetic */ Class val$type;
 
-            public AnonymousClass2(Constructor constructor, Class cls) {
+            public C106212(Constructor constructor, Class cls) {
                 this.val$constructor = constructor;
                 this.val$type = cls;
             }
 
-            @Override // h0.b.a.a
+            @Override // p617h0.p620b.p621a.ObjectInstantiator
             public Object newInstance() {
                 try {
                     return this.val$constructor.newInstance(new Object[0]);
                 } catch (Exception e) {
-                    StringBuilder sbU = b.d.b.a.a.U("Error constructing instance of class: ");
-                    sbU.append(Util.className(this.val$type));
-                    throw new KryoException(sbU.toString(), e);
+                    StringBuilder sbM833U = outline.m833U("Error constructing instance of class: ");
+                    sbM833U.append(Util.className(this.val$type));
+                    throw new KryoException(sbM833U.toString(), e);
                 }
             }
         }
@@ -132,17 +134,17 @@ public class Kryo {
         public DefaultInstantiatorStrategy() {
         }
 
-        public a getFallbackInstantiatorStrategy() {
+        public InstantiatorStrategy getFallbackInstantiatorStrategy() {
             return this.fallbackStrategy;
         }
 
-        @Override // h0.b.b.a
-        public h0.b.a.a newInstantiatorOf(Class cls) {
+        @Override // p617h0.p620b.p627b.InstantiatorStrategy
+        public ObjectInstantiator newInstantiatorOf(Class cls) {
             Constructor declaredConstructor;
             if (!Util.IS_ANDROID) {
                 if (!((cls.getEnclosingClass() == null || !cls.isMemberClass() || Modifier.isStatic(cls.getModifiers())) ? false : true)) {
                     try {
-                        return new AnonymousClass1(b.a(cls), cls);
+                        return new C106201(ConstructorAccess.m892a(cls), cls);
                     } catch (Exception unused) {
                     }
                 }
@@ -154,22 +156,22 @@ public class Kryo {
                     declaredConstructor = cls.getDeclaredConstructor(null);
                     declaredConstructor.setAccessible(true);
                 }
-                return new AnonymousClass2(declaredConstructor, cls);
+                return new C106212(declaredConstructor, cls);
             } catch (Exception unused3) {
-                a aVar = this.fallbackStrategy;
-                if (aVar != null) {
-                    return aVar.newInstantiatorOf(cls);
+                InstantiatorStrategy instantiatorStrategy = this.fallbackStrategy;
+                if (instantiatorStrategy != null) {
+                    return instantiatorStrategy.newInstantiatorOf(cls);
                 }
                 if (cls.isMemberClass() && !Modifier.isStatic(cls.getModifiers())) {
-                    StringBuilder sbU = b.d.b.a.a.U("Class cannot be created (non-static member class): ");
-                    sbU.append(Util.className(cls));
-                    throw new KryoException(sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("Class cannot be created (non-static member class): ");
+                    sbM833U.append(Util.className(cls));
+                    throw new KryoException(sbM833U.toString());
                 }
-                StringBuilder sbU2 = b.d.b.a.a.U("Class cannot be created (missing no-arg constructor): ");
-                sbU2.append(Util.className(cls));
-                StringBuilder sb = new StringBuilder(sbU2.toString());
+                StringBuilder sbM833U2 = outline.m833U("Class cannot be created (missing no-arg constructor): ");
+                sbM833U2.append(Util.className(cls));
+                StringBuilder sb = new StringBuilder(sbM833U2.toString());
                 if (cls.getSimpleName().equals("")) {
-                    b.d.b.a.a.s0(sb, "\n\tThis is an anonymous class, which is not serializable by default in Kryo. Possible solutions: ", "1. Remove uses of anonymous classes, including double brace initialization, from the containing ", "class. This is the safest solution, as anonymous classes don't have predictable names for serialization.", "\n\t2. Register a FieldSerializer for the containing class and call ");
+                    outline.m876s0(sb, "\n\tThis is an anonymous class, which is not serializable by default in Kryo. Possible solutions: ", "1. Remove uses of anonymous classes, including double brace initialization, from the containing ", "class. This is the safest solution, as anonymous classes don't have predictable names for serialization.", "\n\t2. Register a FieldSerializer for the containing class and call ");
                     sb.append("FieldSerializer#setIgnoreSyntheticFields(false) on it. This is not safe but may be sufficient temporarily. ");
                     sb.append("Use at your own risk.");
                 }
@@ -177,12 +179,12 @@ public class Kryo {
             }
         }
 
-        public void setFallbackInstantiatorStrategy(a aVar) {
-            this.fallbackStrategy = aVar;
+        public void setFallbackInstantiatorStrategy(InstantiatorStrategy instantiatorStrategy) {
+            this.fallbackStrategy = instantiatorStrategy;
         }
 
-        public DefaultInstantiatorStrategy(a aVar) {
-            this.fallbackStrategy = aVar;
+        public DefaultInstantiatorStrategy(InstantiatorStrategy instantiatorStrategy) {
+            this.fallbackStrategy = instantiatorStrategy;
         }
     }
 
@@ -201,14 +203,14 @@ public class Kryo {
     }
 
     private void beginObject() {
-        a.C0064a c0064a = b.e.a.a.a;
+        Log.a aVar = Log.f3007a;
         int i = this.depth;
         if (i != this.maxDepth) {
             this.depth = i + 1;
         } else {
-            StringBuilder sbU = b.d.b.a.a.U("Max depth exceeded: ");
-            sbU.append(this.depth);
-            throw new KryoException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Max depth exceeded: ");
+            sbM833U.append(this.depth);
+            throw new KryoException(sbM833U.toString());
         }
     }
 
@@ -247,7 +249,7 @@ public class Kryo {
             if (this.needsCopyReference != null) {
                 reference(t3);
             }
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             int i = this.copyDepth - 1;
             this.copyDepth = i;
             if (i == 0) {
@@ -284,7 +286,7 @@ public class Kryo {
             if (this.needsCopyReference != null) {
                 reference(t3);
             }
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             this.copyShallow = false;
             int i = this.copyDepth - 1;
             this.copyDepth = i;
@@ -366,7 +368,7 @@ public class Kryo {
         return this.graphContext;
     }
 
-    public h0.b.b.a getInstantiatorStrategy() {
+    public InstantiatorStrategy getInstantiatorStrategy() {
         return this.strategy;
     }
 
@@ -419,7 +421,7 @@ public class Kryo {
             throw new IllegalArgumentException(unregisteredClassMessage(cls));
         }
         if (this.warnUnregisteredClasses) {
-            b.e.a.a.a.a(4, null, unregisteredClassMessage(cls), null);
+            Log.f3007a.m888a(4, null, unregisteredClassMessage(cls), null);
         }
         return this.classResolver.registerImplicit(cls);
     }
@@ -464,7 +466,7 @@ public class Kryo {
 
     public <T> T newInstance(Class<T> cls) {
         Registration registration = getRegistration(cls);
-        h0.b.a.a instantiator = registration.getInstantiator();
+        ObjectInstantiator instantiator = registration.getInstantiator();
         if (instantiator == null) {
             instantiator = newInstantiator(cls);
             registration.setInstantiator(instantiator);
@@ -472,7 +474,7 @@ public class Kryo {
         return (T) instantiator.newInstance();
     }
 
-    public h0.b.a.a newInstantiator(Class cls) {
+    public ObjectInstantiator newInstantiator(Class cls) {
         return this.strategy.newInstantiatorOf(cls);
     }
 
@@ -520,7 +522,7 @@ public class Kryo {
             } else {
                 obj = registration.getSerializer().read(this, input, type);
             }
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             int i2 = this.depth - 1;
             this.depth = i2;
             if (i2 == 0 && this.autoReset) {
@@ -558,7 +560,7 @@ public class Kryo {
             } else {
                 t = (T) getRegistration(cls).getSerializer().read(this, input, cls);
             }
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             int i = this.depth - 1;
             this.depth = i;
             if (i == 0 && this.autoReset) {
@@ -596,7 +598,7 @@ public class Kryo {
             } else {
                 Serializer serializer = getRegistration(cls).getSerializer();
                 if (!serializer.getAcceptsNull() && input.readByte() == 0) {
-                    a.C0064a c0064a = b.e.a.a.a;
+                    Log.a aVar = Log.f3007a;
                     int i = this.depth - 1;
                     this.depth = i;
                     if (i == 0 && this.autoReset) {
@@ -606,7 +608,7 @@ public class Kryo {
                 }
                 t = (T) serializer.read(this, input, cls);
             }
-            a.C0064a c0064a2 = b.e.a.a.a;
+            Log.a aVar2 = Log.f3007a;
             int i2 = this.depth - 1;
             this.depth = i2;
             if (i2 == 0 && this.autoReset) {
@@ -631,7 +633,7 @@ public class Kryo {
         if (z2) {
             varInt = input.readVarInt(true);
             if (varInt == 0) {
-                a.C0064a c0064a = b.e.a.a.a;
+                Log.a aVar = Log.f3007a;
                 this.readObject = null;
                 return -1;
             }
@@ -648,12 +650,12 @@ public class Kryo {
         }
         if (varInt == 1) {
             int iNextReadId = this.referenceResolver.nextReadId(cls);
-            a.C0064a c0064a2 = b.e.a.a.a;
+            Log.a aVar2 = Log.f3007a;
             this.readReferenceIds.add(iNextReadId);
             return this.readReferenceIds.size;
         }
         this.readObject = this.referenceResolver.getReadObject(cls, varInt - 2);
-        a.C0064a c0064a3 = b.e.a.a.a;
+        Log.a aVar3 = Log.f3007a;
         return -1;
     }
 
@@ -697,7 +699,7 @@ public class Kryo {
         if (identityMap != null) {
             identityMap.clear(2048);
         }
-        a.C0064a c0064a = b.e.a.a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     @Deprecated
@@ -727,8 +729,8 @@ public class Kryo {
         this.defaultSerializer = serializerFactory;
     }
 
-    public void setInstantiatorStrategy(h0.b.b.a aVar) {
-        this.strategy = aVar;
+    public void setInstantiatorStrategy(InstantiatorStrategy instantiatorStrategy) {
+        this.strategy = instantiatorStrategy;
     }
 
     public void setMaxDepth(int i) {
@@ -744,7 +746,7 @@ public class Kryo {
         }
         this.references = true;
         this.referenceResolver = referenceResolver;
-        a.C0064a c0064a = b.e.a.a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public boolean setReferences(boolean z2) {
@@ -755,13 +757,13 @@ public class Kryo {
         if (z2 && this.referenceResolver == null) {
             this.referenceResolver = new MapReferenceResolver();
         }
-        a.C0064a c0064a = b.e.a.a.a;
+        Log.a aVar = Log.f3007a;
         return !z2;
     }
 
     public void setRegistrationRequired(boolean z2) {
         this.registrationRequired = z2;
-        a.C0064a c0064a = b.e.a.a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public void setStreamFactory(StreamFactory streamFactory) {
@@ -770,16 +772,16 @@ public class Kryo {
 
     public void setWarnUnregisteredClasses(boolean z2) {
         this.warnUnregisteredClasses = z2;
-        a.C0064a c0064a = b.e.a.a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     public String unregisteredClassMessage(Class cls) {
-        StringBuilder sbU = b.d.b.a.a.U("Class is not registered: ");
-        sbU.append(Util.className(cls));
-        sbU.append("\nNote: To register this class use: kryo.register(");
-        sbU.append(Util.className(cls));
-        sbU.append(".class);");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("Class is not registered: ");
+        sbM833U.append(Util.className(cls));
+        sbM833U.append("\nNote: To register this class use: kryo.register(");
+        sbM833U.append(Util.className(cls));
+        sbM833U.append(".class);");
+        return sbM833U.toString();
     }
 
     public Registration writeClass(Output output, Class cls) {
@@ -825,7 +827,7 @@ public class Kryo {
                 }
                 return;
             }
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             registrationWriteClass.getSerializer().write(this, output, obj);
             int i3 = this.depth - 1;
             this.depth = i3;
@@ -863,7 +865,7 @@ public class Kryo {
                 }
                 return;
             }
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             getRegistration(obj.getClass()).getSerializer().write(this, output, obj);
             int i2 = this.depth - 1;
             this.depth = i2;
@@ -902,7 +904,7 @@ public class Kryo {
                 }
             } else if (!serializer.getAcceptsNull()) {
                 if (obj == null) {
-                    a.C0064a c0064a = b.e.a.a.a;
+                    Log.a aVar = Log.f3007a;
                     output.writeByte((byte) 0);
                     int i2 = this.depth - 1;
                     this.depth = i2;
@@ -914,7 +916,7 @@ public class Kryo {
                 }
                 output.writeByte((byte) 1);
             }
-            a.C0064a c0064a2 = b.e.a.a.a;
+            Log.a aVar2 = Log.f3007a;
             serializer.write(this, output, obj);
             int i3 = this.depth - 1;
             this.depth = i3;
@@ -932,7 +934,7 @@ public class Kryo {
 
     public boolean writeReferenceOrNull(Output output, Object obj, boolean z2) throws KryoException {
         if (obj == null) {
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             output.writeVarInt(0, true);
             return true;
         }
@@ -944,13 +946,13 @@ public class Kryo {
         }
         int writtenId = this.referenceResolver.getWrittenId(obj);
         if (writtenId != -1) {
-            a.C0064a c0064a2 = b.e.a.a.a;
+            Log.a aVar2 = Log.f3007a;
             output.writeVarInt(writtenId + 2, true);
             return true;
         }
         this.referenceResolver.addWrittenObject(obj);
         output.writeVarInt(1, true);
-        a.C0064a c0064a3 = b.e.a.a.a;
+        Log.a aVar3 = Log.f3007a;
         return false;
     }
 
@@ -1077,7 +1079,7 @@ public class Kryo {
         if (i >= 0) {
             return register(new Registration(cls, serializer, i));
         }
-        throw new IllegalArgumentException(b.d.b.a.a.q("id must be >= 0: ", i));
+        throw new IllegalArgumentException(outline.m871q("id must be >= 0: ", i));
     }
 
     public void addDefaultSerializer(Class cls, Class<? extends Serializer> cls2) {
@@ -1097,10 +1099,10 @@ public class Kryo {
         int id2 = registration.getId();
         if (id2 >= 0) {
             getRegistration(registration.getId());
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             return this.classResolver.register(registration);
         }
-        throw new IllegalArgumentException(b.d.b.a.a.q("id must be > 0: ", id2));
+        throw new IllegalArgumentException(outline.m871q("id must be > 0: ", id2));
     }
 
     public void writeObject(Output output, Object obj, Serializer serializer) {
@@ -1126,7 +1128,7 @@ public class Kryo {
                     }
                     return;
                 }
-                a.C0064a c0064a = b.e.a.a.a;
+                Log.a aVar = Log.f3007a;
                 serializer.write(this, output, obj);
                 int i2 = this.depth - 1;
                 this.depth = i2;
@@ -1174,7 +1176,7 @@ public class Kryo {
             if (this.needsCopyReference != null) {
                 reference(t2);
             }
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             int i = this.copyDepth - 1;
             this.copyDepth = i;
             if (i == 0) {
@@ -1213,7 +1215,7 @@ public class Kryo {
                 } else {
                     t = (T) serializer.read(this, input, cls);
                 }
-                a.C0064a c0064a = b.e.a.a.a;
+                Log.a aVar = Log.f3007a;
                 int i = this.depth - 1;
                 this.depth = i;
                 if (i == 0 && this.autoReset) {
@@ -1254,7 +1256,7 @@ public class Kryo {
                     }
                 } else if (!serializer.getAcceptsNull()) {
                     if (obj == null) {
-                        a.C0064a c0064a = b.e.a.a.a;
+                        Log.a aVar = Log.f3007a;
                         output.writeByte((byte) 0);
                         int i2 = this.depth - 1;
                         this.depth = i2;
@@ -1266,7 +1268,7 @@ public class Kryo {
                     }
                     output.writeByte((byte) 1);
                 }
-                a.C0064a c0064a2 = b.e.a.a.a;
+                Log.a aVar2 = Log.f3007a;
                 serializer.write(this, output, obj);
                 int i3 = this.depth - 1;
                 this.depth = i3;
@@ -1312,7 +1314,7 @@ public class Kryo {
             if (this.needsCopyReference != null) {
                 reference(t2);
             }
-            a.C0064a c0064a = b.e.a.a.a;
+            Log.a aVar = Log.f3007a;
             this.copyShallow = false;
             int i = this.copyDepth - 1;
             this.copyDepth = i;
@@ -1356,7 +1358,7 @@ public class Kryo {
                     }
                 } else {
                     if (!serializer.getAcceptsNull() && input.readByte() == 0) {
-                        a.C0064a c0064a = b.e.a.a.a;
+                        Log.a aVar = Log.f3007a;
                         int i = this.depth - 1;
                         this.depth = i;
                         if (i == 0 && this.autoReset) {
@@ -1366,7 +1368,7 @@ public class Kryo {
                     }
                     t = (T) serializer.read(this, input, cls);
                 }
-                a.C0064a c0064a2 = b.e.a.a.a;
+                Log.a aVar2 = Log.f3007a;
                 int i2 = this.depth - 1;
                 this.depth = i2;
                 if (i2 == 0 && this.autoReset) {

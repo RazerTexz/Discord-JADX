@@ -4,8 +4,7 @@ import android.content.Context;
 import android.text.SpannableStringBuilder;
 import androidx.annotation.StringRes;
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.a.k.b;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.activity.Activity;
 import com.discord.api.activity.ActivityEmoji;
 import com.discord.api.activity.ActivityParty;
@@ -18,18 +17,19 @@ import com.discord.utilities.platform.Platform;
 import com.discord.utilities.textprocessing.node.EmojiNode;
 import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
-import d0.t.u;
-import d0.u.a;
-import d0.z.d.m;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+import p007b.p008a.p027k.FormatUtils;
+import p507d0.p580t._Collections;
+import p507d0.p582u.C12169a;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: PresenceUtils.kt */
 /* loaded from: classes2.dex */
 public final class PresenceUtils {
     public static final PresenceUtils INSTANCE = new PresenceUtils();
-    private static final Comparator<Activity> ACTIVITY_COMPARATOR = a.compareBy(PresenceUtils$ACTIVITY_COMPARATOR$1.INSTANCE, PresenceUtils$ACTIVITY_COMPARATOR$2.INSTANCE, PresenceUtils$ACTIVITY_COMPARATOR$3.INSTANCE);
+    private static final Comparator<Activity> ACTIVITY_COMPARATOR = C12169a.compareBy(PresenceUtils2.INSTANCE, PresenceUtils3.INSTANCE, PresenceUtils4.INSTANCE);
 
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
@@ -68,14 +68,14 @@ public final class PresenceUtils {
     }
 
     /* compiled from: PresenceUtils.kt */
-    /* renamed from: com.discord.utilities.presence.PresenceUtils$getStatusDraweeSpanStringBuilder$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements EmojiNode.RenderContext {
+    /* renamed from: com.discord.utilities.presence.PresenceUtils$getStatusDraweeSpanStringBuilder$1 */
+    public static final class C68411 implements EmojiNode.RenderContext {
         public final /* synthetic */ boolean $animateCustomStatusEmoji;
         public final /* synthetic */ Context $context;
         private final Context context;
         private final boolean isAnimationEnabled;
 
-        public AnonymousClass1(Context context, boolean z2) {
+        public C68411(Context context, boolean z2) {
             this.$context = context;
             this.$animateCustomStatusEmoji = z2;
             this.context = context;
@@ -95,7 +95,7 @@ public final class PresenceUtils {
 
         @Override // com.discord.utilities.textprocessing.node.EmojiNode.RenderContext
         public void onEmojiClicked(EmojiNode.EmojiIdAndType emojiIdAndType) {
-            m.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
+            Intrinsics3.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
             EmojiNode.RenderContext.DefaultImpls.onEmojiClicked(this, emojiIdAndType);
         }
     }
@@ -105,11 +105,11 @@ public final class PresenceUtils {
 
     public static final CharSequence getActivityHeader(Context context, Activity activity) {
         Object properName;
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         int iOrdinal = activity.getType().ordinal();
         if (iOrdinal != 0) {
-            return iOrdinal != 1 ? iOrdinal != 2 ? iOrdinal != 3 ? iOrdinal != 5 ? b.h(context, R.string.user_activity_header_playing, new Object[0], null, 4) : b.h(context, R.string.user_activity_header_competing, new Object[]{activity.getName()}, null, 4) : b.h(context, R.string.user_activity_header_watching, new Object[]{activity.getName()}, null, 4) : b.h(context, R.string.user_activity_header_listening, new Object[]{activity.getName()}, null, 4) : b.h(context, R.string.user_activity_header_live_on_platform, new Object[]{activity.getName()}, null, 4);
+            return iOrdinal != 1 ? iOrdinal != 2 ? iOrdinal != 3 ? iOrdinal != 5 ? FormatUtils.m216h(context, C5419R.string.user_activity_header_playing, new Object[0], null, 4) : FormatUtils.m216h(context, C5419R.string.user_activity_header_competing, new Object[]{activity.getName()}, null, 4) : FormatUtils.m216h(context, C5419R.string.user_activity_header_watching, new Object[]{activity.getName()}, null, 4) : FormatUtils.m216h(context, C5419R.string.user_activity_header_listening, new Object[]{activity.getName()}, null, 4) : FormatUtils.m216h(context, C5419R.string.user_activity_header_live_on_platform, new Object[]{activity.getName()}, null, 4);
         }
         ActivityPlatform platform = activity.getPlatform();
         if (platform != null) {
@@ -125,10 +125,10 @@ public final class PresenceUtils {
                 }
             }
             if (properName != null) {
-                return b.h(context, R.string.user_activity_header_playing_on_platform, new Object[]{properName}, null, 4);
+                return FormatUtils.m216h(context, C5419R.string.user_activity_header_playing_on_platform, new Object[]{properName}, null, 4);
             }
         }
-        return b.h(context, R.string.user_activity_header_playing, new Object[0], null, 4);
+        return FormatUtils.m216h(context, C5419R.string.user_activity_header_playing, new Object[0], null, 4);
     }
 
     private final CharSequence getActivityString(Context context, Activity activityModel) {
@@ -138,7 +138,7 @@ public final class PresenceUtils {
         }
         int iOrdinal = type.ordinal();
         if (iOrdinal == 0) {
-            return b.h(context, R.string.playing_game, new Object[]{activityModel.getName()}, null, 4);
+            return FormatUtils.m216h(context, C5419R.string.playing_game, new Object[]{activityModel.getName()}, null, 4);
         }
         if (iOrdinal == 1) {
             Object[] objArr = new Object[1];
@@ -147,16 +147,16 @@ public final class PresenceUtils {
                 details = activityModel.getName();
             }
             objArr[0] = details;
-            return b.h(context, R.string.streaming, objArr, null, 4);
+            return FormatUtils.m216h(context, C5419R.string.streaming, objArr, null, 4);
         }
         if (iOrdinal == 2) {
-            return b.h(context, R.string.listening_to, new Object[]{activityModel.getName()}, null, 4);
+            return FormatUtils.m216h(context, C5419R.string.listening_to, new Object[]{activityModel.getName()}, null, 4);
         }
         if (iOrdinal != 3) {
             if (iOrdinal != 5) {
                 return null;
             }
-            return b.h(context, R.string.competing, new Object[]{activityModel.getName()}, null, 4);
+            return FormatUtils.m216h(context, C5419R.string.competing, new Object[]{activityModel.getName()}, null, 4);
         }
         Object[] objArr2 = new Object[1];
         String details2 = activityModel.getDetails();
@@ -164,12 +164,12 @@ public final class PresenceUtils {
             details2 = activityModel.getName();
         }
         objArr2[0] = details2;
-        return b.h(context, R.string.watching, objArr2, null, 4);
+        return FormatUtils.m216h(context, C5419R.string.watching, objArr2, null, 4);
     }
 
     private final CharSequence getApplicationStreamingString(Context context, Presence presence) {
         Activity playingActivity;
-        return (presence == null || (playingActivity = getPlayingActivity(presence)) == null) ? b.h(context, R.string.streaming_a_game, new Object[0], null, 4) : b.h(context, R.string.streaming, new Object[]{playingActivity.getName()}, null, 4);
+        return (presence == null || (playingActivity = getPlayingActivity(presence)) == null) ? FormatUtils.m216h(context, C5419R.string.streaming_a_game, new Object[0], null, 4) : FormatUtils.m216h(context, C5419R.string.streaming, new Object[]{playingActivity.getName()}, null, 4);
     }
 
     private final DraweeSpanStringBuilder getStatusDraweeSpanStringBuilder(Context context, Presence presence, boolean isStreamingApplication, boolean hideEmoji, boolean showFallbackStatusText, boolean animateCustomStatusEmoji) {
@@ -182,7 +182,7 @@ public final class PresenceUtils {
             emojiNodeFrom$default = EmojiNode.Companion.from$default(companion, 0, companion.generateEmojiIdAndType(emoji), 1, (Object) null);
         }
         if (emojiNodeFrom$default != null) {
-            emojiNodeFrom$default.render((SpannableStringBuilder) draweeSpanStringBuilder, new AnonymousClass1(context, animateCustomStatusEmoji));
+            emojiNodeFrom$default.render((SpannableStringBuilder) draweeSpanStringBuilder, new C68411(context, animateCustomStatusEmoji));
         }
         CharSequence statusText = getStatusText(context, presence, isStreamingApplication, showFallbackStatusText);
         if (statusText != null) {
@@ -212,7 +212,7 @@ public final class PresenceUtils {
             return activityString;
         }
         if (showFallbackStatusText) {
-            return b.h(context, getStatusText(presence), new Object[0], null, 4);
+            return FormatUtils.m216h(context, getStatusText(presence), new Object[0], null, 4);
         }
         return null;
     }
@@ -225,10 +225,10 @@ public final class PresenceUtils {
     }
 
     public static final void setPresenceText(Presence presence, boolean isStreamingApplication, SimpleDraweeSpanTextView textView, boolean showFallbackStatusText, boolean hideEmoji) {
-        m.checkNotNullParameter(textView, "textView");
+        Intrinsics3.checkNotNullParameter(textView, "textView");
         PresenceUtils presenceUtils = INSTANCE;
         Context context = textView.getContext();
-        m.checkNotNullExpressionValue(context, "textView.context");
+        Intrinsics3.checkNotNullExpressionValue(context, "textView.context");
         DraweeSpanStringBuilder statusDraweeSpanStringBuilder$default = getStatusDraweeSpanStringBuilder$default(presenceUtils, context, presence, isStreamingApplication, hideEmoji, showFallbackStatusText, false, 32, null);
         textView.setDraweeSpanStringBuilder(statusDraweeSpanStringBuilder$default);
         textView.setVisibility(statusDraweeSpanStringBuilder$default.length() > 0 ? 0 : 8);
@@ -250,8 +250,8 @@ public final class PresenceUtils {
 
     public final Activity getActivityByType(List<Activity> list, ActivityType activityType) {
         Object next;
-        m.checkNotNullParameter(list, "$this$getActivityByType");
-        m.checkNotNullParameter(activityType, "type");
+        Intrinsics3.checkNotNullParameter(list, "$this$getActivityByType");
+        Intrinsics3.checkNotNullParameter(activityType, "type");
         Iterator<T> it = list.iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -268,16 +268,16 @@ public final class PresenceUtils {
 
     public final long getCurrentSize(ActivityParty activityParty) {
         Long l;
-        m.checkNotNullParameter(activityParty, "$this$currentSize");
-        List<Long> listB = activityParty.b();
-        if (listB == null || (l = (Long) u.first((List) listB)) == null) {
+        Intrinsics3.checkNotNullParameter(activityParty, "$this$currentSize");
+        List<Long> listM7559b = activityParty.m7559b();
+        if (listM7559b == null || (l = (Long) _Collections.first((List) listM7559b)) == null) {
             return 0L;
         }
         return l.longValue();
     }
 
     public final Activity getCustomStatusActivity(Presence presence) {
-        m.checkNotNullParameter(presence, "$this$customStatusActivity");
+        Intrinsics3.checkNotNullParameter(presence, "$this$customStatusActivity");
         List<Activity> activities = presence.getActivities();
         if (activities != null) {
             return getActivityByType(activities, ActivityType.CUSTOM_STATUS);
@@ -287,21 +287,21 @@ public final class PresenceUtils {
 
     public final long getMaxSize(ActivityParty activityParty) {
         Long l;
-        m.checkNotNullParameter(activityParty, "$this$maxSize");
-        List<Long> listB = activityParty.b();
-        if (listB == null || (l = (Long) u.last((List) listB)) == null) {
+        Intrinsics3.checkNotNullParameter(activityParty, "$this$maxSize");
+        List<Long> listM7559b = activityParty.m7559b();
+        if (listM7559b == null || (l = (Long) _Collections.last((List) listM7559b)) == null) {
             return 0L;
         }
         return l.longValue();
     }
 
     public final long getNumOpenSlots(ActivityParty activityParty) {
-        m.checkNotNullParameter(activityParty, "$this$numOpenSlots");
+        Intrinsics3.checkNotNullParameter(activityParty, "$this$numOpenSlots");
         return getMaxSize(activityParty) - getCurrentSize(activityParty);
     }
 
     public final Activity getPlayingActivity(Presence presence) {
-        m.checkNotNullParameter(presence, "$this$playingActivity");
+        Intrinsics3.checkNotNullParameter(presence, "$this$playingActivity");
         List<Activity> activities = presence.getActivities();
         if (activities != null) {
             return getActivityByType(activities, ActivityType.PLAYING);
@@ -310,7 +310,7 @@ public final class PresenceUtils {
     }
 
     public final Activity getPrimaryActivity(Presence presence) {
-        m.checkNotNullParameter(presence, "$this$primaryActivity");
+        Intrinsics3.checkNotNullParameter(presence, "$this$primaryActivity");
         List<Activity> activities = presence.getActivities();
         if (activities != null) {
             return getPrimaryActivity(activities);
@@ -319,7 +319,7 @@ public final class PresenceUtils {
     }
 
     public final Activity getSpotifyListeningActivity(Presence presence) {
-        m.checkNotNullParameter(presence, "$this$spotifyListeningActivity");
+        Intrinsics3.checkNotNullParameter(presence, "$this$spotifyListeningActivity");
         List<Activity> activities = presence.getActivities();
         if (activities != null) {
             return getSpotifyListeningActivity(activities);
@@ -328,7 +328,7 @@ public final class PresenceUtils {
     }
 
     public final Activity getStageChannelActivity(Presence presence) {
-        m.checkNotNullParameter(presence, "$this$stageChannelActivity");
+        Intrinsics3.checkNotNullParameter(presence, "$this$stageChannelActivity");
         List<Activity> activities = presence.getActivities();
         if (activities != null) {
             return getStageChannelActivity(activities);
@@ -338,12 +338,12 @@ public final class PresenceUtils {
 
     @StringRes
     public final int getStatusStringResForPresence(Presence presence) {
-        m.checkNotNullParameter(presence, "presence");
+        Intrinsics3.checkNotNullParameter(presence, "presence");
         return getStatusText(presence);
     }
 
     public final Activity getStreamingActivity(Presence presence) {
-        m.checkNotNullParameter(presence, "$this$streamingActivity");
+        Intrinsics3.checkNotNullParameter(presence, "$this$streamingActivity");
         List<Activity> activities = presence.getActivities();
         if (activities != null) {
             return getActivityByType(activities, ActivityType.STREAMING);
@@ -352,10 +352,10 @@ public final class PresenceUtils {
     }
 
     public final boolean isMobile(ClientStatuses clientStatuses) {
-        m.checkNotNullParameter(clientStatuses, "$this$isMobile");
-        ClientStatus clientStatusB = clientStatuses.b();
+        Intrinsics3.checkNotNullParameter(clientStatuses, "$this$isMobile");
+        ClientStatus clientStatusM8150b = clientStatuses.m8150b();
         ClientStatus clientStatus = ClientStatus.ONLINE;
-        return (clientStatusB != clientStatus || clientStatuses.c() == clientStatus || clientStatuses.a() == clientStatus) ? false : true;
+        return (clientStatusM8150b != clientStatus || clientStatuses.m8151c() == clientStatus || clientStatuses.m8149a() == clientStatus) ? false : true;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:22:? A[RETURN, SYNTHETIC] */
@@ -374,7 +374,7 @@ public final class PresenceUtils {
             } else {
                 Iterator<T> it = activities.iterator();
                 while (it.hasNext()) {
-                    if (ActivityUtilsKt.isRichPresence((Activity) it.next())) {
+                    if (ActivityUtils.isRichPresence((Activity) it.next())) {
                         z2 = true;
                         break;
                     }
@@ -396,7 +396,7 @@ public final class PresenceUtils {
                 break;
             }
             next = it.next();
-            if (ActivityUtilsKt.isSpotifyActivity((Activity) next)) {
+            if (ActivityUtils.isSpotifyActivity((Activity) next)) {
                 break;
             }
         }
@@ -412,7 +412,7 @@ public final class PresenceUtils {
                 break;
             }
             next = it.next();
-            if (ActivityUtilsKt.isStageChannelActivity((Activity) next)) {
+            if (ActivityUtils.isStageChannelActivity((Activity) next)) {
                 break;
             }
         }
@@ -421,7 +421,7 @@ public final class PresenceUtils {
 
     public final Activity getPrimaryActivity(List<Activity> list) {
         Object next;
-        m.checkNotNullParameter(list, "$this$primaryActivity");
+        Intrinsics3.checkNotNullParameter(list, "$this$primaryActivity");
         Iterator<T> it = list.iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -441,15 +441,15 @@ public final class PresenceUtils {
         if (status != null) {
             int iOrdinal = status.ordinal();
             if (iOrdinal == 0) {
-                return R.string.status_online;
+                return C5419R.string.status_online;
             }
             if (iOrdinal == 1) {
-                return R.string.status_idle;
+                return C5419R.string.status_idle;
             }
             if (iOrdinal == 2) {
-                return R.string.status_dnd;
+                return C5419R.string.status_dnd;
             }
         }
-        return R.string.status_offline;
+        return C5419R.string.status_offline;
     }
 }

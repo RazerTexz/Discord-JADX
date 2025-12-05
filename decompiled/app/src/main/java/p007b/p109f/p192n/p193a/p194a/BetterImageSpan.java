@@ -1,0 +1,91 @@
+package p007b.p109f.p192n.p193a.p194a;
+
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.text.style.ReplacementSpan;
+import androidx.annotation.Nullable;
+
+/* compiled from: BetterImageSpan.java */
+/* renamed from: b.f.n.a.a.a, reason: use source file name */
+/* loaded from: classes3.dex */
+public class BetterImageSpan extends ReplacementSpan {
+
+    /* renamed from: j */
+    public int f4359j;
+
+    /* renamed from: k */
+    public int f4360k;
+
+    /* renamed from: l */
+    public Rect f4361l;
+
+    /* renamed from: m */
+    public final int f4362m;
+
+    /* renamed from: n */
+    public final Paint.FontMetricsInt f4363n = new Paint.FontMetricsInt();
+
+    /* renamed from: o */
+    public final Drawable f4364o;
+
+    public BetterImageSpan(Drawable drawable, int i) {
+        this.f4364o = drawable;
+        this.f4362m = i;
+        m1592b();
+    }
+
+    /* renamed from: a */
+    public final int m1591a(Paint.FontMetricsInt fontMetricsInt) {
+        int i = this.f4362m;
+        if (i == 0) {
+            return fontMetricsInt.descent - this.f4360k;
+        }
+        if (i != 2) {
+            return -this.f4360k;
+        }
+        int i2 = fontMetricsInt.descent;
+        int i3 = fontMetricsInt.ascent;
+        return (((i2 - i3) - this.f4360k) / 2) + i3;
+    }
+
+    /* renamed from: b */
+    public void m1592b() {
+        Rect bounds = this.f4364o.getBounds();
+        this.f4361l = bounds;
+        this.f4359j = bounds.width();
+        this.f4360k = this.f4361l.height();
+    }
+
+    @Override // android.text.style.ReplacementSpan
+    public void draw(Canvas canvas, CharSequence charSequence, int i, int i2, float f, int i3, int i4, int i5, Paint paint) {
+        paint.getFontMetricsInt(this.f4363n);
+        canvas.translate(f, m1591a(this.f4363n) + i4);
+        this.f4364o.draw(canvas);
+        canvas.translate(-f, -r2);
+    }
+
+    @Override // android.text.style.ReplacementSpan
+    public int getSize(Paint paint, CharSequence charSequence, int i, int i2, @Nullable Paint.FontMetricsInt fontMetricsInt) {
+        m1592b();
+        if (fontMetricsInt == null) {
+            return this.f4359j;
+        }
+        int iM1591a = m1591a(fontMetricsInt);
+        int i3 = this.f4360k + iM1591a;
+        if (iM1591a < fontMetricsInt.ascent) {
+            fontMetricsInt.ascent = iM1591a;
+        }
+        if (iM1591a < fontMetricsInt.top) {
+            fontMetricsInt.top = iM1591a;
+        }
+        if (i3 > fontMetricsInt.descent) {
+            fontMetricsInt.descent = i3;
+        }
+        if (i3 > fontMetricsInt.bottom) {
+            fontMetricsInt.bottom = i3;
+        }
+        return this.f4359j;
+    }
+}

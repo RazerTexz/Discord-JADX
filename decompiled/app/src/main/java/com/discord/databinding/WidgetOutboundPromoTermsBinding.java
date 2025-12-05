@@ -10,25 +10,27 @@ import com.discord.utilities.view.text.LinkifiedTextView;
 /* loaded from: classes.dex */
 public final class WidgetOutboundPromoTermsBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f17345a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2507b;
+    public final TextView f17346b;
 
+    /* renamed from: c */
     @NonNull
-    public final LinkifiedTextView c;
+    public final LinkifiedTextView f17347c;
 
     public WidgetOutboundPromoTermsBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull LinkifiedTextView linkifiedTextView) {
-        this.a = linearLayout;
-        this.f2507b = textView;
-        this.c = linkifiedTextView;
+        this.f17345a = linearLayout;
+        this.f17346b = textView;
+        this.f17347c = linkifiedTextView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17345a;
     }
 }

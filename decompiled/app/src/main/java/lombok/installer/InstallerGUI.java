@@ -142,12 +142,12 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$1, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$1 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$1.SCL.lombok */
-    class AnonymousClass1 implements Runnable {
+    class RunnableC128701 implements Runnable {
         private final /* synthetic */ Throwable val$t;
 
-        AnonymousClass1(Throwable th) {
+        RunnableC128701(Throwable th) {
             this.val$t = th;
         }
 
@@ -164,7 +164,7 @@ public class InstallerGUI {
     }
 
     private void handleException(Throwable t) {
-        SwingUtilities.invokeLater(new AnonymousClass1(t));
+        SwingUtilities.invokeLater(new RunnableC128701(t));
     }
 
     private Component buildHowIWorkArea() {
@@ -180,7 +180,7 @@ public class InstallerGUI {
         JButton backButton = new JButton("Okay - Good to know!");
         buttonBar.add(Box.createHorizontalGlue());
         buttonBar.add(backButton);
-        backButton.addActionListener(new AnonymousClass2());
+        backButton.addActionListener(new C128752());
         constraints.gridy = 2;
         container.add(buttonBar, constraints);
         container.setPreferredSize(new Dimension(INSTALLER_WINDOW_WIDTH, 415));
@@ -188,10 +188,10 @@ public class InstallerGUI {
         return container;
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$2, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$2 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$2.SCL.lombok */
-    class AnonymousClass2 implements ActionListener {
-        AnonymousClass2() {
+    class C128752 implements ActionListener {
+        C128752() {
         }
 
         public void actionPerformed(ActionEvent e) {
@@ -311,8 +311,8 @@ public class InstallerGUI {
         buttonBar.add(Box.createHorizontalGlue());
         JButton yesButton = new JButton("Yes - uninstall Lombok");
         buttonBar.add(yesButton);
-        noButton.addActionListener(new AnonymousClass3());
-        yesButton.addActionListener(new AnonymousClass4());
+        noButton.addActionListener(new C128763());
+        yesButton.addActionListener(new C128774());
         constraints.gridy = 4;
         container.add(buttonBar, constraints);
         container.setPreferredSize(new Dimension(INSTALLER_WINDOW_WIDTH, 415));
@@ -320,10 +320,10 @@ public class InstallerGUI {
         return container;
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$3, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$3 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$3.SCL.lombok */
-    class AnonymousClass3 implements ActionListener {
-        AnonymousClass3() {
+    class C128763 implements ActionListener {
+        C128763() {
         }
 
         public void actionPerformed(ActionEvent e) {
@@ -334,10 +334,10 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$4, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$4 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$4.SCL.lombok */
-    class AnonymousClass4 implements ActionListener {
-        AnonymousClass4() {
+    class C128774 implements ActionListener {
+        C128774() {
         }
 
         public void actionPerformed(ActionEvent e) {
@@ -386,16 +386,16 @@ public class InstallerGUI {
         idesListScroll.setBackground(Color.WHITE);
         idesListScroll.getViewport().setBackground(Color.WHITE);
         container.add(idesListScroll, constraints);
-        Thread findIdesThread = new AnonymousClass5();
+        Thread findIdesThread = new C128785();
         findIdesThread.start();
         Box buttonBar = Box.createHorizontalBox();
         JButton specifyIdeLocationButton = new JButton("Specify location...");
         buttonBar.add(specifyIdeLocationButton);
-        specifyIdeLocationButton.addActionListener(new AnonymousClass6());
+        specifyIdeLocationButton.addActionListener(new C128796());
         buttonBar.add(Box.createHorizontalGlue());
         this.installButton = new JButton("Install / Update");
         buttonBar.add(this.installButton);
-        this.installButton.addActionListener(new AnonymousClass7());
+        this.installButton.addActionListener(new C128807());
         constraints.gridy = 4;
         constraints.weightx = 0.0d;
         container.add(buttonBar, constraints);
@@ -403,11 +403,11 @@ public class InstallerGUI {
         constraints.fill = 0;
         JHyperLink showMe = new JHyperLink("Show me what this installer will do to my IDE installation.");
         container.add(showMe, constraints);
-        showMe.addActionListener(new AnonymousClass8());
+        showMe.addActionListener(new C128818());
         constraints.gridy = 6;
         this.uninstallButton = new JHyperLink("Uninstall lombok from selected IDE installations.");
         this.uninstallPlaceholder = new JLabel("<html>&nbsp;</html>");
-        this.uninstallButton.addActionListener(new AnonymousClass9());
+        this.uninstallButton.addActionListener(new C128829());
         container.add(this.uninstallButton, constraints);
         this.uninstallPlaceholder.setVisible(false);
         container.add(this.uninstallPlaceholder, constraints);
@@ -416,13 +416,13 @@ public class InstallerGUI {
         return container;
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$5, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$5 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$5.SCL.lombok */
-    class AnonymousClass5 extends Thread {
-        AnonymousClass5() {
+    class C128785 extends Thread {
+        C128785() {
         }
 
-        static /* synthetic */ InstallerGUI access$0(AnonymousClass5 anonymousClass5) {
+        static /* synthetic */ InstallerGUI access$0(C128785 c128785) {
             return InstallerGUI.this;
         }
 
@@ -453,32 +453,32 @@ public class InstallerGUI {
             public void run() {
                 for (IdeLocation location : this.val$locations) {
                     try {
-                        InstallerGUI.access$7(AnonymousClass5.access$0(AnonymousClass5.this)).addLocation(location);
+                        InstallerGUI.access$7(C128785.access$0(C128785.this)).addLocation(location);
                     } catch (Throwable t) {
-                        InstallerGUI.access$8(AnonymousClass5.access$0(AnonymousClass5.this), t);
+                        InstallerGUI.access$8(C128785.access$0(C128785.this), t);
                     }
                 }
                 for (CorruptedIdeLocationException problem : this.val$problems) {
-                    problem.showDialog(InstallerGUI.access$0(AnonymousClass5.access$0(AnonymousClass5.this)));
+                    problem.showDialog(InstallerGUI.access$0(C128785.access$0(C128785.this)));
                 }
-                InstallerGUI.access$9(AnonymousClass5.access$0(AnonymousClass5.this)).setVisible(false);
+                InstallerGUI.access$9(C128785.access$0(C128785.this)).setVisible(false);
                 if (this.val$locations.size() + this.val$problems.size() == 0) {
-                    JOptionPane.showMessageDialog(InstallerGUI.access$0(AnonymousClass5.access$0(AnonymousClass5.this)), "I can't find any IDEs on your computer.\nIf you have IDEs installed on this computer, please use the 'Specify Location...' button to manually point out the \nlocation of your IDE installation to me. Thanks!", "Can't find IDE", 1);
+                    JOptionPane.showMessageDialog(InstallerGUI.access$0(C128785.access$0(C128785.this)), "I can't find any IDEs on your computer.\nIf you have IDEs installed on this computer, please use the 'Specify Location...' button to manually point out the \nlocation of your IDE installation to me. Thanks!", "Can't find IDE", 1);
                 }
             }
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$6, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$6 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$6.SCL.lombok */
-    class AnonymousClass6 implements ActionListener {
-        AnonymousClass6() {
+    class C128796 implements ActionListener {
+        C128796() {
         }
 
         public void actionPerformed(ActionEvent event) {
             List<Pattern> exeNames = Installer.getIdeExecutableNames();
             String file = null;
-            if (OsUtils.getOS() == OsUtils.OS.MAC_OS_X) {
+            if (OsUtils.getOS() == OsUtils.EnumC12884OS.MAC_OS_X) {
                 FileDialog chooser = new FileDialog(InstallerGUI.access$0(InstallerGUI.this));
                 chooser.setMode(0);
                 chooser.setFilenameFilter(new AnonymousClass1(exeNames));
@@ -560,10 +560,10 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$7, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$7 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$7.SCL.lombok */
-    class AnonymousClass7 implements ActionListener {
-        AnonymousClass7() {
+    class C128807 implements ActionListener {
+        C128807() {
         }
 
         public void actionPerformed(ActionEvent e) {
@@ -576,10 +576,10 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$8, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$8 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$8.SCL.lombok */
-    class AnonymousClass8 implements ActionListener {
-        AnonymousClass8() {
+    class C128818 implements ActionListener {
+        C128818() {
         }
 
         public void actionPerformed(ActionEvent e) {
@@ -587,10 +587,10 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$9, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$9 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$9.SCL.lombok */
-    class AnonymousClass9 implements ActionListener {
-        AnonymousClass9() {
+    class C128829 implements ActionListener {
+        C128829() {
         }
 
         public void actionPerformed(ActionEvent e) {
@@ -653,25 +653,25 @@ public class InstallerGUI {
         this.appWindow.setContentPane(spinner);
         AtomicInteger successes = new AtomicInteger();
         AtomicBoolean failure = new AtomicBoolean();
-        new AnonymousClass10(toInstall, successes, failure, appWindowContent).start();
+        new C1287110(toInstall, successes, failure, appWindowContent).start();
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$10, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$10 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10.SCL.lombok */
-    class AnonymousClass10 extends Thread {
+    class C1287110 extends Thread {
         private final /* synthetic */ List val$toInstall;
         private final /* synthetic */ AtomicInteger val$successes;
         private final /* synthetic */ AtomicBoolean val$failure;
         private final /* synthetic */ Container val$appWindowContent;
 
-        AnonymousClass10(List list, AtomicInteger atomicInteger, AtomicBoolean atomicBoolean, Container container) {
+        C1287110(List list, AtomicInteger atomicInteger, AtomicBoolean atomicBoolean, Container container) {
             this.val$toInstall = list;
             this.val$successes = atomicInteger;
             this.val$failure = atomicBoolean;
             this.val$appWindowContent = container;
         }
 
-        static /* synthetic */ InstallerGUI access$0(AnonymousClass10 anonymousClass10) {
+        static /* synthetic */ InstallerGUI access$0(C1287110 c1287110) {
             return InstallerGUI.this;
         }
 
@@ -722,7 +722,7 @@ public class InstallerGUI {
 
             @Override // java.lang.Runnable
             public void run() {
-                JOptionPane.showMessageDialog(InstallerGUI.access$0(AnonymousClass10.access$0(AnonymousClass10.this)), this.val$e.getMessage(), "Install Problem", 2);
+                JOptionPane.showMessageDialog(InstallerGUI.access$0(C1287110.access$0(C1287110.this)), this.val$e.getMessage(), "Install Problem", 2);
             }
         }
 
@@ -737,7 +737,7 @@ public class InstallerGUI {
 
             @Override // java.lang.Runnable
             public void run() {
-                JOptionPane.showMessageDialog(InstallerGUI.access$0(AnonymousClass10.access$0(AnonymousClass10.this)), this.val$e.getMessage(), "Install Problem", 0);
+                JOptionPane.showMessageDialog(InstallerGUI.access$0(C1287110.access$0(C1287110.this)), this.val$e.getMessage(), "Install Problem", 0);
             }
         }
 
@@ -752,13 +752,13 @@ public class InstallerGUI {
 
             @Override // java.lang.Runnable
             public void run() {
-                InstallerGUI.access$0(AnonymousClass10.access$0(AnonymousClass10.this)).setContentPane(this.val$appWindowContent);
-                InstallerGUI.access$0(AnonymousClass10.access$0(AnonymousClass10.this)).pack();
+                InstallerGUI.access$0(C1287110.access$0(C1287110.this)).setContentPane(this.val$appWindowContent);
+                InstallerGUI.access$0(C1287110.access$0(C1287110.this)).pack();
                 StringBuilder installSpecific = new StringBuilder();
-                for (String installSpecificMessage : InstallerGUI.access$13(AnonymousClass10.access$0(AnonymousClass10.this))) {
+                for (String installSpecificMessage : InstallerGUI.access$13(C1287110.access$0(C1287110.this))) {
                     installSpecific.append("<br>").append(installSpecificMessage);
                 }
-                InstallerGUI.access$14(AnonymousClass10.access$0(AnonymousClass10.this), installSpecific.toString());
+                InstallerGUI.access$14(C1287110.access$0(C1287110.this), installSpecific.toString());
             }
         }
 
@@ -799,21 +799,21 @@ public class InstallerGUI {
         Container originalContentPane = this.appWindow.getContentPane();
         this.appWindow.setContentPane(spinner);
         AtomicInteger successes = new AtomicInteger();
-        new Thread(new AnonymousClass11(successes, originalContentPane)).start();
+        new Thread(new RunnableC1287211(successes, originalContentPane)).start();
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$11, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$11 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11.SCL.lombok */
-    class AnonymousClass11 implements Runnable {
+    class RunnableC1287211 implements Runnable {
         private final /* synthetic */ AtomicInteger val$successes;
         private final /* synthetic */ Container val$originalContentPane;
 
-        AnonymousClass11(AtomicInteger atomicInteger, Container container) {
+        RunnableC1287211(AtomicInteger atomicInteger, Container container) {
             this.val$successes = atomicInteger;
             this.val$originalContentPane = container;
         }
 
-        static /* synthetic */ InstallerGUI access$0(AnonymousClass11 anonymousClass11) {
+        static /* synthetic */ InstallerGUI access$0(RunnableC1287211 runnableC1287211) {
             return InstallerGUI.this;
         }
 
@@ -855,7 +855,7 @@ public class InstallerGUI {
 
             @Override // java.lang.Runnable
             public void run() {
-                JOptionPane.showMessageDialog(InstallerGUI.access$0(AnonymousClass11.access$0(AnonymousClass11.this)), this.val$e.getMessage(), "Uninstall Problem", 2);
+                JOptionPane.showMessageDialog(InstallerGUI.access$0(RunnableC1287211.access$0(RunnableC1287211.this)), this.val$e.getMessage(), "Uninstall Problem", 2);
             }
         }
 
@@ -870,7 +870,7 @@ public class InstallerGUI {
 
             @Override // java.lang.Runnable
             public void run() {
-                JOptionPane.showMessageDialog(InstallerGUI.access$0(AnonymousClass11.access$0(AnonymousClass11.this)), this.val$e.getMessage(), "Uninstall Problem", 0);
+                JOptionPane.showMessageDialog(InstallerGUI.access$0(RunnableC1287211.access$0(RunnableC1287211.this)), this.val$e.getMessage(), "Uninstall Problem", 0);
             }
         }
 
@@ -888,12 +888,12 @@ public class InstallerGUI {
             @Override // java.lang.Runnable
             public void run() {
                 if (this.val$successes.get() > 0) {
-                    JOptionPane.showMessageDialog(InstallerGUI.access$0(AnonymousClass11.access$0(AnonymousClass11.this)), "Lombok has been removed from the selected IDE installations.", "Uninstall successful", 1);
-                    InstallerGUI.access$0(AnonymousClass11.access$0(AnonymousClass11.this)).setVisible(false);
+                    JOptionPane.showMessageDialog(InstallerGUI.access$0(RunnableC1287211.access$0(RunnableC1287211.this)), "Lombok has been removed from the selected IDE installations.", "Uninstall successful", 1);
+                    InstallerGUI.access$0(RunnableC1287211.access$0(RunnableC1287211.this)).setVisible(false);
                     System.exit(0);
                     return;
                 }
-                InstallerGUI.access$0(AnonymousClass11.access$0(AnonymousClass11.this)).setContentPane(this.val$originalContentPane);
+                InstallerGUI.access$0(RunnableC1287211.access$0(RunnableC1287211.this)).setContentPane(this.val$originalContentPane);
             }
         }
     }
@@ -951,7 +951,7 @@ public class InstallerGUI {
             box.add(new JLabel(new ImageIcon(location.getIdeIcon())));
             box.add(checkbox);
             checkbox.setSelected(true);
-            checkbox.addActionListener(new AnonymousClass1(location, checkbox));
+            checkbox.addActionListener(new C128831(location, checkbox));
             if (location.hasLombok()) {
                 box.add(new JLabel(new ImageIcon(Installer.class.getResource("lombokIcon.png"))));
             }
@@ -962,13 +962,13 @@ public class InstallerGUI {
             fireSelectionChange();
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$IdesList$1, reason: invalid class name */
+        /* renamed from: lombok.installer.InstallerGUI$IdesList$1 */
         /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$IdesList$1.SCL.lombok */
-        class AnonymousClass1 implements ActionListener {
+        class C128831 implements ActionListener {
             private final /* synthetic */ IdeLocation val$location;
             private final /* synthetic */ JCheckBox val$checkbox;
 
-            AnonymousClass1(IdeLocation ideLocation, JCheckBox jCheckBox) {
+            C128831(IdeLocation ideLocation, JCheckBox jCheckBox) {
                 this.val$location = ideLocation;
                 this.val$checkbox = jCheckBox;
             }
@@ -1051,15 +1051,15 @@ public class InstallerGUI {
         buttonBar.add(changelogLink);
         buttonBar.add(Box.createHorizontalGlue());
         JButton quitButton = new JButton("Quit Installer");
-        quitButton.addActionListener(new AnonymousClass12());
+        quitButton.addActionListener(new C1287312());
         buttonBar.add(quitButton);
         return buttonBar;
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$12, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$12 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$12.SCL.lombok */
-    class AnonymousClass12 implements ActionListener {
-        AnonymousClass12() {
+    class C1287312 implements ActionListener {
+        C1287312() {
         }
 
         public void actionPerformed(ActionEvent e) {
@@ -1068,14 +1068,14 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$13, reason: invalid class name */
+    /* renamed from: lombok.installer.InstallerGUI$13 */
     /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$13.SCL.lombok */
-    class AnonymousClass13 implements ActionListener {
+    class C1287413 implements ActionListener {
         private final /* synthetic */ JHyperLink val$hyperlink;
         private final /* synthetic */ URI val$location;
         private static /* synthetic */ int[] $SWITCH_TABLE$lombok$installer$OsUtils$OS;
 
-        AnonymousClass13(JHyperLink jHyperLink, URI uri) {
+        C1287413(JHyperLink jHyperLink, URI uri) {
             this.val$hyperlink = jHyperLink;
             this.val$location = uri;
         }
@@ -1085,17 +1085,17 @@ public class InstallerGUI {
             if (iArr != null) {
                 return iArr;
             }
-            int[] iArr2 = new int[OsUtils.OS.valuesCustom().length];
+            int[] iArr2 = new int[OsUtils.EnumC12884OS.valuesCustom().length];
             try {
-                iArr2[OsUtils.OS.MAC_OS_X.ordinal()] = 1;
+                iArr2[OsUtils.EnumC12884OS.MAC_OS_X.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                iArr2[OsUtils.OS.UNIX.ordinal()] = 3;
+                iArr2[OsUtils.EnumC12884OS.UNIX.ordinal()] = 3;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                iArr2[OsUtils.OS.WINDOWS.ordinal()] = 2;
+                iArr2[OsUtils.EnumC12884OS.WINDOWS.ordinal()] = 2;
             } catch (NoSuchFieldError unused3) {
             }
             $SWITCH_TABLE$lombok$installer$OsUtils$OS = iArr2;
@@ -1131,14 +1131,14 @@ public class InstallerGUI {
     }
 
     private ActionListener openBrowser(JHyperLink hyperlink, URI location) {
-        return new AnonymousClass13(hyperlink, location);
+        return new C1287413(hyperlink, location);
     }
 
     public void show() {
         this.appWindow.setVisible(true);
-        if (OsUtils.getOS() == OsUtils.OS.MAC_OS_X) {
+        if (OsUtils.getOS() == OsUtils.EnumC12884OS.MAC_OS_X) {
             try {
-                AppleNativeLook.go();
+                AppleNativeLook.m10938go();
             } catch (Throwable unused) {
             }
         }

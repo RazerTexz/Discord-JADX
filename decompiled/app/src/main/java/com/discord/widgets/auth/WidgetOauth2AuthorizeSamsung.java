@@ -10,33 +10,20 @@ import android.view.View;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.view.PointerIconCompat;
-import b.a.r.b;
-import b.d.b.a.a;
-import b.i.a.f.e.o.f;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelUserSettings;
 import com.discord.restapi.RestAPIParams;
-import com.discord.samsung.SamsungConnect$SamsungCallbackException;
+import com.discord.samsung.SamsungConnect3;
 import com.discord.samsung.SamsungConnectActivity;
 import com.discord.utilities.captcha.CaptchaErrorBody;
 import com.discord.utilities.captcha.CaptchaHelper;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.auth.WidgetOauth2Authorize;
-import d0.g0.w;
-import d0.g0.y;
-import d0.l;
-import d0.w.h.c;
-import d0.w.i.a.d;
-import d0.w.i.a.e;
-import d0.w.i.a.k;
-import d0.z.d.m;
-import d0.z.d.o;
-import f0.x;
 import java.util.UUID;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
@@ -47,11 +34,27 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlinx.coroutines.CoroutineDispatcher;
 import kotlinx.coroutines.CoroutineScope;
 import org.objectweb.asm.Opcodes;
-import rx.Observable;
-import s.a.a.n;
-import s.a.k0;
-import s.a.l1;
-import s.a.x0;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p048r.SamsungConnect;
+import p007b.p008a.p048r.SamsungConnect2;
+import p007b.p008a.p048r.SamsungConnectActivity2;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.Result3;
+import p507d0.p579g0.Strings4;
+import p507d0.p579g0._Strings;
+import p507d0.p584w.p585h.Intrinsics2;
+import p507d0.p584w.p586i.p587a.ContinuationImpl3;
+import p507d0.p584w.p586i.p587a.ContinuationImpl6;
+import p507d0.p584w.p586i.p587a.DebugMetadata;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p600f0.OkHttpClient;
+import p658rx.Observable;
+import p659s.p660a.CoroutineScope2;
+import p659s.p660a.Dispatchers;
+import p659s.p660a.MainCoroutineDispatcher;
+import p659s.p660a.p661a.MainDispatchers;
 
 /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
 /* loaded from: classes2.dex */
@@ -79,19 +82,19 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
 
         private final String createSAStateId() {
-            StringBuilder sbU = a.U("SA");
-            sbU.append(UUID.randomUUID());
-            return y.take(sbU.toString(), 115);
+            StringBuilder sbM833U = outline.m833U("SA");
+            sbM833U.append(UUID.randomUUID());
+            return _Strings.take(sbM833U.toString(), 115);
         }
 
         private final void logI(String message) {
-            AppLog appLog = AppLog.g;
-            appLog.c(message, "Samsung", null, new WidgetOauth2AuthorizeSamsung$Companion$logI$1(appLog));
+            AppLog appLog = AppLog.f14950g;
+            appLog.m8360c(message, "Samsung", null, new WidgetOauth2AuthorizeSamsung2(appLog));
         }
 
         private final void logW(String message, Throwable throwable) {
-            AppLog appLog = AppLog.g;
-            appLog.c(message, "Samsung", throwable, new WidgetOauth2AuthorizeSamsung$Companion$logW$1(appLog));
+            AppLog appLog = AppLog.f14950g;
+            appLog.m8360c(message, "Samsung", throwable, new WidgetOauth2AuthorizeSamsung3(appLog));
         }
 
         public static /* synthetic */ void logW$default(Companion companion, String str, Throwable th, int i, Object obj) {
@@ -102,8 +105,8 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
 
         public final Observable<Void> getForSamsung(WidgetOauth2Authorize.OAuth2Authorize oAuth2Authorize, String str) {
-            m.checkNotNullParameter(oAuth2Authorize, "$this$getForSamsung");
-            m.checkNotNullParameter(str, "accountUri");
+            Intrinsics3.checkNotNullParameter(oAuth2Authorize, "$this$getForSamsung");
+            Intrinsics3.checkNotNullParameter(str, "accountUri");
             return RestAPI.INSTANCE.getApi().getOauth2SamsungAuthorize(String.valueOf(oAuth2Authorize.getClientId()), oAuth2Authorize.getState(), oAuth2Authorize.getResponseType(), str, oAuth2Authorize.getPrompt(), oAuth2Authorize.getScope());
         }
 
@@ -113,24 +116,24 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
     }
 
     /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$1 */
+    public static final class C72521 extends Lambda implements Function1<Error, Unit> {
+        public C72521() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             Companion.access$logI(WidgetOauth2AuthorizeSamsung.INSTANCE, "POST /authorize: error " + error);
             String bodyText = error.getBodyText();
-            if (bodyText == null || !w.contains$default((CharSequence) bodyText, (CharSequence) CaptchaHelper.CAPTCHA_KEY, false, 2, (Object) null)) {
+            if (bodyText == null || !Strings4.contains$default((CharSequence) bodyText, (CharSequence) CaptchaHelper.CAPTCHA_KEY, false, 2, (Object) null)) {
                 return;
             }
             WidgetAuthCaptcha.INSTANCE.launch(WidgetOauth2AuthorizeSamsung.this.requireContext(), WidgetOauth2AuthorizeSamsung.this.getCaptchaLauncher(), CaptchaErrorBody.INSTANCE.createFromError(error));
@@ -138,14 +141,14 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
     }
 
     /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<RestAPIParams.OAuth2Authorize.ResponsePost, Unit> {
+    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2 */
+    public static final class C72532 extends Lambda implements Function1<RestAPIParams.OAuth2Authorize.ResponsePost, Unit> {
         public final /* synthetic */ String $samsungAuthCode;
 
         /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-        @e(c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2$1", f = "WidgetOauth2AuthorizeSamsung.kt", l = {157}, m = "invokeSuspend")
+        @DebugMetadata(m10084c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2$1", m10085f = "WidgetOauth2AuthorizeSamsung.kt", m10086l = {157}, m10087m = "invokeSuspend")
         /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+        public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public final /* synthetic */ RestAPIParams.OAuth2Authorize.ResponsePost $it;
             public int label;
 
@@ -155,26 +158,26 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
                 this.$it = responsePost;
             }
 
-            @Override // d0.w.i.a.a
+            @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
             public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-                m.checkNotNullParameter(continuation, "completion");
-                return AnonymousClass2.this.new AnonymousClass1(this.$it, continuation);
+                Intrinsics3.checkNotNullParameter(continuation, "completion");
+                return C72532.this.new AnonymousClass1(this.$it, continuation);
             }
 
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
-                return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
+                return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.f27425a);
             }
 
-            @Override // d0.w.i.a.a
+            @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
             public final Object invokeSuspend(Object obj) {
-                Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
+                Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
                 int i = this.label;
                 if (i == 0) {
-                    l.throwOnFailure(obj);
+                    Result3.throwOnFailure(obj);
                     WidgetOauth2AuthorizeSamsung widgetOauth2AuthorizeSamsung = WidgetOauth2AuthorizeSamsung.this;
                     String location = this.$it.getLocation();
-                    String str = AnonymousClass2.this.$samsungAuthCode;
+                    String str = C72532.this.$samsungAuthCode;
                     this.label = 1;
                     if (widgetOauth2AuthorizeSamsung.samsungCallbackHandshake(location, str, this) == coroutine_suspended) {
                         return coroutine_suspended;
@@ -183,14 +186,14 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
                     if (i != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    l.throwOnFailure(obj);
+                    Result3.throwOnFailure(obj);
                 }
-                return Unit.a;
+                return Unit.f27425a;
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str) {
+        public C72532(String str) {
             super(1);
             this.$samsungAuthCode = str;
         }
@@ -198,31 +201,31 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(RestAPIParams.OAuth2Authorize.ResponsePost responsePost) {
             invoke2(responsePost);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestAPIParams.OAuth2Authorize.ResponsePost responsePost) {
-            m.checkNotNullParameter(responsePost, "it");
+            Intrinsics3.checkNotNullParameter(responsePost, "it");
             Companion.access$logI(WidgetOauth2AuthorizeSamsung.INSTANCE, "POST /authorize success");
-            f.H0(x0.j, k0.f3842b, null, new AnonymousClass1(responsePost, null), 2, null);
+            C3404f.m4211H0(CoroutineScope2.f27919j, Dispatchers.f27867b, null, new AnonymousClass1(responsePost, null), 2, null);
         }
     }
 
     /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$configureUI$1 */
+    public static final class ViewOnClickListenerC72541 implements View.OnClickListener {
+        public ViewOnClickListenerC72541() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Account[] accountsByType = AccountManager.get(context).getAccountsByType("com.osp.app.signin");
-            m.checkNotNullExpressionValue(accountsByType, "accountManager.getAccoun…yType(SA_ACCOUNT_SERVICE)");
+            Intrinsics3.checkNotNullExpressionValue(accountsByType, "accountManager.getAccoun…yType(SA_ACCOUNT_SERVICE)");
             if (!(!(accountsByType.length == 0))) {
                 Companion.access$logI(WidgetOauth2AuthorizeSamsung.INSTANCE, "Not Logged into Samsung Account");
             }
@@ -242,20 +245,20 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
     }
 
     /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    @e(c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung", f = "WidgetOauth2AuthorizeSamsung.kt", l = {Opcodes.RETURN, Opcodes.NEWARRAY, Opcodes.CHECKCAST}, m = "samsungCallbackHandshake")
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d {
+    @DebugMetadata(m10084c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung", m10085f = "WidgetOauth2AuthorizeSamsung.kt", m10086l = {Opcodes.RETURN, Opcodes.NEWARRAY, Opcodes.CHECKCAST}, m10087m = "samsungCallbackHandshake")
+    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$1 */
+    public static final class C72551 extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
         public Object L$2;
         public int label;
         public /* synthetic */ Object result;
 
-        public AnonymousClass1(Continuation continuation) {
+        public C72551(Continuation continuation) {
             super(continuation);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Object invokeSuspend(Object obj) {
             this.result = obj;
             this.label |= Integer.MIN_VALUE;
@@ -264,59 +267,59 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
     }
 
     /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    @e(c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$2", f = "WidgetOauth2AuthorizeSamsung.kt", l = {}, m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    @DebugMetadata(m10084c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$2", m10085f = "WidgetOauth2AuthorizeSamsung.kt", m10086l = {}, m10087m = "invokeSuspend")
+    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$2 */
+    public static final class C72562 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
-        public AnonymousClass2(Continuation continuation) {
+        public C72562(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            m.checkNotNullParameter(continuation, "completion");
-            return WidgetOauth2AuthorizeSamsung.this.new AnonymousClass2(continuation);
+            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            return WidgetOauth2AuthorizeSamsung.this.new C72562(continuation);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
-            return ((AnonymousClass2) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
+            return ((C72562) create(coroutineScope, continuation)).invokeSuspend(Unit.f27425a);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Object invokeSuspend(Object obj) {
-            c.getCOROUTINE_SUSPENDED();
+            Intrinsics2.getCOROUTINE_SUSPENDED();
             if (this.label != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            l.throwOnFailure(obj);
-            b.a.d.m.i(WidgetOauth2AuthorizeSamsung.this, R.string.authorized, 0, 4);
+            Result3.throwOnFailure(obj);
+            AppToast.m171i(WidgetOauth2AuthorizeSamsung.this, C5419R.string.authorized, 0, 4);
             AppActivity appActivity = WidgetOauth2AuthorizeSamsung.this.getAppActivity();
             if (appActivity == null) {
                 return null;
             }
             appActivity.finish();
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$startSamsungAccountLink$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$startSamsungAccountLink$1 */
+    public static final class C72571 extends Lambda implements Function1<Error, Unit> {
+        public C72571() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) throws Exception {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) throws Exception {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             Companion.access$logI(WidgetOauth2AuthorizeSamsung.INSTANCE, "GET /authorize: error " + error);
             AppActivity appActivity = WidgetOauth2AuthorizeSamsung.this.getAppActivity();
             if (appActivity != null) {
@@ -326,12 +329,12 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
     }
 
     /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$startSamsungAccountLink$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$startSamsungAccountLink$2 */
+    public static final class C72582 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $samsungAuthCode;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str) {
+        public C72582(String str) {
             super(1);
             this.$samsungAuthCode = str;
         }
@@ -339,7 +342,7 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -349,16 +352,16 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
     }
 
     public WidgetOauth2AuthorizeSamsung() {
-        WidgetOauth2AuthorizeSamsung$samsungConnectLauncher$1 widgetOauth2AuthorizeSamsung$samsungConnectLauncher$1 = new WidgetOauth2AuthorizeSamsung$samsungConnectLauncher$1(this);
-        m.checkNotNullParameter(this, "fragment");
-        m.checkNotNullParameter(widgetOauth2AuthorizeSamsung$samsungConnectLauncher$1, "callback");
-        ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new b.a.r.c(widgetOauth2AuthorizeSamsung$samsungConnectLauncher$1));
-        m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…  }\n          }\n        }");
+        WidgetOauth2AuthorizeSamsung5 widgetOauth2AuthorizeSamsung5 = new WidgetOauth2AuthorizeSamsung5(this);
+        Intrinsics3.checkNotNullParameter(this, "fragment");
+        Intrinsics3.checkNotNullParameter(widgetOauth2AuthorizeSamsung5, "callback");
+        ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new SamsungConnectActivity2(widgetOauth2AuthorizeSamsung5));
+        Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…  }\n          }\n        }");
         this.samsungConnectLauncher = activityResultLauncherRegisterForActivityResult;
-        ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult2 = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetOauth2AuthorizeSamsung$samsungDisclaimerLauncher$1(this));
-        m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult2, "registerForActivityResul…inish()\n        }\n      }");
+        ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult2 = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetOauth2AuthorizeSamsung6(this));
+        Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult2, "registerForActivityResul…inish()\n        }\n      }");
         this.samsungDisclaimerLauncher = activityResultLauncherRegisterForActivityResult2;
-        this.captchaLauncher = WidgetAuthCaptcha.INSTANCE.registerForResult(this, new WidgetOauth2AuthorizeSamsung$captchaLauncher$1(this));
+        this.captchaLauncher = WidgetAuthCaptcha.INSTANCE.registerForResult(this, new WidgetOauth2AuthorizeSamsung4(this));
     }
 
     public static final /* synthetic */ void access$authorizeForSamsung(WidgetOauth2AuthorizeSamsung widgetOauth2AuthorizeSamsung, String str, CaptchaHelper.CaptchaPayload captchaPayload) {
@@ -390,7 +393,7 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
     }
 
     private final void authorizeForSamsung(String samsungAuthCode, CaptchaHelper.CaptchaPayload captchaPayload) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(getOauth2ViewModel().getOauthAuthorize().post(captchaPayload != null ? captchaPayload.getCaptchaKey() : null, captchaPayload != null ? captchaPayload.getCaptchaRqtoken() : null), false, 1, null), this, null, 2, null), WidgetOauth2AuthorizeSamsung.class, (Context) null, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(samsungAuthCode), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(getOauth2ViewModel().getOauthAuthorize().post(captchaPayload != null ? captchaPayload.getCaptchaKey() : null, captchaPayload != null ? captchaPayload.getCaptchaRqtoken() : null), false, 1, null), this, null, 2, null), WidgetOauth2AuthorizeSamsung.class, (Context) null, (Function1) null, new C72521(), (Function0) null, (Function0) null, new C72532(samsungAuthCode), 54, (Object) null);
     }
 
     private final void handleConnectActivityFailure(SamsungConnectActivity.Result.Failure result) {
@@ -398,7 +401,7 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
             return;
         }
         Companion.logW$default(INSTANCE, "Retrying SA connection.\nBecause sometimes it just doesn't bind the first time.", null, 2, null);
-        SamsungConnectActivity.b(requireContext(), this.samsungConnectLauncher, result.attemptCount);
+        SamsungConnectActivity.m8504b(requireContext(), this.samsungConnectLauncher, result.attemptCount);
     }
 
     private final void handleConnectActivitySuccess(SamsungConnectActivity.Result.Success result) {
@@ -409,8 +412,8 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
 
     private final void startSamsungAccountLink(String saUrl, String samsungAuthCode) {
         String str;
-        m.checkNotNullParameter(saUrl, "authServerUrl");
-        String strTake = y.take(saUrl, 2);
+        Intrinsics3.checkNotNullParameter(saUrl, "authServerUrl");
+        String strTake = _Strings.take(saUrl, 2);
         int iHashCode = strTake.hashCode();
         if (iHashCode != 3179) {
             if (iHashCode == 3248) {
@@ -423,19 +426,19 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
         Companion companion = INSTANCE;
         Companion.access$logI(companion, "GET /authorize " + str);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(companion.getForSamsung(getOauth2ViewModel().getOauthAuthorize(), str), false, 1, null), this, null, 2, null), WidgetOauth2AuthorizeSamsung.class, requireContext(), (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(samsungAuthCode), 52, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(companion.getForSamsung(getOauth2ViewModel().getOauthAuthorize(), str), false, 1, null), this, null, 2, null), WidgetOauth2AuthorizeSamsung.class, requireContext(), (Function1) null, new C72571(), (Function0) null, (Function0) null, new C72582(samsungAuthCode), 52, (Object) null);
     }
 
     @Override // com.discord.widgets.auth.WidgetOauth2Authorize
     public void configureUI(RestAPIParams.OAuth2Authorize.ResponseGet data) {
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.configureUI(data);
-        getBinding().g.setOnClickListener(new AnonymousClass1());
+        getBinding().f17335g.setOnClickListener(new ViewOnClickListenerC72541());
     }
 
     @Override // com.discord.widgets.auth.WidgetOauth2Authorize
     public WidgetOauth2Authorize.OAuth2Authorize createOauthAuthorize(Uri requestUrl) {
-        m.checkNotNullParameter(requestUrl, "requestUrl");
+        Intrinsics3.checkNotNullParameter(requestUrl, "requestUrl");
         WidgetOauth2Authorize.OAuth2Authorize oAuth2AuthorizeCreateOauthAuthorize = super.createOauthAuthorize(requestUrl);
         String state = oAuth2AuthorizeCreateOauthAuthorize.getState();
         if (state == null) {
@@ -455,42 +458,42 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final Object samsungCallbackHandshake(String str, String str2, Continuation<? super Unit> continuation) throws Throwable {
-        AnonymousClass1 anonymousClass1;
+        C72551 c72551;
         String str3;
-        x xVar;
+        OkHttpClient okHttpClient;
         WidgetOauth2AuthorizeSamsung widgetOauth2AuthorizeSamsung;
         String queryParameter;
-        l1 l1Var;
-        AnonymousClass2 anonymousClass2;
-        if (continuation instanceof AnonymousClass1) {
-            anonymousClass1 = (AnonymousClass1) continuation;
-            int i = anonymousClass1.label;
+        MainCoroutineDispatcher mainCoroutineDispatcher;
+        C72562 c72562;
+        if (continuation instanceof C72551) {
+            c72551 = (C72551) continuation;
+            int i = c72551.label;
             if ((i & Integer.MIN_VALUE) != 0) {
-                anonymousClass1.label = i - Integer.MIN_VALUE;
+                c72551.label = i - Integer.MIN_VALUE;
             } else {
-                anonymousClass1 = new AnonymousClass1(continuation);
+                c72551 = new C72551(continuation);
             }
         }
-        Object objC1 = anonymousClass1.result;
-        Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
-        int i2 = anonymousClass1.label;
+        Object objM4197C1 = c72551.result;
+        Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+        int i2 = c72551.label;
         if (i2 == 0) {
-            l.throwOnFailure(objC1);
-            x.a aVar = new x.a();
-            aVar.h = false;
-            x xVar2 = new x(aVar);
+            Result3.throwOnFailure(objM4197C1);
+            OkHttpClient.a aVar = new OkHttpClient.a();
+            aVar.f26036h = false;
+            OkHttpClient okHttpClient2 = new OkHttpClient(aVar);
             Companion.access$logI(INSTANCE, "GET /callback");
-            anonymousClass1.L$0 = this;
-            anonymousClass1.L$1 = str2;
-            anonymousClass1.L$2 = xVar2;
-            anonymousClass1.label = 1;
-            Object objC12 = f.C1(k0.f3842b, new b.a.r.a(str, xVar2, null), anonymousClass1);
-            if (objC12 == coroutine_suspended) {
+            c72551.L$0 = this;
+            c72551.L$1 = str2;
+            c72551.L$2 = okHttpClient2;
+            c72551.label = 1;
+            Object objM4197C12 = C3404f.m4197C1(Dispatchers.f27867b, new SamsungConnect(str, okHttpClient2, null), c72551);
+            if (objM4197C12 == coroutine_suspended) {
                 return coroutine_suspended;
             }
             str3 = str2;
-            xVar = xVar2;
-            objC1 = objC12;
+            okHttpClient = okHttpClient2;
+            objM4197C1 = objM4197C12;
             widgetOauth2AuthorizeSamsung = this;
         } else {
             if (i2 != 1) {
@@ -498,54 +501,54 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
                     if (i2 != 3) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    l.throwOnFailure(objC1);
-                    return Unit.a;
+                    Result3.throwOnFailure(objM4197C1);
+                    return Unit.f27425a;
                 }
-                widgetOauth2AuthorizeSamsung = (WidgetOauth2AuthorizeSamsung) anonymousClass1.L$0;
-                l.throwOnFailure(objC1);
-                Companion.access$logI(INSTANCE, "POST /callback success " + ((Uri) objC1));
-                CoroutineDispatcher coroutineDispatcher = k0.a;
-                l1Var = n.f3830b;
-                anonymousClass2 = widgetOauth2AuthorizeSamsung.new AnonymousClass2(null);
-                anonymousClass1.L$0 = null;
-                anonymousClass1.label = 3;
-                if (f.C1(l1Var, anonymousClass2, anonymousClass1) == coroutine_suspended) {
+                widgetOauth2AuthorizeSamsung = (WidgetOauth2AuthorizeSamsung) c72551.L$0;
+                Result3.throwOnFailure(objM4197C1);
+                Companion.access$logI(INSTANCE, "POST /callback success " + ((Uri) objM4197C1));
+                CoroutineDispatcher coroutineDispatcher = Dispatchers.f27866a;
+                mainCoroutineDispatcher = MainDispatchers.f27700b;
+                c72562 = widgetOauth2AuthorizeSamsung.new C72562(null);
+                c72551.L$0 = null;
+                c72551.label = 3;
+                if (C3404f.m4197C1(mainCoroutineDispatcher, c72562, c72551) == coroutine_suspended) {
                     return coroutine_suspended;
                 }
-                return Unit.a;
+                return Unit.f27425a;
             }
-            x xVar3 = (x) anonymousClass1.L$2;
-            String str4 = (String) anonymousClass1.L$1;
-            WidgetOauth2AuthorizeSamsung widgetOauth2AuthorizeSamsung2 = (WidgetOauth2AuthorizeSamsung) anonymousClass1.L$0;
-            l.throwOnFailure(objC1);
-            xVar = xVar3;
+            OkHttpClient okHttpClient3 = (OkHttpClient) c72551.L$2;
+            String str4 = (String) c72551.L$1;
+            WidgetOauth2AuthorizeSamsung widgetOauth2AuthorizeSamsung2 = (WidgetOauth2AuthorizeSamsung) c72551.L$0;
+            Result3.throwOnFailure(objM4197C1);
+            okHttpClient = okHttpClient3;
             str3 = str4;
             widgetOauth2AuthorizeSamsung = widgetOauth2AuthorizeSamsung2;
         }
-        Uri uri = (Uri) objC1;
+        Uri uri = (Uri) objM4197C1;
         if (uri == null || (queryParameter = uri.getQueryParameter("redirect_uri")) == null) {
-            throw new SamsungConnect$SamsungCallbackException("no_redirect_uri", "no redirect uri returned from GET/callback");
+            throw new SamsungConnect3("no_redirect_uri", "no redirect uri returned from GET/callback");
         }
-        m.checkNotNullExpressionValue(queryParameter, "getCallbackUri?.getQuery…m GET/callback\"\n        )");
+        Intrinsics3.checkNotNullExpressionValue(queryParameter, "getCallbackUri?.getQuery…m GET/callback\"\n        )");
         Companion.access$logI(INSTANCE, "POST /callback " + queryParameter);
         String state = widgetOauth2AuthorizeSamsung.getOauth2ViewModel().getOauthAuthorize().getState();
-        m.checkNotNull(state);
-        anonymousClass1.L$0 = widgetOauth2AuthorizeSamsung;
-        anonymousClass1.L$1 = null;
-        anonymousClass1.L$2 = null;
-        anonymousClass1.label = 2;
-        objC1 = f.C1(k0.f3842b, new b(state, str3, queryParameter, xVar, null), anonymousClass1);
-        if (objC1 == coroutine_suspended) {
+        Intrinsics3.checkNotNull(state);
+        c72551.L$0 = widgetOauth2AuthorizeSamsung;
+        c72551.L$1 = null;
+        c72551.L$2 = null;
+        c72551.label = 2;
+        objM4197C1 = C3404f.m4197C1(Dispatchers.f27867b, new SamsungConnect2(state, str3, queryParameter, okHttpClient, null), c72551);
+        if (objM4197C1 == coroutine_suspended) {
             return coroutine_suspended;
         }
-        Companion.access$logI(INSTANCE, "POST /callback success " + ((Uri) objC1));
-        CoroutineDispatcher coroutineDispatcher2 = k0.a;
-        l1Var = n.f3830b;
-        anonymousClass2 = widgetOauth2AuthorizeSamsung.new AnonymousClass2(null);
-        anonymousClass1.L$0 = null;
-        anonymousClass1.label = 3;
-        if (f.C1(l1Var, anonymousClass2, anonymousClass1) == coroutine_suspended) {
+        Companion.access$logI(INSTANCE, "POST /callback success " + ((Uri) objM4197C1));
+        CoroutineDispatcher coroutineDispatcher2 = Dispatchers.f27866a;
+        mainCoroutineDispatcher = MainDispatchers.f27700b;
+        c72562 = widgetOauth2AuthorizeSamsung.new C72562(null);
+        c72551.L$0 = null;
+        c72551.label = 3;
+        if (C3404f.m4197C1(mainCoroutineDispatcher, c72562, c72551) == coroutine_suspended) {
         }
-        return Unit.a;
+        return Unit.f27425a;
     }
 }

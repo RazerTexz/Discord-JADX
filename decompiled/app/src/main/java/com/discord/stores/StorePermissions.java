@@ -15,18 +15,10 @@ import com.discord.models.member.GuildMember;
 import com.discord.models.message.Message;
 import com.discord.models.thread.dto.ModelThreadListSync;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.utilities.collections.CollectionExtensionsKt;
+import com.discord.utilities.collections.CollectionExtensions;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.persister.Persister;
 import com.discord.utilities.search.network.state.SearchState;
-import d0.d0.f;
-import d0.t.g0;
-import d0.t.h0;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -35,9 +27,20 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.jvm.functions.Function0;
-import rx.Observable;
+import p507d0.Tuples;
+import p507d0.p512d0._Ranges;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MapsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
 
 /* compiled from: StorePermissions.kt */
 /* loaded from: classes2.dex */
@@ -57,9 +60,9 @@ public final class StorePermissions extends StoreV2 {
     private final StoreUser storeUser;
 
     /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observeAllPermissions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends Map<Long, ? extends Long>>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StorePermissions$observeAllPermissions$1 */
+    public static final class C63291 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends Long>>> {
+        public C63291() {
             super(0);
         }
 
@@ -76,34 +79,34 @@ public final class StorePermissions extends StoreV2 {
     }
 
     /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observeChannelPermissionsForGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Map<Long, ? extends Map<Long, ? extends Long>>, Map<Long, ? extends Long>> {
+    /* renamed from: com.discord.stores.StorePermissions$observeChannelPermissionsForGuild$1 */
+    public static final class C63301<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends Long>>, Map<Long, ? extends Long>> {
         public final /* synthetic */ long $guildId;
 
-        public AnonymousClass1(long j) {
+        public C63301(long j) {
             this.$guildId = j;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Map<Long, ? extends Long> call(Map<Long, ? extends Map<Long, ? extends Long>> map) {
             return call2((Map<Long, ? extends Map<Long, Long>>) map);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Long> call2(Map<Long, ? extends Map<Long, Long>> map) {
-            m.checkNotNullExpressionValue(map, ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS);
+            Intrinsics3.checkNotNullExpressionValue(map, ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS);
             Map<Long, Long> mapEmptyMap = map.get(Long.valueOf(this.$guildId));
             if (mapEmptyMap == null) {
-                mapEmptyMap = h0.emptyMap();
+                mapEmptyMap = Maps6.emptyMap();
             }
             return mapEmptyMap;
         }
     }
 
     /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForAllChannels$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends Long>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForAllChannels$1 */
+    public static final class C63311 extends Lambda implements Function0<Map<Long, ? extends Long>> {
+        public C63311() {
             super(0);
         }
 
@@ -120,12 +123,12 @@ public final class StorePermissions extends StoreV2 {
     }
 
     /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Long> {
+    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForChannel$1 */
+    public static final class C63321 extends Lambda implements Function0<Long> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C63321(long j) {
             super(0);
             this.$channelId = j;
         }
@@ -143,12 +146,12 @@ public final class StorePermissions extends StoreV2 {
     }
 
     /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Long> {
+    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForGuild$1 */
+    public static final class C63331 extends Lambda implements Function0<Long> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C63331(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -166,12 +169,12 @@ public final class StorePermissions extends StoreV2 {
     }
 
     public StorePermissions(StoreUser storeUser, StoreChannels storeChannels, StoreGuilds storeGuilds, StoreThreadsJoined storeThreadsJoined, StoreStageInstances storeStageInstances, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(storeUser, "storeUser");
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(storeGuilds, "storeGuilds");
-        m.checkNotNullParameter(storeThreadsJoined, "storeThreadsJoined");
-        m.checkNotNullParameter(storeStageInstances, "storeStageInstances");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        Intrinsics3.checkNotNullParameter(storeThreadsJoined, "storeThreadsJoined");
+        Intrinsics3.checkNotNullParameter(storeStageInstances, "storeStageInstances");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.storeUser = storeUser;
         this.storeChannels = storeChannels;
         this.storeGuilds = storeGuilds;
@@ -207,20 +210,20 @@ public final class StorePermissions extends StoreV2 {
         storePermissions.permissionsForGuildsSnapshot = map;
     }
 
-    @StoreThread
+    @Store3
     private final Map<Long, Long> computeChannelPermissions(long guildId, Iterable<Channel> channels) {
         Guild guild = this.storeGuilds.getGuildsInternal$app_productionGoogleRelease().get(Long.valueOf(guildId));
         if (guild == null) {
-            return h0.emptyMap();
+            return Maps6.emptyMap();
         }
         Map<Long, GuildMember> map = this.storeGuilds.getGuildMembersComputedInternal$app_productionGoogleRelease().get(Long.valueOf(guildId));
         Map<Long, GuildRole> map2 = this.storeGuilds.getGuildRolesInternal$app_productionGoogleRelease().get(Long.valueOf(guildId));
         Map<Long, StageInstance> stageInstancesForGuildInternal = this.storeStageInstances.getStageInstancesForGuildInternal(guildId);
-        LinkedHashMap linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(channels, 10)), 16));
+        LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(channels, 10)), 16));
         for (Channel channel : channels) {
             boolean zHasJoinedInternal = this.storeThreadsJoined.hasJoinedInternal(channel.getId());
-            Pair pair = d0.o.to(Long.valueOf(channel.getId()), Long.valueOf(ChannelUtils.B(channel) ? Permission.ALL : PermissionUtils.computePermissions(getMeId(), channel, this.storeChannels.getGuildChannelInternal$app_productionGoogleRelease(channel.getGuildId(), channel.getParentId()), guild.getOwnerId(), map != null ? map.get(Long.valueOf(getMeId())) : null, map2, stageInstancesForGuildInternal, zHasJoinedInternal)));
-            linkedHashMap.put(pair.getFirst(), pair.getSecond());
+            Tuples2 tuples2M10073to = Tuples.m10073to(Long.valueOf(channel.getId()), Long.valueOf(ChannelUtils.m7667B(channel) ? Permission.ALL : PermissionUtils.computePermissions(getMeId(), channel, this.storeChannels.getGuildChannelInternal$app_productionGoogleRelease(channel.getGuildId(), channel.getParentId()), guild.getOwnerId(), map != null ? map.get(Long.valueOf(getMeId())) : null, map2, stageInstancesForGuildInternal, zHasJoinedInternal)));
+            linkedHashMap.put(tuples2M10073to.getFirst(), tuples2M10073to.getSecond());
         }
         return linkedHashMap;
     }
@@ -229,7 +232,7 @@ public final class StorePermissions extends StoreV2 {
         return this.storeUser.getMe().getId();
     }
 
-    @StoreThread
+    @Store3
     private final void recomputeAllPermissions() {
         this.permissionsForGuilds.clear();
         this.permissionsForChannels.clear();
@@ -256,19 +259,19 @@ public final class StorePermissions extends StoreV2 {
             long jLongValue = ((Number) it.next()).longValue();
             List listEmptyList = (List) linkedHashMap.get(Long.valueOf(jLongValue));
             if (listEmptyList == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             updateGuildPermissions(jLongValue, listEmptyList);
         }
     }
 
-    @StoreThread
+    @Store3
     private final void restoreFromCache() {
         this.permissionsForGuilds.putAll(this.permissionsForGuildsCache.get());
         this.permissionsForChannels.putAll(this.permissionsForChannelsCache.get());
     }
 
-    @StoreThread
+    @Store3
     private final void updateChannelPermissions(Channel channel) {
         if (getMeId() == 0) {
             return;
@@ -276,13 +279,13 @@ public final class StorePermissions extends StoreV2 {
         long guildId = channel.getGuildId();
         Map<Long, Long> mapEmptyMap = this.permissionsForChannels.get(Long.valueOf(guildId));
         if (mapEmptyMap == null) {
-            mapEmptyMap = h0.emptyMap();
+            mapEmptyMap = Maps6.emptyMap();
         }
-        this.permissionsForChannels.put(Long.valueOf(guildId), h0.plus(mapEmptyMap, computeChannelPermissions(guildId, d0.t.m.listOf(channel))));
+        this.permissionsForChannels.put(Long.valueOf(guildId), Maps6.plus(mapEmptyMap, computeChannelPermissions(guildId, CollectionsJVM.listOf(channel))));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void updateGuildPermissions(long guildId, Collection<Channel> guildThreads) {
         Map<Long, Channel> map;
         Guild guild;
@@ -296,8 +299,8 @@ public final class StorePermissions extends StoreV2 {
             this.permissionsForGuilds.put(Long.valueOf(guildId), Long.valueOf(jComputeNonThreadPermissions));
             markChanged();
         }
-        Map<Long, Long> mapComputeChannelPermissions = computeChannelPermissions(guildId, u.plus((Collection) map.values(), (Iterable) guildThreads));
-        if (!m.areEqual(this.permissionsForChannels.get(Long.valueOf(guildId)), mapComputeChannelPermissions)) {
+        Map<Long, Long> mapComputeChannelPermissions = computeChannelPermissions(guildId, _Collections.plus((Collection) map.values(), (Iterable) guildThreads));
+        if (!Intrinsics3.areEqual(this.permissionsForChannels.get(Long.valueOf(guildId)), mapComputeChannelPermissions)) {
             this.permissionsForChannels.put(Long.valueOf(guildId), mapComputeChannelPermissions);
             markChanged();
         }
@@ -311,67 +314,67 @@ public final class StorePermissions extends StoreV2 {
         return this.permissionsForChannelsFlattenedSnapshot;
     }
 
-    @StoreThread
+    @Store3
     public final Map<Long, Long> getPermissionsByChannelInternal$app_productionGoogleRelease(long guildId) {
         Map<Long, Long> map = this.permissionsForChannels.get(Long.valueOf(guildId));
-        return map != null ? map : h0.emptyMap();
+        return map != null ? map : Maps6.emptyMap();
     }
 
-    @StoreThread
+    @Store3
     public final void handleChannelOrThreadCreateOrUpdate(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         updateChannelPermissions(channel);
     }
 
-    @StoreThread
+    @Store3
     public final void handleChannelOrThreadDelete(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         long guildId = channel.getGuildId();
         Map<Long, Long> mapEmptyMap = this.permissionsForChannels.get(Long.valueOf(guildId));
         if (mapEmptyMap == null) {
-            mapEmptyMap = h0.emptyMap();
+            mapEmptyMap = Maps6.emptyMap();
         }
-        this.permissionsForChannels.put(Long.valueOf(guildId), h0.minus(mapEmptyMap, Long.valueOf(channel.getId())));
+        this.permissionsForChannels.put(Long.valueOf(guildId), Maps6.minus(mapEmptyMap, Long.valueOf(channel.getId())));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen() {
         recomputeAllPermissions();
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildAdd(com.discord.api.guild.Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         updateGuildPermissions(guild.getId(), this.storeChannels.getThreadsForGuildInternal$app_productionGoogleRelease(guild.getId()));
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildMemberAdd(com.discord.api.guildmember.GuildMember member) {
-        m.checkNotNullParameter(member, "member");
+        Intrinsics3.checkNotNullParameter(member, "member");
         if (getMeId() != 0 && member.getUser().getId() == getMeId()) {
             updateGuildPermissions(member.getGuildId(), this.storeChannels.getThreadsForGuildInternal$app_productionGoogleRelease(member.getGuildId()));
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildRemove(com.discord.api.guild.Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         long id2 = guild.getId();
         this.permissionsForChannels.remove(Long.valueOf(id2));
         this.permissionsForGuilds.remove(Long.valueOf(id2));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildRolesChanged(long guildId) {
         updateGuildPermissions(guildId, this.storeChannels.getThreadsForGuildInternal$app_productionGoogleRelease(guildId));
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessagesLoaded(List<Message> messages) {
-        m.checkNotNullParameter(messages, "messages");
+        Intrinsics3.checkNotNullParameter(messages, "messages");
         if (getMeId() == 0) {
             return;
         }
@@ -383,7 +386,7 @@ public final class StorePermissions extends StoreV2 {
                 arrayList.add(thread);
             }
         }
-        Channel channel = (Channel) u.firstOrNull((List) arrayList);
+        Channel channel = (Channel) _Collections.firstOrNull((List) arrayList);
         Long lValueOf = channel != null ? Long.valueOf(channel.getGuildId()) : null;
         if (lValueOf != null) {
             updateGuildPermissions(lValueOf.longValue(), this.storeChannels.getThreadsForGuildInternal$app_productionGoogleRelease(lValueOf.longValue()));
@@ -391,24 +394,24 @@ public final class StorePermissions extends StoreV2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:14:0x004a  */
-    @StoreThread
+    @Store3
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final void handleSearchFinish(SearchState searchState) {
         Long lValueOf;
-        m.checkNotNullParameter(searchState, "searchState");
+        Intrinsics3.checkNotNullParameter(searchState, "searchState");
         if (getMeId() == 0) {
             return;
         }
         List<Message> hits = searchState.getHits();
         if (hits != null) {
-            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(hits, 10));
+            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(hits, 10));
             Iterator<T> it = hits.iterator();
             while (it.hasNext()) {
                 arrayList.add(((Message) it.next()).getThread());
             }
-            Channel channel = (Channel) u.firstOrNull((List) arrayList);
+            Channel channel = (Channel) _Collections.firstOrNull((List) arrayList);
             lValueOf = channel != null ? Long.valueOf(channel.getGuildId()) : null;
         }
         if (lValueOf != null) {
@@ -416,50 +419,50 @@ public final class StorePermissions extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleStageInstanceChange(StageInstance stageInstance) {
         Channel channelInternal$app_productionGoogleRelease;
-        m.checkNotNullParameter(stageInstance, "stageInstance");
+        Intrinsics3.checkNotNullParameter(stageInstance, "stageInstance");
         if (getMeId() == 0 || (channelInternal$app_productionGoogleRelease = this.storeChannels.getChannelInternal$app_productionGoogleRelease(stageInstance.getGuildId(), stageInstance.getChannelId())) == null) {
             return;
         }
         updateChannelPermissions(channelInternal$app_productionGoogleRelease);
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadListSync(ModelThreadListSync threadListSync) {
-        m.checkNotNullParameter(threadListSync, "threadListSync");
+        Intrinsics3.checkNotNullParameter(threadListSync, "threadListSync");
         if (getMeId() == 0) {
             return;
         }
         updateGuildPermissions(threadListSync.getGuildId(), this.storeChannels.getThreadsForGuildInternal$app_productionGoogleRelease(threadListSync.getGuildId()));
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadMemberUpdate(ThreadMemberUpdate threadMemberUpdate) {
-        m.checkNotNullParameter(threadMemberUpdate, "threadMemberUpdate");
+        Intrinsics3.checkNotNullParameter(threadMemberUpdate, "threadMemberUpdate");
         Channel guildChannelInternal$app_productionGoogleRelease = this.storeChannels.getGuildChannelInternal$app_productionGoogleRelease(threadMemberUpdate.getGuildId(), threadMemberUpdate.getId());
         if (guildChannelInternal$app_productionGoogleRelease != null) {
             updateChannelPermissions(guildChannelInternal$app_productionGoogleRelease);
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadMembersUpdate(ThreadMembersUpdate threadMembersUpdate) {
         Channel guildChannelInternal$app_productionGoogleRelease;
         Boolean boolValueOf;
-        m.checkNotNullParameter(threadMembersUpdate, "threadMembersUpdate");
+        Intrinsics3.checkNotNullParameter(threadMembersUpdate, "threadMembersUpdate");
         if (getMeId() == 0 || (guildChannelInternal$app_productionGoogleRelease = this.storeChannels.getGuildChannelInternal$app_productionGoogleRelease(threadMembersUpdate.getGuildId(), threadMembersUpdate.getId())) == null) {
             return;
         }
-        List<AugmentedThreadMember> listA = threadMembersUpdate.a();
-        if (listA != null) {
+        List<AugmentedThreadMember> listM8275a = threadMembersUpdate.m8275a();
+        if (listM8275a != null) {
             boolean z2 = true;
-            if (listA.isEmpty()) {
+            if (listM8275a.isEmpty()) {
                 z2 = false;
                 boolValueOf = Boolean.valueOf(z2);
             } else {
-                Iterator<T> it = listA.iterator();
+                Iterator<T> it = listM8275a.iterator();
                 while (it.hasNext()) {
                     if (((AugmentedThreadMember) it.next()).getUserId() == getMeId()) {
                         break;
@@ -471,48 +474,48 @@ public final class StorePermissions extends StoreV2 {
         } else {
             boolValueOf = null;
         }
-        List<Long> listD = threadMembersUpdate.d();
-        Boolean boolValueOf2 = listD != null ? Boolean.valueOf(listD.contains(Long.valueOf(getMeId()))) : null;
+        List<Long> listM8278d = threadMembersUpdate.m8278d();
+        Boolean boolValueOf2 = listM8278d != null ? Boolean.valueOf(listM8278d.contains(Long.valueOf(getMeId()))) : null;
         Boolean bool = Boolean.TRUE;
-        if (m.areEqual(boolValueOf, bool) || m.areEqual(boolValueOf2, bool)) {
+        if (Intrinsics3.areEqual(boolValueOf, bool) || Intrinsics3.areEqual(boolValueOf2, bool)) {
             updateChannelPermissions(guildChannelInternal$app_productionGoogleRelease);
         }
     }
 
-    @StoreThread
+    @Store3
     public final void init() {
         restoreFromCache();
         markChanged();
     }
 
     public final Observable<Map<Long, Map<Long, Long>>> observeAllPermissions() {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C63291(), 14, null);
     }
 
     public final Observable<Map<Long, Long>> observeChannelPermissionsForGuild(long guildId) {
-        Observable<Map<Long, Long>> observableR = observeAllPermissions().G(new AnonymousClass1(guildId)).r();
-        m.checkNotNullExpressionValue(observableR, "observeAllPermissions()\n…  .distinctUntilChanged()");
-        return observableR;
+        Observable<Map<Long, Long>> observableM11112r = observeAllPermissions().m11083G(new C63301(guildId)).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observeAllPermissions()\n…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final Observable<Map<Long, Long>> observePermissionsForAllChannels() {
-        Observable<Map<Long, Long>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
-        return observableR;
+        Observable<Map<Long, Long>> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C63311(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck\n        …  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final Observable<Long> observePermissionsForChannel(long channelId) {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(channelId), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C63321(channelId), 14, null);
     }
 
     public final Observable<Long> observePermissionsForGuild(long guildId) {
-        Observable<Long> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(guildId), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
-        return observableR;
+        Observable<Long> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C63331(guildId), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck\n        …  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         Iterator<T> it = this.permissionsForChannels.values().iterator();
         int size = 0;
@@ -524,8 +527,8 @@ public final class StorePermissions extends StoreV2 {
         while (it2.hasNext()) {
             map.putAll((Map) it2.next());
         }
-        this.permissionsForGuildsSnapshot = CollectionExtensionsKt.snapshot$default(this.permissionsForGuilds, 0, 0.0f, 3, null);
-        this.permissionsForChannelsSnapshot = CollectionExtensionsKt.snapshot$default(this.permissionsForChannels, 0, 0.0f, 3, null);
+        this.permissionsForGuildsSnapshot = CollectionExtensions.snapshot$default(this.permissionsForGuilds, 0, 0.0f, 3, null);
+        this.permissionsForChannelsSnapshot = CollectionExtensions.snapshot$default(this.permissionsForChannels, 0, 0.0f, 3, null);
         this.permissionsForChannelsFlattenedSnapshot = map;
         this.permissionsForGuildsCache.set(this.permissionsForGuilds, true);
         this.permissionsForChannelsCache.set(this.permissionsForChannels, true);

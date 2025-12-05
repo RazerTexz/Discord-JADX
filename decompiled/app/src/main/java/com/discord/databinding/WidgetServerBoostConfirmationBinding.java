@@ -13,37 +13,42 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetServerBoostConfirmationBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f17461a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final GuildBoostConfirmationView f2534b;
+    public final GuildBoostConfirmationView f17462b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f17463c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f17464d;
 
+    /* renamed from: e */
     @NonNull
-    public final MaterialButton e;
+    public final MaterialButton f17465e;
 
+    /* renamed from: f */
     @NonNull
-    public final DimmerView f;
+    public final DimmerView f17466f;
 
     public WidgetServerBoostConfirmationBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LinearLayout linearLayout, @NonNull GuildBoostConfirmationView guildBoostConfirmationView, @NonNull TextView textView, @NonNull TextView textView2, @NonNull MaterialButton materialButton, @NonNull DimmerView dimmerView) {
-        this.a = coordinatorLayout;
-        this.f2534b = guildBoostConfirmationView;
-        this.c = textView;
-        this.d = textView2;
-        this.e = materialButton;
-        this.f = dimmerView;
+        this.f17461a = coordinatorLayout;
+        this.f17462b = guildBoostConfirmationView;
+        this.f17463c = textView;
+        this.f17464d = textView2;
+        this.f17465e = materialButton;
+        this.f17466f = dimmerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17461a;
     }
 }

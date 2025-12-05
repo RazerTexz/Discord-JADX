@@ -1,8 +1,8 @@
 package com.discord.api.commands;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: CommandChoice.kt */
 /* loaded from: classes.dex */
@@ -11,8 +11,8 @@ public final /* data */ class CommandChoice {
     private final String value;
 
     public CommandChoice(String str, String str2) {
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        m.checkNotNullParameter(str2, "value");
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(str2, "value");
         this.name = str;
         this.value = str2;
     }
@@ -35,7 +35,7 @@ public final /* data */ class CommandChoice {
             return false;
         }
         CommandChoice commandChoice = (CommandChoice) other;
-        return m.areEqual(this.name, commandChoice.name) && m.areEqual(this.value, commandChoice.value);
+        return Intrinsics3.areEqual(this.name, commandChoice.name) && Intrinsics3.areEqual(this.value, commandChoice.value);
     }
 
     public int hashCode() {
@@ -46,9 +46,9 @@ public final /* data */ class CommandChoice {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("CommandChoice(name=");
-        sbU.append(this.name);
-        sbU.append(", value=");
-        return a.J(sbU, this.value, ")");
+        StringBuilder sbM833U = outline.m833U("CommandChoice(name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", value=");
+        return outline.m822J(sbM833U, this.value, ")");
     }
 }

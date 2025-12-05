@@ -1,7 +1,7 @@
 package com.discord.api.guildhash;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildHash.kt */
 /* loaded from: classes.dex */
@@ -27,7 +27,7 @@ public final /* data */ class GuildHash {
             return false;
         }
         GuildHash guildHash = (GuildHash) other;
-        return m.areEqual(this.hash, guildHash.hash) && this.omitted == guildHash.omitted;
+        return Intrinsics3.areEqual(this.hash, guildHash.hash) && this.omitted == guildHash.omitted;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -43,9 +43,9 @@ public final /* data */ class GuildHash {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildHash(hash=");
-        sbU.append(this.hash);
-        sbU.append(", omitted=");
-        return a.O(sbU, this.omitted, ")");
+        StringBuilder sbM833U = outline.m833U("GuildHash(hash=");
+        sbM833U.append(this.hash);
+        sbM833U.append(", omitted=");
+        return outline.m827O(sbM833U, this.omitted, ")");
     }
 }

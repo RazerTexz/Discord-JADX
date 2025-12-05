@@ -10,8 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.connectedaccounts.ConnectedAccount;
 import com.discord.databinding.UserProfileConnectionsViewBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -22,14 +21,15 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.platform.Platform;
 import com.discord.utilities.view.extensions.ViewExtensions;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function3;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: UserProfileConnectionsView.kt */
 /* loaded from: classes.dex */
@@ -44,7 +44,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
         private final int type;
 
         public ConnectedAccountItem(ConnectedAccount connectedAccount) {
-            m.checkNotNullParameter(connectedAccount, "connectedAccount");
+            Intrinsics3.checkNotNullParameter(connectedAccount, "connectedAccount");
             this.connectedAccount = connectedAccount;
             this.key = connectedAccount.getId();
         }
@@ -62,13 +62,13 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
 
         public final ConnectedAccountItem copy(ConnectedAccount connectedAccount) {
-            m.checkNotNullParameter(connectedAccount, "connectedAccount");
+            Intrinsics3.checkNotNullParameter(connectedAccount, "connectedAccount");
             return new ConnectedAccountItem(connectedAccount);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof ConnectedAccountItem) && m.areEqual(this.connectedAccount, ((ConnectedAccountItem) other).connectedAccount);
+                return (other instanceof ConnectedAccountItem) && Intrinsics3.areEqual(this.connectedAccount, ((ConnectedAccountItem) other).connectedAccount);
             }
             return true;
         }
@@ -96,10 +96,10 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ConnectedAccountItem(connectedAccount=");
-            sbU.append(this.connectedAccount);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ConnectedAccountItem(connectedAccount=");
+            sbM833U.append(this.connectedAccount);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -110,8 +110,8 @@ public final class UserProfileConnectionsView extends LinearLayout {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ConnectedAccountsAdapter(RecyclerView recyclerView) {
             super(recyclerView, false, 2, null);
-            m.checkNotNullParameter(recyclerView, "recyclerView");
-            this.onConnectedAccountClick = UserProfileConnectionsView$ConnectedAccountsAdapter$onConnectedAccountClick$1.INSTANCE;
+            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+            this.onConnectedAccountClick = UserProfileConnectionsView2.INSTANCE;
         }
 
         public final Function3<String, Integer, String, Unit> getOnConnectedAccountClick() {
@@ -124,14 +124,14 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
 
         public final void setOnConnectedAccountClick(Function3<? super String, ? super Integer, ? super String, Unit> function3) {
-            m.checkNotNullParameter(function3, "<set-?>");
+            Intrinsics3.checkNotNullParameter(function3, "<set-?>");
             this.onConnectedAccountClick = function3;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public MGRecyclerViewHolder<ConnectedAccountsAdapter, ConnectedAccountItem> onCreateViewHolder(ViewGroup parent, int viewType) {
-            m.checkNotNullParameter(parent, "parent");
-            return new ViewHolder(R.layout.icon_list_item_text_view, this);
+            Intrinsics3.checkNotNullParameter(parent, "parent");
+            return new ViewHolder(C5419R.layout.icon_list_item_text_view, this);
         }
     }
 
@@ -142,7 +142,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolder(@LayoutRes int i, ConnectedAccountsAdapter connectedAccountsAdapter) {
             super(i, connectedAccountsAdapter);
-            m.checkNotNullParameter(connectedAccountsAdapter, "adapter");
+            Intrinsics3.checkNotNullParameter(connectedAccountsAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "null cannot be cast to non-null type android.widget.TextView");
             this.listItemTextView = (TextView) view;
@@ -159,7 +159,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ConnectedAccountItem data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             ConnectedAccount connectedAccount = data.getConnectedAccount();
             String name = connectedAccount.getName();
@@ -173,9 +173,9 @@ public final class UserProfileConnectionsView extends LinearLayout {
             this.listItemTextView.setText(connectedAccount.getName());
             TextView textView2 = this.listItemTextView;
             String str = String.format("%s, %s", Arrays.copyOf(new Object[]{connectedAccount.getType(), connectedAccount.getName()}, 2));
-            m.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
+            Intrinsics3.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
             textView2.setContentDescription(str);
-            this.itemView.setOnClickListener(new UserProfileConnectionsView$ViewHolder$onConfigure$1(this, platformFrom, name, iIntValue, profileUrl));
+            this.itemView.setOnClickListener(new UserProfileConnectionsView3(this, platformFrom, name, iIntValue, profileUrl));
         }
     }
 
@@ -186,7 +186,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
         private final boolean showMutualGuildsAndFriends;
 
         public ViewState(boolean z2, boolean z3, List<ConnectedAccountItem> list) {
-            m.checkNotNullParameter(list, "connectedAccountItems");
+            Intrinsics3.checkNotNullParameter(list, "connectedAccountItems");
             this.showConnectionsSection = z2;
             this.showMutualGuildsAndFriends = z3;
             this.connectedAccountItems = list;
@@ -221,7 +221,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
 
         public final ViewState copy(boolean showConnectionsSection, boolean showMutualGuildsAndFriends, List<ConnectedAccountItem> connectedAccountItems) {
-            m.checkNotNullParameter(connectedAccountItems, "connectedAccountItems");
+            Intrinsics3.checkNotNullParameter(connectedAccountItems, "connectedAccountItems");
             return new ViewState(showConnectionsSection, showMutualGuildsAndFriends, connectedAccountItems);
         }
 
@@ -233,7 +233,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return this.showConnectionsSection == viewState.showConnectionsSection && this.showMutualGuildsAndFriends == viewState.showMutualGuildsAndFriends && m.areEqual(this.connectedAccountItems, viewState.connectedAccountItems);
+            return this.showConnectionsSection == viewState.showConnectionsSection && this.showMutualGuildsAndFriends == viewState.showMutualGuildsAndFriends && Intrinsics3.areEqual(this.connectedAccountItems, viewState.connectedAccountItems);
         }
 
         public final List<ConnectedAccountItem> getConnectedAccountItems() {
@@ -266,22 +266,22 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewState(showConnectionsSection=");
-            sbU.append(this.showConnectionsSection);
-            sbU.append(", showMutualGuildsAndFriends=");
-            sbU.append(this.showMutualGuildsAndFriends);
-            sbU.append(", connectedAccountItems=");
-            return a.L(sbU, this.connectedAccountItems, ")");
+            StringBuilder sbM833U = outline.m833U("ViewState(showConnectionsSection=");
+            sbM833U.append(this.showConnectionsSection);
+            sbM833U.append(", showMutualGuildsAndFriends=");
+            sbM833U.append(this.showMutualGuildsAndFriends);
+            sbM833U.append(", connectedAccountItems=");
+            return outline.m824L(sbM833U, this.connectedAccountItems, ")");
         }
     }
 
     /* compiled from: UserProfileConnectionsView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function3<String, Integer, String, Unit> {
+    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$1 */
+    public static final class C102931 extends Lambda implements Function3<String, Integer, String, Unit> {
         public final /* synthetic */ Function3 $onConnectedAccountClick;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Function3 function3) {
+        public C102931(Function3 function3) {
             super(3);
             this.$onConnectedAccountClick = function3;
         }
@@ -289,21 +289,21 @@ public final class UserProfileConnectionsView extends LinearLayout {
         @Override // kotlin.jvm.functions.Function3
         public /* bridge */ /* synthetic */ Unit invoke(String str, Integer num, String str2) {
             invoke(str, num.intValue(), str2);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(String str, int i, String str2) {
-            m.checkNotNullParameter(str, "username");
+            Intrinsics3.checkNotNullParameter(str, "username");
             this.$onConnectedAccountClick.invoke(str, Integer.valueOf(i), str2);
         }
     }
 
     /* compiled from: UserProfileConnectionsView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$2 */
+    public static final class ViewOnClickListenerC102942 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onMutualGuildsItemClick;
 
-        public AnonymousClass2(Function0 function0) {
+        public ViewOnClickListenerC102942(Function0 function0) {
             this.$onMutualGuildsItemClick = function0;
         }
 
@@ -314,11 +314,11 @@ public final class UserProfileConnectionsView extends LinearLayout {
     }
 
     /* compiled from: UserProfileConnectionsView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$3 */
+    public static final class ViewOnClickListenerC102953 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onMutualFriendsItemClick;
 
-        public AnonymousClass3(Function0 function0) {
+        public ViewOnClickListenerC102953(Function0 function0) {
             this.$onMutualFriendsItemClick = function0;
         }
 
@@ -331,24 +331,24 @@ public final class UserProfileConnectionsView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UserProfileConnectionsView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(attributeSet, "attrs");
-        View viewInflate = LayoutInflater.from(context).inflate(R.layout.user_profile_connections_view, (ViewGroup) this, false);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
+        View viewInflate = LayoutInflater.from(context).inflate(C5419R.layout.user_profile_connections_view, (ViewGroup) this, false);
         addView(viewInflate);
-        int i = R.id.user_profile_connections_mutual_friends_item;
-        TextView textView = (TextView) viewInflate.findViewById(R.id.user_profile_connections_mutual_friends_item);
+        int i = C5419R.id.user_profile_connections_mutual_friends_item;
+        TextView textView = (TextView) viewInflate.findViewById(C5419R.id.user_profile_connections_mutual_friends_item);
         if (textView != null) {
-            i = R.id.user_profile_connections_mutual_guilds_item;
-            TextView textView2 = (TextView) viewInflate.findViewById(R.id.user_profile_connections_mutual_guilds_item);
+            i = C5419R.id.user_profile_connections_mutual_guilds_item;
+            TextView textView2 = (TextView) viewInflate.findViewById(C5419R.id.user_profile_connections_mutual_guilds_item);
             if (textView2 != null) {
-                i = R.id.user_profile_connections_view_recycler;
-                RecyclerView recyclerView = (RecyclerView) viewInflate.findViewById(R.id.user_profile_connections_view_recycler);
+                i = C5419R.id.user_profile_connections_view_recycler;
+                RecyclerView recyclerView = (RecyclerView) viewInflate.findViewById(C5419R.id.user_profile_connections_view_recycler);
                 if (recyclerView != null) {
                     UserProfileConnectionsViewBinding userProfileConnectionsViewBinding = new UserProfileConnectionsViewBinding((LinearLayout) viewInflate, textView, textView2, recyclerView);
-                    m.checkNotNullExpressionValue(userProfileConnectionsViewBinding, "UserProfileConnectionsVi…rom(context), this, true)");
+                    Intrinsics3.checkNotNullExpressionValue(userProfileConnectionsViewBinding, "UserProfileConnectionsVi…rom(context), this, true)");
                     this.binding = userProfileConnectionsViewBinding;
                     MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-                    m.checkNotNullExpressionValue(recyclerView, "binding.userProfileConnectionsViewRecycler");
+                    Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.userProfileConnectionsViewRecycler");
                     this.connectedAccountsAdapter = (ConnectedAccountsAdapter) companion.configure(new ConnectedAccountsAdapter(recyclerView));
                     return;
                 }
@@ -360,24 +360,24 @@ public final class UserProfileConnectionsView extends LinearLayout {
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        this.binding.d.setHasFixedSize(false);
-        ViewCompat.setNestedScrollingEnabled(this.binding.d, false);
+        this.binding.f15338d.setHasFixedSize(false);
+        ViewCompat.setNestedScrollingEnabled(this.binding.f15338d, false);
     }
 
     public final void updateViewState(ViewState viewState, Function3<? super String, ? super Integer, ? super String, Unit> onConnectedAccountClick, Function0<Unit> onMutualGuildsItemClick, Function0<Unit> onMutualFriendsItemClick) {
-        m.checkNotNullParameter(viewState, "viewState");
-        m.checkNotNullParameter(onConnectedAccountClick, "onConnectedAccountClick");
-        m.checkNotNullParameter(onMutualGuildsItemClick, "onMutualGuildsItemClick");
-        m.checkNotNullParameter(onMutualFriendsItemClick, "onMutualFriendsItemClick");
-        this.connectedAccountsAdapter.setOnConnectedAccountClick(new AnonymousClass1(onConnectedAccountClick));
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
+        Intrinsics3.checkNotNullParameter(onConnectedAccountClick, "onConnectedAccountClick");
+        Intrinsics3.checkNotNullParameter(onMutualGuildsItemClick, "onMutualGuildsItemClick");
+        Intrinsics3.checkNotNullParameter(onMutualFriendsItemClick, "onMutualFriendsItemClick");
+        this.connectedAccountsAdapter.setOnConnectedAccountClick(new C102931(onConnectedAccountClick));
         this.connectedAccountsAdapter.setData(viewState.getConnectedAccountItems());
-        this.binding.c.setOnClickListener(new AnonymousClass2(onMutualGuildsItemClick));
-        TextView textView = this.binding.c;
-        m.checkNotNullExpressionValue(textView, "binding.userProfileConnectionsMutualGuildsItem");
+        this.binding.f15337c.setOnClickListener(new ViewOnClickListenerC102942(onMutualGuildsItemClick));
+        TextView textView = this.binding.f15337c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.userProfileConnectionsMutualGuildsItem");
         textView.setVisibility(viewState.getShowMutualGuildsAndFriends() ? 0 : 8);
-        this.binding.f2164b.setOnClickListener(new AnonymousClass3(onMutualFriendsItemClick));
-        TextView textView2 = this.binding.f2164b;
-        m.checkNotNullExpressionValue(textView2, "binding.userProfileConnectionsMutualFriendsItem");
+        this.binding.f15336b.setOnClickListener(new ViewOnClickListenerC102953(onMutualFriendsItemClick));
+        TextView textView2 = this.binding.f15336b;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.userProfileConnectionsMutualFriendsItem");
         textView2.setVisibility(viewState.getShowMutualGuildsAndFriends() ? 0 : 8);
     }
 }

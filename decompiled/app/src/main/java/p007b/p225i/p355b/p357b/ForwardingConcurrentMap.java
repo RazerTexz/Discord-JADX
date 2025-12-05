@@ -1,0 +1,34 @@
+package p007b.p225i.p355b.p357b;
+
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import java.util.concurrent.ConcurrentMap;
+import p007b.p225i.p355b.p357b.MapMakerInternalMap;
+
+/* compiled from: ForwardingConcurrentMap.java */
+/* renamed from: b.i.b.b.k, reason: use source file name */
+/* loaded from: classes3.dex */
+public abstract class ForwardingConcurrentMap<K, V> extends ForwardingMap<K, V> implements ConcurrentMap<K, V> {
+    @Override // java.util.Map, java.util.concurrent.ConcurrentMap
+    @CanIgnoreReturnValue
+    public V putIfAbsent(K k, V v) {
+        return ((MapMakerInternalMap.b) this).f12078j.putIfAbsent(k, v);
+    }
+
+    @Override // java.util.Map, java.util.concurrent.ConcurrentMap
+    @CanIgnoreReturnValue
+    public boolean remove(Object obj, Object obj2) {
+        return ((MapMakerInternalMap.b) this).f12078j.remove(obj, obj2);
+    }
+
+    @Override // java.util.Map, java.util.concurrent.ConcurrentMap
+    @CanIgnoreReturnValue
+    public V replace(K k, V v) {
+        return ((MapMakerInternalMap.b) this).f12078j.replace(k, v);
+    }
+
+    @Override // java.util.Map, java.util.concurrent.ConcurrentMap
+    @CanIgnoreReturnValue
+    public boolean replace(K k, V v, V v2) {
+        return ((MapMakerInternalMap.b) this).f12078j.replace(k, v, v2);
+    }
+}

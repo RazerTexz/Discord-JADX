@@ -17,77 +17,92 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /* loaded from: classes.dex */
 public final class ForumBrowserPostViewBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final View a;
+    public final View f15080a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2109b;
+    public final TextView f15081b;
 
+    /* renamed from: c */
     @NonNull
-    public final SimpleDraweeSpanTextView c;
+    public final SimpleDraweeSpanTextView f15082c;
 
+    /* renamed from: d */
     @NonNull
-    public final SimpleDraweeView d;
+    public final SimpleDraweeView f15083d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f15084e;
 
+    /* renamed from: f */
     @NonNull
-    public final ForumPostTagView f;
+    public final ForumPostTagView f15085f;
 
+    /* renamed from: g */
     @NonNull
-    public final SimpleDraweeView g;
+    public final SimpleDraweeView f15086g;
 
+    /* renamed from: h */
     @NonNull
-    public final TextView h;
+    public final TextView f15087h;
 
+    /* renamed from: i */
     @NonNull
-    public final LinearLayout i;
+    public final LinearLayout f15088i;
 
+    /* renamed from: j */
     @NonNull
-    public final ImageView j;
+    public final ImageView f15089j;
 
+    /* renamed from: k */
     @NonNull
-    public final ImageView k;
+    public final ImageView f15090k;
 
+    /* renamed from: l */
     @NonNull
-    public final ReactionView l;
+    public final ReactionView f15091l;
 
+    /* renamed from: m */
     @NonNull
-    public final TextView m;
+    public final TextView f15092m;
 
+    /* renamed from: n */
     @NonNull
-    public final TypingDots n;
+    public final TypingDots f15093n;
 
+    /* renamed from: o */
     @NonNull
-    public final UserSummaryView o;
+    public final UserSummaryView f15094o;
 
+    /* renamed from: p */
     @NonNull
-    public final TextView p;
+    public final TextView f15095p;
 
     public ForumBrowserPostViewBinding(@NonNull View view, @NonNull Barrier barrier, @NonNull TextView textView, @NonNull SimpleDraweeSpanTextView simpleDraweeSpanTextView, @NonNull SimpleDraweeView simpleDraweeView, @NonNull TextView textView2, @NonNull ForumPostTagView forumPostTagView, @NonNull Barrier barrier2, @NonNull SimpleDraweeView simpleDraweeView2, @NonNull TextView textView3, @NonNull LinearLayout linearLayout, @NonNull ImageView imageView, @NonNull ImageView imageView2, @NonNull ReactionView reactionView, @NonNull TextView textView4, @NonNull TypingDots typingDots, @NonNull UserSummaryView userSummaryView, @NonNull TextView textView5) {
-        this.a = view;
-        this.f2109b = textView;
-        this.c = simpleDraweeSpanTextView;
-        this.d = simpleDraweeView;
-        this.e = textView2;
-        this.f = forumPostTagView;
-        this.g = simpleDraweeView2;
-        this.h = textView3;
-        this.i = linearLayout;
-        this.j = imageView;
-        this.k = imageView2;
-        this.l = reactionView;
-        this.m = textView4;
-        this.n = typingDots;
-        this.o = userSummaryView;
-        this.p = textView5;
+        this.f15080a = view;
+        this.f15081b = textView;
+        this.f15082c = simpleDraweeSpanTextView;
+        this.f15083d = simpleDraweeView;
+        this.f15084e = textView2;
+        this.f15085f = forumPostTagView;
+        this.f15086g = simpleDraweeView2;
+        this.f15087h = textView3;
+        this.f15088i = linearLayout;
+        this.f15089j = imageView;
+        this.f15090k = imageView2;
+        this.f15091l = reactionView;
+        this.f15092m = textView4;
+        this.f15093n = typingDots;
+        this.f15094o = userSummaryView;
+        this.f15095p = textView5;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15080a;
     }
 }

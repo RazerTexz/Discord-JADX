@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackFriendsListViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackFriendsListViewed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackFriendsListViewed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence tabOpened = null;
     private final Long numFriends = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackFriendsListViewed implements AnalyticsSchema,
             return false;
         }
         TrackFriendsListViewed trackFriendsListViewed = (TrackFriendsListViewed) other;
-        return m.areEqual(this.tabOpened, trackFriendsListViewed.tabOpened) && m.areEqual(this.numFriends, trackFriendsListViewed.numFriends) && m.areEqual(this.numOutgoingRequests, trackFriendsListViewed.numOutgoingRequests) && m.areEqual(this.numIncomingRequests, trackFriendsListViewed.numIncomingRequests) && m.areEqual(this.numSuggestions, trackFriendsListViewed.numSuggestions) && m.areEqual(this.wasDismissed, trackFriendsListViewed.wasDismissed) && m.areEqual(this.contactSyncIsEnabled, trackFriendsListViewed.contactSyncIsEnabled) && m.areEqual(this.isDiscoverableEmail, trackFriendsListViewed.isDiscoverableEmail) && m.areEqual(this.isDiscoverablePhone, trackFriendsListViewed.isDiscoverablePhone);
+        return Intrinsics3.areEqual(this.tabOpened, trackFriendsListViewed.tabOpened) && Intrinsics3.areEqual(this.numFriends, trackFriendsListViewed.numFriends) && Intrinsics3.areEqual(this.numOutgoingRequests, trackFriendsListViewed.numOutgoingRequests) && Intrinsics3.areEqual(this.numIncomingRequests, trackFriendsListViewed.numIncomingRequests) && Intrinsics3.areEqual(this.numSuggestions, trackFriendsListViewed.numSuggestions) && Intrinsics3.areEqual(this.wasDismissed, trackFriendsListViewed.wasDismissed) && Intrinsics3.areEqual(this.contactSyncIsEnabled, trackFriendsListViewed.contactSyncIsEnabled) && Intrinsics3.areEqual(this.isDiscoverableEmail, trackFriendsListViewed.isDiscoverableEmail) && Intrinsics3.areEqual(this.isDiscoverablePhone, trackFriendsListViewed.isDiscoverablePhone);
     }
 
     public int hashCode() {
@@ -60,23 +60,23 @@ public final /* data */ class TrackFriendsListViewed implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackFriendsListViewed(tabOpened=");
-        sbU.append(this.tabOpened);
-        sbU.append(", numFriends=");
-        sbU.append(this.numFriends);
-        sbU.append(", numOutgoingRequests=");
-        sbU.append(this.numOutgoingRequests);
-        sbU.append(", numIncomingRequests=");
-        sbU.append(this.numIncomingRequests);
-        sbU.append(", numSuggestions=");
-        sbU.append(this.numSuggestions);
-        sbU.append(", wasDismissed=");
-        sbU.append(this.wasDismissed);
-        sbU.append(", contactSyncIsEnabled=");
-        sbU.append(this.contactSyncIsEnabled);
-        sbU.append(", isDiscoverableEmail=");
-        sbU.append(this.isDiscoverableEmail);
-        sbU.append(", isDiscoverablePhone=");
-        return a.D(sbU, this.isDiscoverablePhone, ")");
+        StringBuilder sbM833U = outline.m833U("TrackFriendsListViewed(tabOpened=");
+        sbM833U.append(this.tabOpened);
+        sbM833U.append(", numFriends=");
+        sbM833U.append(this.numFriends);
+        sbM833U.append(", numOutgoingRequests=");
+        sbM833U.append(this.numOutgoingRequests);
+        sbM833U.append(", numIncomingRequests=");
+        sbM833U.append(this.numIncomingRequests);
+        sbM833U.append(", numSuggestions=");
+        sbM833U.append(this.numSuggestions);
+        sbM833U.append(", wasDismissed=");
+        sbM833U.append(this.wasDismissed);
+        sbM833U.append(", contactSyncIsEnabled=");
+        sbM833U.append(this.contactSyncIsEnabled);
+        sbM833U.append(", isDiscoverableEmail=");
+        sbM833U.append(this.isDiscoverableEmail);
+        sbM833U.append(", isDiscoverablePhone=");
+        return outline.m816D(sbM833U, this.isDiscoverablePhone, ")");
     }
 }

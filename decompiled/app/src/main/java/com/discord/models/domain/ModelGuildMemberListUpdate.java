@@ -1,16 +1,16 @@
 package com.discord.models.domain;
 
 import androidx.browser.customtabs.CustomTabsCallback;
-import b.d.b.a.a;
 import com.discord.api.guildmember.GuildMember;
 import com.discord.models.domain.Model;
-import d0.z.d.m;
 import java.io.IOException;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Ref$IntRef;
 import kotlin.jvm.internal.Ref$ObjectRef;
-import kotlin.ranges.IntRange;
+import kotlin.ranges.Ranges2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelGuildMemberListUpdate.kt */
 /* loaded from: classes.dex */
@@ -43,12 +43,12 @@ public final /* data */ class ModelGuildMemberListUpdate {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // com.discord.models.domain.Model.Parser
             public Group parse(Model.JsonReader reader) throws IOException {
-                m.checkNotNullParameter(reader, "reader");
+                Intrinsics3.checkNotNullParameter(reader, "reader");
                 Ref$IntRef ref$IntRef = new Ref$IntRef();
                 ref$IntRef.element = 0;
                 Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
                 ref$ObjectRef.element = "";
-                reader.nextObject(new ModelGuildMemberListUpdate$Group$Parser$parse$1(ref$ObjectRef, reader, ref$IntRef));
+                reader.nextObject(new ModelGuildMemberListUpdate2(ref$ObjectRef, reader, ref$IntRef));
                 return new Group((String) ref$ObjectRef.element, ref$IntRef.element);
             }
         }
@@ -66,7 +66,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
         */
         public Group(String str, int i) {
             Type type;
-            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
+            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
             this.id = str;
             this.count = i;
             int iHashCode = str.hashCode();
@@ -99,7 +99,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
         }
 
         public final Group copy(String id2, int count) {
-            m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+            Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
             return new Group(id2, count);
         }
 
@@ -111,7 +111,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 return false;
             }
             Group group = (Group) other;
-            return m.areEqual(this.id, group.id) && this.count == group.count;
+            return Intrinsics3.areEqual(this.id, group.id) && this.count == group.count;
         }
 
         public final int getCount() {
@@ -132,10 +132,10 @@ public final /* data */ class ModelGuildMemberListUpdate {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Group(id=");
-            sbU.append(this.id);
-            sbU.append(", count=");
-            return a.B(sbU, this.count, ")");
+            StringBuilder sbM833U = outline.m833U("Group(id=");
+            sbM833U.append(this.id);
+            sbM833U.append(", count=");
+            return outline.m814B(sbM833U, this.count, ")");
         }
     }
 
@@ -185,7 +185,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
 
             public String toString() {
-                return a.B(a.U("Delete(index="), this.index, ")");
+                return outline.m814B(outline.m833U("Delete(index="), this.index, ")");
             }
         }
 
@@ -197,7 +197,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Insert(int i, Item item) {
                 super(item, null, 2, null);
-                m.checkNotNullParameter(item, "item");
+                Intrinsics3.checkNotNullParameter(item, "item");
                 this.index = i;
                 this.item = item;
             }
@@ -222,7 +222,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
 
             public final Insert copy(int index, Item item) {
-                m.checkNotNullParameter(item, "item");
+                Intrinsics3.checkNotNullParameter(item, "item");
                 return new Insert(index, item);
             }
 
@@ -234,7 +234,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                     return false;
                 }
                 Insert insert = (Insert) other;
-                return this.index == insert.index && m.areEqual(getItem(), insert.getItem());
+                return this.index == insert.index && Intrinsics3.areEqual(getItem(), insert.getItem());
             }
 
             public final int getIndex() {
@@ -253,67 +253,67 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Insert(index=");
-                sbU.append(this.index);
-                sbU.append(", item=");
-                sbU.append(getItem());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Insert(index=");
+                sbM833U.append(this.index);
+                sbM833U.append(", item=");
+                sbM833U.append(getItem());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
         /* compiled from: ModelGuildMemberListUpdate.kt */
         public static final /* data */ class Invalidate extends Operation {
-            private final IntRange range;
+            private final Ranges2 range;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public Invalidate(IntRange intRange) {
+            public Invalidate(Ranges2 ranges2) {
                 super(null, null, 3, null);
-                m.checkNotNullParameter(intRange, "range");
-                this.range = intRange;
+                Intrinsics3.checkNotNullParameter(ranges2, "range");
+                this.range = ranges2;
             }
 
-            public static /* synthetic */ Invalidate copy$default(Invalidate invalidate, IntRange intRange, int i, Object obj) {
+            public static /* synthetic */ Invalidate copy$default(Invalidate invalidate, Ranges2 ranges2, int i, Object obj) {
                 if ((i & 1) != 0) {
-                    intRange = invalidate.range;
+                    ranges2 = invalidate.range;
                 }
-                return invalidate.copy(intRange);
+                return invalidate.copy(ranges2);
             }
 
             /* renamed from: component1, reason: from getter */
-            public final IntRange getRange() {
+            public final Ranges2 getRange() {
                 return this.range;
             }
 
-            public final Invalidate copy(IntRange range) {
-                m.checkNotNullParameter(range, "range");
+            public final Invalidate copy(Ranges2 range) {
+                Intrinsics3.checkNotNullParameter(range, "range");
                 return new Invalidate(range);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Invalidate) && m.areEqual(this.range, ((Invalidate) other).range);
+                    return (other instanceof Invalidate) && Intrinsics3.areEqual(this.range, ((Invalidate) other).range);
                 }
                 return true;
             }
 
-            public final IntRange getRange() {
+            public final Ranges2 getRange() {
                 return this.range;
             }
 
             public int hashCode() {
-                IntRange intRange = this.range;
-                if (intRange != null) {
-                    return intRange.hashCode();
+                Ranges2 ranges2 = this.range;
+                if (ranges2 != null) {
+                    return ranges2.hashCode();
                 }
                 return 0;
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Invalidate(range=");
-                sbU.append(this.range);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Invalidate(range=");
+                sbM833U.append(this.range);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -327,7 +327,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 public GroupItem(Group group) {
                     super(null);
-                    m.checkNotNullParameter(group, "group");
+                    Intrinsics3.checkNotNullParameter(group, "group");
                     this.group = group;
                 }
 
@@ -344,13 +344,13 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 }
 
                 public final GroupItem copy(Group group) {
-                    m.checkNotNullParameter(group, "group");
+                    Intrinsics3.checkNotNullParameter(group, "group");
                     return new GroupItem(group);
                 }
 
                 public boolean equals(Object other) {
                     if (this != other) {
-                        return (other instanceof GroupItem) && m.areEqual(this.group, ((GroupItem) other).group);
+                        return (other instanceof GroupItem) && Intrinsics3.areEqual(this.group, ((GroupItem) other).group);
                     }
                     return true;
                 }
@@ -368,10 +368,10 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("GroupItem(group=");
-                    sbU.append(this.group);
-                    sbU.append(")");
-                    return sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("GroupItem(group=");
+                    sbM833U.append(this.group);
+                    sbM833U.append(")");
+                    return sbM833U.toString();
                 }
             }
 
@@ -382,7 +382,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 public MemberItem(GuildMember guildMember) {
                     super(null);
-                    m.checkNotNullParameter(guildMember, "member");
+                    Intrinsics3.checkNotNullParameter(guildMember, "member");
                     this.member = guildMember;
                 }
 
@@ -399,13 +399,13 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 }
 
                 public final MemberItem copy(GuildMember member) {
-                    m.checkNotNullParameter(member, "member");
+                    Intrinsics3.checkNotNullParameter(member, "member");
                     return new MemberItem(member);
                 }
 
                 public boolean equals(Object other) {
                     if (this != other) {
-                        return (other instanceof MemberItem) && m.areEqual(this.member, ((MemberItem) other).member);
+                        return (other instanceof MemberItem) && Intrinsics3.areEqual(this.member, ((MemberItem) other).member);
                     }
                     return true;
                 }
@@ -423,10 +423,10 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("MemberItem(member=");
-                    sbU.append(this.member);
-                    sbU.append(")");
-                    return sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("MemberItem(member=");
+                    sbM833U.append(this.member);
+                    sbM833U.append(")");
+                    return sbM833U.toString();
                 }
             }
 
@@ -446,23 +446,23 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // com.discord.models.domain.Model.Parser
                 public Item parse(Model.JsonReader reader) throws IOException {
-                    Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
-                    ref$ObjectRefC0.element = null;
+                    Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(reader, "reader");
+                    ref$ObjectRefM844c0.element = null;
                     Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
                     ref$ObjectRef.element = null;
-                    reader.nextObject(new ModelGuildMemberListUpdate$Operation$Item$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef));
+                    reader.nextObject(new ModelGuildMemberListUpdate3(ref$ObjectRefM844c0, reader, ref$ObjectRef));
                     T t = ref$ObjectRef.element;
                     if (((GuildMember) t) != null) {
                         GuildMember guildMember = (GuildMember) t;
-                        m.checkNotNull(guildMember);
+                        Intrinsics3.checkNotNull(guildMember);
                         return new MemberItem(guildMember);
                     }
-                    T t2 = ref$ObjectRefC0.element;
+                    T t2 = ref$ObjectRefM844c0.element;
                     if (((Group) t2) == null) {
                         throw new IllegalArgumentException("either member or group must be present.");
                     }
                     Group group = (Group) t2;
-                    m.checkNotNull(group);
+                    Intrinsics3.checkNotNull(group);
                     return new GroupItem(group);
                 }
             }
@@ -498,8 +498,8 @@ public final /* data */ class ModelGuildMemberListUpdate {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // com.discord.models.domain.Model.Parser
             public Operation parse(Model.JsonReader reader) throws IOException {
-                Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
-                ref$ObjectRefC0.element = null;
+                Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(reader, "reader");
+                ref$ObjectRefM844c0.element = null;
                 Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
                 ref$ObjectRef.element = null;
                 Ref$ObjectRef ref$ObjectRef2 = new Ref$ObjectRef();
@@ -508,89 +508,89 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 ref$ObjectRef3.element = null;
                 Ref$ObjectRef ref$ObjectRef4 = new Ref$ObjectRef();
                 ref$ObjectRef4.element = null;
-                reader.nextObject(new ModelGuildMemberListUpdate$Operation$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef, ref$ObjectRef3, ref$ObjectRef2, ref$ObjectRef4));
-                String str = (String) ref$ObjectRefC0.element;
+                reader.nextObject(new ModelGuildMemberListUpdate4(ref$ObjectRefM844c0, reader, ref$ObjectRef, ref$ObjectRef3, ref$ObjectRef2, ref$ObjectRef4));
+                String str = (String) ref$ObjectRefM844c0.element;
                 if (str != null) {
                     switch (str.hashCode()) {
                         case -2130463047:
                             if (str.equals("INSERT")) {
                                 Integer num = (Integer) ref$ObjectRef.element;
-                                m.checkNotNull(num);
+                                Intrinsics3.checkNotNull(num);
                                 int iIntValue = num.intValue();
                                 Item item = (Item) ref$ObjectRef2.element;
-                                m.checkNotNull(item);
+                                Intrinsics3.checkNotNull(item);
                                 return new Insert(iIntValue, item);
                             }
                             break;
                         case -1785516855:
                             if (str.equals("UPDATE")) {
                                 Integer num2 = (Integer) ref$ObjectRef.element;
-                                m.checkNotNull(num2);
+                                Intrinsics3.checkNotNull(num2);
                                 int iIntValue2 = num2.intValue();
                                 Item item2 = (Item) ref$ObjectRef2.element;
-                                m.checkNotNull(item2);
+                                Intrinsics3.checkNotNull(item2);
                                 return new Update(iIntValue2, item2);
                             }
                             break;
                         case -1346757317:
                             if (str.equals("INVALIDATE")) {
-                                IntRange intRange = (IntRange) ref$ObjectRef3.element;
-                                m.checkNotNull(intRange);
-                                return new Invalidate(intRange);
+                                Ranges2 ranges2 = (Ranges2) ref$ObjectRef3.element;
+                                Intrinsics3.checkNotNull(ranges2);
+                                return new Invalidate(ranges2);
                             }
                             break;
                         case 2560667:
                             if (str.equals("SYNC")) {
-                                IntRange intRange2 = (IntRange) ref$ObjectRef3.element;
-                                m.checkNotNull(intRange2);
+                                Ranges2 ranges22 = (Ranges2) ref$ObjectRef3.element;
+                                Intrinsics3.checkNotNull(ranges22);
                                 List list = (List) ref$ObjectRef4.element;
-                                m.checkNotNull(list);
-                                return new Sync(intRange2, list);
+                                Intrinsics3.checkNotNull(list);
+                                return new Sync(ranges22, list);
                             }
                             break;
                         case 2012838315:
                             if (str.equals("DELETE")) {
                                 Integer num3 = (Integer) ref$ObjectRef.element;
-                                m.checkNotNull(num3);
+                                Intrinsics3.checkNotNull(num3);
                                 return new Delete(num3.intValue());
                             }
                             break;
                     }
                 }
-                StringBuilder sbU = a.U("Invalid operation type: ");
-                sbU.append((String) ref$ObjectRefC0.element);
-                throw new IllegalArgumentException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("Invalid operation type: ");
+                sbM833U.append((String) ref$ObjectRefM844c0.element);
+                throw new IllegalArgumentException(sbM833U.toString());
             }
         }
 
         /* compiled from: ModelGuildMemberListUpdate.kt */
         public static final /* data */ class Sync extends Operation {
             private final List<Item> items;
-            private final IntRange range;
+            private final Ranges2 range;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             /* JADX WARN: Multi-variable type inference failed */
-            public Sync(IntRange intRange, List<? extends Item> list) {
+            public Sync(Ranges2 ranges2, List<? extends Item> list) {
                 super(null, list, 1, null);
-                m.checkNotNullParameter(intRange, "range");
-                m.checkNotNullParameter(list, "items");
-                this.range = intRange;
+                Intrinsics3.checkNotNullParameter(ranges2, "range");
+                Intrinsics3.checkNotNullParameter(list, "items");
+                this.range = ranges2;
                 this.items = list;
             }
 
             /* JADX WARN: Multi-variable type inference failed */
-            public static /* synthetic */ Sync copy$default(Sync sync, IntRange intRange, List list, int i, Object obj) {
+            public static /* synthetic */ Sync copy$default(Sync sync, Ranges2 ranges2, List list, int i, Object obj) {
                 if ((i & 1) != 0) {
-                    intRange = sync.range;
+                    ranges2 = sync.range;
                 }
                 if ((i & 2) != 0) {
                     list = sync.getItems();
                 }
-                return sync.copy(intRange, list);
+                return sync.copy(ranges2, list);
             }
 
             /* renamed from: component1, reason: from getter */
-            public final IntRange getRange() {
+            public final Ranges2 getRange() {
                 return this.range;
             }
 
@@ -598,9 +598,9 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 return getItems();
             }
 
-            public final Sync copy(IntRange range, List<? extends Item> items) {
-                m.checkNotNullParameter(range, "range");
-                m.checkNotNullParameter(items, "items");
+            public final Sync copy(Ranges2 range, List<? extends Item> items) {
+                Intrinsics3.checkNotNullParameter(range, "range");
+                Intrinsics3.checkNotNullParameter(items, "items");
                 return new Sync(range, items);
             }
 
@@ -612,7 +612,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                     return false;
                 }
                 Sync sync = (Sync) other;
-                return m.areEqual(this.range, sync.range) && m.areEqual(getItems(), sync.getItems());
+                return Intrinsics3.areEqual(this.range, sync.range) && Intrinsics3.areEqual(getItems(), sync.getItems());
             }
 
             @Override // com.discord.models.domain.ModelGuildMemberListUpdate.Operation
@@ -620,24 +620,24 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 return this.items;
             }
 
-            public final IntRange getRange() {
+            public final Ranges2 getRange() {
                 return this.range;
             }
 
             public int hashCode() {
-                IntRange intRange = this.range;
-                int iHashCode = (intRange != null ? intRange.hashCode() : 0) * 31;
+                Ranges2 ranges2 = this.range;
+                int iHashCode = (ranges2 != null ? ranges2.hashCode() : 0) * 31;
                 List<Item> items = getItems();
                 return iHashCode + (items != null ? items.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Sync(range=");
-                sbU.append(this.range);
-                sbU.append(", items=");
-                sbU.append(getItems());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Sync(range=");
+                sbM833U.append(this.range);
+                sbM833U.append(", items=");
+                sbM833U.append(getItems());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -649,7 +649,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Update(int i, Item item) {
                 super(item, null, 2, null);
-                m.checkNotNullParameter(item, "item");
+                Intrinsics3.checkNotNullParameter(item, "item");
                 this.index = i;
                 this.item = item;
             }
@@ -674,7 +674,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
 
             public final Update copy(int index, Item item) {
-                m.checkNotNullParameter(item, "item");
+                Intrinsics3.checkNotNullParameter(item, "item");
                 return new Update(index, item);
             }
 
@@ -686,7 +686,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                     return false;
                 }
                 Update update = (Update) other;
-                return this.index == update.index && m.areEqual(getItem(), update.getItem());
+                return this.index == update.index && Intrinsics3.areEqual(getItem(), update.getItem());
             }
 
             public final int getIndex() {
@@ -705,12 +705,12 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Update(index=");
-                sbU.append(this.index);
-                sbU.append(", item=");
-                sbU.append(getItem());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Update(index=");
+                sbM833U.append(this.index);
+                sbM833U.append(", item=");
+                sbM833U.append(getItem());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -749,17 +749,17 @@ public final /* data */ class ModelGuildMemberListUpdate {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.discord.models.domain.Model.Parser
         public ModelGuildMemberListUpdate parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
-            ref$ObjectRefC0.element = null;
+            Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(reader, "reader");
+            ref$ObjectRefM844c0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
             Ref$ObjectRef ref$ObjectRef2 = new Ref$ObjectRef();
             ref$ObjectRef2.element = null;
             Ref$ObjectRef ref$ObjectRef3 = new Ref$ObjectRef();
             ref$ObjectRef3.element = null;
-            reader.nextObject(new ModelGuildMemberListUpdate$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3));
-            Long l = (Long) ref$ObjectRefC0.element;
-            m.checkNotNull(l);
+            reader.nextObject(new ModelGuildMemberListUpdate5(ref$ObjectRefM844c0, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3));
+            Long l = (Long) ref$ObjectRefM844c0.element;
+            Intrinsics3.checkNotNull(l);
             long jLongValue = l.longValue();
             String str = (String) ref$ObjectRef.element;
             if (str == null) {
@@ -767,18 +767,18 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
             String str2 = str;
             List list = (List) ref$ObjectRef2.element;
-            m.checkNotNull(list);
+            Intrinsics3.checkNotNull(list);
             List list2 = (List) ref$ObjectRef3.element;
-            m.checkNotNull(list2);
+            Intrinsics3.checkNotNull(list2);
             return new ModelGuildMemberListUpdate(jLongValue, str2, list, list2);
         }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public ModelGuildMemberListUpdate(long j, String str, List<? extends Operation> list, List<Group> list2) {
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
-        m.checkNotNullParameter(list, "operations");
-        m.checkNotNullParameter(list2, "groups");
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
+        Intrinsics3.checkNotNullParameter(list, "operations");
+        Intrinsics3.checkNotNullParameter(list2, "groups");
         this.guildId = j;
         this.id = str;
         this.operations = list;
@@ -823,9 +823,9 @@ public final /* data */ class ModelGuildMemberListUpdate {
     }
 
     public final ModelGuildMemberListUpdate copy(long guildId, String id2, List<? extends Operation> operations, List<Group> groups) {
-        m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
-        m.checkNotNullParameter(operations, "operations");
-        m.checkNotNullParameter(groups, "groups");
+        Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+        Intrinsics3.checkNotNullParameter(operations, "operations");
+        Intrinsics3.checkNotNullParameter(groups, "groups");
         return new ModelGuildMemberListUpdate(guildId, id2, operations, groups);
     }
 
@@ -837,7 +837,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             return false;
         }
         ModelGuildMemberListUpdate modelGuildMemberListUpdate = (ModelGuildMemberListUpdate) other;
-        return this.guildId == modelGuildMemberListUpdate.guildId && m.areEqual(this.id, modelGuildMemberListUpdate.id) && m.areEqual(this.operations, modelGuildMemberListUpdate.operations) && m.areEqual(this.groups, modelGuildMemberListUpdate.groups);
+        return this.guildId == modelGuildMemberListUpdate.guildId && Intrinsics3.areEqual(this.id, modelGuildMemberListUpdate.id) && Intrinsics3.areEqual(this.operations, modelGuildMemberListUpdate.operations) && Intrinsics3.areEqual(this.groups, modelGuildMemberListUpdate.groups);
     }
 
     public final List<Group> getGroups() {
@@ -868,13 +868,13 @@ public final /* data */ class ModelGuildMemberListUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelGuildMemberListUpdate(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", id=");
-        sbU.append(this.id);
-        sbU.append(", operations=");
-        sbU.append(this.operations);
-        sbU.append(", groups=");
-        return a.L(sbU, this.groups, ")");
+        StringBuilder sbM833U = outline.m833U("ModelGuildMemberListUpdate(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", operations=");
+        sbM833U.append(this.operations);
+        sbM833U.append(", groups=");
+        return outline.m824L(sbM833U, this.groups, ")");
     }
 }

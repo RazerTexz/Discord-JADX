@@ -2,11 +2,11 @@ package com.discord.utilities.textprocessing;
 
 import android.text.SpannableStringBuilder;
 import androidx.exifinterface.media.ExifInterface;
-import b.a.t.b.b.h;
 import com.discord.simpleast.core.node.Node;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
-import d0.z.d.m;
 import java.util.Collection;
+import p007b.p008a.p050t.p052b.p054b.SimpleRenderer;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: AstRenderer.kt */
 /* loaded from: classes2.dex */
@@ -17,9 +17,9 @@ public final class AstRenderer {
     }
 
     public static final <T> DraweeSpanStringBuilder render(Collection<? extends Node<T>> ast, T renderContext) {
-        m.checkNotNullParameter(ast, "ast");
+        Intrinsics3.checkNotNullParameter(ast, "ast");
         DraweeSpanStringBuilder draweeSpanStringBuilder = new DraweeSpanStringBuilder();
-        h.a(draweeSpanStringBuilder, ast, renderContext);
+        SimpleRenderer.m375a(draweeSpanStringBuilder, ast, renderContext);
         INSTANCE.trim(draweeSpanStringBuilder);
         return draweeSpanStringBuilder;
     }

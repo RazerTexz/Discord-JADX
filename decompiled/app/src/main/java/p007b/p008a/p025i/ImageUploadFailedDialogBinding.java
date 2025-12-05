@@ -1,0 +1,75 @@
+package p007b.p008a.p025i;
+
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.viewbinding.ViewBinding;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.switchmaterial.SwitchMaterial;
+
+/* compiled from: ImageUploadFailedDialogBinding.java */
+/* renamed from: b.a.i.c0, reason: use source file name */
+/* loaded from: classes.dex */
+public final class ImageUploadFailedDialogBinding implements ViewBinding {
+
+    /* renamed from: a */
+    @NonNull
+    public final RelativeLayout f726a;
+
+    /* renamed from: b */
+    @NonNull
+    public final MaterialButton f727b;
+
+    /* renamed from: c */
+    @NonNull
+    public final SwitchMaterial f728c;
+
+    /* renamed from: d */
+    @NonNull
+    public final RelativeLayout f729d;
+
+    /* renamed from: e */
+    @NonNull
+    public final View f730e;
+
+    /* renamed from: f */
+    @NonNull
+    public final MaterialButton f731f;
+
+    /* renamed from: g */
+    @NonNull
+    public final RelativeLayout f732g;
+
+    /* renamed from: h */
+    @NonNull
+    public final MaterialButton f733h;
+
+    /* renamed from: i */
+    @NonNull
+    public final MaterialButton f734i;
+
+    /* renamed from: j */
+    @NonNull
+    public final TextView f735j;
+
+    public ImageUploadFailedDialogBinding(@NonNull RelativeLayout relativeLayout, @NonNull ImageView imageView, @NonNull MaterialButton materialButton, @NonNull SwitchMaterial switchMaterial, @NonNull RelativeLayout relativeLayout2, @NonNull View view, @NonNull MaterialButton materialButton2, @NonNull RelativeLayout relativeLayout3, @NonNull MaterialButton materialButton3, @NonNull MaterialButton materialButton4, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3) {
+        this.f726a = relativeLayout;
+        this.f727b = materialButton;
+        this.f728c = switchMaterial;
+        this.f729d = relativeLayout2;
+        this.f730e = view;
+        this.f731f = materialButton2;
+        this.f732g = relativeLayout3;
+        this.f733h = materialButton3;
+        this.f734i = materialButton4;
+        this.f735j = textView;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return this.f726a;
+    }
+}

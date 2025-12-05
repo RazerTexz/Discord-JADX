@@ -49,9 +49,9 @@ public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implement
     public final Drawable.Callback mCallback;
     private Context mContext;
 
-    /* renamed from: androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$1, reason: invalid class name */
-    public class AnonymousClass1 implements Drawable.Callback {
-        public AnonymousClass1() {
+    /* renamed from: androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$1 */
+    public class C06771 implements Drawable.Callback {
+        public C06771() {
         }
 
         @Override // android.graphics.drawable.Drawable.Callback
@@ -70,9 +70,9 @@ public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implement
         }
     }
 
-    /* renamed from: androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$2, reason: invalid class name */
-    public class AnonymousClass2 extends AnimatorListenerAdapter {
-        public AnonymousClass2() {
+    /* renamed from: androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$2 */
+    public class C06782 extends AnimatorListenerAdapter {
+        public C06782() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -494,7 +494,7 @@ public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implement
         }
         this.mAnimationCallbacks.add(animationCallback);
         if (this.mAnimatorListener == null) {
-            this.mAnimatorListener = new AnonymousClass2();
+            this.mAnimatorListener = new C06782();
         }
         this.mAnimatedVectorState.mAnimatorSet.addListener(this.mAnimatorListener);
     }
@@ -694,13 +694,13 @@ public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implement
         this.mArgbEvaluator = null;
         this.mAnimatorListener = null;
         this.mAnimationCallbacks = null;
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-        this.mCallback = anonymousClass1;
+        C06771 c06771 = new C06771();
+        this.mCallback = c06771;
         this.mContext = context;
         if (animatedVectorDrawableCompatState != null) {
             this.mAnimatedVectorState = animatedVectorDrawableCompatState;
         } else {
-            this.mAnimatedVectorState = new AnimatedVectorDrawableCompatState(context, animatedVectorDrawableCompatState, anonymousClass1, resources);
+            this.mAnimatedVectorState = new AnimatedVectorDrawableCompatState(context, animatedVectorDrawableCompatState, c06771, resources);
         }
     }
 

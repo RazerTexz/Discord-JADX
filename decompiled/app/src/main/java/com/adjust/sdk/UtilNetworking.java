@@ -2,7 +2,6 @@ package com.adjust.sdk;
 
 import android.net.Uri;
 import androidx.browser.trusted.sharing.ShareTarget;
-import b.d.b.a.a;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
@@ -16,6 +15,7 @@ import java.util.Map;
 import javax.net.ssl.HttpsURLConnection;
 import org.json.JSONException;
 import org.json.JSONObject;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class UtilNetworking {
@@ -258,17 +258,17 @@ public class UtilNetworking {
         if (str6 != null) {
             map2.put("payload", str6);
         }
-        String strJ = "";
+        String strM822J = "";
         String string = "";
         for (Map.Entry entry : map2.entrySet()) {
             if (entry.getValue() != null) {
-                strJ = a.J(a.U(strJ), (String) entry.getKey(), " ");
-                StringBuilder sbU = a.U(string);
-                sbU.append((String) entry.getValue());
-                string = sbU.toString();
+                strM822J = outline.m822J(outline.m833U(strM822J), (String) entry.getKey(), " ");
+                StringBuilder sbM833U = outline.m833U(string);
+                sbM833U.append((String) entry.getValue());
+                string = sbM833U.toString();
             }
         }
-        String strSubstring = strJ.substring(0, strJ.length() - 1);
+        String strSubstring = strM822J.substring(0, strM822J.length() - 1);
         HashMap map3 = new HashMap();
         map3.put("clear_signature", string);
         map3.put("fields", strSubstring);

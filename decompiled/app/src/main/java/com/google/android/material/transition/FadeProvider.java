@@ -8,56 +8,68 @@ import android.view.ViewGroup;
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.i.a.g.l.k;
+import p007b.p225i.p226a.p341g.p353l.TransitionUtils3;
 
 /* loaded from: classes3.dex */
 public final class FadeProvider implements VisibilityAnimatorProvider {
     private float incomingEndThreshold = 1.0f;
 
-    public static class a implements ValueAnimator.AnimatorUpdateListener {
-        public final /* synthetic */ View a;
+    /* renamed from: com.google.android.material.transition.FadeProvider$a */
+    public static class C11040a implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final /* synthetic */ float f3081b;
-        public final /* synthetic */ float c;
-        public final /* synthetic */ float d;
-        public final /* synthetic */ float e;
+        /* renamed from: a */
+        public final /* synthetic */ View f21252a;
 
-        public a(View view, float f, float f2, float f3, float f4) {
-            this.a = view;
-            this.f3081b = f;
-            this.c = f2;
-            this.d = f3;
-            this.e = f4;
+        /* renamed from: b */
+        public final /* synthetic */ float f21253b;
+
+        /* renamed from: c */
+        public final /* synthetic */ float f21254c;
+
+        /* renamed from: d */
+        public final /* synthetic */ float f21255d;
+
+        /* renamed from: e */
+        public final /* synthetic */ float f21256e;
+
+        public C11040a(View view, float f, float f2, float f3, float f4) {
+            this.f21252a = view;
+            this.f21253b = f;
+            this.f21254c = f2;
+            this.f21255d = f3;
+            this.f21256e = f4;
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
         public void onAnimationUpdate(ValueAnimator valueAnimator) {
-            this.a.setAlpha(k.e(this.f3081b, this.c, this.d, this.e, ((Float) valueAnimator.getAnimatedValue()).floatValue()));
+            this.f21252a.setAlpha(TransitionUtils3.m6190e(this.f21253b, this.f21254c, this.f21255d, this.f21256e, ((Float) valueAnimator.getAnimatedValue()).floatValue()));
         }
     }
 
-    public static class b extends AnimatorListenerAdapter {
-        public final /* synthetic */ View a;
+    /* renamed from: com.google.android.material.transition.FadeProvider$b */
+    public static class C11041b extends AnimatorListenerAdapter {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final /* synthetic */ float f3082b;
+        /* renamed from: a */
+        public final /* synthetic */ View f21257a;
 
-        public b(View view, float f) {
-            this.a = view;
-            this.f3082b = f;
+        /* renamed from: b */
+        public final /* synthetic */ float f21258b;
+
+        public C11041b(View view, float f) {
+            this.f21257a = view;
+            this.f21258b = f;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            this.a.setAlpha(this.f3082b);
+            this.f21257a.setAlpha(this.f21258b);
         }
     }
 
-    private static Animator createFadeAnimator(View view, float f, float f2, @FloatRange(from = 0.0d, to = 1.0d) float f3, @FloatRange(from = 0.0d, to = 1.0d) float f4, float f5) {
+    private static Animator createFadeAnimator(View view, float f, float f2, @FloatRange(from = 0.0d, m75to = 1.0d) float f3, @FloatRange(from = 0.0d, m75to = 1.0d) float f4, float f5) {
         ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
-        valueAnimatorOfFloat.addUpdateListener(new a(view, f, f2, f3, f4));
-        valueAnimatorOfFloat.addListener(new b(view, f5));
+        valueAnimatorOfFloat.addUpdateListener(new C11040a(view, f, f2, f3, f4));
+        valueAnimatorOfFloat.addListener(new C11041b(view, f5));
         return valueAnimatorOfFloat;
     }
 

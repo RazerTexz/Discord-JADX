@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildSettingsDiscoveryUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildSettingsDiscoveryUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackGuildSettingsDiscoveryUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Boolean automatic = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackGuildSettingsDiscoveryUpdated implements Anal
             return false;
         }
         TrackGuildSettingsDiscoveryUpdated trackGuildSettingsDiscoveryUpdated = (TrackGuildSettingsDiscoveryUpdated) other;
-        return m.areEqual(this.guildId, trackGuildSettingsDiscoveryUpdated.guildId) && m.areEqual(this.automatic, trackGuildSettingsDiscoveryUpdated.automatic) && m.areEqual(this.discoverySplashEditType, trackGuildSettingsDiscoveryUpdated.discoverySplashEditType) && m.areEqual(this.rulesChannelId, trackGuildSettingsDiscoveryUpdated.rulesChannelId) && m.areEqual(this.isDiscoverable, trackGuildSettingsDiscoveryUpdated.isDiscoverable) && m.areEqual(this.failedReasons, trackGuildSettingsDiscoveryUpdated.failedReasons);
+        return Intrinsics3.areEqual(this.guildId, trackGuildSettingsDiscoveryUpdated.guildId) && Intrinsics3.areEqual(this.automatic, trackGuildSettingsDiscoveryUpdated.automatic) && Intrinsics3.areEqual(this.discoverySplashEditType, trackGuildSettingsDiscoveryUpdated.discoverySplashEditType) && Intrinsics3.areEqual(this.rulesChannelId, trackGuildSettingsDiscoveryUpdated.rulesChannelId) && Intrinsics3.areEqual(this.isDiscoverable, trackGuildSettingsDiscoveryUpdated.isDiscoverable) && Intrinsics3.areEqual(this.failedReasons, trackGuildSettingsDiscoveryUpdated.failedReasons);
     }
 
     public int hashCode() {
@@ -52,17 +52,17 @@ public final /* data */ class TrackGuildSettingsDiscoveryUpdated implements Anal
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildSettingsDiscoveryUpdated(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", automatic=");
-        sbU.append(this.automatic);
-        sbU.append(", discoverySplashEditType=");
-        sbU.append(this.discoverySplashEditType);
-        sbU.append(", rulesChannelId=");
-        sbU.append(this.rulesChannelId);
-        sbU.append(", isDiscoverable=");
-        sbU.append(this.isDiscoverable);
-        sbU.append(", failedReasons=");
-        return a.L(sbU, this.failedReasons, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildSettingsDiscoveryUpdated(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", automatic=");
+        sbM833U.append(this.automatic);
+        sbM833U.append(", discoverySplashEditType=");
+        sbM833U.append(this.discoverySplashEditType);
+        sbM833U.append(", rulesChannelId=");
+        sbM833U.append(this.rulesChannelId);
+        sbM833U.append(", isDiscoverable=");
+        sbM833U.append(this.isDiscoverable);
+        sbM833U.append(", failedReasons=");
+        return outline.m824L(sbM833U, this.failedReasons, ")");
     }
 }

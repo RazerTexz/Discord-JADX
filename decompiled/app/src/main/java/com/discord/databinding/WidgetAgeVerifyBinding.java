@@ -4,41 +4,45 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.g0;
-import b.a.i.h0;
-import b.a.i.i0;
 import com.discord.app.AppViewFlipper;
+import p007b.p008a.p025i.LayoutAgeVerifyBinding;
+import p007b.p008a.p025i.LayoutAgeVerifyConfirmBinding;
+import p007b.p008a.p025i.LayoutAgeVerifyUnderageBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetAgeVerifyBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f15643a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final AppViewFlipper f2224b;
+    public final AppViewFlipper f15644b;
 
+    /* renamed from: c */
     @NonNull
-    public final h0 c;
+    public final LayoutAgeVerifyConfirmBinding f15645c;
 
+    /* renamed from: d */
     @NonNull
-    public final i0 d;
+    public final LayoutAgeVerifyUnderageBinding f15646d;
 
+    /* renamed from: e */
     @NonNull
-    public final g0 e;
+    public final LayoutAgeVerifyBinding f15647e;
 
-    public WidgetAgeVerifyBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppViewFlipper appViewFlipper, @NonNull h0 h0Var, @NonNull i0 i0Var, @NonNull g0 g0Var) {
-        this.a = coordinatorLayout;
-        this.f2224b = appViewFlipper;
-        this.c = h0Var;
-        this.d = i0Var;
-        this.e = g0Var;
+    public WidgetAgeVerifyBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppViewFlipper appViewFlipper, @NonNull LayoutAgeVerifyConfirmBinding layoutAgeVerifyConfirmBinding, @NonNull LayoutAgeVerifyUnderageBinding layoutAgeVerifyUnderageBinding, @NonNull LayoutAgeVerifyBinding layoutAgeVerifyBinding) {
+        this.f15643a = coordinatorLayout;
+        this.f15644b = appViewFlipper;
+        this.f15645c = layoutAgeVerifyConfirmBinding;
+        this.f15646d = layoutAgeVerifyUnderageBinding;
+        this.f15647e = layoutAgeVerifyBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15643a;
     }
 }

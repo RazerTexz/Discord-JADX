@@ -2,9 +2,11 @@ package com.facebook.cache.common;
 
 /* loaded from: classes.dex */
 public interface CacheKey {
-    boolean a();
+    /* renamed from: a */
+    boolean mo929a();
 
-    String b();
+    /* renamed from: b */
+    String mo930b();
 
     boolean equals(Object obj);
 

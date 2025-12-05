@@ -41,10 +41,13 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     private static final String STATIC_FILL_VALUES_METHOD_NAME = "$fillValuesFromInstanceIntoBuilder";
     private static final String INSTANCE_VARIABLE_NAME = "instance";
     private static final String BUILDER_VARIABLE_NAME = "b";
-    private static /* synthetic */ int[] $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult;
 
-    static /* synthetic */ int[] $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult() {
-        int[] iArr = $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult;
+    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    private static /* synthetic */ int[] f27488x2486df07;
+
+    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    static /* synthetic */ int[] m10946x2486df07() {
+        int[] iArr = f27488x2486df07;
         if (iArr != null) {
             return iArr;
         }
@@ -61,7 +64,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
             iArr2[JavacHandlerUtil.MemberExistsResult.NOT_EXISTS.ordinal()] = 1;
         } catch (NoSuchFieldError unused3) {
         }
-        $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult = iArr2;
+        f27488x2486df07 = iArr2;
         return iArr2;
     }
 
@@ -472,7 +475,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
      */
     /* JADX WARN: Code restructure failed: missing block: B:204:0x0997, code lost:
     
-        switch($SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult()[lombok.javac.handlers.JavacHandlerUtil.methodExists("toBuilder", r0.parentType, 0).ordinal()]) {
+        switch(m10946x2486df07()[lombok.javac.handlers.JavacHandlerUtil.methodExists("toBuilder", r0.parentType, 0).ordinal()]) {
             case 1: goto L206;
             case 2: goto L209;
             case 3: goto L209;
@@ -548,7 +551,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         if (!HandlerUtil.checkName("buildMethodName", job.buildMethodName, annotationNode)) {
             return;
         }
-        JavacNode parent = annotationNode.up();
+        JavacNode parent = annotationNode.m10925up();
         job.builderFields = new ArrayList();
         job.typeParams = List.nil();
         List<JCTree.JCExpression> buildMethodThrownExceptions = List.nil();
@@ -724,7 +727,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
                 JCTree.JCFieldAccess fieldInThis2 = maker.Select(maker.Ident(job.toName("this")), bfd.rawName);
                 JCTree.JCExpression parentTypeRef = JavacHandlerUtil.namePlusTypeParamsToTypeReference(maker, job.parentType, List.nil());
                 JCTree.JCAssign assignDefault = maker.Assign(fieldInThis2, maker.Apply(JavacHandlerUtil.typeParameterNames(maker, job.parentType.get().typarams), maker.Select(parentTypeRef, bfd.nameOfDefaultProvider), List.nil()));
-                statements.append(maker.If(setField, jCExpressionStatementExec, maker.Exec(assignDefault)));
+                statements.append(maker.m10940If(setField, jCExpressionStatementExec, maker.Exec(assignDefault)));
             } else {
                 statements.append(jCExpressionStatementExec);
             }
@@ -906,7 +909,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         }
         JCTree.JCModifiers modifiers = maker.Modifiers(4L, annsOnMethod.prepend(overrideAnnotation));
         Name name = job.toName(SELF_METHOD);
-        JCTree.JCExpression returnType = JavacHandlerUtil.namePlusTypeParamsToTypeReference(maker, job.builderType.up(), job.getBuilderClassName(), false, job.typeParams);
+        JCTree.JCExpression returnType = JavacHandlerUtil.namePlusTypeParamsToTypeReference(maker, job.builderType.m10925up(), job.getBuilderClassName(), false, job.typeParams);
         JCTree.JCBlock body = maker.Block(0L, List.of(maker.Return(maker.Ident(job.toName("this")))));
         return maker.MethodDef(modifiers, name, returnType, List.nil(), List.nil(), List.nil(), body, null);
     }
@@ -1019,8 +1022,8 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     private void generateSetterMethodsForBuilder(SuperBuilderJob job, HandleBuilder.BuilderFieldData fieldNode, String builderGenericName, String setterPrefix) {
         boolean deprecate = JavacHandlerUtil.isFieldDeprecated(fieldNode.originalFieldNode);
         JavacTreeMaker maker = job.getTreeMaker();
-        JavacSingularsRecipes.ExpressionMaker returnTypeMaker = new AnonymousClass1(maker, job, builderGenericName);
-        JavacSingularsRecipes.StatementMaker returnStatementMaker = new AnonymousClass2(maker, job);
+        JavacSingularsRecipes.ExpressionMaker returnTypeMaker = new C128951(maker, job, builderGenericName);
+        JavacSingularsRecipes.StatementMaker returnStatementMaker = new C128962(maker, job);
         if (fieldNode.singularData == null || fieldNode.singularData.getSingularizer() == null) {
             generateSimpleSetterMethodForBuilder(job, deprecate, fieldNode.createdFields.get(0), fieldNode.name, fieldNode.nameOfSetFlag, returnTypeMaker.make(), returnStatementMaker.make(), fieldNode.annotations, fieldNode.originalFieldNode, setterPrefix);
         } else {
@@ -1028,14 +1031,14 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         }
     }
 
-    /* renamed from: lombok.javac.handlers.HandleSuperBuilder$1, reason: invalid class name */
+    /* renamed from: lombok.javac.handlers.HandleSuperBuilder$1 */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder$1.SCL.lombok */
-    class AnonymousClass1 implements JavacSingularsRecipes.ExpressionMaker {
+    class C128951 implements JavacSingularsRecipes.ExpressionMaker {
         private final /* synthetic */ JavacTreeMaker val$maker;
         private final /* synthetic */ SuperBuilderJob val$job;
         private final /* synthetic */ String val$builderGenericName;
 
-        AnonymousClass1(JavacTreeMaker javacTreeMaker, SuperBuilderJob superBuilderJob, String str) {
+        C128951(JavacTreeMaker javacTreeMaker, SuperBuilderJob superBuilderJob, String str) {
             this.val$maker = javacTreeMaker;
             this.val$job = superBuilderJob;
             this.val$builderGenericName = str;
@@ -1047,13 +1050,13 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         }
     }
 
-    /* renamed from: lombok.javac.handlers.HandleSuperBuilder$2, reason: invalid class name */
+    /* renamed from: lombok.javac.handlers.HandleSuperBuilder$2 */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder$2.SCL.lombok */
-    class AnonymousClass2 implements JavacSingularsRecipes.StatementMaker {
+    class C128962 implements JavacSingularsRecipes.StatementMaker {
         private final /* synthetic */ JavacTreeMaker val$maker;
         private final /* synthetic */ SuperBuilderJob val$job;
 
-        AnonymousClass2(JavacTreeMaker javacTreeMaker, SuperBuilderJob superBuilderJob) {
+        C128962(JavacTreeMaker javacTreeMaker, SuperBuilderJob superBuilderJob) {
             this.val$maker = javacTreeMaker;
             this.val$job = superBuilderJob;
         }

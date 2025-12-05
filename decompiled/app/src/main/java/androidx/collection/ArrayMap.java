@@ -12,9 +12,9 @@ public class ArrayMap<K, V> extends SimpleArrayMap<K, V> implements Map<K, V> {
     @Nullable
     public MapCollections<K, V> mCollections;
 
-    /* renamed from: androidx.collection.ArrayMap$1, reason: invalid class name */
-    public class AnonymousClass1 extends MapCollections<K, V> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.collection.ArrayMap$1 */
+    public class C01631 extends MapCollections<K, V> {
+        public C01631() {
         }
 
         @Override // androidx.collection.MapCollections
@@ -68,7 +68,7 @@ public class ArrayMap<K, V> extends SimpleArrayMap<K, V> implements Map<K, V> {
 
     private MapCollections<K, V> getCollection() {
         if (this.mCollections == null) {
-            this.mCollections = new AnonymousClass1();
+            this.mCollections = new C01631();
         }
         return this.mCollections;
     }

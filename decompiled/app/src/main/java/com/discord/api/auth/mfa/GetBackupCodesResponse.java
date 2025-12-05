@@ -1,21 +1,22 @@
 package com.discord.api.auth.mfa;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GetBackupCodesResponse.kt */
 /* loaded from: classes.dex */
 public final /* data */ class GetBackupCodesResponse {
     private final List<BackupCode> backupCodes;
 
-    public final List<BackupCode> a() {
+    /* renamed from: a */
+    public final List<BackupCode> m7590a() {
         return this.backupCodes;
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof GetBackupCodesResponse) && m.areEqual(this.backupCodes, ((GetBackupCodesResponse) other).backupCodes);
+            return (other instanceof GetBackupCodesResponse) && Intrinsics3.areEqual(this.backupCodes, ((GetBackupCodesResponse) other).backupCodes);
         }
         return true;
     }
@@ -29,6 +30,6 @@ public final /* data */ class GetBackupCodesResponse {
     }
 
     public String toString() {
-        return a.L(a.U("GetBackupCodesResponse(backupCodes="), this.backupCodes, ")");
+        return outline.m824L(outline.m833U("GetBackupCodesResponse(backupCodes="), this.backupCodes, ")");
     }
 }

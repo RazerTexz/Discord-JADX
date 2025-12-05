@@ -18,90 +18,107 @@ import com.google.android.material.textfield.TextInputLayout;
 /* loaded from: classes.dex */
 public final class WidgetSettingsGiftingBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f17953a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final DimmerView f2620b;
+    public final DimmerView f17954b;
 
+    /* renamed from: c */
     @NonNull
-    public final GiftSelectView c;
+    public final GiftSelectView f17955c;
 
+    /* renamed from: d */
     @NonNull
-    public final GiftSelectView d;
+    public final GiftSelectView f17956d;
 
+    /* renamed from: e */
     @NonNull
-    public final GiftSelectView e;
+    public final GiftSelectView f17957e;
 
+    /* renamed from: f */
     @NonNull
-    public final GiftSelectView f;
+    public final GiftSelectView f17958f;
 
+    /* renamed from: g */
     @NonNull
-    public final LinkifiedTextView g;
+    public final LinkifiedTextView f17959g;
 
+    /* renamed from: h */
     @NonNull
-    public final LinkifiedTextView h;
+    public final LinkifiedTextView f17960h;
 
+    /* renamed from: i */
     @NonNull
-    public final AppViewFlipper i;
+    public final AppViewFlipper f17961i;
 
+    /* renamed from: j */
     @NonNull
-    public final ProgressBar j;
+    public final ProgressBar f17962j;
 
+    /* renamed from: k */
     @NonNull
-    public final TextInputLayout k;
+    public final TextInputLayout f17963k;
 
+    /* renamed from: l */
     @NonNull
-    public final TextView l;
+    public final TextView f17964l;
 
+    /* renamed from: m */
     @NonNull
-    public final RecyclerView m;
+    public final RecyclerView f17965m;
 
+    /* renamed from: n */
     @NonNull
-    public final TextView n;
+    public final TextView f17966n;
 
+    /* renamed from: o */
     @NonNull
-    public final MaterialButton o;
+    public final MaterialButton f17967o;
 
+    /* renamed from: p */
     @NonNull
-    public final TextView p;
+    public final TextView f17968p;
 
+    /* renamed from: q */
     @NonNull
-    public final TextView q;
+    public final TextView f17969q;
 
+    /* renamed from: r */
     @NonNull
-    public final TextView r;
+    public final TextView f17970r;
 
-    /* renamed from: s, reason: collision with root package name */
+    /* renamed from: s */
     @NonNull
-    public final RecyclerView f2621s;
+    public final RecyclerView f17971s;
 
     public WidgetSettingsGiftingBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull DimmerView dimmerView, @NonNull GiftSelectView giftSelectView, @NonNull GiftSelectView giftSelectView2, @NonNull GiftSelectView giftSelectView3, @NonNull GiftSelectView giftSelectView4, @NonNull LinkifiedTextView linkifiedTextView, @NonNull LinkifiedTextView linkifiedTextView2, @NonNull AppViewFlipper appViewFlipper, @NonNull ProgressBar progressBar, @NonNull TextInputLayout textInputLayout, @NonNull TextView textView, @NonNull RecyclerView recyclerView, @NonNull LinearLayout linearLayout, @NonNull TextView textView2, @NonNull MaterialButton materialButton, @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView5, @NonNull RecyclerView recyclerView2) {
-        this.a = coordinatorLayout;
-        this.f2620b = dimmerView;
-        this.c = giftSelectView;
-        this.d = giftSelectView2;
-        this.e = giftSelectView3;
-        this.f = giftSelectView4;
-        this.g = linkifiedTextView;
-        this.h = linkifiedTextView2;
-        this.i = appViewFlipper;
-        this.j = progressBar;
-        this.k = textInputLayout;
-        this.l = textView;
-        this.m = recyclerView;
-        this.n = textView2;
-        this.o = materialButton;
-        this.p = textView3;
-        this.q = textView4;
-        this.r = textView5;
-        this.f2621s = recyclerView2;
+        this.f17953a = coordinatorLayout;
+        this.f17954b = dimmerView;
+        this.f17955c = giftSelectView;
+        this.f17956d = giftSelectView2;
+        this.f17957e = giftSelectView3;
+        this.f17958f = giftSelectView4;
+        this.f17959g = linkifiedTextView;
+        this.f17960h = linkifiedTextView2;
+        this.f17961i = appViewFlipper;
+        this.f17962j = progressBar;
+        this.f17963k = textInputLayout;
+        this.f17964l = textView;
+        this.f17965m = recyclerView;
+        this.f17966n = textView2;
+        this.f17967o = materialButton;
+        this.f17968p = textView3;
+        this.f17969q = textView4;
+        this.f17970r = textView5;
+        this.f17971s = recyclerView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17953a;
     }
 }

@@ -75,9 +75,9 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
     public void handle(AnnotationValues<UtilityClass> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.UTILITY_CLASS_FLAG_USAGE, "@UtilityClass");
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) UtilityClass.class);
-        JavacNode typeNode = annotationNode.up();
+        JavacNode typeNode = annotationNode.m10925up();
         if (checkLegality(typeNode, annotationNode)) {
-            changeModifiersAndGenerateConstructor(annotationNode.up(), annotationNode);
+            changeModifiersAndGenerateConstructor(annotationNode.m10925up(), annotationNode);
         }
     }
 
@@ -87,7 +87,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
         	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.process(SwitchRegionMaker.java:68)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:112)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:103)
+        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:104)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
@@ -146,7 +146,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
             r11 = r0
         L49:
             r0 = r11
-            lombok.core.LombokNode r0 = r0.up()
+            lombok.core.LombokNode r0 = r0.m10925up()
             lombok.javac.JavacNode r0 = (lombok.javac.JavacNode) r0
             r11 = r0
             int[] r0 = $SWITCH_TABLE$lombok$core$AST$Kind()
@@ -175,7 +175,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
             goto L49
         L92:
             r0 = r11
-            lombok.core.LombokNode r0 = r0.up()
+            lombok.core.LombokNode r0 = r0.m10925up()
             lombok.javac.JavacNode r0 = (lombok.javac.JavacNode) r0
             lombok.core.AST$Kind r0 = r0.getKind()
             lombok.core.AST$Kind r1 = lombok.core.AST.Kind.COMPILATION_UNIT
@@ -205,9 +205,9 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
         JCTree.JCClassDecl classDecl = typeNode.get();
         boolean makeConstructor = true;
         classDecl.mods.flags |= 16;
-        boolean markStatic = typeNode.up().getKind() != AST.Kind.COMPILATION_UNIT;
-        if (markStatic && typeNode.up().getKind() == AST.Kind.TYPE) {
-            JCTree.JCClassDecl typeDecl = typeNode.up().get();
+        boolean markStatic = typeNode.m10925up().getKind() != AST.Kind.COMPILATION_UNIT;
+        if (markStatic && typeNode.m10925up().getKind() == AST.Kind.TYPE) {
+            JCTree.JCClassDecl typeDecl = typeNode.m10925up().get();
             if ((typeDecl.mods.flags & 8704) != 0) {
                 markStatic = false;
             }

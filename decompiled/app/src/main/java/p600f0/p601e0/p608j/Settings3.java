@@ -1,0 +1,45 @@
+package p600f0.p601e0.p608j;
+
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: Settings.kt */
+/* renamed from: f0.e0.j.s, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class Settings3 {
+
+    /* renamed from: a */
+    public int f25752a;
+
+    /* renamed from: b */
+    public final int[] f25753b = new int[10];
+
+    /* renamed from: a */
+    public final int m10312a() {
+        if ((this.f25752a & 128) != 0) {
+            return this.f25753b[7];
+        }
+        return 65535;
+    }
+
+    /* renamed from: b */
+    public final void m10313b(Settings3 settings3) {
+        Intrinsics3.checkParameterIsNotNull(settings3, "other");
+        for (int i = 0; i < 10; i++) {
+            if (((1 << i) & settings3.f25752a) != 0) {
+                m10314c(i, settings3.f25753b[i]);
+            }
+        }
+    }
+
+    /* renamed from: c */
+    public final Settings3 m10314c(int i, int i2) {
+        if (i >= 0) {
+            int[] iArr = this.f25753b;
+            if (i < iArr.length) {
+                this.f25752a = (1 << i) | this.f25752a;
+                iArr[i] = i2;
+            }
+        }
+        return this;
+    }
+}

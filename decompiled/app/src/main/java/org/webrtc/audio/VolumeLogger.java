@@ -2,10 +2,10 @@ package org.webrtc.audio;
 
 import android.media.AudioManager;
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
 import java.util.Timer;
 import java.util.TimerTask;
 import org.webrtc.Logging;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class VolumeLogger {
@@ -30,21 +30,21 @@ public class VolumeLogger {
         public void run() {
             int mode = VolumeLogger.access$000(VolumeLogger.this).getMode();
             if (mode == 1) {
-                StringBuilder sbU = a.U("STREAM_RING stream volume: ");
-                sbU.append(VolumeLogger.access$000(VolumeLogger.this).getStreamVolume(2));
-                sbU.append(" (max=");
-                sbU.append(this.maxRingVolume);
-                sbU.append(")");
-                Logging.d(VolumeLogger.TAG, sbU.toString());
+                StringBuilder sbM833U = outline.m833U("STREAM_RING stream volume: ");
+                sbM833U.append(VolumeLogger.access$000(VolumeLogger.this).getStreamVolume(2));
+                sbM833U.append(" (max=");
+                sbM833U.append(this.maxRingVolume);
+                sbM833U.append(")");
+                Logging.m11027d(VolumeLogger.TAG, sbM833U.toString());
                 return;
             }
             if (mode == 3) {
-                StringBuilder sbU2 = a.U("VOICE_CALL stream volume: ");
-                sbU2.append(VolumeLogger.access$000(VolumeLogger.this).getStreamVolume(0));
-                sbU2.append(" (max=");
-                sbU2.append(this.maxVoiceCallVolume);
-                sbU2.append(")");
-                Logging.d(VolumeLogger.TAG, sbU2.toString());
+                StringBuilder sbM833U2 = outline.m833U("VOICE_CALL stream volume: ");
+                sbM833U2.append(VolumeLogger.access$000(VolumeLogger.this).getStreamVolume(0));
+                sbM833U2.append(" (max=");
+                sbM833U2.append(this.maxVoiceCallVolume);
+                sbM833U2.append(")");
+                Logging.m11027d(VolumeLogger.TAG, sbM833U2.toString());
             }
         }
     }
@@ -58,24 +58,24 @@ public class VolumeLogger {
     }
 
     public void start() {
-        StringBuilder sbU = a.U("start");
-        sbU.append(WebRtcAudioUtils.getThreadInfo());
-        Logging.d(TAG, sbU.toString());
+        StringBuilder sbM833U = outline.m833U("start");
+        sbM833U.append(WebRtcAudioUtils.getThreadInfo());
+        Logging.m11027d(TAG, sbM833U.toString());
         if (this.timer != null) {
             return;
         }
-        StringBuilder sbU2 = a.U("audio mode is: ");
-        sbU2.append(WebRtcAudioUtils.modeToString(this.audioManager.getMode()));
-        Logging.d(TAG, sbU2.toString());
+        StringBuilder sbM833U2 = outline.m833U("audio mode is: ");
+        sbM833U2.append(WebRtcAudioUtils.modeToString(this.audioManager.getMode()));
+        Logging.m11027d(TAG, sbM833U2.toString());
         Timer timer = new Timer(THREAD_NAME);
         this.timer = timer;
         timer.schedule(new LogVolumeTask(this.audioManager.getStreamMaxVolume(2), this.audioManager.getStreamMaxVolume(0)), 0L, 30000L);
     }
 
     public void stop() {
-        StringBuilder sbU = a.U("stop");
-        sbU.append(WebRtcAudioUtils.getThreadInfo());
-        Logging.d(TAG, sbU.toString());
+        StringBuilder sbM833U = outline.m833U("stop");
+        sbM833U.append(WebRtcAudioUtils.getThreadInfo());
+        Logging.m11027d(TAG, sbM833U.toString());
         Timer timer = this.timer;
         if (timer != null) {
             timer.cancel();

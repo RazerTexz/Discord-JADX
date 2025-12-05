@@ -1,0 +1,28 @@
+package com.discord.widgets.stage;
+
+import com.discord.api.voice.state.VoiceState;
+import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+
+/* compiled from: StageChannelJoinHelper.kt */
+/* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$2$channelVoiceStateUserIds$2, reason: use source file name */
+/* loaded from: classes2.dex */
+public final class StageChannelJoinHelper3 extends Lambda implements Function1<VoiceState, Long> {
+    public static final StageChannelJoinHelper3 INSTANCE = new StageChannelJoinHelper3();
+
+    public StageChannelJoinHelper3() {
+        super(1);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ Long invoke(VoiceState voiceState) {
+        return Long.valueOf(invoke2(voiceState));
+    }
+
+    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final long invoke2(VoiceState voiceState) {
+        Intrinsics3.checkNotNullParameter(voiceState, "it");
+        return voiceState.getUserId();
+    }
+}

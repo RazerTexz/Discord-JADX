@@ -5,30 +5,26 @@ import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Window;
-import androidx.core.os.BundleKt;
+import androidx.core.os.Bundle2;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetQuickMentionsDialogBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.accessibility.AccessibilityUtils;
 import com.discord.utilities.analytics.AnalyticsTracker;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.utilities.view.recycler.ViewPager2ExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.view.recycler.ViewPager2Extensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.user.WidgetUserMentions;
 import com.discord.widgets.user.search.WidgetGlobalSearch;
 import com.discord.widgets.user.search.WidgetGlobalSearchDismissModel;
 import com.google.android.material.tabs.TabLayout;
-import d0.o;
-import d0.z.d.a0;
-import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -36,11 +32,16 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetQuickMentionsDialog.kt */
 /* loaded from: classes2.dex */
 public final class WidgetQuickMentionsDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetQuickMentionsDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetQuickMentionsDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetQuickMentionsDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetQuickMentionsDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -66,7 +67,7 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
         }
 
         public final void dismiss(FragmentManager fragmentManager) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             Fragment fragmentFindFragmentByTag = fragmentManager.findFragmentByTag("javaClass");
             if (fragmentFindFragmentByTag instanceof WidgetQuickMentionsDialog) {
                 ((WidgetQuickMentionsDialog) fragmentFindFragmentByTag).dismiss();
@@ -74,10 +75,10 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
         }
 
         public final void show(FragmentManager fragmentManager, String searchText) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             dismiss(fragmentManager);
             WidgetQuickMentionsDialog widgetQuickMentionsDialog = new WidgetQuickMentionsDialog();
-            widgetQuickMentionsDialog.setArguments(BundleKt.bundleOf(o.to(WidgetGlobalSearch.EXTRA_SEARCH_TEXT, searchText)));
+            widgetQuickMentionsDialog.setArguments(Bundle2.bundleOf(Tuples.m10073to(WidgetGlobalSearch.EXTRA_SEARCH_TEXT, searchText)));
             widgetQuickMentionsDialog.show(fragmentManager, "javaClass");
             AnalyticsTracker.INSTANCE.quickSwitcherOpen();
         }
@@ -94,7 +95,7 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public TabsAdapter(WidgetQuickMentionsDialog widgetQuickMentionsDialog, String str) {
             super(widgetQuickMentionsDialog);
-            m.checkNotNullParameter(widgetQuickMentionsDialog, "fragment");
+            Intrinsics3.checkNotNullParameter(widgetQuickMentionsDialog, "fragment");
             this.searchText = str;
         }
 
@@ -117,42 +118,42 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
 
         public final int getItemTitleResId(int position) {
             if (position == 0) {
-                return R.string.search;
+                return C5419R.string.search;
             }
             if (position == 1) {
-                return R.string.mentions;
+                return C5419R.string.mentions;
             }
             throw new UnsupportedOperationException();
         }
     }
 
     /* compiled from: WidgetQuickMentionsDialog.kt */
-    /* renamed from: com.discord.widgets.quickmentions.WidgetQuickMentionsDialog$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Unit, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.quickmentions.WidgetQuickMentionsDialog$onViewBoundOrOnResume$1 */
+    public static final class C91221 extends Lambda implements Function1<Unit, Unit> {
+        public C91221() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Unit unit) {
             invoke2(unit);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
-            m.checkNotNullParameter(unit, "it");
+            Intrinsics3.checkNotNullParameter(unit, "it");
             WidgetQuickMentionsDialog.this.dismiss();
         }
     }
 
     /* compiled from: WidgetQuickMentionsDialog.kt */
-    /* renamed from: com.discord.widgets.quickmentions.WidgetQuickMentionsDialog$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends d0.z.d.o implements Function2<TabLayout.Tab, Integer, Unit> {
+    /* renamed from: com.discord.widgets.quickmentions.WidgetQuickMentionsDialog$onViewBoundOrOnResume$2 */
+    public static final class C91232 extends Lambda implements Function2<TabLayout.Tab, Integer, Unit> {
         public final /* synthetic */ TabsAdapter $adapter;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(TabsAdapter tabsAdapter) {
+        public C91232(TabsAdapter tabsAdapter) {
             super(2);
             this.$adapter = tabsAdapter;
         }
@@ -160,19 +161,19 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(TabLayout.Tab tab, Integer num) {
             invoke(tab, num.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(TabLayout.Tab tab, int i) {
-            m.checkNotNullParameter(tab, "tab");
+            Intrinsics3.checkNotNullParameter(tab, "tab");
             tab.setText(WidgetQuickMentionsDialog.this.getString(this.$adapter.getItemTitleResId(i)));
         }
     }
 
     public WidgetQuickMentionsDialog() {
-        super(R.layout.widget_quick_mentions_dialog);
-        this.dismissViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetGlobalSearchDismissModel.class), new WidgetQuickMentionsDialog$$special$$inlined$activityViewModels$1(this), new WidgetQuickMentionsDialog$$special$$inlined$activityViewModels$2(this));
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetQuickMentionsDialog$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_quick_mentions_dialog);
+        this.dismissViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetGlobalSearchDismissModel.class), new WidgetQuickMentionsDialog$$special$$inlined$activityViewModels$1(this), new WidgetQuickMentionsDialog$$special$$inlined$activityViewModels$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetQuickMentionsDialog2.INSTANCE, null, 2, null);
     }
 
     private final WidgetQuickMentionsDialogBinding getBinding() {
@@ -208,15 +209,15 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
     @Override // com.discord.app.AppDialog
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getDismissViewModel().getDismissEvents(), this, null, 2, null), WidgetQuickMentionsDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getDismissViewModel().getDismissEvents(), this, null, 2, null), WidgetQuickMentionsDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C91221(), 62, (Object) null);
         TabsAdapter tabsAdapter = new TabsAdapter(this, requireArguments().getString(WidgetGlobalSearch.EXTRA_SEARCH_TEXT));
-        ViewPager2 viewPager2 = getBinding().f2516b;
-        m.checkNotNullExpressionValue(viewPager2, "binding.tabContents");
+        ViewPager2 viewPager2 = getBinding().f17399b;
+        Intrinsics3.checkNotNullExpressionValue(viewPager2, "binding.tabContents");
         viewPager2.setAdapter(tabsAdapter);
-        TabLayout tabLayout = getBinding().c;
-        m.checkNotNullExpressionValue(tabLayout, "binding.tabs");
-        ViewPager2 viewPager22 = getBinding().f2516b;
-        m.checkNotNullExpressionValue(viewPager22, "binding.tabContents");
-        ViewPager2ExtensionsKt.setUpWithViewPager2(tabLayout, viewPager22, new AnonymousClass2(tabsAdapter));
+        TabLayout tabLayout = getBinding().f17400c;
+        Intrinsics3.checkNotNullExpressionValue(tabLayout, "binding.tabs");
+        ViewPager2 viewPager22 = getBinding().f17399b;
+        Intrinsics3.checkNotNullExpressionValue(viewPager22, "binding.tabContents");
+        ViewPager2Extensions.setUpWithViewPager2(tabLayout, viewPager22, new C91232(tabsAdapter));
     }
 }

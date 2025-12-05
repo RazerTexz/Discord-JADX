@@ -1,10 +1,10 @@
 package com.discord.models.domain;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.models.domain.billing.ModelBillingAddress;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelPaymentSource.kt */
 /* loaded from: classes.dex */
@@ -24,20 +24,20 @@ public abstract class ModelPaymentSource {
         private Companion() {
         }
 
-        public final ModelPaymentSource wrap(PaymentSourceRaw raw) throws UnableToWrapException {
-            m.checkNotNullParameter(raw, "raw");
+        public final ModelPaymentSource wrap(ModelPaymentSource3 raw) throws UnableToWrapException {
+            Intrinsics3.checkNotNullParameter(raw, "raw");
             try {
                 int type = raw.getType();
                 if (type == 1) {
                     String brand = raw.getBrand();
-                    m.checkNotNull(brand);
+                    Intrinsics3.checkNotNull(brand);
                     String last_4 = raw.getLast_4();
-                    m.checkNotNull(last_4);
+                    Intrinsics3.checkNotNull(last_4);
                     return new ModelPaymentSourceCard(brand, last_4, raw.getExpiresMonth(), raw.getExpiresYear(), raw.getId(), raw.getInvalid(), raw.getBillingAddress(), raw.getDefault());
                 }
                 if (type == 2) {
                     String email = raw.getEmail();
-                    m.checkNotNull(email);
+                    Intrinsics3.checkNotNull(email);
                     return new ModelPaymentSourcePaypal(email, raw.getId(), raw.getInvalid(), raw.getBillingAddress(), raw.getDefault());
                 }
                 throw new IllegalArgumentException("unsupported payment source type: " + raw.getType());
@@ -65,10 +65,10 @@ public abstract class ModelPaymentSource {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ModelPaymentSourceCard(String str, String str2, int i, int i2, String str3, boolean z2, ModelBillingAddress modelBillingAddress, boolean z3) {
             super(str3, z2, modelBillingAddress, z3, null);
-            m.checkNotNullParameter(str, "brand");
-            m.checkNotNullParameter(str2, "last4");
-            m.checkNotNullParameter(str3, ModelAuditLogEntry.CHANGE_KEY_ID);
-            m.checkNotNullParameter(modelBillingAddress, "billingAddress");
+            Intrinsics3.checkNotNullParameter(str, "brand");
+            Intrinsics3.checkNotNullParameter(str2, "last4");
+            Intrinsics3.checkNotNullParameter(str3, ModelAuditLogEntry.CHANGE_KEY_ID);
+            Intrinsics3.checkNotNullParameter(modelBillingAddress, "billingAddress");
             this.brand = str;
             this.last4 = str2;
             this.expiresMonth = i;
@@ -120,10 +120,10 @@ public abstract class ModelPaymentSource {
         }
 
         public final ModelPaymentSourceCard copy(String brand, String last4, int expiresMonth, int expiresYear, String id2, boolean invalid, ModelBillingAddress billingAddress, boolean z2) {
-            m.checkNotNullParameter(brand, "brand");
-            m.checkNotNullParameter(last4, "last4");
-            m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
-            m.checkNotNullParameter(billingAddress, "billingAddress");
+            Intrinsics3.checkNotNullParameter(brand, "brand");
+            Intrinsics3.checkNotNullParameter(last4, "last4");
+            Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+            Intrinsics3.checkNotNullParameter(billingAddress, "billingAddress");
             return new ModelPaymentSourceCard(brand, last4, expiresMonth, expiresYear, id2, invalid, billingAddress, z2);
         }
 
@@ -135,7 +135,7 @@ public abstract class ModelPaymentSource {
                 return false;
             }
             ModelPaymentSourceCard modelPaymentSourceCard = (ModelPaymentSourceCard) other;
-            return m.areEqual(this.brand, modelPaymentSourceCard.brand) && m.areEqual(this.last4, modelPaymentSourceCard.last4) && this.expiresMonth == modelPaymentSourceCard.expiresMonth && this.expiresYear == modelPaymentSourceCard.expiresYear && m.areEqual(getId(), modelPaymentSourceCard.getId()) && getInvalid() == modelPaymentSourceCard.getInvalid() && m.areEqual(getBillingAddress(), modelPaymentSourceCard.getBillingAddress()) && getDefault() == modelPaymentSourceCard.getDefault();
+            return Intrinsics3.areEqual(this.brand, modelPaymentSourceCard.brand) && Intrinsics3.areEqual(this.last4, modelPaymentSourceCard.last4) && this.expiresMonth == modelPaymentSourceCard.expiresMonth && this.expiresYear == modelPaymentSourceCard.expiresYear && Intrinsics3.areEqual(getId(), modelPaymentSourceCard.getId()) && getInvalid() == modelPaymentSourceCard.getInvalid() && Intrinsics3.areEqual(getBillingAddress(), modelPaymentSourceCard.getBillingAddress()) && getDefault() == modelPaymentSourceCard.getDefault();
         }
 
         @Override // com.discord.models.domain.ModelPaymentSource
@@ -194,24 +194,24 @@ public abstract class ModelPaymentSource {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelPaymentSourceCard(brand=");
-            sbU.append(this.brand);
-            sbU.append(", last4=");
-            sbU.append(this.last4);
-            sbU.append(", expiresMonth=");
-            sbU.append(this.expiresMonth);
-            sbU.append(", expiresYear=");
-            sbU.append(this.expiresYear);
-            sbU.append(", id=");
-            sbU.append(getId());
-            sbU.append(", invalid=");
-            sbU.append(getInvalid());
-            sbU.append(", billingAddress=");
-            sbU.append(getBillingAddress());
-            sbU.append(", default=");
-            sbU.append(getDefault());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelPaymentSourceCard(brand=");
+            sbM833U.append(this.brand);
+            sbM833U.append(", last4=");
+            sbM833U.append(this.last4);
+            sbM833U.append(", expiresMonth=");
+            sbM833U.append(this.expiresMonth);
+            sbM833U.append(", expiresYear=");
+            sbM833U.append(this.expiresYear);
+            sbM833U.append(", id=");
+            sbM833U.append(getId());
+            sbM833U.append(", invalid=");
+            sbM833U.append(getInvalid());
+            sbM833U.append(", billingAddress=");
+            sbM833U.append(getBillingAddress());
+            sbM833U.append(", default=");
+            sbM833U.append(getDefault());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -226,9 +226,9 @@ public abstract class ModelPaymentSource {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ModelPaymentSourcePaypal(String str, String str2, boolean z2, ModelBillingAddress modelBillingAddress, boolean z3) {
             super(str2, z2, modelBillingAddress, z3, null);
-            m.checkNotNullParameter(str, NotificationCompat.CATEGORY_EMAIL);
-            m.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_ID);
-            m.checkNotNullParameter(modelBillingAddress, "billingAddress");
+            Intrinsics3.checkNotNullParameter(str, NotificationCompat.CATEGORY_EMAIL);
+            Intrinsics3.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_ID);
+            Intrinsics3.checkNotNullParameter(modelBillingAddress, "billingAddress");
             this.email = str;
             this.id = str2;
             this.invalid = z2;
@@ -280,9 +280,9 @@ public abstract class ModelPaymentSource {
         }
 
         public final ModelPaymentSourcePaypal copy(String email, String id2, boolean invalid, ModelBillingAddress billingAddress, boolean z2) {
-            m.checkNotNullParameter(email, NotificationCompat.CATEGORY_EMAIL);
-            m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
-            m.checkNotNullParameter(billingAddress, "billingAddress");
+            Intrinsics3.checkNotNullParameter(email, NotificationCompat.CATEGORY_EMAIL);
+            Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+            Intrinsics3.checkNotNullParameter(billingAddress, "billingAddress");
             return new ModelPaymentSourcePaypal(email, id2, invalid, billingAddress, z2);
         }
 
@@ -294,7 +294,7 @@ public abstract class ModelPaymentSource {
                 return false;
             }
             ModelPaymentSourcePaypal modelPaymentSourcePaypal = (ModelPaymentSourcePaypal) other;
-            return m.areEqual(this.email, modelPaymentSourcePaypal.email) && m.areEqual(getId(), modelPaymentSourcePaypal.getId()) && getInvalid() == modelPaymentSourcePaypal.getInvalid() && m.areEqual(getBillingAddress(), modelPaymentSourcePaypal.getBillingAddress()) && getDefault() == modelPaymentSourcePaypal.getDefault();
+            return Intrinsics3.areEqual(this.email, modelPaymentSourcePaypal.email) && Intrinsics3.areEqual(getId(), modelPaymentSourcePaypal.getId()) && getInvalid() == modelPaymentSourcePaypal.getInvalid() && Intrinsics3.areEqual(getBillingAddress(), modelPaymentSourcePaypal.getBillingAddress()) && getDefault() == modelPaymentSourcePaypal.getDefault();
         }
 
         @Override // com.discord.models.domain.ModelPaymentSource
@@ -339,18 +339,18 @@ public abstract class ModelPaymentSource {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelPaymentSourcePaypal(email=");
-            sbU.append(this.email);
-            sbU.append(", id=");
-            sbU.append(getId());
-            sbU.append(", invalid=");
-            sbU.append(getInvalid());
-            sbU.append(", billingAddress=");
-            sbU.append(getBillingAddress());
-            sbU.append(", default=");
-            sbU.append(getDefault());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelPaymentSourcePaypal(email=");
+            sbM833U.append(this.email);
+            sbM833U.append(", id=");
+            sbM833U.append(getId());
+            sbM833U.append(", invalid=");
+            sbM833U.append(getInvalid());
+            sbM833U.append(", billingAddress=");
+            sbM833U.append(getBillingAddress());
+            sbM833U.append(", default=");
+            sbM833U.append(getDefault());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -359,7 +359,7 @@ public abstract class ModelPaymentSource {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UnableToWrapException(Throwable th) {
             super(th);
-            m.checkNotNullParameter(th, "cause");
+            Intrinsics3.checkNotNullParameter(th, "cause");
         }
     }
 

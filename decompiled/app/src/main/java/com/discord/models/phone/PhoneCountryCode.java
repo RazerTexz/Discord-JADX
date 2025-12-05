@@ -1,9 +1,9 @@
 package com.discord.models.phone;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: PhoneCountryCode.kt */
 /* loaded from: classes.dex */
@@ -36,7 +36,7 @@ public final /* data */ class PhoneCountryCode {
     }
 
     public PhoneCountryCode(String str, String str2, String str3) {
-        a.q0(str, ModelAuditLogEntry.CHANGE_KEY_NAME, str2, "alpha2", str3, "phoneCountryCode");
+        outline.m872q0(str, ModelAuditLogEntry.CHANGE_KEY_NAME, str2, "alpha2", str3, "phoneCountryCode");
         this.name = str;
         this.alpha2 = str2;
         this.phoneCountryCode = str3;
@@ -79,9 +79,9 @@ public final /* data */ class PhoneCountryCode {
     }
 
     public final PhoneCountryCode copy(String name, String alpha2, String phoneCountryCode) {
-        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        m.checkNotNullParameter(alpha2, "alpha2");
-        m.checkNotNullParameter(phoneCountryCode, "phoneCountryCode");
+        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(alpha2, "alpha2");
+        Intrinsics3.checkNotNullParameter(phoneCountryCode, "phoneCountryCode");
         return new PhoneCountryCode(name, alpha2, phoneCountryCode);
     }
 
@@ -93,7 +93,7 @@ public final /* data */ class PhoneCountryCode {
             return false;
         }
         PhoneCountryCode phoneCountryCode = (PhoneCountryCode) other;
-        return m.areEqual(this.name, phoneCountryCode.name) && m.areEqual(this.alpha2, phoneCountryCode.alpha2) && m.areEqual(this.phoneCountryCode, phoneCountryCode.phoneCountryCode);
+        return Intrinsics3.areEqual(this.name, phoneCountryCode.name) && Intrinsics3.areEqual(this.alpha2, phoneCountryCode.alpha2) && Intrinsics3.areEqual(this.phoneCountryCode, phoneCountryCode.phoneCountryCode);
     }
 
     public final String getAlpha2() {
@@ -118,11 +118,11 @@ public final /* data */ class PhoneCountryCode {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("PhoneCountryCode(name=");
-        sbU.append(this.name);
-        sbU.append(", alpha2=");
-        sbU.append(this.alpha2);
-        sbU.append(", phoneCountryCode=");
-        return a.J(sbU, this.phoneCountryCode, ")");
+        StringBuilder sbM833U = outline.m833U("PhoneCountryCode(name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", alpha2=");
+        sbM833U.append(this.alpha2);
+        sbM833U.append(", phoneCountryCode=");
+        return outline.m822J(sbM833U, this.phoneCountryCode, ")");
     }
 }

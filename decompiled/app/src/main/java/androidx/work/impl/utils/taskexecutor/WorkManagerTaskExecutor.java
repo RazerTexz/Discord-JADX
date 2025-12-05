@@ -12,11 +12,11 @@ import java.util.concurrent.Executor;
 public class WorkManagerTaskExecutor implements TaskExecutor {
     private final SerialExecutor mBackgroundExecutor;
     private final Handler mMainThreadHandler = new Handler(Looper.getMainLooper());
-    private final Executor mMainThreadExecutor = new AnonymousClass1();
+    private final Executor mMainThreadExecutor = new ExecutorC07871();
 
-    /* renamed from: androidx.work.impl.utils.taskexecutor.WorkManagerTaskExecutor$1, reason: invalid class name */
-    public class AnonymousClass1 implements Executor {
-        public AnonymousClass1() {
+    /* renamed from: androidx.work.impl.utils.taskexecutor.WorkManagerTaskExecutor$1 */
+    public class ExecutorC07871 implements Executor {
+        public ExecutorC07871() {
         }
 
         @Override // java.util.concurrent.Executor

@@ -32,9 +32,9 @@ public class ActionBarDrawerToggle implements DrawerLayout.DrawerListener {
     public View.OnClickListener mToolbarNavigationClickListener;
     private boolean mWarnedForDisplayHomeAsUp;
 
-    /* renamed from: androidx.appcompat.app.ActionBarDrawerToggle$1, reason: invalid class name */
-    public class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.app.ActionBarDrawerToggle$1 */
+    public class ViewOnClickListenerC00521 implements View.OnClickListener {
+        public ViewOnClickListenerC00521() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -319,7 +319,7 @@ public class ActionBarDrawerToggle implements DrawerLayout.DrawerListener {
         this.mWarnedForDisplayHomeAsUp = false;
         if (toolbar != null) {
             this.mActivityImpl = new ToolbarCompatDelegate(toolbar);
-            toolbar.setNavigationOnClickListener(new AnonymousClass1());
+            toolbar.setNavigationOnClickListener(new ViewOnClickListenerC00521());
         } else if (activity instanceof DelegateProvider) {
             this.mActivityImpl = ((DelegateProvider) activity).getDrawerToggleDelegate();
         } else {

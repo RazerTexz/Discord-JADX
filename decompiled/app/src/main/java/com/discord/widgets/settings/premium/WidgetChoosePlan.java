@@ -12,17 +12,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.a.a.c;
-import b.a.a.b.a;
-import b.a.a.b.b;
-import b.a.a.b.f;
-import b.a.a.b.g;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.d.b.a.a;
 import com.android.billingclient.api.SkuDetails;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetChoosePlanBinding;
 import com.discord.stores.StoreGooglePlayPurchases;
@@ -32,16 +23,12 @@ import com.discord.utilities.billing.GooglePlayBillingManager;
 import com.discord.utilities.billing.GooglePlaySku;
 import com.discord.utilities.dimmer.DimmerView;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.premium.BlockRussianPurchasesUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.settings.premium.ChoosePlanViewModel;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.io.Serializable;
 import java.util.Objects;
 import kotlin.Lazy;
@@ -52,11 +39,28 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p009a.p010a.GuildBoostActivatedDialog;
+import p007b.p008a.p009a.p012b.PremiumActivatedDialog;
+import p007b.p008a.p009a.p012b.PremiumAndGuildBoostActivatedDialog;
+import p007b.p008a.p009a.p012b.UpgradeGuildBoostDialog;
+import p007b.p008a.p009a.p012b.UpgradePremiumYearlyDialog;
+import p007b.p008a.p018d.AppHelpDesk;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.AdaptedFunctionReference;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetChoosePlan.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChoosePlan extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChoosePlan.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChoosePlanBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChoosePlan.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChoosePlanBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -82,9 +86,9 @@ public final class WidgetChoosePlan extends AppFragment {
         }
 
         public final void launch(Context context, ActivityResultLauncher<Intent> launcher, ViewType viewType, String oldSkuName, Traits.Location locationTrait, Traits.Subscription subscriptionTrait) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(viewType, "viewType");
-            m.checkNotNullParameter(locationTrait, "locationTrait");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(viewType, "viewType");
+            Intrinsics3.checkNotNullParameter(locationTrait, "locationTrait");
             if (BlockRussianPurchasesUtils.INSTANCE.getINSTANCE().showDialog()) {
                 return;
             }
@@ -94,17 +98,17 @@ public final class WidgetChoosePlan extends AppFragment {
             intent.putExtra(WidgetChoosePlan.RESULT_VIEW_TYPE, viewType);
             AnalyticsTracker.paymentFlowStarted$default(AnalyticsTracker.INSTANCE, locationTrait, subscriptionTrait, null, null, 12, null);
             if (launcher != null) {
-                j.g.f(context, launcher, WidgetChoosePlan.class, intent);
+                AppScreen2.f524g.m160f(context, launcher, WidgetChoosePlan.class, intent);
             } else {
-                j.d(context, WidgetChoosePlan.class, intent);
+                AppScreen2.m156d(context, WidgetChoosePlan.class, intent);
             }
         }
 
         public final ActivityResultLauncher<Intent> registerForResult(AppFragment fragment, Function0<Unit> callback) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(callback, "callback");
-            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetChoosePlan$Companion$registerForResult$1(callback));
-            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…k()\n          }\n        }");
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(callback, "callback");
+            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetChoosePlan2(callback));
+            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…k()\n          }\n        }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
@@ -137,53 +141,53 @@ public final class WidgetChoosePlan extends AppFragment {
     }
 
     /* compiled from: WidgetChoosePlan.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<ChoosePlanViewModel.Event, Unit> {
-        public AnonymousClass1(WidgetChoosePlan widgetChoosePlan) {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C98911 extends FunctionReferenceImpl implements Function1<ChoosePlanViewModel.Event, Unit> {
+        public C98911(WidgetChoosePlan widgetChoosePlan) {
             super(1, widgetChoosePlan, WidgetChoosePlan.class, "handleEvent", "handleEvent(Lcom/discord/widgets/settings/premium/ChoosePlanViewModel$Event;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ChoosePlanViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChoosePlanViewModel.Event event) {
-            m.checkNotNullParameter(event, "p1");
+            Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetChoosePlan.access$handleEvent((WidgetChoosePlan) this.receiver, event);
         }
     }
 
     /* compiled from: WidgetChoosePlan.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends d0.z.d.a implements Function1<ChoosePlanViewModel.ViewState, Unit> {
-        public AnonymousClass2(WidgetChoosePlan widgetChoosePlan) {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$onViewBoundOrOnResume$2 */
+    public static final /* synthetic */ class C98922 extends AdaptedFunctionReference implements Function1<ChoosePlanViewModel.ViewState, Unit> {
+        public C98922(WidgetChoosePlan widgetChoosePlan) {
             super(1, widgetChoosePlan, WidgetChoosePlan.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/premium/ChoosePlanViewModel$ViewState;)Lkotlin/Unit;", 8);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ChoosePlanViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChoosePlanViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "p1");
+            Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetChoosePlan.access$configureUI((WidgetChoosePlan) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetChoosePlan.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function3<GooglePlaySku, String, SkuDetails, Unit> {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2 */
+    public static final class C98932 extends Lambda implements Function3<GooglePlaySku, String, SkuDetails, Unit> {
         public final /* synthetic */ Traits.Location $locationTrait;
 
         /* compiled from: WidgetChoosePlan.kt */
         /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $oldSkuName;
             public final /* synthetic */ GooglePlaySku $sku;
 
@@ -197,23 +201,23 @@ public final class WidgetChoosePlan extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                WidgetChoosePlan.access$getViewModel$p(WidgetChoosePlan.this).buy(this.$sku, this.$oldSkuName, AnonymousClass2.this.$locationTrait, "premium_upsell");
+                WidgetChoosePlan.access$getViewModel$p(WidgetChoosePlan.this).buy(this.$sku, this.$oldSkuName, C98932.this.$locationTrait, "premium_upsell");
             }
         }
 
         /* compiled from: WidgetChoosePlan.kt */
-        /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$2, reason: invalid class name and collision with other inner class name */
-        public static final class C04582 extends o implements Function0<Unit> {
+        /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$2, reason: invalid class name */
+        public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $oldSkuName;
             public final /* synthetic */ GooglePlaySku $sku;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C04582(GooglePlaySku googlePlaySku, String str) {
+            public AnonymousClass2(GooglePlaySku googlePlaySku, String str) {
                 super(0);
                 this.$sku = googlePlaySku;
                 this.$oldSkuName = str;
@@ -222,7 +226,7 @@ public final class WidgetChoosePlan extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -235,7 +239,7 @@ public final class WidgetChoosePlan extends AppFragment {
 
         /* compiled from: WidgetChoosePlan.kt */
         /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$3, reason: invalid class name */
-        public static final class AnonymousClass3 extends o implements Function0<Unit> {
+        public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $oldSkuName;
             public final /* synthetic */ GooglePlaySku $sku;
 
@@ -249,18 +253,18 @@ public final class WidgetChoosePlan extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                WidgetChoosePlan.access$getViewModel$p(WidgetChoosePlan.this).buy(this.$sku, this.$oldSkuName, AnonymousClass2.this.$locationTrait, "yearly_upsell");
+                WidgetChoosePlan.access$getViewModel$p(WidgetChoosePlan.this).buy(this.$sku, this.$oldSkuName, C98932.this.$locationTrait, "yearly_upsell");
             }
         }
 
         /* compiled from: WidgetChoosePlan.kt */
         /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$4, reason: invalid class name */
-        public static final class AnonymousClass4 extends o implements Function0<Unit> {
+        public static final class AnonymousClass4 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $oldSkuName;
             public final /* synthetic */ GooglePlaySku $sku;
 
@@ -274,7 +278,7 @@ public final class WidgetChoosePlan extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -287,7 +291,7 @@ public final class WidgetChoosePlan extends AppFragment {
 
         /* compiled from: WidgetChoosePlan.kt */
         /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$5, reason: invalid class name */
-        public static final class AnonymousClass5 extends o implements Function0<Unit> {
+        public static final class AnonymousClass5 extends Lambda implements Function0<Unit> {
             public AnonymousClass5() {
                 super(0);
             }
@@ -295,17 +299,17 @@ public final class WidgetChoosePlan extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnalyticsTracker.INSTANCE.upgradePremiumYearlyClosed(AnonymousClass2.this.$locationTrait);
+                AnalyticsTracker.INSTANCE.upgradePremiumYearlyClosed(C98932.this.$locationTrait);
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(Traits.Location location) {
+        public C98932(Traits.Location location) {
             super(3);
             this.$locationTrait = location;
         }
@@ -313,33 +317,33 @@ public final class WidgetChoosePlan extends AppFragment {
         @Override // kotlin.jvm.functions.Function3
         public /* bridge */ /* synthetic */ Unit invoke(GooglePlaySku googlePlaySku, String str, SkuDetails skuDetails) {
             invoke2(googlePlaySku, str, skuDetails);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GooglePlaySku googlePlaySku, String str, SkuDetails skuDetails) {
-            m.checkNotNullParameter(googlePlaySku, "sku");
+            Intrinsics3.checkNotNullParameter(googlePlaySku, "sku");
             if (googlePlaySku.getUpgrade() != null && skuDetails != null && googlePlaySku.getType() == GooglePlaySku.Type.PREMIUM_GUILD) {
                 AnalyticsTracker.paymentFlowStep$default(AnalyticsTracker.INSTANCE, this.$locationTrait, Traits.Subscription.INSTANCE.withGatewayPlanId(googlePlaySku.getSkuName()), "premium_upsell", "plan_select", null, null, 48, null);
-                a.Companion bVar = b.a.a.b.a.INSTANCE;
+                UpgradeGuildBoostDialog.Companion bVar = UpgradeGuildBoostDialog.INSTANCE;
                 FragmentManager parentFragmentManager = WidgetChoosePlan.this.getParentFragmentManager();
-                m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                 AnonymousClass1 anonymousClass1 = new AnonymousClass1(googlePlaySku, str);
-                C04582 c04582 = new C04582(googlePlaySku, str);
-                String strB = skuDetails.b();
-                m.checkNotNullExpressionValue(strB, "upgradeSkuDetails.price");
-                boolean zAreEqual = m.areEqual(googlePlaySku.getSkuName(), str);
+                AnonymousClass2 anonymousClass2 = new AnonymousClass2(googlePlaySku, str);
+                String strM7501b = skuDetails.m7501b();
+                Intrinsics3.checkNotNullExpressionValue(strM7501b, "upgradeSkuDetails.price");
+                boolean zAreEqual = Intrinsics3.areEqual(googlePlaySku.getSkuName(), str);
                 Objects.requireNonNull(bVar);
-                m.checkNotNullParameter(parentFragmentManager, "fragmentManager");
-                m.checkNotNullParameter(anonymousClass1, "onContinueClickListener");
-                m.checkNotNullParameter(c04582, "onUpgradeClickListener");
-                m.checkNotNullParameter(strB, "upgradePrice");
-                b.a.a.b.a aVar = new b.a.a.b.a();
-                aVar.onContinueClickListener = anonymousClass1;
-                aVar.onUpgradeClickListener = c04582;
-                aVar.upgradePrice = strB;
-                aVar.hasBoostPlan = zAreEqual;
-                aVar.show(parentFragmentManager, b.a.a.b.a.class.getSimpleName());
+                Intrinsics3.checkNotNullParameter(parentFragmentManager, "fragmentManager");
+                Intrinsics3.checkNotNullParameter(anonymousClass1, "onContinueClickListener");
+                Intrinsics3.checkNotNullParameter(anonymousClass2, "onUpgradeClickListener");
+                Intrinsics3.checkNotNullParameter(strM7501b, "upgradePrice");
+                UpgradeGuildBoostDialog upgradeGuildBoostDialog = new UpgradeGuildBoostDialog();
+                upgradeGuildBoostDialog.onContinueClickListener = anonymousClass1;
+                upgradeGuildBoostDialog.onUpgradeClickListener = anonymousClass2;
+                upgradeGuildBoostDialog.upgradePrice = strM7501b;
+                upgradeGuildBoostDialog.hasBoostPlan = zAreEqual;
+                upgradeGuildBoostDialog.show(parentFragmentManager, UpgradeGuildBoostDialog.class.getSimpleName());
                 return;
             }
             if (googlePlaySku.getUpgrade() == null || skuDetails == null) {
@@ -347,41 +351,41 @@ public final class WidgetChoosePlan extends AppFragment {
                 return;
             }
             AnalyticsTracker.paymentFlowStep$default(AnalyticsTracker.INSTANCE, this.$locationTrait, Traits.Subscription.INSTANCE.withGatewayPlanId(googlePlaySku.getSkuName()), "yearly_upsell", "plan_select", null, null, 48, null);
-            b.Companion c0018b = b.INSTANCE;
+            UpgradePremiumYearlyDialog.Companion bVar2 = UpgradePremiumYearlyDialog.INSTANCE;
             FragmentManager parentFragmentManager2 = WidgetChoosePlan.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
             AnonymousClass3 anonymousClass3 = new AnonymousClass3(googlePlaySku, str);
             AnonymousClass4 anonymousClass4 = new AnonymousClass4(googlePlaySku, str);
             AnonymousClass5 anonymousClass5 = new AnonymousClass5();
-            String strB2 = skuDetails.b();
-            m.checkNotNullExpressionValue(strB2, "upgradeSkuDetails.price");
-            boolean zAreEqual2 = m.areEqual(googlePlaySku.getSkuName(), str);
+            String strM7501b2 = skuDetails.m7501b();
+            Intrinsics3.checkNotNullExpressionValue(strM7501b2, "upgradeSkuDetails.price");
+            boolean zAreEqual2 = Intrinsics3.areEqual(googlePlaySku.getSkuName(), str);
             boolean z2 = googlePlaySku.getType() == GooglePlaySku.Type.PREMIUM_TIER_1 || googlePlaySku.getType() == GooglePlaySku.Type.PREMIUM_TIER_1_AND_PREMIUM_GUILD;
-            Objects.requireNonNull(c0018b);
-            m.checkNotNullParameter(parentFragmentManager2, "fragmentManager");
-            m.checkNotNullParameter(anonymousClass3, "onMonthlyClickListener");
-            m.checkNotNullParameter(anonymousClass4, "onYearlyClickListener");
-            m.checkNotNullParameter(anonymousClass5, "onDismissCallback");
-            m.checkNotNullParameter(strB2, "upgradePrice");
-            b bVar2 = new b();
-            bVar2.onMonthlyClickListener = anonymousClass3;
-            bVar2.onYearlyClickListener = anonymousClass4;
-            bVar2.onDismissCallback = anonymousClass5;
-            bVar2.upgradePrice = strB2;
-            bVar2.hasMonthlyPlan = zAreEqual2;
+            Objects.requireNonNull(bVar2);
+            Intrinsics3.checkNotNullParameter(parentFragmentManager2, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(anonymousClass3, "onMonthlyClickListener");
+            Intrinsics3.checkNotNullParameter(anonymousClass4, "onYearlyClickListener");
+            Intrinsics3.checkNotNullParameter(anonymousClass5, "onDismissCallback");
+            Intrinsics3.checkNotNullParameter(strM7501b2, "upgradePrice");
+            UpgradePremiumYearlyDialog upgradePremiumYearlyDialog = new UpgradePremiumYearlyDialog();
+            upgradePremiumYearlyDialog.onMonthlyClickListener = anonymousClass3;
+            upgradePremiumYearlyDialog.onYearlyClickListener = anonymousClass4;
+            upgradePremiumYearlyDialog.onDismissCallback = anonymousClass5;
+            upgradePremiumYearlyDialog.upgradePrice = strM7501b2;
+            upgradePremiumYearlyDialog.hasMonthlyPlan = zAreEqual2;
             Bundle bundle = new Bundle();
             bundle.putBoolean("ARG_IS_TIER_1", z2);
-            bVar2.setArguments(bundle);
-            bVar2.show(parentFragmentManager2, b.class.getSimpleName());
+            upgradePremiumYearlyDialog.setArguments(bundle);
+            upgradePremiumYearlyDialog.show(parentFragmentManager2, UpgradePremiumYearlyDialog.class.getSimpleName());
         }
     }
 
     public WidgetChoosePlan() {
-        super(R.layout.widget_choose_plan);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChoosePlan$binding$2.INSTANCE, null, 2, null);
-        WidgetChoosePlan$viewModel$2 widgetChoosePlan$viewModel$2 = new WidgetChoosePlan$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(ChoosePlanViewModel.class), new WidgetChoosePlan$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetChoosePlan$viewModel$2));
+        super(C5419R.layout.widget_choose_plan);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChoosePlan3.INSTANCE, null, 2, null);
+        WidgetChoosePlan5 widgetChoosePlan5 = new WidgetChoosePlan5(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(ChoosePlanViewModel.class), new WidgetChoosePlan$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetChoosePlan5));
     }
 
     public static final /* synthetic */ Unit access$configureUI(WidgetChoosePlan widgetChoosePlan, ChoosePlanViewModel.ViewState viewState) {
@@ -405,19 +409,19 @@ public final class WidgetChoosePlan extends AppFragment {
         }
         WidgetChoosePlanAdapter widgetChoosePlanAdapter = this.adapter;
         if (widgetChoosePlanAdapter == null) {
-            m.throwUninitializedPropertyAccessException("adapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
         }
         ChoosePlanViewModel.ViewState.Loaded loaded = (ChoosePlanViewModel.ViewState.Loaded) viewState;
         widgetChoosePlanAdapter.setData(loaded.getItems());
-        LinearLayout linearLayout = getBinding().f2349b;
-        m.checkNotNullExpressionValue(linearLayout, "binding.choosePlanEmptyContainer");
+        LinearLayout linearLayout = getBinding().f16384b;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.choosePlanEmptyContainer");
         linearLayout.setVisibility(loaded.isEmpty() ? 0 : 8);
-        if (m.areEqual(loaded.getPurchasesQueryState(), StoreGooglePlayPurchases.QueryState.InProgress.INSTANCE)) {
-            DimmerView.setDimmed$default(getBinding().e, true, false, 2, null);
-            return Unit.a;
+        if (Intrinsics3.areEqual(loaded.getPurchasesQueryState(), StoreGooglePlayPurchases.QueryState.InProgress.INSTANCE)) {
+            DimmerView.setDimmed$default(getBinding().f16387e, true, false, 2, null);
+            return Unit.f27425a;
         }
-        DimmerView.setDimmed$default(getBinding().e, false, false, 2, null);
-        return Unit.a;
+        DimmerView.setDimmed$default(getBinding().f16387e, false, false, 2, null);
+        return Unit.f27425a;
     }
 
     private final WidgetChoosePlanBinding getBinding() {
@@ -430,7 +434,7 @@ public final class WidgetChoosePlan extends AppFragment {
 
     private final void handleEvent(ChoosePlanViewModel.Event event) {
         if (event instanceof ChoosePlanViewModel.Event.ErrorSkuPurchase) {
-            b.a.d.m.i(this, ((ChoosePlanViewModel.Event.ErrorSkuPurchase) event).getMessage(), 0, 4);
+            AppToast.m171i(this, ((ChoosePlanViewModel.Event.ErrorSkuPurchase) event).getMessage(), 0, 4);
             return;
         }
         if (event instanceof ChoosePlanViewModel.Event.StartSkuPurchase) {
@@ -441,96 +445,96 @@ public final class WidgetChoosePlan extends AppFragment {
             ChoosePlanViewModel.Event.CompleteSkuPurchase completeSkuPurchase = (ChoosePlanViewModel.Event.CompleteSkuPurchase) event;
             GooglePlaySku googlePlaySkuFromSkuName = GooglePlaySku.INSTANCE.fromSkuName(completeSkuPurchase.getSkuName());
             if (googlePlaySkuFromSkuName != null) {
-                WidgetChoosePlan$handleEvent$onDismiss$1 widgetChoosePlan$handleEvent$onDismiss$1 = new WidgetChoosePlan$handleEvent$onDismiss$1(this);
+                WidgetChoosePlan4 widgetChoosePlan4 = new WidgetChoosePlan4(this);
                 int iOrdinal = googlePlaySkuFromSkuName.getType().ordinal();
                 if (iOrdinal == 0) {
-                    f.Companion aVar = f.INSTANCE;
+                    PremiumActivatedDialog.Companion aVar = PremiumActivatedDialog.INSTANCE;
                     FragmentManager parentFragmentManager = getParentFragmentManager();
-                    m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-                    aVar.a(parentFragmentManager, widgetChoosePlan$handleEvent$onDismiss$1, false);
+                    Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                    aVar.m121a(parentFragmentManager, widgetChoosePlan4, false);
                     return;
                 }
                 if (iOrdinal == 1) {
-                    f.Companion aVar2 = f.INSTANCE;
+                    PremiumActivatedDialog.Companion aVar2 = PremiumActivatedDialog.INSTANCE;
                     FragmentManager parentFragmentManager2 = getParentFragmentManager();
-                    m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
-                    aVar2.a(parentFragmentManager2, widgetChoosePlan$handleEvent$onDismiss$1, true);
+                    Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+                    aVar2.m121a(parentFragmentManager2, widgetChoosePlan4, true);
                     return;
                 }
                 if (iOrdinal != 2 && iOrdinal != 3) {
                     if (iOrdinal != 4) {
                         return;
                     }
-                    c.Companion aVar3 = c.INSTANCE;
+                    GuildBoostActivatedDialog.Companion aVar3 = GuildBoostActivatedDialog.INSTANCE;
                     FragmentManager parentFragmentManager3 = getParentFragmentManager();
-                    m.checkNotNullExpressionValue(parentFragmentManager3, "parentFragmentManager");
-                    aVar3.a(parentFragmentManager3, requireContext(), null, googlePlaySkuFromSkuName.getPremiumSubscriptionCount(), false, widgetChoosePlan$handleEvent$onDismiss$1);
+                    Intrinsics3.checkNotNullExpressionValue(parentFragmentManager3, "parentFragmentManager");
+                    aVar3.m101a(parentFragmentManager3, requireContext(), null, googlePlaySkuFromSkuName.getPremiumSubscriptionCount(), false, widgetChoosePlan4);
                     return;
                 }
-                g.Companion aVar4 = g.INSTANCE;
+                PremiumAndGuildBoostActivatedDialog.Companion aVar4 = PremiumAndGuildBoostActivatedDialog.INSTANCE;
                 FragmentManager parentFragmentManager4 = getParentFragmentManager();
-                m.checkNotNullExpressionValue(parentFragmentManager4, "parentFragmentManager");
+                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager4, "parentFragmentManager");
                 String planName = completeSkuPurchase.getPlanName();
                 Objects.requireNonNull(aVar4);
-                m.checkNotNullParameter(parentFragmentManager4, "fragmentManager");
-                m.checkNotNullParameter(widgetChoosePlan$handleEvent$onDismiss$1, "onDismiss");
-                m.checkNotNullParameter(planName, "planName");
-                g gVar = new g();
-                gVar.onDismiss = widgetChoosePlan$handleEvent$onDismiss$1;
+                Intrinsics3.checkNotNullParameter(parentFragmentManager4, "fragmentManager");
+                Intrinsics3.checkNotNullParameter(widgetChoosePlan4, "onDismiss");
+                Intrinsics3.checkNotNullParameter(planName, "planName");
+                PremiumAndGuildBoostActivatedDialog premiumAndGuildBoostActivatedDialog = new PremiumAndGuildBoostActivatedDialog();
+                premiumAndGuildBoostActivatedDialog.onDismiss = widgetChoosePlan4;
                 Bundle bundle = new Bundle();
                 bundle.putString("extra_plan_text", planName);
-                gVar.setArguments(bundle);
-                gVar.show(parentFragmentManager4, g.class.getSimpleName());
+                premiumAndGuildBoostActivatedDialog.setArguments(bundle);
+                premiumAndGuildBoostActivatedDialog.show(parentFragmentManager4, PremiumAndGuildBoostActivatedDialog.class.getSimpleName());
             }
         }
     }
 
     private final void setUpRecycler() {
-        RecyclerView recyclerView = getBinding().d;
-        m.checkNotNullExpressionValue(recyclerView, "binding.choosePlanRecycler");
+        RecyclerView recyclerView = getBinding().f16386d;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.choosePlanRecycler");
         this.planLayoutManager = new LinearLayoutManager(recyclerView.getContext(), 1, false);
-        RecyclerView recyclerView2 = getBinding().d;
+        RecyclerView recyclerView2 = getBinding().f16386d;
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        m.checkNotNullExpressionValue(recyclerView2, "it");
+        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "it");
         this.adapter = (WidgetChoosePlanAdapter) companion.configure(new WidgetChoosePlanAdapter(recyclerView2));
         Serializable serializableExtra = getMostRecentIntent().getSerializableExtra(RESULT_EXTRA_LOCATION_TRAIT);
         Objects.requireNonNull(serializableExtra, "null cannot be cast to non-null type com.discord.utilities.analytics.Traits.Location");
         Traits.Location location = (Traits.Location) serializableExtra;
         WidgetChoosePlanAdapter widgetChoosePlanAdapter = this.adapter;
         if (widgetChoosePlanAdapter == null) {
-            m.throwUninitializedPropertyAccessException("adapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
         }
-        widgetChoosePlanAdapter.setOnClickPlan(new AnonymousClass2(location));
-        RecyclerView recyclerView3 = getBinding().d;
-        m.checkNotNullExpressionValue(recyclerView3, "binding.choosePlanRecycler");
+        widgetChoosePlanAdapter.setOnClickPlan(new C98932(location));
+        RecyclerView recyclerView3 = getBinding().f16386d;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.choosePlanRecycler");
         LinearLayoutManager linearLayoutManager = this.planLayoutManager;
         if (linearLayoutManager == null) {
-            m.throwUninitializedPropertyAccessException("planLayoutManager");
+            Intrinsics3.throwUninitializedPropertyAccessException("planLayoutManager");
         }
         recyclerView3.setLayoutManager(linearLayoutManager);
-        RecyclerView recyclerView4 = getBinding().d;
-        m.checkNotNullExpressionValue(recyclerView4, "binding.choosePlanRecycler");
+        RecyclerView recyclerView4 = getBinding().f16386d;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView4, "binding.choosePlanRecycler");
         WidgetChoosePlanAdapter widgetChoosePlanAdapter2 = this.adapter;
         if (widgetChoosePlanAdapter2 == null) {
-            m.throwUninitializedPropertyAccessException("adapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
         }
         recyclerView4.setAdapter(widgetChoosePlanAdapter2);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setUpRecycler();
-        LinkifiedTextView linkifiedTextView = getBinding().c;
-        m.checkNotNullExpressionValue(linkifiedTextView, "binding.choosePlanEmptyDescription");
-        b.a.k.b.n(linkifiedTextView, R.string.premium_no_plans_body, new Object[]{b.a.d.f.a.a(360055386693L, null)}, null, 4);
+        LinkifiedTextView linkifiedTextView = getBinding().f16385c;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.choosePlanEmptyDescription");
+        FormatUtils.m222n(linkifiedTextView, C5419R.string.premium_no_plans_body, new Object[]{AppHelpDesk.f507a.m149a(360055386693L, null)}, null, 4);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getViewModel().observeEvents(), this, null, 2, null), WidgetChoosePlan.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getViewModel().observeViewState(), this, null, 2, null), WidgetChoosePlan.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getViewModel().observeEvents(), this, null, 2, null), WidgetChoosePlan.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C98911(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getViewModel().observeViewState(), this, null, 2, null), WidgetChoosePlan.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C98922(this), 62, (Object) null);
     }
 }

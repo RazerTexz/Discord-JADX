@@ -10,13 +10,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.recycler.DiffCreator;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.g0;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.p.a;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Unit;
@@ -24,8 +19,14 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Subscription;
+import p507d0.Tuples;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p653p.Schedulers2;
+import p658rx.Observable;
+import p658rx.Subscription;
 
 /* compiled from: MGRecyclerAdapterSimple.kt */
 /* loaded from: classes2.dex */
@@ -37,12 +38,12 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     private Function2<? super List<? extends D>, ? super List<? extends D>, Unit> onUpdated;
 
     /* compiled from: MGRecyclerAdapterSimple.kt */
-    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$1, reason: invalid class name */
-    public static final class AnonymousClass1<V> implements Callable<DiffUtil.DiffResult> {
+    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$1 */
+    public static final class CallableC68151<V> implements Callable<DiffUtil.DiffResult> {
         public final /* synthetic */ List $newData;
         public final /* synthetic */ List $oldData;
 
-        public AnonymousClass1(List list, List list2) {
+        public CallableC68151(List list, List list2) {
             this.$oldData = list;
             this.$newData = list2;
         }
@@ -60,13 +61,13 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     }
 
     /* compiled from: MGRecyclerAdapterSimple.kt */
-    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<DiffUtil.DiffResult, Unit> {
+    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$2 */
+    public static final class C68162 extends Lambda implements Function1<DiffUtil.DiffResult, Unit> {
         public final /* synthetic */ List $newData;
         public final /* synthetic */ List $oldData;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(List list, List list2) {
+        public C68162(List list, List list2) {
             super(1);
             this.$oldData = list;
             this.$newData = list2;
@@ -75,7 +76,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(DiffUtil.DiffResult diffResult) {
             invoke2(diffResult);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -85,44 +86,44 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     }
 
     /* compiled from: MGRecyclerAdapterSimple.kt */
-    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$3 */
+    public static final class C68173 extends Lambda implements Function1<Error, Unit> {
+        public C68173() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             MGRecyclerAdapterSimple mGRecyclerAdapterSimple = MGRecyclerAdapterSimple.this;
             Throwable throwable = error.getThrowable();
-            m.checkNotNullExpressionValue(throwable, "error.throwable");
+            Intrinsics3.checkNotNullExpressionValue(throwable, "error.throwable");
             MGRecyclerAdapterSimple.access$handleError(mGRecyclerAdapterSimple, throwable);
         }
     }
 
     /* compiled from: MGRecyclerAdapterSimple.kt */
-    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<Subscription, Unit> {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$4 */
+    public static final class C68184 extends Lambda implements Function1<Subscription, Unit> {
+        public C68184() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MGRecyclerAdapterSimple.access$setDiffingSubscription$p(MGRecyclerAdapterSimple.this, subscription);
         }
     }
@@ -170,7 +171,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     }
 
     private final void handleError(Throwable throwable) {
-        AppLog.g.e("Unable to configure recycler.", throwable, g0.mapOf(d0.o.to("adapterClass", getClass().getSimpleName())));
+        AppLog.f14950g.mo8364e("Unable to configure recycler.", throwable, MapsJVM.mapOf(Tuples.m10073to("adapterClass", getClass().getSimpleName())));
     }
 
     public final List<D> getInternalData() {
@@ -193,7 +194,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     }
 
     public void setData(List<? extends D> data) {
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         unsubscribeFromUpdates();
         List<? extends D> list = this.internalData;
         if (list.isEmpty()) {
@@ -209,16 +210,16 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
                 return;
             }
         }
-        Observable observableX = Observable.D(new AnonymousClass1(list, data)).X(a.a());
-        m.checkNotNullExpressionValue(observableX, "Observable\n            .…Schedulers.computation())");
-        Observable observableUi = ObservableExtensionsKt.ui(observableX);
+        Observable observableM11098X = Observable.m11060D(new CallableC68151(list, data)).m11098X(Schedulers2.m10873a());
+        Intrinsics3.checkNotNullExpressionValue(observableM11098X, "Observable\n            .…Schedulers.computation())");
+        Observable observableM8518ui = ObservableExtensionsKt.m8518ui(observableM11098X);
         Class<?> cls = getClass();
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2(list, data);
-        ObservableExtensionsKt.appSubscribe$default(observableUi, cls, (Context) null, new AnonymousClass4(), new AnonymousClass3(), (Function0) null, (Function0) null, anonymousClass2, 50, (Object) null);
+        C68162 c68162 = new C68162(list, data);
+        ObservableExtensionsKt.appSubscribe$default(observableM8518ui, cls, (Context) null, new C68184(), new C68173(), (Function0) null, (Function0) null, c68162, 50, (Object) null);
     }
 
     public final void setOnUpdated(Function2<? super List<? extends D>, ? super List<? extends D>, Unit> onUpdated) {
-        m.checkNotNullParameter(onUpdated, "onUpdated");
+        Intrinsics3.checkNotNullParameter(onUpdated, "onUpdated");
         this.onUpdated = onUpdated;
     }
 
@@ -233,9 +234,9 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MGRecyclerAdapterSimple(RecyclerView recyclerView, boolean z2) {
         super(recyclerView);
-        m.checkNotNullParameter(recyclerView, "recycler");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
         this.deferredDiffs = z2;
-        this.internalData = n.emptyList();
+        this.internalData = Collections2.emptyList();
         this.diffCreator = new DiffCreator<>(null);
     }
 

@@ -1,0 +1,36 @@
+package p007b.p109f.p115d.p119d;
+
+import java.io.FilterOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+/* compiled from: CountingOutputStream.java */
+/* renamed from: b.f.d.d.b, reason: use source file name */
+/* loaded from: classes.dex */
+public class CountingOutputStream extends FilterOutputStream {
+
+    /* renamed from: j */
+    public long f3092j;
+
+    public CountingOutputStream(OutputStream outputStream) {
+        super(outputStream);
+        this.f3092j = 0L;
+    }
+
+    @Override // java.io.FilterOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        ((FilterOutputStream) this).out.close();
+    }
+
+    @Override // java.io.FilterOutputStream, java.io.OutputStream
+    public void write(byte[] bArr, int i, int i2) throws IOException {
+        ((FilterOutputStream) this).out.write(bArr, i, i2);
+        this.f3092j += i2;
+    }
+
+    @Override // java.io.FilterOutputStream, java.io.OutputStream
+    public void write(int i) throws IOException {
+        ((FilterOutputStream) this).out.write(i);
+        this.f3092j++;
+    }
+}

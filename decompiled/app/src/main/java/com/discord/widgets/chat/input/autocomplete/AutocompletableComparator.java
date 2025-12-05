@@ -3,10 +3,10 @@ package com.discord.widgets.chat.input.autocomplete;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.models.commands.Application;
 import com.discord.utilities.user.UserUtils;
-import d0.z.d.a0;
-import d0.z.d.m;
 import java.util.Comparator;
 import kotlin.NoWhenBranchMatchedException;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: Autocompletable.kt */
 /* loaded from: classes2.dex */
@@ -18,10 +18,10 @@ public final class AutocompletableComparator implements Comparator<Autocompletab
 
     /* renamed from: compare, reason: avoid collision after fix types in other method */
     public int compare2(Autocompletable o1, Autocompletable o2) {
-        m.checkNotNullParameter(o1, "o1");
-        m.checkNotNullParameter(o2, "o2");
-        if (!m.areEqual(a0.getOrCreateKotlinClass(o1.getClass()), a0.getOrCreateKotlinClass(o2.getClass()))) {
-            return m.compare(AutocompletableKt.getSortIndex(o1), AutocompletableKt.getSortIndex(o2));
+        Intrinsics3.checkNotNullParameter(o1, "o1");
+        Intrinsics3.checkNotNullParameter(o2, "o2");
+        if (!Intrinsics3.areEqual(Reflection2.getOrCreateKotlinClass(o1.getClass()), Reflection2.getOrCreateKotlinClass(o2.getClass()))) {
+            return Intrinsics3.compare(AutocompletableKt.getSortIndex(o1), AutocompletableKt.getSortIndex(o2));
         }
         if (o1 instanceof ApplicationCommandChoiceAutocompletable) {
             return AutocompletableKt.access$lower(((ApplicationCommandChoiceAutocompletable) o1).getChoice().getName()).compareTo(AutocompletableKt.access$lower(((ApplicationCommandChoiceAutocompletable) o2).getChoice().getName()));
@@ -35,7 +35,7 @@ public final class AutocompletableComparator implements Comparator<Autocompletab
             Application application = applicationCommandAutocompletable2.getApplication();
             Long lValueOf = application != null ? Long.valueOf(application.getId()) : null;
             Application application2 = applicationCommandAutocompletable.getApplication();
-            if (m.areEqual(lValueOf, application2 != null ? Long.valueOf(application2.getId()) : null)) {
+            if (Intrinsics3.areEqual(lValueOf, application2 != null ? Long.valueOf(application2.getId()) : null)) {
                 return AutocompletableKt.access$lower(applicationCommandAutocompletable2.getCommand().getName()).compareTo(AutocompletableKt.access$lower(applicationCommandAutocompletable.getCommand().getName()));
             }
             Application application3 = applicationCommandAutocompletable2.getApplication();
@@ -49,16 +49,16 @@ public final class AutocompletableComparator implements Comparator<Autocompletab
         if (o1 instanceof ChannelAutocompletable) {
             ChannelAutocompletable channelAutocompletable = (ChannelAutocompletable) o2;
             ChannelAutocompletable channelAutocompletable2 = (ChannelAutocompletable) o1;
-            String strAccess$lower2 = AutocompletableKt.access$lower(ChannelUtils.c(channelAutocompletable2.getChannel()));
-            String strAccess$lower3 = AutocompletableKt.access$lower(ChannelUtils.c(channelAutocompletable.getChannel()));
-            return m.areEqual(strAccess$lower2, strAccess$lower3) ^ true ? strAccess$lower2.compareTo(strAccess$lower3) : (channelAutocompletable2.getChannel().getId() > channelAutocompletable.getChannel().getId() ? 1 : (channelAutocompletable2.getChannel().getId() == channelAutocompletable.getChannel().getId() ? 0 : -1));
+            String strAccess$lower2 = AutocompletableKt.access$lower(ChannelUtils.m7679c(channelAutocompletable2.getChannel()));
+            String strAccess$lower3 = AutocompletableKt.access$lower(ChannelUtils.m7679c(channelAutocompletable.getChannel()));
+            return Intrinsics3.areEqual(strAccess$lower2, strAccess$lower3) ^ true ? strAccess$lower2.compareTo(strAccess$lower3) : (channelAutocompletable2.getChannel().getId() > channelAutocompletable.getChannel().getId() ? 1 : (channelAutocompletable2.getChannel().getId() == channelAutocompletable.getChannel().getId() ? 0 : -1));
         }
         if (o1 instanceof EmojiAutocompletable) {
             String firstName = ((EmojiAutocompletable) o1).getEmoji().getFirstName();
-            m.checkNotNullExpressionValue(firstName, "o1.emoji.firstName");
+            Intrinsics3.checkNotNullExpressionValue(firstName, "o1.emoji.firstName");
             String strAccess$lower4 = AutocompletableKt.access$lower(firstName);
             String firstName2 = ((EmojiAutocompletable) o2).getEmoji().getFirstName();
-            m.checkNotNullExpressionValue(firstName2, "o2c.emoji.firstName");
+            Intrinsics3.checkNotNullExpressionValue(firstName2, "o2c.emoji.firstName");
             return strAccess$lower4.compareTo(AutocompletableKt.access$lower(firstName2));
         }
         if (o1 instanceof EmojiUpsellPlaceholder) {

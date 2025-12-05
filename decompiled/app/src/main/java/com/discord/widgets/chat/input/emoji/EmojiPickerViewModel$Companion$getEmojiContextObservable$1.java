@@ -4,14 +4,14 @@ import androidx.core.app.NotificationCompat;
 import com.discord.api.channel.Channel;
 import com.discord.stores.StoreChannelsSelected;
 import com.discord.stores.StoreEmoji;
-import j0.k.b;
+import p637j0.p641k.Func1;
 
 /* compiled from: EmojiPickerViewModel.kt */
 /* loaded from: classes2.dex */
-public final class EmojiPickerViewModel$Companion$getEmojiContextObservable$1<T, R> implements b<StoreChannelsSelected.ResolvedSelectedChannel, StoreEmoji.EmojiContext> {
+public final class EmojiPickerViewModel$Companion$getEmojiContextObservable$1<T, R> implements Func1<StoreChannelsSelected.ResolvedSelectedChannel, StoreEmoji.EmojiContext> {
     public static final EmojiPickerViewModel$Companion$getEmojiContextObservable$1 INSTANCE = new EmojiPickerViewModel$Companion$getEmojiContextObservable$1();
 
-    @Override // j0.k.b
+    @Override // p637j0.p641k.Func1
     public /* bridge */ /* synthetic */ StoreEmoji.EmojiContext call(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
         return call2(resolvedSelectedChannel);
     }

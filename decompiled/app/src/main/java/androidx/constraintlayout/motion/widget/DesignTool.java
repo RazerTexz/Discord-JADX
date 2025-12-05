@@ -7,7 +7,7 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import java.util.HashMap;
 
 /* loaded from: classes.dex */
-public class DesignTool implements ProxyInterface {
+public class DesignTool implements DesignTool2 {
     private static final boolean DEBUG = false;
     private static final String TAG = "DesignTool";
     public static final HashMap<Pair<Integer, Integer>, String> allAttributes;
@@ -106,7 +106,7 @@ public class DesignTool implements ProxyInterface {
         }
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public int designAccess(int i, String str, Object obj, float[] fArr, int i2, float[] fArr2, int i3) {
         MotionController motionController;
         View view = (View) obj;
@@ -217,7 +217,7 @@ public class DesignTool implements ProxyInterface {
         return motionController.getKeyFrameInfo(i, iArr);
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public float getKeyFramePosition(Object obj, int i, float f, float f2) {
         return this.mMotionLayout.mFrameArrayList.get((View) obj).getKeyFrameParameter(i, f, f2);
     }
@@ -239,7 +239,7 @@ public class DesignTool implements ProxyInterface {
         return motionScene.getKeyFrame(motionLayout.getContext(), i, i2, i3);
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public Object getKeyframeAtLocation(Object obj, float f, float f2) {
         MotionController motionController;
         View view = (View) obj;
@@ -254,7 +254,7 @@ public class DesignTool implements ProxyInterface {
         return motionController.getPositionKeyframe(viewGroup.getWidth(), viewGroup.getHeight(), f, f2);
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public Boolean getPositionKeyframe(Object obj, Object obj2, float f, float f2, String[] strArr, float[] fArr) {
         if (!(obj instanceof KeyPositionBase)) {
             return Boolean.FALSE;
@@ -296,7 +296,7 @@ public class DesignTool implements ProxyInterface {
         return this.mLastStartState;
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public long getTransitionTimeMs() {
         return this.mMotionLayout.getTransitionTimeMs();
     }
@@ -305,7 +305,7 @@ public class DesignTool implements ProxyInterface {
         return (this.mLastStartState == null || this.mLastEndState == null) ? false : true;
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public void setAttributes(int i, String str, Object obj, Object obj2) {
         View view = (View) obj;
         HashMap map = (HashMap) obj2;
@@ -337,7 +337,7 @@ public class DesignTool implements ProxyInterface {
         this.mMotionLayout.requestLayout();
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public void setKeyFrame(Object obj, int i, String str, Object obj2) {
         MotionScene motionScene = this.mMotionLayout.mScene;
         if (motionScene != null) {
@@ -350,7 +350,7 @@ public class DesignTool implements ProxyInterface {
         }
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public boolean setKeyFramePosition(Object obj, int i, int i2, float f, float f2) {
         MotionLayout motionLayout = this.mMotionLayout;
         if (motionLayout.mScene == null) {
@@ -412,7 +412,7 @@ public class DesignTool implements ProxyInterface {
         this.mMotionLayout.requestLayout();
     }
 
-    @Override // androidx.constraintlayout.motion.widget.ProxyInterface
+    @Override // androidx.constraintlayout.motion.widget.DesignTool2
     public void setToolPosition(float f) {
         MotionLayout motionLayout = this.mMotionLayout;
         if (motionLayout.mScene == null) {

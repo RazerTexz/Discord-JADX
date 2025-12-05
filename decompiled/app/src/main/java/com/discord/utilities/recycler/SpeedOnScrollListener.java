@@ -3,11 +3,11 @@ package com.discord.utilities.recycler;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: SpeedOnScrollListener.kt */
 /* loaded from: classes2.dex */
@@ -20,18 +20,18 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
     private long timeStamp;
 
     /* compiled from: SpeedOnScrollListener.kt */
-    /* renamed from: com.discord.utilities.recycler.SpeedOnScrollListener$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.recycler.SpeedOnScrollListener$1 */
+    public static final class C68511 extends Lambda implements Function1<Boolean, Unit> {
+        public static final C68511 INSTANCE = new C68511();
 
-        public AnonymousClass1() {
+        public C68511() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
             invoke(bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(boolean z2) {
@@ -43,7 +43,7 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
     }
 
     public /* synthetic */ SpeedOnScrollListener(long j, Function1 function1, int i, Clock clock, int i2, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i2 & 1) != 0 ? 1L : j, (i2 & 2) != 0 ? AnonymousClass1.INSTANCE : function1, (i2 & 4) != 0 ? 1 : i, (i2 & 8) != 0 ? ClockFactory.get() : clock);
+        this((i2 & 1) != 0 ? 1L : j, (i2 & 2) != 0 ? C68511.INSTANCE : function1, (i2 & 4) != 0 ? 1 : i, (i2 & 8) != 0 ? ClockFactory.get() : clock);
     }
 
     public final Clock getClock() {
@@ -64,7 +64,7 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
 
     @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
     public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-        m.checkNotNullParameter(recyclerView, "recyclerView");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
         if (newState == 0) {
             this.thresholdCallback.invoke(Boolean.valueOf(0 < this.maxScrolledPxPerMs));
         }
@@ -72,7 +72,7 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
 
     @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-        m.checkNotNullParameter(recyclerView, "recyclerView");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
         long jCurrentTimeMillis = this.clock.currentTimeMillis();
         if (this.timeStamp == -1) {
             this.timeStamp = jCurrentTimeMillis;
@@ -88,8 +88,8 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
 
     /* JADX WARN: Multi-variable type inference failed */
     public SpeedOnScrollListener(long j, Function1<? super Boolean, Unit> function1, int i, Clock clock) {
-        m.checkNotNullParameter(function1, "thresholdCallback");
-        m.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(function1, "thresholdCallback");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
         this.maxScrolledPxPerMs = j;
         this.thresholdCallback = function1;
         this.orientation = i;

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMobileOverlayToggled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMobileOverlayToggled implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackMobileOverlayToggled implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean enabled = null;
     private final transient String analyticsSchemaTypeName = "mobile_overlay_toggled";
@@ -21,7 +21,7 @@ public final /* data */ class TrackMobileOverlayToggled implements AnalyticsSche
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackMobileOverlayToggled) && m.areEqual(this.enabled, ((TrackMobileOverlayToggled) other).enabled);
+            return (other instanceof TrackMobileOverlayToggled) && Intrinsics3.areEqual(this.enabled, ((TrackMobileOverlayToggled) other).enabled);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackMobileOverlayToggled implements AnalyticsSche
     }
 
     public String toString() {
-        return a.D(a.U("TrackMobileOverlayToggled(enabled="), this.enabled, ")");
+        return outline.m816D(outline.m833U("TrackMobileOverlayToggled(enabled="), this.enabled, ")");
     }
 }

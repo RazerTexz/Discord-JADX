@@ -3,31 +3,39 @@ package com.google.android.gms.internal.icing;
 import android.accounts.Account;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.d;
-import b.i.a.f.h.k.m;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Arrays;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p313h.p324k.C3568m;
 
 /* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
 /* loaded from: classes3.dex */
 public final class zzh extends AbstractSafeParcelable {
-    public static final Parcelable.Creator<zzh> CREATOR = new m();
-    public final zzk[] j;
-    public final String k;
-    public final boolean l;
-    public final Account m;
+    public static final Parcelable.Creator<zzh> CREATOR = new C3568m();
+
+    /* renamed from: j */
+    public final zzk[] f20585j;
+
+    /* renamed from: k */
+    public final String f20586k;
+
+    /* renamed from: l */
+    public final boolean f20587l;
+
+    /* renamed from: m */
+    public final Account f20588m;
 
     public zzh(zzk[] zzkVarArr, String str, boolean z2, Account account) {
-        this.j = zzkVarArr;
-        this.k = str;
-        this.l = z2;
-        this.m = account;
+        this.f20585j = zzkVarArr;
+        this.f20586k = str;
+        this.f20587l = z2;
+        this.f20588m = account;
     }
 
     public final boolean equals(Object obj) {
         if (obj instanceof zzh) {
             zzh zzhVar = (zzh) obj;
-            if (d.h0(this.k, zzhVar.k) && d.h0(Boolean.valueOf(this.l), Boolean.valueOf(zzhVar.l)) && d.h0(this.m, zzhVar.m) && Arrays.equals(this.j, zzhVar.j)) {
+            if (AnimatableValueParser.m524h0(this.f20586k, zzhVar.f20586k) && AnimatableValueParser.m524h0(Boolean.valueOf(this.f20587l), Boolean.valueOf(zzhVar.f20587l)) && AnimatableValueParser.m524h0(this.f20588m, zzhVar.f20588m) && Arrays.equals(this.f20585j, zzhVar.f20585j)) {
                 return true;
             }
         }
@@ -35,18 +43,18 @@ public final class zzh extends AbstractSafeParcelable {
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(new Object[]{this.k, Boolean.valueOf(this.l), this.m, Integer.valueOf(Arrays.hashCode(this.j))});
+        return Arrays.hashCode(new Object[]{this.f20586k, Boolean.valueOf(this.f20587l), this.f20588m, Integer.valueOf(Arrays.hashCode(this.f20585j))});
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = d.y2(parcel, 20293);
-        d.v2(parcel, 1, this.j, i, false);
-        d.t2(parcel, 2, this.k, false);
-        boolean z2 = this.l;
+        int iM594y2 = AnimatableValueParser.m594y2(parcel, 20293);
+        AnimatableValueParser.m582v2(parcel, 1, this.f20585j, i, false);
+        AnimatableValueParser.m574t2(parcel, 2, this.f20586k, false);
+        boolean z2 = this.f20587l;
         parcel.writeInt(262147);
         parcel.writeInt(z2 ? 1 : 0);
-        d.s2(parcel, 4, this.m, i, false);
-        d.A2(parcel, iY2);
+        AnimatableValueParser.m570s2(parcel, 4, this.f20588m, i, false);
+        AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 }

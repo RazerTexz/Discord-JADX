@@ -5,11 +5,8 @@ import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
-import b.a.m.a.h0.a;
-import b.a.m.a.h0.b;
-import b.a.m.a.h0.c;
 import com.discord.models.domain.Model;
-import com.discord.widgets.chat.input.MentionUtilsKt;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,6 +16,10 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+import p007b.p008a.p033m.p034a.p035h0.C1145a;
+import p007b.p008a.p033m.p034a.p035h0.C1146b;
+import p007b.p008a.p033m.p034a.p035h0.C1147c;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ModelEmojiUnicode implements Model, Emoji {
@@ -34,10 +35,10 @@ public class ModelEmojiUnicode implements Model, Emoji {
     private List<String> names;
     private String surrogates;
     private static final String[] DIVERSITY_MODIFIERS = {"🏻", "🏼", "🏽", "🏾", "🏿"};
-    public static final Parcelable.Creator<ModelEmojiUnicode> CREATOR = new AnonymousClass1();
+    public static final Parcelable.Creator<ModelEmojiUnicode> CREATOR = new C55451();
 
-    /* renamed from: com.discord.models.domain.emoji.ModelEmojiUnicode$1, reason: invalid class name */
-    public static class AnonymousClass1 implements Parcelable.Creator<ModelEmojiUnicode> {
+    /* renamed from: com.discord.models.domain.emoji.ModelEmojiUnicode$1 */
+    public static class C55451 implements Parcelable.Creator<ModelEmojiUnicode> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ ModelEmojiUnicode createFromParcel(Parcel parcel) {
             return createFromParcel(parcel);
@@ -77,7 +78,7 @@ public class ModelEmojiUnicode implements Model, Emoji {
         public void assignField(Model.JsonReader jsonReader) throws IOException {
             EmojiCategory byString = EmojiCategory.getByString(jsonReader.nextName());
             if (byString != null) {
-                this.emojis.put(byString, jsonReader.nextList(new a(jsonReader)));
+                this.emojis.put(byString, jsonReader.nextList(new C1145a(jsonReader)));
             } else {
                 jsonReader.skipValue();
             }
@@ -113,10 +114,10 @@ public class ModelEmojiUnicode implements Model, Emoji {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("ModelEmojiUnicode.Bundle(emojis=");
-            sbU.append(getEmojis());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelEmojiUnicode.Bundle(emojis=");
+            sbM833U.append(getEmojis());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -161,7 +162,7 @@ public class ModelEmojiUnicode implements Model, Emoji {
                 this.hasDiversityParent = jsonReader.nextBoolean(this.hasDiversityParent);
                 break;
             case "names":
-                this.names = jsonReader.nextList(new c(jsonReader));
+                this.names = jsonReader.nextList(new C1147c(jsonReader));
                 break;
             case "surrogates":
                 this.surrogates = jsonReader.nextString(this.surrogates);
@@ -173,7 +174,7 @@ public class ModelEmojiUnicode implements Model, Emoji {
                 this.hasMultiDiversityParent = jsonReader.nextBoolean(this.hasMultiDiversityParent);
                 break;
             case "diversityChildren":
-                this.diversityChildren = jsonReader.nextList(new b(jsonReader));
+                this.diversityChildren = jsonReader.nextList(new C1146b(jsonReader));
                 break;
             default:
                 jsonReader.skipValue();
@@ -294,7 +295,7 @@ public class ModelEmojiUnicode implements Model, Emoji {
             str = getFirstName();
         }
         try {
-            return Pattern.compile("([^\\\\]|^):" + str + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
+            return Pattern.compile("([^\\\\]|^):" + str + MentionUtils.EMOJIS_AND_STICKERS_CHAR);
         } catch (PatternSyntaxException unused) {
             return Pattern.compile("$^");
         }
@@ -353,24 +354,24 @@ public class ModelEmojiUnicode implements Model, Emoji {
     }
 
     public String toString() {
-        StringBuilder sbU = b.d.b.a.a.U("ModelEmojiUnicode(names=");
-        sbU.append(getNames());
-        sbU.append(", surrogates=");
-        sbU.append(getSurrogates());
-        sbU.append(", hasDiversity=");
-        sbU.append(isHasDiversity());
-        sbU.append(", hasMultiDiversity=");
-        sbU.append(isHasMultiDiversity());
-        sbU.append(", hasDiversityParent=");
-        sbU.append(isHasDiversityParent());
-        sbU.append(", hasMultiDiversityParent=");
-        sbU.append(isHasMultiDiversityParent());
-        sbU.append(", diversityChildren=");
-        sbU.append(getDiversityChildren());
-        sbU.append(", codePoints=");
-        sbU.append(getCodePoints());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ModelEmojiUnicode(names=");
+        sbM833U.append(getNames());
+        sbM833U.append(", surrogates=");
+        sbM833U.append(getSurrogates());
+        sbM833U.append(", hasDiversity=");
+        sbM833U.append(isHasDiversity());
+        sbM833U.append(", hasMultiDiversity=");
+        sbM833U.append(isHasMultiDiversity());
+        sbM833U.append(", hasDiversityParent=");
+        sbM833U.append(isHasDiversityParent());
+        sbM833U.append(", hasMultiDiversityParent=");
+        sbM833U.append(isHasMultiDiversityParent());
+        sbM833U.append(", diversityChildren=");
+        sbM833U.append(getDiversityChildren());
+        sbM833U.append(", codePoints=");
+        sbM833U.append(getCodePoints());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     @Override // android.os.Parcelable

@@ -1,0 +1,43 @@
+package p007b.p008a.p025i;
+
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.viewbinding.ViewBinding;
+
+/* compiled from: ViewSettingsPremiumGuildNoGuildsBinding.java */
+/* renamed from: b.a.i.t3, reason: use source file name */
+/* loaded from: classes.dex */
+public final class ViewSettingsPremiumGuildNoGuildsBinding implements ViewBinding {
+
+    /* renamed from: a */
+    @NonNull
+    public final LinearLayoutCompat f1250a;
+
+    /* renamed from: b */
+    @NonNull
+    public final ImageView f1251b;
+
+    /* renamed from: c */
+    @NonNull
+    public final TextView f1252c;
+
+    /* renamed from: d */
+    @NonNull
+    public final TextView f1253d;
+
+    public ViewSettingsPremiumGuildNoGuildsBinding(@NonNull LinearLayoutCompat linearLayoutCompat, @NonNull ImageView imageView, @NonNull TextView textView, @NonNull TextView textView2) {
+        this.f1250a = linearLayoutCompat;
+        this.f1251b = imageView;
+        this.f1252c = textView;
+        this.f1253d = textView2;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return this.f1250a;
+    }
+}

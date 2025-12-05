@@ -1,0 +1,63 @@
+package p007b.p085c.p086a.p094x;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
+import android.view.View;
+import androidx.annotation.Nullable;
+import com.discord.widgets.chat.input.MentionUtils;
+import java.util.HashMap;
+import java.util.Map;
+import p007b.p085c.p086a.ImageAssetDelegate;
+import p007b.p085c.p086a.LottieImageAsset;
+import p007b.p085c.p086a.p089b0.Logger2;
+import p007b.p100d.p104b.p105a.outline;
+
+/* compiled from: ImageAssetManager.java */
+/* renamed from: b.c.a.x.b, reason: use source file name */
+/* loaded from: classes.dex */
+public class ImageAssetManager {
+
+    /* renamed from: a */
+    public static final Object f2647a = new Object();
+
+    /* renamed from: b */
+    public final Context f2648b;
+
+    /* renamed from: c */
+    public String f2649c;
+
+    /* renamed from: d */
+    @Nullable
+    public ImageAssetDelegate f2650d;
+
+    /* renamed from: e */
+    public final Map<String, LottieImageAsset> f2651e;
+
+    public ImageAssetManager(Drawable.Callback callback, String str, ImageAssetDelegate imageAssetDelegate, Map<String, LottieImageAsset> map) {
+        this.f2649c = str;
+        if (!TextUtils.isEmpty(str)) {
+            if (this.f2649c.charAt(r4.length() - 1) != '/') {
+                this.f2649c = outline.m820H(new StringBuilder(), this.f2649c, MentionUtils.SLASH_CHAR);
+            }
+        }
+        if (callback instanceof View) {
+            this.f2648b = ((View) callback).getContext();
+            this.f2651e = map;
+            this.f2650d = imageAssetDelegate;
+        } else {
+            Logger2.m640b("LottieDrawable must be inside of a view for images to work.");
+            this.f2651e = new HashMap();
+            this.f2648b = null;
+        }
+    }
+
+    /* renamed from: a */
+    public final Bitmap m749a(String str, @Nullable Bitmap bitmap) {
+        synchronized (f2647a) {
+            this.f2651e.get(str).f2418e = bitmap;
+        }
+        return bitmap;
+    }
+}

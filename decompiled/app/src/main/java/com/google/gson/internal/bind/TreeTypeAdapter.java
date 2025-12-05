@@ -1,12 +1,5 @@
 package com.google.gson.internal.bind;
 
-import b.i.a.f.e.o.f;
-import b.i.d.h;
-import b.i.d.i;
-import b.i.d.j;
-import b.i.d.l;
-import b.i.d.m;
-import b.i.d.o;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
@@ -16,94 +9,124 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Objects;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p007b.p225i.p408d.JsonDeserializationContext;
+import p007b.p225i.p408d.JsonDeserializer2;
+import p007b.p225i.p408d.JsonNull;
+import p007b.p225i.p408d.JsonSerializationContext;
+import p007b.p225i.p408d.JsonSerializer2;
+import p007b.p225i.p408d.TypeAdapterFactory2;
 
 /* loaded from: classes3.dex */
 public final class TreeTypeAdapter<T> extends TypeAdapter<T> {
-    public final m<T> a;
 
-    /* renamed from: b, reason: collision with root package name */
-    public final i<T> f3126b;
-    public final Gson c;
-    public final TypeToken<T> d;
-    public final o e;
-    public final TreeTypeAdapter<T>.b f = new b(this, null);
-    public TypeAdapter<T> g;
+    /* renamed from: a */
+    public final JsonSerializer2<T> f21541a;
 
-    public static final class SingleTypeFactory implements o {
-        public final TypeToken<?> j;
-        public final boolean k;
-        public final Class<?> l;
-        public final m<?> m;
-        public final i<?> n;
+    /* renamed from: b */
+    public final JsonDeserializer2<T> f21542b;
+
+    /* renamed from: c */
+    public final Gson f21543c;
+
+    /* renamed from: d */
+    public final TypeToken<T> f21544d;
+
+    /* renamed from: e */
+    public final TypeAdapterFactory2 f21545e;
+
+    /* renamed from: f */
+    public final TreeTypeAdapter<T>.C11113b f21546f = new C11113b(this, null);
+
+    /* renamed from: g */
+    public TypeAdapter<T> f21547g;
+
+    public static final class SingleTypeFactory implements TypeAdapterFactory2 {
+
+        /* renamed from: j */
+        public final TypeToken<?> f21548j;
+
+        /* renamed from: k */
+        public final boolean f21549k;
+
+        /* renamed from: l */
+        public final Class<?> f21550l;
+
+        /* renamed from: m */
+        public final JsonSerializer2<?> f21551m;
+
+        /* renamed from: n */
+        public final JsonDeserializer2<?> f21552n;
 
         public SingleTypeFactory(Object obj, TypeToken<?> typeToken, boolean z2, Class<?> cls) {
-            m<?> mVar = obj instanceof m ? (m) obj : null;
-            this.m = mVar;
-            i<?> iVar = obj instanceof i ? (i) obj : null;
-            this.n = iVar;
-            f.w((mVar == null && iVar == null) ? false : true);
-            this.j = typeToken;
-            this.k = z2;
-            this.l = null;
+            JsonSerializer2<?> jsonSerializer2 = obj instanceof JsonSerializer2 ? (JsonSerializer2) obj : null;
+            this.f21551m = jsonSerializer2;
+            JsonDeserializer2<?> jsonDeserializer2 = obj instanceof JsonDeserializer2 ? (JsonDeserializer2) obj : null;
+            this.f21552n = jsonDeserializer2;
+            C3404f.m4355w((jsonSerializer2 == null && jsonDeserializer2 == null) ? false : true);
+            this.f21548j = typeToken;
+            this.f21549k = z2;
+            this.f21550l = null;
         }
 
-        @Override // b.i.d.o
+        @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
-            TypeToken<?> typeToken2 = this.j;
-            if (typeToken2 != null ? typeToken2.equals(typeToken) || (this.k && this.j.getType() == typeToken.getRawType()) : this.l.isAssignableFrom(typeToken.getRawType())) {
-                return new TreeTypeAdapter(this.m, this.n, gson, typeToken, this);
+            TypeToken<?> typeToken2 = this.f21548j;
+            if (typeToken2 != null ? typeToken2.equals(typeToken) || (this.f21549k && this.f21548j.getType() == typeToken.getRawType()) : this.f21550l.isAssignableFrom(typeToken.getRawType())) {
+                return new TreeTypeAdapter(this.f21551m, this.f21552n, gson, typeToken, this);
             }
             return null;
         }
     }
 
-    public final class b implements l, h {
-        public b(TreeTypeAdapter treeTypeAdapter, a aVar) {
+    /* renamed from: com.google.gson.internal.bind.TreeTypeAdapter$b */
+    public final class C11113b implements JsonSerializationContext, JsonDeserializationContext {
+        public C11113b(TreeTypeAdapter treeTypeAdapter, C11112a c11112a) {
         }
     }
 
-    public TreeTypeAdapter(m<T> mVar, i<T> iVar, Gson gson, TypeToken<T> typeToken, o oVar) {
-        this.a = mVar;
-        this.f3126b = iVar;
-        this.c = gson;
-        this.d = typeToken;
-        this.e = oVar;
+    public TreeTypeAdapter(JsonSerializer2<T> jsonSerializer2, JsonDeserializer2<T> jsonDeserializer2, Gson gson, TypeToken<T> typeToken, TypeAdapterFactory2 typeAdapterFactory2) {
+        this.f21541a = jsonSerializer2;
+        this.f21542b = jsonDeserializer2;
+        this.f21543c = gson;
+        this.f21544d = typeToken;
+        this.f21545e = typeAdapterFactory2;
     }
 
     @Override // com.google.gson.TypeAdapter
     public T read(JsonReader jsonReader) throws JsonParseException, IOException {
-        if (this.f3126b == null) {
-            TypeAdapter<T> typeAdapterJ = this.g;
-            if (typeAdapterJ == null) {
-                typeAdapterJ = this.c.j(this.e, this.d);
-                this.g = typeAdapterJ;
+        if (this.f21542b == null) {
+            TypeAdapter<T> typeAdapterM9206j = this.f21547g;
+            if (typeAdapterM9206j == null) {
+                typeAdapterM9206j = this.f21543c.m9206j(this.f21545e, this.f21544d);
+                this.f21547g = typeAdapterM9206j;
             }
-            return typeAdapterJ.read(jsonReader);
+            return typeAdapterM9206j.read(jsonReader);
         }
-        JsonElement jsonElementS0 = f.S0(jsonReader);
-        Objects.requireNonNull(jsonElementS0);
-        if (jsonElementS0 instanceof j) {
+        JsonElement jsonElementM4244S0 = C3404f.m4244S0(jsonReader);
+        Objects.requireNonNull(jsonElementM4244S0);
+        if (jsonElementM4244S0 instanceof JsonNull) {
             return null;
         }
-        return this.f3126b.a(jsonElementS0, this.d.getType(), this.f);
+        return this.f21542b.m6856a(jsonElementM4244S0, this.f21544d.getType(), this.f21546f);
     }
 
     @Override // com.google.gson.TypeAdapter
     public void write(JsonWriter jsonWriter, T t) throws IOException {
-        m<T> mVar = this.a;
-        if (mVar == null) {
-            TypeAdapter<T> typeAdapterJ = this.g;
-            if (typeAdapterJ == null) {
-                typeAdapterJ = this.c.j(this.e, this.d);
-                this.g = typeAdapterJ;
+        JsonSerializer2<T> jsonSerializer2 = this.f21541a;
+        if (jsonSerializer2 == null) {
+            TypeAdapter<T> typeAdapterM9206j = this.f21547g;
+            if (typeAdapterM9206j == null) {
+                typeAdapterM9206j = this.f21543c.m9206j(this.f21545e, this.f21544d);
+                this.f21547g = typeAdapterM9206j;
             }
-            typeAdapterJ.write(jsonWriter, t);
+            typeAdapterM9206j.write(jsonWriter, t);
             return;
         }
         if (t == null) {
-            jsonWriter.s();
+            jsonWriter.mo6905s();
         } else {
-            TypeAdapters.X.write(jsonWriter, mVar.serialize(t, this.d.getType(), this.f));
+            TypeAdapters.f21579X.write(jsonWriter, jsonSerializer2.serialize(t, this.f21544d.getType(), this.f21546f));
         }
     }
 }

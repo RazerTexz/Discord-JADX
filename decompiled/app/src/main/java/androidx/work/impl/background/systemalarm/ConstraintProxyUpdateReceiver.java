@@ -20,13 +20,13 @@ public class ConstraintProxyUpdateReceiver extends BroadcastReceiver {
     public static final String KEY_STORAGE_NOT_LOW_PROXY_ENABLED = "KEY_STORAGE_NOT_LOW_PROXY_ENABLED";
     public static final String TAG = Logger.tagWithPrefix("ConstrntProxyUpdtRecvr");
 
-    /* renamed from: androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver$1 */
+    public class RunnableC07361 implements Runnable {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ Intent val$intent;
         public final /* synthetic */ BroadcastReceiver.PendingResult val$pendingResult;
 
-        public AnonymousClass1(Intent intent, Context context, BroadcastReceiver.PendingResult pendingResult) {
+        public RunnableC07361(Intent intent, Context context, BroadcastReceiver.PendingResult pendingResult) {
             this.val$intent = intent;
             this.val$context = context;
             this.val$pendingResult = pendingResult;
@@ -61,7 +61,7 @@ public class ConstraintProxyUpdateReceiver extends BroadcastReceiver {
     public void onReceive(@NonNull Context context, @Nullable Intent intent) {
         String action = intent != null ? intent.getAction() : null;
         if (ACTION.equals(action)) {
-            WorkManagerImpl.getInstance(context).getWorkTaskExecutor().executeOnBackgroundThread(new AnonymousClass1(intent, context, goAsync()));
+            WorkManagerImpl.getInstance(context).getWorkTaskExecutor().executeOnBackgroundThread(new RunnableC07361(intent, context, goAsync()));
         } else {
             Logger.get().debug(TAG, String.format("Ignoring unknown action %s", action), new Throwable[0]);
         }

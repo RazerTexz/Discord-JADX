@@ -36,19 +36,19 @@ public class ChangeBounds extends Transition {
     private static final String PROPNAME_WINDOW_X = "android:changeBounds:windowX";
     private static final String PROPNAME_WINDOW_Y = "android:changeBounds:windowY";
     private static final String[] sTransitionProperties = {PROPNAME_BOUNDS, PROPNAME_CLIP, PROPNAME_PARENT, PROPNAME_WINDOW_X, PROPNAME_WINDOW_Y};
-    private static final Property<Drawable, PointF> DRAWABLE_ORIGIN_PROPERTY = new AnonymousClass1(PointF.class, "boundsOrigin");
-    private static final Property<ViewBounds, PointF> TOP_LEFT_PROPERTY = new AnonymousClass2(PointF.class, "topLeft");
-    private static final Property<ViewBounds, PointF> BOTTOM_RIGHT_PROPERTY = new AnonymousClass3(PointF.class, "bottomRight");
-    private static final Property<View, PointF> BOTTOM_RIGHT_ONLY_PROPERTY = new AnonymousClass4(PointF.class, "bottomRight");
-    private static final Property<View, PointF> TOP_LEFT_ONLY_PROPERTY = new AnonymousClass5(PointF.class, "topLeft");
-    private static final Property<View, PointF> POSITION_PROPERTY = new AnonymousClass6(PointF.class, ModelAuditLogEntry.CHANGE_KEY_POSITION);
+    private static final Property<Drawable, PointF> DRAWABLE_ORIGIN_PROPERTY = new C06341(PointF.class, "boundsOrigin");
+    private static final Property<ViewBounds, PointF> TOP_LEFT_PROPERTY = new C06362(PointF.class, "topLeft");
+    private static final Property<ViewBounds, PointF> BOTTOM_RIGHT_PROPERTY = new C06373(PointF.class, "bottomRight");
+    private static final Property<View, PointF> BOTTOM_RIGHT_ONLY_PROPERTY = new C06384(PointF.class, "bottomRight");
+    private static final Property<View, PointF> TOP_LEFT_ONLY_PROPERTY = new C06395(PointF.class, "topLeft");
+    private static final Property<View, PointF> POSITION_PROPERTY = new C06406(PointF.class, ModelAuditLogEntry.CHANGE_KEY_POSITION);
     private static RectEvaluator sRectEvaluator = new RectEvaluator();
 
-    /* renamed from: androidx.transition.ChangeBounds$1, reason: invalid class name */
-    public static class AnonymousClass1 extends Property<Drawable, PointF> {
+    /* renamed from: androidx.transition.ChangeBounds$1 */
+    public static class C06341 extends Property<Drawable, PointF> {
         private Rect mBounds;
 
-        public AnonymousClass1(Class cls, String str) {
+        public C06341(Class cls, String str) {
             super(cls, str);
             this.mBounds = new Rect();
         }
@@ -78,14 +78,14 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$10, reason: invalid class name */
-    public class AnonymousClass10 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.transition.ChangeBounds$10 */
+    public class C063510 extends AnimatorListenerAdapter {
         public final /* synthetic */ BitmapDrawable val$drawable;
         public final /* synthetic */ ViewGroup val$sceneRoot;
         public final /* synthetic */ float val$transitionAlpha;
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass10(ViewGroup viewGroup, BitmapDrawable bitmapDrawable, View view, float f) {
+        public C063510(ViewGroup viewGroup, BitmapDrawable bitmapDrawable, View view, float f) {
             this.val$sceneRoot = viewGroup;
             this.val$drawable = bitmapDrawable;
             this.val$view = view;
@@ -99,9 +99,9 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$2, reason: invalid class name */
-    public static class AnonymousClass2 extends Property<ViewBounds, PointF> {
-        public AnonymousClass2(Class cls, String str) {
+    /* renamed from: androidx.transition.ChangeBounds$2 */
+    public static class C06362 extends Property<ViewBounds, PointF> {
+        public C06362(Class cls, String str) {
             super(cls, str);
         }
 
@@ -126,9 +126,9 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$3, reason: invalid class name */
-    public static class AnonymousClass3 extends Property<ViewBounds, PointF> {
-        public AnonymousClass3(Class cls, String str) {
+    /* renamed from: androidx.transition.ChangeBounds$3 */
+    public static class C06373 extends Property<ViewBounds, PointF> {
+        public C06373(Class cls, String str) {
             super(cls, str);
         }
 
@@ -153,9 +153,9 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$4, reason: invalid class name */
-    public static class AnonymousClass4 extends Property<View, PointF> {
-        public AnonymousClass4(Class cls, String str) {
+    /* renamed from: androidx.transition.ChangeBounds$4 */
+    public static class C06384 extends Property<View, PointF> {
+        public C06384(Class cls, String str) {
             super(cls, str);
         }
 
@@ -180,9 +180,9 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$5, reason: invalid class name */
-    public static class AnonymousClass5 extends Property<View, PointF> {
-        public AnonymousClass5(Class cls, String str) {
+    /* renamed from: androidx.transition.ChangeBounds$5 */
+    public static class C06395 extends Property<View, PointF> {
+        public C06395(Class cls, String str) {
             super(cls, str);
         }
 
@@ -207,9 +207,9 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$6, reason: invalid class name */
-    public static class AnonymousClass6 extends Property<View, PointF> {
-        public AnonymousClass6(Class cls, String str) {
+    /* renamed from: androidx.transition.ChangeBounds$6 */
+    public static class C06406 extends Property<View, PointF> {
+        public C06406(Class cls, String str) {
             super(cls, str);
         }
 
@@ -236,19 +236,19 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$7, reason: invalid class name */
-    public class AnonymousClass7 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.transition.ChangeBounds$7 */
+    public class C06417 extends AnimatorListenerAdapter {
         private ViewBounds mViewBounds;
         public final /* synthetic */ ViewBounds val$viewBounds;
 
-        public AnonymousClass7(ViewBounds viewBounds) {
+        public C06417(ViewBounds viewBounds) {
             this.val$viewBounds = viewBounds;
             this.mViewBounds = viewBounds;
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$8, reason: invalid class name */
-    public class AnonymousClass8 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.transition.ChangeBounds$8 */
+    public class C06428 extends AnimatorListenerAdapter {
         private boolean mIsCanceled;
         public final /* synthetic */ int val$endBottom;
         public final /* synthetic */ int val$endLeft;
@@ -257,7 +257,7 @@ public class ChangeBounds extends Transition {
         public final /* synthetic */ Rect val$finalClip;
         public final /* synthetic */ View val$view;
 
-        public AnonymousClass8(View view, Rect rect, int i, int i2, int i3, int i4) {
+        public C06428(View view, Rect rect, int i, int i2, int i3, int i4) {
             this.val$view = view;
             this.val$finalClip = rect;
             this.val$endLeft = i;
@@ -281,12 +281,12 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$9, reason: invalid class name */
-    public class AnonymousClass9 extends TransitionListenerAdapter {
+    /* renamed from: androidx.transition.ChangeBounds$9 */
+    public class C06439 extends TransitionListenerAdapter {
         public boolean mCanceled = false;
         public final /* synthetic */ ViewGroup val$parent;
 
-        public AnonymousClass9(ViewGroup viewGroup) {
+        public C06439(ViewGroup viewGroup) {
             this.val$parent = viewGroup;
         }
 
@@ -441,7 +441,7 @@ public class ChangeBounds extends Transition {
             PathMotion pathMotion = getPathMotion();
             int[] iArr = this.mTempLocation;
             ObjectAnimator objectAnimatorOfPropertyValuesHolder = ObjectAnimator.ofPropertyValuesHolder(bitmapDrawable, PropertyValuesHolderUtils.ofPointF(DRAWABLE_ORIGIN_PROPERTY, pathMotion.getPath(iIntValue - iArr[0], iIntValue2 - iArr[1], iIntValue3 - iArr[0], iIntValue4 - iArr[1])));
-            objectAnimatorOfPropertyValuesHolder.addListener(new AnonymousClass10(viewGroup, bitmapDrawable, view2, transitionAlpha));
+            objectAnimatorOfPropertyValuesHolder.addListener(new C063510(viewGroup, bitmapDrawable, view2, transitionAlpha));
             return objectAnimatorOfPropertyValuesHolder;
         }
         Rect rect2 = (Rect) transitionValues.values.get(PROPNAME_BOUNDS);
@@ -495,7 +495,7 @@ public class ChangeBounds extends Transition {
                 objArr[i2] = rect;
                 objArr[1] = rect6;
                 ObjectAnimator objectAnimatorOfObject = ObjectAnimator.ofObject(view, "clipBounds", rectEvaluator, objArr);
-                objectAnimatorOfObject.addListener(new AnonymousClass8(view, rect5, i4, i6, i8, i10));
+                objectAnimatorOfObject.addListener(new C06428(view, rect5, i4, i6, i8, i10));
                 objectAnimator = objectAnimatorOfObject;
             }
             animatorMergeAnimators = TransitionUtils.mergeAnimators(objectAnimatorOfPointF, objectAnimator);
@@ -512,14 +512,14 @@ public class ChangeBounds extends Transition {
                 ObjectAnimator objectAnimatorOfPointF3 = ObjectAnimatorUtils.ofPointF(viewBounds, BOTTOM_RIGHT_PROPERTY, getPathMotion().getPath(i7, i9, i8, i10));
                 AnimatorSet animatorSet = new AnimatorSet();
                 animatorSet.playTogether(objectAnimatorOfPointF2, objectAnimatorOfPointF3);
-                animatorSet.addListener(new AnonymousClass7(viewBounds));
+                animatorSet.addListener(new C06417(viewBounds));
                 animatorMergeAnimators = animatorSet;
             }
         }
         if (view.getParent() instanceof ViewGroup) {
             ViewGroup viewGroup4 = (ViewGroup) view.getParent();
             ViewGroupUtils.suppressLayout(viewGroup4, true);
-            addListener(new AnonymousClass9(viewGroup4));
+            addListener(new C06439(viewGroup4));
         }
         return animatorMergeAnimators;
     }

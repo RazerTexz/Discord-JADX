@@ -8,8 +8,7 @@ import android.os.Build;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetNoticeNuxSamsungLinkBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -18,14 +17,11 @@ import com.discord.stores.StoreNotices;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.intent.IntentUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import d0.g0.t;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -34,12 +30,16 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetNoticeNuxSamsungLink.kt */
 /* loaded from: classes2.dex */
 public final class WidgetNoticeNuxSamsungLink extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetNoticeNuxSamsungLink.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNoticeNuxSamsungLinkBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetNoticeNuxSamsungLink.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNoticeNuxSamsungLinkBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -58,14 +58,14 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
         }
 
         private final void internalEnqueue() {
-            StoreStream.INSTANCE.getNotices().requestToShow(new StoreNotices.Notice(WidgetNoticeNuxSamsungLink.NOTICE_NAME, null, 0L, 0, true, null, 0L, false, RecyclerView.FOREVER_NS, WidgetNoticeNuxSamsungLink$Companion$internalEnqueue$notice$1.INSTANCE, 230, null));
+            StoreStream.INSTANCE.getNotices().requestToShow(new StoreNotices.Notice(WidgetNoticeNuxSamsungLink.NOTICE_NAME, null, 0L, 0, true, null, 0L, false, RecyclerView.FOREVER_NS, WidgetNoticeNuxSamsungLink4.INSTANCE, 230, null));
         }
 
         public final void enqueue(Context context, Clock clock) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(clock, "clock");
-            if (Build.VERSION.SDK_INT >= 28 && t.equals(Build.MANUFACTURER, "samsung", true)) {
-                m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(clock, "clock");
+            if (Build.VERSION.SDK_INT >= 28 && StringsJVM.equals(Build.MANUFACTURER, "samsung", true)) {
+                Intrinsics3.checkNotNullParameter(context, "context");
                 try {
                     try {
                     } catch (PackageManager.NameNotFoundException unused) {
@@ -77,9 +77,9 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
                 boolean z2 = context.getPackageManager().getPackageInfo("com.samsung.android.game.gametools", 0) != null;
                 if (z2) {
                     StoreStream.Companion companion = StoreStream.INSTANCE;
-                    Observable observableJ = Observable.j(companion.getAuthentication().observeIsAuthed$app_productionGoogleRelease(), StoreUser.observeMe$default(companion.getUsers(), false, 1, null), WidgetNoticeNuxSamsungLink$Companion$enqueue$1.INSTANCE);
-                    m.checkNotNullExpressionValue(observableJ, "Observable\n          .co…hed to meUser\n          }");
-                    ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableJ, 0L, false, 3, null)), WidgetNoticeNuxSamsungLink.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new WidgetNoticeNuxSamsungLink$Companion$enqueue$2(clock), 62, (Object) null);
+                    Observable observableM11076j = Observable.m11076j(companion.getAuthentication().observeIsAuthed$app_productionGoogleRelease(), StoreUser.observeMe$default(companion.getUsers(), false, 1, null), WidgetNoticeNuxSamsungLink2.INSTANCE);
+                    Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable\n          .co…hed to meUser\n          }");
+                    ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableM11076j, 0L, false, 3, null)), WidgetNoticeNuxSamsungLink.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new WidgetNoticeNuxSamsungLink3(clock), 62, (Object) null);
                 }
             }
         }
@@ -90,16 +90,16 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
     }
 
     /* compiled from: WidgetNoticeNuxSamsungLink.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<List<? extends ModelOAuth2Token>, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$1 */
+    public static final class C91001 extends Lambda implements Function1<List<? extends ModelOAuth2Token>, Unit> {
+        public C91001() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends ModelOAuth2Token> list) {
             invoke2((List<ModelOAuth2Token>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* JADX WARN: Removed duplicated region for block: B:20:0x004e  */
@@ -111,15 +111,15 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
         */
         public final void invoke2(List<ModelOAuth2Token> list) {
             boolean z2;
-            m.checkNotNullExpressionValue(list, "authedApps");
+            Intrinsics3.checkNotNullExpressionValue(list, "authedApps");
             boolean z3 = true;
             if ((list instanceof Collection) && list.isEmpty()) {
                 z3 = false;
             } else {
                 Iterator<T> it = list.iterator();
                 while (it.hasNext()) {
-                    if (m.areEqual(String.valueOf(((ModelOAuth2Token) it.next()).getApplication().getId()), "591317049637339146")) {
-                        if (Build.VERSION.SDK_INT >= 28 && t.equals(Build.MANUFACTURER, "samsung", true)) {
+                    if (Intrinsics3.areEqual(String.valueOf(((ModelOAuth2Token) it.next()).getApplication().getId()), "591317049637339146")) {
+                        if (Build.VERSION.SDK_INT >= 28 && StringsJVM.equals(Build.MANUFACTURER, "samsung", true)) {
                             z2 = true;
                         }
                         if (!z2) {
@@ -140,25 +140,25 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
     }
 
     /* compiled from: WidgetNoticeNuxSamsungLink.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$2 */
+    public static final class ViewOnClickListenerC91012 implements View.OnClickListener {
+        public ViewOnClickListenerC91012() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetNoticeNuxSamsungLink widgetNoticeNuxSamsungLink = WidgetNoticeNuxSamsungLink.this;
             Uri oauth2Authorize = IntentUtils.RouteBuilders.Uris.INSTANCE.getOauth2Authorize();
-            m.checkNotNullParameter(oauth2Authorize, "oAuthUri");
+            Intrinsics3.checkNotNullParameter(oauth2Authorize, "oAuthUri");
             widgetNoticeNuxSamsungLink.startActivity(new Intent("android.intent.action.VIEW", oauth2Authorize.buildUpon().appendQueryParameter("client_id", "591317049637339146").appendQueryParameter("prompt", "consent").appendQueryParameter("response_type", ModelAuditLogEntry.CHANGE_KEY_CODE).appendQueryParameter("scope", "identify activities.read activities.write").build()));
             WidgetNoticeNuxSamsungLink.this.dismiss();
         }
     }
 
     /* compiled from: WidgetNoticeNuxSamsungLink.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$3 */
+    public static final class ViewOnClickListenerC91023 implements View.OnClickListener {
+        public ViewOnClickListenerC91023() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -168,8 +168,8 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
     }
 
     public WidgetNoticeNuxSamsungLink() {
-        super(R.layout.widget_notice_nux_samsung_link);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetNoticeNuxSamsungLink$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_notice_nux_samsung_link);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetNoticeNuxSamsungLink5.INSTANCE, null, 2, null);
     }
 
     private final WidgetNoticeNuxSamsungLinkBinding getBinding() {
@@ -178,11 +178,11 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         StoreStream.INSTANCE.getNotices().markDialogSeen(NOTICE_NAME);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getOAuthTokens(), false, 1, null)), 0L, false, 1, null), this, null, 2, null), WidgetNoticeNuxSamsungLink.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        getBinding().c.setOnClickListener(new AnonymousClass2());
-        getBinding().f2502b.setOnClickListener(new AnonymousClass3());
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getOAuthTokens(), false, 1, null)), 0L, false, 1, null), this, null, 2, null), WidgetNoticeNuxSamsungLink.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C91001(), 62, (Object) null);
+        getBinding().f17307c.setOnClickListener(new ViewOnClickListenerC91012());
+        getBinding().f17306b.setOnClickListener(new ViewOnClickListenerC91023());
     }
 }

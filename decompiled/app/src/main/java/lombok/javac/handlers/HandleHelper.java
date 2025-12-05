@@ -48,7 +48,7 @@ public class HandleHelper extends JavacAnnotationHandler<Helper> {
         String n;
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.HELPER_FLAG_USAGE, "@Helper");
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) Helper.class);
-        JavacNode annotatedType = annotationNode.up();
+        JavacNode annotatedType = annotationNode.m10925up();
         JavacNode containingBlock = annotatedType == null ? null : annotatedType.directUp();
         List<JCTree.JCStatement> origStatements = getStatementsFromJcNode(containingBlock == null ? null : containingBlock.get());
         if (annotatedType == null || annotatedType.getKind() != AST.Kind.TYPE || origStatements == null) {
@@ -70,9 +70,9 @@ public class HandleHelper extends JavacAnnotationHandler<Helper> {
         Name helperName = annotationNode.toName("$" + ((JCTree.JCClassDecl) jCStatement).name);
         boolean[] helperUsed = new boolean[1];
         JavacTreeMaker maker = annotationNode.getTreeMaker();
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(knownMethodNames_, maker, helperName, helperUsed);
+        C128941 c128941 = new C128941(knownMethodNames_, maker, helperName, helperUsed);
         while (it.hasNext()) {
-            it.next().accept(anonymousClass1, (Object) null);
+            it.next().accept(c128941, (Object) null);
         }
         if (!helperUsed[0]) {
             annotationNode.addWarning("No methods of this helper class are ever used.");
@@ -91,9 +91,9 @@ public class HandleHelper extends JavacAnnotationHandler<Helper> {
         setStatementsOfJcNode(containingBlock.get(), newStatements.toList());
     }
 
-    /* renamed from: lombok.javac.handlers.HandleHelper$1, reason: invalid class name */
+    /* renamed from: lombok.javac.handlers.HandleHelper$1 */
     /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleHelper$1.SCL.lombok */
-    class AnonymousClass1 extends TreeScanner<Void, Void> {
+    class C128941 extends TreeScanner<Void, Void> {
         private final /* synthetic */ String[] val$knownMethodNames_;
         private final /* synthetic */ JavacTreeMaker val$maker;
         private final /* synthetic */ Name val$helperName;
@@ -103,7 +103,7 @@ public class HandleHelper extends JavacAnnotationHandler<Helper> {
             return visitMethodInvocation(methodInvocationTree, (Void) obj);
         }
 
-        AnonymousClass1(String[] strArr, JavacTreeMaker javacTreeMaker, Name name, boolean[] zArr) {
+        C128941(String[] strArr, JavacTreeMaker javacTreeMaker, Name name, boolean[] zArr) {
             this.val$knownMethodNames_ = strArr;
             this.val$maker = javacTreeMaker;
             this.val$helperName = name;

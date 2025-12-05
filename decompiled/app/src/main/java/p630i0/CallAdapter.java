@@ -1,0 +1,23 @@
+package p630i0;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Type;
+
+/* compiled from: CallAdapter.java */
+/* renamed from: i0.e, reason: use source file name */
+/* loaded from: classes3.dex */
+public interface CallAdapter<R, T> {
+
+    /* compiled from: CallAdapter.java */
+    /* renamed from: i0.e$a */
+    public static abstract class a {
+        /* renamed from: a */
+        public abstract CallAdapter<?, ?> mo10707a(Type type, Annotation[] annotationArr, Retrofit2 retrofit22);
+    }
+
+    /* renamed from: a */
+    Type mo10705a();
+
+    /* renamed from: b */
+    T mo10706b(Call3<R> call3);
+}

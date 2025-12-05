@@ -3,7 +3,7 @@ package com.discord.utilities.recycler;
 import android.graphics.Rect;
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GridColumnSpaceItemDecoration.kt */
 /* loaded from: classes2.dex */
@@ -18,10 +18,10 @@ public final class GridColumnSpaceItemDecoration extends RecyclerView.ItemDecora
 
     @Override // androidx.recyclerview.widget.RecyclerView.ItemDecoration
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-        m.checkNotNullParameter(outRect, "outRect");
-        m.checkNotNullParameter(view, "view");
-        m.checkNotNullParameter(parent, "parent");
-        m.checkNotNullParameter(state, "state");
+        Intrinsics3.checkNotNullParameter(outRect, "outRect");
+        Intrinsics3.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(state, "state");
         super.getItemOffsets(outRect, view, parent, state);
         int childAdapterPosition = parent.getChildAdapterPosition(view);
         int i = this.columnCount;

@@ -8,21 +8,22 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetSearchSuggestionItemHeaderBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final TextView a;
+    public final TextView f17426a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2524b;
+    public final TextView f17427b;
 
     public WidgetSearchSuggestionItemHeaderBinding(@NonNull TextView textView, @NonNull TextView textView2) {
-        this.a = textView;
-        this.f2524b = textView2;
+        this.f17426a = textView;
+        this.f17427b = textView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17426a;
     }
 }

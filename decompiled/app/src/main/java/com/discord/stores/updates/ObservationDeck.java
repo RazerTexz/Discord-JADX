@@ -2,31 +2,32 @@ package com.discord.stores.updates;
 
 import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.a;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.logging.Logger;
-import d0.t.h0;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Ref$ObjectRef;
-import rx.Emitter;
-import rx.Observable;
-import rx.functions.Action0;
-import rx.functions.Action1;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p580t.Maps6;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Emitter;
+import p658rx.Observable;
+import p658rx.functions.Action0;
+import p658rx.functions.Action1;
 
 /* compiled from: ObservationDeck.kt */
 /* loaded from: classes2.dex */
@@ -35,7 +36,7 @@ public final class ObservationDeck {
     private final LogLevel logLevel;
     private final Logger logger;
     private List<Observer> observers;
-    private static final Function0<Unit> ON_UPDATE_EMPTY = ObservationDeck$Companion$ON_UPDATE_EMPTY$1.INSTANCE;
+    private static final Function0<Unit> ON_UPDATE_EMPTY = ObservationDeck2.INSTANCE;
 
     /* compiled from: ObservationDeck.kt */
     public enum LogLevel {
@@ -68,17 +69,17 @@ public final class ObservationDeck {
 
         public final String toDebugLogString() {
             StringBuilder sb = new StringBuilder();
-            StringBuilder sbU = a.U("Observer name: ");
+            StringBuilder sbM833U = outline.m833U("Observer name: ");
             String name = getName();
             if (name == null) {
                 name = "Unknown";
             }
-            sbU.append(name);
-            sbU.append('\n');
-            sb.append(sbU.toString());
-            sb.append(u.joinToString$default(getObservingUpdates(), ", ", null, null, 0, null, null, 62, null));
+            sbM833U.append(name);
+            sbM833U.append('\n');
+            sb.append(sbM833U.toString());
+            sb.append(_Collections.joinToString$default(getObservingUpdates(), ", ", null, null, 0, null, null, 62, null));
             String string = sb.toString();
-            m.checkNotNullExpressionValue(string, "stringBuilder.toString()");
+            Intrinsics3.checkNotNullExpressionValue(string, "stringBuilder.toString()");
             return string;
         }
     }
@@ -88,20 +89,20 @@ public final class ObservationDeck {
     }
 
     /* compiled from: ObservationDeck.kt */
-    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Action1<Emitter<Unit>> {
+    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$1 */
+    public static final class C66321<T> implements Action1<Emitter<Unit>> {
         public final /* synthetic */ Ref$ObjectRef $observer;
         public final /* synthetic */ String $observerName;
         public final /* synthetic */ boolean $updateOnConnect;
         public final /* synthetic */ UpdateSource[] $updateSources;
 
         /* compiled from: ObservationDeck.kt */
-        /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03211 extends o implements Function0<Unit> {
+        /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Emitter $emitter;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C03211(Emitter emitter) {
+            public AnonymousClass1(Emitter emitter) {
                 super(0);
                 this.$emitter = emitter;
             }
@@ -109,23 +110,23 @@ public final class ObservationDeck {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                this.$emitter.onNext(Unit.a);
+                this.$emitter.onNext(Unit.f27425a);
             }
         }
 
-        public AnonymousClass1(Ref$ObjectRef ref$ObjectRef, boolean z2, String str, UpdateSource[] updateSourceArr) {
+        public C66321(Ref$ObjectRef ref$ObjectRef, boolean z2, String str, UpdateSource[] updateSourceArr) {
             this.$observer = ref$ObjectRef;
             this.$updateOnConnect = z2;
             this.$observerName = str;
             this.$updateSources = updateSourceArr;
         }
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Emitter<Unit> emitter) {
             call2(emitter);
         }
@@ -136,23 +137,23 @@ public final class ObservationDeck {
             ObservationDeck observationDeck = ObservationDeck.this;
             boolean z2 = this.$updateOnConnect;
             String str = this.$observerName;
-            C03211 c03211 = new C03211(emitter);
+            AnonymousClass1 anonymousClass1 = new AnonymousClass1(emitter);
             UpdateSource[] updateSourceArr = this.$updateSources;
-            ref$ObjectRef.element = (T) observationDeck.connect((UpdateSource[]) Arrays.copyOf(updateSourceArr, updateSourceArr.length), z2, str, c03211);
+            ref$ObjectRef.element = (T) observationDeck.connect((UpdateSource[]) Arrays.copyOf(updateSourceArr, updateSourceArr.length), z2, str, anonymousClass1);
         }
     }
 
     /* compiled from: ObservationDeck.kt */
-    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements Action0 {
+    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$2 */
+    public static final class C66332 implements Action0 {
         public final /* synthetic */ Ref$ObjectRef $observer;
 
-        public AnonymousClass2(Ref$ObjectRef ref$ObjectRef) {
+        public C66332(Ref$ObjectRef ref$ObjectRef) {
             this.$observer = ref$ObjectRef;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // rx.functions.Action0
+        @Override // p658rx.functions.Action0
         public final void call() {
             Observer observer = (Observer) this.$observer.element;
             if (observer != null) {
@@ -162,15 +163,15 @@ public final class ObservationDeck {
     }
 
     /* compiled from: ObservationDeck.kt */
-    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$3, reason: invalid class name */
-    public static final class AnonymousClass3<T, R> implements b<Unit, T> {
+    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$3 */
+    public static final class C66343<T, R> implements Func1<Unit, T> {
         public final /* synthetic */ Function0 $generator;
 
-        public AnonymousClass3(Function0 function0) {
+        public C66343(Function0 function0) {
             this.$generator = function0;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Object call(Unit unit) {
             return call2(unit);
         }
@@ -182,11 +183,11 @@ public final class ObservationDeck {
     }
 
     /* compiled from: ObservationDeck.kt */
-    /* renamed from: com.discord.stores.updates.ObservationDeck$logNotifyError$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Observer, CharSequence> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.stores.updates.ObservationDeck$logNotifyError$2 */
+    public static final class C66352 extends Lambda implements Function1<Observer, CharSequence> {
+        public static final C66352 INSTANCE = new C66352();
 
-        public AnonymousClass2() {
+        public C66352() {
             super(1);
         }
 
@@ -197,7 +198,7 @@ public final class ObservationDeck {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(Observer observer) {
-            m.checkNotNullParameter(observer, "observer");
+            Intrinsics3.checkNotNullParameter(observer, "observer");
             return observer.toDebugLogString();
         }
     }
@@ -207,8 +208,8 @@ public final class ObservationDeck {
     }
 
     public ObservationDeck(Logger logger, LogLevel logLevel) {
-        m.checkNotNullParameter(logger, "logger");
-        m.checkNotNullParameter(logLevel, "logLevel");
+        Intrinsics3.checkNotNullParameter(logger, "logger");
+        Intrinsics3.checkNotNullParameter(logLevel, "logLevel");
         this.logger = logger;
         this.logLevel = logLevel;
         this.observers = new ArrayList();
@@ -249,16 +250,16 @@ public final class ObservationDeck {
 
     private final void logNotifyError(Throwable throwable, Set<? extends UpdateSource> updates) {
         Logger logger = this.logger;
-        Pair[] pairArr = new Pair[2];
-        pairArr[0] = d0.o.to("Update Sources", u.joinToString$default(updates, ", ", null, null, 0, null, null, 62, null));
+        Tuples2[] tuples2Arr = new Tuples2[2];
+        tuples2Arr[0] = Tuples.m10073to("Update Sources", _Collections.joinToString$default(updates, ", ", null, null, 0, null, null, 62, null));
         List<Observer> list = this.observers;
         ArrayList arrayList = new ArrayList();
         Iterator<T> it = list.iterator();
         while (true) {
             boolean z2 = true;
             if (!it.hasNext()) {
-                pairArr[1] = d0.o.to("Observers", u.joinToString$default(arrayList, "\n", null, null, 0, null, AnonymousClass2.INSTANCE, 30, null));
-                logger.e("ObservationDeck notify error", throwable, h0.mapOf(pairArr));
+                tuples2Arr[1] = Tuples.m10073to("Observers", _Collections.joinToString$default(arrayList, "\n", null, null, 0, null, C66352.INSTANCE, 30, null));
+                logger.mo8364e("ObservationDeck notify error", throwable, Maps6.mapOf(tuples2Arr));
                 return;
             }
             Object next = it.next();
@@ -281,27 +282,27 @@ public final class ObservationDeck {
     }
 
     public final synchronized Observer connect(UpdateSource[] updateSources, boolean updateOnConnect, String observerName, Function0<Unit> onUpdate) {
-        ObservationDeck$connect$observer$1 observationDeck$connect$observer$1;
-        m.checkNotNullParameter(updateSources, "updateSources");
-        m.checkNotNullParameter(onUpdate, "onUpdate");
-        observationDeck$connect$observer$1 = new ObservationDeck$connect$observer$1(updateSources, onUpdate, observerName);
-        connect(observationDeck$connect$observer$1, updateOnConnect);
-        return observationDeck$connect$observer$1;
+        ObservationDeck3 observationDeck3;
+        Intrinsics3.checkNotNullParameter(updateSources, "updateSources");
+        Intrinsics3.checkNotNullParameter(onUpdate, "onUpdate");
+        observationDeck3 = new ObservationDeck3(updateSources, onUpdate, observerName);
+        connect(observationDeck3, updateOnConnect);
+        return observationDeck3;
     }
 
     public final synchronized Observable<Unit> connectRx(UpdateSource[] updateSources, boolean updateOnConnect, Emitter.BackpressureMode backpressureMode, String observerName) {
-        Observable<Unit> observableW;
-        m.checkNotNullParameter(updateSources, "updateSources");
-        m.checkNotNullParameter(backpressureMode, "backpressureMode");
+        Observable<Unit> observableM11117w;
+        Intrinsics3.checkNotNullParameter(updateSources, "updateSources");
+        Intrinsics3.checkNotNullParameter(backpressureMode, "backpressureMode");
         Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
         ref$ObjectRef.element = null;
-        observableW = Observable.o(new AnonymousClass1(ref$ObjectRef, updateOnConnect, observerName, updateSources), backpressureMode).w(new AnonymousClass2(ref$ObjectRef));
-        m.checkNotNullExpressionValue(observableW, "Observable.create<Unit>(…rver?.let(::disconnect) }");
-        return observableW;
+        observableM11117w = Observable.m11080o(new C66321(ref$ObjectRef, updateOnConnect, observerName, updateSources), backpressureMode).m11117w(new C66332(ref$ObjectRef));
+        Intrinsics3.checkNotNullExpressionValue(observableM11117w, "Observable.create<Unit>(…rver?.let(::disconnect) }");
+        return observableM11117w;
     }
 
     public final synchronized void disconnect(Observer observer) {
-        m.checkNotNullParameter(observer, "observer");
+        Intrinsics3.checkNotNullParameter(observer, "observer");
         logBreadcrumb("disconnect START. observer: " + observer.getName());
         observer.markStale();
         logBreadcrumb("disconnect END. observer: " + observer.getName());
@@ -315,7 +316,7 @@ public final class ObservationDeck {
     public final synchronized void notify(Set<? extends UpdateSource> updates) {
         String str;
         boolean z2;
-        m.checkNotNullParameter(updates, "updates");
+        Intrinsics3.checkNotNullParameter(updates, "updates");
         logBreadcrumb("notify START");
         int i = 0;
         while (i < this.observers.size()) {
@@ -368,7 +369,7 @@ public final class ObservationDeck {
     }
 
     public /* synthetic */ ObservationDeck(Logger logger, LogLevel logLevel, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i & 1) != 0 ? AppLog.g : logger, (i & 2) != 0 ? LogLevel.NONE : logLevel);
+        this((i & 1) != 0 ? AppLog.f14950g : logger, (i & 2) != 0 ? LogLevel.NONE : logLevel);
     }
 
     public static /* synthetic */ Observable connectRx$default(ObservationDeck observationDeck, UpdateSource[] updateSourceArr, boolean z2, Emitter.BackpressureMode backpressureMode, String str, Function0 function0, int i, Object obj) {
@@ -384,7 +385,7 @@ public final class ObservationDeck {
     }
 
     public final synchronized Observer connect(Observer observer, boolean updateOnConnect) {
-        m.checkNotNullParameter(observer, "observer");
+        Intrinsics3.checkNotNullParameter(observer, "observer");
         logBreadcrumb("connect START. observer: " + observer.getName());
         this.observers.add(observer);
         if (updateOnConnect) {
@@ -396,11 +397,11 @@ public final class ObservationDeck {
 
     public final synchronized <T> Observable<T> connectRx(UpdateSource[] updateSources, boolean updateOnConnect, Emitter.BackpressureMode backpressureMode, String observerName, Function0<? extends T> generator) {
         Observable<T> observable;
-        m.checkNotNullParameter(updateSources, "updateSources");
-        m.checkNotNullParameter(backpressureMode, "backpressureMode");
-        m.checkNotNullParameter(generator, "generator");
-        observable = (Observable<T>) connectRx((UpdateSource[]) Arrays.copyOf(updateSources, updateSources.length), updateOnConnect, backpressureMode, observerName).G(new AnonymousClass3(generator));
-        m.checkNotNullExpressionValue(observable, "connectRx(\n        *upda…    ).map { generator() }");
+        Intrinsics3.checkNotNullParameter(updateSources, "updateSources");
+        Intrinsics3.checkNotNullParameter(backpressureMode, "backpressureMode");
+        Intrinsics3.checkNotNullParameter(generator, "generator");
+        observable = (Observable<T>) connectRx((UpdateSource[]) Arrays.copyOf(updateSources, updateSources.length), updateOnConnect, backpressureMode, observerName).m11083G(new C66343(generator));
+        Intrinsics3.checkNotNullExpressionValue(observable, "connectRx(\n        *upda…    ).map { generator() }");
         return observable;
     }
 }

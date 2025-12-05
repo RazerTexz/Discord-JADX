@@ -1,14 +1,14 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create.benefits;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.api.guildrolesubscription.GuildRoleSubscriptionBenefitType;
 import com.discord.api.guildrolesubscription.SubscriptionTrialInterval;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.recycler.DiffKeyProvider;
 import com.discord.widgets.guild_role_subscriptions.tier.model.Benefit;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildRoleSubscriptionBenefitAdapterItem.kt */
 /* loaded from: classes2.dex */
@@ -24,7 +24,7 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AddBenefitItem(GuildRoleSubscriptionBenefitType guildRoleSubscriptionBenefitType, long j, String str) {
             super(null);
-            m.checkNotNullParameter(guildRoleSubscriptionBenefitType, "type");
+            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionBenefitType, "type");
             this.type = guildRoleSubscriptionBenefitType;
             this.guildId = j;
             this.tierName = str;
@@ -60,7 +60,7 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
         }
 
         public final AddBenefitItem copy(GuildRoleSubscriptionBenefitType type, long guildId, String tierName) {
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(type, "type");
             return new AddBenefitItem(type, guildId, tierName);
         }
 
@@ -72,7 +72,7 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
                 return false;
             }
             AddBenefitItem addBenefitItem = (AddBenefitItem) other;
-            return m.areEqual(this.type, addBenefitItem.type) && this.guildId == addBenefitItem.guildId && m.areEqual(this.tierName, addBenefitItem.tierName);
+            return Intrinsics3.areEqual(this.type, addBenefitItem.type) && this.guildId == addBenefitItem.guildId && Intrinsics3.areEqual(this.tierName, addBenefitItem.tierName);
         }
 
         public final long getGuildId() {
@@ -94,18 +94,18 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
 
         public int hashCode() {
             GuildRoleSubscriptionBenefitType guildRoleSubscriptionBenefitType = this.type;
-            int iA = (b.a(this.guildId) + ((guildRoleSubscriptionBenefitType != null ? guildRoleSubscriptionBenefitType.hashCode() : 0) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.guildId) + ((guildRoleSubscriptionBenefitType != null ? guildRoleSubscriptionBenefitType.hashCode() : 0) * 31)) * 31;
             String str = this.tierName;
-            return iA + (str != null ? str.hashCode() : 0);
+            return iM3a + (str != null ? str.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("AddBenefitItem(type=");
-            sbU.append(this.type);
-            sbU.append(", guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", tierName=");
-            return a.J(sbU, this.tierName, ")");
+            StringBuilder sbM833U = outline.m833U("AddBenefitItem(type=");
+            sbM833U.append(this.type);
+            sbM833U.append(", guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", tierName=");
+            return outline.m822J(sbM833U, this.tierName, ")");
         }
     }
 
@@ -120,8 +120,8 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public BenefitItem(GuildRoleSubscriptionBenefitType guildRoleSubscriptionBenefitType, Benefit benefit, long j, String str) {
             super(null);
-            m.checkNotNullParameter(guildRoleSubscriptionBenefitType, "type");
-            m.checkNotNullParameter(benefit, "benefit");
+            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionBenefitType, "type");
+            Intrinsics3.checkNotNullParameter(benefit, "benefit");
             this.type = guildRoleSubscriptionBenefitType;
             this.benefit = benefit;
             this.guildId = j;
@@ -168,8 +168,8 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
         }
 
         public final BenefitItem copy(GuildRoleSubscriptionBenefitType type, Benefit benefit, long guildId, String tierName) {
-            m.checkNotNullParameter(type, "type");
-            m.checkNotNullParameter(benefit, "benefit");
+            Intrinsics3.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(benefit, "benefit");
             return new BenefitItem(type, benefit, guildId, tierName);
         }
 
@@ -181,7 +181,7 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
                 return false;
             }
             BenefitItem benefitItem = (BenefitItem) other;
-            return m.areEqual(this.type, benefitItem.type) && m.areEqual(this.benefit, benefitItem.benefit) && this.guildId == benefitItem.guildId && m.areEqual(this.tierName, benefitItem.tierName);
+            return Intrinsics3.areEqual(this.type, benefitItem.type) && Intrinsics3.areEqual(this.benefit, benefitItem.benefit) && this.guildId == benefitItem.guildId && Intrinsics3.areEqual(this.tierName, benefitItem.tierName);
         }
 
         public final Benefit getBenefit() {
@@ -209,20 +209,20 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
             GuildRoleSubscriptionBenefitType guildRoleSubscriptionBenefitType = this.type;
             int iHashCode = (guildRoleSubscriptionBenefitType != null ? guildRoleSubscriptionBenefitType.hashCode() : 0) * 31;
             Benefit benefit = this.benefit;
-            int iA = (b.a(this.guildId) + ((iHashCode + (benefit != null ? benefit.hashCode() : 0)) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.guildId) + ((iHashCode + (benefit != null ? benefit.hashCode() : 0)) * 31)) * 31;
             String str = this.tierName;
-            return iA + (str != null ? str.hashCode() : 0);
+            return iM3a + (str != null ? str.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("BenefitItem(type=");
-            sbU.append(this.type);
-            sbU.append(", benefit=");
-            sbU.append(this.benefit);
-            sbU.append(", guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", tierName=");
-            return a.J(sbU, this.tierName, ")");
+            StringBuilder sbM833U = outline.m833U("BenefitItem(type=");
+            sbM833U.append(this.type);
+            sbM833U.append(", benefit=");
+            sbM833U.append(this.benefit);
+            sbM833U.append(", guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", tierName=");
+            return outline.m822J(sbM833U, this.tierName, ")");
         }
     }
 
@@ -281,7 +281,7 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
                 return false;
             }
             FreeTrialItem freeTrialItem = (FreeTrialItem) other;
-            return this.isFreeTrialEnabled == freeTrialItem.isFreeTrialEnabled && m.areEqual(this.trialInterval, freeTrialItem.trialInterval) && m.areEqual(this.activeTrialUserLimit, freeTrialItem.activeTrialUserLimit);
+            return this.isFreeTrialEnabled == freeTrialItem.isFreeTrialEnabled && Intrinsics3.areEqual(this.trialInterval, freeTrialItem.trialInterval) && Intrinsics3.areEqual(this.activeTrialUserLimit, freeTrialItem.activeTrialUserLimit);
         }
 
         public final Integer getActiveTrialUserLimit() {
@@ -319,12 +319,12 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("FreeTrialItem(isFreeTrialEnabled=");
-            sbU.append(this.isFreeTrialEnabled);
-            sbU.append(", trialInterval=");
-            sbU.append(this.trialInterval);
-            sbU.append(", activeTrialUserLimit=");
-            return a.F(sbU, this.activeTrialUserLimit, ")");
+            StringBuilder sbM833U = outline.m833U("FreeTrialItem(isFreeTrialEnabled=");
+            sbM833U.append(this.isFreeTrialEnabled);
+            sbM833U.append(", trialInterval=");
+            sbM833U.append(this.trialInterval);
+            sbM833U.append(", activeTrialUserLimit=");
+            return outline.m818F(sbM833U, this.activeTrialUserLimit, ")");
         }
     }
 
@@ -336,7 +336,7 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Header(GuildRoleSubscriptionBenefitType guildRoleSubscriptionBenefitType) {
             super(null);
-            m.checkNotNullParameter(guildRoleSubscriptionBenefitType, "type");
+            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionBenefitType, "type");
             this.type = guildRoleSubscriptionBenefitType;
             this.key = "BenefitHeader" + guildRoleSubscriptionBenefitType;
         }
@@ -354,13 +354,13 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
         }
 
         public final Header copy(GuildRoleSubscriptionBenefitType type) {
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(type, "type");
             return new Header(type);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Header) && m.areEqual(this.type, ((Header) other).type);
+                return (other instanceof Header) && Intrinsics3.areEqual(this.type, ((Header) other).type);
             }
             return true;
         }
@@ -383,10 +383,10 @@ public abstract class GuildRoleSubscriptionBenefitAdapterItem implements DiffKey
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Header(type=");
-            sbU.append(this.type);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Header(type=");
+            sbM833U.append(this.type);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 

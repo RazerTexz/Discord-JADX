@@ -1,12 +1,12 @@
 package com.adjust.sdk;
 
-import b.d.b.a.a;
 import com.adjust.sdk.scheduler.SingleThreadCachedScheduler;
 import com.adjust.sdk.scheduler.ThreadExecutor;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
 import java.net.SocketTimeoutException;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class RequestHandler implements IRequestHandler {
@@ -18,12 +18,12 @@ public class RequestHandler implements IRequestHandler {
     private ILogger logger = AdjustFactory.getLogger();
     private ThreadExecutor executor = new SingleThreadCachedScheduler("RequestHandler");
 
-    /* renamed from: com.adjust.sdk.RequestHandler$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: com.adjust.sdk.RequestHandler$1 */
+    public class RunnableC53871 implements Runnable {
         public final /* synthetic */ ActivityPackage val$activityPackage;
         public final /* synthetic */ int val$queueSize;
 
-        public AnonymousClass1(ActivityPackage activityPackage, int i) {
+        public RunnableC53871(ActivityPackage activityPackage, int i) {
             this.val$activityPackage = activityPackage;
             this.val$queueSize = i;
         }
@@ -63,29 +63,29 @@ public class RequestHandler implements IRequestHandler {
         if (activityPackage.getActivityKind() == ActivityKind.GDPR) {
             baseUrl = AdjustFactory.getGdprUrl();
             if (this.gdprPath != null) {
-                StringBuilder sbU = a.U(baseUrl);
-                sbU.append(this.gdprPath);
-                baseUrl = sbU.toString();
+                StringBuilder sbM833U = outline.m833U(baseUrl);
+                sbM833U.append(this.gdprPath);
+                baseUrl = sbM833U.toString();
             }
         } else if (activityPackage.getActivityKind() == ActivityKind.SUBSCRIPTION) {
             baseUrl = AdjustFactory.getSubscriptionUrl();
             if (this.subscriptionPath != null) {
-                StringBuilder sbU2 = a.U(baseUrl);
-                sbU2.append(this.subscriptionPath);
-                baseUrl = sbU2.toString();
+                StringBuilder sbM833U2 = outline.m833U(baseUrl);
+                sbM833U2.append(this.subscriptionPath);
+                baseUrl = sbM833U2.toString();
             }
         } else {
             baseUrl = AdjustFactory.getBaseUrl();
             if (this.basePath != null) {
-                StringBuilder sbU3 = a.U(baseUrl);
-                sbU3.append(this.basePath);
-                baseUrl = sbU3.toString();
+                StringBuilder sbM833U3 = outline.m833U(baseUrl);
+                sbM833U3.append(this.basePath);
+                baseUrl = sbM833U3.toString();
             }
         }
-        StringBuilder sbU4 = a.U(baseUrl);
-        sbU4.append(activityPackage.getPath());
+        StringBuilder sbM833U4 = outline.m833U(baseUrl);
+        sbM833U4.append(activityPackage.getPath());
         try {
-            ResponseData responseDataCreatePOSTHttpsURLConnection = UtilNetworking.createPOSTHttpsURLConnection(sbU4.toString(), activityPackage, i);
+            ResponseData responseDataCreatePOSTHttpsURLConnection = UtilNetworking.createPOSTHttpsURLConnection(sbM833U4.toString(), activityPackage, i);
             IPackageHandler iPackageHandler = this.packageHandlerWeakRef.get();
             if (iPackageHandler == null || (iActivityHandler = this.activityHandlerWeakRef.get()) == null) {
                 return;
@@ -128,7 +128,7 @@ public class RequestHandler implements IRequestHandler {
 
     @Override // com.adjust.sdk.IRequestHandler
     public void sendPackage(ActivityPackage activityPackage, int i) {
-        this.executor.submit(new AnonymousClass1(activityPackage, i));
+        this.executor.submit(new RunnableC53871(activityPackage, i));
     }
 
     @Override // com.adjust.sdk.IRequestHandler

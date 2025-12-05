@@ -5,67 +5,83 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
-import b.c.a.a0.d;
-import b.i.a.f.c.a.d.e;
 import com.adjust.sdk.Constants;
 import com.google.android.gms.common.internal.ReflectedParcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p292c.p293a.p294d.C3190e;
 
 /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
 /* loaded from: classes3.dex */
 public class Credential extends AbstractSafeParcelable implements ReflectedParcelable {
-    public static final Parcelable.Creator<Credential> CREATOR = new e();
-    public final String j;
+    public static final Parcelable.Creator<Credential> CREATOR = new C3190e();
 
-    @Nullable
-    public final String k;
+    /* renamed from: j */
+    public final String f20389j;
 
+    /* renamed from: k */
     @Nullable
-    public final Uri l;
-    public final List<IdToken> m;
+    public final String f20390k;
 
+    /* renamed from: l */
     @Nullable
-    public final String n;
+    public final Uri f20391l;
 
-    @Nullable
-    public final String o;
+    /* renamed from: m */
+    public final List<IdToken> f20392m;
 
+    /* renamed from: n */
     @Nullable
-    public final String p;
+    public final String f20393n;
 
+    /* renamed from: o */
     @Nullable
-    public final String q;
+    public final String f20394o;
+
+    /* renamed from: p */
+    @Nullable
+    public final String f20395p;
+
+    /* renamed from: q */
+    @Nullable
+    public final String f20396q;
 
     /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-    public static class a {
-        public final String a;
+    /* renamed from: com.google.android.gms.auth.api.credentials.Credential$a */
+    public static class C10792a {
 
-        /* renamed from: b, reason: collision with root package name */
+        /* renamed from: a */
+        public final String f20397a;
+
+        /* renamed from: b */
         @Nullable
-        public String f2995b;
+        public String f20398b;
 
+        /* renamed from: c */
         @Nullable
-        public Uri c;
+        public Uri f20399c;
 
+        /* renamed from: d */
         @Nullable
-        public String d;
+        public String f20400d;
 
-        public a(String str) {
-            this.a = str;
+        public C10792a(String str) {
+            this.f20397a = str;
         }
 
-        public Credential a() {
-            return new Credential(this.a, this.f2995b, this.c, null, this.d, null, null, null);
+        /* renamed from: a */
+        public Credential m9009a() {
+            return new Credential(this.f20397a, this.f20398b, this.f20399c, null, this.f20400d, null, null, null);
         }
     }
 
     public Credential(String str, @Nullable String str2, @Nullable Uri uri, List<IdToken> list, @Nullable String str3, @Nullable String str4, @Nullable String str5, @Nullable String str6) {
-        d.z(str, "credential identifier cannot be null");
+        AnimatableValueParser.m595z(str, "credential identifier cannot be null");
         String strTrim = str.trim();
-        d.v(strTrim, "credential identifier cannot be empty");
+        AnimatableValueParser.m579v(strTrim, "credential identifier cannot be empty");
         if (str3 != null && TextUtils.isEmpty(str3)) {
             throw new IllegalArgumentException("Password must not be empty if set");
         }
@@ -87,14 +103,14 @@ public class Credential extends AbstractSafeParcelable implements ReflectedParce
         if (str2 != null && TextUtils.isEmpty(str2.trim())) {
             str2 = null;
         }
-        this.k = str2;
-        this.l = uri;
-        this.m = list == null ? Collections.emptyList() : Collections.unmodifiableList(list);
-        this.j = strTrim;
-        this.n = str3;
-        this.o = str4;
-        this.p = str5;
-        this.q = str6;
+        this.f20390k = str2;
+        this.f20391l = uri;
+        this.f20392m = list == null ? Collections.emptyList() : Collections.unmodifiableList(list);
+        this.f20389j = strTrim;
+        this.f20393n = str3;
+        this.f20394o = str4;
+        this.f20395p = str5;
+        this.f20396q = str6;
     }
 
     public boolean equals(@Nullable Object obj) {
@@ -105,24 +121,24 @@ public class Credential extends AbstractSafeParcelable implements ReflectedParce
             return false;
         }
         Credential credential = (Credential) obj;
-        return TextUtils.equals(this.j, credential.j) && TextUtils.equals(this.k, credential.k) && d.h0(this.l, credential.l) && TextUtils.equals(this.n, credential.n) && TextUtils.equals(this.o, credential.o);
+        return TextUtils.equals(this.f20389j, credential.f20389j) && TextUtils.equals(this.f20390k, credential.f20390k) && AnimatableValueParser.m524h0(this.f20391l, credential.f20391l) && TextUtils.equals(this.f20393n, credential.f20393n) && TextUtils.equals(this.f20394o, credential.f20394o);
     }
 
     public int hashCode() {
-        return Arrays.hashCode(new Object[]{this.j, this.k, this.l, this.n, this.o});
+        return Arrays.hashCode(new Object[]{this.f20389j, this.f20390k, this.f20391l, this.f20393n, this.f20394o});
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = d.y2(parcel, 20293);
-        d.t2(parcel, 1, this.j, false);
-        d.t2(parcel, 2, this.k, false);
-        d.s2(parcel, 3, this.l, i, false);
-        d.w2(parcel, 4, this.m, false);
-        d.t2(parcel, 5, this.n, false);
-        d.t2(parcel, 6, this.o, false);
-        d.t2(parcel, 9, this.p, false);
-        d.t2(parcel, 10, this.q, false);
-        d.A2(parcel, iY2);
+        int iM594y2 = AnimatableValueParser.m594y2(parcel, 20293);
+        AnimatableValueParser.m574t2(parcel, 1, this.f20389j, false);
+        AnimatableValueParser.m574t2(parcel, 2, this.f20390k, false);
+        AnimatableValueParser.m570s2(parcel, 3, this.f20391l, i, false);
+        AnimatableValueParser.m586w2(parcel, 4, this.f20392m, false);
+        AnimatableValueParser.m574t2(parcel, 5, this.f20393n, false);
+        AnimatableValueParser.m574t2(parcel, 6, this.f20394o, false);
+        AnimatableValueParser.m574t2(parcel, 9, this.f20395p, false);
+        AnimatableValueParser.m574t2(parcel, 10, this.f20396q, false);
+        AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 }

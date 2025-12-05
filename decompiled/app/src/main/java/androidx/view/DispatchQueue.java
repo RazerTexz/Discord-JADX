@@ -3,14 +3,14 @@ package androidx.view;
 import android.annotation.SuppressLint;
 import androidx.annotation.AnyThread;
 import androidx.annotation.MainThread;
-import d0.z.d.m;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import kotlin.coroutines.CoroutineContext;
 import kotlinx.coroutines.CoroutineDispatcher;
-import s.a.a.n;
-import s.a.k0;
-import s.a.l1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p659s.p660a.Dispatchers;
+import p659s.p660a.MainCoroutineDispatcher;
+import p659s.p660a.p661a.MainDispatchers;
 
 /* compiled from: DispatchQueue.kt */
 /* loaded from: classes.dex */
@@ -40,12 +40,12 @@ public final class DispatchQueue {
     @AnyThread
     @SuppressLint({"WrongThread"})
     public final void dispatchAndEnqueue(CoroutineContext context, Runnable runnable) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(runnable, "runnable");
-        CoroutineDispatcher coroutineDispatcher = k0.a;
-        l1 l1VarH = n.f3830b.H();
-        if (l1VarH.isDispatchNeeded(context) || canRun()) {
-            l1VarH.dispatch(context, new DispatchQueue$dispatchAndEnqueue$$inlined$with$lambda$1(this, context, runnable));
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(runnable, "runnable");
+        CoroutineDispatcher coroutineDispatcher = Dispatchers.f27866a;
+        MainCoroutineDispatcher mainCoroutineDispatcherMo11194H = MainDispatchers.f27700b.mo11194H();
+        if (mainCoroutineDispatcherMo11194H.isDispatchNeeded(context) || canRun()) {
+            mainCoroutineDispatcherMo11194H.dispatch(context, new DispatchQueue2(this, context, runnable));
         } else {
             enqueue(runnable);
         }

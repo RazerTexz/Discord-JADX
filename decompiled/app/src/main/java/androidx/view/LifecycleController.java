@@ -2,9 +2,9 @@ package androidx.view;
 
 import androidx.annotation.MainThread;
 import androidx.view.Lifecycle;
-import b.i.a.f.e.o.f;
-import d0.z.d.m;
 import kotlinx.coroutines.Job;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: LifecycleController.kt */
 @MainThread
@@ -16,19 +16,19 @@ public final class LifecycleController {
     private final LifecycleEventObserver observer;
 
     public LifecycleController(Lifecycle lifecycle, Lifecycle.State state, DispatchQueue dispatchQueue, Job job) {
-        m.checkNotNullParameter(lifecycle, "lifecycle");
-        m.checkNotNullParameter(state, "minState");
-        m.checkNotNullParameter(dispatchQueue, "dispatchQueue");
-        m.checkNotNullParameter(job, "parentJob");
+        Intrinsics3.checkNotNullParameter(lifecycle, "lifecycle");
+        Intrinsics3.checkNotNullParameter(state, "minState");
+        Intrinsics3.checkNotNullParameter(dispatchQueue, "dispatchQueue");
+        Intrinsics3.checkNotNullParameter(job, "parentJob");
         this.lifecycle = lifecycle;
         this.minState = state;
         this.dispatchQueue = dispatchQueue;
-        LifecycleController$observer$1 lifecycleController$observer$1 = new LifecycleController$observer$1(this, job);
-        this.observer = lifecycleController$observer$1;
+        LifecycleController2 lifecycleController2 = new LifecycleController2(this, job);
+        this.observer = lifecycleController2;
         if (lifecycle.getCurrentState() != Lifecycle.State.DESTROYED) {
-            lifecycle.addObserver(lifecycleController$observer$1);
+            lifecycle.addObserver(lifecycleController2);
         } else {
-            f.t(job, null, 1, null);
+            C3404f.m4343t(job, null, 1, null);
             finish();
         }
     }
@@ -46,7 +46,7 @@ public final class LifecycleController {
     }
 
     private final void handleDestroy(Job parentJob) {
-        f.t(parentJob, null, 1, null);
+        C3404f.m4343t(parentJob, null, 1, null);
         finish();
     }
 

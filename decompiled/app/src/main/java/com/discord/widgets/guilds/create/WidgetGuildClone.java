@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.guild.Guild;
 import com.discord.api.role.GuildRole;
@@ -18,25 +16,27 @@ import com.discord.models.domain.ModelGuildTemplate;
 import com.discord.stores.StoreGuildTemplates;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.color.ColorCompatKt;
+import com.discord.utilities.color.ColorCompat2;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.guilds.create.GuildCreateCloneViews;
 import com.discord.widgets.guilds.create.WidgetGuildCreate;
 import com.discord.widgets.guilds.create.WidgetGuildCreateViewModel;
 import com.discord.widgets.roles.RolesListView;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetGuildClone.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildClone extends WidgetGuildCreate {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildClone.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildCloneBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildClone.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildCloneBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -61,14 +61,14 @@ public final class WidgetGuildClone extends WidgetGuildCreate {
         }
 
         public final void show(Context context, String guildTemplateCode, String location) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
             Intent intentPutExtra = new Intent().putExtra(WidgetGuildCreate.EXTRA_OPTIONS, new WidgetGuildCreate.Options(location, null, false, null, false, 30, null));
-            m.checkNotNullExpressionValue(intentPutExtra, "Intent().putExtra(EXTRA_OPTIONS, options)");
+            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent().putExtra(EXTRA_OPTIONS, options)");
             if (guildTemplateCode != null) {
                 intentPutExtra.putExtra(WidgetGuildClone.INTENT_GUILD_TEMPLATE_CODE, guildTemplateCode);
             }
-            j.d(context, WidgetGuildClone.class, intentPutExtra);
+            AppScreen2.m156d(context, WidgetGuildClone.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -77,8 +77,8 @@ public final class WidgetGuildClone extends WidgetGuildCreate {
     }
 
     public WidgetGuildClone() {
-        super(R.layout.widget_guild_clone);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildClone$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_guild_clone);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildClone2.INSTANCE, null, 2, null);
     }
 
     private final WidgetGuildCloneBinding getBinding() {
@@ -88,27 +88,27 @@ public final class WidgetGuildClone extends WidgetGuildCreate {
     @Override // com.discord.widgets.guilds.create.WidgetGuildCreate
     public void configureUI(WidgetGuildCreateViewModel.ViewState viewState) {
         List<Channel> listEmptyList;
-        m.checkNotNullParameter(viewState, "viewState");
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
         super.configureUI(viewState);
         StoreStream.INSTANCE.getGuildTemplates().clearDynamicLinkGuildTemplateCode();
-        if (m.areEqual(viewState, WidgetGuildCreateViewModel.ViewState.Uninitialized.INSTANCE)) {
-            AppViewFlipper appViewFlipper = getBinding().c;
-            m.checkNotNullExpressionValue(appViewFlipper, "binding.guildCreateFlipper");
+        if (Intrinsics3.areEqual(viewState, WidgetGuildCreateViewModel.ViewState.Uninitialized.INSTANCE)) {
+            AppViewFlipper appViewFlipper = getBinding().f16753c;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.guildCreateFlipper");
             appViewFlipper.setDisplayedChild(0);
             return;
         }
         if (viewState instanceof WidgetGuildCreateViewModel.ViewState.Initialized) {
             WidgetGuildCreateViewModel.ViewState.Initialized initialized = (WidgetGuildCreateViewModel.ViewState.Initialized) viewState;
             StoreGuildTemplates.GuildTemplateState guildTemplate = initialized.getGuildTemplate();
-            if (m.areEqual(guildTemplate, StoreGuildTemplates.GuildTemplateState.None.INSTANCE) || m.areEqual(guildTemplate, StoreGuildTemplates.GuildTemplateState.Invalid.INSTANCE) || m.areEqual(guildTemplate, StoreGuildTemplates.GuildTemplateState.LoadFailed.INSTANCE)) {
-                AppViewFlipper appViewFlipper2 = getBinding().c;
-                m.checkNotNullExpressionValue(appViewFlipper2, "binding.guildCreateFlipper");
+            if (Intrinsics3.areEqual(guildTemplate, StoreGuildTemplates.GuildTemplateState.None.INSTANCE) || Intrinsics3.areEqual(guildTemplate, StoreGuildTemplates.GuildTemplateState.Invalid.INSTANCE) || Intrinsics3.areEqual(guildTemplate, StoreGuildTemplates.GuildTemplateState.LoadFailed.INSTANCE)) {
+                AppViewFlipper appViewFlipper2 = getBinding().f16753c;
+                Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.guildCreateFlipper");
                 appViewFlipper2.setDisplayedChild(1);
                 return;
             }
-            if (m.areEqual(guildTemplate, StoreGuildTemplates.GuildTemplateState.Loading.INSTANCE)) {
-                AppViewFlipper appViewFlipper3 = getBinding().c;
-                m.checkNotNullExpressionValue(appViewFlipper3, "binding.guildCreateFlipper");
+            if (Intrinsics3.areEqual(guildTemplate, StoreGuildTemplates.GuildTemplateState.Loading.INSTANCE)) {
+                AppViewFlipper appViewFlipper3 = getBinding().f16753c;
+                Intrinsics3.checkNotNullExpressionValue(appViewFlipper3, "binding.guildCreateFlipper");
                 appViewFlipper3.setDisplayedChild(0);
                 return;
             }
@@ -116,61 +116,61 @@ public final class WidgetGuildClone extends WidgetGuildCreate {
                 ModelGuildTemplate guildTemplate2 = ((StoreGuildTemplates.GuildTemplateState.Resolved) initialized.getGuildTemplate()).getGuildTemplate();
                 Guild serializedSourceGuild = guildTemplate2.getSerializedSourceGuild();
                 if (serializedSourceGuild == null) {
-                    AppViewFlipper appViewFlipper4 = getBinding().c;
-                    m.checkNotNullExpressionValue(appViewFlipper4, "binding.guildCreateFlipper");
+                    AppViewFlipper appViewFlipper4 = getBinding().f16753c;
+                    Intrinsics3.checkNotNullExpressionValue(appViewFlipper4, "binding.guildCreateFlipper");
                     appViewFlipper4.setDisplayedChild(1);
                     return;
                 }
-                AppViewFlipper appViewFlipper5 = getBinding().c;
-                m.checkNotNullExpressionValue(appViewFlipper5, "binding.guildCreateFlipper");
+                AppViewFlipper appViewFlipper5 = getBinding().f16753c;
+                Intrinsics3.checkNotNullExpressionValue(appViewFlipper5, "binding.guildCreateFlipper");
                 appViewFlipper5.setDisplayedChild(2);
-                TextView textView = getBinding().g;
-                m.checkNotNullExpressionValue(textView, "binding.guildTemplateName");
-                int themedColor = ColorCompat.getThemedColor(textView, R.attr.colorHeaderSecondary);
-                TextView textView2 = getBinding().g;
-                m.checkNotNullExpressionValue(textView2, "binding.guildTemplateName");
-                ColorCompatKt.setDrawableColor(textView2, themedColor);
-                TextView textView3 = getBinding().g;
-                m.checkNotNullExpressionValue(textView3, "binding.guildTemplateName");
+                TextView textView = getBinding().f16757g;
+                Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildTemplateName");
+                int themedColor = ColorCompat.getThemedColor(textView, C5419R.attr.colorHeaderSecondary);
+                TextView textView2 = getBinding().f16757g;
+                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildTemplateName");
+                ColorCompat2.setDrawableColor(textView2, themedColor);
+                TextView textView3 = getBinding().f16757g;
+                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.guildTemplateName");
                 textView3.setText(guildTemplate2.getName());
-                GuildTemplateChannelsView guildTemplateChannelsView = getBinding().h;
-                List<Channel> listG = serializedSourceGuild.g();
-                if (listG == null || (listEmptyList = u.sortedWith(listG, new WidgetGuildClone$configureUI$$inlined$sortedBy$1())) == null) {
-                    listEmptyList = n.emptyList();
+                GuildTemplateChannelsView guildTemplateChannelsView = getBinding().f16758h;
+                List<Channel> listM7860g = serializedSourceGuild.m7860g();
+                if (listM7860g == null || (listEmptyList = _Collections.sortedWith(listM7860g, new WidgetGuildClone$configureUI$$inlined$sortedBy$1())) == null) {
+                    listEmptyList = Collections2.emptyList();
                 }
                 guildTemplateChannelsView.updateView(listEmptyList);
-                List<GuildRole> listG2 = serializedSourceGuild.G();
-                if (listG2 == null) {
-                    listG2 = n.emptyList();
+                List<GuildRole> listM7842G = serializedSourceGuild.m7842G();
+                if (listM7842G == null) {
+                    listM7842G = Collections2.emptyList();
                 }
-                List listSortedWith = u.sortedWith(listG2, new WidgetGuildClone$configureUI$$inlined$sortedBy$2());
+                List listSortedWith = _Collections.sortedWith(listM7842G, new WidgetGuildClone$configureUI$$inlined$sortedBy$2());
                 ArrayList arrayList = new ArrayList();
                 for (Object obj : listSortedWith) {
-                    if (!m.areEqual(((GuildRole) obj).getName(), "@everyone")) {
+                    if (!Intrinsics3.areEqual(((GuildRole) obj).getName(), "@everyone")) {
                         arrayList.add(obj);
                     }
                 }
-                LinearLayout linearLayout = getBinding().j;
-                m.checkNotNullExpressionValue(linearLayout, "binding.guildTemplatePreviewRolesLayout");
+                LinearLayout linearLayout = getBinding().f16760j;
+                Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.guildTemplatePreviewRolesLayout");
                 linearLayout.setVisibility(arrayList.isEmpty() ^ true ? 0 : 8);
-                RolesListView rolesListView = getBinding().i;
-                RolesListView rolesListView2 = getBinding().i;
-                m.checkNotNullExpressionValue(rolesListView2, "binding.guildTemplatePreviewRoles");
-                rolesListView.updateView(arrayList, ColorCompat.getThemedColor(rolesListView2.getContext(), R.attr.primary_300), serializedSourceGuild.getId());
+                RolesListView rolesListView = getBinding().f16759i;
+                RolesListView rolesListView2 = getBinding().f16759i;
+                Intrinsics3.checkNotNullExpressionValue(rolesListView2, "binding.guildTemplatePreviewRoles");
+                rolesListView.updateView(arrayList, ColorCompat.getThemedColor(rolesListView2.getContext(), C5419R.attr.primary_300), serializedSourceGuild.getId());
             }
         }
     }
 
     @Override // com.discord.widgets.guilds.create.WidgetGuildCreate
     public WidgetGuildCreateViewModel createViewModelFactory() {
-        return new WidgetGuildCreateViewModel(R.string.create_server_default_server_name_format, null, getMostRecentIntent().getStringExtra(INTENT_GUILD_TEMPLATE_CODE), false, getArgs().getAnalyticsLocation(), null, false, null, null, null, 962, null);
+        return new WidgetGuildCreateViewModel(C5419R.string.create_server_default_server_name_format, null, getMostRecentIntent().getStringExtra(INTENT_GUILD_TEMPLATE_CODE), false, getArgs().getAnalyticsLocation(), null, false, null, null, null, 962, null);
     }
 
     @Override // com.discord.widgets.guilds.create.WidgetGuildCreate
     public GuildCreateCloneViews getViews() {
         GuildCreateCloneViews.Companion companion = GuildCreateCloneViews.INSTANCE;
         WidgetGuildCloneBinding binding = getBinding();
-        m.checkNotNullExpressionValue(binding, "binding");
+        Intrinsics3.checkNotNullExpressionValue(binding, "binding");
         return companion.from(binding);
     }
 }

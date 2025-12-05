@@ -20,20 +20,20 @@ import com.discord.stores.StoreSlowMode;
 import com.discord.stores.StoreThreadDraft;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserRelationships;
-import com.discord.utilities.rx.ObservableCombineLatestOverloadsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableCombineLatestOverloads2;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.input.ChatInputViewModel;
 import com.discord.widgets.forums.ForumPostCreateManager;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
-import j0.l.e.k;
 import kotlin.jvm.functions.Function13;
-import rx.Observable;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implements b<StoreChannelsSelected.ResolvedSelectedChannel, Observable<? extends ChatInputViewModel.StoreState>> {
+public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implements Func1<StoreChannelsSelected.ResolvedSelectedChannel, Observable<? extends ChatInputViewModel.StoreState>> {
     public final /* synthetic */ StoreChat $storeChat;
     public final /* synthetic */ StoreGuildJoinRequest $storeGuildJoinRequest;
     public final /* synthetic */ StoreGuilds $storeGuilds;
@@ -46,13 +46,13 @@ public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implem
     public final /* synthetic */ StoreUser $storeUsers;
 
     /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function13<MeUser, StoreChat.EditingMessage, Integer, Long, GuildVerificationLevel, Boolean, Boolean, Guild, ChatInputViewModel.StoreState.Loaded.PendingReply, GuildMember, GuildJoinRequest, StoreThreadDraft.ThreadDraftState, Boolean, ChatInputViewModel.StoreState.Loaded> {
+    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$Companion$observeStoreState$1$1 */
+    public static final class C76871 extends Lambda implements Function13<MeUser, StoreChat.EditingMessage, Integer, Long, GuildVerificationLevel, Boolean, Boolean, Guild, ChatInputViewModel.StoreState.Loaded.PendingReply, GuildMember, GuildJoinRequest, StoreThreadDraft.ThreadDraftState, Boolean, ChatInputViewModel.StoreState.Loaded> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ StoreChannelsSelected.ResolvedSelectedChannel $selectedChannel;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Channel channel, StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
+        public C76871(Channel channel, StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
             super(13);
             this.$channel = channel;
             this.$selectedChannel = resolvedSelectedChannel;
@@ -64,11 +64,11 @@ public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implem
         }
 
         public final ChatInputViewModel.StoreState.Loaded invoke(MeUser meUser, StoreChat.EditingMessage editingMessage, Integer num, Long l, GuildVerificationLevel guildVerificationLevel, boolean z2, Boolean bool, Guild guild, ChatInputViewModel.StoreState.Loaded.PendingReply pendingReply, GuildMember guildMember, GuildJoinRequest guildJoinRequest, StoreThreadDraft.ThreadDraftState threadDraftState, boolean z3) {
-            m.checkNotNullParameter(meUser, "me");
-            m.checkNotNullParameter(guildVerificationLevel, "verificationLevelTriggered");
-            m.checkNotNullParameter(threadDraftState, "threadDraftState");
+            Intrinsics3.checkNotNullParameter(meUser, "me");
+            Intrinsics3.checkNotNullParameter(guildVerificationLevel, "verificationLevelTriggered");
+            Intrinsics3.checkNotNullParameter(threadDraftState, "threadDraftState");
             Channel channel = this.$channel;
-            m.checkNotNullExpressionValue(bool, "isOnCooldown");
+            Intrinsics3.checkNotNullExpressionValue(bool, "isOnCooldown");
             boolean zBooleanValue = bool.booleanValue();
             StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel = this.$selectedChannel;
             if (!(resolvedSelectedChannel instanceof StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft)) {
@@ -91,7 +91,7 @@ public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implem
         this.$storeThreadDraft = storeThreadDraft;
     }
 
-    @Override // j0.k.b
+    @Override // p637j0.p641k.Func1
     public /* bridge */ /* synthetic */ Observable<? extends ChatInputViewModel.StoreState> call(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
         return call2(resolvedSelectedChannel);
     }
@@ -100,19 +100,19 @@ public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implem
     public final Observable<? extends ChatInputViewModel.StoreState> call2(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
         Channel channelOrParent = resolvedSelectedChannel.getChannelOrParent();
         if (channelOrParent == null) {
-            return new k(ChatInputViewModel.StoreState.Loading.INSTANCE);
+            return new ScalarSynchronousObservable(ChatInputViewModel.StoreState.Loading.INSTANCE);
         }
         Observable<MeUser> observableObserveMe = this.$storeUsers.observeMe(true);
         Observable observableComputationBuffered = ObservableExtensionsKt.computationBuffered(this.$storeChat.observeEditingMessage());
         StoreUserRelationships storeUserRelationships = this.$storeUserRelationships;
-        User userA = ChannelUtils.a(channelOrParent);
-        Observable<Integer> observableObserve = storeUserRelationships.observe(userA != null ? userA.getId() : 0L);
+        User userM7677a = ChannelUtils.m7677a(channelOrParent);
+        Observable<Integer> observableObserve = storeUserRelationships.observe(userM7677a != null ? userM7677a.getId() : 0L);
         Observable<Long> observableObservePermissionsForChannel = this.$storePermissions.observePermissionsForChannel(channelOrParent.getId());
         ChatInputViewModel.Companion companion = ChatInputViewModel.INSTANCE;
         Observable observableAccess$getVerificationLevelTriggeredObservable = ChatInputViewModel.Companion.access$getVerificationLevelTriggeredObservable(companion, channelOrParent.getGuildId(), this.$storeGuilds, this.$storeUsers);
         Observable<Boolean> observableIsLurkingObs = this.$storeLurking.isLurkingObs(channelOrParent.getGuildId());
         Observable observableAccess$getIsOnCooldownObservable = ChatInputViewModel.Companion.access$getIsOnCooldownObservable(companion, channelOrParent.getId(), this.$storeSlowMode);
-        m.checkNotNullExpressionValue(observableAccess$getIsOnCooldownObservable, "getIsOnCooldownObservabl…hannel.id, storeSlowMode)");
-        return ObservableCombineLatestOverloadsKt.combineLatest(observableObserveMe, observableComputationBuffered, observableObserve, observableObservePermissionsForChannel, observableAccess$getVerificationLevelTriggeredObservable, observableIsLurkingObs, observableAccess$getIsOnCooldownObservable, this.$storeGuilds.observeFromChannelId(channelOrParent.getId()), ChatInputViewModel.Companion.access$getPendingReplyStateObservable(companion, channelOrParent.getId(), this.$storePendingReplies), this.$storeGuilds.observeComputedMember(channelOrParent.getGuildId(), this.$storeUsers.getMeSnapshot().getId()), this.$storeGuildJoinRequest.observeGuildJoinRequest(channelOrParent.getGuildId()), this.$storeThreadDraft.observeDraftState(), ForumPostCreateManager.INSTANCE.observeIsForumPostCreateInProgress(channelOrParent.getGuildId()), new AnonymousClass1(channelOrParent, resolvedSelectedChannel));
+        Intrinsics3.checkNotNullExpressionValue(observableAccess$getIsOnCooldownObservable, "getIsOnCooldownObservabl…hannel.id, storeSlowMode)");
+        return ObservableCombineLatestOverloads2.combineLatest(observableObserveMe, observableComputationBuffered, observableObserve, observableObservePermissionsForChannel, observableAccess$getVerificationLevelTriggeredObservable, observableIsLurkingObs, observableAccess$getIsOnCooldownObservable, this.$storeGuilds.observeFromChannelId(channelOrParent.getId()), ChatInputViewModel.Companion.access$getPendingReplyStateObservable(companion, channelOrParent.getId(), this.$storePendingReplies), this.$storeGuilds.observeComputedMember(channelOrParent.getGuildId(), this.$storeUsers.getMeSnapshot().getId()), this.$storeGuildJoinRequest.observeGuildJoinRequest(channelOrParent.getGuildId()), this.$storeThreadDraft.observeDraftState(), ForumPostCreateManager.INSTANCE.observeIsForumPostCreateInProgress(channelOrParent.getGuildId()), new C76871(channelOrParent, resolvedSelectedChannel));
     }
 }

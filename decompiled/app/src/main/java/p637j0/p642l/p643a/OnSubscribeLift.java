@@ -1,0 +1,47 @@
+package p637j0.p642l.p643a;
+
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p637j0.p641k.Func1;
+import p637j0.p652o.C12774l;
+import p658rx.Observable;
+import p658rx.Subscriber;
+
+/* compiled from: OnSubscribeLift.java */
+/* renamed from: j0.l.a.r, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class OnSubscribeLift<T, R> implements Observable.InterfaceC13005a<R> {
+
+    /* renamed from: j */
+    public final Observable.InterfaceC13005a<T> f27013j;
+
+    /* renamed from: k */
+    public final Observable.InterfaceC13006b<? extends R, ? super T> f27014k;
+
+    public OnSubscribeLift(Observable.InterfaceC13005a<T> interfaceC13005a, Observable.InterfaceC13006b<? extends R, ? super T> interfaceC13006b) {
+        this.f27013j = interfaceC13005a;
+        this.f27014k = interfaceC13006b;
+    }
+
+    @Override // p658rx.functions.Action1
+    public void call(Object obj) {
+        Subscriber subscriber = (Subscriber) obj;
+        try {
+            Observable.InterfaceC13006b interfaceC13006bCall = this.f27014k;
+            Func1<Observable.InterfaceC13006b, Observable.InterfaceC13006b> func1 = C12774l.f27382i;
+            if (func1 != null) {
+                interfaceC13006bCall = func1.call(interfaceC13006bCall);
+            }
+            Subscriber subscriber2 = (Subscriber) interfaceC13006bCall.call(subscriber);
+            try {
+                subscriber2.onStart();
+                this.f27013j.call(subscriber2);
+            } catch (Throwable th) {
+                C3404f.m4325o1(th);
+                subscriber2.onError(th);
+            }
+        } catch (Throwable th2) {
+            C3404f.m4325o1(th2);
+            subscriber.onError(th2);
+        }
+    }
+}

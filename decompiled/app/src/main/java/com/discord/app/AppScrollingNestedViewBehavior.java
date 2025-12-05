@@ -8,7 +8,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.discord.utilities.display.DisplayUtils;
 import com.google.android.material.appbar.AppBarLayout;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: AppScrollingNestedViewBehavior.kt */
 /* loaded from: classes.dex */
@@ -16,18 +16,18 @@ public final class AppScrollingNestedViewBehavior extends AppBarLayout.Scrolling
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AppScrollingNestedViewBehavior(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(attributeSet, "attrs");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
     }
 
     @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
     public WindowInsetsCompat onApplyWindowInsets(CoordinatorLayout coordinatorLayout, View child, WindowInsetsCompat insets) {
-        m.checkNotNullParameter(coordinatorLayout, "coordinatorLayout");
-        m.checkNotNullParameter(child, "child");
-        m.checkNotNullParameter(insets, "insets");
+        Intrinsics3.checkNotNullParameter(coordinatorLayout, "coordinatorLayout");
+        Intrinsics3.checkNotNullParameter(child, "child");
+        Intrinsics3.checkNotNullParameter(insets, "insets");
         ViewCompat.setOnApplyWindowInsetsListener(child, DisplayUtils.getNO_OP_WINDOW_INSETS_LISTENER());
         WindowInsetsCompat windowInsetsCompatOnApplyWindowInsets = DisplayUtils.getNO_OP_WINDOW_INSETS_LISTENER().onApplyWindowInsets(child, insets);
-        m.checkNotNullExpressionValue(windowInsetsCompatOnApplyWindowInsets, "NO_OP_WINDOW_INSETS_LIST…ndowInsets(child, insets)");
+        Intrinsics3.checkNotNullExpressionValue(windowInsetsCompatOnApplyWindowInsets, "NO_OP_WINDOW_INSETS_LIST…ndowInsets(child, insets)");
         return windowInsetsCompatOnApplyWindowInsets;
     }
 }

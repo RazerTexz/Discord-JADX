@@ -1,9 +1,9 @@
 package com.discord.widgets.chat.list.entries;
 
-import b.d.b.a.a;
 import com.discord.api.sticker.BaseSticker;
 import com.discord.models.message.Message;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: StickerEntry.kt */
 /* loaded from: classes2.dex */
@@ -14,8 +14,8 @@ public final /* data */ class StickerEntry extends ChatListEntry {
     private final int type;
 
     public StickerEntry(Message message, BaseSticker baseSticker) {
-        m.checkNotNullParameter(message, "message");
-        m.checkNotNullParameter(baseSticker, "sticker");
+        Intrinsics3.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(baseSticker, "sticker");
         this.message = message;
         this.sticker = baseSticker;
         this.type = 31;
@@ -43,8 +43,8 @@ public final /* data */ class StickerEntry extends ChatListEntry {
     }
 
     public final StickerEntry copy(Message message, BaseSticker sticker) {
-        m.checkNotNullParameter(message, "message");
-        m.checkNotNullParameter(sticker, "sticker");
+        Intrinsics3.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(sticker, "sticker");
         return new StickerEntry(message, sticker);
     }
 
@@ -56,7 +56,7 @@ public final /* data */ class StickerEntry extends ChatListEntry {
             return false;
         }
         StickerEntry stickerEntry = (StickerEntry) other;
-        return m.areEqual(this.message, stickerEntry.message) && m.areEqual(this.sticker, stickerEntry.sticker);
+        return Intrinsics3.areEqual(this.message, stickerEntry.message) && Intrinsics3.areEqual(this.sticker, stickerEntry.sticker);
     }
 
     @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -85,11 +85,11 @@ public final /* data */ class StickerEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("StickerEntry(message=");
-        sbU.append(this.message);
-        sbU.append(", sticker=");
-        sbU.append(this.sticker);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("StickerEntry(message=");
+        sbM833U.append(this.message);
+        sbM833U.append(", sticker=");
+        sbM833U.append(this.sticker);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

@@ -4,18 +4,18 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.core.app.NotificationCompat;
 import com.discord.BuildConfig;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.k;
-import d0.z.d.m;
-import j0.k.b;
 import java.util.concurrent.TimeUnit;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
-import rx.subjects.SerializedSubject;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
+import p658rx.subjects.SerializedSubject;
 
 /* compiled from: StoreClientVersion.kt */
 /* loaded from: classes2.dex */
@@ -23,14 +23,14 @@ public final class StoreClientVersion extends Store {
     private int clientMinVersion;
     private final int clientVersion = BuildConfig.VERSION_CODE;
     private final String clientMinVersionKey = "CLIENT_OUTDATED_KEY";
-    private final SerializedSubject<Boolean, Boolean> clientOutdatedSubject = new SerializedSubject<>(BehaviorSubject.l0(Boolean.FALSE));
+    private final SerializedSubject<Boolean, Boolean> clientOutdatedSubject = new SerializedSubject<>(BehaviorSubject.m11130l0(Boolean.FALSE));
 
     /* compiled from: StoreClientVersion.kt */
-    /* renamed from: com.discord.stores.StoreClientVersion$init$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Long, Observable<? extends Integer>> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StoreClientVersion$init$1 */
+    public static final class C58471<T, R> implements Func1<Long, Observable<? extends Integer>> {
+        public static final C58471 INSTANCE = new C58471();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Observable<? extends Integer> call(Long l) {
             return call2(l);
         }
@@ -42,16 +42,16 @@ public final class StoreClientVersion extends Store {
     }
 
     /* compiled from: StoreClientVersion.kt */
-    /* renamed from: com.discord.stores.StoreClientVersion$init$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<Integer, Unit> {
-        public AnonymousClass2(StoreClientVersion storeClientVersion) {
+    /* renamed from: com.discord.stores.StoreClientVersion$init$2 */
+    public static final /* synthetic */ class C58482 extends FunctionReferenceImpl implements Function1<Integer, Unit> {
+        public C58482(StoreClientVersion storeClientVersion) {
             super(1, storeClientVersion, StoreClientVersion.class, "setClientMinVersion", "setClientMinVersion(I)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
             invoke(num.intValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(int i) {
@@ -66,29 +66,29 @@ public final class StoreClientVersion extends Store {
     private final synchronized void setClientMinVersion(int clientMinVersion) {
         if (this.clientMinVersion != clientMinVersion) {
             this.clientMinVersion = clientMinVersion;
-            this.clientOutdatedSubject.k.onNext(Boolean.valueOf(this.clientVersion < clientMinVersion));
+            this.clientOutdatedSubject.f27653k.onNext(Boolean.valueOf(this.clientVersion < clientMinVersion));
             SharedPreferences.Editor editorEdit = getPrefs().edit();
-            m.checkNotNullExpressionValue(editorEdit, "editor");
+            Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
             editorEdit.putInt(this.clientMinVersionKey, clientMinVersion);
             editorEdit.apply();
         }
     }
 
     public final Observable<Boolean> getClientOutdated() {
-        Observable<Boolean> observableR = ObservableExtensionsKt.computationLatest(this.clientOutdatedSubject).r();
-        m.checkNotNullExpressionValue(observableR, "clientOutdatedSubject\n  …  .distinctUntilChanged()");
-        return observableR;
+        Observable<Boolean> observableM11112r = ObservableExtensionsKt.computationLatest(this.clientOutdatedSubject).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "clientOutdatedSubject\n  …  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.Store
     public synchronized void init(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         super.init(context);
         int i = getPrefs().getInt(this.clientMinVersionKey, 0);
         this.clientMinVersion = i;
         setClientMinVersion(i);
-        Observable<R> observableA = Observable.E(0L, 1L, TimeUnit.HOURS).A(AnonymousClass1.INSTANCE);
-        m.checkNotNullExpressionValue(observableA, "Observable\n        .inte…ClientVersion()\n        }");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationBuffered(observableA), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
+        Observable<R> observableM11082A = Observable.m11061E(0L, 1L, TimeUnit.HOURS).m11082A(C58471.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11082A, "Observable\n        .inte…ClientVersion()\n        }");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationBuffered(observableM11082A), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C58482(this), 62, (Object) null);
     }
 }

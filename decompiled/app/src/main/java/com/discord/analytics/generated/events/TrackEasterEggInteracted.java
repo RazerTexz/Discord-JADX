@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackEasterEggInteracted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackEasterEggInteracted implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackEasterEggInteracted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence type = null;
     private final transient String analyticsSchemaTypeName = "easter_egg_interacted";
@@ -21,7 +21,7 @@ public final /* data */ class TrackEasterEggInteracted implements AnalyticsSchem
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackEasterEggInteracted) && m.areEqual(this.type, ((TrackEasterEggInteracted) other).type);
+            return (other instanceof TrackEasterEggInteracted) && Intrinsics3.areEqual(this.type, ((TrackEasterEggInteracted) other).type);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackEasterEggInteracted implements AnalyticsSchem
     }
 
     public String toString() {
-        return a.E(a.U("TrackEasterEggInteracted(type="), this.type, ")");
+        return outline.m817E(outline.m833U("TrackEasterEggInteracted(type="), this.type, ")");
     }
 }

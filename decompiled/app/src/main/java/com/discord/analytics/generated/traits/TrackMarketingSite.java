@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMarketingSite.kt */
 /* loaded from: classes.dex */
@@ -10,7 +10,7 @@ public final /* data */ class TrackMarketingSite {
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackMarketingSite) && m.areEqual(this.marketingVariant, ((TrackMarketingSite) other).marketingVariant);
+            return (other instanceof TrackMarketingSite) && Intrinsics3.areEqual(this.marketingVariant, ((TrackMarketingSite) other).marketingVariant);
         }
         return true;
     }
@@ -24,6 +24,6 @@ public final /* data */ class TrackMarketingSite {
     }
 
     public String toString() {
-        return a.E(a.U("TrackMarketingSite(marketingVariant="), this.marketingVariant, ")");
+        return outline.m817E(outline.m833U("TrackMarketingSite(marketingVariant="), this.marketingVariant, ")");
     }
 }

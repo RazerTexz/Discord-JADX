@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackVideoLayoutToggled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVideoLayoutToggled implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackVideoLayoutToggled implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Long channelId = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackVideoLayoutToggled implements AnalyticsSchema
             return false;
         }
         TrackVideoLayoutToggled trackVideoLayoutToggled = (TrackVideoLayoutToggled) other;
-        return m.areEqual(this.guildId, trackVideoLayoutToggled.guildId) && m.areEqual(this.channelId, trackVideoLayoutToggled.channelId) && m.areEqual(this.channelType, trackVideoLayoutToggled.channelType) && m.areEqual(this.voiceStateCount, trackVideoLayoutToggled.voiceStateCount) && m.areEqual(this.videoStreamCount, trackVideoLayoutToggled.videoStreamCount) && m.areEqual(this.videoEnabled, trackVideoLayoutToggled.videoEnabled) && m.areEqual(this.gameName, trackVideoLayoutToggled.gameName) && m.areEqual(this.gameId, trackVideoLayoutToggled.gameId) && m.areEqual(this.videoLayout, trackVideoLayoutToggled.videoLayout) && m.areEqual(this.gamePlatform, trackVideoLayoutToggled.gamePlatform) && m.areEqual(this.streamerUserId, trackVideoLayoutToggled.streamerUserId) && m.areEqual(this.videoStreamState, trackVideoLayoutToggled.videoStreamState) && m.areEqual(this.mediaSessionId, trackVideoLayoutToggled.mediaSessionId);
+        return Intrinsics3.areEqual(this.guildId, trackVideoLayoutToggled.guildId) && Intrinsics3.areEqual(this.channelId, trackVideoLayoutToggled.channelId) && Intrinsics3.areEqual(this.channelType, trackVideoLayoutToggled.channelType) && Intrinsics3.areEqual(this.voiceStateCount, trackVideoLayoutToggled.voiceStateCount) && Intrinsics3.areEqual(this.videoStreamCount, trackVideoLayoutToggled.videoStreamCount) && Intrinsics3.areEqual(this.videoEnabled, trackVideoLayoutToggled.videoEnabled) && Intrinsics3.areEqual(this.gameName, trackVideoLayoutToggled.gameName) && Intrinsics3.areEqual(this.gameId, trackVideoLayoutToggled.gameId) && Intrinsics3.areEqual(this.videoLayout, trackVideoLayoutToggled.videoLayout) && Intrinsics3.areEqual(this.gamePlatform, trackVideoLayoutToggled.gamePlatform) && Intrinsics3.areEqual(this.streamerUserId, trackVideoLayoutToggled.streamerUserId) && Intrinsics3.areEqual(this.videoStreamState, trackVideoLayoutToggled.videoStreamState) && Intrinsics3.areEqual(this.mediaSessionId, trackVideoLayoutToggled.mediaSessionId);
     }
 
     public int hashCode() {
@@ -72,31 +72,31 @@ public final /* data */ class TrackVideoLayoutToggled implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackVideoLayoutToggled(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", voiceStateCount=");
-        sbU.append(this.voiceStateCount);
-        sbU.append(", videoStreamCount=");
-        sbU.append(this.videoStreamCount);
-        sbU.append(", videoEnabled=");
-        sbU.append(this.videoEnabled);
-        sbU.append(", gameName=");
-        sbU.append(this.gameName);
-        sbU.append(", gameId=");
-        sbU.append(this.gameId);
-        sbU.append(", videoLayout=");
-        sbU.append(this.videoLayout);
-        sbU.append(", gamePlatform=");
-        sbU.append(this.gamePlatform);
-        sbU.append(", streamerUserId=");
-        sbU.append(this.streamerUserId);
-        sbU.append(", videoStreamState=");
-        sbU.append(this.videoStreamState);
-        sbU.append(", mediaSessionId=");
-        return a.E(sbU, this.mediaSessionId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackVideoLayoutToggled(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", voiceStateCount=");
+        sbM833U.append(this.voiceStateCount);
+        sbM833U.append(", videoStreamCount=");
+        sbM833U.append(this.videoStreamCount);
+        sbM833U.append(", videoEnabled=");
+        sbM833U.append(this.videoEnabled);
+        sbM833U.append(", gameName=");
+        sbM833U.append(this.gameName);
+        sbM833U.append(", gameId=");
+        sbM833U.append(this.gameId);
+        sbM833U.append(", videoLayout=");
+        sbM833U.append(this.videoLayout);
+        sbM833U.append(", gamePlatform=");
+        sbM833U.append(this.gamePlatform);
+        sbM833U.append(", streamerUserId=");
+        sbM833U.append(this.streamerUserId);
+        sbM833U.append(", videoStreamState=");
+        sbM833U.append(this.videoStreamState);
+        sbM833U.append(", mediaSessionId=");
+        return outline.m817E(sbM833U, this.mediaSessionId, ")");
     }
 }

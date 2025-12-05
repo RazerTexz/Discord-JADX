@@ -10,11 +10,11 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.util.Preconditions;
 import androidx.core.util.Predicate;
-import b.d.b.a.a;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public final class ContentInfoCompat {
@@ -118,22 +118,22 @@ public final class ContentInfoCompat {
     @NonNull
     public String toString() {
         String string;
-        StringBuilder sbU = a.U("ContentInfoCompat{clip=");
-        sbU.append(this.mClip.getDescription());
-        sbU.append(", source=");
-        sbU.append(sourceToString(this.mSource));
-        sbU.append(", flags=");
-        sbU.append(flagsToString(this.mFlags));
+        StringBuilder sbM833U = outline.m833U("ContentInfoCompat{clip=");
+        sbM833U.append(this.mClip.getDescription());
+        sbM833U.append(", source=");
+        sbM833U.append(sourceToString(this.mSource));
+        sbM833U.append(", flags=");
+        sbM833U.append(flagsToString(this.mFlags));
         if (this.mLinkUri == null) {
             string = "";
         } else {
-            StringBuilder sbU2 = a.U(", hasLinkUri(");
-            sbU2.append(this.mLinkUri.toString().length());
-            sbU2.append(")");
-            string = sbU2.toString();
+            StringBuilder sbM833U2 = outline.m833U(", hasLinkUri(");
+            sbM833U2.append(this.mLinkUri.toString().length());
+            sbM833U2.append(")");
+            string = sbM833U2.toString();
         }
-        sbU.append(string);
-        return a.J(sbU, this.mExtras != null ? ", hasExtras" : "", "}");
+        sbM833U.append(string);
+        return outline.m822J(sbM833U, this.mExtras != null ? ", hasExtras" : "", "}");
     }
 
     public static final class Builder {

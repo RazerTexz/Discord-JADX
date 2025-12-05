@@ -2,9 +2,9 @@ package com.discord.widgets.friends;
 
 import android.view.View;
 import com.discord.widgets.friends.WidgetFriendsListAdapter;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetFriendsListAdapter.kt */
 /* loaded from: classes2.dex */
@@ -18,7 +18,7 @@ public final class WidgetFriendsListAdapter$ItemContactSyncUpsell$onConfigure$2 
     @Override // android.view.View.OnLongClickListener
     public final boolean onLongClick(View view) {
         Function1<View, Unit> onClickContactSyncUpsellLongClick = WidgetFriendsListAdapter.ItemContactSyncUpsell.access$getAdapter$p(this.this$0).getOnClickContactSyncUpsellLongClick();
-        m.checkNotNullExpressionValue(view, "it");
+        Intrinsics3.checkNotNullExpressionValue(view, "it");
         onClickContactSyncUpsellLongClick.invoke(view);
         return true;
     }

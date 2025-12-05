@@ -14,9 +14,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.user.UserProfile;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetUserMutualGuildsBinding;
@@ -31,7 +29,7 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserProfile;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
@@ -39,16 +37,13 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
-import com.discord.utilities.resources.StringResourceUtilsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.utilities.user.UserProfileUtilsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.user.UserProfileUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.user.profile.WidgetUserProfileEmptyListItem;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.e0.c;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -57,13 +52,18 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
-import rx.functions.Action0;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p513e0.KClass;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.functions.Action0;
 
 /* compiled from: WidgetUserMutualGuilds.kt */
 /* loaded from: classes.dex */
 public final class WidgetUserMutualGuilds extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetUserMutualGuilds.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserMutualGuildsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserMutualGuilds.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserMutualGuildsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -83,34 +83,34 @@ public final class WidgetUserMutualGuilds extends AppFragment {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public ViewHolder(@LayoutRes int i, Adapter adapter) {
                 super(i, adapter);
-                m.checkNotNullParameter(adapter, "adapter");
+                Intrinsics3.checkNotNullParameter(adapter, "adapter");
                 View view = this.itemView;
-                int i2 = R.id.guild_icon_barrier;
-                Barrier barrier = (Barrier) view.findViewById(R.id.guild_icon_barrier);
+                int i2 = C5419R.id.guild_icon_barrier;
+                Barrier barrier = (Barrier) view.findViewById(C5419R.id.guild_icon_barrier);
                 if (barrier != null) {
-                    i2 = R.id.guild_member_avatar;
-                    SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.guild_member_avatar);
+                    i2 = C5419R.id.guild_member_avatar;
+                    SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.guild_member_avatar);
                     if (simpleDraweeView != null) {
-                        i2 = R.id.guild_member_identity_barrier;
-                        Barrier barrier2 = (Barrier) view.findViewById(R.id.guild_member_identity_barrier);
+                        i2 = C5419R.id.guild_member_identity_barrier;
+                        Barrier barrier2 = (Barrier) view.findViewById(C5419R.id.guild_member_identity_barrier);
                         if (barrier2 != null) {
-                            i2 = R.id.user_profile_adapter_item_server_image;
-                            SimpleDraweeView simpleDraweeView2 = (SimpleDraweeView) view.findViewById(R.id.user_profile_adapter_item_server_image);
+                            i2 = C5419R.id.user_profile_adapter_item_server_image;
+                            SimpleDraweeView simpleDraweeView2 = (SimpleDraweeView) view.findViewById(C5419R.id.user_profile_adapter_item_server_image);
                             if (simpleDraweeView2 != null) {
-                                i2 = R.id.user_profile_adapter_item_server_name;
-                                TextView textView = (TextView) view.findViewById(R.id.user_profile_adapter_item_server_name);
+                                i2 = C5419R.id.user_profile_adapter_item_server_name;
+                                TextView textView = (TextView) view.findViewById(C5419R.id.user_profile_adapter_item_server_name);
                                 if (textView != null) {
-                                    i2 = R.id.user_profile_adapter_item_server_text;
-                                    TextView textView2 = (TextView) view.findViewById(R.id.user_profile_adapter_item_server_text);
+                                    i2 = C5419R.id.user_profile_adapter_item_server_text;
+                                    TextView textView2 = (TextView) view.findViewById(C5419R.id.user_profile_adapter_item_server_text);
                                     if (textView2 != null) {
-                                        i2 = R.id.user_profile_adapter_item_server_wrap;
-                                        RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.user_profile_adapter_item_server_wrap);
+                                        i2 = C5419R.id.user_profile_adapter_item_server_wrap;
+                                        RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(C5419R.id.user_profile_adapter_item_server_wrap);
                                         if (relativeLayout != null) {
-                                            i2 = R.id.user_profile_adapter_item_user_display_name;
-                                            TextView textView3 = (TextView) view.findViewById(R.id.user_profile_adapter_item_user_display_name);
+                                            i2 = C5419R.id.user_profile_adapter_item_user_display_name;
+                                            TextView textView3 = (TextView) view.findViewById(C5419R.id.user_profile_adapter_item_user_display_name);
                                             if (textView3 != null) {
                                                 WidgetUserProfileAdapterItemServerBinding widgetUserProfileAdapterItemServerBinding = new WidgetUserProfileAdapterItemServerBinding((ConstraintLayout) view, barrier, simpleDraweeView, barrier2, simpleDraweeView2, textView, textView2, relativeLayout, textView3);
-                                                m.checkNotNullExpressionValue(widgetUserProfileAdapterItemServerBinding, "WidgetUserProfileAdapter…verBinding.bind(itemView)");
+                                                Intrinsics3.checkNotNullExpressionValue(widgetUserProfileAdapterItemServerBinding, "WidgetUserProfileAdapter…verBinding.bind(itemView)");
                                                 this.binding = widgetUserProfileAdapterItemServerBinding;
                                                 return;
                                             }
@@ -135,26 +135,26 @@ public final class WidgetUserMutualGuilds extends AppFragment {
 
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Model.Item data) {
-                m.checkNotNullParameter(data, "data");
+                Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
-                this.binding.a.setOnClickListener(new WidgetUserMutualGuilds$Adapter$ViewHolder$onConfigure$1(this, data));
-                SimpleDraweeView simpleDraweeView = this.binding.c;
+                this.binding.f18371a.setOnClickListener(new WidgetUserMutualGuilds2(this, data));
+                SimpleDraweeView simpleDraweeView = this.binding.f18373c;
                 Guild guild = data.getGuild();
                 simpleDraweeView.setVisibility((guild != null ? guild.getIcon() : null) == null ? 8 : 0);
-                m.checkNotNullExpressionValue(simpleDraweeView, "this");
+                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "this");
                 IconUtils.setIcon$default((ImageView) simpleDraweeView, data.getGuild(), 0, (MGImages.ChangeDetector) null, false, 28, (Object) null);
-                TextView textView = this.binding.e;
+                TextView textView = this.binding.f18375e;
                 Guild guild2 = data.getGuild();
                 textView.setVisibility((guild2 != null ? guild2.getIcon() : null) == null ? 0 : 8);
                 Guild guild3 = data.getGuild();
                 textView.setText(guild3 != null ? guild3.getShortName() : null);
-                TextView textView2 = this.binding.d;
+                TextView textView2 = this.binding.f18374d;
                 Guild guild4 = data.getGuild();
                 textView2.setText(guild4 != null ? guild4.getName() : null);
                 GuildMember guildMember = data.getGuildMember();
                 boolean z2 = true;
                 boolean z3 = guildMember != null && guildMember.hasAvatar();
-                TextView textView3 = this.binding.f;
+                TextView textView3 = this.binding.f18376f;
                 String nick = data.getNick();
                 if (nick == null) {
                     User user = data.getUser();
@@ -165,11 +165,11 @@ public final class WidgetUserMutualGuilds extends AppFragment {
                     z2 = false;
                 }
                 textView3.setVisibility(z2 ? 0 : 8);
-                SimpleDraweeView simpleDraweeView2 = this.binding.f2691b;
+                SimpleDraweeView simpleDraweeView2 = this.binding.f18372b;
                 simpleDraweeView2.setVisibility(z3 ? 0 : 8);
                 if (guildMember != null) {
                     String forGuildMember$default = IconUtils.getForGuildMember$default(IconUtils.INSTANCE, guildMember, Integer.valueOf(DimenUtils.dpToPixels(16)), false, 4, null);
-                    m.checkNotNullExpressionValue(simpleDraweeView2, "this");
+                    Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "this");
                     IconUtils.setIcon$default(simpleDraweeView2, forGuildMember$default, 0, (Function1) null, (MGImages.ChangeDetector) null, 28, (Object) null);
                 }
             }
@@ -178,8 +178,8 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Adapter(RecyclerView recyclerView, Action0 action0) {
             super(recyclerView, false, 2, null);
-            m.checkNotNullParameter(recyclerView, "recyclerView");
-            m.checkNotNullParameter(action0, "guildSelectedCallback");
+            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+            Intrinsics3.checkNotNullParameter(action0, "guildSelectedCallback");
             this.guildSelectedCallback = action0;
         }
 
@@ -194,12 +194,12 @@ public final class WidgetUserMutualGuilds extends AppFragment {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public MGRecyclerViewHolder<?, Model.Item> onCreateViewHolder(ViewGroup parent, int viewType) {
-            m.checkNotNullParameter(parent, "parent");
+            Intrinsics3.checkNotNullParameter(parent, "parent");
             if (viewType == 0) {
-                return new WidgetUserProfileEmptyListItem(R.layout.widget_user_profile_adapter_item_empty, this, R.attr.img_no_mutual_servers, R.string.no_mutual_guilds);
+                return new WidgetUserProfileEmptyListItem(C5419R.layout.widget_user_profile_adapter_item_empty, this, C5419R.attr.img_no_mutual_servers, C5419R.string.no_mutual_guilds);
             }
             if (viewType == 1) {
-                return new ViewHolder(R.layout.widget_user_profile_adapter_item_server, this);
+                return new ViewHolder(C5419R.layout.widget_user_profile_adapter_item_server, this);
             }
             throw invalidViewTypeException(viewType);
         }
@@ -211,10 +211,10 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         }
 
         public final void show(Context context, long userId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra("com.discord.intent.extra.EXTRA_USER_ID", userId);
-            j.d(context, WidgetUserMutualGuilds.class, intent);
+            AppScreen2.m156d(context, WidgetUserMutualGuilds.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -259,13 +259,13 @@ public final class WidgetUserMutualGuilds extends AppFragment {
             }
 
             public final Observable<Model> get(long userId, StoreUserProfile storeUserProfile, StoreGuildsSorted storeGuildsSorted, StoreUser storeUser, StoreGuilds storeGuilds) {
-                m.checkNotNullParameter(storeUserProfile, "storeUserProfile");
-                m.checkNotNullParameter(storeGuildsSorted, "storeGuildsSorted");
-                m.checkNotNullParameter(storeUser, "storeUser");
-                m.checkNotNullParameter(storeGuilds, "storeGuilds");
-                Observable<Model> observableR = ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{storeUserProfile, storeGuildsSorted, storeUser, storeGuilds}, false, null, null, new WidgetUserMutualGuilds$Model$Companion$get$1(storeUserProfile, userId, storeGuildsSorted, storeUser, storeGuilds), 14, null).r();
-                m.checkNotNullExpressionValue(observableR, "ObservationDeckProvider.… }.distinctUntilChanged()");
-                return observableR;
+                Intrinsics3.checkNotNullParameter(storeUserProfile, "storeUserProfile");
+                Intrinsics3.checkNotNullParameter(storeGuildsSorted, "storeGuildsSorted");
+                Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+                Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+                Observable<Model> observableM11112r = ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{storeUserProfile, storeGuildsSorted, storeUser, storeGuilds}, false, null, null, new WidgetUserMutualGuilds3(storeUserProfile, userId, storeGuildsSorted, storeUser, storeGuilds), 14, null).m11112r();
+                Intrinsics3.checkNotNullExpressionValue(observableM11112r, "ObservationDeckProvider.… }.distinctUntilChanged()");
+                return observableM11112r;
             }
 
             public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -276,21 +276,21 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         /* JADX WARN: Multi-variable type inference failed */
         public Model(UserProfile userProfile, Map<Long, Guild> map, User user, Map<Long, ? extends Map<Long, GuildMember>> map2) {
             GuildMember guildMember;
-            m.checkNotNullParameter(userProfile, "profile");
-            m.checkNotNullParameter(map, "guilds");
-            m.checkNotNullParameter(map2, "guildMembers");
+            Intrinsics3.checkNotNullParameter(userProfile, "profile");
+            Intrinsics3.checkNotNullParameter(map, "guilds");
+            Intrinsics3.checkNotNullParameter(map2, "guildMembers");
             this.profile = userProfile;
             this.guilds = map;
             this.user = user;
             this.guildMembers = map2;
-            this.list = new ArrayList(userProfile.d().size());
+            this.list = new ArrayList(userProfile.m8308d().size());
             for (Guild guild : map.values()) {
-                UserProfile.GuildReference guildReference = (UserProfile.GuildReference) a.e(guild, UserProfileUtilsKt.getMutualGuildsById(this.profile));
+                UserProfile.GuildReference guildReference = (UserProfile.GuildReference) outline.m847e(guild, UserProfileUtils.getMutualGuildsById(this.profile));
                 if (guildReference != null) {
                     List<Item> list = this.list;
                     User user2 = this.user;
                     String nick = guildReference.getNick();
-                    Map map3 = (Map) a.e(guild, this.guildMembers);
+                    Map map3 = (Map) outline.m847e(guild, this.guildMembers);
                     if (map3 != null) {
                         User user3 = this.user;
                         guildMember = (GuildMember) map3.get(user3 != null ? Long.valueOf(user3.getId()) : null);
@@ -342,9 +342,9 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         }
 
         public final Model copy(UserProfile profile, Map<Long, Guild> guilds, User user, Map<Long, ? extends Map<Long, GuildMember>> guildMembers) {
-            m.checkNotNullParameter(profile, "profile");
-            m.checkNotNullParameter(guilds, "guilds");
-            m.checkNotNullParameter(guildMembers, "guildMembers");
+            Intrinsics3.checkNotNullParameter(profile, "profile");
+            Intrinsics3.checkNotNullParameter(guilds, "guilds");
+            Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
             return new Model(profile, guilds, user, guildMembers);
         }
 
@@ -356,7 +356,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return m.areEqual(this.profile, model.profile) && m.areEqual(this.guilds, model.guilds) && m.areEqual(this.user, model.user) && m.areEqual(this.guildMembers, model.guildMembers);
+            return Intrinsics3.areEqual(this.profile, model.profile) && Intrinsics3.areEqual(this.guilds, model.guilds) && Intrinsics3.areEqual(this.user, model.user) && Intrinsics3.areEqual(this.guildMembers, model.guildMembers);
         }
 
         public final Map<Long, Map<Long, GuildMember>> getGuildMembers() {
@@ -395,14 +395,14 @@ public final class WidgetUserMutualGuilds extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Model(profile=");
-            sbU.append(this.profile);
-            sbU.append(", guilds=");
-            sbU.append(this.guilds);
-            sbU.append(", user=");
-            sbU.append(this.user);
-            sbU.append(", guildMembers=");
-            return a.M(sbU, this.guildMembers, ")");
+            StringBuilder sbM833U = outline.m833U("Model(profile=");
+            sbM833U.append(this.profile);
+            sbM833U.append(", guilds=");
+            sbM833U.append(this.guilds);
+            sbM833U.append(", user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", guildMembers=");
+            return outline.m825M(sbM833U, this.guildMembers, ")");
         }
 
         /* compiled from: WidgetUserMutualGuilds.kt */
@@ -486,7 +486,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
                     return false;
                 }
                 Item item = (Item) other;
-                return getType() == item.getType() && m.areEqual(this.guild, item.guild) && m.areEqual(this.nick, item.nick) && m.areEqual(this.user, item.user) && m.areEqual(this.guildMember, item.guildMember);
+                return getType() == item.getType() && Intrinsics3.areEqual(this.guild, item.guild) && Intrinsics3.areEqual(this.nick, item.nick) && Intrinsics3.areEqual(this.user, item.user) && Intrinsics3.areEqual(this.guildMember, item.guildMember);
             }
 
             public final Guild getGuild() {
@@ -528,18 +528,18 @@ public final class WidgetUserMutualGuilds extends AppFragment {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Item(type=");
-                sbU.append(getType());
-                sbU.append(", guild=");
-                sbU.append(this.guild);
-                sbU.append(", nick=");
-                sbU.append(this.nick);
-                sbU.append(", user=");
-                sbU.append(this.user);
-                sbU.append(", guildMember=");
-                sbU.append(this.guildMember);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Item(type=");
+                sbM833U.append(getType());
+                sbM833U.append(", guild=");
+                sbM833U.append(this.guild);
+                sbM833U.append(", nick=");
+                sbM833U.append(this.nick);
+                sbM833U.append(", user=");
+                sbM833U.append(this.user);
+                sbM833U.append(", guildMember=");
+                sbM833U.append(this.guildMember);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
 
             public /* synthetic */ Item(int i, Guild guild, String str, User user, GuildMember guildMember, int i2, DefaultConstructorMarker defaultConstructorMarker) {
@@ -549,45 +549,45 @@ public final class WidgetUserMutualGuilds extends AppFragment {
     }
 
     /* compiled from: WidgetUserMutualGuilds.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Action0 {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$onViewBound$1 */
+    public static final class C102181 implements Action0 {
+        public C102181() {
         }
 
-        @Override // rx.functions.Action0
+        @Override // p658rx.functions.Action0
         public final void call() {
             Context contextRequireContext = WidgetUserMutualGuilds.this.requireContext();
-            List<c<? extends AppFragment>> list = j.a;
-            m.checkNotNullParameter(contextRequireContext, "context");
+            List<KClass<? extends AppFragment>> list = AppScreen2.f518a;
+            Intrinsics3.checkNotNullParameter(contextRequireContext, "context");
             Intent intent = new Intent();
             intent.addFlags(67108864);
-            j.c(contextRequireContext, false, intent, 2);
+            AppScreen2.m155c(contextRequireContext, false, intent, 2);
         }
     }
 
     /* compiled from: WidgetUserMutualGuilds.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Model, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$onViewBoundOrOnResume$1 */
+    public static final class C102191 extends Lambda implements Function1<Model, Unit> {
+        public C102191() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
-            m.checkNotNullParameter(model, "data");
+            Intrinsics3.checkNotNullParameter(model, "data");
             WidgetUserMutualGuilds.access$configureUI(WidgetUserMutualGuilds.this, model);
         }
     }
 
     public WidgetUserMutualGuilds() {
-        super(R.layout.widget_user_mutual_guilds);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetUserMutualGuilds$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_user_mutual_guilds);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetUserMutualGuilds4.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetUserMutualGuilds widgetUserMutualGuilds, Model model) {
@@ -596,12 +596,12 @@ public final class WidgetUserMutualGuilds extends AppFragment {
 
     private final void configureUI(Model data) {
         int numMutualGuilds = data.getNumMutualGuilds();
-        setActionBarTitle(StringResourceUtilsKt.getI18nPluralString(requireContext(), R.plurals.user_profile_mutual_guilds_count, R.string.mutual_guilds, Integer.valueOf(numMutualGuilds), Integer.valueOf(numMutualGuilds)));
+        setActionBarTitle(StringResourceUtils.getI18nPluralString(requireContext(), C5419R.plurals.user_profile_mutual_guilds_count, C5419R.string.mutual_guilds, Integer.valueOf(numMutualGuilds), Integer.valueOf(numMutualGuilds)));
         User user = data.getUser();
         setActionBarSubtitle(user != null ? user.getUsername() : null);
         Adapter adapter = this.adapter;
         if (adapter == null) {
-            m.throwUninitializedPropertyAccessException("adapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
         }
         adapter.setData(data.getList());
     }
@@ -616,18 +616,18 @@ public final class WidgetUserMutualGuilds extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        RecyclerView recyclerView = getBinding().f2685b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.userMutualGuildsRecyclerView");
-        this.adapter = (Adapter) companion.configure(new Adapter(recyclerView, new AnonymousClass1()));
+        RecyclerView recyclerView = getBinding().f18343b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.userMutualGuildsRecyclerView");
+        this.adapter = (Adapter) companion.configure(new Adapter(recyclerView, new C102181()));
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         StoreUserProfile.fetchProfile$default(StoreStream.INSTANCE.getUserProfile(), getUserId(), null, true, null, 10, null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.Companion.get$default(Model.INSTANCE, getUserId(), null, null, null, null, 30, null), this, null, 2, null), WidgetUserMutualGuilds.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.Companion.get$default(Model.INSTANCE, getUserId(), null, null, null, null, 30, null), this, null, 2, null), WidgetUserMutualGuilds.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C102191(), 62, (Object) null);
     }
 }

@@ -1,7 +1,7 @@
 package com.discord.widgets.user.search;
 
 import kotlin.jvm.functions.Function6;
-import rx.functions.Func6;
+import p658rx.functions.Func6;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
@@ -12,7 +12,7 @@ public final class WidgetGlobalSearchModel$sam$rx_functions_Func6$0 implements F
         this.function = function6;
     }
 
-    @Override // rx.functions.Func6
+    @Override // p658rx.functions.Func6
     public final /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6) {
         return this.function.invoke(obj, obj2, obj3, obj4, obj5, obj6);
     }

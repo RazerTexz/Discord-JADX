@@ -92,7 +92,7 @@ public class GreedyScheduler implements Scheduler, WorkConstraintsCallback, Exec
                     break;
                 }
                 WorkSpec next = it.next();
-                if (next.f38id.equals(str)) {
+                if (next.f163id.equals(str)) {
                     Logger.get().debug(TAG, String.format("Stopping tracking for %s", str), new Throwable[0]);
                     this.mConstrainedWorkSpecs.remove(next);
                     this.mWorkConstraintsTracker.replace(this.mConstrainedWorkSpecs);
@@ -173,13 +173,13 @@ public class GreedyScheduler implements Scheduler, WorkConstraintsCallback, Exec
                         Logger.get().debug(TAG, String.format("Ignoring WorkSpec %s, Requires device idle.", workSpec), new Throwable[0]);
                     } else if (i < 24 || !workSpec.constraints.hasContentUriTriggers()) {
                         hashSet.add(workSpec);
-                        hashSet2.add(workSpec.f38id);
+                        hashSet2.add(workSpec.f163id);
                     } else {
                         Logger.get().debug(TAG, String.format("Ignoring WorkSpec %s, Requires ContentUri triggers.", workSpec), new Throwable[0]);
                     }
                 } else {
-                    Logger.get().debug(TAG, String.format("Starting work for %s", workSpec.f38id), new Throwable[0]);
-                    this.mWorkManagerImpl.startWork(workSpec.f38id);
+                    Logger.get().debug(TAG, String.format("Starting work for %s", workSpec.f163id), new Throwable[0]);
+                    this.mWorkManagerImpl.startWork(workSpec.f163id);
                 }
             }
         }

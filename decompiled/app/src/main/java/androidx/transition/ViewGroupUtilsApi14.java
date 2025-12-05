@@ -18,8 +18,8 @@ public class ViewGroupUtilsApi14 {
     private static Field sLayoutSuppressedField;
     private static boolean sLayoutSuppressedFieldFetched;
 
-    /* renamed from: androidx.transition.ViewGroupUtilsApi14$1, reason: invalid class name */
-    public static class AnonymousClass1 extends LayoutTransition {
+    /* renamed from: androidx.transition.ViewGroupUtilsApi14$1 */
+    public static class C06701 extends LayoutTransition {
         @Override // android.animation.LayoutTransition
         public boolean isChangingLayout() {
             return true;
@@ -62,9 +62,9 @@ public class ViewGroupUtilsApi14 {
         LayoutTransition layoutTransition;
         boolean z3 = false;
         if (sEmptyLayoutTransition == null) {
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-            sEmptyLayoutTransition = anonymousClass1;
-            anonymousClass1.setAnimator(2, null);
+            C06701 c06701 = new C06701();
+            sEmptyLayoutTransition = c06701;
+            c06701.setAnimator(2, null);
             sEmptyLayoutTransition.setAnimator(0, null);
             sEmptyLayoutTransition.setAnimator(1, null);
             sEmptyLayoutTransition.setAnimator(3, null);
@@ -77,7 +77,7 @@ public class ViewGroupUtilsApi14 {
                     cancelLayoutTransition(layoutTransition2);
                 }
                 if (layoutTransition2 != sEmptyLayoutTransition) {
-                    viewGroup.setTag(R.id.transition_layout_save, layoutTransition2);
+                    viewGroup.setTag(C0658R.id.transition_layout_save, layoutTransition2);
                 }
             }
             viewGroup.setLayoutTransition(sEmptyLayoutTransition);
@@ -106,7 +106,7 @@ public class ViewGroupUtilsApi14 {
                         Log.i(TAG, "Failed to get mLayoutSuppressed field by reflection");
                         if (z3) {
                         }
-                        int i = R.id.transition_layout_save;
+                        int i = C0658R.id.transition_layout_save;
                         layoutTransition = (LayoutTransition) viewGroup.getTag(i);
                         if (layoutTransition == null) {
                         }
@@ -119,7 +119,7 @@ public class ViewGroupUtilsApi14 {
         if (z3) {
             viewGroup.requestLayout();
         }
-        int i2 = R.id.transition_layout_save;
+        int i2 = C0658R.id.transition_layout_save;
         layoutTransition = (LayoutTransition) viewGroup.getTag(i2);
         if (layoutTransition == null) {
             viewGroup.setTag(i2, null);

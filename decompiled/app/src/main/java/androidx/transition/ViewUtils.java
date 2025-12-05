@@ -16,9 +16,9 @@ public class ViewUtils {
     private static final String TAG = "ViewUtils";
     public static final Property<View, Float> TRANSITION_ALPHA;
 
-    /* renamed from: androidx.transition.ViewUtils$1, reason: invalid class name */
-    public static class AnonymousClass1 extends Property<View, Float> {
-        public AnonymousClass1(Class cls, String str) {
+    /* renamed from: androidx.transition.ViewUtils$1 */
+    public static class C06711 extends Property<View, Float> {
+        public C06711(Class cls, String str) {
             super(cls, str);
         }
 
@@ -43,9 +43,9 @@ public class ViewUtils {
         }
     }
 
-    /* renamed from: androidx.transition.ViewUtils$2, reason: invalid class name */
-    public static class AnonymousClass2 extends Property<View, Rect> {
-        public AnonymousClass2(Class cls, String str) {
+    /* renamed from: androidx.transition.ViewUtils$2 */
+    public static class C06722 extends Property<View, Rect> {
+        public C06722(Class cls, String str) {
             super(cls, str);
         }
 
@@ -81,8 +81,8 @@ public class ViewUtils {
         } else {
             IMPL = new ViewUtilsApi21();
         }
-        TRANSITION_ALPHA = new AnonymousClass1(Float.class, "translationAlpha");
-        CLIP_BOUNDS = new AnonymousClass2(Rect.class, "clipBounds");
+        TRANSITION_ALPHA = new C06711(Float.class, "translationAlpha");
+        CLIP_BOUNDS = new C06722(Rect.class, "clipBounds");
     }
 
     private ViewUtils() {

@@ -7,15 +7,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.WorkerThread;
 import androidx.work.ListenableWorker;
 import androidx.work.impl.utils.futures.SettableFuture;
-import b.i.b.d.a.a;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 /* loaded from: classes.dex */
 public abstract class Worker extends ListenableWorker {
     public SettableFuture<ListenableWorker.Result> mFuture;
 
-    /* renamed from: androidx.work.Worker$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.work.Worker$1 */
+    public class RunnableC07201 implements Runnable {
+        public RunnableC07201() {
         }
 
         @Override // java.lang.Runnable
@@ -40,9 +40,9 @@ public abstract class Worker extends ListenableWorker {
 
     @Override // androidx.work.ListenableWorker
     @NonNull
-    public final a<ListenableWorker.Result> startWork() {
+    public final ListenableFuture8<ListenableWorker.Result> startWork() {
         this.mFuture = SettableFuture.create();
-        getBackgroundExecutor().execute(new AnonymousClass1());
+        getBackgroundExecutor().execute(new RunnableC07201());
         return this.mFuture;
     }
 }

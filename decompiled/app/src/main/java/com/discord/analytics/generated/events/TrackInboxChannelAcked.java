@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackInboxChannelAcked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInboxChannelAcked implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
+public final /* data */ class TrackInboxChannelAcked implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -20,14 +20,15 @@ public final /* data */ class TrackInboxChannelAcked implements AnalyticsSchema,
     private final Long numUnreadChannelsRemaining = null;
     private final transient String analyticsSchemaTypeName = "inbox_channel_acked";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -45,7 +46,7 @@ public final /* data */ class TrackInboxChannelAcked implements AnalyticsSchema,
             return false;
         }
         TrackInboxChannelAcked trackInboxChannelAcked = (TrackInboxChannelAcked) other;
-        return m.areEqual(this.markedAllChannelsAsRead, trackInboxChannelAcked.markedAllChannelsAsRead) && m.areEqual(this.numUnreadChannelsRemaining, trackInboxChannelAcked.numUnreadChannelsRemaining);
+        return Intrinsics3.areEqual(this.markedAllChannelsAsRead, trackInboxChannelAcked.markedAllChannelsAsRead) && Intrinsics3.areEqual(this.numUnreadChannelsRemaining, trackInboxChannelAcked.numUnreadChannelsRemaining);
     }
 
     public int hashCode() {
@@ -56,9 +57,9 @@ public final /* data */ class TrackInboxChannelAcked implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackInboxChannelAcked(markedAllChannelsAsRead=");
-        sbU.append(this.markedAllChannelsAsRead);
-        sbU.append(", numUnreadChannelsRemaining=");
-        return a.G(sbU, this.numUnreadChannelsRemaining, ")");
+        StringBuilder sbM833U = outline.m833U("TrackInboxChannelAcked(markedAllChannelsAsRead=");
+        sbM833U.append(this.markedAllChannelsAsRead);
+        sbM833U.append(", numUnreadChannelsRemaining=");
+        return outline.m819G(sbM833U, this.numUnreadChannelsRemaining, ")");
     }
 }

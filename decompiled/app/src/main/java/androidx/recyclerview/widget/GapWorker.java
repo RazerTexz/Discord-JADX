@@ -13,14 +13,14 @@ import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class GapWorker implements Runnable {
     public static final ThreadLocal<GapWorker> sGapWorker = new ThreadLocal<>();
-    public static Comparator<Task> sTaskComparator = new AnonymousClass1();
+    public static Comparator<Task> sTaskComparator = new C05491();
     public long mFrameIntervalNs;
     public long mPostTimeNs;
     public ArrayList<RecyclerView> mRecyclerViews = new ArrayList<>();
     private ArrayList<Task> mTasks = new ArrayList<>();
 
-    /* renamed from: androidx.recyclerview.widget.GapWorker$1, reason: invalid class name */
-    public class AnonymousClass1 implements Comparator<Task> {
+    /* renamed from: androidx.recyclerview.widget.GapWorker$1 */
+    public class C05491 implements Comparator<Task> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Task task, Task task2) {
             return compare2(task, task2);

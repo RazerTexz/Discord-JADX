@@ -10,8 +10,8 @@ import androidx.view.GenericLifecycleObserver;
 import androidx.view.Lifecycle;
 import androidx.view.LifecycleOwner;
 import androidx.view.Recreator;
-import b.d.b.a.a;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 @SuppressLint({"RestrictedApi"})
 /* loaded from: classes.dex */
@@ -25,9 +25,9 @@ public final class SavedStateRegistry {
     private SafeIterableMap<String, SavedStateProvider> mComponents = new SafeIterableMap<>();
     public boolean mAllowingSavingState = true;
 
-    /* renamed from: androidx.savedstate.SavedStateRegistry$1, reason: invalid class name */
-    public class AnonymousClass1 implements GenericLifecycleObserver {
-        public AnonymousClass1() {
+    /* renamed from: androidx.savedstate.SavedStateRegistry$1 */
+    public class C06001 implements GenericLifecycleObserver {
+        public C06001() {
         }
 
         @Override // androidx.view.LifecycleEventObserver
@@ -80,7 +80,7 @@ public final class SavedStateRegistry {
         if (bundle != null) {
             this.mRestoredState = bundle.getBundle(SAVED_COMPONENTS_KEY);
         }
-        lifecycle.addObserver(new AnonymousClass1());
+        lifecycle.addObserver(new C06001());
         this.mRestored = true;
     }
 
@@ -118,10 +118,10 @@ public final class SavedStateRegistry {
             cls.getDeclaredConstructor(new Class[0]);
             this.mRecreatorProvider.add(cls.getName());
         } catch (NoSuchMethodException e) {
-            StringBuilder sbU = a.U("Class");
-            sbU.append(cls.getSimpleName());
-            sbU.append(" must have default constructor in order to be automatically recreated");
-            throw new IllegalArgumentException(sbU.toString(), e);
+            StringBuilder sbM833U = outline.m833U("Class");
+            sbM833U.append(cls.getSimpleName());
+            sbM833U.append(" must have default constructor in order to be automatically recreated");
+            throw new IllegalArgumentException(sbM833U.toString(), e);
         }
     }
 

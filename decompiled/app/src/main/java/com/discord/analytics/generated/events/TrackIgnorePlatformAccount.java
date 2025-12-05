@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackIgnorePlatformAccount.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackIgnorePlatformAccount implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackIgnorePlatformAccount implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence platformType = null;
     private final CharSequence displayType = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackIgnorePlatformAccount implements AnalyticsSch
             return false;
         }
         TrackIgnorePlatformAccount trackIgnorePlatformAccount = (TrackIgnorePlatformAccount) other;
-        return m.areEqual(this.platformType, trackIgnorePlatformAccount.platformType) && m.areEqual(this.displayType, trackIgnorePlatformAccount.displayType);
+        return Intrinsics3.areEqual(this.platformType, trackIgnorePlatformAccount.platformType) && Intrinsics3.areEqual(this.displayType, trackIgnorePlatformAccount.displayType);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackIgnorePlatformAccount implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackIgnorePlatformAccount(platformType=");
-        sbU.append(this.platformType);
-        sbU.append(", displayType=");
-        return a.E(sbU, this.displayType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackIgnorePlatformAccount(platformType=");
+        sbM833U.append(this.platformType);
+        sbM833U.append(", displayType=");
+        return outline.m817E(sbM833U, this.displayType, ")");
     }
 }

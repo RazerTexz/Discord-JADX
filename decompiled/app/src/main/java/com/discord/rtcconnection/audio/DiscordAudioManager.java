@@ -16,10 +16,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
 import androidx.annotation.MainThread;
-import b.a.q.k0.f;
-import b.a.q.k0.h;
-import b.a.q.k0.i;
-import b.a.q.l0.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.rtcconnection.enums.AudioManagerBroadcastAction;
 import com.discord.rtcconnection.enums.BluetoothBroadcastAction;
@@ -27,10 +23,6 @@ import com.discord.rtcconnection.enums.BluetoothHeadsetAudioState;
 import com.discord.rtcconnection.enums.BluetoothProfileConnectionState;
 import com.discord.rtcconnection.enums.ScoAudioState;
 import com.discord.utilities.lifecycle.ApplicationProvider;
-import d0.g;
-import d0.t.n;
-import d0.t.o;
-import d0.z.d.m;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -43,52 +35,118 @@ import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.functions.Function0;
 import org.webrtc.MediaStreamTrack;
 import org.webrtc.ThreadUtils;
-import rx.subjects.BehaviorSubject;
-import rx.subjects.SerializedSubject;
+import p007b.p008a.p041q.p042k0.AudioManagerBroadcastReceiver;
+import p007b.p008a.p041q.p042k0.AudioPermissions;
+import p007b.p008a.p041q.p042k0.BluetoothBroadcastReceiver;
+import p007b.p008a.p041q.p042k0.BluetoothHeadsetPrivateApi;
+import p007b.p008a.p041q.p042k0.DiscordAudioManager2;
+import p007b.p008a.p041q.p042k0.DiscordAudioManager3;
+import p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener;
+import p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener;
+import p007b.p008a.p041q.p043l0.WiredHeadsetState;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.subjects.BehaviorSubject;
+import p658rx.subjects.SerializedSubject;
 
 /* compiled from: DiscordAudioManager.kt */
 /* loaded from: classes.dex */
 public final class DiscordAudioManager {
-    public static final Lazy a = g.lazy(d.j);
 
-    /* renamed from: b, reason: collision with root package name */
-    public static final AudioDevice f2784b = new AudioDevice(null, false, null, null, 15);
-    public static final List<DeviceTypes> c = n.listOf((Object[]) new DeviceTypes[]{DeviceTypes.EARPIECE, DeviceTypes.SPEAKERPHONE, DeviceTypes.BLUETOOTH_HEADSET, DeviceTypes.WIRED_HEADSET});
-    public static final DiscordAudioManager d = null;
-    public boolean A;
-    public boolean B;
-    public boolean C;
-    public boolean D;
-    public final AudioManager e;
-    public final BluetoothManager f;
-    public final Lazy g;
-    public final boolean h;
-    public final Object i;
-    public final long j;
-    public final ContentResolver k;
-    public final b.a.q.k0.c l;
-    public final b.a.q.k0.a m;
-    public BluetoothHeadset n;
-    public BluetoothScoState o;
-    public AudioManager.OnAudioFocusChangeListener p;
-    public AudioFocusRequest q;
-    public List<AudioDevice> r;
+    /* renamed from: a */
+    public static final Lazy f18826a = LazyJVM.lazy(C5623d.f18864j);
 
-    /* renamed from: s, reason: collision with root package name */
-    public final SerializedSubject<List<AudioDevice>, List<AudioDevice>> f2785s;
-    public DeviceTypes t;
-    public final SerializedSubject<DeviceTypes, DeviceTypes> u;
-    public ContentObserver v;
-    public int w;
+    /* renamed from: b */
+    public static final AudioDevice f18827b = new AudioDevice(null, false, null, null, 15);
 
-    /* renamed from: x, reason: collision with root package name */
-    public final int f2786x;
+    /* renamed from: c */
+    public static final List<DeviceTypes> f18828c = Collections2.listOf((Object[]) new DeviceTypes[]{DeviceTypes.EARPIECE, DeviceTypes.SPEAKERPHONE, DeviceTypes.BLUETOOTH_HEADSET, DeviceTypes.WIRED_HEADSET});
 
-    /* renamed from: y, reason: collision with root package name */
-    public final SerializedSubject<Integer, Integer> f2787y;
+    /* renamed from: d */
+    public static final DiscordAudioManager f18829d = null;
 
-    /* renamed from: z, reason: collision with root package name */
-    public DeviceTypes f2788z;
+    /* renamed from: A */
+    public boolean f18830A;
+
+    /* renamed from: B */
+    public boolean f18831B;
+
+    /* renamed from: C */
+    public boolean f18832C;
+
+    /* renamed from: D */
+    public boolean f18833D;
+
+    /* renamed from: e */
+    public final AudioManager f18834e;
+
+    /* renamed from: f */
+    public final BluetoothManager f18835f;
+
+    /* renamed from: g */
+    public final Lazy f18836g;
+
+    /* renamed from: h */
+    public final boolean f18837h;
+
+    /* renamed from: i */
+    public final Object f18838i;
+
+    /* renamed from: j */
+    public final long f18839j;
+
+    /* renamed from: k */
+    public final ContentResolver f18840k;
+
+    /* renamed from: l */
+    public final BluetoothBroadcastReceiver f18841l;
+
+    /* renamed from: m */
+    public final AudioManagerBroadcastReceiver f18842m;
+
+    /* renamed from: n */
+    public BluetoothHeadset f18843n;
+
+    /* renamed from: o */
+    public BluetoothScoState f18844o;
+
+    /* renamed from: p */
+    public AudioManager.OnAudioFocusChangeListener f18845p;
+
+    /* renamed from: q */
+    public AudioFocusRequest f18846q;
+
+    /* renamed from: r */
+    public List<AudioDevice> f18847r;
+
+    /* renamed from: s */
+    public final SerializedSubject<List<AudioDevice>, List<AudioDevice>> f18848s;
+
+    /* renamed from: t */
+    public DeviceTypes f18849t;
+
+    /* renamed from: u */
+    public final SerializedSubject<DeviceTypes, DeviceTypes> f18850u;
+
+    /* renamed from: v */
+    public ContentObserver f18851v;
+
+    /* renamed from: w */
+    public int f18852w;
+
+    /* renamed from: x */
+    public final int f18853x;
+
+    /* renamed from: y */
+    public final SerializedSubject<Integer, Integer> f18854y;
+
+    /* renamed from: z */
+    public DeviceTypes f18855z;
 
     /* compiled from: DiscordAudioManager.kt */
     public static final /* data */ class AudioDevice {
@@ -96,7 +154,7 @@ public final class DiscordAudioManager {
         /* renamed from: a, reason: from kotlin metadata */
         public final DeviceTypes type;
 
-        /* renamed from: b, reason: collision with root package name and from kotlin metadata */
+        /* renamed from: b, reason: from kotlin metadata */
         public final boolean isAvailable;
 
         /* renamed from: c, reason: from kotlin metadata */
@@ -110,14 +168,15 @@ public final class DiscordAudioManager {
         }
 
         public AudioDevice(DeviceTypes deviceTypes, boolean z2, String str, String str2) {
-            m.checkNotNullParameter(deviceTypes, "type");
+            Intrinsics3.checkNotNullParameter(deviceTypes, "type");
             this.type = deviceTypes;
             this.isAvailable = z2;
             this.id = str;
             this.name = str2;
         }
 
-        public static AudioDevice a(AudioDevice audioDevice, DeviceTypes deviceTypes, boolean z2, String str, String str2, int i) {
+        /* renamed from: a */
+        public static AudioDevice m8493a(AudioDevice audioDevice, DeviceTypes deviceTypes, boolean z2, String str, String str2, int i) {
             DeviceTypes deviceTypes2 = (i & 1) != 0 ? audioDevice.type : null;
             if ((i & 2) != 0) {
                 z2 = audioDevice.isAvailable;
@@ -129,7 +188,7 @@ public final class DiscordAudioManager {
                 str2 = audioDevice.name;
             }
             Objects.requireNonNull(audioDevice);
-            m.checkNotNullParameter(deviceTypes2, "type");
+            Intrinsics3.checkNotNullParameter(deviceTypes2, "type");
             return new AudioDevice(deviceTypes2, z2, str, str2);
         }
 
@@ -141,7 +200,7 @@ public final class DiscordAudioManager {
                 return false;
             }
             AudioDevice audioDevice = (AudioDevice) other;
-            return m.areEqual(this.type, audioDevice.type) && this.isAvailable == audioDevice.isAvailable && m.areEqual(this.id, audioDevice.id) && m.areEqual(this.name, audioDevice.name);
+            return Intrinsics3.areEqual(this.type, audioDevice.type) && this.isAvailable == audioDevice.isAvailable && Intrinsics3.areEqual(this.id, audioDevice.id) && Intrinsics3.areEqual(this.name, audioDevice.name);
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -161,14 +220,14 @@ public final class DiscordAudioManager {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("AudioDevice(type=");
-            sbU.append(this.type);
-            sbU.append(", isAvailable=");
-            sbU.append(this.isAvailable);
-            sbU.append(", id=");
-            sbU.append(this.id);
-            sbU.append(", name=");
-            return b.d.b.a.a.J(sbU, this.name, ")");
+            StringBuilder sbM833U = outline.m833U("AudioDevice(type=");
+            sbM833U.append(this.type);
+            sbM833U.append(", isAvailable=");
+            sbM833U.append(this.isAvailable);
+            sbM833U.append(", id=");
+            sbM833U.append(this.id);
+            sbM833U.append(", name=");
+            return outline.m822J(sbM833U, this.name, ")");
         }
 
         public AudioDevice(DeviceTypes deviceTypes, boolean z2, String str, String str2, int i) {
@@ -176,7 +235,7 @@ public final class DiscordAudioManager {
             z2 = (i & 2) != 0 ? false : z2;
             int i2 = i & 4;
             int i3 = i & 8;
-            m.checkNotNullParameter(deviceTypes, "type");
+            Intrinsics3.checkNotNullParameter(deviceTypes, "type");
             this.type = deviceTypes;
             this.isAvailable = z2;
             this.id = null;
@@ -224,49 +283,50 @@ public final class DiscordAudioManager {
     }
 
     /* compiled from: DiscordAudioManager.kt */
-    public static final class a implements Runnable {
-        public a() {
+    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$a */
+    public static final class RunnableC5620a implements Runnable {
+        public RunnableC5620a() {
         }
 
         @Override // java.lang.Runnable
         public final void run() {
             DiscordAudioManager discordAudioManager = DiscordAudioManager.this;
-            b.a.q.k0.a aVar = discordAudioManager.m;
-            Objects.requireNonNull(aVar);
+            AudioManagerBroadcastReceiver audioManagerBroadcastReceiver = discordAudioManager.f18842m;
+            Objects.requireNonNull(audioManagerBroadcastReceiver);
             ThreadUtils.checkIsOnMainThread();
             boolean profileProxy = false;
-            List listListOf = n.listOf((Object[]) new AudioManagerBroadcastAction[]{AudioManagerBroadcastAction.HeadsetPlug, AudioManagerBroadcastAction.ScoAudioStateUpdated});
-            b.c.a.a0.d.b1("AudioManagerBroadcastReceiver", "registering for broadcasts with actions: " + listListOf);
+            List listListOf = Collections2.listOf((Object[]) new AudioManagerBroadcastAction[]{AudioManagerBroadcastAction.HeadsetPlug, AudioManagerBroadcastAction.ScoAudioStateUpdated});
+            AnimatableValueParser.m501b1("AudioManagerBroadcastReceiver", "registering for broadcasts with actions: " + listListOf);
             IntentFilter intentFilter = new IntentFilter();
             Iterator it = listListOf.iterator();
             while (it.hasNext()) {
                 intentFilter.addAction(((AudioManagerBroadcastAction) it.next()).getAction());
             }
-            aVar.f261b.registerReceiver(aVar, intentFilter);
-            b.a.q.k0.c cVar = discordAudioManager.l;
-            Objects.requireNonNull(cVar);
+            audioManagerBroadcastReceiver.f1641b.registerReceiver(audioManagerBroadcastReceiver, intentFilter);
+            BluetoothBroadcastReceiver bluetoothBroadcastReceiver = discordAudioManager.f18841l;
+            Objects.requireNonNull(bluetoothBroadcastReceiver);
             ThreadUtils.checkIsOnMainThread();
-            if (!cVar.l) {
-                StringBuilder sbU = b.d.b.a.a.U("registering for broadcasts with actions: ");
-                Set<BluetoothBroadcastAction> set = b.a.q.k0.c.j;
-                sbU.append(set);
-                b.c.a.a0.d.b1("BluetoothBroadcastReceiver", sbU.toString());
+            if (!bluetoothBroadcastReceiver.f1649l) {
+                StringBuilder sbM833U = outline.m833U("registering for broadcasts with actions: ");
+                Set<BluetoothBroadcastAction> set = BluetoothBroadcastReceiver.f1647j;
+                sbM833U.append(set);
+                AnimatableValueParser.m501b1("BluetoothBroadcastReceiver", sbM833U.toString());
                 IntentFilter intentFilter2 = new IntentFilter();
                 Iterator<T> it2 = set.iterator();
                 while (it2.hasNext()) {
                     intentFilter2.addAction(((BluetoothBroadcastAction) it2.next()).getAction());
                 }
-                cVar.n.registerReceiver(cVar, intentFilter2);
-                b.a.q.k0.d dVar = b.a.q.k0.d.c;
-                Lazy lazy = b.a.q.k0.d.a;
+                bluetoothBroadcastReceiver.f1651n.registerReceiver(bluetoothBroadcastReceiver, intentFilter2);
+                BluetoothHeadsetPrivateApi bluetoothHeadsetPrivateApi = BluetoothHeadsetPrivateApi.f1655c;
+                Lazy lazy = BluetoothHeadsetPrivateApi.f1653a;
                 if (((String) lazy.getValue()) != null) {
-                    Context context = cVar.n;
-                    m.checkNotNullParameter(context, "context");
-                    m.checkNotNullParameter(cVar, "receiver");
+                    Context context = bluetoothBroadcastReceiver.f1651n;
+                    Intrinsics3.checkNotNullParameter(context, "context");
+                    Intrinsics3.checkNotNullParameter(bluetoothBroadcastReceiver, "receiver");
                     try {
                         String str = (String) lazy.getValue();
                         if (str != null) {
-                            context.registerReceiver(cVar, new IntentFilter(str));
+                            context.registerReceiver(bluetoothBroadcastReceiver, new IntentFilter(str));
                         }
                     } catch (Throwable unused) {
                     }
@@ -274,64 +334,67 @@ public final class DiscordAudioManager {
                 try {
                     BluetoothAdapter defaultAdapter = BluetoothAdapter.getDefaultAdapter();
                     if (defaultAdapter != null) {
-                        profileProxy = defaultAdapter.getProfileProxy(cVar.n, cVar, 1);
+                        profileProxy = defaultAdapter.getProfileProxy(bluetoothBroadcastReceiver.f1651n, bluetoothBroadcastReceiver, 1);
                     }
                 } catch (SecurityException e) {
-                    b.c.a.a0.d.f1("BluetoothBroadcastReceiver", "failed to get BluetoothHeadset profile: " + e);
+                    AnimatableValueParser.m517f1("BluetoothBroadcastReceiver", "failed to get BluetoothHeadset profile: " + e);
                 }
                 if (profileProxy) {
-                    b.c.a.a0.d.b1("BluetoothBroadcastReceiver", "listening for HeadsetProfile proxy");
+                    AnimatableValueParser.m501b1("BluetoothBroadcastReceiver", "listening for HeadsetProfile proxy");
                 } else {
-                    b.c.a.a0.d.c1("BluetoothBroadcastReceiver", "listening for HeadsetProfile proxy failed", null);
+                    AnimatableValueParser.m505c1("BluetoothBroadcastReceiver", "listening for HeadsetProfile proxy failed", null);
                 }
-                cVar.l = true;
+                bluetoothBroadcastReceiver.f1649l = true;
             }
-            b.a.q.k0.e eVar = new b.a.q.k0.e(discordAudioManager);
-            synchronized (discordAudioManager.i) {
-                discordAudioManager.p = eVar;
+            DiscordAudioManager2 discordAudioManager2 = new DiscordAudioManager2(discordAudioManager);
+            synchronized (discordAudioManager.f18838i) {
+                discordAudioManager.f18845p = discordAudioManager2;
             }
         }
     }
 
     /* compiled from: DiscordAudioManager.kt */
-    public final class b implements h {
-        public b() {
+    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$b */
+    public final class C5621b implements OnAudioManagerBroadcastListener {
+        public C5621b() {
         }
 
-        @Override // b.a.q.k0.h
-        public void a(Context context, boolean z2) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(context, "context");
+        @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
+        /* renamed from: a */
+        public void mo281a(Context context, boolean z2) {
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
         }
 
-        @Override // b.a.q.k0.h
+        @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
         @MainThread
-        public void b(Context context, ScoAudioState.b bVar) {
+        /* renamed from: b */
+        public void mo282b(Context context, ScoAudioState.C5637b c5637b) {
             boolean z2;
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(bVar, "scoAudioStateUpdate");
-            int iOrdinal = bVar.a.ordinal();
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(c5637b, "scoAudioStateUpdate");
+            int iOrdinal = c5637b.f18874a.ordinal();
             if (iOrdinal != 0) {
                 if (iOrdinal != 1) {
                     return;
                 }
-                b.c.a.a0.d.b1("DiscordAudioManager", "[onScoAudioStateUpdate] scoAudioStateUpdate = " + bVar);
-                DiscordAudioManager.this.j();
+                AnimatableValueParser.m501b1("DiscordAudioManager", "[onScoAudioStateUpdate] scoAudioStateUpdate = " + c5637b);
+                DiscordAudioManager.this.m8490j();
                 return;
             }
-            b.c.a.a0.d.b1("DiscordAudioManager", "[onScoAudioStateUpdate] scoAudioStateUpdate = " + bVar);
+            AnimatableValueParser.m501b1("DiscordAudioManager", "[onScoAudioStateUpdate] scoAudioStateUpdate = " + c5637b);
             DiscordAudioManager discordAudioManager = DiscordAudioManager.this;
-            BluetoothScoState bluetoothScoState = discordAudioManager.o;
-            discordAudioManager.k();
+            BluetoothScoState bluetoothScoState = discordAudioManager.f18844o;
+            discordAudioManager.m8491k();
             int iOrdinal2 = bluetoothScoState.ordinal();
             if (iOrdinal2 == 2) {
-                synchronized (DiscordAudioManager.this.i) {
-                    z2 = DiscordAudioManager.this.D;
+                synchronized (DiscordAudioManager.this.f18838i) {
+                    z2 = DiscordAudioManager.this.f18833D;
                 }
                 if (z2) {
-                    b.c.a.a0.d.b1("DiscordAudioManager", "SCO off detected directly from ON. Refreshing Bluetooth device");
-                    DiscordAudioManager.this.j();
-                    DiscordAudioManager.this.l();
+                    AnimatableValueParser.m501b1("DiscordAudioManager", "SCO off detected directly from ON. Refreshing Bluetooth device");
+                    DiscordAudioManager.this.m8490j();
+                    DiscordAudioManager.this.m8492l();
                     return;
                 }
                 return;
@@ -339,162 +402,170 @@ public final class DiscordAudioManager {
             if (iOrdinal2 != 3) {
                 return;
             }
-            StringBuilder sbU = b.d.b.a.a.U("Unable to turn on SCO. Clearing Bluetooth device. mode: ");
-            sbU.append(DiscordAudioManager.this.e.getMode());
-            b.c.a.a0.d.b1("DiscordAudioManager", sbU.toString());
-            synchronized (DiscordAudioManager.this.i) {
+            StringBuilder sbM833U = outline.m833U("Unable to turn on SCO. Clearing Bluetooth device. mode: ");
+            sbM833U.append(DiscordAudioManager.this.f18834e.getMode());
+            AnimatableValueParser.m501b1("DiscordAudioManager", sbM833U.toString());
+            synchronized (DiscordAudioManager.this.f18838i) {
                 DiscordAudioManager discordAudioManager2 = DiscordAudioManager.this;
-                List<AudioDevice> list = discordAudioManager2.r;
-                ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+                List<AudioDevice> list = discordAudioManager2.f18847r;
+                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                 for (AudioDevice audioDevice : list) {
-                    arrayList.add(audioDevice.type.ordinal() != 5 ? AudioDevice.a(audioDevice, null, false, null, null, 15) : AudioDevice.a(audioDevice, null, false, null, null, 1));
+                    arrayList.add(audioDevice.type.ordinal() != 5 ? AudioDevice.m8493a(audioDevice, null, false, null, null, 15) : AudioDevice.m8493a(audioDevice, null, false, null, null, 1));
                 }
-                discordAudioManager2.r = arrayList;
-                discordAudioManager2.f2785s.k.onNext(arrayList);
+                discordAudioManager2.f18847r = arrayList;
+                discordAudioManager2.f18848s.f27653k.onNext(arrayList);
             }
             DiscordAudioManager discordAudioManager3 = DiscordAudioManager.this;
-            discordAudioManager3.a(discordAudioManager3.r);
+            discordAudioManager3.m8483a(discordAudioManager3.f18847r);
         }
 
-        @Override // b.a.q.k0.h
-        public void c(Context context) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(context, "context");
+        @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
+        /* renamed from: c */
+        public void mo283c(Context context) {
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
         }
 
-        @Override // b.a.q.k0.h
-        public void d(Context context, boolean z2) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(context, "context");
+        @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
+        /* renamed from: d */
+        public void mo284d(Context context, boolean z2) {
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
         }
 
-        @Override // b.a.q.k0.h
+        @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
         @MainThread
-        public void e(Context context, b.a.q.l0.a aVar) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(aVar, "wiredHeadsetState");
-            b.c.a.a0.d.b1("DiscordAudioManager", "[onWiredHeadsetPlug] wiredHeadsetState = " + aVar);
-            if (m.areEqual(aVar, a.b.a)) {
-                synchronized (DiscordAudioManager.this.i) {
+        /* renamed from: e */
+        public void mo285e(Context context, WiredHeadsetState wiredHeadsetState) {
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(wiredHeadsetState, "wiredHeadsetState");
+            AnimatableValueParser.m501b1("DiscordAudioManager", "[onWiredHeadsetPlug] wiredHeadsetState = " + wiredHeadsetState);
+            if (Intrinsics3.areEqual(wiredHeadsetState, WiredHeadsetState.b.f1669a)) {
+                synchronized (DiscordAudioManager.this.f18838i) {
                     DiscordAudioManager discordAudioManager = DiscordAudioManager.this;
-                    List<AudioDevice> list = discordAudioManager.r;
-                    ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+                    List<AudioDevice> list = discordAudioManager.f18847r;
+                    ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                     for (AudioDevice audioDevice : list) {
                         int iOrdinal = audioDevice.type.ordinal();
-                        arrayList.add(iOrdinal != 3 ? iOrdinal != 4 ? AudioDevice.a(audioDevice, null, false, null, null, 15) : AudioDevice.a(audioDevice, null, DiscordAudioManager.this.h, null, null, 13) : AudioDevice.a(audioDevice, null, false, null, null, 13));
+                        arrayList.add(iOrdinal != 3 ? iOrdinal != 4 ? AudioDevice.m8493a(audioDevice, null, false, null, null, 15) : AudioDevice.m8493a(audioDevice, null, DiscordAudioManager.this.f18837h, null, null, 13) : AudioDevice.m8493a(audioDevice, null, false, null, null, 13));
                     }
-                    discordAudioManager.r = arrayList;
-                    discordAudioManager.f2785s.k.onNext(arrayList);
+                    discordAudioManager.f18847r = arrayList;
+                    discordAudioManager.f18848s.f27653k.onNext(arrayList);
                 }
-            } else if (aVar instanceof a.C0041a) {
-                synchronized (DiscordAudioManager.this.i) {
+            } else if (wiredHeadsetState instanceof WiredHeadsetState.a) {
+                synchronized (DiscordAudioManager.this.f18838i) {
                     DiscordAudioManager discordAudioManager2 = DiscordAudioManager.this;
-                    List<AudioDevice> list2 = discordAudioManager2.r;
-                    ArrayList arrayList2 = new ArrayList(o.collectionSizeOrDefault(list2, 10));
+                    List<AudioDevice> list2 = discordAudioManager2.f18847r;
+                    ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(list2, 10));
                     for (AudioDevice audioDevice2 : list2) {
                         int iOrdinal2 = audioDevice2.type.ordinal();
-                        arrayList2.add(iOrdinal2 != 3 ? iOrdinal2 != 4 ? AudioDevice.a(audioDevice2, null, false, null, null, 15) : AudioDevice.a(audioDevice2, null, false, null, null, 13) : AudioDevice.a(audioDevice2, null, true, null, null, 13));
+                        arrayList2.add(iOrdinal2 != 3 ? iOrdinal2 != 4 ? AudioDevice.m8493a(audioDevice2, null, false, null, null, 15) : AudioDevice.m8493a(audioDevice2, null, false, null, null, 13) : AudioDevice.m8493a(audioDevice2, null, true, null, null, 13));
                     }
-                    discordAudioManager2.r = arrayList2;
-                    discordAudioManager2.f2785s.k.onNext(arrayList2);
+                    discordAudioManager2.f18847r = arrayList2;
+                    discordAudioManager2.f18848s.f27653k.onNext(arrayList2);
                 }
             }
-            DiscordAudioManager.this.l();
+            DiscordAudioManager.this.m8492l();
         }
     }
 
     /* compiled from: DiscordAudioManager.kt */
-    public final class c implements i {
-        public c() {
+    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$c */
+    public final class C5622c implements OnBluetoothBroadcastListener {
+        public C5622c() {
         }
 
-        @Override // b.a.q.k0.i
+        @Override // p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener
         @MainThread
-        public void a(Context context, BluetoothHeadsetAudioState.b bVar) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(bVar, "audioState");
-            BluetoothHeadsetAudioState bluetoothHeadsetAudioState = bVar.a;
+        /* renamed from: a */
+        public void mo286a(Context context, BluetoothHeadsetAudioState.C5633b c5633b) {
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(c5633b, "audioState");
+            BluetoothHeadsetAudioState bluetoothHeadsetAudioState = c5633b.f18868a;
             if (bluetoothHeadsetAudioState == null) {
                 bluetoothHeadsetAudioState = BluetoothHeadsetAudioState.Disconnected;
             }
-            BluetoothDevice bluetoothDevice = bVar.c;
+            BluetoothDevice bluetoothDevice = c5633b.f18870c;
             StringBuilder sb = new StringBuilder();
             sb.append("[onHeadsetAudioStateChanged] state: ");
             sb.append(bluetoothHeadsetAudioState);
             sb.append(", device: ");
             sb.append(bluetoothDevice != null ? bluetoothDevice.getName() : null);
-            b.c.a.a0.d.b1("DiscordAudioManager", sb.toString());
+            AnimatableValueParser.m501b1("DiscordAudioManager", sb.toString());
             int iOrdinal = bluetoothHeadsetAudioState.ordinal();
             if (iOrdinal == 0) {
-                DiscordAudioManager.this.l();
+                DiscordAudioManager.this.m8492l();
                 return;
             }
             if (iOrdinal != 2) {
                 return;
             }
-            synchronized (DiscordAudioManager.this.i) {
+            synchronized (DiscordAudioManager.this.f18838i) {
                 DiscordAudioManager discordAudioManager = DiscordAudioManager.this;
-                List<AudioDevice> list = discordAudioManager.r;
-                ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+                List<AudioDevice> list = discordAudioManager.f18847r;
+                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                 for (AudioDevice audioDevice : list) {
-                    arrayList.add(audioDevice.type.ordinal() != 5 ? AudioDevice.a(audioDevice, null, false, null, null, 15) : AudioDevice.a(audioDevice, null, true, bluetoothDevice != null ? bluetoothDevice.getAddress() : null, bluetoothDevice != null ? bluetoothDevice.getName() : null, 1));
+                    arrayList.add(audioDevice.type.ordinal() != 5 ? AudioDevice.m8493a(audioDevice, null, false, null, null, 15) : AudioDevice.m8493a(audioDevice, null, true, bluetoothDevice != null ? bluetoothDevice.getAddress() : null, bluetoothDevice != null ? bluetoothDevice.getName() : null, 1));
                 }
-                discordAudioManager.r = arrayList;
-                discordAudioManager.f2785s.k.onNext(arrayList);
+                discordAudioManager.f18847r = arrayList;
+                discordAudioManager.f18848s.f27653k.onNext(arrayList);
             }
         }
 
-        @Override // b.a.q.k0.i
+        @Override // p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener
         @MainThread
-        public void b(BluetoothDevice bluetoothDevice) {
-            b.a.q.k0.d dVar = b.a.q.k0.d.c;
-            if (!(((String) b.a.q.k0.d.a.getValue()) != null)) {
+        /* renamed from: b */
+        public void mo287b(BluetoothDevice bluetoothDevice) {
+            BluetoothHeadsetPrivateApi bluetoothHeadsetPrivateApi = BluetoothHeadsetPrivateApi.f1655c;
+            if (!(((String) BluetoothHeadsetPrivateApi.f1653a.getValue()) != null)) {
                 throw new IllegalStateException("Check failed.".toString());
             }
             if (bluetoothDevice != null) {
-                DiscordAudioManager.this.l();
+                DiscordAudioManager.this.m8492l();
             }
         }
 
-        @Override // b.a.q.k0.i
+        @Override // p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener
         @MainThread
-        public void c(BluetoothHeadset bluetoothHeadset) {
-            DiscordAudioManager.this.n = bluetoothHeadset;
+        /* renamed from: c */
+        public void mo288c(BluetoothHeadset bluetoothHeadset) {
+            DiscordAudioManager.this.f18843n = bluetoothHeadset;
         }
 
-        @Override // b.a.q.k0.i
+        @Override // p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener
         @MainThread
-        public void d(Context context, BluetoothProfileConnectionState.b bVar) {
+        /* renamed from: d */
+        public void mo289d(Context context, BluetoothProfileConnectionState.C5635b c5635b) {
             ArrayList arrayList;
             DiscordAudioManager discordAudioManager;
             DeviceTypes deviceTypes;
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(bVar, "connectionState");
-            BluetoothProfileConnectionState bluetoothProfileConnectionState = bVar.f2791b;
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(c5635b, "connectionState");
+            BluetoothProfileConnectionState bluetoothProfileConnectionState = c5635b.f18872b;
             if (bluetoothProfileConnectionState == null) {
                 bluetoothProfileConnectionState = BluetoothProfileConnectionState.Disconnected;
             }
-            BluetoothDevice bluetoothDevice = bVar.c;
+            BluetoothDevice bluetoothDevice = c5635b.f18873c;
             StringBuilder sb = new StringBuilder();
             sb.append("[onHeadsetConnectionStateChanged] state: ");
             sb.append(bluetoothProfileConnectionState);
             sb.append(", device: ");
             sb.append(bluetoothDevice != null ? bluetoothDevice.getName() : null);
-            b.c.a.a0.d.b1("DiscordAudioManager", sb.toString());
+            AnimatableValueParser.m501b1("DiscordAudioManager", sb.toString());
             int iOrdinal = bluetoothProfileConnectionState.ordinal();
             if (iOrdinal == 0) {
-                synchronized (DiscordAudioManager.this.i) {
-                    List<AudioDevice> list = DiscordAudioManager.this.r;
-                    arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+                synchronized (DiscordAudioManager.this.f18838i) {
+                    List<AudioDevice> list = DiscordAudioManager.this.f18847r;
+                    arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                     Iterator<T> it = list.iterator();
                     while (it.hasNext()) {
-                        arrayList.add(AudioDevice.a((AudioDevice) it.next(), null, false, null, null, 15));
+                        arrayList.add(AudioDevice.m8493a((AudioDevice) it.next(), null, false, null, null, 15));
                     }
                 }
                 DeviceTypes deviceTypes2 = DeviceTypes.BLUETOOTH_HEADSET;
                 if (((AudioDevice) arrayList.get(deviceTypes2.getValue())).id != null) {
-                    if (m.areEqual(bluetoothDevice != null ? bluetoothDevice.getAddress() : null, ((AudioDevice) arrayList.get(deviceTypes2.getValue())).id)) {
-                        DiscordAudioManager.this.l();
+                    if (Intrinsics3.areEqual(bluetoothDevice != null ? bluetoothDevice.getAddress() : null, ((AudioDevice) arrayList.get(deviceTypes2.getValue())).id)) {
+                        DiscordAudioManager.this.m8492l();
                         return;
                     }
                     return;
@@ -503,15 +574,15 @@ public final class DiscordAudioManager {
             }
             if (iOrdinal != 1) {
                 if (iOrdinal == 2) {
-                    synchronized (DiscordAudioManager.this.i) {
+                    synchronized (DiscordAudioManager.this.f18838i) {
                         discordAudioManager = DiscordAudioManager.this;
-                        deviceTypes = discordAudioManager.t;
+                        deviceTypes = discordAudioManager.f18849t;
                     }
                     if (deviceTypes == DeviceTypes.BLUETOOTH_HEADSET) {
-                        discordAudioManager.g();
+                        discordAudioManager.m8487g();
                         return;
                     } else {
-                        discordAudioManager.l();
+                        discordAudioManager.m8492l();
                         return;
                     }
                 }
@@ -519,15 +590,18 @@ public final class DiscordAudioManager {
                     return;
                 }
             }
-            b.c.a.a0.d.b1("DiscordAudioManager", "[onHeadsetConnectionStateChanged] " + bluetoothProfileConnectionState + "...");
+            AnimatableValueParser.m501b1("DiscordAudioManager", "[onHeadsetConnectionStateChanged] " + bluetoothProfileConnectionState + "...");
         }
     }
 
     /* compiled from: DiscordAudioManager.kt */
-    public static final class d extends d0.z.d.o implements Function0<DiscordAudioManager> {
-        public static final d j = new d();
+    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$d */
+    public static final class C5623d extends Lambda implements Function0<DiscordAudioManager> {
 
-        public d() {
+        /* renamed from: j */
+        public static final C5623d f18864j = new C5623d();
+
+        public C5623d() {
             super(0);
         }
 
@@ -538,88 +612,92 @@ public final class DiscordAudioManager {
     }
 
     /* compiled from: DiscordAudioManager.kt */
-    public static final class e extends d0.z.d.o implements Function0<b.a.q.k0.b> {
+    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$e */
+    public static final class C5624e extends Lambda implements Function0<AudioPermissions> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public e(Context context) {
+        public C5624e(Context context) {
             super(0);
             this.$context = context;
         }
 
         @Override // kotlin.jvm.functions.Function0
-        public b.a.q.k0.b invoke() {
-            return new b.a.q.k0.b(this.$context);
+        public AudioPermissions invoke() {
+            return new AudioPermissions(this.$context);
         }
     }
 
     public DiscordAudioManager(Context context) {
-        AudioDevice audioDeviceA;
-        m.checkNotNullParameter(context, "context");
+        AudioDevice audioDeviceM8493a;
+        Intrinsics3.checkNotNullParameter(context, "context");
         Object systemService = context.getSystemService(MediaStreamTrack.AUDIO_TRACK_KIND);
         Objects.requireNonNull(systemService, "null cannot be cast to non-null type android.media.AudioManager");
-        this.e = (AudioManager) systemService;
+        this.f18834e = (AudioManager) systemService;
         Object systemService2 = context.getSystemService("bluetooth");
         Objects.requireNonNull(systemService2, "null cannot be cast to non-null type android.bluetooth.BluetoothManager");
-        this.f = (BluetoothManager) systemService2;
-        this.g = g.lazy(new e(context));
-        this.h = context.getPackageManager().hasSystemFeature("android.hardware.telephony");
-        this.i = this;
+        this.f18835f = (BluetoothManager) systemService2;
+        this.f18836g = LazyJVM.lazy(new C5624e(context));
+        this.f18837h = context.getPackageManager().hasSystemFeature("android.hardware.telephony");
+        this.f18838i = this;
         Thread threadCurrentThread = Thread.currentThread();
-        m.checkNotNullExpressionValue(threadCurrentThread, "Thread.currentThread()");
-        this.j = threadCurrentThread.getId();
+        Intrinsics3.checkNotNullExpressionValue(threadCurrentThread, "Thread.currentThread()");
+        this.f18839j = threadCurrentThread.getId();
         ContentResolver contentResolver = context.getContentResolver();
-        m.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
-        this.k = contentResolver;
-        this.l = new b.a.q.k0.c(context, new c());
-        this.m = new b.a.q.k0.a(context, new b());
-        new Handler(Looper.getMainLooper()).post(new a());
-        this.o = BluetoothScoState.INVALID;
-        List<AudioDevice> listListOf = n.listOf((Object[]) new AudioDevice[]{new AudioDevice(DeviceTypes.SPEAKERPHONE, false, null, null, 14), new AudioDevice(DeviceTypes.WIRED_HEADSET, false, null, null, 14), new AudioDevice(DeviceTypes.EARPIECE, false, null, null, 14), new AudioDevice(DeviceTypes.BLUETOOTH_HEADSET, false, null, null, 14)});
+        Intrinsics3.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
+        this.f18840k = contentResolver;
+        this.f18841l = new BluetoothBroadcastReceiver(context, new C5622c());
+        this.f18842m = new AudioManagerBroadcastReceiver(context, new C5621b());
+        new Handler(Looper.getMainLooper()).post(new RunnableC5620a());
+        this.f18844o = BluetoothScoState.INVALID;
+        List<AudioDevice> listListOf = Collections2.listOf((Object[]) new AudioDevice[]{new AudioDevice(DeviceTypes.SPEAKERPHONE, false, null, null, 14), new AudioDevice(DeviceTypes.WIRED_HEADSET, false, null, null, 14), new AudioDevice(DeviceTypes.EARPIECE, false, null, null, 14), new AudioDevice(DeviceTypes.BLUETOOTH_HEADSET, false, null, null, 14)});
         ArrayList arrayList = new ArrayList();
         for (AudioDevice audioDevice : listListOf) {
             int iOrdinal = audioDevice.type.ordinal();
             if (iOrdinal == 0 || iOrdinal == 1) {
-                audioDeviceA = null;
+                audioDeviceM8493a = null;
             } else if (iOrdinal == 2) {
-                audioDeviceA = AudioDevice.a(audioDevice, null, true, null, null, 13);
+                audioDeviceM8493a = AudioDevice.m8493a(audioDevice, null, true, null, null, 13);
             } else if (iOrdinal == 3) {
-                audioDeviceA = AudioDevice.a(audioDevice, null, this.e.isWiredHeadsetOn(), null, null, 13);
+                audioDeviceM8493a = AudioDevice.m8493a(audioDevice, null, this.f18834e.isWiredHeadsetOn(), null, null, 13);
             } else if (iOrdinal == 4) {
-                audioDeviceA = AudioDevice.a(audioDevice, null, this.h, null, null, 13);
+                audioDeviceM8493a = AudioDevice.m8493a(audioDevice, null, this.f18837h, null, null, 13);
             } else {
                 if (iOrdinal != 5) {
                     throw new NoWhenBranchMatchedException();
                 }
-                audioDeviceA = AudioDevice.a(audioDevice, null, false, null, null, 15);
+                audioDeviceM8493a = AudioDevice.m8493a(audioDevice, null, false, null, null, 15);
             }
-            if (audioDeviceA != null) {
-                arrayList.add(audioDeviceA);
+            if (audioDeviceM8493a != null) {
+                arrayList.add(audioDeviceM8493a);
             }
         }
-        this.r = arrayList;
-        this.f2785s = new SerializedSubject<>(BehaviorSubject.l0(arrayList));
+        this.f18847r = arrayList;
+        this.f18848s = new SerializedSubject<>(BehaviorSubject.m11130l0(arrayList));
         DeviceTypes deviceTypes = DeviceTypes.INVALID;
-        this.t = deviceTypes;
-        this.u = new SerializedSubject<>(BehaviorSubject.l0(deviceTypes));
-        this.f2786x = this.e.getStreamMaxVolume(3);
-        this.f2787y = new SerializedSubject<>(BehaviorSubject.l0(Integer.valueOf(this.w)));
-        this.f2788z = DeviceTypes.DEFAULT;
+        this.f18849t = deviceTypes;
+        this.f18850u = new SerializedSubject<>(BehaviorSubject.m11130l0(deviceTypes));
+        this.f18853x = this.f18834e.getStreamMaxVolume(3);
+        this.f18854y = new SerializedSubject<>(BehaviorSubject.m11130l0(Integer.valueOf(this.f18852w)));
+        this.f18855z = DeviceTypes.DEFAULT;
     }
 
-    public static final DiscordAudioManager d() {
-        return (DiscordAudioManager) a.getValue();
+    /* renamed from: d */
+    public static final DiscordAudioManager m8481d() {
+        return (DiscordAudioManager) f18826a.getValue();
     }
 
-    public static final List<AudioDevice> f() {
-        return n.listOf((Object[]) new AudioDevice[]{new AudioDevice(DeviceTypes.SPEAKERPHONE, false, null, null, 14), new AudioDevice(DeviceTypes.WIRED_HEADSET, false, null, null, 14), new AudioDevice(DeviceTypes.EARPIECE, false, null, null, 14), new AudioDevice(DeviceTypes.BLUETOOTH_HEADSET, false, null, null, 14)});
+    /* renamed from: f */
+    public static final List<AudioDevice> m8482f() {
+        return Collections2.listOf((Object[]) new AudioDevice[]{new AudioDevice(DeviceTypes.SPEAKERPHONE, false, null, null, 14), new AudioDevice(DeviceTypes.WIRED_HEADSET, false, null, null, 14), new AudioDevice(DeviceTypes.EARPIECE, false, null, null, 14), new AudioDevice(DeviceTypes.BLUETOOTH_HEADSET, false, null, null, 14)});
     }
 
-    public final void a(List<AudioDevice> list) {
+    /* renamed from: a */
+    public final void m8483a(List<AudioDevice> list) {
         DeviceTypes deviceTypesPrevious;
         DeviceTypes deviceTypes;
-        synchronized (this.i) {
-            List<DeviceTypes> list2 = c;
+        synchronized (this.f18838i) {
+            List<DeviceTypes> list2 = f18828c;
             ListIterator<DeviceTypes> listIterator = list2.listIterator(list2.size());
             while (true) {
                 if (!listIterator.hasPrevious()) {
@@ -637,63 +715,67 @@ public final class DiscordAudioManager {
                 deviceTypes = DeviceTypes.SPEAKERPHONE;
             }
         }
-        b.c.a.a0.d.b1("DiscordAudioManager", "Default device to activate: " + deviceTypes);
-        b(deviceTypes);
+        AnimatableValueParser.m501b1("DiscordAudioManager", "Default device to activate: " + deviceTypes);
+        m8484b(deviceTypes);
     }
 
-    public final void b(DeviceTypes deviceTypes) {
+    /* renamed from: b */
+    public final void m8484b(DeviceTypes deviceTypes) {
         boolean z2;
-        synchronized (this.i) {
-            z2 = !this.D;
+        synchronized (this.f18838i) {
+            z2 = !this.f18833D;
         }
         if (z2) {
-            b.c.a.a0.d.f1("DiscordAudioManager", "Unable to activate audio output outside Discord-requested communication mode");
+            AnimatableValueParser.m517f1("DiscordAudioManager", "Unable to activate audio output outside Discord-requested communication mode");
             return;
         }
         if (deviceTypes == DeviceTypes.BLUETOOTH_HEADSET) {
-            j();
+            m8490j();
         } else {
-            k();
+            m8491k();
         }
         boolean z3 = deviceTypes == DeviceTypes.SPEAKERPHONE;
-        if (this.e.isSpeakerphoneOn() != z3) {
-            this.e.setSpeakerphoneOn(z3);
+        if (this.f18834e.isSpeakerphoneOn() != z3) {
+            this.f18834e.setSpeakerphoneOn(z3);
         }
-        synchronized (this.i) {
-            this.t = deviceTypes;
-            this.u.k.onNext(deviceTypes);
+        synchronized (this.f18838i) {
+            this.f18849t = deviceTypes;
+            this.f18850u.f27653k.onNext(deviceTypes);
         }
-        b.c.a.a0.d.b1("DiscordAudioManager", "Activated device: " + deviceTypes);
+        AnimatableValueParser.m501b1("DiscordAudioManager", "Activated device: " + deviceTypes);
     }
 
-    public final void c() {
+    /* renamed from: c */
+    public final void m8485c() {
         Thread threadCurrentThread = Thread.currentThread();
-        m.checkNotNullExpressionValue(threadCurrentThread, "Thread.currentThread()");
-        if (threadCurrentThread.getId() != this.j) {
+        Intrinsics3.checkNotNullExpressionValue(threadCurrentThread, "Thread.currentThread()");
+        if (threadCurrentThread.getId() != this.f18839j) {
             throw new IllegalStateException("Method was not called from a valid thread");
         }
     }
 
-    public final b.a.q.k0.b e() {
-        return (b.a.q.k0.b) this.g.getValue();
+    /* renamed from: e */
+    public final AudioPermissions m8486e() {
+        return (AudioPermissions) this.f18836g.getValue();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:80:0x0099 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void g() {
+    public final void m8487g() {
         List<BluetoothDevice> listEmptyList;
         Object next;
         BluetoothDevice bluetoothDevice;
         boolean z2;
-        if (!e().d) {
-            b.c.a.a0.d.f1("DiscordAudioManager", "refreshBluetoothHeadset() requires BLUETOOTH permission");
+        if (!m8486e().f1646d) {
+            AnimatableValueParser.m517f1("DiscordAudioManager", "refreshBluetoothHeadset() requires BLUETOOTH permission");
             return;
         }
-        BluetoothHeadset bluetoothHeadset = this.n;
+        BluetoothHeadset bluetoothHeadset = this.f18843n;
         if (bluetoothHeadset == null || (listEmptyList = bluetoothHeadset.getConnectedDevices()) == null) {
-            listEmptyList = n.emptyList();
+            listEmptyList = Collections2.emptyList();
         }
         Iterator<T> it = listEmptyList.iterator();
         while (true) {
@@ -703,18 +785,18 @@ public final class DiscordAudioManager {
             }
             next = it.next();
             BluetoothDevice bluetoothDevice2 = (BluetoothDevice) next;
-            BluetoothHeadset bluetoothHeadset2 = this.n;
+            BluetoothHeadset bluetoothHeadset2 = this.f18843n;
             if (bluetoothHeadset2 != null ? bluetoothHeadset2.isAudioConnected(bluetoothDevice2) : false) {
                 break;
             }
         }
         BluetoothDevice bluetoothDevice3 = (BluetoothDevice) next;
-        BluetoothHeadset bluetoothHeadset3 = this.n;
+        BluetoothHeadset bluetoothHeadset3 = this.f18843n;
         if (bluetoothHeadset3 != null) {
-            b.a.q.k0.d dVar = b.a.q.k0.d.c;
-            m.checkNotNullParameter(bluetoothHeadset3, "headsetProfile");
+            BluetoothHeadsetPrivateApi bluetoothHeadsetPrivateApi = BluetoothHeadsetPrivateApi.f1655c;
+            Intrinsics3.checkNotNullParameter(bluetoothHeadset3, "headsetProfile");
             try {
-                Method method = (Method) b.a.q.k0.d.f263b.getValue();
+                Method method = (Method) BluetoothHeadsetPrivateApi.f1654b.getValue();
                 Object objInvoke = method != null ? method.invoke(bluetoothHeadset3, new Object[0]) : null;
                 if (!(objInvoke instanceof BluetoothDevice)) {
                     objInvoke = null;
@@ -728,28 +810,28 @@ public final class DiscordAudioManager {
         if (bluetoothDevice3 == null) {
             bluetoothDevice3 = bluetoothDevice;
         }
-        if (e().d) {
-            BluetoothAdapter adapter = this.f.getAdapter();
+        if (m8486e().f1646d) {
+            BluetoothAdapter adapter = this.f18835f.getAdapter();
             if (adapter != null) {
                 int profileConnectionState = adapter.getProfileConnectionState(1);
                 if (adapter.isEnabled() && profileConnectionState == 2) {
                     z2 = true;
                 }
             }
-            synchronized (this.i) {
-                List<AudioDevice> list = this.r;
-                ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+            synchronized (this.f18838i) {
+                List<AudioDevice> list = this.f18847r;
+                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                 for (AudioDevice audioDevice : list) {
-                    arrayList.add(audioDevice.type.ordinal() != 5 ? AudioDevice.a(audioDevice, null, false, null, null, 15) : AudioDevice.a(audioDevice, null, (this.D && this.t == DeviceTypes.BLUETOOTH_HEADSET) ? bluetoothDevice3 != null : z2, bluetoothDevice3 != null ? bluetoothDevice3.getAddress() : null, bluetoothDevice3 != null ? bluetoothDevice3.getName() : null, 1));
+                    arrayList.add(audioDevice.type.ordinal() != 5 ? AudioDevice.m8493a(audioDevice, null, false, null, null, 15) : AudioDevice.m8493a(audioDevice, null, (this.f18833D && this.f18849t == DeviceTypes.BLUETOOTH_HEADSET) ? bluetoothDevice3 != null : z2, bluetoothDevice3 != null ? bluetoothDevice3.getAddress() : null, bluetoothDevice3 != null ? bluetoothDevice3.getName() : null, 1));
                 }
-                this.r = arrayList;
-                this.f2785s.k.onNext(arrayList);
+                this.f18847r = arrayList;
+                this.f18848s.f27653k.onNext(arrayList);
             }
             return;
         }
-        b.c.a.a0.d.f1("DiscordAudioManager", "hasBluetoothHeadset() requires BLUETOOTH permission");
+        AnimatableValueParser.m517f1("DiscordAudioManager", "hasBluetoothHeadset() requires BLUETOOTH permission");
         z2 = false;
-        synchronized (this.i) {
+        synchronized (this.f18838i) {
         }
     }
 
@@ -759,28 +841,29 @@ public final class DiscordAudioManager {
     /* JADX WARN: Removed duplicated region for block: B:59:0x00fa  */
     /* JADX WARN: Removed duplicated region for block: B:61:0x00fd  */
     /* JADX WARN: Removed duplicated region for block: B:62:0x0105  */
+    /* renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void h(boolean z2) {
+    public final void m8488h(boolean z2) {
         AudioFocusRequest audioFocusRequest;
-        c();
-        if (!e().f262b) {
-            b.c.a.a0.d.f1("DiscordAudioManager", "MODIFY_AUDIO_SETTINGS is missing. Client will run with reduced functionality");
+        m8485c();
+        if (!m8486e().f1644b) {
+            AnimatableValueParser.m517f1("DiscordAudioManager", "MODIFY_AUDIO_SETTINGS is missing. Client will run with reduced functionality");
             return;
         }
         boolean z3 = false;
         if (z2) {
             Looper looperMyLooper = Looper.myLooper();
-            f fVar = new f(this, looperMyLooper != null ? new Handler(looperMyLooper) : null);
-            this.k.registerContentObserver(Settings.System.CONTENT_URI, true, fVar);
-            this.v = fVar;
-            this.A = this.e.isSpeakerphoneOn();
-            this.B = this.e.isMicrophoneMute();
-            this.C = this.e.isBluetoothScoOn();
-            i(true);
-            synchronized (this.i) {
-                AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener = this.p;
+            DiscordAudioManager3 discordAudioManager3 = new DiscordAudioManager3(this, looperMyLooper != null ? new Handler(looperMyLooper) : null);
+            this.f18840k.registerContentObserver(Settings.System.CONTENT_URI, true, discordAudioManager3);
+            this.f18851v = discordAudioManager3;
+            this.f18830A = this.f18834e.isSpeakerphoneOn();
+            this.f18831B = this.f18834e.isMicrophoneMute();
+            this.f18832C = this.f18834e.isBluetoothScoOn();
+            m8489i(true);
+            synchronized (this.f18838i) {
+                AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener = this.f18845p;
                 if (onAudioFocusChangeListener != null) {
                     if (Build.VERSION.SDK_INT >= 26) {
                         AudioFocusRequest.Builder builder = new AudioFocusRequest.Builder(1);
@@ -789,131 +872,135 @@ public final class DiscordAudioManager {
                         builder2.setContentType(1);
                         builder.setAcceptsDelayedFocusGain(true);
                         Looper looperMyLooper2 = Looper.myLooper();
-                        m.checkNotNull(looperMyLooper2);
+                        Intrinsics3.checkNotNull(looperMyLooper2);
                         builder.setOnAudioFocusChangeListener(onAudioFocusChangeListener, new Handler(looperMyLooper2));
                         builder.setAudioAttributes(builder2.build());
                         AudioFocusRequest audioFocusRequestBuild = builder.build();
-                        this.q = audioFocusRequestBuild;
-                        if (this.e.requestAudioFocus(audioFocusRequestBuild) == 1) {
+                        this.f18846q = audioFocusRequestBuild;
+                        if (this.f18834e.requestAudioFocus(audioFocusRequestBuild) == 1) {
                             z3 = true;
                         }
                         if (z3) {
-                            b.c.a.a0.d.f1("DiscordAudioManager", "Unable to requestAudioFocus()");
+                            AnimatableValueParser.m517f1("DiscordAudioManager", "Unable to requestAudioFocus()");
                         } else {
-                            b.c.a.a0.d.b1("DiscordAudioManager", "Successful requestAudioFocus()");
+                            AnimatableValueParser.m501b1("DiscordAudioManager", "Successful requestAudioFocus()");
                         }
                     } else {
-                        if (this.e.requestAudioFocus(onAudioFocusChangeListener, 0, 1) == 1) {
+                        if (this.f18834e.requestAudioFocus(onAudioFocusChangeListener, 0, 1) == 1) {
                         }
                         if (z3) {
                         }
                     }
                 }
             }
-            l();
+            m8492l();
             return;
         }
-        ContentObserver contentObserver = this.v;
+        ContentObserver contentObserver = this.f18851v;
         if (contentObserver != null) {
-            this.k.unregisterContentObserver(contentObserver);
+            this.f18840k.unregisterContentObserver(contentObserver);
         }
-        this.v = null;
-        b(DeviceTypes.INVALID);
-        synchronized (this.i) {
-            this.f2788z = DeviceTypes.DEFAULT;
+        this.f18851v = null;
+        m8484b(DeviceTypes.INVALID);
+        synchronized (this.f18838i) {
+            this.f18855z = DeviceTypes.DEFAULT;
         }
-        i(false);
+        m8489i(false);
         if (Build.VERSION.SDK_INT >= 26) {
-            synchronized (this.i) {
-                audioFocusRequest = this.q;
+            synchronized (this.f18838i) {
+                audioFocusRequest = this.f18846q;
             }
-            if (audioFocusRequest != null && this.e.abandonAudioFocusRequest(audioFocusRequest) == 1) {
+            if (audioFocusRequest != null && this.f18834e.abandonAudioFocusRequest(audioFocusRequest) == 1) {
                 z3 = true;
             }
             if (z3) {
-                b.c.a.a0.d.f1("DiscordAudioManager", "Unable to releaseAudioFocus()");
+                AnimatableValueParser.m517f1("DiscordAudioManager", "Unable to releaseAudioFocus()");
             } else {
-                b.c.a.a0.d.b1("DiscordAudioManager", "Successful releaseAudioFocus()");
+                AnimatableValueParser.m501b1("DiscordAudioManager", "Successful releaseAudioFocus()");
             }
         } else {
-            synchronized (this.i) {
-                AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener2 = this.p;
+            synchronized (this.f18838i) {
+                AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener2 = this.f18845p;
                 if (onAudioFocusChangeListener2 != null) {
-                    if (this.e.abandonAudioFocus(onAudioFocusChangeListener2) == 1) {
+                    if (this.f18834e.abandonAudioFocus(onAudioFocusChangeListener2) == 1) {
                     }
                     if (z3) {
                     }
                 }
             }
         }
-        boolean z4 = this.B;
-        if (this.e.isMicrophoneMute() != z4) {
-            this.e.setMicrophoneMute(z4);
+        boolean z4 = this.f18831B;
+        if (this.f18834e.isMicrophoneMute() != z4) {
+            this.f18834e.setMicrophoneMute(z4);
         }
-        boolean z5 = this.A;
-        if (this.e.isSpeakerphoneOn() != z5) {
-            this.e.setSpeakerphoneOn(z5);
+        boolean z5 = this.f18830A;
+        if (this.f18834e.isSpeakerphoneOn() != z5) {
+            this.f18834e.setSpeakerphoneOn(z5);
         }
-        if (this.C) {
-            j();
+        if (this.f18832C) {
+            m8490j();
         }
     }
 
-    public final void i(boolean z2) {
+    /* renamed from: i */
+    public final void m8489i(boolean z2) {
         try {
-            this.e.setMode(z2 ? 3 : 0);
+            this.f18834e.setMode(z2 ? 3 : 0);
         } catch (SecurityException unused) {
         }
-        synchronized (this.i) {
-            this.D = z2;
+        synchronized (this.f18838i) {
+            this.f18833D = z2;
         }
     }
 
-    public final synchronized void j() {
+    /* renamed from: j */
+    public final synchronized void m8490j() {
         BluetoothScoState bluetoothScoState;
-        BluetoothScoState bluetoothScoState2 = this.o;
+        BluetoothScoState bluetoothScoState2 = this.f18844o;
         BluetoothScoState bluetoothScoState3 = BluetoothScoState.ON;
         if (bluetoothScoState2 != bluetoothScoState3 && bluetoothScoState2 != (bluetoothScoState = BluetoothScoState.TURNING_ON)) {
-            if (this.e.isBluetoothScoOn()) {
-                this.o = bluetoothScoState3;
+            if (this.f18834e.isBluetoothScoOn()) {
+                this.f18844o = bluetoothScoState3;
             } else {
-                this.o = bluetoothScoState;
-                this.e.startBluetoothSco();
+                this.f18844o = bluetoothScoState;
+                this.f18834e.startBluetoothSco();
             }
         }
     }
 
-    public final synchronized void k() {
-        BluetoothScoState bluetoothScoState = this.o;
+    /* renamed from: k */
+    public final synchronized void m8491k() {
+        BluetoothScoState bluetoothScoState = this.f18844o;
         if (bluetoothScoState == BluetoothScoState.ON || bluetoothScoState == BluetoothScoState.TURNING_ON) {
-            if (!this.e.isBluetoothScoOn()) {
-                this.o = BluetoothScoState.OFF;
+            if (!this.f18834e.isBluetoothScoOn()) {
+                this.f18844o = BluetoothScoState.OFF;
             } else {
-                this.o = BluetoothScoState.TURNING_OFF;
-                this.e.stopBluetoothSco();
+                this.f18844o = BluetoothScoState.TURNING_OFF;
+                this.f18834e.stopBluetoothSco();
             }
         }
     }
 
-    public final void l() {
+    /* renamed from: l */
+    public final void m8492l() {
         DeviceTypes deviceTypes;
         ArrayList arrayList;
-        synchronized (this.i) {
-            deviceTypes = this.f2788z;
+        synchronized (this.f18838i) {
+            deviceTypes = this.f18855z;
         }
-        g();
-        synchronized (this.i) {
-            List<AudioDevice> list = this.r;
-            arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
+        m8487g();
+        synchronized (this.f18838i) {
+            List<AudioDevice> list = this.f18847r;
+            arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
             Iterator<T> it = list.iterator();
             while (it.hasNext()) {
-                arrayList.add(AudioDevice.a((AudioDevice) it.next(), null, false, null, null, 15));
+                arrayList.add(AudioDevice.m8493a((AudioDevice) it.next(), null, false, null, null, 15));
             }
         }
         if (deviceTypes == DeviceTypes.DEFAULT || !arrayList.get(deviceTypes.getValue()).isAvailable) {
-            a(arrayList);
+            m8483a(arrayList);
         } else {
-            b(deviceTypes);
+            m8484b(deviceTypes);
         }
     }
 }

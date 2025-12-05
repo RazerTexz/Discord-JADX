@@ -4,13 +4,13 @@ import android.content.Context;
 import com.discord.simpleast.core.parser.Parser;
 import com.discord.simpleast.core.parser.Rule;
 import com.discord.utilities.search.query.node.QueryNode;
-import com.discord.utilities.search.query.node.answer.HasAnswerOption;
+import com.discord.utilities.search.query.node.answer.HasNode2;
 import com.discord.utilities.search.strings.SearchStringProvider;
-import com.discord.widgets.chat.input.MentionUtilsKt;
-import d0.z.d.m;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: QueryParser.kt */
 /* loaded from: classes2.dex */
@@ -40,11 +40,11 @@ public final class QueryParser extends Parser<Context, QueryNode, Object> {
         }
 
         private final String createHasAnswerRegex(SearchStringProvider searchStringProvider) {
-            HasAnswerOption.values();
+            HasNode2.values();
             ArrayList arrayList = new ArrayList(7);
-            HasAnswerOption[] hasAnswerOptionArrValues = HasAnswerOption.values();
+            HasNode2[] hasNode2ArrValues = HasNode2.values();
             for (int i = 0; i < 7; i++) {
-                arrayList.add(hasAnswerOptionArrValues[i].getLocalizedInputText(searchStringProvider));
+                arrayList.add(hasNode2ArrValues[i].getLocalizedInputText(searchStringProvider));
             }
             StringBuilder sb = new StringBuilder("(?:\\s*(");
             int size = arrayList.size() - 1;
@@ -55,60 +55,60 @@ public final class QueryParser extends Parser<Context, QueryNode, Object> {
             sb.append((CharSequence) arrayList.get(arrayList.size() - 1));
             sb.append("))");
             String string = sb.toString();
-            m.checkNotNullExpressionValue(string, "builder.toString()");
+            Intrinsics3.checkNotNullExpressionValue(string, "builder.toString()");
             return string;
         }
 
         private final Rule<Context, QueryNode, Object> getContentRule() {
             Pattern patternCompile = Pattern.compile(QueryParser.ANY_TOKEN_REGEX, 64);
-            m.checkNotNullExpressionValue(patternCompile, "simpleTextPattern");
-            return new QueryParser$Companion$getContentRule$1(patternCompile, patternCompile);
+            Intrinsics3.checkNotNullExpressionValue(patternCompile, "simpleTextPattern");
+            return new QueryParser2(patternCompile, patternCompile);
         }
 
         private final Rule<Context, QueryNode, Object> getFromFilterRule(CharSequence localizedFrom) {
             Pattern patternCompile = Pattern.compile('^' + ("[\\s]*?(" + localizedFrom + "):"), 64);
-            m.checkNotNullExpressionValue(patternCompile, "fromFilterPattern");
-            return new QueryParser$Companion$getFromFilterRule$1(localizedFrom, patternCompile, patternCompile);
+            Intrinsics3.checkNotNullExpressionValue(patternCompile, "fromFilterPattern");
+            return new QueryParser3(localizedFrom, patternCompile, patternCompile);
         }
 
         private final Rule<Context, QueryNode, Object> getUserRule() {
             Pattern patternCompile = Pattern.compile("^(?:\\s*([^@#:]+)#([0-9]{4}))", 64);
-            m.checkNotNullExpressionValue(patternCompile, "fromUserPattern");
-            return new QueryParser$Companion$getUserRule$1(patternCompile, patternCompile);
+            Intrinsics3.checkNotNullExpressionValue(patternCompile, "fromUserPattern");
+            return new QueryParser9(patternCompile, patternCompile);
         }
 
         public final Rule<Context, QueryNode, Object> getHasAnswerRule(SearchStringProvider searchStringProvider) {
-            m.checkNotNullParameter(searchStringProvider, "searchStringProvider");
+            Intrinsics3.checkNotNullParameter(searchStringProvider, "searchStringProvider");
             Pattern patternCompile = Pattern.compile('^' + createHasAnswerRegex(searchStringProvider), 64);
-            m.checkNotNullExpressionValue(patternCompile, "hasAnswerPattern");
-            return new QueryParser$Companion$getHasAnswerRule$1(searchStringProvider, patternCompile, patternCompile);
+            Intrinsics3.checkNotNullExpressionValue(patternCompile, "hasAnswerPattern");
+            return new QueryParser4(searchStringProvider, patternCompile, patternCompile);
         }
 
         public final Rule<Context, QueryNode, Object> getHasFilterRule(CharSequence localizedHas) {
-            m.checkNotNullParameter(localizedHas, "localizedHas");
-            Pattern patternCompile = Pattern.compile('^' + ("^[\\s]*?" + localizedHas + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR), 64);
-            m.checkNotNullExpressionValue(patternCompile, "hasFilterPattern");
-            return new QueryParser$Companion$getHasFilterRule$1(localizedHas, patternCompile, patternCompile);
+            Intrinsics3.checkNotNullParameter(localizedHas, "localizedHas");
+            Pattern patternCompile = Pattern.compile('^' + ("^[\\s]*?" + localizedHas + MentionUtils.EMOJIS_AND_STICKERS_CHAR), 64);
+            Intrinsics3.checkNotNullExpressionValue(patternCompile, "hasFilterPattern");
+            return new QueryParser5(localizedHas, patternCompile, patternCompile);
         }
 
         public final Rule<Context, QueryNode, Object> getInAnswerRule() {
             Pattern patternCompile = Pattern.compile("^(?:\\s*#([^ ]+))", 64);
-            m.checkNotNullExpressionValue(patternCompile, "inAnswerPattern");
-            return new QueryParser$Companion$getInAnswerRule$1(patternCompile, patternCompile);
+            Intrinsics3.checkNotNullExpressionValue(patternCompile, "inAnswerPattern");
+            return new QueryParser6(patternCompile, patternCompile);
         }
 
         public final Rule<Context, QueryNode, Object> getInFilterRule(CharSequence localizedIn) {
-            m.checkNotNullParameter(localizedIn, "localizedIn");
-            Pattern patternCompile = Pattern.compile('^' + ("^[\\s]*?" + localizedIn + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR), 64);
-            m.checkNotNullExpressionValue(patternCompile, "fromUserPattern");
-            return new QueryParser$Companion$getInFilterRule$1(localizedIn, patternCompile, patternCompile);
+            Intrinsics3.checkNotNullParameter(localizedIn, "localizedIn");
+            Pattern patternCompile = Pattern.compile('^' + ("^[\\s]*?" + localizedIn + MentionUtils.EMOJIS_AND_STICKERS_CHAR), 64);
+            Intrinsics3.checkNotNullExpressionValue(patternCompile, "fromUserPattern");
+            return new QueryParser7(localizedIn, patternCompile, patternCompile);
         }
 
         public final Rule<Context, QueryNode, Object> getMentionsFilterRule(CharSequence localizedMentions) {
-            m.checkNotNullParameter(localizedMentions, "localizedMentions");
-            Pattern patternCompile = Pattern.compile('^' + ("^[\\s]*?" + localizedMentions + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR), 64);
-            m.checkNotNullExpressionValue(patternCompile, "mentionsFilterPattern");
-            return new QueryParser$Companion$getMentionsFilterRule$1(localizedMentions, patternCompile, patternCompile);
+            Intrinsics3.checkNotNullParameter(localizedMentions, "localizedMentions");
+            Pattern patternCompile = Pattern.compile('^' + ("^[\\s]*?" + localizedMentions + MentionUtils.EMOJIS_AND_STICKERS_CHAR), 64);
+            Intrinsics3.checkNotNullExpressionValue(patternCompile, "mentionsFilterPattern");
+            return new QueryParser8(localizedMentions, patternCompile, patternCompile);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -119,7 +119,7 @@ public final class QueryParser extends Parser<Context, QueryNode, Object> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public QueryParser(SearchStringProvider searchStringProvider) {
         super(false, 1, null);
-        m.checkNotNullParameter(searchStringProvider, "searchStringProvider");
+        Intrinsics3.checkNotNullParameter(searchStringProvider, "searchStringProvider");
         Companion companion = INSTANCE;
         addRule(Companion.access$getUserRule(companion)).addRule(Companion.access$getFromFilterRule(companion, searchStringProvider.getFromFilterString())).addRule(companion.getMentionsFilterRule(searchStringProvider.getMentionsFilterString())).addRule(companion.getHasFilterRule(searchStringProvider.getHasFilterString())).addRule(companion.getHasAnswerRule(searchStringProvider)).addRule(companion.getInFilterRule(searchStringProvider.getInFilterString())).addRule(companion.getInAnswerRule()).addRule(Companion.access$getContentRule(companion));
     }

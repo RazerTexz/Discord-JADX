@@ -69,11 +69,11 @@ public final class WindowInsetsControllerCompat {
         @NonNull
         public final Window mWindow;
 
-        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl20$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
+        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl20$1 */
+        public class RunnableC02981 implements Runnable {
             public final /* synthetic */ View val$finalView;
 
-            public AnonymousClass1(View view) {
+            public RunnableC02981(View view) {
                 this.val$finalView = view;
             }
 
@@ -126,7 +126,7 @@ public final class WindowInsetsControllerCompat {
             if (currentFocus == null || !currentFocus.hasWindowFocus()) {
                 return;
             }
-            currentFocus.post(new AnonymousClass1(currentFocus));
+            currentFocus.post(new RunnableC02981(currentFocus));
         }
 
         @Override // androidx.core.view.WindowInsetsControllerCompat.Impl
@@ -253,12 +253,12 @@ public final class WindowInsetsControllerCompat {
         public final WindowInsetsController mInsetsController;
         private final SimpleArrayMap<OnControllableInsetsChangedListener, WindowInsetsController.OnControllableInsetsChangedListener> mListeners;
 
-        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl30$1, reason: invalid class name */
-        public class AnonymousClass1 implements WindowInsetsAnimationControlListener {
+        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl30$1 */
+        public class WindowInsetsAnimationControlListenerC02991 implements WindowInsetsAnimationControlListener {
             private WindowInsetsAnimationControllerCompat mCompatAnimController = null;
             public final /* synthetic */ WindowInsetsAnimationControlListenerCompat val$listener;
 
-            public AnonymousClass1(WindowInsetsAnimationControlListenerCompat windowInsetsAnimationControlListenerCompat) {
+            public WindowInsetsAnimationControlListenerC02991(WindowInsetsAnimationControlListenerCompat windowInsetsAnimationControlListenerCompat) {
                 this.val$listener = windowInsetsAnimationControlListenerCompat;
             }
 
@@ -280,11 +280,11 @@ public final class WindowInsetsControllerCompat {
             }
         }
 
-        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl30$2, reason: invalid class name */
-        public class AnonymousClass2 implements WindowInsetsController.OnControllableInsetsChangedListener {
+        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl30$2 */
+        public class WindowInsetsControllerOnControllableInsetsChangedListenerC03002 implements WindowInsetsController.OnControllableInsetsChangedListener {
             public final /* synthetic */ OnControllableInsetsChangedListener val$listener;
 
-            public AnonymousClass2(OnControllableInsetsChangedListener onControllableInsetsChangedListener) {
+            public WindowInsetsControllerOnControllableInsetsChangedListenerC03002(OnControllableInsetsChangedListener onControllableInsetsChangedListener) {
                 this.val$listener = onControllableInsetsChangedListener;
             }
 
@@ -306,14 +306,14 @@ public final class WindowInsetsControllerCompat {
             if (this.mListeners.containsKey(onControllableInsetsChangedListener)) {
                 return;
             }
-            AnonymousClass2 anonymousClass2 = new AnonymousClass2(onControllableInsetsChangedListener);
-            this.mListeners.put(onControllableInsetsChangedListener, anonymousClass2);
-            this.mInsetsController.addOnControllableInsetsChangedListener(anonymousClass2);
+            WindowInsetsControllerOnControllableInsetsChangedListenerC03002 windowInsetsControllerOnControllableInsetsChangedListenerC03002 = new WindowInsetsControllerOnControllableInsetsChangedListenerC03002(onControllableInsetsChangedListener);
+            this.mListeners.put(onControllableInsetsChangedListener, windowInsetsControllerOnControllableInsetsChangedListenerC03002);
+            this.mInsetsController.addOnControllableInsetsChangedListener(windowInsetsControllerOnControllableInsetsChangedListenerC03002);
         }
 
         @Override // androidx.core.view.WindowInsetsControllerCompat.Impl
         public void controlWindowInsetsAnimation(int i, long j, @Nullable Interpolator interpolator, @Nullable CancellationSignal cancellationSignal, @NonNull WindowInsetsAnimationControlListenerCompat windowInsetsAnimationControlListenerCompat) {
-            this.mInsetsController.controlWindowInsetsAnimation(i, j, interpolator, cancellationSignal, new AnonymousClass1(windowInsetsAnimationControlListenerCompat));
+            this.mInsetsController.controlWindowInsetsAnimation(i, j, interpolator, cancellationSignal, new WindowInsetsAnimationControlListenerC02991(windowInsetsAnimationControlListenerCompat));
         }
 
         @Override // androidx.core.view.WindowInsetsControllerCompat.Impl

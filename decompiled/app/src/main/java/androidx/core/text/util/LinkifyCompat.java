@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.net.MailTo;
 import androidx.core.util.PatternsCompat;
-import b.d.b.a.a;
 import com.adjust.sdk.Constants;
 import java.io.UnsupportedEncodingException;
 import java.lang.annotation.Retention;
@@ -26,14 +25,15 @@ import java.util.Comparator;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public final class LinkifyCompat {
     private static final String[] EMPTY_STRING = new String[0];
-    private static final Comparator<LinkSpec> COMPARATOR = new AnonymousClass1();
+    private static final Comparator<LinkSpec> COMPARATOR = new C02561();
 
-    /* renamed from: androidx.core.text.util.LinkifyCompat$1, reason: invalid class name */
-    public class AnonymousClass1 implements Comparator<LinkSpec> {
+    /* renamed from: androidx.core.text.util.LinkifyCompat$1 */
+    public class C02561 implements Comparator<LinkSpec> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(LinkSpec linkSpec, LinkSpec linkSpec2) {
             return compare2(linkSpec, linkSpec2);
@@ -183,7 +183,7 @@ public final class LinkifyCompat {
                 i++;
             }
         }
-        return (z2 || strArr.length <= 0) ? str : a.J(new StringBuilder(), strArr[0], str);
+        return (z2 || strArr.length <= 0) ? str : outline.m822J(new StringBuilder(), strArr[0], str);
     }
 
     private static void pruneOverlaps(ArrayList<LinkSpec> arrayList, Spannable spannable) {

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackThread;
-import com.discord.analytics.generated.traits.TrackThreadReceiver;
+import com.discord.analytics.generated.traits.TrackThread2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackJoinThread.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackJoinThread implements AnalyticsSchema, TrackBaseReceiver, TrackThreadReceiver {
+public final /* data */ class TrackJoinThread implements AnalyticsSchema, TrackBase2, TrackThread2 {
     private TrackBase trackBase;
     private TrackThread trackThread;
     private final Long channelId = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackJoinThread implements AnalyticsSchema, TrackB
             return false;
         }
         TrackJoinThread trackJoinThread = (TrackJoinThread) other;
-        return m.areEqual(this.channelId, trackJoinThread.channelId) && m.areEqual(this.parentId, trackJoinThread.parentId) && m.areEqual(this.guildId, trackJoinThread.guildId) && m.areEqual(this.channelType, trackJoinThread.channelType) && m.areEqual(this.targetUserId, trackJoinThread.targetUserId) && m.areEqual(this.isSelfJoin, trackJoinThread.isSelfJoin);
+        return Intrinsics3.areEqual(this.channelId, trackJoinThread.channelId) && Intrinsics3.areEqual(this.parentId, trackJoinThread.parentId) && Intrinsics3.areEqual(this.guildId, trackJoinThread.guildId) && Intrinsics3.areEqual(this.channelType, trackJoinThread.channelType) && Intrinsics3.areEqual(this.targetUserId, trackJoinThread.targetUserId) && Intrinsics3.areEqual(this.isSelfJoin, trackJoinThread.isSelfJoin);
     }
 
     public int hashCode() {
@@ -54,17 +54,17 @@ public final /* data */ class TrackJoinThread implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackJoinThread(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", parentId=");
-        sbU.append(this.parentId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", targetUserId=");
-        sbU.append(this.targetUserId);
-        sbU.append(", isSelfJoin=");
-        return a.D(sbU, this.isSelfJoin, ")");
+        StringBuilder sbM833U = outline.m833U("TrackJoinThread(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", parentId=");
+        sbM833U.append(this.parentId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", targetUserId=");
+        sbM833U.append(this.targetUserId);
+        sbM833U.append(", isSelfJoin=");
+        return outline.m816D(sbM833U, this.isSelfJoin, ")");
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackLaunchGame.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLaunchGame implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackLaunchGame implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence game = null;
     private final Long gameId = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackLaunchGame implements AnalyticsSchema, TrackB
             return false;
         }
         TrackLaunchGame trackLaunchGame = (TrackLaunchGame) other;
-        return m.areEqual(this.game, trackLaunchGame.game) && m.areEqual(this.gameId, trackLaunchGame.gameId) && m.areEqual(this.verified, trackLaunchGame.verified) && m.areEqual(this.elevated, trackLaunchGame.elevated) && m.areEqual(this.customName, trackLaunchGame.customName) && m.areEqual(this.platformType, trackLaunchGame.platformType) && m.areEqual(this.gamePlatform, trackLaunchGame.gamePlatform) && m.areEqual(this.distributor, trackLaunchGame.distributor);
+        return Intrinsics3.areEqual(this.game, trackLaunchGame.game) && Intrinsics3.areEqual(this.gameId, trackLaunchGame.gameId) && Intrinsics3.areEqual(this.verified, trackLaunchGame.verified) && Intrinsics3.areEqual(this.elevated, trackLaunchGame.elevated) && Intrinsics3.areEqual(this.customName, trackLaunchGame.customName) && Intrinsics3.areEqual(this.platformType, trackLaunchGame.platformType) && Intrinsics3.areEqual(this.gamePlatform, trackLaunchGame.gamePlatform) && Intrinsics3.areEqual(this.distributor, trackLaunchGame.distributor);
     }
 
     public int hashCode() {
@@ -57,21 +57,21 @@ public final /* data */ class TrackLaunchGame implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackLaunchGame(game=");
-        sbU.append(this.game);
-        sbU.append(", gameId=");
-        sbU.append(this.gameId);
-        sbU.append(", verified=");
-        sbU.append(this.verified);
-        sbU.append(", elevated=");
-        sbU.append(this.elevated);
-        sbU.append(", customName=");
-        sbU.append(this.customName);
-        sbU.append(", platformType=");
-        sbU.append(this.platformType);
-        sbU.append(", gamePlatform=");
-        sbU.append(this.gamePlatform);
-        sbU.append(", distributor=");
-        return a.E(sbU, this.distributor, ")");
+        StringBuilder sbM833U = outline.m833U("TrackLaunchGame(game=");
+        sbM833U.append(this.game);
+        sbM833U.append(", gameId=");
+        sbM833U.append(this.gameId);
+        sbM833U.append(", verified=");
+        sbM833U.append(this.verified);
+        sbM833U.append(", elevated=");
+        sbM833U.append(this.elevated);
+        sbM833U.append(", customName=");
+        sbM833U.append(this.customName);
+        sbM833U.append(", platformType=");
+        sbM833U.append(this.platformType);
+        sbM833U.append(", gamePlatform=");
+        sbM833U.append(this.gamePlatform);
+        sbM833U.append(", distributor=");
+        return outline.m817E(sbM833U, this.distributor, ")");
     }
 }

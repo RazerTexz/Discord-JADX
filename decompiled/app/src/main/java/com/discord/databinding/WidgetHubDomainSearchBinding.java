@@ -17,45 +17,52 @@ import com.google.android.material.textfield.TextInputLayout;
 /* loaded from: classes.dex */
 public final class WidgetHubDomainSearchBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f17162a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final LinkifiedTextView f2471b;
+    public final LinkifiedTextView f17163b;
 
+    /* renamed from: c */
     @NonNull
-    public final LinearLayout c;
+    public final LinearLayout f17164c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f17165d;
 
+    /* renamed from: e */
     @NonNull
-    public final RecyclerView e;
+    public final RecyclerView f17166e;
 
+    /* renamed from: f */
     @NonNull
-    public final FloatingActionButton f;
+    public final FloatingActionButton f17167f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextInputLayout g;
+    public final TextInputLayout f17168g;
 
+    /* renamed from: h */
     @NonNull
-    public final TextInputEditText h;
+    public final TextInputEditText f17169h;
 
     public WidgetHubDomainSearchBinding(@NonNull ConstraintLayout constraintLayout, @NonNull AppBarLayout appBarLayout, @NonNull Barrier barrier, @NonNull LinkifiedTextView linkifiedTextView, @NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull RecyclerView recyclerView, @NonNull FloatingActionButton floatingActionButton, @NonNull TextInputLayout textInputLayout, @NonNull TextInputEditText textInputEditText) {
-        this.a = constraintLayout;
-        this.f2471b = linkifiedTextView;
-        this.c = linearLayout;
-        this.d = textView;
-        this.e = recyclerView;
-        this.f = floatingActionButton;
-        this.g = textInputLayout;
-        this.h = textInputEditText;
+        this.f17162a = constraintLayout;
+        this.f17163b = linkifiedTextView;
+        this.f17164c = linearLayout;
+        this.f17165d = textView;
+        this.f17166e = recyclerView;
+        this.f17167f = floatingActionButton;
+        this.f17168g = textInputLayout;
+        this.f17169h = textInputEditText;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17162a;
     }
 }

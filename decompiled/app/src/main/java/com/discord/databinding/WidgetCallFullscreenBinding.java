@@ -14,8 +14,6 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.p4;
-import b.a.i.q4;
 import com.discord.views.calls.CallEventsButtonView;
 import com.discord.views.calls.StageCallVisitCommunityView;
 import com.discord.views.calls.VideoCallParticipantView;
@@ -25,120 +23,143 @@ import com.discord.widgets.voice.controls.VoiceControlsSheetView;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
+import p007b.p008a.p025i.WidgetCallFullscreenAudioShareWarningBinding;
+import p007b.p008a.p025i.WidgetCallFullscreenPrivateCallBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetCallFullscreenBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f15758a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final Toolbar f2245b;
+    public final Toolbar f15759b;
 
+    /* renamed from: c */
     @NonNull
-    public final AppBarLayout c;
+    public final AppBarLayout f15760c;
 
+    /* renamed from: d */
     @NonNull
-    public final RelativeLayout d;
+    public final RelativeLayout f15761d;
 
+    /* renamed from: e */
     @NonNull
-    public final p4 e;
+    public final WidgetCallFullscreenAudioShareWarningBinding f15762e;
 
+    /* renamed from: f */
     @NonNull
-    public final CoordinatorLayout f;
+    public final CoordinatorLayout f15763f;
 
+    /* renamed from: g */
     @NonNull
-    public final MaterialButton g;
+    public final MaterialButton f15764g;
 
+    /* renamed from: h */
     @NonNull
-    public final TextView h;
+    public final TextView f15765h;
 
+    /* renamed from: i */
     @NonNull
-    public final ConstraintLayout i;
+    public final ConstraintLayout f15766i;
 
+    /* renamed from: j */
     @NonNull
-    public final LinearLayout j;
+    public final LinearLayout f15767j;
 
+    /* renamed from: k */
     @NonNull
-    public final MaterialButton k;
+    public final MaterialButton f15768k;
 
+    /* renamed from: l */
     @NonNull
-    public final VideoCallParticipantView l;
+    public final VideoCallParticipantView f15769l;
 
+    /* renamed from: m */
     @NonNull
-    public final RecyclerView m;
+    public final RecyclerView f15770m;
 
+    /* renamed from: n */
     @NonNull
-    public final MaterialButton n;
+    public final MaterialButton f15771n;
 
+    /* renamed from: o */
     @NonNull
-    public final ConstraintLayout o;
+    public final ConstraintLayout f15772o;
 
+    /* renamed from: p */
     @NonNull
-    public final RecyclerView p;
+    public final RecyclerView f15773p;
 
+    /* renamed from: q */
     @NonNull
-    public final StageCallVisitCommunityView q;
+    public final StageCallVisitCommunityView f15774q;
 
+    /* renamed from: r */
     @NonNull
-    public final ViewStub r;
+    public final ViewStub f15775r;
 
-    /* renamed from: s, reason: collision with root package name */
+    /* renamed from: s */
     @NonNull
-    public final q4 f2246s;
+    public final WidgetCallFullscreenPrivateCallBinding f15776s;
 
+    /* renamed from: t */
     @NonNull
-    public final ConstraintLayout t;
+    public final ConstraintLayout f15777t;
 
+    /* renamed from: u */
     @NonNull
-    public final UserSummaryView u;
+    public final UserSummaryView f15778u;
 
+    /* renamed from: v */
     @NonNull
-    public final MaterialTextView v;
+    public final MaterialTextView f15779v;
 
+    /* renamed from: w */
     @NonNull
-    public final CallEventsButtonView w;
+    public final CallEventsButtonView f15780w;
 
-    /* renamed from: x, reason: collision with root package name */
+    /* renamed from: x */
     @NonNull
-    public final VoiceCallActiveEventView f2247x;
+    public final VoiceCallActiveEventView f15781x;
 
-    /* renamed from: y, reason: collision with root package name */
+    /* renamed from: y */
     @NonNull
-    public final VoiceControlsSheetView f2248y;
+    public final VoiceControlsSheetView f15782y;
 
-    public WidgetCallFullscreenBinding(@NonNull ConstraintLayout constraintLayout, @NonNull Toolbar toolbar, @NonNull AppBarLayout appBarLayout, @NonNull RelativeLayout relativeLayout, @NonNull p4 p4Var, @NonNull Barrier barrier, @NonNull ConstraintLayout constraintLayout2, @NonNull CoordinatorLayout coordinatorLayout, @NonNull MaterialButton materialButton, @NonNull TextView textView, @NonNull ConstraintLayout constraintLayout3, @NonNull LinearLayout linearLayout, @NonNull MaterialButton materialButton2, @NonNull VideoCallParticipantView videoCallParticipantView, @NonNull RecyclerView recyclerView, @NonNull MaterialButton materialButton3, @NonNull ConstraintLayout constraintLayout4, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull ImageView imageView, @NonNull RecyclerView recyclerView2, @NonNull StageCallVisitCommunityView stageCallVisitCommunityView, @NonNull ViewStub viewStub, @NonNull q4 q4Var, @NonNull ConstraintLayout constraintLayout5, @NonNull UserSummaryView userSummaryView, @NonNull MaterialTextView materialTextView, @NonNull CallEventsButtonView callEventsButtonView, @NonNull VoiceCallActiveEventView voiceCallActiveEventView, @NonNull Barrier barrier2, @NonNull VoiceControlsSheetView voiceControlsSheetView, @NonNull FragmentContainerView fragmentContainerView) {
-        this.a = constraintLayout;
-        this.f2245b = toolbar;
-        this.c = appBarLayout;
-        this.d = relativeLayout;
-        this.e = p4Var;
-        this.f = coordinatorLayout;
-        this.g = materialButton;
-        this.h = textView;
-        this.i = constraintLayout3;
-        this.j = linearLayout;
-        this.k = materialButton2;
-        this.l = videoCallParticipantView;
-        this.m = recyclerView;
-        this.n = materialButton3;
-        this.o = constraintLayout4;
-        this.p = recyclerView2;
-        this.q = stageCallVisitCommunityView;
-        this.r = viewStub;
-        this.f2246s = q4Var;
-        this.t = constraintLayout5;
-        this.u = userSummaryView;
-        this.v = materialTextView;
-        this.w = callEventsButtonView;
-        this.f2247x = voiceCallActiveEventView;
-        this.f2248y = voiceControlsSheetView;
+    public WidgetCallFullscreenBinding(@NonNull ConstraintLayout constraintLayout, @NonNull Toolbar toolbar, @NonNull AppBarLayout appBarLayout, @NonNull RelativeLayout relativeLayout, @NonNull WidgetCallFullscreenAudioShareWarningBinding widgetCallFullscreenAudioShareWarningBinding, @NonNull Barrier barrier, @NonNull ConstraintLayout constraintLayout2, @NonNull CoordinatorLayout coordinatorLayout, @NonNull MaterialButton materialButton, @NonNull TextView textView, @NonNull ConstraintLayout constraintLayout3, @NonNull LinearLayout linearLayout, @NonNull MaterialButton materialButton2, @NonNull VideoCallParticipantView videoCallParticipantView, @NonNull RecyclerView recyclerView, @NonNull MaterialButton materialButton3, @NonNull ConstraintLayout constraintLayout4, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull ImageView imageView, @NonNull RecyclerView recyclerView2, @NonNull StageCallVisitCommunityView stageCallVisitCommunityView, @NonNull ViewStub viewStub, @NonNull WidgetCallFullscreenPrivateCallBinding widgetCallFullscreenPrivateCallBinding, @NonNull ConstraintLayout constraintLayout5, @NonNull UserSummaryView userSummaryView, @NonNull MaterialTextView materialTextView, @NonNull CallEventsButtonView callEventsButtonView, @NonNull VoiceCallActiveEventView voiceCallActiveEventView, @NonNull Barrier barrier2, @NonNull VoiceControlsSheetView voiceControlsSheetView, @NonNull FragmentContainerView fragmentContainerView) {
+        this.f15758a = constraintLayout;
+        this.f15759b = toolbar;
+        this.f15760c = appBarLayout;
+        this.f15761d = relativeLayout;
+        this.f15762e = widgetCallFullscreenAudioShareWarningBinding;
+        this.f15763f = coordinatorLayout;
+        this.f15764g = materialButton;
+        this.f15765h = textView;
+        this.f15766i = constraintLayout3;
+        this.f15767j = linearLayout;
+        this.f15768k = materialButton2;
+        this.f15769l = videoCallParticipantView;
+        this.f15770m = recyclerView;
+        this.f15771n = materialButton3;
+        this.f15772o = constraintLayout4;
+        this.f15773p = recyclerView2;
+        this.f15774q = stageCallVisitCommunityView;
+        this.f15775r = viewStub;
+        this.f15776s = widgetCallFullscreenPrivateCallBinding;
+        this.f15777t = constraintLayout5;
+        this.f15778u = userSummaryView;
+        this.f15779v = materialTextView;
+        this.f15780w = callEventsButtonView;
+        this.f15781x = voiceCallActiveEventView;
+        this.f15782y = voiceControlsSheetView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15758a;
     }
 }

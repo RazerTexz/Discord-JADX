@@ -1,14 +1,14 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Registration;
 import com.esotericsoftware.kryo.Serializer;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.p502io.Input;
+import com.esotericsoftware.kryo.p502io.Output;
 import java.lang.reflect.Array;
 import java.lang.reflect.Modifier;
+import p007b.p106e.p107a.Log;
 
 /* loaded from: classes.dex */
 public class DefaultArraySerializers {
@@ -397,7 +397,7 @@ public class DefaultArraySerializers {
 
         @Override // com.esotericsoftware.kryo.Serializer
         public void setGenerics(Kryo kryo, Class[] clsArr) {
-            a.C0064a c0064a = a.a;
+            Log.a aVar = Log.f3007a;
             this.generics = clsArr;
         }
 

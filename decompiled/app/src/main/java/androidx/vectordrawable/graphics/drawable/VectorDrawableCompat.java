@@ -37,12 +37,12 @@ import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.graphics.PathParser;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
-import b.d.b.a.a;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class VectorDrawableCompat extends VectorDrawableCommon {
@@ -116,7 +116,7 @@ public class VectorDrawableCompat extends VectorDrawableCommon {
             return false;
         }
 
-        public /* synthetic */ VObject(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ VObject(C06791 c06791) {
             this();
         }
     }
@@ -364,16 +364,16 @@ public class VectorDrawableCompat extends VectorDrawableCommon {
     }
 
     private void printGroupTree(VGroup vGroup, int i) {
-        String strW = "";
+        String strM883w = "";
         for (int i2 = 0; i2 < i; i2++) {
-            strW = a.w(strW, "    ");
+            strM883w = outline.m883w(strM883w, "    ");
         }
-        StringBuilder sbX = a.X(strW, "current group is :");
-        sbX.append(vGroup.getGroupName());
-        sbX.append(" rotation is ");
-        sbX.append(vGroup.mRotate);
-        Log.v(LOGTAG, sbX.toString());
-        Log.v(LOGTAG, strW + "matrix is :" + vGroup.getLocalMatrix().toString());
+        StringBuilder sbM836X = outline.m836X(strM883w, "current group is :");
+        sbM836X.append(vGroup.getGroupName());
+        sbM836X.append(" rotation is ");
+        sbM836X.append(vGroup.mRotate);
+        Log.v(LOGTAG, sbM836X.toString());
+        Log.v(LOGTAG, strM883w + "matrix is :" + vGroup.getLocalMatrix().toString());
         for (int i3 = 0; i3 < vGroup.mChildren.size(); i3++) {
             VObject vObject = vGroup.mChildren.get(i3);
             if (vObject instanceof VGroup) {
@@ -893,30 +893,30 @@ public class VectorDrawableCompat extends VectorDrawableCommon {
         public String nodesToString(PathParser.PathDataNode[] pathDataNodeArr) {
             String string = " ";
             for (int i = 0; i < pathDataNodeArr.length; i++) {
-                StringBuilder sbU = a.U(string);
-                sbU.append(pathDataNodeArr[i].mType);
-                sbU.append(":");
-                string = sbU.toString();
+                StringBuilder sbM833U = outline.m833U(string);
+                sbM833U.append(pathDataNodeArr[i].mType);
+                sbM833U.append(":");
+                string = sbM833U.toString();
                 for (float f : pathDataNodeArr[i].mParams) {
-                    StringBuilder sbU2 = a.U(string);
-                    sbU2.append(f);
-                    sbU2.append(",");
-                    string = sbU2.toString();
+                    StringBuilder sbM833U2 = outline.m833U(string);
+                    sbM833U2.append(f);
+                    sbM833U2.append(",");
+                    string = sbM833U2.toString();
                 }
             }
             return string;
         }
 
         public void printVPath(int i) {
-            String strW = "";
+            String strM883w = "";
             for (int i2 = 0; i2 < i; i2++) {
-                strW = a.w(strW, "    ");
+                strM883w = outline.m883w(strM883w, "    ");
             }
-            StringBuilder sbX = a.X(strW, "current path is :");
-            sbX.append(this.mPathName);
-            sbX.append(" pathData is ");
-            sbX.append(nodesToString(this.mNodes));
-            Log.v(VectorDrawableCompat.LOGTAG, sbX.toString());
+            StringBuilder sbM836X = outline.m836X(strM883w, "current path is :");
+            sbM836X.append(this.mPathName);
+            sbM836X.append(" pathData is ");
+            sbM836X.append(nodesToString(this.mNodes));
+            Log.v(VectorDrawableCompat.LOGTAG, sbM836X.toString());
         }
 
         public void setPathData(PathParser.PathDataNode[] pathDataNodeArr) {

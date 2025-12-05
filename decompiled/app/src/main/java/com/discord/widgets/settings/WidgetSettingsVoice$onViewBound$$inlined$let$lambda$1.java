@@ -15,6 +15,6 @@ public final class WidgetSettingsVoice$onViewBound$$inlined$let$lambda$1 impleme
 
     @Override // java.lang.Runnable
     public final void run() {
-        WidgetSettingsVoice.access$getBinding$p(this.this$0).u.g(true, true);
+        WidgetSettingsVoice.access$getBinding$p(this.this$0).f18115u.m8529g(true, true);
     }
 }

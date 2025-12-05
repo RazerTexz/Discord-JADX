@@ -10,9 +10,7 @@ import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.core.app.NotificationCompat;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.user.User;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.databinding.WidgetChatListAdapterItemApplicationCommandBinding;
@@ -24,14 +22,17 @@ import com.discord.utilities.time.TimeUtils;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.MessageEntry;
-import d0.g0.t;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
 /* loaded from: classes2.dex */
@@ -39,64 +40,64 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
     private final WidgetChatListAdapterItemApplicationCommandBinding binding;
 
     /* compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<TextView, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$1 */
+    public static final class C80081 extends Lambda implements Function1<TextView, Unit> {
+        public static final C80081 INSTANCE = new C80081();
 
         /* compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class ViewOnLongClickListenerC03881 implements View.OnLongClickListener {
+        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 implements View.OnLongClickListener {
             public final /* synthetic */ TextView $this_copyTextOnLongPress;
 
-            public ViewOnLongClickListenerC03881(TextView textView) {
+            public AnonymousClass1(TextView textView) {
                 this.$this_copyTextOnLongPress = textView;
             }
 
             @Override // android.view.View.OnLongClickListener
             public final boolean onLongClick(View view) {
                 Context context = this.$this_copyTextOnLongPress.getContext();
-                m.checkNotNullExpressionValue(context, "context");
+                Intrinsics3.checkNotNullExpressionValue(context, "context");
                 CharSequence text = this.$this_copyTextOnLongPress.getText();
-                m.checkNotNullExpressionValue(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
-                b.a.d.m.c(context, text, 0, 4);
+                Intrinsics3.checkNotNullExpressionValue(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                AppToast.m165c(context, text, 0, 4);
                 return false;
             }
         }
 
-        public AnonymousClass1() {
+        public C80081() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(TextView textView) {
             invoke2(textView);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            m.checkNotNullParameter(textView, "$this$copyTextOnLongPress");
-            textView.setOnLongClickListener(new ViewOnLongClickListenerC03881(textView));
+            Intrinsics3.checkNotNullParameter(textView, "$this$copyTextOnLongPress");
+            textView.setOnLongClickListener(new AnonymousClass1(textView));
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$2 */
+    public static final class ViewOnClickListenerC80092 implements View.OnClickListener {
+        public ViewOnClickListenerC80092() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            TextView textView = WidgetChatListAdapterItemApplicationCommand.access$getBinding$p(WidgetChatListAdapterItemApplicationCommand.this).f2308b;
-            m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextCommand");
+            TextView textView = WidgetChatListAdapterItemApplicationCommand.access$getBinding$p(WidgetChatListAdapterItemApplicationCommand.this).f16139b;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextCommand");
             if (textView.getMaxLines() == 1) {
-                TextView textView2 = WidgetChatListAdapterItemApplicationCommand.access$getBinding$p(WidgetChatListAdapterItemApplicationCommand.this).f2308b;
-                m.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemTextCommand");
+                TextView textView2 = WidgetChatListAdapterItemApplicationCommand.access$getBinding$p(WidgetChatListAdapterItemApplicationCommand.this).f16139b;
+                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemTextCommand");
                 textView2.setMaxLines(Integer.MAX_VALUE);
             } else {
-                TextView textView3 = WidgetChatListAdapterItemApplicationCommand.access$getBinding$p(WidgetChatListAdapterItemApplicationCommand.this).f2308b;
-                m.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemTextCommand");
+                TextView textView3 = WidgetChatListAdapterItemApplicationCommand.access$getBinding$p(WidgetChatListAdapterItemApplicationCommand.this).f16139b;
+                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemTextCommand");
                 textView3.setMaxLines(1);
             }
         }
@@ -104,35 +105,35 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemApplicationCommand(WidgetChatListAdapter widgetChatListAdapter) {
-        super(R.layout.widget_chat_list_adapter_item_application_command, widgetChatListAdapter);
-        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        super(C5419R.layout.widget_chat_list_adapter_item_application_command, widgetChatListAdapter);
+        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
-        int i = R.id.chat_list_adapter_item_text_avatar;
-        ImageView imageView = (ImageView) view.findViewById(R.id.chat_list_adapter_item_text_avatar);
+        int i = C5419R.id.chat_list_adapter_item_text_avatar;
+        ImageView imageView = (ImageView) view.findViewById(C5419R.id.chat_list_adapter_item_text_avatar);
         if (imageView != null) {
-            i = R.id.chat_list_adapter_item_text_command;
-            TextView textView = (TextView) view.findViewById(R.id.chat_list_adapter_item_text_command);
+            i = C5419R.id.chat_list_adapter_item_text_command;
+            TextView textView = (TextView) view.findViewById(C5419R.id.chat_list_adapter_item_text_command);
             if (textView != null) {
-                i = R.id.chat_list_adapter_item_text_decorator;
-                CardView cardView = (CardView) view.findViewById(R.id.chat_list_adapter_item_text_decorator);
+                i = C5419R.id.chat_list_adapter_item_text_decorator;
+                CardView cardView = (CardView) view.findViewById(C5419R.id.chat_list_adapter_item_text_decorator);
                 if (cardView != null) {
-                    i = R.id.chat_list_adapter_item_text_decorator_reply_link_icon;
-                    FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.chat_list_adapter_item_text_decorator_reply_link_icon);
+                    i = C5419R.id.chat_list_adapter_item_text_decorator_reply_link_icon;
+                    FrameLayout frameLayout = (FrameLayout) view.findViewById(C5419R.id.chat_list_adapter_item_text_decorator_reply_link_icon);
                     if (frameLayout != null) {
-                        i = R.id.chat_list_adapter_item_text_header;
-                        ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(R.id.chat_list_adapter_item_text_header);
+                        i = C5419R.id.chat_list_adapter_item_text_header;
+                        ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(C5419R.id.chat_list_adapter_item_text_header);
                         if (constraintLayout != null) {
-                            i = R.id.chat_list_adapter_item_text_name;
-                            TextView textView2 = (TextView) view.findViewById(R.id.chat_list_adapter_item_text_name);
+                            i = C5419R.id.chat_list_adapter_item_text_name;
+                            TextView textView2 = (TextView) view.findViewById(C5419R.id.chat_list_adapter_item_text_name);
                             if (textView2 != null) {
-                                i = R.id.chat_list_adapter_item_text_timestamp;
-                                TextView textView3 = (TextView) view.findViewById(R.id.chat_list_adapter_item_text_timestamp);
+                                i = C5419R.id.chat_list_adapter_item_text_timestamp;
+                                TextView textView3 = (TextView) view.findViewById(C5419R.id.chat_list_adapter_item_text_timestamp);
                                 if (textView3 != null) {
-                                    i = R.id.uikit_chat_guideline;
-                                    Guideline guideline = (Guideline) view.findViewById(R.id.uikit_chat_guideline);
+                                    i = C5419R.id.uikit_chat_guideline;
+                                    Guideline guideline = (Guideline) view.findViewById(C5419R.id.uikit_chat_guideline);
                                     if (guideline != null) {
                                         WidgetChatListAdapterItemApplicationCommandBinding widgetChatListAdapterItemApplicationCommandBinding = new WidgetChatListAdapterItemApplicationCommandBinding((ConstraintLayout) view, imageView, textView, cardView, frameLayout, constraintLayout, textView2, textView3, guideline);
-                                        m.checkNotNullExpressionValue(widgetChatListAdapterItemApplicationCommandBinding, "WidgetChatListAdapterIte…andBinding.bind(itemView)");
+                                        Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemApplicationCommandBinding, "WidgetChatListAdapterIte…andBinding.bind(itemView)");
                                         this.binding = widgetChatListAdapterItemApplicationCommandBinding;
                                         return;
                                     }
@@ -156,8 +157,8 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
 
     private final int getAuthorTextColor(GuildMember member) {
         View view = this.itemView;
-        m.checkNotNullExpressionValue(view, "itemView");
-        return GuildMember.INSTANCE.getColor(member, ColorCompat.getThemedColor(view.getContext(), R.attr.colorHeaderPrimary));
+        Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+        return GuildMember.INSTANCE.getColor(member, ColorCompat.getThemedColor(view.getContext(), C5419R.attr.colorHeaderPrimary));
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
@@ -183,14 +184,14 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
         String strGroup2;
         String str;
         Integer type;
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         MessageEntry messageEntry = (MessageEntry) data;
         Message message = messageEntry.getMessage();
         GuildMember author = messageEntry.getAuthor();
         Map<Long, String> nickOrUsernames = messageEntry.getNickOrUsernames();
         int authorTextColor = getAuthorTextColor(author);
-        AnonymousClass1 anonymousClass1 = AnonymousClass1.INSTANCE;
+        C80081 c80081 = C80081.INSTANCE;
         Pattern patternCompile = Pattern.compile("^<(/[^:]+):([0-9]*)>(.*)");
         String content = message.getContent();
         String str2 = "";
@@ -212,31 +213,31 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
                 str = "";
             }
             View view = this.itemView;
-            m.checkNotNullExpressionValue(view, "itemView");
-            int themedColor = ColorCompat.getThemedColor(view, R.attr.color_brand_500);
-            TextView textView = this.binding.e;
-            m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextName");
-            CharSequence charSequenceD = b.d(textView, R.string.system_message_application_command_used_short_mobile, new Object[]{str, strGroup}, new WidgetChatListAdapterItemApplicationCommand$onConfigure$content$1(this, authorTextColor, message, themedColor));
-            TextView textView2 = this.binding.e;
-            m.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemTextName");
+            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            int themedColor = ColorCompat.getThemedColor(view, C5419R.attr.color_brand_500);
+            TextView textView = this.binding.f16142e;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextName");
+            CharSequence charSequenceM212d = FormatUtils.m212d(textView, C5419R.string.system_message_application_command_used_short_mobile, new Object[]{str, strGroup}, new WidgetChatListAdapterItemApplicationCommand2(this, authorTextColor, message, themedColor));
+            TextView textView2 = this.binding.f16142e;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemTextName");
             textView2.setMovementMethod(LinkMovementMethod.getInstance());
-            TextView textView3 = this.binding.e;
-            m.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemTextName");
-            textView3.setText(charSequenceD);
-            TextView textView4 = this.binding.f2308b;
-            m.checkNotNullExpressionValue(textView4, "binding.chatListAdapterItemTextCommand");
+            TextView textView3 = this.binding.f16142e;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemTextName");
+            textView3.setText(charSequenceM212d);
+            TextView textView4 = this.binding.f16139b;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.chatListAdapterItemTextCommand");
             textView4.setMaxLines(1);
-            this.binding.f2308b.setOnClickListener(new AnonymousClass2());
-            boolean z2 = !t.isBlank(strGroup2);
-            CardView cardView = this.binding.c;
-            m.checkNotNullExpressionValue(cardView, "binding.chatListAdapterItemTextDecorator");
+            this.binding.f16139b.setOnClickListener(new ViewOnClickListenerC80092());
+            boolean z2 = !StringsJVM.isBlank(strGroup2);
+            CardView cardView = this.binding.f16140c;
+            Intrinsics3.checkNotNullExpressionValue(cardView, "binding.chatListAdapterItemTextDecorator");
             cardView.setVisibility(!z2 ? 0 : 8);
-            FrameLayout frameLayout = this.binding.d;
-            m.checkNotNullExpressionValue(frameLayout, "binding.chatListAdapterI…extDecoratorReplyLinkIcon");
+            FrameLayout frameLayout = this.binding.f16141d;
+            Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.chatListAdapterI…extDecoratorReplyLinkIcon");
             frameLayout.setVisibility(z2 ? 0 : 8);
-            TextView textView5 = this.binding.f2308b;
-            m.checkNotNullExpressionValue(textView5, "binding.chatListAdapterItemTextCommand");
-            Context contextX = a.x(this.itemView, "itemView", "itemView.context");
+            TextView textView5 = this.binding.f16139b;
+            Intrinsics3.checkNotNullExpressionValue(textView5, "binding.chatListAdapterItemTextCommand");
+            Context contextM885x = outline.m885x(this.itemView, "itemView", "itemView.context");
             Object[] objArr = new Object[2];
             type = message.getType();
             if (type != null && type.intValue() == 20) {
@@ -244,15 +245,15 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
             }
             objArr[0] = str2;
             objArr[1] = strGroup2;
-            textView5.setText(b.h(contextX, R.string.command_display_string, objArr, null, 4));
-            TextView textView6 = this.binding.f2308b;
-            m.checkNotNullExpressionValue(textView6, "binding.chatListAdapterItemTextCommand");
-            anonymousClass1.invoke2(textView6);
-            TextView textView7 = this.binding.f;
-            m.checkNotNullExpressionValue(textView7, "binding.chatListAdapterItemTextTimestamp");
-            Context contextX2 = a.x(this.itemView, "itemView", "itemView.context");
+            textView5.setText(FormatUtils.m216h(contextM885x, C5419R.string.command_display_string, objArr, null, 4));
+            TextView textView6 = this.binding.f16139b;
+            Intrinsics3.checkNotNullExpressionValue(textView6, "binding.chatListAdapterItemTextCommand");
+            c80081.invoke2(textView6);
+            TextView textView7 = this.binding.f16143f;
+            Intrinsics3.checkNotNullExpressionValue(textView7, "binding.chatListAdapterItemTextTimestamp");
+            Context contextM885x2 = outline.m885x(this.itemView, "itemView", "itemView.context");
             UtcDateTime timestamp = message.getTimestamp();
-            textView7.setText(TimeUtils.toReadableTimeString$default(contextX2, timestamp == null ? timestamp.getDateTimeMillis() : 0L, null, 4, null));
+            textView7.setText(TimeUtils.toReadableTimeString$default(contextM885x2, timestamp == null ? timestamp.getDateTimeMillis() : 0L, null, 4, null));
         }
         strGroup = AutocompleteViewModel.COMMAND_DISCOVER_TOKEN;
         strGroup2 = "";
@@ -261,31 +262,31 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
         if (str == null) {
         }
         View view2 = this.itemView;
-        m.checkNotNullExpressionValue(view2, "itemView");
-        int themedColor2 = ColorCompat.getThemedColor(view2, R.attr.color_brand_500);
-        TextView textView8 = this.binding.e;
-        m.checkNotNullExpressionValue(textView8, "binding.chatListAdapterItemTextName");
-        CharSequence charSequenceD2 = b.d(textView8, R.string.system_message_application_command_used_short_mobile, new Object[]{str, strGroup}, new WidgetChatListAdapterItemApplicationCommand$onConfigure$content$1(this, authorTextColor, message, themedColor2));
-        TextView textView22 = this.binding.e;
-        m.checkNotNullExpressionValue(textView22, "binding.chatListAdapterItemTextName");
+        Intrinsics3.checkNotNullExpressionValue(view2, "itemView");
+        int themedColor2 = ColorCompat.getThemedColor(view2, C5419R.attr.color_brand_500);
+        TextView textView8 = this.binding.f16142e;
+        Intrinsics3.checkNotNullExpressionValue(textView8, "binding.chatListAdapterItemTextName");
+        CharSequence charSequenceM212d2 = FormatUtils.m212d(textView8, C5419R.string.system_message_application_command_used_short_mobile, new Object[]{str, strGroup}, new WidgetChatListAdapterItemApplicationCommand2(this, authorTextColor, message, themedColor2));
+        TextView textView22 = this.binding.f16142e;
+        Intrinsics3.checkNotNullExpressionValue(textView22, "binding.chatListAdapterItemTextName");
         textView22.setMovementMethod(LinkMovementMethod.getInstance());
-        TextView textView32 = this.binding.e;
-        m.checkNotNullExpressionValue(textView32, "binding.chatListAdapterItemTextName");
-        textView32.setText(charSequenceD2);
-        TextView textView42 = this.binding.f2308b;
-        m.checkNotNullExpressionValue(textView42, "binding.chatListAdapterItemTextCommand");
+        TextView textView32 = this.binding.f16142e;
+        Intrinsics3.checkNotNullExpressionValue(textView32, "binding.chatListAdapterItemTextName");
+        textView32.setText(charSequenceM212d2);
+        TextView textView42 = this.binding.f16139b;
+        Intrinsics3.checkNotNullExpressionValue(textView42, "binding.chatListAdapterItemTextCommand");
         textView42.setMaxLines(1);
-        this.binding.f2308b.setOnClickListener(new AnonymousClass2());
-        boolean z22 = !t.isBlank(strGroup2);
-        CardView cardView2 = this.binding.c;
-        m.checkNotNullExpressionValue(cardView2, "binding.chatListAdapterItemTextDecorator");
+        this.binding.f16139b.setOnClickListener(new ViewOnClickListenerC80092());
+        boolean z22 = !StringsJVM.isBlank(strGroup2);
+        CardView cardView2 = this.binding.f16140c;
+        Intrinsics3.checkNotNullExpressionValue(cardView2, "binding.chatListAdapterItemTextDecorator");
         cardView2.setVisibility(!z22 ? 0 : 8);
-        FrameLayout frameLayout2 = this.binding.d;
-        m.checkNotNullExpressionValue(frameLayout2, "binding.chatListAdapterI…extDecoratorReplyLinkIcon");
+        FrameLayout frameLayout2 = this.binding.f16141d;
+        Intrinsics3.checkNotNullExpressionValue(frameLayout2, "binding.chatListAdapterI…extDecoratorReplyLinkIcon");
         frameLayout2.setVisibility(z22 ? 0 : 8);
-        TextView textView52 = this.binding.f2308b;
-        m.checkNotNullExpressionValue(textView52, "binding.chatListAdapterItemTextCommand");
-        Context contextX3 = a.x(this.itemView, "itemView", "itemView.context");
+        TextView textView52 = this.binding.f16139b;
+        Intrinsics3.checkNotNullExpressionValue(textView52, "binding.chatListAdapterItemTextCommand");
+        Context contextM885x3 = outline.m885x(this.itemView, "itemView", "itemView.context");
         Object[] objArr2 = new Object[2];
         type = message.getType();
         if (type != null) {
@@ -293,14 +294,14 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
         }
         objArr2[0] = str2;
         objArr2[1] = strGroup2;
-        textView52.setText(b.h(contextX3, R.string.command_display_string, objArr2, null, 4));
-        TextView textView62 = this.binding.f2308b;
-        m.checkNotNullExpressionValue(textView62, "binding.chatListAdapterItemTextCommand");
-        anonymousClass1.invoke2(textView62);
-        TextView textView72 = this.binding.f;
-        m.checkNotNullExpressionValue(textView72, "binding.chatListAdapterItemTextTimestamp");
-        Context contextX22 = a.x(this.itemView, "itemView", "itemView.context");
+        textView52.setText(FormatUtils.m216h(contextM885x3, C5419R.string.command_display_string, objArr2, null, 4));
+        TextView textView62 = this.binding.f16139b;
+        Intrinsics3.checkNotNullExpressionValue(textView62, "binding.chatListAdapterItemTextCommand");
+        c80081.invoke2(textView62);
+        TextView textView72 = this.binding.f16143f;
+        Intrinsics3.checkNotNullExpressionValue(textView72, "binding.chatListAdapterItemTextTimestamp");
+        Context contextM885x22 = outline.m885x(this.itemView, "itemView", "itemView.context");
         UtcDateTime timestamp2 = message.getTimestamp();
-        textView72.setText(TimeUtils.toReadableTimeString$default(contextX22, timestamp2 == null ? timestamp2.getDateTimeMillis() : 0L, null, 4, null));
+        textView72.setText(TimeUtils.toReadableTimeString$default(contextM885x22, timestamp2 == null ? timestamp2.getDateTimeMillis() : 0L, null, 4, null));
     }
 }

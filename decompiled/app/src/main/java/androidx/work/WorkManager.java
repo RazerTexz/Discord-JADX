@@ -7,10 +7,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.view.LiveData;
 import androidx.work.impl.WorkManagerImpl;
-import b.i.b.d.a.a;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @SuppressLint({"AddedAbstractMethod"})
 /* loaded from: classes.dex */
@@ -84,28 +84,28 @@ public abstract class WorkManager {
     public abstract Operation enqueueUniqueWork(@NonNull String str, @NonNull ExistingWorkPolicy existingWorkPolicy, @NonNull List<OneTimeWorkRequest> list);
 
     @NonNull
-    public abstract a<Long> getLastCancelAllTimeMillis();
+    public abstract ListenableFuture8<Long> getLastCancelAllTimeMillis();
 
     @NonNull
     public abstract LiveData<Long> getLastCancelAllTimeMillisLiveData();
 
     @NonNull
-    public abstract a<WorkInfo> getWorkInfoById(@NonNull UUID uuid);
+    public abstract ListenableFuture8<WorkInfo> getWorkInfoById(@NonNull UUID uuid);
 
     @NonNull
     public abstract LiveData<WorkInfo> getWorkInfoByIdLiveData(@NonNull UUID uuid);
 
     @NonNull
-    public abstract a<List<WorkInfo>> getWorkInfos(@NonNull WorkQuery workQuery);
+    public abstract ListenableFuture8<List<WorkInfo>> getWorkInfos(@NonNull WorkQuery workQuery);
 
     @NonNull
-    public abstract a<List<WorkInfo>> getWorkInfosByTag(@NonNull String str);
+    public abstract ListenableFuture8<List<WorkInfo>> getWorkInfosByTag(@NonNull String str);
 
     @NonNull
     public abstract LiveData<List<WorkInfo>> getWorkInfosByTagLiveData(@NonNull String str);
 
     @NonNull
-    public abstract a<List<WorkInfo>> getWorkInfosForUniqueWork(@NonNull String str);
+    public abstract ListenableFuture8<List<WorkInfo>> getWorkInfosForUniqueWork(@NonNull String str);
 
     @NonNull
     public abstract LiveData<List<WorkInfo>> getWorkInfosForUniqueWorkLiveData(@NonNull String str);

@@ -1,6 +1,5 @@
 package com.discord.widgets.chat.list.adapter;
 
-import a0.a.a.b;
 import android.content.Context;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -8,10 +7,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.view.ViewGroupKt;
+import androidx.core.view.ViewGroup;
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.application.Application;
 import com.discord.api.user.User;
 import com.discord.databinding.WidgetChatListAdapterItemGiftBinding;
@@ -27,12 +25,12 @@ import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.drawable.DrawableCompat;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.fresco.GrayscalePostprocessor;
-import com.discord.utilities.gifting.GiftStyleKt;
+import com.discord.utilities.gifting.GiftStyle3;
 import com.discord.utilities.gifting.GiftingUtils;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.premium.PremiumUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.view.extensions.ViewExtensions;
@@ -42,17 +40,21 @@ import com.discord.widgets.settings.premium.WidgetSettingsPremium;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.google.android.material.button.MaterialButton;
-import d0.g0.t;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.l.e.k;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Subscription;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
+import p658rx.Subscription;
 
 /* compiled from: WidgetChatListAdapterItemGift.kt */
 /* loaded from: classes2.dex */
@@ -75,7 +77,7 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
         }
 
         private final String getDiscordStoreURL(long skuId) {
-            return a.t("https://discord.com/store/skus/", skuId);
+            return outline.m877t("https://discord.com/store/skus/", skuId);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -129,7 +131,7 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
                     return false;
                 }
                 Invalid invalid = (Invalid) other;
-                return m.areEqual(this.gifterUserId, invalid.gifterUserId) && this.meId == invalid.meId;
+                return Intrinsics3.areEqual(this.gifterUserId, invalid.gifterUserId) && this.meId == invalid.meId;
             }
 
             public final Long getGifterUserId() {
@@ -142,14 +144,14 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
 
             public int hashCode() {
                 Long l = this.gifterUserId;
-                return b.a(this.meId) + ((l != null ? l.hashCode() : 0) * 31);
+                return C0002b.m3a(this.meId) + ((l != null ? l.hashCode() : 0) * 31);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Invalid(gifterUserId=");
-                sbU.append(this.gifterUserId);
-                sbU.append(", meId=");
-                return a.C(sbU, this.meId, ")");
+                StringBuilder sbM833U = outline.m833U("Invalid(gifterUserId=");
+                sbM833U.append(this.gifterUserId);
+                sbM833U.append(", meId=");
+                return outline.m815C(sbM833U, this.meId, ")");
             }
         }
 
@@ -172,8 +174,8 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Resolved(ModelGift modelGift, MeUser meUser, boolean z2, boolean z3) {
                 super(null);
-                m.checkNotNullParameter(modelGift, "gift");
-                m.checkNotNullParameter(meUser, "meUser");
+                Intrinsics3.checkNotNullParameter(modelGift, "gift");
+                Intrinsics3.checkNotNullParameter(meUser, "meUser");
                 this.gift = modelGift;
                 this.meUser = meUser;
                 this.inLibrary = z2;
@@ -217,8 +219,8 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
             }
 
             public final Resolved copy(ModelGift gift, MeUser meUser, boolean inLibrary, boolean redeeming) {
-                m.checkNotNullParameter(gift, "gift");
-                m.checkNotNullParameter(meUser, "meUser");
+                Intrinsics3.checkNotNullParameter(gift, "gift");
+                Intrinsics3.checkNotNullParameter(meUser, "meUser");
                 return new Resolved(gift, meUser, inLibrary, redeeming);
             }
 
@@ -230,7 +232,7 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
                     return false;
                 }
                 Resolved resolved = (Resolved) other;
-                return m.areEqual(this.gift, resolved.gift) && m.areEqual(this.meUser, resolved.meUser) && this.inLibrary == resolved.inLibrary && this.redeeming == resolved.redeeming;
+                return Intrinsics3.areEqual(this.gift, resolved.gift) && Intrinsics3.areEqual(this.meUser, resolved.meUser) && this.inLibrary == resolved.inLibrary && this.redeeming == resolved.redeeming;
             }
 
             public final ModelGift getGift() {
@@ -266,14 +268,14 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Resolved(gift=");
-                sbU.append(this.gift);
-                sbU.append(", meUser=");
-                sbU.append(this.meUser);
-                sbU.append(", inLibrary=");
-                sbU.append(this.inLibrary);
-                sbU.append(", redeeming=");
-                return a.O(sbU, this.redeeming, ")");
+                StringBuilder sbM833U = outline.m833U("Resolved(gift=");
+                sbM833U.append(this.gift);
+                sbM833U.append(", meUser=");
+                sbM833U.append(this.meUser);
+                sbM833U.append(", inLibrary=");
+                sbM833U.append(this.inLibrary);
+                sbM833U.append(", redeeming=");
+                return outline.m827O(sbM833U, this.redeeming, ")");
             }
         }
 
@@ -301,16 +303,16 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
         }
 
         private final Observable<Model> getInvalidGift(GiftEntry item) {
-            Observable<Model> observableJ = Observable.j(new k(Long.valueOf(item.getUserId())), StoreStream.INSTANCE.getUsers().observeMeId(), WidgetChatListAdapterItemGift$ModelProvider$getInvalidGift$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…lid(authorUserId, meId) }");
-            return observableJ;
+            Observable<Model> observableM11076j = Observable.m11076j(new ScalarSynchronousObservable(Long.valueOf(item.getUserId())), StoreStream.INSTANCE.getUsers().observeMeId(), WidgetChatListAdapterItemGift3.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable.combineLatest…lid(authorUserId, meId) }");
+            return observableM11076j;
         }
 
         private final Observable<Model> getResolvedGiftModel(ModelGift gift, boolean redeeming) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable<Model> observableJ = Observable.j(StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getLibrary().observeApplications(), new WidgetChatListAdapterItemGift$ModelProvider$getResolvedGiftModel$1(gift, redeeming));
-            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest… me.id)\n        }\n      }");
-            return observableJ;
+            Observable<Model> observableM11076j = Observable.m11076j(StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getLibrary().observeApplications(), new WidgetChatListAdapterItemGift4(gift, redeeming));
+            Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable.combineLatest… me.id)\n        }\n      }");
+            return observableM11076j;
         }
 
         public static /* synthetic */ Observable getResolvedGiftModel$default(ModelProvider modelProvider, ModelGift modelGift, boolean z2, int i, Object obj) {
@@ -321,57 +323,57 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
         }
 
         public final Observable<Model> get(GiftEntry item) {
-            m.checkNotNullParameter(item, "item");
-            Observable observableY = StoreStream.INSTANCE.getGifting().requestGift(item.getGiftCode()).Y(new WidgetChatListAdapterItemGift$ModelProvider$get$1(item));
-            m.checkNotNullExpressionValue(observableY, "StoreStream\n            …          }\n            }");
-            return observableY;
+            Intrinsics3.checkNotNullParameter(item, "item");
+            Observable observableM11099Y = StoreStream.INSTANCE.getGifting().requestGift(item.getGiftCode()).m11099Y(new WidgetChatListAdapterItemGift2(item));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "StoreStream\n            …          }\n            }");
+            return observableM11099Y;
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGift.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$configureResolvedUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ImageRequestBuilder, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$configureResolvedUI$1 */
+    public static final class C80671 extends Lambda implements Function1<ImageRequestBuilder, Unit> {
+        public static final C80671 INSTANCE = new C80671();
 
-        public AnonymousClass1() {
+        public C80671() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ImageRequestBuilder imageRequestBuilder) {
             invoke2(imageRequestBuilder);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ImageRequestBuilder imageRequestBuilder) {
-            m.checkNotNullParameter(imageRequestBuilder, "it");
-            imageRequestBuilder.l = WidgetChatListAdapterItemGift.access$getSPLASH_IMAGE_POSTPROCESSOR$cp();
+            Intrinsics3.checkNotNullParameter(imageRequestBuilder, "it");
+            imageRequestBuilder.f19623l = WidgetChatListAdapterItemGift.access$getSPLASH_IMAGE_POSTPROCESSOR$cp();
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGift.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$configureResolvedUI$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$configureResolvedUI$3 */
+    public static final class ViewOnClickListenerC80683 implements View.OnClickListener {
+        public static final ViewOnClickListenerC80683 INSTANCE = new ViewOnClickListenerC80683();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             WidgetSettingsPremium.Companion.launch$default(companion, context, null, null, 6, null);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGift.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$configureResolvedUI$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$configureResolvedUI$4 */
+    public static final class ViewOnClickListenerC80694 implements View.OnClickListener {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ Model.Resolved $model;
 
-        public AnonymousClass4(Context context, Model.Resolved resolved) {
+        public ViewOnClickListenerC80694(Context context, Model.Resolved resolved) {
             this.$context = context;
             this.$model = resolved;
         }
@@ -380,121 +382,121 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
         public final void onClick(View view) {
             UriHandler uriHandler = UriHandler.INSTANCE;
             Context context = this.$context;
-            m.checkNotNullExpressionValue(context, "context");
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
             UriHandler.handle$default(uriHandler, context, Companion.access$getDiscordStoreURL(WidgetChatListAdapterItemGift.INSTANCE, this.$model.getGift().getSkuId()), false, false, null, 28, null);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGift.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$onConfigure$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends d0.z.d.k implements Function1<Model, Unit> {
-        public AnonymousClass1(WidgetChatListAdapterItemGift widgetChatListAdapterItemGift) {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$onConfigure$1 */
+    public static final /* synthetic */ class C80711 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+        public C80711(WidgetChatListAdapterItemGift widgetChatListAdapterItemGift) {
             super(1, widgetChatListAdapterItemGift, WidgetChatListAdapterItemGift.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemGift$Model;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
-            m.checkNotNullParameter(model, "p1");
+            Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetChatListAdapterItemGift.access$configureUI((WidgetChatListAdapterItemGift) this.receiver, model);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGift.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$onConfigure$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$onConfigure$2 */
+    public static final class C80722 extends Lambda implements Function1<Error, Unit> {
+        public C80722() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             WidgetChatListAdapterItemGift.access$configureInvalidUI(WidgetChatListAdapterItemGift.this, null);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemGift.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$onConfigure$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Subscription, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$onConfigure$3 */
+    public static final class C80733 extends Lambda implements Function1<Subscription, Unit> {
+        public C80733() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            m.checkNotNullParameter(subscription, "it");
+            Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetChatListAdapterItemGift.access$setSubscription$p(WidgetChatListAdapterItemGift.this, subscription);
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemGift(WidgetChatListAdapter widgetChatListAdapter) {
-        super(R.layout.widget_chat_list_adapter_item_gift, widgetChatListAdapter);
-        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        super(C5419R.layout.widget_chat_list_adapter_item_gift, widgetChatListAdapter);
+        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
-        int i = R.id.barrier;
-        Barrier barrier = (Barrier) view.findViewById(R.id.barrier);
+        int i = C5419R.id.barrier;
+        Barrier barrier = (Barrier) view.findViewById(C5419R.id.barrier);
         if (barrier != null) {
-            i = R.id.buttonsContainer;
-            FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.buttonsContainer);
+            i = C5419R.id.buttonsContainer;
+            FrameLayout frameLayout = (FrameLayout) view.findViewById(C5419R.id.buttonsContainer);
             if (frameLayout != null) {
-                i = R.id.item_gift_accept_button;
-                MaterialButton materialButton = (MaterialButton) view.findViewById(R.id.item_gift_accept_button);
+                i = C5419R.id.item_gift_accept_button;
+                MaterialButton materialButton = (MaterialButton) view.findViewById(C5419R.id.item_gift_accept_button);
                 if (materialButton != null) {
-                    i = R.id.item_gift_cannot_claim_button;
-                    MaterialButton materialButton2 = (MaterialButton) view.findViewById(R.id.item_gift_cannot_claim_button);
+                    i = C5419R.id.item_gift_cannot_claim_button;
+                    MaterialButton materialButton2 = (MaterialButton) view.findViewById(C5419R.id.item_gift_cannot_claim_button);
                     if (materialButton2 != null) {
-                        i = R.id.item_gift_details;
-                        LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.item_gift_details);
+                        i = C5419R.id.item_gift_details;
+                        LinearLayout linearLayout = (LinearLayout) view.findViewById(C5419R.id.item_gift_details);
                         if (linearLayout != null) {
-                            i = R.id.item_gift_expires;
-                            TextView textView = (TextView) view.findViewById(R.id.item_gift_expires);
+                            i = C5419R.id.item_gift_expires;
+                            TextView textView = (TextView) view.findViewById(C5419R.id.item_gift_expires);
                             if (textView != null) {
-                                i = R.id.item_gift_header;
-                                TextView textView2 = (TextView) view.findViewById(R.id.item_gift_header);
+                                i = C5419R.id.item_gift_header;
+                                TextView textView2 = (TextView) view.findViewById(C5419R.id.item_gift_header);
                                 if (textView2 != null) {
-                                    i = R.id.item_gift_image;
-                                    SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.item_gift_image);
+                                    i = C5419R.id.item_gift_image;
+                                    SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.item_gift_image);
                                     if (simpleDraweeView != null) {
-                                        i = R.id.item_gift_image_background;
-                                        SimpleDraweeView simpleDraweeView2 = (SimpleDraweeView) view.findViewById(R.id.item_gift_image_background);
+                                        i = C5419R.id.item_gift_image_background;
+                                        SimpleDraweeView simpleDraweeView2 = (SimpleDraweeView) view.findViewById(C5419R.id.item_gift_image_background);
                                         if (simpleDraweeView2 != null) {
-                                            i = R.id.item_gift_loading_button_placeholder;
-                                            View viewFindViewById = view.findViewById(R.id.item_gift_loading_button_placeholder);
+                                            i = C5419R.id.item_gift_loading_button_placeholder;
+                                            View viewFindViewById = view.findViewById(C5419R.id.item_gift_loading_button_placeholder);
                                             if (viewFindViewById != null) {
-                                                i = R.id.item_gift_name;
-                                                TextView textView3 = (TextView) view.findViewById(R.id.item_gift_name);
+                                                i = C5419R.id.item_gift_name;
+                                                TextView textView3 = (TextView) view.findViewById(C5419R.id.item_gift_name);
                                                 if (textView3 != null) {
-                                                    i = R.id.item_gift_open_button;
-                                                    MaterialButton materialButton3 = (MaterialButton) view.findViewById(R.id.item_gift_open_button);
+                                                    i = C5419R.id.item_gift_open_button;
+                                                    MaterialButton materialButton3 = (MaterialButton) view.findViewById(C5419R.id.item_gift_open_button);
                                                     if (materialButton3 != null) {
-                                                        i = R.id.item_gift_subtext;
-                                                        TextView textView4 = (TextView) view.findViewById(R.id.item_gift_subtext);
+                                                        i = C5419R.id.item_gift_subtext;
+                                                        TextView textView4 = (TextView) view.findViewById(C5419R.id.item_gift_subtext);
                                                         if (textView4 != null) {
-                                                            i = R.id.item_gift_verify_button;
-                                                            MaterialButton materialButton4 = (MaterialButton) view.findViewById(R.id.item_gift_verify_button);
+                                                            i = C5419R.id.item_gift_verify_button;
+                                                            MaterialButton materialButton4 = (MaterialButton) view.findViewById(C5419R.id.item_gift_verify_button);
                                                             if (materialButton4 != null) {
                                                                 ConstraintLayout constraintLayout = (ConstraintLayout) view;
                                                                 WidgetChatListAdapterItemGiftBinding widgetChatListAdapterItemGiftBinding = new WidgetChatListAdapterItemGiftBinding(constraintLayout, barrier, frameLayout, materialButton, materialButton2, linearLayout, textView, textView2, simpleDraweeView, simpleDraweeView2, viewFindViewById, textView3, materialButton3, textView4, materialButton4, constraintLayout);
-                                                                m.checkNotNullExpressionValue(widgetChatListAdapterItemGiftBinding, "WidgetChatListAdapterIte…iftBinding.bind(itemView)");
+                                                                Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemGiftBinding, "WidgetChatListAdapterIte…iftBinding.bind(itemView)");
                                                                 this.binding = widgetChatListAdapterItemGiftBinding;
                                                                 return;
                                                             }
@@ -525,7 +527,7 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
     public static final /* synthetic */ GiftEntry access$getItem$p(WidgetChatListAdapterItemGift widgetChatListAdapterItemGift) {
         GiftEntry giftEntry = widgetChatListAdapterItemGift.item;
         if (giftEntry == null) {
-            m.throwUninitializedPropertyAccessException("item");
+            Intrinsics3.throwUninitializedPropertyAccessException("item");
         }
         return giftEntry;
     }
@@ -548,70 +550,70 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
 
     private final void configureInvalidUI(Model.Invalid model) {
         View view = this.itemView;
-        m.checkNotNullExpressionValue(view, "itemView");
+        Intrinsics3.checkNotNullExpressionValue(view, "itemView");
         Context context = view.getContext();
-        boolean zAreEqual = m.areEqual(model != null ? model.getGifterUserId() : null, model != null ? Long.valueOf(model.getMeId()) : null);
-        SimpleDraweeView simpleDraweeView = this.binding.h;
-        m.checkNotNullExpressionValue(simpleDraweeView, "binding.itemGiftImageBackground");
+        boolean zAreEqual = Intrinsics3.areEqual(model != null ? model.getGifterUserId() : null, model != null ? Long.valueOf(model.getMeId()) : null);
+        SimpleDraweeView simpleDraweeView = this.binding.f16216h;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.itemGiftImageBackground");
         simpleDraweeView.setVisibility(4);
-        TextView textView = this.binding.f;
-        m.checkNotNullExpressionValue(textView, "binding.itemGiftHeader");
-        b.a.k.b.o(textView, zAreEqual ? context.getString(R.string.gift_embed_invalid_title_self) : context.getString(R.string.gift_embed_invalid_title_other), new Object[0], null, 4);
-        TextView textView2 = this.binding.j;
-        m.checkNotNullExpressionValue(textView2, "binding.itemGiftName");
-        b.a.k.b.n(textView2, R.string.gift_embed_invalid, new Object[0], null, 4);
-        this.binding.j.setTextColor(ColorCompat.getColor(context, R.color.status_red_500));
-        this.binding.j.setBackgroundResource(0);
-        m.checkNotNullExpressionValue(context, "context");
-        this.binding.g.setImageResource(DrawableCompat.getThemedDrawableRes(context, R.attr.img_poop, R.drawable.img_poop_dark));
-        TextView textView3 = this.binding.l;
-        m.checkNotNullExpressionValue(textView3, "binding.itemGiftSubtext");
+        TextView textView = this.binding.f16214f;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemGiftHeader");
+        FormatUtils.m223o(textView, zAreEqual ? context.getString(C5419R.string.gift_embed_invalid_title_self) : context.getString(C5419R.string.gift_embed_invalid_title_other), new Object[0], null, 4);
+        TextView textView2 = this.binding.f16218j;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.itemGiftName");
+        FormatUtils.m222n(textView2, C5419R.string.gift_embed_invalid, new Object[0], null, 4);
+        this.binding.f16218j.setTextColor(ColorCompat.getColor(context, C5419R.color.status_red_500));
+        this.binding.f16218j.setBackgroundResource(0);
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        this.binding.f16215g.setImageResource(DrawableCompat.getThemedDrawableRes(context, C5419R.attr.img_poop, C5419R.drawable.img_poop_dark));
+        TextView textView3 = this.binding.f16220l;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.itemGiftSubtext");
         textView3.setVisibility(8);
-        TextView textView4 = this.binding.e;
-        m.checkNotNullExpressionValue(textView4, "binding.itemGiftExpires");
+        TextView textView4 = this.binding.f16213e;
+        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.itemGiftExpires");
         textView4.setVisibility(8);
-        MaterialButton materialButton = this.binding.c;
-        m.checkNotNullExpressionValue(materialButton, "binding.itemGiftAcceptButton");
+        MaterialButton materialButton = this.binding.f16211c;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.itemGiftAcceptButton");
         materialButton.setVisibility(8);
-        MaterialButton materialButton2 = this.binding.d;
-        m.checkNotNullExpressionValue(materialButton2, "binding.itemGiftCannotClaimButton");
+        MaterialButton materialButton2 = this.binding.f16212d;
+        Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.itemGiftCannotClaimButton");
         materialButton2.setVisibility(8);
-        View view2 = this.binding.i;
-        m.checkNotNullExpressionValue(view2, "binding.itemGiftLoadingButtonPlaceholder");
+        View view2 = this.binding.f16217i;
+        Intrinsics3.checkNotNullExpressionValue(view2, "binding.itemGiftLoadingButtonPlaceholder");
         view2.setVisibility(8);
         this.itemView.setOnClickListener(null);
     }
 
     private final void configureLoadingUI() {
         View view = this.itemView;
-        m.checkNotNullExpressionValue(view, "itemView");
+        Intrinsics3.checkNotNullExpressionValue(view, "itemView");
         Context context = view.getContext();
-        TextView textView = this.binding.f;
-        m.checkNotNullExpressionValue(textView, "binding.itemGiftHeader");
-        b.a.k.b.n(textView, R.string.gift_embed_resolving, new Object[0], null, 4);
-        TextView textView2 = this.binding.j;
-        m.checkNotNullExpressionValue(textView2, "binding.itemGiftName");
+        TextView textView = this.binding.f16214f;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemGiftHeader");
+        FormatUtils.m222n(textView, C5419R.string.gift_embed_resolving, new Object[0], null, 4);
+        TextView textView2 = this.binding.f16218j;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.itemGiftName");
         textView2.setText((CharSequence) null);
-        this.binding.j.setTextColor(ColorCompat.getThemedColor(context, R.attr.primary_100));
-        this.binding.j.setBackgroundResource(R.drawable.drawable_empty_text_placeholder_dark);
-        this.binding.g.setActualImageResource(R.drawable.drawable_empty_text_placeholder_dark);
-        SimpleDraweeView simpleDraweeView = this.binding.h;
-        m.checkNotNullExpressionValue(simpleDraweeView, "binding.itemGiftImageBackground");
+        this.binding.f16218j.setTextColor(ColorCompat.getThemedColor(context, C5419R.attr.primary_100));
+        this.binding.f16218j.setBackgroundResource(C5419R.drawable.drawable_empty_text_placeholder_dark);
+        this.binding.f16215g.setActualImageResource(C5419R.drawable.drawable_empty_text_placeholder_dark);
+        SimpleDraweeView simpleDraweeView = this.binding.f16216h;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.itemGiftImageBackground");
         simpleDraweeView.setVisibility(4);
-        TextView textView3 = this.binding.l;
-        m.checkNotNullExpressionValue(textView3, "binding.itemGiftSubtext");
+        TextView textView3 = this.binding.f16220l;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.itemGiftSubtext");
         textView3.setVisibility(8);
-        TextView textView4 = this.binding.e;
-        m.checkNotNullExpressionValue(textView4, "binding.itemGiftExpires");
+        TextView textView4 = this.binding.f16213e;
+        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.itemGiftExpires");
         textView4.setVisibility(8);
-        MaterialButton materialButton = this.binding.c;
-        m.checkNotNullExpressionValue(materialButton, "binding.itemGiftAcceptButton");
+        MaterialButton materialButton = this.binding.f16211c;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.itemGiftAcceptButton");
         materialButton.setVisibility(8);
-        MaterialButton materialButton2 = this.binding.d;
-        m.checkNotNullExpressionValue(materialButton2, "binding.itemGiftCannotClaimButton");
+        MaterialButton materialButton2 = this.binding.f16212d;
+        Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.itemGiftCannotClaimButton");
         materialButton2.setVisibility(8);
-        View view2 = this.binding.i;
-        m.checkNotNullExpressionValue(view2, "binding.itemGiftLoadingButtonPlaceholder");
+        View view2 = this.binding.f16217i;
+        Intrinsics3.checkNotNullExpressionValue(view2, "binding.itemGiftLoadingButtonPlaceholder");
         view2.setVisibility(0);
         this.itemView.setOnClickListener(null);
     }
@@ -629,7 +631,7 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
         Application application2;
         ModelSku sku5;
         View view = this.itemView;
-        m.checkNotNullExpressionValue(view, "itemView");
+        Intrinsics3.checkNotNullExpressionValue(view, "itemView");
         Context context = view.getContext();
         User user = model.getGift().getUser();
         boolean z2 = user != null && user.getId() == model.getMeUser().getId();
@@ -642,51 +644,51 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
         ModelStoreListing storeListing2 = model.getGift().getStoreListing();
         String splash = (storeListing2 == null || (sku4 = storeListing2.getSku()) == null || (application2 = sku4.getApplication()) == null) ? null : application2.getSplash();
         View view2 = this.itemView;
-        m.checkNotNullExpressionValue(view2, "itemView");
+        Intrinsics3.checkNotNullExpressionValue(view2, "itemView");
         String giftSplashUrl = iconUtils.getGiftSplashUrl(applicationId, splash, Integer.valueOf(view2.getWidth()));
         if (model.getGift().isAnyNitroGift()) {
-            SimpleDraweeView simpleDraweeView = this.binding.h;
+            SimpleDraweeView simpleDraweeView = this.binding.f16216h;
             PremiumUtils premiumUtils = PremiumUtils.INSTANCE;
             ModelGift gift = model.getGift();
-            m.checkNotNullExpressionValue(context, "context");
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
             simpleDraweeView.setActualImageResource(premiumUtils.getNitroGiftBackground(gift, context));
-            SimpleDraweeView simpleDraweeView2 = this.binding.h;
-            m.checkNotNullExpressionValue(simpleDraweeView2, "binding.itemGiftImageBackground");
+            SimpleDraweeView simpleDraweeView2 = this.binding.f16216h;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.itemGiftImageBackground");
             simpleDraweeView2.setVisibility(0);
         } else if (giftSplashUrl != null) {
-            SimpleDraweeView simpleDraweeView3 = this.binding.h;
-            m.checkNotNullExpressionValue(simpleDraweeView3, "binding.itemGiftImageBackground");
-            MGImages.setImage$default(simpleDraweeView3, giftSplashUrl, 0, 0, false, AnonymousClass1.INSTANCE, null, 92, null);
-            SimpleDraweeView simpleDraweeView4 = this.binding.h;
-            m.checkNotNullExpressionValue(simpleDraweeView4, "binding.itemGiftImageBackground");
+            SimpleDraweeView simpleDraweeView3 = this.binding.f16216h;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "binding.itemGiftImageBackground");
+            MGImages.setImage$default(simpleDraweeView3, giftSplashUrl, 0, 0, false, C80671.INSTANCE, null, 92, null);
+            SimpleDraweeView simpleDraweeView4 = this.binding.f16216h;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView4, "binding.itemGiftImageBackground");
             simpleDraweeView4.setVisibility(0);
         } else {
-            SimpleDraweeView simpleDraweeView5 = this.binding.h;
-            m.checkNotNullExpressionValue(simpleDraweeView5, "binding.itemGiftImageBackground");
+            SimpleDraweeView simpleDraweeView5 = this.binding.f16216h;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView5, "binding.itemGiftImageBackground");
             simpleDraweeView5.setVisibility(8);
         }
-        TextView textView = this.binding.f;
-        m.checkNotNullExpressionValue(textView, "binding.itemGiftHeader");
-        b.a.k.b.o(textView, z2 ? context.getString(R.string.gift_embed_title_self) : context.getString(R.string.gift_embed_title), new Object[0], null, 4);
-        TextView textView2 = this.binding.j;
-        m.checkNotNullExpressionValue(textView2, "binding.itemGiftName");
+        TextView textView = this.binding.f16214f;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemGiftHeader");
+        FormatUtils.m223o(textView, z2 ? context.getString(C5419R.string.gift_embed_title_self) : context.getString(C5419R.string.gift_embed_title), new Object[0], null, 4);
+        TextView textView2 = this.binding.f16218j;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.itemGiftName");
         ModelStoreListing storeListing3 = model.getGift().getStoreListing();
         textView2.setText((storeListing3 == null || (sku3 = storeListing3.getSku()) == null) ? null : sku3.getName());
-        this.binding.j.setTextColor(ColorCompat.getThemedColor(context, R.attr.primary_100));
-        this.binding.j.setBackgroundResource(0);
-        TextView textView3 = this.binding.e;
-        m.checkNotNullExpressionValue(textView3, "binding.itemGiftExpires");
+        this.binding.f16218j.setTextColor(ColorCompat.getThemedColor(context, C5419R.attr.primary_100));
+        this.binding.f16218j.setBackgroundResource(0);
+        TextView textView3 = this.binding.f16213e;
+        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.itemGiftExpires");
         textView3.setVisibility(model.getGift().getExpiresAt() != null ? 0 : 8);
         if (model.getGift().getExpiresAt() != null) {
-            TextView textView4 = this.binding.e;
-            m.checkNotNullExpressionValue(textView4, "binding.itemGiftExpires");
-            m.checkNotNullExpressionValue(context, "context");
-            textView4.setText(b.a.k.b.h(context, R.string.gift_embed_expiration, new Object[]{GiftingUtils.INSTANCE.getTimeString(model.getGift().getExpiresDiff(ClockFactory.get().currentTimeMillis()), context)}, null, 4));
+            TextView textView4 = this.binding.f16213e;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.itemGiftExpires");
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            textView4.setText(FormatUtils.m216h(context, C5419R.string.gift_embed_expiration, new Object[]{GiftingUtils.INSTANCE.getTimeString(model.getGift().getExpiresDiff(ClockFactory.get().currentTimeMillis()), context)}, null, 4));
         }
         if (model.getGift().isAnyNitroGift()) {
             MGImages mGImages = MGImages.INSTANCE;
-            SimpleDraweeView simpleDraweeView6 = this.binding.g;
-            m.checkNotNullExpressionValue(simpleDraweeView6, "binding.itemGiftImage");
+            SimpleDraweeView simpleDraweeView6 = this.binding.f16215g;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView6, "binding.itemGiftImage");
             MGImages.setImage$default(mGImages, simpleDraweeView6, PremiumUtils.INSTANCE.getNitroGiftIcon(model.getGift()), (MGImages.ChangeDetector) null, 4, (Object) null);
         } else {
             ModelStoreListing storeListing4 = model.getGift().getStoreListing();
@@ -696,44 +698,44 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
                 ModelStoreListing storeListing5 = model.getGift().getStoreListing();
                 applicationIcon$default = IconUtils.getApplicationIcon$default((storeListing5 == null || (sku2 = storeListing5.getSku()) == null) ? 0L : sku2.getApplicationId(), icon, 0, 4, (Object) null);
             }
-            this.binding.g.setImageURI(applicationIcon$default);
+            this.binding.f16215g.setImageURI(applicationIcon$default);
         }
         if (!model.getMeUser().isVerified()) {
-            String string2 = context.getString(R.string.gift_code_auth_help_text_verification_required);
-            m.checkNotNullExpressionValue(string2, "context.getString(R.stri…xt_verification_required)");
-            string = t.replace$default(t.replace$default(t.replace$default(string2, "(onClick)", "", false, 4, (Object) null), "[", "", false, 4, (Object) null), "]", "", false, 4, (Object) null);
+            String string2 = context.getString(C5419R.string.gift_code_auth_help_text_verification_required);
+            Intrinsics3.checkNotNullExpressionValue(string2, "context.getString(R.stri…xt_verification_required)");
+            string = StringsJVM.replace$default(StringsJVM.replace$default(StringsJVM.replace$default(string2, "(onClick)", "", false, 4, (Object) null), "[", "", false, 4, (Object) null), "]", "", false, 4, (Object) null);
         } else if (zIsClaimedByMe) {
-            string = context.getString(R.string.gift_embed_body_claimed_self_mobile);
+            string = context.getString(C5419R.string.gift_embed_body_claimed_self_mobile);
         } else if (model.getInLibrary()) {
-            m.checkNotNullExpressionValue(context, "context");
-            string = t.replace$default(t.replace$default(t.replace$default(b.a.k.b.h(context, R.string.gift_code_auth_help_text_owned, new Object[]{""}, null, 4).toString(), "()", "", false, 4, (Object) null), "[", "", false, 4, (Object) null), "]", "", false, 4, (Object) null);
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            string = StringsJVM.replace$default(StringsJVM.replace$default(StringsJVM.replace$default(FormatUtils.m216h(context, C5419R.string.gift_code_auth_help_text_owned, new Object[]{""}, null, 4).toString(), "()", "", false, 4, (Object) null), "[", "", false, 4, (Object) null), "]", "", false, 4, (Object) null);
         } else {
-            string = z3 ? context.getString(R.string.gift_code_auth_help_text_claimed) : null;
+            string = z3 ? context.getString(C5419R.string.gift_code_auth_help_text_claimed) : null;
         }
-        TextView textView5 = this.binding.l;
-        m.checkNotNullExpressionValue(textView5, "binding.itemGiftSubtext");
+        TextView textView5 = this.binding.f16220l;
+        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.itemGiftSubtext");
         ViewExtensions.setTextAndVisibilityBy(textView5, string);
         if (z4) {
-            materialButton = GiftStyleKt.hasCustomStyle(model.getGift()) ? this.binding.k : this.binding.c;
-            materialButton.setOnClickListener(new WidgetChatListAdapterItemGift$configureResolvedUI$$inlined$apply$lambda$1(this, model));
+            materialButton = GiftStyle3.hasCustomStyle(model.getGift()) ? this.binding.f16219k : this.binding.f16211c;
+            materialButton.setOnClickListener(new WidgetChatListAdapterItemGift5(this, model));
         } else if (model.getMeUser().isVerified()) {
-            materialButton = this.binding.d;
+            materialButton = this.binding.f16212d;
             boolean redeeming = model.getRedeeming();
-            int i = R.string.gift_embed_button_claimed;
+            int i = C5419R.string.gift_embed_button_claimed;
             if (redeeming) {
-                i = R.string.gift_embed_button_claiming;
+                i = C5419R.string.gift_embed_button_claiming;
             } else if (!zIsClaimedByMe && model.getInLibrary()) {
-                i = R.string.gift_embed_button_owned;
+                i = C5419R.string.gift_embed_button_owned;
             }
-            b.a.k.b.n(materialButton, i, new Object[0], null, 4);
+            FormatUtils.m222n(materialButton, i, new Object[0], null, 4);
         } else {
-            materialButton = this.binding.m;
-            materialButton.setOnClickListener(WidgetChatListAdapterItemGift$configureResolvedUI$visibleButton$2$1.INSTANCE);
+            materialButton = this.binding.f16221m;
+            materialButton.setOnClickListener(WidgetChatListAdapterItemGift6.INSTANCE);
         }
-        m.checkNotNullExpressionValue(materialButton, "if (canAccept) {\n      i…}\n        )\n      }\n    }");
-        FrameLayout frameLayout = this.binding.f2320b;
-        m.checkNotNullExpressionValue(frameLayout, "binding.buttonsContainer");
-        for (View view3 : ViewGroupKt.getChildren(frameLayout)) {
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "if (canAccept) {\n      i…}\n        )\n      }\n    }");
+        FrameLayout frameLayout = this.binding.f16210b;
+        Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.buttonsContainer");
+        for (View view3 : ViewGroup.getChildren(frameLayout)) {
             if (view3 == materialButton) {
                 ((MaterialButton) view3).setVisibility(0);
             } else {
@@ -741,9 +743,9 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
             }
         }
         if (model.getGift().isAnyNitroGift()) {
-            this.itemView.setOnClickListener(AnonymousClass3.INSTANCE);
+            this.itemView.setOnClickListener(ViewOnClickListenerC80683.INSTANCE);
         } else {
-            this.itemView.setOnClickListener(new AnonymousClass4(context, model));
+            this.itemView.setOnClickListener(new ViewOnClickListenerC80694(context, model));
         }
     }
 
@@ -773,16 +775,16 @@ public final class WidgetChatListAdapterItemGift extends WidgetChatListItem {
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         GiftEntry giftEntry = (GiftEntry) data;
         this.item = giftEntry;
         ModelProvider modelProvider = ModelProvider.INSTANCE;
         if (giftEntry == null) {
-            m.throwUninitializedPropertyAccessException("item");
+            Intrinsics3.throwUninitializedPropertyAccessException("item");
         }
-        Observable observableUi = ObservableExtensionsKt.ui(modelProvider.get(giftEntry));
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(this);
-        ObservableExtensionsKt.appSubscribe$default(observableUi, WidgetChatListAdapterItemGift.class, (Context) null, new AnonymousClass3(), new AnonymousClass2(), (Function0) null, (Function0) null, anonymousClass1, 50, (Object) null);
+        Observable observableM8518ui = ObservableExtensionsKt.m8518ui(modelProvider.get(giftEntry));
+        C80711 c80711 = new C80711(this);
+        ObservableExtensionsKt.appSubscribe$default(observableM8518ui, WidgetChatListAdapterItemGift.class, (Context) null, new C80733(), new C80722(), (Function0) null, (Function0) null, c80711, 50, (Object) null);
     }
 }

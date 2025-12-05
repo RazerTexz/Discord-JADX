@@ -1,8 +1,8 @@
 package com.discord.widgets.servers.member_verification.form_fields;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MemberVerificationItemMultipleChoice.kt */
 /* loaded from: classes2.dex */
@@ -14,7 +14,7 @@ public final /* data */ class MemberVerificationItemMultipleChoice implements Me
     private final int type;
 
     public MemberVerificationItemMultipleChoice(int i, List<String> list, Integer num) {
-        m.checkNotNullParameter(list, "choices");
+        Intrinsics3.checkNotNullParameter(list, "choices");
         this.fieldIndex = i;
         this.choices = list;
         this.response = num;
@@ -54,7 +54,7 @@ public final /* data */ class MemberVerificationItemMultipleChoice implements Me
     }
 
     public final MemberVerificationItemMultipleChoice copy(int fieldIndex, List<String> choices, Integer response) {
-        m.checkNotNullParameter(choices, "choices");
+        Intrinsics3.checkNotNullParameter(choices, "choices");
         return new MemberVerificationItemMultipleChoice(fieldIndex, choices, response);
     }
 
@@ -66,7 +66,7 @@ public final /* data */ class MemberVerificationItemMultipleChoice implements Me
             return false;
         }
         MemberVerificationItemMultipleChoice memberVerificationItemMultipleChoice = (MemberVerificationItemMultipleChoice) other;
-        return this.fieldIndex == memberVerificationItemMultipleChoice.fieldIndex && m.areEqual(this.choices, memberVerificationItemMultipleChoice.choices) && m.areEqual(this.response, memberVerificationItemMultipleChoice.response);
+        return this.fieldIndex == memberVerificationItemMultipleChoice.fieldIndex && Intrinsics3.areEqual(this.choices, memberVerificationItemMultipleChoice.choices) && Intrinsics3.areEqual(this.response, memberVerificationItemMultipleChoice.response);
     }
 
     public final List<String> getChoices() {
@@ -100,11 +100,11 @@ public final /* data */ class MemberVerificationItemMultipleChoice implements Me
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("MemberVerificationItemMultipleChoice(fieldIndex=");
-        sbU.append(this.fieldIndex);
-        sbU.append(", choices=");
-        sbU.append(this.choices);
-        sbU.append(", response=");
-        return a.F(sbU, this.response, ")");
+        StringBuilder sbM833U = outline.m833U("MemberVerificationItemMultipleChoice(fieldIndex=");
+        sbM833U.append(this.fieldIndex);
+        sbM833U.append(", choices=");
+        sbM833U.append(this.choices);
+        sbM833U.append(", response=");
+        return outline.m818F(sbM833U, this.response, ")");
     }
 }

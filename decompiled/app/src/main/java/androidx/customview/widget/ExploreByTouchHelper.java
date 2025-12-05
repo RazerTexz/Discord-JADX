@@ -28,8 +28,8 @@ public abstract class ExploreByTouchHelper extends AccessibilityDelegateCompat {
     public static final int HOST_ID = -1;
     public static final int INVALID_ID = Integer.MIN_VALUE;
     private static final Rect INVALID_PARENT_BOUNDS = new Rect(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE);
-    private static final FocusStrategy.BoundsAdapter<AccessibilityNodeInfoCompat> NODE_ADAPTER = new AnonymousClass1();
-    private static final FocusStrategy.CollectionAdapter<SparseArrayCompat<AccessibilityNodeInfoCompat>, AccessibilityNodeInfoCompat> SPARSE_VALUES_ADAPTER = new AnonymousClass2();
+    private static final FocusStrategy.BoundsAdapter<AccessibilityNodeInfoCompat> NODE_ADAPTER = new C03141();
+    private static final FocusStrategy.CollectionAdapter<SparseArrayCompat<AccessibilityNodeInfoCompat>, AccessibilityNodeInfoCompat> SPARSE_VALUES_ADAPTER = new C03152();
     private final View mHost;
     private final AccessibilityManager mManager;
     private MyNodeProvider mNodeProvider;
@@ -41,8 +41,8 @@ public abstract class ExploreByTouchHelper extends AccessibilityDelegateCompat {
     public int mKeyboardFocusedVirtualViewId = Integer.MIN_VALUE;
     private int mHoveredVirtualViewId = Integer.MIN_VALUE;
 
-    /* renamed from: androidx.customview.widget.ExploreByTouchHelper$1, reason: invalid class name */
-    public static class AnonymousClass1 implements FocusStrategy.BoundsAdapter<AccessibilityNodeInfoCompat> {
+    /* renamed from: androidx.customview.widget.ExploreByTouchHelper$1 */
+    public static class C03141 implements FocusStrategy.BoundsAdapter<AccessibilityNodeInfoCompat> {
         @Override // androidx.customview.widget.FocusStrategy.BoundsAdapter
         public /* bridge */ /* synthetic */ void obtainBounds(AccessibilityNodeInfoCompat accessibilityNodeInfoCompat, Rect rect) {
             obtainBounds2(accessibilityNodeInfoCompat, rect);
@@ -54,8 +54,8 @@ public abstract class ExploreByTouchHelper extends AccessibilityDelegateCompat {
         }
     }
 
-    /* renamed from: androidx.customview.widget.ExploreByTouchHelper$2, reason: invalid class name */
-    public static class AnonymousClass2 implements FocusStrategy.CollectionAdapter<SparseArrayCompat<AccessibilityNodeInfoCompat>, AccessibilityNodeInfoCompat> {
+    /* renamed from: androidx.customview.widget.ExploreByTouchHelper$2 */
+    public static class C03152 implements FocusStrategy.CollectionAdapter<SparseArrayCompat<AccessibilityNodeInfoCompat>, AccessibilityNodeInfoCompat> {
         @Override // androidx.customview.widget.FocusStrategy.CollectionAdapter
         public /* bridge */ /* synthetic */ AccessibilityNodeInfoCompat get(SparseArrayCompat<AccessibilityNodeInfoCompat> sparseArrayCompat, int i) {
             return get2(sparseArrayCompat, i);

@@ -16,11 +16,11 @@ import java.util.List;
 /* loaded from: classes.dex */
 public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$1, reason: invalid class name */
-    public class AnonymousClass1 extends Transition.EpicenterCallback {
+    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$1 */
+    public class C04011 extends Transition.EpicenterCallback {
         public final /* synthetic */ Rect val$epicenter;
 
-        public AnonymousClass1(Rect rect) {
+        public C04011(Rect rect) {
             this.val$epicenter = rect;
         }
 
@@ -30,12 +30,12 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$2, reason: invalid class name */
-    public class AnonymousClass2 implements Transition.TransitionListener {
+    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$2 */
+    public class C04022 implements Transition.TransitionListener {
         public final /* synthetic */ ArrayList val$exitingViews;
         public final /* synthetic */ View val$fragmentView;
 
-        public AnonymousClass2(View view, ArrayList arrayList) {
+        public C04022(View view, ArrayList arrayList) {
             this.val$fragmentView = view;
             this.val$exitingViews = arrayList;
         }
@@ -69,8 +69,8 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$3, reason: invalid class name */
-    public class AnonymousClass3 implements Transition.TransitionListener {
+    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$3 */
+    public class C04033 implements Transition.TransitionListener {
         public final /* synthetic */ Object val$enterTransition;
         public final /* synthetic */ ArrayList val$enteringViews;
         public final /* synthetic */ Object val$exitTransition;
@@ -78,7 +78,7 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         public final /* synthetic */ Object val$sharedElementTransition;
         public final /* synthetic */ ArrayList val$sharedElementsIn;
 
-        public AnonymousClass3(Object obj, ArrayList arrayList, Object obj2, ArrayList arrayList2, Object obj3, ArrayList arrayList3) {
+        public C04033(Object obj, ArrayList arrayList, Object obj2, ArrayList arrayList2, Object obj3, ArrayList arrayList3) {
             this.val$enterTransition = obj;
             this.val$enteringViews = arrayList;
             this.val$exitTransition = obj2;
@@ -121,11 +121,11 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$4, reason: invalid class name */
-    public class AnonymousClass4 implements Transition.TransitionListener {
+    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$4 */
+    public class C04044 implements Transition.TransitionListener {
         public final /* synthetic */ Runnable val$transitionCompleteRunnable;
 
-        public AnonymousClass4(Runnable runnable) {
+        public C04044(Runnable runnable) {
             this.val$transitionCompleteRunnable = runnable;
         }
 
@@ -151,11 +151,11 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$5, reason: invalid class name */
-    public class AnonymousClass5 extends Transition.EpicenterCallback {
+    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$5 */
+    public class C04055 extends Transition.EpicenterCallback {
         public final /* synthetic */ Rect val$epicenter;
 
-        public AnonymousClass5(Rect rect) {
+        public C04055(Rect rect) {
             this.val$epicenter = rect;
         }
 
@@ -296,12 +296,12 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
 
     @Override // androidx.fragment.app.FragmentTransitionImpl
     public void scheduleHideFragmentView(Object obj, View view, ArrayList<View> arrayList) {
-        ((Transition) obj).addListener(new AnonymousClass2(view, arrayList));
+        ((Transition) obj).addListener(new C04022(view, arrayList));
     }
 
     @Override // androidx.fragment.app.FragmentTransitionImpl
     public void scheduleRemoveTargets(Object obj, Object obj2, ArrayList<View> arrayList, Object obj3, ArrayList<View> arrayList2, Object obj4, ArrayList<View> arrayList3) {
-        ((Transition) obj).addListener(new AnonymousClass3(obj2, arrayList, obj3, arrayList2, obj4, arrayList3));
+        ((Transition) obj).addListener(new C04033(obj2, arrayList, obj3, arrayList2, obj4, arrayList3));
     }
 
     @Override // androidx.fragment.app.FragmentTransitionImpl
@@ -309,13 +309,13 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         if (view != null) {
             Rect rect = new Rect();
             getBoundsOnScreen(view, rect);
-            ((Transition) obj).setEpicenterCallback(new AnonymousClass1(rect));
+            ((Transition) obj).setEpicenterCallback(new C04011(rect));
         }
     }
 
     @Override // androidx.fragment.app.FragmentTransitionImpl
     public void setListenerForTransitionEnd(@NonNull Fragment fragment, @NonNull Object obj, @NonNull CancellationSignal cancellationSignal, @NonNull Runnable runnable) {
-        ((Transition) obj).addListener(new AnonymousClass4(runnable));
+        ((Transition) obj).addListener(new C04044(runnable));
     }
 
     @Override // androidx.fragment.app.FragmentTransitionImpl
@@ -355,7 +355,7 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
     @Override // androidx.fragment.app.FragmentTransitionImpl
     public void setEpicenter(Object obj, Rect rect) {
         if (obj != null) {
-            ((Transition) obj).setEpicenterCallback(new AnonymousClass5(rect));
+            ((Transition) obj).setEpicenterCallback(new C04055(rect));
         }
     }
 }

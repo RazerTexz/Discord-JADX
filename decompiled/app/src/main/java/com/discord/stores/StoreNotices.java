@@ -5,27 +5,17 @@ import androidx.annotation.MainThread;
 import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.FragmentActivity;
-import b.d.b.a.a;
 import com.discord.app.AppComponent;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.logging.Logger;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.persister.Persister;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.widgets.home.WidgetHome;
 import com.discord.widgets.voice.fullscreen.WidgetCallFullscreen;
-import d0.e0.c;
-import d0.g;
-import d0.g0.w;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -41,8 +31,19 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import org.objectweb.asm.Opcodes;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p513e0.KClass;
+import p507d0.p579g0.Strings4;
+import p507d0.p580t.Collections2;
+import p507d0.p580t._Collections;
+import p507d0.p582u.C12169a;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: StoreNotices.kt */
 /* loaded from: classes2.dex */
@@ -92,12 +93,12 @@ public final class StoreNotices extends Store {
             }
 
             public final PassiveNotice buildPassiveNotice(int priority, long sinceLastPeriodMs, long delayPeriodMs, boolean persist) {
-                return new PassiveNotice(name(), priority, persist, sinceLastPeriodMs, delayPeriodMs, new StoreNotices$Dialog$Type$buildPassiveNotice$1(this));
+                return new PassiveNotice(name(), priority, persist, sinceLastPeriodMs, delayPeriodMs, new StoreNotices2(this));
             }
         }
 
         public Dialog(Type type, Map<String, ? extends Object> map) {
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(type, "type");
             this.type = type;
             this.metadata = map;
         }
@@ -123,7 +124,7 @@ public final class StoreNotices extends Store {
         }
 
         public final Dialog copy(Type type, Map<String, ? extends Object> metadata) {
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(type, "type");
             return new Dialog(type, metadata);
         }
 
@@ -135,7 +136,7 @@ public final class StoreNotices extends Store {
                 return false;
             }
             Dialog dialog = (Dialog) other;
-            return m.areEqual(this.type, dialog.type) && m.areEqual(this.metadata, dialog.metadata);
+            return Intrinsics3.areEqual(this.type, dialog.type) && Intrinsics3.areEqual(this.metadata, dialog.metadata);
         }
 
         public final Map<String, Object> getMetadata() {
@@ -154,10 +155,10 @@ public final class StoreNotices extends Store {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Dialog(type=");
-            sbU.append(this.type);
-            sbU.append(", metadata=");
-            return a.M(sbU, this.metadata, ")");
+            StringBuilder sbM833U = outline.m833U("Dialog(type=");
+            sbM833U.append(this.type);
+            sbM833U.append(", metadata=");
+            return outline.m825M(sbM833U, this.metadata, ")");
         }
 
         public /* synthetic */ Dialog(Type type, Map map, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -176,7 +177,7 @@ public final class StoreNotices extends Store {
         }
 
         public InputDialog(Type type) {
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(type, "type");
             this.type = type;
         }
 
@@ -193,13 +194,13 @@ public final class StoreNotices extends Store {
         }
 
         public final InputDialog copy(Type type) {
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(type, "type");
             return new InputDialog(type);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof InputDialog) && m.areEqual(this.type, ((InputDialog) other).type);
+                return (other instanceof InputDialog) && Intrinsics3.areEqual(this.type, ((InputDialog) other).type);
             }
             return true;
         }
@@ -217,10 +218,10 @@ public final class StoreNotices extends Store {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("InputDialog(type=");
-            sbU.append(this.type);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("InputDialog(type=");
+            sbM833U.append(this.type);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -236,13 +237,13 @@ public final class StoreNotices extends Store {
         private final long requestedShowTimestamp;
         private final Function1<FragmentActivity, Boolean> show;
         private final long sinceLastPeriodMs;
-        private final List<c<? extends AppComponent>> validScreens;
+        private final List<KClass<? extends AppComponent>> validScreens;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public Notice(String str, Clock clock, long j, int i, boolean z2, List<? extends c<? extends AppComponent>> list, long j2, boolean z3, long j3, Function1<? super FragmentActivity, Boolean> function1) {
-            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-            m.checkNotNullParameter(clock, "clock");
-            m.checkNotNullParameter(function1, "show");
+        public Notice(String str, Clock clock, long j, int i, boolean z2, List<? extends KClass<? extends AppComponent>> list, long j2, boolean z3, long j3, Function1<? super FragmentActivity, Boolean> function1) {
+            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            Intrinsics3.checkNotNullParameter(clock, "clock");
+            Intrinsics3.checkNotNullParameter(function1, "show");
             this.name = str;
             this.clock = clock;
             this.requestedShowTimestamp = j;
@@ -302,16 +303,16 @@ public final class StoreNotices extends Store {
             return this.sinceLastPeriodMs;
         }
 
-        public final List<c<? extends AppComponent>> getValidScreens() {
+        public final List<KClass<? extends AppComponent>> getValidScreens() {
             return this.validScreens;
         }
 
         public final boolean isInAppNotification() {
-            return w.contains((CharSequence) this.name, (CharSequence) StoreNotices.IN_APP_NOTICE_TAG, true);
+            return Strings4.contains((CharSequence) this.name, (CharSequence) StoreNotices.IN_APP_NOTICE_TAG, true);
         }
 
         public final boolean isPopup() {
-            return w.contains((CharSequence) this.name, (CharSequence) StoreNotices.NOTICE_POPUP_TAG, true);
+            return Strings4.contains((CharSequence) this.name, (CharSequence) StoreNotices.NOTICE_POPUP_TAG, true);
         }
 
         public final void setHasShown(boolean z2) {
@@ -319,14 +320,14 @@ public final class StoreNotices extends Store {
         }
 
         public boolean shouldShow(Map<Integer, Long> lastShownTimes) {
-            m.checkNotNullParameter(lastShownTimes, "lastShownTimes");
+            Intrinsics3.checkNotNullParameter(lastShownTimes, "lastShownTimes");
             Long l = lastShownTimes.get(Integer.valueOf(this.priority));
             return this.delayPeriodMs < this.clock.currentTimeMillis() - (l != null ? l.longValue() : 0L);
         }
 
         @MainThread
         public final boolean show(FragmentActivity activity) {
-            m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+            Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             if (this.hasShown || activity.isFinishing()) {
                 return false;
             }
@@ -336,20 +337,20 @@ public final class StoreNotices extends Store {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Notice<");
-            sbU.append(this.name);
-            sbU.append(">(pri=");
-            sbU.append(this.priority);
-            sbU.append(", ts=");
-            sbU.append(this.requestedShowTimestamp);
-            sbU.append(')');
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Notice<");
+            sbM833U.append(this.name);
+            sbM833U.append(">(pri=");
+            sbM833U.append(this.priority);
+            sbM833U.append(", ts=");
+            sbM833U.append(this.requestedShowTimestamp);
+            sbM833U.append(')');
+            return sbM833U.toString();
         }
 
         /* JADX WARN: Illegal instructions before constructor call */
         public /* synthetic */ Notice(String str, Clock clock, long j, int i, boolean z2, List list, long j2, boolean z3, long j3, Function1 function1, int i2, DefaultConstructorMarker defaultConstructorMarker) {
             Clock clock2 = (i2 & 2) != 0 ? ClockFactory.get() : clock;
-            this(str, clock2, (i2 & 4) != 0 ? clock2.currentTimeMillis() : j, (i2 & 8) != 0 ? 10 : i, (i2 & 16) != 0 ? false : z2, (i2 & 32) != 0 ? n.listOf((Object[]) new c[]{a0.getOrCreateKotlinClass(WidgetHome.class), a0.getOrCreateKotlinClass(WidgetCallFullscreen.class)}) : list, (i2 & 64) != 0 ? 15000L : j2, (i2 & 128) != 0 ? false : z3, (i2 & 256) != 0 ? 31536000000L : j3, function1);
+            this(str, clock2, (i2 & 4) != 0 ? clock2.currentTimeMillis() : j, (i2 & 8) != 0 ? 10 : i, (i2 & 16) != 0 ? false : z2, (i2 & 32) != 0 ? Collections2.listOf((Object[]) new KClass[]{Reflection2.getOrCreateKotlinClass(WidgetHome.class), Reflection2.getOrCreateKotlinClass(WidgetCallFullscreen.class)}) : list, (i2 & 64) != 0 ? 15000L : j2, (i2 & 128) != 0 ? false : z3, (i2 & 256) != 0 ? 31536000000L : j3, function1);
         }
     }
 
@@ -361,7 +362,7 @@ public final class StoreNotices extends Store {
 
         @Override // com.discord.stores.StoreNotices.Notice
         public boolean shouldShow(Map<Integer, Long> lastShownTimes) {
-            m.checkNotNullParameter(lastShownTimes, "lastShownTimes");
+            Intrinsics3.checkNotNullParameter(lastShownTimes, "lastShownTimes");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             Iterator<Map.Entry<Integer, Long>> it = lastShownTimes.entrySet().iterator();
             while (true) {
@@ -373,25 +374,25 @@ public final class StoreNotices extends Store {
                     linkedHashMap.put(next.getKey(), next.getValue());
                 }
             }
-            Long l = (Long) u.maxOrNull((Iterable) linkedHashMap.values());
+            Long l = (Long) _Collections.maxOrNull((Iterable) linkedHashMap.values());
             return getDelayPeriodMs() < getClock().currentTimeMillis() - (l != null ? l.longValue() : 0L);
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public PassiveNotice(String str, int i, boolean z2, long j, long j2, Function1<? super FragmentActivity, Boolean> function1) {
             super(str, null, 0L, i, z2, null, j2, false, j, function1, Opcodes.IF_ACMPNE, null);
-            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-            m.checkNotNullParameter(function1, "show");
+            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            Intrinsics3.checkNotNullParameter(function1, "show");
         }
     }
 
     /* compiled from: StoreNotices.kt */
-    /* renamed from: com.discord.stores.StoreNotices$clearSeen$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<HashMap<String, Long>, HashMap<String, Long>> {
+    /* renamed from: com.discord.stores.StoreNotices$clearSeen$1 */
+    public static final class C62871 extends Lambda implements Function1<HashMap<String, Long>, HashMap<String, Long>> {
         public final /* synthetic */ String $noticeName;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C62871(String str) {
             super(1);
             this.$noticeName = str;
         }
@@ -403,40 +404,40 @@ public final class StoreNotices extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final HashMap<String, Long> invoke2(HashMap<String, Long> map) {
-            m.checkNotNullParameter(map, "cache");
+            Intrinsics3.checkNotNullParameter(map, "cache");
             map.remove(this.$noticeName);
             return map;
         }
     }
 
     /* compiled from: StoreNotices.kt */
-    /* renamed from: com.discord.stores.StoreNotices$init$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Unit, Observable<? extends Long>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreNotices$init$1 */
+    public static final class C62881<T, R> implements Func1<Unit, Observable<? extends Long>> {
+        public C62881() {
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Observable<? extends Long> call(Unit unit) {
             return call2(unit);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Long> call2(Unit unit) {
-            return Observable.E(0L, StoreNotices.access$getPollRateMs$p(StoreNotices.this), TimeUnit.MILLISECONDS);
+            return Observable.m11061E(0L, StoreNotices.access$getPollRateMs$p(StoreNotices.this), TimeUnit.MILLISECONDS);
         }
     }
 
     /* compiled from: StoreNotices.kt */
-    /* renamed from: com.discord.stores.StoreNotices$init$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Long, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.stores.StoreNotices$init$2 */
+    public static final class C62892 extends Lambda implements Function1<Long, Unit> {
+        public C62892() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke2(l);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -446,44 +447,44 @@ public final class StoreNotices extends Store {
     }
 
     /* compiled from: StoreNotices.kt */
-    /* renamed from: com.discord.stores.StoreNotices$init$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.stores.StoreNotices$init$3 */
+    public static final class C62903 extends Lambda implements Function1<Error, Unit> {
+        public C62903() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
-            AppLog appLog = AppLog.g;
-            StringBuilder sbU = a.U("Could not process next notice: ");
-            sbU.append(StoreNotices.access$getNoticeQueue$p(StoreNotices.this));
-            Logger.e$default(appLog, sbU.toString(), error.getThrowable(), null, 4, null);
+            Intrinsics3.checkNotNullParameter(error, "it");
+            AppLog appLog = AppLog.f14950g;
+            StringBuilder sbM833U = outline.m833U("Could not process next notice: ");
+            sbM833U.append(StoreNotices.access$getNoticeQueue$p(StoreNotices.this));
+            Logger.e$default(appLog, sbM833U.toString(), error.getThrowable(), null, 4, null);
         }
     }
 
     public StoreNotices(Clock clock, StoreStream storeStream) {
-        m.checkNotNullParameter(clock, "clock");
-        m.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
         this.clock = clock;
         this.stream = storeStream;
         this.noticesSeenCache = new Persister<>("NOTICES_SHOWN_V2", new HashMap());
-        this.noticeQueue = new PriorityQueue<>(11, d0.u.a.compareBy(StoreNotices$noticeQueue$1.INSTANCE, StoreNotices$noticeQueue$2.INSTANCE, StoreNotices$noticeQueue$3.INSTANCE));
+        this.noticeQueue = new PriorityQueue<>(11, C12169a.compareBy(StoreNotices4.INSTANCE, StoreNotices5.INSTANCE, StoreNotices6.INSTANCE));
         this.pollRateMs = 30000L;
         this.lastShownTimes = new HashMap<>();
-        BehaviorSubject<Unit> behaviorSubjectK0 = BehaviorSubject.k0();
-        m.checkNotNullExpressionValue(behaviorSubjectK0, "BehaviorSubject.create()");
-        this.processTrigger = behaviorSubjectK0;
-        BehaviorSubject<Notice> behaviorSubjectL0 = BehaviorSubject.l0(null);
-        m.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(null as Notice?)");
-        this.noticePublisher = behaviorSubjectL0;
-        this.firstUseTimestamp = g.lazy(new StoreNotices$firstUseTimestamp$2(this));
+        BehaviorSubject<Unit> behaviorSubjectM11129k0 = BehaviorSubject.m11129k0();
+        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectM11129k0, "BehaviorSubject.create()");
+        this.processTrigger = behaviorSubjectM11129k0;
+        BehaviorSubject<Notice> behaviorSubjectM11130l0 = BehaviorSubject.m11130l0(null);
+        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectM11130l0, "BehaviorSubject.create(null as Notice?)");
+        this.noticePublisher = behaviorSubjectM11130l0;
+        this.firstUseTimestamp = LazyJVM.lazy(new StoreNotices3(this));
     }
 
     public static final /* synthetic */ Clock access$getClock$p(StoreNotices storeNotices) {
@@ -535,8 +536,8 @@ public final class StoreNotices extends Store {
     }
 
     public final synchronized void clearSeen(String noticeName) {
-        m.checkNotNullParameter(noticeName, "noticeName");
-        this.noticesSeenCache.getAndSet(true, new AnonymousClass1(noticeName));
+        Intrinsics3.checkNotNullParameter(noticeName, "noticeName");
+        this.noticesSeenCache.getAndSet(true, new C62871(noticeName));
     }
 
     public final long getFirstUseTimestamp() {
@@ -544,9 +545,9 @@ public final class StoreNotices extends Store {
     }
 
     public final Observable<Notice> getNotices() {
-        Observable<Notice> observableR = this.noticePublisher.r();
-        m.checkNotNullExpressionValue(observableR, "noticePublisher.distinctUntilChanged()");
-        return observableR;
+        Observable<Notice> observableM11112r = this.noticePublisher.m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "noticePublisher.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final StoreStream getStream() {
@@ -554,29 +555,29 @@ public final class StoreNotices extends Store {
     }
 
     public final synchronized boolean hasBeenSeen(String noticeName) {
-        m.checkNotNullParameter(noticeName, "noticeName");
+        Intrinsics3.checkNotNullParameter(noticeName, "noticeName");
         return this.noticesSeenCache.get().get(noticeName) != null;
     }
 
     public final synchronized boolean hasSeen(String noticeName) {
-        m.checkNotNullParameter(noticeName, "noticeName");
+        Intrinsics3.checkNotNullParameter(noticeName, "noticeName");
         return this.noticesSeenCache.get().containsKey(noticeName);
     }
 
     @Override // com.discord.stores.Store
     public void init(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         super.init(context);
-        AppLog appLog = AppLog.g;
+        AppLog appLog = AppLog.f14950g;
         Logger.d$default(appLog, "Notices init", null, 2, null);
         Logger.d$default(appLog, "Notices prev seen: " + this.noticesSeenCache.get().entrySet(), null, 2, null);
-        Observable observableP = this.processTrigger.Y(new AnonymousClass1()).p(50L, TimeUnit.MILLISECONDS);
-        m.checkNotNullExpressionValue(observableP, "processTrigger\n        .…S, TimeUnit.MILLISECONDS)");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(observableP), StoreNotices.class, (Context) null, (Function1) null, new AnonymousClass3(), (Function0) null, (Function0) null, new AnonymousClass2(), 54, (Object) null);
+        Observable observableM11110p = this.processTrigger.m11099Y(new C62881()).m11110p(50L, TimeUnit.MILLISECONDS);
+        Intrinsics3.checkNotNullExpressionValue(observableM11110p, "processTrigger\n        .…S, TimeUnit.MILLISECONDS)");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(observableM11110p), StoreNotices.class, (Context) null, (Function1) null, new C62903(), (Function0) null, (Function0) null, new C62892(), 54, (Object) null);
     }
 
     public final void markDialogSeen(String noticeDialogType) {
-        m.checkNotNullParameter(noticeDialogType, "noticeDialogType");
+        Intrinsics3.checkNotNullParameter(noticeDialogType, "noticeDialogType");
         try {
             markSeen(Dialog.Type.valueOf(noticeDialogType));
         } catch (IllegalArgumentException unused) {
@@ -588,7 +589,7 @@ public final class StoreNotices extends Store {
         PriorityQueue<Notice> priorityQueue = this.noticeQueue;
         ArrayList arrayList = new ArrayList();
         for (Object obj : priorityQueue) {
-            if (w.contains$default((CharSequence) ((Notice) obj).getName(), (CharSequence) IN_APP_NOTICE_TAG, false, 2, (Object) null)) {
+            if (Strings4.contains$default((CharSequence) ((Notice) obj).getName(), (CharSequence) IN_APP_NOTICE_TAG, false, 2, (Object) null)) {
                 arrayList.add(obj);
             }
         }
@@ -601,8 +602,8 @@ public final class StoreNotices extends Store {
     public final synchronized void markSeen(String noticeName, long seenAtMs) {
         Object next;
         Object next2;
-        m.checkNotNullParameter(noticeName, "noticeName");
-        AppLog.i("Notice seen: " + noticeName + " @ " + seenAtMs);
+        Intrinsics3.checkNotNullParameter(noticeName, "noticeName");
+        AppLog.m8358i("Notice seen: " + noticeName + " @ " + seenAtMs);
         Iterator<T> it = this.noticeQueue.iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -610,7 +611,7 @@ public final class StoreNotices extends Store {
                 break;
             } else {
                 next = it.next();
-                if (m.areEqual(((Notice) next).getName(), noticeName)) {
+                if (Intrinsics3.areEqual(((Notice) next).getName(), noticeName)) {
                     break;
                 }
             }
@@ -644,11 +645,11 @@ public final class StoreNotices extends Store {
                 HashMap<String, Long> map = this.noticesSeenCache.get();
                 map.put(notice.getName(), Long.valueOf(seenAtMs));
                 this.noticesSeenCache.set(map, true);
-                Logger.v$default(AppLog.g, "Notice seen saved: " + noticeName + " @ " + seenAtMs, null, 2, null);
+                Logger.v$default(AppLog.f14950g, "Notice seen saved: " + noticeName + " @ " + seenAtMs, null, 2, null);
             }
             this.noticePublisher.onNext(null);
         }
-        this.processTrigger.onNext(Unit.a);
+        this.processTrigger.onNext(Unit.f27425a);
     }
 
     public final Observable<HashMap<String, Long>> observeNoticesSeen() {
@@ -656,7 +657,7 @@ public final class StoreNotices extends Store {
     }
 
     public final synchronized void requestToShow(Notice notice) {
-        m.checkNotNullParameter(notice, "notice");
+        Intrinsics3.checkNotNullParameter(notice, "notice");
         if (notice.canShow(this.noticesSeenCache.get().get(notice.getName()))) {
             PriorityQueue<Notice> priorityQueue = this.noticeQueue;
             boolean z2 = true;
@@ -665,7 +666,7 @@ public final class StoreNotices extends Store {
                 while (true) {
                     if (!it.hasNext()) {
                         break;
-                    } else if (m.areEqual(((Notice) it.next()).getName(), notice.getName())) {
+                    } else if (Intrinsics3.areEqual(((Notice) it.next()).getName(), notice.getName())) {
                         z2 = false;
                         break;
                     }
@@ -673,19 +674,19 @@ public final class StoreNotices extends Store {
             }
             if (z2) {
                 this.noticeQueue.add(notice);
-                AppLog.i("Notice Request: " + notice.getName());
-                Logger.d$default(AppLog.g, "Notice queues: " + this.noticeQueue, null, 2, null);
+                AppLog.m8358i("Notice Request: " + notice.getName());
+                Logger.d$default(AppLog.f14950g, "Notice queues: " + this.noticeQueue, null, 2, null);
                 long delayPeriodMs = notice.getDelayPeriodMs();
                 if (delayPeriodMs < this.pollRateMs) {
                     setPollRateMs(delayPeriodMs);
                 }
-                this.processTrigger.onNext(Unit.a);
+                this.processTrigger.onNext(Unit.f27425a);
             }
         }
     }
 
     public final void markSeen(Dialog.Type type) {
-        m.checkNotNullParameter(type, "type");
+        Intrinsics3.checkNotNullParameter(type, "type");
         markSeen$default(this, type.name(), 0L, 2, null);
     }
 }

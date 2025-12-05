@@ -23,7 +23,7 @@ public class FileLog {
         try {
             if (fos == null) {
                 fos = new FileOutputStream(new File(System.getProperty("user.home"), "LOMBOK-DEBUG-OUT.txt"));
-                Runtime.getRuntime().addShutdownHook(new AnonymousClass1());
+                Runtime.getRuntime().addShutdownHook(new C128391());
             }
             fos.write(message.getBytes(Constants.ENCODING));
             fos.write(10);
@@ -39,10 +39,10 @@ public class FileLog {
         }
     }
 
-    /* renamed from: lombok.core.debug.FileLog$1, reason: invalid class name */
+    /* renamed from: lombok.core.debug.FileLog$1 */
     /* loaded from: discord-126021.apk:lombok/core/debug/FileLog$1.SCL.lombok */
-    class AnonymousClass1 extends Thread {
-        AnonymousClass1() {
+    class C128391 extends Thread {
+        C128391() {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable

@@ -28,12 +28,12 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
     private List<PreferenceResourceDescriptor> mPreferenceResourceDescriptors;
     private List<Preference> mPreferences;
     private List<Preference> mVisiblePreferences;
-    private Runnable mSyncRunnable = new AnonymousClass1();
+    private Runnable mSyncRunnable = new RunnableC05201();
     private Handler mHandler = new Handler();
 
-    /* renamed from: androidx.preference.PreferenceGroupAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.preference.PreferenceGroupAdapter$1 */
+    public class RunnableC05201 implements Runnable {
+        public RunnableC05201() {
         }
 
         @Override // java.lang.Runnable
@@ -42,13 +42,13 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
         }
     }
 
-    /* renamed from: androidx.preference.PreferenceGroupAdapter$2, reason: invalid class name */
-    public class AnonymousClass2 extends DiffUtil.Callback {
+    /* renamed from: androidx.preference.PreferenceGroupAdapter$2 */
+    public class C05212 extends DiffUtil.Callback {
         public final /* synthetic */ PreferenceManager.PreferenceComparisonCallback val$comparisonCallback;
         public final /* synthetic */ List val$oldVisibleList;
         public final /* synthetic */ List val$visiblePreferenceList;
 
-        public AnonymousClass2(List list, List list2, PreferenceManager.PreferenceComparisonCallback preferenceComparisonCallback) {
+        public C05212(List list, List list2, PreferenceManager.PreferenceComparisonCallback preferenceComparisonCallback) {
             this.val$oldVisibleList = list;
             this.val$visiblePreferenceList = list2;
             this.val$comparisonCallback = preferenceComparisonCallback;
@@ -75,11 +75,11 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
         }
     }
 
-    /* renamed from: androidx.preference.PreferenceGroupAdapter$3, reason: invalid class name */
-    public class AnonymousClass3 implements Preference.OnPreferenceClickListener {
+    /* renamed from: androidx.preference.PreferenceGroupAdapter$3 */
+    public class C05223 implements Preference.OnPreferenceClickListener {
         public final /* synthetic */ PreferenceGroup val$group;
 
-        public AnonymousClass3(PreferenceGroup preferenceGroup) {
+        public C05223(PreferenceGroup preferenceGroup) {
             this.val$group = preferenceGroup;
         }
 
@@ -137,7 +137,7 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
 
     private ExpandButton createExpandButton(PreferenceGroup preferenceGroup, List<Preference> list) {
         ExpandButton expandButton = new ExpandButton(preferenceGroup.getContext(), list, preferenceGroup.getId());
-        expandButton.setOnPreferenceClickListener(new AnonymousClass3(preferenceGroup));
+        expandButton.setOnPreferenceClickListener(new C05223(preferenceGroup));
         return expandButton;
     }
 
@@ -294,7 +294,7 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
         if (preferenceManager == null || preferenceManager.getPreferenceComparisonCallback() == null) {
             notifyDataSetChanged();
         } else {
-            DiffUtil.calculateDiff(new AnonymousClass2(list, listCreateVisiblePreferencesList, preferenceManager.getPreferenceComparisonCallback())).dispatchUpdatesTo(this);
+            DiffUtil.calculateDiff(new C05212(list, listCreateVisiblePreferencesList, preferenceManager.getPreferenceComparisonCallback())).dispatchUpdatesTo(this);
         }
         Iterator<Preference> it2 = this.mPreferences.iterator();
         while (it2.hasNext()) {
@@ -311,8 +311,8 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
     public PreferenceViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         PreferenceResourceDescriptor preferenceResourceDescriptor = this.mPreferenceResourceDescriptors.get(i);
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(viewGroup.getContext());
-        TypedArray typedArrayObtainStyledAttributes = viewGroup.getContext().obtainStyledAttributes((AttributeSet) null, R.styleable.BackgroundStyle);
-        Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(R.styleable.BackgroundStyle_android_selectableItemBackground);
+        TypedArray typedArrayObtainStyledAttributes = viewGroup.getContext().obtainStyledAttributes((AttributeSet) null, C0525R.styleable.BackgroundStyle);
+        Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(C0525R.styleable.BackgroundStyle_android_selectableItemBackground);
         if (drawable == null) {
             drawable = AppCompatResources.getDrawable(viewGroup.getContext(), android.R.drawable.list_selector_background);
         }

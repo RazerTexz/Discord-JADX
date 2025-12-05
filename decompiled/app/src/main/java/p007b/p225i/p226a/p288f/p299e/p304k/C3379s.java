@@ -1,0 +1,57 @@
+package p007b.p225i.p226a.p288f.p299e.p304k;
+
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.api.internal.BasePendingResult;
+import com.google.android.gms.tasks.TaskCompletionSource;
+import java.util.Objects;
+import java.util.concurrent.TimeUnit;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3269d;
+import p007b.p225i.p226a.p288f.p299e.p300h.InterfaceC3273h;
+import p007b.p225i.p226a.p288f.p299e.p304k.C3363k;
+
+/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* renamed from: b.i.a.f.e.k.s */
+/* loaded from: classes3.dex */
+public final class C3379s implements AbstractC3269d.a {
+
+    /* renamed from: a */
+    public final /* synthetic */ AbstractC3269d f9560a;
+
+    /* renamed from: b */
+    public final /* synthetic */ TaskCompletionSource f9561b;
+
+    /* renamed from: c */
+    public final /* synthetic */ C3363k.a f9562c;
+
+    public C3379s(AbstractC3269d abstractC3269d, TaskCompletionSource taskCompletionSource, C3363k.a aVar, C3363k.b bVar) {
+        this.f9560a = abstractC3269d;
+        this.f9561b = taskCompletionSource;
+        this.f9562c = aVar;
+    }
+
+    @Override // p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3269d.a
+    /* renamed from: a */
+    public final void mo4052a(Status status) {
+        if (!status.m9030w0()) {
+            this.f9561b.f20845a.m6025t(AnimatableValueParser.m540l0(status));
+            return;
+        }
+        AbstractC3269d abstractC3269d = this.f9560a;
+        TimeUnit timeUnit = TimeUnit.MILLISECONDS;
+        BasePendingResult basePendingResult = (BasePendingResult) abstractC3269d;
+        Objects.requireNonNull(basePendingResult);
+        AnimatableValueParser.m435G(!basePendingResult.f20507i, "Result has already been consumed.");
+        AnimatableValueParser.m435G(true, "Cannot await if then() has been called.");
+        try {
+            if (!basePendingResult.f20502d.await(0L, timeUnit)) {
+                basePendingResult.m9033e(Status.f20492m);
+            }
+        } catch (InterruptedException unused) {
+            basePendingResult.m9033e(Status.f20490k);
+        }
+        AnimatableValueParser.m435G(basePendingResult.m9034f(), "Result is not ready.");
+        InterfaceC3273h interfaceC3273hM9037j = basePendingResult.m9037j();
+        this.f9561b.f20845a.m6024s(this.f9562c.mo4165a(interfaceC3273hM9037j));
+    }
+}

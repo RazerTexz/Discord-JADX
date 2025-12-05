@@ -40,7 +40,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.UiThread;
 import androidx.collection.SimpleArrayMap;
-import androidx.core.R;
+import androidx.core.C0205R;
 import androidx.core.util.Preconditions;
 import androidx.core.view.AccessibilityDelegateCompat;
 import androidx.core.view.WindowInsetsAnimationCompat;
@@ -48,7 +48,6 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityNodeProviderCompat;
 import androidx.core.view.accessibility.AccessibilityViewCommand;
-import b.d.b.a.a;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
@@ -64,6 +63,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import p007b.p100d.p104b.p105a.outline;
 
 @SuppressLint({"PrivateConstructorForUtilityClass"})
 /* loaded from: classes.dex */
@@ -135,21 +135,21 @@ public class ViewCompat {
     private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
     private static WeakHashMap<View, ViewPropertyAnimatorCompat> sViewPropertyAnimatorMap = null;
     private static boolean sAccessibilityDelegateCheckFailed = false;
-    private static final int[] ACCESSIBILITY_ACTIONS_RESOURCE_IDS = {R.id.accessibility_custom_action_0, R.id.accessibility_custom_action_1, R.id.accessibility_custom_action_2, R.id.accessibility_custom_action_3, R.id.accessibility_custom_action_4, R.id.accessibility_custom_action_5, R.id.accessibility_custom_action_6, R.id.accessibility_custom_action_7, R.id.accessibility_custom_action_8, R.id.accessibility_custom_action_9, R.id.accessibility_custom_action_10, R.id.accessibility_custom_action_11, R.id.accessibility_custom_action_12, R.id.accessibility_custom_action_13, R.id.accessibility_custom_action_14, R.id.accessibility_custom_action_15, R.id.accessibility_custom_action_16, R.id.accessibility_custom_action_17, R.id.accessibility_custom_action_18, R.id.accessibility_custom_action_19, R.id.accessibility_custom_action_20, R.id.accessibility_custom_action_21, R.id.accessibility_custom_action_22, R.id.accessibility_custom_action_23, R.id.accessibility_custom_action_24, R.id.accessibility_custom_action_25, R.id.accessibility_custom_action_26, R.id.accessibility_custom_action_27, R.id.accessibility_custom_action_28, R.id.accessibility_custom_action_29, R.id.accessibility_custom_action_30, R.id.accessibility_custom_action_31};
-    private static final OnReceiveContentViewBehavior NO_OP_ON_RECEIVE_CONTENT_VIEW_BEHAVIOR = new AnonymousClass1();
+    private static final int[] ACCESSIBILITY_ACTIONS_RESOURCE_IDS = {C0205R.id.accessibility_custom_action_0, C0205R.id.accessibility_custom_action_1, C0205R.id.accessibility_custom_action_2, C0205R.id.accessibility_custom_action_3, C0205R.id.accessibility_custom_action_4, C0205R.id.accessibility_custom_action_5, C0205R.id.accessibility_custom_action_6, C0205R.id.accessibility_custom_action_7, C0205R.id.accessibility_custom_action_8, C0205R.id.accessibility_custom_action_9, C0205R.id.accessibility_custom_action_10, C0205R.id.accessibility_custom_action_11, C0205R.id.accessibility_custom_action_12, C0205R.id.accessibility_custom_action_13, C0205R.id.accessibility_custom_action_14, C0205R.id.accessibility_custom_action_15, C0205R.id.accessibility_custom_action_16, C0205R.id.accessibility_custom_action_17, C0205R.id.accessibility_custom_action_18, C0205R.id.accessibility_custom_action_19, C0205R.id.accessibility_custom_action_20, C0205R.id.accessibility_custom_action_21, C0205R.id.accessibility_custom_action_22, C0205R.id.accessibility_custom_action_23, C0205R.id.accessibility_custom_action_24, C0205R.id.accessibility_custom_action_25, C0205R.id.accessibility_custom_action_26, C0205R.id.accessibility_custom_action_27, C0205R.id.accessibility_custom_action_28, C0205R.id.accessibility_custom_action_29, C0205R.id.accessibility_custom_action_30, C0205R.id.accessibility_custom_action_31};
+    private static final OnReceiveContentViewBehavior NO_OP_ON_RECEIVE_CONTENT_VIEW_BEHAVIOR = new C02811();
     private static AccessibilityPaneVisibilityManager sAccessibilityPaneVisibilityManager = new AccessibilityPaneVisibilityManager();
 
-    /* renamed from: androidx.core.view.ViewCompat$1, reason: invalid class name */
-    public class AnonymousClass1 implements OnReceiveContentViewBehavior {
+    /* renamed from: androidx.core.view.ViewCompat$1 */
+    public class C02811 implements OnReceiveContentViewBehavior {
         @Override // androidx.core.view.OnReceiveContentViewBehavior
         public ContentInfoCompat onReceiveContent(@NonNull ContentInfoCompat contentInfoCompat) {
             return contentInfoCompat;
         }
     }
 
-    /* renamed from: androidx.core.view.ViewCompat$2, reason: invalid class name */
-    public class AnonymousClass2 extends AccessibilityViewProperty<Boolean> {
-        public AnonymousClass2(int i, Class cls, int i2) {
+    /* renamed from: androidx.core.view.ViewCompat$2 */
+    public class C02822 extends AccessibilityViewProperty<Boolean> {
+        public C02822(int i, Class cls, int i2) {
             super(i, cls, i2);
         }
 
@@ -189,9 +189,9 @@ public class ViewCompat {
         }
     }
 
-    /* renamed from: androidx.core.view.ViewCompat$3, reason: invalid class name */
-    public class AnonymousClass3 extends AccessibilityViewProperty<CharSequence> {
-        public AnonymousClass3(int i, Class cls, int i2, int i3) {
+    /* renamed from: androidx.core.view.ViewCompat$3 */
+    public class C02833 extends AccessibilityViewProperty<CharSequence> {
+        public C02833(int i, Class cls, int i2, int i3) {
             super(i, cls, i2, i3);
         }
 
@@ -231,9 +231,9 @@ public class ViewCompat {
         }
     }
 
-    /* renamed from: androidx.core.view.ViewCompat$4, reason: invalid class name */
-    public class AnonymousClass4 extends AccessibilityViewProperty<CharSequence> {
-        public AnonymousClass4(int i, Class cls, int i2, int i3) {
+    /* renamed from: androidx.core.view.ViewCompat$4 */
+    public class C02844 extends AccessibilityViewProperty<CharSequence> {
+        public C02844(int i, Class cls, int i2, int i3) {
             super(i, cls, i2, i3);
         }
 
@@ -273,9 +273,9 @@ public class ViewCompat {
         }
     }
 
-    /* renamed from: androidx.core.view.ViewCompat$5, reason: invalid class name */
-    public class AnonymousClass5 extends AccessibilityViewProperty<Boolean> {
-        public AnonymousClass5(int i, Class cls, int i2) {
+    /* renamed from: androidx.core.view.ViewCompat$5 */
+    public class C02855 extends AccessibilityViewProperty<Boolean> {
+        public C02855(int i, Class cls, int i2) {
             super(i, cls, i2);
         }
 
@@ -439,13 +439,13 @@ public class ViewCompat {
     @RequiresApi(21)
     public static class Api21Impl {
 
-        /* renamed from: androidx.core.view.ViewCompat$Api21Impl$1, reason: invalid class name */
-        public class AnonymousClass1 implements View.OnApplyWindowInsetsListener {
+        /* renamed from: androidx.core.view.ViewCompat$Api21Impl$1 */
+        public class ViewOnApplyWindowInsetsListenerC02861 implements View.OnApplyWindowInsetsListener {
             public WindowInsetsCompat mLastInsets = null;
             public final /* synthetic */ OnApplyWindowInsetsListener val$listener;
             public final /* synthetic */ View val$v;
 
-            public AnonymousClass1(View view, OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
+            public ViewOnApplyWindowInsetsListenerC02861(View view, OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
                 this.val$v = view;
                 this.val$listener = onApplyWindowInsetsListener;
             }
@@ -474,7 +474,7 @@ public class ViewCompat {
         }
 
         public static void callCompatInsetAnimationCallback(@NonNull WindowInsets windowInsets, @NonNull View view) {
-            View.OnApplyWindowInsetsListener onApplyWindowInsetsListener = (View.OnApplyWindowInsetsListener) view.getTag(R.id.tag_window_insets_animation_callback);
+            View.OnApplyWindowInsetsListener onApplyWindowInsetsListener = (View.OnApplyWindowInsetsListener) view.getTag(C0205R.id.tag_window_insets_animation_callback);
             if (onApplyWindowInsetsListener != null) {
                 onApplyWindowInsetsListener.onApplyWindowInsets(view, windowInsets);
             }
@@ -496,12 +496,12 @@ public class ViewCompat {
 
         public static void setOnApplyWindowInsetsListener(@NonNull View view, @Nullable OnApplyWindowInsetsListener onApplyWindowInsetsListener) {
             if (Build.VERSION.SDK_INT < 30) {
-                view.setTag(R.id.tag_on_apply_window_listener, onApplyWindowInsetsListener);
+                view.setTag(C0205R.id.tag_on_apply_window_listener, onApplyWindowInsetsListener);
             }
             if (onApplyWindowInsetsListener == null) {
-                view.setOnApplyWindowInsetsListener((View.OnApplyWindowInsetsListener) view.getTag(R.id.tag_window_insets_animation_callback));
+                view.setOnApplyWindowInsetsListener((View.OnApplyWindowInsetsListener) view.getTag(C0205R.id.tag_window_insets_animation_callback));
             } else {
-                view.setOnApplyWindowInsetsListener(new AnonymousClass1(view, onApplyWindowInsetsListener));
+                view.setOnApplyWindowInsetsListener(new ViewOnApplyWindowInsetsListenerC02861(view, onApplyWindowInsetsListener));
             }
         }
     }
@@ -552,11 +552,11 @@ public class ViewCompat {
     @RequiresApi(28)
     public static class CompatImplApi28 {
 
-        /* renamed from: androidx.core.view.ViewCompat$CompatImplApi28$1, reason: invalid class name */
-        public class AnonymousClass1 implements View.OnUnhandledKeyEventListener {
+        /* renamed from: androidx.core.view.ViewCompat$CompatImplApi28$1 */
+        public class ViewOnUnhandledKeyEventListenerC02871 implements View.OnUnhandledKeyEventListener {
             public final /* synthetic */ OnUnhandledKeyEventListenerCompat val$listener;
 
-            public AnonymousClass1(OnUnhandledKeyEventListenerCompat onUnhandledKeyEventListenerCompat) {
+            public ViewOnUnhandledKeyEventListenerC02871(OnUnhandledKeyEventListenerCompat onUnhandledKeyEventListenerCompat) {
                 this.val$listener = onUnhandledKeyEventListenerCompat;
             }
 
@@ -570,20 +570,20 @@ public class ViewCompat {
         }
 
         public static void addOnUnhandledKeyEventListener(@NonNull View view, @NonNull OnUnhandledKeyEventListenerCompat onUnhandledKeyEventListenerCompat) {
-            int i = R.id.tag_unhandled_key_listeners;
+            int i = C0205R.id.tag_unhandled_key_listeners;
             SimpleArrayMap simpleArrayMap = (SimpleArrayMap) view.getTag(i);
             if (simpleArrayMap == null) {
                 simpleArrayMap = new SimpleArrayMap();
                 view.setTag(i, simpleArrayMap);
             }
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1(onUnhandledKeyEventListenerCompat);
-            simpleArrayMap.put(onUnhandledKeyEventListenerCompat, anonymousClass1);
-            view.addOnUnhandledKeyEventListener(anonymousClass1);
+            ViewOnUnhandledKeyEventListenerC02871 viewOnUnhandledKeyEventListenerC02871 = new ViewOnUnhandledKeyEventListenerC02871(onUnhandledKeyEventListenerCompat);
+            simpleArrayMap.put(onUnhandledKeyEventListenerCompat, viewOnUnhandledKeyEventListenerC02871);
+            view.addOnUnhandledKeyEventListener(viewOnUnhandledKeyEventListenerC02871);
         }
 
         public static void removeOnUnhandledKeyEventListener(@NonNull View view, @NonNull OnUnhandledKeyEventListenerCompat onUnhandledKeyEventListenerCompat) {
             View.OnUnhandledKeyEventListener onUnhandledKeyEventListener;
-            SimpleArrayMap simpleArrayMap = (SimpleArrayMap) view.getTag(R.id.tag_unhandled_key_listeners);
+            SimpleArrayMap simpleArrayMap = (SimpleArrayMap) view.getTag(C0205R.id.tag_unhandled_key_listeners);
             if (simpleArrayMap == null || (onUnhandledKeyEventListener = (View.OnUnhandledKeyEventListener) simpleArrayMap.get(onUnhandledKeyEventListenerCompat)) == null) {
                 return;
             }
@@ -633,8 +633,9 @@ public class ViewCompat {
         private SparseArray<WeakReference<View>> mCapturedKeys = null;
         private WeakReference<KeyEvent> mLastDispatchedPreViewKeyEvent = null;
 
-        public static UnhandledKeyEventManager at(View view) {
-            int i = R.id.tag_unhandled_key_event_manager;
+        /* renamed from: at */
+        public static UnhandledKeyEventManager m89at(View view) {
+            int i = C0205R.id.tag_unhandled_key_event_manager;
             UnhandledKeyEventManager unhandledKeyEventManager = (UnhandledKeyEventManager) view.getTag(i);
             if (unhandledKeyEventManager != null) {
                 return unhandledKeyEventManager;
@@ -672,7 +673,7 @@ public class ViewCompat {
         }
 
         private boolean onUnhandledKeyEvent(@NonNull View view, @NonNull KeyEvent keyEvent) {
-            ArrayList arrayList = (ArrayList) view.getTag(R.id.tag_unhandled_key_listeners);
+            ArrayList arrayList = (ArrayList) view.getTag(C0205R.id.tag_unhandled_key_listeners);
             if (arrayList == null) {
                 return false;
             }
@@ -788,7 +789,7 @@ public class ViewCompat {
     }
 
     private static AccessibilityViewProperty<Boolean> accessibilityHeadingProperty() {
-        return new AnonymousClass5(R.id.tag_accessibility_heading, Boolean.class, 28);
+        return new C02855(C0205R.id.tag_accessibility_heading, Boolean.class, 28);
     }
 
     public static int addAccessibilityAction(@NonNull View view, @NonNull CharSequence charSequence, @NonNull AccessibilityViewCommand accessibilityViewCommand) {
@@ -810,7 +811,7 @@ public class ViewCompat {
             CompatImplApi28.addOnUnhandledKeyEventListener(view, onUnhandledKeyEventListenerCompat);
             return;
         }
-        int i = R.id.tag_unhandled_key_listeners;
+        int i = C0205R.id.tag_unhandled_key_listeners;
         ArrayList arrayList = (ArrayList) view.getTag(i);
         if (arrayList == null) {
             arrayList = new ArrayList();
@@ -967,7 +968,7 @@ public class ViewCompat {
         if (Build.VERSION.SDK_INT >= 28) {
             return false;
         }
-        return UnhandledKeyEventManager.at(view).dispatch(view, keyEvent);
+        return UnhandledKeyEventManager.m89at(view).dispatch(view, keyEvent);
     }
 
     @UiThread
@@ -975,7 +976,7 @@ public class ViewCompat {
         if (Build.VERSION.SDK_INT >= 28) {
             return false;
         }
-        return UnhandledKeyEventManager.at(view).preDispatch(keyEvent);
+        return UnhandledKeyEventManager.m89at(view).preDispatch(keyEvent);
     }
 
     public static void enableAccessibleClickableSpanSupport(View view) {
@@ -1045,7 +1046,7 @@ public class ViewCompat {
     }
 
     private static List<AccessibilityNodeInfoCompat.AccessibilityActionCompat> getActionList(View view) {
-        int i = R.id.tag_accessibility_actions;
+        int i = C0205R.id.tag_accessibility_actions;
         ArrayList arrayList = (ArrayList) view.getTag(i);
         if (arrayList != null) {
             return arrayList;
@@ -1194,7 +1195,7 @@ public class ViewCompat {
 
     @Nullable
     public static String[] getOnReceiveContentMimeTypes(@NonNull View view) {
-        return (String[]) view.getTag(R.id.tag_on_receive_content_mime_types);
+        return (String[]) view.getTag(C0205R.id.tag_on_receive_content_mime_types);
     }
 
     public static AccessibilityDelegateCompat getOrCreateAccessibilityDelegateCompat(@NonNull View view) {
@@ -1547,7 +1548,7 @@ public class ViewCompat {
     }
 
     private static AccessibilityViewProperty<CharSequence> paneTitleProperty() {
-        return new AnonymousClass3(R.id.tag_accessibility_pane_title, CharSequence.class, 8, 28);
+        return new C02833(C0205R.id.tag_accessibility_pane_title, CharSequence.class, 8, 28);
     }
 
     public static boolean performAccessibilityAction(@NonNull View view, int i, Bundle bundle) {
@@ -1559,7 +1560,7 @@ public class ViewCompat {
         if (Log.isLoggable(TAG, 3)) {
             Log.d(TAG, "performReceiveContent: " + contentInfoCompat + ", view=" + view.getClass().getSimpleName() + "[" + view.getId() + "]");
         }
-        OnReceiveContentListener onReceiveContentListener = (OnReceiveContentListener) view.getTag(R.id.tag_on_receive_content_listener);
+        OnReceiveContentListener onReceiveContentListener = (OnReceiveContentListener) view.getTag(C0205R.id.tag_on_receive_content_listener);
         if (onReceiveContentListener == null) {
             return getFallback(view).onReceiveContent(contentInfoCompat);
         }
@@ -1602,7 +1603,7 @@ public class ViewCompat {
             CompatImplApi28.removeOnUnhandledKeyEventListener(view, onUnhandledKeyEventListenerCompat);
             return;
         }
-        ArrayList arrayList = (ArrayList) view.getTag(R.id.tag_unhandled_key_listeners);
+        ArrayList arrayList = (ArrayList) view.getTag(C0205R.id.tag_unhandled_key_listeners);
         if (arrayList != null) {
             arrayList.remove(onUnhandledKeyEventListenerCompat);
             if (arrayList.size() == 0) {
@@ -1651,7 +1652,7 @@ public class ViewCompat {
     }
 
     private static AccessibilityViewProperty<Boolean> screenReaderFocusableProperty() {
-        return new AnonymousClass2(R.id.tag_screen_reader_focusable, Boolean.class, 28);
+        return new C02822(C0205R.id.tag_screen_reader_focusable, Boolean.class, 28);
     }
 
     public static void setAccessibilityDelegate(@NonNull View view, AccessibilityDelegateCompat accessibilityDelegateCompat) {
@@ -1686,7 +1687,7 @@ public class ViewCompat {
     }
 
     @Deprecated
-    public static void setAlpha(View view, @FloatRange(from = 0.0d, to = 1.0d) float f) {
+    public static void setAlpha(View view, @FloatRange(from = 0.0d, m75to = 1.0d) float f) {
         view.setAlpha(f);
     }
 
@@ -1844,12 +1845,12 @@ public class ViewCompat {
                 }
                 i++;
             }
-            StringBuilder sbU = a.U("A MIME type set here must not start with *: ");
-            sbU.append(Arrays.toString(strArr));
-            Preconditions.checkArgument(!z2, sbU.toString());
+            StringBuilder sbM833U = outline.m833U("A MIME type set here must not start with *: ");
+            sbM833U.append(Arrays.toString(strArr));
+            Preconditions.checkArgument(!z2, sbM833U.toString());
         }
-        view.setTag(R.id.tag_on_receive_content_mime_types, strArr);
-        view.setTag(R.id.tag_on_receive_content_listener, onReceiveContentListener);
+        view.setTag(C0205R.id.tag_on_receive_content_mime_types, strArr);
+        view.setTag(C0205R.id.tag_on_receive_content_listener, onReceiveContentListener);
     }
 
     @Deprecated
@@ -1992,7 +1993,7 @@ public class ViewCompat {
     }
 
     private static AccessibilityViewProperty<CharSequence> stateDescriptionProperty() {
-        return new AnonymousClass4(R.id.tag_state_description, CharSequence.class, 64, 30);
+        return new C02844(C0205R.id.tag_state_description, CharSequence.class, 64, 30);
     }
 
     public static void stopNestedScroll(@NonNull View view) {

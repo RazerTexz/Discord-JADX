@@ -76,12 +76,12 @@ public class AddFieldScript extends PatchScript {
         return null;
     }
 
-    /* renamed from: lombok.patcher.scripts.AddFieldScript$1, reason: invalid class name */
+    /* renamed from: lombok.patcher.scripts.AddFieldScript$1 */
     /* loaded from: discord-126021.apk:lombok/patcher/scripts/AddFieldScript$1.SCL.lombok */
-    class AnonymousClass1 extends ClassVisitor {
+    class C129151 extends ClassVisitor {
         private boolean alreadyAdded;
 
-        AnonymousClass1(int $anonymous0, ClassVisitor $anonymous1) {
+        C129151(int $anonymous0, ClassVisitor $anonymous1) {
             super($anonymous0, $anonymous1);
             this.alreadyAdded = false;
         }
@@ -97,7 +97,7 @@ public class AddFieldScript extends PatchScript {
         @Override // org.objectweb.asm.ClassVisitor
         public void visitEnd() {
             if (!this.alreadyAdded) {
-                FieldVisitor fv = this.cv.visitField(AddFieldScript.access$1(AddFieldScript.this), AddFieldScript.access$0(AddFieldScript.this), AddFieldScript.access$2(AddFieldScript.this), null, AddFieldScript.access$3(AddFieldScript.this));
+                FieldVisitor fv = this.f27598cv.visitField(AddFieldScript.access$1(AddFieldScript.this), AddFieldScript.access$0(AddFieldScript.this), AddFieldScript.access$2(AddFieldScript.this), null, AddFieldScript.access$3(AddFieldScript.this));
                 fv.visitEnd();
             }
             super.visitEnd();
@@ -106,7 +106,7 @@ public class AddFieldScript extends PatchScript {
 
     @Override // lombok.patcher.PatchScript
     protected ClassVisitor createClassVisitor(ClassWriter writer, String classSpec, TransplantMapper transplantMapper) {
-        return new AnonymousClass1(Opcodes.ASM7, writer);
+        return new C129151(Opcodes.ASM7, writer);
     }
 
     @Override // lombok.patcher.PatchScript

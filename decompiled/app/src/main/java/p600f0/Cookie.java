@@ -1,0 +1,288 @@
+package p600f0;
+
+import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import kotlin.TypeCastException;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p021f.C0897c;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.Strings4;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p600f0.p601e0.Util7;
+import p600f0.p601e0.p606h.dates;
+
+/* compiled from: Cookie.kt */
+/* renamed from: f0.n, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class Cookie {
+
+    /* renamed from: f */
+    public final String f25947f;
+
+    /* renamed from: g */
+    public final String f25948g;
+
+    /* renamed from: h */
+    public final long f25949h;
+
+    /* renamed from: i */
+    public final String f25950i;
+
+    /* renamed from: j */
+    public final String f25951j;
+
+    /* renamed from: k */
+    public final boolean f25952k;
+
+    /* renamed from: l */
+    public final boolean f25953l;
+
+    /* renamed from: m */
+    public final boolean f25954m;
+
+    /* renamed from: n */
+    public final boolean f25955n;
+
+    /* renamed from: e */
+    public static final a f25946e = new a(null);
+
+    /* renamed from: a */
+    public static final Pattern f25942a = Pattern.compile("(\\d{2,4})[^\\d]*");
+
+    /* renamed from: b */
+    public static final Pattern f25943b = Pattern.compile("(?i)(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec).*");
+
+    /* renamed from: c */
+    public static final Pattern f25944c = Pattern.compile("(\\d{1,2})[^\\d]*");
+
+    /* renamed from: d */
+    public static final Pattern f25945d = Pattern.compile("(\\d{1,2}):(\\d{1,2}):(\\d{1,2})[^\\d]*");
+
+    /* compiled from: Cookie.kt */
+    /* renamed from: f0.n$a */
+    public static final class a {
+        public a(DefaultConstructorMarker defaultConstructorMarker) {
+        }
+
+        /* renamed from: a */
+        public final int m10385a(String str, int i, int i2, boolean z2) {
+            while (i < i2) {
+                char cCharAt = str.charAt(i);
+                if (((cCharAt < ' ' && cCharAt != '\t') || cCharAt >= 127 || ('0' <= cCharAt && '9' >= cCharAt) || (('a' <= cCharAt && 'z' >= cCharAt) || (('A' <= cCharAt && 'Z' >= cCharAt) || cCharAt == ':'))) == (!z2)) {
+                    return i;
+                }
+                i++;
+            }
+            return i2;
+        }
+
+        /* renamed from: b */
+        public final boolean m10386b(String str, String str2) {
+            if (Intrinsics3.areEqual(str, str2)) {
+                return true;
+            }
+            if (StringsJVM.endsWith$default(str, str2, false, 2, null) && str.charAt((str.length() - str2.length()) - 1) == '.') {
+                byte[] bArr = Util7.f25397a;
+                Intrinsics3.checkParameterIsNotNull(str, "$this$canParseAsIpAddress");
+                if (!Util7.f25402f.matches(str)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /* JADX WARN: Removed duplicated region for block: B:22:0x00c4  */
+        /* renamed from: c */
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+        */
+        public final long m10387c(String str, int i, int i2) throws NumberFormatException {
+            int iM10385a = m10385a(str, i, i2, false);
+            Matcher matcher = Cookie.f25945d.matcher(str);
+            int i3 = -1;
+            int i4 = -1;
+            int i5 = -1;
+            int iIndexOf$default = -1;
+            int i6 = -1;
+            int i7 = -1;
+            while (iM10385a < i2) {
+                int iM10385a2 = m10385a(str, iM10385a + 1, i2, true);
+                matcher.region(iM10385a, iM10385a2);
+                if (i4 == -1 && matcher.usePattern(Cookie.f25945d).matches()) {
+                    String strGroup = matcher.group(1);
+                    Intrinsics3.checkExpressionValueIsNotNull(strGroup, "matcher.group(1)");
+                    i4 = Integer.parseInt(strGroup);
+                    String strGroup2 = matcher.group(2);
+                    Intrinsics3.checkExpressionValueIsNotNull(strGroup2, "matcher.group(2)");
+                    i6 = Integer.parseInt(strGroup2);
+                    String strGroup3 = matcher.group(3);
+                    Intrinsics3.checkExpressionValueIsNotNull(strGroup3, "matcher.group(3)");
+                    i7 = Integer.parseInt(strGroup3);
+                } else if (i5 == -1 && matcher.usePattern(Cookie.f25944c).matches()) {
+                    String strGroup4 = matcher.group(1);
+                    Intrinsics3.checkExpressionValueIsNotNull(strGroup4, "matcher.group(1)");
+                    i5 = Integer.parseInt(strGroup4);
+                } else if (iIndexOf$default == -1) {
+                    Pattern pattern = Cookie.f25943b;
+                    if (matcher.usePattern(pattern).matches()) {
+                        String strGroup5 = matcher.group(1);
+                        Intrinsics3.checkExpressionValueIsNotNull(strGroup5, "matcher.group(1)");
+                        Locale locale = Locale.US;
+                        Intrinsics3.checkExpressionValueIsNotNull(locale, "Locale.US");
+                        if (strGroup5 == null) {
+                            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
+                        }
+                        String lowerCase = strGroup5.toLowerCase(locale);
+                        Intrinsics3.checkExpressionValueIsNotNull(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
+                        String strPattern = pattern.pattern();
+                        Intrinsics3.checkExpressionValueIsNotNull(strPattern, "MONTH_PATTERN.pattern()");
+                        iIndexOf$default = Strings4.indexOf$default((CharSequence) strPattern, lowerCase, 0, false, 6, (Object) null) / 4;
+                    } else if (i3 == -1 && matcher.usePattern(Cookie.f25942a).matches()) {
+                        String strGroup6 = matcher.group(1);
+                        Intrinsics3.checkExpressionValueIsNotNull(strGroup6, "matcher.group(1)");
+                        i3 = Integer.parseInt(strGroup6);
+                    }
+                }
+                iM10385a = m10385a(str, iM10385a2 + 1, i2, false);
+            }
+            if (70 <= i3 && 99 >= i3) {
+                i3 += 1900;
+            }
+            if (i3 >= 0 && 69 >= i3) {
+                i3 += 2000;
+            }
+            if (!(i3 >= 1601)) {
+                throw new IllegalArgumentException("Failed requirement.".toString());
+            }
+            if (!(iIndexOf$default != -1)) {
+                throw new IllegalArgumentException("Failed requirement.".toString());
+            }
+            if (!(1 <= i5 && 31 >= i5)) {
+                throw new IllegalArgumentException("Failed requirement.".toString());
+            }
+            if (!(i4 >= 0 && 23 >= i4)) {
+                throw new IllegalArgumentException("Failed requirement.".toString());
+            }
+            if (!(i6 >= 0 && 59 >= i6)) {
+                throw new IllegalArgumentException("Failed requirement.".toString());
+            }
+            if (!(i7 >= 0 && 59 >= i7)) {
+                throw new IllegalArgumentException("Failed requirement.".toString());
+            }
+            GregorianCalendar gregorianCalendar = new GregorianCalendar(Util7.f25401e);
+            gregorianCalendar.setLenient(false);
+            gregorianCalendar.set(1, i3);
+            gregorianCalendar.set(2, iIndexOf$default - 1);
+            gregorianCalendar.set(5, i5);
+            gregorianCalendar.set(11, i4);
+            gregorianCalendar.set(12, i6);
+            gregorianCalendar.set(13, i7);
+            gregorianCalendar.set(14, 0);
+            return gregorianCalendar.getTimeInMillis();
+        }
+    }
+
+    public Cookie(String str, String str2, long j, String str3, String str4, boolean z2, boolean z3, boolean z4, boolean z5, DefaultConstructorMarker defaultConstructorMarker) {
+        this.f25947f = str;
+        this.f25948g = str2;
+        this.f25949h = j;
+        this.f25950i = str3;
+        this.f25951j = str4;
+        this.f25952k = z2;
+        this.f25953l = z3;
+        this.f25954m = z4;
+        this.f25955n = z5;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:14:0x0048  */
+    /* renamed from: a */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public final boolean m10384a(HttpUrl httpUrl) {
+        boolean zAreEqual;
+        Intrinsics3.checkParameterIsNotNull(httpUrl, "url");
+        if (this.f25955n) {
+            zAreEqual = Intrinsics3.areEqual(httpUrl.f25979g, this.f25950i);
+        } else {
+            String str = httpUrl.f25979g;
+            String str2 = this.f25950i;
+            if (!Intrinsics3.areEqual(str, str2)) {
+                if (StringsJVM.endsWith$default(str, str2, false, 2, null) && str.charAt((str.length() - str2.length()) - 1) == '.') {
+                    byte[] bArr = Util7.f25397a;
+                    Intrinsics3.checkParameterIsNotNull(str, "$this$canParseAsIpAddress");
+                    if (!Util7.f25402f.matches(str)) {
+                        zAreEqual = true;
+                    }
+                }
+                zAreEqual = false;
+            }
+        }
+        if (!zAreEqual) {
+            return false;
+        }
+        String str3 = this.f25951j;
+        String strM10400b = httpUrl.m10400b();
+        if (Intrinsics3.areEqual(strM10400b, str3) || (StringsJVM.startsWith$default(strM10400b, str3, false, 2, null) && (StringsJVM.endsWith$default(str3, AutocompleteViewModel.COMMAND_DISCOVER_TOKEN, false, 2, null) || strM10400b.charAt(str3.length()) == '/'))) {
+            return !this.f25952k || httpUrl.f25975c;
+        }
+        return false;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof Cookie) {
+            Cookie cookie = (Cookie) obj;
+            if (Intrinsics3.areEqual(cookie.f25947f, this.f25947f) && Intrinsics3.areEqual(cookie.f25948g, this.f25948g) && cookie.f25949h == this.f25949h && Intrinsics3.areEqual(cookie.f25950i, this.f25950i) && Intrinsics3.areEqual(cookie.f25951j, this.f25951j) && cookie.f25952k == this.f25952k && cookie.f25953l == this.f25953l && cookie.f25954m == this.f25954m && cookie.f25955n == this.f25955n) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @IgnoreJRERequirement
+    public int hashCode() {
+        return C0897c.m186a(this.f25955n) + ((C0897c.m186a(this.f25954m) + ((C0897c.m186a(this.f25953l) + ((C0897c.m186a(this.f25952k) + outline.m863m(this.f25951j, outline.m863m(this.f25950i, (C0002b.m3a(this.f25949h) + outline.m863m(this.f25948g, outline.m863m(this.f25947f, 527, 31), 31)) * 31, 31), 31)) * 31)) * 31)) * 31);
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.f25947f);
+        sb.append('=');
+        sb.append(this.f25948g);
+        if (this.f25954m) {
+            if (this.f25949h == Long.MIN_VALUE) {
+                sb.append("; max-age=0");
+            } else {
+                sb.append("; expires=");
+                Date date = new Date(this.f25949h);
+                dates.a aVar = dates.f25526a;
+                Intrinsics3.checkParameterIsNotNull(date, "$this$toHttpDateString");
+                String str = dates.f25526a.get().format(date);
+                Intrinsics3.checkExpressionValueIsNotNull(str, "STANDARD_DATE_FORMAT.get().format(this)");
+                sb.append(str);
+            }
+        }
+        if (!this.f25955n) {
+            sb.append("; domain=");
+            sb.append(this.f25950i);
+        }
+        sb.append("; path=");
+        sb.append(this.f25951j);
+        if (this.f25952k) {
+            sb.append("; secure");
+        }
+        if (this.f25953l) {
+            sb.append("; httponly");
+        }
+        String string = sb.toString();
+        Intrinsics3.checkExpressionValueIsNotNull(string, "toString()");
+        return string;
+    }
+}

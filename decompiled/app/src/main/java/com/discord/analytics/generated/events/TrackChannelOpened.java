@@ -1,22 +1,22 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
 import com.discord.analytics.generated.traits.TrackThread;
-import com.discord.analytics.generated.traits.TrackThreadReceiver;
+import com.discord.analytics.generated.traits.TrackThread2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackChannelOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackChannelOpened implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver, TrackThreadReceiver, TrackOverlayClientMetadataReceiver {
+public final /* data */ class TrackChannelOpened implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2, TrackThread2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -28,14 +28,15 @@ public final /* data */ class TrackChannelOpened implements AnalyticsSchema, Tra
     private final CharSequence staticRoute = null;
     private final transient String analyticsSchemaTypeName = "channel_opened";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -53,7 +54,7 @@ public final /* data */ class TrackChannelOpened implements AnalyticsSchema, Tra
             return false;
         }
         TrackChannelOpened trackChannelOpened = (TrackChannelOpened) other;
-        return m.areEqual(this.channelIsNsfw, trackChannelOpened.channelIsNsfw) && m.areEqual(this.channelView, trackChannelOpened.channelView) && m.areEqual(this.parentId, trackChannelOpened.parentId) && m.areEqual(this.staticRoute, trackChannelOpened.staticRoute);
+        return Intrinsics3.areEqual(this.channelIsNsfw, trackChannelOpened.channelIsNsfw) && Intrinsics3.areEqual(this.channelView, trackChannelOpened.channelView) && Intrinsics3.areEqual(this.parentId, trackChannelOpened.parentId) && Intrinsics3.areEqual(this.staticRoute, trackChannelOpened.staticRoute);
     }
 
     public int hashCode() {
@@ -68,13 +69,13 @@ public final /* data */ class TrackChannelOpened implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackChannelOpened(channelIsNsfw=");
-        sbU.append(this.channelIsNsfw);
-        sbU.append(", channelView=");
-        sbU.append(this.channelView);
-        sbU.append(", parentId=");
-        sbU.append(this.parentId);
-        sbU.append(", staticRoute=");
-        return a.E(sbU, this.staticRoute, ")");
+        StringBuilder sbM833U = outline.m833U("TrackChannelOpened(channelIsNsfw=");
+        sbM833U.append(this.channelIsNsfw);
+        sbM833U.append(", channelView=");
+        sbM833U.append(this.channelView);
+        sbM833U.append(", parentId=");
+        sbM833U.append(this.parentId);
+        sbM833U.append(", staticRoute=");
+        return outline.m817E(sbM833U, this.staticRoute, ")");
     }
 }

@@ -14,19 +14,19 @@ import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 public class LiveDataUtils {
 
     /* JADX INFO: Add missing generic type declarations: [In] */
-    /* renamed from: androidx.work.impl.utils.LiveDataUtils$1, reason: invalid class name */
-    public class AnonymousClass1<In> implements Observer<In> {
+    /* renamed from: androidx.work.impl.utils.LiveDataUtils$1 */
+    public class C07751<In> implements Observer<In> {
         public Out mCurrentOutput = null;
         public final /* synthetic */ Object val$lock;
         public final /* synthetic */ Function val$mappingMethod;
         public final /* synthetic */ MediatorLiveData val$outputLiveData;
         public final /* synthetic */ TaskExecutor val$workTaskExecutor;
 
-        /* renamed from: androidx.work.impl.utils.LiveDataUtils$1$1, reason: invalid class name and collision with other inner class name */
-        public class RunnableC00071 implements Runnable {
+        /* renamed from: androidx.work.impl.utils.LiveDataUtils$1$1, reason: invalid class name */
+        public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ Object val$input;
 
-            public RunnableC00071(Object obj) {
+            public AnonymousClass1(Object obj) {
                 this.val$input = obj;
             }
 
@@ -34,23 +34,23 @@ public class LiveDataUtils {
             /* JADX WARN: Type inference failed for: r1v3, types: [Out, java.lang.Object] */
             @Override // java.lang.Runnable
             public void run() {
-                synchronized (AnonymousClass1.this.val$lock) {
-                    ?? Apply = AnonymousClass1.this.val$mappingMethod.apply(this.val$input);
-                    AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                    Out out = anonymousClass1.mCurrentOutput;
+                synchronized (C07751.this.val$lock) {
+                    ?? Apply = C07751.this.val$mappingMethod.apply(this.val$input);
+                    C07751 c07751 = C07751.this;
+                    Out out = c07751.mCurrentOutput;
                     if (out == 0 && Apply != 0) {
-                        anonymousClass1.mCurrentOutput = Apply;
-                        anonymousClass1.val$outputLiveData.postValue(Apply);
+                        c07751.mCurrentOutput = Apply;
+                        c07751.val$outputLiveData.postValue(Apply);
                     } else if (out != 0 && !out.equals(Apply)) {
-                        AnonymousClass1 anonymousClass12 = AnonymousClass1.this;
-                        anonymousClass12.mCurrentOutput = Apply;
-                        anonymousClass12.val$outputLiveData.postValue(Apply);
+                        C07751 c077512 = C07751.this;
+                        c077512.mCurrentOutput = Apply;
+                        c077512.val$outputLiveData.postValue(Apply);
                     }
                 }
             }
         }
 
-        public AnonymousClass1(TaskExecutor taskExecutor, Object obj, Function function, MediatorLiveData mediatorLiveData) {
+        public C07751(TaskExecutor taskExecutor, Object obj, Function function, MediatorLiveData mediatorLiveData) {
             this.val$workTaskExecutor = taskExecutor;
             this.val$lock = obj;
             this.val$mappingMethod = function;
@@ -59,7 +59,7 @@ public class LiveDataUtils {
 
         @Override // androidx.view.Observer
         public void onChanged(@Nullable In in) {
-            this.val$workTaskExecutor.executeOnBackgroundThread(new RunnableC00071(in));
+            this.val$workTaskExecutor.executeOnBackgroundThread(new AnonymousClass1(in));
         }
     }
 
@@ -69,7 +69,7 @@ public class LiveDataUtils {
     public static <In, Out> LiveData<Out> dedupedMappedLiveDataFor(@NonNull LiveData<In> liveData, @NonNull Function<In, Out> function, @NonNull TaskExecutor taskExecutor) {
         Object obj = new Object();
         MediatorLiveData mediatorLiveData = new MediatorLiveData();
-        mediatorLiveData.addSource(liveData, new AnonymousClass1(taskExecutor, obj, function, mediatorLiveData));
+        mediatorLiveData.addSource(liveData, new C07751(taskExecutor, obj, function, mediatorLiveData));
         return mediatorLiveData;
     }
 }

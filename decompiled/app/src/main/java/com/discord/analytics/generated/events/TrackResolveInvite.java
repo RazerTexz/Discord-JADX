@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackResolveInvite.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackResolveInvite implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackResolveInvite implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean resolved = null;
     private final CharSequence code = null;
@@ -42,7 +42,7 @@ public final /* data */ class TrackResolveInvite implements AnalyticsSchema, Tra
             return false;
         }
         TrackResolveInvite trackResolveInvite = (TrackResolveInvite) other;
-        return m.areEqual(this.resolved, trackResolveInvite.resolved) && m.areEqual(this.code, trackResolveInvite.code) && m.areEqual(this.authenticated, trackResolveInvite.authenticated) && m.areEqual(this.guildId, trackResolveInvite.guildId) && m.areEqual(this.channelId, trackResolveInvite.channelId) && m.areEqual(this.channelType, trackResolveInvite.channelType) && m.areEqual(this.inviterId, trackResolveInvite.inviterId) && m.areEqual(this.sizeTotal, trackResolveInvite.sizeTotal) && m.areEqual(this.sizeOnline, trackResolveInvite.sizeOnline) && m.areEqual(this.inviteType, trackResolveInvite.inviteType) && m.areEqual(this.destinationUserId, trackResolveInvite.destinationUserId) && m.areEqual(this.userBanned, trackResolveInvite.userBanned) && m.areEqual(this.inputValue, trackResolveInvite.inputValue) && m.areEqual(this.errorCode, trackResolveInvite.errorCode) && m.areEqual(this.errorMessage, trackResolveInvite.errorMessage);
+        return Intrinsics3.areEqual(this.resolved, trackResolveInvite.resolved) && Intrinsics3.areEqual(this.code, trackResolveInvite.code) && Intrinsics3.areEqual(this.authenticated, trackResolveInvite.authenticated) && Intrinsics3.areEqual(this.guildId, trackResolveInvite.guildId) && Intrinsics3.areEqual(this.channelId, trackResolveInvite.channelId) && Intrinsics3.areEqual(this.channelType, trackResolveInvite.channelType) && Intrinsics3.areEqual(this.inviterId, trackResolveInvite.inviterId) && Intrinsics3.areEqual(this.sizeTotal, trackResolveInvite.sizeTotal) && Intrinsics3.areEqual(this.sizeOnline, trackResolveInvite.sizeOnline) && Intrinsics3.areEqual(this.inviteType, trackResolveInvite.inviteType) && Intrinsics3.areEqual(this.destinationUserId, trackResolveInvite.destinationUserId) && Intrinsics3.areEqual(this.userBanned, trackResolveInvite.userBanned) && Intrinsics3.areEqual(this.inputValue, trackResolveInvite.inputValue) && Intrinsics3.areEqual(this.errorCode, trackResolveInvite.errorCode) && Intrinsics3.areEqual(this.errorMessage, trackResolveInvite.errorMessage);
     }
 
     public int hashCode() {
@@ -79,35 +79,35 @@ public final /* data */ class TrackResolveInvite implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackResolveInvite(resolved=");
-        sbU.append(this.resolved);
-        sbU.append(", code=");
-        sbU.append(this.code);
-        sbU.append(", authenticated=");
-        sbU.append(this.authenticated);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", inviterId=");
-        sbU.append(this.inviterId);
-        sbU.append(", sizeTotal=");
-        sbU.append(this.sizeTotal);
-        sbU.append(", sizeOnline=");
-        sbU.append(this.sizeOnline);
-        sbU.append(", inviteType=");
-        sbU.append(this.inviteType);
-        sbU.append(", destinationUserId=");
-        sbU.append(this.destinationUserId);
-        sbU.append(", userBanned=");
-        sbU.append(this.userBanned);
-        sbU.append(", inputValue=");
-        sbU.append(this.inputValue);
-        sbU.append(", errorCode=");
-        sbU.append(this.errorCode);
-        sbU.append(", errorMessage=");
-        return a.E(sbU, this.errorMessage, ")");
+        StringBuilder sbM833U = outline.m833U("TrackResolveInvite(resolved=");
+        sbM833U.append(this.resolved);
+        sbM833U.append(", code=");
+        sbM833U.append(this.code);
+        sbM833U.append(", authenticated=");
+        sbM833U.append(this.authenticated);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", inviterId=");
+        sbM833U.append(this.inviterId);
+        sbM833U.append(", sizeTotal=");
+        sbM833U.append(this.sizeTotal);
+        sbM833U.append(", sizeOnline=");
+        sbM833U.append(this.sizeOnline);
+        sbM833U.append(", inviteType=");
+        sbM833U.append(this.inviteType);
+        sbM833U.append(", destinationUserId=");
+        sbM833U.append(this.destinationUserId);
+        sbM833U.append(", userBanned=");
+        sbM833U.append(this.userBanned);
+        sbM833U.append(", inputValue=");
+        sbM833U.append(this.inputValue);
+        sbM833U.append(", errorCode=");
+        sbM833U.append(this.errorCode);
+        sbM833U.append(", errorMessage=");
+        return outline.m817E(sbM833U, this.errorMessage, ")");
     }
 }

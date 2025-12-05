@@ -5,40 +5,49 @@ import kotlin.Unit;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.jvm.functions.Function1;
 import kotlin.sequences.Sequence;
-import s.a.m0;
-import s.a.p;
-import s.a.r;
+import p659s.p660a.Job2;
+import p659s.p660a.Job4;
+import p659s.p660a.Job6;
 
 /* compiled from: Job.kt */
 /* loaded from: classes3.dex */
 public interface Job extends CoroutineContext.Element {
 
     /* renamed from: h, reason: from kotlin metadata */
-    public static final Companion INSTANCE = Companion.a;
+    public static final Companion INSTANCE = Companion.f27463a;
 
     /* compiled from: Job.kt */
     /* renamed from: kotlinx.coroutines.Job$a, reason: from kotlin metadata */
     public static final class Companion implements CoroutineContext.Key<Job> {
-        public static final /* synthetic */ Companion a = new Companion();
+
+        /* renamed from: a */
+        public static final /* synthetic */ Companion f27463a = new Companion();
 
         static {
-            int i = CoroutineExceptionHandler.g;
+            int i = CoroutineExceptionHandler.f27455g;
         }
     }
 
-    p D(r child);
+    /* renamed from: D */
+    Job4 mo10909D(Job6 child);
 
-    boolean a();
+    /* renamed from: a */
+    boolean mo10910a();
 
-    void b(CancellationException cause);
+    /* renamed from: b */
+    void mo10911b(CancellationException cause);
 
-    Sequence<Job> e();
+    /* renamed from: e */
+    Sequence<Job> mo10912e();
 
-    m0 n(boolean onCancelling, boolean invokeImmediately, Function1<? super Throwable, Unit> handler);
+    /* renamed from: n */
+    Job2 mo10913n(boolean onCancelling, boolean invokeImmediately, Function1<? super Throwable, Unit> handler);
 
-    CancellationException q();
+    /* renamed from: q */
+    CancellationException mo10914q();
 
     boolean start();
 
-    m0 u(Function1<? super Throwable, Unit> handler);
+    /* renamed from: u */
+    Job2 mo10915u(Function1<? super Throwable, Unit> handler);
 }

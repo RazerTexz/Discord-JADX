@@ -3,8 +3,8 @@ package com.esotericsoftware.kryo.serializers;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.p502io.Input;
+import com.esotericsoftware.kryo.p502io.Output;
 import com.esotericsoftware.kryo.util.Util;
 import java.time.Duration;
 import java.time.Instant;
@@ -52,7 +52,7 @@ public final class TimeSerializers {
             output.writeInt(duration.getNano(), true);
         }
 
-        public /* synthetic */ DurationSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ DurationSerializer(C106281 c106281) {
             this();
         }
     }
@@ -84,7 +84,7 @@ public final class TimeSerializers {
             output.writeInt(instant.getNano(), true);
         }
 
-        public /* synthetic */ InstantSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ InstantSerializer(C106281 c106281) {
             this();
         }
     }
@@ -115,7 +115,7 @@ public final class TimeSerializers {
             write(output, localDate);
         }
 
-        public /* synthetic */ LocalDateSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ LocalDateSerializer(C106281 c106281) {
             this();
         }
 
@@ -157,7 +157,7 @@ public final class TimeSerializers {
             LocalTimeSerializer.write(output, localDateTime.toLocalTime());
         }
 
-        public /* synthetic */ LocalDateTimeSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ LocalDateTimeSerializer(C106281 c106281) {
             this();
         }
     }
@@ -188,7 +188,7 @@ public final class TimeSerializers {
             write(output, localTime);
         }
 
-        public /* synthetic */ LocalTimeSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ LocalTimeSerializer(C106281 c106281) {
             this();
         }
 
@@ -277,7 +277,7 @@ public final class TimeSerializers {
             output.writeByte(monthDay.getDayOfMonth());
         }
 
-        public /* synthetic */ MonthDaySerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ MonthDaySerializer(C106281 c106281) {
             this();
         }
     }
@@ -310,7 +310,7 @@ public final class TimeSerializers {
             ZoneOffsetSerializer.write(output, offsetDateTime.getOffset());
         }
 
-        public /* synthetic */ OffsetDateTimeSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ OffsetDateTimeSerializer(C106281 c106281) {
             this();
         }
     }
@@ -342,7 +342,7 @@ public final class TimeSerializers {
             ZoneOffsetSerializer.write(output, offsetTime.getOffset());
         }
 
-        public /* synthetic */ OffsetTimeSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ OffsetTimeSerializer(C106281 c106281) {
             this();
         }
     }
@@ -375,7 +375,7 @@ public final class TimeSerializers {
             output.writeInt(period.getDays(), true);
         }
 
-        public /* synthetic */ PeriodSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ PeriodSerializer(C106281 c106281) {
             this();
         }
     }
@@ -407,7 +407,7 @@ public final class TimeSerializers {
             output.writeByte(yearMonth.getMonthValue());
         }
 
-        public /* synthetic */ YearMonthSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ YearMonthSerializer(C106281 c106281) {
             this();
         }
     }
@@ -438,7 +438,7 @@ public final class TimeSerializers {
             output.writeInt(year.getValue(), true);
         }
 
-        public /* synthetic */ YearSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ YearSerializer(C106281 c106281) {
             this();
         }
     }
@@ -469,7 +469,7 @@ public final class TimeSerializers {
             write(output, zoneId);
         }
 
-        public /* synthetic */ ZoneIdSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ ZoneIdSerializer(C106281 c106281) {
             this();
         }
 
@@ -508,7 +508,7 @@ public final class TimeSerializers {
             write(output, zoneOffset);
         }
 
-        public /* synthetic */ ZoneOffsetSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ ZoneOffsetSerializer(C106281 c106281) {
             this();
         }
 
@@ -555,7 +555,7 @@ public final class TimeSerializers {
             ZoneIdSerializer.write(output, zonedDateTime.getZone());
         }
 
-        public /* synthetic */ ZonedDateTimeSerializer(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ ZonedDateTimeSerializer(C106281 c106281) {
             this();
         }
     }

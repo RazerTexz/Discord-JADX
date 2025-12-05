@@ -1,12 +1,12 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create.benefits;
 
 import com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscriptionTierViewModel;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildRoleSubscriptionTierBenefits$viewModel$2 extends o implements Function0<GuildRoleSubscriptionTierViewModel> {
+public final class WidgetGuildRoleSubscriptionTierBenefits$viewModel$2 extends Lambda implements Function0<GuildRoleSubscriptionTierViewModel> {
     public static final WidgetGuildRoleSubscriptionTierBenefits$viewModel$2 INSTANCE = new WidgetGuildRoleSubscriptionTierBenefits$viewModel$2();
 
     public WidgetGuildRoleSubscriptionTierBenefits$viewModel$2() {

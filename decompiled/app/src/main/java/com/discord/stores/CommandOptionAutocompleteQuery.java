@@ -1,7 +1,7 @@
 package com.discord.stores;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: StoreApplicationCommands.kt */
 /* loaded from: classes2.dex */
@@ -10,8 +10,8 @@ public final /* data */ class CommandOptionAutocompleteQuery {
     private final String queryString;
 
     public CommandOptionAutocompleteQuery(String str, String str2) {
-        m.checkNotNullParameter(str, "queryString");
-        m.checkNotNullParameter(str2, "commandOptionName");
+        Intrinsics3.checkNotNullParameter(str, "queryString");
+        Intrinsics3.checkNotNullParameter(str2, "commandOptionName");
         this.queryString = str;
         this.commandOptionName = str2;
     }
@@ -37,8 +37,8 @@ public final /* data */ class CommandOptionAutocompleteQuery {
     }
 
     public final CommandOptionAutocompleteQuery copy(String queryString, String commandOptionName) {
-        m.checkNotNullParameter(queryString, "queryString");
-        m.checkNotNullParameter(commandOptionName, "commandOptionName");
+        Intrinsics3.checkNotNullParameter(queryString, "queryString");
+        Intrinsics3.checkNotNullParameter(commandOptionName, "commandOptionName");
         return new CommandOptionAutocompleteQuery(queryString, commandOptionName);
     }
 
@@ -50,7 +50,7 @@ public final /* data */ class CommandOptionAutocompleteQuery {
             return false;
         }
         CommandOptionAutocompleteQuery commandOptionAutocompleteQuery = (CommandOptionAutocompleteQuery) other;
-        return m.areEqual(this.queryString, commandOptionAutocompleteQuery.queryString) && m.areEqual(this.commandOptionName, commandOptionAutocompleteQuery.commandOptionName);
+        return Intrinsics3.areEqual(this.queryString, commandOptionAutocompleteQuery.queryString) && Intrinsics3.areEqual(this.commandOptionName, commandOptionAutocompleteQuery.commandOptionName);
     }
 
     public final String getCommandOptionName() {
@@ -69,9 +69,9 @@ public final /* data */ class CommandOptionAutocompleteQuery {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("CommandOptionAutocompleteQuery(queryString=");
-        sbU.append(this.queryString);
-        sbU.append(", commandOptionName=");
-        return a.J(sbU, this.commandOptionName, ")");
+        StringBuilder sbM833U = outline.m833U("CommandOptionAutocompleteQuery(queryString=");
+        sbM833U.append(this.queryString);
+        sbM833U.append(", commandOptionName=");
+        return outline.m822J(sbM833U, this.commandOptionName, ")");
     }
 }

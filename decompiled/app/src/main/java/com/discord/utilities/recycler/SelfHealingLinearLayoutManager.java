@@ -2,11 +2,11 @@ package com.discord.utilities.recycler;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
 import com.discord.app.AppLog;
-import d0.g0.w;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.Strings4;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SelfHealingLinearLayoutManager.kt */
 /* loaded from: classes2.dex */
@@ -15,9 +15,9 @@ public final class SelfHealingLinearLayoutManager extends LinearLayoutManager {
     private final RecyclerView recyclerView;
 
     /* compiled from: SelfHealingLinearLayoutManager.kt */
-    /* renamed from: com.discord.utilities.recycler.SelfHealingLinearLayoutManager$resetAdapter$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.utilities.recycler.SelfHealingLinearLayoutManager$resetAdapter$1 */
+    public static final class RunnableC68501 implements Runnable {
+        public RunnableC68501() {
         }
 
         @Override // java.lang.Runnable
@@ -40,21 +40,21 @@ public final class SelfHealingLinearLayoutManager extends LinearLayoutManager {
     }
 
     private final void logWarning(Throwable exception) {
-        StringBuilder sbU = a.U("Triggered in adapter: ");
-        sbU.append(this.adapter.getClass());
-        AppLog.g.w("Invalid adapter configuration.", new Exception(sbU.toString(), exception));
+        StringBuilder sbM833U = outline.m833U("Triggered in adapter: ");
+        sbM833U.append(this.adapter.getClass());
+        AppLog.f14950g.mo8370w("Invalid adapter configuration.", new Exception(sbM833U.toString(), exception));
     }
 
     private final void resetAdapter(Throwable exception) {
-        this.recyclerView.post(new AnonymousClass1());
+        this.recyclerView.post(new RunnableC68501());
         logWarning(exception);
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
         String message;
-        m.checkNotNullParameter(recycler, "recycler");
-        m.checkNotNullParameter(state, "state");
+        Intrinsics3.checkNotNullParameter(recycler, "recycler");
+        Intrinsics3.checkNotNullParameter(state, "state");
         try {
             super.onLayoutChildren(recycler, state);
         } catch (IllegalArgumentException e) {
@@ -63,7 +63,7 @@ public final class SelfHealingLinearLayoutManager extends LinearLayoutManager {
             resetAdapter(e2);
         } catch (RuntimeException e3) {
             String message2 = e3.getMessage();
-            if ((message2 == null || !w.contains$default((CharSequence) message2, (CharSequence) "trying to unhide", false, 2, (Object) null)) && ((message = e3.getMessage()) == null || !w.contains$default((CharSequence) message, (CharSequence) "trying to hide", false, 2, (Object) null))) {
+            if ((message2 == null || !Strings4.contains$default((CharSequence) message2, (CharSequence) "trying to unhide", false, 2, (Object) null)) && ((message = e3.getMessage()) == null || !Strings4.contains$default((CharSequence) message, (CharSequence) "trying to hide", false, 2, (Object) null))) {
                 throw e3;
             }
             resetAdapter(e3);
@@ -73,8 +73,8 @@ public final class SelfHealingLinearLayoutManager extends LinearLayoutManager {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SelfHealingLinearLayoutManager(RecyclerView recyclerView, RecyclerView.Adapter<?> adapter, int i, boolean z2) {
         super(recyclerView.getContext(), i, z2);
-        m.checkNotNullParameter(recyclerView, "recyclerView");
-        m.checkNotNullParameter(adapter, "adapter");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+        Intrinsics3.checkNotNullParameter(adapter, "adapter");
         this.recyclerView = recyclerView;
         this.adapter = adapter;
     }

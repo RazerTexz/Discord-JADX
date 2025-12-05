@@ -1,8 +1,8 @@
 package com.discord.models.experiments.dto;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: UnauthenticatedUserExperimentsDto.kt */
 /* loaded from: classes.dex */
@@ -11,8 +11,8 @@ public final /* data */ class UnauthenticatedUserExperimentsDto {
     private final String fingerprint;
 
     public UnauthenticatedUserExperimentsDto(String str, List<UserExperimentDto> list) {
-        m.checkNotNullParameter(str, "fingerprint");
-        m.checkNotNullParameter(list, "assignments");
+        Intrinsics3.checkNotNullParameter(str, "fingerprint");
+        Intrinsics3.checkNotNullParameter(list, "assignments");
         this.fingerprint = str;
         this.assignments = list;
     }
@@ -38,8 +38,8 @@ public final /* data */ class UnauthenticatedUserExperimentsDto {
     }
 
     public final UnauthenticatedUserExperimentsDto copy(String fingerprint, List<UserExperimentDto> assignments) {
-        m.checkNotNullParameter(fingerprint, "fingerprint");
-        m.checkNotNullParameter(assignments, "assignments");
+        Intrinsics3.checkNotNullParameter(fingerprint, "fingerprint");
+        Intrinsics3.checkNotNullParameter(assignments, "assignments");
         return new UnauthenticatedUserExperimentsDto(fingerprint, assignments);
     }
 
@@ -51,7 +51,7 @@ public final /* data */ class UnauthenticatedUserExperimentsDto {
             return false;
         }
         UnauthenticatedUserExperimentsDto unauthenticatedUserExperimentsDto = (UnauthenticatedUserExperimentsDto) other;
-        return m.areEqual(this.fingerprint, unauthenticatedUserExperimentsDto.fingerprint) && m.areEqual(this.assignments, unauthenticatedUserExperimentsDto.assignments);
+        return Intrinsics3.areEqual(this.fingerprint, unauthenticatedUserExperimentsDto.fingerprint) && Intrinsics3.areEqual(this.assignments, unauthenticatedUserExperimentsDto.assignments);
     }
 
     public final List<UserExperimentDto> getAssignments() {
@@ -70,9 +70,9 @@ public final /* data */ class UnauthenticatedUserExperimentsDto {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("UnauthenticatedUserExperimentsDto(fingerprint=");
-        sbU.append(this.fingerprint);
-        sbU.append(", assignments=");
-        return a.L(sbU, this.assignments, ")");
+        StringBuilder sbM833U = outline.m833U("UnauthenticatedUserExperimentsDto(fingerprint=");
+        sbM833U.append(this.fingerprint);
+        sbM833U.append(", assignments=");
+        return outline.m824L(sbM833U, this.assignments, ")");
     }
 }

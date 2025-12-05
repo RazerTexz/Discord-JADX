@@ -1,9 +1,9 @@
 package com.discord.widgets.bugreports;
 
-import a0.a.a.b;
 import androidx.annotation.StringRes;
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: WidgetBugReport.kt */
 /* loaded from: classes2.dex */
@@ -74,15 +74,15 @@ public final /* data */ class Priority {
     }
 
     public int hashCode() {
-        return b.a(this.emojiId) + (((this.title * 31) + this.description) * 31);
+        return C0002b.m3a(this.emojiId) + (((this.title * 31) + this.description) * 31);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("Priority(title=");
-        sbU.append(this.title);
-        sbU.append(", description=");
-        sbU.append(this.description);
-        sbU.append(", emojiId=");
-        return a.C(sbU, this.emojiId, ")");
+        StringBuilder sbM833U = outline.m833U("Priority(title=");
+        sbM833U.append(this.title);
+        sbM833U.append(", description=");
+        sbM833U.append(this.description);
+        sbM833U.append(", emojiId=");
+        return outline.m815C(sbM833U, this.emojiId, ")");
     }
 }

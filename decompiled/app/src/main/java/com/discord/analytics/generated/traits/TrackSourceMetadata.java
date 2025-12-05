@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSourceMetadata.kt */
 /* loaded from: classes.dex */
@@ -36,7 +36,7 @@ public final /* data */ class TrackSourceMetadata {
             return false;
         }
         TrackSourceMetadata trackSourceMetadata = (TrackSourceMetadata) other;
-        return m.areEqual(this.sourcePage, trackSourceMetadata.sourcePage) && m.areEqual(this.sourceSection, trackSourceMetadata.sourceSection) && m.areEqual(this.sourceObject, trackSourceMetadata.sourceObject) && m.areEqual(this.sourceObjectType, trackSourceMetadata.sourceObjectType) && m.areEqual(this.sourcePromotionId, trackSourceMetadata.sourcePromotionId);
+        return Intrinsics3.areEqual(this.sourcePage, trackSourceMetadata.sourcePage) && Intrinsics3.areEqual(this.sourceSection, trackSourceMetadata.sourceSection) && Intrinsics3.areEqual(this.sourceObject, trackSourceMetadata.sourceObject) && Intrinsics3.areEqual(this.sourceObjectType, trackSourceMetadata.sourceObjectType) && Intrinsics3.areEqual(this.sourcePromotionId, trackSourceMetadata.sourcePromotionId);
     }
 
     public int hashCode() {
@@ -53,15 +53,15 @@ public final /* data */ class TrackSourceMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSourceMetadata(sourcePage=");
-        sbU.append(this.sourcePage);
-        sbU.append(", sourceSection=");
-        sbU.append(this.sourceSection);
-        sbU.append(", sourceObject=");
-        sbU.append(this.sourceObject);
-        sbU.append(", sourceObjectType=");
-        sbU.append(this.sourceObjectType);
-        sbU.append(", sourcePromotionId=");
-        return a.G(sbU, this.sourcePromotionId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSourceMetadata(sourcePage=");
+        sbM833U.append(this.sourcePage);
+        sbM833U.append(", sourceSection=");
+        sbM833U.append(this.sourceSection);
+        sbM833U.append(", sourceObject=");
+        sbM833U.append(this.sourceObject);
+        sbM833U.append(", sourceObjectType=");
+        sbM833U.append(this.sourceObjectType);
+        sbM833U.append(", sourcePromotionId=");
+        return outline.m819G(sbM833U, this.sourcePromotionId, ")");
     }
 }

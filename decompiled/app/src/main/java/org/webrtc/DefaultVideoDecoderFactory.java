@@ -1,10 +1,10 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import h0.c.q0;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import org.webrtc.EglBase;
+import p617h0.p628c.VideoDecoderFactory2;
 
 /* loaded from: classes3.dex */
 public class DefaultVideoDecoderFactory implements VideoDecoderFactory {
@@ -22,7 +22,7 @@ public class DefaultVideoDecoderFactory implements VideoDecoderFactory {
 
     @Override // org.webrtc.VideoDecoderFactory
     public /* synthetic */ VideoDecoder createDecoder(String str) {
-        return q0.a(this, str);
+        return VideoDecoderFactory2.m10671a(this, str);
     }
 
     @Override // org.webrtc.VideoDecoderFactory

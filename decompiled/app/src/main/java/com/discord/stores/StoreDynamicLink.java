@@ -4,17 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import androidx.core.app.NotificationCompat;
-import b.a.e.d;
-import b.d.b.a.a;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.intent.IntentUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.g0.t;
-import d0.g0.w;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
-import j0.l.e.k;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Objects;
@@ -25,9 +17,18 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.text.MatchResult;
 import kotlin.text.Regex;
-import rx.Emitter;
-import rx.Observable;
-import rx.functions.Action1;
+import p007b.p008a.p018d.p019m0.RoutingPatterns;
+import p007b.p008a.p020e.Backgrounded4;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.Strings4;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Emitter;
+import p658rx.Observable;
+import p658rx.functions.Action1;
 
 /* compiled from: StoreDynamicLink.kt */
 /* loaded from: classes2.dex */
@@ -135,7 +136,7 @@ public final class StoreDynamicLink {
                 return false;
             }
             DynamicLinkData dynamicLinkData = (DynamicLinkData) other;
-            return m.areEqual(this.uri, dynamicLinkData.uri) && m.areEqual(this.fingerprint, dynamicLinkData.fingerprint) && m.areEqual(this.attemptId, dynamicLinkData.attemptId) && m.areEqual(this.inviteCode, dynamicLinkData.inviteCode) && m.areEqual(this.guildTemplateCode, dynamicLinkData.guildTemplateCode) && m.areEqual(this.authToken, dynamicLinkData.authToken);
+            return Intrinsics3.areEqual(this.uri, dynamicLinkData.uri) && Intrinsics3.areEqual(this.fingerprint, dynamicLinkData.fingerprint) && Intrinsics3.areEqual(this.attemptId, dynamicLinkData.attemptId) && Intrinsics3.areEqual(this.inviteCode, dynamicLinkData.inviteCode) && Intrinsics3.areEqual(this.guildTemplateCode, dynamicLinkData.guildTemplateCode) && Intrinsics3.areEqual(this.authToken, dynamicLinkData.authToken);
         }
 
         public final String getAttemptId() {
@@ -178,27 +179,27 @@ public final class StoreDynamicLink {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("DynamicLinkData(uri=");
-            sbU.append(this.uri);
-            sbU.append(", fingerprint=");
-            sbU.append(this.fingerprint);
-            sbU.append(", attemptId=");
-            sbU.append(this.attemptId);
-            sbU.append(", inviteCode=");
-            sbU.append(this.inviteCode);
-            sbU.append(", guildTemplateCode=");
-            sbU.append(this.guildTemplateCode);
-            sbU.append(", authToken=");
-            return a.J(sbU, this.authToken, ")");
+            StringBuilder sbM833U = outline.m833U("DynamicLinkData(uri=");
+            sbM833U.append(this.uri);
+            sbM833U.append(", fingerprint=");
+            sbM833U.append(this.fingerprint);
+            sbM833U.append(", attemptId=");
+            sbM833U.append(this.attemptId);
+            sbM833U.append(", inviteCode=");
+            sbM833U.append(this.inviteCode);
+            sbM833U.append(", guildTemplateCode=");
+            sbM833U.append(this.guildTemplateCode);
+            sbM833U.append(", authToken=");
+            return outline.m822J(sbM833U, this.authToken, ")");
         }
     }
 
     /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Throwable, Uri> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$1 */
+    public static final class C58781<T, R> implements Func1<Throwable, Uri> {
+        public static final C58781 INSTANCE = new C58781();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Uri call(Throwable th) {
             return call2(th);
         }
@@ -210,12 +211,12 @@ public final class StoreDynamicLink {
     }
 
     /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$handleDataReceived$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreDynamicLink$handleDataReceived$1 */
+    public static final class C58811 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ DynamicLinkData $data;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(DynamicLinkData dynamicLinkData) {
+        public C58811(DynamicLinkData dynamicLinkData) {
             super(0);
             this.$data = dynamicLinkData;
         }
@@ -223,7 +224,7 @@ public final class StoreDynamicLink {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -239,11 +240,11 @@ public final class StoreDynamicLink {
     }
 
     /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Uri, DynamicLinkData> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$1 */
+    public static final class C58831<T, R> implements Func1<Uri, DynamicLinkData> {
+        public static final C58831 INSTANCE = new C58831();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ DynamicLinkData call(Uri uri) {
             return call2(uri);
         }
@@ -266,22 +267,22 @@ public final class StoreDynamicLink {
             String strPrevious2;
             String path2;
             String queryParameter3 = null;
-            if (m.areEqual(uri, Uri.EMPTY)) {
+            if (Intrinsics3.areEqual(uri, Uri.EMPTY)) {
                 return null;
             }
             IntentUtils intentUtils = IntentUtils.INSTANCE;
-            m.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            Intrinsics3.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
             Uri uri2 = intentUtils.isHttpDomainUrl(uri) ? uri : null;
-            b.a.d.m0.a aVar = b.a.d.m0.a.G;
-            m.checkNotNullParameter(uri, "$this$isInviteLink");
+            RoutingPatterns routingPatterns = RoutingPatterns.f538G;
+            Intrinsics3.checkNotNullParameter(uri, "$this$isInviteLink");
             boolean z2 = false;
-            if (t.equals(uri.getHost(), b.a.d.m0.a.d, true) || ((t.equals(uri.getHost(), b.a.d.m0.a.a, true) || t.equals(uri.getHost(), b.a.d.m0.a.f60b, true)) && (path2 = uri.getPath()) != null && b.a.d.m0.a.n.matches(path2))) {
-                Regex regex = b.a.d.m0.a.n;
+            if (StringsJVM.equals(uri.getHost(), RoutingPatterns.f542d, true) || ((StringsJVM.equals(uri.getHost(), RoutingPatterns.f539a, true) || StringsJVM.equals(uri.getHost(), RoutingPatterns.f540b, true)) && (path2 = uri.getPath()) != null && RoutingPatterns.f552n.matches(path2))) {
+                Regex regex = RoutingPatterns.f552n;
                 String path3 = uri.getPath();
                 if (path3 == null) {
                     path3 = "";
                 }
-                m.checkNotNullExpressionValue(path3, "uri.path ?: \"\"");
+                Intrinsics3.checkNotNullExpressionValue(path3, "uri.path ?: \"\"");
                 MatchResult matchResultMatchEntire = regex.matchEntire(path3);
                 if (matchResultMatchEntire == null || (groupValues2 = matchResultMatchEntire.getGroupValues()) == null) {
                     str = null;
@@ -293,23 +294,23 @@ public final class StoreDynamicLink {
                             break;
                         }
                         strPrevious2 = listIterator.previous();
-                        if (!t.isBlank(strPrevious2)) {
+                        if (!StringsJVM.isBlank(strPrevious2)) {
                             break;
                         }
                     }
                     str = strPrevious2;
                 }
             }
-            b.a.d.m0.a aVar2 = b.a.d.m0.a.G;
-            m.checkNotNullParameter(uri, "$this$isGuildTemplateLink");
-            if (t.equals(uri.getHost(), b.a.d.m0.a.e, true) || ((t.equals(uri.getHost(), b.a.d.m0.a.a, true) || t.equals(uri.getHost(), b.a.d.m0.a.f60b, true)) && (path = uri.getPath()) != null && b.a.d.m0.a.p.matches(path))) {
+            RoutingPatterns routingPatterns2 = RoutingPatterns.f538G;
+            Intrinsics3.checkNotNullParameter(uri, "$this$isGuildTemplateLink");
+            if (StringsJVM.equals(uri.getHost(), RoutingPatterns.f543e, true) || ((StringsJVM.equals(uri.getHost(), RoutingPatterns.f539a, true) || StringsJVM.equals(uri.getHost(), RoutingPatterns.f540b, true)) && (path = uri.getPath()) != null && RoutingPatterns.f554p.matches(path))) {
                 z2 = true;
             }
             if (z2) {
-                Regex regex2 = b.a.d.m0.a.p;
+                Regex regex2 = RoutingPatterns.f554p;
                 String path4 = uri.getPath();
                 String str3 = path4 != null ? path4 : "";
-                m.checkNotNullExpressionValue(str3, "uri.path ?: \"\"");
+                Intrinsics3.checkNotNullExpressionValue(str3, "uri.path ?: \"\"");
                 MatchResult matchResultMatchEntire2 = regex2.matchEntire(str3);
                 if (matchResultMatchEntire2 == null || (groupValues = matchResultMatchEntire2.getGroupValues()) == null) {
                     str2 = null;
@@ -321,7 +322,7 @@ public final class StoreDynamicLink {
                             break;
                         }
                         strPrevious = listIterator2.previous();
-                        if (!t.isBlank(strPrevious)) {
+                        if (!StringsJVM.isBlank(strPrevious)) {
                             break;
                         }
                     }
@@ -347,11 +348,11 @@ public final class StoreDynamicLink {
     }
 
     /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$2, reason: invalid class name */
-    public static final class AnonymousClass2<T> implements Action1<DynamicLinkData> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$2 */
+    public static final class C58842<T> implements Action1<DynamicLinkData> {
+        public static final C58842 INSTANCE = new C58842();
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(DynamicLinkData dynamicLinkData) {
             call2(dynamicLinkData);
         }
@@ -365,19 +366,19 @@ public final class StoreDynamicLink {
                 String inviteCode = dynamicLinkData.getInviteCode();
                 String guildTemplateCode = dynamicLinkData.getGuildTemplateCode();
                 String authToken = dynamicLinkData.getAuthToken();
-                d dVar = d.d;
-                analyticsTracker.externalDynamicLinkReceived(fingerprint, attemptId, inviteCode, guildTemplateCode, authToken, d.a);
+                Backgrounded4 backgrounded4 = Backgrounded4.f600d;
+                analyticsTracker.externalDynamicLinkReceived(fingerprint, attemptId, inviteCode, guildTemplateCode, authToken, Backgrounded4.f597a);
             }
         }
     }
 
     /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<DynamicLinkData, Unit> {
+    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$3 */
+    public static final class C58853 extends Lambda implements Function1<DynamicLinkData, Unit> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(Context context) {
+        public C58853(Context context) {
             super(1);
             this.$context = context;
         }
@@ -385,7 +386,7 @@ public final class StoreDynamicLink {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(DynamicLinkData dynamicLinkData) {
             invoke2(dynamicLinkData);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -395,8 +396,8 @@ public final class StoreDynamicLink {
     }
 
     public StoreDynamicLink(StoreStream storeStream, Dispatcher dispatcher) {
-        m.checkNotNullParameter(storeStream, "stream");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
         this.stream = storeStream;
         this.dispatcher = dispatcher;
     }
@@ -410,45 +411,45 @@ public final class StoreDynamicLink {
     }
 
     private final Observable<Uri> getDynamicLinkObservable(Intent intent) {
-        Observable observableO = Observable.o(new StoreDynamicLink$getDynamicLinkObservable$firebaseDynamicLinks$1(intent), Emitter.BackpressureMode.BUFFER);
-        m.checkNotNullExpressionValue(observableO, "Observable.create({\n    ….BackpressureMode.BUFFER)");
-        Observable<Uri> observableM = Observable.I(new k(Uri.EMPTY).q(1000L, TimeUnit.MILLISECONDS), observableO).M(AnonymousClass1.INSTANCE);
-        m.checkNotNullExpressionValue(observableM, "Observable\n        .merg…ErrorReturn { Uri.EMPTY }");
-        return observableM;
+        Observable observableM11080o = Observable.m11080o(new StoreDynamicLink2(intent), Emitter.BackpressureMode.BUFFER);
+        Intrinsics3.checkNotNullExpressionValue(observableM11080o, "Observable.create({\n    ….BackpressureMode.BUFFER)");
+        Observable<Uri> observableM11087M = Observable.m11064I(new ScalarSynchronousObservable(Uri.EMPTY).m11111q(1000L, TimeUnit.MILLISECONDS), observableM11080o).m11087M(C58781.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11087M, "Observable\n        .merg…ErrorReturn { Uri.EMPTY }");
+        return observableM11087M;
     }
 
     private final void handleDataReceived(DynamicLinkData data, Context context) {
         String guildTemplateCode;
         String inviteCode;
-        this.dispatcher.schedule(new AnonymousClass1(data));
-        if (data != null && (inviteCode = data.getInviteCode()) != null && (!t.isBlank(inviteCode))) {
+        this.dispatcher.schedule(new C58811(data));
+        if (data != null && (inviteCode = data.getInviteCode()) != null && (!StringsJVM.isBlank(inviteCode))) {
             IntentUtils.RouteBuilders routeBuilders = IntentUtils.RouteBuilders.INSTANCE;
             String inviteCode2 = data.getInviteCode();
             Objects.requireNonNull(inviteCode2, "null cannot be cast to non-null type kotlin.CharSequence");
-            IntentUtils.consumeRoutingIntent$default(IntentUtils.INSTANCE, routeBuilders.selectInvite(w.trim(inviteCode2).toString(), StoreInviteSettings.LOCATION_DEEPLINK), context, null, 4, null);
+            IntentUtils.consumeRoutingIntent$default(IntentUtils.INSTANCE, routeBuilders.selectInvite(Strings4.trim(inviteCode2).toString(), StoreInviteSettings.LOCATION_DEEPLINK), context, null, 4, null);
             return;
         }
-        if (data != null && (guildTemplateCode = data.getGuildTemplateCode()) != null && (!t.isBlank(guildTemplateCode))) {
+        if (data != null && (guildTemplateCode = data.getGuildTemplateCode()) != null && (!StringsJVM.isBlank(guildTemplateCode))) {
             IntentUtils.RouteBuilders routeBuilders2 = IntentUtils.RouteBuilders.INSTANCE;
             String guildTemplateCode2 = data.getGuildTemplateCode();
             Objects.requireNonNull(guildTemplateCode2, "null cannot be cast to non-null type kotlin.CharSequence");
-            IntentUtils.consumeRoutingIntent$default(IntentUtils.INSTANCE, routeBuilders2.selectGuildTemplate(w.trim(guildTemplateCode2).toString(), StoreInviteSettings.LOCATION_DEEPLINK), context, null, 4, null);
+            IntentUtils.consumeRoutingIntent$default(IntentUtils.INSTANCE, routeBuilders2.selectGuildTemplate(Strings4.trim(guildTemplateCode2).toString(), StoreInviteSettings.LOCATION_DEEPLINK), context, null, 4, null);
             return;
         }
         if ((data != null ? data.getUri() : null) != null) {
             Intent data2 = new Intent().setData(data.getUri());
-            m.checkNotNullExpressionValue(data2, "Intent().setData(data.uri)");
+            Intrinsics3.checkNotNullExpressionValue(data2, "Intent().setData(data.uri)");
             IntentUtils.consumeRoutingIntent$default(IntentUtils.INSTANCE, data2, context, null, 4, null);
         }
     }
 
     public final void storeLinkIfExists(Intent intent, Context context) {
-        m.checkNotNullParameter(intent, "intent");
-        m.checkNotNullParameter(context, "context");
-        Observable<R> observableG = getDynamicLinkObservable(intent).G(AnonymousClass1.INSTANCE);
-        m.checkNotNullExpressionValue(observableG, "getDynamicLinkObservable…ode, authToken)\n        }");
-        Observable observableU = ObservableExtensionsKt.computationBuffered(observableG).r().u(AnonymousClass2.INSTANCE);
-        m.checkNotNullExpressionValue(observableU, "getDynamicLinkObservable…  )\n          }\n        }");
-        ObservableExtensionsKt.appSubscribe$default(observableU, StoreDynamicLink.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(context), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(intent, "intent");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Observable<R> observableM11083G = getDynamicLinkObservable(intent).m11083G(C58831.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11083G, "getDynamicLinkObservable…ode, authToken)\n        }");
+        Observable observableM11115u = ObservableExtensionsKt.computationBuffered(observableM11083G).m11112r().m11115u(C58842.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11115u, "getDynamicLinkObservable…  )\n          }\n        }");
+        ObservableExtensionsKt.appSubscribe$default(observableM11115u, StoreDynamicLink.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C58853(context), 62, (Object) null);
     }
 }

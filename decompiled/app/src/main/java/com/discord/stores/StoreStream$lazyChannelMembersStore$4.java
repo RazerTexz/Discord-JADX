@@ -1,11 +1,11 @@
 package com.discord.stores;
 
-import d0.z.d.k;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
 
 /* compiled from: StoreStream.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class StoreStream$lazyChannelMembersStore$4 extends k implements Function1<Long, Boolean> {
+public final /* synthetic */ class StoreStream$lazyChannelMembersStore$4 extends FunctionReferenceImpl implements Function1<Long, Boolean> {
     public StoreStream$lazyChannelMembersStore$4(StoreApplicationStreaming storeApplicationStreaming) {
         super(1, storeApplicationStreaming, StoreApplicationStreaming.class, "isUserStreaming", "isUserStreaming(J)Z", 0);
     }

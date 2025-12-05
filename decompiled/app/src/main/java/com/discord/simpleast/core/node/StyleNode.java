@@ -3,15 +3,16 @@ package com.discord.simpleast.core.node;
 import android.text.SpannableStringBuilder;
 import androidx.exifinterface.media.ExifInterface;
 import com.discord.simpleast.core.node.Node;
-import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p050t.p052b.p053a.TextNode;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: StyleNode.kt */
 /* loaded from: classes.dex */
-public class StyleNode<RC, T> extends Node.a<RC> {
+public class StyleNode<RC, T> extends Node.C5655a<RC> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -27,28 +28,32 @@ public class StyleNode<RC, T> extends Node.a<RC> {
     }
 
     /* compiled from: StyleNode.kt */
-    public interface a<RC> {
+    /* renamed from: com.discord.simpleast.core.node.StyleNode$a */
+    public interface InterfaceC5656a<RC> {
         Iterable<?> get(RC rc);
     }
 
     /* compiled from: StyleNode.kt */
-    public static final class b<RC> extends b.a.t.b.a.a<RC> {
-        public final a<RC> a;
+    /* renamed from: com.discord.simpleast.core.node.StyleNode$b */
+    public static final class C5657b<RC> extends TextNode<RC> {
+
+        /* renamed from: a */
+        public final InterfaceC5656a<RC> f18952a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public b(String str, a<RC> aVar) {
+        public C5657b(String str, InterfaceC5656a<RC> interfaceC5656a) {
             super(str);
-            m.checkNotNullParameter(str, "content");
-            m.checkNotNullParameter(aVar, "stylesProvider");
-            this.a = aVar;
+            Intrinsics3.checkNotNullParameter(str, "content");
+            Intrinsics3.checkNotNullParameter(interfaceC5656a, "stylesProvider");
+            this.f18952a = interfaceC5656a;
         }
 
-        @Override // b.a.t.b.a.a, com.discord.simpleast.core.node.Node
+        @Override // p007b.p008a.p050t.p052b.p053a.TextNode, com.discord.simpleast.core.node.Node
         public void render(SpannableStringBuilder spannableStringBuilder, RC rc) {
-            m.checkNotNullParameter(spannableStringBuilder, "builder");
+            Intrinsics3.checkNotNullParameter(spannableStringBuilder, "builder");
             int length = spannableStringBuilder.length();
             super.render(spannableStringBuilder, rc);
-            Iterator<?> it = this.a.get(rc).iterator();
+            Iterator<?> it = this.f18952a.get(rc).iterator();
             while (it.hasNext()) {
                 spannableStringBuilder.setSpan(it.next(), length, spannableStringBuilder.length(), 33);
             }
@@ -59,16 +64,16 @@ public class StyleNode<RC, T> extends Node.a<RC> {
     /* JADX WARN: Multi-variable type inference failed */
     public StyleNode(List<? extends T> list) {
         super(new Node[0]);
-        m.checkNotNullParameter(list, "styles");
+        Intrinsics3.checkNotNullParameter(list, "styles");
         this.styles = list;
     }
 
     public static final <RC, T> StyleNode<RC, T> wrapText(String str, List<? extends T> list) {
         Objects.requireNonNull(INSTANCE);
-        m.checkNotNullParameter(str, "content");
-        m.checkNotNullParameter(list, "styles");
+        Intrinsics3.checkNotNullParameter(str, "content");
+        Intrinsics3.checkNotNullParameter(list, "styles");
         StyleNode<RC, T> styleNode = new StyleNode<>(list);
-        styleNode.addChild(new b.a.t.b.a.a(str));
+        styleNode.addChild(new TextNode(str));
         return styleNode;
     }
 
@@ -76,9 +81,9 @@ public class StyleNode<RC, T> extends Node.a<RC> {
         return this.styles;
     }
 
-    @Override // com.discord.simpleast.core.node.Node.a, com.discord.simpleast.core.node.Node
+    @Override // com.discord.simpleast.core.node.Node.C5655a, com.discord.simpleast.core.node.Node
     public void render(SpannableStringBuilder builder, RC renderContext) {
-        m.checkNotNullParameter(builder, "builder");
+        Intrinsics3.checkNotNullParameter(builder, "builder");
         int length = builder.length();
         super.render(builder, renderContext);
         Iterator<T> it = this.styles.iterator();

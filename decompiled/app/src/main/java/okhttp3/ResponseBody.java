@@ -1,14 +1,14 @@
 package okhttp3;
 
-import d0.y.b;
-import d0.z.d.m;
-import f0.e0.c;
-import g0.g;
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
+import p507d0.p579g0.Charsets2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p600f0.p601e0.Util7;
+import p615g0.BufferedSource;
 
 /* compiled from: ResponseBody.kt */
 /* loaded from: classes3.dex */
@@ -18,67 +18,80 @@ public abstract class ResponseBody implements Closeable {
     public Reader reader;
 
     /* compiled from: ResponseBody.kt */
-    public static final class a extends Reader {
-        public boolean j;
-        public Reader k;
-        public final g l;
-        public final Charset m;
+    /* renamed from: okhttp3.ResponseBody$a */
+    public static final class C12938a extends Reader {
 
-        public a(g gVar, Charset charset) {
-            m.checkParameterIsNotNull(gVar, "source");
-            m.checkParameterIsNotNull(charset, "charset");
-            this.l = gVar;
-            this.m = charset;
+        /* renamed from: j */
+        public boolean f27580j;
+
+        /* renamed from: k */
+        public Reader f27581k;
+
+        /* renamed from: l */
+        public final BufferedSource f27582l;
+
+        /* renamed from: m */
+        public final Charset f27583m;
+
+        public C12938a(BufferedSource bufferedSource, Charset charset) {
+            Intrinsics3.checkParameterIsNotNull(bufferedSource, "source");
+            Intrinsics3.checkParameterIsNotNull(charset, "charset");
+            this.f27582l = bufferedSource;
+            this.f27583m = charset;
         }
 
         @Override // java.io.Reader, java.io.Closeable, java.lang.AutoCloseable
         public void close() throws IOException {
-            this.j = true;
-            Reader reader = this.k;
+            this.f27580j = true;
+            Reader reader = this.f27581k;
             if (reader != null) {
                 reader.close();
             } else {
-                this.l.close();
+                this.f27582l.close();
             }
         }
 
         @Override // java.io.Reader
         public int read(char[] cArr, int i, int i2) throws IOException {
-            m.checkParameterIsNotNull(cArr, "cbuf");
-            if (this.j) {
+            Intrinsics3.checkParameterIsNotNull(cArr, "cbuf");
+            if (this.f27580j) {
                 throw new IOException("Stream closed");
             }
-            Reader inputStreamReader = this.k;
+            Reader inputStreamReader = this.f27581k;
             if (inputStreamReader == null) {
-                inputStreamReader = new InputStreamReader(this.l.u0(), c.s(this.l, this.m));
-                this.k = inputStreamReader;
+                inputStreamReader = new InputStreamReader(this.f27582l.mo10470u0(), Util7.m10138s(this.f27582l, this.f27583m));
+                this.f27581k = inputStreamReader;
             }
             return inputStreamReader.read(cArr, i, i2);
         }
     }
 
-    public abstract long a();
+    /* renamed from: a */
+    public abstract long mo10103a();
 
-    public abstract MediaType b();
+    /* renamed from: b */
+    public abstract MediaType mo10104b();
 
-    public abstract g c();
+    /* renamed from: c */
+    public abstract BufferedSource mo10105c();
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public void close() {
-        c.d(c());
+        Util7.m10123d(mo10105c());
     }
 
-    public final String d() throws IOException {
-        Charset charsetA;
-        g gVarC = c();
+    /* renamed from: d */
+    public final String m10998d() throws IOException {
+        Charset charsetM10966a;
+        BufferedSource bufferedSourceMo10105c = mo10105c();
         try {
-            MediaType mediaTypeB = b();
-            if (mediaTypeB == null || (charsetA = mediaTypeB.a(d0.g0.c.a)) == null) {
-                charsetA = d0.g0.c.a;
+            MediaType mediaTypeMo10104b = mo10104b();
+            if (mediaTypeMo10104b == null || (charsetM10966a = mediaTypeMo10104b.m10966a(Charsets2.f25136a)) == null) {
+                charsetM10966a = Charsets2.f25136a;
             }
-            String strM = gVarC.M(c.s(gVarC, charsetA));
-            b.closeFinally(gVarC, null);
-            return strM;
+            String strMo10437M = bufferedSourceMo10105c.mo10437M(Util7.m10138s(bufferedSourceMo10105c, charsetM10966a));
+            p507d0.p591y.Closeable.closeFinally(bufferedSourceMo10105c, null);
+            return strMo10437M;
         } finally {
         }
     }

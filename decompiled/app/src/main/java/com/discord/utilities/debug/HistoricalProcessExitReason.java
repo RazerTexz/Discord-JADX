@@ -4,17 +4,17 @@ import android.app.ActivityManager;
 import android.app.ApplicationExitInfo;
 import android.os.Build;
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.lifecycle.ApplicationProvider;
-import d0.g;
-import d0.o;
-import d0.t.h0;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.List;
 import java.util.Map;
 import kotlin.Lazy;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.Tuples;
+import p507d0.p580t.Maps6;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: HistoricalProcessExitReason.kt */
 /* loaded from: classes2.dex */
@@ -22,7 +22,7 @@ public final class HistoricalProcessExitReason {
     public static final HistoricalProcessExitReason INSTANCE = new HistoricalProcessExitReason();
 
     /* renamed from: lastReason$delegate, reason: from kotlin metadata */
-    private static final Lazy lastReason = g.lazy(HistoricalProcessExitReason$lastReason$2.INSTANCE);
+    private static final Lazy lastReason = LazyJVM.lazy(HistoricalProcessExitReason2.INSTANCE);
 
     /* compiled from: HistoricalProcessExitReason.kt */
     public static final /* data */ class Reason {
@@ -30,7 +30,7 @@ public final class HistoricalProcessExitReason {
         private final String reason;
 
         public Reason(String str, String str2) {
-            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_REASON);
+            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_REASON);
             this.reason = str;
             this.description = str2;
         }
@@ -56,7 +56,7 @@ public final class HistoricalProcessExitReason {
         }
 
         public final Reason copy(String reason, String description) {
-            m.checkNotNullParameter(reason, ModelAuditLogEntry.CHANGE_KEY_REASON);
+            Intrinsics3.checkNotNullParameter(reason, ModelAuditLogEntry.CHANGE_KEY_REASON);
             return new Reason(reason, description);
         }
 
@@ -68,7 +68,7 @@ public final class HistoricalProcessExitReason {
                 return false;
             }
             Reason reason = (Reason) other;
-            return m.areEqual(this.reason, reason.reason) && m.areEqual(this.description, reason.description);
+            return Intrinsics3.areEqual(this.reason, reason.reason) && Intrinsics3.areEqual(this.description, reason.description);
         }
 
         public final String getDescription() {
@@ -87,10 +87,10 @@ public final class HistoricalProcessExitReason {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Reason(reason=");
-            sbU.append(this.reason);
-            sbU.append(", description=");
-            return a.J(sbU, this.description, ")");
+            StringBuilder sbM833U = outline.m833U("Reason(reason=");
+            sbM833U.append(this.reason);
+            sbM833U.append(", description=");
+            return outline.m822J(sbM833U, this.description, ")");
         }
     }
 
@@ -106,7 +106,7 @@ public final class HistoricalProcessExitReason {
         if (Build.VERSION.SDK_INT < 30) {
             return null;
         }
-        Map mapMapOf = h0.mapOf(o.to(6, "ANR"), o.to(4, "CRASH"), o.to(5, "CRASH_NATIVE"), o.to(12, "DEPENDENCY_DIED"), o.to(9, "EXCESSIVE_RESOURCE_USAGE"), o.to(1, "EXIT_SELF"), o.to(7, "INITIALIZATION_FAILURE"), o.to(3, "LOW_MEMORY"), o.to(13, "OTHER"), o.to(8, "PERMISSION_CHANGE"), o.to(2, "SIGNALED"), o.to(0, "UNKNOWN"), o.to(10, "USER_REQUESTED"), o.to(11, "USER_STOPPED"));
+        Map mapMapOf = Maps6.mapOf(Tuples.m10073to(6, "ANR"), Tuples.m10073to(4, "CRASH"), Tuples.m10073to(5, "CRASH_NATIVE"), Tuples.m10073to(12, "DEPENDENCY_DIED"), Tuples.m10073to(9, "EXCESSIVE_RESOURCE_USAGE"), Tuples.m10073to(1, "EXIT_SELF"), Tuples.m10073to(7, "INITIALIZATION_FAILURE"), Tuples.m10073to(3, "LOW_MEMORY"), Tuples.m10073to(13, "OTHER"), Tuples.m10073to(8, "PERMISSION_CHANGE"), Tuples.m10073to(2, "SIGNALED"), Tuples.m10073to(0, "UNKNOWN"), Tuples.m10073to(10, "USER_REQUESTED"), Tuples.m10073to(11, "USER_STOPPED"));
         Object systemService = ApplicationProvider.INSTANCE.get().getSystemService(ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         if (!(systemService instanceof ActivityManager)) {
             systemService = null;
@@ -114,14 +114,14 @@ public final class HistoricalProcessExitReason {
         ActivityManager activityManager = (ActivityManager) systemService;
         if (activityManager != null) {
             List<ApplicationExitInfo> historicalProcessExitReasons = activityManager.getHistoricalProcessExitReasons(null, 0, 1);
-            m.checkNotNullExpressionValue(historicalProcessExitReasons, "activityManager.getHisto…ssExitReasons(null, 0, 1)");
-            ApplicationExitInfo applicationExitInfo = (ApplicationExitInfo) u.firstOrNull((List) historicalProcessExitReasons);
+            Intrinsics3.checkNotNullExpressionValue(historicalProcessExitReasons, "activityManager.getHisto…ssExitReasons(null, 0, 1)");
+            ApplicationExitInfo applicationExitInfo = (ApplicationExitInfo) _Collections.firstOrNull((List) historicalProcessExitReasons);
             if (applicationExitInfo != null) {
                 String string = (String) mapMapOf.get(Integer.valueOf(applicationExitInfo.getReason()));
                 if (string == null) {
-                    StringBuilder sbU = a.U("Unknown ");
-                    sbU.append(applicationExitInfo.getReason());
-                    string = sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("Unknown ");
+                    sbM833U.append(applicationExitInfo.getReason());
+                    string = sbM833U.toString();
                 }
                 reason = new Reason(string, applicationExitInfo.getDescription());
             }

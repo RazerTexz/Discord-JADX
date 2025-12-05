@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildViewed implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver, TrackOverlayClientMetadataReceiver {
+public final /* data */ class TrackGuildViewed implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -28,14 +28,15 @@ public final /* data */ class TrackGuildViewed implements AnalyticsSchema, Track
     private final Boolean viewingStarred = null;
     private final transient String analyticsSchemaTypeName = "guild_viewed";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -53,7 +54,7 @@ public final /* data */ class TrackGuildViewed implements AnalyticsSchema, Track
             return false;
         }
         TrackGuildViewed trackGuildViewed = (TrackGuildViewed) other;
-        return m.areEqual(this.guildAffinityScore, trackGuildViewed.guildAffinityScore) && m.areEqual(this.guildAffinityIndex, trackGuildViewed.guildAffinityIndex) && m.areEqual(this.isPending, trackGuildViewed.isPending) && m.areEqual(this.previewEnabled, trackGuildViewed.previewEnabled) && m.areEqual(this.postableChannels, trackGuildViewed.postableChannels) && m.areEqual(this.premiumProgressBarEnabled, trackGuildViewed.premiumProgressBarEnabled) && m.areEqual(this.viewingStarred, trackGuildViewed.viewingStarred);
+        return Intrinsics3.areEqual(this.guildAffinityScore, trackGuildViewed.guildAffinityScore) && Intrinsics3.areEqual(this.guildAffinityIndex, trackGuildViewed.guildAffinityIndex) && Intrinsics3.areEqual(this.isPending, trackGuildViewed.isPending) && Intrinsics3.areEqual(this.previewEnabled, trackGuildViewed.previewEnabled) && Intrinsics3.areEqual(this.postableChannels, trackGuildViewed.postableChannels) && Intrinsics3.areEqual(this.premiumProgressBarEnabled, trackGuildViewed.premiumProgressBarEnabled) && Intrinsics3.areEqual(this.viewingStarred, trackGuildViewed.viewingStarred);
     }
 
     public int hashCode() {
@@ -74,19 +75,19 @@ public final /* data */ class TrackGuildViewed implements AnalyticsSchema, Track
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildViewed(guildAffinityScore=");
-        sbU.append(this.guildAffinityScore);
-        sbU.append(", guildAffinityIndex=");
-        sbU.append(this.guildAffinityIndex);
-        sbU.append(", isPending=");
-        sbU.append(this.isPending);
-        sbU.append(", previewEnabled=");
-        sbU.append(this.previewEnabled);
-        sbU.append(", postableChannels=");
-        sbU.append(this.postableChannels);
-        sbU.append(", premiumProgressBarEnabled=");
-        sbU.append(this.premiumProgressBarEnabled);
-        sbU.append(", viewingStarred=");
-        return a.D(sbU, this.viewingStarred, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildViewed(guildAffinityScore=");
+        sbM833U.append(this.guildAffinityScore);
+        sbM833U.append(", guildAffinityIndex=");
+        sbM833U.append(this.guildAffinityIndex);
+        sbM833U.append(", isPending=");
+        sbM833U.append(this.isPending);
+        sbM833U.append(", previewEnabled=");
+        sbM833U.append(this.previewEnabled);
+        sbM833U.append(", postableChannels=");
+        sbM833U.append(this.postableChannels);
+        sbM833U.append(", premiumProgressBarEnabled=");
+        sbM833U.append(this.premiumProgressBarEnabled);
+        sbM833U.append(", viewingStarred=");
+        return outline.m816D(sbM833U, this.viewingStarred, ")");
     }
 }

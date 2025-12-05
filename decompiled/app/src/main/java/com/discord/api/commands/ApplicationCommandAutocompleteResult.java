@@ -1,8 +1,8 @@
 package com.discord.api.commands;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ApplicationCommandAutocompleteResult.kt */
 /* loaded from: classes.dex */
@@ -10,7 +10,8 @@ public final /* data */ class ApplicationCommandAutocompleteResult {
     private final List<ApplicationCommandAutocompleteChoice> choices;
     private final String nonce;
 
-    public final List<ApplicationCommandAutocompleteChoice> a() {
+    /* renamed from: a */
+    public final List<ApplicationCommandAutocompleteChoice> m7722a() {
         return this.choices;
     }
 
@@ -27,7 +28,7 @@ public final /* data */ class ApplicationCommandAutocompleteResult {
             return false;
         }
         ApplicationCommandAutocompleteResult applicationCommandAutocompleteResult = (ApplicationCommandAutocompleteResult) other;
-        return m.areEqual(this.nonce, applicationCommandAutocompleteResult.nonce) && m.areEqual(this.choices, applicationCommandAutocompleteResult.choices);
+        return Intrinsics3.areEqual(this.nonce, applicationCommandAutocompleteResult.nonce) && Intrinsics3.areEqual(this.choices, applicationCommandAutocompleteResult.choices);
     }
 
     public int hashCode() {
@@ -38,9 +39,9 @@ public final /* data */ class ApplicationCommandAutocompleteResult {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ApplicationCommandAutocompleteResult(nonce=");
-        sbU.append(this.nonce);
-        sbU.append(", choices=");
-        return a.L(sbU, this.choices, ")");
+        StringBuilder sbM833U = outline.m833U("ApplicationCommandAutocompleteResult(nonce=");
+        sbM833U.append(this.nonce);
+        sbM833U.append(", choices=");
+        return outline.m824L(sbM833U, this.choices, ")");
     }
 }

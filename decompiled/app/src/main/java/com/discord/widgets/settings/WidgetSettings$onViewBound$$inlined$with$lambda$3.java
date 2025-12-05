@@ -2,9 +2,9 @@ package com.discord.widgets.settings;
 
 import android.view.View;
 import com.discord.widgets.media.WidgetQRScanner;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetSettings.kt */
 /* loaded from: classes2.dex */
@@ -12,16 +12,16 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$3 implements 
     public final /* synthetic */ WidgetSettings this$0;
 
     /* compiled from: WidgetSettings.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$3$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$3$1 */
+    public static final class C96111 extends Lambda implements Function0<Unit> {
+        public C96111() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -36,6 +36,6 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$3 implements 
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        this.this$0.requestCameraQRScanner(new AnonymousClass1());
+        this.this$0.requestCameraQRScanner(new C96111());
     }
 }

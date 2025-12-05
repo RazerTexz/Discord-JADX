@@ -4,28 +4,28 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.guild.GuildFeature;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetGuildScheduledEventUpsellBottomSheetBinding;
 import com.discord.models.guild.Guild;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.guilds.profile.WidgetGuildProfileSheet;
 import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet;
-import d0.g;
-import d0.z.d.m;
 import java.util.Set;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildScheduledEventUpsellBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventUpsellBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildScheduledEventUpsellBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventUpsellBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -43,7 +43,7 @@ public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomS
         }
 
         public final void launch(FragmentManager fragmentManager, long guildId) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetGuildScheduledEventUpsellBottomSheet widgetGuildScheduledEventUpsellBottomSheet = new WidgetGuildScheduledEventUpsellBottomSheet();
             Bundle bundle = new Bundle();
             bundle.putLong("com.discord.intent.extra.EXTRA_GUILD_ID", guildId);
@@ -57,9 +57,9 @@ public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomS
     }
 
     /* compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$onViewCreated$1 */
+    public static final class ViewOnClickListenerC89291 implements View.OnClickListener {
+        public ViewOnClickListenerC89291() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -69,12 +69,12 @@ public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomS
             if (guild == null || (features = guild.getFeatures()) == null || !features.contains(GuildFeature.COMMUNITY)) {
                 WidgetGuildProfileSheet.Companion companion = WidgetGuildProfileSheet.INSTANCE;
                 FragmentManager parentFragmentManager = WidgetGuildScheduledEventUpsellBottomSheet.this.getParentFragmentManager();
-                m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                 WidgetGuildProfileSheet.Companion.show$default(companion, parentFragmentManager, true, WidgetGuildScheduledEventUpsellBottomSheet.access$getGuildId$p(WidgetGuildScheduledEventUpsellBottomSheet.this), 0L, true, 8, null);
             } else {
                 WidgetGuildScheduledEventListBottomSheet.Companion companion2 = WidgetGuildScheduledEventListBottomSheet.INSTANCE;
                 FragmentManager parentFragmentManager2 = WidgetGuildScheduledEventUpsellBottomSheet.this.getParentFragmentManager();
-                m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
                 WidgetGuildScheduledEventListBottomSheet.Companion.show$default(companion2, parentFragmentManager2, WidgetGuildScheduledEventUpsellBottomSheet.access$getGuildId$p(WidgetGuildScheduledEventUpsellBottomSheet.this), null, 4, null);
             }
             WidgetGuildScheduledEventUpsellBottomSheet.this.dismiss();
@@ -82,9 +82,9 @@ public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomS
     }
 
     /* compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$onViewCreated$2 */
+    public static final class ViewOnClickListenerC89302 implements View.OnClickListener {
+        public ViewOnClickListenerC89302() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -95,8 +95,8 @@ public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomS
 
     public WidgetGuildScheduledEventUpsellBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildScheduledEventUpsellBottomSheet$binding$2.INSTANCE, null, 2, null);
-        this.guildId = g.lazy(new WidgetGuildScheduledEventUpsellBottomSheet$guildId$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildScheduledEventUpsellBottomSheet2.INSTANCE, null, 2, null);
+        this.guildId = LazyJVM.lazy(new WidgetGuildScheduledEventUpsellBottomSheet3(this));
     }
 
     public static final /* synthetic */ long access$getGuildId$p(WidgetGuildScheduledEventUpsellBottomSheet widgetGuildScheduledEventUpsellBottomSheet) {
@@ -113,14 +113,14 @@ public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomS
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_guild_scheduled_event_upsell_bottom_sheet;
+        return C5419R.layout.widget_guild_scheduled_event_upsell_bottom_sheet;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
-        getBinding().c.setOnClickListener(new AnonymousClass1());
-        getBinding().f2450b.setOnClickListener(new AnonymousClass2());
+        getBinding().f17049c.setOnClickListener(new ViewOnClickListenerC89291());
+        getBinding().f17048b.setOnClickListener(new ViewOnClickListenerC89302());
     }
 }

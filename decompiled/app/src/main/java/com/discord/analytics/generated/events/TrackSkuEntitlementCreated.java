@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackEntitlementMetadata;
-import com.discord.analytics.generated.traits.TrackEntitlementMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackEntitlementMetadata2;
 import com.discord.analytics.generated.traits.TrackPaymentMetadata;
-import com.discord.analytics.generated.traits.TrackPaymentMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackPaymentMetadata2;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSkuEntitlementCreated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSkuEntitlementCreated implements AnalyticsSchema, TrackBaseReceiver, TrackStoreSkuMetadataReceiver, TrackPaymentMetadataReceiver, TrackEntitlementMetadataReceiver {
+public final /* data */ class TrackSkuEntitlementCreated implements AnalyticsSchema, TrackBase2, TrackStoreSkuMetadata2, TrackPaymentMetadata2, TrackEntitlementMetadata2 {
     private TrackBase trackBase;
     private TrackEntitlementMetadata trackEntitlementMetadata;
     private TrackPaymentMetadata trackPaymentMetadata;
@@ -39,7 +39,7 @@ public final /* data */ class TrackSkuEntitlementCreated implements AnalyticsSch
             return false;
         }
         TrackSkuEntitlementCreated trackSkuEntitlementCreated = (TrackSkuEntitlementCreated) other;
-        return m.areEqual(this.entitlementType, trackSkuEntitlementCreated.entitlementType) && m.areEqual(this.startTimestamp, trackSkuEntitlementCreated.startTimestamp) && m.areEqual(this.endTimestamp, trackSkuEntitlementCreated.endTimestamp) && m.areEqual(this.redemptionCode, trackSkuEntitlementCreated.redemptionCode);
+        return Intrinsics3.areEqual(this.entitlementType, trackSkuEntitlementCreated.entitlementType) && Intrinsics3.areEqual(this.startTimestamp, trackSkuEntitlementCreated.startTimestamp) && Intrinsics3.areEqual(this.endTimestamp, trackSkuEntitlementCreated.endTimestamp) && Intrinsics3.areEqual(this.redemptionCode, trackSkuEntitlementCreated.redemptionCode);
     }
 
     public int hashCode() {
@@ -54,13 +54,13 @@ public final /* data */ class TrackSkuEntitlementCreated implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSkuEntitlementCreated(entitlementType=");
-        sbU.append(this.entitlementType);
-        sbU.append(", startTimestamp=");
-        sbU.append(this.startTimestamp);
-        sbU.append(", endTimestamp=");
-        sbU.append(this.endTimestamp);
-        sbU.append(", redemptionCode=");
-        return a.E(sbU, this.redemptionCode, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSkuEntitlementCreated(entitlementType=");
+        sbM833U.append(this.entitlementType);
+        sbM833U.append(", startTimestamp=");
+        sbM833U.append(this.startTimestamp);
+        sbM833U.append(", endTimestamp=");
+        sbM833U.append(this.endTimestamp);
+        sbM833U.append(", redemptionCode=");
+        return outline.m817E(sbM833U, this.redemptionCode, ")");
     }
 }

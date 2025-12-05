@@ -14,9 +14,9 @@ public abstract class ListAdapter<T, VH extends RecyclerView.ViewHolder> extends
     public final AsyncListDiffer<T> mDiffer;
     private final AsyncListDiffer.ListListener<T> mListener;
 
-    /* renamed from: androidx.recyclerview.widget.ListAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements AsyncListDiffer.ListListener<T> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.recyclerview.widget.ListAdapter$1 */
+    public class C05591 implements AsyncListDiffer.ListListener<T> {
+        public C05591() {
         }
 
         @Override // androidx.recyclerview.widget.AsyncListDiffer.ListListener
@@ -26,11 +26,11 @@ public abstract class ListAdapter<T, VH extends RecyclerView.ViewHolder> extends
     }
 
     public ListAdapter(@NonNull DiffUtil.ItemCallback<T> itemCallback) {
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-        this.mListener = anonymousClass1;
+        C05591 c05591 = new C05591();
+        this.mListener = c05591;
         AsyncListDiffer<T> asyncListDiffer = new AsyncListDiffer<>(new AdapterListUpdateCallback(this), new AsyncDifferConfig.Builder(itemCallback).build());
         this.mDiffer = asyncListDiffer;
-        asyncListDiffer.addListListener(anonymousClass1);
+        asyncListDiffer.addListListener(c05591);
     }
 
     @NonNull
@@ -59,10 +59,10 @@ public abstract class ListAdapter<T, VH extends RecyclerView.ViewHolder> extends
     }
 
     public ListAdapter(@NonNull AsyncDifferConfig<T> asyncDifferConfig) {
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-        this.mListener = anonymousClass1;
+        C05591 c05591 = new C05591();
+        this.mListener = c05591;
         AsyncListDiffer<T> asyncListDiffer = new AsyncListDiffer<>(new AdapterListUpdateCallback(this), asyncDifferConfig);
         this.mDiffer = asyncListDiffer;
-        asyncListDiffer.addListListener(anonymousClass1);
+        asyncListDiffer.addListListener(c05591);
     }
 }

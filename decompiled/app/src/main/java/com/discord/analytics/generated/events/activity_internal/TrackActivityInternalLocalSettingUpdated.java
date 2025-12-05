@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackActivityInternalLocalSettingUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalLocalSettingUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
+public final /* data */ class TrackActivityInternalLocalSettingUpdated implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence settingName = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackActivityInternalLocalSettingUpdated implement
             return false;
         }
         TrackActivityInternalLocalSettingUpdated trackActivityInternalLocalSettingUpdated = (TrackActivityInternalLocalSettingUpdated) other;
-        return m.areEqual(this.settingName, trackActivityInternalLocalSettingUpdated.settingName) && m.areEqual(this.phase, trackActivityInternalLocalSettingUpdated.phase) && m.areEqual(this.valueStr, trackActivityInternalLocalSettingUpdated.valueStr) && m.areEqual(this.prevValueStr, trackActivityInternalLocalSettingUpdated.prevValueStr) && m.areEqual(this.valueBool, trackActivityInternalLocalSettingUpdated.valueBool) && m.areEqual(this.prevValueBool, trackActivityInternalLocalSettingUpdated.prevValueBool) && m.areEqual(this.valueInt, trackActivityInternalLocalSettingUpdated.valueInt) && m.areEqual(this.prevValueInt, trackActivityInternalLocalSettingUpdated.prevValueInt) && m.areEqual(this.valueFloat, trackActivityInternalLocalSettingUpdated.valueFloat) && m.areEqual(this.prevValueFloat, trackActivityInternalLocalSettingUpdated.prevValueFloat);
+        return Intrinsics3.areEqual(this.settingName, trackActivityInternalLocalSettingUpdated.settingName) && Intrinsics3.areEqual(this.phase, trackActivityInternalLocalSettingUpdated.phase) && Intrinsics3.areEqual(this.valueStr, trackActivityInternalLocalSettingUpdated.valueStr) && Intrinsics3.areEqual(this.prevValueStr, trackActivityInternalLocalSettingUpdated.prevValueStr) && Intrinsics3.areEqual(this.valueBool, trackActivityInternalLocalSettingUpdated.valueBool) && Intrinsics3.areEqual(this.prevValueBool, trackActivityInternalLocalSettingUpdated.prevValueBool) && Intrinsics3.areEqual(this.valueInt, trackActivityInternalLocalSettingUpdated.valueInt) && Intrinsics3.areEqual(this.prevValueInt, trackActivityInternalLocalSettingUpdated.prevValueInt) && Intrinsics3.areEqual(this.valueFloat, trackActivityInternalLocalSettingUpdated.valueFloat) && Intrinsics3.areEqual(this.prevValueFloat, trackActivityInternalLocalSettingUpdated.prevValueFloat);
     }
 
     public int hashCode() {
@@ -66,27 +66,27 @@ public final /* data */ class TrackActivityInternalLocalSettingUpdated implement
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackActivityInternalLocalSettingUpdated(settingName=");
-        sbU.append(this.settingName);
-        sbU.append(", phase=");
-        sbU.append(this.phase);
-        sbU.append(", valueStr=");
-        sbU.append(this.valueStr);
-        sbU.append(", prevValueStr=");
-        sbU.append(this.prevValueStr);
-        sbU.append(", valueBool=");
-        sbU.append(this.valueBool);
-        sbU.append(", prevValueBool=");
-        sbU.append(this.prevValueBool);
-        sbU.append(", valueInt=");
-        sbU.append(this.valueInt);
-        sbU.append(", prevValueInt=");
-        sbU.append(this.prevValueInt);
-        sbU.append(", valueFloat=");
-        sbU.append(this.valueFloat);
-        sbU.append(", prevValueFloat=");
-        sbU.append(this.prevValueFloat);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("TrackActivityInternalLocalSettingUpdated(settingName=");
+        sbM833U.append(this.settingName);
+        sbM833U.append(", phase=");
+        sbM833U.append(this.phase);
+        sbM833U.append(", valueStr=");
+        sbM833U.append(this.valueStr);
+        sbM833U.append(", prevValueStr=");
+        sbM833U.append(this.prevValueStr);
+        sbM833U.append(", valueBool=");
+        sbM833U.append(this.valueBool);
+        sbM833U.append(", prevValueBool=");
+        sbM833U.append(this.prevValueBool);
+        sbM833U.append(", valueInt=");
+        sbM833U.append(this.valueInt);
+        sbM833U.append(", prevValueInt=");
+        sbM833U.append(this.prevValueInt);
+        sbM833U.append(", valueFloat=");
+        sbM833U.append(this.valueFloat);
+        sbM833U.append(", prevValueFloat=");
+        sbM833U.append(this.prevValueFloat);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

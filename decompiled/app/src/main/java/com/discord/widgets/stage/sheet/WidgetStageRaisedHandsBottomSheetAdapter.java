@@ -8,8 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.role.GuildRole;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.databinding.StageRaisedHandsItemUserBinding;
@@ -18,17 +17,18 @@ import com.discord.models.member.GuildMember;
 import com.discord.models.user.User;
 import com.discord.stores.StoreVoiceParticipants;
 import com.discord.utilities.SnowflakeUtils;
-import com.discord.utilities.extensions.SimpleDraweeViewExtensionsKt;
+import com.discord.utilities.extensions.SimpleDraweeViewExtensions;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
 /* loaded from: classes2.dex */
@@ -55,7 +55,7 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Participant(StoreVoiceParticipants.VoiceUser voiceUser, UtcDateTime utcDateTime, GuildMember guildMember, GuildRole guildRole) {
                 super(null);
-                m.checkNotNullParameter(voiceUser, "participant");
+                Intrinsics3.checkNotNullParameter(voiceUser, "participant");
                 this.participant = voiceUser;
                 this.requestToSpeakTimestamp = utcDateTime;
                 this.member = guildMember;
@@ -100,7 +100,7 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
             }
 
             public final Participant copy(StoreVoiceParticipants.VoiceUser participant, UtcDateTime requestToSpeakTimestamp, GuildMember member, GuildRole role) {
-                m.checkNotNullParameter(participant, "participant");
+                Intrinsics3.checkNotNullParameter(participant, "participant");
                 return new Participant(participant, requestToSpeakTimestamp, member, role);
             }
 
@@ -112,7 +112,7 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
                     return false;
                 }
                 Participant participant = (Participant) other;
-                return m.areEqual(this.participant, participant.participant) && m.areEqual(this.requestToSpeakTimestamp, participant.requestToSpeakTimestamp) && m.areEqual(this.member, participant.member) && m.areEqual(this.role, participant.role);
+                return Intrinsics3.areEqual(this.participant, participant.participant) && Intrinsics3.areEqual(this.requestToSpeakTimestamp, participant.requestToSpeakTimestamp) && Intrinsics3.areEqual(this.member, participant.member) && Intrinsics3.areEqual(this.role, participant.role);
             }
 
             @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -153,16 +153,16 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Participant(participant=");
-                sbU.append(this.participant);
-                sbU.append(", requestToSpeakTimestamp=");
-                sbU.append(this.requestToSpeakTimestamp);
-                sbU.append(", member=");
-                sbU.append(this.member);
-                sbU.append(", role=");
-                sbU.append(this.role);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Participant(participant=");
+                sbM833U.append(this.participant);
+                sbM833U.append(", requestToSpeakTimestamp=");
+                sbM833U.append(this.requestToSpeakTimestamp);
+                sbM833U.append(", member=");
+                sbM833U.append(this.member);
+                sbM833U.append(", role=");
+                sbM833U.append(this.role);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -180,26 +180,26 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolderParticipant(WidgetStageRaisedHandsBottomSheetAdapter widgetStageRaisedHandsBottomSheetAdapter) {
-            super(R.layout.stage_raised_hands_item_user, widgetStageRaisedHandsBottomSheetAdapter);
-            m.checkNotNullParameter(widgetStageRaisedHandsBottomSheetAdapter, "adapter");
+            super(C5419R.layout.stage_raised_hands_item_user, widgetStageRaisedHandsBottomSheetAdapter);
+            Intrinsics3.checkNotNullParameter(widgetStageRaisedHandsBottomSheetAdapter, "adapter");
             View view = this.itemView;
-            int i = R.id.stage_raised_hands_item_dismiss_button;
-            ImageView imageView = (ImageView) view.findViewById(R.id.stage_raised_hands_item_dismiss_button);
+            int i = C5419R.id.stage_raised_hands_item_dismiss_button;
+            ImageView imageView = (ImageView) view.findViewById(C5419R.id.stage_raised_hands_item_dismiss_button);
             if (imageView != null) {
-                i = R.id.stage_raised_hands_item_invite_button;
-                ImageView imageView2 = (ImageView) view.findViewById(R.id.stage_raised_hands_item_invite_button);
+                i = C5419R.id.stage_raised_hands_item_invite_button;
+                ImageView imageView2 = (ImageView) view.findViewById(C5419R.id.stage_raised_hands_item_invite_button);
                 if (imageView2 != null) {
-                    i = R.id.stage_raised_hands_item_role;
-                    TextView textView = (TextView) view.findViewById(R.id.stage_raised_hands_item_role);
+                    i = C5419R.id.stage_raised_hands_item_role;
+                    TextView textView = (TextView) view.findViewById(C5419R.id.stage_raised_hands_item_role);
                     if (textView != null) {
-                        i = R.id.stage_raised_hands_item_user_avatar;
-                        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.stage_raised_hands_item_user_avatar);
+                        i = C5419R.id.stage_raised_hands_item_user_avatar;
+                        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.stage_raised_hands_item_user_avatar);
                         if (simpleDraweeView != null) {
-                            i = R.id.stage_raised_hands_item_user_name;
-                            TextView textView2 = (TextView) view.findViewById(R.id.stage_raised_hands_item_user_name);
+                            i = C5419R.id.stage_raised_hands_item_user_name;
+                            TextView textView2 = (TextView) view.findViewById(C5419R.id.stage_raised_hands_item_user_name);
                             if (textView2 != null) {
                                 StageRaisedHandsItemUserBinding stageRaisedHandsItemUserBinding = new StageRaisedHandsItemUserBinding((ConstraintLayout) view, imageView, imageView2, textView, simpleDraweeView, textView2);
-                                m.checkNotNullExpressionValue(stageRaisedHandsItemUserBinding, "StageRaisedHandsItemUserBinding.bind(itemView)");
+                                Intrinsics3.checkNotNullExpressionValue(stageRaisedHandsItemUserBinding, "StageRaisedHandsItemUserBinding.bind(itemView)");
                                 this.binding = stageRaisedHandsItemUserBinding;
                                 return;
                             }
@@ -217,15 +217,15 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
         private final String getParticipantMemberInfo(Context context, ListItem.Participant data) {
             String name;
             if (isNewUser(data.getParticipant().getUser())) {
-                String string = context.getString(R.string.request_to_speak_member_info_new_to_discord);
-                m.checkNotNullExpressionValue(string, "context.getString(R.stri…mber_info_new_to_discord)");
+                String string = context.getString(C5419R.string.request_to_speak_member_info_new_to_discord);
+                Intrinsics3.checkNotNullExpressionValue(string, "context.getString(R.stri…mber_info_new_to_discord)");
                 return string;
             }
             GuildMember member = data.getMember();
             UtcDateTime joinedAt = member != null ? member.getJoinedAt() : null;
             if (joinedAt == null) {
-                String string2 = context.getString(R.string.request_to_speak_member_info_non_member);
-                m.checkNotNullExpressionValue(string2, "context.getString(R.stri…k_member_info_non_member)");
+                String string2 = context.getString(C5419R.string.request_to_speak_member_info_non_member);
+                Intrinsics3.checkNotNullExpressionValue(string2, "context.getString(R.stri…k_member_info_non_member)");
                 return string2;
             }
             if (!data.getMember().getRoles().isEmpty()) {
@@ -233,17 +233,17 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
                 if (role != null && (name = role.getName()) != null) {
                     return name;
                 }
-                String string3 = context.getString(R.string.request_to_speak_member_info_member_roles);
-                m.checkNotNullExpressionValue(string3, "context.getString(R.stri…member_info_member_roles)");
+                String string3 = context.getString(C5419R.string.request_to_speak_member_info_member_roles);
+                Intrinsics3.checkNotNullExpressionValue(string3, "context.getString(R.stri…member_info_member_roles)");
                 return string3;
             }
             if (ClockFactory.get().currentTimeMillis() - joinedAt.getDateTimeMillis() < WidgetStageRaisedHandsBottomSheetAdapter.MILLIS_PER_DAY) {
-                String string4 = context.getString(R.string.request_to_speak_member_info_new_member);
-                m.checkNotNullExpressionValue(string4, "context.getString(R.stri…k_member_info_new_member)");
+                String string4 = context.getString(C5419R.string.request_to_speak_member_info_new_member);
+                Intrinsics3.checkNotNullExpressionValue(string4, "context.getString(R.stri…k_member_info_new_member)");
                 return string4;
             }
-            String string5 = context.getString(R.string.request_to_speak_member_info_member);
-            m.checkNotNullExpressionValue(string5, "context.getString(R.stri…speak_member_info_member)");
+            String string5 = context.getString(C5419R.string.request_to_speak_member_info_member);
+            Intrinsics3.checkNotNullExpressionValue(string5, "context.getString(R.stri…speak_member_info_member)");
             return string5;
         }
 
@@ -258,28 +258,28 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ListItem data) throws Resources.NotFoundException {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             ListItem.Participant participant = (ListItem.Participant) data;
             StoreVoiceParticipants.VoiceUser participant2 = participant.getParticipant();
             GuildMember member = participant.getMember();
-            this.binding.e.setOnClickListener(new WidgetStageRaisedHandsBottomSheetAdapter$ViewHolderParticipant$onConfigure$1(this, participant2));
-            ImageView imageView = this.binding.c;
+            this.binding.f15255e.setOnClickListener(new WidgetStageRaisedHandsBottomSheetAdapter3(this, participant2));
+            ImageView imageView = this.binding.f15253c;
             ViewExtensions.setEnabledAndAlpha$default(imageView, !participant2.getIsInvitedToSpeak(), 0.0f, 2, null);
-            imageView.setOnClickListener(new WidgetStageRaisedHandsBottomSheetAdapter$ViewHolderParticipant$onConfigure$$inlined$apply$lambda$1(this, participant2));
-            this.binding.f2146b.setOnClickListener(new WidgetStageRaisedHandsBottomSheetAdapter$ViewHolderParticipant$onConfigure$3(this, participant2));
-            SimpleDraweeView simpleDraweeView = this.binding.e;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.stageRaisedHandsItemUserAvatar");
-            SimpleDraweeViewExtensionsKt.setAvatar$default(simpleDraweeView, participant2.getUser(), false, R.dimen.avatar_size_standard, participant2.getGuildMember(), 2, null);
-            TextView textView = this.binding.f;
-            m.checkNotNullExpressionValue(textView, "binding.stageRaisedHandsItemUserName");
+            imageView.setOnClickListener(new WidgetStageRaisedHandsBottomSheetAdapter2(this, participant2));
+            this.binding.f15252b.setOnClickListener(new WidgetStageRaisedHandsBottomSheetAdapter4(this, participant2));
+            SimpleDraweeView simpleDraweeView = this.binding.f15255e;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.stageRaisedHandsItemUserAvatar");
+            SimpleDraweeViewExtensions.setAvatar$default(simpleDraweeView, participant2.getUser(), false, C5419R.dimen.avatar_size_standard, participant2.getGuildMember(), 2, null);
+            TextView textView = this.binding.f15256f;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.stageRaisedHandsItemUserName");
             textView.setText(participant2.getDisplayName());
             if (member != null && member.getColor() != -16777216) {
-                this.binding.f.setTextColor(member.getColor());
+                this.binding.f15256f.setTextColor(member.getColor());
             }
-            TextView textView2 = this.binding.d;
+            TextView textView2 = this.binding.f15254d;
             Context context = textView2.getContext();
-            m.checkNotNullExpressionValue(context, "context");
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
             textView2.setText(getParticipantMemberInfo(context, participant));
         }
     }
@@ -287,10 +287,10 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetStageRaisedHandsBottomSheetAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
-        this.onViewProfile = WidgetStageRaisedHandsBottomSheetAdapter$onViewProfile$1.INSTANCE;
-        this.onInviteToSpeak = WidgetStageRaisedHandsBottomSheetAdapter$onInviteToSpeak$1.INSTANCE;
-        this.onDismissRequest = WidgetStageRaisedHandsBottomSheetAdapter$onDismissRequest$1.INSTANCE;
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        this.onViewProfile = WidgetStageRaisedHandsBottomSheetAdapter7.INSTANCE;
+        this.onInviteToSpeak = WidgetStageRaisedHandsBottomSheetAdapter6.INSTANCE;
+        this.onDismissRequest = WidgetStageRaisedHandsBottomSheetAdapter5.INSTANCE;
     }
 
     public final Function1<StoreVoiceParticipants.VoiceUser, Unit> getOnDismissRequest() {
@@ -311,23 +311,23 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
     }
 
     public final void setOnDismissRequest(Function1<? super StoreVoiceParticipants.VoiceUser, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onDismissRequest = function1;
     }
 
     public final void setOnInviteToSpeak(Function1<? super StoreVoiceParticipants.VoiceUser, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onInviteToSpeak = function1;
     }
 
     public final void setOnViewProfile(Function1<? super StoreVoiceParticipants.VoiceUser, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onViewProfile = function1;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, ListItem> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new ViewHolderParticipant(this);
         }

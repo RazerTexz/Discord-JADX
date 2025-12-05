@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStorybookStoryError.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStorybookStoryError implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackStorybookStoryError implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence storyId = null;
     private final transient String analyticsSchemaTypeName = "storybook_story_error";
@@ -21,7 +21,7 @@ public final /* data */ class TrackStorybookStoryError implements AnalyticsSchem
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackStorybookStoryError) && m.areEqual(this.storyId, ((TrackStorybookStoryError) other).storyId);
+            return (other instanceof TrackStorybookStoryError) && Intrinsics3.areEqual(this.storyId, ((TrackStorybookStoryError) other).storyId);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackStorybookStoryError implements AnalyticsSchem
     }
 
     public String toString() {
-        return a.E(a.U("TrackStorybookStoryError(storyId="), this.storyId, ")");
+        return outline.m817E(outline.m833U("TrackStorybookStoryError(storyId="), this.storyId, ")");
     }
 }

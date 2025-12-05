@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackFeedUserPreferenceChanged.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackFeedUserPreferenceChanged implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
+public final /* data */ class TrackFeedUserPreferenceChanged implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -24,14 +24,15 @@ public final /* data */ class TrackFeedUserPreferenceChanged implements Analytic
     private final Long targetUserId = null;
     private final transient String analyticsSchemaTypeName = "feed_user_preference_changed";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -49,7 +50,7 @@ public final /* data */ class TrackFeedUserPreferenceChanged implements Analytic
             return false;
         }
         TrackFeedUserPreferenceChanged trackFeedUserPreferenceChanged = (TrackFeedUserPreferenceChanged) other;
-        return m.areEqual(this.loadId, trackFeedUserPreferenceChanged.loadId) && m.areEqual(this.operation, trackFeedUserPreferenceChanged.operation) && m.areEqual(this.preference, trackFeedUserPreferenceChanged.preference) && m.areEqual(this.entityType, trackFeedUserPreferenceChanged.entityType) && m.areEqual(this.messageId, trackFeedUserPreferenceChanged.messageId) && m.areEqual(this.targetUserId, trackFeedUserPreferenceChanged.targetUserId);
+        return Intrinsics3.areEqual(this.loadId, trackFeedUserPreferenceChanged.loadId) && Intrinsics3.areEqual(this.operation, trackFeedUserPreferenceChanged.operation) && Intrinsics3.areEqual(this.preference, trackFeedUserPreferenceChanged.preference) && Intrinsics3.areEqual(this.entityType, trackFeedUserPreferenceChanged.entityType) && Intrinsics3.areEqual(this.messageId, trackFeedUserPreferenceChanged.messageId) && Intrinsics3.areEqual(this.targetUserId, trackFeedUserPreferenceChanged.targetUserId);
     }
 
     public int hashCode() {
@@ -68,17 +69,17 @@ public final /* data */ class TrackFeedUserPreferenceChanged implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackFeedUserPreferenceChanged(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", operation=");
-        sbU.append(this.operation);
-        sbU.append(", preference=");
-        sbU.append(this.preference);
-        sbU.append(", entityType=");
-        sbU.append(this.entityType);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", targetUserId=");
-        return a.G(sbU, this.targetUserId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackFeedUserPreferenceChanged(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", operation=");
+        sbM833U.append(this.operation);
+        sbM833U.append(", preference=");
+        sbM833U.append(this.preference);
+        sbM833U.append(", entityType=");
+        sbM833U.append(this.entityType);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", targetUserId=");
+        return outline.m819G(sbM833U, this.targetUserId, ")");
     }
 }

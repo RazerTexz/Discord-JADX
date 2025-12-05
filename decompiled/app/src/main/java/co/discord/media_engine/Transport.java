@@ -1,9 +1,9 @@
 package co.discord.media_engine;
 
-import a0.a.a.b;
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.Arrays;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Statistics.kt */
 /* loaded from: classes.dex */
@@ -77,7 +77,7 @@ public final /* data */ class Transport {
             return false;
         }
         Transport transport = (Transport) other;
-        return this.availableOutgoingBitrate == transport.availableOutgoingBitrate && this.bytesReceived == transport.bytesReceived && this.bytesSent == transport.bytesSent && this.ping == transport.ping && m.areEqual(this.decryptionFailures, transport.decryptionFailures) && m.areEqual(this.localAddress, transport.localAddress) && m.areEqual(this.receiverReports, transport.receiverReports);
+        return this.availableOutgoingBitrate == transport.availableOutgoingBitrate && this.bytesReceived == transport.bytesReceived && this.bytesSent == transport.bytesSent && this.ping == transport.ping && Intrinsics3.areEqual(this.decryptionFailures, transport.decryptionFailures) && Intrinsics3.areEqual(this.localAddress, transport.localAddress) && Intrinsics3.areEqual(this.receiverReports, transport.receiverReports);
     }
 
     public final int getAvailableOutgoingBitrate() {
@@ -109,9 +109,9 @@ public final /* data */ class Transport {
     }
 
     public int hashCode() {
-        int iA = (((b.a(this.bytesSent) + ((b.a(this.bytesReceived) + (this.availableOutgoingBitrate * 31)) * 31)) * 31) + this.ping) * 31;
+        int iM3a = (((C0002b.m3a(this.bytesSent) + ((C0002b.m3a(this.bytesReceived) + (this.availableOutgoingBitrate * 31)) * 31)) * 31) + this.ping) * 31;
         Integer num = this.decryptionFailures;
-        int iHashCode = (iA + (num != null ? num.hashCode() : 0)) * 31;
+        int iHashCode = (iM3a + (num != null ? num.hashCode() : 0)) * 31;
         String str = this.localAddress;
         int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
         ReceiverReport[] receiverReportArr = this.receiverReports;
@@ -119,21 +119,21 @@ public final /* data */ class Transport {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("Transport(availableOutgoingBitrate=");
-        sbU.append(this.availableOutgoingBitrate);
-        sbU.append(", bytesReceived=");
-        sbU.append(this.bytesReceived);
-        sbU.append(", bytesSent=");
-        sbU.append(this.bytesSent);
-        sbU.append(", ping=");
-        sbU.append(this.ping);
-        sbU.append(", decryptionFailures=");
-        sbU.append(this.decryptionFailures);
-        sbU.append(", localAddress=");
-        sbU.append(this.localAddress);
-        sbU.append(", receiverReports=");
-        sbU.append(Arrays.toString(this.receiverReports));
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("Transport(availableOutgoingBitrate=");
+        sbM833U.append(this.availableOutgoingBitrate);
+        sbM833U.append(", bytesReceived=");
+        sbM833U.append(this.bytesReceived);
+        sbM833U.append(", bytesSent=");
+        sbM833U.append(this.bytesSent);
+        sbM833U.append(", ping=");
+        sbM833U.append(this.ping);
+        sbM833U.append(", decryptionFailures=");
+        sbM833U.append(this.decryptionFailures);
+        sbM833U.append(", localAddress=");
+        sbM833U.append(this.localAddress);
+        sbM833U.append(", receiverReports=");
+        sbM833U.append(Arrays.toString(this.receiverReports));
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

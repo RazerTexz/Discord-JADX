@@ -10,33 +10,37 @@ import com.discord.utilities.view.text.LinkifiedTextView;
 /* loaded from: classes.dex */
 public final class WidgetUserAccountVerifyBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final RelativeLayout a;
+    public final RelativeLayout f18320a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final RelativeLayout f2679b;
+    public final RelativeLayout f18321b;
 
+    /* renamed from: c */
     @NonNull
-    public final RelativeLayout c;
+    public final RelativeLayout f18322c;
 
+    /* renamed from: d */
     @NonNull
-    public final LinkifiedTextView d;
+    public final LinkifiedTextView f18323d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f18324e;
 
     public WidgetUserAccountVerifyBinding(@NonNull RelativeLayout relativeLayout, @NonNull RelativeLayout relativeLayout2, @NonNull RelativeLayout relativeLayout3, @NonNull LinkifiedTextView linkifiedTextView, @NonNull TextView textView) {
-        this.a = relativeLayout;
-        this.f2679b = relativeLayout2;
-        this.c = relativeLayout3;
-        this.d = linkifiedTextView;
-        this.e = textView;
+        this.f18320a = relativeLayout;
+        this.f18321b = relativeLayout2;
+        this.f18322c = relativeLayout3;
+        this.f18323d = linkifiedTextView;
+        this.f18324e = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18320a;
     }
 }

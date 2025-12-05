@@ -4,13 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
 import androidx.work.Logger;
-import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
+import p007b.p100d.p104b.p105a.outline;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -22,19 +22,19 @@ public class WorkTimer {
     public final Object mLock;
     public final Map<String, WorkTimerRunnable> mTimerMap;
 
-    /* renamed from: androidx.work.impl.utils.WorkTimer$1, reason: invalid class name */
-    public class AnonymousClass1 implements ThreadFactory {
+    /* renamed from: androidx.work.impl.utils.WorkTimer$1 */
+    public class ThreadFactoryC07841 implements ThreadFactory {
         private int mThreadsCreated = 0;
 
-        public AnonymousClass1() {
+        public ThreadFactoryC07841() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
         public Thread newThread(@NonNull Runnable runnable) {
             Thread threadNewThread = Executors.defaultThreadFactory().newThread(runnable);
-            StringBuilder sbU = a.U("WorkManager-WorkTimer-thread-");
-            sbU.append(this.mThreadsCreated);
-            threadNewThread.setName(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("WorkManager-WorkTimer-thread-");
+            sbM833U.append(this.mThreadsCreated);
+            threadNewThread.setName(sbM833U.toString());
             this.mThreadsCreated++;
             return threadNewThread;
         }
@@ -72,12 +72,12 @@ public class WorkTimer {
     }
 
     public WorkTimer() {
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-        this.mBackgroundThreadFactory = anonymousClass1;
+        ThreadFactoryC07841 threadFactoryC07841 = new ThreadFactoryC07841();
+        this.mBackgroundThreadFactory = threadFactoryC07841;
         this.mTimerMap = new HashMap();
         this.mListeners = new HashMap();
         this.mLock = new Object();
-        this.mExecutorService = Executors.newSingleThreadScheduledExecutor(anonymousClass1);
+        this.mExecutorService = Executors.newSingleThreadScheduledExecutor(threadFactoryC07841);
     }
 
     @NonNull

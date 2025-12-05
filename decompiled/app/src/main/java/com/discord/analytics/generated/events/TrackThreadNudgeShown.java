@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackThreadNudgeShown.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackThreadNudgeShown implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver, TrackGuildReceiver {
+public final /* data */ class TrackThreadNudgeShown implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -20,14 +20,15 @@ public final /* data */ class TrackThreadNudgeShown implements AnalyticsSchema, 
     private final Long replyChainLength = null;
     private final transient String analyticsSchemaTypeName = "thread_nudge_shown";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -45,7 +46,7 @@ public final /* data */ class TrackThreadNudgeShown implements AnalyticsSchema, 
             return false;
         }
         TrackThreadNudgeShown trackThreadNudgeShown = (TrackThreadNudgeShown) other;
-        return m.areEqual(this.type, trackThreadNudgeShown.type) && m.areEqual(this.replyChainLength, trackThreadNudgeShown.replyChainLength);
+        return Intrinsics3.areEqual(this.type, trackThreadNudgeShown.type) && Intrinsics3.areEqual(this.replyChainLength, trackThreadNudgeShown.replyChainLength);
     }
 
     public int hashCode() {
@@ -56,9 +57,9 @@ public final /* data */ class TrackThreadNudgeShown implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackThreadNudgeShown(type=");
-        sbU.append(this.type);
-        sbU.append(", replyChainLength=");
-        return a.G(sbU, this.replyChainLength, ")");
+        StringBuilder sbM833U = outline.m833U("TrackThreadNudgeShown(type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", replyChainLength=");
+        return outline.m819G(sbM833U, this.replyChainLength, ")");
     }
 }

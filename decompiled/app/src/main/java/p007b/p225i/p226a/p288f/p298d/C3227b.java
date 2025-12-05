@@ -1,0 +1,153 @@
+package p007b.p225i.p226a.p288f.p298d;
+
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Looper;
+import android.os.Message;
+import android.os.Messenger;
+import android.os.RemoteException;
+import android.util.Log;
+import androidx.annotation.AnyThread;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.collection.SimpleArrayMap;
+import com.google.android.gms.cloudmessaging.zza;
+import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.TaskCompletionSource;
+import java.util.Objects;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p340n.C4358c0;
+import p007b.p225i.p226a.p288f.p340n.C4374r;
+
+/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* renamed from: b.i.a.f.d.b */
+/* loaded from: classes3.dex */
+public class C3227b {
+
+    /* renamed from: a */
+    public static int f9243a;
+
+    /* renamed from: b */
+    public static PendingIntent f9244b;
+
+    /* renamed from: c */
+    public static final Executor f9245c = ExecutorC3251z.f9295j;
+
+    /* renamed from: e */
+    public final Context f9247e;
+
+    /* renamed from: f */
+    public final C3243r f9248f;
+
+    /* renamed from: g */
+    public final ScheduledExecutorService f9249g;
+
+    /* renamed from: i */
+    public Messenger f9251i;
+
+    /* renamed from: j */
+    public zza f9252j;
+
+    /* renamed from: d */
+    public final SimpleArrayMap<String, TaskCompletionSource<Bundle>> f9246d = new SimpleArrayMap<>();
+
+    /* renamed from: h */
+    public Messenger f9250h = new Messenger(new HandlerC3250y(this, Looper.getMainLooper()));
+
+    public C3227b(@NonNull Context context) {
+        this.f9247e = context;
+        this.f9248f = new C3243r(context);
+        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
+        scheduledThreadPoolExecutor.setKeepAliveTime(60L, TimeUnit.SECONDS);
+        scheduledThreadPoolExecutor.allowCoreThreadTimeOut(true);
+        this.f9249g = scheduledThreadPoolExecutor;
+    }
+
+    /* renamed from: a */
+    public final void m3999a(String str, @Nullable Bundle bundle) {
+        synchronized (this.f9246d) {
+            TaskCompletionSource<Bundle> taskCompletionSourceRemove = this.f9246d.remove(str);
+            if (taskCompletionSourceRemove != null) {
+                taskCompletionSourceRemove.f20845a.m6024s(bundle);
+            } else {
+                String strValueOf = String.valueOf(str);
+                Log.w("Rpc", strValueOf.length() != 0 ? "Missing callback for ".concat(strValueOf) : new String("Missing callback for "));
+            }
+        }
+    }
+
+    @AnyThread
+    /* renamed from: b */
+    public final Task<Bundle> m4000b(Bundle bundle) {
+        String string;
+        synchronized (C3227b.class) {
+            int i = f9243a;
+            f9243a = i + 1;
+            string = Integer.toString(i);
+        }
+        TaskCompletionSource<Bundle> taskCompletionSource = new TaskCompletionSource<>();
+        synchronized (this.f9246d) {
+            this.f9246d.put(string, taskCompletionSource);
+        }
+        Intent intent = new Intent();
+        intent.setPackage("com.google.android.gms");
+        if (this.f9248f.m4010a() == 2) {
+            intent.setAction("com.google.iid.TOKEN_REQUEST");
+        } else {
+            intent.setAction("com.google.android.c2dm.intent.REGISTER");
+        }
+        intent.putExtras(bundle);
+        Context context = this.f9247e;
+        synchronized (C3227b.class) {
+            if (f9244b == null) {
+                Intent intent2 = new Intent();
+                intent2.setPackage("com.google.example.invalidpackage");
+                f9244b = PendingIntent.getBroadcast(context, 0, intent2, 0);
+            }
+            intent.putExtra("app", f9244b);
+        }
+        intent.putExtra("kid", outline.m859k(outline.m841b(string, 5), "|ID|", string, "|"));
+        if (Log.isLoggable("Rpc", 3)) {
+            String strValueOf = String.valueOf(intent.getExtras());
+            StringBuilder sb = new StringBuilder(strValueOf.length() + 8);
+            sb.append("Sending ");
+            sb.append(strValueOf);
+            Log.d("Rpc", sb.toString());
+        }
+        intent.putExtra("google.messenger", this.f9250h);
+        if (this.f9251i != null || this.f9252j != null) {
+            Message messageObtain = Message.obtain();
+            messageObtain.obj = intent;
+            try {
+                Messenger messenger = this.f9251i;
+                if (messenger != null) {
+                    messenger.send(messageObtain);
+                } else {
+                    Messenger messenger2 = this.f9252j.f20471j;
+                    Objects.requireNonNull(messenger2);
+                    messenger2.send(messageObtain);
+                }
+            } catch (RemoteException unused) {
+                if (Log.isLoggable("Rpc", 3)) {
+                    Log.d("Rpc", "Messenger failed, fallback to startService");
+                }
+            }
+        } else if (this.f9248f.m4010a() == 2) {
+            this.f9247e.sendBroadcast(intent);
+        } else {
+            this.f9247e.startService(intent);
+        }
+        ScheduledFuture<?> scheduledFutureSchedule = this.f9249g.schedule(new RunnableC3246u(taskCompletionSource), 30L, TimeUnit.SECONDS);
+        C4358c0<Bundle> c4358c0 = taskCompletionSource.f20845a;
+        c4358c0.f11472b.m6031a(new C4374r(ExecutorC3251z.f9295j, new C3249x(this, string, scheduledFutureSchedule)));
+        c4358c0.m6028w();
+        return taskCompletionSource.f20845a;
+    }
+}

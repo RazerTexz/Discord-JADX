@@ -1,11 +1,11 @@
 package com.discord.widgets.chat.list.entries;
 
-import a0.a.a.b;
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.d.b.a.a;
 import com.discord.api.application.Application;
 import com.discord.api.message.activity.MessageActivity;
-import d0.z.d.m;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GameInviteEntry.kt */
 /* loaded from: classes2.dex */
@@ -18,14 +18,14 @@ public final /* data */ class GameInviteEntry extends ChatListEntry {
     private final int type;
 
     public GameInviteEntry(long j, long j2, MessageActivity messageActivity, Application application) {
-        m.checkNotNullParameter(messageActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-        m.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(messageActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        Intrinsics3.checkNotNullParameter(application, "application");
         this.authorId = j;
         this.messageId = j2;
         this.activity = messageActivity;
         this.application = application;
         this.type = 22;
-        this.key = a.t("22 -- ", j2);
+        this.key = outline.m877t("22 -- ", j2);
     }
 
     public static /* synthetic */ GameInviteEntry copy$default(GameInviteEntry gameInviteEntry, long j, long j2, MessageActivity messageActivity, Application application, int i, Object obj) {
@@ -68,8 +68,8 @@ public final /* data */ class GameInviteEntry extends ChatListEntry {
     }
 
     public final GameInviteEntry copy(long authorId, long messageId, MessageActivity activity, Application application) {
-        m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-        m.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        Intrinsics3.checkNotNullParameter(application, "application");
         return new GameInviteEntry(authorId, messageId, activity, application);
     }
 
@@ -81,7 +81,7 @@ public final /* data */ class GameInviteEntry extends ChatListEntry {
             return false;
         }
         GameInviteEntry gameInviteEntry = (GameInviteEntry) other;
-        return this.authorId == gameInviteEntry.authorId && this.messageId == gameInviteEntry.messageId && m.areEqual(this.activity, gameInviteEntry.activity) && m.areEqual(this.application, gameInviteEntry.application);
+        return this.authorId == gameInviteEntry.authorId && this.messageId == gameInviteEntry.messageId && Intrinsics3.areEqual(this.activity, gameInviteEntry.activity) && Intrinsics3.areEqual(this.application, gameInviteEntry.application);
     }
 
     public final MessageActivity getActivity() {
@@ -111,23 +111,23 @@ public final /* data */ class GameInviteEntry extends ChatListEntry {
     }
 
     public int hashCode() {
-        int iA = (b.a(this.messageId) + (b.a(this.authorId) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.messageId) + (C0002b.m3a(this.authorId) * 31)) * 31;
         MessageActivity messageActivity = this.activity;
-        int iHashCode = (iA + (messageActivity != null ? messageActivity.hashCode() : 0)) * 31;
+        int iHashCode = (iM3a + (messageActivity != null ? messageActivity.hashCode() : 0)) * 31;
         Application application = this.application;
         return iHashCode + (application != null ? application.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GameInviteEntry(authorId=");
-        sbU.append(this.authorId);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", activity=");
-        sbU.append(this.activity);
-        sbU.append(", application=");
-        sbU.append(this.application);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("GameInviteEntry(authorId=");
+        sbM833U.append(this.authorId);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", activity=");
+        sbM833U.append(this.activity);
+        sbM833U.append(", application=");
+        sbM833U.append(this.application);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

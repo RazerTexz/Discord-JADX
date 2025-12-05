@@ -1,16 +1,10 @@
 package com.discord.models.experiments.dto;
 
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
 import com.discord.api.guild.GuildFeature;
 import com.discord.api.guild.GuildHubType;
 import com.discord.models.domain.Model;
 import com.discord.models.experiments.domain.ExperimentHash;
-import d0.o;
-import d0.t.h0;
-import d0.t.n0;
-import d0.t.u;
-import d0.z.d.m;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +13,13 @@ import java.util.Set;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Ref$ObjectRef;
-import kotlin.ranges.LongRange;
+import kotlin.ranges.Ranges3;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.Sets5;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildExperimentFilter.kt */
 /* loaded from: classes.dex */
@@ -33,7 +33,7 @@ public abstract class GuildExperimentFilter {
         /* JADX WARN: Multi-variable type inference failed */
         public GuildHasFeatureFilter(Set<? extends GuildFeature> set) {
             super(null);
-            m.checkNotNullParameter(set, "features");
+            Intrinsics3.checkNotNullParameter(set, "features");
             this.features = set;
         }
 
@@ -50,13 +50,13 @@ public abstract class GuildExperimentFilter {
         }
 
         public final GuildHasFeatureFilter copy(Set<? extends GuildFeature> features) {
-            m.checkNotNullParameter(features, "features");
+            Intrinsics3.checkNotNullParameter(features, "features");
             return new GuildHasFeatureFilter(features);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof GuildHasFeatureFilter) && m.areEqual(this.features, ((GuildHasFeatureFilter) other).features);
+                return (other instanceof GuildHasFeatureFilter) && Intrinsics3.areEqual(this.features, ((GuildHasFeatureFilter) other).features);
             }
             return true;
         }
@@ -74,7 +74,7 @@ public abstract class GuildExperimentFilter {
         }
 
         public String toString() {
-            return a.N(a.U("GuildHasFeatureFilter(features="), this.features, ")");
+            return outline.m826N(outline.m833U("GuildHasFeatureFilter(features="), this.features, ")");
         }
     }
 
@@ -86,7 +86,7 @@ public abstract class GuildExperimentFilter {
         /* JADX WARN: Multi-variable type inference failed */
         public GuildHubTypesFeatureFilter(Set<? extends GuildHubType> set) {
             super(null);
-            m.checkNotNullParameter(set, "hubTypes");
+            Intrinsics3.checkNotNullParameter(set, "hubTypes");
             this.hubTypes = set;
         }
 
@@ -103,13 +103,13 @@ public abstract class GuildExperimentFilter {
         }
 
         public final GuildHubTypesFeatureFilter copy(Set<? extends GuildHubType> hubTypes) {
-            m.checkNotNullParameter(hubTypes, "hubTypes");
+            Intrinsics3.checkNotNullParameter(hubTypes, "hubTypes");
             return new GuildHubTypesFeatureFilter(hubTypes);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof GuildHubTypesFeatureFilter) && m.areEqual(this.hubTypes, ((GuildHubTypesFeatureFilter) other).hubTypes);
+                return (other instanceof GuildHubTypesFeatureFilter) && Intrinsics3.areEqual(this.hubTypes, ((GuildHubTypesFeatureFilter) other).hubTypes);
             }
             return true;
         }
@@ -127,62 +127,62 @@ public abstract class GuildExperimentFilter {
         }
 
         public String toString() {
-            return a.N(a.U("GuildHubTypesFeatureFilter(hubTypes="), this.hubTypes, ")");
+            return outline.m826N(outline.m833U("GuildHubTypesFeatureFilter(hubTypes="), this.hubTypes, ")");
         }
     }
 
     /* compiled from: GuildExperimentFilter.kt */
     public static final /* data */ class GuildIdRangeFilter extends GuildExperimentFilter {
-        private final LongRange range;
+        private final Ranges3 range;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public GuildIdRangeFilter(LongRange longRange) {
+        public GuildIdRangeFilter(Ranges3 ranges3) {
             super(null);
-            m.checkNotNullParameter(longRange, "range");
-            this.range = longRange;
+            Intrinsics3.checkNotNullParameter(ranges3, "range");
+            this.range = ranges3;
         }
 
-        public static /* synthetic */ GuildIdRangeFilter copy$default(GuildIdRangeFilter guildIdRangeFilter, LongRange longRange, int i, Object obj) {
+        public static /* synthetic */ GuildIdRangeFilter copy$default(GuildIdRangeFilter guildIdRangeFilter, Ranges3 ranges3, int i, Object obj) {
             if ((i & 1) != 0) {
-                longRange = guildIdRangeFilter.range;
+                ranges3 = guildIdRangeFilter.range;
             }
-            return guildIdRangeFilter.copy(longRange);
+            return guildIdRangeFilter.copy(ranges3);
         }
 
         /* renamed from: component1, reason: from getter */
-        public final LongRange getRange() {
+        public final Ranges3 getRange() {
             return this.range;
         }
 
-        public final GuildIdRangeFilter copy(LongRange range) {
-            m.checkNotNullParameter(range, "range");
+        public final GuildIdRangeFilter copy(Ranges3 range) {
+            Intrinsics3.checkNotNullParameter(range, "range");
             return new GuildIdRangeFilter(range);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof GuildIdRangeFilter) && m.areEqual(this.range, ((GuildIdRangeFilter) other).range);
+                return (other instanceof GuildIdRangeFilter) && Intrinsics3.areEqual(this.range, ((GuildIdRangeFilter) other).range);
             }
             return true;
         }
 
-        public final LongRange getRange() {
+        public final Ranges3 getRange() {
             return this.range;
         }
 
         public int hashCode() {
-            LongRange longRange = this.range;
-            if (longRange != null) {
-                return longRange.hashCode();
+            Ranges3 ranges3 = this.range;
+            if (ranges3 != null) {
+                return ranges3.hashCode();
             }
             return 0;
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("GuildIdRangeFilter(range=");
-            sbU.append(this.range);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("GuildIdRangeFilter(range=");
+            sbM833U.append(this.range);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -193,7 +193,7 @@ public abstract class GuildExperimentFilter {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public GuildIdsFilter(Set<Long> set) {
             super(null);
-            m.checkNotNullParameter(set, "guildIds");
+            Intrinsics3.checkNotNullParameter(set, "guildIds");
             this.guildIds = set;
         }
 
@@ -210,13 +210,13 @@ public abstract class GuildExperimentFilter {
         }
 
         public final GuildIdsFilter copy(Set<Long> guildIds) {
-            m.checkNotNullParameter(guildIds, "guildIds");
+            Intrinsics3.checkNotNullParameter(guildIds, "guildIds");
             return new GuildIdsFilter(guildIds);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof GuildIdsFilter) && m.areEqual(this.guildIds, ((GuildIdsFilter) other).guildIds);
+                return (other instanceof GuildIdsFilter) && Intrinsics3.areEqual(this.guildIds, ((GuildIdsFilter) other).guildIds);
             }
             return true;
         }
@@ -234,62 +234,62 @@ public abstract class GuildExperimentFilter {
         }
 
         public String toString() {
-            return a.N(a.U("GuildIdsFilter(guildIds="), this.guildIds, ")");
+            return outline.m826N(outline.m833U("GuildIdsFilter(guildIds="), this.guildIds, ")");
         }
     }
 
     /* compiled from: GuildExperimentFilter.kt */
     public static final /* data */ class GuildMemberCountRangeFilter extends GuildExperimentFilter {
-        private final LongRange range;
+        private final Ranges3 range;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public GuildMemberCountRangeFilter(LongRange longRange) {
+        public GuildMemberCountRangeFilter(Ranges3 ranges3) {
             super(null);
-            m.checkNotNullParameter(longRange, "range");
-            this.range = longRange;
+            Intrinsics3.checkNotNullParameter(ranges3, "range");
+            this.range = ranges3;
         }
 
-        public static /* synthetic */ GuildMemberCountRangeFilter copy$default(GuildMemberCountRangeFilter guildMemberCountRangeFilter, LongRange longRange, int i, Object obj) {
+        public static /* synthetic */ GuildMemberCountRangeFilter copy$default(GuildMemberCountRangeFilter guildMemberCountRangeFilter, Ranges3 ranges3, int i, Object obj) {
             if ((i & 1) != 0) {
-                longRange = guildMemberCountRangeFilter.range;
+                ranges3 = guildMemberCountRangeFilter.range;
             }
-            return guildMemberCountRangeFilter.copy(longRange);
+            return guildMemberCountRangeFilter.copy(ranges3);
         }
 
         /* renamed from: component1, reason: from getter */
-        public final LongRange getRange() {
+        public final Ranges3 getRange() {
             return this.range;
         }
 
-        public final GuildMemberCountRangeFilter copy(LongRange range) {
-            m.checkNotNullParameter(range, "range");
+        public final GuildMemberCountRangeFilter copy(Ranges3 range) {
+            Intrinsics3.checkNotNullParameter(range, "range");
             return new GuildMemberCountRangeFilter(range);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof GuildMemberCountRangeFilter) && m.areEqual(this.range, ((GuildMemberCountRangeFilter) other).range);
+                return (other instanceof GuildMemberCountRangeFilter) && Intrinsics3.areEqual(this.range, ((GuildMemberCountRangeFilter) other).range);
             }
             return true;
         }
 
-        public final LongRange getRange() {
+        public final Ranges3 getRange() {
             return this.range;
         }
 
         public int hashCode() {
-            LongRange longRange = this.range;
-            if (longRange != null) {
-                return longRange.hashCode();
+            Ranges3 ranges3 = this.range;
+            if (ranges3 != null) {
+                return ranges3.hashCode();
             }
             return 0;
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("GuildMemberCountRangeFilter(range=");
-            sbU.append(this.range);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("GuildMemberCountRangeFilter(range=");
+            sbM833U.append(this.range);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -304,7 +304,7 @@ public abstract class GuildExperimentFilter {
             Parser parser = new Parser();
             INSTANCE = parser;
             ExperimentHash experimentHash = ExperimentHash.INSTANCE;
-            parsers = h0.mapOf(o.to(Long.valueOf(experimentHash.from("guild_ids")), new GuildExperimentFilter$Parser$parsers$1(parser)), o.to(Long.valueOf(experimentHash.from("guild_id_range")), new GuildExperimentFilter$Parser$parsers$2(parser)), o.to(Long.valueOf(experimentHash.from("guild_member_count_range")), new GuildExperimentFilter$Parser$parsers$3(parser)), o.to(Long.valueOf(experimentHash.from("guild_has_feature")), new GuildExperimentFilter$Parser$parsers$4(parser)), o.to(Long.valueOf(experimentHash.from("guild_hub_types")), new GuildExperimentFilter$Parser$parsers$5(parser)));
+            parsers = Maps6.mapOf(Tuples.m10073to(Long.valueOf(experimentHash.from("guild_ids")), new GuildExperimentFilter$Parser$parsers$1(parser)), Tuples.m10073to(Long.valueOf(experimentHash.from("guild_id_range")), new GuildExperimentFilter$Parser$parsers$2(parser)), Tuples.m10073to(Long.valueOf(experimentHash.from("guild_member_count_range")), new GuildExperimentFilter$Parser$parsers$3(parser)), Tuples.m10073to(Long.valueOf(experimentHash.from("guild_has_feature")), new GuildExperimentFilter$Parser$parsers$4(parser)), Tuples.m10073to(Long.valueOf(experimentHash.from("guild_hub_types")), new GuildExperimentFilter$Parser$parsers$5(parser)));
             MIN_ID_HASH = experimentHash.from("min_id");
             MAX_ID_HASH = experimentHash.from("max_id");
         }
@@ -343,7 +343,7 @@ public abstract class GuildExperimentFilter {
         /* JADX WARN: Type inference failed for: r1v0, types: [T, java.util.Set] */
         private final GuildHasFeatureFilter parseGuildHasFeatureFilter(Model.JsonReader reader) throws IOException {
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
-            ref$ObjectRef.element = n0.emptySet();
+            ref$ObjectRef.element = Sets5.emptySet();
             reader.nextListIndexed(new GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1(reader, ref$ObjectRef));
             return new GuildHasFeatureFilter((Set) ref$ObjectRef.element);
         }
@@ -351,7 +351,7 @@ public abstract class GuildExperimentFilter {
         /* JADX WARN: Type inference failed for: r1v0, types: [T, java.util.Set] */
         private final GuildHubTypesFeatureFilter parseGuildHubTypesFeatureFilter(Model.JsonReader reader) throws IOException {
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
-            ref$ObjectRef.element = n0.emptySet();
+            ref$ObjectRef.element = Sets5.emptySet();
             reader.nextListIndexed(new GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1(reader, ref$ObjectRef));
             return new GuildHubTypesFeatureFilter((Set) ref$ObjectRef.element);
         }
@@ -365,8 +365,8 @@ public abstract class GuildExperimentFilter {
             ref$ObjectRef.element = null;
             reader.nextListIndexed(new GuildExperimentFilter$Parser$parseGuildIdsFilter$1(reader, ref$ObjectRef));
             List list = (List) ref$ObjectRef.element;
-            m.checkNotNull(list);
-            return new GuildIdsFilter(u.toSet(list));
+            Intrinsics3.checkNotNull(list);
+            return new GuildIdsFilter(_Collections.toSet(list));
         }
 
         private final GuildMemberCountRangeFilter parseGuildMemberCountRangeFilter(Model.JsonReader reader) {
@@ -374,7 +374,7 @@ public abstract class GuildExperimentFilter {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        private final LongRange parseRange(Model.JsonReader reader) throws IOException {
+        private final Ranges3 parseRange(Model.JsonReader reader) throws IOException {
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
             Ref$ObjectRef ref$ObjectRef2 = new Ref$ObjectRef();
@@ -383,7 +383,7 @@ public abstract class GuildExperimentFilter {
             Long l = (Long) ref$ObjectRef.element;
             long jLongValue = l != null ? l.longValue() : 0L;
             Long l2 = (Long) ref$ObjectRef2.element;
-            return new LongRange(jLongValue, l2 != null ? l2.longValue() : RecyclerView.FOREVER_NS);
+            return new Ranges3(jLongValue, l2 != null ? l2.longValue() : RecyclerView.FOREVER_NS);
         }
 
         public final Map<Long, Function1<Model.JsonReader, GuildExperimentFilter>> getParsers() {
@@ -391,7 +391,7 @@ public abstract class GuildExperimentFilter {
         }
 
         public final List<GuildExperimentFilter> parseFilters(Model.JsonReader reader) throws IOException {
-            m.checkNotNullParameter(reader, "reader");
+            Intrinsics3.checkNotNullParameter(reader, "reader");
             ArrayList arrayList = new ArrayList();
             reader.nextList(new GuildExperimentFilter$Parser$parseFilters$1(reader, arrayList));
             return arrayList;

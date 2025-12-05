@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackDirectoryEntry.kt */
 /* loaded from: classes.dex */
@@ -23,7 +23,7 @@ public final /* data */ class TrackDirectoryEntry {
             return false;
         }
         TrackDirectoryEntry trackDirectoryEntry = (TrackDirectoryEntry) other;
-        return m.areEqual(this.directoryChannelId, trackDirectoryEntry.directoryChannelId) && m.areEqual(this.directoryGuildId, trackDirectoryEntry.directoryGuildId) && m.areEqual(this.entityId, trackDirectoryEntry.entityId) && m.areEqual(this.authorId, trackDirectoryEntry.authorId) && m.areEqual(this.entityType, trackDirectoryEntry.entityType) && m.areEqual(this.createdAt, trackDirectoryEntry.createdAt) && m.areEqual(this.primaryCategoryId, trackDirectoryEntry.primaryCategoryId) && m.areEqual(this.entryDescription, trackDirectoryEntry.entryDescription);
+        return Intrinsics3.areEqual(this.directoryChannelId, trackDirectoryEntry.directoryChannelId) && Intrinsics3.areEqual(this.directoryGuildId, trackDirectoryEntry.directoryGuildId) && Intrinsics3.areEqual(this.entityId, trackDirectoryEntry.entityId) && Intrinsics3.areEqual(this.authorId, trackDirectoryEntry.authorId) && Intrinsics3.areEqual(this.entityType, trackDirectoryEntry.entityType) && Intrinsics3.areEqual(this.createdAt, trackDirectoryEntry.createdAt) && Intrinsics3.areEqual(this.primaryCategoryId, trackDirectoryEntry.primaryCategoryId) && Intrinsics3.areEqual(this.entryDescription, trackDirectoryEntry.entryDescription);
     }
 
     public int hashCode() {
@@ -46,21 +46,21 @@ public final /* data */ class TrackDirectoryEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackDirectoryEntry(directoryChannelId=");
-        sbU.append(this.directoryChannelId);
-        sbU.append(", directoryGuildId=");
-        sbU.append(this.directoryGuildId);
-        sbU.append(", entityId=");
-        sbU.append(this.entityId);
-        sbU.append(", authorId=");
-        sbU.append(this.authorId);
-        sbU.append(", entityType=");
-        sbU.append(this.entityType);
-        sbU.append(", createdAt=");
-        sbU.append(this.createdAt);
-        sbU.append(", primaryCategoryId=");
-        sbU.append(this.primaryCategoryId);
-        sbU.append(", entryDescription=");
-        return a.E(sbU, this.entryDescription, ")");
+        StringBuilder sbM833U = outline.m833U("TrackDirectoryEntry(directoryChannelId=");
+        sbM833U.append(this.directoryChannelId);
+        sbM833U.append(", directoryGuildId=");
+        sbM833U.append(this.directoryGuildId);
+        sbM833U.append(", entityId=");
+        sbM833U.append(this.entityId);
+        sbM833U.append(", authorId=");
+        sbM833U.append(this.authorId);
+        sbM833U.append(", entityType=");
+        sbM833U.append(this.entityType);
+        sbM833U.append(", createdAt=");
+        sbM833U.append(this.createdAt);
+        sbM833U.append(", primaryCategoryId=");
+        sbM833U.append(this.primaryCategoryId);
+        sbM833U.append(", entryDescription=");
+        return outline.m817E(sbM833U, this.entryDescription, ")");
     }
 }

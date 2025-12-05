@@ -7,16 +7,13 @@ import androidx.core.view.ViewKt;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetChannelSidebarActionsBinding;
 import com.discord.utilities.device.DeviceUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.channelsidebar.GuildChannelSideBarActionsView;
 import com.discord.views.channelsidebar.PrivateChannelSideBarActionsView;
 import com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel;
@@ -27,19 +24,22 @@ import com.discord.widgets.chat.pins.WidgetChannelPinnedMessages;
 import com.discord.widgets.search.WidgetSearch;
 import com.discord.widgets.settings.WidgetMuteSettingsSheet;
 import com.discord.widgets.user.calls.PrivateCallLauncher;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetChannelSidebarActions.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChannelSidebarActions extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChannelSidebarActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSidebarActionsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSidebarActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSidebarActionsBinding;", 0)};
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -48,11 +48,11 @@ public final class WidgetChannelSidebarActions extends AppFragment {
     private final Lazy viewModel;
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$1 */
+    public static final class ViewOnClickListenerC73371 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
 
-        public AnonymousClass1(WidgetChannelSidebarActionsViewModel.ViewState viewState) {
+        public ViewOnClickListenerC73371(WidgetChannelSidebarActionsViewModel.ViewState viewState) {
             this.$viewState = viewState;
         }
 
@@ -63,11 +63,11 @@ public final class WidgetChannelSidebarActions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$2 */
+    public static final class ViewOnClickListenerC73382 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
 
-        public AnonymousClass2(WidgetChannelSidebarActionsViewModel.ViewState viewState) {
+        public ViewOnClickListenerC73382(WidgetChannelSidebarActionsViewModel.ViewState viewState) {
             this.$viewState = viewState;
         }
 
@@ -78,11 +78,11 @@ public final class WidgetChannelSidebarActions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$3 */
+    public static final class ViewOnClickListenerC73393 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
 
-        public AnonymousClass3(long j) {
+        public ViewOnClickListenerC73393(long j) {
             this.$channelId = j;
         }
 
@@ -91,18 +91,18 @@ public final class WidgetChannelSidebarActions extends AppFragment {
             WidgetMuteSettingsSheet.Companion companion = WidgetMuteSettingsSheet.INSTANCE;
             long j = this.$channelId;
             FragmentManager parentFragmentManager = WidgetChannelSidebarActions.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.showForChannel(j, parentFragmentManager);
         }
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$4 */
+    public static final class ViewOnClickListenerC73404 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
 
-        public AnonymousClass4(long j, Context context) {
+        public ViewOnClickListenerC73404(long j, Context context) {
             this.$channelId = j;
             this.$context = context;
         }
@@ -114,13 +114,13 @@ public final class WidgetChannelSidebarActions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$5 */
+    public static final class C73415 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass5(WidgetChannelSidebarActionsViewModel.ViewState viewState, Context context) {
+        public C73415(WidgetChannelSidebarActionsViewModel.ViewState viewState, Context context) {
             super(1);
             this.$viewState = viewState;
             this.$context = context;
@@ -129,24 +129,24 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetSearch.INSTANCE.launchForGuild(((WidgetChannelSidebarActionsViewModel.ViewState.Guild) this.$viewState).getGuildId(), this.$context);
         }
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$6 */
+    public static final class C73426 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass6(Context context, WidgetChannelSidebarActionsViewModel.ViewState viewState) {
+        public C73426(Context context, WidgetChannelSidebarActionsViewModel.ViewState viewState) {
             super(1);
             this.$context = context;
             this.$viewState = viewState;
@@ -155,24 +155,24 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetThreadBrowser.INSTANCE.show(this.$context, ((WidgetChannelSidebarActionsViewModel.ViewState.Guild) this.$viewState).getGuildId(), ((WidgetChannelSidebarActionsViewModel.ViewState.Guild) this.$viewState).getChannelId(), "Channel Side Bar");
         }
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$7, reason: invalid class name */
-    public static final class AnonymousClass7 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$7 */
+    public static final class C73437 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass7(Context context, long j) {
+        public C73437(Context context, long j) {
             super(1);
             this.$context = context;
             this.$channelId = j;
@@ -181,23 +181,23 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChannelPinnedMessages.INSTANCE.show(this.$context, this.$channelId);
         }
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$8, reason: invalid class name */
-    public static final class AnonymousClass8 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$8 */
+    public static final class C73448 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass8(long j) {
+        public C73448(long j) {
             super(1);
             this.$channelId = j;
         }
@@ -205,29 +205,29 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetMuteSettingsSheet.Companion companion = WidgetMuteSettingsSheet.INSTANCE;
             long j = this.$channelId;
             FragmentManager parentFragmentManager = WidgetChannelSidebarActions.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.showForChannel(j, parentFragmentManager);
         }
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$9, reason: invalid class name */
-    public static final class AnonymousClass9 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$configureUI$9 */
+    public static final class C73459 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
         public final /* synthetic */ WidgetChannelSidebarActionsViewModel.ViewState $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass9(WidgetChannelSidebarActionsViewModel.ViewState viewState, long j, Context context) {
+        public C73459(WidgetChannelSidebarActionsViewModel.ViewState viewState, long j, Context context) {
             super(1);
             this.$viewState = viewState;
             this.$channelId = j;
@@ -237,12 +237,12 @@ public final class WidgetChannelSidebarActions extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             if (((WidgetChannelSidebarActionsViewModel.ViewState.Guild) this.$viewState).isThread()) {
                 WidgetThreadSettings.INSTANCE.launch(this.$channelId, this.$context);
             } else {
@@ -252,31 +252,31 @@ public final class WidgetChannelSidebarActions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSidebarActions.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<WidgetChannelSidebarActionsViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$onViewBoundOrOnResume$1 */
+    public static final class C73461 extends Lambda implements Function1<WidgetChannelSidebarActionsViewModel.ViewState, Unit> {
+        public C73461() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetChannelSidebarActionsViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelSidebarActionsViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "viewState");
+            Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetChannelSidebarActions.access$configureUI(WidgetChannelSidebarActions.this, viewState);
         }
     }
 
     public WidgetChannelSidebarActions() {
-        super(R.layout.widget_channel_sidebar_actions);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChannelSidebarActions$binding$2.INSTANCE, null, 2, null);
-        WidgetChannelSidebarActions$viewModel$2 widgetChannelSidebarActions$viewModel$2 = WidgetChannelSidebarActions$viewModel$2.INSTANCE;
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetChannelSidebarActionsViewModel.class), new WidgetChannelSidebarActions$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetChannelSidebarActions$viewModel$2));
+        super(C5419R.layout.widget_channel_sidebar_actions);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelSidebarActions2.INSTANCE, null, 2, null);
+        WidgetChannelSidebarActions3 widgetChannelSidebarActions3 = WidgetChannelSidebarActions3.INSTANCE;
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetChannelSidebarActionsViewModel.class), new WidgetChannelSidebarActions$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetChannelSidebarActions3));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetChannelSidebarActions widgetChannelSidebarActions, WidgetChannelSidebarActionsViewModel.ViewState viewState) {
@@ -290,9 +290,9 @@ public final class WidgetChannelSidebarActions extends AppFragment {
     private final void configureUI(WidgetChannelSidebarActionsViewModel.ViewState viewState) {
         DeviceUtils deviceUtils = DeviceUtils.INSTANCE;
         Resources resources = getResources();
-        m.checkNotNullExpressionValue(resources, "resources");
+        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
         boolean zIsSmallScreen = deviceUtils.isSmallScreen(resources);
-        if (m.areEqual(viewState, WidgetChannelSidebarActionsViewModel.ViewState.Uninitialized.INSTANCE)) {
+        if (Intrinsics3.areEqual(viewState, WidgetChannelSidebarActionsViewModel.ViewState.Uninitialized.INSTANCE)) {
             View view = getView();
             if (view != null) {
                 ViewKt.setVisible(view, false);
@@ -305,35 +305,35 @@ public final class WidgetChannelSidebarActions extends AppFragment {
             if (view2 != null) {
                 ViewKt.setVisible(view2, true);
             }
-            GuildChannelSideBarActionsView guildChannelSideBarActionsView = getBinding().f2280b;
-            m.checkNotNullExpressionValue(guildChannelSideBarActionsView, "binding.widgetChannelSidebarActionsGuildView");
+            GuildChannelSideBarActionsView guildChannelSideBarActionsView = getBinding().f15959b;
+            Intrinsics3.checkNotNullExpressionValue(guildChannelSideBarActionsView, "binding.widgetChannelSidebarActionsGuildView");
             guildChannelSideBarActionsView.setVisibility(8);
-            PrivateChannelSideBarActionsView privateChannelSideBarActionsView = getBinding().c;
-            m.checkNotNullExpressionValue(privateChannelSideBarActionsView, "binding.widgetChannelSidebarActionsPrivateView");
+            PrivateChannelSideBarActionsView privateChannelSideBarActionsView = getBinding().f15960c;
+            Intrinsics3.checkNotNullExpressionValue(privateChannelSideBarActionsView, "binding.widgetChannelSidebarActionsPrivateView");
             privateChannelSideBarActionsView.setVisibility(0);
             WidgetChannelSidebarActionsViewModel.ViewState.Private r2 = (WidgetChannelSidebarActionsViewModel.ViewState.Private) viewState;
             long channelId = r2.getChannelId();
-            getBinding().c.a(new AnonymousClass1(viewState), new AnonymousClass2(viewState), new AnonymousClass3(channelId), new AnonymousClass4(channelId, requireContext()), r2.isMuted());
+            getBinding().f15960c.m8590a(new ViewOnClickListenerC73371(viewState), new ViewOnClickListenerC73382(viewState), new ViewOnClickListenerC73393(channelId), new ViewOnClickListenerC73404(channelId, requireContext()), r2.isMuted());
             return;
         }
         if (viewState instanceof WidgetChannelSidebarActionsViewModel.ViewState.Guild) {
             WidgetChannelSidebarActionsViewModel.ViewState.Guild guild = (WidgetChannelSidebarActionsViewModel.ViewState.Guild) viewState;
             long channelId2 = guild.getChannelId();
             Context contextRequireContext = requireContext();
-            GuildChannelSideBarActionsView guildChannelSideBarActionsView2 = getBinding().f2280b;
-            AnonymousClass5 anonymousClass5 = new AnonymousClass5(viewState, contextRequireContext);
-            AnonymousClass6 anonymousClass6 = new AnonymousClass6(contextRequireContext, viewState);
-            AnonymousClass7 anonymousClass7 = new AnonymousClass7(contextRequireContext, channelId2);
-            guildChannelSideBarActionsView2.a(anonymousClass5, anonymousClass6, new AnonymousClass8(channelId2), anonymousClass7, new AnonymousClass9(viewState, channelId2, contextRequireContext), guild.getHasUnreadPins(), guild.isMuted(), guild.getDisablePins(), zIsSmallScreen || guild.isGuildForumPost() || guild.isGuildForumChannel());
+            GuildChannelSideBarActionsView guildChannelSideBarActionsView2 = getBinding().f15959b;
+            C73415 c73415 = new C73415(viewState, contextRequireContext);
+            C73426 c73426 = new C73426(contextRequireContext, viewState);
+            C73437 c73437 = new C73437(contextRequireContext, channelId2);
+            guildChannelSideBarActionsView2.m8589a(c73415, c73426, new C73448(channelId2), c73437, new C73459(viewState, channelId2, contextRequireContext), guild.getHasUnreadPins(), guild.isMuted(), guild.getDisablePins(), zIsSmallScreen || guild.isGuildForumPost() || guild.isGuildForumChannel());
             View view3 = getView();
             if (view3 != null) {
                 ViewKt.setVisible(view3, true);
             }
-            PrivateChannelSideBarActionsView privateChannelSideBarActionsView2 = getBinding().c;
-            m.checkNotNullExpressionValue(privateChannelSideBarActionsView2, "binding.widgetChannelSidebarActionsPrivateView");
+            PrivateChannelSideBarActionsView privateChannelSideBarActionsView2 = getBinding().f15960c;
+            Intrinsics3.checkNotNullExpressionValue(privateChannelSideBarActionsView2, "binding.widgetChannelSidebarActionsPrivateView");
             privateChannelSideBarActionsView2.setVisibility(8);
-            GuildChannelSideBarActionsView guildChannelSideBarActionsView3 = getBinding().f2280b;
-            m.checkNotNullExpressionValue(guildChannelSideBarActionsView3, "binding.widgetChannelSidebarActionsGuildView");
+            GuildChannelSideBarActionsView guildChannelSideBarActionsView3 = getBinding().f15959b;
+            Intrinsics3.checkNotNullExpressionValue(guildChannelSideBarActionsView3, "binding.widgetChannelSidebarActionsGuildView");
             guildChannelSideBarActionsView3.setVisibility(guild.getShouldHideChannelSidebar() ^ true ? 0 : 8);
         }
     }
@@ -349,7 +349,7 @@ public final class WidgetChannelSidebarActions extends AppFragment {
     private final void startPrivateCall(long channelId, boolean useVideo) {
         Context contextRequireContext = requireContext();
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         PrivateCallLauncher privateCallLauncher = new PrivateCallLauncher(this, this, contextRequireContext, parentFragmentManager);
         if (useVideo) {
             privateCallLauncher.launchVideoCall(channelId);
@@ -361,6 +361,6 @@ public final class WidgetChannelSidebarActions extends AppFragment {
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetChannelSidebarActions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetChannelSidebarActions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C73461(), 62, (Object) null);
     }
 }

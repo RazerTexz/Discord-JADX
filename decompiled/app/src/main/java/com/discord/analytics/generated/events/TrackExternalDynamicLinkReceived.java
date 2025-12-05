@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackExternalDynamicLinkReceived.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackExternalDynamicLinkReceived implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackExternalDynamicLinkReceived implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long fingerprint = null;
     private final CharSequence attemptId = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackExternalDynamicLinkReceived implements Analyt
             return false;
         }
         TrackExternalDynamicLinkReceived trackExternalDynamicLinkReceived = (TrackExternalDynamicLinkReceived) other;
-        return m.areEqual(this.fingerprint, trackExternalDynamicLinkReceived.fingerprint) && m.areEqual(this.attemptId, trackExternalDynamicLinkReceived.attemptId) && m.areEqual(this.hasAuthToken, trackExternalDynamicLinkReceived.hasAuthToken) && m.areEqual(this.inviteCode, trackExternalDynamicLinkReceived.inviteCode) && m.areEqual(this.guildTemplateCode, trackExternalDynamicLinkReceived.guildTemplateCode) && m.areEqual(this.isBackgrounded, trackExternalDynamicLinkReceived.isBackgrounded) && m.areEqual(this.linkType, trackExternalDynamicLinkReceived.linkType) && m.areEqual(this.deeplinkSource, trackExternalDynamicLinkReceived.deeplinkSource);
+        return Intrinsics3.areEqual(this.fingerprint, trackExternalDynamicLinkReceived.fingerprint) && Intrinsics3.areEqual(this.attemptId, trackExternalDynamicLinkReceived.attemptId) && Intrinsics3.areEqual(this.hasAuthToken, trackExternalDynamicLinkReceived.hasAuthToken) && Intrinsics3.areEqual(this.inviteCode, trackExternalDynamicLinkReceived.inviteCode) && Intrinsics3.areEqual(this.guildTemplateCode, trackExternalDynamicLinkReceived.guildTemplateCode) && Intrinsics3.areEqual(this.isBackgrounded, trackExternalDynamicLinkReceived.isBackgrounded) && Intrinsics3.areEqual(this.linkType, trackExternalDynamicLinkReceived.linkType) && Intrinsics3.areEqual(this.deeplinkSource, trackExternalDynamicLinkReceived.deeplinkSource);
     }
 
     public int hashCode() {
@@ -57,21 +57,21 @@ public final /* data */ class TrackExternalDynamicLinkReceived implements Analyt
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackExternalDynamicLinkReceived(fingerprint=");
-        sbU.append(this.fingerprint);
-        sbU.append(", attemptId=");
-        sbU.append(this.attemptId);
-        sbU.append(", hasAuthToken=");
-        sbU.append(this.hasAuthToken);
-        sbU.append(", inviteCode=");
-        sbU.append(this.inviteCode);
-        sbU.append(", guildTemplateCode=");
-        sbU.append(this.guildTemplateCode);
-        sbU.append(", isBackgrounded=");
-        sbU.append(this.isBackgrounded);
-        sbU.append(", linkType=");
-        sbU.append(this.linkType);
-        sbU.append(", deeplinkSource=");
-        return a.E(sbU, this.deeplinkSource, ")");
+        StringBuilder sbM833U = outline.m833U("TrackExternalDynamicLinkReceived(fingerprint=");
+        sbM833U.append(this.fingerprint);
+        sbM833U.append(", attemptId=");
+        sbM833U.append(this.attemptId);
+        sbM833U.append(", hasAuthToken=");
+        sbM833U.append(this.hasAuthToken);
+        sbM833U.append(", inviteCode=");
+        sbM833U.append(this.inviteCode);
+        sbM833U.append(", guildTemplateCode=");
+        sbM833U.append(this.guildTemplateCode);
+        sbM833U.append(", isBackgrounded=");
+        sbM833U.append(this.isBackgrounded);
+        sbM833U.append(", linkType=");
+        sbM833U.append(this.linkType);
+        sbM833U.append(", deeplinkSource=");
+        return outline.m817E(sbM833U, this.deeplinkSource, ")");
     }
 }

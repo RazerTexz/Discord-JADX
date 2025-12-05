@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
-import a0.a.a.b;
-import b.d.b.a.a;
-import d0.z.d.m;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GiftEntry.kt */
 /* loaded from: classes2.dex */
@@ -15,7 +15,7 @@ public final /* data */ class GiftEntry extends ChatListEntry {
     private final long userId;
 
     public GiftEntry(long j, long j2, long j3, String str) {
-        m.checkNotNullParameter(str, "giftCode");
+        Intrinsics3.checkNotNullParameter(str, "giftCode");
         this.userId = j;
         this.messageId = j2;
         this.channelId = j3;
@@ -49,7 +49,7 @@ public final /* data */ class GiftEntry extends ChatListEntry {
     }
 
     public final GiftEntry copy(long userId, long messageId, long channelId, String giftCode) {
-        m.checkNotNullParameter(giftCode, "giftCode");
+        Intrinsics3.checkNotNullParameter(giftCode, "giftCode");
         return new GiftEntry(userId, messageId, channelId, giftCode);
     }
 
@@ -61,7 +61,7 @@ public final /* data */ class GiftEntry extends ChatListEntry {
             return false;
         }
         GiftEntry giftEntry = (GiftEntry) other;
-        return this.userId == giftEntry.userId && this.messageId == giftEntry.messageId && this.channelId == giftEntry.channelId && m.areEqual(this.giftCode, giftEntry.giftCode);
+        return this.userId == giftEntry.userId && this.messageId == giftEntry.messageId && this.channelId == giftEntry.channelId && Intrinsics3.areEqual(this.giftCode, giftEntry.giftCode);
     }
 
     public final long getChannelId() {
@@ -91,19 +91,19 @@ public final /* data */ class GiftEntry extends ChatListEntry {
     }
 
     public int hashCode() {
-        int iA = (b.a(this.channelId) + ((b.a(this.messageId) + (b.a(this.userId) * 31)) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.channelId) + ((C0002b.m3a(this.messageId) + (C0002b.m3a(this.userId) * 31)) * 31)) * 31;
         String str = this.giftCode;
-        return iA + (str != null ? str.hashCode() : 0);
+        return iM3a + (str != null ? str.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GiftEntry(userId=");
-        sbU.append(this.userId);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", giftCode=");
-        return a.J(sbU, this.giftCode, ")");
+        StringBuilder sbM833U = outline.m833U("GiftEntry(userId=");
+        sbM833U.append(this.userId);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", giftCode=");
+        return outline.m822J(sbM833U, this.giftCode, ")");
     }
 }

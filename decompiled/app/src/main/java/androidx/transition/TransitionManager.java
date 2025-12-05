@@ -24,11 +24,11 @@ public class TransitionManager {
         public ViewGroup mSceneRoot;
         public Transition mTransition;
 
-        /* renamed from: androidx.transition.TransitionManager$MultiListener$1, reason: invalid class name */
-        public class AnonymousClass1 extends TransitionListenerAdapter {
+        /* renamed from: androidx.transition.TransitionManager$MultiListener$1 */
+        public class C06681 extends TransitionListenerAdapter {
             public final /* synthetic */ ArrayMap val$runningTransitions;
 
-            public AnonymousClass1(ArrayMap arrayMap) {
+            public C06681(ArrayMap arrayMap) {
                 this.val$runningTransitions = arrayMap;
             }
 
@@ -66,7 +66,7 @@ public class TransitionManager {
                 arrayList2 = new ArrayList(arrayList);
             }
             arrayList.add(this.mTransition);
-            this.mTransition.addListener(new AnonymousClass1(runningTransitions));
+            this.mTransition.addListener(new C06681(runningTransitions));
             this.mTransition.captureValues(this.mSceneRoot, false);
             if (arrayList2 != null) {
                 Iterator it = arrayList2.iterator();
@@ -160,7 +160,8 @@ public class TransitionManager {
         return transition2 != null ? transition2 : sDefaultTransition;
     }
 
-    public static void go(@NonNull Scene scene) {
+    /* renamed from: go */
+    public static void m96go(@NonNull Scene scene) {
         changeScene(scene, sDefaultTransition);
     }
 
@@ -212,7 +213,8 @@ public class TransitionManager {
         sceneChangeRunTransition(viewGroup, transitionClone);
     }
 
-    public static void go(@NonNull Scene scene, @Nullable Transition transition) {
+    /* renamed from: go */
+    public static void m97go(@NonNull Scene scene, @Nullable Transition transition) {
         changeScene(scene, transition);
     }
 

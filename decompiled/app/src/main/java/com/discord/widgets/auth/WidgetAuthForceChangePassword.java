@@ -4,13 +4,13 @@ import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.core.app.NotificationCompat;
-import b.a.d.j;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.functions.Func0;
+import p007b.p008a.p018d.AppScreen2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.functions.Func0;
 
 /* compiled from: WidgetAuthForceChangePassword.kt */
 /* loaded from: classes2.dex */
@@ -25,8 +25,8 @@ public final class WidgetAuthForceChangePassword extends WidgetSettingsAccountCh
         }
 
         public final void launch(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetAuthForceChangePassword.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetAuthForceChangePassword.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -35,16 +35,16 @@ public final class WidgetAuthForceChangePassword extends WidgetSettingsAccountCh
     }
 
     /* compiled from: WidgetAuthForceChangePassword.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthForceChangePassword$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1<R> implements Func0<Boolean> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.auth.WidgetAuthForceChangePassword$onViewBound$1 */
+    public static final class C71721<R> implements Func0<Boolean> {
+        public static final C71721 INSTANCE = new C71721();
 
-        @Override // rx.functions.Func0, java.util.concurrent.Callable
+        @Override // p658rx.functions.Func0, java.util.concurrent.Callable
         public /* bridge */ /* synthetic */ Object call() {
             return call();
         }
 
-        @Override // rx.functions.Func0, java.util.concurrent.Callable
+        @Override // p658rx.functions.Func0, java.util.concurrent.Callable
         public final Boolean call() {
             StoreStream.INSTANCE.getAuthentication().logout();
             return Boolean.TRUE;
@@ -58,11 +58,11 @@ public final class WidgetAuthForceChangePassword extends WidgetSettingsAccountCh
 
     @Override // com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword, com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        ImageView imageView = getBinding().f2596b;
-        m.checkNotNullExpressionValue(imageView, "binding.authChangePasswordIcon");
+        ImageView imageView = getBinding().f17819b;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.authChangePasswordIcon");
         imageView.setVisibility(0);
-        setOnBackPressed(AnonymousClass1.INSTANCE, 0);
+        setOnBackPressed(C71721.INSTANCE, 0);
     }
 }

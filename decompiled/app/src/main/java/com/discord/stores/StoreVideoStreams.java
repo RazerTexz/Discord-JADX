@@ -1,19 +1,19 @@
 package com.discord.stores;
 
-import b.c.a.a0.d;
-import b.d.b.a.a;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.rtcconnection.VideoMetadata;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.stores.updates.ObservationDeck4;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreVideoStreams.kt */
 /* loaded from: classes2.dex */
@@ -32,7 +32,7 @@ public final class StoreVideoStreams extends StoreV2 {
         private final VideoMetadata applicationStreamMetadata;
         private final Integer callStreamId;
         private final VideoMetadata callStreamMetadata;
-        private final boolean isEmpty = m.areEqual(this, Empty);
+        private final boolean isEmpty = Intrinsics3.areEqual(this, Empty);
 
         /* compiled from: StoreVideoStreams.kt */
         public static final class Companion {
@@ -107,7 +107,7 @@ public final class StoreVideoStreams extends StoreV2 {
                 return false;
             }
             UserStreams userStreams = (UserStreams) other;
-            return m.areEqual(this.callStreamId, userStreams.callStreamId) && m.areEqual(this.callStreamMetadata, userStreams.callStreamMetadata) && m.areEqual(this.applicationStreamId, userStreams.applicationStreamId) && m.areEqual(this.applicationStreamMetadata, userStreams.applicationStreamMetadata);
+            return Intrinsics3.areEqual(this.callStreamId, userStreams.callStreamId) && Intrinsics3.areEqual(this.callStreamMetadata, userStreams.callStreamMetadata) && Intrinsics3.areEqual(this.applicationStreamId, userStreams.applicationStreamId) && Intrinsics3.areEqual(this.applicationStreamMetadata, userStreams.applicationStreamMetadata);
         }
 
         public final Integer getApplicationStreamId() {
@@ -143,23 +143,23 @@ public final class StoreVideoStreams extends StoreV2 {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("UserStreams(callStreamId=");
-            sbU.append(this.callStreamId);
-            sbU.append(", callStreamMetadata=");
-            sbU.append(this.callStreamMetadata);
-            sbU.append(", applicationStreamId=");
-            sbU.append(this.applicationStreamId);
-            sbU.append(", applicationStreamMetadata=");
-            sbU.append(this.applicationStreamMetadata);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("UserStreams(callStreamId=");
+            sbM833U.append(this.callStreamId);
+            sbM833U.append(", callStreamMetadata=");
+            sbM833U.append(this.callStreamMetadata);
+            sbM833U.append(", applicationStreamId=");
+            sbM833U.append(this.applicationStreamId);
+            sbM833U.append(", applicationStreamMetadata=");
+            sbM833U.append(this.applicationStreamMetadata);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     /* compiled from: StoreVideoStreams.kt */
-    /* renamed from: com.discord.stores.StoreVideoStreams$observeUserStreams$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends UserStreams>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreVideoStreams$observeUserStreams$1 */
+    public static final class C66171 extends Lambda implements Function0<Map<Long, ? extends UserStreams>> {
+        public C66171() {
             super(0);
         }
 
@@ -180,7 +180,7 @@ public final class StoreVideoStreams extends StoreV2 {
     }
 
     public /* synthetic */ StoreVideoStreams(ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i & 1) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this((i & 1) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ Map access$getUserStreamsByUserSnapshot$p(StoreVideoStreams storeVideoStreams) {
@@ -205,7 +205,7 @@ public final class StoreVideoStreams extends StoreV2 {
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final Long findUserForApplicationStream(int streamId) {
         for (Map.Entry<Long, UserStreams> entry : this.userStreamsByUser.entrySet()) {
             long jLongValue = entry.getKey().longValue();
@@ -217,29 +217,29 @@ public final class StoreVideoStreams extends StoreV2 {
         return null;
     }
 
-    @StoreThread
+    @Store3
     public final void handleApplicationStreamUpdate(long userId, Integer streamId) {
         setUserStreams(userId, UserStreams.copy$default(currentUserStreams(userId), null, null, streamId, null, 11, null));
     }
 
-    @StoreThread
+    @Store3
     public final void handleApplicationStreamVideoMetadataUpdate(VideoMetadata metadata) {
-        m.checkNotNullParameter(metadata, "metadata");
+        Intrinsics3.checkNotNullParameter(metadata, "metadata");
         setUserStreams(metadata.userID, UserStreams.copy$default(currentUserStreams(metadata.userID), null, null, null, metadata, 7, null));
     }
 
-    @StoreThread
+    @Store3
     public final void handleVideoMetadataUpdate(VideoMetadata metadata) {
-        m.checkNotNullParameter(metadata, "metadata");
+        Intrinsics3.checkNotNullParameter(metadata, "metadata");
         setUserStreams(metadata.userID, UserStreams.copy$default(currentUserStreams(metadata.userID), null, metadata, null, null, 13, null));
     }
 
-    @StoreThread
+    @Store3
     public final void handleVideoStreamUpdate(long userId, Integer streamId) {
         setUserStreams(userId, UserStreams.copy$default(currentUserStreams(userId), streamId, null, null, null, 14, null));
     }
 
-    @StoreThread
+    @Store3
     public final void handleVoiceChannelSelected(long channelId) {
         if (channelId == 0 && (!this.userStreamsByUser.isEmpty())) {
             this.userStreamsByUser.clear();
@@ -247,10 +247,10 @@ public final class StoreVideoStreams extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleVoiceStateUpdates(VoiceState voiceState) {
-        m.checkNotNullParameter(voiceState, "voiceState");
-        if (d.X0(voiceState)) {
+        Intrinsics3.checkNotNullParameter(voiceState, "voiceState");
+        if (AnimatableValueParser.m487X0(voiceState)) {
             if (this.userStreamsByUser.remove(Long.valueOf(voiceState.getUserId())) != null) {
                 markChanged();
             }
@@ -258,7 +258,7 @@ public final class StoreVideoStreams extends StoreV2 {
     }
 
     public final Observable<Map<Long, UserStreams>> observeUserStreams() {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C66171(), 14, null);
     }
 
     @Override // com.discord.stores.StoreV2
@@ -268,9 +268,9 @@ public final class StoreVideoStreams extends StoreV2 {
     }
 
     public StoreVideoStreams(ObservationDeck observationDeck) {
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.observationDeck = observationDeck;
-        this.userStreamsByUserSnapshot = h0.emptyMap();
+        this.userStreamsByUserSnapshot = Maps6.emptyMap();
         this.userStreamsByUser = new HashMap<>();
     }
 }

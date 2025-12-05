@@ -1,19 +1,19 @@
 package com.discord.analytics.generated.events.network_action;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackNetworkMetadata;
-import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackNetworkActionInviteResolve.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNetworkActionInviteResolve implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackNetworkMetadataReceiver {
+public final /* data */ class TrackNetworkActionInviteResolve implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
     private final transient String analyticsSchemaTypeName;
     private final Boolean authenticated;
     private final Long channelId;
@@ -49,8 +49,9 @@ public final /* data */ class TrackNetworkActionInviteResolve implements Analyti
         this.analyticsSchemaTypeName = "network_action_invite_resolve";
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver
-    public void b(TrackNetworkMetadata trackNetworkMetadata) {
+    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
+    /* renamed from: b */
+    public void mo7529b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
 
@@ -68,7 +69,7 @@ public final /* data */ class TrackNetworkActionInviteResolve implements Analyti
             return false;
         }
         TrackNetworkActionInviteResolve trackNetworkActionInviteResolve = (TrackNetworkActionInviteResolve) other;
-        return m.areEqual(this.resolved, trackNetworkActionInviteResolve.resolved) && m.areEqual(this.code, trackNetworkActionInviteResolve.code) && m.areEqual(this.authenticated, trackNetworkActionInviteResolve.authenticated) && m.areEqual(this.guildId, trackNetworkActionInviteResolve.guildId) && m.areEqual(this.channelId, trackNetworkActionInviteResolve.channelId) && m.areEqual(this.channelType, trackNetworkActionInviteResolve.channelType) && m.areEqual(this.inviterId, trackNetworkActionInviteResolve.inviterId) && m.areEqual(this.sizeTotal, trackNetworkActionInviteResolve.sizeTotal) && m.areEqual(this.sizeOnline, trackNetworkActionInviteResolve.sizeOnline) && m.areEqual(this.inviteType, trackNetworkActionInviteResolve.inviteType) && m.areEqual(this.destinationUserId, trackNetworkActionInviteResolve.destinationUserId) && m.areEqual(this.userBanned, trackNetworkActionInviteResolve.userBanned) && m.areEqual(this.inputValue, trackNetworkActionInviteResolve.inputValue);
+        return Intrinsics3.areEqual(this.resolved, trackNetworkActionInviteResolve.resolved) && Intrinsics3.areEqual(this.code, trackNetworkActionInviteResolve.code) && Intrinsics3.areEqual(this.authenticated, trackNetworkActionInviteResolve.authenticated) && Intrinsics3.areEqual(this.guildId, trackNetworkActionInviteResolve.guildId) && Intrinsics3.areEqual(this.channelId, trackNetworkActionInviteResolve.channelId) && Intrinsics3.areEqual(this.channelType, trackNetworkActionInviteResolve.channelType) && Intrinsics3.areEqual(this.inviterId, trackNetworkActionInviteResolve.inviterId) && Intrinsics3.areEqual(this.sizeTotal, trackNetworkActionInviteResolve.sizeTotal) && Intrinsics3.areEqual(this.sizeOnline, trackNetworkActionInviteResolve.sizeOnline) && Intrinsics3.areEqual(this.inviteType, trackNetworkActionInviteResolve.inviteType) && Intrinsics3.areEqual(this.destinationUserId, trackNetworkActionInviteResolve.destinationUserId) && Intrinsics3.areEqual(this.userBanned, trackNetworkActionInviteResolve.userBanned) && Intrinsics3.areEqual(this.inputValue, trackNetworkActionInviteResolve.inputValue);
     }
 
     public int hashCode() {
@@ -101,32 +102,32 @@ public final /* data */ class TrackNetworkActionInviteResolve implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackNetworkActionInviteResolve(resolved=");
-        sbU.append(this.resolved);
-        sbU.append(", code=");
-        sbU.append(this.code);
-        sbU.append(", authenticated=");
-        sbU.append(this.authenticated);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", inviterId=");
-        sbU.append(this.inviterId);
-        sbU.append(", sizeTotal=");
-        sbU.append(this.sizeTotal);
-        sbU.append(", sizeOnline=");
-        sbU.append(this.sizeOnline);
-        sbU.append(", inviteType=");
-        sbU.append(this.inviteType);
-        sbU.append(", destinationUserId=");
-        sbU.append(this.destinationUserId);
-        sbU.append(", userBanned=");
-        sbU.append(this.userBanned);
-        sbU.append(", inputValue=");
-        return a.E(sbU, this.inputValue, ")");
+        StringBuilder sbM833U = outline.m833U("TrackNetworkActionInviteResolve(resolved=");
+        sbM833U.append(this.resolved);
+        sbM833U.append(", code=");
+        sbM833U.append(this.code);
+        sbM833U.append(", authenticated=");
+        sbM833U.append(this.authenticated);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", inviterId=");
+        sbM833U.append(this.inviterId);
+        sbM833U.append(", sizeTotal=");
+        sbM833U.append(this.sizeTotal);
+        sbM833U.append(", sizeOnline=");
+        sbM833U.append(this.sizeOnline);
+        sbM833U.append(", inviteType=");
+        sbM833U.append(this.inviteType);
+        sbM833U.append(", destinationUserId=");
+        sbM833U.append(this.destinationUserId);
+        sbM833U.append(", userBanned=");
+        sbM833U.append(this.userBanned);
+        sbM833U.append(", inputValue=");
+        return outline.m817E(sbM833U, this.inputValue, ")");
     }
 
     public TrackNetworkActionInviteResolve() {

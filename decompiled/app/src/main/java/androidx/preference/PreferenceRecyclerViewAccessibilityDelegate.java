@@ -17,9 +17,9 @@ public class PreferenceRecyclerViewAccessibilityDelegate extends RecyclerViewAcc
     public final AccessibilityDelegateCompat mItemDelegate;
     public final RecyclerView mRecyclerView;
 
-    /* renamed from: androidx.preference.PreferenceRecyclerViewAccessibilityDelegate$1, reason: invalid class name */
-    public class AnonymousClass1 extends AccessibilityDelegateCompat {
-        public AnonymousClass1() {
+    /* renamed from: androidx.preference.PreferenceRecyclerViewAccessibilityDelegate$1 */
+    public class C05241 extends AccessibilityDelegateCompat {
+        public C05241() {
         }
 
         @Override // androidx.core.view.AccessibilityDelegateCompat
@@ -42,7 +42,7 @@ public class PreferenceRecyclerViewAccessibilityDelegate extends RecyclerViewAcc
     public PreferenceRecyclerViewAccessibilityDelegate(RecyclerView recyclerView) {
         super(recyclerView);
         this.mDefaultItemDelegate = super.getItemDelegate();
-        this.mItemDelegate = new AnonymousClass1();
+        this.mItemDelegate = new C05241();
         this.mRecyclerView = recyclerView;
     }
 

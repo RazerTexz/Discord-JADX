@@ -54,12 +54,12 @@ public class SystemForegroundDispatcher implements WorkConstraintsCallback, Exec
     private WorkManagerImpl mWorkManagerImpl;
     public final Map<String, WorkSpec> mWorkSpecById;
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundDispatcher$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.work.impl.foreground.SystemForegroundDispatcher$1 */
+    public class RunnableC07411 implements Runnable {
         public final /* synthetic */ WorkDatabase val$database;
         public final /* synthetic */ String val$workSpecId;
 
-        public AnonymousClass1(WorkDatabase workDatabase, String str) {
+        public RunnableC07411(WorkDatabase workDatabase, String str) {
             this.val$database = workDatabase;
             this.val$workSpecId = str;
         }
@@ -181,7 +181,7 @@ public class SystemForegroundDispatcher implements WorkConstraintsCallback, Exec
     @MainThread
     private void handleStartForeground(@NonNull Intent intent) {
         Logger.get().info(TAG, String.format("Started foreground service %s", intent), new Throwable[0]);
-        this.mTaskExecutor.executeOnBackgroundThread(new AnonymousClass1(this.mWorkManagerImpl.getWorkDatabase(), intent.getStringExtra(KEY_WORKSPEC_ID)));
+        this.mTaskExecutor.executeOnBackgroundThread(new RunnableC07411(this.mWorkManagerImpl.getWorkDatabase(), intent.getStringExtra(KEY_WORKSPEC_ID)));
     }
 
     public WorkManagerImpl getWorkManager() {

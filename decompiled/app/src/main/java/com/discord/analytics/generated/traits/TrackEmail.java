@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackEmail.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackEmail {
             return false;
         }
         TrackEmail trackEmail = (TrackEmail) other;
-        return m.areEqual(this.emailType, trackEmail.emailType) && m.areEqual(this.subjectType, trackEmail.subjectType) && m.areEqual(this.emailId, trackEmail.emailId) && m.areEqual(this.category, trackEmail.category) && m.areEqual(this.version, trackEmail.version);
+        return Intrinsics3.areEqual(this.emailType, trackEmail.emailType) && Intrinsics3.areEqual(this.subjectType, trackEmail.subjectType) && Intrinsics3.areEqual(this.emailId, trackEmail.emailId) && Intrinsics3.areEqual(this.category, trackEmail.category) && Intrinsics3.areEqual(this.version, trackEmail.version);
     }
 
     public int hashCode() {
@@ -37,15 +37,15 @@ public final /* data */ class TrackEmail {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackEmail(emailType=");
-        sbU.append(this.emailType);
-        sbU.append(", subjectType=");
-        sbU.append(this.subjectType);
-        sbU.append(", emailId=");
-        sbU.append(this.emailId);
-        sbU.append(", category=");
-        sbU.append(this.category);
-        sbU.append(", version=");
-        return a.E(sbU, this.version, ")");
+        StringBuilder sbM833U = outline.m833U("TrackEmail(emailType=");
+        sbM833U.append(this.emailType);
+        sbM833U.append(", subjectType=");
+        sbM833U.append(this.subjectType);
+        sbM833U.append(", emailId=");
+        sbM833U.append(this.emailId);
+        sbM833U.append(", category=");
+        sbM833U.append(this.category);
+        sbM833U.append(", version=");
+        return outline.m817E(sbM833U, this.version, ")");
     }
 }

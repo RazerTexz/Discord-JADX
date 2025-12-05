@@ -21,8 +21,8 @@ import com.discord.api.commands.ApplicationCommandData;
 import com.discord.api.connectedaccounts.ConnectedAccount;
 import com.discord.api.creatormonetization.CreatorMonetizationEligibilityRequirements;
 import com.discord.api.creatormonetization.CreatorMonetizationEnableRequest;
-import com.discord.api.directory.DirectoryEntryEvent;
 import com.discord.api.directory.DirectoryEntryGuild;
+import com.discord.api.directory.DirectoryEntryGuild2;
 import com.discord.api.fingerprint.FingerprintResponse;
 import com.discord.api.forum.ForumPostFirstMessages;
 import com.discord.api.friendsuggestions.BulkAddFriendsResponse;
@@ -46,7 +46,7 @@ import com.discord.api.guildscheduledevent.GuildScheduledEventMeUser;
 import com.discord.api.handoff.CreateHandoffTokenRequest;
 import com.discord.api.handoff.HandoffToken;
 import com.discord.api.hubs.EmailVerification;
-import com.discord.api.hubs.EmailVerificationCode;
+import com.discord.api.hubs.EmailVerification2;
 import com.discord.api.hubs.WaitlistSignup;
 import com.discord.api.message.Message;
 import com.discord.api.premium.ClaimedOutboundPromotion;
@@ -64,9 +64,7 @@ import com.discord.api.thread.ThreadMember;
 import com.discord.api.user.PatchUserBody;
 import com.discord.api.user.User;
 import com.discord.api.user.UserProfile;
-import com.discord.api.user.UserSurveyFetchResponse;
-import com.discord.models.domain.Consents;
-import com.discord.models.domain.Harvest;
+import com.discord.api.user.UserSurvey3;
 import com.discord.models.domain.ModelApplicationStreamPreview;
 import com.discord.models.domain.ModelAppliedGuildBoost;
 import com.discord.models.domain.ModelAuditLog;
@@ -90,6 +88,8 @@ import com.discord.models.domain.ModelMemberVerificationForm;
 import com.discord.models.domain.ModelMemberVerificationFormResponse;
 import com.discord.models.domain.ModelNotificationSettings;
 import com.discord.models.domain.ModelOAuth2Token;
+import com.discord.models.domain.ModelPaymentSource2;
+import com.discord.models.domain.ModelPaymentSource3;
 import com.discord.models.domain.ModelPhoneVerificationToken;
 import com.discord.models.domain.ModelRemoteAuthHandshake;
 import com.discord.models.domain.ModelRtcLatencyRegion;
@@ -98,12 +98,12 @@ import com.discord.models.domain.ModelSubscription;
 import com.discord.models.domain.ModelTypingResponse;
 import com.discord.models.domain.ModelUrl;
 import com.discord.models.domain.ModelUserAffinities;
+import com.discord.models.domain.ModelUserConsents2;
+import com.discord.models.domain.ModelUserConsents3;
 import com.discord.models.domain.ModelUserNote;
 import com.discord.models.domain.ModelUserRelationship;
 import com.discord.models.domain.ModelUserSettings;
 import com.discord.models.domain.ModelVoiceRegion;
-import com.discord.models.domain.PatchPaymentSourceRaw;
-import com.discord.models.domain.PaymentSourceRaw;
 import com.discord.models.domain.auth.ModelLoginResult;
 import com.discord.models.domain.billing.ModelInvoicePreview;
 import com.discord.models.domain.emoji.ModelEmojiGuild;
@@ -117,28 +117,29 @@ import com.discord.restapi.RestAPIParams;
 import com.discord.utilities.analytics.ChatInputComponentTypes;
 import com.discord.utilities.auth.GoogleSmartLockManager;
 import com.google.gson.JsonObject;
-import d0.o;
-import d0.t.g0;
-import i0.f0.a;
-import i0.f0.b;
-import i0.f0.f;
-import i0.f0.h;
-import i0.f0.i;
-import i0.f0.l;
-import i0.f0.n;
-import i0.f0.p;
-import i0.f0.q;
-import i0.f0.s;
-import i0.f0.t;
-import i0.f0.y;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.Unit;
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
+import p507d0.Tuples;
+import p507d0.p580t.MapsJVM;
+import p630i0.p636f0.Body;
+import p630i0.p636f0.DELETE;
+import p630i0.p636f0.GET;
+import p630i0.p636f0.HTTP;
+import p630i0.p636f0.Header3;
+import p630i0.p636f0.Multipart;
+import p630i0.p636f0.PATCH;
+import p630i0.p636f0.POST;
+import p630i0.p636f0.PUT;
+import p630i0.p636f0.Part2;
+import p630i0.p636f0.Path2;
+import p630i0.p636f0.Query2;
+import p630i0.p636f0.Url;
+import p658rx.Observable;
 import retrofit2.Response;
-import rx.Observable;
 
 /* compiled from: RestAPIInterface.kt */
 /* loaded from: classes.dex */
@@ -208,7 +209,7 @@ public interface RestAPIInterface {
 
         public static /* synthetic */ Observable postOauth2Authorize$default(RestAPIInterface restAPIInterface, String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, Map map, int i, Object obj) {
             if (obj == null) {
-                return restAPIInterface.postOauth2Authorize(str, str2, (i & 4) != 0 ? null : str3, str4, (i & 16) != 0 ? "consent" : str5, str6, (i & 64) != 0 ? null : str7, (i & 128) != 0 ? null : str8, (i & 256) != 0 ? null : str9, (i & 512) != 0 ? g0.mapOf(o.to("authorize", "true")) : map);
+                return restAPIInterface.postOauth2Authorize(str, str2, (i & 4) != 0 ? null : str3, str4, (i & 16) != 0 ? "consent" : str5, str6, (i & 64) != 0 ? null : str7, (i & 128) != 0 ? null : str8, (i & 256) != 0 ? null : str9, (i & 512) != 0 ? MapsJVM.mapOf(Tuples.m10073to("authorize", "true")) : map);
             }
             throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: postOauth2Authorize");
         }
@@ -248,870 +249,870 @@ public interface RestAPIInterface {
 
     /* compiled from: RestAPIInterface.kt */
     public interface Dynamic {
-        @f
-        Observable<JsonObject> get(@y String url);
+        @GET
+        Observable<JsonObject> get(@Url String url);
     }
 
     /* compiled from: RestAPIInterface.kt */
     public interface Files {
-        @f
-        Observable<ResponseBody> getFile(@y String url);
+        @GET
+        Observable<ResponseBody> getFile(@Url String url);
     }
 
     /* compiled from: RestAPIInterface.kt */
     public interface RtcLatency {
-        @f
-        Observable<List<ModelRtcLatencyRegion>> get(@y String url);
+        @GET
+        Observable<List<ModelRtcLatencyRegion>> get(@Url String url);
     }
 
-    @i0.f0.o("guilds/{guildId}/creator-monetization/{requestId}/accept-terms")
-    Observable<CreatorMonetizationEnableRequest> acceptCreatorMonetizationTerms(@s("guildId") long guildId, @s("requestId") long requestId);
+    @POST("guilds/{guildId}/creator-monetization/{requestId}/accept-terms")
+    Observable<CreatorMonetizationEnableRequest> acceptCreatorMonetizationTerms(@Path2("guildId") long guildId, @Path2("requestId") long requestId);
 
-    @i0.f0.o("entitlements/gift-codes/{code}/redeem")
-    Observable<Void> acceptGift(@s(ModelAuditLogEntry.CHANGE_KEY_CODE) String code);
+    @POST("entitlements/gift-codes/{code}/redeem")
+    Observable<Void> acceptGift(@Path2(ModelAuditLogEntry.CHANGE_KEY_CODE) String code);
 
-    @i0.f0.o("guilds/{guildId}/ack")
-    Observable<Void> ackGuild(@s("guildId") long guildId);
+    @POST("guilds/{guildId}/ack")
+    Observable<Void> ackGuild(@Path2("guildId") long guildId);
 
-    @n("guilds/{guildId}/requests/@me/ack")
-    Observable<Void> ackGuildJoinRequest(@s("guildId") long guildId);
+    @PATCH("guilds/{guildId}/requests/@me/ack")
+    Observable<Void> ackGuildJoinRequest(@Path2("guildId") long guildId);
 
-    @p("channels/{channelId}/pins/{messageId}")
-    Observable<Void> addChannelPin(@s("channelId") long channelId, @s("messageId") long messageId);
+    @PUT("channels/{channelId}/pins/{messageId}")
+    Observable<Void> addChannelPin(@Path2("channelId") long channelId, @Path2("messageId") long messageId);
 
-    @p("channels/{channelId}/recipients/{recipientId}")
-    Observable<Void> addChannelRecipient(@s("channelId") long channelId, @s("recipientId") long recipientId);
+    @PUT("channels/{channelId}/recipients/{recipientId}")
+    Observable<Void> addChannelRecipient(@Path2("channelId") long channelId, @Path2("recipientId") long recipientId);
 
-    @p("channels/{channelId}/messages/{messageId}/reactions/{reaction}/@me")
-    Observable<Void> addReaction(@s("channelId") long channelId, @s("messageId") long messageId, @s(encoded = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "reaction") String reaction);
+    @PUT("channels/{channelId}/messages/{messageId}/reactions/{reaction}/@me")
+    Observable<Void> addReaction(@Path2("channelId") long channelId, @Path2("messageId") long messageId, @Path2(encoded = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "reaction") String reaction);
 
-    @p("users/@me/relationships/{userId}")
-    Observable<Void> addRelationship(@s("userId") long userId, @a RestAPIParams.UserRelationship relationship, @i("X-Context-Properties") String context);
+    @PUT("users/@me/relationships/{userId}")
+    Observable<Void> addRelationship(@Path2("userId") long userId, @Body RestAPIParams.UserRelationship relationship, @Header3("X-Context-Properties") String context);
 
-    @i0.f0.o("channels/{channelId}/directory-entry/{guildId}")
-    Observable<Response<DirectoryEntryGuild>> addServerToHub(@s("channelId") long channelId, @s("guildId") long guildId, @a RestAPIParams.AddServerBody body);
+    @POST("channels/{channelId}/directory-entry/{guildId}")
+    Observable<Response<DirectoryEntryGuild>> addServerToHub(@Path2("channelId") long channelId, @Path2("guildId") long guildId, @Body RestAPIParams.AddServerBody body);
 
-    @f("connections/{connection}/authorize")
-    Observable<ModelUrl> authorizeConnection(@s("connection") String connection);
+    @GET("connections/{connection}/authorize")
+    Observable<ModelUrl> authorizeConnection(@Path2("connection") String connection);
 
-    @i0.f0.o("auth/authorize-ip")
-    Observable<Response<Void>> authorizeIP(@a RestAPIParams.AuthorizeIP body);
+    @POST("auth/authorize-ip")
+    Observable<Response<Void>> authorizeIP(@Body RestAPIParams.AuthorizeIP body);
 
-    @p("guilds/{guildId}/bans/{userId}")
-    Observable<Void> banGuildMember(@s("guildId") long guildId, @s("userId") long userId, @a RestAPIParams.BanGuildMember body, @i("X-Audit-Log-Reason") String reason);
+    @PUT("guilds/{guildId}/bans/{userId}")
+    Observable<Void> banGuildMember(@Path2("guildId") long guildId, @Path2("userId") long userId, @Body RestAPIParams.BanGuildMember body, @Header3("X-Audit-Log-Reason") String reason);
 
-    @n("guilds/{guildId}/roles")
-    Observable<Void> batchUpdateRole(@s("guildId") long guildId, @a List<RestAPIParams.Role> body);
+    @PATCH("guilds/{guildId}/roles")
+    Observable<Void> batchUpdateRole(@Path2("guildId") long guildId, @Body List<RestAPIParams.Role> body);
 
-    @i0.f0.o("users/@me/relationships/bulk")
-    Observable<Response<BulkAddFriendsResponse>> bulkAddRelationships(@a RestAPIParams.UserBulkRelationship body);
+    @POST("users/@me/relationships/bulk")
+    Observable<Response<BulkAddFriendsResponse>> bulkAddRelationships(@Body RestAPIParams.UserBulkRelationship body);
 
-    @f("channels/{channelId}/call")
-    Observable<ModelCall.Ringable> call(@s("channelId") long channelId);
+    @GET("channels/{channelId}/call")
+    Observable<ModelCall.Ringable> call(@Path2("channelId") long channelId);
 
-    @i0.f0.o("users/@me/guilds/premium/subscription-slots/{subscriptionSlotId}/cancel")
-    Observable<ModelGuildBoostSlot> cancelSubscriptionSlot(@s("subscriptionSlotId") long slotId);
+    @POST("users/@me/guilds/premium/subscription-slots/{subscriptionSlotId}/cancel")
+    Observable<ModelGuildBoostSlot> cancelSubscriptionSlot(@Path2("subscriptionSlotId") long slotId);
 
-    @n("guilds/{guildId}/members/{userId}")
-    Observable<Void> changeGuildMember(@s("guildId") long guildId, @s("userId") long userId, @a RestAPIParams.GuildMember body);
+    @PATCH("guilds/{guildId}/members/{userId}")
+    Observable<Void> changeGuildMember(@Path2("guildId") long guildId, @Path2("userId") long userId, @Body RestAPIParams.GuildMember body);
 
-    @n("guilds/{guildId}/members/@me/nick")
-    Observable<Void> changeGuildNickname(@s("guildId") long guildId, @a RestAPIParams.Nick body);
+    @PATCH("guilds/{guildId}/members/@me/nick")
+    Observable<Void> changeGuildNickname(@Path2("guildId") long guildId, @Body RestAPIParams.Nick body);
 
-    @i0.f0.o("outbound-promotions/{promotionId}/claim")
-    Observable<ClaimedOutboundPromotion> claimOutboundPromotion(@s("promotionId") long promotionId);
+    @POST("outbound-promotions/{promotionId}/claim")
+    Observable<ClaimedOutboundPromotion> claimOutboundPromotion(@Path2("promotionId") long promotionId);
 
-    @i0.f0.o("store/skus/{skuId}/purchase")
-    Observable<Unit> claimSku(@s("skuId") long skuId, @a RestAPIParams.EmptyBody emptyBody);
+    @POST("store/skus/{skuId}/purchase")
+    Observable<Unit> claimSku(@Path2("skuId") long skuId, @Body RestAPIParams.EmptyBody emptyBody);
 
-    @p("channels/{channelId}/recipients/{recipientId}")
-    Observable<Channel> convertDMToGroup(@s("channelId") long channelId, @s("recipientId") long recipientId);
+    @PUT("channels/{channelId}/recipients/{recipientId}")
+    Observable<Channel> convertDMToGroup(@Path2("channelId") long channelId, @Path2("recipientId") long recipientId);
 
-    @i0.f0.o("channels/{channelId}/followers")
-    Observable<Void> createChannelFollower(@s("channelId") long channelId, @a RestAPIParams.ChannelFollowerPost body);
+    @POST("channels/{channelId}/followers")
+    Observable<Void> createChannelFollower(@Path2("channelId") long channelId, @Body RestAPIParams.ChannelFollowerPost body);
 
-    @p("users/@me/connections/contacts/@me")
-    Observable<ConnectedAccount> createConnectionContacts(@a RestAPIParams.ConnectedAccountContacts connectedAccountContacts);
+    @PUT("users/@me/connections/contacts/@me")
+    Observable<ConnectedAccount> createConnectionContacts(@Body RestAPIParams.ConnectedAccountContacts connectedAccountContacts);
 
-    @i0.f0.o("guilds/{guildId}/creator-monetization/enable-requests")
-    Observable<CreatorMonetizationEnableRequest> createCreatorMonetizationEnableRequest(@s("guildId") long guildId);
+    @POST("guilds/{guildId}/creator-monetization/enable-requests")
+    Observable<CreatorMonetizationEnableRequest> createCreatorMonetizationEnableRequest(@Path2("guildId") long guildId);
 
-    @i0.f0.o("guilds")
-    Observable<Response<Guild>> createGuild(@a RestAPIParams.CreateGuild body);
+    @POST("guilds")
+    Observable<Response<Guild>> createGuild(@Body RestAPIParams.CreateGuild body);
 
-    @i0.f0.o("guilds/{guildId}/channels")
-    Observable<Response<Channel>> createGuildChannel(@s("guildId") long guildId, @a RestAPIParams.CreateGuildChannel body);
+    @POST("guilds/{guildId}/channels")
+    Observable<Response<Channel>> createGuildChannel(@Path2("guildId") long guildId, @Body RestAPIParams.CreateGuildChannel body);
 
-    @i0.f0.o("guilds/templates/{guildTemplateCode}")
-    Observable<Guild> createGuildFromTemplate(@s("guildTemplateCode") String guildTemplateCode, @a RestAPIParams.CreateGuildFromTemplate body);
+    @POST("guilds/templates/{guildTemplateCode}")
+    Observable<Guild> createGuildFromTemplate(@Path2("guildTemplateCode") String guildTemplateCode, @Body RestAPIParams.CreateGuildFromTemplate body);
 
-    @p("guilds/{guildId}/requests/@me")
-    Observable<ModelMemberVerificationFormResponse> createGuildJoinRequest(@s("guildId") long guildId, @a RestAPIParams.MemberVerificationForm body);
+    @PUT("guilds/{guildId}/requests/@me")
+    Observable<ModelMemberVerificationFormResponse> createGuildJoinRequest(@Path2("guildId") long guildId, @Body RestAPIParams.MemberVerificationForm body);
 
-    @i0.f0.o("guilds/{guildId}/role-subscriptions/group-listings")
-    Observable<GuildRoleSubscriptionGroupListing> createGuildRoleSubscriptionGroupListing(@s("guildId") long guildId, @a RestAPIParams.CreateGuildRoleSubscriptionGroupListing body);
+    @POST("guilds/{guildId}/role-subscriptions/group-listings")
+    Observable<GuildRoleSubscriptionGroupListing> createGuildRoleSubscriptionGroupListing(@Path2("guildId") long guildId, @Body RestAPIParams.CreateGuildRoleSubscriptionGroupListing body);
 
-    @i0.f0.o("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}/subscription-listings")
-    Observable<GuildRoleSubscriptionTierListing> createGuildRoleSubscriptionTier(@s("guildId") long guildId, @s("groupListingId") long groupListingId, @a RestAPIParams.CreateGuildRoleSubscriptionTierListing body);
+    @POST("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}/subscription-listings")
+    Observable<GuildRoleSubscriptionTierListing> createGuildRoleSubscriptionTier(@Path2("guildId") long guildId, @Path2("groupListingId") long groupListingId, @Body RestAPIParams.CreateGuildRoleSubscriptionTierListing body);
 
-    @i0.f0.o("guilds/{guildId}/scheduled-events")
-    Observable<GuildScheduledEvent> createGuildScheduledEvent(@s("guildId") long guildId, @a RestAPIParams.CreateGuildScheduledEventBody event);
+    @POST("guilds/{guildId}/scheduled-events")
+    Observable<GuildScheduledEvent> createGuildScheduledEvent(@Path2("guildId") long guildId, @Body RestAPIParams.CreateGuildScheduledEventBody event);
 
-    @p("guilds/{guildId}/scheduled-events/{eventId}/users/@me")
-    Observable<Unit> createGuildScheduledEventRsvp(@s("guildId") long guildId, @s("eventId") long eventId);
+    @PUT("guilds/{guildId}/scheduled-events/{eventId}/users/@me")
+    Observable<Unit> createGuildScheduledEventRsvp(@Path2("guildId") long guildId, @Path2("eventId") long eventId);
 
-    @i0.f0.o("auth/handoff")
-    Observable<HandoffToken> createHandoffToken(@a CreateHandoffTokenRequest body);
+    @POST("auth/handoff")
+    Observable<HandoffToken> createHandoffToken(@Body CreateHandoffTokenRequest body);
 
-    @i0.f0.o("google-play/purchase-metadata")
-    Observable<Unit> createPurchaseMetadata(@a RestAPIParams.PurchaseMetadataBody purchaseMetadataBody);
+    @POST("google-play/purchase-metadata")
+    Observable<Unit> createPurchaseMetadata(@Body RestAPIParams.PurchaseMetadataBody purchaseMetadataBody);
 
-    @i0.f0.o("guilds/{guildId}/roles")
-    Observable<GuildRole> createRole(@s("guildId") long guildId);
+    @POST("guilds/{guildId}/roles")
+    Observable<GuildRole> createRole(@Path2("guildId") long guildId);
 
-    @i0.f0.o("channels/{channelId}/threads")
-    Observable<Channel> createThread(@s("channelId") long channelId, @t(ModelAuditLogEntry.CHANGE_KEY_LOCATION) String location, @a RestAPIParams.ThreadCreationSettings body);
+    @POST("channels/{channelId}/threads")
+    Observable<Channel> createThread(@Path2("channelId") long channelId, @Query2(ModelAuditLogEntry.CHANGE_KEY_LOCATION) String location, @Body RestAPIParams.ThreadCreationSettings body);
 
-    @i0.f0.o("channels/{channelId}/messages/{messageId}/threads")
-    Observable<Channel> createThreadFromMessage(@s("channelId") long channelId, @s("messageId") long messageId, @t(ModelAuditLogEntry.CHANGE_KEY_LOCATION) String location, @a RestAPIParams.ThreadCreationSettings body);
+    @POST("channels/{channelId}/messages/{messageId}/threads")
+    Observable<Channel> createThreadFromMessage(@Path2("channelId") long channelId, @Path2("messageId") long messageId, @Query2(ModelAuditLogEntry.CHANGE_KEY_LOCATION) String location, @Body RestAPIParams.ThreadCreationSettings body);
 
-    @i0.f0.o("channels/{channelId}/threads?has_message=true")
-    @l
-    Observable<Channel> createThreadWithMessage(@s("channelId") long channelId, @q(ModelAuditLogEntry.CHANGE_KEY_NAME) String name, @q("content") String content, @q("applied_tags") List<Long> appliedTags, @q("sticker_ids") List<Long> stickerIds, @q("type") int type, @q(ModelAuditLogEntry.CHANGE_KEY_AUTO_ARCHIVE_DURATION) Integer autoArchiveDuration, @q MultipartBody.Part[] files);
+    @POST("channels/{channelId}/threads?has_message=true")
+    @Multipart
+    Observable<Channel> createThreadWithMessage(@Path2("channelId") long channelId, @Part2(ModelAuditLogEntry.CHANGE_KEY_NAME) String name, @Part2("content") String content, @Part2("applied_tags") List<Long> appliedTags, @Part2("sticker_ids") List<Long> stickerIds, @Part2("type") int type, @Part2(ModelAuditLogEntry.CHANGE_KEY_AUTO_ARCHIVE_DURATION) Integer autoArchiveDuration, @Part2 MultipartBody.Part[] files);
 
-    @i0.f0.o("channels/{channelId}/messages/{messageId}/crosspost")
-    Observable<Void> crosspostMessage(@s("channelId") long channelId, @s("messageId") Long messageId);
+    @POST("channels/{channelId}/messages/{messageId}/crosspost")
+    Observable<Void> crosspostMessage(@Path2("channelId") long channelId, @Path2("messageId") Long messageId);
 
-    @i0.f0.o("users/@me/delete")
-    Observable<Void> deleteAccount(@a RestAPIParams.DisableAccount body);
+    @POST("users/@me/delete")
+    Observable<Void> deleteAccount(@Body RestAPIParams.DisableAccount body);
 
-    @b("channels/{channelId}")
-    Observable<Channel> deleteChannel(@s("channelId") long channelId);
+    @DELETE("channels/{channelId}")
+    Observable<Channel> deleteChannel(@Path2("channelId") long channelId);
 
-    @b("channels/{channelId}/pins/{messageId}")
-    Observable<Void> deleteChannelPin(@s("channelId") long channelId, @s("messageId") long messageId);
+    @DELETE("channels/{channelId}/pins/{messageId}")
+    Observable<Void> deleteChannelPin(@Path2("channelId") long channelId, @Path2("messageId") long messageId);
 
-    @b("users/@me/connections/{connection}/{connectionId}")
-    Observable<Response<Void>> deleteConnection(@s("connection") String connection, @s("connectionId") String connectionId);
+    @DELETE("users/@me/connections/{connection}/{connectionId}")
+    Observable<Response<Void>> deleteConnection(@Path2("connection") String connection, @Path2("connectionId") String connectionId);
 
-    @i0.f0.o("guilds/{guildId}/delete")
-    Observable<Void> deleteGuild(@s("guildId") long guildId, @a RestAPIParams.DeleteGuild body);
+    @POST("guilds/{guildId}/delete")
+    Observable<Void> deleteGuild(@Path2("guildId") long guildId, @Body RestAPIParams.DeleteGuild body);
 
-    @b("guilds/{guildId}/emojis/{emojiId}")
-    Observable<Void> deleteGuildEmoji(@s("guildId") long guildId, @s("emojiId") long emojiId);
+    @DELETE("guilds/{guildId}/emojis/{emojiId}")
+    Observable<Void> deleteGuildEmoji(@Path2("guildId") long guildId, @Path2("emojiId") long emojiId);
 
-    @b("guilds/{guildId}/integrations/{integrationId}")
-    Observable<Void> deleteGuildIntegration(@s("guildId") long guildId, @s("integrationId") long integrationId);
+    @DELETE("guilds/{guildId}/integrations/{integrationId}")
+    Observable<Void> deleteGuildIntegration(@Path2("guildId") long guildId, @Path2("integrationId") long integrationId);
 
-    @b("guilds/{guildId}/requests/@me")
-    Observable<ModelMemberVerificationFormResponse> deleteGuildJoinRequest(@s("guildId") long guildId);
+    @DELETE("guilds/{guildId}/requests/@me")
+    Observable<ModelMemberVerificationFormResponse> deleteGuildJoinRequest(@Path2("guildId") long guildId);
 
-    @b("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}/subscription-listings/{listingId}")
-    Observable<Void> deleteGuildRoleSubscriptionTierListing(@s("guildId") long guildId, @s("groupListingId") long groupListingId, @s("listingId") long tierListingId);
+    @DELETE("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}/subscription-listings/{listingId}")
+    Observable<Void> deleteGuildRoleSubscriptionTierListing(@Path2("guildId") long guildId, @Path2("groupListingId") long groupListingId, @Path2("listingId") long tierListingId);
 
-    @b("guilds/{guildId}/scheduled-events/{eventId}")
-    Observable<Void> deleteGuildScheduledEvent(@s("guildId") long guildId, @s("eventId") long eventId);
+    @DELETE("guilds/{guildId}/scheduled-events/{eventId}")
+    Observable<Void> deleteGuildScheduledEvent(@Path2("guildId") long guildId, @Path2("eventId") long eventId);
 
-    @b("guilds/{guildId}/scheduled-events/{eventId}/users/@me")
-    Observable<Void> deleteGuildScheduledEventRsvp(@s("guildId") long guildId, @s("eventId") long eventId);
+    @DELETE("guilds/{guildId}/scheduled-events/{eventId}/users/@me")
+    Observable<Void> deleteGuildScheduledEventRsvp(@Path2("guildId") long guildId, @Path2("eventId") long eventId);
 
-    @b("channels/{channel_id}/messages/{message_id}")
-    Observable<Void> deleteMessage(@s(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) long channelId, @s("message_id") long messageId);
+    @DELETE("channels/{channel_id}/messages/{message_id}")
+    Observable<Void> deleteMessage(@Path2(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) long channelId, @Path2("message_id") long messageId);
 
-    @b("oauth2/tokens/{oauthId}")
-    Observable<Void> deleteOAuthToken(@s("oauthId") long oauthId);
+    @DELETE("oauth2/tokens/{oauthId}")
+    Observable<Void> deleteOAuthToken(@Path2("oauthId") long oauthId);
 
-    @b("users/@me/billing/payment-sources/{paymentSourceId}")
-    Observable<Void> deletePaymentSource(@s("paymentSourceId") String paymentSourceId);
+    @DELETE("users/@me/billing/payment-sources/{paymentSourceId}")
+    Observable<Void> deletePaymentSource(@Path2("paymentSourceId") String paymentSourceId);
 
-    @b("channels/{channelId}/permissions/{targetId}")
-    Observable<Void> deletePermissionOverwrites(@s("channelId") long channelId, @s("targetId") long targetId);
+    @DELETE("channels/{channelId}/permissions/{targetId}")
+    Observable<Void> deletePermissionOverwrites(@Path2("channelId") long channelId, @Path2("targetId") long targetId);
 
-    @b("guilds/{guildId}/roles/{roleId}")
-    Observable<Void> deleteRole(@s("guildId") long guildId, @s("roleId") long roleId);
+    @DELETE("guilds/{guildId}/roles/{roleId}")
+    Observable<Void> deleteRole(@Path2("guildId") long guildId, @Path2("roleId") long roleId);
 
-    @b("users/@me/billing/subscriptions/{subscriptionId}")
-    Observable<Void> deleteSubscription(@s("subscriptionId") String subscriptionId);
+    @DELETE("users/@me/billing/subscriptions/{subscriptionId}")
+    Observable<Void> deleteSubscription(@Path2("subscriptionId") String subscriptionId);
 
-    @i0.f0.o("users/@me/disable")
-    Observable<Void> disableAccount(@a RestAPIParams.DisableAccount body);
+    @POST("users/@me/disable")
+    Observable<Void> disableAccount(@Body RestAPIParams.DisableAccount body);
 
-    @n("guilds/{guildId}/members/{userId}")
-    Observable<Response<Void>> disableGuildCommunication(@s("guildId") long guildId, @s("userId") long userId, @a RestAPIParams.DisableGuildCommunication body, @i("X-Audit-Log-Reason") String reason);
+    @PATCH("guilds/{guildId}/members/{userId}")
+    Observable<Response<Void>> disableGuildCommunication(@Path2("guildId") long guildId, @Path2("userId") long userId, @Body RestAPIParams.DisableGuildCommunication body, @Header3("X-Audit-Log-Reason") String reason);
 
-    @i0.f0.o("users/@me/mfa/totp/disable")
-    Observable<DisableMfaResponse> disableMFA(@a DisableMfaRequestBody body);
+    @POST("users/@me/mfa/totp/disable")
+    Observable<DisableMfaResponse> disableMFA(@Body DisableMfaRequestBody body);
 
-    @i0.f0.o("users/@me/mfa/sms/disable")
-    Observable<Void> disableMfaSMS(@a RestAPIParams.ActivateMfaSMS body);
+    @POST("users/@me/mfa/sms/disable")
+    Observable<Void> disableMfaSMS(@Body RestAPIParams.ActivateMfaSMS body);
 
-    @n("guilds/{guildId}/members/{userId}")
-    Observable<Void> disconnectGuildMember(@s("guildId") long guildId, @s("userId") long userId, @a RestAPIParams.GuildMemberDisconnect body);
+    @PATCH("guilds/{guildId}/members/{userId}")
+    Observable<Void> disconnectGuildMember(@Path2("guildId") long guildId, @Path2("userId") long userId, @Body RestAPIParams.GuildMemberDisconnect body);
 
-    @i0.f0.o("google-play/downgrade-subscription")
-    Observable<Object> downgradeSubscription(@a RestAPIParams.DowngradeSubscriptionBody downgradeSubscriptionBody);
+    @POST("google-play/downgrade-subscription")
+    Observable<Object> downgradeSubscription(@Body RestAPIParams.DowngradeSubscriptionBody downgradeSubscriptionBody);
 
-    @n("channels/{channelId}")
-    Observable<Channel> editGroupDM(@s("channelId") long channelId, @a RestAPIParams.GroupDM body);
+    @PATCH("channels/{channelId}")
+    Observable<Channel> editGroupDM(@Path2("channelId") long channelId, @Body RestAPIParams.GroupDM body);
 
-    @n("channels/{channel_id}/messages/{message_id}")
-    Observable<Message> editMessage(@s(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) long channelId, @s("message_id") long messageId, @a RestAPIParams.Message message);
+    @PATCH("channels/{channel_id}/messages/{message_id}")
+    Observable<Message> editMessage(@Path2(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) long channelId, @Path2("message_id") long messageId, @Body RestAPIParams.Message message);
 
-    @n("channels/{channelId}")
-    Observable<Channel> editTextChannel(@s("channelId") long channelId, @a RestAPIParams.TextChannel body);
+    @PATCH("channels/{channelId}")
+    Observable<Channel> editTextChannel(@Path2("channelId") long channelId, @Body RestAPIParams.TextChannel body);
 
-    @n("channels/{channelId}")
-    Observable<Channel> editThread(@s("channelId") long channelId, @a RestAPIParams.ThreadSettings body);
+    @PATCH("channels/{channelId}")
+    Observable<Channel> editThread(@Path2("channelId") long channelId, @Body RestAPIParams.ThreadSettings body);
 
-    @n("channels/{channelId}")
-    Observable<Channel> editTopicalChannel(@s("channelId") long channelId, @a RestAPIParams.TopicalChannel body);
+    @PATCH("channels/{channelId}")
+    Observable<Channel> editTopicalChannel(@Path2("channelId") long channelId, @Body RestAPIParams.TopicalChannel body);
 
-    @n("channels/{channelId}")
-    Observable<Channel> editVoiceChannel(@s("channelId") long channelId, @a RestAPIParams.VoiceChannel body);
+    @PATCH("channels/{channelId}")
+    Observable<Channel> editVoiceChannel(@Path2("channelId") long channelId, @Body RestAPIParams.VoiceChannel body);
 
-    @i0.f0.o("guilds/{guildId}/integrations")
-    Observable<Void> enableIntegration(@s("guildId") long guildId, @a RestAPIParams.EnableIntegration body);
+    @POST("guilds/{guildId}/integrations")
+    Observable<Void> enableIntegration(@Path2("guildId") long guildId, @Body RestAPIParams.EnableIntegration body);
 
-    @i0.f0.o("users/@me/mfa/totp/enable")
-    Observable<EnableMfaResponse> enableMFA(@a RestAPIParams.EnableMFA body);
+    @POST("users/@me/mfa/totp/enable")
+    Observable<EnableMfaResponse> enableMFA(@Body RestAPIParams.EnableMFA body);
 
-    @i0.f0.o("users/@me/mfa/sms/enable")
-    Observable<Void> enableMfaSMS(@a RestAPIParams.ActivateMfaSMS body);
+    @POST("users/@me/mfa/sms/enable")
+    Observable<Void> enableMfaSMS(@Body RestAPIParams.ActivateMfaSMS body);
 
-    @b("stage-instances/{channelId}")
-    Observable<Unit> endStageInstance(@s("channelId") long channelId);
+    @DELETE("stage-instances/{channelId}")
+    Observable<Unit> endStageInstance(@Path2("channelId") long channelId);
 
-    @i0.f0.o("auth/forgot")
-    Observable<Response<Void>> forgotPassword(@a RestAPIParams.ForgotPassword body);
+    @POST("auth/forgot")
+    Observable<Response<Void>> forgotPassword(@Body RestAPIParams.ForgotPassword body);
 
-    @i0.f0.o("users/@me/entitlements/gift-codes")
-    Observable<ModelGift> generateGiftCode(@a RestAPIParams.GenerateGiftCode body);
+    @POST("users/@me/entitlements/gift-codes")
+    Observable<ModelGift> generateGiftCode(@Body RestAPIParams.GenerateGiftCode body);
 
-    @f("users/{userId}/sessions/{sessionId}/activities/{applicationId}/metadata")
-    Observable<ActivityMetadata> getActivityMetadata(@s("userId") long userId, @s("sessionId") String sessionId, @s("applicationId") long applicationId);
+    @GET("users/{userId}/sessions/{sessionId}/activities/{applicationId}/metadata")
+    Observable<ActivityMetadata> getActivityMetadata(@Path2("userId") long userId, @Path2("sessionId") String sessionId, @Path2("applicationId") long applicationId);
 
-    @f("outbound-promotions")
+    @GET("outbound-promotions")
     Observable<List<OutboundPromotion>> getAllActiveOutboundPromotions();
 
-    @f("outbound-promotions/preview")
+    @GET("outbound-promotions/preview")
     Observable<List<OutboundPromotion>> getAllPreviewPromotions();
 
-    @f("channels/{channelId}/threads/archived/private")
-    Observable<ThreadListing> getAllPrivateArchivedThreads(@s("channelId") long channelId, @t("before") String before);
+    @GET("channels/{channelId}/threads/archived/private")
+    Observable<ThreadListing> getAllPrivateArchivedThreads(@Path2("channelId") long channelId, @Query2("before") String before);
 
-    @f("channels/{channelId}/threads/archived/public")
-    Observable<ThreadListing> getAllPublicArchivedThreads(@s("channelId") long channelId, @t("before") String before);
+    @GET("channels/{channelId}/threads/archived/public")
+    Observable<ThreadListing> getAllPublicArchivedThreads(@Path2("channelId") long channelId, @Query2("before") String before);
 
-    @f("oauth2/applications/{applicationId}/assets")
-    Observable<List<ApplicationAsset>> getApplicationAssets(@s("applicationId") long applicationId);
+    @GET("oauth2/applications/{applicationId}/assets")
+    Observable<List<ApplicationAsset>> getApplicationAssets(@Path2("applicationId") long applicationId);
 
-    @f("applications/{botId}/commands")
-    Observable<List<ApplicationCommand>> getApplicationCommands(@s("botId") long botId);
+    @GET("applications/{botId}/commands")
+    Observable<List<ApplicationCommand>> getApplicationCommands(@Path2("botId") long botId);
 
-    @f("applications/public")
-    Observable<List<Application>> getApplications(@t("application_ids") long appIds);
+    @GET("applications/public")
+    Observable<List<Application>> getApplications(@Query2("application_ids") long appIds);
 
-    @f("guilds/{guildId}/audit-logs")
-    Observable<ModelAuditLog> getAuditLogs(@s("guildId") long guildId, @t("limit") int limit, @t("before") Long before, @t("user_id") Long userId, @t("action_type") Integer actionType);
+    @GET("guilds/{guildId}/audit-logs")
+    Observable<ModelAuditLog> getAuditLogs(@Path2("guildId") long guildId, @Query2("limit") int limit, @Query2("before") Long before, @Query2("user_id") Long userId, @Query2("action_type") Integer actionType);
 
-    @i0.f0.o("users/@me/mfa/codes")
-    Observable<GetBackupCodesResponse> getBackupCodes(@a GetBackupCodesRequestBody body);
+    @POST("users/@me/mfa/codes")
+    Observable<GetBackupCodesResponse> getBackupCodes(@Body GetBackupCodesRequestBody body);
 
-    @i0.f0.o("auth/verify/view-backup-codes-challenge")
-    Observable<GetBackupCodesSendVerificationKeyResponse> getBackupCodesSendVerificationKey(@a GetBackupCodesSendVerificationKeyRequestBody body);
+    @POST("auth/verify/view-backup-codes-challenge")
+    Observable<GetBackupCodesSendVerificationKeyResponse> getBackupCodesSendVerificationKey(@Body GetBackupCodesSendVerificationKeyRequestBody body);
 
-    @i0.f0.o("users/@me/mfa/codes-verification")
-    Observable<GetBackupCodesResponse> getBackupCodesVerification(@a GetBackupCodesVerificationRequestBody body);
+    @POST("users/@me/mfa/codes-verification")
+    Observable<GetBackupCodesResponse> getBackupCodesVerification(@Body GetBackupCodesVerificationRequestBody body);
 
-    @f("guilds/{guildId}/bans")
-    Observable<List<ModelBan>> getBans(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/bans")
+    Observable<List<ModelBan>> getBans(@Path2("guildId") long guildId);
 
-    @f("private/bug-reports")
+    @GET("private/bug-reports")
     Observable<BugReportConfig> getBugReportConfig();
 
-    @f("channels/{channelId}")
-    Observable<Channel> getChannel(@s("channelId") long channelId);
+    @GET("channels/{channelId}")
+    Observable<Channel> getChannel(@Path2("channelId") long channelId);
 
-    @f("channels/{channelId}/follower-stats")
-    Observable<ModelChannelFollowerStatsDto> getChannelFollowerStats(@s("channelId") long channelId);
+    @GET("channels/{channelId}/follower-stats")
+    Observable<ModelChannelFollowerStatsDto> getChannelFollowerStats(@Path2("channelId") long channelId);
 
-    @f("channels/{channelId}/messages")
-    Observable<List<Message>> getChannelMessages(@s("channelId") long channelId, @t("before") Long before, @t("after") Long after, @t("limit") Integer limit);
+    @GET("channels/{channelId}/messages")
+    Observable<List<Message>> getChannelMessages(@Path2("channelId") long channelId, @Query2("before") Long before, @Query2("after") Long after, @Query2("limit") Integer limit);
 
-    @f("channels/{channelId}/messages")
-    Observable<List<Message>> getChannelMessagesAround(@s("channelId") long channelId, @t("limit") int limit, @t("around") long around);
+    @GET("channels/{channelId}/messages")
+    Observable<List<Message>> getChannelMessagesAround(@Path2("channelId") long channelId, @Query2("limit") int limit, @Query2("around") long around);
 
-    @f("channels/{channelId}/pins")
-    Observable<List<Message>> getChannelPins(@s("channelId") long channelId);
+    @GET("channels/{channelId}/pins")
+    Observable<List<Message>> getChannelPins(@Path2("channelId") long channelId);
 
-    @f("users/@me/outbound-promotions/codes")
+    @GET("users/@me/outbound-promotions/codes")
     Observable<List<ClaimedOutboundPromotion>> getClaimedOutboundPromotions();
 
-    @f("users/@me/connections/{platformType}/{accountId}/access-token")
-    Observable<ModelConnectionAccessToken> getConnectionAccessToken(@s("platformType") String platformType, @s("accountId") String accountId);
+    @GET("users/@me/connections/{platformType}/{accountId}/access-token")
+    Observable<ModelConnectionAccessToken> getConnectionAccessToken(@Path2("platformType") String platformType, @Path2("accountId") String accountId);
 
-    @f("connections/{connection}/callback-continuation/{pinNumber}")
-    Observable<ModelConnectionState> getConnectionState(@s("connection") String connection, @s("pinNumber") String pinNumber);
+    @GET("connections/{connection}/callback-continuation/{pinNumber}")
+    Observable<ModelConnectionState> getConnectionState(@Path2("connection") String connection, @Path2("pinNumber") String pinNumber);
 
-    @f("users/@me/connections")
+    @GET("users/@me/connections")
     Observable<List<ConnectedAccount>> getConnections();
 
-    @f("users/@me/consent")
-    Observable<Consents> getConsents();
+    @GET("users/@me/consent")
+    Observable<ModelUserConsents2> getConsents();
 
-    @f("guilds/{guildId}/creator-monetization/requirements")
-    Observable<CreatorMonetizationEligibilityRequirements> getCreatorMonetizationEligibilityRequirements(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/creator-monetization/requirements")
+    Observable<CreatorMonetizationEligibilityRequirements> getCreatorMonetizationEligibilityRequirements(@Path2("guildId") long guildId);
 
-    @f("channels/{channelId}/directory-entries")
-    Observable<List<DirectoryEntryGuild>> getDirectoryEntries(@s("channelId") long channelId);
+    @GET("channels/{channelId}/directory-entries")
+    Observable<List<DirectoryEntryGuild>> getDirectoryEntries(@Path2("channelId") long channelId);
 
-    @f("guilds/{guildId}/directory-entries/broadcast")
-    Observable<GuildScheduledEventBroadcast> getDirectoryEntryBroadcastInfo(@s("guildId") long guildId, @t("entity_id") Long entityId, @t("type") int type);
+    @GET("guilds/{guildId}/directory-entries/broadcast")
+    Observable<GuildScheduledEventBroadcast> getDirectoryEntryBroadcastInfo(@Path2("guildId") long guildId, @Query2("entity_id") Long entityId, @Query2("type") int type);
 
-    @f("channels/{channelId}/directory-entries")
-    Observable<List<DirectoryEntryEvent>> getDirectoryGuildScheduledEvents(@s("channelId") long channelId, @t("type") int type);
+    @GET("channels/{channelId}/directory-entries")
+    Observable<List<DirectoryEntryGuild2>> getDirectoryGuildScheduledEvents(@Path2("channelId") long channelId, @Query2("type") int type);
 
-    @f("emojis/{emojiId}/guild")
-    Observable<Guild> getEmojiGuild(@s("emojiId") long emojiId);
+    @GET("emojis/{emojiId}/guild")
+    Observable<Guild> getEmojiGuild(@Path2("emojiId") long emojiId);
 
-    @f("channels/{channelId}/directory-entries/counts")
-    Observable<Map<Integer, Integer>> getEntryCounts(@s("channelId") long channelId);
+    @GET("channels/{channelId}/directory-entries/counts")
+    Observable<Map<Integer, Integer>> getEntryCounts(@Path2("channelId") long channelId);
 
-    @f("experiments")
+    @GET("experiments")
     Observable<UnauthenticatedUserExperimentsDto> getExperiments();
 
-    @i0.f0.o("channels/{channelId}/post-data")
-    Observable<ForumPostFirstMessages> getForumPostData(@s("channelId") long channelId, @a RestAPIParams.GetForumPostData body);
+    @POST("channels/{channelId}/post-data")
+    Observable<ForumPostFirstMessages> getForumPostData(@Path2("channelId") long channelId, @Body RestAPIParams.GetForumPostData body);
 
-    @f("friend-suggestions")
+    @GET("friend-suggestions")
     Observable<List<FriendSuggestion>> getFriendSuggestions();
 
-    @f("gifs/search")
-    Observable<List<GifDto>> getGifSearchResults(@t("q") String query, @t("provider") String provider, @t("locale") String locale, @t("media_format") String mediaFormat, @t("limit") int limit);
+    @GET("gifs/search")
+    Observable<List<GifDto>> getGifSearchResults(@Query2("q") String query, @Query2("provider") String provider, @Query2("locale") String locale, @Query2("media_format") String mediaFormat, @Query2("limit") int limit);
 
-    @f("gifs/suggest")
-    Observable<List<String>> getGifSuggestedSearchTerms(@t("provider") String provider, @t("q") String query, @t("locale") String locale, @t("limit") int limit);
+    @GET("gifs/suggest")
+    Observable<List<String>> getGifSuggestedSearchTerms(@Query2("provider") String provider, @Query2("q") String query, @Query2("locale") String locale, @Query2("limit") int limit);
 
-    @f("gifs/trending-search")
-    Observable<List<String>> getGifTrendingSearchTerms(@t("provider") String provider, @t("locale") String locale, @t("limit") int limit);
+    @GET("gifs/trending-search")
+    Observable<List<String>> getGifTrendingSearchTerms(@Query2("provider") String provider, @Query2("locale") String locale, @Query2("limit") int limit);
 
-    @f("users/@me/entitlements/gifts")
+    @GET("users/@me/entitlements/gifts")
     Observable<List<ModelEntitlement>> getGifts();
 
-    @f("guilds/{guildId}/applications")
-    Observable<List<Application>> getGuildApplications(@s("guildId") long guildId, @t("include_team") boolean includeTeam);
+    @GET("guilds/{guildId}/applications")
+    Observable<List<Application>> getGuildApplications(@Path2("guildId") long guildId, @Query2("include_team") boolean includeTeam);
 
-    @f("guilds/{guildId}/emojis")
-    Observable<List<ModelEmojiGuild>> getGuildEmojis(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/emojis")
+    Observable<List<ModelEmojiGuild>> getGuildEmojis(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/integrations")
-    Observable<List<ModelGuildIntegration>> getGuildIntegrations(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/integrations")
+    Observable<List<ModelGuildIntegration>> getGuildIntegrations(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/invites")
-    Observable<List<ModelInvite>> getGuildInvites(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/invites")
+    Observable<List<ModelInvite>> getGuildInvites(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/member-verification")
-    Observable<ModelMemberVerificationForm> getGuildMemberVerificationForm(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/member-verification")
+    Observable<ModelMemberVerificationForm> getGuildMemberVerificationForm(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/preview")
-    Observable<GuildPreview> getGuildPreview(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/preview")
+    Observable<GuildPreview> getGuildPreview(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/roles/member-counts")
-    Observable<Map<Long, Integer>> getGuildRoleMemberCounts(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/roles/member-counts")
+    Observable<Map<Long, Integer>> getGuildRoleMemberCounts(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/roles/{roleId}/member-ids")
-    Observable<List<Long>> getGuildRoleMemberIds(@s("guildId") long guildId, @s("roleId") long roleId);
+    @GET("guilds/{guildId}/roles/{roleId}/member-ids")
+    Observable<List<Long>> getGuildRoleMemberIds(@Path2("guildId") long guildId, @Path2("roleId") long roleId);
 
-    @f("guilds/{guildId}/role-subscriptions/trials")
-    Observable<List<GuildRoleSubscriptionTierFreeTrial>> getGuildRoleSubscriptionFreeTrials(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/role-subscriptions/trials")
+    Observable<List<GuildRoleSubscriptionTierFreeTrial>> getGuildRoleSubscriptionFreeTrials(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}")
-    Observable<GuildRoleSubscriptionGroupListing> getGuildRoleSubscriptionGroupListing(@s("guildId") long guildId, @s("groupListingId") long groupListingId);
+    @GET("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}")
+    Observable<GuildRoleSubscriptionGroupListing> getGuildRoleSubscriptionGroupListing(@Path2("guildId") long guildId, @Path2("groupListingId") long groupListingId);
 
-    @f("guilds/{guildId}/role-subscriptions/group-listings")
-    Observable<List<GuildRoleSubscriptionGroupListing>> getGuildRoleSubscriptionGroupListings(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/role-subscriptions/group-listings")
+    Observable<List<GuildRoleSubscriptionGroupListing>> getGuildRoleSubscriptionGroupListings(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/scheduled-events/{eventId}")
-    Observable<GuildScheduledEvent> getGuildScheduledEvent(@s("guildId") long guildId, @s("eventId") long eventId);
+    @GET("guilds/{guildId}/scheduled-events/{eventId}")
+    Observable<GuildScheduledEvent> getGuildScheduledEvent(@Path2("guildId") long guildId, @Path2("eventId") long eventId);
 
-    @f("guilds/{guildId}/scheduled-events/{eventId}/users")
-    Observable<List<ApiGuildScheduledEventUser>> getGuildScheduledEventUsers(@s("guildId") long guildId, @s("eventId") long eventId, @t("limit") int limit, @t("with_member") boolean withMember, @t("upgrade_response_type") boolean upgradeResponseType);
+    @GET("guilds/{guildId}/scheduled-events/{eventId}/users")
+    Observable<List<ApiGuildScheduledEventUser>> getGuildScheduledEventUsers(@Path2("guildId") long guildId, @Path2("eventId") long eventId, @Query2("limit") int limit, @Query2("with_member") boolean withMember, @Query2("upgrade_response_type") boolean upgradeResponseType);
 
-    @f("guilds/{guildId}/scheduled-events")
-    Observable<List<GuildScheduledEvent>> getGuildScheduledEvents(@s("guildId") long guildId, @t("with_user_count") boolean withUserCount);
+    @GET("guilds/{guildId}/scheduled-events")
+    Observable<List<GuildScheduledEvent>> getGuildScheduledEvents(@Path2("guildId") long guildId, @Query2("with_user_count") boolean withUserCount);
 
-    @f("guilds/templates/{guildTemplateCode}")
-    Observable<ModelGuildTemplate> getGuildTemplateCode(@s("guildTemplateCode") String guildTemplateCode);
+    @GET("guilds/templates/{guildTemplateCode}")
+    Observable<ModelGuildTemplate> getGuildTemplateCode(@Path2("guildTemplateCode") String guildTemplateCode);
 
-    @f("guilds/{guildId}/regions")
-    Observable<List<ModelVoiceRegion>> getGuildVoiceRegions(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/regions")
+    Observable<List<ModelVoiceRegion>> getGuildVoiceRegions(@Path2("guildId") long guildId);
 
-    @f("guilds/{guildId}/welcome-screen")
-    Observable<GuildWelcomeScreen> getGuildWelcomeScreen(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/welcome-screen")
+    Observable<GuildWelcomeScreen> getGuildWelcomeScreen(@Path2("guildId") long guildId);
 
-    @f("users/@me/harvest")
-    Observable<Harvest> getHarvestStatus();
+    @GET("users/@me/harvest")
+    Observable<ModelUserConsents3> getHarvestStatus();
 
-    @f("channels/{channelId}/messages/{messageId}/interaction-data")
-    Observable<ApplicationCommandData> getInteractionData(@s("channelId") long channelId, @s("messageId") long messageId);
+    @GET("channels/{channelId}/messages/{messageId}/interaction-data")
+    Observable<ApplicationCommandData> getInteractionData(@Path2("channelId") long channelId, @Path2("messageId") long messageId);
 
-    @f("invites/{code}")
-    Observable<Response<ModelInvite>> getInviteCode(@s(ModelAuditLogEntry.CHANGE_KEY_CODE) String code, @t("with_counts") boolean withCounts, @t("guild_scheduled_event_id") Long guildScheduledEventId);
+    @GET("invites/{code}")
+    Observable<Response<ModelInvite>> getInviteCode(@Path2(ModelAuditLogEntry.CHANGE_KEY_CODE) String code, @Query2("with_counts") boolean withCounts, @Query2("guild_scheduled_event_id") Long guildScheduledEventId);
 
-    @i0.f0.o("users/@me/billing/invoices/preview")
-    Observable<ModelInvoicePreview> getInvoicePreview(@a RestAPIParams.InvoicePreviewBody invoicePreviewBody);
+    @POST("users/@me/billing/invoices/preview")
+    Observable<ModelInvoicePreview> getInvoicePreview(@Body RestAPIParams.InvoicePreviewBody invoicePreviewBody);
 
-    @f("users/@me/library")
+    @GET("users/@me/library")
     Observable<List<ModelLibraryApplication>> getLibrary();
 
-    @f("auth/location-metadata")
+    @GET("auth/location-metadata")
     Observable<ModelLocationMetadata> getLocationMetadata();
 
-    @f("users/@me/scheduled-events")
-    Observable<List<GuildScheduledEventMeUser>> getMeGuildScheduledEvents(@t("guild_ids") long guildIds);
+    @GET("users/@me/scheduled-events")
+    Observable<List<GuildScheduledEventMeUser>> getMeGuildScheduledEvents(@Query2("guild_ids") long guildIds);
 
-    @f("users/@me/mentions")
-    Observable<List<Message>> getMentions(@t("limit") int limit, @t("roles") boolean roles, @t(ModelGuildMemberListUpdate.EVERYONE_ID) boolean everyone, @t(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID) Long guildId, @t("before") Long before);
+    @GET("users/@me/mentions")
+    Observable<List<Message>> getMentions(@Query2("limit") int limit, @Query2("roles") boolean roles, @Query2(ModelGuildMemberListUpdate.EVERYONE_ID) boolean everyone, @Query2(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID) Long guildId, @Query2("before") Long before);
 
-    @f("users/@me/applications/{applicationId}/entitlements")
-    Observable<List<ModelEntitlement>> getMyEntitlements(@s("applicationId") long applicationId, @t("exclude_consumed") boolean excludeConsumed);
+    @GET("users/@me/applications/{applicationId}/entitlements")
+    Observable<List<ModelEntitlement>> getMyEntitlements(@Path2("applicationId") long applicationId, @Query2("exclude_consumed") boolean excludeConsumed);
 
-    @f("channels/{channelId}/users/@me/threads/archived/private")
-    Observable<ThreadListing> getMyPrivateArchivedThreads(@s("channelId") long channelId, @t("before") Long before);
+    @GET("channels/{channelId}/users/@me/threads/archived/private")
+    Observable<ThreadListing> getMyPrivateArchivedThreads(@Path2("channelId") long channelId, @Query2("before") Long before);
 
-    @f("oauth2/tokens")
+    @GET("oauth2/tokens")
     Observable<List<ModelOAuth2Token>> getOAuthTokens();
 
-    @f("oauth2/authorize")
-    Observable<RestAPIParams.OAuth2Authorize.ResponseGet> getOauth2Authorize(@t("client_id") String clientId, @t("state") String state, @t("response_type") String responseType, @t("redirect_uri") String redirectUrl, @t("prompt") String prompt, @t("scope") String scope, @t(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS) String permissions);
+    @GET("oauth2/authorize")
+    Observable<RestAPIParams.OAuth2Authorize.ResponseGet> getOauth2Authorize(@Query2("client_id") String clientId, @Query2("state") String state, @Query2("response_type") String responseType, @Query2("redirect_uri") String redirectUrl, @Query2("prompt") String prompt, @Query2("scope") String scope, @Query2(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS) String permissions);
 
-    @f("oauth2/samsung/authorize")
-    Observable<Void> getOauth2SamsungAuthorize(@t("client_id") String clientId, @t("state") String state, @t("response_type") String responseType, @t("redirect_uri") String redirectUrl, @t("prompt") String prompt, @t("scope") String scope);
+    @GET("oauth2/samsung/authorize")
+    Observable<Void> getOauth2SamsungAuthorize(@Query2("client_id") String clientId, @Query2("state") String state, @Query2("response_type") String responseType, @Query2("redirect_uri") String redirectUrl, @Query2("prompt") String prompt, @Query2("scope") String scope);
 
-    @f("applications/{applicationId}/payment-payout-groups")
-    Observable<List<PayoutGroup>> getPaymentPayoutGroups(@s("applicationId") long applicationId);
+    @GET("applications/{applicationId}/payment-payout-groups")
+    Observable<List<PayoutGroup>> getPaymentPayoutGroups(@Path2("applicationId") long applicationId);
 
-    @f("users/@me/billing/payment-sources")
-    Observable<List<PaymentSourceRaw>> getPaymentSources();
+    @GET("users/@me/billing/payment-sources")
+    Observable<List<ModelPaymentSource3>> getPaymentSources();
 
-    @f("store/price-tiers")
-    Observable<List<Integer>> getPriceTiers(@t("price_tier_type") int priceTierType);
+    @GET("store/price-tiers")
+    Observable<List<Integer>> getPriceTiers(@Query2("price_tier_type") int priceTierType);
 
-    @f("guilds/{guildId}/prune")
-    Observable<PruneCountResponse> getPruneCount(@s("guildId") long guildId, @t("days") int days);
+    @GET("guilds/{guildId}/prune")
+    Observable<PruneCountResponse> getPruneCount(@Path2("guildId") long guildId, @Query2("days") int days);
 
-    @f("channels/{channelId}/messages/{messageId}/reactions/{emoji}")
-    Observable<List<User>> getReactionUsers(@s("channelId") long channelId, @s("messageId") long messageId, @s(encoded = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "emoji") String emoji, @t("limit") Integer limit);
+    @GET("channels/{channelId}/messages/{messageId}/reactions/{emoji}")
+    Observable<List<User>> getReactionUsers(@Path2("channelId") long channelId, @Path2("messageId") long messageId, @Path2(encoded = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "emoji") String emoji, @Query2("limit") Integer limit);
 
-    @f("stage-instances")
+    @GET("stage-instances")
     Observable<Response<List<RecommendedStageInstance>>> getRecommendedStageInstances();
 
-    @f("users/{userId}/relationships")
-    Observable<List<ModelUserRelationship>> getRelationships(@s("userId") long userId);
+    @GET("users/{userId}/relationships")
+    Observable<List<ModelUserRelationship>> getRelationships(@Path2("userId") long userId);
 
-    @f("reporting/menu/{reportType}")
-    Observable<MenuAPIResponse> getReportMenu(@s("reportType") String reportType);
+    @GET("reporting/menu/{reportType}")
+    Observable<MenuAPIResponse> getReportMenu(@Path2("reportType") String reportType);
 
-    @f("tracks/{id}")
-    Observable<ModelSpotifyTrack> getSpotifyTrack(@s(ModelAuditLogEntry.CHANGE_KEY_ID) String id2);
+    @GET("tracks/{id}")
+    Observable<ModelSpotifyTrack> getSpotifyTrack(@Path2(ModelAuditLogEntry.CHANGE_KEY_ID) String id2);
 
-    @f("stage-instances/extra")
-    Observable<List<RecommendedStageInstance>> getStageInstancesForChannels(@t("channel_ids") Set<Long> channelIds);
+    @GET("stage-instances/extra")
+    Observable<List<RecommendedStageInstance>> getStageInstancesForChannels(@Query2("channel_ids") Set<Long> channelIds);
 
-    @f("stickers/{stickerId}")
-    Observable<Sticker> getSticker(@s("stickerId") long stickerId);
+    @GET("stickers/{stickerId}")
+    Observable<Sticker> getSticker(@Path2("stickerId") long stickerId);
 
-    @f("stickers/{stickerId}/guild")
-    Observable<Guild> getStickerGuild(@s("stickerId") long stickerId);
+    @GET("stickers/{stickerId}/guild")
+    Observable<Guild> getStickerGuild(@Path2("stickerId") long stickerId);
 
-    @f("sticker-packs/{packId}")
-    Observable<ModelStickerPack> getStickerPack(@s("packId") long packId);
+    @GET("sticker-packs/{packId}")
+    Observable<ModelStickerPack> getStickerPack(@Path2("packId") long packId);
 
-    @f("sticker-packs")
+    @GET("sticker-packs")
     Observable<ModelStickerStoreDirectory> getStickerPacks();
 
-    @f("streams/{streamKey}/preview")
-    Observable<ModelApplicationStreamPreview> getStreamPreview(@s("streamKey") String streamKey, @t("version") long version);
+    @GET("streams/{streamKey}/preview")
+    Observable<ModelApplicationStreamPreview> getStreamPreview(@Path2("streamKey") String streamKey, @Query2("version") long version);
 
-    @f("users/@me/guilds/premium/subscription-slots")
+    @GET("users/@me/guilds/premium/subscription-slots")
     Observable<List<ModelGuildBoostSlot>> getSubscriptionSlots();
 
-    @f("users/@me/billing/subscriptions")
+    @GET("users/@me/billing/subscriptions")
     Observable<List<ModelSubscription>> getSubscriptions();
 
-    @f("gifs/trending")
-    Observable<TrendingGifCategoriesResponseDto> getTrendingGifCategories(@t("provider") String provider, @t("locale") String locale, @t("media_format") String mediaFormat);
+    @GET("gifs/trending")
+    Observable<TrendingGifCategoriesResponseDto> getTrendingGifCategories(@Query2("provider") String provider, @Query2("locale") String locale, @Query2("media_format") String mediaFormat);
 
-    @f("gifs/trending-gifs")
-    Observable<List<GifDto>> getTrendingGifCategory(@t("provider") String provider, @t("locale") String locale, @t("media_format") String mediaFormat, @t("limit") int limit);
+    @GET("gifs/trending-gifs")
+    Observable<List<GifDto>> getTrendingGifCategory(@Query2("provider") String provider, @Query2("locale") String locale, @Query2("media_format") String mediaFormat, @Query2("limit") int limit);
 
-    @f("users/@me/affinities/users")
+    @GET("users/@me/affinities/users")
     Observable<ModelUserAffinities> getUserAffinities();
 
-    @f("users/@me/join-request-guilds")
+    @GET("users/@me/join-request-guilds")
     Observable<List<Guild>> getUserJoinRequestGuilds();
 
-    @f("users/@me/notes/{userId}")
-    Observable<ModelUserNote> getUserNote(@s("userId") long userId);
+    @GET("users/@me/notes/{userId}")
+    Observable<ModelUserNote> getUserNote(@Path2("userId") long userId);
 
-    @f("users/@me/survey")
-    Observable<Response<UserSurveyFetchResponse>> getUserSurvey();
+    @GET("users/@me/survey")
+    Observable<Response<UserSurvey3>> getUserSurvey();
 
-    @f("guilds/{guildId}/vanity-url")
-    Observable<VanityUrlResponse> getVanityUrl(@s("guildId") long guildId);
+    @GET("guilds/{guildId}/vanity-url")
+    Observable<VanityUrlResponse> getVanityUrl(@Path2("guildId") long guildId);
 
-    @b("friend-suggestions/{userId}")
-    Observable<Void> ignoreFriendSuggestion(@s("userId") long userId);
+    @DELETE("friend-suggestions/{userId}")
+    Observable<Void> ignoreFriendSuggestion(@Path2("userId") long userId);
 
-    @p("guilds/{guildId}/members/@me")
-    Observable<Guild> joinGuild(@s("guildId") long guildId, @t("lurker") boolean isLurker, @t("session_id") String sessionId, @t("directory_channel_id") Long directoryChannelId, @a RestAPIParams.InviteCode body, @i("X-Context-Properties") String context);
+    @PUT("guilds/{guildId}/members/@me")
+    Observable<Guild> joinGuild(@Path2("guildId") long guildId, @Query2("lurker") boolean isLurker, @Query2("session_id") String sessionId, @Query2("directory_channel_id") Long directoryChannelId, @Body RestAPIParams.InviteCode body, @Header3("X-Context-Properties") String context);
 
-    @i0.f0.o("integrations/{integrationId}/join")
-    Observable<Void> joinGuildFromIntegration(@s("integrationId") String integrationId);
+    @POST("integrations/{integrationId}/join")
+    Observable<Void> joinGuildFromIntegration(@Path2("integrationId") String integrationId);
 
-    @i0.f0.o("hub-waitlist/signup")
-    Observable<WaitlistSignup> joinHubWaitlist(@a RestAPIParams.HubWaitlist body);
+    @POST("hub-waitlist/signup")
+    Observable<WaitlistSignup> joinHubWaitlist(@Body RestAPIParams.HubWaitlist body);
 
-    @i0.f0.o("channels/{channelId}/thread-members/@me")
-    Observable<Void> joinThread(@s("channelId") long channelId, @t(ModelAuditLogEntry.CHANGE_KEY_LOCATION) String location, @a RestAPIParams.EmptyBody body);
+    @POST("channels/{channelId}/thread-members/@me")
+    Observable<Void> joinThread(@Path2("channelId") long channelId, @Query2(ModelAuditLogEntry.CHANGE_KEY_LOCATION) String location, @Body RestAPIParams.EmptyBody body);
 
-    @b("guilds/{guildId}/members/{userId}")
-    Observable<Void> kickGuildMember(@s("guildId") long guildId, @s("userId") long userId, @i("X-Audit-Log-Reason") String reason);
+    @DELETE("guilds/{guildId}/members/{userId}")
+    Observable<Void> kickGuildMember(@Path2("guildId") long guildId, @Path2("userId") long userId, @Header3("X-Audit-Log-Reason") String reason);
 
-    @b("users/@me/guilds/{guildId}")
-    Observable<Void> leaveGuild(@s("guildId") long guildId);
+    @DELETE("users/@me/guilds/{guildId}")
+    Observable<Void> leaveGuild(@Path2("guildId") long guildId);
 
-    @h(hasBody = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, method = "DELETE", path = "users/@me/guilds/{guildId}")
-    Observable<Void> leaveGuild(@s("guildId") long guildId, @a RestAPIParams.LeaveGuildBody leaveGuildBody);
+    @HTTP(hasBody = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, method = "DELETE", path = "users/@me/guilds/{guildId}")
+    Observable<Void> leaveGuild(@Path2("guildId") long guildId, @Body RestAPIParams.LeaveGuildBody leaveGuildBody);
 
-    @b("channels/{channelId}/thread-members/@me")
-    Observable<Void> leaveThread(@s("channelId") long channelId, @t(ModelAuditLogEntry.CHANGE_KEY_LOCATION) String location);
+    @DELETE("channels/{channelId}/thread-members/@me")
+    Observable<Void> leaveThread(@Path2("channelId") long channelId, @Query2(ModelAuditLogEntry.CHANGE_KEY_LOCATION) String location);
 
-    @i0.f0.o("auth/logout")
-    Observable<Response<Void>> logout(@a RestAPIParams.UserDevices body);
+    @POST("auth/logout")
+    Observable<Response<Void>> logout(@Body RestAPIParams.UserDevices body);
 
-    @n("channels/{channelId}/directory-entry/{guildId}")
-    Observable<DirectoryEntryGuild> modifyServerInHub(@s("channelId") long channelId, @s("guildId") long guildId, @a RestAPIParams.AddServerBody body);
+    @PATCH("channels/{channelId}/directory-entry/{guildId}")
+    Observable<DirectoryEntryGuild> modifyServerInHub(@Path2("channelId") long channelId, @Path2("guildId") long guildId, @Body RestAPIParams.AddServerBody body);
 
-    @n("guilds/{guildId}/emojis/{emojiId}")
-    Observable<ModelEmojiGuild> patchGuildEmoji(@s("guildId") long guildId, @s("emojiId") long emojiId, @a RestAPIParams.PatchGuildEmoji body);
+    @PATCH("guilds/{guildId}/emojis/{emojiId}")
+    Observable<ModelEmojiGuild> patchGuildEmoji(@Path2("guildId") long guildId, @Path2("emojiId") long emojiId, @Body RestAPIParams.PatchGuildEmoji body);
 
-    @n("users/@me")
-    Observable<User> patchUser(@a PatchUserBody patchUserBody);
+    @PATCH("users/@me")
+    Observable<User> patchUser(@Body PatchUserBody patchUserBody);
 
-    @n("users/@me")
-    Observable<User> patchUser(@a RestAPIParams.UserInfo userInfo);
+    @PATCH("users/@me")
+    Observable<User> patchUser(@Body RestAPIParams.UserInfo userInfo);
 
-    @i0.f0.o("phone-verifications/resend")
-    Observable<Void> phoneVerificationsResend(@a RestAPIParams.VerificationCodeResend body);
+    @POST("phone-verifications/resend")
+    Observable<Void> phoneVerificationsResend(@Body RestAPIParams.VerificationCodeResend body);
 
-    @i0.f0.o("phone-verifications/verify")
-    Observable<Response<ModelPhoneVerificationToken>> phoneVerificationsVerify(@a RestAPIParams.VerificationCode body);
+    @POST("phone-verifications/verify")
+    Observable<Response<ModelPhoneVerificationToken>> phoneVerificationsVerify(@Body RestAPIParams.VerificationCode body);
 
-    @i0.f0.o("auth/fingerprint")
-    Observable<FingerprintResponse> postAuthFingerprint(@a RestAPIParams.EmptyBody body);
+    @POST("auth/fingerprint")
+    Observable<FingerprintResponse> postAuthFingerprint(@Body RestAPIParams.EmptyBody body);
 
-    @i0.f0.o("auth/login")
-    Observable<Response<ModelLoginResult>> postAuthLogin(@a RestAPIParams.AuthLogin body);
+    @POST("auth/login")
+    Observable<Response<ModelLoginResult>> postAuthLogin(@Body RestAPIParams.AuthLogin body);
 
-    @i0.f0.o("auth/register")
-    Observable<Response<RegisterResponse>> postAuthRegister(@a RestAPIParams.AuthRegister body);
+    @POST("auth/register")
+    Observable<Response<RegisterResponse>> postAuthRegister(@Body RestAPIParams.AuthRegister body);
 
-    @i0.f0.o("auth/register/phone")
-    Observable<Response<Void>> postAuthRegisterPhone(@a RestAPIParams.AuthRegisterPhone body);
+    @POST("auth/register/phone")
+    Observable<Response<Void>> postAuthRegisterPhone(@Body RestAPIParams.AuthRegisterPhone body);
 
-    @i0.f0.o("auth/verify/resend")
-    Observable<Response<Void>> postAuthVerifyResend(@a RestAPIParams.EmptyBody body);
+    @POST("auth/verify/resend")
+    Observable<Response<Void>> postAuthVerifyResend(@Body RestAPIParams.EmptyBody body);
 
-    @i0.f0.o("channels/{channelId}/invites")
-    Observable<ModelInvite> postChannelInvite(@s("channelId") long channelId, @a RestAPIParams.Invite body);
+    @POST("channels/{channelId}/invites")
+    Observable<ModelInvite> postChannelInvite(@Path2("channelId") long channelId, @Body RestAPIParams.Invite body);
 
-    @i0.f0.o("channels/{channelId}/messages/{messageId}/ack")
-    Observable<Void> postChannelMessagesAck(@s("channelId") long channelId, @s("messageId") Long messageId, @a RestAPIParams.ChannelMessagesAck body);
+    @POST("channels/{channelId}/messages/{messageId}/ack")
+    Observable<Void> postChannelMessagesAck(@Path2("channelId") long channelId, @Path2("messageId") Long messageId, @Body RestAPIParams.ChannelMessagesAck body);
 
-    @i0.f0.o("guilds/{guildId}/emojis")
-    Observable<ModelEmojiGuild> postGuildEmoji(@s("guildId") long guildId, @a RestAPIParams.PostGuildEmoji body);
+    @POST("guilds/{guildId}/emojis")
+    Observable<ModelEmojiGuild> postGuildEmoji(@Path2("guildId") long guildId, @Body RestAPIParams.PostGuildEmoji body);
 
-    @i0.f0.o("guilds/{guildId}/ack/{ackType}/{ackedId}")
-    Observable<Void> postGuildFeatureAck(@s("guildId") long channelId, @s("ackType") int ackType, @s("ackedId") long ackedId, @a RestAPIParams.GuildFeatureAck body);
+    @POST("guilds/{guildId}/ack/{ackType}/{ackedId}")
+    Observable<Void> postGuildFeatureAck(@Path2("guildId") long channelId, @Path2("ackType") int ackType, @Path2("ackedId") long ackedId, @Body RestAPIParams.GuildFeatureAck body);
 
-    @i0.f0.o("invites/{code}")
-    Observable<ModelInvite> postInviteCode(@s(ModelAuditLogEntry.CHANGE_KEY_CODE) String code, @a RestAPIParams.InviteCode body, @i("X-Context-Properties") String context);
+    @POST("invites/{code}")
+    Observable<ModelInvite> postInviteCode(@Path2(ModelAuditLogEntry.CHANGE_KEY_CODE) String code, @Body RestAPIParams.InviteCode body, @Header3("X-Context-Properties") String context);
 
-    @i0.f0.o("auth/mfa/totp")
-    Observable<Response<ModelLoginResult>> postMFACode(@a RestAPIParams.MFALogin body);
+    @POST("auth/mfa/totp")
+    Observable<Response<ModelLoginResult>> postMFACode(@Body RestAPIParams.MFALogin body);
 
-    @i0.f0.o("oauth2/authorize")
-    Observable<RestAPIParams.OAuth2Authorize.ResponsePost> postOauth2Authorize(@t("client_id") String clientId, @t("state") String state, @t("response_type") String responseType, @t("redirect_uri") String redirectUrl, @t("prompt") String prompt, @t("scope") String scope, @t(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS) String permissions, @t("code_challenge") String codeChallenge, @t("code_challenge_method") String codeChallengeMethod, @a Map<String, String> body);
+    @POST("oauth2/authorize")
+    Observable<RestAPIParams.OAuth2Authorize.ResponsePost> postOauth2Authorize(@Query2("client_id") String clientId, @Query2("state") String state, @Query2("response_type") String responseType, @Query2("redirect_uri") String redirectUrl, @Query2("prompt") String prompt, @Query2("scope") String scope, @Query2(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS) String permissions, @Query2("code_challenge") String codeChallenge, @Query2("code_challenge_method") String codeChallengeMethod, @Body Map<String, String> body);
 
-    @i0.f0.o("users/@me/remote-auth/cancel")
-    Observable<Void> postRemoteAuthCancel(@a RestAPIParams.RemoteAuthCancel body);
+    @POST("users/@me/remote-auth/cancel")
+    Observable<Void> postRemoteAuthCancel(@Body RestAPIParams.RemoteAuthCancel body);
 
-    @i0.f0.o("users/@me/remote-auth/finish")
-    Observable<Void> postRemoteAuthFinish(@a RestAPIParams.RemoteAuthFinish body);
+    @POST("users/@me/remote-auth/finish")
+    Observable<Void> postRemoteAuthFinish(@Body RestAPIParams.RemoteAuthFinish body);
 
-    @i0.f0.o("users/@me/remote-auth")
-    Observable<ModelRemoteAuthHandshake> postRemoteAuthInitialize(@a RestAPIParams.RemoteAuthInitialize body);
+    @POST("users/@me/remote-auth")
+    Observable<ModelRemoteAuthHandshake> postRemoteAuthInitialize(@Body RestAPIParams.RemoteAuthInitialize body);
 
-    @i0.f0.o("streams/{streamKey}/preview")
-    Observable<Void> postStreamPreview(@s("streamKey") String streamKey, @a RestAPIParams.Thumbnail thumbnail);
+    @POST("streams/{streamKey}/preview")
+    Observable<Void> postStreamPreview(@Path2("streamKey") String streamKey, @Body RestAPIParams.Thumbnail thumbnail);
 
-    @i0.f0.o("guilds/{guildId}/prune")
-    Observable<Void> pruneMembers(@s("guildId") long guildId, @a RestAPIParams.PruneGuild body);
+    @POST("guilds/{guildId}/prune")
+    Observable<Void> pruneMembers(@Path2("guildId") long guildId, @Body RestAPIParams.PruneGuild body);
 
-    @b("channels/{channelId}/messages/{messageId}/reactions")
-    Observable<Void> removeAllReactions(@s("channelId") long channelId, @s("messageId") long messageId);
+    @DELETE("channels/{channelId}/messages/{messageId}/reactions")
+    Observable<Void> removeAllReactions(@Path2("channelId") long channelId, @Path2("messageId") long messageId);
 
-    @b("channels/{channelId}/recipients/{recipientId}")
-    Observable<Void> removeChannelRecipient(@s("channelId") long channelId, @s("recipientId") long recipientId);
+    @DELETE("channels/{channelId}/recipients/{recipientId}")
+    Observable<Void> removeChannelRecipient(@Path2("channelId") long channelId, @Path2("recipientId") long recipientId);
 
-    @b("channels/{channelId}/messages/{messageId}/reactions/{reaction}/{userId}")
-    Observable<Void> removeReaction(@s("channelId") long channelId, @s("messageId") long messageId, @s(encoded = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "reaction") String reaction, @s("userId") long userId);
+    @DELETE("channels/{channelId}/messages/{messageId}/reactions/{reaction}/{userId}")
+    Observable<Void> removeReaction(@Path2("channelId") long channelId, @Path2("messageId") long messageId, @Path2(encoded = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "reaction") String reaction, @Path2("userId") long userId);
 
-    @b("users/@me/relationships/{userId}")
-    Observable<Void> removeRelationship(@s("userId") long userId, @i("X-Context-Properties") String context);
+    @DELETE("users/@me/relationships/{userId}")
+    Observable<Void> removeRelationship(@Path2("userId") long userId, @Header3("X-Context-Properties") String context);
 
-    @b("channels/{channelId}/messages/{messageId}/reactions/{reaction}/@me")
-    Observable<Void> removeSelfReaction(@s("channelId") long channelId, @s("messageId") long messageId, @s(encoded = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "reaction") String reaction);
+    @DELETE("channels/{channelId}/messages/{messageId}/reactions/{reaction}/@me")
+    Observable<Void> removeSelfReaction(@Path2("channelId") long channelId, @Path2("messageId") long messageId, @Path2(encoded = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "reaction") String reaction);
 
-    @b("channels/{channelId}/directory-entry/{guildId}")
-    Observable<Response<DirectoryEntryGuild>> removeServerFromHub(@s("channelId") long channelId, @s("guildId") long guildId);
+    @DELETE("channels/{channelId}/directory-entry/{guildId}")
+    Observable<Response<DirectoryEntryGuild>> removeServerFromHub(@Path2("channelId") long channelId, @Path2("guildId") long guildId);
 
-    @n("guilds/{guildId}/channels")
-    Observable<Void> reorderChannels(@s("guildId") long guildId, @a List<RestAPIParams.ChannelPosition> body);
+    @PATCH("guilds/{guildId}/channels")
+    Observable<Void> reorderChannels(@Path2("guildId") long guildId, @Body List<RestAPIParams.ChannelPosition> body);
 
-    @i0.f0.o("report")
-    Observable<Unit> report(@a RestAPIParams.Report body);
+    @POST("report")
+    Observable<Unit> report(@Body RestAPIParams.Report body);
 
-    @f("report")
-    Observable<List<ReportReason>> report(@t(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) Long channelId, @t(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID) Long guildId, @t("message_id") Long messageId, @t("user_id") Long userId);
+    @GET("report")
+    Observable<List<ReportReason>> report(@Query2(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) Long channelId, @Query2(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID) Long guildId, @Query2("message_id") Long messageId, @Query2("user_id") Long userId);
 
-    @i0.f0.o("users/@me/harvest")
-    Observable<Harvest> requestHarvest();
+    @POST("users/@me/harvest")
+    Observable<ModelUserConsents3> requestHarvest();
 
-    @i0.f0.o("guilds/{guildId}/requests/@me")
-    Observable<ModelMemberVerificationFormResponse> resetGuildJoinRequest(@s("guildId") long guildId);
+    @POST("guilds/{guildId}/requests/@me")
+    Observable<ModelMemberVerificationFormResponse> resetGuildJoinRequest(@Path2("guildId") long guildId);
 
-    @f("entitlements/gift-codes/{code}")
-    Observable<ModelGift> resolveGiftCode(@s(ModelAuditLogEntry.CHANGE_KEY_CODE) String code, @t("with_application") boolean withApplication, @t("with_subscription_plan") boolean withSubscription);
+    @GET("entitlements/gift-codes/{code}")
+    Observable<ModelGift> resolveGiftCode(@Path2(ModelAuditLogEntry.CHANGE_KEY_CODE) String code, @Query2("with_application") boolean withApplication, @Query2("with_subscription_plan") boolean withSubscription);
 
-    @f("users/@me/entitlements/gift-codes")
-    Observable<List<ModelGift>> resolveSkuIdGift(@t("sku_id") long skuId, @t("subscription_plan_id") Long subscriptionPlanId);
+    @GET("users/@me/entitlements/gift-codes")
+    Observable<List<ModelGift>> resolveSkuIdGift(@Query2("sku_id") long skuId, @Query2("subscription_plan_id") Long subscriptionPlanId);
 
-    @b("users/@me/entitlements/gift-codes/{code}")
-    Observable<Void> revokeGiftCode(@s(ModelAuditLogEntry.CHANGE_KEY_CODE) String code);
+    @DELETE("users/@me/entitlements/gift-codes/{code}")
+    Observable<Void> revokeGiftCode(@Path2(ModelAuditLogEntry.CHANGE_KEY_CODE) String code);
 
-    @b("invites/{inviteCode}")
-    Observable<ModelInvite> revokeInvite(@s("inviteCode") String inviteCode);
+    @DELETE("invites/{inviteCode}")
+    Observable<ModelInvite> revokeInvite(@Path2("inviteCode") String inviteCode);
 
-    @i0.f0.o("channels/{channelId}/call/ring")
-    Observable<Void> ring(@s("channelId") long channelId, @a RestAPIParams.Ring body, @i("X-Context-Properties") String context);
+    @POST("channels/{channelId}/call/ring")
+    Observable<Void> ring(@Path2("channelId") long channelId, @Body RestAPIParams.Ring body, @Header3("X-Context-Properties") String context);
 
-    @i0.f0.o("science")
-    Observable<Void> science(@a Science body);
+    @POST("science")
+    Observable<Void> science(@Body Science body);
 
-    @f("channels/{channelId}/messages/search")
-    Observable<ModelSearchResponse> searchChannelMessages(@s("channelId") long channelId, @t("max_id") Long oldestMessageId, @t("author_id") List<String> authorIds, @t("mentions") List<String> mentionsIds, @t("has") List<String> has, @t("content") List<String> content, @t("attempts") Integer attempts, @t("include_nsfw") Boolean includeNsfw);
+    @GET("channels/{channelId}/messages/search")
+    Observable<ModelSearchResponse> searchChannelMessages(@Path2("channelId") long channelId, @Query2("max_id") Long oldestMessageId, @Query2("author_id") List<String> authorIds, @Query2("mentions") List<String> mentionsIds, @Query2("has") List<String> has, @Query2("content") List<String> content, @Query2("attempts") Integer attempts, @Query2("include_nsfw") Boolean includeNsfw);
 
-    @f("guilds/{guildId}/messages/search")
-    Observable<ModelSearchResponse> searchGuildMessages(@s("guildId") long guildId, @t("max_id") Long oldestMessageId, @t("author_id") List<String> authorIds, @t("mentions") List<String> mentionsIds, @t(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) List<String> inChannelIds, @t("has") List<String> has, @t("content") List<String> content, @t("attempts") Integer attempts, @t("include_nsfw") Boolean includeNsfw);
+    @GET("guilds/{guildId}/messages/search")
+    Observable<ModelSearchResponse> searchGuildMessages(@Path2("guildId") long guildId, @Query2("max_id") Long oldestMessageId, @Query2("author_id") List<String> authorIds, @Query2("mentions") List<String> mentionsIds, @Query2(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) List<String> inChannelIds, @Query2("has") List<String> has, @Query2("content") List<String> content, @Query2("attempts") Integer attempts, @Query2("include_nsfw") Boolean includeNsfw);
 
-    @f("channels/{channelId}/directory-entries/search")
-    Observable<List<DirectoryEntryGuild>> searchServers(@s("channelId") long channelId, @t("query") String query);
+    @GET("channels/{channelId}/directory-entries/search")
+    Observable<List<DirectoryEntryGuild>> searchServers(@Path2("channelId") long channelId, @Query2("query") String query);
 
-    @i0.f0.o("interactions")
-    @l
-    Observable<Void> sendApplicationCommand(@q("payload_json") PayloadJSON<RestAPIParams.ApplicationCommand> payloadJson, @q MultipartBody.Part[] files);
+    @POST("interactions")
+    @Multipart
+    Observable<Void> sendApplicationCommand(@Part2("payload_json") PayloadJSON<RestAPIParams.ApplicationCommand> payloadJson, @Part2 MultipartBody.Part[] files);
 
-    @i0.f0.o("interactions")
-    Observable<Void> sendApplicationCommand(@a RestAPIParams.ApplicationCommand body);
+    @POST("interactions")
+    Observable<Void> sendApplicationCommand(@Body RestAPIParams.ApplicationCommand body);
 
-    @i0.f0.o("private/bug-reports")
-    @l
-    Observable<Unit> sendBugReport(@q(ModelAuditLogEntry.CHANGE_KEY_NAME) String name, @q(ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION) String description, @q("priority") int priority, @q("asana_inbox_id") Long asanaInboxId, @q MultipartBody.Part screenshot);
+    @POST("private/bug-reports")
+    @Multipart
+    Observable<Unit> sendBugReport(@Part2(ModelAuditLogEntry.CHANGE_KEY_NAME) String name, @Part2(ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION) String description, @Part2("priority") int priority, @Part2("asana_inbox_id") Long asanaInboxId, @Part2 MultipartBody.Part screenshot);
 
-    @i0.f0.o("interactions")
-    Observable<Void> sendComponentInteraction(@a RestAPIParams.ComponentInteraction body);
+    @POST("interactions")
+    Observable<Void> sendComponentInteraction(@Body RestAPIParams.ComponentInteraction body);
 
-    @i0.f0.o("channels/{channelId}/greet")
-    Observable<Message> sendGreetMessage(@s("channelId") long channelId, @a RestAPIParams.GreetMessage body);
+    @POST("channels/{channelId}/greet")
+    Observable<Message> sendGreetMessage(@Path2("channelId") long channelId, @Body RestAPIParams.GreetMessage body);
 
-    @i0.f0.o("channels/{channelId}/messages")
-    @l
-    Observable<Message> sendMessage(@s("channelId") long channelId, @q("payload_json") PayloadJSON<RestAPIParams.Message> payloadJson, @q MultipartBody.Part[] files);
+    @POST("channels/{channelId}/messages")
+    @Multipart
+    Observable<Message> sendMessage(@Path2("channelId") long channelId, @Part2("payload_json") PayloadJSON<RestAPIParams.Message> payloadJson, @Part2 MultipartBody.Part[] files);
 
-    @i0.f0.o("channels/{channelId}/messages")
-    Observable<Message> sendMessage(@s("channelId") long channelId, @a RestAPIParams.Message message);
+    @POST("channels/{channelId}/messages")
+    Observable<Message> sendMessage(@Path2("channelId") long channelId, @Body RestAPIParams.Message message);
 
-    @i0.f0.o("interactions")
-    Observable<Void> sendModalInteraction(@a RestAPIParams.ModalInteraction body);
+    @POST("interactions")
+    Observable<Void> sendModalInteraction(@Body RestAPIParams.ModalInteraction body);
 
-    @i0.f0.o("users/@me/relationships")
-    Observable<Void> sendRelationshipRequest(@a RestAPIParams.UserRelationship.Add relationship, @i("X-Context-Properties") String context);
+    @POST("users/@me/relationships")
+    Observable<Void> sendRelationshipRequest(@Body RestAPIParams.UserRelationship.Add relationship, @Header3("X-Context-Properties") String context);
 
-    @i0.f0.o("users/@me/consent")
-    Observable<Void> setConsents(@a RestAPIParams.Consents body);
+    @POST("users/@me/consent")
+    Observable<Void> setConsents(@Body RestAPIParams.Consents body);
 
-    @i0.f0.o("guilds/{guildId}/mfa")
-    Observable<Void> setMfaLevel(@s("guildId") long guildId, @a RestAPIParams.GuildMFA body);
+    @POST("guilds/{guildId}/mfa")
+    Observable<Void> setMfaLevel(@Path2("guildId") long guildId, @Body RestAPIParams.GuildMFA body);
 
-    @i0.f0.o("channels/{channelId}/typing")
-    Observable<ModelTypingResponse> setUserTyping(@s("channelId") long channelId, @a RestAPIParams.EmptyBody body);
+    @POST("channels/{channelId}/typing")
+    Observable<ModelTypingResponse> setUserTyping(@Path2("channelId") long channelId, @Body RestAPIParams.EmptyBody body);
 
-    @i0.f0.o("stage-instances")
-    Observable<StageInstance> startStageInstance(@a RestAPIParams.StartStageInstanceBody body);
+    @POST("stage-instances")
+    Observable<StageInstance> startStageInstance(@Body RestAPIParams.StartStageInstanceBody body);
 
-    @i0.f0.o("channels/{channelId}/call/stop-ringing")
-    Observable<Void> stopRinging(@s("channelId") long channelId, @a RestAPIParams.Ring body, @i("X-Context-Properties") String context);
+    @POST("channels/{channelId}/call/stop-ringing")
+    Observable<Void> stopRinging(@Path2("channelId") long channelId, @Body RestAPIParams.Ring body, @Header3("X-Context-Properties") String context);
 
-    @i0.f0.o("connections/{connection}/callback")
-    Observable<Void> submitConnectionState(@s("connection") String connection, @a RestAPIParams.ConnectionState state);
+    @POST("connections/{connection}/callback")
+    Observable<Void> submitConnectionState(@Path2("connection") String connection, @Body RestAPIParams.ConnectionState state);
 
-    @i0.f0.o("reporting/{reportType}")
-    Observable<Unit> submitReport(@s("reportType") String reportType, @a ReportSubmissionBody body);
+    @POST("reporting/{reportType}")
+    Observable<Unit> submitReport(@Path2("reportType") String reportType, @Body ReportSubmissionBody body);
 
-    @p("guilds/{guildId}/premium/subscriptions")
-    Observable<List<ModelAppliedGuildBoost>> subscribeToGuild(@s("guildId") long guildId, @a RestAPIParams.GuildBoosting guildBoosting);
+    @PUT("guilds/{guildId}/premium/subscriptions")
+    Observable<List<ModelAppliedGuildBoost>> subscribeToGuild(@Path2("guildId") long guildId, @Body RestAPIParams.GuildBoosting guildBoosting);
 
-    @i0.f0.o("guilds/{guildId}/integrations/{integrationId}/sync")
-    Observable<Void> syncIntegration(@s("guildId") long guildId, @s("integrationId") long integrationId);
+    @POST("guilds/{guildId}/integrations/{integrationId}/sync")
+    Observable<Void> syncIntegration(@Path2("guildId") long guildId, @Path2("integrationId") long integrationId);
 
-    @n("guilds/{guildId}")
-    Observable<Void> transferGuildOwnership(@s("guildId") long guildId, @a RestAPIParams.TransferGuildOwnership transferGuildOwnership);
+    @PATCH("guilds/{guildId}")
+    Observable<Void> transferGuildOwnership(@Path2("guildId") long guildId, @Body RestAPIParams.TransferGuildOwnership transferGuildOwnership);
 
-    @b("guilds/{guildId}/bans/{userId}")
-    Observable<Void> unbanUser(@s("guildId") long guildId, @s("userId") long userId);
+    @DELETE("guilds/{guildId}/bans/{userId}")
+    Observable<Void> unbanUser(@Path2("guildId") long guildId, @Path2("userId") long userId);
 
-    @i0.f0.o("users/@me/guilds/premium/subscription-slots/{subscriptionSlotId}/uncancel")
-    Observable<ModelGuildBoostSlot> uncancelSubscriptionSlot(@s("subscriptionSlotId") long slotId);
+    @POST("users/@me/guilds/premium/subscription-slots/{subscriptionSlotId}/uncancel")
+    Observable<ModelGuildBoostSlot> uncancelSubscriptionSlot(@Path2("subscriptionSlotId") long slotId);
 
-    @b("guilds/{guildId}/premium/subscriptions/{subscriptionId}")
-    Observable<Void> unsubscribeToGuild(@s("guildId") long guildId, @s("subscriptionId") long subscriptionId);
+    @DELETE("guilds/{guildId}/premium/subscriptions/{subscriptionId}")
+    Observable<Void> unsubscribeToGuild(@Path2("guildId") long guildId, @Path2("subscriptionId") long subscriptionId);
 
-    @n("users/@me/connections/{connection}/{connectionId}")
-    Observable<Response<ConnectedAccount>> updateConnection(@s("connection") String connection, @s("connectionId") String connectionId, @a RestAPIParams.ConnectedAccount connectedAccount);
+    @PATCH("users/@me/connections/{connection}/{connectionId}")
+    Observable<Response<ConnectedAccount>> updateConnection(@Path2("connection") String connection, @Path2("connectionId") String connectionId, @Body RestAPIParams.ConnectedAccount connectedAccount);
 
-    @n("users/@me/connections/{connection}/{connectionId}")
-    Observable<Response<ConnectedAccount>> updateConnectionName(@s("connection") String connection, @s("connectionId") String connectionId, @a RestAPIParams.ConnectedAccountNameOnly connectedAccountName);
+    @PATCH("users/@me/connections/{connection}/{connectionId}")
+    Observable<Response<ConnectedAccount>> updateConnectionName(@Path2("connection") String connection, @Path2("connectionId") String connectionId, @Body RestAPIParams.ConnectedAccountNameOnly connectedAccountName);
 
-    @n("guilds/{guildId}")
-    Observable<Guild> updateGuild(@s("guildId") long guildId, @a RestAPIParams.UpdateGuild body);
+    @PATCH("guilds/{guildId}")
+    Observable<Guild> updateGuild(@Path2("guildId") long guildId, @Body RestAPIParams.UpdateGuild body);
 
-    @n("guilds/{guildId}/integrations/{integrationId}")
-    Observable<Void> updateGuildIntegration(@s("guildId") long guildId, @s("integrationId") long integrationId, @a RestAPIParams.GuildIntegration body);
+    @PATCH("guilds/{guildId}/integrations/{integrationId}")
+    Observable<Void> updateGuildIntegration(@Path2("guildId") long guildId, @Path2("integrationId") long integrationId, @Body RestAPIParams.GuildIntegration body);
 
-    @n("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}")
-    Observable<GuildRoleSubscriptionGroupListing> updateGuildRoleSubscriptionGroupListing(@s("guildId") long guildId, @s("groupListingId") long groupListingId, @a RestAPIParams.UpdateGuildRoleSubscriptionGroupListing body);
+    @PATCH("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}")
+    Observable<GuildRoleSubscriptionGroupListing> updateGuildRoleSubscriptionGroupListing(@Path2("guildId") long guildId, @Path2("groupListingId") long groupListingId, @Body RestAPIParams.UpdateGuildRoleSubscriptionGroupListing body);
 
-    @n("guilds/{guildId}/role-subscriptions/subscription-listings/{listingId}/trial")
-    Observable<GuildRoleSubscriptionTierFreeTrial> updateGuildRoleSubscriptionTierFreeTrial(@s("guildId") long guildId, @s("listingId") long listingId, @a RestAPIParams.UpdateGuildRoleSubscriptionTierFreeTrial body);
+    @PATCH("guilds/{guildId}/role-subscriptions/subscription-listings/{listingId}/trial")
+    Observable<GuildRoleSubscriptionTierFreeTrial> updateGuildRoleSubscriptionTierFreeTrial(@Path2("guildId") long guildId, @Path2("listingId") long listingId, @Body RestAPIParams.UpdateGuildRoleSubscriptionTierFreeTrial body);
 
-    @n("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}/subscription-listings/{listingId}")
-    Observable<GuildRoleSubscriptionTierListing> updateGuildRoleSubscriptionTierListing(@s("guildId") long guildId, @s("groupListingId") long groupListingId, @s("listingId") long tierListingId, @a RestAPIParams.UpdateGuildRoleSubscriptionTierListing body);
+    @PATCH("guilds/{guildId}/role-subscriptions/group-listings/{groupListingId}/subscription-listings/{listingId}")
+    Observable<GuildRoleSubscriptionTierListing> updateGuildRoleSubscriptionTierListing(@Path2("guildId") long guildId, @Path2("groupListingId") long groupListingId, @Path2("listingId") long tierListingId, @Body RestAPIParams.UpdateGuildRoleSubscriptionTierListing body);
 
-    @n("guilds/{guildId}/scheduled-events/{eventId}")
-    Observable<Unit> updateGuildScheduledEvent(@s("guildId") long guildId, @s("eventId") long eventId, @a RestAPIParams.UpdateGuildScheduledEventBody body);
+    @PATCH("guilds/{guildId}/scheduled-events/{eventId}")
+    Observable<Unit> updateGuildScheduledEvent(@Path2("guildId") long guildId, @Path2("eventId") long eventId, @Body RestAPIParams.UpdateGuildScheduledEventBody body);
 
-    @n("guilds/{guildId}/members/@me")
-    Observable<GuildMember> updateMeGuildMember(@s("guildId") long guildId, @a PatchGuildMemberBody body);
+    @PATCH("guilds/{guildId}/members/@me")
+    Observable<GuildMember> updateMeGuildMember(@Path2("guildId") long guildId, @Body PatchGuildMemberBody body);
 
-    @n("guilds/{guildId}/voice-states/@me")
-    Observable<Void> updateMyVoiceStates(@s("guildId") long guildId, @a RestAPIParams.ChannelVoiceStateUpdate body);
+    @PATCH("guilds/{guildId}/voice-states/@me")
+    Observable<Void> updateMyVoiceStates(@Path2("guildId") long guildId, @Body RestAPIParams.ChannelVoiceStateUpdate body);
 
-    @n("users/@me/billing/payment-sources/{paymentSourceId}")
-    Observable<Void> updatePaymentSource(@s("paymentSourceId") String paymentSourceId, @a PatchPaymentSourceRaw PatchPaymentSourceRaw);
+    @PATCH("users/@me/billing/payment-sources/{paymentSourceId}")
+    Observable<Void> updatePaymentSource(@Path2("paymentSourceId") String paymentSourceId, @Body ModelPaymentSource2 PatchPaymentSourceRaw);
 
-    @p("channels/{channelId}/permissions/{targetId}")
-    Observable<Void> updatePermissionOverwrites(@s("channelId") long channelId, @s("targetId") long targetId, @a RestAPIParams.ChannelPermissionOverwrites body);
+    @PUT("channels/{channelId}/permissions/{targetId}")
+    Observable<Void> updatePermissionOverwrites(@Path2("channelId") long channelId, @Path2("targetId") long targetId, @Body RestAPIParams.ChannelPermissionOverwrites body);
 
-    @n("users/@me/guilds/@me/settings")
-    Observable<ModelNotificationSettings> updatePrivateChannelSettings(@a RestAPIParams.UserGuildSettings userGuildSettings);
+    @PATCH("users/@me/guilds/@me/settings")
+    Observable<ModelNotificationSettings> updatePrivateChannelSettings(@Body RestAPIParams.UserGuildSettings userGuildSettings);
 
-    @n("guilds/{guildId}/roles/{roleId}")
-    Observable<Void> updateRole(@s("guildId") long guildId, @s("roleId") long roleId, @a RestAPIParams.Role body);
+    @PATCH("guilds/{guildId}/roles/{roleId}")
+    Observable<Void> updateRole(@Path2("guildId") long guildId, @Path2("roleId") long roleId, @Body RestAPIParams.Role body);
 
-    @n("stage-instances/{channelId}")
-    Observable<StageInstance> updateStageInstance(@s("channelId") long channelId, @a RestAPIParams.UpdateStageInstanceBody body);
+    @PATCH("stage-instances/{channelId}")
+    Observable<StageInstance> updateStageInstance(@Path2("channelId") long channelId, @Body RestAPIParams.UpdateStageInstanceBody body);
 
-    @n("users/@me/billing/subscriptions/{subscriptionId}")
-    Observable<Void> updateSubscription(@s("subscriptionId") String subscriptionId, @a RestAPIParams.UpdateSubscription updateSubscription);
+    @PATCH("users/@me/billing/subscriptions/{subscriptionId}")
+    Observable<Void> updateSubscription(@Path2("subscriptionId") String subscriptionId, @Body RestAPIParams.UpdateSubscription updateSubscription);
 
-    @n("channels/{channelId}/thread-members/@me/settings")
-    Observable<ThreadMember> updateThreadMemberSettings(@s("channelId") long channelId, @a RestAPIParams.ThreadMemberSettings body);
+    @PATCH("channels/{channelId}/thread-members/@me/settings")
+    Observable<ThreadMember> updateThreadMemberSettings(@Path2("channelId") long channelId, @Body RestAPIParams.ThreadMemberSettings body);
 
-    @n("users/@me/guilds/{guildId}/settings")
-    Observable<ModelNotificationSettings> updateUserGuildSettings(@s("guildId") long guildId, @a RestAPIParams.UserGuildSettings userGuildSettings);
+    @PATCH("users/@me/guilds/{guildId}/settings")
+    Observable<ModelNotificationSettings> updateUserGuildSettings(@Path2("guildId") long guildId, @Body RestAPIParams.UserGuildSettings userGuildSettings);
 
-    @p("users/@me/notes/{userId}")
-    Observable<Void> updateUserNotes(@s("userId") long userId, @a RestAPIParams.UserNoteUpdate userNoteUpdate);
+    @PUT("users/@me/notes/{userId}")
+    Observable<Void> updateUserNotes(@Path2("userId") long userId, @Body RestAPIParams.UserNoteUpdate userNoteUpdate);
 
-    @n("users/@me/settings")
-    Observable<ModelUserSettings> updateUserSettings(@a RestAPIParams.UserSettings userSettings);
+    @PATCH("users/@me/settings")
+    Observable<ModelUserSettings> updateUserSettings(@Body RestAPIParams.UserSettings userSettings);
 
-    @n("users/@me/settings")
-    Observable<ModelUserSettings> updateUserSettingsCustomStatus(@a RestAPIParams.UserSettingsCustomStatus userSettingsCustomStatus);
+    @PATCH("users/@me/settings")
+    Observable<ModelUserSettings> updateUserSettingsCustomStatus(@Body RestAPIParams.UserSettingsCustomStatus userSettingsCustomStatus);
 
-    @n("guilds/{guildId}/voice-states/{userId}")
-    Observable<Void> updateUserVoiceStates(@s("guildId") long guildId, @s("userId") long userId, @a RestAPIParams.ChannelVoiceStateUpdate body);
+    @PATCH("guilds/{guildId}/voice-states/{userId}")
+    Observable<Void> updateUserVoiceStates(@Path2("guildId") long guildId, @Path2("userId") long userId, @Body RestAPIParams.ChannelVoiceStateUpdate body);
 
-    @n("guilds/{guildId}/vanity-url")
-    Observable<VanityUrlResponse> updateVanityUrl(@s("guildId") long guildId, @a RestAPIParams.VanityUrl body);
+    @PATCH("guilds/{guildId}/vanity-url")
+    Observable<VanityUrlResponse> updateVanityUrl(@Path2("guildId") long guildId, @Body RestAPIParams.VanityUrl body);
 
-    @p("users/@me/connections/contacts/@me/external-friend-list-entries")
-    Observable<Response<BulkFriendSuggestions>> uploadContacts(@a RestAPIParams.UploadContacts uploadContacts);
+    @PUT("users/@me/connections/contacts/@me/external-friend-list-entries")
+    Observable<Response<BulkFriendSuggestions>> uploadContacts(@Body RestAPIParams.UploadContacts uploadContacts);
 
-    @i0.f0.o("debug-logs/4/{filename}")
-    Observable<Void> uploadLog(@s("filename") String filename, @a String content);
+    @POST("debug-logs/4/{filename}")
+    Observable<Void> uploadLog(@Path2("filename") String filename, @Body String content);
 
-    @i0.f0.o("debug-logs/multi/4")
-    @l
-    Observable<Void> uploadLogs(@q MultipartBody.Part[] files);
+    @POST("debug-logs/multi/4")
+    @Multipart
+    Observable<Void> uploadLogs(@Part2 MultipartBody.Part[] files);
 
-    @f("users/{userId}/sessions/{sessionId}/activities/{applicationId}/{actionType}")
-    Observable<ActivityActionConfirmation> userActivityAction(@s("userId") long userId, @s("applicationId") long application, @s("sessionId") String sessionId, @s("actionType") Integer actionType, @t(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) Long channelId, @t("message_id") Long messageId);
+    @GET("users/{userId}/sessions/{sessionId}/activities/{applicationId}/{actionType}")
+    Observable<ActivityActionConfirmation> userActivityAction(@Path2("userId") long userId, @Path2("applicationId") long application, @Path2("sessionId") String sessionId, @Path2("actionType") Integer actionType, @Query2(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID) Long channelId, @Query2("message_id") Long messageId);
 
-    @i0.f0.o("users/@me/phone")
-    Observable<Void> userAddPhone(@a RestAPIParams.Phone body);
+    @POST("users/@me/phone")
+    Observable<Void> userAddPhone(@Body RestAPIParams.Phone body);
 
-    @i0.f0.o("users/@me/phone/verify")
-    Observable<Void> userAddPhoneNoPassword(@a RestAPIParams.VerificationCodeOnly body);
+    @POST("users/@me/phone/verify")
+    Observable<Void> userAddPhoneNoPassword(@Body RestAPIParams.VerificationCodeOnly body);
 
-    @n("users/@me/agreements")
-    Observable<Void> userAgreements(@a RestAPIParams.UserAgreements body);
+    @PATCH("users/@me/agreements")
+    Observable<Void> userAgreements(@Body RestAPIParams.UserAgreements body);
 
-    @i0.f0.o("users/@me/captcha/verify")
-    Observable<Void> userCaptchaVerify(@a RestAPIParams.CaptchaCode body);
+    @POST("users/@me/captcha/verify")
+    Observable<Void> userCaptchaVerify(@Body RestAPIParams.CaptchaCode body);
 
-    @i0.f0.o("users/@me/channels")
-    Observable<Channel> userCreateChannel(@a RestAPIParams.CreateChannel body);
+    @POST("users/@me/channels")
+    Observable<Channel> userCreateChannel(@Body RestAPIParams.CreateChannel body);
 
-    @i0.f0.o("users/@me/devices")
-    Observable<Void> userCreateDevice(@a RestAPIParams.UserDevices body);
+    @POST("users/@me/devices")
+    Observable<Void> userCreateDevice(@Body RestAPIParams.UserDevices body);
 
-    @p("users/@me/email")
+    @PUT("users/@me/email")
     Observable<Void> userEmail();
 
-    @i0.f0.o("users/@me/email/verify-code")
-    Observable<ModelEmailChangeConfirm> userEmailVerifyCode(@a RestAPIParams.UserEmailConfirmCode body);
+    @POST("users/@me/email/verify-code")
+    Observable<ModelEmailChangeConfirm> userEmailVerifyCode(@Body RestAPIParams.UserEmailConfirmCode body);
 
-    @f("users/{userId}")
-    Observable<User> userGet(@s("userId") long userId);
+    @GET("users/{userId}")
+    Observable<User> userGet(@Path2("userId") long userId);
 
-    @h(hasBody = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, method = "DELETE", path = "users/@me/phone")
-    Observable<Void> userPhoneDelete(@a RestAPIParams.DeletePhone body);
+    @HTTP(hasBody = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, method = "DELETE", path = "users/@me/phone")
+    Observable<Void> userPhoneDelete(@Body RestAPIParams.DeletePhone body);
 
-    @i0.f0.o("users/@me/phone")
-    Observable<Void> userPhoneWithToken(@a RestAPIParams.VerificationPhoneCode body);
+    @POST("users/@me/phone")
+    Observable<Void> userPhoneWithToken(@Body RestAPIParams.VerificationPhoneCode body);
 
-    @f("users/{userId}/profile")
-    Observable<UserProfile> userProfileGet(@s("userId") long userId, @t("with_mutual_guilds") boolean withMutualGuilds, @t(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID) Long guildId);
+    @GET("users/{userId}/profile")
+    Observable<UserProfile> userProfileGet(@Path2("userId") long userId, @Query2("with_mutual_guilds") boolean withMutualGuilds, @Query2(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID) Long guildId);
 
-    @i0.f0.o("guilds/automations/email-domain-lookup")
-    Observable<Response<EmailVerification>> verifyEmail(@a RestAPIParams.VerifyEmail body);
+    @POST("guilds/automations/email-domain-lookup")
+    Observable<Response<EmailVerification>> verifyEmail(@Body RestAPIParams.VerifyEmail body);
 
-    @i0.f0.o("guilds/automations/email-domain-lookup/verify-code")
-    Observable<Response<EmailVerificationCode>> verifyEmailCode(@a RestAPIParams.VerifyEmailCode body);
+    @POST("guilds/automations/email-domain-lookup/verify-code")
+    Observable<Response<EmailVerification2>> verifyEmailCode(@Body RestAPIParams.VerifyEmailCode body);
 
-    @i0.f0.o("google-play/verify-purchase-token")
-    Observable<RestAPIParams.VerifyPurchaseResponse> verifyPurchaseToken(@a RestAPIParams.VerifyPurchaseTokenBody verifyPurchaseBody);
+    @POST("google-play/verify-purchase-token")
+    Observable<RestAPIParams.VerifyPurchaseResponse> verifyPurchaseToken(@Body RestAPIParams.VerifyPurchaseTokenBody verifyPurchaseBody);
 }

@@ -11,9 +11,9 @@ public final class GuildExperimentDto$Parser$parse$4 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $populations;
 
     /* compiled from: GuildExperimentDto.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentDto$Parser$parse$4$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<GuildExperimentPopulationDto> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentDto$Parser$parse$4$1 */
+    public static final class C55471<T> implements Model.JsonReader.ItemFactory<GuildExperimentPopulationDto> {
+        public C55471() {
         }
 
         @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
@@ -36,6 +36,6 @@ public final class GuildExperimentDto$Parser$parse$4 implements Runnable {
     /* JADX WARN: Type inference failed for: r1v1, types: [T, java.util.List] */
     @Override // java.lang.Runnable
     public final void run() {
-        this.$populations.element = this.$jsonReader.nextList(new AnonymousClass1());
+        this.$populations.element = this.$jsonReader.nextList(new C55471());
     }
 }

@@ -1,10 +1,10 @@
 package com.discord.widgets.chat.list.entries;
 
-import a0.a.a.b;
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.d.b.a.a;
 import com.discord.api.message.activity.MessageActivity;
-import d0.z.d.m;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SpotifyListenTogetherEntry.kt */
 /* loaded from: classes2.dex */
@@ -16,12 +16,12 @@ public final /* data */ class SpotifyListenTogetherEntry extends ChatListEntry {
     private final long userId;
 
     public SpotifyListenTogetherEntry(long j, long j2, MessageActivity messageActivity) {
-        m.checkNotNullParameter(messageActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        Intrinsics3.checkNotNullParameter(messageActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         this.userId = j;
         this.messageId = j2;
         this.activity = messageActivity;
         this.type = 23;
-        this.key = a.t("23 -- ", j2);
+        this.key = outline.m877t("23 -- ", j2);
     }
 
     public static /* synthetic */ SpotifyListenTogetherEntry copy$default(SpotifyListenTogetherEntry spotifyListenTogetherEntry, long j, long j2, MessageActivity messageActivity, int i, Object obj) {
@@ -55,7 +55,7 @@ public final /* data */ class SpotifyListenTogetherEntry extends ChatListEntry {
     }
 
     public final SpotifyListenTogetherEntry copy(long userId, long messageId, MessageActivity activity) {
-        m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         return new SpotifyListenTogetherEntry(userId, messageId, activity);
     }
 
@@ -67,7 +67,7 @@ public final /* data */ class SpotifyListenTogetherEntry extends ChatListEntry {
             return false;
         }
         SpotifyListenTogetherEntry spotifyListenTogetherEntry = (SpotifyListenTogetherEntry) other;
-        return this.userId == spotifyListenTogetherEntry.userId && this.messageId == spotifyListenTogetherEntry.messageId && m.areEqual(this.activity, spotifyListenTogetherEntry.activity);
+        return this.userId == spotifyListenTogetherEntry.userId && this.messageId == spotifyListenTogetherEntry.messageId && Intrinsics3.areEqual(this.activity, spotifyListenTogetherEntry.activity);
     }
 
     public final MessageActivity getActivity() {
@@ -93,19 +93,19 @@ public final /* data */ class SpotifyListenTogetherEntry extends ChatListEntry {
     }
 
     public int hashCode() {
-        int iA = (b.a(this.messageId) + (b.a(this.userId) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.messageId) + (C0002b.m3a(this.userId) * 31)) * 31;
         MessageActivity messageActivity = this.activity;
-        return iA + (messageActivity != null ? messageActivity.hashCode() : 0);
+        return iM3a + (messageActivity != null ? messageActivity.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("SpotifyListenTogetherEntry(userId=");
-        sbU.append(this.userId);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", activity=");
-        sbU.append(this.activity);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("SpotifyListenTogetherEntry(userId=");
+        sbM833U.append(this.userId);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", activity=");
+        sbM833U.append(this.activity);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

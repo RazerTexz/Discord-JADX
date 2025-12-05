@@ -1,14 +1,14 @@
 package com.discord.widgets.feedback;
 
 import androidx.annotation.StringRes;
-import b.d.b.a.a;
 import com.discord.widgets.voice.feedback.FeedbackIssue;
 import com.discord.widgets.voice.feedback.FeedbackRating;
 import com.discord.widgets.voice.feedback.PendingFeedback;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
 
 /* compiled from: FeedbackSheetViewModel.kt */
 /* loaded from: classes2.dex */
@@ -17,7 +17,7 @@ public interface FeedbackSheetViewModel {
     /* compiled from: FeedbackSheetViewModel.kt */
     public static final class DefaultImpls {
         public static void selectRating(FeedbackSheetViewModel feedbackSheetViewModel, FeedbackRating feedbackRating) {
-            m.checkNotNullParameter(feedbackRating, "feedbackRating");
+            Intrinsics3.checkNotNullParameter(feedbackRating, "feedbackRating");
         }
     }
 
@@ -32,7 +32,7 @@ public interface FeedbackSheetViewModel {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public NavigateToIssueDetails(PendingFeedback pendingFeedback, boolean z2) {
                 super(null);
-                m.checkNotNullParameter(pendingFeedback, "pendingFeedback");
+                Intrinsics3.checkNotNullParameter(pendingFeedback, "pendingFeedback");
                 this.pendingFeedback = pendingFeedback;
                 this.showCxLinkForIssueDetails = z2;
             }
@@ -58,7 +58,7 @@ public interface FeedbackSheetViewModel {
             }
 
             public final NavigateToIssueDetails copy(PendingFeedback pendingFeedback, boolean showCxLinkForIssueDetails) {
-                m.checkNotNullParameter(pendingFeedback, "pendingFeedback");
+                Intrinsics3.checkNotNullParameter(pendingFeedback, "pendingFeedback");
                 return new NavigateToIssueDetails(pendingFeedback, showCxLinkForIssueDetails);
             }
 
@@ -70,7 +70,7 @@ public interface FeedbackSheetViewModel {
                     return false;
                 }
                 NavigateToIssueDetails navigateToIssueDetails = (NavigateToIssueDetails) other;
-                return m.areEqual(this.pendingFeedback, navigateToIssueDetails.pendingFeedback) && this.showCxLinkForIssueDetails == navigateToIssueDetails.showCxLinkForIssueDetails;
+                return Intrinsics3.areEqual(this.pendingFeedback, navigateToIssueDetails.pendingFeedback) && this.showCxLinkForIssueDetails == navigateToIssueDetails.showCxLinkForIssueDetails;
             }
 
             public final PendingFeedback getPendingFeedback() {
@@ -94,10 +94,10 @@ public interface FeedbackSheetViewModel {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("NavigateToIssueDetails(pendingFeedback=");
-                sbU.append(this.pendingFeedback);
-                sbU.append(", showCxLinkForIssueDetails=");
-                return a.O(sbU, this.showCxLinkForIssueDetails, ")");
+                StringBuilder sbM833U = outline.m833U("NavigateToIssueDetails(pendingFeedback=");
+                sbM833U.append(this.pendingFeedback);
+                sbM833U.append(", showCxLinkForIssueDetails=");
+                return outline.m827O(sbM833U, this.showCxLinkForIssueDetails, ")");
             }
         }
 
@@ -146,7 +146,7 @@ public interface FeedbackSheetViewModel {
             }
 
             public String toString() {
-                return a.O(a.U("Submitted(showConfirmation="), this.showConfirmation, ")");
+                return outline.m827O(outline.m833U("Submitted(showConfirmation="), this.showConfirmation, ")");
             }
         }
 
@@ -179,8 +179,8 @@ public interface FeedbackSheetViewModel {
 
         /* JADX WARN: Multi-variable type inference failed */
         public ViewState(FeedbackRating feedbackRating, List<? extends FeedbackIssue> list, @StringRes int i, @StringRes Integer num, @StringRes int i2) {
-            m.checkNotNullParameter(feedbackRating, "selectedFeedbackRating");
-            m.checkNotNullParameter(list, "feedbackIssues");
+            Intrinsics3.checkNotNullParameter(feedbackRating, "selectedFeedbackRating");
+            Intrinsics3.checkNotNullParameter(list, "feedbackIssues");
             this.selectedFeedbackRating = feedbackRating;
             this.feedbackIssues = list;
             this.titleTextResId = i;
@@ -236,8 +236,8 @@ public interface FeedbackSheetViewModel {
         }
 
         public final ViewState copy(FeedbackRating selectedFeedbackRating, List<? extends FeedbackIssue> feedbackIssues, @StringRes int titleTextResId, @StringRes Integer promptTextResId, @StringRes int issuesHeaderTextResId) {
-            m.checkNotNullParameter(selectedFeedbackRating, "selectedFeedbackRating");
-            m.checkNotNullParameter(feedbackIssues, "feedbackIssues");
+            Intrinsics3.checkNotNullParameter(selectedFeedbackRating, "selectedFeedbackRating");
+            Intrinsics3.checkNotNullParameter(feedbackIssues, "feedbackIssues");
             return new ViewState(selectedFeedbackRating, feedbackIssues, titleTextResId, promptTextResId, issuesHeaderTextResId);
         }
 
@@ -249,7 +249,7 @@ public interface FeedbackSheetViewModel {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return m.areEqual(this.selectedFeedbackRating, viewState.selectedFeedbackRating) && m.areEqual(this.feedbackIssues, viewState.feedbackIssues) && this.titleTextResId == viewState.titleTextResId && m.areEqual(this.promptTextResId, viewState.promptTextResId) && this.issuesHeaderTextResId == viewState.issuesHeaderTextResId;
+            return Intrinsics3.areEqual(this.selectedFeedbackRating, viewState.selectedFeedbackRating) && Intrinsics3.areEqual(this.feedbackIssues, viewState.feedbackIssues) && this.titleTextResId == viewState.titleTextResId && Intrinsics3.areEqual(this.promptTextResId, viewState.promptTextResId) && this.issuesHeaderTextResId == viewState.issuesHeaderTextResId;
         }
 
         public final List<FeedbackIssue> getFeedbackIssues() {
@@ -286,16 +286,16 @@ public interface FeedbackSheetViewModel {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewState(selectedFeedbackRating=");
-            sbU.append(this.selectedFeedbackRating);
-            sbU.append(", feedbackIssues=");
-            sbU.append(this.feedbackIssues);
-            sbU.append(", titleTextResId=");
-            sbU.append(this.titleTextResId);
-            sbU.append(", promptTextResId=");
-            sbU.append(this.promptTextResId);
-            sbU.append(", issuesHeaderTextResId=");
-            return a.B(sbU, this.issuesHeaderTextResId, ")");
+            StringBuilder sbM833U = outline.m833U("ViewState(selectedFeedbackRating=");
+            sbM833U.append(this.selectedFeedbackRating);
+            sbM833U.append(", feedbackIssues=");
+            sbM833U.append(this.feedbackIssues);
+            sbM833U.append(", titleTextResId=");
+            sbM833U.append(this.titleTextResId);
+            sbM833U.append(", promptTextResId=");
+            sbM833U.append(this.promptTextResId);
+            sbM833U.append(", issuesHeaderTextResId=");
+            return outline.m814B(sbM833U, this.issuesHeaderTextResId, ")");
         }
 
         public /* synthetic */ ViewState(FeedbackRating feedbackRating, List list, int i, Integer num, int i2, int i3, DefaultConstructorMarker defaultConstructorMarker) {

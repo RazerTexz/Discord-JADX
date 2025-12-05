@@ -3,8 +3,8 @@ package com.discord.widgets.user.search;
 import androidx.exifinterface.media.ExifInterface;
 import com.discord.api.channel.Channel;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.u.a;
 import java.util.Comparator;
+import p507d0.p582u.C12169a;
 
 /* compiled from: Comparisons.kt */
 /* loaded from: classes.dex */
@@ -40,6 +40,6 @@ public final class WidgetGlobalSearchModel$Companion$create$$inlined$sortedBy$1<
                 iIntValue2 = num.intValue();
             }
         }
-        return a.compareValues(numValueOf2, Integer.valueOf(iIntValue2));
+        return C12169a.compareValues(numValueOf2, Integer.valueOf(iIntValue2));
     }
 }

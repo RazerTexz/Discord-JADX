@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildRoleUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildRoleUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackGuildRoleUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence action = null;
     private final Long guildId = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackGuildRoleUpdated implements AnalyticsSchema, 
             return false;
         }
         TrackGuildRoleUpdated trackGuildRoleUpdated = (TrackGuildRoleUpdated) other;
-        return m.areEqual(this.action, trackGuildRoleUpdated.action) && m.areEqual(this.guildId, trackGuildRoleUpdated.guildId) && m.areEqual(this.roleId, trackGuildRoleUpdated.roleId) && m.areEqual(this.rolePermissions, trackGuildRoleUpdated.rolePermissions) && m.areEqual(this.roleMentionable, trackGuildRoleUpdated.roleMentionable) && m.areEqual(this.roleHoist, trackGuildRoleUpdated.roleHoist) && m.areEqual(this.iconHash, trackGuildRoleUpdated.iconHash) && m.areEqual(this.unicodeEmoji, trackGuildRoleUpdated.unicodeEmoji);
+        return Intrinsics3.areEqual(this.action, trackGuildRoleUpdated.action) && Intrinsics3.areEqual(this.guildId, trackGuildRoleUpdated.guildId) && Intrinsics3.areEqual(this.roleId, trackGuildRoleUpdated.roleId) && Intrinsics3.areEqual(this.rolePermissions, trackGuildRoleUpdated.rolePermissions) && Intrinsics3.areEqual(this.roleMentionable, trackGuildRoleUpdated.roleMentionable) && Intrinsics3.areEqual(this.roleHoist, trackGuildRoleUpdated.roleHoist) && Intrinsics3.areEqual(this.iconHash, trackGuildRoleUpdated.iconHash) && Intrinsics3.areEqual(this.unicodeEmoji, trackGuildRoleUpdated.unicodeEmoji);
     }
 
     public int hashCode() {
@@ -57,21 +57,21 @@ public final /* data */ class TrackGuildRoleUpdated implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildRoleUpdated(action=");
-        sbU.append(this.action);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", roleId=");
-        sbU.append(this.roleId);
-        sbU.append(", rolePermissions=");
-        sbU.append(this.rolePermissions);
-        sbU.append(", roleMentionable=");
-        sbU.append(this.roleMentionable);
-        sbU.append(", roleHoist=");
-        sbU.append(this.roleHoist);
-        sbU.append(", iconHash=");
-        sbU.append(this.iconHash);
-        sbU.append(", unicodeEmoji=");
-        return a.E(sbU, this.unicodeEmoji, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildRoleUpdated(action=");
+        sbM833U.append(this.action);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", roleId=");
+        sbM833U.append(this.roleId);
+        sbM833U.append(", rolePermissions=");
+        sbM833U.append(this.rolePermissions);
+        sbM833U.append(", roleMentionable=");
+        sbM833U.append(this.roleMentionable);
+        sbM833U.append(", roleHoist=");
+        sbM833U.append(this.roleHoist);
+        sbM833U.append(", iconHash=");
+        sbM833U.append(this.iconHash);
+        sbM833U.append(", unicodeEmoji=");
+        return outline.m817E(sbM833U, this.unicodeEmoji, ")");
     }
 }

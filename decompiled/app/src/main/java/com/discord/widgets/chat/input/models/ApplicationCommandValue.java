@@ -1,10 +1,10 @@
 package com.discord.widgets.chat.input.models;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ApplicationCommandValue.kt */
 /* loaded from: classes2.dex */
@@ -16,7 +16,7 @@ public final /* data */ class ApplicationCommandValue {
     private final Object value;
 
     public ApplicationCommandValue(String str, Object obj, int i, List<ApplicationCommandValue> list, Boolean bool) {
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.name = str;
         this.value = obj;
         this.type = i;
@@ -71,7 +71,7 @@ public final /* data */ class ApplicationCommandValue {
     }
 
     public final ApplicationCommandValue copy(String name, Object value, int type, List<ApplicationCommandValue> options, Boolean focused) {
-        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return new ApplicationCommandValue(name, value, type, options, focused);
     }
 
@@ -83,7 +83,7 @@ public final /* data */ class ApplicationCommandValue {
             return false;
         }
         ApplicationCommandValue applicationCommandValue = (ApplicationCommandValue) other;
-        return m.areEqual(this.name, applicationCommandValue.name) && m.areEqual(this.value, applicationCommandValue.value) && this.type == applicationCommandValue.type && m.areEqual(this.options, applicationCommandValue.options) && m.areEqual(this.focused, applicationCommandValue.focused);
+        return Intrinsics3.areEqual(this.name, applicationCommandValue.name) && Intrinsics3.areEqual(this.value, applicationCommandValue.value) && this.type == applicationCommandValue.type && Intrinsics3.areEqual(this.options, applicationCommandValue.options) && Intrinsics3.areEqual(this.focused, applicationCommandValue.focused);
     }
 
     public final Boolean getFocused() {
@@ -118,16 +118,16 @@ public final /* data */ class ApplicationCommandValue {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ApplicationCommandValue(name=");
-        sbU.append(this.name);
-        sbU.append(", value=");
-        sbU.append(this.value);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", options=");
-        sbU.append(this.options);
-        sbU.append(", focused=");
-        return a.D(sbU, this.focused, ")");
+        StringBuilder sbM833U = outline.m833U("ApplicationCommandValue(name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", value=");
+        sbM833U.append(this.value);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", options=");
+        sbM833U.append(this.options);
+        sbM833U.append(", focused=");
+        return outline.m816D(sbM833U, this.focused, ")");
     }
 
     public /* synthetic */ ApplicationCommandValue(String str, Object obj, int i, List list, Boolean bool, int i2, DefaultConstructorMarker defaultConstructorMarker) {

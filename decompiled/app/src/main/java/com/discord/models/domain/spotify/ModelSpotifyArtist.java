@@ -1,8 +1,8 @@
 package com.discord.models.domain.spotify;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelSpotifyArtist.kt */
 /* loaded from: classes.dex */
@@ -11,8 +11,8 @@ public final /* data */ class ModelSpotifyArtist {
     private final String name;
 
     public ModelSpotifyArtist(String str, String str2) {
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
-        m.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
+        Intrinsics3.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.id = str;
         this.name = str2;
     }
@@ -38,8 +38,8 @@ public final /* data */ class ModelSpotifyArtist {
     }
 
     public final ModelSpotifyArtist copy(String id2, String name) {
-        m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
-        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return new ModelSpotifyArtist(id2, name);
     }
 
@@ -51,7 +51,7 @@ public final /* data */ class ModelSpotifyArtist {
             return false;
         }
         ModelSpotifyArtist modelSpotifyArtist = (ModelSpotifyArtist) other;
-        return m.areEqual(this.id, modelSpotifyArtist.id) && m.areEqual(this.name, modelSpotifyArtist.name);
+        return Intrinsics3.areEqual(this.id, modelSpotifyArtist.id) && Intrinsics3.areEqual(this.name, modelSpotifyArtist.name);
     }
 
     public final String getId() {
@@ -70,9 +70,9 @@ public final /* data */ class ModelSpotifyArtist {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelSpotifyArtist(id=");
-        sbU.append(this.id);
-        sbU.append(", name=");
-        return a.J(sbU, this.name, ")");
+        StringBuilder sbM833U = outline.m833U("ModelSpotifyArtist(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", name=");
+        return outline.m822J(sbM833U, this.name, ")");
     }
 }

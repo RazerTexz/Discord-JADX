@@ -195,20 +195,20 @@ public class InclusionExclusionUtils {
 
     public static <A extends AST<A, L, N>, L extends LombokNode<A, L, N>, N> List<Included<L, ToString.Include>> handleToStringMarking(LombokNode<A, L, N> typeNode, AnnotationValues<ToString> annotation, LombokNode<A, L, N> annotationNode) {
         List<Included<L, ToString.Include>> members = handleIncludeExcludeMarking(ToString.Include.class, ModelAuditLogEntry.CHANGE_KEY_NAME, ToString.Exclude.class, typeNode, annotation, annotationNode, true);
-        Collections.sort(members, new AnonymousClass1());
+        Collections.sort(members, new C128411());
         return members;
     }
 
     /* JADX INFO: Add missing generic type declarations: [L] */
-    /* renamed from: lombok.core.handlers.InclusionExclusionUtils$1, reason: invalid class name */
+    /* renamed from: lombok.core.handlers.InclusionExclusionUtils$1 */
     /* loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils$1.SCL.lombok */
-    class AnonymousClass1<L> implements Comparator<Included<L, ToString.Include>> {
+    class C128411<L> implements Comparator<Included<L, ToString.Include>> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Object obj, Object obj2) {
             return compare((Included) obj, (Included) obj2);
         }
 
-        AnonymousClass1() {
+        C128411() {
         }
 
         public int compare(Included<L, ToString.Include> included, Included<L, ToString.Include> included2) {
@@ -218,20 +218,20 @@ public class InclusionExclusionUtils {
 
     public static <A extends AST<A, L, N>, L extends LombokNode<A, L, N>, N> List<Included<L, EqualsAndHashCode.Include>> handleEqualsAndHashCodeMarking(LombokNode<A, L, N> typeNode, AnnotationValues<EqualsAndHashCode> annotation, LombokNode<A, L, N> annotationNode) {
         List<Included<L, EqualsAndHashCode.Include>> members = handleIncludeExcludeMarking(EqualsAndHashCode.Include.class, "replaces", EqualsAndHashCode.Exclude.class, typeNode, annotation, annotationNode, false);
-        Collections.sort(members, new AnonymousClass2());
+        Collections.sort(members, new C128422());
         return members;
     }
 
     /* JADX INFO: Add missing generic type declarations: [L] */
-    /* renamed from: lombok.core.handlers.InclusionExclusionUtils$2, reason: invalid class name */
+    /* renamed from: lombok.core.handlers.InclusionExclusionUtils$2 */
     /* loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils$2.SCL.lombok */
-    class AnonymousClass2<L> implements Comparator<Included<L, EqualsAndHashCode.Include>> {
+    class C128422<L> implements Comparator<Included<L, EqualsAndHashCode.Include>> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Object obj, Object obj2) {
             return compare((Included) obj, (Included) obj2);
         }
 
-        AnonymousClass2() {
+        C128422() {
         }
 
         public int compare(Included<L, EqualsAndHashCode.Include> included, Included<L, EqualsAndHashCode.Include> included2) {

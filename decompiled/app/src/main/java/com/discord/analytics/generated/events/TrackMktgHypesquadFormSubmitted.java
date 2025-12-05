@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackMarketingSite;
-import com.discord.analytics.generated.traits.TrackMarketingSiteReceiver;
+import com.discord.analytics.generated.traits.TrackMarketingSite2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMktgHypesquadFormSubmitted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMktgHypesquadFormSubmitted implements AnalyticsSchema, TrackBaseReceiver, TrackMarketingSiteReceiver {
+public final /* data */ class TrackMktgHypesquadFormSubmitted implements AnalyticsSchema, TrackBase2, TrackMarketingSite2 {
     private TrackBase trackBase;
     private TrackMarketingSite trackMarketingSite;
     private final CharSequence referredByCode = null;
@@ -24,7 +24,7 @@ public final /* data */ class TrackMktgHypesquadFormSubmitted implements Analyti
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackMktgHypesquadFormSubmitted) && m.areEqual(this.referredByCode, ((TrackMktgHypesquadFormSubmitted) other).referredByCode);
+            return (other instanceof TrackMktgHypesquadFormSubmitted) && Intrinsics3.areEqual(this.referredByCode, ((TrackMktgHypesquadFormSubmitted) other).referredByCode);
         }
         return true;
     }
@@ -38,6 +38,6 @@ public final /* data */ class TrackMktgHypesquadFormSubmitted implements Analyti
     }
 
     public String toString() {
-        return a.E(a.U("TrackMktgHypesquadFormSubmitted(referredByCode="), this.referredByCode, ")");
+        return outline.m817E(outline.m833U("TrackMktgHypesquadFormSubmitted(referredByCode="), this.referredByCode, ")");
     }
 }

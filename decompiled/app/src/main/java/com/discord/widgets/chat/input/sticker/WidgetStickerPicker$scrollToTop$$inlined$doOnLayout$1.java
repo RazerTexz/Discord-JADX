@@ -1,7 +1,7 @@
 package com.discord.widgets.chat.input.sticker;
 
 import android.view.View;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: View.kt */
 /* loaded from: classes2.dex */
@@ -14,8 +14,8 @@ public final class WidgetStickerPicker$scrollToTop$$inlined$doOnLayout$1 impleme
 
     @Override // android.view.View.OnLayoutChangeListener
     public void onLayoutChange(View view, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         view.removeOnLayoutChangeListener(this);
-        WidgetStickerPicker.access$getBinding$p(this.this$0).k.scrollToPosition(0);
+        WidgetStickerPicker.access$getBinding$p(this.this$0).f18198k.scrollToPosition(0);
     }
 }

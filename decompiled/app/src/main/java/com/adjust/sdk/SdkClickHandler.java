@@ -1,6 +1,5 @@
 package com.adjust.sdk;
 
-import b.d.b.a.a;
 import com.adjust.sdk.scheduler.SingleThreadCachedScheduler;
 import com.adjust.sdk.scheduler.ThreadScheduler;
 import java.io.IOException;
@@ -11,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONException;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class SdkClickHandler implements ISdkClickHandler {
@@ -26,11 +26,11 @@ public class SdkClickHandler implements ISdkClickHandler {
     private boolean paused;
     private ThreadScheduler scheduler;
 
-    /* renamed from: com.adjust.sdk.SdkClickHandler$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: com.adjust.sdk.SdkClickHandler$1 */
+    public class RunnableC53891 implements Runnable {
         public final /* synthetic */ ActivityPackage val$sdkClick;
 
-        public AnonymousClass1(ActivityPackage activityPackage) {
+        public RunnableC53891(ActivityPackage activityPackage) {
             this.val$sdkClick = activityPackage;
         }
 
@@ -43,9 +43,9 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.SdkClickHandler$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: com.adjust.sdk.SdkClickHandler$2 */
+    public class RunnableC53902 implements Runnable {
+        public RunnableC53902() {
         }
 
         @Override // java.lang.Runnable
@@ -74,9 +74,9 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.SdkClickHandler$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
-        public AnonymousClass3() {
+    /* renamed from: com.adjust.sdk.SdkClickHandler$3 */
+    public class RunnableC53913 implements Runnable {
+        public RunnableC53913() {
         }
 
         @Override // java.lang.Runnable
@@ -85,11 +85,11 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.SdkClickHandler$4, reason: invalid class name */
-    public class AnonymousClass4 implements Runnable {
+    /* renamed from: com.adjust.sdk.SdkClickHandler$4 */
+    public class RunnableC53924 implements Runnable {
         public final /* synthetic */ ActivityPackage val$sdkClickPackage;
 
-        public AnonymousClass4(ActivityPackage activityPackage) {
+        public RunnableC53924(ActivityPackage activityPackage) {
             this.val$sdkClickPackage = activityPackage;
         }
 
@@ -141,7 +141,7 @@ public class SdkClickHandler implements ISdkClickHandler {
     }
 
     private void sendNextSdkClick() {
-        this.scheduler.submit(new AnonymousClass3());
+        this.scheduler.submit(new RunnableC53913());
     }
 
     private void sendNextSdkClickI() {
@@ -151,14 +151,14 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
         ActivityPackage activityPackageRemove = this.packageQueue.remove(0);
         int retries = activityPackageRemove.getRetries();
-        AnonymousClass4 anonymousClass4 = new AnonymousClass4(activityPackageRemove);
+        RunnableC53924 runnableC53924 = new RunnableC53924(activityPackageRemove);
         if (retries <= 0) {
-            anonymousClass4.run();
+            runnableC53924.run();
             return;
         }
         long waitingTime = Util.getWaitingTime(retries, this.backoffStrategy);
         this.logger.verbose("Waiting for %s seconds before retrying sdk_click for the %d time", Util.SecondsDisplayFormat.format(waitingTime / MILLISECONDS_TO_SECONDS_DIVISOR), Integer.valueOf(retries));
-        this.scheduler.schedule(anonymousClass4, waitingTime);
+        this.scheduler.schedule(runnableC53924, waitingTime);
     }
 
     private void sendSdkClickI(ActivityPackage activityPackage) {
@@ -188,14 +188,14 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
         String baseUrl = AdjustFactory.getBaseUrl();
         if (this.basePath != null) {
-            StringBuilder sbU = a.U(baseUrl);
-            sbU.append(this.basePath);
-            baseUrl = sbU.toString();
+            StringBuilder sbM833U = outline.m833U(baseUrl);
+            sbM833U.append(this.basePath);
+            baseUrl = sbM833U.toString();
         }
-        StringBuilder sbU2 = a.U(baseUrl);
-        sbU2.append(activityPackage.getPath());
+        StringBuilder sbM833U2 = outline.m833U(baseUrl);
+        sbM833U2.append(activityPackage.getPath());
         try {
-            SdkClickResponseData sdkClickResponseData = (SdkClickResponseData) UtilNetworking.createPOSTHttpsURLConnection(sbU2.toString(), activityPackage, this.packageQueue.size() - 1);
+            SdkClickResponseData sdkClickResponseData = (SdkClickResponseData) UtilNetworking.createPOSTHttpsURLConnection(sbM833U2.toString(), activityPackage, this.packageQueue.size() - 1);
             if (sdkClickResponseData.jsonResponse == null) {
                 retrySendingI(activityPackage);
                 return;
@@ -252,12 +252,12 @@ public class SdkClickHandler implements ISdkClickHandler {
 
     @Override // com.adjust.sdk.ISdkClickHandler
     public void sendReftagReferrers() {
-        this.scheduler.submit(new AnonymousClass2());
+        this.scheduler.submit(new RunnableC53902());
     }
 
     @Override // com.adjust.sdk.ISdkClickHandler
     public void sendSdkClick(ActivityPackage activityPackage) {
-        this.scheduler.submit(new AnonymousClass1(activityPackage));
+        this.scheduler.submit(new RunnableC53891(activityPackage));
     }
 
     @Override // com.adjust.sdk.ISdkClickHandler

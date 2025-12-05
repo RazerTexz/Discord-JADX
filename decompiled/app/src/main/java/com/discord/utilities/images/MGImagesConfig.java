@@ -4,25 +4,28 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.c.a.a0.d;
-import b.f.d.d.k;
-import b.f.d.e.a;
-import b.f.g.a.a.e;
-import b.f.j.e.g;
-import b.f.j.e.h;
-import b.f.j.e.j;
-import b.f.j.e.l;
-import b.f.j.e.n;
-import b.f.j.r.b;
-import b.f.m.n.c;
 import com.facebook.cache.disk.DiskCacheConfig;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.cache.DefaultBitmapMemoryCacheParamsSupplier;
 import com.facebook.imagepipeline.cache.MemoryCacheParams;
-import d0.z.d.m;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p115d.p119d.Suppliers;
+import p007b.p109f.p115d.p120e.FLog;
+import p007b.p109f.p132g.p133a.p134a.Fresco;
+import p007b.p109f.p132g.p133a.p134a.PipelineDraweeControllerBuilderSupplier;
+import p007b.p109f.p161j.p170e.ImagePipeline;
+import p007b.p109f.p161j.p170e.ImagePipeline2;
+import p007b.p109f.p161j.p170e.ImagePipelineConfig2;
+import p007b.p109f.p161j.p170e.ImagePipelineExperiments;
+import p007b.p109f.p161j.p170e.ImagePipelineFactory;
+import p007b.p109f.p161j.p170e.NativeCodeSetup;
+import p007b.p109f.p161j.p183r.FrescoSystrace;
+import p007b.p109f.p190m.p191n.NativeLoader;
+import p007b.p109f.p190m.p191n.SystemDelegate;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MGImagesConfig.kt */
 /* loaded from: classes2.dex */
@@ -34,12 +37,12 @@ public final class MGImagesConfig {
     private static final long MAX_DISK_CACHE_SIZE = 41943040;
 
     /* compiled from: MGImagesConfig.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesConfig$getAppBitmapMemoryCacheParamsSupplier$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends DefaultBitmapMemoryCacheParamsSupplier {
+    /* renamed from: com.discord.utilities.images.MGImagesConfig$getAppBitmapMemoryCacheParamsSupplier$1 */
+    public static final class C67801 extends DefaultBitmapMemoryCacheParamsSupplier {
         public final /* synthetic */ ActivityManager $activityManager;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ActivityManager activityManager, ActivityManager activityManager2) {
+        public C67801(ActivityManager activityManager, ActivityManager activityManager2) {
             super(activityManager2);
             this.$activityManager = activityManager;
         }
@@ -53,8 +56,8 @@ public final class MGImagesConfig {
         @Override // com.facebook.imagepipeline.cache.DefaultBitmapMemoryCacheParamsSupplier, com.facebook.common.internal.Supplier
         public MemoryCacheParams get() {
             MemoryCacheParams memoryCacheParams = super.get();
-            int i = memoryCacheParams.a;
-            return new MemoryCacheParams(i, memoryCacheParams.f2895b, memoryCacheParams.c, memoryCacheParams.d, i / 3, TimeUnit.MINUTES.toMillis(5L));
+            int i = memoryCacheParams.f19542a;
+            return new MemoryCacheParams(i, memoryCacheParams.f19543b, memoryCacheParams.f19544c, memoryCacheParams.f19545d, i / 3, TimeUnit.MINUTES.toMillis(5L));
         }
     }
 
@@ -65,81 +68,81 @@ public final class MGImagesConfig {
         Object systemService = context.getSystemService(ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         Objects.requireNonNull(systemService, "null cannot be cast to non-null type android.app.ActivityManager");
         ActivityManager activityManager = (ActivityManager) systemService;
-        return new AnonymousClass1(activityManager, activityManager);
+        return new C67801(activityManager, activityManager);
     }
 
     private final DiskCacheConfig newDiskCacheConfig(Context context, String str) {
-        DiskCacheConfig.b bVar = new DiskCacheConfig.b(context, null);
-        bVar.f2883b = new k(context.getCacheDir());
-        bVar.a = str;
-        bVar.c = MAX_DISK_CACHE_SIZE;
-        DiskCacheConfig diskCacheConfig = new DiskCacheConfig(bVar);
-        m.checkNotNullExpressionValue(diskCacheConfig, "DiskCacheConfig\n        …HE_SIZE)\n        .build()");
+        DiskCacheConfig.C10634b c10634b = new DiskCacheConfig.C10634b(context, null);
+        c10634b.f19434b = new Suppliers(context.getCacheDir());
+        c10634b.f19433a = str;
+        c10634b.f19435c = MAX_DISK_CACHE_SIZE;
+        DiskCacheConfig diskCacheConfig = new DiskCacheConfig(c10634b);
+        Intrinsics3.checkNotNullExpressionValue(diskCacheConfig, "DiskCacheConfig\n        …HE_SIZE)\n        .build()");
         return diskCacheConfig;
     }
 
     public final void init(Application context) {
-        m.checkNotNullParameter(context, "context");
-        j.a aVar = new j.a(context, null);
-        aVar.c = true;
-        aVar.d = newDiskCacheConfig(context, CACHE_DIR);
-        aVar.e = newDiskCacheConfig(context, CACHE_DIR_SMALL);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        ImagePipelineConfig2.a aVar = new ImagePipelineConfig2.a(context, null);
+        aVar.f3772c = true;
+        aVar.f3773d = newDiskCacheConfig(context, CACHE_DIR);
+        aVar.f3774e = newDiskCacheConfig(context, CACHE_DIR_SMALL);
         DefaultBitmapMemoryCacheParamsSupplier appBitmapMemoryCacheParamsSupplier = getAppBitmapMemoryCacheParamsSupplier(context);
         Objects.requireNonNull(appBitmapMemoryCacheParamsSupplier);
-        aVar.a = appBitmapMemoryCacheParamsSupplier;
-        l.b bVar = aVar.f;
-        bVar.f576b = true;
-        j.a aVar2 = bVar.a;
+        aVar.f3770a = appBitmapMemoryCacheParamsSupplier;
+        ImagePipelineExperiments.b bVar = aVar.f3775f;
+        bVar.f3786b = true;
+        ImagePipelineConfig2.a aVar2 = bVar.f3785a;
         Objects.requireNonNull(aVar2);
-        j jVar = new j(aVar2, null);
-        b.b();
-        if (b.f.g.a.a.b.f477b) {
-            a.k(b.f.g.a.a.b.class, "Fresco has already been initialized! `Fresco.initialize(...)` should only be called 1 single time to avoid memory leaks!");
+        ImagePipelineConfig2 imagePipelineConfig2 = new ImagePipelineConfig2(aVar2, null);
+        FrescoSystrace.m1527b();
+        if (Fresco.f3169b) {
+            FLog.m983k(Fresco.class, "Fresco has already been initialized! `Fresco.initialize(...)` should only be called 1 single time to avoid memory leaks!");
         } else {
-            b.f.g.a.a.b.f477b = true;
+            Fresco.f3169b = true;
         }
-        n.a = true;
-        if (!b.f.m.n.a.b()) {
-            b.b();
+        NativeCodeSetup.f3808a = true;
+        if (!NativeLoader.m1588b()) {
+            FrescoSystrace.m1527b();
             try {
                 try {
                     try {
                         Class.forName("com.facebook.imagepipeline.nativecode.NativeCodeInitializer").getMethod("init", Context.class).invoke(null, context);
                     } catch (ClassNotFoundException unused) {
-                        b.f.m.n.a.a(new c());
+                        NativeLoader.m1587a(new SystemDelegate());
                     } catch (IllegalAccessException unused2) {
-                        b.f.m.n.a.a(new c());
+                        NativeLoader.m1587a(new SystemDelegate());
                     }
                 } catch (NoSuchMethodException unused3) {
-                    b.f.m.n.a.a(new c());
+                    NativeLoader.m1587a(new SystemDelegate());
                 } catch (InvocationTargetException unused4) {
-                    b.f.m.n.a.a(new c());
+                    NativeLoader.m1587a(new SystemDelegate());
                 }
-                b.b();
+                FrescoSystrace.m1527b();
             } finally {
-                b.b();
+                FrescoSystrace.m1527b();
             }
         }
         Context applicationContext = context.getApplicationContext();
-        b.f.j.e.m.j(jVar);
-        b.b();
-        e eVar = new e(applicationContext);
-        b.f.g.a.a.b.a = eVar;
-        SimpleDraweeView.initialize(eVar);
-        b.b();
+        ImagePipelineFactory.m1294j(imagePipelineConfig2);
+        FrescoSystrace.m1527b();
+        PipelineDraweeControllerBuilderSupplier pipelineDraweeControllerBuilderSupplier = new PipelineDraweeControllerBuilderSupplier(applicationContext);
+        Fresco.f3168a = pipelineDraweeControllerBuilderSupplier;
+        SimpleDraweeView.initialize(pipelineDraweeControllerBuilderSupplier);
+        FrescoSystrace.m1527b();
     }
 
     public final void onTrimMemory(int level) {
         if (level == 5 || level == 10 || level == 15 || level == 40 || level == 60 || level == 80) {
-            b.f.j.e.m mVar = b.f.j.e.m.a;
-            d.y(mVar, "ImagePipelineFactory was not initialized!");
-            if (mVar.l == null) {
-                mVar.l = mVar.a();
+            ImagePipelineFactory imagePipelineFactory = ImagePipelineFactory.f3788a;
+            AnimatableValueParser.m591y(imagePipelineFactory, "ImagePipelineFactory was not initialized!");
+            if (imagePipelineFactory.f3799l == null) {
+                imagePipelineFactory.f3799l = imagePipelineFactory.m1295a();
             }
-            h hVar = mVar.l;
-            g gVar = new g(hVar);
-            hVar.e.d(gVar);
-            hVar.f.d(gVar);
+            ImagePipeline2 imagePipeline2 = imagePipelineFactory.f3799l;
+            ImagePipeline imagePipeline = new ImagePipeline(imagePipeline2);
+            imagePipeline2.f3737e.mo1236d(imagePipeline);
+            imagePipeline2.f3738f.mo1236d(imagePipeline);
         }
     }
 }

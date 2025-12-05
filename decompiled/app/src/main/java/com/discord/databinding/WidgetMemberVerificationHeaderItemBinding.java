@@ -8,21 +8,22 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetMemberVerificationHeaderItemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final TextView a;
+    public final TextView f17244a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2489b;
+    public final TextView f17245b;
 
     public WidgetMemberVerificationHeaderItemBinding(@NonNull TextView textView, @NonNull TextView textView2) {
-        this.a = textView;
-        this.f2489b = textView2;
+        this.f17244a = textView;
+        this.f17245b = textView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17244a;
     }
 }

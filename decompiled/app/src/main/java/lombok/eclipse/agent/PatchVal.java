@@ -178,7 +178,8 @@ public class PatchVal {
         return false;
     }
 
-    private static boolean is(TypeReference ref, BlockScope scope, String key) {
+    /* renamed from: is */
+    private static boolean m10928is(TypeReference ref, BlockScope scope, String key) {
         Scope s2;
         Scope scope2 = scope.parent;
         while (true) {
@@ -315,11 +316,11 @@ public class PatchVal {
     }
 
     private static boolean isVar(LocalDeclaration local, BlockScope scope) {
-        return is(local.type, scope, "lombok.experimental.var") || is(local.type, scope, "lombok.var");
+        return m10928is(local.type, scope, "lombok.experimental.var") || m10928is(local.type, scope, "lombok.var");
     }
 
     private static boolean isVal(LocalDeclaration local, BlockScope scope) {
-        return is(local.type, scope, "lombok.val");
+        return m10928is(local.type, scope, "lombok.val");
     }
 
     public static boolean handleValForForEach(ForeachStatement forEach, BlockScope scope) {
@@ -470,8 +471,7 @@ public class PatchVal {
                     case 2:
                     case 3:
                         ReferenceContext parentAST = parent.referenceContext();
-                        if (parentAST == referenceContext) {
-                        } else {
+                        if (parentAST != referenceContext) {
                             clearIgnoreFurtherInvestigationField(parentAST);
                             return;
                         }

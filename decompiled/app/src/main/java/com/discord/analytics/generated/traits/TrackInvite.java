@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackInvite.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackInvite {
             return false;
         }
         TrackInvite trackInvite = (TrackInvite) other;
-        return m.areEqual(this.inviteCode, trackInvite.inviteCode) && m.areEqual(this.inviteGuildId, trackInvite.inviteGuildId) && m.areEqual(this.inviteChannelId, trackInvite.inviteChannelId) && m.areEqual(this.inviteChannelType, trackInvite.inviteChannelType) && m.areEqual(this.inviteInviterId, trackInvite.inviteInviterId);
+        return Intrinsics3.areEqual(this.inviteCode, trackInvite.inviteCode) && Intrinsics3.areEqual(this.inviteGuildId, trackInvite.inviteGuildId) && Intrinsics3.areEqual(this.inviteChannelId, trackInvite.inviteChannelId) && Intrinsics3.areEqual(this.inviteChannelType, trackInvite.inviteChannelType) && Intrinsics3.areEqual(this.inviteInviterId, trackInvite.inviteInviterId);
     }
 
     public int hashCode() {
@@ -37,15 +37,15 @@ public final /* data */ class TrackInvite {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackInvite(inviteCode=");
-        sbU.append(this.inviteCode);
-        sbU.append(", inviteGuildId=");
-        sbU.append(this.inviteGuildId);
-        sbU.append(", inviteChannelId=");
-        sbU.append(this.inviteChannelId);
-        sbU.append(", inviteChannelType=");
-        sbU.append(this.inviteChannelType);
-        sbU.append(", inviteInviterId=");
-        return a.G(sbU, this.inviteInviterId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackInvite(inviteCode=");
+        sbM833U.append(this.inviteCode);
+        sbM833U.append(", inviteGuildId=");
+        sbM833U.append(this.inviteGuildId);
+        sbM833U.append(", inviteChannelId=");
+        sbM833U.append(this.inviteChannelId);
+        sbM833U.append(", inviteChannelType=");
+        sbM833U.append(this.inviteChannelType);
+        sbM833U.append(", inviteInviterId=");
+        return outline.m819G(sbM833U, this.inviteInviterId, ")");
     }
 }

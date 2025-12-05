@@ -6,8 +6,6 @@ import android.graphics.SurfaceTexture;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
-import h0.c.n0;
 import javax.microedition.khronos.egl.EGL10;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.egl.EGLContext;
@@ -15,6 +13,8 @@ import javax.microedition.khronos.egl.EGLDisplay;
 import javax.microedition.khronos.egl.EGLSurface;
 import org.webrtc.EglBase;
 import org.webrtc.EglBase10;
+import p007b.p100d.p104b.p105a.outline;
+import p617h0.p628c.EglBase2;
 
 /* loaded from: classes3.dex */
 public class EglBase10Impl implements EglBase10 {
@@ -120,9 +120,9 @@ public class EglBase10Impl implements EglBase10 {
         EGLDisplay eglDisplay = getEglDisplay();
         this.eglDisplay = eglDisplay;
         this.eglConfig = getEglConfig(eglDisplay, iArr);
-        int iC = n0.c(iArr);
-        Logging.d(TAG, "Using OpenGL ES version " + iC);
-        this.eglContext = createEglContext(eGLContext, this.eglDisplay, this.eglConfig, iC);
+        int iM10664c = EglBase2.m10664c(iArr);
+        Logging.m11027d(TAG, "Using OpenGL ES version " + iM10664c);
+        this.eglContext = createEglContext(eGLContext, this.eglDisplay, this.eglConfig, iM10664c);
     }
 
     private void checkIsNotReleased() {
@@ -146,9 +146,9 @@ public class EglBase10Impl implements EglBase10 {
         if (eGLContextEglCreateContext != EGL10.EGL_NO_CONTEXT) {
             return eGLContextEglCreateContext;
         }
-        StringBuilder sbU = a.U("Failed to create EGL context: 0x");
-        sbU.append(Integer.toHexString(this.egl.eglGetError()));
-        throw new RuntimeException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Failed to create EGL context: 0x");
+        sbM833U.append(Integer.toHexString(this.egl.eglGetError()));
+        throw new RuntimeException(sbM833U.toString());
     }
 
     private void createSurfaceInternal(Object obj) {
@@ -164,18 +164,18 @@ public class EglBase10Impl implements EglBase10 {
         if (eGLSurfaceEglCreateWindowSurface != EGL10.EGL_NO_SURFACE) {
             return;
         }
-        StringBuilder sbU = a.U("Failed to create window surface: 0x");
-        sbU.append(Integer.toHexString(this.egl.eglGetError()));
-        throw new RuntimeException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Failed to create window surface: 0x");
+        sbM833U.append(Integer.toHexString(this.egl.eglGetError()));
+        throw new RuntimeException(sbM833U.toString());
     }
 
     private EGLConfig getEglConfig(EGLDisplay eGLDisplay, int[] iArr) {
         EGLConfig[] eGLConfigArr = new EGLConfig[1];
         int[] iArr2 = new int[1];
         if (!this.egl.eglChooseConfig(eGLDisplay, iArr, eGLConfigArr, 1, iArr2)) {
-            StringBuilder sbU = a.U("eglChooseConfig failed: 0x");
-            sbU.append(Integer.toHexString(this.egl.eglGetError()));
-            throw new RuntimeException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("eglChooseConfig failed: 0x");
+            sbM833U.append(Integer.toHexString(this.egl.eglGetError()));
+            throw new RuntimeException(sbM833U.toString());
         }
         if (iArr2[0] <= 0) {
             throw new RuntimeException("Unable to find any matching EGL config");
@@ -190,16 +190,16 @@ public class EglBase10Impl implements EglBase10 {
     private EGLDisplay getEglDisplay() {
         EGLDisplay eGLDisplayEglGetDisplay = this.egl.eglGetDisplay(EGL10.EGL_DEFAULT_DISPLAY);
         if (eGLDisplayEglGetDisplay == EGL10.EGL_NO_DISPLAY) {
-            StringBuilder sbU = a.U("Unable to get EGL10 display: 0x");
-            sbU.append(Integer.toHexString(this.egl.eglGetError()));
-            throw new RuntimeException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Unable to get EGL10 display: 0x");
+            sbM833U.append(Integer.toHexString(this.egl.eglGetError()));
+            throw new RuntimeException(sbM833U.toString());
         }
         if (this.egl.eglInitialize(eGLDisplayEglGetDisplay, new int[2])) {
             return eGLDisplayEglGetDisplay;
         }
-        StringBuilder sbU2 = a.U("Unable to initialize EGL10: 0x");
-        sbU2.append(Integer.toHexString(this.egl.eglGetError()));
-        throw new RuntimeException(sbU2.toString());
+        StringBuilder sbM833U2 = outline.m833U("Unable to initialize EGL10: 0x");
+        sbM833U2.append(Integer.toHexString(this.egl.eglGetError()));
+        throw new RuntimeException(sbM833U2.toString());
     }
 
     @Override // org.webrtc.EglBase
@@ -218,9 +218,9 @@ public class EglBase10Impl implements EglBase10 {
         if (eGLSurfaceEglCreatePbufferSurface != EGL10.EGL_NO_SURFACE) {
             return;
         }
-        StringBuilder sbW = a.W("Failed to create pixel buffer surface with size ", i, "x", i2, ": 0x");
-        sbW.append(Integer.toHexString(this.egl.eglGetError()));
-        throw new RuntimeException(sbW.toString());
+        StringBuilder sbM835W = outline.m835W("Failed to create pixel buffer surface with size ", i, "x", i2, ": 0x");
+        sbM835W.append(Integer.toHexString(this.egl.eglGetError()));
+        throw new RuntimeException(sbM835W.toString());
     }
 
     @Override // org.webrtc.EglBase

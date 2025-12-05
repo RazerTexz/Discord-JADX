@@ -2,10 +2,10 @@ package com.discord.widgets.chat.input;
 
 import androidx.annotation.MainThread;
 import androidx.core.app.NotificationCompat;
-import d0.g;
 import java.util.HashMap;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.LazyJVM;
 
 /* compiled from: MessageDraftsRepo.kt */
 /* loaded from: classes2.dex */
@@ -17,7 +17,7 @@ public final class MessageDraftsRepo {
         public static final Provider INSTANCE = new Provider();
 
         /* renamed from: MESSAGE_DRAFTS_REPO_INSTANCE$delegate, reason: from kotlin metadata */
-        private static final Lazy MESSAGE_DRAFTS_REPO_INSTANCE = g.lazy(MessageDraftsRepo$Provider$MESSAGE_DRAFTS_REPO_INSTANCE$2.INSTANCE);
+        private static final Lazy MESSAGE_DRAFTS_REPO_INSTANCE = LazyJVM.lazy(MessageDraftsRepo2.INSTANCE);
 
         private Provider() {
         }

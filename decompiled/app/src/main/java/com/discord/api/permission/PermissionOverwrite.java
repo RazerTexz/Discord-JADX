@@ -1,8 +1,8 @@
 package com.discord.api.permission;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: PermissionOverwrite.kt */
 /* loaded from: classes.dex */
@@ -19,19 +19,20 @@ public final /* data */ class PermissionOverwrite {
     }
 
     public PermissionOverwrite(long j, Type type, long j2, long j3) {
-        m.checkNotNullParameter(type, "type");
+        Intrinsics3.checkNotNullParameter(type, "type");
         this.id = j;
         this.type = type;
         this.allow = j2;
         this.deny = j3;
     }
 
-    public static PermissionOverwrite b(PermissionOverwrite permissionOverwrite, long j, Type type, long j2, long j3, int i) {
+    /* renamed from: b */
+    public static PermissionOverwrite m8127b(PermissionOverwrite permissionOverwrite, long j, Type type, long j2, long j3, int i) {
         long j4 = (i & 1) != 0 ? permissionOverwrite.id : j;
         Type type2 = (i & 2) != 0 ? permissionOverwrite.type : null;
         long j5 = (i & 4) != 0 ? permissionOverwrite.allow : j2;
         long j6 = (i & 8) != 0 ? permissionOverwrite.deny : j3;
-        m.checkNotNullParameter(type2, "type");
+        Intrinsics3.checkNotNullParameter(type2, "type");
         return new PermissionOverwrite(j4, type2, j5, j6);
     }
 
@@ -50,7 +51,8 @@ public final /* data */ class PermissionOverwrite {
         return this.deny;
     }
 
-    public final long e() {
+    /* renamed from: e */
+    public final long m8131e() {
         return this.id;
     }
 
@@ -62,7 +64,7 @@ public final /* data */ class PermissionOverwrite {
             return false;
         }
         PermissionOverwrite permissionOverwrite = (PermissionOverwrite) other;
-        return this.id == permissionOverwrite.id && m.areEqual(this.type, permissionOverwrite.type) && this.allow == permissionOverwrite.allow && this.deny == permissionOverwrite.deny;
+        return this.id == permissionOverwrite.id && Intrinsics3.areEqual(this.type, permissionOverwrite.type) && this.allow == permissionOverwrite.allow && this.deny == permissionOverwrite.deny;
     }
 
     /* renamed from: f, reason: from getter */
@@ -82,13 +84,13 @@ public final /* data */ class PermissionOverwrite {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("PermissionOverwrite(id=");
-        sbU.append(this.id);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", allow=");
-        sbU.append(this.allow);
-        sbU.append(", deny=");
-        return a.C(sbU, this.deny, ")");
+        StringBuilder sbM833U = outline.m833U("PermissionOverwrite(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", allow=");
+        sbM833U.append(this.allow);
+        sbM833U.append(", deny=");
+        return outline.m815C(sbM833U, this.deny, ")");
     }
 }

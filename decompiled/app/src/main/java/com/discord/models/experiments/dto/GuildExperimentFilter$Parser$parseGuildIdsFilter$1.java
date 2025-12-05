@@ -11,9 +11,9 @@ public final class GuildExperimentFilter$Parser$parseGuildIdsFilter$1 implements
     public final /* synthetic */ Model.JsonReader $reader;
 
     /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$1 */
+    public static final class RunnableC55551 implements Runnable {
+        public RunnableC55551() {
         }
 
         @Override // java.lang.Runnable
@@ -23,8 +23,8 @@ public final class GuildExperimentFilter$Parser$parseGuildIdsFilter$1 implements
     }
 
     /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements Runnable {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$2 */
+    public static final class RunnableC55562 implements Runnable {
 
         /* compiled from: GuildExperimentFilter.kt */
         /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$2$1, reason: invalid class name */
@@ -44,7 +44,7 @@ public final class GuildExperimentFilter$Parser$parseGuildIdsFilter$1 implements
             }
         }
 
-        public AnonymousClass2() {
+        public RunnableC55562() {
         }
 
         /* JADX WARN: Type inference failed for: r0v2, types: [T, java.util.List] */
@@ -62,6 +62,6 @@ public final class GuildExperimentFilter$Parser$parseGuildIdsFilter$1 implements
 
     @Override // java.lang.Runnable
     public final void run() throws IOException {
-        this.$reader.nextListIndexed(new AnonymousClass1(), new AnonymousClass2());
+        this.$reader.nextListIndexed(new RunnableC55551(), new RunnableC55562());
     }
 }

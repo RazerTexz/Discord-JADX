@@ -9,26 +9,26 @@ import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppDialog;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetNavigationHelpBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.dimen.DimenUtils;
-import com.discord.utilities.view.recycler.ViewPager2ExtensionsKt;
+import com.discord.utilities.view.recycler.ViewPager2Extensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.google.android.material.tabs.TabLayout;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetNavigationHelp.kt */
 /* loaded from: classes2.dex */
 public final class WidgetNavigationHelp extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetNavigationHelp.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNavigationHelpBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetNavigationHelp.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNavigationHelpBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -42,7 +42,7 @@ public final class WidgetNavigationHelp extends AppDialog {
         }
 
         public final void show(FragmentManager fragmentManager) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             AnalyticsTracker.openModal$default("Help Nav", "Guild List", null, 4, null);
             new WidgetNavigationHelp().show(fragmentManager, "javaClass");
         }
@@ -55,21 +55,21 @@ public final class WidgetNavigationHelp extends AppDialog {
     /* compiled from: WidgetNavigationHelp.kt */
     public static final class NuxChannelsPageFragment extends AppFragment {
         public NuxChannelsPageFragment() {
-            super(R.layout.widget_navigation_help_nux_channels);
+            super(C5419R.layout.widget_navigation_help_nux_channels);
         }
     }
 
     /* compiled from: WidgetNavigationHelp.kt */
     public static final class NuxDmsPageFragment extends AppFragment {
         public NuxDmsPageFragment() {
-            super(R.layout.widget_navigation_help_nux_dms);
+            super(C5419R.layout.widget_navigation_help_nux_dms);
         }
     }
 
     /* compiled from: WidgetNavigationHelp.kt */
     public static final class NuxGuildsPageFragment extends AppFragment {
         public NuxGuildsPageFragment() {
-            super(R.layout.widget_navigation_help_nux_guilds);
+            super(C5419R.layout.widget_navigation_help_nux_guilds);
         }
     }
 
@@ -78,7 +78,7 @@ public final class WidgetNavigationHelp extends AppDialog {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public NuxPagerAdapter(Fragment fragment) {
             super(fragment);
-            m.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
         }
 
         @Override // androidx.viewpager2.adapter.FragmentStateAdapter
@@ -92,7 +92,7 @@ public final class WidgetNavigationHelp extends AppDialog {
             if (position == 2) {
                 return new NuxDmsPageFragment();
             }
-            throw new IllegalStateException(a.q("unknown nux page: ", position));
+            throw new IllegalStateException(outline.m871q("unknown nux page: ", position));
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -103,9 +103,9 @@ public final class WidgetNavigationHelp extends AppDialog {
     }
 
     /* compiled from: WidgetNavigationHelp.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNavigationHelp$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.nux.WidgetNavigationHelp$onViewBound$1 */
+    public static final class ViewOnClickListenerC91061 implements View.OnClickListener {
+        public ViewOnClickListenerC91061() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -115,8 +115,8 @@ public final class WidgetNavigationHelp extends AppDialog {
     }
 
     public WidgetNavigationHelp() {
-        super(R.layout.widget_navigation_help);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetNavigationHelp$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_navigation_help);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetNavigationHelp2.INSTANCE, null, 2, null);
     }
 
     private final WidgetNavigationHelpBinding getBinding() {
@@ -139,17 +139,17 @@ public final class WidgetNavigationHelp extends AppDialog {
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        getBinding().d.setPageTransformer(new MarginPageTransformer(DimenUtils.dpToPixels(8)));
-        ViewPager2 viewPager2 = getBinding().d;
-        m.checkNotNullExpressionValue(viewPager2, "binding.navigationHelpNuxPager");
+        getBinding().f17294d.setPageTransformer(new MarginPageTransformer(DimenUtils.dpToPixels(8)));
+        ViewPager2 viewPager2 = getBinding().f17294d;
+        Intrinsics3.checkNotNullExpressionValue(viewPager2, "binding.navigationHelpNuxPager");
         viewPager2.setAdapter(new NuxPagerAdapter(this));
-        TabLayout tabLayout = getBinding().c;
-        m.checkNotNullExpressionValue(tabLayout, "binding.navigationHelpIndicators");
-        ViewPager2 viewPager22 = getBinding().d;
-        m.checkNotNullExpressionValue(viewPager22, "binding.navigationHelpNuxPager");
-        ViewPager2ExtensionsKt.setUpWithViewPager2$default(tabLayout, viewPager22, null, 2, null);
-        getBinding().f2499b.setOnClickListener(new AnonymousClass1());
+        TabLayout tabLayout = getBinding().f17293c;
+        Intrinsics3.checkNotNullExpressionValue(tabLayout, "binding.navigationHelpIndicators");
+        ViewPager2 viewPager22 = getBinding().f17294d;
+        Intrinsics3.checkNotNullExpressionValue(viewPager22, "binding.navigationHelpNuxPager");
+        ViewPager2Extensions.setUpWithViewPager2$default(tabLayout, viewPager22, null, 2, null);
+        getBinding().f17292b.setOnClickListener(new ViewOnClickListenerC91061());
     }
 }

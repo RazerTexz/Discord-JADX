@@ -15,7 +15,6 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.res.FontResourcesParserCompat;
 import androidx.core.provider.FontsContractCompat;
-import b.d.b.a.a;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
@@ -23,6 +22,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 @RequiresApi(26)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
@@ -62,9 +62,9 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
             methodObtainCreateFromFamiliesWithDefaultMethod = obtainCreateFromFamiliesWithDefaultMethod(clsObtainFontFamily);
             cls = clsObtainFontFamily;
         } catch (ClassNotFoundException | NoSuchMethodException e) {
-            StringBuilder sbU = a.U("Unable to collect necessary methods for class ");
-            sbU.append(e.getClass().getName());
-            Log.e(TAG, sbU.toString(), e);
+            StringBuilder sbM833U = outline.m833U("Unable to collect necessary methods for class ");
+            sbM833U.append(e.getClass().getName());
+            Log.e(TAG, sbM833U.toString(), e);
             methodObtainCreateFromFamiliesWithDefaultMethod = null;
             constructorObtainFontFamilyCtor = null;
             methodObtainAddFontFromAssetManagerMethod = null;

@@ -30,7 +30,6 @@ import androidx.collection.ArrayMap;
 import androidx.core.app.BundleCompat;
 import androidx.core.util.Pair;
 import androidx.media.MediaSessionManager;
-import b.d.b.a.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -38,7 +37,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import x.a.b.b.a.b;
+import p007b.p100d.p104b.p105a.outline;
+import p668x.p669a.p672b.p674b.p675a.IMediaSession;
 
 /* loaded from: classes.dex */
 public abstract class MediaBrowserServiceCompat extends Service {
@@ -72,15 +72,15 @@ public abstract class MediaBrowserServiceCompat extends Service {
     public final ArrayMap<IBinder, ConnectionRecord> mConnections = new ArrayMap<>();
     public final ServiceHandler mHandler = new ServiceHandler();
 
-    /* renamed from: androidx.media.MediaBrowserServiceCompat$1, reason: invalid class name */
-    public class AnonymousClass1 extends Result<List<MediaBrowserCompat.MediaItem>> {
+    /* renamed from: androidx.media.MediaBrowserServiceCompat$1 */
+    public class C04761 extends Result<List<MediaBrowserCompat.MediaItem>> {
         public final /* synthetic */ ConnectionRecord val$connection;
         public final /* synthetic */ Bundle val$notifyChildrenChangedOptions;
         public final /* synthetic */ String val$parentId;
         public final /* synthetic */ Bundle val$subscribeOptions;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Object obj, ConnectionRecord connectionRecord, String str, Bundle bundle, Bundle bundle2) {
+        public C04761(Object obj, ConnectionRecord connectionRecord, String str, Bundle bundle, Bundle bundle2) {
             super(obj);
             this.val$connection = connectionRecord;
             this.val$parentId = str;
@@ -97,11 +97,11 @@ public abstract class MediaBrowserServiceCompat extends Service {
         public void onResultSent2(@Nullable List<MediaBrowserCompat.MediaItem> list) {
             if (MediaBrowserServiceCompat.this.mConnections.get(this.val$connection.callbacks.asBinder()) != this.val$connection) {
                 if (MediaBrowserServiceCompat.DEBUG) {
-                    StringBuilder sbU = a.U("Not sending onLoadChildren result for connection that has been disconnected. pkg=");
-                    sbU.append(this.val$connection.pkg);
-                    sbU.append(" id=");
-                    sbU.append(this.val$parentId);
-                    Log.d(MediaBrowserServiceCompat.TAG, sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("Not sending onLoadChildren result for connection that has been disconnected. pkg=");
+                    sbM833U.append(this.val$connection.pkg);
+                    sbM833U.append(" id=");
+                    sbM833U.append(this.val$parentId);
+                    Log.d(MediaBrowserServiceCompat.TAG, sbM833U.toString());
                     return;
                 }
                 return;
@@ -112,20 +112,20 @@ public abstract class MediaBrowserServiceCompat extends Service {
             try {
                 this.val$connection.callbacks.onLoadChildren(this.val$parentId, list, this.val$subscribeOptions, this.val$notifyChildrenChangedOptions);
             } catch (RemoteException unused) {
-                StringBuilder sbU2 = a.U("Calling onLoadChildren() failed for id=");
-                sbU2.append(this.val$parentId);
-                sbU2.append(" package=");
-                a.r0(sbU2, this.val$connection.pkg, MediaBrowserServiceCompat.TAG);
+                StringBuilder sbM833U2 = outline.m833U("Calling onLoadChildren() failed for id=");
+                sbM833U2.append(this.val$parentId);
+                sbM833U2.append(" package=");
+                outline.m874r0(sbM833U2, this.val$connection.pkg, MediaBrowserServiceCompat.TAG);
             }
         }
     }
 
-    /* renamed from: androidx.media.MediaBrowserServiceCompat$2, reason: invalid class name */
-    public class AnonymousClass2 extends Result<MediaBrowserCompat.MediaItem> {
+    /* renamed from: androidx.media.MediaBrowserServiceCompat$2 */
+    public class C04772 extends Result<MediaBrowserCompat.MediaItem> {
         public final /* synthetic */ ResultReceiver val$receiver;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(Object obj, ResultReceiver resultReceiver) {
+        public C04772(Object obj, ResultReceiver resultReceiver) {
             super(obj);
             this.val$receiver = resultReceiver;
         }
@@ -138,21 +138,21 @@ public abstract class MediaBrowserServiceCompat extends Service {
         /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
         public void onResultSent2(@Nullable MediaBrowserCompat.MediaItem mediaItem) {
             if ((getFlags() & 2) != 0) {
-                this.val$receiver.b(-1, null);
+                this.val$receiver.m73b(-1, null);
                 return;
             }
             Bundle bundle = new Bundle();
             bundle.putParcelable(MediaBrowserServiceCompat.KEY_MEDIA_ITEM, mediaItem);
-            this.val$receiver.b(0, bundle);
+            this.val$receiver.m73b(0, bundle);
         }
     }
 
-    /* renamed from: androidx.media.MediaBrowserServiceCompat$3, reason: invalid class name */
-    public class AnonymousClass3 extends Result<List<MediaBrowserCompat.MediaItem>> {
+    /* renamed from: androidx.media.MediaBrowserServiceCompat$3 */
+    public class C04783 extends Result<List<MediaBrowserCompat.MediaItem>> {
         public final /* synthetic */ ResultReceiver val$receiver;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(Object obj, ResultReceiver resultReceiver) {
+        public C04783(Object obj, ResultReceiver resultReceiver) {
             super(obj);
             this.val$receiver = resultReceiver;
         }
@@ -165,33 +165,33 @@ public abstract class MediaBrowserServiceCompat extends Service {
         /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
         public void onResultSent2(@Nullable List<MediaBrowserCompat.MediaItem> list) {
             if ((getFlags() & 4) != 0 || list == null) {
-                this.val$receiver.b(-1, null);
+                this.val$receiver.m73b(-1, null);
                 return;
             }
             Bundle bundle = new Bundle();
             bundle.putParcelableArray(MediaBrowserServiceCompat.KEY_SEARCH_RESULTS, (Parcelable[]) list.toArray(new MediaBrowserCompat.MediaItem[0]));
-            this.val$receiver.b(0, bundle);
+            this.val$receiver.m73b(0, bundle);
         }
     }
 
-    /* renamed from: androidx.media.MediaBrowserServiceCompat$4, reason: invalid class name */
-    public class AnonymousClass4 extends Result<Bundle> {
+    /* renamed from: androidx.media.MediaBrowserServiceCompat$4 */
+    public class C04794 extends Result<Bundle> {
         public final /* synthetic */ ResultReceiver val$receiver;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass4(Object obj, ResultReceiver resultReceiver) {
+        public C04794(Object obj, ResultReceiver resultReceiver) {
             super(obj);
             this.val$receiver = resultReceiver;
         }
 
         @Override // androidx.media.MediaBrowserServiceCompat.Result
         public void onErrorSent(@Nullable Bundle bundle) {
-            this.val$receiver.b(-1, bundle);
+            this.val$receiver.m73b(-1, bundle);
         }
 
         @Override // androidx.media.MediaBrowserServiceCompat.Result
         public void onProgressUpdateSent(@Nullable Bundle bundle) {
-            this.val$receiver.b(1, bundle);
+            this.val$receiver.m73b(1, bundle);
         }
 
         @Override // androidx.media.MediaBrowserServiceCompat.Result
@@ -201,7 +201,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
         public void onResultSent2(@Nullable Bundle bundle) {
-            this.val$receiver.b(0, bundle);
+            this.val$receiver.m73b(0, bundle);
         }
     }
 
@@ -250,9 +250,9 @@ public abstract class MediaBrowserServiceCompat extends Service {
         public final HashMap<String, List<Pair<IBinder, Bundle>>> subscriptions = new HashMap<>();
         public final int uid;
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ConnectionRecord$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
-            public AnonymousClass1() {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ConnectionRecord$1 */
+        public class RunnableC04801 implements Runnable {
+            public RunnableC04801() {
             }
 
             @Override // java.lang.Runnable
@@ -273,7 +273,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         @Override // android.os.IBinder.DeathRecipient
         public void binderDied() {
-            MediaBrowserServiceCompat.this.mHandler.post(new AnonymousClass1());
+            MediaBrowserServiceCompat.this.mHandler.post(new RunnableC04801());
         }
     }
 
@@ -299,11 +299,11 @@ public abstract class MediaBrowserServiceCompat extends Service {
         public final List<Bundle> mRootExtrasList = new ArrayList();
         public MediaBrowserService mServiceFwk;
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$1 */
+        public class RunnableC04811 implements Runnable {
             public final /* synthetic */ MediaSessionCompat.Token val$token;
 
-            public AnonymousClass1(MediaSessionCompat.Token token) {
+            public RunnableC04811(MediaSessionCompat.Token token) {
                 this.val$token = token;
             }
 
@@ -313,12 +313,12 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2, reason: invalid class name */
-        public class AnonymousClass2 extends Result<List<MediaBrowserCompat.MediaItem>> {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2 */
+        public class C04822 extends Result<List<MediaBrowserCompat.MediaItem>> {
             public final /* synthetic */ ResultWrapper val$resultWrapper;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public AnonymousClass2(Object obj, ResultWrapper resultWrapper) {
+            public C04822(Object obj, ResultWrapper resultWrapper) {
                 super(obj);
                 this.val$resultWrapper = resultWrapper;
             }
@@ -350,12 +350,12 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$3, reason: invalid class name */
-        public class AnonymousClass3 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$3 */
+        public class RunnableC04833 implements Runnable {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ String val$parentId;
 
-            public AnonymousClass3(String str, Bundle bundle) {
+            public RunnableC04833(String str, Bundle bundle) {
                 this.val$parentId = str;
                 this.val$options = bundle;
             }
@@ -369,13 +369,13 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$4, reason: invalid class name */
-        public class AnonymousClass4 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$4 */
+        public class RunnableC04844 implements Runnable {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ String val$parentId;
             public final /* synthetic */ MediaSessionManager.RemoteUserInfo val$remoteUserInfo;
 
-            public AnonymousClass4(MediaSessionManager.RemoteUserInfo remoteUserInfo, String str, Bundle bundle) {
+            public RunnableC04844(MediaSessionManager.RemoteUserInfo remoteUserInfo, String str, Bundle bundle) {
                 this.val$remoteUserInfo = remoteUserInfo;
                 this.val$parentId = str;
                 this.val$options = bundle;
@@ -401,7 +401,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             @Override // android.service.media.MediaBrowserService
             @SuppressLint({"SyntheticAccessor"})
             public MediaBrowserService.BrowserRoot onGetRoot(String str, int i, Bundle bundle) {
-                MediaSessionCompat.a(bundle);
+                MediaSessionCompat.m40a(bundle);
                 BrowserRoot browserRootOnGetRoot = MediaBrowserServiceImplApi21.this.onGetRoot(str, i, bundle == null ? null : new Bundle(bundle));
                 if (browserRootOnGetRoot == null) {
                     return null;
@@ -449,7 +449,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
 
         public void notifyChildrenChangedForCompat(String str, Bundle bundle) {
-            MediaBrowserServiceCompat.this.mHandler.post(new AnonymousClass3(str, bundle));
+            MediaBrowserServiceCompat.this.mHandler.post(new RunnableC04833(str, bundle));
         }
 
         public void notifyChildrenChangedForCompatOnHandler(ConnectionRecord connectionRecord, String str, Bundle bundle) {
@@ -493,8 +493,8 @@ public abstract class MediaBrowserServiceCompat extends Service {
                 BundleCompat.putBinder(extras, MediaBrowserProtocol.EXTRA_MESSENGER_BINDER, this.mMessenger.getBinder());
                 MediaSessionCompat.Token token = MediaBrowserServiceCompat.this.mSession;
                 if (token != null) {
-                    b bVarB = token.b();
-                    BundleCompat.putBinder(extras, MediaBrowserProtocol.EXTRA_SESSION_BINDER, bVarB == null ? null : bVarB.asBinder());
+                    IMediaSession iMediaSessionM46b = token.m46b();
+                    BundleCompat.putBinder(extras, MediaBrowserProtocol.EXTRA_SESSION_BINDER, iMediaSessionM46b == null ? null : iMediaSessionM46b.asBinder());
                 } else {
                     this.mRootExtrasList.add(extras);
                 }
@@ -523,34 +523,34 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
 
         public void onLoadChildren(String str, ResultWrapper<List<Parcel>> resultWrapper) {
-            AnonymousClass2 anonymousClass2 = new AnonymousClass2(str, resultWrapper);
+            C04822 c04822 = new C04822(str, resultWrapper);
             MediaBrowserServiceCompat mediaBrowserServiceCompat = MediaBrowserServiceCompat.this;
             mediaBrowserServiceCompat.mCurConnection = mediaBrowserServiceCompat.mConnectionFromFwk;
-            mediaBrowserServiceCompat.onLoadChildren(str, anonymousClass2);
+            mediaBrowserServiceCompat.onLoadChildren(str, c04822);
             MediaBrowserServiceCompat.this.mCurConnection = null;
         }
 
         @Override // androidx.media.MediaBrowserServiceCompat.MediaBrowserServiceImpl
         public void setSessionToken(MediaSessionCompat.Token token) {
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass1(token));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04811(token));
         }
 
         public void setSessionTokenOnHandler(MediaSessionCompat.Token token) {
             if (!this.mRootExtrasList.isEmpty()) {
-                b bVarB = token.b();
-                if (bVarB != null) {
+                IMediaSession iMediaSessionM46b = token.m46b();
+                if (iMediaSessionM46b != null) {
                     Iterator<Bundle> it = this.mRootExtrasList.iterator();
                     while (it.hasNext()) {
-                        BundleCompat.putBinder(it.next(), MediaBrowserProtocol.EXTRA_SESSION_BINDER, bVarB.asBinder());
+                        BundleCompat.putBinder(it.next(), MediaBrowserProtocol.EXTRA_SESSION_BINDER, iMediaSessionM46b.asBinder());
                     }
                 }
                 this.mRootExtrasList.clear();
             }
-            this.mServiceFwk.setSessionToken((MediaSession.Token) token.k);
+            this.mServiceFwk.setSessionToken((MediaSession.Token) token.f51k);
         }
 
         public void notifyChildrenChangedForCompat(MediaSessionManager.RemoteUserInfo remoteUserInfo, String str, Bundle bundle) {
-            MediaBrowserServiceCompat.this.mHandler.post(new AnonymousClass4(remoteUserInfo, str, bundle));
+            MediaBrowserServiceCompat.this.mHandler.post(new RunnableC04844(remoteUserInfo, str, bundle));
         }
 
         @Override // androidx.media.MediaBrowserServiceCompat.MediaBrowserServiceImpl
@@ -562,12 +562,12 @@ public abstract class MediaBrowserServiceCompat extends Service {
     @RequiresApi(23)
     public class MediaBrowserServiceImplApi23 extends MediaBrowserServiceImplApi21 {
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi23$1, reason: invalid class name */
-        public class AnonymousClass1 extends Result<MediaBrowserCompat.MediaItem> {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi23$1 */
+        public class C04851 extends Result<MediaBrowserCompat.MediaItem> {
             public final /* synthetic */ ResultWrapper val$resultWrapper;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public AnonymousClass1(Object obj, ResultWrapper resultWrapper) {
+            public C04851(Object obj, ResultWrapper resultWrapper) {
                 super(obj);
                 this.val$resultWrapper = resultWrapper;
             }
@@ -617,10 +617,10 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
 
         public void onLoadItem(String str, ResultWrapper<Parcel> resultWrapper) {
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1(str, resultWrapper);
+            C04851 c04851 = new C04851(str, resultWrapper);
             MediaBrowserServiceCompat mediaBrowserServiceCompat = MediaBrowserServiceCompat.this;
             mediaBrowserServiceCompat.mCurConnection = mediaBrowserServiceCompat.mConnectionFromFwk;
-            mediaBrowserServiceCompat.onLoadItem(str, anonymousClass1);
+            mediaBrowserServiceCompat.onLoadItem(str, c04851);
             MediaBrowserServiceCompat.this.mCurConnection = null;
         }
     }
@@ -628,13 +628,13 @@ public abstract class MediaBrowserServiceCompat extends Service {
     @RequiresApi(26)
     public class MediaBrowserServiceImplApi26 extends MediaBrowserServiceImplApi23 {
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi26$1, reason: invalid class name */
-        public class AnonymousClass1 extends Result<List<MediaBrowserCompat.MediaItem>> {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi26$1 */
+        public class C04861 extends Result<List<MediaBrowserCompat.MediaItem>> {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ ResultWrapper val$resultWrapper;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public AnonymousClass1(Object obj, ResultWrapper resultWrapper, Bundle bundle) {
+            public C04861(Object obj, ResultWrapper resultWrapper, Bundle bundle) {
                 super(obj);
                 this.val$resultWrapper = resultWrapper;
                 this.val$options = bundle;
@@ -676,7 +676,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
             @Override // android.service.media.MediaBrowserService
             public void onLoadChildren(String str, MediaBrowserService.Result<List<MediaBrowser.MediaItem>> result, Bundle bundle) {
-                MediaSessionCompat.a(bundle);
+                MediaSessionCompat.m40a(bundle);
                 MediaBrowserServiceImplApi26 mediaBrowserServiceImplApi26 = MediaBrowserServiceImplApi26.this;
                 MediaBrowserServiceCompat mediaBrowserServiceCompat = MediaBrowserServiceCompat.this;
                 mediaBrowserServiceCompat.mCurConnection = mediaBrowserServiceCompat.mConnectionFromFwk;
@@ -722,10 +722,10 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
 
         public void onLoadChildren(String str, ResultWrapper<List<Parcel>> resultWrapper, Bundle bundle) {
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1(str, resultWrapper, bundle);
+            C04861 c04861 = new C04861(str, resultWrapper, bundle);
             MediaBrowserServiceCompat mediaBrowserServiceCompat = MediaBrowserServiceCompat.this;
             mediaBrowserServiceCompat.mCurConnection = mediaBrowserServiceCompat.mConnectionFromFwk;
-            mediaBrowserServiceCompat.onLoadChildren(str, anonymousClass1, bundle);
+            mediaBrowserServiceCompat.onLoadChildren(str, c04861, bundle);
             MediaBrowserServiceCompat.this.mCurConnection = null;
         }
     }
@@ -750,11 +750,11 @@ public abstract class MediaBrowserServiceCompat extends Service {
     public class MediaBrowserServiceImplBase implements MediaBrowserServiceImpl {
         private Messenger mMessenger;
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$1 */
+        public class RunnableC04871 implements Runnable {
             public final /* synthetic */ MediaSessionCompat.Token val$token;
 
-            public AnonymousClass1(MediaSessionCompat.Token token) {
+            public RunnableC04871(MediaSessionCompat.Token token) {
                 this.val$token = token;
             }
 
@@ -766,22 +766,22 @@ public abstract class MediaBrowserServiceCompat extends Service {
                     try {
                         next.callbacks.onConnect(next.root.getRootId(), this.val$token, next.root.getExtras());
                     } catch (RemoteException unused) {
-                        StringBuilder sbU = a.U("Connection for ");
-                        sbU.append(next.pkg);
-                        sbU.append(" is no longer valid.");
-                        Log.w(MediaBrowserServiceCompat.TAG, sbU.toString());
+                        StringBuilder sbM833U = outline.m833U("Connection for ");
+                        sbM833U.append(next.pkg);
+                        sbM833U.append(" is no longer valid.");
+                        Log.w(MediaBrowserServiceCompat.TAG, sbM833U.toString());
                         it.remove();
                     }
                 }
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2, reason: invalid class name */
-        public class AnonymousClass2 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2 */
+        public class RunnableC04882 implements Runnable {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ String val$parentId;
 
-            public AnonymousClass2(String str, Bundle bundle) {
+            public RunnableC04882(String str, Bundle bundle) {
                 this.val$parentId = str;
                 this.val$options = bundle;
             }
@@ -795,13 +795,13 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$3, reason: invalid class name */
-        public class AnonymousClass3 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$3 */
+        public class RunnableC04893 implements Runnable {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ String val$parentId;
             public final /* synthetic */ MediaSessionManager.RemoteUserInfo val$remoteUserInfo;
 
-            public AnonymousClass3(MediaSessionManager.RemoteUserInfo remoteUserInfo, String str, Bundle bundle) {
+            public RunnableC04893(MediaSessionManager.RemoteUserInfo remoteUserInfo, String str, Bundle bundle) {
                 this.val$remoteUserInfo = remoteUserInfo;
                 this.val$parentId = str;
                 this.val$options = bundle;
@@ -845,7 +845,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         @Override // androidx.media.MediaBrowserServiceCompat.MediaBrowserServiceImpl
         public void notifyChildrenChanged(@NonNull String str, Bundle bundle) {
-            MediaBrowserServiceCompat.this.mHandler.post(new AnonymousClass2(str, bundle));
+            MediaBrowserServiceCompat.this.mHandler.post(new RunnableC04882(str, bundle));
         }
 
         public void notifyChildrenChangedOnHandler(ConnectionRecord connectionRecord, String str, Bundle bundle) {
@@ -874,12 +874,12 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         @Override // androidx.media.MediaBrowserServiceCompat.MediaBrowserServiceImpl
         public void setSessionToken(MediaSessionCompat.Token token) {
-            MediaBrowserServiceCompat.this.mHandler.post(new AnonymousClass1(token));
+            MediaBrowserServiceCompat.this.mHandler.post(new RunnableC04871(token));
         }
 
         @Override // androidx.media.MediaBrowserServiceCompat.MediaBrowserServiceImpl
         public void notifyChildrenChanged(@NonNull MediaSessionManager.RemoteUserInfo remoteUserInfo, @NonNull String str, Bundle bundle) {
-            MediaBrowserServiceCompat.this.mHandler.post(new AnonymousClass3(remoteUserInfo, str, bundle));
+            MediaBrowserServiceCompat.this.mHandler.post(new RunnableC04893(remoteUserInfo, str, bundle));
         }
     }
 
@@ -905,21 +905,21 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void detach() {
             if (this.mDetachCalled) {
-                StringBuilder sbU = a.U("detach() called when detach() had already been called for: ");
-                sbU.append(this.mDebug);
-                throw new IllegalStateException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("detach() called when detach() had already been called for: ");
+                sbM833U.append(this.mDebug);
+                throw new IllegalStateException(sbM833U.toString());
             }
             if (this.mSendResultCalled) {
-                StringBuilder sbU2 = a.U("detach() called when sendResult() had already been called for: ");
-                sbU2.append(this.mDebug);
-                throw new IllegalStateException(sbU2.toString());
+                StringBuilder sbM833U2 = outline.m833U("detach() called when sendResult() had already been called for: ");
+                sbM833U2.append(this.mDebug);
+                throw new IllegalStateException(sbM833U2.toString());
             }
             if (!this.mSendErrorCalled) {
                 this.mDetachCalled = true;
             } else {
-                StringBuilder sbU3 = a.U("detach() called when sendError() had already been called for: ");
-                sbU3.append(this.mDebug);
-                throw new IllegalStateException(sbU3.toString());
+                StringBuilder sbM833U3 = outline.m833U("detach() called when sendError() had already been called for: ");
+                sbM833U3.append(this.mDebug);
+                throw new IllegalStateException(sbM833U3.toString());
             }
         }
 
@@ -932,15 +932,15 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
 
         public void onErrorSent(@Nullable Bundle bundle) {
-            StringBuilder sbU = a.U("It is not supported to send an error for ");
-            sbU.append(this.mDebug);
-            throw new UnsupportedOperationException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("It is not supported to send an error for ");
+            sbM833U.append(this.mDebug);
+            throw new UnsupportedOperationException(sbM833U.toString());
         }
 
         public void onProgressUpdateSent(@Nullable Bundle bundle) {
-            StringBuilder sbU = a.U("It is not supported to send an interim update for ");
-            sbU.append(this.mDebug);
-            throw new UnsupportedOperationException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("It is not supported to send an interim update for ");
+            sbM833U.append(this.mDebug);
+            throw new UnsupportedOperationException(sbM833U.toString());
         }
 
         public void onResultSent(@Nullable T t) {
@@ -948,9 +948,9 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void sendError(@Nullable Bundle bundle) {
             if (this.mSendResultCalled || this.mSendErrorCalled) {
-                StringBuilder sbU = a.U("sendError() called when either sendResult() or sendError() had already been called for: ");
-                sbU.append(this.mDebug);
-                throw new IllegalStateException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("sendError() called when either sendResult() or sendError() had already been called for: ");
+                sbM833U.append(this.mDebug);
+                throw new IllegalStateException(sbM833U.toString());
             }
             this.mSendErrorCalled = true;
             onErrorSent(bundle);
@@ -958,9 +958,9 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void sendProgressUpdate(@Nullable Bundle bundle) {
             if (this.mSendResultCalled || this.mSendErrorCalled) {
-                StringBuilder sbU = a.U("sendProgressUpdate() called when either sendResult() or sendError() had already been called for: ");
-                sbU.append(this.mDebug);
-                throw new IllegalStateException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("sendProgressUpdate() called when either sendResult() or sendError() had already been called for: ");
+                sbM833U.append(this.mDebug);
+                throw new IllegalStateException(sbM833U.toString());
             }
             checkExtraFields(bundle);
             onProgressUpdateSent(bundle);
@@ -968,9 +968,9 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void sendResult(@Nullable T t) {
             if (this.mSendResultCalled || this.mSendErrorCalled) {
-                StringBuilder sbU = a.U("sendResult() called when either sendResult() or sendError() had already been called for: ");
-                sbU.append(this.mDebug);
-                throw new IllegalStateException(sbU.toString());
+                StringBuilder sbM833U = outline.m833U("sendResult() called when either sendResult() or sendError() had already been called for: ");
+                sbM833U.append(this.mDebug);
+                throw new IllegalStateException(sbM833U.toString());
             }
             this.mSendResultCalled = true;
             onResultSent(t);
@@ -1025,15 +1025,15 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
     public class ServiceBinderImpl {
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$1 */
+        public class RunnableC04901 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ int val$pid;
             public final /* synthetic */ String val$pkg;
             public final /* synthetic */ Bundle val$rootHints;
             public final /* synthetic */ int val$uid;
 
-            public AnonymousClass1(ServiceCallbacks serviceCallbacks, String str, int i, int i2, Bundle bundle) {
+            public RunnableC04901(ServiceCallbacks serviceCallbacks, String str, int i, int i2, Bundle bundle) {
                 this.val$callbacks = serviceCallbacks;
                 this.val$pkg = str;
                 this.val$pid = i;
@@ -1053,16 +1053,16 @@ public abstract class MediaBrowserServiceCompat extends Service {
                 MediaBrowserServiceCompat mediaBrowserServiceCompat2 = MediaBrowserServiceCompat.this;
                 mediaBrowserServiceCompat2.mCurConnection = null;
                 if (browserRootOnGetRoot == null) {
-                    StringBuilder sbU = a.U("No root for client ");
-                    sbU.append(this.val$pkg);
-                    sbU.append(" from service ");
-                    sbU.append(getClass().getName());
-                    Log.i(MediaBrowserServiceCompat.TAG, sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("No root for client ");
+                    sbM833U.append(this.val$pkg);
+                    sbM833U.append(" from service ");
+                    sbM833U.append(getClass().getName());
+                    Log.i(MediaBrowserServiceCompat.TAG, sbM833U.toString());
                     try {
                         this.val$callbacks.onConnectFailed();
                         return;
                     } catch (RemoteException unused) {
-                        a.r0(a.U("Calling onConnectFailed() failed. Ignoring. pkg="), this.val$pkg, MediaBrowserServiceCompat.TAG);
+                        outline.m874r0(outline.m833U("Calling onConnectFailed() failed. Ignoring. pkg="), this.val$pkg, MediaBrowserServiceCompat.TAG);
                         return;
                     }
                 }
@@ -1073,17 +1073,17 @@ public abstract class MediaBrowserServiceCompat extends Service {
                         this.val$callbacks.onConnect(connectionRecord.root.getRootId(), MediaBrowserServiceCompat.this.mSession, connectionRecord.root.getExtras());
                     }
                 } catch (RemoteException unused2) {
-                    a.r0(a.U("Calling onConnect() failed. Dropping client. pkg="), this.val$pkg, MediaBrowserServiceCompat.TAG);
+                    outline.m874r0(outline.m833U("Calling onConnect() failed. Dropping client. pkg="), this.val$pkg, MediaBrowserServiceCompat.TAG);
                     MediaBrowserServiceCompat.this.mConnections.remove(iBinderAsBinder);
                 }
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$2, reason: invalid class name */
-        public class AnonymousClass2 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$2 */
+        public class RunnableC04912 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
 
-            public AnonymousClass2(ServiceCallbacks serviceCallbacks) {
+            public RunnableC04912(ServiceCallbacks serviceCallbacks) {
                 this.val$callbacks = serviceCallbacks;
             }
 
@@ -1096,14 +1096,14 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$3, reason: invalid class name */
-        public class AnonymousClass3 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$3 */
+        public class RunnableC04923 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ String val$id;
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ IBinder val$token;
 
-            public AnonymousClass3(ServiceCallbacks serviceCallbacks, String str, IBinder iBinder, Bundle bundle) {
+            public RunnableC04923(ServiceCallbacks serviceCallbacks, String str, IBinder iBinder, Bundle bundle) {
                 this.val$callbacks = serviceCallbacks;
                 this.val$id = str;
                 this.val$token = iBinder;
@@ -1114,20 +1114,20 @@ public abstract class MediaBrowserServiceCompat extends Service {
             public void run() {
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.mConnections.get(this.val$callbacks.asBinder());
                 if (connectionRecord == null) {
-                    a.r0(a.U("addSubscription for callback that isn't registered id="), this.val$id, MediaBrowserServiceCompat.TAG);
+                    outline.m874r0(outline.m833U("addSubscription for callback that isn't registered id="), this.val$id, MediaBrowserServiceCompat.TAG);
                 } else {
                     MediaBrowserServiceCompat.this.addSubscription(this.val$id, connectionRecord, this.val$token, this.val$options);
                 }
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$4, reason: invalid class name */
-        public class AnonymousClass4 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$4 */
+        public class RunnableC04934 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ String val$id;
             public final /* synthetic */ IBinder val$token;
 
-            public AnonymousClass4(ServiceCallbacks serviceCallbacks, String str, IBinder iBinder) {
+            public RunnableC04934(ServiceCallbacks serviceCallbacks, String str, IBinder iBinder) {
                 this.val$callbacks = serviceCallbacks;
                 this.val$id = str;
                 this.val$token = iBinder;
@@ -1137,26 +1137,26 @@ public abstract class MediaBrowserServiceCompat extends Service {
             public void run() {
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.mConnections.get(this.val$callbacks.asBinder());
                 if (connectionRecord == null) {
-                    a.r0(a.U("removeSubscription for callback that isn't registered id="), this.val$id, MediaBrowserServiceCompat.TAG);
+                    outline.m874r0(outline.m833U("removeSubscription for callback that isn't registered id="), this.val$id, MediaBrowserServiceCompat.TAG);
                 } else {
                     if (MediaBrowserServiceCompat.this.removeSubscription(this.val$id, connectionRecord, this.val$token)) {
                         return;
                     }
-                    StringBuilder sbU = a.U("removeSubscription called for ");
-                    sbU.append(this.val$id);
-                    sbU.append(" which is not subscribed");
-                    Log.w(MediaBrowserServiceCompat.TAG, sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("removeSubscription called for ");
+                    sbM833U.append(this.val$id);
+                    sbM833U.append(" which is not subscribed");
+                    Log.w(MediaBrowserServiceCompat.TAG, sbM833U.toString());
                 }
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$5, reason: invalid class name */
-        public class AnonymousClass5 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$5 */
+        public class RunnableC04945 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ String val$mediaId;
             public final /* synthetic */ ResultReceiver val$receiver;
 
-            public AnonymousClass5(ServiceCallbacks serviceCallbacks, String str, ResultReceiver resultReceiver) {
+            public RunnableC04945(ServiceCallbacks serviceCallbacks, String str, ResultReceiver resultReceiver) {
                 this.val$callbacks = serviceCallbacks;
                 this.val$mediaId = str;
                 this.val$receiver = resultReceiver;
@@ -1166,22 +1166,22 @@ public abstract class MediaBrowserServiceCompat extends Service {
             public void run() {
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.mConnections.get(this.val$callbacks.asBinder());
                 if (connectionRecord == null) {
-                    a.r0(a.U("getMediaItem for callback that isn't registered id="), this.val$mediaId, MediaBrowserServiceCompat.TAG);
+                    outline.m874r0(outline.m833U("getMediaItem for callback that isn't registered id="), this.val$mediaId, MediaBrowserServiceCompat.TAG);
                 } else {
                     MediaBrowserServiceCompat.this.performLoadItem(this.val$mediaId, connectionRecord, this.val$receiver);
                 }
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$6, reason: invalid class name */
-        public class AnonymousClass6 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$6 */
+        public class RunnableC04956 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ int val$pid;
             public final /* synthetic */ String val$pkg;
             public final /* synthetic */ Bundle val$rootHints;
             public final /* synthetic */ int val$uid;
 
-            public AnonymousClass6(ServiceCallbacks serviceCallbacks, int i, String str, int i2, Bundle bundle) {
+            public RunnableC04956(ServiceCallbacks serviceCallbacks, int i, String str, int i2, Bundle bundle) {
                 this.val$callbacks = serviceCallbacks;
                 this.val$uid = i;
                 this.val$pkg = str;
@@ -1217,11 +1217,11 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$7, reason: invalid class name */
-        public class AnonymousClass7 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$7 */
+        public class RunnableC04967 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
 
-            public AnonymousClass7(ServiceCallbacks serviceCallbacks) {
+            public RunnableC04967(ServiceCallbacks serviceCallbacks) {
                 this.val$callbacks = serviceCallbacks;
             }
 
@@ -1235,14 +1235,14 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$8, reason: invalid class name */
-        public class AnonymousClass8 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$8 */
+        public class RunnableC04978 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ Bundle val$extras;
             public final /* synthetic */ String val$query;
             public final /* synthetic */ ResultReceiver val$receiver;
 
-            public AnonymousClass8(ServiceCallbacks serviceCallbacks, String str, Bundle bundle, ResultReceiver resultReceiver) {
+            public RunnableC04978(ServiceCallbacks serviceCallbacks, String str, Bundle bundle, ResultReceiver resultReceiver) {
                 this.val$callbacks = serviceCallbacks;
                 this.val$query = str;
                 this.val$extras = bundle;
@@ -1253,21 +1253,21 @@ public abstract class MediaBrowserServiceCompat extends Service {
             public void run() {
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.mConnections.get(this.val$callbacks.asBinder());
                 if (connectionRecord == null) {
-                    a.r0(a.U("search for callback that isn't registered query="), this.val$query, MediaBrowserServiceCompat.TAG);
+                    outline.m874r0(outline.m833U("search for callback that isn't registered query="), this.val$query, MediaBrowserServiceCompat.TAG);
                 } else {
                     MediaBrowserServiceCompat.this.performSearch(this.val$query, this.val$extras, connectionRecord, this.val$receiver);
                 }
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$9, reason: invalid class name */
-        public class AnonymousClass9 implements Runnable {
+        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$9 */
+        public class RunnableC04989 implements Runnable {
             public final /* synthetic */ String val$action;
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ Bundle val$extras;
             public final /* synthetic */ ResultReceiver val$receiver;
 
-            public AnonymousClass9(ServiceCallbacks serviceCallbacks, String str, Bundle bundle, ResultReceiver resultReceiver) {
+            public RunnableC04989(ServiceCallbacks serviceCallbacks, String str, Bundle bundle, ResultReceiver resultReceiver) {
                 this.val$callbacks = serviceCallbacks;
                 this.val$action = str;
                 this.val$extras = bundle;
@@ -1281,11 +1281,11 @@ public abstract class MediaBrowserServiceCompat extends Service {
                     MediaBrowserServiceCompat.this.performCustomAction(this.val$action, this.val$extras, connectionRecord, this.val$receiver);
                     return;
                 }
-                StringBuilder sbU = a.U("sendCustomAction for callback that isn't registered action=");
-                sbU.append(this.val$action);
-                sbU.append(", extras=");
-                sbU.append(this.val$extras);
-                Log.w(MediaBrowserServiceCompat.TAG, sbU.toString());
+                StringBuilder sbM833U = outline.m833U("sendCustomAction for callback that isn't registered action=");
+                sbM833U.append(this.val$action);
+                sbM833U.append(", extras=");
+                sbM833U.append(this.val$extras);
+                Log.w(MediaBrowserServiceCompat.TAG, sbM833U.toString());
             }
         }
 
@@ -1293,52 +1293,52 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
 
         public void addSubscription(String str, IBinder iBinder, Bundle bundle, ServiceCallbacks serviceCallbacks) {
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass3(serviceCallbacks, str, iBinder, bundle));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04923(serviceCallbacks, str, iBinder, bundle));
         }
 
         public void connect(String str, int i, int i2, Bundle bundle, ServiceCallbacks serviceCallbacks) {
             if (MediaBrowserServiceCompat.this.isValidPackage(str, i2)) {
-                MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass1(serviceCallbacks, str, i, i2, bundle));
+                MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04901(serviceCallbacks, str, i, i2, bundle));
                 return;
             }
             throw new IllegalArgumentException("Package/uid mismatch: uid=" + i2 + " package=" + str);
         }
 
         public void disconnect(ServiceCallbacks serviceCallbacks) {
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass2(serviceCallbacks));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04912(serviceCallbacks));
         }
 
         public void getMediaItem(String str, ResultReceiver resultReceiver, ServiceCallbacks serviceCallbacks) {
             if (TextUtils.isEmpty(str) || resultReceiver == null) {
                 return;
             }
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass5(serviceCallbacks, str, resultReceiver));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04945(serviceCallbacks, str, resultReceiver));
         }
 
         public void registerCallbacks(ServiceCallbacks serviceCallbacks, String str, int i, int i2, Bundle bundle) {
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass6(serviceCallbacks, i2, str, i, bundle));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04956(serviceCallbacks, i2, str, i, bundle));
         }
 
         public void removeSubscription(String str, IBinder iBinder, ServiceCallbacks serviceCallbacks) {
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass4(serviceCallbacks, str, iBinder));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04934(serviceCallbacks, str, iBinder));
         }
 
         public void search(String str, Bundle bundle, ResultReceiver resultReceiver, ServiceCallbacks serviceCallbacks) {
             if (TextUtils.isEmpty(str) || resultReceiver == null) {
                 return;
             }
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass8(serviceCallbacks, str, bundle, resultReceiver));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04978(serviceCallbacks, str, bundle, resultReceiver));
         }
 
         public void sendCustomAction(String str, Bundle bundle, ResultReceiver resultReceiver, ServiceCallbacks serviceCallbacks) {
             if (TextUtils.isEmpty(str) || resultReceiver == null) {
                 return;
             }
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass9(serviceCallbacks, str, bundle, resultReceiver));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04989(serviceCallbacks, str, bundle, resultReceiver));
         }
 
         public void unregisterCallbacks(ServiceCallbacks serviceCallbacks) {
-            MediaBrowserServiceCompat.this.mHandler.postOrRun(new AnonymousClass7(serviceCallbacks));
+            MediaBrowserServiceCompat.this.mHandler.postOrRun(new RunnableC04967(serviceCallbacks));
         }
     }
 
@@ -1416,7 +1416,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             switch (message.what) {
                 case 1:
                     Bundle bundle = data.getBundle(MediaBrowserProtocol.DATA_ROOT_HINTS);
-                    MediaSessionCompat.a(bundle);
+                    MediaSessionCompat.m40a(bundle);
                     this.mServiceBinderImpl.connect(data.getString(MediaBrowserProtocol.DATA_PACKAGE_NAME), data.getInt(MediaBrowserProtocol.DATA_CALLING_PID), data.getInt(MediaBrowserProtocol.DATA_CALLING_UID), bundle, new ServiceCallbacksCompat(message.replyTo));
                     break;
                 case 2:
@@ -1424,7 +1424,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                     break;
                 case 3:
                     Bundle bundle2 = data.getBundle(MediaBrowserProtocol.DATA_OPTIONS);
-                    MediaSessionCompat.a(bundle2);
+                    MediaSessionCompat.m40a(bundle2);
                     this.mServiceBinderImpl.addSubscription(data.getString(MediaBrowserProtocol.DATA_MEDIA_ITEM_ID), BundleCompat.getBinder(data, MediaBrowserProtocol.DATA_CALLBACK_TOKEN), bundle2, new ServiceCallbacksCompat(message.replyTo));
                     break;
                 case 4:
@@ -1435,7 +1435,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                     break;
                 case 6:
                     Bundle bundle3 = data.getBundle(MediaBrowserProtocol.DATA_ROOT_HINTS);
-                    MediaSessionCompat.a(bundle3);
+                    MediaSessionCompat.m40a(bundle3);
                     this.mServiceBinderImpl.registerCallbacks(new ServiceCallbacksCompat(message.replyTo), data.getString(MediaBrowserProtocol.DATA_PACKAGE_NAME), data.getInt(MediaBrowserProtocol.DATA_CALLING_PID), data.getInt(MediaBrowserProtocol.DATA_CALLING_UID), bundle3);
                     break;
                 case 7:
@@ -1443,12 +1443,12 @@ public abstract class MediaBrowserServiceCompat extends Service {
                     break;
                 case 8:
                     Bundle bundle4 = data.getBundle(MediaBrowserProtocol.DATA_SEARCH_EXTRAS);
-                    MediaSessionCompat.a(bundle4);
+                    MediaSessionCompat.m40a(bundle4);
                     this.mServiceBinderImpl.search(data.getString(MediaBrowserProtocol.DATA_SEARCH_QUERY), bundle4, (ResultReceiver) data.getParcelable(MediaBrowserProtocol.DATA_RESULT_RECEIVER), new ServiceCallbacksCompat(message.replyTo));
                     break;
                 case 9:
                     Bundle bundle5 = data.getBundle(MediaBrowserProtocol.DATA_CUSTOM_ACTION_EXTRAS);
-                    MediaSessionCompat.a(bundle5);
+                    MediaSessionCompat.m40a(bundle5);
                     this.mServiceBinderImpl.sendCustomAction(data.getString(MediaBrowserProtocol.DATA_CUSTOM_ACTION), bundle5, (ResultReceiver) data.getParcelable(MediaBrowserProtocol.DATA_RESULT_RECEIVER), new ServiceCallbacksCompat(message.replyTo));
                     break;
                 default:
@@ -1614,47 +1614,47 @@ public abstract class MediaBrowserServiceCompat extends Service {
     }
 
     public void performCustomAction(String str, Bundle bundle, ConnectionRecord connectionRecord, ResultReceiver resultReceiver) {
-        AnonymousClass4 anonymousClass4 = new AnonymousClass4(str, resultReceiver);
+        C04794 c04794 = new C04794(str, resultReceiver);
         this.mCurConnection = connectionRecord;
-        onCustomAction(str, bundle, anonymousClass4);
+        onCustomAction(str, bundle, c04794);
         this.mCurConnection = null;
-        if (anonymousClass4.isDone()) {
+        if (c04794.isDone()) {
             return;
         }
         throw new IllegalStateException("onCustomAction must call detach() or sendResult() or sendError() before returning for action=" + str + " extras=" + bundle);
     }
 
     public void performLoadChildren(String str, ConnectionRecord connectionRecord, Bundle bundle, Bundle bundle2) {
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(str, connectionRecord, str, bundle, bundle2);
+        C04761 c04761 = new C04761(str, connectionRecord, str, bundle, bundle2);
         this.mCurConnection = connectionRecord;
         if (bundle == null) {
-            onLoadChildren(str, anonymousClass1);
+            onLoadChildren(str, c04761);
         } else {
-            onLoadChildren(str, anonymousClass1, bundle);
+            onLoadChildren(str, c04761, bundle);
         }
         this.mCurConnection = null;
-        if (!anonymousClass1.isDone()) {
-            throw new IllegalStateException(a.K(a.U("onLoadChildren must call detach() or sendResult() before returning for package="), connectionRecord.pkg, " id=", str));
+        if (!c04761.isDone()) {
+            throw new IllegalStateException(outline.m823K(outline.m833U("onLoadChildren must call detach() or sendResult() before returning for package="), connectionRecord.pkg, " id=", str));
         }
     }
 
     public void performLoadItem(String str, ConnectionRecord connectionRecord, ResultReceiver resultReceiver) {
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2(str, resultReceiver);
+        C04772 c04772 = new C04772(str, resultReceiver);
         this.mCurConnection = connectionRecord;
-        onLoadItem(str, anonymousClass2);
+        onLoadItem(str, c04772);
         this.mCurConnection = null;
-        if (!anonymousClass2.isDone()) {
-            throw new IllegalStateException(a.w("onLoadItem must call detach() or sendResult() before returning for id=", str));
+        if (!c04772.isDone()) {
+            throw new IllegalStateException(outline.m883w("onLoadItem must call detach() or sendResult() before returning for id=", str));
         }
     }
 
     public void performSearch(String str, Bundle bundle, ConnectionRecord connectionRecord, ResultReceiver resultReceiver) {
-        AnonymousClass3 anonymousClass3 = new AnonymousClass3(str, resultReceiver);
+        C04783 c04783 = new C04783(str, resultReceiver);
         this.mCurConnection = connectionRecord;
-        onSearch(str, bundle, anonymousClass3);
+        onSearch(str, bundle, c04783);
         this.mCurConnection = null;
-        if (!anonymousClass3.isDone()) {
-            throw new IllegalStateException(a.w("onSearch must call detach() or sendResult() before returning for query=", str));
+        if (!c04783.isDone()) {
+            throw new IllegalStateException(outline.m883w("onSearch must call detach() or sendResult() before returning for query=", str));
         }
     }
 

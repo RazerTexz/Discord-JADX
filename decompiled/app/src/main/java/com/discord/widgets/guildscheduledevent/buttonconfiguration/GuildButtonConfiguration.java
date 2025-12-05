@@ -2,17 +2,17 @@ package com.discord.widgets.guildscheduledevent.buttonconfiguration;
 
 import android.content.Context;
 import android.view.View;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.guildscheduledevent.GuildScheduledEventEntityType;
 import com.discord.api.guildscheduledevent.GuildScheduledEventStatus;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventTiming;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt;
-import d0.z.d.m;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities2;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities5;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildButtonConfiguration.kt */
 /* loaded from: classes2.dex */
@@ -47,10 +47,10 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
     private final int secondaryButtonTextDrawableRes;
     private final boolean secondaryButtonVisible;
     private final View.OnClickListener shareButtonOnClickListener;
-    private final GuildScheduledEventTiming timing;
+    private final GuildScheduledEventUtilities2 timing;
 
     public GuildButtonConfiguration(GuildScheduledEvent guildScheduledEvent, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, View.OnClickListener onClickListener, View.OnClickListener onClickListener2, View.OnClickListener onClickListener3, View.OnClickListener onClickListener4, View.OnClickListener onClickListener5, View.OnClickListener onClickListener6) {
-        m.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
+        Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
         this.guildScheduledEvent = guildScheduledEvent;
         this.canRsvp = z2;
         this.canStartEvent = z3;
@@ -66,12 +66,12 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
         this.onStartEventButtonClicked = onClickListener4;
         this.onShareButtonClicked = onClickListener5;
         this.onExtraButtonClicked = onClickListener6;
-        GuildScheduledEventTiming eventTiming = GuildScheduledEventUtilitiesKt.getEventTiming(guildScheduledEvent);
+        GuildScheduledEventUtilities2 eventTiming = GuildScheduledEventUtilities5.getEventTiming(guildScheduledEvent);
         this.timing = eventTiming;
         boolean z9 = true;
         boolean z10 = guildScheduledEvent.getStatus() == GuildScheduledEventStatus.COMPLETED;
         this.isEventComplete = z10;
-        boolean z11 = eventTiming == GuildScheduledEventTiming.LIVE;
+        boolean z11 = eventTiming == GuildScheduledEventUtilities2.LIVE;
         this.isEventActive = z11;
         this.canConnectToChannel = z5;
         boolean z12 = z8 && z11 && z4 && z3;
@@ -86,16 +86,16 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
         }
         this.secondaryButtonOnClickListener = onClickListener7;
         this.secondaryButtonEnabled = !z10 && (!z11 || (guildScheduledEvent.getEntityType() != GuildScheduledEventEntityType.EXTERNAL && z5));
-        this.secondaryButtonTextDrawableRes = (z11 || !getSecondaryButtonEnabled()) ? 0 : z7 ? R.drawable.ic_check_active_16dp : R.drawable.ic_bell_16dp;
+        this.secondaryButtonTextDrawableRes = (z11 || !getSecondaryButtonEnabled()) ? 0 : z7 ? C5419R.drawable.ic_check_active_16dp : C5419R.drawable.ic_bell_16dp;
         boolean secondaryButtonEnabled = getSecondaryButtonEnabled();
-        int i = R.drawable.bg_guild_scheduled_event_list_item_interested_button_default;
+        int i = C5419R.drawable.bg_guild_scheduled_event_list_item_interested_button_default;
         if (!secondaryButtonEnabled) {
-            i = R.drawable.bg_guild_scheduled_event_list_item_interested_button_disabled;
+            i = C5419R.drawable.bg_guild_scheduled_event_list_item_interested_button_disabled;
         } else if (!z12) {
             if (z11) {
-                i = R.drawable.bg_guild_scheduled_event_list_item_interested_button_active;
+                i = C5419R.drawable.bg_guild_scheduled_event_list_item_interested_button_active;
             } else if (z7) {
-                i = R.drawable.bg_guild_scheduled_event_list_item_interested_button_interested;
+                i = C5419R.drawable.bg_guild_scheduled_event_list_item_interested_button_interested;
             }
         }
         this.secondaryButtonBackground = i;
@@ -184,7 +184,7 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
     }
 
     public final GuildButtonConfiguration copy(GuildScheduledEvent guildScheduledEvent, boolean canRsvp, boolean canStartEvent, boolean isConnected, boolean canConnect, boolean isInGuild, boolean isRsvped, boolean isDetailView, View.OnClickListener onRsvpButtonClicked, View.OnClickListener onJoinButtonClicked, View.OnClickListener onEndEventButtonClicked, View.OnClickListener onStartEventButtonClicked, View.OnClickListener onShareButtonClicked, View.OnClickListener onExtraButtonClicked) {
-        m.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
+        Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
         return new GuildButtonConfiguration(guildScheduledEvent, canRsvp, canStartEvent, isConnected, canConnect, isInGuild, isRsvped, isDetailView, onRsvpButtonClicked, onJoinButtonClicked, onEndEventButtonClicked, onStartEventButtonClicked, onShareButtonClicked, onExtraButtonClicked);
     }
 
@@ -196,7 +196,7 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
             return false;
         }
         GuildButtonConfiguration guildButtonConfiguration = (GuildButtonConfiguration) other;
-        return m.areEqual(this.guildScheduledEvent, guildButtonConfiguration.guildScheduledEvent) && this.canRsvp == guildButtonConfiguration.canRsvp && this.canStartEvent == guildButtonConfiguration.canStartEvent && this.isConnected == guildButtonConfiguration.isConnected && this.canConnect == guildButtonConfiguration.canConnect && this.isInGuild == guildButtonConfiguration.isInGuild && this.isRsvped == guildButtonConfiguration.isRsvped && this.isDetailView == guildButtonConfiguration.isDetailView && m.areEqual(this.onRsvpButtonClicked, guildButtonConfiguration.onRsvpButtonClicked) && m.areEqual(this.onJoinButtonClicked, guildButtonConfiguration.onJoinButtonClicked) && m.areEqual(this.onEndEventButtonClicked, guildButtonConfiguration.onEndEventButtonClicked) && m.areEqual(this.onStartEventButtonClicked, guildButtonConfiguration.onStartEventButtonClicked) && m.areEqual(this.onShareButtonClicked, guildButtonConfiguration.onShareButtonClicked) && m.areEqual(this.onExtraButtonClicked, guildButtonConfiguration.onExtraButtonClicked);
+        return Intrinsics3.areEqual(this.guildScheduledEvent, guildButtonConfiguration.guildScheduledEvent) && this.canRsvp == guildButtonConfiguration.canRsvp && this.canStartEvent == guildButtonConfiguration.canStartEvent && this.isConnected == guildButtonConfiguration.isConnected && this.canConnect == guildButtonConfiguration.canConnect && this.isInGuild == guildButtonConfiguration.isInGuild && this.isRsvped == guildButtonConfiguration.isRsvped && this.isDetailView == guildButtonConfiguration.isDetailView && Intrinsics3.areEqual(this.onRsvpButtonClicked, guildButtonConfiguration.onRsvpButtonClicked) && Intrinsics3.areEqual(this.onJoinButtonClicked, guildButtonConfiguration.onJoinButtonClicked) && Intrinsics3.areEqual(this.onEndEventButtonClicked, guildButtonConfiguration.onEndEventButtonClicked) && Intrinsics3.areEqual(this.onStartEventButtonClicked, guildButtonConfiguration.onStartEventButtonClicked) && Intrinsics3.areEqual(this.onShareButtonClicked, guildButtonConfiguration.onShareButtonClicked) && Intrinsics3.areEqual(this.onExtraButtonClicked, guildButtonConfiguration.onExtraButtonClicked);
     }
 
     public final boolean getCanConnect() {
@@ -376,60 +376,60 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
     public CharSequence primaryButtonText(Context context) {
-        m.checkNotNullParameter(context, "context");
-        return b.h(context, R.string.start_event, new Object[0], null, 4);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        return FormatUtils.m216h(context, C5419R.string.start_event, new Object[0], null, 4);
     }
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
     public CharSequence secondaryButtonText(Context context) {
         int i;
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         if (this.isEventActive && this.guildScheduledEvent.getEntityType() == GuildScheduledEventEntityType.EXTERNAL) {
-            i = R.string.guild_event_started;
+            i = C5419R.string.guild_event_started;
         } else {
             boolean z2 = this.isEventActive;
-            i = (!z2 || this.canConnectToChannel) ? this.isEndEventVisible ? R.string.end_event : (z2 && this.isConnected) ? R.string.go_to_channel : (z2 && this.guildScheduledEvent.getEntityType() == GuildScheduledEventEntityType.VOICE) ? R.string.guild_event_join : this.isEventActive ? R.string.stage_channel_join_button : this.isEventComplete ? R.string.guild_event_invite_completed : R.string.indicate_rsvp : R.string.channel_locked_short;
+            i = (!z2 || this.canConnectToChannel) ? this.isEndEventVisible ? C5419R.string.end_event : (z2 && this.isConnected) ? C5419R.string.go_to_channel : (z2 && this.guildScheduledEvent.getEntityType() == GuildScheduledEventEntityType.VOICE) ? C5419R.string.guild_event_join : this.isEventActive ? C5419R.string.stage_channel_join_button : this.isEventComplete ? C5419R.string.guild_event_invite_completed : C5419R.string.indicate_rsvp : C5419R.string.channel_locked_short;
         }
-        return b.h(context, i, new Object[0], null, 4);
+        return FormatUtils.m216h(context, i, new Object[0], null, 4);
     }
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
     public int secondaryButtonTextColor(Context context) {
-        m.checkNotNullParameter(context, "context");
-        return !getSecondaryButtonEnabled() ? ColorCompat.getColor(context, R.color.white_alpha_40) : (!this.isRsvped || this.isEventActive || this.isEventComplete) ? ColorCompat.getColor(context, R.color.white) : ColorCompat.getThemedColor(context, R.attr.colorBackgroundAccent);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        return !getSecondaryButtonEnabled() ? ColorCompat.getColor(context, C5419R.color.white_alpha_40) : (!this.isRsvped || this.isEventActive || this.isEventComplete) ? ColorCompat.getColor(context, C5419R.color.white) : ColorCompat.getThemedColor(context, C5419R.attr.colorBackgroundAccent);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildButtonConfiguration(guildScheduledEvent=");
-        sbU.append(this.guildScheduledEvent);
-        sbU.append(", canRsvp=");
-        sbU.append(this.canRsvp);
-        sbU.append(", canStartEvent=");
-        sbU.append(this.canStartEvent);
-        sbU.append(", isConnected=");
-        sbU.append(this.isConnected);
-        sbU.append(", canConnect=");
-        sbU.append(this.canConnect);
-        sbU.append(", isInGuild=");
-        sbU.append(this.isInGuild);
-        sbU.append(", isRsvped=");
-        sbU.append(this.isRsvped);
-        sbU.append(", isDetailView=");
-        sbU.append(this.isDetailView);
-        sbU.append(", onRsvpButtonClicked=");
-        sbU.append(this.onRsvpButtonClicked);
-        sbU.append(", onJoinButtonClicked=");
-        sbU.append(this.onJoinButtonClicked);
-        sbU.append(", onEndEventButtonClicked=");
-        sbU.append(this.onEndEventButtonClicked);
-        sbU.append(", onStartEventButtonClicked=");
-        sbU.append(this.onStartEventButtonClicked);
-        sbU.append(", onShareButtonClicked=");
-        sbU.append(this.onShareButtonClicked);
-        sbU.append(", onExtraButtonClicked=");
-        sbU.append(this.onExtraButtonClicked);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("GuildButtonConfiguration(guildScheduledEvent=");
+        sbM833U.append(this.guildScheduledEvent);
+        sbM833U.append(", canRsvp=");
+        sbM833U.append(this.canRsvp);
+        sbM833U.append(", canStartEvent=");
+        sbM833U.append(this.canStartEvent);
+        sbM833U.append(", isConnected=");
+        sbM833U.append(this.isConnected);
+        sbM833U.append(", canConnect=");
+        sbM833U.append(this.canConnect);
+        sbM833U.append(", isInGuild=");
+        sbM833U.append(this.isInGuild);
+        sbM833U.append(", isRsvped=");
+        sbM833U.append(this.isRsvped);
+        sbM833U.append(", isDetailView=");
+        sbM833U.append(this.isDetailView);
+        sbM833U.append(", onRsvpButtonClicked=");
+        sbM833U.append(this.onRsvpButtonClicked);
+        sbM833U.append(", onJoinButtonClicked=");
+        sbM833U.append(this.onJoinButtonClicked);
+        sbM833U.append(", onEndEventButtonClicked=");
+        sbM833U.append(this.onEndEventButtonClicked);
+        sbM833U.append(", onStartEventButtonClicked=");
+        sbM833U.append(this.onStartEventButtonClicked);
+        sbM833U.append(", onShareButtonClicked=");
+        sbM833U.append(this.onShareButtonClicked);
+        sbM833U.append(", onExtraButtonClicked=");
+        sbM833U.append(this.onExtraButtonClicked);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public /* synthetic */ GuildButtonConfiguration(GuildScheduledEvent guildScheduledEvent, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, View.OnClickListener onClickListener, View.OnClickListener onClickListener2, View.OnClickListener onClickListener3, View.OnClickListener onClickListener4, View.OnClickListener onClickListener5, View.OnClickListener onClickListener6, int i, DefaultConstructorMarker defaultConstructorMarker) {

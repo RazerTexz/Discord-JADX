@@ -1,18 +1,18 @@
 package com.discord.widgets.home;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.user.NsfwAllowance;
 import com.discord.models.presence.Presence;
 import com.discord.stores.StoreChannelsSelected;
 import com.discord.stores.StoreStream;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
-import j0.l.e.k;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import java.util.concurrent.TimeUnit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
 
 /* compiled from: WidgetHomeModel.kt */
 /* loaded from: classes2.dex */
@@ -40,28 +40,28 @@ public final /* data */ class WidgetHomeModel {
 
         public final Observable<WidgetHomeModel> get() {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable observableY = Observable.j(companion.getGuildSelected().observeSelectedGuildId(), companion.getChannelsSelected().observeResolvedSelectedChannel(), WidgetHomeModel$Companion$get$1.INSTANCE).Y(WidgetHomeModel$Companion$get$2.INSTANCE);
-            m.checkNotNullExpressionValue(observableY, "Observable.combineLatest…            )\n          }");
-            Observable<WidgetHomeModel> observableR = ObservableExtensionsKt.computationLatest(observableY).r();
-            m.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
-            return observableR;
+            Observable observableM11099Y = Observable.m11076j(companion.getGuildSelected().observeSelectedGuildId(), companion.getChannelsSelected().observeResolvedSelectedChannel(), WidgetHomeModel2.INSTANCE).m11099Y(WidgetHomeModel3.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "Observable.combineLatest…            )\n          }");
+            Observable<WidgetHomeModel> observableM11112r = ObservableExtensionsKt.computationLatest(observableM11099Y).m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r, "Observable.combineLatest…  .distinctUntilChanged()");
+            return observableM11112r;
         }
 
         public final Observable<Boolean> getInitialized() {
-            Observable<Boolean> observableQ = StoreStream.INSTANCE.isInitializedObservable().q(150L, TimeUnit.MILLISECONDS);
-            m.checkNotNullExpressionValue(observableQ, "StoreStream\n          .i…0, TimeUnit.MILLISECONDS)");
-            return observableQ;
+            Observable<Boolean> observableM11111q = StoreStream.INSTANCE.isInitializedObservable().m11111q(150L, TimeUnit.MILLISECONDS);
+            Intrinsics3.checkNotNullExpressionValue(observableM11111q, "StoreStream\n          .i…0, TimeUnit.MILLISECONDS)");
+            return observableM11111q;
         }
 
         public final Observable<Channel> getParentChannelObservable(Channel channel) {
-            if (channel == null || ChannelUtils.H(channel)) {
+            if (channel == null || ChannelUtils.m7673H(channel)) {
                 if ((channel != null ? Long.valueOf(channel.getParentId()) : null) != null) {
                     return StoreStream.INSTANCE.getChannels().observeChannel(channel.getParentId());
                 }
             }
-            k kVar = new k(null);
-            m.checkNotNullExpressionValue(kVar, "Observable.just(null)");
-            return kVar;
+            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(null);
+            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(null)");
+            return scalarSynchronousObservable;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -70,7 +70,7 @@ public final /* data */ class WidgetHomeModel {
     }
 
     public WidgetHomeModel(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel, Channel channel, Channel channel2, Presence presence, int i, boolean z2, boolean z3, NsfwAllowance nsfwAllowance, int i2, boolean z4) {
-        m.checkNotNullParameter(resolvedSelectedChannel, "selectedChannel");
+        Intrinsics3.checkNotNullParameter(resolvedSelectedChannel, "selectedChannel");
         this.selectedChannel = resolvedSelectedChannel;
         this.selectedVoiceChannel = channel;
         this.parentChannel = channel2;
@@ -141,7 +141,7 @@ public final /* data */ class WidgetHomeModel {
     }
 
     public final WidgetHomeModel copy(StoreChannelsSelected.ResolvedSelectedChannel selectedChannel, Channel selectedVoiceChannel, Channel parentChannel, Presence dmPresence, int unreadCount, boolean isFriend, boolean isCallConnected, NsfwAllowance nsfwAllowed, int threadCount, boolean threadExperimentEnabled) {
-        m.checkNotNullParameter(selectedChannel, "selectedChannel");
+        Intrinsics3.checkNotNullParameter(selectedChannel, "selectedChannel");
         return new WidgetHomeModel(selectedChannel, selectedVoiceChannel, parentChannel, dmPresence, unreadCount, isFriend, isCallConnected, nsfwAllowed, threadCount, threadExperimentEnabled);
     }
 
@@ -153,7 +153,7 @@ public final /* data */ class WidgetHomeModel {
             return false;
         }
         WidgetHomeModel widgetHomeModel = (WidgetHomeModel) other;
-        return m.areEqual(this.selectedChannel, widgetHomeModel.selectedChannel) && m.areEqual(this.selectedVoiceChannel, widgetHomeModel.selectedVoiceChannel) && m.areEqual(this.parentChannel, widgetHomeModel.parentChannel) && m.areEqual(this.dmPresence, widgetHomeModel.dmPresence) && this.unreadCount == widgetHomeModel.unreadCount && this.isFriend == widgetHomeModel.isFriend && this.isCallConnected == widgetHomeModel.isCallConnected && m.areEqual(this.nsfwAllowed, widgetHomeModel.nsfwAllowed) && this.threadCount == widgetHomeModel.threadCount && this.threadExperimentEnabled == widgetHomeModel.threadExperimentEnabled;
+        return Intrinsics3.areEqual(this.selectedChannel, widgetHomeModel.selectedChannel) && Intrinsics3.areEqual(this.selectedVoiceChannel, widgetHomeModel.selectedVoiceChannel) && Intrinsics3.areEqual(this.parentChannel, widgetHomeModel.parentChannel) && Intrinsics3.areEqual(this.dmPresence, widgetHomeModel.dmPresence) && this.unreadCount == widgetHomeModel.unreadCount && this.isFriend == widgetHomeModel.isFriend && this.isCallConnected == widgetHomeModel.isCallConnected && Intrinsics3.areEqual(this.nsfwAllowed, widgetHomeModel.nsfwAllowed) && this.threadCount == widgetHomeModel.threadCount && this.threadExperimentEnabled == widgetHomeModel.threadExperimentEnabled;
     }
 
     public final Channel getChannel() {
@@ -242,25 +242,25 @@ public final /* data */ class WidgetHomeModel {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("WidgetHomeModel(selectedChannel=");
-        sbU.append(this.selectedChannel);
-        sbU.append(", selectedVoiceChannel=");
-        sbU.append(this.selectedVoiceChannel);
-        sbU.append(", parentChannel=");
-        sbU.append(this.parentChannel);
-        sbU.append(", dmPresence=");
-        sbU.append(this.dmPresence);
-        sbU.append(", unreadCount=");
-        sbU.append(this.unreadCount);
-        sbU.append(", isFriend=");
-        sbU.append(this.isFriend);
-        sbU.append(", isCallConnected=");
-        sbU.append(this.isCallConnected);
-        sbU.append(", nsfwAllowed=");
-        sbU.append(this.nsfwAllowed);
-        sbU.append(", threadCount=");
-        sbU.append(this.threadCount);
-        sbU.append(", threadExperimentEnabled=");
-        return a.O(sbU, this.threadExperimentEnabled, ")");
+        StringBuilder sbM833U = outline.m833U("WidgetHomeModel(selectedChannel=");
+        sbM833U.append(this.selectedChannel);
+        sbM833U.append(", selectedVoiceChannel=");
+        sbM833U.append(this.selectedVoiceChannel);
+        sbM833U.append(", parentChannel=");
+        sbM833U.append(this.parentChannel);
+        sbM833U.append(", dmPresence=");
+        sbM833U.append(this.dmPresence);
+        sbM833U.append(", unreadCount=");
+        sbM833U.append(this.unreadCount);
+        sbM833U.append(", isFriend=");
+        sbM833U.append(this.isFriend);
+        sbM833U.append(", isCallConnected=");
+        sbM833U.append(this.isCallConnected);
+        sbM833U.append(", nsfwAllowed=");
+        sbM833U.append(this.nsfwAllowed);
+        sbM833U.append(", threadCount=");
+        sbM833U.append(this.threadCount);
+        sbM833U.append(", threadExperimentEnabled=");
+        return outline.m827O(sbM833U, this.threadExperimentEnabled, ")");
     }
 }

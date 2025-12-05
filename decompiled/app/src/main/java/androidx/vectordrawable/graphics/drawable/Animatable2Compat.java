@@ -12,9 +12,9 @@ public interface Animatable2Compat extends Animatable {
     public static abstract class AnimationCallback {
         public Animatable2.AnimationCallback mPlatformCallback;
 
-        /* renamed from: androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback$1, reason: invalid class name */
-        public class AnonymousClass1 extends Animatable2.AnimationCallback {
-            public AnonymousClass1() {
+        /* renamed from: androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback$1 */
+        public class C06761 extends Animatable2.AnimationCallback {
+            public C06761() {
             }
 
             @Override // android.graphics.drawable.Animatable2.AnimationCallback
@@ -31,7 +31,7 @@ public interface Animatable2Compat extends Animatable {
         @RequiresApi(23)
         public Animatable2.AnimationCallback getPlatformCallback() {
             if (this.mPlatformCallback == null) {
-                this.mPlatformCallback = new AnonymousClass1();
+                this.mPlatformCallback = new C06761();
             }
             return this.mPlatformCallback;
         }

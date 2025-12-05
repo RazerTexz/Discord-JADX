@@ -1,12 +1,11 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.InputChunked;
-import com.esotericsoftware.kryo.io.Output;
-import com.esotericsoftware.kryo.io.OutputChunked;
+import com.esotericsoftware.kryo.p502io.Input;
+import com.esotericsoftware.kryo.p502io.InputChunked;
+import com.esotericsoftware.kryo.p502io.Output;
+import com.esotericsoftware.kryo.p502io.OutputChunked;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,17 +14,19 @@ import java.lang.annotation.Target;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.Comparator;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p106e.p107a.Log;
 
 /* loaded from: classes.dex */
 public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
-    private static final Comparator<FieldSerializer.CachedField> TAGGED_VALUE_COMPARATOR = new AnonymousClass1();
+    private static final Comparator<FieldSerializer.CachedField> TAGGED_VALUE_COMPARATOR = new C106271();
     private boolean[] annexed;
     private boolean[] deprecated;
     private int[] tags;
     private int writeFieldCount;
 
-    /* renamed from: com.esotericsoftware.kryo.serializers.TaggedFieldSerializer$1, reason: invalid class name */
-    public static class AnonymousClass1 implements Comparator<FieldSerializer.CachedField> {
+    /* renamed from: com.esotericsoftware.kryo.serializers.TaggedFieldSerializer$1 */
+    public static class C106271 implements Comparator<FieldSerializer.CachedField> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(FieldSerializer.CachedField cachedField, FieldSerializer.CachedField cachedField2) {
             return compare2(cachedField, cachedField2);
@@ -55,7 +56,7 @@ public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
         int length = fields.length;
         for (int i = 0; i < length; i++) {
             if (fields[i].getField().getAnnotation(Tag.class) == null) {
-                a.C0064a c0064a = a.a;
+                Log.a aVar = Log.f3007a;
                 super.removeField(fields[i]);
             }
         }
@@ -125,16 +126,16 @@ public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
             }
             if (cachedField == null) {
                 if (!isSkipUnknownTags()) {
-                    StringBuilder sbV = b.d.b.a.a.V("Unknown field tag: ", varInt2, " (");
-                    sbV.append(getType().getName());
-                    sbV.append(")");
-                    throw new KryoException(sbV.toString());
+                    StringBuilder sbM834V = outline.m834V("Unknown field tag: ", varInt2, " (");
+                    sbM834V.append(getType().getName());
+                    sbM834V.append(")");
+                    throw new KryoException(sbM834V.toString());
                 }
                 if (inputChunked == null) {
                     inputChunked = new InputChunked(input, 1024);
                 }
                 inputChunked.nextChunks();
-                a.C0064a c0064a = a.a;
+                Log.a aVar = Log.f3007a;
             } else if (z2) {
                 if (inputChunked == null) {
                     inputChunked = new InputChunked(input, 1024);

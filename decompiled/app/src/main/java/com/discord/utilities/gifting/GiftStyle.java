@@ -2,20 +2,20 @@ package com.discord.utilities.gifting;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.RawRes;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelGift;
-import d0.g;
-import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GiftStyle.kt */
 /* loaded from: classes2.dex */
 public enum GiftStyle {
-    WumpusGlobe(1, R.drawable.gift_wumpus_snowglobe, R.raw.anim_gift_wumpus_globe),
-    WumpusBox(2, R.drawable.gift_wumpus_box, R.raw.anim_gift_wumpus_box),
-    WumpusLatte(3, R.drawable.gift_wumpus_latte, R.raw.anim_gift_wumpus_latte);
+    WumpusGlobe(1, C5419R.drawable.gift_wumpus_snowglobe, C5419R.raw.anim_gift_wumpus_globe),
+    WumpusBox(2, C5419R.drawable.gift_wumpus_box, C5419R.raw.anim_gift_wumpus_box),
+    WumpusLatte(3, C5419R.drawable.gift_wumpus_latte, C5419R.raw.anim_gift_wumpus_latte);
 
     private final int animRes;
     private final int id;
@@ -23,7 +23,7 @@ public enum GiftStyle {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy values$delegate = g.lazy(GiftStyle$Companion$values$2.INSTANCE);
+    private static final Lazy values$delegate = LazyJVM.lazy(GiftStyle2.INSTANCE);
 
     /* compiled from: GiftStyle.kt */
     public static final class Companion {
@@ -37,7 +37,7 @@ public enum GiftStyle {
         }
 
         public final GiftStyle from(ModelGift gift) {
-            m.checkNotNullParameter(gift, "gift");
+            Intrinsics3.checkNotNullParameter(gift, "gift");
             for (GiftStyle giftStyle : getValues()) {
                 int id2 = giftStyle.getId();
                 Integer giftStyle2 = gift.getGiftStyle();

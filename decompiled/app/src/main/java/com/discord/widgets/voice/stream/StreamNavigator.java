@@ -4,10 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.projection.MediaProjectionManager;
 import androidx.fragment.app.Fragment;
-import d0.z.d.m;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: StreamNavigator.kt */
 /* loaded from: classes.dex */
@@ -19,7 +19,7 @@ public final class StreamNavigator {
     }
 
     public static final void handleActivityResult(int requestCode, int resultCode, Intent data, Function1<? super Intent, Unit> intentCallback) {
-        m.checkNotNullParameter(intentCallback, "intentCallback");
+        Intrinsics3.checkNotNullParameter(intentCallback, "intentCallback");
         if (resultCode == -1 && requestCode == START_SCREENSHARE_REQUEST_CODE && data != null) {
             intentCallback.invoke(data);
         }
@@ -30,7 +30,7 @@ public final class StreamNavigator {
         if (fragment == null || (contextRequireContext = fragment.requireContext()) == null) {
             return;
         }
-        m.checkNotNullExpressionValue(contextRequireContext, "fragment?.requireContext() ?: return");
+        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "fragment?.requireContext() ?: return");
         Object systemService = contextRequireContext.getSystemService("media_projection");
         Objects.requireNonNull(systemService, "null cannot be cast to non-null type android.media.projection.MediaProjectionManager");
         fragment.startActivityForResult(((MediaProjectionManager) systemService).createScreenCaptureIntent(), START_SCREENSHARE_REQUEST_CODE);

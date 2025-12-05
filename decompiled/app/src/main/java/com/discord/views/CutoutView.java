@@ -11,18 +11,24 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.IntRange;
 import androidx.annotation.Px;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.dimen.DimenUtils;
-import d0.z.d.m;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: CutoutView.kt */
 /* loaded from: classes2.dex */
 public class CutoutView extends FrameLayout {
-    public static final int j = DimenUtils.dpToPixels(14);
-    public static final int k = DimenUtils.dpToPixels(8);
+
+    /* renamed from: j */
+    public static final int f19050j = DimenUtils.dpToPixels(14);
+
+    /* renamed from: k */
+    public static final int f19051k = DimenUtils.dpToPixels(8);
 
     /* renamed from: l, reason: from kotlin metadata */
-    public a style;
+    public InterfaceC7075a style;
 
     /* renamed from: m, reason: from kotlin metadata */
     public boolean isCutoutEnabled;
@@ -39,16 +45,16 @@ public class CutoutView extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CutoutView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        this.style = a.d.a;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        this.style = InterfaceC7075a.d.f19062a;
         this.isCutoutEnabled = true;
         setWillNotDraw(false);
-        int[] iArr = R.a.CutoutView;
-        m.checkNotNullExpressionValue(iArr, "R.styleable.CutoutView");
+        int[] iArr = C5419R.a.CutoutView;
+        Intrinsics3.checkNotNullExpressionValue(iArr, "R.styleable.CutoutView");
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr);
-        m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(attrs, styleable)");
+        Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(attrs, styleable)");
         if (typedArrayObtainStyledAttributes.getInt(2, 0) == 1) {
-            setStyle(new a.C0353a(typedArrayObtainStyledAttributes.getDimensionPixelSize(1, j), typedArrayObtainStyledAttributes.getDimensionPixelSize(0, k)));
+            setStyle(new InterfaceC7075a.a(typedArrayObtainStyledAttributes.getDimensionPixelSize(1, f19050j), typedArrayObtainStyledAttributes.getDimensionPixelSize(0, f19051k)));
         }
         typedArrayObtainStyledAttributes.recycle();
     }
@@ -56,7 +62,7 @@ public class CutoutView extends FrameLayout {
     @Override // android.view.View
     public void draw(Canvas canvas) {
         Path path;
-        m.checkNotNullParameter(canvas, "canvas");
+        Intrinsics3.checkNotNullParameter(canvas, "canvas");
         int iSave = canvas.save();
         try {
             if (this.isCutoutEnabled && (path = this.drawBounds) != null) {
@@ -68,7 +74,7 @@ public class CutoutView extends FrameLayout {
         }
     }
 
-    public final a getStyle() {
+    public final InterfaceC7075a getStyle() {
         return this.style;
     }
 
@@ -80,7 +86,7 @@ public class CutoutView extends FrameLayout {
                 View view = new View(getContext());
                 view.setBackgroundColor((int) 4278255360L);
                 addView(view);
-                setStyle(new a.C0353a(0, 0, 3));
+                setStyle(new InterfaceC7075a.a(0, 0, 3));
             }
         }
     }
@@ -95,10 +101,10 @@ public class CutoutView extends FrameLayout {
         }
         this.lastWidth = measuredWidth;
         this.lastHeight = measuredHeight;
-        a aVar = this.style;
+        InterfaceC7075a interfaceC7075a = this.style;
         Context context = getContext();
-        m.checkNotNullExpressionValue(context, "context");
-        this.drawBounds = aVar.a(context, measuredWidth, measuredHeight);
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        this.drawBounds = interfaceC7075a.mo8543a(context, measuredWidth, measuredHeight);
     }
 
     public final void setCutoutEnabled(boolean z2) {
@@ -108,44 +114,49 @@ public class CutoutView extends FrameLayout {
         }
     }
 
-    public final void setStyle(a aVar) {
-        m.checkNotNullParameter(aVar, "value");
-        this.style = aVar;
+    public final void setStyle(InterfaceC7075a interfaceC7075a) {
+        Intrinsics3.checkNotNullParameter(interfaceC7075a, "value");
+        this.style = interfaceC7075a;
         if (this.lastWidth <= 0 || this.lastHeight <= 0) {
             return;
         }
         Context context = getContext();
-        m.checkNotNullExpressionValue(context, "context");
-        this.drawBounds = aVar.a(context, this.lastWidth, this.lastHeight);
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        this.drawBounds = interfaceC7075a.mo8543a(context, this.lastWidth, this.lastHeight);
         invalidate();
     }
 
     /* compiled from: CutoutView.kt */
-    public interface a {
+    /* renamed from: com.discord.views.CutoutView$a */
+    public interface InterfaceC7075a {
 
         /* compiled from: CutoutView.kt */
-        public static final class b implements a {
-            public final int a;
+        /* renamed from: com.discord.views.CutoutView$a$b */
+        public static final class b implements InterfaceC7075a {
 
-            /* renamed from: b, reason: collision with root package name */
-            public final int f2827b;
+            /* renamed from: a */
+            public final int f19059a;
+
+            /* renamed from: b */
+            public final int f19060b;
 
             public b(@IntRange(from = 0) int i, @IntRange(from = 0) int i2) {
-                this.a = i;
-                this.f2827b = i2;
+                this.f19059a = i;
+                this.f19060b = i2;
             }
 
-            @Override // com.discord.views.CutoutView.a
-            public Path a(Context context, int i, int i2) {
-                m.checkNotNullParameter(context, "context");
+            @Override // com.discord.views.CutoutView.InterfaceC7075a
+            /* renamed from: a */
+            public Path mo8543a(Context context, int i, int i2) {
+                Intrinsics3.checkNotNullParameter(context, "context");
                 float f = i;
-                int i3 = this.a;
+                int i3 = this.f19059a;
                 float f2 = i3 - (f / 2.0f);
                 float f3 = i3 * 2.0f;
                 float f4 = -f2;
                 float f5 = i2 + f2;
-                if (b.c.a.a0.d.U0(context)) {
-                    float f6 = f - this.f2827b;
+                if (AnimatableValueParser.m478U0(context)) {
+                    float f6 = f - this.f19060b;
                     RectF rectF = new RectF(f6, f4, f3 + f6, f5);
                     Path path = new Path();
                     path.moveTo(f4, f4);
@@ -154,7 +165,7 @@ public class CutoutView extends FrameLayout {
                     path.close();
                     return path;
                 }
-                float f7 = this.f2827b;
+                float f7 = this.f19060b;
                 RectF rectF2 = new RectF(f7 - f3, f4, f7, f5);
                 Path path2 = new Path();
                 float f8 = f + f2;
@@ -173,39 +184,43 @@ public class CutoutView extends FrameLayout {
                     return false;
                 }
                 b bVar = (b) obj;
-                return this.a == bVar.a && this.f2827b == bVar.f2827b;
+                return this.f19059a == bVar.f19059a && this.f19060b == bVar.f19060b;
             }
 
             public int hashCode() {
-                return (this.a * 31) + this.f2827b;
+                return (this.f19059a * 31) + this.f19060b;
             }
 
             public String toString() {
-                StringBuilder sbU = b.d.b.a.a.U("End(cutCurveRadiusPx=");
-                sbU.append(this.a);
-                sbU.append(", cutDistanceInwardFromEdgePx=");
-                return b.d.b.a.a.B(sbU, this.f2827b, ")");
+                StringBuilder sbM833U = outline.m833U("End(cutCurveRadiusPx=");
+                sbM833U.append(this.f19059a);
+                sbM833U.append(", cutDistanceInwardFromEdgePx=");
+                return outline.m814B(sbM833U, this.f19060b, ")");
             }
         }
 
         /* compiled from: CutoutView.kt */
-        public static final class c implements a {
-            public final int a;
+        /* renamed from: com.discord.views.CutoutView$a$c */
+        public static final class c implements InterfaceC7075a {
+
+            /* renamed from: a */
+            public final int f19061a;
 
             public c(int i) {
-                this.a = i;
+                this.f19061a = i;
             }
 
-            @Override // com.discord.views.CutoutView.a
-            public Path a(Context context, int i, int i2) {
-                m.checkNotNullParameter(context, "context");
-                float f = this.a;
+            @Override // com.discord.views.CutoutView.InterfaceC7075a
+            /* renamed from: a */
+            public Path mo8543a(Context context, int i, int i2) {
+                Intrinsics3.checkNotNullParameter(context, "context");
+                float f = this.f19061a;
                 Resources resources = context.getResources();
-                m.checkNotNullExpressionValue(resources, "context.resources");
+                Intrinsics3.checkNotNullExpressionValue(resources, "context.resources");
                 float f2 = f * resources.getDisplayMetrics().density;
                 float f3 = i2;
                 float f4 = f3 / 2.0f;
-                if (b.c.a.a0.d.U0(context)) {
+                if (AnimatableValueParser.m478U0(context)) {
                     Path path = new Path();
                     float f5 = i + f2;
                     path.moveTo(0.0f, 0.0f);
@@ -228,55 +243,63 @@ public class CutoutView extends FrameLayout {
 
             public boolean equals(Object obj) {
                 if (this != obj) {
-                    return (obj instanceof c) && this.a == ((c) obj).a;
+                    return (obj instanceof c) && this.f19061a == ((c) obj).f19061a;
                 }
                 return true;
             }
 
             public int hashCode() {
-                return this.a;
+                return this.f19061a;
             }
 
             public String toString() {
-                return b.d.b.a.a.B(b.d.b.a.a.U("EndOverlap(offsetDp="), this.a, ")");
+                return outline.m814B(outline.m833U("EndOverlap(offsetDp="), this.f19061a, ")");
             }
         }
 
         /* compiled from: CutoutView.kt */
-        public static final class d implements a {
-            public static final d a = new d();
+        /* renamed from: com.discord.views.CutoutView$a$d */
+        public static final class d implements InterfaceC7075a {
 
-            @Override // com.discord.views.CutoutView.a
-            public Path a(Context context, int i, int i2) {
-                m.checkNotNullParameter(context, "context");
+            /* renamed from: a */
+            public static final d f19062a = new d();
+
+            @Override // com.discord.views.CutoutView.InterfaceC7075a
+            /* renamed from: a */
+            public Path mo8543a(Context context, int i, int i2) {
+                Intrinsics3.checkNotNullParameter(context, "context");
                 return null;
             }
         }
 
-        Path a(Context context, int i, int i2);
+        /* renamed from: a */
+        Path mo8543a(Context context, int i, int i2);
 
         /* compiled from: CutoutView.kt */
-        /* renamed from: com.discord.views.CutoutView$a$a, reason: collision with other inner class name */
-        public static final class C0353a implements a {
-            public final int a;
+        /* renamed from: com.discord.views.CutoutView$a$a */
+        public static final class a implements InterfaceC7075a {
 
-            /* renamed from: b, reason: collision with root package name */
-            public final int f2826b;
+            /* renamed from: a */
+            public final int f19057a;
 
-            public C0353a() {
-                int i = CutoutView.j;
-                int i2 = CutoutView.k;
-                this.a = i;
-                this.f2826b = i2;
+            /* renamed from: b */
+            public final int f19058b;
+
+            public a() {
+                int i = CutoutView.f19050j;
+                int i2 = CutoutView.f19051k;
+                this.f19057a = i;
+                this.f19058b = i2;
             }
 
-            @Override // com.discord.views.CutoutView.a
-            public Path a(Context context, int i, int i2) {
-                m.checkNotNullParameter(context, "context");
+            @Override // com.discord.views.CutoutView.InterfaceC7075a
+            /* renamed from: a */
+            public Path mo8543a(Context context, int i, int i2) {
+                Intrinsics3.checkNotNullParameter(context, "context");
                 Path path = new Path();
                 path.addRect(0.0f, 0.0f, i, i2, Path.Direction.CW);
                 Path path2 = new Path();
-                path2.addCircle(b.c.a.a0.d.U0(context) ? i - this.f2826b : this.f2826b, this.f2826b, this.a, Path.Direction.CW);
+                path2.addCircle(AnimatableValueParser.m478U0(context) ? i - this.f19058b : this.f19058b, this.f19058b, this.f19057a, Path.Direction.CW);
                 Path path3 = new Path(path);
                 path3.op(path2, Path.Op.DIFFERENCE);
                 return path3;
@@ -286,34 +309,34 @@ public class CutoutView extends FrameLayout {
                 if (this == obj) {
                     return true;
                 }
-                if (!(obj instanceof C0353a)) {
+                if (!(obj instanceof a)) {
                     return false;
                 }
-                C0353a c0353a = (C0353a) obj;
-                return this.a == c0353a.a && this.f2826b == c0353a.f2826b;
+                a aVar = (a) obj;
+                return this.f19057a == aVar.f19057a && this.f19058b == aVar.f19058b;
             }
 
             public int hashCode() {
-                return (this.a * 31) + this.f2826b;
+                return (this.f19057a * 31) + this.f19058b;
             }
 
             public String toString() {
-                StringBuilder sbU = b.d.b.a.a.U("CircularBadge(badgeRadius=");
-                sbU.append(this.a);
-                sbU.append(", inset=");
-                return b.d.b.a.a.B(sbU, this.f2826b, ")");
+                StringBuilder sbM833U = outline.m833U("CircularBadge(badgeRadius=");
+                sbM833U.append(this.f19057a);
+                sbM833U.append(", inset=");
+                return outline.m814B(sbM833U, this.f19058b, ")");
             }
 
-            public C0353a(int i, int i2, int i3) {
-                i = (i3 & 1) != 0 ? CutoutView.j : i;
-                i2 = (i3 & 2) != 0 ? CutoutView.k : i2;
-                this.a = i;
-                this.f2826b = i2;
+            public a(int i, int i2, int i3) {
+                i = (i3 & 1) != 0 ? CutoutView.f19050j : i;
+                i2 = (i3 & 2) != 0 ? CutoutView.f19051k : i2;
+                this.f19057a = i;
+                this.f19058b = i2;
             }
 
-            public C0353a(@Px int i, @Px int i2) {
-                this.a = i;
-                this.f2826b = i2;
+            public a(@Px int i, @Px int i2) {
+                this.f19057a = i;
+                this.f19058b = i2;
             }
         }
     }

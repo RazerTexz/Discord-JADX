@@ -4,31 +4,31 @@ import android.content.Context;
 import android.view.View;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsActivityStatusBinding;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserSettings;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.functions.Action1;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.functions.Action1;
 
 /* compiled from: WidgetSettingsActivityStatus.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsActivityStatus extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsActivityStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsActivityStatusBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsActivityStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsActivityStatusBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -42,8 +42,8 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
         }
 
         public final void launch(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetSettingsActivityStatus.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetSettingsActivityStatus.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -52,12 +52,12 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsActivityStatus.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsActivityStatus$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Action1<Boolean> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsActivityStatus$configureUI$1 */
+    public static final class C96251<T> implements Action1<Boolean> {
+        public C96251() {
         }
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Boolean bool) {
             call2(bool);
         }
@@ -66,22 +66,22 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
         public final void call2(Boolean bool) {
             StoreUserSettings userSettings = StoreStream.INSTANCE.getUserSettings();
             AppActivity appActivity = WidgetSettingsActivityStatus.this.getAppActivity();
-            m.checkNotNullExpressionValue(bool, "checked");
+            Intrinsics3.checkNotNullExpressionValue(bool, "checked");
             userSettings.setIsShowCurrentGameEnabled(appActivity, bool.booleanValue());
         }
     }
 
     /* compiled from: WidgetSettingsActivityStatus.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsActivityStatus$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsActivityStatus$onViewBoundOrOnResume$1 */
+    public static final class C96261 extends Lambda implements Function1<Boolean, Unit> {
+        public C96261() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
             invoke(bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(boolean z2) {
@@ -90,8 +90,8 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
     }
 
     public WidgetSettingsActivityStatus() {
-        super(R.layout.widget_settings_activity_status);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsActivityStatus$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_settings_activity_status);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsActivityStatus2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetSettingsActivityStatus widgetSettingsActivityStatus, boolean z2) {
@@ -99,10 +99,10 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
     }
 
     private final void configureUI(boolean showCurrentGame) {
-        CheckedSetting checkedSetting = getBinding().f2601b;
-        m.checkNotNullExpressionValue(checkedSetting, "binding.showCurrentActivity");
+        CheckedSetting checkedSetting = getBinding().f17847b;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.showCurrentActivity");
         checkedSetting.setChecked(showCurrentGame);
-        getBinding().f2601b.setOnCheckedListener(new AnonymousClass1());
+        getBinding().f17847b.setOnCheckedListener(new C96251());
     }
 
     private final WidgetSettingsActivityStatusBinding getBinding() {
@@ -111,16 +111,16 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        setActionBarSubtitle(R.string.user_settings);
-        setActionBarTitle(R.string.activity_status);
+        setActionBarSubtitle(C5419R.string.user_settings);
+        setActionBarTitle(C5419R.string.activity_status);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getUserSettings().observeIsShowCurrentGameEnabled(), this, null, 2, null), WidgetSettingsActivityStatus.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getUserSettings().observeIsShowCurrentGameEnabled(), this, null, 2, null), WidgetSettingsActivityStatus.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C96261(), 62, (Object) null);
     }
 }

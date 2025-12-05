@@ -4,22 +4,18 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import androidx.core.os.BundleKt;
+import androidx.core.os.Bundle2;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentKt;
+import androidx.fragment.app.Fragment2;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetForumGuidelinesBottomSheetBinding;
 import com.discord.stores.StoreStream;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import d0.g;
-import d0.o;
-import d0.z.d.m;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -27,12 +23,17 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.Tuples;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetForumGuidelinesBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetForumGuidelinesBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetForumGuidelinesBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetForumGuidelinesBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetForumGuidelinesBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -56,18 +57,18 @@ public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
         }
 
         public final void registerForResult(Fragment fragment, String requestKey, Function2<? super Long, ? super Long, Unit> onActionTaken) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(requestKey, "requestKey");
-            m.checkNotNullParameter(onActionTaken, "onActionTaken");
-            FragmentKt.setFragmentResultListener(fragment, requestKey, new WidgetForumGuidelinesBottomSheet$Companion$registerForResult$1(requestKey, onActionTaken));
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(onActionTaken, "onActionTaken");
+            Fragment2.setFragmentResultListener(fragment, requestKey, new WidgetForumGuidelinesBottomSheet2(requestKey, onActionTaken));
         }
 
         public final void show(FragmentManager fragmentManager, long guildId, long parentChannelId, String requestKey) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
-            m.checkNotNullParameter(requestKey, "requestKey");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(requestKey, "requestKey");
             ForumGuidelinesManager.INSTANCE.markGuidelinesSeen(parentChannelId);
             WidgetForumGuidelinesBottomSheet widgetForumGuidelinesBottomSheet = new WidgetForumGuidelinesBottomSheet();
-            widgetForumGuidelinesBottomSheet.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_GUILD_ID", Long.valueOf(guildId)), o.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(parentChannelId)), o.to(WidgetForumGuidelinesBottomSheet.EXTRA_REQUEST_KEY, requestKey)));
+            widgetForumGuidelinesBottomSheet.setArguments(Bundle2.bundleOf(Tuples.m10073to("com.discord.intent.extra.EXTRA_GUILD_ID", Long.valueOf(guildId)), Tuples.m10073to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(parentChannelId)), Tuples.m10073to(WidgetForumGuidelinesBottomSheet.EXTRA_REQUEST_KEY, requestKey)));
             widgetForumGuidelinesBottomSheet.show(fragmentManager, WidgetForumGuidelinesBottomSheet.class.getSimpleName());
         }
 
@@ -77,11 +78,11 @@ public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetForumGuidelinesBottomSheet.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumGuidelinesBottomSheet$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.forums.WidgetForumGuidelinesBottomSheet$configureUI$1 */
+    public static final class ViewOnClickListenerC83531 implements View.OnClickListener {
         public final /* synthetic */ Bundle $bundle;
 
-        public AnonymousClass1(Bundle bundle) {
+        public ViewOnClickListenerC83531(Bundle bundle) {
             this.$bundle = bundle;
         }
 
@@ -90,37 +91,37 @@ public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
             WidgetForumGuidelinesBottomSheet.this.dismiss();
             WidgetForumGuidelinesBottomSheet widgetForumGuidelinesBottomSheet = WidgetForumGuidelinesBottomSheet.this;
             String strAccess$getRequestKey$p = WidgetForumGuidelinesBottomSheet.access$getRequestKey$p(widgetForumGuidelinesBottomSheet);
-            m.checkNotNullExpressionValue(strAccess$getRequestKey$p, "requestKey");
-            FragmentKt.setFragmentResult(widgetForumGuidelinesBottomSheet, strAccess$getRequestKey$p, this.$bundle);
+            Intrinsics3.checkNotNullExpressionValue(strAccess$getRequestKey$p, "requestKey");
+            Fragment2.setFragmentResult(widgetForumGuidelinesBottomSheet, strAccess$getRequestKey$p, this.$bundle);
         }
     }
 
     /* compiled from: WidgetForumGuidelinesBottomSheet.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumGuidelinesBottomSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Channel, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.forums.WidgetForumGuidelinesBottomSheet$onResume$1 */
+    public static final class C83541 extends Lambda implements Function1<Channel, Unit> {
+        public C83541() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Channel channel) {
             invoke2(channel);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            m.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
             WidgetForumGuidelinesBottomSheet.access$configureUI(WidgetForumGuidelinesBottomSheet.this, channel);
         }
     }
 
     public WidgetForumGuidelinesBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetForumGuidelinesBottomSheet$binding$2.INSTANCE, null, 2, null);
-        this.guildId = g.lazy(new WidgetForumGuidelinesBottomSheet$guildId$2(this));
-        this.channelId = g.lazy(new WidgetForumGuidelinesBottomSheet$channelId$2(this));
-        this.requestKey = g.lazy(new WidgetForumGuidelinesBottomSheet$requestKey$2(this));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetForumGuidelinesBottomSheet3.INSTANCE, null, 2, null);
+        this.guildId = LazyJVM.lazy(new WidgetForumGuidelinesBottomSheet5(this));
+        this.channelId = LazyJVM.lazy(new WidgetForumGuidelinesBottomSheet4(this));
+        this.requestKey = LazyJVM.lazy(new WidgetForumGuidelinesBottomSheet6(this));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetForumGuidelinesBottomSheet widgetForumGuidelinesBottomSheet, Channel channel) {
@@ -132,13 +133,13 @@ public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
     }
 
     private final void configureUI(Channel channel) {
-        TextView textView = getBinding().f2388b;
-        m.checkNotNullExpressionValue(textView, "binding.channelTopic");
+        TextView textView = getBinding().f16641b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.channelTopic");
         textView.setText(channel.getTopic());
         Bundle bundle = new Bundle();
         bundle.putLong("com.discord.intent.extra.EXTRA_CHANNEL_ID", getChannelId());
         bundle.putLong("com.discord.intent.extra.EXTRA_GUILD_ID", getGuildId());
-        getBinding().c.setOnClickListener(new AnonymousClass1(bundle));
+        getBinding().f16642c.setOnClickListener(new ViewOnClickListenerC83531(bundle));
     }
 
     private final WidgetForumGuidelinesBottomSheetBinding getBinding() {
@@ -159,14 +160,14 @@ public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_forum_guidelines_bottom_sheet;
+        return C5419R.layout.widget_forum_guidelines_bottom_sheet;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onResume() {
         super.onResume();
-        Observable<R> observableG = StoreStream.INSTANCE.getChannels().observeChannel(getChannelId()).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-        m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableG, this, null, 2, null), WidgetForumGuidelinesBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable<R> observableM11083G = StoreStream.INSTANCE.getChannels().observeChannel(getChannelId()).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableM11083G, this, null, 2, null), WidgetForumGuidelinesBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C83541(), 62, (Object) null);
     }
 }

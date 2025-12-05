@@ -1,12 +1,12 @@
 package com.discord.widgets.settings.premium;
 
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetSettingsGiftingAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSettingsGiftingAdapter$onClickSkuListener$1 extends o implements Function2<Long, Long, Unit> {
+public final class WidgetSettingsGiftingAdapter$onClickSkuListener$1 extends Lambda implements Function2<Long, Long, Unit> {
     public static final WidgetSettingsGiftingAdapter$onClickSkuListener$1 INSTANCE = new WidgetSettingsGiftingAdapter$onClickSkuListener$1();
 
     public WidgetSettingsGiftingAdapter$onClickSkuListener$1() {
@@ -16,7 +16,7 @@ public final class WidgetSettingsGiftingAdapter$onClickSkuListener$1 extends o i
     @Override // kotlin.jvm.functions.Function2
     public /* bridge */ /* synthetic */ Unit invoke(Long l, Long l2) {
         invoke(l.longValue(), l2);
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     public final void invoke(long j, Long l) {

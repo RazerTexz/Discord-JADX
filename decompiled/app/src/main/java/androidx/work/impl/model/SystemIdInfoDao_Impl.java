@@ -7,7 +7,7 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
-import androidx.sqlite.db.SupportSQLiteStatement;
+import androidx.sqlite.p006db.SupportSQLiteStatement;
 
 /* loaded from: classes.dex */
 public final class SystemIdInfoDao_Impl implements SystemIdInfoDao {
@@ -15,9 +15,9 @@ public final class SystemIdInfoDao_Impl implements SystemIdInfoDao {
     private final EntityInsertionAdapter<SystemIdInfo> __insertionAdapterOfSystemIdInfo;
     private final SharedSQLiteStatement __preparedStmtOfRemoveSystemIdInfo;
 
-    /* renamed from: androidx.work.impl.model.SystemIdInfoDao_Impl$1, reason: invalid class name */
-    public class AnonymousClass1 extends EntityInsertionAdapter<SystemIdInfo> {
-        public AnonymousClass1(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.SystemIdInfoDao_Impl$1 */
+    public class C07501 extends EntityInsertionAdapter<SystemIdInfo> {
+        public C07501(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -43,9 +43,9 @@ public final class SystemIdInfoDao_Impl implements SystemIdInfoDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.SystemIdInfoDao_Impl$2, reason: invalid class name */
-    public class AnonymousClass2 extends SharedSQLiteStatement {
-        public AnonymousClass2(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.SystemIdInfoDao_Impl$2 */
+    public class C07512 extends SharedSQLiteStatement {
+        public C07512(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -57,8 +57,8 @@ public final class SystemIdInfoDao_Impl implements SystemIdInfoDao {
 
     public SystemIdInfoDao_Impl(RoomDatabase roomDatabase) {
         this.__db = roomDatabase;
-        this.__insertionAdapterOfSystemIdInfo = new AnonymousClass1(roomDatabase);
-        this.__preparedStmtOfRemoveSystemIdInfo = new AnonymousClass2(roomDatabase);
+        this.__insertionAdapterOfSystemIdInfo = new C07501(roomDatabase);
+        this.__preparedStmtOfRemoveSystemIdInfo = new C07512(roomDatabase);
     }
 
     @Override // androidx.work.impl.model.SystemIdInfoDao

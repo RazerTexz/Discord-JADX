@@ -1,8 +1,8 @@
 package com.discord.api.user;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: UserSurvey.kt */
 /* loaded from: classes.dex */
@@ -20,15 +20,18 @@ public final /* data */ class UserSurvey {
         return this.cta;
     }
 
-    public final List<Long> b() {
+    /* renamed from: b */
+    public final List<Long> m8315b() {
         return this.guild_permissions;
     }
 
-    public final List<String> c() {
+    /* renamed from: c */
+    public final List<String> m8316c() {
         return this.guild_requirements;
     }
 
-    public final List<Integer> d() {
+    /* renamed from: d */
+    public final List<Integer> m8317d() {
         return this.guild_size;
     }
 
@@ -45,7 +48,7 @@ public final /* data */ class UserSurvey {
             return false;
         }
         UserSurvey userSurvey = (UserSurvey) other;
-        return m.areEqual(this.prompt, userSurvey.prompt) && m.areEqual(this.cta, userSurvey.cta) && m.areEqual(this.url, userSurvey.url) && m.areEqual(this.key, userSurvey.key) && m.areEqual(this.guild_requirements, userSurvey.guild_requirements) && m.areEqual(this.guild_size, userSurvey.guild_size) && m.areEqual(this.guild_permissions, userSurvey.guild_permissions);
+        return Intrinsics3.areEqual(this.prompt, userSurvey.prompt) && Intrinsics3.areEqual(this.cta, userSurvey.cta) && Intrinsics3.areEqual(this.url, userSurvey.url) && Intrinsics3.areEqual(this.key, userSurvey.key) && Intrinsics3.areEqual(this.guild_requirements, userSurvey.guild_requirements) && Intrinsics3.areEqual(this.guild_size, userSurvey.guild_size) && Intrinsics3.areEqual(this.guild_permissions, userSurvey.guild_permissions);
     }
 
     /* renamed from: f, reason: from getter */
@@ -76,19 +79,19 @@ public final /* data */ class UserSurvey {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("UserSurvey(prompt=");
-        sbU.append(this.prompt);
-        sbU.append(", cta=");
-        sbU.append(this.cta);
-        sbU.append(", url=");
-        sbU.append(this.url);
-        sbU.append(", key=");
-        sbU.append(this.key);
-        sbU.append(", guild_requirements=");
-        sbU.append(this.guild_requirements);
-        sbU.append(", guild_size=");
-        sbU.append(this.guild_size);
-        sbU.append(", guild_permissions=");
-        return a.L(sbU, this.guild_permissions, ")");
+        StringBuilder sbM833U = outline.m833U("UserSurvey(prompt=");
+        sbM833U.append(this.prompt);
+        sbM833U.append(", cta=");
+        sbM833U.append(this.cta);
+        sbM833U.append(", url=");
+        sbM833U.append(this.url);
+        sbM833U.append(", key=");
+        sbM833U.append(this.key);
+        sbM833U.append(", guild_requirements=");
+        sbM833U.append(this.guild_requirements);
+        sbM833U.append(", guild_size=");
+        sbM833U.append(this.guild_size);
+        sbM833U.append(", guild_permissions=");
+        return outline.m824L(sbM833U, this.guild_permissions, ")");
     }
 }

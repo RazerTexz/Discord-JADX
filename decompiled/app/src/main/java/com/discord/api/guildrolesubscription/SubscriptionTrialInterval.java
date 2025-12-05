@@ -1,7 +1,7 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SubscriptionTrialInterval.kt */
 /* loaded from: classes.dex */
@@ -10,7 +10,7 @@ public final /* data */ class SubscriptionTrialInterval {
     private final int intervalCount;
 
     public SubscriptionTrialInterval(GuildRoleSubscriptionFreeTrialIntervalTypes guildRoleSubscriptionFreeTrialIntervalTypes, int i) {
-        m.checkNotNullParameter(guildRoleSubscriptionFreeTrialIntervalTypes, "interval");
+        Intrinsics3.checkNotNullParameter(guildRoleSubscriptionFreeTrialIntervalTypes, "interval");
         this.interval = guildRoleSubscriptionFreeTrialIntervalTypes;
         this.intervalCount = i;
     }
@@ -33,7 +33,7 @@ public final /* data */ class SubscriptionTrialInterval {
             return false;
         }
         SubscriptionTrialInterval subscriptionTrialInterval = (SubscriptionTrialInterval) other;
-        return m.areEqual(this.interval, subscriptionTrialInterval.interval) && this.intervalCount == subscriptionTrialInterval.intervalCount;
+        return Intrinsics3.areEqual(this.interval, subscriptionTrialInterval.interval) && this.intervalCount == subscriptionTrialInterval.intervalCount;
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class SubscriptionTrialInterval {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("SubscriptionTrialInterval(interval=");
-        sbU.append(this.interval);
-        sbU.append(", intervalCount=");
-        return a.B(sbU, this.intervalCount, ")");
+        StringBuilder sbM833U = outline.m833U("SubscriptionTrialInterval(interval=");
+        sbM833U.append(this.interval);
+        sbM833U.append(", intervalCount=");
+        return outline.m814B(sbM833U, this.intervalCount, ")");
     }
 }

@@ -33,6 +33,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.view.ContextThemeWrapper;
@@ -57,12 +58,12 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
     private SpinnerAdapter mTempAdapter;
     public final Rect mTempRect;
 
-    /* renamed from: androidx.appcompat.widget.AppCompatSpinner$1, reason: invalid class name */
-    public class AnonymousClass1 extends ForwardingListener {
+    /* renamed from: androidx.appcompat.widget.AppCompatSpinner$1 */
+    public class C01021 extends ForwardingListener {
         public final /* synthetic */ DropdownPopup val$popup;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(View view, DropdownPopup dropdownPopup) {
+        public C01021(View view, DropdownPopup dropdownPopup) {
             super(view);
             this.val$popup = dropdownPopup;
         }
@@ -83,9 +84,9 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.AppCompatSpinner$2, reason: invalid class name */
-    public class AnonymousClass2 implements ViewTreeObserver.OnGlobalLayoutListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.widget.AppCompatSpinner$2 */
+    public class ViewTreeObserverOnGlobalLayoutListenerC01032 implements ViewTreeObserver.OnGlobalLayoutListener {
+        public ViewTreeObserverOnGlobalLayoutListenerC01032() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -343,11 +344,11 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         private int mOriginalHorizontalOffset;
         private final Rect mVisibleRect;
 
-        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$1, reason: invalid class name */
-        public class AnonymousClass1 implements AdapterView.OnItemClickListener {
+        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$1 */
+        public class C01041 implements AdapterView.OnItemClickListener {
             public final /* synthetic */ AppCompatSpinner val$this$0;
 
-            public AnonymousClass1(AppCompatSpinner appCompatSpinner) {
+            public C01041(AppCompatSpinner appCompatSpinner) {
                 this.val$this$0 = appCompatSpinner;
             }
 
@@ -362,9 +363,9 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             }
         }
 
-        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$2, reason: invalid class name */
-        public class AnonymousClass2 implements ViewTreeObserver.OnGlobalLayoutListener {
-            public AnonymousClass2() {
+        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$2 */
+        public class ViewTreeObserverOnGlobalLayoutListenerC01052 implements ViewTreeObserver.OnGlobalLayoutListener {
+            public ViewTreeObserverOnGlobalLayoutListenerC01052() {
             }
 
             @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -379,11 +380,11 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             }
         }
 
-        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$3, reason: invalid class name */
-        public class AnonymousClass3 implements PopupWindow.OnDismissListener {
+        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$3 */
+        public class C01063 implements PopupWindow.OnDismissListener {
             public final /* synthetic */ ViewTreeObserver.OnGlobalLayoutListener val$layoutListener;
 
-            public AnonymousClass3(ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener) {
+            public C01063(ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener) {
                 this.val$layoutListener = onGlobalLayoutListener;
             }
 
@@ -402,7 +403,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             setAnchorView(AppCompatSpinner.this);
             setModal(true);
             setPromptPosition(0);
-            setOnItemClickListener(new AnonymousClass1(AppCompatSpinner.this));
+            setOnItemClickListener(new C01041(AppCompatSpinner.this));
         }
 
         public static /* synthetic */ void access$001(DropdownPopup dropdownPopup) throws IllegalArgumentException {
@@ -487,18 +488,18 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             if (zIsShowing || (viewTreeObserver = AppCompatSpinner.this.getViewTreeObserver()) == null) {
                 return;
             }
-            AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-            viewTreeObserver.addOnGlobalLayoutListener(anonymousClass2);
-            setOnDismissListener(new AnonymousClass3(anonymousClass2));
+            ViewTreeObserverOnGlobalLayoutListenerC01052 viewTreeObserverOnGlobalLayoutListenerC01052 = new ViewTreeObserverOnGlobalLayoutListenerC01052();
+            viewTreeObserver.addOnGlobalLayoutListener(viewTreeObserverOnGlobalLayoutListenerC01052);
+            setOnDismissListener(new C01063(viewTreeObserverOnGlobalLayoutListenerC01052));
         }
     }
 
     public static class SavedState extends View.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C01071();
         public boolean mShowDropdown;
 
-        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$SavedState$1, reason: invalid class name */
-        public class AnonymousClass1 implements Parcelable.Creator<SavedState> {
+        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$SavedState$1 */
+        public class C01071 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -702,7 +703,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         if (!savedState.mShowDropdown || (viewTreeObserver = getViewTreeObserver()) == null) {
             return;
         }
-        viewTreeObserver.addOnGlobalLayoutListener(new AnonymousClass2());
+        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserverOnGlobalLayoutListenerC01032());
     }
 
     @Override // android.widget.Spinner, android.widget.AbsSpinner, android.view.View
@@ -836,7 +837,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
     }
 
     public AppCompatSpinner(@NonNull Context context, int i) {
-        this(context, null, androidx.appcompat.R.attr.spinnerStyle, i);
+        this(context, null, C0051R.attr.spinnerStyle, i);
     }
 
     @Override // android.widget.Spinner, android.widget.AbsSpinner
@@ -856,7 +857,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
     }
 
     public AppCompatSpinner(@NonNull Context context, @Nullable AttributeSet attributeSet) {
-        this(context, attributeSet, androidx.appcompat.R.attr.spinnerStyle);
+        this(context, attributeSet, C0051R.attr.spinnerStyle);
     }
 
     public AppCompatSpinner(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
@@ -889,12 +890,12 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         super(context, attributeSet, i);
         this.mTempRect = new Rect();
         ThemeUtils.checkAppCompatTheme(this, getContext());
-        TintTypedArray tintTypedArrayObtainStyledAttributes = TintTypedArray.obtainStyledAttributes(context, attributeSet, androidx.appcompat.R.styleable.Spinner, i, 0);
+        TintTypedArray tintTypedArrayObtainStyledAttributes = TintTypedArray.obtainStyledAttributes(context, attributeSet, C0051R.styleable.Spinner, i, 0);
         this.mBackgroundTintHelper = new AppCompatBackgroundHelper(this);
         if (theme != null) {
             this.mPopupContext = new ContextThemeWrapper(context, theme);
         } else {
-            int resourceId = tintTypedArrayObtainStyledAttributes.getResourceId(androidx.appcompat.R.styleable.Spinner_popupTheme, 0);
+            int resourceId = tintTypedArrayObtainStyledAttributes.getResourceId(C0051R.styleable.Spinner_popupTheme, 0);
             if (resourceId != 0) {
                 this.mPopupContext = new ContextThemeWrapper(context, resourceId);
             } else {
@@ -923,7 +924,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
                         }
                         if (i2 != 0) {
                         }
-                        textArray = tintTypedArrayObtainStyledAttributes.getTextArray(androidx.appcompat.R.styleable.Spinner_android_entries);
+                        textArray = tintTypedArrayObtainStyledAttributes.getTextArray(C0051R.styleable.Spinner_android_entries);
                         if (textArray != null) {
                         }
                         tintTypedArrayObtainStyledAttributes.recycle();
@@ -948,21 +949,21 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             if (i2 != 0) {
                 DialogPopup dialogPopup = new DialogPopup();
                 this.mPopup = dialogPopup;
-                dialogPopup.setPromptText(tintTypedArrayObtainStyledAttributes.getString(androidx.appcompat.R.styleable.Spinner_android_prompt));
+                dialogPopup.setPromptText(tintTypedArrayObtainStyledAttributes.getString(C0051R.styleable.Spinner_android_prompt));
             } else if (i2 == 1) {
                 DropdownPopup dropdownPopup = new DropdownPopup(this.mPopupContext, attributeSet, i);
-                TintTypedArray tintTypedArrayObtainStyledAttributes2 = TintTypedArray.obtainStyledAttributes(this.mPopupContext, attributeSet, androidx.appcompat.R.styleable.Spinner, i, 0);
-                this.mDropDownWidth = tintTypedArrayObtainStyledAttributes2.getLayoutDimension(androidx.appcompat.R.styleable.Spinner_android_dropDownWidth, -2);
-                dropdownPopup.setBackgroundDrawable(tintTypedArrayObtainStyledAttributes2.getDrawable(androidx.appcompat.R.styleable.Spinner_android_popupBackground));
-                dropdownPopup.setPromptText(tintTypedArrayObtainStyledAttributes.getString(androidx.appcompat.R.styleable.Spinner_android_prompt));
+                TintTypedArray tintTypedArrayObtainStyledAttributes2 = TintTypedArray.obtainStyledAttributes(this.mPopupContext, attributeSet, C0051R.styleable.Spinner, i, 0);
+                this.mDropDownWidth = tintTypedArrayObtainStyledAttributes2.getLayoutDimension(C0051R.styleable.Spinner_android_dropDownWidth, -2);
+                dropdownPopup.setBackgroundDrawable(tintTypedArrayObtainStyledAttributes2.getDrawable(C0051R.styleable.Spinner_android_popupBackground));
+                dropdownPopup.setPromptText(tintTypedArrayObtainStyledAttributes.getString(C0051R.styleable.Spinner_android_prompt));
                 tintTypedArrayObtainStyledAttributes2.recycle();
                 this.mPopup = dropdownPopup;
-                this.mForwardingListener = new AnonymousClass1(this, dropdownPopup);
+                this.mForwardingListener = new C01021(this, dropdownPopup);
             }
-            textArray = tintTypedArrayObtainStyledAttributes.getTextArray(androidx.appcompat.R.styleable.Spinner_android_entries);
+            textArray = tintTypedArrayObtainStyledAttributes.getTextArray(C0051R.styleable.Spinner_android_entries);
             if (textArray != null) {
                 ArrayAdapter arrayAdapter = new ArrayAdapter(context, R.layout.simple_spinner_item, textArray);
-                arrayAdapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+                arrayAdapter.setDropDownViewResource(C0051R.layout.support_simple_spinner_dropdown_item);
                 setAdapter(arrayAdapter);
             }
             tintTypedArrayObtainStyledAttributes.recycle();

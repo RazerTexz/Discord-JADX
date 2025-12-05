@@ -9,17 +9,18 @@ import androidx.annotation.LayoutRes;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.accessibility.AccessibilityUtils;
 import com.discord.utilities.display.DisplayUtils;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.view.text.TextWatcher;
 import com.discord.widgets.notice.WidgetNoticeDialog;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
-import rx.subjects.PublishSubject;
-import rx.subjects.Subject;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.subjects.PublishSubject;
+import p658rx.subjects.Subject;
 
 /* compiled from: AppDialog.kt */
 /* loaded from: classes.dex */
@@ -29,13 +30,18 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
     private final Subject<Void, Void> unsubscribeSignal;
 
     /* compiled from: AppDialog.kt */
-    public static final class a implements View.OnClickListener {
-        public final /* synthetic */ View k;
-        public final /* synthetic */ Function1 l;
+    /* renamed from: com.discord.app.AppDialog$a */
+    public static final class ViewOnClickListenerC5446a implements View.OnClickListener {
 
-        public a(View view, Function1 function1) {
-            this.k = view;
-            this.l = function1;
+        /* renamed from: k */
+        public final /* synthetic */ View f14941k;
+
+        /* renamed from: l */
+        public final /* synthetic */ Function1 f14942l;
+
+        public ViewOnClickListenerC5446a(View view, Function1 function1) {
+            this.f14941k = view;
+            this.f14942l = function1;
         }
 
         @Override // android.view.View.OnClickListener
@@ -45,9 +51,9 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
     }
 
     public AppDialog() {
-        PublishSubject publishSubjectK0 = PublishSubject.k0();
-        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
-        this.unsubscribeSignal = publishSubjectK0;
+        PublishSubject publishSubjectM11133k0 = PublishSubject.m11133k0();
+        Intrinsics3.checkNotNullExpressionValue(publishSubjectM11133k0, "PublishSubject.create()");
+        this.unsubscribeSignal = publishSubjectM11133k0;
     }
 
     public static /* synthetic */ void hideKeyboard$default(AppDialog appDialog, View view, int i, Object obj) {
@@ -77,7 +83,7 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
         if (arguments == null) {
             arguments = new Bundle();
         }
-        m.checkNotNullExpressionValue(arguments, "arguments ?: Bundle()");
+        Intrinsics3.checkNotNullExpressionValue(arguments, "arguments ?: Bundle()");
         return arguments;
     }
 
@@ -106,10 +112,10 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Window window;
         Dialog dialogOnCreateDialog = super.onCreateDialog(savedInstanceState);
-        m.checkNotNullExpressionValue(dialogOnCreateDialog, "super.onCreateDialog(savedInstanceState)");
+        Intrinsics3.checkNotNullExpressionValue(dialogOnCreateDialog, "super.onCreateDialog(savedInstanceState)");
         dialogOnCreateDialog.requestWindowFeature(1);
         if (AccessibilityUtils.INSTANCE.isReducedMotionEnabled() && (window = dialogOnCreateDialog.getWindow()) != null) {
-            window.setWindowAnimations(R.style.FadeInOut);
+            window.setWindowAnimations(C5419R.style.FadeInOut);
         }
         return dialogOnCreateDialog;
     }
@@ -145,22 +151,22 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
             if (this instanceof WidgetNoticeDialog) {
                 ((WidgetNoticeDialog) this).logOnStartError(e);
             } else {
-                AppLog appLog = AppLog.g;
-                StringBuilder sbU = b.d.b.a.a.U("Failed to start AppDialog: ");
-                sbU.append(getClass().getName());
-                Logger.e$default(appLog, sbU.toString(), e, null, 4, null);
+                AppLog appLog = AppLog.f14950g;
+                StringBuilder sbM833U = outline.m833U("Failed to start AppDialog: ");
+                sbM833U.append(getClass().getName());
+                Logger.e$default(appLog, sbM833U.toString(), e, null, 4, null);
             }
         }
         Dialog dialog = getDialog();
         if (dialog == null || (window = dialog.getWindow()) == null) {
             return;
         }
-        window.setBackgroundDrawableResource(R.color.transparent);
+        window.setBackgroundDrawableResource(C5419R.color.transparent);
     }
 
     @CallSuper
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
     }
 
     @CallSuper
@@ -169,7 +175,7 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
 
     @Override // androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         this.isRecreated = savedInstanceState != null;
         DisplayUtils.drawUnderSystemBars(view);
@@ -179,29 +185,29 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
     }
 
     public final void setOnClickAndDismissListener(View view, Function1<? super View, Unit> function1) {
-        m.checkNotNullParameter(view, "$this$setOnClickAndDismissListener");
-        m.checkNotNullParameter(function1, "onClickListener");
-        view.setOnClickListener(new a(view, function1));
+        Intrinsics3.checkNotNullParameter(view, "$this$setOnClickAndDismissListener");
+        Intrinsics3.checkNotNullParameter(function1, "onClickListener");
+        view.setOnClickListener(new ViewOnClickListenerC5446a(view, function1));
     }
 
     @Override // androidx.fragment.app.DialogFragment
     public void show(FragmentManager manager, String tag) {
-        m.checkNotNullParameter(manager, "manager");
+        Intrinsics3.checkNotNullParameter(manager, "manager");
         if (!isDetached()) {
             try {
                 super.show(manager, tag);
             } catch (Exception unused) {
             }
         } else {
-            AppLog appLog = AppLog.g;
-            StringBuilder sbU = b.d.b.a.a.U("failed to show ");
-            sbU.append(manager.getClass().getName());
-            Logger.e$default(appLog, "Could not show dialog because of detached FragmentManager", new IllegalStateException(sbU.toString()), null, 4, null);
+            AppLog appLog = AppLog.f14950g;
+            StringBuilder sbM833U = outline.m833U("failed to show ");
+            sbM833U.append(manager.getClass().getName());
+            Logger.e$default(appLog, "Could not show dialog because of detached FragmentManager", new IllegalStateException(sbM833U.toString()), null, 4, null);
         }
     }
 
     public final void showKeyboard(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         AppActivity appActivity = getAppActivity();
         if (appActivity != null) {
             appActivity.showKeyboard(view);
@@ -210,14 +216,14 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
 
     public AppDialog(@LayoutRes int i) {
         super(i);
-        PublishSubject publishSubjectK0 = PublishSubject.k0();
-        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
-        this.unsubscribeSignal = publishSubjectK0;
+        PublishSubject publishSubjectM11133k0 = PublishSubject.m11133k0();
+        Intrinsics3.checkNotNullExpressionValue(publishSubjectM11133k0, "PublishSubject.create()");
+        this.unsubscribeSignal = publishSubjectM11133k0;
     }
 
     @Override // androidx.fragment.app.DialogFragment
     public int show(FragmentTransaction transaction, String tag) {
-        m.checkNotNullParameter(transaction, "transaction");
+        Intrinsics3.checkNotNullParameter(transaction, "transaction");
         try {
             return super.show(transaction, tag);
         } catch (Exception unused) {

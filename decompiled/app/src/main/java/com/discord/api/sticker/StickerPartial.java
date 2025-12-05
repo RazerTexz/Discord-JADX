@@ -1,10 +1,10 @@
 package com.discord.api.sticker;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.NoWhenBranchMatchedException;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: StickerPartial.kt */
 /* loaded from: classes.dex */
@@ -28,8 +28,8 @@ public final /* data */ class StickerPartial implements Serializable, BaseSticke
     }
 
     public StickerPartial(long j, StickerFormatType stickerFormatType, String str) {
-        m.checkNotNullParameter(stickerFormatType, "formatType");
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(stickerFormatType, "formatType");
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.id = j;
         this.formatType = stickerFormatType;
         this.name = str;
@@ -42,7 +42,8 @@ public final /* data */ class StickerPartial implements Serializable, BaseSticke
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    public String b() {
+    /* renamed from: b */
+    public String mo8228b() {
         int iOrdinal = this.formatType.ordinal();
         if (iOrdinal == 0) {
             return "";
@@ -57,7 +58,8 @@ public final /* data */ class StickerPartial implements Serializable, BaseSticke
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    public StickerPartial c() {
+    /* renamed from: c */
+    public StickerPartial mo8229c() {
         return this;
     }
 
@@ -80,7 +82,7 @@ public final /* data */ class StickerPartial implements Serializable, BaseSticke
             return false;
         }
         StickerPartial stickerPartial = (StickerPartial) other;
-        return this.id == stickerPartial.id && m.areEqual(this.formatType, stickerPartial.formatType) && m.areEqual(this.name, stickerPartial.name);
+        return this.id == stickerPartial.id && Intrinsics3.areEqual(this.formatType, stickerPartial.formatType) && Intrinsics3.areEqual(this.name, stickerPartial.name);
     }
 
     public final long getId() {
@@ -97,11 +99,11 @@ public final /* data */ class StickerPartial implements Serializable, BaseSticke
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("StickerPartial(id=");
-        sbU.append(this.id);
-        sbU.append(", formatType=");
-        sbU.append(this.formatType);
-        sbU.append(", name=");
-        return a.J(sbU, this.name, ")");
+        StringBuilder sbM833U = outline.m833U("StickerPartial(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", formatType=");
+        sbM833U.append(this.formatType);
+        sbM833U.append(", name=");
+        return outline.m822J(sbM833U, this.name, ")");
     }
 }

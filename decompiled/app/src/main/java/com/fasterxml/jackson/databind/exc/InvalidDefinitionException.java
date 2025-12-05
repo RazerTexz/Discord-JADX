@@ -1,28 +1,28 @@
 package com.fasterxml.jackson.databind.exc;
 
-import b.g.a.b.d;
-import b.g.a.b.f;
-import b.g.a.c.c;
-import b.g.a.c.c0.s;
-import b.g.a.c.j;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import p007b.p195g.p196a.p198b.JsonGenerator;
+import p007b.p195g.p196a.p198b.JsonParser;
+import p007b.p195g.p196a.p205c.BeanDescription;
+import p007b.p195g.p196a.p205c.JavaType;
+import p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition;
 
 /* loaded from: classes3.dex */
 public class InvalidDefinitionException extends JsonMappingException {
-    public final j _type;
+    public final JavaType _type;
 
-    public InvalidDefinitionException(f fVar, String str, j jVar) {
-        super(fVar, str);
-        this._type = jVar;
+    public InvalidDefinitionException(JsonParser jsonParser, String str, JavaType javaType) {
+        super(jsonParser, str);
+        this._type = javaType;
     }
 
-    public InvalidDefinitionException(d dVar, String str, j jVar) {
-        super(dVar, str);
-        this._type = jVar;
+    public InvalidDefinitionException(JsonGenerator jsonGenerator, String str, JavaType javaType) {
+        super(jsonGenerator, str);
+        this._type = javaType;
     }
 
-    public InvalidDefinitionException(d dVar, String str, c cVar, s sVar) {
-        super(dVar, str);
-        this._type = cVar == null ? null : cVar.a;
+    public InvalidDefinitionException(JsonGenerator jsonGenerator, String str, BeanDescription beanDescription, BeanPropertyDefinition beanPropertyDefinition) {
+        super(jsonGenerator, str);
+        this._type = beanDescription == null ? null : beanDescription.f4626a;
     }
 }

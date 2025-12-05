@@ -1,12 +1,12 @@
 package com.discord.widgets.settings;
 
 import androidx.core.app.FrameMetricsAggregator;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetSettings.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSettings$viewModel$2 extends o implements Function0<SettingsViewModel> {
+public final class WidgetSettings$viewModel$2 extends Lambda implements Function0<SettingsViewModel> {
     public static final WidgetSettings$viewModel$2 INSTANCE = new WidgetSettings$viewModel$2();
 
     public WidgetSettings$viewModel$2() {

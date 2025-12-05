@@ -3,9 +3,9 @@ package androidx.constraintlayout.solver.widgets.analyzer;
 import androidx.constraintlayout.solver.widgets.ConstraintAnchor;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Iterator;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ChainRun extends WidgetRun {
@@ -178,11 +178,11 @@ public class ChainRun extends WidgetRun {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChainRun ");
-        sbU.append(this.orientation == 0 ? "horizontal : " : "vertical : ");
-        String string = sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ChainRun ");
+        sbM833U.append(this.orientation == 0 ? "horizontal : " : "vertical : ");
+        String string = sbM833U.toString();
         for (WidgetRun widgetRun : this.widgets) {
-            string = a.w(a.w(string, "<") + widgetRun, "> ");
+            string = outline.m883w(outline.m883w(string, "<") + widgetRun, "> ");
         }
         return string;
     }

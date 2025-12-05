@@ -10,31 +10,24 @@ import android.widget.TextView;
 import androidx.annotation.ColorInt;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.os.BundleKt;
+import androidx.core.os.Bundle2;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.f0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetGuildRoleSubscriptionTierDesignBinding;
 import com.discord.dialogs.ImageUploadDialog;
 import com.discord.utilities.colors.ColorPickerUtils;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.images.MGImages;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import com.discord.widgets.chat.input.MentionUtilsKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.widgets.chat.input.MentionUtils;
 import com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscriptionTierViewModel;
 import com.discord.widgets.guild_role_subscriptions.tier.model.GuildRoleSubscriptionTier;
 import com.jaredrummler.android.colorpicker.ColorPickerDialog;
-import d0.g;
-import d0.o;
-import d0.z.d.a0;
-import d0.z.d.m;
-import f0.e0.c;
 import java.util.Objects;
 import kotlin.Lazy;
 import kotlin.Unit;
@@ -42,12 +35,20 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.functions.Action1;
+import p007b.p008a.p018d.AppViewModelDelegates2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.Tuples;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p600f0.p601e0.Util7;
+import p658rx.functions.Action1;
 
 /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildRoleSubscriptionTierDesign.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionTierDesignBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionTierDesign.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionTierDesignBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -81,7 +82,7 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
 
         public final WidgetGuildRoleSubscriptionTierDesign newInstance(boolean hideHeader) {
             WidgetGuildRoleSubscriptionTierDesign widgetGuildRoleSubscriptionTierDesign = new WidgetGuildRoleSubscriptionTierDesign();
-            widgetGuildRoleSubscriptionTierDesign.setArguments(BundleKt.bundleOf(o.to(WidgetGuildRoleSubscriptionTierDesign.INTENT_EXTRA_HIDE_HEADER, Boolean.valueOf(hideHeader))));
+            widgetGuildRoleSubscriptionTierDesign.setArguments(Bundle2.bundleOf(Tuples.m10073to(WidgetGuildRoleSubscriptionTierDesign.INTENT_EXTRA_HIDE_HEADER, Boolean.valueOf(hideHeader))));
             return widgetGuildRoleSubscriptionTierDesign;
         }
 
@@ -91,18 +92,18 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
     }
 
     /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function0<Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBound$1 */
+    public static final class C85031 extends Lambda implements Function0<Unit> {
+        public static final C85031 INSTANCE = new C85031();
 
-        public AnonymousClass1() {
+        public C85031() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -111,16 +112,16 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
     }
 
     /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends d0.z.d.o implements Function0<Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBound$2 */
+    public static final class C85042 extends Lambda implements Function0<Unit> {
+        public C85042() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -130,31 +131,31 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
     }
 
     /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBoundOrOnResume$1 */
+    public static final class C85051 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
+        public C85051() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "it");
+            Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionTierDesign.access$configureUI(WidgetGuildRoleSubscriptionTierDesign.this, viewState);
         }
     }
 
     /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$setupMemberColor$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$setupMemberColor$2 */
+    public static final class ViewOnClickListenerC85062 implements View.OnClickListener {
         public final /* synthetic */ int $currentColor;
 
-        public AnonymousClass2(int i) {
+        public ViewOnClickListenerC85062(int i) {
             this.$currentColor = i;
         }
 
@@ -165,12 +166,12 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
     }
 
     public WidgetGuildRoleSubscriptionTierDesign() {
-        super(R.layout.widget_guild_role_subscription_tier_design);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildRoleSubscriptionTierDesign$binding$2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildRoleSubscriptionTierViewModel.class), new WidgetGuildRoleSubscriptionTierDesign$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(WidgetGuildRoleSubscriptionTierDesign$viewModel$2.INSTANCE));
-        this.hideHeader = g.lazy(new WidgetGuildRoleSubscriptionTierDesign$hideHeader$2(this));
-        this.memberBadgeImageSelectedResult = new WidgetGuildRoleSubscriptionTierDesign$memberBadgeImageSelectedResult$1(this);
-        this.defaultColor = g.lazy(new WidgetGuildRoleSubscriptionTierDesign$defaultColor$2(this));
+        super(C5419R.layout.widget_guild_role_subscription_tier_design);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildRoleSubscriptionTierDesign2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildRoleSubscriptionTierViewModel.class), new C8499xc56e8221(this), new AppViewModelDelegates2(WidgetGuildRoleSubscriptionTierDesign7.INSTANCE));
+        this.hideHeader = LazyJVM.lazy(new WidgetGuildRoleSubscriptionTierDesign4(this));
+        this.memberBadgeImageSelectedResult = new WidgetGuildRoleSubscriptionTierDesign6(this);
+        this.defaultColor = LazyJVM.lazy(new WidgetGuildRoleSubscriptionTierDesign3(this));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetGuildRoleSubscriptionTierDesign widgetGuildRoleSubscriptionTierDesign, GuildRoleSubscriptionTierViewModel.ViewState viewState) {
@@ -190,9 +191,9 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
         Integer memberColor = guildRoleSubscriptionTier.getMemberColor();
         int iIntValue = memberColor != null ? memberColor.intValue() : getDefaultColor();
         setupMemberColor(iIntValue);
-        getBinding().g.updateImage(guildRoleSubscriptionTier.getMemberIcon(), guildRoleSubscriptionTier.getGuildRole());
-        getBinding().i.setMemberDesign(Integer.valueOf(iIntValue), guildRoleSubscriptionTier.getMemberIcon(), guildRoleSubscriptionTier.getGuildRole());
-        getBinding().h.setMemberDesign(Integer.valueOf(iIntValue), guildRoleSubscriptionTier.getMemberIcon(), guildRoleSubscriptionTier.getGuildRole());
+        getBinding().f16969g.updateImage(guildRoleSubscriptionTier.getMemberIcon(), guildRoleSubscriptionTier.getGuildRole());
+        getBinding().f16971i.setMemberDesign(Integer.valueOf(iIntValue), guildRoleSubscriptionTier.getMemberIcon(), guildRoleSubscriptionTier.getGuildRole());
+        getBinding().f16970h.setMemberDesign(Integer.valueOf(iIntValue), guildRoleSubscriptionTier.getMemberIcon(), guildRoleSubscriptionTier.getGuildRole());
     }
 
     private final WidgetGuildRoleSubscriptionTierDesignBinding getBinding() {
@@ -212,15 +213,15 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
     }
 
     private final void launchColorPicker(@ColorInt int currentColor) {
-        ColorPickerDialog colorPickerDialogBuildColorPickerDialog = ColorPickerUtils.INSTANCE.buildColorPickerDialog(requireContext(), R.string.guild_role_subscription_tier_design_member_color_label, currentColor);
-        colorPickerDialogBuildColorPickerDialog.k = new WidgetGuildRoleSubscriptionTierDesign$launchColorPicker$$inlined$apply$lambda$1(this);
+        ColorPickerDialog colorPickerDialogBuildColorPickerDialog = ColorPickerUtils.INSTANCE.buildColorPickerDialog(requireContext(), C5419R.string.guild_role_subscription_tier_design_member_color_label, currentColor);
+        colorPickerDialogBuildColorPickerDialog.f21719k = new WidgetGuildRoleSubscriptionTierDesign5(this);
         colorPickerDialogBuildColorPickerDialog.show(getParentFragmentManager(), DIALOG_TAG_COLOR_PICKER);
     }
 
     private final void setupMemberColor(@ColorInt int currentColor) {
-        View view = getBinding().f2440b;
-        m.checkNotNullExpressionValue(view, "binding.guildRoleSubscriptionTierAppearanceColor");
-        Drawable drawable = ContextCompat.getDrawable(requireContext(), R.drawable.rounded_rectangle_4dp_radius);
+        View view = getBinding().f16964b;
+        Intrinsics3.checkNotNullExpressionValue(view, "binding.guildRoleSubscriptionTierAppearanceColor");
+        Drawable drawable = ContextCompat.getDrawable(requireContext(), C5419R.drawable.rounded_rectangle_4dp_radius);
         if (drawable != null) {
             drawable.mutate();
             drawable.setColorFilter(new PorterDuffColorFilter(currentColor, PorterDuff.Mode.SRC_ATOP));
@@ -231,58 +232,58 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
             throw new IllegalArgumentException("Required value was null.".toString());
         }
         view.setBackground(drawable);
-        getBinding().c.setOnClickListener(new AnonymousClass2(currentColor));
-        TextView textView = getBinding().d;
-        m.checkNotNullExpressionValue(textView, "binding.guildRoleSubscri…onTierAppearanceColorText");
+        getBinding().f16965c.setOnClickListener(new ViewOnClickListenerC85062(currentColor));
+        TextView textView = getBinding().f16966d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildRoleSubscri…onTierAppearanceColorText");
         StringBuilder sb = new StringBuilder();
-        sb.append(MentionUtilsKt.CHANNELS_CHAR);
-        String strX = c.x(currentColor);
-        Objects.requireNonNull(strX, "null cannot be cast to non-null type java.lang.String");
-        String strSubstring = strX.substring(2);
-        m.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
+        sb.append(MentionUtils.CHANNELS_CHAR);
+        String strM10143x = Util7.m10143x(currentColor);
+        Objects.requireNonNull(strM10143x, "null cannot be cast to non-null type java.lang.String");
+        String strSubstring = strM10143x.substring(2);
+        Intrinsics3.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
         sb.append(strSubstring);
         textView.setText(sb.toString());
     }
 
     @Override // com.discord.app.AppFragment
     public void onImageChosen(Uri uri, String mimeType) {
-        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        m.checkNotNullParameter(mimeType, "mimeType");
+        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
         super.onImageChosen(uri, mimeType);
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         MGImages.prepareImageUpload(uri, mimeType, parentFragmentManager, this, this.memberBadgeImageSelectedResult, ImageUploadDialog.PreviewType.GUILD_SUBSCRIPTION_ROLE_AVATAR);
     }
 
     @Override // com.discord.app.AppFragment
     public void onImageCropped(Uri uri, String mimeType) {
-        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        m.checkNotNullParameter(mimeType, "mimeType");
+        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
         super.onImageCropped(uri, mimeType);
         MGImages.requestDataUrl(getContext(), uri, mimeType, this.memberBadgeImageSelectedResult);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        getBinding().g.configureUI(AnonymousClass1.INSTANCE, new AnonymousClass2());
+        getBinding().f16969g.configureUI(C85031.INSTANCE, new C85042());
         getViewModel().setDefaultMemberColor(getDefaultColor());
-        TextView textView = getBinding().f;
-        m.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierAppearanceTitle");
+        TextView textView = getBinding().f16968f;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierAppearanceTitle");
         textView.setVisibility(getHideHeader() ^ true ? 0 : 8);
         if (getHideHeader()) {
-            getBinding().e.setPadding(0, DimenUtils.dpToPixels(16), 0, 0);
+            getBinding().f16967e.setPadding(0, DimenUtils.dpToPixels(16), 0, 0);
             return;
         }
-        TextView textView2 = getBinding().e;
-        m.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscri…ionTierAppearanceSubtitle");
+        TextView textView2 = getBinding().f16967e;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscri…ionTierAppearanceSubtitle");
         textView2.setPadding(0, 0, 0, 0);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetGuildRoleSubscriptionTierDesign.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetGuildRoleSubscriptionTierDesign.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85051(), 62, (Object) null);
     }
 }

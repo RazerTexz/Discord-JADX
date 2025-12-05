@@ -16,9 +16,9 @@ public class DropDownPreference extends ListPreference {
     private final AdapterView.OnItemSelectedListener mItemSelectedListener;
     private Spinner mSpinner;
 
-    /* renamed from: androidx.preference.DropDownPreference$1, reason: invalid class name */
-    public class AnonymousClass1 implements AdapterView.OnItemSelectedListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.preference.DropDownPreference$1 */
+    public class C05021 implements AdapterView.OnItemSelectedListener {
+        public C05021() {
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
@@ -78,7 +78,7 @@ public class DropDownPreference extends ListPreference {
 
     @Override // androidx.preference.Preference
     public void onBindViewHolder(PreferenceViewHolder preferenceViewHolder) {
-        Spinner spinner = (Spinner) preferenceViewHolder.itemView.findViewById(R.id.spinner);
+        Spinner spinner = (Spinner) preferenceViewHolder.itemView.findViewById(C0525R.id.spinner);
         this.mSpinner = spinner;
         spinner.setAdapter((SpinnerAdapter) this.mAdapter);
         this.mSpinner.setOnItemSelectedListener(this.mItemSelectedListener);
@@ -103,7 +103,7 @@ public class DropDownPreference extends ListPreference {
     }
 
     public DropDownPreference(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, R.attr.dropdownPreferenceStyle);
+        this(context, attributeSet, C0525R.attr.dropdownPreferenceStyle);
     }
 
     public DropDownPreference(Context context, AttributeSet attributeSet, int i) {
@@ -112,7 +112,7 @@ public class DropDownPreference extends ListPreference {
 
     public DropDownPreference(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        this.mItemSelectedListener = new AnonymousClass1();
+        this.mItemSelectedListener = new C05021();
         this.mContext = context;
         this.mAdapter = createAdapter();
         updateEntries();

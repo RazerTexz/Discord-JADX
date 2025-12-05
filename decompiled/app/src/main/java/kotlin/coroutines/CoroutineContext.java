@@ -1,12 +1,12 @@
 package kotlin.coroutines;
 
 import androidx.exifinterface.media.ExifInterface;
-import d0.w.c;
-import d0.w.d;
-import d0.w.f;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function2;
+import p507d0.p584w.ContinuationInterceptor;
+import p507d0.p584w.CoroutineContextImpl3;
+import p507d0.p584w.CoroutineContextImpl4;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: CoroutineContext.kt */
 /* loaded from: classes3.dex */
@@ -16,29 +16,30 @@ public interface CoroutineContext {
     public interface Element extends CoroutineContext {
 
         /* compiled from: CoroutineContext.kt */
-        public static final class a {
+        /* renamed from: kotlin.coroutines.CoroutineContext$Element$a */
+        public static final class C12790a {
             public static <R> R fold(Element element, R r, Function2<? super R, ? super Element, ? extends R> function2) {
-                m.checkNotNullParameter(function2, "operation");
+                Intrinsics3.checkNotNullParameter(function2, "operation");
                 return function2.invoke(r, element);
             }
 
             /* JADX WARN: Multi-variable type inference failed */
             public static <E extends Element> E get(Element element, Key<E> key) {
-                m.checkNotNullParameter(key, "key");
-                if (m.areEqual(element.getKey(), key)) {
+                Intrinsics3.checkNotNullParameter(key, "key");
+                if (Intrinsics3.areEqual(element.getKey(), key)) {
                     return element;
                 }
                 return null;
             }
 
             public static CoroutineContext minusKey(Element element, Key<?> key) {
-                m.checkNotNullParameter(key, "key");
-                return m.areEqual(element.getKey(), key) ? f.j : element;
+                Intrinsics3.checkNotNullParameter(key, "key");
+                return Intrinsics3.areEqual(element.getKey(), key) ? CoroutineContextImpl4.f25237j : element;
             }
 
             public static CoroutineContext plus(Element element, CoroutineContext coroutineContext) {
-                m.checkNotNullParameter(coroutineContext, "context");
-                return a.plus(element, coroutineContext);
+                Intrinsics3.checkNotNullParameter(coroutineContext, "context");
+                return C12791a.plus(element, coroutineContext);
             }
         }
 
@@ -53,14 +54,17 @@ public interface CoroutineContext {
     }
 
     /* compiled from: CoroutineContext.kt */
-    public static final class a {
+    /* renamed from: kotlin.coroutines.CoroutineContext$a */
+    public static final class C12791a {
 
         /* compiled from: CoroutineContext.kt */
-        /* renamed from: kotlin.coroutines.CoroutineContext$a$a, reason: collision with other inner class name */
-        public static final class C0640a extends o implements Function2<CoroutineContext, Element, CoroutineContext> {
-            public static final C0640a j = new C0640a();
+        /* renamed from: kotlin.coroutines.CoroutineContext$a$a */
+        public static final class a extends Lambda implements Function2<CoroutineContext, Element, CoroutineContext> {
 
-            public C0640a() {
+            /* renamed from: j */
+            public static final a f27431j = new a();
+
+            public a() {
                 super(2);
             }
 
@@ -71,33 +75,33 @@ public interface CoroutineContext {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final CoroutineContext invoke2(CoroutineContext coroutineContext, Element element) {
-                c cVar;
-                m.checkNotNullParameter(coroutineContext, "acc");
-                m.checkNotNullParameter(element, "element");
+                CoroutineContextImpl3 coroutineContextImpl3;
+                Intrinsics3.checkNotNullParameter(coroutineContext, "acc");
+                Intrinsics3.checkNotNullParameter(element, "element");
                 CoroutineContext coroutineContextMinusKey = coroutineContext.minusKey(element.getKey());
-                f fVar = f.j;
-                if (coroutineContextMinusKey == fVar) {
+                CoroutineContextImpl4 coroutineContextImpl4 = CoroutineContextImpl4.f25237j;
+                if (coroutineContextMinusKey == coroutineContextImpl4) {
                     return element;
                 }
-                int i = d.e;
-                d.b bVar = d.b.a;
-                d dVar = (d) coroutineContextMinusKey.get(bVar);
-                if (dVar == null) {
-                    cVar = new c(coroutineContextMinusKey, element);
+                int i = ContinuationInterceptor.f25235e;
+                ContinuationInterceptor.b bVar = ContinuationInterceptor.b.f25236a;
+                ContinuationInterceptor continuationInterceptor = (ContinuationInterceptor) coroutineContextMinusKey.get(bVar);
+                if (continuationInterceptor == null) {
+                    coroutineContextImpl3 = new CoroutineContextImpl3(coroutineContextMinusKey, element);
                 } else {
                     CoroutineContext coroutineContextMinusKey2 = coroutineContextMinusKey.minusKey(bVar);
-                    if (coroutineContextMinusKey2 == fVar) {
-                        return new c(element, dVar);
+                    if (coroutineContextMinusKey2 == coroutineContextImpl4) {
+                        return new CoroutineContextImpl3(element, continuationInterceptor);
                     }
-                    cVar = new c(new c(coroutineContextMinusKey2, element), dVar);
+                    coroutineContextImpl3 = new CoroutineContextImpl3(new CoroutineContextImpl3(coroutineContextMinusKey2, element), continuationInterceptor);
                 }
-                return cVar;
+                return coroutineContextImpl3;
             }
         }
 
         public static CoroutineContext plus(CoroutineContext coroutineContext, CoroutineContext coroutineContext2) {
-            m.checkNotNullParameter(coroutineContext2, "context");
-            return coroutineContext2 == f.j ? coroutineContext : (CoroutineContext) coroutineContext2.fold(coroutineContext, C0640a.j);
+            Intrinsics3.checkNotNullParameter(coroutineContext2, "context");
+            return coroutineContext2 == CoroutineContextImpl4.f25237j ? coroutineContext : (CoroutineContext) coroutineContext2.fold(coroutineContext, a.f27431j);
         }
     }
 

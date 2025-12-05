@@ -5,14 +5,14 @@ import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.PermissionOverwrite;
 import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StoreStream;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import kotlin.NoWhenBranchMatchedException;
-import rx.Observable;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
 
 /* compiled from: ChannelPermissionsAddMemberUtils.kt */
 /* loaded from: classes2.dex */
@@ -36,15 +36,15 @@ public final class ChannelPermissionsAddMemberUtils {
 
     public final Observable<List<Void>> addPermissionOverwrites(long channelId, Map<Long, ? extends PermissionOverwrite.Type> selectedItems, long permission) {
         RestAPIParams.ChannelPermissionOverwrites channelPermissionOverwritesCreateForRole;
-        m.checkNotNullParameter(selectedItems, "selectedItems");
+        Intrinsics3.checkNotNullParameter(selectedItems, "selectedItems");
         Channel channel = StoreStream.INSTANCE.getChannels().getChannel(channelId);
         ArrayList arrayList = new ArrayList(selectedItems.size());
         for (Map.Entry<Long, ? extends PermissionOverwrite.Type> entry : selectedItems.entrySet()) {
             long jLongValue = entry.getKey().longValue();
             PermissionOverwrite.Type value = entry.getValue();
-            PermissionOverwrite permissionOverwriteF = channel != null ? ChannelUtils.f(channel, jLongValue) : null;
-            long allow = permissionOverwriteF != null ? permissionOverwriteF.getAllow() : 0L;
-            long deny = permissionOverwriteF != null ? permissionOverwriteF.getDeny() : 0L;
+            PermissionOverwrite permissionOverwriteM7682f = channel != null ? ChannelUtils.m7682f(channel, jLongValue) : null;
+            long allow = permissionOverwriteM7682f != null ? permissionOverwriteM7682f.getAllow() : 0L;
+            long deny = permissionOverwriteM7682f != null ? permissionOverwriteM7682f.getDeny() : 0L;
             int iOrdinal = value.ordinal();
             if (iOrdinal == 0) {
                 channelPermissionOverwritesCreateForRole = RestAPIParams.ChannelPermissionOverwrites.INSTANCE.createForRole(jLongValue, Long.valueOf(allow | permission), Long.valueOf((~permission) & deny));
@@ -56,8 +56,8 @@ public final class ChannelPermissionsAddMemberUtils {
             }
             arrayList.add(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updatePermissionOverwrites(channelId, jLongValue, channelPermissionOverwritesCreateForRole), false, 1, null));
         }
-        Observable<List<Void>> observableF0 = Observable.l(arrayList).f0();
-        m.checkNotNullExpressionValue(observableF0, "Observable.concat(overwr…quests)\n        .toList()");
-        return observableF0;
+        Observable<List<Void>> observableM11105f0 = Observable.m11078l(arrayList).m11105f0();
+        Intrinsics3.checkNotNullExpressionValue(observableM11105f0, "Observable.concat(overwr…quests)\n        .toList()");
+        return observableM11105f0;
     }
 }

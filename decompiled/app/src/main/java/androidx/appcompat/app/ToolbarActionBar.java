@@ -34,11 +34,11 @@ public class ToolbarActionBar extends ActionBar {
     public boolean mToolbarMenuPrepared;
     public Window.Callback mWindowCallback;
     private ArrayList<ActionBar.OnMenuVisibilityListener> mMenuVisibilityListeners = new ArrayList<>();
-    private final Runnable mMenuInvalidator = new AnonymousClass1();
+    private final Runnable mMenuInvalidator = new RunnableC00731();
 
-    /* renamed from: androidx.appcompat.app.ToolbarActionBar$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.app.ToolbarActionBar$1 */
+    public class RunnableC00731 implements Runnable {
+        public RunnableC00731() {
         }
 
         @Override // java.lang.Runnable
@@ -47,9 +47,9 @@ public class ToolbarActionBar extends ActionBar {
         }
     }
 
-    /* renamed from: androidx.appcompat.app.ToolbarActionBar$2, reason: invalid class name */
-    public class AnonymousClass2 implements Toolbar.OnMenuItemClickListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.app.ToolbarActionBar$2 */
+    public class C00742 implements Toolbar.OnMenuItemClickListener {
+        public C00742() {
         }
 
         @Override // androidx.appcompat.widget.Toolbar.OnMenuItemClickListener
@@ -136,13 +136,13 @@ public class ToolbarActionBar extends ActionBar {
     }
 
     public ToolbarActionBar(Toolbar toolbar, CharSequence charSequence, Window.Callback callback) {
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-        this.mMenuClicker = anonymousClass2;
+        C00742 c00742 = new C00742();
+        this.mMenuClicker = c00742;
         this.mDecorToolbar = new ToolbarWidgetWrapper(toolbar, false);
         ToolbarCallbackWrapper toolbarCallbackWrapper = new ToolbarCallbackWrapper(callback);
         this.mWindowCallback = toolbarCallbackWrapper;
         this.mDecorToolbar.setWindowCallback(toolbarCallbackWrapper);
-        toolbar.setOnMenuItemClickListener(anonymousClass2);
+        toolbar.setOnMenuItemClickListener(c00742);
         this.mDecorToolbar.setWindowTitle(charSequence);
     }
 

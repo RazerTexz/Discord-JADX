@@ -9,16 +9,13 @@ import com.discord.models.embeddedactivities.EmbeddedActivity;
 import com.discord.models.guild.UserGuildMember;
 import com.discord.stores.StoreApplicationStreamPreviews;
 import com.discord.stores.StoreVoiceParticipants;
-import com.discord.utilities.EmbeddedActivityUtilsKt;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventTiming;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventsComparator;
+import com.discord.utilities.EmbeddedActivityUtils;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities2;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities5;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities6;
 import com.discord.utilities.streams.StreamContext;
 import com.discord.widgets.voice.model.CallModel;
 import com.discord.widgets.voice.sheet.CallParticipantsAdapter;
-import d0.t.o;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -26,6 +23,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ParticipantsListItemGenerator.kt */
 /* loaded from: classes.dex */
@@ -41,7 +41,7 @@ public final class ParticipantsListItemGenerator {
 
         private final void addEmbeddedActivitiesToListItems(ArrayList<CallParticipantsAdapter.ListItem> listItems, List<EmbeddedActivity> embeddedActivities, Map<Long, StoreVoiceParticipants.VoiceUser> voiceParticipants, Map<Long, Application> applications) {
             for (EmbeddedActivity embeddedActivity : embeddedActivities) {
-                List<UserGuildMember> activityParticipants = EmbeddedActivityUtilsKt.getActivityParticipants(embeddedActivity, voiceParticipants);
+                List<UserGuildMember> activityParticipants = EmbeddedActivityUtils.getActivityParticipants(embeddedActivity, voiceParticipants);
                 Application application = applications.get(Long.valueOf(embeddedActivity.getApplicationId()));
                 if (application != null) {
                     listItems.add(new CallParticipantsAdapter.ListItem.EmbeddedActivityItem(embeddedActivity, activityParticipants, com.discord.models.commands.Application.INSTANCE.fromApiApplication(application)));
@@ -50,7 +50,7 @@ public final class ParticipantsListItemGenerator {
         }
 
         private final Comparator<StoreVoiceParticipants.VoiceUser> createUserItemsComparator(String mySpectatingStreamKey) {
-            return new ParticipantsListItemGenerator$Companion$createUserItemsComparator$1(mySpectatingStreamKey);
+            return new ParticipantsListItemGenerator2(mySpectatingStreamKey);
         }
 
         public static /* synthetic */ Comparator createUserItemsComparator$default(Companion companion, String str, int i, Object obj) {
@@ -61,11 +61,11 @@ public final class ParticipantsListItemGenerator {
         }
 
         public final List<CallParticipantsAdapter.ListItem> createConnectedListItems(Map<Long, StoreVoiceParticipants.VoiceUser> voiceParticipants, String mySpectatingStreamKey, Channel channel, CallModel callModel, List<EmbeddedActivity> embeddedActivities, Map<Long, Application> applications) {
-            m.checkNotNullParameter(voiceParticipants, "voiceParticipants");
-            m.checkNotNullParameter(channel, "channel");
-            m.checkNotNullParameter(callModel, "callModel");
-            m.checkNotNullParameter(embeddedActivities, "embeddedActivities");
-            m.checkNotNullParameter(applications, "applications");
+            Intrinsics3.checkNotNullParameter(voiceParticipants, "voiceParticipants");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(callModel, "callModel");
+            Intrinsics3.checkNotNullParameter(embeddedActivities, "embeddedActivities");
+            Intrinsics3.checkNotNullParameter(applications, "applications");
             ArrayList<CallParticipantsAdapter.ListItem> arrayList = new ArrayList<>();
             List<GuildScheduledEvent> guildScheduledEvents = callModel.getGuildScheduledEvents();
             ArrayList arrayList2 = new ArrayList();
@@ -75,29 +75,29 @@ public final class ParticipantsListItemGenerator {
                     break;
                 }
                 Object next = it.next();
-                GuildScheduledEventTiming eventTiming = GuildScheduledEventUtilitiesKt.getEventTiming((GuildScheduledEvent) next);
-                if (eventTiming.isStartable() || eventTiming == GuildScheduledEventTiming.LIVE) {
+                GuildScheduledEventUtilities2 eventTiming = GuildScheduledEventUtilities5.getEventTiming((GuildScheduledEvent) next);
+                if (eventTiming.isStartable() || eventTiming == GuildScheduledEventUtilities2.LIVE) {
                     arrayList2.add(next);
                 }
             }
-            GuildScheduledEvent guildScheduledEvent = (GuildScheduledEvent) u.minWithOrNull(arrayList2, GuildScheduledEventsComparator.INSTANCE);
+            GuildScheduledEvent guildScheduledEvent = (GuildScheduledEvent) _Collections.minWithOrNull(arrayList2, GuildScheduledEventUtilities6.INSTANCE);
             if (guildScheduledEvent != null) {
                 arrayList.add(new CallParticipantsAdapter.ListItem.Event(guildScheduledEvent, callModel.canManageEvent(), callModel.isConnected()));
             }
             addEmbeddedActivitiesToListItems(arrayList, embeddedActivities, voiceParticipants, applications);
             ArrayList arrayList3 = new ArrayList();
             for (StoreVoiceParticipants.VoiceUser voiceUser : voiceParticipants.values()) {
-                if (voiceUser.isConnected() || ChannelUtils.B(channel)) {
+                if (voiceUser.isConnected() || ChannelUtils.m7667B(channel)) {
                     arrayList3.add(voiceUser);
                 }
             }
             boolean z2 = !arrayList3.isEmpty();
             boolean z3 = mySpectatingStreamKey != null;
             if (z2) {
-                List<StoreVoiceParticipants.VoiceUser> listSortedWith = u.sortedWith(arrayList3, createUserItemsComparator(mySpectatingStreamKey));
-                ArrayList arrayList4 = new ArrayList(o.collectionSizeOrDefault(listSortedWith, 10));
+                List<StoreVoiceParticipants.VoiceUser> listSortedWith = _Collections.sortedWith(arrayList3, createUserItemsComparator(mySpectatingStreamKey));
+                ArrayList arrayList4 = new ArrayList(Iterables2.collectionSizeOrDefault(listSortedWith, 10));
                 for (StoreVoiceParticipants.VoiceUser voiceUser2 : listSortedWith) {
-                    arrayList4.add(new CallParticipantsAdapter.ListItem.VoiceUser(voiceUser2, ChannelUtils.B(channel) && !voiceUser2.isConnected(), z3 && m.areEqual(mySpectatingStreamKey, voiceUser2.getWatchingStream())));
+                    arrayList4.add(new CallParticipantsAdapter.ListItem.VoiceUser(voiceUser2, ChannelUtils.m7667B(channel) && !voiceUser2.isConnected(), z3 && Intrinsics3.areEqual(mySpectatingStreamKey, voiceUser2.getWatchingStream())));
                 }
                 arrayList.addAll(arrayList4);
             }
@@ -109,9 +109,9 @@ public final class ParticipantsListItemGenerator {
 
         public final boolean refreshStreams(List<? extends CallParticipantsAdapter.ListItem> listItems, Set<String> fetchedPreviews, StoreApplicationStreamPreviews storeApplicationStreamPreviews) {
             ModelApplicationStream stream;
-            m.checkNotNullParameter(listItems, "listItems");
-            m.checkNotNullParameter(fetchedPreviews, "fetchedPreviews");
-            m.checkNotNullParameter(storeApplicationStreamPreviews, "storeApplicationStreamPreviews");
+            Intrinsics3.checkNotNullParameter(listItems, "listItems");
+            Intrinsics3.checkNotNullParameter(fetchedPreviews, "fetchedPreviews");
+            Intrinsics3.checkNotNullParameter(storeApplicationStreamPreviews, "storeApplicationStreamPreviews");
             boolean z2 = false;
             for (CallParticipantsAdapter.ListItem listItem : listItems) {
                 if (listItem instanceof CallParticipantsAdapter.ListItem.VoiceUser) {

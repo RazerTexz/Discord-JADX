@@ -19,16 +19,7 @@ import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.a.b.c;
-import b.a.a.c;
-import b.a.d.f0;
-import b.a.i.t4;
-import b.a.i.u4;
-import b.a.i.v4;
-import b.a.k.b;
-import b.a.o.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.guild.GuildVerificationLevel;
@@ -40,22 +31,22 @@ import com.discord.i18n.RenderContext;
 import com.discord.models.commands.ApplicationCommand;
 import com.discord.models.commands.ApplicationCommandOption;
 import com.discord.models.member.GuildMember;
-import com.discord.utilities.KotlinExtensionsKt;
+import com.discord.utilities.KotlinExtensions;
 import com.discord.utilities.ShareUtils;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.color.ColorCompatKt;
-import com.discord.utilities.duration.DurationUtilsKt;
+import com.discord.utilities.color.ColorCompat2;
+import com.discord.utilities.duration.DurationUtils;
 import com.discord.utilities.guilds.MemberVerificationUtils;
 import com.discord.utilities.intent.IntentUtils;
 import com.discord.utilities.locale.LocaleManager;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.utilities.views.ViewVisibilityObserver;
 import com.discord.utilities.views.ViewVisibilityObserverProvider;
 import com.discord.widgets.announcements.WidgetChannelFollowSheet;
@@ -72,16 +63,6 @@ import com.lytefast.flexinput.FlexInputListener;
 import com.lytefast.flexinput.fragment.FlexInputFragment;
 import com.lytefast.flexinput.model.Attachment;
 import com.lytefast.flexinput.widget.FlexEditText;
-import d0.d0.f;
-import d0.g;
-import d0.g0.t;
-import d0.t.g0;
-import d0.t.h0;
-import d0.t.n;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.text.NumberFormat;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -95,12 +76,35 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.functions.Function4;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p008a.p009a.ImageUploadFailedDialog;
+import p007b.p008a.p009a.p012b.MultiValuePropPremiumUpsellDialog;
+import p007b.p008a.p018d.AppHelpDesk;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates2;
+import p007b.p008a.p025i.WidgetChatInputCommunicationDisabledGuardBinding;
+import p007b.p008a.p025i.WidgetChatInputGuardBinding;
+import p007b.p008a.p025i.WidgetChatInputMemberVerificationGuardBinding;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p008a.p039o.PanelsChildGestureRegionObserver;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.LazyJVM;
+import p507d0.p512d0._Ranges;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: WidgetChatInput.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChatInput extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChatInput.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatInputBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChatInput.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatInputBinding;", 0)};
     private InputAutocomplete autocomplete;
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
@@ -150,11 +154,11 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$1 */
+    public static final class ViewOnClickListenerC77051 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
-        public AnonymousClass1(ChatInputViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC77051(ChatInputViewModel.ViewState.Loaded loaded) {
             this.$viewState = loaded;
         }
 
@@ -165,11 +169,11 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$2 */
+    public static final class ViewOnClickListenerC77062 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
-        public AnonymousClass2(ChatInputViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC77062(ChatInputViewModel.ViewState.Loaded loaded) {
             this.$viewState = loaded;
         }
 
@@ -180,9 +184,9 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$3 */
+    public static final class ViewOnClickListenerC77073 implements View.OnClickListener {
+        public ViewOnClickListenerC77073() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -192,9 +196,9 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$4 */
+    public static final class ViewOnClickListenerC77084 implements View.OnClickListener {
+        public ViewOnClickListenerC77084() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -204,28 +208,28 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$5 */
+    public static final class ViewOnClickListenerC77095 implements View.OnClickListener {
         public final /* synthetic */ String $guideUrl;
 
-        public AnonymousClass5(String str) {
+        public ViewOnClickListenerC77095(String str) {
             this.$guideUrl = str;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            UriHandler.handle$default(UriHandler.INSTANCE, a.I(WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f2304s.f205b, "binding.guardCommunicati…nicationDisabledGuardText", "binding.guardCommunicati…DisabledGuardText.context"), this.$guideUrl, false, false, null, 28, null);
+            UriHandler.handle$default(UriHandler.INSTANCE, outline.m821I(WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16112s.f1255b, "binding.guardCommunicati…nicationDisabledGuardText", "binding.guardCommunicati…DisabledGuardText.context"), this.$guideUrl, false, false, null, 28, null);
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$6, reason: invalid class name */
-    public static final class AnonymousClass6 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$6 */
+    public static final class ViewOnClickListenerC77106 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
         /* compiled from: WidgetChatInput.kt */
         /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$6$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -235,7 +239,7 @@ public final class WidgetChatInput extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -243,7 +247,7 @@ public final class WidgetChatInput extends AppFragment {
             }
         }
 
-        public AnonymousClass6(ChatInputViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC77106(ChatInputViewModel.ViewState.Loaded loaded) {
             this.$viewState = loaded;
         }
 
@@ -252,19 +256,19 @@ public final class WidgetChatInput extends AppFragment {
             MemberVerificationUtils memberVerificationUtils = MemberVerificationUtils.INSTANCE;
             Context contextRequireContext = WidgetChatInput.this.requireContext();
             FragmentManager parentFragmentManager = WidgetChatInput.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             MemberVerificationUtils.maybeShowVerificationGate$default(memberVerificationUtils, contextRequireContext, parentFragmentManager, this.$viewState.getChannel().getGuildId(), Traits.Location.Page.GUILD_CHANNEL, null, null, AnonymousClass1.INSTANCE, 48, null);
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$7, reason: invalid class name */
-    public static final class AnonymousClass7 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$7 */
+    public static final class ViewOnClickListenerC77117 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
         /* compiled from: WidgetChatInput.kt */
         /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$7$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -274,7 +278,7 @@ public final class WidgetChatInput extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -282,7 +286,7 @@ public final class WidgetChatInput extends AppFragment {
             }
         }
 
-        public AnonymousClass7(ChatInputViewModel.ViewState.Loaded loaded) {
+        public ViewOnClickListenerC77117(ChatInputViewModel.ViewState.Loaded loaded) {
             this.$viewState = loaded;
         }
 
@@ -291,31 +295,31 @@ public final class WidgetChatInput extends AppFragment {
             MemberVerificationUtils memberVerificationUtils = MemberVerificationUtils.INSTANCE;
             Context contextRequireContext = WidgetChatInput.this.requireContext();
             FragmentManager parentFragmentManager = WidgetChatInput.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             MemberVerificationUtils.maybeShowVerificationGate$default(memberVerificationUtils, contextRequireContext, parentFragmentManager, this.$viewState.getChannel().getGuildId(), Traits.Location.Page.GUILD_CHANNEL, null, null, AnonymousClass1.INSTANCE, 48, null);
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$8, reason: invalid class name */
-    public static final class AnonymousClass8 implements View.OnClickListener {
-        public AnonymousClass8() {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureChatGuard$8 */
+    public static final class ViewOnClickListenerC77128 implements View.OnClickListener {
+        public ViewOnClickListenerC77128() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             ChatInputViewModel chatInputViewModelAccess$getViewModel$p = WidgetChatInput.access$getViewModel$p(WidgetChatInput.this);
-            m.checkNotNullExpressionValue(view, "it");
+            Intrinsics3.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            m.checkNotNullExpressionValue(context, "it.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
             chatInputViewModelAccess$getViewModel$p.verifyAccount(context);
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarEditing$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarEditing$1 */
+    public static final class ViewOnClickListenerC77131 implements View.OnClickListener {
+        public ViewOnClickListenerC77131() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -325,13 +329,13 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$1 */
+    public static final class C77141 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying $model;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Context context, ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying replying) {
+        public C77141(Context context, ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying replying) {
             super(1);
             this.$context = context;
             this.$model = replying;
@@ -340,22 +344,22 @@ public final class WidgetChatInput extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(RenderContext renderContext) {
             invoke2(renderContext);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            m.checkNotNullParameter(renderContext, "$receiver");
-            renderContext.boldColor = Integer.valueOf(GuildMember.INSTANCE.getColor(this.$model.getRepliedAuthorGuildMember(), ColorCompat.getThemedColor(this.$context, R.attr.colorHeaderPrimary)));
+            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            renderContext.boldColor = Integer.valueOf(GuildMember.INSTANCE.getColor(this.$model.getRepliedAuthorGuildMember(), ColorCompat.getThemedColor(this.$context, C5419R.attr.colorHeaderPrimary)));
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$2 */
+    public static final class ViewOnClickListenerC77152 implements View.OnClickListener {
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying $model;
 
-        public AnonymousClass2(ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying replying) {
+        public ViewOnClickListenerC77152(ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying replying) {
             this.$model = replying;
         }
 
@@ -366,9 +370,9 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$3 */
+    public static final class ViewOnClickListenerC77163 implements View.OnClickListener {
+        public ViewOnClickListenerC77163() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -378,9 +382,9 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureContextBarReplying$4 */
+    public static final class ViewOnClickListenerC77174 implements View.OnClickListener {
+        public ViewOnClickListenerC77174() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -390,24 +394,24 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function4<ApplicationCommandData, Map<ApplicationCommandOption, ? extends Attachment<?>>, Boolean, Function1<? super Boolean, ? extends Unit>, Unit> {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$1 */
+    public static final class C77181 extends Lambda implements Function4<ApplicationCommandData, Map<ApplicationCommandOption, ? extends Attachment<?>>, Boolean, Function1<? super Boolean, ? extends Unit>, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ MessageManager $messageManager;
 
         /* compiled from: WidgetChatInput.kt */
-        /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03721 extends o implements Function1<Boolean, Unit> {
-            public static final C03721 INSTANCE = new C03721();
+        /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
+            public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-            public C03721() {
+            public AnonymousClass1() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
                 invoke(bool.booleanValue());
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             public final void invoke(boolean z2) {
@@ -415,46 +419,46 @@ public final class WidgetChatInput extends AppFragment {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Context context, MessageManager messageManager) {
+        public C77181(Context context, MessageManager messageManager) {
             super(4);
             this.$context = context;
             this.$messageManager = messageManager;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ void invoke$default(AnonymousClass1 anonymousClass1, ApplicationCommandData applicationCommandData, Map map, boolean z2, Function1 function1, int i, Object obj) {
+        public static /* synthetic */ void invoke$default(C77181 c77181, ApplicationCommandData applicationCommandData, Map map, boolean z2, Function1 function1, int i, Object obj) {
             if ((i & 4) != 0) {
                 z2 = false;
             }
             if ((i & 8) != 0) {
-                function1 = C03721.INSTANCE;
+                function1 = AnonymousClass1.INSTANCE;
             }
-            anonymousClass1.invoke(applicationCommandData, (Map<ApplicationCommandOption, ? extends Attachment<?>>) map, z2, (Function1<? super Boolean, Unit>) function1);
+            c77181.invoke(applicationCommandData, (Map<ApplicationCommandOption, ? extends Attachment<?>>) map, z2, (Function1<? super Boolean, Unit>) function1);
         }
 
         @Override // kotlin.jvm.functions.Function4
         public /* bridge */ /* synthetic */ Unit invoke(ApplicationCommandData applicationCommandData, Map<ApplicationCommandOption, ? extends Attachment<?>> map, Boolean bool, Function1<? super Boolean, ? extends Unit> function1) {
             invoke(applicationCommandData, map, bool.booleanValue(), (Function1<? super Boolean, Unit>) function1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(ApplicationCommandData applicationCommandData, Map<ApplicationCommandOption, ? extends Attachment<?>> map, boolean z2, Function1<? super Boolean, Unit> function1) {
-            m.checkNotNullParameter(applicationCommandData, "applicationCommandData");
-            m.checkNotNullParameter(map, "attachments");
-            m.checkNotNullParameter(function1, "onValidationResult");
+            Intrinsics3.checkNotNullParameter(applicationCommandData, "applicationCommandData");
+            Intrinsics3.checkNotNullParameter(map, "attachments");
+            Intrinsics3.checkNotNullParameter(function1, "onValidationResult");
             WidgetChatInput.access$getViewModel$p(WidgetChatInput.this).sendCommand(this.$context, this.$messageManager, applicationCommandData, map, z2, false, function1);
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function3<List<? extends Attachment<?>>, ApplicationCommandData, Function1<? super Boolean, ? extends Unit>, Unit> {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$2 */
+    public static final class C77192 extends Lambda implements Function3<List<? extends Attachment<?>>, ApplicationCommandData, Function1<? super Boolean, ? extends Unit>, Unit> {
         public final /* synthetic */ WidgetChatInputEditText $chatInput;
         public final /* synthetic */ Context $context;
         public final /* synthetic */ MessageManager $messageManager;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(WidgetChatInputEditText widgetChatInputEditText, Context context, MessageManager messageManager) {
+        public C77192(WidgetChatInputEditText widgetChatInputEditText, Context context, MessageManager messageManager) {
             super(3);
             this.$chatInput = widgetChatInputEditText;
             this.$context = context;
@@ -464,7 +468,7 @@ public final class WidgetChatInput extends AppFragment {
         @Override // kotlin.jvm.functions.Function3
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends Attachment<?>> list, ApplicationCommandData applicationCommandData, Function1<? super Boolean, ? extends Unit> function1) {
             invoke2(list, applicationCommandData, (Function1<? super Boolean, Unit>) function1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -473,22 +477,22 @@ public final class WidgetChatInput extends AppFragment {
             MessageContent messageContent2;
             ApplicationCommand applicationCommand;
             String strInvoke;
-            m.checkNotNullParameter(list, "attachmentsRaw");
-            m.checkNotNullParameter(function1, "onValidationResult");
+            Intrinsics3.checkNotNullParameter(list, "attachmentsRaw");
+            Intrinsics3.checkNotNullParameter(function1, "onValidationResult");
             InputAutocomplete inputAutocompleteAccess$getAutocomplete$p = WidgetChatInput.access$getAutocomplete$p(WidgetChatInput.this);
             if (inputAutocompleteAccess$getAutocomplete$p == null || (messageContent = inputAutocompleteAccess$getAutocomplete$p.getInputContent()) == null) {
-                messageContent = new MessageContent(this.$chatInput.getText(), n.emptyList());
+                messageContent = new MessageContent(this.$chatInput.getText(), Collections2.emptyList());
             }
             if (applicationCommandData == null || (applicationCommand = applicationCommandData.getApplicationCommand()) == null || !applicationCommand.getBuiltIn()) {
                 messageContent2 = messageContent;
             } else {
                 ApplicationCommand applicationCommand2 = applicationCommandData.getApplicationCommand();
                 List<ApplicationCommandValue> values = applicationCommandData.getValues();
-                LinkedHashMap linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(values, 10)), 16));
+                LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(values, 10)), 16));
                 for (Object obj : values) {
                     linkedHashMap.put(((ApplicationCommandValue) obj).getName(), obj);
                 }
-                LinkedHashMap linkedHashMap2 = new LinkedHashMap(g0.mapCapacity(linkedHashMap.size()));
+                LinkedHashMap linkedHashMap2 = new LinkedHashMap(MapsJVM.mapCapacity(linkedHashMap.size()));
                 for (Map.Entry entry : linkedHashMap.entrySet()) {
                     linkedHashMap2.put(entry.getKey(), ((ApplicationCommandValue) entry.getValue()).getValue());
                 }
@@ -504,28 +508,28 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function2<List<? extends Attachment<?>>, Function1<? super Boolean, ? extends Unit>, Unit> {
-        public final /* synthetic */ AnonymousClass1 $sendCommand$1;
-        public final /* synthetic */ AnonymousClass2 $sendMessage$2;
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$3 */
+    public static final class C77203 extends Lambda implements Function2<List<? extends Attachment<?>>, Function1<? super Boolean, ? extends Unit>, Unit> {
+        public final /* synthetic */ C77181 $sendCommand$1;
+        public final /* synthetic */ C77192 $sendMessage$2;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(AnonymousClass1 anonymousClass1, AnonymousClass2 anonymousClass2) {
+        public C77203(C77181 c77181, C77192 c77192) {
             super(2);
-            this.$sendCommand$1 = anonymousClass1;
-            this.$sendMessage$2 = anonymousClass2;
+            this.$sendCommand$1 = c77181;
+            this.$sendMessage$2 = c77192;
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends Attachment<?>> list, Function1<? super Boolean, ? extends Unit> function1) {
             invoke2(list, (Function1<? super Boolean, Unit>) function1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends Attachment<?>> list, Function1<? super Boolean, Unit> function1) {
-            m.checkNotNullParameter(list, "attachmentsRaw");
-            m.checkNotNullParameter(function1, "onValidationResult");
+            Intrinsics3.checkNotNullParameter(list, "attachmentsRaw");
+            Intrinsics3.checkNotNullParameter(function1, "onValidationResult");
             InputAutocomplete inputAutocompleteAccess$getAutocomplete$p = WidgetChatInput.access$getAutocomplete$p(WidgetChatInput.this);
             ApplicationCommandData applicationCommandData$default = inputAutocompleteAccess$getAutocomplete$p != null ? InputAutocomplete.getApplicationCommandData$default(inputAutocompleteAccess$getAutocomplete$p, null, 1, null) : null;
             if (applicationCommandData$default != null && !applicationCommandData$default.getValidInputs()) {
@@ -536,23 +540,23 @@ public final class WidgetChatInput extends AppFragment {
                 this.$sendMessage$2.invoke2(list, applicationCommandData$default, function1);
                 return;
             }
-            AnonymousClass1 anonymousClass1 = this.$sendCommand$1;
+            C77181 c77181 = this.$sendCommand$1;
             InputAutocomplete inputAutocompleteAccess$getAutocomplete$p2 = WidgetChatInput.access$getAutocomplete$p(WidgetChatInput.this);
             Map<ApplicationCommandOption, Attachment<?>> commandAttachments = inputAutocompleteAccess$getAutocomplete$p2 != null ? inputAutocompleteAccess$getAutocomplete$p2.getCommandAttachments() : null;
             if (commandAttachments == null) {
-                commandAttachments = h0.emptyMap();
+                commandAttachments = Maps6.emptyMap();
             }
-            anonymousClass1.invoke(applicationCommandData$default, (Map<ApplicationCommandOption, ? extends Attachment<?>>) commandAttachments, false, function1);
+            c77181.invoke(applicationCommandData$default, (Map<ApplicationCommandOption, ? extends Attachment<?>>) commandAttachments, false, function1);
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<Integer, Boolean> {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$4 */
+    public static final class C77214 extends Lambda implements Function1<Integer, Boolean> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass4(Context context) {
+        public C77214(Context context) {
             super(1);
             this.$context = context;
         }
@@ -563,47 +567,47 @@ public final class WidgetChatInput extends AppFragment {
         }
 
         public final boolean invoke(@StringRes int i) {
-            b.a.d.m.g(this.$context, i, 0, null, 12);
+            AppToast.m169g(this.$context, i, 0, null, 12);
             return false;
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends o implements Function1<ApplicationCommandOption, Unit> {
-        public final /* synthetic */ AnonymousClass1 $sendCommand$1;
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$5 */
+    public static final class C77225 extends Lambda implements Function1<ApplicationCommandOption, Unit> {
+        public final /* synthetic */ C77181 $sendCommand$1;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass5(AnonymousClass1 anonymousClass1) {
+        public C77225(C77181 c77181) {
             super(1);
-            this.$sendCommand$1 = anonymousClass1;
+            this.$sendCommand$1 = c77181;
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ApplicationCommandOption applicationCommandOption) {
             invoke2(applicationCommandOption);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ApplicationCommandOption applicationCommandOption) {
-            m.checkNotNullParameter(applicationCommandOption, "it");
+            Intrinsics3.checkNotNullParameter(applicationCommandOption, "it");
             InputAutocomplete inputAutocompleteAccess$getAutocomplete$p = WidgetChatInput.access$getAutocomplete$p(WidgetChatInput.this);
             ApplicationCommandData applicationCommandData = inputAutocompleteAccess$getAutocomplete$p != null ? inputAutocompleteAccess$getAutocomplete$p.getApplicationCommandData(applicationCommandOption) : null;
             if (applicationCommandData != null) {
-                AnonymousClass1.invoke$default(this.$sendCommand$1, applicationCommandData, h0.emptyMap(), true, null, 8, null);
+                C77181.invoke$default(this.$sendCommand$1, applicationCommandData, Maps6.emptyMap(), true, null, 8, null);
             }
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends o implements Function0<Unit> {
-        public final /* synthetic */ AnonymousClass3 $trySend$3;
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$6 */
+    public static final class C77236 extends Lambda implements Function0<Unit> {
+        public final /* synthetic */ C77203 $trySend$3;
 
         /* compiled from: WidgetChatInput.kt */
         /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$6$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
@@ -611,7 +615,7 @@ public final class WidgetChatInput extends AppFragment {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
                 invoke(bool.booleanValue());
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             public final void invoke(boolean z2) {
@@ -622,33 +626,33 @@ public final class WidgetChatInput extends AppFragment {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass6(AnonymousClass3 anonymousClass3) {
+        public C77236(C77203 c77203) {
             super(0);
-            this.$trySend$3 = anonymousClass3;
+            this.$trySend$3 = c77203;
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            this.$trySend$3.invoke2(n.emptyList(), (Function1<? super Boolean, Unit>) new AnonymousClass1());
+            this.$trySend$3.invoke2(Collections2.emptyList(), (Function1<? super Boolean, Unit>) new AnonymousClass1());
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$7, reason: invalid class name */
-    public static final class AnonymousClass7 implements FlexInputListener {
-        public final /* synthetic */ AnonymousClass4 $sendMessageError$4;
-        public final /* synthetic */ AnonymousClass3 $trySend$3;
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$7 */
+    public static final class C77247 implements FlexInputListener {
+        public final /* synthetic */ C77214 $sendMessageError$4;
+        public final /* synthetic */ C77203 $trySend$3;
         public final /* synthetic */ ChatInputViewModel.ViewState.Loaded $viewState;
 
         /* compiled from: WidgetChatInput.kt */
         /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureSendListeners$7$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
             public final /* synthetic */ Function1 $onSendResult;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -660,7 +664,7 @@ public final class WidgetChatInput extends AppFragment {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
                 invoke(bool.booleanValue());
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             public final void invoke(boolean z2) {
@@ -671,37 +675,37 @@ public final class WidgetChatInput extends AppFragment {
             }
         }
 
-        public AnonymousClass7(ChatInputViewModel.ViewState.Loaded loaded, AnonymousClass4 anonymousClass4, AnonymousClass3 anonymousClass3) {
+        public C77247(ChatInputViewModel.ViewState.Loaded loaded, C77214 c77214, C77203 c77203) {
             this.$viewState = loaded;
-            this.$sendMessageError$4 = anonymousClass4;
-            this.$trySend$3 = anonymousClass3;
+            this.$sendMessageError$4 = c77214;
+            this.$trySend$3 = c77203;
         }
 
         @Override // com.lytefast.flexinput.FlexInputListener
         public final void onSend(String str, List<? extends Attachment<?>> list, Function1<? super Boolean, Unit> function1) {
-            m.checkNotNullParameter(list, "list");
-            m.checkNotNullParameter(function1, "onSendResult");
+            Intrinsics3.checkNotNullParameter(list, "list");
+            Intrinsics3.checkNotNullParameter(function1, "onSendResult");
             if (this.$viewState.isOnCooldown() && !this.$viewState.isEditing() && this.$viewState.getSelectedThreadDraft() == null) {
-                function1.invoke(Boolean.valueOf(this.$sendMessageError$4.invoke(R.string.channel_slowmode_desc_short)));
+                function1.invoke(Boolean.valueOf(this.$sendMessageError$4.invoke(C5419R.string.channel_slowmode_desc_short)));
                 return;
             }
             if (this.$viewState.isEditing() && (!list.isEmpty())) {
-                function1.invoke(Boolean.valueOf(this.$sendMessageError$4.invoke(R.string.editing_with_attachment_error)));
+                function1.invoke(Boolean.valueOf(this.$sendMessageError$4.invoke(C5419R.string.editing_with_attachment_error)));
             } else if (this.$viewState.getAbleToSendMessage()) {
                 this.$trySend$3.invoke2(list, (Function1<? super Boolean, Unit>) new AnonymousClass1(function1));
             } else {
-                function1.invoke(Boolean.valueOf(this.$sendMessageError$4.invoke(R.string.no_send_messages_permission_placeholder)));
+                function1.invoke(Boolean.valueOf(this.$sendMessageError$4.invoke(C5419R.string.no_send_messages_permission_placeholder)));
             }
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$configureUI$1 */
+    public static final class C77251 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ChatInputViewModel.ViewState $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ChatInputViewModel.ViewState viewState) {
+        public C77251(ChatInputViewModel.ViewState viewState) {
             super(0);
             this.$viewState = viewState;
         }
@@ -709,7 +713,7 @@ public final class WidgetChatInput extends AppFragment {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -724,12 +728,12 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$handleEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$handleEvent$1 */
+    public static final class C77261 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ChatInputViewModel.Event $event;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ChatInputViewModel.Event event) {
+        public C77261(ChatInputViewModel.Event event) {
             super(0);
             this.$event = event;
         }
@@ -737,7 +741,7 @@ public final class WidgetChatInput extends AppFragment {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -751,43 +755,43 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBound$1 */
+    public static final class C77271 extends Lambda implements Function0<Unit> {
+        public C77271() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            FlexEditText flexEditTextL = WidgetChatInput.access$getFlexInputFragment$p(WidgetChatInput.this).l();
+            FlexEditText flexEditTextM9293l = WidgetChatInput.access$getFlexInputFragment$p(WidgetChatInput.this).m9293l();
             WidgetChatInput widgetChatInput = WidgetChatInput.this;
             FlexInputFragment flexInputFragmentAccess$getFlexInputFragment$p = WidgetChatInput.access$getFlexInputFragment$p(widgetChatInput);
             AppFlexInputViewModel appFlexInputViewModelAccess$getFlexInputViewModel$p = WidgetChatInput.access$getFlexInputViewModel$p(WidgetChatInput.this);
-            TextView textView = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).k;
-            m.checkNotNullExpressionValue(textView, "binding.chatInputEmojiMatchingHeader");
-            RecyclerView recyclerView = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).l;
-            m.checkNotNullExpressionValue(recyclerView, "binding.chatInputMentionsRecycler");
-            RecyclerView recyclerView2 = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).c;
-            m.checkNotNullExpressionValue(recyclerView2, "binding.chatInputCategoriesRecycler");
-            LinearLayout linearLayout = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).m;
-            m.checkNotNullExpressionValue(linearLayout, "binding.chatInputStickersContainer");
-            RecyclerView recyclerView3 = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).o;
-            m.checkNotNullExpressionValue(recyclerView3, "binding.chatInputStickersRecycler");
-            TextView textView2 = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).n;
-            m.checkNotNullExpressionValue(textView2, "binding.chatInputStickersMatchingHeader");
-            WidgetChatInputApplicationCommandsBinding widgetChatInputApplicationCommandsBinding = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f2303b;
-            m.checkNotNullExpressionValue(widgetChatInputApplicationCommandsBinding, "binding.applicationCommandsRoot");
-            InputAutocomplete inputAutocomplete = new InputAutocomplete(widgetChatInput, flexInputFragmentAccess$getFlexInputFragment$p, appFlexInputViewModelAccess$getFlexInputViewModel$p, flexEditTextL, null, textView, recyclerView, recyclerView2, linearLayout, recyclerView3, textView2, widgetChatInputApplicationCommandsBinding);
+            TextView textView = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16104k;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatInputEmojiMatchingHeader");
+            RecyclerView recyclerView = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16105l;
+            Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatInputMentionsRecycler");
+            RecyclerView recyclerView2 = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16096c;
+            Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.chatInputCategoriesRecycler");
+            LinearLayout linearLayout = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16106m;
+            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.chatInputStickersContainer");
+            RecyclerView recyclerView3 = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16108o;
+            Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.chatInputStickersRecycler");
+            TextView textView2 = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16107n;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.chatInputStickersMatchingHeader");
+            WidgetChatInputApplicationCommandsBinding widgetChatInputApplicationCommandsBinding = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16095b;
+            Intrinsics3.checkNotNullExpressionValue(widgetChatInputApplicationCommandsBinding, "binding.applicationCommandsRoot");
+            InputAutocomplete inputAutocomplete = new InputAutocomplete(widgetChatInput, flexInputFragmentAccess$getFlexInputFragment$p, appFlexInputViewModelAccess$getFlexInputViewModel$p, flexEditTextM9293l, null, textView, recyclerView, recyclerView2, linearLayout, recyclerView3, textView2, widgetChatInputApplicationCommandsBinding);
             WidgetChatInput.access$setAutocomplete$p(WidgetChatInput.this, inputAutocomplete);
             inputAutocomplete.onViewBoundOrOnResume();
-            WidgetChatInput.access$setChatInputEditTextHolder$p(WidgetChatInput.this, new WidgetChatInputEditText(flexEditTextL, null, 2, null));
-            WidgetChatInput.access$setChatInputTruncatedHint$p(WidgetChatInput.this, new WidgetChatInputTruncatedHint(flexEditTextL));
+            WidgetChatInput.access$setChatInputEditTextHolder$p(WidgetChatInput.this, new WidgetChatInputEditText(flexEditTextM9293l, null, 2, null));
+            WidgetChatInput.access$setChatInputTruncatedHint$p(WidgetChatInput.this, new WidgetChatInputTruncatedHint(flexEditTextM9293l));
             WidgetChatInputTruncatedHint widgetChatInputTruncatedHintAccess$getChatInputTruncatedHint$p = WidgetChatInput.access$getChatInputTruncatedHint$p(WidgetChatInput.this);
             if (widgetChatInputTruncatedHintAccess$getChatInputTruncatedHint$p != null) {
                 widgetChatInputTruncatedHintAccess$getChatInputTruncatedHint$p.addBindedTextWatcher(WidgetChatInput.this);
@@ -796,56 +800,56 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<ChatInputViewModel.ViewState, Unit> {
-        public AnonymousClass1(WidgetChatInput widgetChatInput) {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C77281 extends FunctionReferenceImpl implements Function1<ChatInputViewModel.ViewState, Unit> {
+        public C77281(WidgetChatInput widgetChatInput) {
             super(1, widgetChatInput, WidgetChatInput.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/input/ChatInputViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ChatInputViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChatInputViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "p1");
+            Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetChatInput.access$configureUI((WidgetChatInput) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<ChatInputViewModel.Event, Unit> {
-        public AnonymousClass2(WidgetChatInput widgetChatInput) {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$2 */
+    public static final /* synthetic */ class C77292 extends FunctionReferenceImpl implements Function1<ChatInputViewModel.Event, Unit> {
+        public C77292(WidgetChatInput widgetChatInput) {
             super(1, widgetChatInput, WidgetChatInput.class, "handleEvent", "handleEvent(Lcom/discord/widgets/chat/input/ChatInputViewModel$Event;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ChatInputViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChatInputViewModel.Event event) {
-            m.checkNotNullParameter(event, "p1");
+            Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetChatInput.access$handleEvent((WidgetChatInput) this.receiver, event);
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Boolean, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$onViewBoundOrOnResume$3 */
+    public static final class C77303 extends Lambda implements Function1<Boolean, Unit> {
+        public C77303() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool) {
             invoke(bool.booleanValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(boolean z2) {
@@ -854,85 +858,85 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements OnApplyWindowInsetsListener {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$1 */
+    public static final class C77311 implements OnApplyWindowInsetsListener {
+        public static final C77311 INSTANCE = new C77311();
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public final WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            m.checkNotNullParameter(view, "view");
-            m.checkNotNullParameter(windowInsetsCompat, "insets");
+            Intrinsics3.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(windowInsetsCompat, "insets");
             view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), windowInsetsCompat.getSystemWindowInsetBottom());
             return windowInsetsCompat.consumeSystemWindowInsets();
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements OnApplyWindowInsetsListener {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$2 */
+    public static final class C77322 implements OnApplyWindowInsetsListener {
+        public static final C77322 INSTANCE = new C77322();
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public final WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            m.checkNotNullParameter(view, "view");
-            m.checkNotNullParameter(windowInsetsCompat, "insets");
+            Intrinsics3.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(windowInsetsCompat, "insets");
             view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), windowInsetsCompat.getSystemWindowInsetBottom());
             return windowInsetsCompat.consumeSystemWindowInsets();
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements OnApplyWindowInsetsListener {
-        public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$3 */
+    public static final class C77333 implements OnApplyWindowInsetsListener {
+        public static final C77333 INSTANCE = new C77333();
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public final WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            m.checkNotNullParameter(view, "view");
-            m.checkNotNullParameter(windowInsetsCompat, "insets");
+            Intrinsics3.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(windowInsetsCompat, "insets");
             view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), windowInsetsCompat.getSystemWindowInsetBottom());
             return windowInsetsCompat.consumeSystemWindowInsets();
         }
     }
 
     /* compiled from: WidgetChatInput.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements OnApplyWindowInsetsListener {
+    /* renamed from: com.discord.widgets.chat.input.WidgetChatInput$setWindowInsetsListeners$4 */
+    public static final class C77344 implements OnApplyWindowInsetsListener {
         public final /* synthetic */ boolean $shouldApplyWindowInsets;
 
-        public AnonymousClass4(boolean z2) {
+        public C77344(boolean z2) {
             this.$shouldApplyWindowInsets = z2;
         }
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public final WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            m.checkNotNullParameter(view, "<anonymous parameter 0>");
-            m.checkNotNullParameter(windowInsetsCompat, "insets");
-            WindowInsetsCompat windowInsetsCompatBuild = new WindowInsetsCompat.Builder().setSystemWindowInsets(Insets.of(0, 0, 0, this.$shouldApplyWindowInsets ? windowInsetsCompat.getSystemWindowInsetBottom() : 0)).build();
-            m.checkNotNullExpressionValue(windowInsetsCompatBuild, "WindowInsetsCompat.Build…        )\n      ).build()");
-            ViewCompat.dispatchApplyWindowInsets(WidgetChatInput.access$getBinding$p(WidgetChatInput.this).q, windowInsetsCompatBuild);
-            u4 u4Var = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).r;
-            m.checkNotNullExpressionValue(u4Var, "binding.guard");
-            ViewCompat.dispatchApplyWindowInsets(u4Var.a, windowInsetsCompatBuild);
-            v4 v4Var = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).t;
-            m.checkNotNullExpressionValue(v4Var, "binding.guardMemberVerification");
-            ViewCompat.dispatchApplyWindowInsets(v4Var.a, windowInsetsCompatBuild);
-            t4 t4Var = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f2304s;
-            m.checkNotNullExpressionValue(t4Var, "binding.guardCommunicationDisabled");
-            ViewCompat.dispatchApplyWindowInsets(t4Var.a, windowInsetsCompatBuild);
+            Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
+            Intrinsics3.checkNotNullParameter(windowInsetsCompat, "insets");
+            WindowInsetsCompat windowInsetsCompatBuild = new WindowInsetsCompat.Builder().setSystemWindowInsets(Insets.m82of(0, 0, 0, this.$shouldApplyWindowInsets ? windowInsetsCompat.getSystemWindowInsetBottom() : 0)).build();
+            Intrinsics3.checkNotNullExpressionValue(windowInsetsCompatBuild, "WindowInsetsCompat.Build…        )\n      ).build()");
+            ViewCompat.dispatchApplyWindowInsets(WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16110q, windowInsetsCompatBuild);
+            WidgetChatInputGuardBinding widgetChatInputGuardBinding = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16111r;
+            Intrinsics3.checkNotNullExpressionValue(widgetChatInputGuardBinding, "binding.guard");
+            ViewCompat.dispatchApplyWindowInsets(widgetChatInputGuardBinding.f1291a, windowInsetsCompatBuild);
+            WidgetChatInputMemberVerificationGuardBinding widgetChatInputMemberVerificationGuardBinding = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16113t;
+            Intrinsics3.checkNotNullExpressionValue(widgetChatInputMemberVerificationGuardBinding, "binding.guardMemberVerification");
+            ViewCompat.dispatchApplyWindowInsets(widgetChatInputMemberVerificationGuardBinding.f1320a, windowInsetsCompatBuild);
+            WidgetChatInputCommunicationDisabledGuardBinding widgetChatInputCommunicationDisabledGuardBinding = WidgetChatInput.access$getBinding$p(WidgetChatInput.this).f16112s;
+            Intrinsics3.checkNotNullExpressionValue(widgetChatInputCommunicationDisabledGuardBinding, "binding.guardCommunicationDisabled");
+            ViewCompat.dispatchApplyWindowInsets(widgetChatInputCommunicationDisabledGuardBinding.f1254a, windowInsetsCompatBuild);
             return windowInsetsCompat.consumeSystemWindowInsets();
         }
     }
 
     public WidgetChatInput() {
-        super(R.layout.widget_chat_input);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding(this, WidgetChatInput$binding$2.INSTANCE, new WidgetChatInput$binding$3(this));
+        super(C5419R.layout.widget_chat_input);
+        this.binding = FragmentViewBindingDelegate3.viewBinding(this, WidgetChatInput2.INSTANCE, new WidgetChatInput3(this));
         this.inlineVoiceVisibilityObserver = ViewVisibilityObserverProvider.INSTANCE.get(ViewVisibilityObserverProvider.INLINE_VOICE_FEATURE);
         this.messageDraftsRepo = MessageDraftsRepo.Provider.INSTANCE.get();
         this.clock = ClockFactory.get();
-        this.flexInputFragment = g.lazy(new WidgetChatInput$flexInputFragment$2(this));
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(ChatInputViewModel.class), new WidgetChatInput$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(WidgetChatInput$viewModel$2.INSTANCE));
-        this.flexInputViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(AppFlexInputViewModel.class), new WidgetChatInput$appActivityViewModels$$inlined$activityViewModels$3(this), new f0(new WidgetChatInput$flexInputViewModel$2(this)));
+        this.flexInputFragment = LazyJVM.lazy(new WidgetChatInput4(this));
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(ChatInputViewModel.class), new C7701xc3f142cd(this), new AppViewModelDelegates2(WidgetChatInput6.INSTANCE));
+        this.flexInputViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(AppFlexInputViewModel.class), new C7703xc3f142cf(this), new AppViewModelDelegates2(new WidgetChatInput5(this)));
     }
 
     public static final /* synthetic */ void access$configureSendListeners(WidgetChatInput widgetChatInput, ChatInputViewModel.ViewState.Loaded loaded) {
@@ -1026,143 +1030,143 @@ public final class WidgetChatInput extends AppFragment {
     }
 
     private final void configureChatGuard(ChatInputViewModel.ViewState.Loaded viewState) {
-        u4 u4Var = getBinding().r;
-        m.checkNotNullExpressionValue(u4Var, "binding.guard");
-        LinearLayout linearLayout = u4Var.a;
-        m.checkNotNullExpressionValue(linearLayout, "binding.guard.root");
+        WidgetChatInputGuardBinding widgetChatInputGuardBinding = getBinding().f16111r;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputGuardBinding, "binding.guard");
+        LinearLayout linearLayout = widgetChatInputGuardBinding.f1291a;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.guard.root");
         linearLayout.setVisibility(viewState.isLurking() || viewState.isVerificationLevelTriggered() || viewState.isSystemDM() || viewState.getShouldShowFollow() ? 0 : 8);
-        v4 v4Var = getBinding().t;
-        m.checkNotNullExpressionValue(v4Var, "binding.guardMemberVerification");
-        RelativeLayout relativeLayout = v4Var.a;
-        m.checkNotNullExpressionValue(relativeLayout, "binding.guardMemberVerification.root");
-        u4 u4Var2 = getBinding().r;
-        m.checkNotNullExpressionValue(u4Var2, "binding.guard");
-        LinearLayout linearLayout2 = u4Var2.a;
-        m.checkNotNullExpressionValue(linearLayout2, "binding.guard.root");
+        WidgetChatInputMemberVerificationGuardBinding widgetChatInputMemberVerificationGuardBinding = getBinding().f16113t;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputMemberVerificationGuardBinding, "binding.guardMemberVerification");
+        RelativeLayout relativeLayout = widgetChatInputMemberVerificationGuardBinding.f1320a;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.guardMemberVerification.root");
+        WidgetChatInputGuardBinding widgetChatInputGuardBinding2 = getBinding().f16111r;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputGuardBinding2, "binding.guard");
+        LinearLayout linearLayout2 = widgetChatInputGuardBinding2.f1291a;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout2, "binding.guard.root");
         relativeLayout.setVisibility(!(linearLayout2.getVisibility() == 0) && viewState.getShouldShowVerificationGate() ? 0 : 8);
-        t4 t4Var = getBinding().f2304s;
-        m.checkNotNullExpressionValue(t4Var, "binding.guardCommunicationDisabled");
-        RelativeLayout relativeLayout2 = t4Var.a;
-        m.checkNotNullExpressionValue(relativeLayout2, "binding.guardCommunicationDisabled.root");
-        u4 u4Var3 = getBinding().r;
-        m.checkNotNullExpressionValue(u4Var3, "binding.guard");
-        LinearLayout linearLayout3 = u4Var3.a;
-        m.checkNotNullExpressionValue(linearLayout3, "binding.guard.root");
+        WidgetChatInputCommunicationDisabledGuardBinding widgetChatInputCommunicationDisabledGuardBinding = getBinding().f16112s;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputCommunicationDisabledGuardBinding, "binding.guardCommunicationDisabled");
+        RelativeLayout relativeLayout2 = widgetChatInputCommunicationDisabledGuardBinding.f1254a;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout2, "binding.guardCommunicationDisabled.root");
+        WidgetChatInputGuardBinding widgetChatInputGuardBinding3 = getBinding().f16111r;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputGuardBinding3, "binding.guard");
+        LinearLayout linearLayout3 = widgetChatInputGuardBinding3.f1291a;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout3, "binding.guard.root");
         relativeLayout2.setVisibility(!(linearLayout3.getVisibility() == 0) && !viewState.getShouldShowVerificationGate() && viewState.isCommunicationDisabled() ? 0 : 8);
         if (viewState.isSystemDM()) {
-            getBinding().r.e.setText(R.string.system_dm_channel_description);
-            TextView textView = getBinding().r.d;
-            m.checkNotNullExpressionValue(textView, "binding.guard.chatInputGuardSubtext");
-            ViewExtensions.setTextAndVisibilityBy(textView, getString(R.string.system_dm_channel_description_subtext));
-            MaterialButton materialButton = getBinding().r.f211b;
-            m.checkNotNullExpressionValue(materialButton, "binding.guard.chatInputGuardAction");
+            getBinding().f16111r.f1295e.setText(C5419R.string.system_dm_channel_description);
+            TextView textView = getBinding().f16111r.f1294d;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.guard.chatInputGuardSubtext");
+            ViewExtensions.setTextAndVisibilityBy(textView, getString(C5419R.string.system_dm_channel_description_subtext));
+            MaterialButton materialButton = getBinding().f16111r.f1292b;
+            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.guard.chatInputGuardAction");
             materialButton.setVisibility(8);
-            MaterialButton materialButton2 = getBinding().r.c;
-            m.checkNotNullExpressionValue(materialButton2, "binding.guard.chatInputGuardActionSecondary");
+            MaterialButton materialButton2 = getBinding().f16111r.f1293c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.guard.chatInputGuardActionSecondary");
             materialButton2.setVisibility(8);
             return;
         }
         if (viewState.getShouldShowFollow()) {
-            getBinding().r.e.setText(R.string.follow_news_chat_input_message);
-            MaterialButton materialButton3 = getBinding().r.f211b;
-            m.checkNotNullExpressionValue(materialButton3, "binding.guard.chatInputGuardAction");
-            ViewExtensions.setTextAndVisibilityBy(materialButton3, getString(R.string.game_popout_follow));
-            getBinding().r.f211b.setOnClickListener(new AnonymousClass1(viewState));
-            MaterialButton materialButton4 = getBinding().r.c;
-            m.checkNotNullExpressionValue(materialButton4, "binding.guard.chatInputGuardActionSecondary");
+            getBinding().f16111r.f1295e.setText(C5419R.string.follow_news_chat_input_message);
+            MaterialButton materialButton3 = getBinding().f16111r.f1292b;
+            Intrinsics3.checkNotNullExpressionValue(materialButton3, "binding.guard.chatInputGuardAction");
+            ViewExtensions.setTextAndVisibilityBy(materialButton3, getString(C5419R.string.game_popout_follow));
+            getBinding().f16111r.f1292b.setOnClickListener(new ViewOnClickListenerC77051(viewState));
+            MaterialButton materialButton4 = getBinding().f16111r.f1293c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton4, "binding.guard.chatInputGuardActionSecondary");
             materialButton4.setVisibility(8);
             return;
         }
         if (viewState.isLurking()) {
             if (!viewState.getShouldShowFollow()) {
-                getBinding().r.e.setText(R.string.lurker_mode_chat_input_message);
-                MaterialButton materialButton5 = getBinding().r.f211b;
-                m.checkNotNullExpressionValue(materialButton5, "binding.guard.chatInputGuardAction");
-                ViewExtensions.setTextAndVisibilityBy(materialButton5, getString(R.string.lurker_mode_chat_input_button));
-                getBinding().r.f211b.setOnClickListener(new AnonymousClass4());
-                MaterialButton materialButton6 = getBinding().r.c;
-                m.checkNotNullExpressionValue(materialButton6, "binding.guard.chatInputGuardActionSecondary");
+                getBinding().f16111r.f1295e.setText(C5419R.string.lurker_mode_chat_input_message);
+                MaterialButton materialButton5 = getBinding().f16111r.f1292b;
+                Intrinsics3.checkNotNullExpressionValue(materialButton5, "binding.guard.chatInputGuardAction");
+                ViewExtensions.setTextAndVisibilityBy(materialButton5, getString(C5419R.string.lurker_mode_chat_input_button));
+                getBinding().f16111r.f1292b.setOnClickListener(new ViewOnClickListenerC77084());
+                MaterialButton materialButton6 = getBinding().f16111r.f1293c;
+                Intrinsics3.checkNotNullExpressionValue(materialButton6, "binding.guard.chatInputGuardActionSecondary");
                 materialButton6.setVisibility(8);
                 return;
             }
-            getBinding().r.e.setText(R.string.follow_news_chat_input_message);
-            MaterialButton materialButton7 = getBinding().r.f211b;
-            m.checkNotNullExpressionValue(materialButton7, "binding.guard.chatInputGuardAction");
-            ViewExtensions.setTextAndVisibilityBy(materialButton7, getString(R.string.game_popout_follow));
-            getBinding().r.f211b.setOnClickListener(new AnonymousClass2(viewState));
-            MaterialButton materialButton8 = getBinding().r.c;
-            m.checkNotNullExpressionValue(materialButton8, "binding.guard.chatInputGuardActionSecondary");
-            ViewExtensions.setTextAndVisibilityBy(materialButton8, getString(R.string.lurker_mode_chat_input_button));
-            getBinding().r.c.setOnClickListener(new AnonymousClass3());
+            getBinding().f16111r.f1295e.setText(C5419R.string.follow_news_chat_input_message);
+            MaterialButton materialButton7 = getBinding().f16111r.f1292b;
+            Intrinsics3.checkNotNullExpressionValue(materialButton7, "binding.guard.chatInputGuardAction");
+            ViewExtensions.setTextAndVisibilityBy(materialButton7, getString(C5419R.string.game_popout_follow));
+            getBinding().f16111r.f1292b.setOnClickListener(new ViewOnClickListenerC77062(viewState));
+            MaterialButton materialButton8 = getBinding().f16111r.f1293c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton8, "binding.guard.chatInputGuardActionSecondary");
+            ViewExtensions.setTextAndVisibilityBy(materialButton8, getString(C5419R.string.lurker_mode_chat_input_button));
+            getBinding().f16111r.f1293c.setOnClickListener(new ViewOnClickListenerC77073());
             return;
         }
         if (viewState.isCommunicationDisabled()) {
-            String strA = b.a.d.f.a.a(360045138571L, null);
-            TextView textView2 = getBinding().f2304s.f205b;
-            m.checkNotNullExpressionValue(textView2, "binding.guardCommunicati…nicationDisabledGuardText");
-            b.n(textView2, R.string.guild_communication_disabled_chat_notice_description, new Object[]{strA}, null, 4);
-            getBinding().f2304s.f205b.setOnClickListener(new AnonymousClass5(strA));
-            TextView textView3 = getBinding().f2304s.c;
-            m.checkNotNullExpressionValue(textView3, "binding.guardCommunicati…ionDisabledGuardTimerText");
-            textView3.setText(DurationUtilsKt.humanizeCountdownDuration(requireContext(), viewState.getTimeoutLeftMs()));
+            String strM149a = AppHelpDesk.f507a.m149a(360045138571L, null);
+            TextView textView2 = getBinding().f16112s.f1255b;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guardCommunicati…nicationDisabledGuardText");
+            FormatUtils.m222n(textView2, C5419R.string.guild_communication_disabled_chat_notice_description, new Object[]{strM149a}, null, 4);
+            getBinding().f16112s.f1255b.setOnClickListener(new ViewOnClickListenerC77095(strM149a));
+            TextView textView3 = getBinding().f16112s.f1256c;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.guardCommunicati…ionDisabledGuardTimerText");
+            textView3.setText(DurationUtils.humanizeCountdownDuration(requireContext(), viewState.getTimeoutLeftMs()));
             return;
         }
         if (!viewState.getShouldShowVerificationGate()) {
-            TextView textView4 = getBinding().r.e;
-            m.checkNotNullExpressionValue(textView4, "binding.guard.chatInputGuardText");
-            textView4.setText(getVerificationText(a.I(getBinding().r.e, "binding.guard.chatInputGuardText", "binding.guard.chatInputGuardText.context"), viewState.getVerificationLevelTriggered()));
-            MaterialButton materialButton9 = getBinding().r.f211b;
-            m.checkNotNullExpressionValue(materialButton9, "binding.guard.chatInputGuardAction");
-            MaterialButton materialButton10 = getBinding().r.f211b;
-            m.checkNotNullExpressionValue(materialButton10, "binding.guard.chatInputGuardAction");
+            TextView textView4 = getBinding().f16111r.f1295e;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.guard.chatInputGuardText");
+            textView4.setText(getVerificationText(outline.m821I(getBinding().f16111r.f1295e, "binding.guard.chatInputGuardText", "binding.guard.chatInputGuardText.context"), viewState.getVerificationLevelTriggered()));
+            MaterialButton materialButton9 = getBinding().f16111r.f1292b;
+            Intrinsics3.checkNotNullExpressionValue(materialButton9, "binding.guard.chatInputGuardAction");
+            MaterialButton materialButton10 = getBinding().f16111r.f1292b;
+            Intrinsics3.checkNotNullExpressionValue(materialButton10, "binding.guard.chatInputGuardAction");
             Context context = materialButton10.getContext();
-            m.checkNotNullExpressionValue(context, "binding.guard.chatInputGuardAction.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "binding.guard.chatInputGuardAction.context");
             ViewExtensions.setTextAndVisibilityBy(materialButton9, getVerificationActionText(context, viewState.getVerificationLevelTriggered()));
-            getBinding().r.f211b.setOnClickListener(new AnonymousClass8());
-            MaterialButton materialButton11 = getBinding().r.c;
-            m.checkNotNullExpressionValue(materialButton11, "binding.guard.chatInputGuardActionSecondary");
+            getBinding().f16111r.f1292b.setOnClickListener(new ViewOnClickListenerC77128());
+            MaterialButton materialButton11 = getBinding().f16111r.f1293c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton11, "binding.guard.chatInputGuardActionSecondary");
             materialButton11.setVisibility(8);
             return;
         }
-        getBinding().t.f218b.setOnClickListener(new AnonymousClass6(viewState));
+        getBinding().f16113t.f1321b.setOnClickListener(new ViewOnClickListenerC77106(viewState));
         ApplicationStatus joinRequestStatus = viewState.getJoinRequestStatus();
         if (joinRequestStatus != null) {
             int iOrdinal = joinRequestStatus.ordinal();
             if (iOrdinal == 1) {
-                ImageView imageView = getBinding().t.c;
-                m.checkNotNullExpressionValue(imageView, "binding.guardMemberVerif…erVerificationGuardAction");
+                ImageView imageView = getBinding().f16113t.f1322c;
+                Intrinsics3.checkNotNullExpressionValue(imageView, "binding.guardMemberVerif…erVerificationGuardAction");
                 imageView.setVisibility(8);
-                MaterialButton materialButton12 = getBinding().t.d;
-                m.checkNotNullExpressionValue(materialButton12, "binding.guardMemberVerif…erVerificationGuardButton");
+                MaterialButton materialButton12 = getBinding().f16113t.f1323d;
+                Intrinsics3.checkNotNullExpressionValue(materialButton12, "binding.guardMemberVerif…erVerificationGuardButton");
                 materialButton12.setVisibility(0);
-                getBinding().t.f.setText(R.string.member_verification_application_confirmation_title);
-                getBinding().t.e.setImageResource(R.drawable.img_member_verification_pending);
-                getBinding().t.c.setImageResource(R.drawable.ic_close_circle_nova_grey_24dp);
-                getBinding().t.d.setOnClickListener(new AnonymousClass7(viewState));
+                getBinding().f16113t.f1325f.setText(C5419R.string.member_verification_application_confirmation_title);
+                getBinding().f16113t.f1324e.setImageResource(C5419R.drawable.img_member_verification_pending);
+                getBinding().f16113t.f1322c.setImageResource(C5419R.drawable.ic_close_circle_nova_grey_24dp);
+                getBinding().f16113t.f1323d.setOnClickListener(new ViewOnClickListenerC77117(viewState));
                 return;
             }
             if (iOrdinal == 2) {
-                MaterialButton materialButton13 = getBinding().t.d;
-                m.checkNotNullExpressionValue(materialButton13, "binding.guardMemberVerif…erVerificationGuardButton");
+                MaterialButton materialButton13 = getBinding().f16113t.f1323d;
+                Intrinsics3.checkNotNullExpressionValue(materialButton13, "binding.guardMemberVerif…erVerificationGuardButton");
                 materialButton13.setVisibility(8);
-                ImageView imageView2 = getBinding().t.c;
-                m.checkNotNullExpressionValue(imageView2, "binding.guardMemberVerif…erVerificationGuardAction");
+                ImageView imageView2 = getBinding().f16113t.f1322c;
+                Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.guardMemberVerif…erVerificationGuardAction");
                 imageView2.setVisibility(0);
-                getBinding().t.f.setText(R.string.member_verification_application_rejected_title);
-                getBinding().t.e.setImageResource(R.drawable.img_member_verification_denied);
-                getBinding().t.c.setImageResource(R.drawable.ic_arrow_right_24dp);
+                getBinding().f16113t.f1325f.setText(C5419R.string.member_verification_application_rejected_title);
+                getBinding().f16113t.f1324e.setImageResource(C5419R.drawable.img_member_verification_denied);
+                getBinding().f16113t.f1322c.setImageResource(C5419R.drawable.ic_arrow_right_24dp);
                 return;
             }
         }
-        MaterialButton materialButton14 = getBinding().t.d;
-        m.checkNotNullExpressionValue(materialButton14, "binding.guardMemberVerif…erVerificationGuardButton");
+        MaterialButton materialButton14 = getBinding().f16113t.f1323d;
+        Intrinsics3.checkNotNullExpressionValue(materialButton14, "binding.guardMemberVerif…erVerificationGuardButton");
         materialButton14.setVisibility(8);
-        ImageView imageView3 = getBinding().t.c;
-        m.checkNotNullExpressionValue(imageView3, "binding.guardMemberVerif…erVerificationGuardAction");
+        ImageView imageView3 = getBinding().f16113t.f1322c;
+        Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.guardMemberVerif…erVerificationGuardAction");
         imageView3.setVisibility(0);
-        getBinding().t.f.setText(R.string.member_verification_chat_blocker_text);
-        getBinding().t.e.setImageResource(R.drawable.img_member_verification_started);
-        getBinding().t.c.setImageResource(R.drawable.ic_arrow_right_24dp);
+        getBinding().f16113t.f1325f.setText(C5419R.string.member_verification_chat_blocker_text);
+        getBinding().f16113t.f1324e.setImageResource(C5419R.drawable.img_member_verification_started);
+        getBinding().f16113t.f1322c.setImageResource(C5419R.drawable.ic_arrow_right_24dp);
     }
 
     private final void configureContextBar(ChatInputViewModel.ViewState.Loaded viewState) {
@@ -1173,51 +1177,51 @@ public final class WidgetChatInput extends AppFragment {
                 configureContextBarReplying((ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying) viewState.getPendingReplyState());
                 return;
             }
-            RelativeLayout relativeLayout = getBinding().e;
-            m.checkNotNullExpressionValue(relativeLayout, "binding.chatInputContextBar");
+            RelativeLayout relativeLayout = getBinding().f16098e;
+            Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.chatInputContextBar");
             relativeLayout.setVisibility(8);
         }
     }
 
     private final void configureContextBarEditing() {
-        RelativeLayout relativeLayout = getBinding().e;
-        m.checkNotNullExpressionValue(relativeLayout, "binding.chatInputContextBar");
+        RelativeLayout relativeLayout = getBinding().f16098e;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.chatInputContextBar");
         relativeLayout.setVisibility(0);
-        RelativeLayout relativeLayout2 = getBinding().e;
-        m.checkNotNullExpressionValue(relativeLayout2, "binding.chatInputContextBar");
+        RelativeLayout relativeLayout2 = getBinding().f16098e;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout2, "binding.chatInputContextBar");
         relativeLayout2.setClickable(false);
-        getBinding().g.setText(R.string.editing_message);
-        getBinding().f.setOnClickListener(new AnonymousClass1());
-        LinearLayout linearLayout = getBinding().h;
-        m.checkNotNullExpressionValue(linearLayout, "binding.chatInputContextReplyMentionButton");
+        getBinding().f16100g.setText(C5419R.string.editing_message);
+        getBinding().f16099f.setOnClickListener(new ViewOnClickListenerC77131());
+        LinearLayout linearLayout = getBinding().f16101h;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.chatInputContextReplyMentionButton");
         linearLayout.setVisibility(8);
     }
 
     private final void configureContextBarReplying(ChatInputViewModel.ViewState.Loaded.PendingReplyState.Replying model) {
         String username;
         Context contextRequireContext = requireContext();
-        RelativeLayout relativeLayout = getBinding().e;
-        m.checkNotNullExpressionValue(relativeLayout, "binding.chatInputContextBar");
+        RelativeLayout relativeLayout = getBinding().f16098e;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.chatInputContextBar");
         relativeLayout.setVisibility(0);
         GuildMember repliedAuthorGuildMember = model.getRepliedAuthorGuildMember();
         if (repliedAuthorGuildMember == null || (username = repliedAuthorGuildMember.getNick()) == null) {
             username = model.getRepliedAuthor().getUsername();
         }
-        TextView textView = getBinding().g;
-        m.checkNotNullExpressionValue(textView, "binding.chatInputContextDescription");
-        b.m(textView, R.string.mobile_replying_to, new Object[]{username}, new AnonymousClass1(contextRequireContext, model));
-        getBinding().e.setOnClickListener(new AnonymousClass2(model));
-        getBinding().f.setOnClickListener(new AnonymousClass3());
-        LinearLayout linearLayout = getBinding().h;
-        m.checkNotNullExpressionValue(linearLayout, "binding.chatInputContextReplyMentionButton");
+        TextView textView = getBinding().f16100g;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatInputContextDescription");
+        FormatUtils.m221m(textView, C5419R.string.mobile_replying_to, new Object[]{username}, new C77141(contextRequireContext, model));
+        getBinding().f16098e.setOnClickListener(new ViewOnClickListenerC77152(model));
+        getBinding().f16099f.setOnClickListener(new ViewOnClickListenerC77163());
+        LinearLayout linearLayout = getBinding().f16101h;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.chatInputContextReplyMentionButton");
         linearLayout.setVisibility(model.getShowMentionToggle() ? 0 : 8);
-        getBinding().h.setOnClickListener(new AnonymousClass4());
-        int themedColor = model.getShouldMention() ? ColorCompat.getThemedColor(contextRequireContext, R.attr.colorControlBrandForeground) : ColorCompat.getThemedColor(contextRequireContext, R.attr.colorTextMuted);
-        ImageView imageView = getBinding().i;
-        m.checkNotNullExpressionValue(imageView, "binding.chatInputContextReplyMentionButtonImage");
-        ColorCompatKt.tintWithColor(imageView, themedColor);
-        getBinding().j.setTextColor(themedColor);
-        getBinding().j.setText(model.getShouldMention() ? R.string.reply_mention_on : R.string.reply_mention_off);
+        getBinding().f16101h.setOnClickListener(new ViewOnClickListenerC77174());
+        int themedColor = model.getShouldMention() ? ColorCompat.getThemedColor(contextRequireContext, C5419R.attr.colorControlBrandForeground) : ColorCompat.getThemedColor(contextRequireContext, C5419R.attr.colorTextMuted);
+        ImageView imageView = getBinding().f16102i;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.chatInputContextReplyMentionButtonImage");
+        ColorCompat2.tintWithColor(imageView, themedColor);
+        getBinding().f16103j.setTextColor(themedColor);
+        getBinding().f16103j.setText(model.getShouldMention() ? C5419R.string.reply_mention_on : C5419R.string.reply_mention_off);
     }
 
     private final void configureInitialText(ChatInputViewModel.ViewState.Loaded viewState) {
@@ -1240,25 +1244,25 @@ public final class WidgetChatInput extends AppFragment {
         if (widgetChatInputEditText != null) {
             Context contextRequireContext = requireContext();
             MessageManager messageManager = new MessageManager(contextRequireContext, null, null, null, null, null, null, null, null, 510, null);
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1(contextRequireContext, messageManager);
-            AnonymousClass3 anonymousClass3 = new AnonymousClass3(anonymousClass1, new AnonymousClass2(widgetChatInputEditText, contextRequireContext, messageManager));
-            AnonymousClass4 anonymousClass4 = new AnonymousClass4(contextRequireContext);
+            C77181 c77181 = new C77181(contextRequireContext, messageManager);
+            C77203 c77203 = new C77203(c77181, new C77192(widgetChatInputEditText, contextRequireContext, messageManager));
+            C77214 c77214 = new C77214(contextRequireContext);
             boolean z2 = widgetChatInputEditText.getChannelId() != viewState.getChannelId();
             widgetChatInputEditText.setChannelId(viewState.getChannelId(), z2);
             InputAutocomplete inputAutocomplete = this.autocomplete;
             if (inputAutocomplete != null) {
-                inputAutocomplete.setOnPerformCommandAutocomplete(new AnonymousClass5(anonymousClass1));
+                inputAutocomplete.setOnPerformCommandAutocomplete(new C77225(c77181));
             }
-            widgetChatInputEditText.setOnSendListener(new AnonymousClass6(anonymousClass3));
+            widgetChatInputEditText.setOnSendListener(new C77236(c77203));
             if (z2) {
                 configureInitialText(viewState);
             }
             configureText(viewState);
             WidgetChatInputAttachments widgetChatInputAttachments = this.chatAttachments;
             if (widgetChatInputAttachments == null) {
-                m.throwUninitializedPropertyAccessException("chatAttachments");
+                Intrinsics3.throwUninitializedPropertyAccessException("chatAttachments");
             }
-            widgetChatInputAttachments.setInputListener(new AnonymousClass7(viewState, anonymousClass4, anonymousClass3));
+            widgetChatInputAttachments.setInputListener(new C77247(viewState, c77214, c77203));
         }
     }
 
@@ -1266,7 +1270,7 @@ public final class WidgetChatInput extends AppFragment {
         if (viewState.getAbleToSendMessage()) {
             return;
         }
-        b.i.a.f.e.o.f.P0(getFlexInputViewModel(), "", null, 2, null);
+        C3404f.m4235P0(getFlexInputViewModel(), "", null, 2, null);
     }
 
     private final void configureUI(ChatInputViewModel.ViewState viewState) {
@@ -1274,38 +1278,38 @@ public final class WidgetChatInput extends AppFragment {
             if (viewState instanceof ChatInputViewModel.ViewState.Loaded) {
                 WidgetChatInputAttachments widgetChatInputAttachments = this.chatAttachments;
                 if (widgetChatInputAttachments == null) {
-                    m.throwUninitializedPropertyAccessException("chatAttachments");
+                    Intrinsics3.throwUninitializedPropertyAccessException("chatAttachments");
                 }
                 ChatInputViewModel.ViewState.Loaded loaded = (ChatInputViewModel.ViewState.Loaded) viewState;
                 widgetChatInputAttachments.configureFlexInputContentPages(loaded.getShowCreateThreadOption());
-                LinearLayout linearLayout = getBinding().q;
-                m.checkNotNullExpressionValue(linearLayout, "binding.chatInputWrap");
+                LinearLayout linearLayout = getBinding().f16110q;
+                Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.chatInputWrap");
                 linearLayout.setVisibility(loaded.isInputShowing() ? 0 : 8);
                 configureChatGuard(loaded);
-                getFlexInputFragment().i(new AnonymousClass1(viewState));
+                getFlexInputFragment().m9290i(new C77251(viewState));
                 configureContextBar(loaded);
                 getFlexInputViewModel().setShowExpressionTrayButtonBadge(loaded.getShouldBadgeChatInput());
                 return;
             }
             return;
         }
-        LinearLayout linearLayout2 = getBinding().q;
-        m.checkNotNullExpressionValue(linearLayout2, "binding.chatInputWrap");
+        LinearLayout linearLayout2 = getBinding().f16110q;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout2, "binding.chatInputWrap");
         linearLayout2.setVisibility(8);
-        v4 v4Var = getBinding().t;
-        m.checkNotNullExpressionValue(v4Var, "binding.guardMemberVerification");
-        RelativeLayout relativeLayout = v4Var.a;
-        m.checkNotNullExpressionValue(relativeLayout, "binding.guardMemberVerification.root");
+        WidgetChatInputMemberVerificationGuardBinding widgetChatInputMemberVerificationGuardBinding = getBinding().f16113t;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputMemberVerificationGuardBinding, "binding.guardMemberVerification");
+        RelativeLayout relativeLayout = widgetChatInputMemberVerificationGuardBinding.f1320a;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.guardMemberVerification.root");
         relativeLayout.setVisibility(8);
-        t4 t4Var = getBinding().f2304s;
-        m.checkNotNullExpressionValue(t4Var, "binding.guardCommunicationDisabled");
-        RelativeLayout relativeLayout2 = t4Var.a;
-        m.checkNotNullExpressionValue(relativeLayout2, "binding.guardCommunicationDisabled.root");
+        WidgetChatInputCommunicationDisabledGuardBinding widgetChatInputCommunicationDisabledGuardBinding = getBinding().f16112s;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputCommunicationDisabledGuardBinding, "binding.guardCommunicationDisabled");
+        RelativeLayout relativeLayout2 = widgetChatInputCommunicationDisabledGuardBinding.f1254a;
+        Intrinsics3.checkNotNullExpressionValue(relativeLayout2, "binding.guardCommunicationDisabled.root");
         relativeLayout2.setVisibility(8);
-        u4 u4Var = getBinding().r;
-        m.checkNotNullExpressionValue(u4Var, "binding.guard");
-        LinearLayout linearLayout3 = u4Var.a;
-        m.checkNotNullExpressionValue(linearLayout3, "binding.guard.root");
+        WidgetChatInputGuardBinding widgetChatInputGuardBinding = getBinding().f16111r;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputGuardBinding, "binding.guard");
+        LinearLayout linearLayout3 = widgetChatInputGuardBinding.f1291a;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout3, "binding.guard.root");
         linearLayout3.setVisibility(8);
     }
 
@@ -1323,44 +1327,44 @@ public final class WidgetChatInput extends AppFragment {
 
     private final CharSequence getHint(Context context, Channel channel, boolean isBlocked, boolean hasSendMessagePermissions) {
         if (isBlocked) {
-            String string = context.getString(R.string.dm_verification_text_blocked);
-            m.checkNotNullExpressionValue(string, "context.getString(R.stri…erification_text_blocked)");
+            String string = context.getString(C5419R.string.dm_verification_text_blocked);
+            Intrinsics3.checkNotNullExpressionValue(string, "context.getString(R.stri…erification_text_blocked)");
             return string;
         }
         if (hasSendMessagePermissions) {
-            return b.h(context, R.string.textarea_placeholder, new Object[]{ChannelUtils.e(channel, context, false, 2)}, null, 4);
+            return FormatUtils.m216h(context, C5419R.string.textarea_placeholder, new Object[]{ChannelUtils.m7681e(channel, context, false, 2)}, null, 4);
         }
-        String string2 = context.getString(R.string.no_send_messages_permission_placeholder);
-        m.checkNotNullExpressionValue(string2, "context.getString(R.stri…s_permission_placeholder)");
+        String string2 = context.getString(C5419R.string.no_send_messages_permission_placeholder);
+        Intrinsics3.checkNotNullExpressionValue(string2, "context.getString(R.stri…s_permission_placeholder)");
         return string2;
     }
 
     private final String getVerificationActionText(Context context, GuildVerificationLevel verificationLevelTriggered) {
         int iOrdinal = verificationLevelTriggered.ordinal();
         if (iOrdinal == 1) {
-            return context.getString(R.string.verify_account);
+            return context.getString(C5419R.string.verify_account);
         }
         if (iOrdinal != 4) {
             return null;
         }
-        return context.getString(R.string.verify_phone);
+        return context.getString(C5419R.string.verify_phone);
     }
 
     private final CharSequence getVerificationText(Context context, GuildVerificationLevel verificationLevelTriggered) {
         int iOrdinal = verificationLevelTriggered.ordinal();
         if (iOrdinal == 1) {
-            return context.getString(R.string.guild_verification_text_not_claimed);
+            return context.getString(C5419R.string.guild_verification_text_not_claimed);
         }
         if (iOrdinal == 2) {
-            return b.h(context, R.string.guild_verification_text_account_age, new Object[]{"5"}, null, 4);
+            return FormatUtils.m216h(context, C5419R.string.guild_verification_text_account_age, new Object[]{"5"}, null, 4);
         }
         if (iOrdinal == 3) {
-            return b.h(context, R.string.guild_verification_text_member_age, new Object[]{"10"}, null, 4);
+            return FormatUtils.m216h(context, C5419R.string.guild_verification_text_member_age, new Object[]{"10"}, null, 4);
         }
         if (iOrdinal != 4) {
             return null;
         }
-        return context.getString(R.string.guild_verification_text_not_phone_verified);
+        return context.getString(C5419R.string.guild_verification_text_not_phone_verified);
     }
 
     private final ChatInputViewModel getViewModel() {
@@ -1372,74 +1376,74 @@ public final class WidgetChatInput extends AppFragment {
         Unit unit = null;
         if (event instanceof ChatInputViewModel.Event.FilesTooLarge) {
             getFlexInputViewModel().hideKeyboard();
-            c.Companion companion = c.INSTANCE;
+            ImageUploadFailedDialog.Companion companion = ImageUploadFailedDialog.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             ChatInputViewModel.Event.FilesTooLarge filesTooLarge = (ChatInputViewModel.Event.FilesTooLarge) event;
             float currentFileSizeMB = filesTooLarge.getCurrentFileSizeMB();
             float maxAttachmentSizeMB = filesTooLarge.getMaxAttachmentSizeMB();
-            companion.a(parentFragmentManager, filesTooLarge.isUserPremium(), filesTooLarge.getMaxFileSizeMB(), maxAttachmentSizeMB, currentFileSizeMB, new AnonymousClass1(event), filesTooLarge.getAttachments().size(), filesTooLarge.getHasImage(), filesTooLarge.getHasVideo(), filesTooLarge.getHasGif());
+            companion.m123a(parentFragmentManager, filesTooLarge.isUserPremium(), filesTooLarge.getMaxFileSizeMB(), maxAttachmentSizeMB, currentFileSizeMB, new C77261(event), filesTooLarge.getAttachments().size(), filesTooLarge.getHasImage(), filesTooLarge.getHasVideo(), filesTooLarge.getHasGif());
             clearInput$default(this, null, false, 1, null);
-            unit = Unit.a;
+            unit = Unit.f27425a;
         } else if (event instanceof ChatInputViewModel.Event.MessageTooLong) {
             getFlexInputViewModel().hideKeyboard();
             NumberFormat numberInstance = NumberFormat.getNumberInstance(new LocaleManager().getPrimaryLocale(requireContext()));
             WidgetNoticeDialog.Companion companion2 = WidgetNoticeDialog.INSTANCE;
             FragmentManager parentFragmentManager2 = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
             ChatInputViewModel.Event.MessageTooLong messageTooLong = (ChatInputViewModel.Event.MessageTooLong) event;
-            WidgetNoticeDialog.Companion.show$default(companion2, parentFragmentManager2, getString(R.string.message_too_long_header), b.k(this, R.string.message_too_long_body_text, new Object[]{numberInstance.format(Integer.valueOf(messageTooLong.getCurrentCharacterCount())), numberInstance.format(Integer.valueOf(messageTooLong.getMaxCharacterCount()))}, null, 4), getString(R.string.okay), null, null, null, null, null, null, null, null, 0, null, 16368, null);
-            unit = Unit.a;
+            WidgetNoticeDialog.Companion.show$default(companion2, parentFragmentManager2, getString(C5419R.string.message_too_long_header), FormatUtils.m219k(this, C5419R.string.message_too_long_body_text, new Object[]{numberInstance.format(Integer.valueOf(messageTooLong.getCurrentCharacterCount())), numberInstance.format(Integer.valueOf(messageTooLong.getMaxCharacterCount()))}, null, 4), getString(C5419R.string.okay), null, null, null, null, null, null, null, null, 0, null, 16368, null);
+            unit = Unit.f27425a;
         } else if (event instanceof ChatInputViewModel.Event.EmptyThreadName) {
             getFlexInputViewModel().hideKeyboard();
             WidgetNoticeDialog.Companion companion3 = WidgetNoticeDialog.INSTANCE;
             FragmentManager parentFragmentManager3 = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager3, "parentFragmentManager");
-            WidgetNoticeDialog.Companion.show$default(companion3, parentFragmentManager3, null, b.k(this, R.string.form_thread_name_required_error, new Object[0], null, 4), getString(R.string.okay), null, null, null, null, null, null, null, null, 0, null, 16370, null);
-            unit = Unit.a;
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager3, "parentFragmentManager");
+            WidgetNoticeDialog.Companion.show$default(companion3, parentFragmentManager3, null, FormatUtils.m219k(this, C5419R.string.form_thread_name_required_error, new Object[0], null, 4), getString(C5419R.string.okay), null, null, null, null, null, null, null, null, 0, null, 16370, null);
+            unit = Unit.f27425a;
         } else if (event instanceof ChatInputViewModel.Event.FailedDeliveryToRecipient) {
             getFlexInputViewModel().hideKeyboard();
             WidgetNoticeDialog.Companion companion4 = WidgetNoticeDialog.INSTANCE;
             FragmentManager parentFragmentManager4 = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager4, "parentFragmentManager");
-            WidgetNoticeDialog.Companion.show$default(companion4, parentFragmentManager4, getString(R.string.error), b.k(this, R.string.bot_dm_send_failed_with_help_link_mobile, new Object[]{b.a.d.f.a.a(360060145013L, null)}, null, 4), getString(R.string.okay), null, null, null, null, null, null, null, null, 0, null, 16368, null);
-            unit = Unit.a;
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager4, "parentFragmentManager");
+            WidgetNoticeDialog.Companion.show$default(companion4, parentFragmentManager4, getString(C5419R.string.error), FormatUtils.m219k(this, C5419R.string.bot_dm_send_failed_with_help_link_mobile, new Object[]{AppHelpDesk.f507a.m149a(360060145013L, null)}, null, 4), getString(C5419R.string.okay), null, null, null, null, null, null, null, null, 0, null, 16368, null);
+            unit = Unit.f27425a;
         } else if (event instanceof ChatInputViewModel.Event.AppendChatText) {
             getFlexInputViewModel().onInputTextAppended(((ChatInputViewModel.Event.AppendChatText) event).getText());
-            unit = Unit.a;
+            unit = Unit.f27425a;
         } else if (event instanceof ChatInputViewModel.Event.SetChatText) {
             getFlexInputViewModel().hideExpressionTray();
             getFlexInputViewModel().onInputTextChanged(((ChatInputViewModel.Event.SetChatText) event).getText(), Boolean.TRUE);
-            unit = Unit.a;
+            unit = Unit.f27425a;
         } else if (event instanceof ChatInputViewModel.Event.CommandInputsInvalid) {
             InputAutocomplete inputAutocomplete = this.autocomplete;
             if (inputAutocomplete != null) {
                 inputAutocomplete.onCommandInputsSendError();
-                unit = Unit.a;
+                unit = Unit.f27425a;
             }
         } else if (event instanceof ChatInputViewModel.Event.ShowPremiumUpsell) {
-            c.Companion companion5 = b.a.a.b.c.INSTANCE;
+            MultiValuePropPremiumUpsellDialog.Companion companion5 = MultiValuePropPremiumUpsellDialog.INSTANCE;
             FragmentManager parentFragmentManager5 = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager5, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager5, "parentFragmentManager");
             ChatInputViewModel.Event.ShowPremiumUpsell showPremiumUpsell = (ChatInputViewModel.Event.ShowPremiumUpsell) event;
-            c.Companion.a(companion5, parentFragmentManager5, showPremiumUpsell.getPage(), getString(showPremiumUpsell.getHeaderResId()), getString(showPremiumUpsell.getBodyResId()), null, null, null, null, showPremiumUpsell.getShowOtherPages(), showPremiumUpsell.getShowLearnMore(), 240);
-            unit = Unit.a;
+            MultiValuePropPremiumUpsellDialog.Companion.m114a(companion5, parentFragmentManager5, showPremiumUpsell.getPage(), getString(showPremiumUpsell.getHeaderResId()), getString(showPremiumUpsell.getBodyResId()), null, null, null, null, showPremiumUpsell.getShowOtherPages(), showPremiumUpsell.getShowLearnMore(), 240);
+            unit = Unit.f27425a;
         } else {
             if (!(event instanceof ChatInputViewModel.Event.ThreadDraftClosed)) {
                 throw new NoWhenBranchMatchedException();
             }
             getFlexInputViewModel().hideKeyboard();
             clearInput$default(this, null, false, 3, null);
-            unit = Unit.a;
+            unit = Unit.f27425a;
         }
-        KotlinExtensionsKt.getExhaustive(unit);
+        KotlinExtensions.getExhaustive(unit);
     }
 
     private final void onViewBindingDestroy(WidgetChatInputBinding binding) {
-        b.a.o.b bVarA = b.C0039b.a();
-        LinearLayout linearLayout = binding.q;
-        m.checkNotNullExpressionValue(linearLayout, "binding.chatInputWrap");
-        bVarA.c(linearLayout);
+        PanelsChildGestureRegionObserver panelsChildGestureRegionObserverM232a = PanelsChildGestureRegionObserver.b.m232a();
+        LinearLayout linearLayout = binding.f16110q;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.chatInputWrap");
+        panelsChildGestureRegionObserverM232a.m231c(linearLayout);
     }
 
     private final void populateDirectShareData() {
@@ -1451,7 +1455,7 @@ public final class WidgetChatInput extends AppFragment {
             boolean z2 = true;
             ShareUtils.SharedContent sharedContent = ShareUtils.INSTANCE.getSharedContent(getMostRecentIntent(), true);
             CharSequence text = sharedContent.getText();
-            if (text != null && !t.isBlank(text)) {
+            if (text != null && !StringsJVM.isBlank(text)) {
                 z2 = false;
             }
             if (!z2) {
@@ -1464,31 +1468,31 @@ public final class WidgetChatInput extends AppFragment {
             for (Uri uri : uris) {
                 WidgetChatInputAttachments widgetChatInputAttachments = this.chatAttachments;
                 if (widgetChatInputAttachments == null) {
-                    m.throwUninitializedPropertyAccessException("chatAttachments");
+                    Intrinsics3.throwUninitializedPropertyAccessException("chatAttachments");
                 }
-                widgetChatInputAttachments.addExternalAttachment(Attachment.INSTANCE.b(uri, contentResolver));
+                widgetChatInputAttachments.addExternalAttachment(Attachment.INSTANCE.m9296b(uri, contentResolver));
             }
         }
     }
 
     private final void setWindowInsetsListeners(boolean shouldApplyWindowInsets) {
-        LinearLayout linearLayout = getBinding().q;
-        m.checkNotNullExpressionValue(linearLayout, "binding.chatInputWrap");
+        LinearLayout linearLayout = getBinding().f16110q;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.chatInputWrap");
         ViewExtensions.setForwardingWindowInsetsListener(linearLayout);
-        FragmentContainerView fragmentContainerView = getBinding().p;
-        m.checkNotNullExpressionValue(fragmentContainerView, "binding.chatInputWidget");
+        FragmentContainerView fragmentContainerView = getBinding().f16109p;
+        Intrinsics3.checkNotNullExpressionValue(fragmentContainerView, "binding.chatInputWidget");
         ViewExtensions.setForwardingWindowInsetsListener(fragmentContainerView);
-        u4 u4Var = getBinding().r;
-        m.checkNotNullExpressionValue(u4Var, "binding.guard");
-        ViewCompat.setOnApplyWindowInsetsListener(u4Var.a, AnonymousClass1.INSTANCE);
-        v4 v4Var = getBinding().t;
-        m.checkNotNullExpressionValue(v4Var, "binding.guardMemberVerification");
-        ViewCompat.setOnApplyWindowInsetsListener(v4Var.a, AnonymousClass2.INSTANCE);
-        t4 t4Var = getBinding().f2304s;
-        m.checkNotNullExpressionValue(t4Var, "binding.guardCommunicationDisabled");
-        ViewCompat.setOnApplyWindowInsetsListener(t4Var.a, AnonymousClass3.INSTANCE);
-        ViewCompat.setOnApplyWindowInsetsListener(getBinding().d, new AnonymousClass4(shouldApplyWindowInsets));
-        getBinding().d.requestApplyInsets();
+        WidgetChatInputGuardBinding widgetChatInputGuardBinding = getBinding().f16111r;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputGuardBinding, "binding.guard");
+        ViewCompat.setOnApplyWindowInsetsListener(widgetChatInputGuardBinding.f1291a, C77311.INSTANCE);
+        WidgetChatInputMemberVerificationGuardBinding widgetChatInputMemberVerificationGuardBinding = getBinding().f16113t;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputMemberVerificationGuardBinding, "binding.guardMemberVerification");
+        ViewCompat.setOnApplyWindowInsetsListener(widgetChatInputMemberVerificationGuardBinding.f1320a, C77322.INSTANCE);
+        WidgetChatInputCommunicationDisabledGuardBinding widgetChatInputCommunicationDisabledGuardBinding = getBinding().f16112s;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatInputCommunicationDisabledGuardBinding, "binding.guardCommunicationDisabled");
+        ViewCompat.setOnApplyWindowInsetsListener(widgetChatInputCommunicationDisabledGuardBinding.f1254a, C77333.INSTANCE);
+        ViewCompat.setOnApplyWindowInsetsListener(getBinding().f16097d, new C77344(shouldApplyWindowInsets));
+        getBinding().f16097d.requestApplyInsets();
     }
 
     public static /* synthetic */ void setWindowInsetsListeners$default(WidgetChatInput widgetChatInput, boolean z2, int i, Object obj) {
@@ -1501,25 +1505,25 @@ public final class WidgetChatInput extends AppFragment {
     private final void showFollowSheet(long channelId, long guildId) {
         WidgetChannelFollowSheet.Companion companion = WidgetChannelFollowSheet.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         companion.show(parentFragmentManager, channelId, guildId);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         WidgetChatInputAttachments widgetChatInputAttachments = new WidgetChatInputAttachments(getFlexInputFragment());
         this.chatAttachments = widgetChatInputAttachments;
         if (widgetChatInputAttachments == null) {
-            m.throwUninitializedPropertyAccessException("chatAttachments");
+            Intrinsics3.throwUninitializedPropertyAccessException("chatAttachments");
         }
         widgetChatInputAttachments.configureFlexInputFragment(this);
-        getFlexInputFragment().i(new AnonymousClass1());
-        b.a.o.b bVarA = b.C0039b.a();
-        LinearLayout linearLayout = getBinding().q;
-        m.checkNotNullExpressionValue(linearLayout, "binding.chatInputWrap");
-        bVarA.b(linearLayout);
+        getFlexInputFragment().m9290i(new C77271());
+        PanelsChildGestureRegionObserver panelsChildGestureRegionObserverM232a = PanelsChildGestureRegionObserver.b.m232a();
+        LinearLayout linearLayout = getBinding().f16110q;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.chatInputWrap");
+        panelsChildGestureRegionObserverM232a.m230b(linearLayout);
         setWindowInsetsListeners$default(this, false, 1, null);
     }
 
@@ -1531,19 +1535,19 @@ public final class WidgetChatInput extends AppFragment {
         if (widgetChatInputTruncatedHint != null) {
             widgetChatInputTruncatedHint.addBindedTextWatcher(this);
         }
-        Observable<ChatInputViewModel.ViewState> observableR = getViewModel().observeChatInputViewState().r();
-        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetChatInput.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetChatInput.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
+        Observable<ChatInputViewModel.ViewState> observableM11112r = getViewModel().observeChatInputViewState().m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "viewModel\n        .obser…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11112r, this, null, 2, null), WidgetChatInput.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C77281(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetChatInput.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C77292(this), 62, (Object) null);
         WidgetChatInputAttachments widgetChatInputAttachments = this.chatAttachments;
         if (widgetChatInputAttachments == null) {
-            m.throwUninitializedPropertyAccessException("chatAttachments");
+            Intrinsics3.throwUninitializedPropertyAccessException("chatAttachments");
         }
         widgetChatInputAttachments.setViewModel(getFlexInputViewModel());
         InputAutocomplete inputAutocomplete = this.autocomplete;
         if (inputAutocomplete != null) {
             inputAutocomplete.onViewBoundOrOnResume();
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(this.inlineVoiceVisibilityObserver.observeIsVisible(), this, null, 2, null), WidgetChatInput.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(this.inlineVoiceVisibilityObserver.observeIsVisible(), this, null, 2, null), WidgetChatInput.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C77303(), 62, (Object) null);
     }
 }

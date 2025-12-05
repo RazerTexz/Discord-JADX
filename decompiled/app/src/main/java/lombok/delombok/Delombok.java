@@ -292,7 +292,7 @@ public class Delombok {
             System.out.println(e.getMessage());
             System.exit(1);
         }
-        CmdReader<CmdArgs> reader = CmdReader.of(CmdArgs.class);
+        CmdReader<CmdArgs> reader = CmdReader.m9327of(CmdArgs.class);
         try {
             CmdArgs args = reader.make(rawArgs);
             if (CmdArgs.access$0(args) || (CmdArgs.access$1(args).isEmpty() && !CmdArgs.access$2(args))) {
@@ -305,7 +305,7 @@ public class Delombok {
             }
             Delombok delombok = new Delombok();
             if (CmdArgs.access$3(args)) {
-                delombok.setFeedback(new PrintStream(new AnonymousClass1()));
+                delombok.setFeedback(new PrintStream(new C128431()));
             }
             if (CmdArgs.access$2(args)) {
                 System.out.println("Available format keys (to use, -f key:value -f key2:value2 -f ... ):");
@@ -398,10 +398,10 @@ public class Delombok {
         }
     }
 
-    /* renamed from: lombok.delombok.Delombok$1, reason: invalid class name */
+    /* renamed from: lombok.delombok.Delombok$1 */
     /* loaded from: discord-126021.apk:lombok/delombok/Delombok$1.SCL.lombok */
-    class AnonymousClass1 extends OutputStream {
-        AnonymousClass1() {
+    class C128431 extends OutputStream {
+        C128431() {
         }
 
         @Override // java.io.OutputStream

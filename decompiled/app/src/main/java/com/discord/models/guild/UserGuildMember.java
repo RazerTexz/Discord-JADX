@@ -1,10 +1,10 @@
 package com.discord.models.guild;
 
-import b.d.b.a.a;
 import com.discord.models.member.GuildMember;
 import com.discord.models.user.User;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: UserGuildMember.kt */
 /* loaded from: classes.dex */
@@ -14,7 +14,7 @@ public final /* data */ class UserGuildMember {
     private final User user;
 
     public UserGuildMember(User user, GuildMember guildMember) {
-        m.checkNotNullParameter(user, "user");
+        Intrinsics3.checkNotNullParameter(user, "user");
         this.user = user;
         this.guildMember = guildMember;
         this.nickname = guildMember != null ? guildMember.getNick() : null;
@@ -41,7 +41,7 @@ public final /* data */ class UserGuildMember {
     }
 
     public final UserGuildMember copy(User user, GuildMember guildMember) {
-        m.checkNotNullParameter(user, "user");
+        Intrinsics3.checkNotNullParameter(user, "user");
         return new UserGuildMember(user, guildMember);
     }
 
@@ -53,7 +53,7 @@ public final /* data */ class UserGuildMember {
             return false;
         }
         UserGuildMember userGuildMember = (UserGuildMember) other;
-        return m.areEqual(this.user, userGuildMember.user) && m.areEqual(this.guildMember, userGuildMember.guildMember);
+        return Intrinsics3.areEqual(this.user, userGuildMember.user) && Intrinsics3.areEqual(this.guildMember, userGuildMember.guildMember);
     }
 
     public final GuildMember getGuildMember() {
@@ -80,12 +80,12 @@ public final /* data */ class UserGuildMember {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("UserGuildMember(user=");
-        sbU.append(this.user);
-        sbU.append(", guildMember=");
-        sbU.append(this.guildMember);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("UserGuildMember(user=");
+        sbM833U.append(this.user);
+        sbM833U.append(", guildMember=");
+        sbM833U.append(this.guildMember);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public /* synthetic */ UserGuildMember(User user, GuildMember guildMember, int i, DefaultConstructorMarker defaultConstructorMarker) {

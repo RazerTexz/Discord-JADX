@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackPaymentMetadata;
-import com.discord.analytics.generated.traits.TrackPaymentMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackPaymentMetadata2;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStoreListingMediaScrolled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStoreListingMediaScrolled implements AnalyticsSchema, TrackBaseReceiver, TrackStoreSkuMetadataReceiver, TrackPaymentMetadataReceiver {
+public final /* data */ class TrackStoreListingMediaScrolled implements AnalyticsSchema, TrackBase2, TrackStoreSkuMetadata2, TrackPaymentMetadata2 {
     private TrackBase trackBase;
     private TrackPaymentMetadata trackPaymentMetadata;
     private TrackStoreSkuMetadata trackStoreSkuMetadata;
@@ -34,7 +34,7 @@ public final /* data */ class TrackStoreListingMediaScrolled implements Analytic
             return false;
         }
         TrackStoreListingMediaScrolled trackStoreListingMediaScrolled = (TrackStoreListingMediaScrolled) other;
-        return m.areEqual(this.cardIndex, trackStoreListingMediaScrolled.cardIndex) && m.areEqual(this.cardType, trackStoreListingMediaScrolled.cardType);
+        return Intrinsics3.areEqual(this.cardIndex, trackStoreListingMediaScrolled.cardIndex) && Intrinsics3.areEqual(this.cardType, trackStoreListingMediaScrolled.cardType);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class TrackStoreListingMediaScrolled implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStoreListingMediaScrolled(cardIndex=");
-        sbU.append(this.cardIndex);
-        sbU.append(", cardType=");
-        return a.E(sbU, this.cardType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStoreListingMediaScrolled(cardIndex=");
+        sbM833U.append(this.cardIndex);
+        sbM833U.append(", cardType=");
+        return outline.m817E(sbM833U, this.cardType, ")");
     }
 }

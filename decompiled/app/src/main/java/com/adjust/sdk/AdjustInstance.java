@@ -17,12 +17,12 @@ public class AdjustInstance {
     private boolean startOffline = false;
     private String subscriptionPath;
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$1, reason: invalid class name */
-    public class AnonymousClass1 implements IRunActivityHandler {
+    /* renamed from: com.adjust.sdk.AdjustInstance$1 */
+    public class C53621 implements IRunActivityHandler {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ String val$value;
 
-        public AnonymousClass1(String str, String str2) {
+        public C53621(String str, String str2) {
             this.val$key = str;
             this.val$value = str2;
         }
@@ -33,11 +33,11 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$10, reason: invalid class name */
-    public class AnonymousClass10 implements Runnable {
+    /* renamed from: com.adjust.sdk.AdjustInstance$10 */
+    public class RunnableC536310 implements Runnable {
         public final /* synthetic */ Context val$context;
 
-        public AnonymousClass10(Context context) {
+        public RunnableC536310(Context context) {
             this.val$context = context;
         }
 
@@ -47,11 +47,11 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$11, reason: invalid class name */
-    public class AnonymousClass11 implements Runnable {
+    /* renamed from: com.adjust.sdk.AdjustInstance$11 */
+    public class RunnableC536411 implements Runnable {
         public final /* synthetic */ Context val$context;
 
-        public AnonymousClass11(Context context) {
+        public RunnableC536411(Context context) {
             this.val$context = context;
         }
 
@@ -61,12 +61,12 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$2, reason: invalid class name */
-    public class AnonymousClass2 implements IRunActivityHandler {
+    /* renamed from: com.adjust.sdk.AdjustInstance$2 */
+    public class C53652 implements IRunActivityHandler {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ String val$value;
 
-        public AnonymousClass2(String str, String str2) {
+        public C53652(String str, String str2) {
             this.val$key = str;
             this.val$value = str2;
         }
@@ -77,11 +77,11 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$3, reason: invalid class name */
-    public class AnonymousClass3 implements IRunActivityHandler {
+    /* renamed from: com.adjust.sdk.AdjustInstance$3 */
+    public class C53663 implements IRunActivityHandler {
         public final /* synthetic */ String val$key;
 
-        public AnonymousClass3(String str) {
+        public C53663(String str) {
             this.val$key = str;
         }
 
@@ -91,11 +91,11 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$4, reason: invalid class name */
-    public class AnonymousClass4 implements IRunActivityHandler {
+    /* renamed from: com.adjust.sdk.AdjustInstance$4 */
+    public class C53674 implements IRunActivityHandler {
         public final /* synthetic */ String val$key;
 
-        public AnonymousClass4(String str) {
+        public C53674(String str) {
             this.val$key = str;
         }
 
@@ -105,9 +105,9 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$5, reason: invalid class name */
-    public class AnonymousClass5 implements IRunActivityHandler {
-        public AnonymousClass5() {
+    /* renamed from: com.adjust.sdk.AdjustInstance$5 */
+    public class C53685 implements IRunActivityHandler {
+        public C53685() {
         }
 
         @Override // com.adjust.sdk.IRunActivityHandler
@@ -116,9 +116,9 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$6, reason: invalid class name */
-    public class AnonymousClass6 implements IRunActivityHandler {
-        public AnonymousClass6() {
+    /* renamed from: com.adjust.sdk.AdjustInstance$6 */
+    public class C53696 implements IRunActivityHandler {
+        public C53696() {
         }
 
         @Override // com.adjust.sdk.IRunActivityHandler
@@ -127,13 +127,13 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$7, reason: invalid class name */
-    public class AnonymousClass7 implements Runnable {
+    /* renamed from: com.adjust.sdk.AdjustInstance$7 */
+    public class RunnableC53707 implements Runnable {
         public final /* synthetic */ long val$clickTime;
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ String val$rawReferrer;
 
-        public AnonymousClass7(Context context, String str, long j) {
+        public RunnableC53707(Context context, String str, long j) {
             this.val$context = context;
             this.val$rawReferrer = str;
             this.val$clickTime = j;
@@ -145,12 +145,12 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$8, reason: invalid class name */
-    public class AnonymousClass8 implements Runnable {
+    /* renamed from: com.adjust.sdk.AdjustInstance$8 */
+    public class RunnableC53718 implements Runnable {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ String val$pushToken;
 
-        public AnonymousClass8(Context context, String str) {
+        public RunnableC53718(Context context, String str) {
             this.val$context = context;
             this.val$pushToken = str;
         }
@@ -161,11 +161,11 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$9, reason: invalid class name */
-    public class AnonymousClass9 implements Runnable {
+    /* renamed from: com.adjust.sdk.AdjustInstance$9 */
+    public class RunnableC53729 implements Runnable {
         public final /* synthetic */ Context val$context;
 
-        public AnonymousClass9(Context context) {
+        public RunnableC53729(Context context) {
             this.val$context = context;
         }
 
@@ -185,23 +185,23 @@ public class AdjustInstance {
     }
 
     private void saveDisableThirdPartySharing(Context context) {
-        Util.runInBackground(new AnonymousClass10(context));
+        Util.runInBackground(new RunnableC536310(context));
     }
 
     private void saveGdprForgetMe(Context context) {
-        Util.runInBackground(new AnonymousClass9(context));
+        Util.runInBackground(new RunnableC53729(context));
     }
 
     private void savePushToken(String str, Context context) {
-        Util.runInBackground(new AnonymousClass8(context, str));
+        Util.runInBackground(new RunnableC53718(context, str));
     }
 
     private void saveRawReferrer(String str, long j, Context context) {
-        Util.runInBackground(new AnonymousClass7(context, str, j));
+        Util.runInBackground(new RunnableC53707(context, str, j));
     }
 
     private void setSendingReferrersAsNotSent(Context context) {
-        Util.runInBackground(new AnonymousClass11(context));
+        Util.runInBackground(new RunnableC536411(context));
     }
 
     public void addSessionCallbackParameter(String str, String str2) {
@@ -212,7 +212,7 @@ public class AdjustInstance {
         if (this.preLaunchActionsArray == null) {
             this.preLaunchActionsArray = new ArrayList();
         }
-        this.preLaunchActionsArray.add(new AnonymousClass1(str, str2));
+        this.preLaunchActionsArray.add(new C53621(str, str2));
     }
 
     public void addSessionPartnerParameter(String str, String str2) {
@@ -223,7 +223,7 @@ public class AdjustInstance {
         if (this.preLaunchActionsArray == null) {
             this.preLaunchActionsArray = new ArrayList();
         }
-        this.preLaunchActionsArray.add(new AnonymousClass2(str, str2));
+        this.preLaunchActionsArray.add(new C53652(str, str2));
     }
 
     public void appWillOpenUrl(Uri uri) {
@@ -313,7 +313,7 @@ public class AdjustInstance {
         if (this.preLaunchActionsArray == null) {
             this.preLaunchActionsArray = new ArrayList();
         }
-        this.preLaunchActionsArray.add(new AnonymousClass3(str));
+        this.preLaunchActionsArray.add(new C53663(str));
     }
 
     public void removeSessionPartnerParameter(String str) {
@@ -324,7 +324,7 @@ public class AdjustInstance {
         if (this.preLaunchActionsArray == null) {
             this.preLaunchActionsArray = new ArrayList();
         }
-        this.preLaunchActionsArray.add(new AnonymousClass4(str));
+        this.preLaunchActionsArray.add(new C53674(str));
     }
 
     public void resetSessionCallbackParameters() {
@@ -335,7 +335,7 @@ public class AdjustInstance {
         if (this.preLaunchActionsArray == null) {
             this.preLaunchActionsArray = new ArrayList();
         }
-        this.preLaunchActionsArray.add(new AnonymousClass5());
+        this.preLaunchActionsArray.add(new C53685());
     }
 
     public void resetSessionPartnerParameters() {
@@ -346,7 +346,7 @@ public class AdjustInstance {
         if (this.preLaunchActionsArray == null) {
             this.preLaunchActionsArray = new ArrayList();
         }
-        this.preLaunchActionsArray.add(new AnonymousClass6());
+        this.preLaunchActionsArray.add(new C53696());
     }
 
     public void sendFirstPackages() {

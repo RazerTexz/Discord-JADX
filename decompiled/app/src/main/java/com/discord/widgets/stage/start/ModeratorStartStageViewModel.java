@@ -1,8 +1,6 @@
 package com.discord.widgets.stage.start;
 
 import android.content.Context;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.guildscheduledevent.GuildScheduledEventStatus;
 import com.discord.models.guild.UserGuildMember;
@@ -12,24 +10,26 @@ import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreVoiceChannelSelected;
 import com.discord.stores.StoreVoiceParticipants;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities5;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.stage.start.ModeratorStartStageItem;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.k;
-import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
 
 /* compiled from: ModeratorStartStageViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ModeratorStartStageViewModel extends d0<ViewState> {
+public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -42,21 +42,21 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
     private final StoreVoiceParticipants voiceParticipants;
 
     /* compiled from: ModeratorStartStageViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.start.ModeratorStartStageViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
-        public AnonymousClass1(ModeratorStartStageViewModel moderatorStartStageViewModel) {
+    /* renamed from: com.discord.widgets.stage.start.ModeratorStartStageViewModel$1 */
+    public static final /* synthetic */ class C100681 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+        public C100681(ModeratorStartStageViewModel moderatorStartStageViewModel) {
             super(1, moderatorStartStageViewModel, ModeratorStartStageViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/stage/start/ModeratorStartStageViewModel$StoreState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "p1");
+            Intrinsics3.checkNotNullParameter(storeState, "p1");
             ModeratorStartStageViewModel.access$handleStoreState((ModeratorStartStageViewModel) this.receiver, storeState);
         }
     }
@@ -71,11 +71,11 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStores(long channelId, StoreChannels channelStore, StoreGuildScheduledEvents guildScheduledEventsStore, StorePermissions permissionsStore, StoreVoiceParticipants voiceParticipantsStore) {
-            Observable<R> observableG = channelStore.observeChannel(channelId).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-            m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
-            Observable<StoreState> observableY = observableG.Y(new ModeratorStartStageViewModel$Companion$observeStores$1(voiceParticipantsStore, guildScheduledEventsStore, permissionsStore, channelId));
-            m.checkNotNullExpressionValue(observableY, "channelStore.observeChan…  )\n          }\n        }");
-            return observableY;
+            Observable<R> observableM11083G = channelStore.observeChannel(channelId).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
+            Observable<StoreState> observableM11099Y = observableM11083G.m11099Y(new ModeratorStartStageViewModel2(voiceParticipantsStore, guildScheduledEventsStore, permissionsStore, channelId));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "channelStore.observeChan…  )\n          }\n        }");
+            return observableM11099Y;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -90,8 +90,8 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
         private final List<UserGuildMember> voiceParticipants;
 
         public StoreState(List<GuildScheduledEvent> list, List<UserGuildMember> list2, boolean z2) {
-            m.checkNotNullParameter(list, "channelEvents");
-            m.checkNotNullParameter(list2, "voiceParticipants");
+            Intrinsics3.checkNotNullParameter(list, "channelEvents");
+            Intrinsics3.checkNotNullParameter(list2, "voiceParticipants");
             this.channelEvents = list;
             this.voiceParticipants = list2;
             this.canStartEvent = z2;
@@ -125,8 +125,8 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
         }
 
         public final StoreState copy(List<GuildScheduledEvent> channelEvents, List<UserGuildMember> voiceParticipants, boolean canStartEvent) {
-            m.checkNotNullParameter(channelEvents, "channelEvents");
-            m.checkNotNullParameter(voiceParticipants, "voiceParticipants");
+            Intrinsics3.checkNotNullParameter(channelEvents, "channelEvents");
+            Intrinsics3.checkNotNullParameter(voiceParticipants, "voiceParticipants");
             return new StoreState(channelEvents, voiceParticipants, canStartEvent);
         }
 
@@ -138,7 +138,7 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.channelEvents, storeState.channelEvents) && m.areEqual(this.voiceParticipants, storeState.voiceParticipants) && this.canStartEvent == storeState.canStartEvent;
+            return Intrinsics3.areEqual(this.channelEvents, storeState.channelEvents) && Intrinsics3.areEqual(this.voiceParticipants, storeState.voiceParticipants) && this.canStartEvent == storeState.canStartEvent;
         }
 
         public final boolean getCanStartEvent() {
@@ -168,12 +168,12 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(channelEvents=");
-            sbU.append(this.channelEvents);
-            sbU.append(", voiceParticipants=");
-            sbU.append(this.voiceParticipants);
-            sbU.append(", canStartEvent=");
-            return a.O(sbU, this.canStartEvent, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(channelEvents=");
+            sbM833U.append(this.channelEvents);
+            sbM833U.append(", voiceParticipants=");
+            sbM833U.append(this.voiceParticipants);
+            sbM833U.append(", canStartEvent=");
+            return outline.m827O(sbM833U, this.canStartEvent, ")");
         }
     }
 
@@ -185,8 +185,8 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public ViewState(List<GuildScheduledEvent> list, List<? extends ModeratorStartStageItem> list2, boolean z2) {
-            m.checkNotNullParameter(list, "channelEvents");
-            m.checkNotNullParameter(list2, "items");
+            Intrinsics3.checkNotNullParameter(list, "channelEvents");
+            Intrinsics3.checkNotNullParameter(list2, "items");
             this.channelEvents = list;
             this.items = list2;
             this.channelEventActive = z2;
@@ -220,8 +220,8 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
         }
 
         public final ViewState copy(List<GuildScheduledEvent> channelEvents, List<? extends ModeratorStartStageItem> items, boolean channelEventActive) {
-            m.checkNotNullParameter(channelEvents, "channelEvents");
-            m.checkNotNullParameter(items, "items");
+            Intrinsics3.checkNotNullParameter(channelEvents, "channelEvents");
+            Intrinsics3.checkNotNullParameter(items, "items");
             return new ViewState(channelEvents, items, channelEventActive);
         }
 
@@ -233,7 +233,7 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return m.areEqual(this.channelEvents, viewState.channelEvents) && m.areEqual(this.items, viewState.items) && this.channelEventActive == viewState.channelEventActive;
+            return Intrinsics3.areEqual(this.channelEvents, viewState.channelEvents) && Intrinsics3.areEqual(this.items, viewState.items) && this.channelEventActive == viewState.channelEventActive;
         }
 
         public final boolean getChannelEventActive() {
@@ -263,12 +263,12 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewState(channelEvents=");
-            sbU.append(this.channelEvents);
-            sbU.append(", items=");
-            sbU.append(this.items);
-            sbU.append(", channelEventActive=");
-            return a.O(sbU, this.channelEventActive, ")");
+            StringBuilder sbM833U = outline.m833U("ViewState(channelEvents=");
+            sbM833U.append(this.channelEvents);
+            sbM833U.append(", items=");
+            sbM833U.append(this.items);
+            sbM833U.append(", channelEventActive=");
+            return outline.m827O(sbM833U, this.channelEventActive, ")");
         }
     }
 
@@ -289,7 +289,7 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
     private final void handleStoreState(StoreState storeState) {
         Object next;
         Object obj = null;
-        List listMutableListOf = n.mutableListOf(new ModeratorStartStageItem.Header(0, null, 3, null));
+        List listMutableListOf = Collections2.mutableListOf(new ModeratorStartStageItem.Header(0, null, 3, null));
         if (storeState.getCanStartEvent()) {
             Iterator<T> it = storeState.getChannelEvents().iterator();
             while (true) {
@@ -298,7 +298,7 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
                     break;
                 } else {
                     next = it.next();
-                    if (GuildScheduledEventUtilitiesKt.getEventTiming((GuildScheduledEvent) next).isStartable()) {
+                    if (GuildScheduledEventUtilities5.getEventTiming((GuildScheduledEvent) next).isStartable()) {
                         break;
                     }
                 }
@@ -314,7 +314,7 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
         }
         listMutableListOf.add(new ModeratorStartStageItem.Continue(0, null, 3, null));
         if (!storeState.getVoiceParticipants().isEmpty()) {
-            listMutableListOf.add(new ModeratorStartStageItem.Waiting(0, null, u.take(storeState.getVoiceParticipants(), 3), 3, null));
+            listMutableListOf.add(new ModeratorStartStageItem.Waiting(0, null, _Collections.take(storeState.getVoiceParticipants(), 3), 3, null));
         }
         List<GuildScheduledEvent> channelEvents = storeState.getChannelEvents();
         Iterator<T> it2 = storeState.getChannelEvents().iterator();
@@ -338,18 +338,18 @@ public final class ModeratorStartStageViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ModeratorStartStageViewModel(long j, StoreChannels storeChannels, StoreGuildScheduledEvents storeGuildScheduledEvents, StoreVoiceChannelSelected storeVoiceChannelSelected, StorePermissions storePermissions, StoreVoiceParticipants storeVoiceParticipants, Observable<StoreState> observable) {
         super(null, 1, null);
-        m.checkNotNullParameter(storeChannels, "channelsStore");
-        m.checkNotNullParameter(storeGuildScheduledEvents, "guildScheduledEventsStore");
-        m.checkNotNullParameter(storeVoiceChannelSelected, "selectedVoiceChannelStore");
-        m.checkNotNullParameter(storePermissions, "permissionsStore");
-        m.checkNotNullParameter(storeVoiceParticipants, "voiceParticipants");
-        m.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(storeChannels, "channelsStore");
+        Intrinsics3.checkNotNullParameter(storeGuildScheduledEvents, "guildScheduledEventsStore");
+        Intrinsics3.checkNotNullParameter(storeVoiceChannelSelected, "selectedVoiceChannelStore");
+        Intrinsics3.checkNotNullParameter(storePermissions, "permissionsStore");
+        Intrinsics3.checkNotNullParameter(storeVoiceParticipants, "voiceParticipants");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
         this.channelId = j;
         this.channelsStore = storeChannels;
         this.guildScheduledEventsStore = storeGuildScheduledEvents;
         this.selectedVoiceChannelStore = storeVoiceChannelSelected;
         this.permissionsStore = storePermissions;
         this.voiceParticipants = storeVoiceParticipants;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), ModeratorStartStageViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), ModeratorStartStageViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C100681(this), 62, (Object) null);
     }
 }

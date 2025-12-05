@@ -1,13 +1,13 @@
 package com.discord.widgets.channels.list;
 
 import com.discord.widgets.stage.model.StageChannel;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$getChannelEventNoticeData$1 extends o implements Function1<StageChannel, Boolean> {
+public final class WidgetChannelListModel$Companion$getChannelEventNoticeData$1 extends Lambda implements Function1<StageChannel, Boolean> {
     public static final WidgetChannelListModel$Companion$getChannelEventNoticeData$1 INSTANCE = new WidgetChannelListModel$Companion$getChannelEventNoticeData$1();
 
     public WidgetChannelListModel$Companion$getChannelEventNoticeData$1() {
@@ -21,7 +21,7 @@ public final class WidgetChannelListModel$Companion$getChannelEventNoticeData$1 
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(StageChannel stageChannel) {
-        m.checkNotNullParameter(stageChannel, "it");
+        Intrinsics3.checkNotNullParameter(stageChannel, "it");
         return stageChannel.getCanAccess() && stageChannel.getHasActiveStageInstance() && !stageChannel.getContainsMe();
     }
 }

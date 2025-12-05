@@ -12,25 +12,27 @@ import com.google.android.material.appbar.AppBarLayout;
 /* loaded from: classes.dex */
 public final class WidgetPriceTierPickerBottomSheetBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f17384a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final AppViewFlipper f2513b;
+    public final AppViewFlipper f17385b;
 
+    /* renamed from: c */
     @NonNull
-    public final RecyclerView c;
+    public final RecyclerView f17386c;
 
     public WidgetPriceTierPickerBottomSheetBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, @NonNull AppViewFlipper appViewFlipper, @NonNull RecyclerView recyclerView, @NonNull Toolbar toolbar) {
-        this.a = coordinatorLayout;
-        this.f2513b = appViewFlipper;
-        this.c = recyclerView;
+        this.f17384a = coordinatorLayout;
+        this.f17385b = appViewFlipper;
+        this.f17386c = recyclerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17384a;
     }
 }

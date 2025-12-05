@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.arch.core.util.Function;
 import androidx.view.LiveData;
+import androidx.work.C0719R;
 import androidx.work.Configuration;
 import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.ExistingWorkPolicy;
@@ -16,7 +17,6 @@ import androidx.work.Logger;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.Operation;
 import androidx.work.PeriodicWorkRequest;
-import androidx.work.R;
 import androidx.work.WorkContinuation;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
@@ -39,11 +39,11 @@ import androidx.work.impl.utils.StopWorkRunnable;
 import androidx.work.impl.utils.futures.SettableFuture;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 import androidx.work.impl.utils.taskexecutor.WorkManagerTaskExecutor;
-import b.i.b.d.a.a;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -63,12 +63,12 @@ public class WorkManagerImpl extends WorkManager {
     private WorkDatabase mWorkDatabase;
     private TaskExecutor mWorkTaskExecutor;
 
-    /* renamed from: androidx.work.impl.WorkManagerImpl$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.work.impl.WorkManagerImpl$1 */
+    public class RunnableC07311 implements Runnable {
         public final /* synthetic */ SettableFuture val$future;
         public final /* synthetic */ PreferenceUtils val$preferenceUtils;
 
-        public AnonymousClass1(SettableFuture settableFuture, PreferenceUtils preferenceUtils) {
+        public RunnableC07311(SettableFuture settableFuture, PreferenceUtils preferenceUtils) {
             this.val$future = settableFuture;
             this.val$preferenceUtils = preferenceUtils;
         }
@@ -83,9 +83,9 @@ public class WorkManagerImpl extends WorkManager {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkManagerImpl$2, reason: invalid class name */
-    public class AnonymousClass2 implements Function<List<WorkSpec.WorkInfoPojo>, WorkInfo> {
-        public AnonymousClass2() {
+    /* renamed from: androidx.work.impl.WorkManagerImpl$2 */
+    public class C07322 implements Function<List<WorkSpec.WorkInfoPojo>, WorkInfo> {
+        public C07322() {
         }
 
         @Override // androidx.arch.core.util.Function
@@ -104,7 +104,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public WorkManagerImpl(@NonNull Context context, @NonNull Configuration configuration, @NonNull TaskExecutor taskExecutor) {
-        this(context, configuration, taskExecutor, context.getResources().getBoolean(R.bool.workmanager_test_configuration));
+        this(context, configuration, taskExecutor, context.getResources().getBoolean(C0719R.bool.workmanager_test_configuration));
     }
 
     private WorkContinuationImpl createWorkContinuationForUniquePeriodicWork(@NonNull String str, @NonNull ExistingPeriodicWorkPolicy existingPeriodicWorkPolicy, @NonNull PeriodicWorkRequest periodicWorkRequest) {
@@ -261,9 +261,9 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public a<Long> getLastCancelAllTimeMillis() {
+    public ListenableFuture8<Long> getLastCancelAllTimeMillis() {
         SettableFuture settableFutureCreate = SettableFuture.create();
-        this.mWorkTaskExecutor.executeOnBackgroundThread(new AnonymousClass1(settableFutureCreate, this.mPreferenceUtils));
+        this.mWorkTaskExecutor.executeOnBackgroundThread(new RunnableC07311(settableFutureCreate, this.mPreferenceUtils));
         return settableFutureCreate;
     }
 
@@ -299,7 +299,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public a<WorkInfo> getWorkInfoById(@NonNull UUID uuid) {
+    public ListenableFuture8<WorkInfo> getWorkInfoById(@NonNull UUID uuid) {
         StatusRunnable<WorkInfo> statusRunnableForUUID = StatusRunnable.forUUID(this, uuid);
         this.mWorkTaskExecutor.getBackgroundExecutor().execute(statusRunnableForUUID);
         return statusRunnableForUUID.getFuture();
@@ -308,12 +308,12 @@ public class WorkManagerImpl extends WorkManager {
     @Override // androidx.work.WorkManager
     @NonNull
     public LiveData<WorkInfo> getWorkInfoByIdLiveData(@NonNull UUID uuid) {
-        return LiveDataUtils.dedupedMappedLiveDataFor(this.mWorkDatabase.workSpecDao().getWorkStatusPojoLiveDataForIds(Collections.singletonList(uuid.toString())), new AnonymousClass2(), this.mWorkTaskExecutor);
+        return LiveDataUtils.dedupedMappedLiveDataFor(this.mWorkDatabase.workSpecDao().getWorkStatusPojoLiveDataForIds(Collections.singletonList(uuid.toString())), new C07322(), this.mWorkTaskExecutor);
     }
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public a<List<WorkInfo>> getWorkInfos(@NonNull WorkQuery workQuery) {
+    public ListenableFuture8<List<WorkInfo>> getWorkInfos(@NonNull WorkQuery workQuery) {
         StatusRunnable<List<WorkInfo>> statusRunnableForWorkQuerySpec = StatusRunnable.forWorkQuerySpec(this, workQuery);
         this.mWorkTaskExecutor.getBackgroundExecutor().execute(statusRunnableForWorkQuerySpec);
         return statusRunnableForWorkQuerySpec.getFuture();
@@ -325,7 +325,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public a<List<WorkInfo>> getWorkInfosByTag(@NonNull String str) {
+    public ListenableFuture8<List<WorkInfo>> getWorkInfosByTag(@NonNull String str) {
         StatusRunnable<List<WorkInfo>> statusRunnableForTag = StatusRunnable.forTag(this, str);
         this.mWorkTaskExecutor.getBackgroundExecutor().execute(statusRunnableForTag);
         return statusRunnableForTag.getFuture();
@@ -339,7 +339,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public a<List<WorkInfo>> getWorkInfosForUniqueWork(@NonNull String str) {
+    public ListenableFuture8<List<WorkInfo>> getWorkInfosForUniqueWork(@NonNull String str) {
         StatusRunnable<List<WorkInfo>> statusRunnableForUniqueWork = StatusRunnable.forUniqueWork(this, str);
         this.mWorkTaskExecutor.getBackgroundExecutor().execute(statusRunnableForUniqueWork);
         return statusRunnableForUniqueWork.getFuture();

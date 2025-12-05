@@ -14,53 +14,62 @@ import com.google.android.material.textfield.TextInputLayout;
 /* loaded from: classes.dex */
 public final class WidgetUserSetCustomStatusBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f18377a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final SimpleDraweeView f2692b;
+    public final SimpleDraweeView f18378b;
 
+    /* renamed from: c */
     @NonNull
-    public final FrameLayout c;
+    public final FrameLayout f18379c;
 
+    /* renamed from: d */
     @NonNull
-    public final MaterialRadioButton d;
+    public final MaterialRadioButton f18380d;
 
+    /* renamed from: e */
     @NonNull
-    public final MaterialRadioButton e;
+    public final MaterialRadioButton f18381e;
 
+    /* renamed from: f */
     @NonNull
-    public final MaterialRadioButton f;
+    public final MaterialRadioButton f18382f;
 
+    /* renamed from: g */
     @NonNull
-    public final MaterialRadioButton g;
+    public final MaterialRadioButton f18383g;
 
+    /* renamed from: h */
     @NonNull
-    public final MaterialRadioButton h;
+    public final MaterialRadioButton f18384h;
 
+    /* renamed from: i */
     @NonNull
-    public final FloatingActionButton i;
+    public final FloatingActionButton f18385i;
 
+    /* renamed from: j */
     @NonNull
-    public final TextInputLayout j;
+    public final TextInputLayout f18386j;
 
     public WidgetUserSetCustomStatusBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull SimpleDraweeView simpleDraweeView, @NonNull FrameLayout frameLayout, @NonNull RadioGroup radioGroup, @NonNull MaterialRadioButton materialRadioButton, @NonNull MaterialRadioButton materialRadioButton2, @NonNull MaterialRadioButton materialRadioButton3, @NonNull MaterialRadioButton materialRadioButton4, @NonNull MaterialRadioButton materialRadioButton5, @NonNull FloatingActionButton floatingActionButton, @NonNull TextInputLayout textInputLayout) {
-        this.a = coordinatorLayout;
-        this.f2692b = simpleDraweeView;
-        this.c = frameLayout;
-        this.d = materialRadioButton;
-        this.e = materialRadioButton2;
-        this.f = materialRadioButton3;
-        this.g = materialRadioButton4;
-        this.h = materialRadioButton5;
-        this.i = floatingActionButton;
-        this.j = textInputLayout;
+        this.f18377a = coordinatorLayout;
+        this.f18378b = simpleDraweeView;
+        this.f18379c = frameLayout;
+        this.f18380d = materialRadioButton;
+        this.f18381e = materialRadioButton2;
+        this.f18382f = materialRadioButton3;
+        this.f18383g = materialRadioButton4;
+        this.f18384h = materialRadioButton5;
+        this.f18385i = floatingActionButton;
+        this.f18386j = textInputLayout;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18377a;
     }
 }

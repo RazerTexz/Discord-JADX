@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackSubscriptionMetadata;
-import com.discord.analytics.generated.traits.TrackSubscriptionMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackSubscriptionMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackCancellationFlowStarted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCancellationFlowStarted implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackSubscriptionMetadataReceiver {
+public final /* data */ class TrackCancellationFlowStarted implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackSubscriptionMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackSubscriptionMetadata trackSubscriptionMetadata;
@@ -27,7 +27,7 @@ public final /* data */ class TrackCancellationFlowStarted implements AnalyticsS
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackCancellationFlowStarted) && m.areEqual(this.subscriptionId, ((TrackCancellationFlowStarted) other).subscriptionId);
+            return (other instanceof TrackCancellationFlowStarted) && Intrinsics3.areEqual(this.subscriptionId, ((TrackCancellationFlowStarted) other).subscriptionId);
         }
         return true;
     }
@@ -41,6 +41,6 @@ public final /* data */ class TrackCancellationFlowStarted implements AnalyticsS
     }
 
     public String toString() {
-        return a.G(a.U("TrackCancellationFlowStarted(subscriptionId="), this.subscriptionId, ")");
+        return outline.m819G(outline.m833U("TrackCancellationFlowStarted(subscriptionId="), this.subscriptionId, ")");
     }
 }

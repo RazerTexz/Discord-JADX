@@ -1,0 +1,42 @@
+package p007b.p485q.p486a.p490k;
+
+import android.R;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
+
+/* compiled from: SelectedStateListDrawable.java */
+/* renamed from: b.q.a.k.d, reason: use source file name */
+/* loaded from: classes3.dex */
+public class SelectedStateListDrawable extends StateListDrawable {
+
+    /* renamed from: j */
+    public int f14453j;
+
+    public SelectedStateListDrawable(Drawable drawable, int i) {
+        this.f14453j = i;
+        addState(new int[]{R.attr.state_selected}, drawable);
+        addState(new int[0], drawable);
+    }
+
+    @Override // android.graphics.drawable.StateListDrawable, android.graphics.drawable.DrawableContainer, android.graphics.drawable.Drawable
+    public boolean isStateful() {
+        return true;
+    }
+
+    @Override // android.graphics.drawable.StateListDrawable, android.graphics.drawable.DrawableContainer, android.graphics.drawable.Drawable
+    public boolean onStateChange(int[] iArr) {
+        boolean z2 = false;
+        for (int i : iArr) {
+            if (i == 16842913) {
+                z2 = true;
+            }
+        }
+        if (z2) {
+            setColorFilter(this.f14453j, PorterDuff.Mode.SRC_ATOP);
+        } else {
+            clearColorFilter();
+        }
+        return super.onStateChange(iArr);
+    }
+}

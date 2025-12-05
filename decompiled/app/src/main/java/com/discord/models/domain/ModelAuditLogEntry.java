@@ -1,11 +1,11 @@
 package com.discord.models.domain;
 
-import b.a.m.a.h;
-import b.d.b.a.a;
 import com.discord.models.domain.Model;
 import com.google.gson.stream.JsonToken;
 import java.io.IOException;
 import java.util.List;
+import p007b.p008a.p033m.p034a.C1144h;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ModelAuditLogEntry implements Model {
@@ -136,16 +136,16 @@ public class ModelAuditLogEntry implements Model {
     private List<Change> changes;
     private Long guildId;
 
-    /* renamed from: id, reason: collision with root package name */
-    private long f2715id;
+    /* renamed from: id */
+    private long f18561id;
     private Options options;
     private String reason;
     private long targetId;
     private Long timestampEnd;
     private long userId;
 
-    /* renamed from: com.discord.models.domain.ModelAuditLogEntry$1, reason: invalid class name */
-    public static /* synthetic */ class AnonymousClass1 {
+    /* renamed from: com.discord.models.domain.ModelAuditLogEntry$1 */
+    public static /* synthetic */ class C55331 {
         public static final /* synthetic */ int[] $SwitchMap$com$google$gson$stream$JsonToken;
 
         static {
@@ -261,14 +261,14 @@ public class ModelAuditLogEntry implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelAuditLogEntry.Change(key=");
-            sbU.append(getKey());
-            sbU.append(", oldValue=");
-            sbU.append(getOldValue());
-            sbU.append(", newValue=");
-            sbU.append(getNewValue());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelAuditLogEntry.Change(key=");
+            sbM833U.append(getKey());
+            sbM833U.append(", oldValue=");
+            sbM833U.append(getOldValue());
+            sbM833U.append(", newValue=");
+            sbM833U.append(getNewValue());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
 
         public Change(String str, Object obj, Object obj2) {
@@ -280,8 +280,8 @@ public class ModelAuditLogEntry implements Model {
 
     public static class ChangeNameId implements Model {
 
-        /* renamed from: id, reason: collision with root package name */
-        private long f2716id;
+        /* renamed from: id */
+        private long f18562id;
         private String name;
 
         @Override // com.discord.models.domain.Model
@@ -289,7 +289,7 @@ public class ModelAuditLogEntry implements Model {
             String strNextName = jsonReader.nextName();
             strNextName.hashCode();
             if (strNextName.equals(ModelAuditLogEntry.CHANGE_KEY_ID)) {
-                this.f2716id = jsonReader.nextLong(this.f2716id);
+                this.f18562id = jsonReader.nextLong(this.f18562id);
             } else if (strNextName.equals(ModelAuditLogEntry.CHANGE_KEY_NAME)) {
                 this.name = jsonReader.nextString(this.name);
             } else {
@@ -318,7 +318,7 @@ public class ModelAuditLogEntry implements Model {
         }
 
         public long getId() {
-            return this.f2716id;
+            return this.f18562id;
         }
 
         public String getName() {
@@ -332,12 +332,12 @@ public class ModelAuditLogEntry implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelAuditLogEntry.ChangeNameId(name=");
-            sbU.append(getName());
-            sbU.append(", id=");
-            sbU.append(getId());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelAuditLogEntry.ChangeNameId(name=");
+            sbM833U.append(getName());
+            sbM833U.append(", id=");
+            sbM833U.append(getId());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -346,8 +346,8 @@ public class ModelAuditLogEntry implements Model {
         private int count;
         private int deleteMemberDays;
 
-        /* renamed from: id, reason: collision with root package name */
-        private long f2717id;
+        /* renamed from: id */
+        private long f18563id;
         private int membersRemoved;
         private String roleName;
         private int type;
@@ -370,7 +370,7 @@ public class ModelAuditLogEntry implements Model {
                     this.deleteMemberDays = jsonReader.nextInt(this.deleteMemberDays);
                     break;
                 case "id":
-                    this.f2717id = jsonReader.nextLong(this.f2717id);
+                    this.f18563id = jsonReader.nextLong(this.f18563id);
                     break;
                 case "type":
                     this.type = jsonReader.nextInt(this.type);
@@ -420,7 +420,7 @@ public class ModelAuditLogEntry implements Model {
         }
 
         public long getId() {
-            return this.f2717id;
+            return this.f18563id;
         }
 
         public int getMembersRemoved() {
@@ -445,22 +445,22 @@ public class ModelAuditLogEntry implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelAuditLogEntry.Options(count=");
-            sbU.append(getCount());
-            sbU.append(", channelId=");
-            sbU.append(getChannelId());
-            sbU.append(", roleName=");
-            sbU.append(getRoleName());
-            sbU.append(", deleteMemberDays=");
-            sbU.append(getDeleteMemberDays());
-            sbU.append(", membersRemoved=");
-            sbU.append(getMembersRemoved());
-            sbU.append(", type=");
-            sbU.append(getType());
-            sbU.append(", id=");
-            sbU.append(getId());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelAuditLogEntry.Options(count=");
+            sbM833U.append(getCount());
+            sbM833U.append(", channelId=");
+            sbM833U.append(getChannelId());
+            sbM833U.append(", roleName=");
+            sbM833U.append(getRoleName());
+            sbM833U.append(", deleteMemberDays=");
+            sbM833U.append(getDeleteMemberDays());
+            sbM833U.append(", membersRemoved=");
+            sbM833U.append(getMembersRemoved());
+            sbM833U.append(", type=");
+            sbM833U.append(getType());
+            sbM833U.append(", id=");
+            sbM833U.append(getId());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -526,10 +526,10 @@ public class ModelAuditLogEntry implements Model {
                 this.userId = jsonReader.nextLong(this.userId);
                 break;
             case "id":
-                this.f2715id = jsonReader.nextLong(this.f2715id);
+                this.f18561id = jsonReader.nextLong(this.f18561id);
                 break;
             case "changes":
-                this.changes = jsonReader.nextList(new h(jsonReader));
+                this.changes = jsonReader.nextList(new C1144h(jsonReader));
                 break;
             case "action_type":
                 this.actionTypeId = jsonReader.nextInt(this.actionTypeId);
@@ -597,7 +597,7 @@ public class ModelAuditLogEntry implements Model {
     }
 
     public long getId() {
-        return this.f2715id;
+        return this.f18561id;
     }
 
     public Options getOptions() {
@@ -643,30 +643,30 @@ public class ModelAuditLogEntry implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelAuditLogEntry(id=");
-        sbU.append(getId());
-        sbU.append(", actionTypeId=");
-        sbU.append(getActionTypeId());
-        sbU.append(", targetId=");
-        sbU.append(getTargetId());
-        sbU.append(", userId=");
-        sbU.append(getUserId());
-        sbU.append(", changes=");
-        sbU.append(getChanges());
-        sbU.append(", options=");
-        sbU.append(getOptions());
-        sbU.append(", reason=");
-        sbU.append(getReason());
-        sbU.append(", guildId=");
-        sbU.append(getGuildId());
-        sbU.append(", timestampEnd=");
-        sbU.append(getTimestampEnd());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ModelAuditLogEntry(id=");
+        sbM833U.append(getId());
+        sbM833U.append(", actionTypeId=");
+        sbM833U.append(getActionTypeId());
+        sbM833U.append(", targetId=");
+        sbM833U.append(getTargetId());
+        sbM833U.append(", userId=");
+        sbM833U.append(getUserId());
+        sbM833U.append(", changes=");
+        sbM833U.append(getChanges());
+        sbM833U.append(", options=");
+        sbM833U.append(getOptions());
+        sbM833U.append(", reason=");
+        sbM833U.append(getReason());
+        sbM833U.append(", guildId=");
+        sbM833U.append(getGuildId());
+        sbM833U.append(", timestampEnd=");
+        sbM833U.append(getTimestampEnd());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public ModelAuditLogEntry(long j, int i, long j2, long j3, List<Change> list, Options options, long j4, Long l) {
-        this.f2715id = j;
+        this.f18561id = j;
         this.actionTypeId = i;
         this.targetId = j2;
         this.userId = j3;

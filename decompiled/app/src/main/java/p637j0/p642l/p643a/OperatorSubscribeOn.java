@@ -1,0 +1,143 @@
+package p637j0.p642l.p643a;
+
+import p658rx.Observable;
+import p658rx.Producer;
+import p658rx.Scheduler;
+import p658rx.Subscriber;
+import p658rx.functions.Action0;
+
+/* compiled from: OperatorSubscribeOn.java */
+/* renamed from: j0.l.a.x1, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class OperatorSubscribeOn<T> implements Observable.InterfaceC13005a<T> {
+
+    /* renamed from: j */
+    public final Scheduler f27108j;
+
+    /* renamed from: k */
+    public final Observable<T> f27109k;
+
+    /* renamed from: l */
+    public final boolean f27110l;
+
+    /* compiled from: OperatorSubscribeOn.java */
+    /* renamed from: j0.l.a.x1$a */
+    public static final class a<T> extends Subscriber<T> implements Action0 {
+
+        /* renamed from: j */
+        public final Subscriber<? super T> f27111j;
+
+        /* renamed from: k */
+        public final boolean f27112k;
+
+        /* renamed from: l */
+        public final Scheduler.Worker f27113l;
+
+        /* renamed from: m */
+        public Observable<T> f27114m;
+
+        /* renamed from: n */
+        public Thread f27115n;
+
+        /* compiled from: OperatorSubscribeOn.java */
+        /* renamed from: j0.l.a.x1$a$a, reason: collision with other inner class name */
+        public class C13349a implements Producer {
+
+            /* renamed from: j */
+            public final /* synthetic */ Producer f27116j;
+
+            /* compiled from: OperatorSubscribeOn.java */
+            /* renamed from: j0.l.a.x1$a$a$a, reason: collision with other inner class name */
+            public class C13350a implements Action0 {
+
+                /* renamed from: j */
+                public final /* synthetic */ long f27118j;
+
+                public C13350a(long j) {
+                    this.f27118j = j;
+                }
+
+                @Override // p658rx.functions.Action0
+                public void call() {
+                    C13349a.this.f27116j.mo10704j(this.f27118j);
+                }
+            }
+
+            public C13349a(Producer producer) {
+                this.f27116j = producer;
+            }
+
+            @Override // p658rx.Producer
+            /* renamed from: j */
+            public void mo10704j(long j) {
+                if (a.this.f27115n != Thread.currentThread()) {
+                    a aVar = a.this;
+                    if (aVar.f27112k) {
+                        aVar.f27113l.mo10740a(new C13350a(j));
+                        return;
+                    }
+                }
+                this.f27116j.mo10704j(j);
+            }
+        }
+
+        public a(Subscriber<? super T> subscriber, boolean z2, Scheduler.Worker worker, Observable<T> observable) {
+            this.f27111j = subscriber;
+            this.f27112k = z2;
+            this.f27113l = worker;
+            this.f27114m = observable;
+        }
+
+        @Override // p658rx.functions.Action0
+        public void call() {
+            Observable<T> observable = this.f27114m;
+            this.f27114m = null;
+            this.f27115n = Thread.currentThread();
+            observable.m11107i0(this);
+        }
+
+        @Override // p637j0.Observer2
+        public void onCompleted() {
+            try {
+                this.f27111j.onCompleted();
+            } finally {
+                this.f27113l.unsubscribe();
+            }
+        }
+
+        @Override // p637j0.Observer2
+        public void onError(Throwable th) {
+            try {
+                this.f27111j.onError(th);
+            } finally {
+                this.f27113l.unsubscribe();
+            }
+        }
+
+        @Override // p637j0.Observer2
+        public void onNext(T t) {
+            this.f27111j.onNext(t);
+        }
+
+        @Override // p658rx.Subscriber
+        public void setProducer(Producer producer) {
+            this.f27111j.setProducer(new C13349a(producer));
+        }
+    }
+
+    public OperatorSubscribeOn(Observable<T> observable, Scheduler scheduler, boolean z2) {
+        this.f27108j = scheduler;
+        this.f27109k = observable;
+        this.f27110l = z2;
+    }
+
+    @Override // p658rx.functions.Action1
+    public void call(Object obj) {
+        Subscriber subscriber = (Subscriber) obj;
+        Scheduler.Worker workerMo10739a = this.f27108j.mo10739a();
+        a aVar = new a(subscriber, this.f27110l, workerMo10739a, this.f27109k);
+        subscriber.add(aVar);
+        subscriber.add(workerMo10739a);
+        workerMo10739a.mo10740a(aVar);
+    }
+}

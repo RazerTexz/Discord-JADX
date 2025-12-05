@@ -1,73 +1,81 @@
 package com.fasterxml.jackson.databind;
 
-import b.g.a.a.m;
-import b.g.a.b.f;
-import b.g.a.c.i0.d;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import java.io.Closeable;
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Objects;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p195g.p196a.p197a.JsonIgnore;
+import p007b.p195g.p196a.p198b.JsonParser;
+import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
 /* loaded from: classes3.dex */
 public class JsonMappingException extends JsonProcessingException {
-    public static final /* synthetic */ int j = 0;
+
+    /* renamed from: j */
+    public static final /* synthetic */ int f19661j = 0;
     private static final long serialVersionUID = 1;
-    public LinkedList<a> _path;
-    public transient Closeable k;
+    public LinkedList<C10677a> _path;
+
+    /* renamed from: k */
+    public transient Closeable f19662k;
 
     public JsonMappingException(Closeable closeable, String str) {
         super(str);
-        this.k = closeable;
-        if (closeable instanceof f) {
-            this._location = ((f) closeable).a();
+        this.f19662k = closeable;
+        if (closeable instanceof JsonParser) {
+            this._location = ((JsonParser) closeable).mo1671a();
         }
     }
 
-    public static JsonMappingException f(Throwable th, a aVar) {
+    /* renamed from: f */
+    public static JsonMappingException m8741f(Throwable th, C10677a c10677a) {
         JsonMappingException jsonMappingException;
         if (th instanceof JsonMappingException) {
             jsonMappingException = (JsonMappingException) th;
         } else {
-            String strH = d.h(th);
-            if (strH == null || strH.isEmpty()) {
-                StringBuilder sbU = b.d.b.a.a.U("(was ");
-                sbU.append(th.getClass().getName());
-                sbU.append(")");
-                strH = sbU.toString();
+            String strM2176h = ClassUtil.m2176h(th);
+            if (strM2176h == null || strM2176h.isEmpty()) {
+                StringBuilder sbM833U = outline.m833U("(was ");
+                sbM833U.append(th.getClass().getName());
+                sbM833U.append(")");
+                strM2176h = sbM833U.toString();
             }
             Closeable closeable = null;
             if (th instanceof JsonProcessingException) {
-                Object objC = ((JsonProcessingException) th).c();
-                if (objC instanceof Closeable) {
-                    closeable = (Closeable) objC;
+                Object objMo8737c = ((JsonProcessingException) th).mo8737c();
+                if (objMo8737c instanceof Closeable) {
+                    closeable = (Closeable) objMo8737c;
                 }
             }
-            jsonMappingException = new JsonMappingException(closeable, strH, th);
+            jsonMappingException = new JsonMappingException(closeable, strM2176h, th);
         }
-        jsonMappingException.e(aVar);
+        jsonMappingException.m8743e(c10677a);
         return jsonMappingException;
     }
 
     @Override // com.fasterxml.jackson.core.JsonProcessingException
-    @m
-    public Object c() {
-        return this.k;
+    @JsonIgnore
+    /* renamed from: c */
+    public Object mo8737c() {
+        return this.f19662k;
     }
 
-    public String d() {
+    /* renamed from: d */
+    public String m8742d() {
         String message = super.getMessage();
         if (this._path == null) {
             return message;
         }
         StringBuilder sb = message == null ? new StringBuilder() : new StringBuilder(message);
         sb.append(" (through reference chain: ");
-        LinkedList<a> linkedList = this._path;
+        LinkedList<C10677a> linkedList = this._path;
         if (linkedList != null) {
-            Iterator<a> it = linkedList.iterator();
+            Iterator<C10677a> it = linkedList.iterator();
             while (it.hasNext()) {
-                sb.append(it.next().a());
+                sb.append(it.next().m8744a());
                 if (it.hasNext()) {
                     sb.append("->");
                 }
@@ -77,23 +85,24 @@ public class JsonMappingException extends JsonProcessingException {
         return sb.toString();
     }
 
-    public void e(a aVar) {
+    /* renamed from: e */
+    public void m8743e(C10677a c10677a) {
         if (this._path == null) {
             this._path = new LinkedList<>();
         }
         if (this._path.size() < 1000) {
-            this._path.addFirst(aVar);
+            this._path.addFirst(c10677a);
         }
     }
 
     @Override // java.lang.Throwable
     public String getLocalizedMessage() {
-        return d();
+        return m8742d();
     }
 
     @Override // com.fasterxml.jackson.core.JsonProcessingException, java.lang.Throwable
     public String getMessage() {
-        return d();
+        return m8742d();
     }
 
     @Override // com.fasterxml.jackson.core.JsonProcessingException, java.lang.Throwable
@@ -101,21 +110,25 @@ public class JsonMappingException extends JsonProcessingException {
         return getClass().getName() + ": " + getMessage();
     }
 
-    public static class a implements Serializable {
+    /* renamed from: com.fasterxml.jackson.databind.JsonMappingException$a */
+    public static class C10677a implements Serializable {
         private static final long serialVersionUID = 2;
         public String _desc;
         public String _fieldName;
         public int _index;
-        public transient Object j;
 
-        public a() {
+        /* renamed from: j */
+        public transient Object f19663j;
+
+        public C10677a() {
             this._index = -1;
         }
 
-        public String a() {
+        /* renamed from: a */
+        public String m8744a() {
             if (this._desc == null) {
                 StringBuilder sb = new StringBuilder();
-                Object obj = this.j;
+                Object obj = this.f19663j;
                 if (obj != null) {
                     Class<?> componentType = obj instanceof Class ? (Class) obj : obj.getClass();
                     int i = 0;
@@ -154,35 +167,35 @@ public class JsonMappingException extends JsonProcessingException {
         }
 
         public String toString() {
-            return a();
+            return m8744a();
         }
 
         public Object writeReplace() {
-            a();
+            m8744a();
             return this;
         }
 
-        public a(Object obj, String str) {
+        public C10677a(Object obj, String str) {
             this._index = -1;
-            this.j = obj;
+            this.f19663j = obj;
             Objects.requireNonNull(str, "Cannot pass null fieldName");
             this._fieldName = str;
         }
 
-        public a(Object obj, int i) {
+        public C10677a(Object obj, int i) {
             this._index = -1;
-            this.j = obj;
+            this.f19663j = obj;
             this._index = i;
         }
     }
 
     public JsonMappingException(Closeable closeable, String str, Throwable th) {
         super(str, th);
-        this.k = closeable;
+        this.f19662k = closeable;
         if (th instanceof JsonProcessingException) {
             this._location = ((JsonProcessingException) th)._location;
-        } else if (closeable instanceof f) {
-            this._location = ((f) closeable).a();
+        } else if (closeable instanceof JsonParser) {
+            this._location = ((JsonParser) closeable).mo1671a();
         }
     }
 }

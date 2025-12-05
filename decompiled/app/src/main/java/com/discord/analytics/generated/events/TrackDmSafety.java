@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackDmSafety.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDmSafety implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver {
+public final /* data */ class TrackDmSafety implements AnalyticsSchema, TrackBase2, TrackChannel2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private final CharSequence safetyPrompt = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackDmSafety implements AnalyticsSchema, TrackBas
             return false;
         }
         TrackDmSafety trackDmSafety = (TrackDmSafety) other;
-        return m.areEqual(this.safetyPrompt, trackDmSafety.safetyPrompt) && m.areEqual(this.response, trackDmSafety.response) && m.areEqual(this.messageId, trackDmSafety.messageId);
+        return Intrinsics3.areEqual(this.safetyPrompt, trackDmSafety.safetyPrompt) && Intrinsics3.areEqual(this.response, trackDmSafety.response) && Intrinsics3.areEqual(this.messageId, trackDmSafety.messageId);
     }
 
     public int hashCode() {
@@ -45,11 +45,11 @@ public final /* data */ class TrackDmSafety implements AnalyticsSchema, TrackBas
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackDmSafety(safetyPrompt=");
-        sbU.append(this.safetyPrompt);
-        sbU.append(", response=");
-        sbU.append(this.response);
-        sbU.append(", messageId=");
-        return a.G(sbU, this.messageId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackDmSafety(safetyPrompt=");
+        sbM833U.append(this.safetyPrompt);
+        sbM833U.append(", response=");
+        sbM833U.append(this.response);
+        sbM833U.append(", messageId=");
+        return outline.m819G(sbM833U, this.messageId, ")");
     }
 }

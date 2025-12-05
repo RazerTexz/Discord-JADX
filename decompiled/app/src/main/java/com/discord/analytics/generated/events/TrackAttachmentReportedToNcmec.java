@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAttachmentReportedToNcmec.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAttachmentReportedToNcmec implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver, TrackGuildReceiver {
+public final /* data */ class TrackAttachmentReportedToNcmec implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -23,14 +23,15 @@ public final /* data */ class TrackAttachmentReportedToNcmec implements Analytic
     private final CharSequence attachmentHash = null;
     private final transient String analyticsSchemaTypeName = "attachment_reported_to_ncmec";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -48,7 +49,7 @@ public final /* data */ class TrackAttachmentReportedToNcmec implements Analytic
             return false;
         }
         TrackAttachmentReportedToNcmec trackAttachmentReportedToNcmec = (TrackAttachmentReportedToNcmec) other;
-        return m.areEqual(this.ncmecReportId, trackAttachmentReportedToNcmec.ncmecReportId) && m.areEqual(this.archiveId, trackAttachmentReportedToNcmec.archiveId) && m.areEqual(this.messageId, trackAttachmentReportedToNcmec.messageId) && m.areEqual(this.attachmentId, trackAttachmentReportedToNcmec.attachmentId) && m.areEqual(this.attachmentHash, trackAttachmentReportedToNcmec.attachmentHash);
+        return Intrinsics3.areEqual(this.ncmecReportId, trackAttachmentReportedToNcmec.ncmecReportId) && Intrinsics3.areEqual(this.archiveId, trackAttachmentReportedToNcmec.archiveId) && Intrinsics3.areEqual(this.messageId, trackAttachmentReportedToNcmec.messageId) && Intrinsics3.areEqual(this.attachmentId, trackAttachmentReportedToNcmec.attachmentId) && Intrinsics3.areEqual(this.attachmentHash, trackAttachmentReportedToNcmec.attachmentHash);
     }
 
     public int hashCode() {
@@ -65,15 +66,15 @@ public final /* data */ class TrackAttachmentReportedToNcmec implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAttachmentReportedToNcmec(ncmecReportId=");
-        sbU.append(this.ncmecReportId);
-        sbU.append(", archiveId=");
-        sbU.append(this.archiveId);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", attachmentId=");
-        sbU.append(this.attachmentId);
-        sbU.append(", attachmentHash=");
-        return a.E(sbU, this.attachmentHash, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAttachmentReportedToNcmec(ncmecReportId=");
+        sbM833U.append(this.ncmecReportId);
+        sbM833U.append(", archiveId=");
+        sbM833U.append(this.archiveId);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", attachmentId=");
+        sbM833U.append(this.attachmentId);
+        sbM833U.append(", attachmentHash=");
+        return outline.m817E(sbM833U, this.attachmentHash, ")");
     }
 }

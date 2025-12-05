@@ -4,25 +4,35 @@ import android.os.Parcelable;
 
 /* loaded from: classes3.dex */
 public interface FlexItem extends Parcelable {
-    int D();
+    /* renamed from: D */
+    int mo8955D();
 
-    void H(int i);
+    /* renamed from: H */
+    void mo8956H(int i);
 
-    int I();
+    /* renamed from: I */
+    int mo8957I();
 
-    int J();
+    /* renamed from: J */
+    int mo8958J();
 
-    int N();
+    /* renamed from: N */
+    int mo8959N();
 
-    void O(int i);
+    /* renamed from: O */
+    void mo8960O(int i);
 
-    float S();
+    /* renamed from: S */
+    float mo8961S();
 
-    float W();
+    /* renamed from: W */
+    float mo8962W();
 
-    int d0();
+    /* renamed from: d0 */
+    int mo8963d0();
 
-    int f0();
+    /* renamed from: f0 */
+    int mo8964f0();
 
     int getHeight();
 
@@ -30,13 +40,18 @@ public interface FlexItem extends Parcelable {
 
     int getWidth();
 
-    boolean j0();
+    /* renamed from: j0 */
+    boolean mo8965j0();
 
-    int m0();
+    /* renamed from: m0 */
+    int mo8966m0();
 
-    int t0();
+    /* renamed from: t0 */
+    int mo8967t0();
 
-    int u();
+    /* renamed from: u */
+    int mo8968u();
 
-    float x();
+    /* renamed from: x */
+    float mo8969x();
 }

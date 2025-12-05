@@ -10,19 +10,15 @@ import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.FragmentActivity;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.ViewDialogConfirmationBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.view.extensions.ViewExtensions;
-import com.discord.utilities.view.text.TextWatcherKt;
+import com.discord.utilities.view.text.TextWatcher4;
 import com.discord.views.CheckedSetting;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g0.t;
-import d0.t.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -33,7 +29,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import rx.functions.Func0;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t._Arrays;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.functions.Func0;
 
 /* compiled from: StatefulViews.kt */
 /* loaded from: classes2.dex */
@@ -50,8 +51,8 @@ public final class StatefulViews {
         private final Function0<Boolean> hasAnythingChanged;
 
         public FragmentOnBackPressedHandler(Activity activity, Function0<Boolean> function0) {
-            m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-            m.checkNotNullParameter(function0, "hasAnythingChanged");
+            Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+            Intrinsics3.checkNotNullParameter(function0, "hasAnythingChanged");
             this.activity = activity;
             this.hasAnythingChanged = function0;
             this.discardConfirmed = new AtomicBoolean(false);
@@ -73,38 +74,38 @@ public final class StatefulViews {
             if (!this.hasAnythingChanged.invoke().booleanValue() || this.discardConfirmed.get()) {
                 return false;
             }
-            ViewDialogConfirmationBinding viewDialogConfirmationBindingB = ViewDialogConfirmationBinding.b(LayoutInflater.from(this.activity));
-            m.checkNotNullExpressionValue(viewDialogConfirmationBindingB, "ViewDialogConfirmationBi…tInflater.from(activity))");
-            AlertDialog alertDialogCreate = new AlertDialog.Builder(this.activity).setView(viewDialogConfirmationBindingB.a).create();
-            m.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(acti…logBinding.root).create()");
-            viewDialogConfirmationBindingB.d.setText(R.string.discard_changes);
-            viewDialogConfirmationBindingB.e.setText(R.string.discard_changes_description);
-            viewDialogConfirmationBindingB.f2185b.setOnClickListener(new StatefulViews$FragmentOnBackPressedHandler$onBackPressed$1(alertDialogCreate));
-            viewDialogConfirmationBindingB.c.setText(R.string.okay);
-            viewDialogConfirmationBindingB.c.setOnClickListener(new StatefulViews$FragmentOnBackPressedHandler$onBackPressed$2(this, alertDialogCreate));
+            ViewDialogConfirmationBinding viewDialogConfirmationBindingM8394b = ViewDialogConfirmationBinding.m8394b(LayoutInflater.from(this.activity));
+            Intrinsics3.checkNotNullExpressionValue(viewDialogConfirmationBindingM8394b, "ViewDialogConfirmationBi…tInflater.from(activity))");
+            AlertDialog alertDialogCreate = new AlertDialog.Builder(this.activity).setView(viewDialogConfirmationBindingM8394b.f15420a).create();
+            Intrinsics3.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(acti…logBinding.root).create()");
+            viewDialogConfirmationBindingM8394b.f15423d.setText(C5419R.string.discard_changes);
+            viewDialogConfirmationBindingM8394b.f15424e.setText(C5419R.string.discard_changes_description);
+            viewDialogConfirmationBindingM8394b.f15421b.setOnClickListener(new StatefulViews2(alertDialogCreate));
+            viewDialogConfirmationBindingM8394b.f15422c.setText(C5419R.string.okay);
+            viewDialogConfirmationBindingM8394b.f15422c.setOnClickListener(new StatefulViews3(this, alertDialogCreate));
             alertDialogCreate.show();
             return true;
         }
     }
 
     /* compiled from: StatefulViews.kt */
-    /* renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$1 */
+    public static final class C69181 extends Lambda implements Function1<View, Unit> {
+        public static final C69181 INSTANCE = new C69181();
 
-        public AnonymousClass1() {
+        public C69181() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "$this$smartHide");
+            Intrinsics3.checkNotNullParameter(view, "$this$smartHide");
             if (view instanceof FloatingActionButton) {
                 ((FloatingActionButton) view).hide();
             } else {
@@ -114,23 +115,23 @@ public final class StatefulViews {
     }
 
     /* compiled from: StatefulViews.kt */
-    /* renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<View, Unit> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$2 */
+    public static final class C69192 extends Lambda implements Function1<View, Unit> {
+        public static final C69192 INSTANCE = new C69192();
 
-        public AnonymousClass2() {
+        public C69192() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "$this$smartShow");
+            Intrinsics3.checkNotNullParameter(view, "$this$smartShow");
             if (view instanceof FloatingActionButton) {
                 ((FloatingActionButton) view).show();
             } else {
@@ -140,20 +141,20 @@ public final class StatefulViews {
     }
 
     /* compiled from: StatefulViews.kt */
-    /* renamed from: com.discord.utilities.stateful.StatefulViews$setupUnsavedChangesConfirmation$1, reason: invalid class name */
-    public static final class AnonymousClass1<R> implements Func0<Boolean> {
+    /* renamed from: com.discord.utilities.stateful.StatefulViews$setupUnsavedChangesConfirmation$1 */
+    public static final class C69241<R> implements Func0<Boolean> {
         public final /* synthetic */ FragmentOnBackPressedHandler $onBackPressedHandler;
 
-        public AnonymousClass1(FragmentOnBackPressedHandler fragmentOnBackPressedHandler) {
+        public C69241(FragmentOnBackPressedHandler fragmentOnBackPressedHandler) {
             this.$onBackPressedHandler = fragmentOnBackPressedHandler;
         }
 
-        @Override // rx.functions.Func0, java.util.concurrent.Callable
+        @Override // p658rx.functions.Func0, java.util.concurrent.Callable
         public /* bridge */ /* synthetic */ Object call() {
             return call();
         }
 
-        @Override // rx.functions.Func0, java.util.concurrent.Callable
+        @Override // p658rx.functions.Func0, java.util.concurrent.Callable
         public final Boolean call() {
             FragmentOnBackPressedHandler fragmentOnBackPressedHandler = this.$onBackPressedHandler;
             return fragmentOnBackPressedHandler != null ? Boolean.valueOf(fragmentOnBackPressedHandler.onBackPressed()) : Boolean.FALSE;
@@ -161,7 +162,7 @@ public final class StatefulViews {
     }
 
     public StatefulViews(List<Integer> list) {
-        m.checkNotNullParameter(list, "ids");
+        Intrinsics3.checkNotNullParameter(list, "ids");
         this.ids = list;
         this.viewValues = new HashMap<>();
         this.viewValuesEdited = new HashMap<>();
@@ -199,7 +200,7 @@ public final class StatefulViews {
                     if (string instanceof SpannableStringBuilder) {
                         string = string.toString();
                     }
-                    z2 = m.areEqual(string, this.viewValues.get(Integer.valueOf(iIntValue)) instanceof SpannableStringBuilder ? String.valueOf(this.viewValues.get(Integer.valueOf(iIntValue))) : this.viewValues.get(Integer.valueOf(iIntValue))) ^ true;
+                    z2 = Intrinsics3.areEqual(string, this.viewValues.get(Integer.valueOf(iIntValue)) instanceof SpannableStringBuilder ? String.valueOf(this.viewValues.get(Integer.valueOf(iIntValue))) : this.viewValues.get(Integer.valueOf(iIntValue))) ^ true;
                 }
                 if (z2) {
                     return true;
@@ -225,7 +226,7 @@ public final class StatefulViews {
                         obj = null;
                     }
                     String str = (String) obj;
-                    z2 = str != null && t.isBlank(str);
+                    z2 = str != null && StringsJVM.isBlank(str);
                 }
                 if (z2) {
                     return true;
@@ -236,7 +237,7 @@ public final class StatefulViews {
     }
 
     public final void addOptionalFields(View... views) {
-        m.checkNotNullParameter(views, "views");
+        Intrinsics3.checkNotNullParameter(views, "views");
         for (View view : views) {
             this.requiredFieldIds.put(Integer.valueOf(view.getId()), Boolean.FALSE);
         }
@@ -254,13 +255,13 @@ public final class StatefulViews {
     }
 
     public final void configureSaveActionView(View saveActionView) {
-        AnonymousClass1 anonymousClass1 = AnonymousClass1.INSTANCE;
-        AnonymousClass2 anonymousClass2 = AnonymousClass2.INSTANCE;
+        C69181 c69181 = C69181.INSTANCE;
+        C69192 c69192 = C69192.INSTANCE;
         if (saveActionView != null) {
             if (!hasAnythingChanged() || isAnyRequiredFieldBlank()) {
-                anonymousClass1.invoke2(saveActionView);
+                c69181.invoke2(saveActionView);
             } else {
-                anonymousClass2.invoke2(saveActionView);
+                c69192.invoke2(saveActionView);
             }
         }
     }
@@ -274,7 +275,7 @@ public final class StatefulViews {
 
     public final boolean hasChanged(int viewId) {
         if (this.viewValuesEdited.containsKey(Integer.valueOf(viewId))) {
-            return !m.areEqual(this.viewValuesEdited.get(Integer.valueOf(viewId)), this.viewValues.get(Integer.valueOf(viewId)));
+            return !Intrinsics3.areEqual(this.viewValuesEdited.get(Integer.valueOf(viewId)), this.viewValues.get(Integer.valueOf(viewId)));
         }
         return false;
     }
@@ -284,8 +285,8 @@ public final class StatefulViews {
     }
 
     public final void setupTextWatcherWithSaveAction(AppFragment fragment, View saveAction, View... views) {
-        m.checkNotNullParameter(fragment, "fragment");
-        m.checkNotNullParameter(views, "views");
+        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        Intrinsics3.checkNotNullParameter(views, "views");
         for (View view : views) {
             HashMap<Integer, Boolean> map = this.requiredFieldIds;
             Integer numValueOf = Integer.valueOf(view.getId());
@@ -293,51 +294,51 @@ public final class StatefulViews {
             if (bool == null) {
                 bool = Boolean.TRUE;
             }
-            m.checkNotNullExpressionValue(bool, "requiredFieldIds[view.id] ?: true");
+            Intrinsics3.checkNotNullExpressionValue(bool, "requiredFieldIds[view.id] ?: true");
             map.put(numValueOf, bool);
-            StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1 statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1 = new StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1(view, this, saveAction, fragment);
-            StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$2 statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$2 = new StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$2(view, this, saveAction, fragment);
+            StatefulViews4 statefulViews4 = new StatefulViews4(view, this, saveAction, fragment);
+            StatefulViews5 statefulViews5 = new StatefulViews5(view, this, saveAction, fragment);
             if (view instanceof TextView) {
-                TextWatcherKt.addBindedTextWatcher((TextView) view, fragment, statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1);
+                TextWatcher4.addBindedTextWatcher((TextView) view, fragment, statefulViews4);
             } else if (view instanceof TextInputLayout) {
-                ViewExtensions.addBindedTextWatcher((TextInputLayout) view, fragment, statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1);
+                ViewExtensions.addBindedTextWatcher((TextInputLayout) view, fragment, statefulViews4);
             } else {
                 if (!(view instanceof CheckedSetting)) {
                     throw new UnsupportedOperationException(view + " must support using `TextWatcher`.");
                 }
-                ((CheckedSetting) view).setOnCheckedListener(new StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$3(statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$2));
+                ((CheckedSetting) view).setOnCheckedListener(new StatefulViews6(statefulViews5));
             }
         }
     }
 
     public final void setupUnsavedChangesConfirmation(AppFragment fragment) {
         FragmentOnBackPressedHandler fragmentOnBackPressedHandler;
-        m.checkNotNullParameter(fragment, "fragment");
+        Intrinsics3.checkNotNullParameter(fragment, "fragment");
         FragmentActivity activity = fragment.getActivity();
         if (activity != null) {
-            m.checkNotNullExpressionValue(activity, "it");
-            fragmentOnBackPressedHandler = new FragmentOnBackPressedHandler(activity, new StatefulViews$setupUnsavedChangesConfirmation$$inlined$let$lambda$1(this));
+            Intrinsics3.checkNotNullExpressionValue(activity, "it");
+            fragmentOnBackPressedHandler = new FragmentOnBackPressedHandler(activity, new StatefulViews7(this));
         } else {
             fragmentOnBackPressedHandler = null;
         }
-        AppFragment.setOnBackPressed$default(fragment, new AnonymousClass1(fragmentOnBackPressedHandler), 0, 2, null);
+        AppFragment.setOnBackPressed$default(fragment, new C69241(fragmentOnBackPressedHandler), 0, 2, null);
     }
 
     public final <T> T get(int id2, T defaultValue) {
         this.viewValues.put(Integer.valueOf(id2), defaultValue);
         T t = (T) get(id2);
-        return (!m.areEqual(this.requiredFieldIds.get(Integer.valueOf(id2)), Boolean.FALSE) && t == null) ? defaultValue : t;
+        return (!Intrinsics3.areEqual(this.requiredFieldIds.get(Integer.valueOf(id2)), Boolean.FALSE) && t == null) ? defaultValue : t;
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public StatefulViews(int... iArr) {
-        this(k.toList(iArr));
-        m.checkNotNullParameter(iArr, "ids");
+        this(_Arrays.toList(iArr));
+        Intrinsics3.checkNotNullParameter(iArr, "ids");
     }
 
     public StatefulViews(Collection<? extends View> collection) {
-        m.checkNotNullParameter(collection, "views");
-        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(collection, 10));
+        Intrinsics3.checkNotNullParameter(collection, "views");
+        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(collection, 10));
         Iterator<T> it = collection.iterator();
         while (it.hasNext()) {
             arrayList.add(Integer.valueOf(((View) it.next()).getId()));

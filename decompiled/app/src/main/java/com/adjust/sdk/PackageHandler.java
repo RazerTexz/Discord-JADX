@@ -27,9 +27,9 @@ public class PackageHandler implements IPackageHandler {
     private BackoffStrategy backoffStrategy = AdjustFactory.getPackageHandlerBackoffStrategy();
     private BackoffStrategy backoffStrategyForInstallSession = AdjustFactory.getInstallSessionBackoffStrategy();
 
-    /* renamed from: com.adjust.sdk.PackageHandler$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: com.adjust.sdk.PackageHandler$1 */
+    public class RunnableC53801 implements Runnable {
+        public RunnableC53801() {
         }
 
         @Override // java.lang.Runnable
@@ -38,11 +38,11 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: com.adjust.sdk.PackageHandler$2 */
+    public class RunnableC53812 implements Runnable {
         public final /* synthetic */ ActivityPackage val$activityPackage;
 
-        public AnonymousClass2(ActivityPackage activityPackage) {
+        public RunnableC53812(ActivityPackage activityPackage) {
             this.val$activityPackage = activityPackage;
         }
 
@@ -52,9 +52,9 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
-        public AnonymousClass3() {
+    /* renamed from: com.adjust.sdk.PackageHandler$3 */
+    public class RunnableC53823 implements Runnable {
+        public RunnableC53823() {
         }
 
         @Override // java.lang.Runnable
@@ -63,9 +63,9 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$4, reason: invalid class name */
-    public class AnonymousClass4 implements Runnable {
-        public AnonymousClass4() {
+    /* renamed from: com.adjust.sdk.PackageHandler$4 */
+    public class RunnableC53834 implements Runnable {
+        public RunnableC53834() {
         }
 
         @Override // java.lang.Runnable
@@ -74,9 +74,9 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$5, reason: invalid class name */
-    public class AnonymousClass5 implements Runnable {
-        public AnonymousClass5() {
+    /* renamed from: com.adjust.sdk.PackageHandler$5 */
+    public class RunnableC53845 implements Runnable {
+        public RunnableC53845() {
         }
 
         @Override // java.lang.Runnable
@@ -87,11 +87,11 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$6, reason: invalid class name */
-    public class AnonymousClass6 implements Runnable {
+    /* renamed from: com.adjust.sdk.PackageHandler$6 */
+    public class RunnableC53856 implements Runnable {
         public final /* synthetic */ SessionParameters val$sessionParametersCopy;
 
-        public AnonymousClass6(SessionParameters sessionParameters) {
+        public RunnableC53856(SessionParameters sessionParameters) {
             this.val$sessionParametersCopy = sessionParameters;
         }
 
@@ -101,9 +101,9 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$7, reason: invalid class name */
-    public class AnonymousClass7 implements Runnable {
-        public AnonymousClass7() {
+    /* renamed from: com.adjust.sdk.PackageHandler$7 */
+    public class RunnableC53867 implements Runnable {
+        public RunnableC53867() {
         }
 
         @Override // java.lang.Runnable
@@ -114,7 +114,7 @@ public class PackageHandler implements IPackageHandler {
 
     public PackageHandler(IActivityHandler iActivityHandler, Context context, boolean z2) {
         init(iActivityHandler, context, z2);
-        this.scheduler.submit(new AnonymousClass1());
+        this.scheduler.submit(new RunnableC53801());
     }
 
     public static /* synthetic */ void access$000(PackageHandler packageHandler) {
@@ -217,7 +217,7 @@ public class PackageHandler implements IPackageHandler {
 
     @Override // com.adjust.sdk.IPackageHandler
     public void addPackage(ActivityPackage activityPackage) {
-        this.scheduler.submit(new AnonymousClass2(activityPackage));
+        this.scheduler.submit(new RunnableC53812(activityPackage));
     }
 
     @Override // com.adjust.sdk.IPackageHandler
@@ -227,20 +227,20 @@ public class PackageHandler implements IPackageHandler {
         if (iActivityHandler != null) {
             iActivityHandler.finishedTrackingActivity(responseData);
         }
-        AnonymousClass5 anonymousClass5 = new AnonymousClass5();
+        RunnableC53845 runnableC53845 = new RunnableC53845();
         if (activityPackage == null) {
-            anonymousClass5.run();
+            runnableC53845.run();
             return;
         }
         int iIncreaseRetries = activityPackage.increaseRetries();
         long waitingTime = (activityPackage.getActivityKind() != ActivityKind.SESSION || new SharedPreferencesManager(this.context).getInstallTracked()) ? Util.getWaitingTime(iIncreaseRetries, this.backoffStrategy) : Util.getWaitingTime(iIncreaseRetries, this.backoffStrategyForInstallSession);
         this.logger.verbose("Waiting for %s seconds before retrying the %d time", Util.SecondsDisplayFormat.format(waitingTime / 1000.0d), Integer.valueOf(iIncreaseRetries));
-        this.scheduler.schedule(anonymousClass5, waitingTime);
+        this.scheduler.schedule(runnableC53845, waitingTime);
     }
 
     @Override // com.adjust.sdk.IPackageHandler
     public void flush() {
-        this.scheduler.submit(new AnonymousClass7());
+        this.scheduler.submit(new RunnableC53867());
     }
 
     @Override // com.adjust.sdk.IPackageHandler
@@ -280,12 +280,12 @@ public class PackageHandler implements IPackageHandler {
 
     @Override // com.adjust.sdk.IPackageHandler
     public void sendFirstPackage() {
-        this.scheduler.submit(new AnonymousClass3());
+        this.scheduler.submit(new RunnableC53823());
     }
 
     @Override // com.adjust.sdk.IPackageHandler
     public void sendNextPackage(ResponseData responseData) {
-        this.scheduler.submit(new AnonymousClass4());
+        this.scheduler.submit(new RunnableC53834());
         IActivityHandler iActivityHandler = this.activityHandlerWeakRef.get();
         if (iActivityHandler != null) {
             iActivityHandler.finishedTrackingActivity(responseData);
@@ -323,7 +323,7 @@ public class PackageHandler implements IPackageHandler {
 
     @Override // com.adjust.sdk.IPackageHandler
     public void updatePackages(SessionParameters sessionParameters) {
-        this.scheduler.submit(new AnonymousClass6(sessionParameters != null ? sessionParameters.deepCopy() : null));
+        this.scheduler.submit(new RunnableC53856(sessionParameters != null ? sessionParameters.deepCopy() : null));
     }
 
     public void updatePackagesI(SessionParameters sessionParameters) {

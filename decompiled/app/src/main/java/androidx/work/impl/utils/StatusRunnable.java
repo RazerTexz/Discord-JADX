@@ -8,21 +8,21 @@ import androidx.work.WorkQuery;
 import androidx.work.impl.WorkManagerImpl;
 import androidx.work.impl.model.WorkSpec;
 import androidx.work.impl.utils.futures.SettableFuture;
-import b.i.b.d.a.a;
 import java.util.List;
 import java.util.UUID;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
 public abstract class StatusRunnable<T> implements Runnable {
     private final SettableFuture<T> mFuture = SettableFuture.create();
 
-    /* renamed from: androidx.work.impl.utils.StatusRunnable$1, reason: invalid class name */
-    public class AnonymousClass1 extends StatusRunnable<List<WorkInfo>> {
+    /* renamed from: androidx.work.impl.utils.StatusRunnable$1 */
+    public class C07771 extends StatusRunnable<List<WorkInfo>> {
         public final /* synthetic */ List val$ids;
         public final /* synthetic */ WorkManagerImpl val$workManager;
 
-        public AnonymousClass1(WorkManagerImpl workManagerImpl, List list) {
+        public C07771(WorkManagerImpl workManagerImpl, List list) {
             this.val$workManager = workManagerImpl;
             this.val$ids = list;
         }
@@ -39,12 +39,12 @@ public abstract class StatusRunnable<T> implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.StatusRunnable$2, reason: invalid class name */
-    public class AnonymousClass2 extends StatusRunnable<WorkInfo> {
+    /* renamed from: androidx.work.impl.utils.StatusRunnable$2 */
+    public class C07782 extends StatusRunnable<WorkInfo> {
         public final /* synthetic */ UUID val$id;
         public final /* synthetic */ WorkManagerImpl val$workManager;
 
-        public AnonymousClass2(WorkManagerImpl workManagerImpl, UUID uuid) {
+        public C07782(WorkManagerImpl workManagerImpl, UUID uuid) {
             this.val$workManager = workManagerImpl;
             this.val$id = uuid;
         }
@@ -65,12 +65,12 @@ public abstract class StatusRunnable<T> implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.StatusRunnable$3, reason: invalid class name */
-    public class AnonymousClass3 extends StatusRunnable<List<WorkInfo>> {
+    /* renamed from: androidx.work.impl.utils.StatusRunnable$3 */
+    public class C07793 extends StatusRunnable<List<WorkInfo>> {
         public final /* synthetic */ String val$tag;
         public final /* synthetic */ WorkManagerImpl val$workManager;
 
-        public AnonymousClass3(WorkManagerImpl workManagerImpl, String str) {
+        public C07793(WorkManagerImpl workManagerImpl, String str) {
             this.val$workManager = workManagerImpl;
             this.val$tag = str;
         }
@@ -87,12 +87,12 @@ public abstract class StatusRunnable<T> implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.StatusRunnable$4, reason: invalid class name */
-    public class AnonymousClass4 extends StatusRunnable<List<WorkInfo>> {
+    /* renamed from: androidx.work.impl.utils.StatusRunnable$4 */
+    public class C07804 extends StatusRunnable<List<WorkInfo>> {
         public final /* synthetic */ String val$name;
         public final /* synthetic */ WorkManagerImpl val$workManager;
 
-        public AnonymousClass4(WorkManagerImpl workManagerImpl, String str) {
+        public C07804(WorkManagerImpl workManagerImpl, String str) {
             this.val$workManager = workManagerImpl;
             this.val$name = str;
         }
@@ -109,12 +109,12 @@ public abstract class StatusRunnable<T> implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.StatusRunnable$5, reason: invalid class name */
-    public class AnonymousClass5 extends StatusRunnable<List<WorkInfo>> {
+    /* renamed from: androidx.work.impl.utils.StatusRunnable$5 */
+    public class C07815 extends StatusRunnable<List<WorkInfo>> {
         public final /* synthetic */ WorkQuery val$querySpec;
         public final /* synthetic */ WorkManagerImpl val$workManager;
 
-        public AnonymousClass5(WorkManagerImpl workManagerImpl, WorkQuery workQuery) {
+        public C07815(WorkManagerImpl workManagerImpl, WorkQuery workQuery) {
             this.val$workManager = workManagerImpl;
             this.val$querySpec = workQuery;
         }
@@ -133,31 +133,31 @@ public abstract class StatusRunnable<T> implements Runnable {
 
     @NonNull
     public static StatusRunnable<List<WorkInfo>> forStringIds(@NonNull WorkManagerImpl workManagerImpl, @NonNull List<String> list) {
-        return new AnonymousClass1(workManagerImpl, list);
+        return new C07771(workManagerImpl, list);
     }
 
     @NonNull
     public static StatusRunnable<List<WorkInfo>> forTag(@NonNull WorkManagerImpl workManagerImpl, @NonNull String str) {
-        return new AnonymousClass3(workManagerImpl, str);
+        return new C07793(workManagerImpl, str);
     }
 
     @NonNull
     public static StatusRunnable<WorkInfo> forUUID(@NonNull WorkManagerImpl workManagerImpl, @NonNull UUID uuid) {
-        return new AnonymousClass2(workManagerImpl, uuid);
+        return new C07782(workManagerImpl, uuid);
     }
 
     @NonNull
     public static StatusRunnable<List<WorkInfo>> forUniqueWork(@NonNull WorkManagerImpl workManagerImpl, @NonNull String str) {
-        return new AnonymousClass4(workManagerImpl, str);
+        return new C07804(workManagerImpl, str);
     }
 
     @NonNull
     public static StatusRunnable<List<WorkInfo>> forWorkQuerySpec(@NonNull WorkManagerImpl workManagerImpl, @NonNull WorkQuery workQuery) {
-        return new AnonymousClass5(workManagerImpl, workQuery);
+        return new C07815(workManagerImpl, workQuery);
     }
 
     @NonNull
-    public a<T> getFuture() {
+    public ListenableFuture8<T> getFuture() {
         return this.mFuture;
     }
 

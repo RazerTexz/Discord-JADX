@@ -30,20 +30,20 @@ public class FormatPreferenceScanner {
             return fps;
         }
         try {
-            return scan_(preferences, new AnonymousClass1(source));
+            return scan_(preferences, new C128461(source));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    /* renamed from: lombok.delombok.FormatPreferenceScanner$1, reason: invalid class name */
+    /* renamed from: lombok.delombok.FormatPreferenceScanner$1 */
     /* loaded from: discord-126021.apk:lombok/delombok/FormatPreferenceScanner$1.SCL.lombok */
-    class AnonymousClass1 extends Reader {
+    class C128461 extends Reader {
         int pos = 0;
         int max;
         private final /* synthetic */ CharSequence val$source;
 
-        AnonymousClass1(CharSequence charSequence) {
+        C128461(CharSequence charSequence) {
             this.val$source = charSequence;
             this.max = charSequence.length();
         }

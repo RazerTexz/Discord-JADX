@@ -1,19 +1,19 @@
 package com.discord.analytics.generated.events.network_action;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackNetworkMetadata;
-import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackNetworkActionUserConnectionsUpdate.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackNetworkMetadataReceiver {
+public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
     private final transient String analyticsSchemaTypeName;
     private final Boolean friendSync;
     private final CharSequence name;
@@ -39,8 +39,9 @@ public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements
         this.analyticsSchemaTypeName = "network_action_user_connections_update";
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver
-    public void b(TrackNetworkMetadata trackNetworkMetadata) {
+    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
+    /* renamed from: b */
+    public void mo7529b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
 
@@ -58,7 +59,7 @@ public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements
             return false;
         }
         TrackNetworkActionUserConnectionsUpdate trackNetworkActionUserConnectionsUpdate = (TrackNetworkActionUserConnectionsUpdate) other;
-        return m.areEqual(this.name, trackNetworkActionUserConnectionsUpdate.name) && m.areEqual(this.friendSync, trackNetworkActionUserConnectionsUpdate.friendSync) && m.areEqual(this.visibility, trackNetworkActionUserConnectionsUpdate.visibility) && m.areEqual(this.showActivity, trackNetworkActionUserConnectionsUpdate.showActivity);
+        return Intrinsics3.areEqual(this.name, trackNetworkActionUserConnectionsUpdate.name) && Intrinsics3.areEqual(this.friendSync, trackNetworkActionUserConnectionsUpdate.friendSync) && Intrinsics3.areEqual(this.visibility, trackNetworkActionUserConnectionsUpdate.visibility) && Intrinsics3.areEqual(this.showActivity, trackNetworkActionUserConnectionsUpdate.showActivity);
     }
 
     public int hashCode() {
@@ -73,13 +74,13 @@ public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackNetworkActionUserConnectionsUpdate(name=");
-        sbU.append(this.name);
-        sbU.append(", friendSync=");
-        sbU.append(this.friendSync);
-        sbU.append(", visibility=");
-        sbU.append(this.visibility);
-        sbU.append(", showActivity=");
-        return a.D(sbU, this.showActivity, ")");
+        StringBuilder sbM833U = outline.m833U("TrackNetworkActionUserConnectionsUpdate(name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", friendSync=");
+        sbM833U.append(this.friendSync);
+        sbM833U.append(", visibility=");
+        sbM833U.append(this.visibility);
+        sbM833U.append(", showActivity=");
+        return outline.m816D(sbM833U, this.showActivity, ")");
     }
 }

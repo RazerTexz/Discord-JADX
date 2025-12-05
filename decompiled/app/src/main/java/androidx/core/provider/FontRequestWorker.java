@@ -26,14 +26,14 @@ public class FontRequestWorker {
     @GuardedBy("LOCK")
     public static final SimpleArrayMap<String, ArrayList<Consumer<TypefaceResult>>> PENDING_REPLIES = new SimpleArrayMap<>();
 
-    /* renamed from: androidx.core.provider.FontRequestWorker$1, reason: invalid class name */
-    public class AnonymousClass1 implements Callable<TypefaceResult> {
+    /* renamed from: androidx.core.provider.FontRequestWorker$1 */
+    public class CallableC02481 implements Callable<TypefaceResult> {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ String val$id;
         public final /* synthetic */ FontRequest val$request;
         public final /* synthetic */ int val$style;
 
-        public AnonymousClass1(String str, Context context, FontRequest fontRequest, int i) {
+        public CallableC02481(String str, Context context, FontRequest fontRequest, int i) {
             this.val$id = str;
             this.val$context = context;
             this.val$request = fontRequest;
@@ -52,11 +52,11 @@ public class FontRequestWorker {
         }
     }
 
-    /* renamed from: androidx.core.provider.FontRequestWorker$2, reason: invalid class name */
-    public class AnonymousClass2 implements Consumer<TypefaceResult> {
+    /* renamed from: androidx.core.provider.FontRequestWorker$2 */
+    public class C02492 implements Consumer<TypefaceResult> {
         public final /* synthetic */ CallbackWithHandler val$callback;
 
-        public AnonymousClass2(CallbackWithHandler callbackWithHandler) {
+        public C02492(CallbackWithHandler callbackWithHandler) {
             this.val$callback = callbackWithHandler;
         }
 
@@ -71,14 +71,14 @@ public class FontRequestWorker {
         }
     }
 
-    /* renamed from: androidx.core.provider.FontRequestWorker$3, reason: invalid class name */
-    public class AnonymousClass3 implements Callable<TypefaceResult> {
+    /* renamed from: androidx.core.provider.FontRequestWorker$3 */
+    public class CallableC02503 implements Callable<TypefaceResult> {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ String val$id;
         public final /* synthetic */ FontRequest val$request;
         public final /* synthetic */ int val$style;
 
-        public AnonymousClass3(String str, Context context, FontRequest fontRequest, int i) {
+        public CallableC02503(String str, Context context, FontRequest fontRequest, int i) {
             this.val$id = str;
             this.val$context = context;
             this.val$request = fontRequest;
@@ -97,11 +97,11 @@ public class FontRequestWorker {
         }
     }
 
-    /* renamed from: androidx.core.provider.FontRequestWorker$4, reason: invalid class name */
-    public class AnonymousClass4 implements Consumer<TypefaceResult> {
+    /* renamed from: androidx.core.provider.FontRequestWorker$4 */
+    public class C02514 implements Consumer<TypefaceResult> {
         public final /* synthetic */ String val$id;
 
-        public AnonymousClass4(String str) {
+        public C02514(String str) {
             this.val$id = str;
         }
 
@@ -186,22 +186,22 @@ public class FontRequestWorker {
             callbackWithHandler.onTypefaceResult(new TypefaceResult(typeface));
             return typeface;
         }
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2(callbackWithHandler);
+        C02492 c02492 = new C02492(callbackWithHandler);
         synchronized (LOCK) {
             SimpleArrayMap<String, ArrayList<Consumer<TypefaceResult>>> simpleArrayMap = PENDING_REPLIES;
             ArrayList<Consumer<TypefaceResult>> arrayList = simpleArrayMap.get(strCreateCacheId);
             if (arrayList != null) {
-                arrayList.add(anonymousClass2);
+                arrayList.add(c02492);
                 return null;
             }
             ArrayList<Consumer<TypefaceResult>> arrayList2 = new ArrayList<>();
-            arrayList2.add(anonymousClass2);
+            arrayList2.add(c02492);
             simpleArrayMap.put(strCreateCacheId, arrayList2);
-            AnonymousClass3 anonymousClass3 = new AnonymousClass3(strCreateCacheId, context, fontRequest, i);
+            CallableC02503 callableC02503 = new CallableC02503(strCreateCacheId, context, fontRequest, i);
             if (executor == null) {
                 executor = DEFAULT_EXECUTOR_SERVICE;
             }
-            RequestExecutor.execute(executor, anonymousClass3, new AnonymousClass4(strCreateCacheId));
+            RequestExecutor.execute(executor, callableC02503, new C02514(strCreateCacheId));
             return null;
         }
     }
@@ -219,7 +219,7 @@ public class FontRequestWorker {
             return fontSync.mTypeface;
         }
         try {
-            TypefaceResult typefaceResult = (TypefaceResult) RequestExecutor.submit(DEFAULT_EXECUTOR_SERVICE, new AnonymousClass1(strCreateCacheId, context, fontRequest, i), i2);
+            TypefaceResult typefaceResult = (TypefaceResult) RequestExecutor.submit(DEFAULT_EXECUTOR_SERVICE, new CallableC02481(strCreateCacheId, context, fontRequest, i), i2);
             callbackWithHandler.onTypefaceResult(typefaceResult);
             return typefaceResult.mTypeface;
         } catch (InterruptedException unused) {

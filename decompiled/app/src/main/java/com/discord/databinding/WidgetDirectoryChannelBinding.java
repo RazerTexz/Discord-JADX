@@ -6,44 +6,49 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewpager2.widget.ViewPager2;
-import b.a.i.d5;
 import com.discord.views.directories.ServerDiscoveryHeader;
 import com.google.android.material.tabs.TabLayout;
+import p007b.p008a.p025i.WidgetDirectoryChannelEmptyBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetDirectoryChannelBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f16461a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final Toolbar f2365b;
+    public final Toolbar f16462b;
 
+    /* renamed from: c */
     @NonNull
-    public final ServerDiscoveryHeader c;
+    public final ServerDiscoveryHeader f16463c;
 
+    /* renamed from: d */
     @NonNull
-    public final TabLayout d;
+    public final TabLayout f16464d;
 
+    /* renamed from: e */
     @NonNull
-    public final ViewPager2 e;
+    public final ViewPager2 f16465e;
 
+    /* renamed from: f */
     @NonNull
-    public final d5 f;
+    public final WidgetDirectoryChannelEmptyBinding f16466f;
 
-    public WidgetDirectoryChannelBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull Toolbar toolbar, @NonNull ServerDiscoveryHeader serverDiscoveryHeader, @NonNull TabLayout tabLayout, @NonNull ViewPager2 viewPager2, @NonNull d5 d5Var) {
-        this.a = coordinatorLayout;
-        this.f2365b = toolbar;
-        this.c = serverDiscoveryHeader;
-        this.d = tabLayout;
-        this.e = viewPager2;
-        this.f = d5Var;
+    public WidgetDirectoryChannelBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull Toolbar toolbar, @NonNull ServerDiscoveryHeader serverDiscoveryHeader, @NonNull TabLayout tabLayout, @NonNull ViewPager2 viewPager2, @NonNull WidgetDirectoryChannelEmptyBinding widgetDirectoryChannelEmptyBinding) {
+        this.f16461a = coordinatorLayout;
+        this.f16462b = toolbar;
+        this.f16463c = serverDiscoveryHeader;
+        this.f16464d = tabLayout;
+        this.f16465e = viewPager2;
+        this.f16466f = widgetDirectoryChannelEmptyBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16461a;
     }
 }

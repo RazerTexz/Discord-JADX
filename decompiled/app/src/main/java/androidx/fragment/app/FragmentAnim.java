@@ -15,17 +15,17 @@ import androidx.annotation.AnimRes;
 import androidx.annotation.NonNull;
 import androidx.core.os.CancellationSignal;
 import androidx.core.view.OneShotPreDrawListener;
-import androidx.fragment.R;
+import androidx.fragment.C0344R;
 import androidx.fragment.app.FragmentTransition;
 
 /* loaded from: classes.dex */
 public class FragmentAnim {
 
-    /* renamed from: androidx.fragment.app.FragmentAnim$1, reason: invalid class name */
-    public class AnonymousClass1 implements CancellationSignal.OnCancelListener {
+    /* renamed from: androidx.fragment.app.FragmentAnim$1 */
+    public class C03731 implements CancellationSignal.OnCancelListener {
         public final /* synthetic */ Fragment val$fragment;
 
-        public AnonymousClass1(Fragment fragment) {
+        public C03731(Fragment fragment) {
             this.val$fragment = fragment;
         }
 
@@ -40,8 +40,8 @@ public class FragmentAnim {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentAnim$2, reason: invalid class name */
-    public class AnonymousClass2 implements Animation.AnimationListener {
+    /* renamed from: androidx.fragment.app.FragmentAnim$2 */
+    public class AnimationAnimationListenerC03742 implements Animation.AnimationListener {
         public final /* synthetic */ FragmentTransition.Callback val$callback;
         public final /* synthetic */ ViewGroup val$container;
         public final /* synthetic */ Fragment val$fragment;
@@ -54,15 +54,15 @@ public class FragmentAnim {
 
             @Override // java.lang.Runnable
             public void run() {
-                if (AnonymousClass2.this.val$fragment.getAnimatingAway() != null) {
-                    AnonymousClass2.this.val$fragment.setAnimatingAway(null);
-                    AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
-                    anonymousClass2.val$callback.onComplete(anonymousClass2.val$fragment, anonymousClass2.val$signal);
+                if (AnimationAnimationListenerC03742.this.val$fragment.getAnimatingAway() != null) {
+                    AnimationAnimationListenerC03742.this.val$fragment.setAnimatingAway(null);
+                    AnimationAnimationListenerC03742 animationAnimationListenerC03742 = AnimationAnimationListenerC03742.this;
+                    animationAnimationListenerC03742.val$callback.onComplete(animationAnimationListenerC03742.val$fragment, animationAnimationListenerC03742.val$signal);
                 }
             }
         }
 
-        public AnonymousClass2(ViewGroup viewGroup, Fragment fragment, FragmentTransition.Callback callback, CancellationSignal cancellationSignal) {
+        public AnimationAnimationListenerC03742(ViewGroup viewGroup, Fragment fragment, FragmentTransition.Callback callback, CancellationSignal cancellationSignal) {
             this.val$container = viewGroup;
             this.val$fragment = fragment;
             this.val$callback = callback;
@@ -83,15 +83,15 @@ public class FragmentAnim {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentAnim$3, reason: invalid class name */
-    public class AnonymousClass3 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.fragment.app.FragmentAnim$3 */
+    public class C03753 extends AnimatorListenerAdapter {
         public final /* synthetic */ FragmentTransition.Callback val$callback;
         public final /* synthetic */ ViewGroup val$container;
         public final /* synthetic */ Fragment val$fragment;
         public final /* synthetic */ CancellationSignal val$signal;
         public final /* synthetic */ View val$viewToAnimate;
 
-        public AnonymousClass3(ViewGroup viewGroup, View view, Fragment fragment, FragmentTransition.Callback callback, CancellationSignal cancellationSignal) {
+        public C03753(ViewGroup viewGroup, View view, Fragment fragment, FragmentTransition.Callback callback, CancellationSignal cancellationSignal) {
             this.val$container = viewGroup;
             this.val$viewToAnimate = view;
             this.val$fragment = fragment;
@@ -119,18 +119,18 @@ public class FragmentAnim {
         ViewGroup viewGroup = fragment.mContainer;
         viewGroup.startViewTransition(view);
         CancellationSignal cancellationSignal = new CancellationSignal();
-        cancellationSignal.setOnCancelListener(new AnonymousClass1(fragment));
+        cancellationSignal.setOnCancelListener(new C03731(fragment));
         callback.onStart(fragment, cancellationSignal);
         if (animationOrAnimator.animation != null) {
             EndViewTransitionAnimation endViewTransitionAnimation = new EndViewTransitionAnimation(animationOrAnimator.animation, viewGroup, view);
             fragment.setAnimatingAway(fragment.mView);
-            endViewTransitionAnimation.setAnimationListener(new AnonymousClass2(viewGroup, fragment, callback, cancellationSignal));
+            endViewTransitionAnimation.setAnimationListener(new AnimationAnimationListenerC03742(viewGroup, fragment, callback, cancellationSignal));
             fragment.mView.startAnimation(endViewTransitionAnimation);
             return;
         }
         Animator animator = animationOrAnimator.animator;
         fragment.setAnimator(animator);
-        animator.addListener(new AnonymousClass3(viewGroup, view, fragment, callback, cancellationSignal));
+        animator.addListener(new C03753(viewGroup, view, fragment, callback, cancellationSignal));
         animator.setTarget(fragment.mView);
         animator.start();
     }
@@ -142,7 +142,7 @@ public class FragmentAnim {
         fragment.setNextAnim(0);
         ViewGroup viewGroup = fragment.mContainer;
         if (viewGroup != null) {
-            int i = R.id.visible_removing_fragment_view_tag;
+            int i = C0344R.id.visible_removing_fragment_view_tag;
             if (viewGroup.getTag(i) != null) {
                 fragment.mContainer.setTag(i, null);
             }
@@ -199,15 +199,15 @@ public class FragmentAnim {
     @AnimRes
     private static int transitToAnimResourceId(int i, boolean z2) {
         if (i == 4097) {
-            return z2 ? R.animator.fragment_open_enter : R.animator.fragment_open_exit;
+            return z2 ? C0344R.animator.fragment_open_enter : C0344R.animator.fragment_open_exit;
         }
         if (i == 4099) {
-            return z2 ? R.animator.fragment_fade_enter : R.animator.fragment_fade_exit;
+            return z2 ? C0344R.animator.fragment_fade_enter : C0344R.animator.fragment_fade_exit;
         }
         if (i != 8194) {
             return -1;
         }
-        return z2 ? R.animator.fragment_close_enter : R.animator.fragment_close_exit;
+        return z2 ? C0344R.animator.fragment_close_enter : C0344R.animator.fragment_close_exit;
     }
 
     public static class AnimationOrAnimator {

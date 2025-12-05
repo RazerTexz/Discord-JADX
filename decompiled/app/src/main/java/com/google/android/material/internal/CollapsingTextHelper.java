@@ -24,11 +24,11 @@ import androidx.core.text.TextDirectionHeuristicsCompat;
 import androidx.core.util.Preconditions;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
-import b.i.a.g.f.a;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.resources.CancelableFontCallback;
 import com.google.android.material.resources.TextAppearance;
 import org.objectweb.asm.Opcodes;
+import p007b.p225i.p226a.p341g.p347f.StaticLayoutBuilderCompat;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes3.dex */
@@ -110,8 +110,9 @@ public final class CollapsingTextHelper {
     private float collapsedTextSize = 15.0f;
     private int maxLines = 1;
 
-    public class a implements CancelableFontCallback.ApplyFont {
-        public a() {
+    /* renamed from: com.google.android.material.internal.CollapsingTextHelper$a */
+    public class C10925a implements CancelableFontCallback.ApplyFont {
+        public C10925a() {
         }
 
         @Override // com.google.android.material.resources.CancelableFontCallback.ApplyFont
@@ -120,8 +121,9 @@ public final class CollapsingTextHelper {
         }
     }
 
-    public class b implements CancelableFontCallback.ApplyFont {
-        public b() {
+    /* renamed from: com.google.android.material.internal.CollapsingTextHelper$b */
+    public class C10926b implements CancelableFontCallback.ApplyFont {
+        public C10926b() {
         }
 
         @Override // com.google.android.material.resources.CancelableFontCallback.ApplyFont
@@ -308,20 +310,20 @@ public final class CollapsingTextHelper {
     }
 
     private StaticLayout createStaticLayout(int i, float f, boolean z2) {
-        StaticLayout staticLayoutA;
+        StaticLayout staticLayoutM6116a;
         try {
-            b.i.a.g.f.a aVar = new b.i.a.g.f.a(this.text, this.textPaint, (int) f);
-            aVar.l = TextUtils.TruncateAt.END;
-            aVar.k = z2;
-            aVar.h = Layout.Alignment.ALIGN_NORMAL;
-            aVar.j = false;
-            aVar.i = i;
-            staticLayoutA = aVar.a();
-        } catch (a.C0123a e) {
+            StaticLayoutBuilderCompat staticLayoutBuilderCompat = new StaticLayoutBuilderCompat(this.text, this.textPaint, (int) f);
+            staticLayoutBuilderCompat.f11711l = TextUtils.TruncateAt.END;
+            staticLayoutBuilderCompat.f11710k = z2;
+            staticLayoutBuilderCompat.f11707h = Layout.Alignment.ALIGN_NORMAL;
+            staticLayoutBuilderCompat.f11709j = false;
+            staticLayoutBuilderCompat.f11708i = i;
+            staticLayoutM6116a = staticLayoutBuilderCompat.m6116a();
+        } catch (StaticLayoutBuilderCompat.a e) {
             Log.e(TAG, e.getCause().getMessage(), e);
-            staticLayoutA = null;
+            staticLayoutM6116a = null;
         }
-        return (StaticLayout) Preconditions.checkNotNull(staticLayoutA);
+        return (StaticLayout) Preconditions.checkNotNull(staticLayoutM6116a);
     }
 
     private void drawMultinlineTransition(@NonNull Canvas canvas, float f, float f2) {
@@ -638,7 +640,7 @@ public final class CollapsingTextHelper {
         if (cancelableFontCallback != null) {
             cancelableFontCallback.cancel();
         }
-        this.collapsedFontCallback = new CancelableFontCallback(new a(), textAppearance.getFallbackFont());
+        this.collapsedFontCallback = new CancelableFontCallback(new C10925a(), textAppearance.getFallbackFont());
         textAppearance.getFontAsync(this.view.getContext(), this.collapsedFontCallback);
         recalculate();
     }
@@ -701,7 +703,7 @@ public final class CollapsingTextHelper {
         if (cancelableFontCallback != null) {
             cancelableFontCallback.cancel();
         }
-        this.expandedFontCallback = new CancelableFontCallback(new b(), textAppearance.getFallbackFont());
+        this.expandedFontCallback = new CancelableFontCallback(new C10926b(), textAppearance.getFallbackFont());
         textAppearance.getFontAsync(this.view.getContext(), this.expandedFontCallback);
         recalculate();
     }

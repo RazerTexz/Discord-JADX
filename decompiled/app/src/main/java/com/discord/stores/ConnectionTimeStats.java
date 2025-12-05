@@ -1,6 +1,5 @@
 package com.discord.stores;
 
-import b.d.b.a.a;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.app.AppLog;
 import com.discord.gateway.GatewaySocket;
@@ -12,11 +11,12 @@ import com.discord.stores.StoreStreamRtcConnection;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.time.Clock;
-import d0.o;
-import d0.t.g0;
-import d0.t.h0;
-import d0.t.u;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MapsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ConnectionTimeStats.kt */
 /* loaded from: classes2.dex */
@@ -42,9 +42,9 @@ public final class ConnectionTimeStats {
         private final StatType type;
 
         public Stat(Clock clock, ConnectionTimeStats connectionTimeStats, StatType statType) {
-            m.checkNotNullParameter(clock, "clock");
-            m.checkNotNullParameter(connectionTimeStats, "owner");
-            m.checkNotNullParameter(statType, "type");
+            Intrinsics3.checkNotNullParameter(clock, "clock");
+            Intrinsics3.checkNotNullParameter(connectionTimeStats, "owner");
+            Intrinsics3.checkNotNullParameter(statType, "type");
             this.clock = clock;
             this.owner = connectionTimeStats;
             this.type = statType;
@@ -83,44 +83,44 @@ public final class ConnectionTimeStats {
                 if (ignoreSubsequentCalls) {
                     return;
                 }
-                AppLog appLog = AppLog.g;
-                StringBuilder sbU = a.U("ConnectionTimeStats: \"");
-                sbU.append(this.type);
-                sbU.append("\" attempting to end while endTime is set!");
-                Logger.w$default(appLog, sbU.toString(), null, 2, null);
+                AppLog appLog = AppLog.f14950g;
+                StringBuilder sbM833U = outline.m833U("ConnectionTimeStats: \"");
+                sbM833U.append(this.type);
+                sbM833U.append("\" attempting to end while endTime is set!");
+                Logger.w$default(appLog, sbM833U.toString(), null, 2, null);
                 return;
             }
             Long l = this.startTime;
             long jCurrentTimeMillis = this.clock.currentTimeMillis();
             if (l == null) {
-                AppLog appLog2 = AppLog.g;
-                StringBuilder sbU2 = a.U("ConnectionTimeStats: \"");
-                sbU2.append(this.type);
-                sbU2.append("\" ended without starting!");
-                Logger.w$default(appLog2, sbU2.toString(), null, 2, null);
+                AppLog appLog2 = AppLog.f14950g;
+                StringBuilder sbM833U2 = outline.m833U("ConnectionTimeStats: \"");
+                sbM833U2.append(this.type);
+                sbM833U2.append("\" ended without starting!");
+                Logger.w$default(appLog2, sbM833U2.toString(), null, 2, null);
                 return;
             }
             long jLongValue = jCurrentTimeMillis - l.longValue();
             if (jLongValue < 0) {
-                AppLog appLog3 = AppLog.g;
-                StringBuilder sbU3 = a.U("ConnectionTimeStats: \"");
-                sbU3.append(this.type);
-                sbU3.append("\" has a negative time!");
-                sbU3.append(u.joinToString$default(h0.mapOf(o.to(this.type.toString(), "type"), o.to(String.valueOf(jLongValue), "elapsedMs"), o.to(String.valueOf(l.longValue()), "start"), o.to(String.valueOf(jCurrentTimeMillis), "end")).entrySet(), "\n\t", null, null, 0, null, null, 62, null));
-                Logger.w$default(appLog3, sbU3.toString(), null, 2, null);
+                AppLog appLog3 = AppLog.f14950g;
+                StringBuilder sbM833U3 = outline.m833U("ConnectionTimeStats: \"");
+                sbM833U3.append(this.type);
+                sbM833U3.append("\" has a negative time!");
+                sbM833U3.append(_Collections.joinToString$default(Maps6.mapOf(Tuples.m10073to(this.type.toString(), "type"), Tuples.m10073to(String.valueOf(jLongValue), "elapsedMs"), Tuples.m10073to(String.valueOf(l.longValue()), "start"), Tuples.m10073to(String.valueOf(jCurrentTimeMillis), "end")).entrySet(), "\n\t", null, null, 0, null, null, 62, null));
+                Logger.w$default(appLog3, sbM833U3.toString(), null, 2, null);
                 return;
             }
             this.endTime = Long.valueOf(jCurrentTimeMillis);
-            StringBuilder sbU4 = a.U("ConnectionTimeStats: \"");
-            sbU4.append(this.type);
-            sbU4.append("\" took ");
-            sbU4.append(jLongValue);
-            sbU4.append(" ms (");
-            sbU4.append(l);
-            sbU4.append(" to ");
-            sbU4.append(jCurrentTimeMillis);
-            sbU4.append(')');
-            AppLog.i(sbU4.toString());
+            StringBuilder sbM833U4 = outline.m833U("ConnectionTimeStats: \"");
+            sbM833U4.append(this.type);
+            sbM833U4.append("\" took ");
+            sbM833U4.append(jLongValue);
+            sbM833U4.append(" ms (");
+            sbM833U4.append(l);
+            sbM833U4.append(" to ");
+            sbM833U4.append(jCurrentTimeMillis);
+            sbM833U4.append(')');
+            AppLog.m8358i(sbM833U4.toString());
             ConnectionTimeStats.access$sendAnalyticsEvent(this.owner, this.type);
         }
 
@@ -129,28 +129,28 @@ public final class ConnectionTimeStats {
                 if (ignoreSubsequentCalls) {
                     return;
                 }
-                AppLog appLog = AppLog.g;
-                StringBuilder sbU = a.U("ConnectionTimeStats: \"");
-                sbU.append(this.type);
-                sbU.append("\" attempting to re-start without reset!");
-                Logger.w$default(appLog, sbU.toString(), null, 2, null);
+                AppLog appLog = AppLog.f14950g;
+                StringBuilder sbM833U = outline.m833U("ConnectionTimeStats: \"");
+                sbM833U.append(this.type);
+                sbM833U.append("\" attempting to re-start without reset!");
+                Logger.w$default(appLog, sbM833U.toString(), null, 2, null);
                 return;
             }
             if (this.endTime != null) {
-                AppLog appLog2 = AppLog.g;
-                StringBuilder sbU2 = a.U("ConnectionTimeStats: \"");
-                sbU2.append(this.type);
-                sbU2.append("\" attempting to re-start while endTime is set!");
-                Logger.w$default(appLog2, sbU2.toString(), null, 2, null);
+                AppLog appLog2 = AppLog.f14950g;
+                StringBuilder sbM833U2 = outline.m833U("ConnectionTimeStats: \"");
+                sbM833U2.append(this.type);
+                sbM833U2.append("\" attempting to re-start while endTime is set!");
+                Logger.w$default(appLog2, sbM833U2.toString(), null, 2, null);
                 return;
             }
             long jCurrentTimeMillis = this.clock.currentTimeMillis();
             this.startTime = Long.valueOf(jCurrentTimeMillis);
-            StringBuilder sbU3 = a.U("ConnectionTimeStats: \"");
-            sbU3.append(this.type);
-            sbU3.append("\" started @ ");
-            sbU3.append(jCurrentTimeMillis);
-            AppLog.i(sbU3.toString());
+            StringBuilder sbM833U3 = outline.m833U("ConnectionTimeStats: \"");
+            sbM833U3.append(this.type);
+            sbM833U3.append("\" started @ ");
+            sbM833U3.append(jCurrentTimeMillis);
+            AppLog.m8358i(sbM833U3.toString());
         }
     }
 
@@ -169,42 +169,42 @@ public final class ConnectionTimeStats {
     }
 
     /* compiled from: ConnectionTimeStats.kt */
-    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends GatewaySocket.DefaultListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$1 */
+    public static final class C56641 extends GatewaySocket.DefaultListener {
+        public C56641() {
         }
 
         @Override // com.discord.gateway.GatewaySocket.DefaultListener, com.discord.gateway.GatewaySocket.Listener
         public void onConnected(GatewaySocket gatewaySocket) {
-            m.checkNotNullParameter(gatewaySocket, "gatewaySocket");
+            Intrinsics3.checkNotNullParameter(gatewaySocket, "gatewaySocket");
             Stat.end$default(ConnectionTimeStats.access$getGatewayConnection$p(ConnectionTimeStats.this), false, 1, null);
             Stat.start$default(ConnectionTimeStats.access$getGatewayHello$p(ConnectionTimeStats.this), false, 1, null);
         }
 
         @Override // com.discord.gateway.GatewaySocket.DefaultListener, com.discord.gateway.GatewaySocket.Listener
         public void onConnecting(GatewaySocket gatewaySocket) {
-            m.checkNotNullParameter(gatewaySocket, "gatewaySocket");
+            Intrinsics3.checkNotNullParameter(gatewaySocket, "gatewaySocket");
             Stat.start$default(ConnectionTimeStats.access$getGatewayConnection$p(ConnectionTimeStats.this), false, 1, null);
         }
 
         @Override // com.discord.gateway.GatewaySocket.DefaultListener, com.discord.gateway.GatewaySocket.Listener
         public void onDisconnected(GatewaySocket gatewaySocket) {
-            m.checkNotNullParameter(gatewaySocket, "gatewaySocket");
+            Intrinsics3.checkNotNullParameter(gatewaySocket, "gatewaySocket");
             ConnectionTimeStats.access$getGatewayConnection$p(ConnectionTimeStats.this).clear();
             ConnectionTimeStats.access$getGatewayHello$p(ConnectionTimeStats.this).clear();
         }
 
         @Override // com.discord.gateway.GatewaySocket.DefaultListener, com.discord.gateway.GatewaySocket.Listener
         public void onHello(GatewaySocket gatewaySocket) {
-            m.checkNotNullParameter(gatewaySocket, "gatewaySocket");
+            Intrinsics3.checkNotNullParameter(gatewaySocket, "gatewaySocket");
             Stat.end$default(ConnectionTimeStats.access$getGatewayHello$p(ConnectionTimeStats.this), false, 1, null);
         }
     }
 
     /* compiled from: ConnectionTimeStats.kt */
-    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends StoreRtcConnection.DefaultListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$2 */
+    public static final class C56652 extends StoreRtcConnection.DefaultListener {
+        public C56652() {
         }
 
         @Override // com.discord.stores.StoreRtcConnection.DefaultListener, com.discord.stores.StoreRtcConnection.Listener
@@ -227,9 +227,9 @@ public final class ConnectionTimeStats {
     }
 
     /* compiled from: ConnectionTimeStats.kt */
-    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends StoreStreamRtcConnection.DefaultListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$3 */
+    public static final class C56663 extends StoreStreamRtcConnection.DefaultListener {
+        public C56663() {
         }
 
         @Override // com.discord.stores.StoreStreamRtcConnection.DefaultListener, com.discord.stores.StoreStreamRtcConnection.Listener
@@ -252,9 +252,9 @@ public final class ConnectionTimeStats {
     }
 
     /* compiled from: ConnectionTimeStats.kt */
-    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends StoreMediaEngine.DefaultListener {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$4 */
+    public static final class C56674 extends StoreMediaEngine.DefaultListener {
+        public C56674() {
         }
 
         @Override // com.discord.stores.StoreMediaEngine.DefaultListener, com.discord.stores.StoreMediaEngine.Listener
@@ -269,10 +269,10 @@ public final class ConnectionTimeStats {
     }
 
     public ConnectionTimeStats(Clock clock) {
-        m.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
         StatType statType = StatType.VideoFirstFrame;
-        if (!m.areEqual(statType.toString(), "VideoFirstFrame")) {
-            Logger.e$default(AppLog.g, "ConnectionTimeStats.StatType has been renamed!", null, g0.mapOf(o.to(ModelAuditLogEntry.CHANGE_KEY_NAME, statType.toString())), 2, null);
+        if (!Intrinsics3.areEqual(statType.toString(), "VideoFirstFrame")) {
+            Logger.e$default(AppLog.f14950g, "ConnectionTimeStats.StatType has been renamed!", null, MapsJVM.mapOf(Tuples.m10073to(ModelAuditLogEntry.CHANGE_KEY_NAME, statType.toString())), 2, null);
         }
         this.gatewayConnection = new Stat(clock, this, StatType.GatewayConnection);
         this.gatewayHello = new Stat(clock, this, StatType.GatewayHello);
@@ -357,8 +357,8 @@ public final class ConnectionTimeStats {
     }
 
     public final void addListener(GatewaySocket socket) {
-        m.checkNotNullParameter(socket, "socket");
-        socket.getListeners().add(new AnonymousClass1());
+        Intrinsics3.checkNotNullParameter(socket, "socket");
+        socket.getListeners().add(new C56641());
     }
 
     public final void handleApplicationStreamUpdate(long userId, Integer streamId) {
@@ -366,13 +366,13 @@ public final class ConnectionTimeStats {
     }
 
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         clear$default(this, false, 1, null);
         this.myUserId = Long.valueOf(payload.getMe().getId());
     }
 
     public final void handleStreamWatch(String streamKey) {
-        m.checkNotNullParameter(streamKey, "streamKey");
+        Intrinsics3.checkNotNullParameter(streamKey, "streamKey");
         Stat.start$default(this.streamRequested, false, 1, null);
     }
 
@@ -383,7 +383,7 @@ public final class ConnectionTimeStats {
     }
 
     public final void handleVoiceStateUpdate(VoiceState voiceState) {
-        m.checkNotNullParameter(voiceState, "voiceState");
+        Intrinsics3.checkNotNullParameter(voiceState, "voiceState");
         long userId = voiceState.getUserId();
         Long l = this.myUserId;
         if (l != null && userId == l.longValue() && voiceState.getChannelId() == null) {
@@ -392,17 +392,17 @@ public final class ConnectionTimeStats {
     }
 
     public final void addListener(StoreRtcConnection rtcConnection) {
-        m.checkNotNullParameter(rtcConnection, "rtcConnection");
-        rtcConnection.getListeners().add(new AnonymousClass2());
+        Intrinsics3.checkNotNullParameter(rtcConnection, "rtcConnection");
+        rtcConnection.getListeners().add(new C56652());
     }
 
     public final void addListener(StoreStreamRtcConnection streamRtcConnection) {
-        m.checkNotNullParameter(streamRtcConnection, "streamRtcConnection");
-        streamRtcConnection.getListeners().add(new AnonymousClass3());
+        Intrinsics3.checkNotNullParameter(streamRtcConnection, "streamRtcConnection");
+        streamRtcConnection.getListeners().add(new C56663());
     }
 
     public final void addListener(StoreMediaEngine storeMediaEngine) {
-        m.checkNotNullParameter(storeMediaEngine, "storeMediaEngine");
-        storeMediaEngine.getListeners().add(new AnonymousClass4());
+        Intrinsics3.checkNotNullParameter(storeMediaEngine, "storeMediaEngine");
+        storeMediaEngine.getListeners().add(new C56674());
     }
 }

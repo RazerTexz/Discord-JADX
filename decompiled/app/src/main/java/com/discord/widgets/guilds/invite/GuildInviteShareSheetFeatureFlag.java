@@ -3,10 +3,10 @@ package com.discord.widgets.guilds.invite;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.stores.StoreExperiments;
 import com.discord.stores.StoreStream;
-import d0.g;
-import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildInviteShareSheetFeatureFlag.kt */
 /* loaded from: classes2.dex */
@@ -14,7 +14,7 @@ public final class GuildInviteShareSheetFeatureFlag {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = g.lazy(GuildInviteShareSheetFeatureFlag$Companion$INSTANCE$2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(GuildInviteShareSheetFeatureFlag2.INSTANCE);
     private final StoreExperiments storeExperiments;
 
     /* compiled from: GuildInviteShareSheetFeatureFlag.kt */
@@ -38,7 +38,7 @@ public final class GuildInviteShareSheetFeatureFlag {
     }
 
     public GuildInviteShareSheetFeatureFlag(StoreExperiments storeExperiments) {
-        m.checkNotNullParameter(storeExperiments, "storeExperiments");
+        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
         this.storeExperiments = storeExperiments;
     }
 

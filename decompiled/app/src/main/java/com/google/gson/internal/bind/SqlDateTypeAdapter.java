@@ -1,6 +1,5 @@
 package com.google.gson.internal.bind;
 
-import b.i.d.o;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
@@ -13,17 +12,20 @@ import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import p007b.p225i.p408d.TypeAdapterFactory2;
 
 /* loaded from: classes3.dex */
 public final class SqlDateTypeAdapter extends TypeAdapter<Date> {
-    public static final o a = new AnonymousClass1();
 
-    /* renamed from: b, reason: collision with root package name */
-    public final DateFormat f3124b = new SimpleDateFormat("MMM d, yyyy");
+    /* renamed from: a */
+    public static final TypeAdapterFactory2 f21537a = new C111101();
 
-    /* renamed from: com.google.gson.internal.bind.SqlDateTypeAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements o {
-        @Override // b.i.d.o
+    /* renamed from: b */
+    public final DateFormat f21538b = new SimpleDateFormat("MMM d, yyyy");
+
+    /* renamed from: com.google.gson.internal.bind.SqlDateTypeAdapter$1 */
+    public class C111101 implements TypeAdapterFactory2 {
+        @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             if (typeToken.getRawType() == Date.class) {
                 return new SqlDateTypeAdapter();
@@ -36,12 +38,12 @@ public final class SqlDateTypeAdapter extends TypeAdapter<Date> {
     public Date read(JsonReader jsonReader) throws IOException {
         Date date;
         synchronized (this) {
-            if (jsonReader.N() == JsonToken.NULL) {
-                jsonReader.H();
+            if (jsonReader.mo6878N() == JsonToken.NULL) {
+                jsonReader.mo6876H();
                 date = null;
             } else {
                 try {
-                    date = new Date(this.f3124b.parse(jsonReader.J()).getTime());
+                    date = new Date(this.f21538b.parse(jsonReader.mo6877J()).getTime());
                 } catch (ParseException e) {
                     throw new JsonSyntaxException(e);
                 }
@@ -54,7 +56,7 @@ public final class SqlDateTypeAdapter extends TypeAdapter<Date> {
     public void write(JsonWriter jsonWriter, Date date) throws IOException {
         Date date2 = date;
         synchronized (this) {
-            jsonWriter.H(date2 == null ? null : this.f3124b.format((java.util.Date) date2));
+            jsonWriter.mo6895H(date2 == null ? null : this.f21538b.format((java.util.Date) date2));
         }
     }
 }

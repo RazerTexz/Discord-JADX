@@ -9,12 +9,12 @@ import androidx.arch.core.util.Function;
 public class Transformations {
 
     /* JADX INFO: Add missing generic type declarations: [X] */
-    /* renamed from: androidx.lifecycle.Transformations$1, reason: invalid class name */
-    public class AnonymousClass1<X> implements Observer<X> {
+    /* renamed from: androidx.lifecycle.Transformations$1 */
+    public class C04491<X> implements Observer<X> {
         public final /* synthetic */ Function val$mapFunction;
         public final /* synthetic */ MediatorLiveData val$result;
 
-        public AnonymousClass1(MediatorLiveData mediatorLiveData, Function function) {
+        public C04491(MediatorLiveData mediatorLiveData, Function function) {
             this.val$result = mediatorLiveData;
             this.val$mapFunction = function;
         }
@@ -26,8 +26,8 @@ public class Transformations {
     }
 
     /* JADX INFO: Add missing generic type declarations: [X] */
-    /* renamed from: androidx.lifecycle.Transformations$2, reason: invalid class name */
-    public class AnonymousClass2<X> implements Observer<X> {
+    /* renamed from: androidx.lifecycle.Transformations$2 */
+    public class C04502<X> implements Observer<X> {
         public LiveData<Y> mSource;
         public final /* synthetic */ MediatorLiveData val$result;
         public final /* synthetic */ Function val$switchMapFunction;
@@ -40,11 +40,11 @@ public class Transformations {
 
             @Override // androidx.view.Observer
             public void onChanged(@Nullable Y y2) {
-                AnonymousClass2.this.val$result.setValue(y2);
+                C04502.this.val$result.setValue(y2);
             }
         }
 
-        public AnonymousClass2(Function function, MediatorLiveData mediatorLiveData) {
+        public C04502(Function function, MediatorLiveData mediatorLiveData) {
             this.val$switchMapFunction = function;
             this.val$result = mediatorLiveData;
         }
@@ -67,12 +67,12 @@ public class Transformations {
     }
 
     /* JADX INFO: Add missing generic type declarations: [X] */
-    /* renamed from: androidx.lifecycle.Transformations$3, reason: invalid class name */
-    public class AnonymousClass3<X> implements Observer<X> {
+    /* renamed from: androidx.lifecycle.Transformations$3 */
+    public class C04513<X> implements Observer<X> {
         public boolean mFirstTime = true;
         public final /* synthetic */ MediatorLiveData val$outputLiveData;
 
-        public AnonymousClass3(MediatorLiveData mediatorLiveData) {
+        public C04513(MediatorLiveData mediatorLiveData) {
             this.val$outputLiveData = mediatorLiveData;
         }
 
@@ -93,7 +93,7 @@ public class Transformations {
     @MainThread
     public static <X> LiveData<X> distinctUntilChanged(@NonNull LiveData<X> liveData) {
         MediatorLiveData mediatorLiveData = new MediatorLiveData();
-        mediatorLiveData.addSource(liveData, new AnonymousClass3(mediatorLiveData));
+        mediatorLiveData.addSource(liveData, new C04513(mediatorLiveData));
         return mediatorLiveData;
     }
 
@@ -101,7 +101,7 @@ public class Transformations {
     @MainThread
     public static <X, Y> LiveData<Y> map(@NonNull LiveData<X> liveData, @NonNull Function<X, Y> function) {
         MediatorLiveData mediatorLiveData = new MediatorLiveData();
-        mediatorLiveData.addSource(liveData, new AnonymousClass1(mediatorLiveData, function));
+        mediatorLiveData.addSource(liveData, new C04491(mediatorLiveData, function));
         return mediatorLiveData;
     }
 
@@ -109,7 +109,7 @@ public class Transformations {
     @MainThread
     public static <X, Y> LiveData<Y> switchMap(@NonNull LiveData<X> liveData, @NonNull Function<X, LiveData<Y>> function) {
         MediatorLiveData mediatorLiveData = new MediatorLiveData();
-        mediatorLiveData.addSource(liveData, new AnonymousClass2(function, mediatorLiveData));
+        mediatorLiveData.addSource(liveData, new C04502(function, mediatorLiveData));
         return mediatorLiveData;
     }
 }

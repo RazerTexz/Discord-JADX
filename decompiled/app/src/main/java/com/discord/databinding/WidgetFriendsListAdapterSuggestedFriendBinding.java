@@ -8,21 +8,22 @@ import com.discord.widgets.friends.SuggestedFriendView;
 /* loaded from: classes.dex */
 public final class WidgetFriendsListAdapterSuggestedFriendBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final SuggestedFriendView a;
+    public final SuggestedFriendView f16674a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final SuggestedFriendView f2395b;
+    public final SuggestedFriendView f16675b;
 
     public WidgetFriendsListAdapterSuggestedFriendBinding(@NonNull SuggestedFriendView suggestedFriendView, @NonNull SuggestedFriendView suggestedFriendView2) {
-        this.a = suggestedFriendView;
-        this.f2395b = suggestedFriendView2;
+        this.f16674a = suggestedFriendView;
+        this.f16675b = suggestedFriendView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16674a;
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackApplicationAddToServerClick.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationAddToServerClick implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackApplicationAddToServerClick implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final CharSequence authType = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackApplicationAddToServerClick implements Analyt
             return false;
         }
         TrackApplicationAddToServerClick trackApplicationAddToServerClick = (TrackApplicationAddToServerClick) other;
-        return m.areEqual(this.applicationId, trackApplicationAddToServerClick.applicationId) && m.areEqual(this.authType, trackApplicationAddToServerClick.authType);
+        return Intrinsics3.areEqual(this.applicationId, trackApplicationAddToServerClick.applicationId) && Intrinsics3.areEqual(this.authType, trackApplicationAddToServerClick.authType);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackApplicationAddToServerClick implements Analyt
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackApplicationAddToServerClick(applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", authType=");
-        return a.E(sbU, this.authType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackApplicationAddToServerClick(applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", authType=");
+        return outline.m817E(sbM833U, this.authType, ")");
     }
 }

@@ -27,22 +27,22 @@ import androidx.core.app.SharedElementCallback;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.LocusIdCompat;
 import androidx.core.view.DragAndDropPermissionsCompat;
-import b.d.b.a.a;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ActivityCompat extends ContextCompat {
     private static PermissionCompatDelegate sDelegate;
 
-    /* renamed from: androidx.core.app.ActivityCompat$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.core.app.ActivityCompat$1 */
+    public class RunnableC02121 implements Runnable {
         public final /* synthetic */ Activity val$activity;
         public final /* synthetic */ String[] val$permissions;
         public final /* synthetic */ int val$requestCode;
 
-        public AnonymousClass1(String[] strArr, Activity activity, int i) {
+        public RunnableC02121(String[] strArr, Activity activity, int i) {
             this.val$permissions = strArr;
             this.val$activity = activity;
             this.val$requestCode = i;
@@ -61,11 +61,11 @@ public class ActivityCompat extends ContextCompat {
         }
     }
 
-    /* renamed from: androidx.core.app.ActivityCompat$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.core.app.ActivityCompat$2 */
+    public class RunnableC02132 implements Runnable {
         public final /* synthetic */ Activity val$activity;
 
-        public AnonymousClass2(Activity activity) {
+        public RunnableC02132(Activity activity) {
             this.val$activity = activity;
         }
 
@@ -107,11 +107,11 @@ public class ActivityCompat extends ContextCompat {
     public static class SharedElementCallback21Impl extends android.app.SharedElementCallback {
         private final SharedElementCallback mCallback;
 
-        /* renamed from: androidx.core.app.ActivityCompat$SharedElementCallback21Impl$1, reason: invalid class name */
-        public class AnonymousClass1 implements SharedElementCallback.OnSharedElementsReadyListener {
+        /* renamed from: androidx.core.app.ActivityCompat$SharedElementCallback21Impl$1 */
+        public class C02141 implements SharedElementCallback.OnSharedElementsReadyListener {
             public final /* synthetic */ SharedElementCallback.OnSharedElementsReadyListener val$listener;
 
-            public AnonymousClass1(SharedElementCallback.OnSharedElementsReadyListener onSharedElementsReadyListener) {
+            public C02141(SharedElementCallback.OnSharedElementsReadyListener onSharedElementsReadyListener) {
                 this.val$listener = onSharedElementsReadyListener;
             }
 
@@ -158,7 +158,7 @@ public class ActivityCompat extends ContextCompat {
         @Override // android.app.SharedElementCallback
         @RequiresApi(23)
         public void onSharedElementsArrived(List<String> list, List<View> list2, SharedElementCallback.OnSharedElementsReadyListener onSharedElementsReadyListener) {
-            this.mCallback.onSharedElementsArrived(list, list2, new AnonymousClass1(onSharedElementsReadyListener));
+            this.mCallback.onSharedElementsArrived(list, list2, new C02141(onSharedElementsReadyListener));
         }
     }
 
@@ -207,7 +207,7 @@ public class ActivityCompat extends ContextCompat {
         if (i >= 28) {
             activity.recreate();
         } else if (i <= 23) {
-            new Handler(activity.getMainLooper()).post(new AnonymousClass2(activity));
+            new Handler(activity.getMainLooper()).post(new RunnableC02132(activity));
         } else {
             if (ActivityRecreator.recreate(activity)) {
                 return;
@@ -227,7 +227,7 @@ public class ActivityCompat extends ContextCompat {
         if (permissionCompatDelegate == null || !permissionCompatDelegate.requestPermissions(activity, strArr, i)) {
             for (String str : strArr) {
                 if (TextUtils.isEmpty(str)) {
-                    throw new IllegalArgumentException(a.J(a.U("Permission request for permissions "), Arrays.toString(strArr), " must not contain null or empty values"));
+                    throw new IllegalArgumentException(outline.m822J(outline.m833U("Permission request for permissions "), Arrays.toString(strArr), " must not contain null or empty values"));
                 }
             }
             if (Build.VERSION.SDK_INT >= 23) {
@@ -236,7 +236,7 @@ public class ActivityCompat extends ContextCompat {
                 }
                 activity.requestPermissions(strArr, i);
             } else if (activity instanceof OnRequestPermissionsResultCallback) {
-                new Handler(Looper.getMainLooper()).post(new AnonymousClass1(strArr, activity, i));
+                new Handler(Looper.getMainLooper()).post(new RunnableC02121(strArr, activity, i));
             }
         }
     }

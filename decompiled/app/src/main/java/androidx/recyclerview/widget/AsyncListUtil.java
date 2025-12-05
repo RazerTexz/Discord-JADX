@@ -9,7 +9,7 @@ import androidx.annotation.UiThread;
 import androidx.annotation.WorkerThread;
 import androidx.recyclerview.widget.ThreadUtil;
 import androidx.recyclerview.widget.TileList;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class AsyncListUtil<T> {
@@ -34,9 +34,9 @@ public class AsyncListUtil<T> {
     public int mRequestedGeneration = 0;
     public final SparseIntArray mMissingPositions = new SparseIntArray();
 
-    /* renamed from: androidx.recyclerview.widget.AsyncListUtil$1, reason: invalid class name */
-    public class AnonymousClass1 implements ThreadUtil.MainThreadCallback<T> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.recyclerview.widget.AsyncListUtil$1 */
+    public class C05361 implements ThreadUtil.MainThreadCallback<T> {
+        public C05361() {
         }
 
         private boolean isRequestedGeneration(int i) {
@@ -59,9 +59,9 @@ public class AsyncListUtil<T> {
             }
             TileList.Tile<T> tileAddOrReplace = AsyncListUtil.this.mTileList.addOrReplace(tile);
             if (tileAddOrReplace != null) {
-                StringBuilder sbU = a.U("duplicate tile @");
-                sbU.append(tileAddOrReplace.mStartPosition);
-                Log.e(AsyncListUtil.TAG, sbU.toString());
+                StringBuilder sbM833U = outline.m833U("duplicate tile @");
+                sbM833U.append(tileAddOrReplace.mStartPosition);
+                Log.e(AsyncListUtil.TAG, sbM833U.toString());
                 AsyncListUtil.this.mBackgroundProxy.recycleTile(tileAddOrReplace);
             }
             int i2 = tile.mStartPosition + tile.mItemCount;
@@ -105,8 +105,8 @@ public class AsyncListUtil<T> {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.AsyncListUtil$2, reason: invalid class name */
-    public class AnonymousClass2 implements ThreadUtil.BackgroundCallback<T> {
+    /* renamed from: androidx.recyclerview.widget.AsyncListUtil$2 */
+    public class C05372 implements ThreadUtil.BackgroundCallback<T> {
         private int mFirstRequiredTileStart;
         private int mGeneration;
         private int mItemCount;
@@ -114,7 +114,7 @@ public class AsyncListUtil<T> {
         public final SparseBooleanArray mLoadedTiles = new SparseBooleanArray();
         private TileList.Tile<T> mRecycledRoot;
 
-        public AnonymousClass2() {
+        public C05372() {
         }
 
         private TileList.Tile<T> acquireTile() {
@@ -164,9 +164,9 @@ public class AsyncListUtil<T> {
         }
 
         private void log(String str, Object... objArr) {
-            StringBuilder sbU = a.U("[BKGR] ");
-            sbU.append(String.format(str, objArr));
-            Log.d(AsyncListUtil.TAG, sbU.toString());
+            StringBuilder sbM833U = outline.m833U("[BKGR] ");
+            sbM833U.append(String.format(str, objArr));
+            Log.d(AsyncListUtil.TAG, sbM833U.toString());
         }
 
         private void removeTile(int i) {
@@ -277,18 +277,18 @@ public class AsyncListUtil<T> {
     }
 
     public AsyncListUtil(@NonNull Class<T> cls, int i, @NonNull DataCallback<T> dataCallback, @NonNull ViewCallback viewCallback) {
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-        this.mMainThreadCallback = anonymousClass1;
-        AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-        this.mBackgroundCallback = anonymousClass2;
+        C05361 c05361 = new C05361();
+        this.mMainThreadCallback = c05361;
+        C05372 c05372 = new C05372();
+        this.mBackgroundCallback = c05372;
         this.mTClass = cls;
         this.mTileSize = i;
         this.mDataCallback = dataCallback;
         this.mViewCallback = viewCallback;
         this.mTileList = new TileList<>(i);
         MessageThreadUtil messageThreadUtil = new MessageThreadUtil();
-        this.mMainThreadProxy = messageThreadUtil.getMainThreadProxy(anonymousClass1);
-        this.mBackgroundProxy = messageThreadUtil.getBackgroundProxy(anonymousClass2);
+        this.mMainThreadProxy = messageThreadUtil.getMainThreadProxy(c05361);
+        this.mBackgroundProxy = messageThreadUtil.getBackgroundProxy(c05372);
         refresh();
     }
 
@@ -313,9 +313,9 @@ public class AsyncListUtil<T> {
     }
 
     public void log(String str, Object... objArr) {
-        StringBuilder sbU = a.U("[MAIN] ");
-        sbU.append(String.format(str, objArr));
-        Log.d(TAG, sbU.toString());
+        StringBuilder sbM833U = outline.m833U("[MAIN] ");
+        sbM833U.append(String.format(str, objArr));
+        Log.d(TAG, sbM833U.toString());
     }
 
     public void onRangeChanged() {

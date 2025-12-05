@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.media.AudioAttributesImpl;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 @RequiresApi(21)
 @RestrictTo({RestrictTo.Scope.LIBRARY})
@@ -148,9 +148,9 @@ public class AudioAttributesImplApi21 implements AudioAttributesImpl {
 
     @NonNull
     public String toString() {
-        StringBuilder sbU = a.U("AudioAttributesCompat: audioattributes=");
-        sbU.append(this.mAudioAttributes);
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("AudioAttributesCompat: audioattributes=");
+        sbM833U.append(this.mAudioAttributes);
+        return sbM833U.toString();
     }
 
     public AudioAttributesImplApi21(AudioAttributes audioAttributes) {

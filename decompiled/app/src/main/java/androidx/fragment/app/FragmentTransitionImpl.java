@@ -20,15 +20,15 @@ import java.util.Map;
 /* loaded from: classes.dex */
 public abstract class FragmentTransitionImpl {
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$1 */
+    public class RunnableC04061 implements Runnable {
         public final /* synthetic */ ArrayList val$inNames;
         public final /* synthetic */ int val$numSharedElements;
         public final /* synthetic */ ArrayList val$outNames;
         public final /* synthetic */ ArrayList val$sharedElementsIn;
         public final /* synthetic */ ArrayList val$sharedElementsOut;
 
-        public AnonymousClass1(int i, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3, ArrayList arrayList4) {
+        public RunnableC04061(int i, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3, ArrayList arrayList4) {
             this.val$numSharedElements = i;
             this.val$sharedElementsIn = arrayList;
             this.val$inNames = arrayList2;
@@ -45,12 +45,12 @@ public abstract class FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$2 */
+    public class RunnableC04072 implements Runnable {
         public final /* synthetic */ Map val$nameOverrides;
         public final /* synthetic */ ArrayList val$sharedElementsIn;
 
-        public AnonymousClass2(ArrayList arrayList, Map map) {
+        public RunnableC04072(ArrayList arrayList, Map map) {
             this.val$sharedElementsIn = arrayList;
             this.val$nameOverrides = map;
         }
@@ -68,12 +68,12 @@ public abstract class FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$3 */
+    public class RunnableC04083 implements Runnable {
         public final /* synthetic */ Map val$nameOverrides;
         public final /* synthetic */ ArrayList val$sharedElementsIn;
 
-        public AnonymousClass3(ArrayList arrayList, Map map) {
+        public RunnableC04083(ArrayList arrayList, Map map) {
             this.val$sharedElementsIn = arrayList;
             this.val$nameOverrides = map;
         }
@@ -217,7 +217,7 @@ public abstract class FragmentTransitionImpl {
     public abstract void scheduleHideFragmentView(Object obj, View view, ArrayList<View> arrayList);
 
     public void scheduleNameReset(ViewGroup viewGroup, ArrayList<View> arrayList, Map<String, String> map) {
-        OneShotPreDrawListener.add(viewGroup, new AnonymousClass3(arrayList, map));
+        OneShotPreDrawListener.add(viewGroup, new RunnableC04083(arrayList, map));
     }
 
     public abstract void scheduleRemoveTargets(Object obj, Object obj2, ArrayList<View> arrayList, Object obj3, ArrayList<View> arrayList2, Object obj4, ArrayList<View> arrayList3);
@@ -231,7 +231,7 @@ public abstract class FragmentTransitionImpl {
     }
 
     public void setNameOverridesOrdered(View view, ArrayList<View> arrayList, Map<String, String> map) {
-        OneShotPreDrawListener.add(view, new AnonymousClass2(arrayList, map));
+        OneShotPreDrawListener.add(view, new RunnableC04072(arrayList, map));
     }
 
     public void setNameOverridesReordered(View view, ArrayList<View> arrayList, ArrayList<View> arrayList2, ArrayList<String> arrayList3, Map<String, String> map) {
@@ -257,7 +257,7 @@ public abstract class FragmentTransitionImpl {
                 }
             }
         }
-        OneShotPreDrawListener.add(view, new AnonymousClass1(size, arrayList2, arrayList3, arrayList, arrayList4));
+        OneShotPreDrawListener.add(view, new RunnableC04061(size, arrayList2, arrayList3, arrayList, arrayList4));
     }
 
     public abstract void setSharedElementTargets(Object obj, View view, ArrayList<View> arrayList);

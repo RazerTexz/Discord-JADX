@@ -4,8 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.b;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.activity.Activity;
 import com.discord.api.activity.ActivityParty;
 import com.discord.api.activity.ActivityTimestamps;
@@ -13,17 +12,18 @@ import com.discord.models.guild.Guild;
 import com.discord.models.presence.Presence;
 import com.discord.models.user.User;
 import com.discord.stores.StoreApplicationStreamPreviews;
-import com.discord.utilities.presence.ActivityUtilsKt;
+import com.discord.utilities.presence.ActivityUtils;
 import com.discord.utilities.presence.PresenceUtils;
 import com.discord.utilities.streams.StreamContext;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.StreamPreviewView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.g0.w;
-import d0.z.d.m;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p007b.p008a.p027k.FormatUtils;
+import p507d0.p579g0.Strings4;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ViewHolderStreamRichPresence.kt */
 /* loaded from: classes.dex */
@@ -31,11 +31,11 @@ public final class ViewHolderStreamRichPresence extends ViewHolderUserRichPresen
     private final StreamPreviewView streamPreview;
 
     /* compiled from: ViewHolderStreamRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ViewHolderStreamRichPresence$setOnStreamPreviewClicked$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.user.presence.ViewHolderStreamRichPresence$setOnStreamPreviewClicked$1 */
+    public static final class ViewOnClickListenerC102801 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onStreamPreviewClicked;
 
-        public AnonymousClass1(Function0 function0) {
+        public ViewOnClickListenerC102801(Function0 function0) {
             this.$onStreamPreviewClicked = function0;
         }
 
@@ -48,15 +48,15 @@ public final class ViewHolderStreamRichPresence extends ViewHolderUserRichPresen
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ViewHolderStreamRichPresence(View view, SimpleDraweeView simpleDraweeView, TextView textView, TextView textView2, TextView textView3, TextView textView4, TextView textView5, View view2, StreamPreviewView streamPreviewView) {
         super(view, simpleDraweeView, null, textView, textView2, textView3, textView4, textView5, view2, null, null, 4);
-        m.checkNotNullParameter(view, "root");
-        m.checkNotNullParameter(simpleDraweeView, "richPresenceImageLarge");
-        m.checkNotNullParameter(textView, "richPresenceHeader");
-        m.checkNotNullParameter(textView2, "richPresenceTitle");
-        m.checkNotNullParameter(textView3, "richPresenceDetails");
-        m.checkNotNullParameter(textView4, "richPresenceTime");
-        m.checkNotNullParameter(textView5, "richPresenceState");
-        m.checkNotNullParameter(view2, "richPresenceTextContainer");
-        m.checkNotNullParameter(streamPreviewView, "streamPreview");
+        Intrinsics3.checkNotNullParameter(view, "root");
+        Intrinsics3.checkNotNullParameter(simpleDraweeView, "richPresenceImageLarge");
+        Intrinsics3.checkNotNullParameter(textView, "richPresenceHeader");
+        Intrinsics3.checkNotNullParameter(textView2, "richPresenceTitle");
+        Intrinsics3.checkNotNullParameter(textView3, "richPresenceDetails");
+        Intrinsics3.checkNotNullParameter(textView4, "richPresenceTime");
+        Intrinsics3.checkNotNullParameter(textView5, "richPresenceState");
+        Intrinsics3.checkNotNullParameter(view2, "richPresenceTextContainer");
+        Intrinsics3.checkNotNullParameter(streamPreviewView, "streamPreview");
         this.streamPreview = streamPreviewView;
     }
 
@@ -65,7 +65,7 @@ public final class ViewHolderStreamRichPresence extends ViewHolderUserRichPresen
         if (preview == null) {
             this.streamPreview.setVisibility(8);
         } else {
-            this.streamPreview.a(preview, streamContext.getJoinability(), streamContext.isCurrentUserParticipating());
+            this.streamPreview.m8557a(preview, streamContext.getJoinability(), streamContext.isCurrentUserParticipating());
             this.streamPreview.setVisibility(0);
         }
     }
@@ -75,20 +75,20 @@ public final class ViewHolderStreamRichPresence extends ViewHolderUserRichPresen
         Code decompiled incorrectly, please refer to instructions dump.
     */
     private final String getRichPresenceStateText(String state, ActivityParty party) {
-        CharSequence charSequenceJ;
+        CharSequence charSequenceM218j;
         if (state == null) {
             return null;
         }
         if (party != null) {
             PresenceUtils presenceUtils = PresenceUtils.INSTANCE;
-            charSequenceJ = presenceUtils.getMaxSize(party) != 0 ? b.j(getRoot(), R.string.user_activity_state_size, new Object[]{String.valueOf(presenceUtils.getCurrentSize(party)), String.valueOf(presenceUtils.getMaxSize(party))}, null, 4) : null;
-            if (charSequenceJ == null) {
-                charSequenceJ = "";
+            charSequenceM218j = presenceUtils.getMaxSize(party) != 0 ? FormatUtils.m218j(getRoot(), C5419R.string.user_activity_state_size, new Object[]{String.valueOf(presenceUtils.getCurrentSize(party)), String.valueOf(presenceUtils.getMaxSize(party))}, null, 4) : null;
+            if (charSequenceM218j == null) {
+                charSequenceM218j = "";
             }
         }
-        String str = state + ' ' + charSequenceJ;
+        String str = state + ' ' + charSequenceM218j;
         Objects.requireNonNull(str, "null cannot be cast to non-null type kotlin.CharSequence");
-        return w.trim(str).toString();
+        return Strings4.trim(str).toString();
     }
 
     @Override // com.discord.widgets.user.presence.ViewHolderUserRichPresence
@@ -104,8 +104,8 @@ public final class ViewHolderStreamRichPresence extends ViewHolderUserRichPresen
         }
         Guild guild = streamContext.getGuild();
         String name = guild != null ? guild.getName() : null;
-        getRichPresenceHeader().setText(name != null ? b.j(getRichPresenceHeader(), R.string.user_activity_header_streaming_to_guild, new Object[]{name}, null, 4) : b.j(getRichPresenceHeader(), R.string.user_activity_header_streaming_to_dm, new Object[0], null, 4));
-        if (model == null || !ActivityUtilsKt.isGameActivity(model)) {
+        getRichPresenceHeader().setText(name != null ? FormatUtils.m218j(getRichPresenceHeader(), C5419R.string.user_activity_header_streaming_to_guild, new Object[]{name}, null, 4) : FormatUtils.m218j(getRichPresenceHeader(), C5419R.string.user_activity_header_streaming_to_dm, new Object[0], null, 4));
+        if (model == null || !ActivityUtils.isGameActivity(model)) {
             getRichPresenceTextContainer().setVisibility(8);
             return;
         }
@@ -128,8 +128,8 @@ public final class ViewHolderStreamRichPresence extends ViewHolderUserRichPresen
     @Override // com.discord.widgets.user.presence.ViewHolderUserRichPresence
     public void configureUi(FragmentManager fragmentManager, StreamContext streamContext, boolean isMe, User user, Context applicationContext, ModelRichPresence richPresence, boolean userInSameVoiceChannel) {
         Presence presence;
-        m.checkNotNullParameter(fragmentManager, "fragmentManager");
-        m.checkNotNullParameter(applicationContext, "applicationContext");
+        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        Intrinsics3.checkNotNullParameter(applicationContext, "applicationContext");
         disposeTimer();
         Activity playingActivity = (richPresence == null || (presence = richPresence.getPresence()) == null) ? null : PresenceUtils.INSTANCE.getPlayingActivity(presence);
         boolean z2 = (streamContext != null ? streamContext.getJoinability() : null) == StreamContext.Joinability.MISSING_PERMISSIONS;
@@ -144,7 +144,7 @@ public final class ViewHolderStreamRichPresence extends ViewHolderUserRichPresen
     }
 
     public final void setOnStreamPreviewClicked(Function0<Unit> onStreamPreviewClicked) {
-        m.checkNotNullParameter(onStreamPreviewClicked, "onStreamPreviewClicked");
-        this.streamPreview.setOnClickListener(new AnonymousClass1(onStreamPreviewClicked));
+        Intrinsics3.checkNotNullParameter(onStreamPreviewClicked, "onStreamPreviewClicked");
+        this.streamPreview.setOnClickListener(new ViewOnClickListenerC102801(onStreamPreviewClicked));
     }
 }

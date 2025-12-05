@@ -1,25 +1,25 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.a;
 import com.discord.models.domain.ModelUserNote;
 import com.discord.restapi.RestAPIParams;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.g0.t;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreUserNotes.kt */
 /* loaded from: classes2.dex */
@@ -49,7 +49,7 @@ public final class StoreUserNotes extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(ModelUserNote modelUserNote) {
                 super(null);
-                m.checkNotNullParameter(modelUserNote, "note");
+                Intrinsics3.checkNotNullParameter(modelUserNote, "note");
                 this.note = modelUserNote;
             }
 
@@ -66,13 +66,13 @@ public final class StoreUserNotes extends StoreV2 {
             }
 
             public final Loaded copy(ModelUserNote note) {
-                m.checkNotNullParameter(note, "note");
+                Intrinsics3.checkNotNullParameter(note, "note");
                 return new Loaded(note);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && m.areEqual(this.note, ((Loaded) other).note);
+                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.note, ((Loaded) other).note);
                 }
                 return true;
             }
@@ -90,10 +90,10 @@ public final class StoreUserNotes extends StoreV2 {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(note=");
-                sbU.append(this.note);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Loaded(note=");
+                sbM833U.append(this.note);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -115,21 +115,21 @@ public final class StoreUserNotes extends StoreV2 {
     }
 
     /* compiled from: StoreUserNotes.kt */
-    /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1 */
+    public static final class C65801 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $userId;
 
         /* compiled from: StoreUserNotes.kt */
-        /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03051 extends o implements Function1<ModelUserNote, Unit> {
+        /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<ModelUserNote, Unit> {
 
             /* compiled from: StoreUserNotes.kt */
             /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C03061 extends o implements Function0<Unit> {
+            public static final class C132651 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ ModelUserNote $note;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C03061(ModelUserNote modelUserNote) {
+                public C132651(ModelUserNote modelUserNote) {
                     super(0);
                     this.$note = modelUserNote;
                 }
@@ -137,7 +137,7 @@ public final class StoreUserNotes extends StoreV2 {
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -146,44 +146,44 @@ public final class StoreUserNotes extends StoreV2 {
                 }
             }
 
-            public C03051() {
+            public AnonymousClass1() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(ModelUserNote modelUserNote) {
                 invoke2(modelUserNote);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelUserNote modelUserNote) {
-                m.checkNotNullParameter(modelUserNote, "note");
-                StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C03061(modelUserNote));
+                Intrinsics3.checkNotNullParameter(modelUserNote, "note");
+                StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C132651(modelUserNote));
             }
         }
 
         /* compiled from: StoreUserNotes.kt */
         /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
             /* compiled from: StoreUserNotes.kt */
-            /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C03071 extends o implements Function0<Unit> {
-                public C03071() {
+            /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2$1, reason: invalid class name */
+            public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+                public AnonymousClass1() {
                     super(0);
                 }
 
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
-                    AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                    StoreUserNotes.access$handleRequestUserNoteError(StoreUserNotes.this, anonymousClass1.$userId);
+                    C65801 c65801 = C65801.this;
+                    StoreUserNotes.access$handleRequestUserNoteError(StoreUserNotes.this, c65801.$userId);
                 }
             }
 
@@ -194,18 +194,18 @@ public final class StoreUserNotes extends StoreV2 {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Error error) {
                 invoke2(error);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                m.checkNotNullParameter(error, "it");
-                StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C03071());
+                Intrinsics3.checkNotNullParameter(error, "it");
+                StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new AnonymousClass1());
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C65801(long j) {
             super(0);
             this.$userId = j;
         }
@@ -213,7 +213,7 @@ public final class StoreUserNotes extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -222,17 +222,17 @@ public final class StoreUserNotes extends StoreV2 {
                 return;
             }
             StoreUserNotes.access$getNotesByUserId$p(StoreUserNotes.this).put(Long.valueOf(this.$userId), UserNoteState.Loading.INSTANCE);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreUserNotes.access$getRestAPI$p(StoreUserNotes.this).getUserNote(this.$userId), false, 1, null), StoreUserNotes.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C03051(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreUserNotes.access$getRestAPI$p(StoreUserNotes.this).getUserNote(this.$userId), false, 1, null), StoreUserNotes.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreUserNotes.kt */
-    /* renamed from: com.discord.stores.StoreUserNotes$observeUserNote$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<UserNoteState> {
+    /* renamed from: com.discord.stores.StoreUserNotes$observeUserNote$1 */
+    public static final class C65811 extends Lambda implements Function0<UserNoteState> {
         public final /* synthetic */ long $userId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C65811(long j) {
             super(0);
             this.$userId = j;
         }
@@ -251,33 +251,33 @@ public final class StoreUserNotes extends StoreV2 {
     }
 
     /* compiled from: StoreUserNotes.kt */
-    /* renamed from: com.discord.stores.StoreUserNotes$saveNote$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.stores.StoreUserNotes$saveNote$1 */
+    public static final class C65821 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $note;
         public final /* synthetic */ long $userId;
 
         /* compiled from: StoreUserNotes.kt */
-        /* renamed from: com.discord.stores.StoreUserNotes$saveNote$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03081 extends o implements Function0<Unit> {
-            public C03081() {
+        /* renamed from: com.discord.stores.StoreUserNotes$saveNote$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+            public AnonymousClass1() {
                 super(0);
             }
 
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                StoreUserNotes.access$updateNoteInternal(StoreUserNotes.this, anonymousClass1.$userId, anonymousClass1.$note);
+                C65821 c65821 = C65821.this;
+                StoreUserNotes.access$updateNoteInternal(StoreUserNotes.this, c65821.$userId, c65821.$note);
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, String str) {
+        public C65821(long j, String str) {
             super(1);
             this.$userId = j;
             this.$note = str;
@@ -286,17 +286,17 @@ public final class StoreUserNotes extends StoreV2 {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
-            StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C03081());
+            StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new AnonymousClass1());
         }
     }
 
     public /* synthetic */ StoreUserNotes(Dispatcher dispatcher, RestAPI restAPI, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(StoreUserNotes storeUserNotes) {
@@ -323,13 +323,13 @@ public final class StoreUserNotes extends StoreV2 {
         storeUserNotes.updateNoteInternal(j, str);
     }
 
-    @StoreThread
+    @Store3
     private final void handleRequestUserNoteError(long userId) {
         this.notesByUserId.put(Long.valueOf(userId), UserNoteState.Empty.INSTANCE);
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void handleRequestUserNoteSuccess(ModelUserNote note) {
         long noteUserId = note.getNoteUserId();
         String note2 = note.getNote();
@@ -339,9 +339,9 @@ public final class StoreUserNotes extends StoreV2 {
         updateNoteInternal(noteUserId, note2);
     }
 
-    @StoreThread
+    @Store3
     private final void updateNoteInternal(long userId, String note) {
-        if (t.isBlank(note)) {
+        if (StringsJVM.isBlank(note)) {
             this.notesByUserId.put(Long.valueOf(userId), UserNoteState.Empty.INSTANCE);
         } else {
             this.notesByUserId.put(Long.valueOf(userId), new UserNoteState.Loaded(new ModelUserNote(userId, note)));
@@ -353,31 +353,31 @@ public final class StoreUserNotes extends StoreV2 {
         return this.notesByUserIdSnapshot;
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen() {
         this.notesByUserId.clear();
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleNoteUpdate(ModelUserNote.Update update) {
-        m.checkNotNullParameter(update, "update");
+        Intrinsics3.checkNotNullParameter(update, "update");
         updateNoteInternal(update.getId(), update.getNote());
     }
 
     public final void loadNote(long userId) {
-        this.dispatcher.schedule(new AnonymousClass1(userId));
+        this.dispatcher.schedule(new C65801(userId));
     }
 
     public final Observable<UserNoteState> observeUserNote(long userId) {
-        Observable<UserNoteState> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(userId), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
-        return observableR;
+        Observable<UserNoteState> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C65811(userId), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final void saveNote(Context context, long userId, String note) {
-        m.checkNotNullParameter(note, "note");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.updateUserNotes(userId, new RestAPIParams.UserNoteUpdate(note)), false, 1, null), StoreUserNotes.class, context, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(userId, note), 60, (Object) null);
+        Intrinsics3.checkNotNullParameter(note, "note");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.updateUserNotes(userId, new RestAPIParams.UserNoteUpdate(note)), false, 1, null), StoreUserNotes.class, context, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C65821(userId, note), 60, (Object) null);
     }
 
     @Override // com.discord.stores.StoreV2
@@ -387,13 +387,13 @@ public final class StoreUserNotes extends StoreV2 {
     }
 
     public StoreUserNotes(Dispatcher dispatcher, RestAPI restAPI, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(restAPI, "restAPI");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.restAPI = restAPI;
         this.observationDeck = observationDeck;
         this.notesByUserId = new HashMap();
-        this.notesByUserIdSnapshot = h0.emptyMap();
+        this.notesByUserIdSnapshot = Maps6.emptyMap();
     }
 }

@@ -1,7 +1,7 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class MediaStreamTrack {
@@ -28,7 +28,7 @@ public class MediaStreamTrack {
                     return mediaType;
                 }
             }
-            throw new IllegalArgumentException(a.q("Unknown native media type: ", i));
+            throw new IllegalArgumentException(outline.m871q("Unknown native media type: ", i));
         }
 
         @CalledByNative("MediaType")
@@ -101,7 +101,8 @@ public class MediaStreamTrack {
         return this.nativeTrack;
     }
 
-    public String id() {
+    /* renamed from: id */
+    public String m11033id() {
         checkMediaStreamTrackExists();
         return nativeGetId(this.nativeTrack);
     }

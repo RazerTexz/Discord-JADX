@@ -1,24 +1,30 @@
 package com.facebook.datasource;
 
-import b.f.e.f;
 import java.util.Map;
 import java.util.concurrent.Executor;
+import p007b.p109f.p129e.DataSubscriber;
 
 /* loaded from: classes.dex */
 public interface DataSource<T> {
-    Map<String, Object> a();
+    /* renamed from: a */
+    Map<String, Object> mo1017a();
 
-    boolean b();
+    /* renamed from: b */
+    boolean mo1018b();
 
-    boolean c();
+    /* renamed from: c */
+    boolean mo1019c();
 
     boolean close();
 
-    Throwable d();
+    /* renamed from: d */
+    Throwable mo1020d();
 
-    boolean e();
+    /* renamed from: e */
+    boolean mo1021e();
 
-    void f(f<T> fVar, Executor executor);
+    /* renamed from: f */
+    void mo1022f(DataSubscriber<T> dataSubscriber, Executor executor);
 
     float getProgress();
 

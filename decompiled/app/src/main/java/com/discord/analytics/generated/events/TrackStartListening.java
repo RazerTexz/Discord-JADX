@@ -1,19 +1,19 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStartListening.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStartListening implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
+public final /* data */ class TrackStartListening implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -31,14 +31,15 @@ public final /* data */ class TrackStartListening implements AnalyticsSchema, Tr
     private final Long voiceStateCount = null;
     private final transient String analyticsSchemaTypeName = "start_listening";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -56,7 +57,7 @@ public final /* data */ class TrackStartListening implements AnalyticsSchema, Tr
             return false;
         }
         TrackStartListening trackStartListening = (TrackStartListening) other;
-        return m.areEqual(this.channel, trackStartListening.channel) && m.areEqual(this.mode, trackStartListening.mode) && m.areEqual(this.mute, trackStartListening.mute) && m.areEqual(this.anyonePriority, trackStartListening.anyonePriority) && m.areEqual(this.server, trackStartListening.server) && m.areEqual(this.gamePlatform, trackStartListening.gamePlatform) && m.areEqual(this.gameName, trackStartListening.gameName) && m.areEqual(this.gameExeName, trackStartListening.gameExeName) && m.areEqual(this.gameId, trackStartListening.gameId) && m.areEqual(this.mediaSessionId, trackStartListening.mediaSessionId) && m.areEqual(this.rtcConnectionId, trackStartListening.rtcConnectionId) && m.areEqual(this.voiceStateCount, trackStartListening.voiceStateCount);
+        return Intrinsics3.areEqual(this.channel, trackStartListening.channel) && Intrinsics3.areEqual(this.mode, trackStartListening.mode) && Intrinsics3.areEqual(this.mute, trackStartListening.mute) && Intrinsics3.areEqual(this.anyonePriority, trackStartListening.anyonePriority) && Intrinsics3.areEqual(this.server, trackStartListening.server) && Intrinsics3.areEqual(this.gamePlatform, trackStartListening.gamePlatform) && Intrinsics3.areEqual(this.gameName, trackStartListening.gameName) && Intrinsics3.areEqual(this.gameExeName, trackStartListening.gameExeName) && Intrinsics3.areEqual(this.gameId, trackStartListening.gameId) && Intrinsics3.areEqual(this.mediaSessionId, trackStartListening.mediaSessionId) && Intrinsics3.areEqual(this.rtcConnectionId, trackStartListening.rtcConnectionId) && Intrinsics3.areEqual(this.voiceStateCount, trackStartListening.voiceStateCount);
     }
 
     public int hashCode() {
@@ -87,29 +88,29 @@ public final /* data */ class TrackStartListening implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStartListening(channel=");
-        sbU.append(this.channel);
-        sbU.append(", mode=");
-        sbU.append(this.mode);
-        sbU.append(", mute=");
-        sbU.append(this.mute);
-        sbU.append(", anyonePriority=");
-        sbU.append(this.anyonePriority);
-        sbU.append(", server=");
-        sbU.append(this.server);
-        sbU.append(", gamePlatform=");
-        sbU.append(this.gamePlatform);
-        sbU.append(", gameName=");
-        sbU.append(this.gameName);
-        sbU.append(", gameExeName=");
-        sbU.append(this.gameExeName);
-        sbU.append(", gameId=");
-        sbU.append(this.gameId);
-        sbU.append(", mediaSessionId=");
-        sbU.append(this.mediaSessionId);
-        sbU.append(", rtcConnectionId=");
-        sbU.append(this.rtcConnectionId);
-        sbU.append(", voiceStateCount=");
-        return a.G(sbU, this.voiceStateCount, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStartListening(channel=");
+        sbM833U.append(this.channel);
+        sbM833U.append(", mode=");
+        sbM833U.append(this.mode);
+        sbM833U.append(", mute=");
+        sbM833U.append(this.mute);
+        sbM833U.append(", anyonePriority=");
+        sbM833U.append(this.anyonePriority);
+        sbM833U.append(", server=");
+        sbM833U.append(this.server);
+        sbM833U.append(", gamePlatform=");
+        sbM833U.append(this.gamePlatform);
+        sbM833U.append(", gameName=");
+        sbM833U.append(this.gameName);
+        sbM833U.append(", gameExeName=");
+        sbM833U.append(this.gameExeName);
+        sbM833U.append(", gameId=");
+        sbM833U.append(this.gameId);
+        sbM833U.append(", mediaSessionId=");
+        sbM833U.append(this.mediaSessionId);
+        sbM833U.append(", rtcConnectionId=");
+        sbM833U.append(this.rtcConnectionId);
+        sbM833U.append(", voiceStateCount=");
+        return outline.m819G(sbM833U, this.voiceStateCount, ")");
     }
 }

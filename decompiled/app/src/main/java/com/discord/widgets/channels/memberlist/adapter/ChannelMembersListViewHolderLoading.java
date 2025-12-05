@@ -4,10 +4,10 @@ import androidx.constraintlayout.widget.Guideline;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.databinding.WidgetChannelMembersListItemLoadingBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.o;
-import d0.t.h0;
-import d0.z.d.m;
 import java.util.Map;
+import p507d0.Tuples;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChannelMembersListViewHolderLoading.kt */
 /* loaded from: classes2.dex */
@@ -20,18 +20,18 @@ public final class ChannelMembersListViewHolderLoading extends RecyclerView.View
         Float fValueOf2 = Float.valueOf(0.3f);
         Float fValueOf3 = Float.valueOf(0.6f);
         Float fValueOf4 = Float.valueOf(0.4f);
-        POSITION_PERCENT_MAP = h0.mapOf(o.to(0, fValueOf), o.to(1, fValueOf2), o.to(2, fValueOf3), o.to(3, fValueOf4), o.to(4, fValueOf3), o.to(5, Float.valueOf(0.8f)), o.to(6, fValueOf2), o.to(7, Float.valueOf(0.5f)), o.to(8, fValueOf), o.to(9, fValueOf4));
+        POSITION_PERCENT_MAP = Maps6.mapOf(Tuples.m10073to(0, fValueOf), Tuples.m10073to(1, fValueOf2), Tuples.m10073to(2, fValueOf3), Tuples.m10073to(3, fValueOf4), Tuples.m10073to(4, fValueOf3), Tuples.m10073to(5, Float.valueOf(0.8f)), Tuples.m10073to(6, fValueOf2), Tuples.m10073to(7, Float.valueOf(0.5f)), Tuples.m10073to(8, fValueOf), Tuples.m10073to(9, fValueOf4));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ChannelMembersListViewHolderLoading(WidgetChannelMembersListItemLoadingBinding widgetChannelMembersListItemLoadingBinding) {
-        super(widgetChannelMembersListItemLoadingBinding.a);
-        m.checkNotNullParameter(widgetChannelMembersListItemLoadingBinding, "binding");
+        super(widgetChannelMembersListItemLoadingBinding.f15859a);
+        Intrinsics3.checkNotNullParameter(widgetChannelMembersListItemLoadingBinding, "binding");
         this.binding = widgetChannelMembersListItemLoadingBinding;
     }
 
     public final void bind(int position) {
-        Guideline guideline = this.binding.f2260b;
+        Guideline guideline = this.binding.f15860b;
         Float f = POSITION_PERCENT_MAP.get(Integer.valueOf(position % 10));
         guideline.setGuidelinePercent(f != null ? f.floatValue() : 0.0f);
     }

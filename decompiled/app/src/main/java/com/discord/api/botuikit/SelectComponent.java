@@ -1,19 +1,19 @@
 package com.discord.api.botuikit;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SelectComponent.kt */
 /* loaded from: classes.dex */
-public final /* data */ class SelectComponent extends ActionComponent {
+public final /* data */ class SelectComponent extends Component5 {
     private final String customId;
     private final boolean disabled;
     private final int maxValues;
     private final int minValues;
-    private final List<SelectItem> options;
+    private final List<SelectComponent2> options;
     private final String placeholder;
-    private final ComponentType type;
+    private final Component6 type;
 
     /* renamed from: a, reason: from getter */
     public final String getCustomId() {
@@ -35,7 +35,8 @@ public final /* data */ class SelectComponent extends ActionComponent {
         return this.minValues;
     }
 
-    public final List<SelectItem> e() {
+    /* renamed from: e */
+    public final List<SelectComponent2> m7609e() {
         return this.options;
     }
 
@@ -47,7 +48,7 @@ public final /* data */ class SelectComponent extends ActionComponent {
             return false;
         }
         SelectComponent selectComponent = (SelectComponent) other;
-        return m.areEqual(this.type, selectComponent.type) && m.areEqual(this.customId, selectComponent.customId) && this.disabled == selectComponent.disabled && m.areEqual(this.placeholder, selectComponent.placeholder) && this.minValues == selectComponent.minValues && this.maxValues == selectComponent.maxValues && m.areEqual(this.options, selectComponent.options);
+        return Intrinsics3.areEqual(this.type, selectComponent.type) && Intrinsics3.areEqual(this.customId, selectComponent.customId) && this.disabled == selectComponent.disabled && Intrinsics3.areEqual(this.placeholder, selectComponent.placeholder) && this.minValues == selectComponent.minValues && this.maxValues == selectComponent.maxValues && Intrinsics3.areEqual(this.options, selectComponent.options);
     }
 
     /* renamed from: f, reason: from getter */
@@ -56,14 +57,14 @@ public final /* data */ class SelectComponent extends ActionComponent {
     }
 
     @Override // com.discord.api.botuikit.Component
-    public ComponentType getType() {
+    public Component6 getType() {
         return this.type;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        ComponentType componentType = this.type;
-        int iHashCode = (componentType != null ? componentType.hashCode() : 0) * 31;
+        Component6 component6 = this.type;
+        int iHashCode = (component6 != null ? component6.hashCode() : 0) * 31;
         String str = this.customId;
         int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.disabled;
@@ -74,24 +75,24 @@ public final /* data */ class SelectComponent extends ActionComponent {
         int i2 = (iHashCode2 + i) * 31;
         String str2 = this.placeholder;
         int iHashCode3 = (((((i2 + (str2 != null ? str2.hashCode() : 0)) * 31) + this.minValues) * 31) + this.maxValues) * 31;
-        List<SelectItem> list = this.options;
+        List<SelectComponent2> list = this.options;
         return iHashCode3 + (list != null ? list.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("SelectComponent(type=");
-        sbU.append(this.type);
-        sbU.append(", customId=");
-        sbU.append(this.customId);
-        sbU.append(", disabled=");
-        sbU.append(this.disabled);
-        sbU.append(", placeholder=");
-        sbU.append(this.placeholder);
-        sbU.append(", minValues=");
-        sbU.append(this.minValues);
-        sbU.append(", maxValues=");
-        sbU.append(this.maxValues);
-        sbU.append(", options=");
-        return a.L(sbU, this.options, ")");
+        StringBuilder sbM833U = outline.m833U("SelectComponent(type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", customId=");
+        sbM833U.append(this.customId);
+        sbM833U.append(", disabled=");
+        sbM833U.append(this.disabled);
+        sbM833U.append(", placeholder=");
+        sbM833U.append(this.placeholder);
+        sbM833U.append(", minValues=");
+        sbM833U.append(this.minValues);
+        sbM833U.append(", maxValues=");
+        sbM833U.append(this.maxValues);
+        sbM833U.append(", options=");
+        return outline.m824L(sbM833U, this.options, ")");
     }
 }

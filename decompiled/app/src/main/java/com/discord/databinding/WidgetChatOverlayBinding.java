@@ -7,52 +7,59 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.x4;
 import com.discord.views.typing.TypingDots;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import p007b.p008a.p025i.WidgetChatInputStickerSuggestionsBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetChatOverlayBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f16362a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final FloatingActionButton f2345b;
+    public final FloatingActionButton f16363b;
 
+    /* renamed from: c */
     @NonNull
-    public final RelativeLayout c;
+    public final RelativeLayout f16364c;
 
+    /* renamed from: d */
     @NonNull
-    public final TypingDots d;
+    public final TypingDots f16365d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16366e;
 
+    /* renamed from: f */
     @NonNull
-    public final ImageView f;
+    public final ImageView f16367f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f16368g;
 
+    /* renamed from: h */
     @NonNull
-    public final x4 h;
+    public final WidgetChatInputStickerSuggestionsBinding f16369h;
 
-    public WidgetChatOverlayBinding(@NonNull ConstraintLayout constraintLayout, @NonNull FloatingActionButton floatingActionButton, @NonNull RelativeLayout relativeLayout, @NonNull TypingDots typingDots, @NonNull TextView textView, @NonNull ImageView imageView, @NonNull TextView textView2, @NonNull x4 x4Var) {
-        this.a = constraintLayout;
-        this.f2345b = floatingActionButton;
-        this.c = relativeLayout;
-        this.d = typingDots;
-        this.e = textView;
-        this.f = imageView;
-        this.g = textView2;
-        this.h = x4Var;
+    public WidgetChatOverlayBinding(@NonNull ConstraintLayout constraintLayout, @NonNull FloatingActionButton floatingActionButton, @NonNull RelativeLayout relativeLayout, @NonNull TypingDots typingDots, @NonNull TextView textView, @NonNull ImageView imageView, @NonNull TextView textView2, @NonNull WidgetChatInputStickerSuggestionsBinding widgetChatInputStickerSuggestionsBinding) {
+        this.f16362a = constraintLayout;
+        this.f16363b = floatingActionButton;
+        this.f16364c = relativeLayout;
+        this.f16365d = typingDots;
+        this.f16366e = textView;
+        this.f16367f = imageView;
+        this.f16368g = textView2;
+        this.f16369h = widgetChatInputStickerSuggestionsBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16362a;
     }
 }

@@ -11,29 +11,32 @@ import com.discord.views.CodeVerificationView;
 /* loaded from: classes.dex */
 public final class WidgetUserPhoneVerifyBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final RelativeLayout a;
+    public final RelativeLayout f18355a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ImageView f2688b;
+    public final ImageView f18356b;
 
+    /* renamed from: c */
     @NonNull
-    public final DimmerView c;
+    public final DimmerView f18357c;
 
+    /* renamed from: d */
     @NonNull
-    public final CodeVerificationView d;
+    public final CodeVerificationView f18358d;
 
     public WidgetUserPhoneVerifyBinding(@NonNull RelativeLayout relativeLayout, @NonNull ImageView imageView, @NonNull DimmerView dimmerView, @NonNull CodeVerificationView codeVerificationView) {
-        this.a = relativeLayout;
-        this.f2688b = imageView;
-        this.c = dimmerView;
-        this.d = codeVerificationView;
+        this.f18355a = relativeLayout;
+        this.f18356b = imageView;
+        this.f18357c = dimmerView;
+        this.f18358d = codeVerificationView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18355a;
     }
 }

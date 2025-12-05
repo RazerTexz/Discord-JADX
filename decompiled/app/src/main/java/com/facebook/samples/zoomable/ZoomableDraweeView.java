@@ -10,11 +10,6 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import androidx.annotation.Nullable;
 import androidx.core.view.ScrollingView;
-import b.f.g.c.c;
-import b.f.g.e.g;
-import b.f.g.e.v;
-import b.f.l.b.d;
-import b.f.l.b.e;
 import com.facebook.drawee.controller.AbstractDraweeController;
 import com.facebook.drawee.controller.ControllerListener;
 import com.facebook.drawee.drawable.ScalingUtils$ScaleType;
@@ -22,155 +17,191 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.DraweeView;
 import java.util.Objects;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p115d.p120e.FLog;
+import p007b.p109f.p132g.p139c.BaseControllerListener;
+import p007b.p109f.p132g.p142e.C1788v;
+import p007b.p109f.p132g.p142e.ForwardingDrawable;
+import p007b.p109f.p132g.p143f.GenericDraweeHierarchyBuilder;
+import p007b.p109f.p187l.p188a.MultiPointerGestureDetector;
+import p007b.p109f.p187l.p188a.TransformGestureDetector;
+import p007b.p109f.p187l.p189b.AnimatedZoomableController;
+import p007b.p109f.p187l.p189b.DefaultZoomableController;
+import p007b.p109f.p187l.p189b.GestureListenerWrapper;
+import p007b.p109f.p187l.p189b.ZoomableController;
 
 /* loaded from: classes3.dex */
 public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy> implements ScrollingView {
-    public static final Class<?> j = ZoomableDraweeView.class;
-    public boolean k;
-    public final RectF l;
-    public final RectF m;
-    public DraweeController n;
-    public e o;
-    public GestureDetector p;
-    public boolean q;
-    public final ControllerListener r;
 
-    /* renamed from: s, reason: collision with root package name */
-    public final e.a f2905s;
-    public final d t;
+    /* renamed from: j */
+    public static final Class<?> f19628j = ZoomableDraweeView.class;
 
-    public class a extends c<Object> {
-        public a() {
+    /* renamed from: k */
+    public boolean f19629k;
+
+    /* renamed from: l */
+    public final RectF f19630l;
+
+    /* renamed from: m */
+    public final RectF f19631m;
+
+    /* renamed from: n */
+    public DraweeController f19632n;
+
+    /* renamed from: o */
+    public ZoomableController f19633o;
+
+    /* renamed from: p */
+    public GestureDetector f19634p;
+
+    /* renamed from: q */
+    public boolean f19635q;
+
+    /* renamed from: r */
+    public final ControllerListener f19636r;
+
+    /* renamed from: s */
+    public final ZoomableController.a f19637s;
+
+    /* renamed from: t */
+    public final GestureListenerWrapper f19638t;
+
+    /* renamed from: com.facebook.samples.zoomable.ZoomableDraweeView$a */
+    public class C10671a extends BaseControllerListener<Object> {
+        public C10671a() {
         }
 
-        @Override // b.f.g.c.c, com.facebook.drawee.controller.ControllerListener
+        @Override // p007b.p109f.p132g.p139c.BaseControllerListener, com.facebook.drawee.controller.ControllerListener
         public void onFinalImageSet(String str, @Nullable Object obj, @Nullable Animatable animatable) {
             ZoomableDraweeView zoomableDraweeView = ZoomableDraweeView.this;
-            Class<?> cls = ZoomableDraweeView.j;
+            Class<?> cls = ZoomableDraweeView.f19628j;
             zoomableDraweeView.getLogTag();
             zoomableDraweeView.hashCode();
-            int i = b.f.d.e.a.a;
-            if (((b.f.l.b.c) zoomableDraweeView.o).c) {
+            int i = FLog.f3102a;
+            if (((DefaultZoomableController) zoomableDraweeView.f19633o).f4301c) {
                 return;
             }
-            zoomableDraweeView.b();
-            ((b.f.l.b.c) zoomableDraweeView.o).k(true);
+            zoomableDraweeView.m8726b();
+            ((DefaultZoomableController) zoomableDraweeView.f19633o).m1564k(true);
         }
 
-        @Override // b.f.g.c.c, com.facebook.drawee.controller.ControllerListener
+        @Override // p007b.p109f.p132g.p139c.BaseControllerListener, com.facebook.drawee.controller.ControllerListener
         public void onRelease(String str) {
             ZoomableDraweeView zoomableDraweeView = ZoomableDraweeView.this;
-            Class<?> cls = ZoomableDraweeView.j;
+            Class<?> cls = ZoomableDraweeView.f19628j;
             zoomableDraweeView.getLogTag();
             zoomableDraweeView.hashCode();
-            int i = b.f.d.e.a.a;
-            ((b.f.l.b.c) zoomableDraweeView.o).k(false);
+            int i = FLog.f3102a;
+            ((DefaultZoomableController) zoomableDraweeView.f19633o).m1564k(false);
         }
     }
 
-    public class b implements e.a {
-        public b() {
+    /* renamed from: com.facebook.samples.zoomable.ZoomableDraweeView$b */
+    public class C10672b implements ZoomableController.a {
+        public C10672b() {
         }
     }
 
     public ZoomableDraweeView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.k = false;
-        this.l = new RectF();
-        this.m = new RectF();
-        this.q = true;
-        this.r = new a();
-        b bVar = new b();
-        this.f2905s = bVar;
-        d dVar = new d();
-        this.t = dVar;
-        b.f.g.f.a aVar = new b.f.g.f.a(context.getResources());
-        ScalingUtils$ScaleType scalingUtils$ScaleType = ScalingUtils$ScaleType.a;
-        aVar.n = v.l;
-        b.c.a.a0.d.l2(aVar, context, attributeSet);
-        setAspectRatio(aVar.e);
-        setHierarchy(aVar.a());
-        b.f.l.b.b bVar2 = new b.f.l.b.b(new b.f.l.a.b(new b.f.l.a.a()));
-        this.o = bVar2;
-        bVar2.f651b = bVar;
-        this.p = new GestureDetector(getContext(), dVar);
+        this.f19629k = false;
+        this.f19630l = new RectF();
+        this.f19631m = new RectF();
+        this.f19635q = true;
+        this.f19636r = new C10671a();
+        C10672b c10672b = new C10672b();
+        this.f19637s = c10672b;
+        GestureListenerWrapper gestureListenerWrapper = new GestureListenerWrapper();
+        this.f19638t = gestureListenerWrapper;
+        GenericDraweeHierarchyBuilder genericDraweeHierarchyBuilder = new GenericDraweeHierarchyBuilder(context.getResources());
+        ScalingUtils$ScaleType scalingUtils$ScaleType = ScalingUtils$ScaleType.f19495a;
+        genericDraweeHierarchyBuilder.f3464n = C1788v.f3446l;
+        AnimatableValueParser.m542l2(genericDraweeHierarchyBuilder, context, attributeSet);
+        setAspectRatio(genericDraweeHierarchyBuilder.f3455e);
+        setHierarchy(genericDraweeHierarchyBuilder.m1122a());
+        AnimatedZoomableController animatedZoomableController = new AnimatedZoomableController(new TransformGestureDetector(new MultiPointerGestureDetector()));
+        this.f19633o = animatedZoomableController;
+        animatedZoomableController.f4300b = c10672b;
+        this.f19634p = new GestureDetector(getContext(), gestureListenerWrapper);
     }
 
-    public final void a(@Nullable DraweeController draweeController, @Nullable DraweeController draweeController2) {
+    /* renamed from: a */
+    public final void m8725a(@Nullable DraweeController draweeController, @Nullable DraweeController draweeController2) {
         DraweeController controller = getController();
         if (controller instanceof AbstractDraweeController) {
-            ((AbstractDraweeController) controller).A(this.r);
+            ((AbstractDraweeController) controller).m8647A(this.f19636r);
         }
         if (draweeController instanceof AbstractDraweeController) {
-            ((AbstractDraweeController) draweeController).f(this.r);
+            ((AbstractDraweeController) draweeController).m8656f(this.f19636r);
         }
-        this.n = draweeController2;
+        this.f19632n = draweeController2;
         super.setController(draweeController);
     }
 
-    public void b() {
-        RectF rectF = this.l;
-        g gVar = getHierarchy().f;
-        Matrix matrix = g.j;
-        gVar.n(matrix);
-        rectF.set(gVar.getBounds());
+    /* renamed from: b */
+    public void m8726b() {
+        RectF rectF = this.f19630l;
+        ForwardingDrawable forwardingDrawable = getHierarchy().f19511f;
+        Matrix matrix = ForwardingDrawable.f3359j;
+        forwardingDrawable.m1103n(matrix);
+        rectF.set(forwardingDrawable.getBounds());
         matrix.mapRect(rectF);
-        this.m.set(0.0f, 0.0f, getWidth(), getHeight());
-        e eVar = this.o;
-        RectF rectF2 = this.l;
-        b.f.l.b.c cVar = (b.f.l.b.c) eVar;
-        if (!rectF2.equals(cVar.e)) {
-            cVar.e.set(rectF2);
-            cVar.i();
+        this.f19631m.set(0.0f, 0.0f, getWidth(), getHeight());
+        ZoomableController zoomableController = this.f19633o;
+        RectF rectF2 = this.f19630l;
+        DefaultZoomableController defaultZoomableController = (DefaultZoomableController) zoomableController;
+        if (!rectF2.equals(defaultZoomableController.f4303e)) {
+            defaultZoomableController.f4303e.set(rectF2);
+            defaultZoomableController.m1563i();
         }
-        ((b.f.l.b.c) this.o).d.set(this.m);
-        b.f.d.e.a.j(getLogTag(), "updateZoomableControllerBounds: view %x, view bounds: %s, image bounds: %s", Integer.valueOf(hashCode()), this.m, this.l);
+        ((DefaultZoomableController) this.f19633o).f4302d.set(this.f19631m);
+        FLog.m982j(getLogTag(), "updateZoomableControllerBounds: view %x, view bounds: %s, image bounds: %s", Integer.valueOf(hashCode()), this.f19631m, this.f19630l);
     }
 
     @Override // android.view.View, androidx.core.view.ScrollingView
     public int computeHorizontalScrollExtent() {
-        return (int) ((b.f.l.b.c) this.o).d.width();
+        return (int) ((DefaultZoomableController) this.f19633o).f4302d.width();
     }
 
     @Override // android.view.View, androidx.core.view.ScrollingView
     public int computeHorizontalScrollOffset() {
-        b.f.l.b.c cVar = (b.f.l.b.c) this.o;
-        return (int) (cVar.d.left - cVar.f.left);
+        DefaultZoomableController defaultZoomableController = (DefaultZoomableController) this.f19633o;
+        return (int) (defaultZoomableController.f4302d.left - defaultZoomableController.f4304f.left);
     }
 
     @Override // android.view.View, androidx.core.view.ScrollingView
     public int computeHorizontalScrollRange() {
-        return (int) ((b.f.l.b.c) this.o).f.width();
+        return (int) ((DefaultZoomableController) this.f19633o).f4304f.width();
     }
 
     @Override // android.view.View, androidx.core.view.ScrollingView
     public int computeVerticalScrollExtent() {
-        return (int) ((b.f.l.b.c) this.o).d.height();
+        return (int) ((DefaultZoomableController) this.f19633o).f4302d.height();
     }
 
     @Override // android.view.View, androidx.core.view.ScrollingView
     public int computeVerticalScrollOffset() {
-        b.f.l.b.c cVar = (b.f.l.b.c) this.o;
-        return (int) (cVar.d.top - cVar.f.top);
+        DefaultZoomableController defaultZoomableController = (DefaultZoomableController) this.f19633o;
+        return (int) (defaultZoomableController.f4302d.top - defaultZoomableController.f4304f.top);
     }
 
     @Override // android.view.View, androidx.core.view.ScrollingView
     public int computeVerticalScrollRange() {
-        return (int) ((b.f.l.b.c) this.o).f.height();
+        return (int) ((DefaultZoomableController) this.f19633o).f4304f.height();
     }
 
     public Class<?> getLogTag() {
-        return j;
+        return f19628j;
     }
 
-    public e getZoomableController() {
-        return this.o;
+    public ZoomableController getZoomableController() {
+        return this.f19633o;
     }
 
     @Override // android.widget.ImageView, android.view.View
     public void onDraw(Canvas canvas) {
         int iSave = canvas.save();
-        canvas.concat(((b.f.l.b.c) this.o).h);
+        canvas.concat(((DefaultZoomableController) this.f19633o).f4306h);
         super.onDraw(canvas);
         canvas.restoreToCount(iSave);
     }
@@ -179,9 +210,9 @@ public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy> imple
     public void onLayout(boolean z2, int i, int i2, int i3, int i4) {
         getLogTag();
         hashCode();
-        int i5 = b.f.d.e.a.a;
+        int i5 = FLog.f3102a;
         super.onLayout(z2, i, i2, i3, i4);
-        b();
+        m8726b();
     }
 
     @Override // com.facebook.drawee.view.DraweeView, android.view.View
@@ -189,18 +220,18 @@ public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy> imple
         motionEvent.getActionMasked();
         getLogTag();
         hashCode();
-        int i = b.f.d.e.a.a;
-        if (this.p.onTouchEvent(motionEvent)) {
+        int i = FLog.f3102a;
+        if (this.f19634p.onTouchEvent(motionEvent)) {
             getLogTag();
             hashCode();
             return true;
         }
-        if (this.k) {
-            if (((b.f.l.b.c) this.o).h(motionEvent)) {
+        if (this.f19629k) {
+            if (((DefaultZoomableController) this.f19633o).m1562h(motionEvent)) {
                 return true;
             }
-        } else if (((b.f.l.b.c) this.o).h(motionEvent)) {
-            if ((!this.q && !this.o.a()) || (this.q && !((b.f.l.b.c) this.o).l)) {
+        } else if (((DefaultZoomableController) this.f19633o).m1562h(motionEvent)) {
+            if ((!this.f19635q && !this.f19633o.mo1551a()) || (this.f19635q && !((DefaultZoomableController) this.f19633o).f4310l)) {
                 getParent().requestDisallowInterceptTouchEvent(true);
             }
             getLogTag();
@@ -214,43 +245,43 @@ public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy> imple
         }
         MotionEvent motionEventObtain = MotionEvent.obtain(motionEvent);
         motionEventObtain.setAction(3);
-        this.p.onTouchEvent(motionEventObtain);
-        ((b.f.l.b.c) this.o).h(motionEventObtain);
+        this.f19634p.onTouchEvent(motionEventObtain);
+        ((DefaultZoomableController) this.f19633o).m1562h(motionEventObtain);
         motionEventObtain.recycle();
         return false;
     }
 
     public void setAllowTouchInterceptionWhileZoomed(boolean z2) {
-        this.q = z2;
+        this.f19635q = z2;
     }
 
     @Override // com.facebook.drawee.view.DraweeView
     public void setController(@Nullable DraweeController draweeController) {
-        a(null, null);
-        ((b.f.l.b.c) this.o).k(false);
-        a(draweeController, null);
+        m8725a(null, null);
+        ((DefaultZoomableController) this.f19633o).m1564k(false);
+        m8725a(draweeController, null);
     }
 
     public void setExperimentalSimpleTouchHandlingEnabled(boolean z2) {
-        this.k = z2;
+        this.f19629k = z2;
     }
 
     public void setIsLongpressEnabled(boolean z2) {
-        this.p.setIsLongpressEnabled(z2);
+        this.f19634p.setIsLongpressEnabled(z2);
     }
 
     public void setTapListener(@Nullable GestureDetector.SimpleOnGestureListener simpleOnGestureListener) {
         if (simpleOnGestureListener != null) {
-            this.t.j = simpleOnGestureListener;
+            this.f19638t.f4311j = simpleOnGestureListener;
         } else {
-            this.t.j = new GestureDetector.SimpleOnGestureListener();
+            this.f19638t.f4311j = new GestureDetector.SimpleOnGestureListener();
         }
     }
 
-    public void setZoomableController(e eVar) {
-        Objects.requireNonNull(eVar);
-        ((b.f.l.b.c) this.o).f651b = null;
-        this.o = eVar;
-        ((b.f.l.b.c) eVar).f651b = this.f2905s;
+    public void setZoomableController(ZoomableController zoomableController) {
+        Objects.requireNonNull(zoomableController);
+        ((DefaultZoomableController) this.f19633o).f4300b = null;
+        this.f19633o = zoomableController;
+        ((DefaultZoomableController) zoomableController).f4300b = this.f19637s;
     }
 }

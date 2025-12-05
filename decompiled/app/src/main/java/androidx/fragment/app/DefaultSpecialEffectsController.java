@@ -19,23 +19,23 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.ViewGroupCompat;
 import androidx.fragment.app.FragmentAnim;
 import androidx.fragment.app.SpecialEffectsController;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class DefaultSpecialEffectsController extends SpecialEffectsController {
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$1 */
+    public class RunnableC03461 implements Runnable {
         public final /* synthetic */ List val$awaitingContainerChanges;
         public final /* synthetic */ SpecialEffectsController.Operation val$operation;
 
-        public AnonymousClass1(List list, SpecialEffectsController.Operation operation) {
+        public RunnableC03461(List list, SpecialEffectsController.Operation operation) {
             this.val$awaitingContainerChanges = list;
             this.val$operation = operation;
         }
@@ -49,42 +49,44 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$10, reason: invalid class name */
-    public static /* synthetic */ class AnonymousClass10 {
-        public static final /* synthetic */ int[] $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State;
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$10 */
+    public static /* synthetic */ class C034710 {
+
+        /* renamed from: $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State */
+        public static final /* synthetic */ int[] f142xe493b431;
 
         static {
             SpecialEffectsController.Operation.State.values();
             int[] iArr = new int[4];
-            $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State = iArr;
+            f142xe493b431 = iArr;
             try {
                 iArr[SpecialEffectsController.Operation.State.GONE.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State[SpecialEffectsController.Operation.State.INVISIBLE.ordinal()] = 2;
+                f142xe493b431[SpecialEffectsController.Operation.State.INVISIBLE.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State[SpecialEffectsController.Operation.State.REMOVED.ordinal()] = 3;
+                f142xe493b431[SpecialEffectsController.Operation.State.REMOVED.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State[SpecialEffectsController.Operation.State.VISIBLE.ordinal()] = 4;
+                f142xe493b431[SpecialEffectsController.Operation.State.VISIBLE.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$2, reason: invalid class name */
-    public class AnonymousClass2 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$2 */
+    public class C03482 extends AnimatorListenerAdapter {
         public final /* synthetic */ AnimationInfo val$animationInfo;
         public final /* synthetic */ ViewGroup val$container;
         public final /* synthetic */ boolean val$isHideOperation;
         public final /* synthetic */ SpecialEffectsController.Operation val$operation;
         public final /* synthetic */ View val$viewToAnimate;
 
-        public AnonymousClass2(ViewGroup viewGroup, View view, boolean z2, SpecialEffectsController.Operation operation, AnimationInfo animationInfo) {
+        public C03482(ViewGroup viewGroup, View view, boolean z2, SpecialEffectsController.Operation operation, AnimationInfo animationInfo) {
             this.val$container = viewGroup;
             this.val$viewToAnimate = view;
             this.val$isHideOperation = z2;
@@ -102,11 +104,11 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$3, reason: invalid class name */
-    public class AnonymousClass3 implements CancellationSignal.OnCancelListener {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$3 */
+    public class C03493 implements CancellationSignal.OnCancelListener {
         public final /* synthetic */ Animator val$animator;
 
-        public AnonymousClass3(Animator animator) {
+        public C03493(Animator animator) {
             this.val$animator = animator;
         }
 
@@ -116,8 +118,8 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$4, reason: invalid class name */
-    public class AnonymousClass4 implements Animation.AnimationListener {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$4 */
+    public class AnimationAnimationListenerC03504 implements Animation.AnimationListener {
         public final /* synthetic */ AnimationInfo val$animationInfo;
         public final /* synthetic */ ViewGroup val$container;
         public final /* synthetic */ View val$viewToAnimate;
@@ -129,13 +131,13 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
 
             @Override // java.lang.Runnable
             public void run() {
-                AnonymousClass4 anonymousClass4 = AnonymousClass4.this;
-                anonymousClass4.val$container.endViewTransition(anonymousClass4.val$viewToAnimate);
-                AnonymousClass4.this.val$animationInfo.completeSpecialEffect();
+                AnimationAnimationListenerC03504 animationAnimationListenerC03504 = AnimationAnimationListenerC03504.this;
+                animationAnimationListenerC03504.val$container.endViewTransition(animationAnimationListenerC03504.val$viewToAnimate);
+                AnimationAnimationListenerC03504.this.val$animationInfo.completeSpecialEffect();
             }
         }
 
-        public AnonymousClass4(ViewGroup viewGroup, View view, AnimationInfo animationInfo) {
+        public AnimationAnimationListenerC03504(ViewGroup viewGroup, View view, AnimationInfo animationInfo) {
             this.val$container = viewGroup;
             this.val$viewToAnimate = view;
             this.val$animationInfo = animationInfo;
@@ -155,13 +157,13 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$5, reason: invalid class name */
-    public class AnonymousClass5 implements CancellationSignal.OnCancelListener {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$5 */
+    public class C03515 implements CancellationSignal.OnCancelListener {
         public final /* synthetic */ AnimationInfo val$animationInfo;
         public final /* synthetic */ ViewGroup val$container;
         public final /* synthetic */ View val$viewToAnimate;
 
-        public AnonymousClass5(View view, ViewGroup viewGroup, AnimationInfo animationInfo) {
+        public C03515(View view, ViewGroup viewGroup, AnimationInfo animationInfo) {
             this.val$viewToAnimate = view;
             this.val$container = viewGroup;
             this.val$animationInfo = animationInfo;
@@ -175,14 +177,14 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$6, reason: invalid class name */
-    public class AnonymousClass6 implements Runnable {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$6 */
+    public class RunnableC03526 implements Runnable {
         public final /* synthetic */ SpecialEffectsController.Operation val$firstOut;
         public final /* synthetic */ boolean val$isPop;
         public final /* synthetic */ SpecialEffectsController.Operation val$lastIn;
         public final /* synthetic */ ArrayMap val$lastInViews;
 
-        public AnonymousClass6(SpecialEffectsController.Operation operation, SpecialEffectsController.Operation operation2, boolean z2, ArrayMap arrayMap) {
+        public RunnableC03526(SpecialEffectsController.Operation operation, SpecialEffectsController.Operation operation2, boolean z2, ArrayMap arrayMap) {
             this.val$lastIn = operation;
             this.val$firstOut = operation2;
             this.val$isPop = z2;
@@ -195,13 +197,13 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$7, reason: invalid class name */
-    public class AnonymousClass7 implements Runnable {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$7 */
+    public class RunnableC03537 implements Runnable {
         public final /* synthetic */ FragmentTransitionImpl val$impl;
         public final /* synthetic */ Rect val$lastInEpicenterRect;
         public final /* synthetic */ View val$lastInEpicenterView;
 
-        public AnonymousClass7(FragmentTransitionImpl fragmentTransitionImpl, View view, Rect rect) {
+        public RunnableC03537(FragmentTransitionImpl fragmentTransitionImpl, View view, Rect rect) {
             this.val$impl = fragmentTransitionImpl;
             this.val$lastInEpicenterView = view;
             this.val$lastInEpicenterRect = rect;
@@ -213,11 +215,11 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$8, reason: invalid class name */
-    public class AnonymousClass8 implements Runnable {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$8 */
+    public class RunnableC03548 implements Runnable {
         public final /* synthetic */ ArrayList val$transitioningViews;
 
-        public AnonymousClass8(ArrayList arrayList) {
+        public RunnableC03548(ArrayList arrayList) {
             this.val$transitioningViews = arrayList;
         }
 
@@ -227,11 +229,11 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$9, reason: invalid class name */
-    public class AnonymousClass9 implements Runnable {
+    /* renamed from: androidx.fragment.app.DefaultSpecialEffectsController$9 */
+    public class RunnableC03559 implements Runnable {
         public final /* synthetic */ TransitionInfo val$transitionInfo;
 
-        public AnonymousClass9(TransitionInfo transitionInfo) {
+        public RunnableC03559(TransitionInfo transitionInfo) {
             this.val$transitionInfo = transitionInfo;
         }
 
@@ -334,10 +336,10 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                             }
                             View view = fragment.mView;
                             container.startViewTransition(view);
-                            animator.addListener(new AnonymousClass2(container, view, z4, operation, animationInfo));
+                            animator.addListener(new C03482(container, view, z4, operation, animationInfo));
                             animator.setTarget(view);
                             animator.start();
-                            animationInfo.getSignal().setOnCancelListener(new AnonymousClass3(animator));
+                            animationInfo.getSignal().setOnCancelListener(new C03493(animator));
                             z3 = true;
                         }
                     }
@@ -366,10 +368,10 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                 } else {
                     container.startViewTransition(view2);
                     FragmentAnim.EndViewTransitionAnimation endViewTransitionAnimation = new FragmentAnim.EndViewTransitionAnimation(animation2, container, view2);
-                    endViewTransitionAnimation.setAnimationListener(new AnonymousClass4(container, view2, animationInfo2));
+                    endViewTransitionAnimation.setAnimationListener(new AnimationAnimationListenerC03504(container, view2, animationInfo2));
                     view2.startAnimation(endViewTransitionAnimation);
                 }
-                animationInfo2.getSignal().setOnCancelListener(new AnonymousClass5(view2, container, animationInfo2));
+                animationInfo2.getSignal().setOnCancelListener(new C03515(view2, container, animationInfo2));
             }
         }
     }
@@ -413,12 +415,12 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                 if (fragmentTransitionImpl2 == null) {
                     fragmentTransitionImpl2 = handlingImpl;
                 } else if (handlingImpl != null && fragmentTransitionImpl2 != handlingImpl) {
-                    StringBuilder sbU = a.U("Mixing framework transitions and AndroidX transitions is not allowed. Fragment ");
-                    sbU.append(transitionInfo.getOperation().getFragment());
-                    sbU.append(" returned Transition ");
-                    sbU.append(transitionInfo.getTransition());
-                    sbU.append(" which uses a different Transition  type than other Fragments.");
-                    throw new IllegalArgumentException(sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("Mixing framework transitions and AndroidX transitions is not allowed. Fragment ");
+                    sbM833U.append(transitionInfo.getOperation().getFragment());
+                    sbM833U.append(" returned Transition ");
+                    sbM833U.append(transitionInfo.getTransition());
+                    sbM833U.append(" which uses a different Transition  type than other Fragments.");
+                    throw new IllegalArgumentException(sbM833U.toString());
                 }
             }
         }
@@ -542,7 +544,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                     ArrayList<String> arrayList11 = arrayList6;
                     ArrayMap arrayMap5 = arrayMap2;
                     HashMap map5 = map4;
-                    OneShotPreDrawListener.add(getContainer(), new AnonymousClass6(operation2, operation, z2, arrayMap4));
+                    OneShotPreDrawListener.add(getContainer(), new RunnableC03526(operation2, operation, z2, arrayMap4));
                     Iterator<View> it = arrayMap3.values().iterator();
                     while (it.hasNext()) {
                         captureTransitioningViews(arrayList8, it.next());
@@ -557,7 +559,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                         captureTransitioningViews(arrayList9, it2.next());
                     }
                     if (!sharedElementTargetNames2.isEmpty() && (view6 = arrayMap4.get(sharedElementTargetNames2.get(0))) != null) {
-                        OneShotPreDrawListener.add(getContainer(), new AnonymousClass7(fragmentTransitionImpl2, view6, rect4));
+                        OneShotPreDrawListener.add(getContainer(), new RunnableC03537(fragmentTransitionImpl2, view6, rect4));
                         z4 = true;
                     }
                     fragmentTransitionImpl2.setSharedElementTargets(objWrapTransitionInSet, view7, arrayList8);
@@ -666,7 +668,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                             objCloneTransition = objCloneTransition;
                             arrayList2 = arrayList15;
                             fragmentTransitionImpl3.scheduleHideFragmentView(objCloneTransition, operation3.getFragment().mView, arrayList2);
-                            OneShotPreDrawListener.add(getContainer(), new AnonymousClass8(arrayList2));
+                            OneShotPreDrawListener.add(getContainer(), new RunnableC03548(arrayList2));
                         } else {
                             objCloneTransition = objCloneTransition;
                             arrayList2 = arrayList15;
@@ -715,7 +717,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                 SpecialEffectsController.Operation operation7 = transitionInfo5.getOperation();
                 boolean z6 = obj3 != null && (operation7 == operation5 || operation7 == operation4);
                 if (transition != null || z6) {
-                    fragmentTransitionImpl3.setListenerForTransitionEnd(transitionInfo5.getOperation().getFragment(), objMergeTransitionsInSequence, transitionInfo5.getSignal(), new AnonymousClass9(transitionInfo5));
+                    fragmentTransitionImpl3.setListenerForTransitionEnd(transitionInfo5.getOperation().getFragment(), objMergeTransitionsInSequence, transitionInfo5.getSignal(), new RunnableC03559(transitionInfo5));
                 }
             }
         }
@@ -791,7 +793,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
             } else if (operation4 == operation2) {
             }
             arrayList2.add(new TransitionInfo(operation4, cancellationSignal2, z2, z3));
-            operation4.addCompletionListener(new AnonymousClass1(arrayList3, operation4));
+            operation4.addCompletionListener(new RunnableC03461(arrayList3, operation4));
         }
         Map<SpecialEffectsController.Operation, Boolean> mapStartTransitions = startTransitions(arrayList2, z2, operation, operation2);
         startAnimations(arrayList, arrayList3, mapStartTransitions.containsValue(Boolean.TRUE), mapStartTransitions);
@@ -862,13 +864,13 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
             if (handlingImpl == null || handlingImpl2 == null || handlingImpl == handlingImpl2) {
                 return handlingImpl != null ? handlingImpl : handlingImpl2;
             }
-            StringBuilder sbU = a.U("Mixing framework transitions and AndroidX transitions is not allowed. Fragment ");
-            sbU.append(getOperation().getFragment());
-            sbU.append(" returned Transition ");
-            sbU.append(this.mTransition);
-            sbU.append(" which uses a different Transition  type than its shared element transition ");
-            sbU.append(this.mSharedElementTransition);
-            throw new IllegalArgumentException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Mixing framework transitions and AndroidX transitions is not allowed. Fragment ");
+            sbM833U.append(getOperation().getFragment());
+            sbM833U.append(" returned Transition ");
+            sbM833U.append(this.mTransition);
+            sbM833U.append(" which uses a different Transition  type than its shared element transition ");
+            sbM833U.append(this.mSharedElementTransition);
+            throw new IllegalArgumentException(sbM833U.toString());
         }
 
         @Nullable

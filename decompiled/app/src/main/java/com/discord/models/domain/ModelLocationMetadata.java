@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelLocationMetadata.kt */
 /* loaded from: classes.dex */
@@ -46,7 +46,7 @@ public final /* data */ class ModelLocationMetadata {
             return false;
         }
         ModelLocationMetadata modelLocationMetadata = (ModelLocationMetadata) other;
-        return this.consentRequired == modelLocationMetadata.consentRequired && m.areEqual(this.countryCode, modelLocationMetadata.countryCode);
+        return this.consentRequired == modelLocationMetadata.consentRequired && Intrinsics3.areEqual(this.countryCode, modelLocationMetadata.countryCode);
     }
 
     public final boolean getConsentRequired() {
@@ -73,9 +73,9 @@ public final /* data */ class ModelLocationMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelLocationMetadata(consentRequired=");
-        sbU.append(this.consentRequired);
-        sbU.append(", countryCode=");
-        return a.J(sbU, this.countryCode, ")");
+        StringBuilder sbM833U = outline.m833U("ModelLocationMetadata(consentRequired=");
+        sbM833U.append(this.consentRequired);
+        sbM833U.append(", countryCode=");
+        return outline.m822J(sbM833U, this.countryCode, ")");
     }
 }

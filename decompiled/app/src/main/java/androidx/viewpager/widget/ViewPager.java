@@ -40,7 +40,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.customview.view.AbsSavedState;
-import b.d.b.a.a;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
@@ -50,6 +49,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ViewPager extends ViewGroup {
@@ -127,12 +127,12 @@ public class ViewPager extends ViewGroup {
     private int mTouchSlop;
     private VelocityTracker mVelocityTracker;
     public static final int[] LAYOUT_ATTRS = {R.attr.layout_gravity};
-    private static final Comparator<ItemInfo> COMPARATOR = new AnonymousClass1();
-    private static final Interpolator sInterpolator = new AnonymousClass2();
+    private static final Comparator<ItemInfo> COMPARATOR = new C06881();
+    private static final Interpolator sInterpolator = new InterpolatorC06892();
     private static final ViewPositionComparator sPositionComparator = new ViewPositionComparator();
 
-    /* renamed from: androidx.viewpager.widget.ViewPager$1, reason: invalid class name */
-    public static class AnonymousClass1 implements Comparator<ItemInfo> {
+    /* renamed from: androidx.viewpager.widget.ViewPager$1 */
+    public static class C06881 implements Comparator<ItemInfo> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(ItemInfo itemInfo, ItemInfo itemInfo2) {
             return compare2(itemInfo, itemInfo2);
@@ -144,8 +144,8 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager.widget.ViewPager$2, reason: invalid class name */
-    public static class AnonymousClass2 implements Interpolator {
+    /* renamed from: androidx.viewpager.widget.ViewPager$2 */
+    public static class InterpolatorC06892 implements Interpolator {
         @Override // android.animation.TimeInterpolator
         public float getInterpolation(float f) {
             float f2 = f - 1.0f;
@@ -153,9 +153,9 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager.widget.ViewPager$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
-        public AnonymousClass3() {
+    /* renamed from: androidx.viewpager.widget.ViewPager$3 */
+    public class RunnableC06903 implements Runnable {
+        public RunnableC06903() {
         }
 
         @Override // java.lang.Runnable
@@ -165,11 +165,11 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager.widget.ViewPager$4, reason: invalid class name */
-    public class AnonymousClass4 implements OnApplyWindowInsetsListener {
+    /* renamed from: androidx.viewpager.widget.ViewPager$4 */
+    public class C06914 implements OnApplyWindowInsetsListener {
         private final Rect mTempRect = new Rect();
 
-        public AnonymousClass4() {
+        public C06914() {
         }
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
@@ -299,13 +299,13 @@ public class ViewPager extends ViewGroup {
     }
 
     public static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C06921();
         public Parcelable adapterState;
         public ClassLoader loader;
         public int position;
 
-        /* renamed from: androidx.viewpager.widget.ViewPager$SavedState$1, reason: invalid class name */
-        public static class AnonymousClass1 implements Parcelable.ClassLoaderCreator<SavedState> {
+        /* renamed from: androidx.viewpager.widget.ViewPager$SavedState$1 */
+        public static class C06921 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -343,10 +343,10 @@ public class ViewPager extends ViewGroup {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("FragmentPager.SavedState{");
-            sbU.append(Integer.toHexString(System.identityHashCode(this)));
-            sbU.append(" position=");
-            return a.B(sbU, this.position, "}");
+            StringBuilder sbM833U = outline.m833U("FragmentPager.SavedState{");
+            sbM833U.append(Integer.toHexString(System.identityHashCode(this)));
+            sbM833U.append(" position=");
+            return outline.m814B(sbM833U, this.position, "}");
         }
 
         @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
@@ -408,7 +408,7 @@ public class ViewPager extends ViewGroup {
         this.mActivePointerId = -1;
         this.mFirstLayout = true;
         this.mNeedCalculatePageOffsets = false;
-        this.mEndScrollRunnable = new AnonymousClass3();
+        this.mEndScrollRunnable = new RunnableC06903();
         this.mScrollState = 0;
         initViewPager();
     }
@@ -1002,9 +1002,9 @@ public class ViewPager extends ViewGroup {
                     sb.append(" => ");
                     sb.append(parent2.getClass().getSimpleName());
                 }
-                StringBuilder sbU = a.U("arrowScroll tried to find focus based on non-child current focused view ");
-                sbU.append(sb.toString());
-                Log.e(TAG, sbU.toString());
+                StringBuilder sbM833U = outline.m833U("arrowScroll tried to find focus based on non-child current focused view ");
+                sbM833U.append(sb.toString());
+                Log.e(TAG, sbM833U.toString());
                 viewFindFocus = null;
             }
         }
@@ -1394,7 +1394,7 @@ public class ViewPager extends ViewGroup {
         if (ViewCompat.getImportantForAccessibility(this) == 0) {
             ViewCompat.setImportantForAccessibility(this, 1);
         }
-        ViewCompat.setOnApplyWindowInsetsListener(this, new AnonymousClass4());
+        ViewCompat.setOnApplyWindowInsetsListener(this, new C06914());
     }
 
     public boolean isFakeDragging() {
@@ -2204,17 +2204,17 @@ public class ViewPager extends ViewGroup {
             } catch (Resources.NotFoundException unused) {
                 hexString = Integer.toHexString(getId());
             }
-            StringBuilder sbU = a.U("The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: ");
-            sbU.append(this.mExpectedAdapterCount);
-            sbU.append(", found: ");
-            sbU.append(count);
-            sbU.append(" Pager id: ");
-            sbU.append(hexString);
-            sbU.append(" Pager class: ");
-            sbU.append(getClass());
-            sbU.append(" Problematic adapter: ");
-            sbU.append(this.mAdapter.getClass());
-            throw new IllegalStateException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: ");
+            sbM833U.append(this.mExpectedAdapterCount);
+            sbM833U.append(", found: ");
+            sbM833U.append(count);
+            sbM833U.append(" Pager id: ");
+            sbM833U.append(hexString);
+            sbM833U.append(" Pager class: ");
+            sbM833U.append(getClass());
+            sbM833U.append(" Problematic adapter: ");
+            sbM833U.append(this.mAdapter.getClass());
+            throw new IllegalStateException(sbM833U.toString());
         }
         int i4 = 0;
         while (true) {
@@ -2445,7 +2445,7 @@ public class ViewPager extends ViewGroup {
         this.mActivePointerId = -1;
         this.mFirstLayout = true;
         this.mNeedCalculatePageOffsets = false;
-        this.mEndScrollRunnable = new AnonymousClass3();
+        this.mEndScrollRunnable = new RunnableC06903();
         this.mScrollState = 0;
         initViewPager();
     }

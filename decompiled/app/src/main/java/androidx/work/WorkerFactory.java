@@ -4,14 +4,14 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class WorkerFactory {
     private static final String TAG = Logger.tagWithPrefix("WorkerFactory");
 
-    /* renamed from: androidx.work.WorkerFactory$1, reason: invalid class name */
-    public class AnonymousClass1 extends WorkerFactory {
+    /* renamed from: androidx.work.WorkerFactory$1 */
+    public class C07211 extends WorkerFactory {
         @Override // androidx.work.WorkerFactory
         @Nullable
         public ListenableWorker createWorker(@NonNull Context context, @NonNull String str, @NonNull WorkerParameters workerParameters) {
@@ -22,7 +22,7 @@ public abstract class WorkerFactory {
     @NonNull
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public static WorkerFactory getDefaultWorkerFactory() {
-        return new AnonymousClass1();
+        return new C07211();
     }
 
     @Nullable
@@ -37,13 +37,13 @@ public abstract class WorkerFactory {
             try {
                 clsAsSubclass = Class.forName(str).asSubclass(ListenableWorker.class);
             } catch (Throwable th) {
-                Logger.get().error(TAG, a.w("Invalid class: ", str), th);
+                Logger.get().error(TAG, outline.m883w("Invalid class: ", str), th);
             }
             if (clsAsSubclass != null) {
                 try {
                     listenableWorkerCreateWorker = (ListenableWorker) clsAsSubclass.getDeclaredConstructor(Context.class, WorkerParameters.class).newInstance(context, workerParameters);
                 } catch (Throwable th2) {
-                    Logger.get().error(TAG, a.w("Could not instantiate ", str), th2);
+                    Logger.get().error(TAG, outline.m883w("Could not instantiate ", str), th2);
                 }
             }
         }

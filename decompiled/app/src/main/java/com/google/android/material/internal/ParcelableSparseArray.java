@@ -10,9 +10,10 @@ import androidx.annotation.RestrictTo;
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes3.dex */
 public class ParcelableSparseArray extends SparseArray<Parcelable> implements Parcelable {
-    public static final Parcelable.Creator<ParcelableSparseArray> CREATOR = new a();
+    public static final Parcelable.Creator<ParcelableSparseArray> CREATOR = new C10940a();
 
-    public static class a implements Parcelable.ClassLoaderCreator<ParcelableSparseArray> {
+    /* renamed from: com.google.android.material.internal.ParcelableSparseArray$a */
+    public static class C10940a implements Parcelable.ClassLoaderCreator<ParcelableSparseArray> {
         @Override // android.os.Parcelable.ClassLoaderCreator
         @NonNull
         public ParcelableSparseArray createFromParcel(@NonNull Parcel parcel, ClassLoader classLoader) {

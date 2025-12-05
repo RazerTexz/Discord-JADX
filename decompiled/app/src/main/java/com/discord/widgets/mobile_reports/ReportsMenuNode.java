@@ -12,14 +12,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.NotificationCompat;
-import androidx.core.view.ViewGroupKt;
-import b.a.i.o2;
-import b.a.i.p2;
-import b.a.i.q2;
-import b.a.i.r2;
-import b.a.i.z4;
-import b.a.k.b;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.report.NodeResult;
 import com.discord.api.report.ReportNode;
 import com.discord.api.report.ReportNodeBottomButton;
@@ -28,7 +21,7 @@ import com.discord.api.report.ReportNodeElementData;
 import com.discord.databinding.ViewReportsMenuNodeBinding;
 import com.discord.models.user.User;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.guilds.GuildUtilsKt;
+import com.discord.utilities.guilds.GuildUtils;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.user.UserUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
@@ -38,8 +31,6 @@ import com.discord.widgets.mobile_reports.MobileReportsViewModel;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
-import d0.z.d.k;
-import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -48,6 +39,14 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p025i.ViewMobileReportBlockUserBinding;
+import p007b.p008a.p025i.ViewMobileReportsChannelPreviewBinding;
+import p007b.p008a.p025i.ViewMobileReportsChildBinding;
+import p007b.p008a.p025i.ViewMobileReportsMulticheckItemBinding;
+import p007b.p008a.p025i.WidgetChatListAdapterItemSingleLineMessagePreviewBinding;
+import p007b.p008a.p027k.FormatUtils;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ReportsMenuNode.kt */
 /* loaded from: classes2.dex */
@@ -61,9 +60,9 @@ public final class ReportsMenuNode extends ConstraintLayout {
     private MobileReportsViewModel.NodeState prevViewState;
 
     /* compiled from: ReportsMenuNode.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupBlockUser$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupBlockUser$1 */
+    public static final class ViewOnClickListenerC90801 implements View.OnClickListener {
+        public ViewOnClickListenerC90801() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -73,21 +72,21 @@ public final class ReportsMenuNode extends ConstraintLayout {
     }
 
     /* compiled from: ReportsMenuNode.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupBottomButton$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<ReportNodeBottomButton, Unit> {
-        public AnonymousClass1(ReportsMenuNode reportsMenuNode) {
+    /* renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupBottomButton$1 */
+    public static final /* synthetic */ class C90811 extends FunctionReferenceImpl implements Function1<ReportNodeBottomButton, Unit> {
+        public C90811(ReportsMenuNode reportsMenuNode) {
             super(1, reportsMenuNode, ReportsMenuNode.class, "bottomButtonClickListener", "bottomButtonClickListener(Lcom/discord/api/report/ReportNodeBottomButton;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ReportNodeBottomButton reportNodeBottomButton) {
             invoke2(reportNodeBottomButton);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ReportNodeBottomButton reportNodeBottomButton) {
-            m.checkNotNullParameter(reportNodeBottomButton, "p1");
+            Intrinsics3.checkNotNullParameter(reportNodeBottomButton, "p1");
             ReportsMenuNode.access$bottomButtonClickListener((ReportsMenuNode) this.receiver, reportNodeBottomButton);
         }
     }
@@ -95,10 +94,10 @@ public final class ReportsMenuNode extends ConstraintLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReportsMenuNode(Context context) {
         super(context);
-        m.checkNotNullParameter(context, "context");
-        ViewReportsMenuNodeBinding viewReportsMenuNodeBindingA = ViewReportsMenuNodeBinding.a(LayoutInflater.from(getContext()), this, true);
-        m.checkNotNullExpressionValue(viewReportsMenuNodeBindingA, "ViewReportsMenuNodeBindi…rom(context), this, true)");
-        this.binding = viewReportsMenuNodeBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        ViewReportsMenuNodeBinding viewReportsMenuNodeBindingM8401a = ViewReportsMenuNodeBinding.m8401a(LayoutInflater.from(getContext()), this, true);
+        Intrinsics3.checkNotNullExpressionValue(viewReportsMenuNodeBindingM8401a, "ViewReportsMenuNodeBindi…rom(context), this, true)");
+        this.binding = viewReportsMenuNodeBindingM8401a;
     }
 
     public static final /* synthetic */ void access$blockUserClickListener(ReportsMenuNode reportsMenuNode) {
@@ -159,102 +158,102 @@ public final class ReportsMenuNode extends ConstraintLayout {
         Context context;
         int i;
         MobileReportsViewModel.BlockUserElement blockUserElement = viewState.getBlockUserElement();
-        o2 o2Var = this.binding.f;
-        m.checkNotNullExpressionValue(o2Var, "binding.mobileReportsNodeBlockUser");
-        LinearLayout linearLayout = o2Var.a;
-        m.checkNotNullExpressionValue(linearLayout, "binding.mobileReportsNodeBlockUser.root");
+        ViewMobileReportBlockUserBinding viewMobileReportBlockUserBinding = this.binding.f15534f;
+        Intrinsics3.checkNotNullExpressionValue(viewMobileReportBlockUserBinding, "binding.mobileReportsNodeBlockUser");
+        LinearLayout linearLayout = viewMobileReportBlockUserBinding.f1102a;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.mobileReportsNodeBlockUser.root");
         linearLayout.setVisibility(blockUserElement != null ? 0 : 8);
         if (blockUserElement == null) {
             return;
         }
         User user = blockUserElement.getUser();
         boolean zIsBlocked = blockUserElement.isBlocked();
-        TextView textView = this.binding.f.d;
-        m.checkNotNullExpressionValue(textView, "binding.mobileReportsNod…obileReportsBlockUserName");
-        textView.setText(UserUtils.INSTANCE.getUserNameWithDiscriminator(user, Integer.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.colorHeaderSecondary)), Float.valueOf(0.8f)));
-        SimpleDraweeView simpleDraweeView = this.binding.f.f173b;
-        m.checkNotNullExpressionValue(simpleDraweeView, "binding.mobileReportsNod…ileReportsBlockUserAvatar");
-        IconUtils.setIcon$default(simpleDraweeView, user, R.dimen.avatar_size_standard, null, null, null, 56, null);
-        this.binding.f.c.setOnClickListener(new AnonymousClass1());
-        MaterialButton materialButton = this.binding.f.c;
-        m.checkNotNullExpressionValue(materialButton, "binding.mobileReportsNod…ileReportsBlockUserButton");
+        TextView textView = this.binding.f15534f.f1105d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.mobileReportsNod…obileReportsBlockUserName");
+        textView.setText(UserUtils.INSTANCE.getUserNameWithDiscriminator(user, Integer.valueOf(ColorCompat.getThemedColor(getContext(), C5419R.attr.colorHeaderSecondary)), Float.valueOf(0.8f)));
+        SimpleDraweeView simpleDraweeView = this.binding.f15534f.f1103b;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.mobileReportsNod…ileReportsBlockUserAvatar");
+        IconUtils.setIcon$default(simpleDraweeView, user, C5419R.dimen.avatar_size_standard, null, null, null, 56, null);
+        this.binding.f15534f.f1104c.setOnClickListener(new ViewOnClickListenerC90801());
+        MaterialButton materialButton = this.binding.f15534f.f1104c;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.mobileReportsNod…ileReportsBlockUserButton");
         ViewExtensions.setEnabledAndAlpha(materialButton, !zIsBlocked, 0.5f);
-        MaterialButton materialButton2 = this.binding.f.c;
-        m.checkNotNullExpressionValue(materialButton2, "binding.mobileReportsNod…ileReportsBlockUserButton");
+        MaterialButton materialButton2 = this.binding.f15534f.f1104c;
+        Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.mobileReportsNod…ileReportsBlockUserButton");
         if (zIsBlocked) {
             context = getContext();
-            i = R.string.blocked;
+            i = C5419R.string.blocked;
         } else {
             context = getContext();
-            i = R.string.block;
+            i = C5419R.string.block;
         }
         materialButton2.setText(context.getString(i));
     }
 
     private final void setupBottomButton(MobileReportsViewModel.NodeState viewState) {
         ReportNodeBottomButton bottomButton = viewState.getBottomButton();
-        MobileReportsBottomButton mobileReportsBottomButton = this.binding.g;
-        m.checkNotNullExpressionValue(mobileReportsBottomButton, "binding.mobileReportsNodeBottomButton");
+        MobileReportsBottomButton mobileReportsBottomButton = this.binding.f15535g;
+        Intrinsics3.checkNotNullExpressionValue(mobileReportsBottomButton, "binding.mobileReportsNodeBottomButton");
         mobileReportsBottomButton.setVisibility(bottomButton != null ? 0 : 8);
-        this.binding.g.setup(bottomButton, viewState.getSubmitState(), new AnonymousClass1(this));
+        this.binding.f15535g.setup(bottomButton, viewState.getSubmitState(), new C90811(this));
     }
 
     private final void setupBreadCrumbs(MobileReportsViewModel.NodeState viewState) {
-        MobileReportsBreadcrumbs mobileReportsBreadcrumbs = this.binding.h;
-        m.checkNotNullExpressionValue(mobileReportsBreadcrumbs, "binding.mobileReportsNodeBreadcrumbs");
+        MobileReportsBreadcrumbs mobileReportsBreadcrumbs = this.binding.f15536h;
+        Intrinsics3.checkNotNullExpressionValue(mobileReportsBreadcrumbs, "binding.mobileReportsNodeBreadcrumbs");
         mobileReportsBreadcrumbs.setVisibility(viewState.getBreadcrumbsElement() != null ? 0 : 8);
         List<NodeResult> breadcrumbsElement = viewState.getBreadcrumbsElement();
-        if (!m.areEqual(breadcrumbsElement, this.prevViewState != null ? r1.getBreadcrumbsElement() : null)) {
-            this.binding.h.setup(viewState.getBreadcrumbsElement());
+        if (!Intrinsics3.areEqual(breadcrumbsElement, this.prevViewState != null ? r1.getBreadcrumbsElement() : null)) {
+            this.binding.f15536h.setup(viewState.getBreadcrumbsElement());
         }
     }
 
     private final void setupChannelPreview(MobileReportsViewModel.NodeState viewState) {
         MobileReportsViewModel.ChannelPreview channelPreviewElement = viewState.getChannelPreviewElement();
         ViewReportsMenuNodeBinding viewReportsMenuNodeBinding = this.binding;
-        p2 p2Var = viewReportsMenuNodeBinding.f2206b;
+        ViewMobileReportsChannelPreviewBinding viewMobileReportsChannelPreviewBinding = viewReportsMenuNodeBinding.f15530b;
         if (channelPreviewElement == null) {
-            MaterialCardView materialCardView = viewReportsMenuNodeBinding.i;
-            m.checkNotNullExpressionValue(materialCardView, "binding.mobileReportsNodeChannelPreview");
+            MaterialCardView materialCardView = viewReportsMenuNodeBinding.f15537i;
+            Intrinsics3.checkNotNullExpressionValue(materialCardView, "binding.mobileReportsNodeChannelPreview");
             materialCardView.setVisibility(8);
             return;
         }
-        TextView textView = p2Var.c;
-        m.checkNotNullExpressionValue(textView, "kicker");
+        TextView textView = viewMobileReportsChannelPreviewBinding.f1132c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "kicker");
         textView.setText(channelPreviewElement.getStageInstance().getTopic());
-        LinkifiedTextView linkifiedTextView = p2Var.d;
-        m.checkNotNullExpressionValue(linkifiedTextView, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        LinkifiedTextView linkifiedTextView = viewMobileReportsChannelPreviewBinding.f1133d;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         linkifiedTextView.setText(channelPreviewElement.getGuild().getName());
-        p2Var.f179b.a(IconUtils.getForGuild$default(channelPreviewElement.getGuild(), null, false, null, 14, null), channelPreviewElement.getGuild().getShortName());
-        MaterialCardView materialCardView2 = this.binding.i;
-        m.checkNotNullExpressionValue(materialCardView2, "binding.mobileReportsNodeChannelPreview");
+        viewMobileReportsChannelPreviewBinding.f1131b.m8545a(IconUtils.getForGuild$default(channelPreviewElement.getGuild(), null, false, null, 14, null), channelPreviewElement.getGuild().getShortName());
+        MaterialCardView materialCardView2 = this.binding.f15537i;
+        Intrinsics3.checkNotNullExpressionValue(materialCardView2, "binding.mobileReportsNodeChannelPreview");
         materialCardView2.setVisibility(0);
     }
 
     private final void setupCheckbox(MobileReportsViewModel.NodeState viewState) {
         List<ReportNodeElementData> data;
         MobileReportsViewModel.CheckboxElement checkboxElement = viewState.getCheckboxElement();
-        LinearLayout linearLayout = this.binding.e;
-        m.checkNotNullExpressionValue(linearLayout, "binding.mobileReportsMultiselect");
+        LinearLayout linearLayout = this.binding.f15533e;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.mobileReportsMultiselect");
         linearLayout.setVisibility(checkboxElement != null ? 0 : 8);
         MobileReportsViewModel.CheckboxElement checkboxElement2 = viewState.getCheckboxElement();
-        if (!m.areEqual(checkboxElement2, this.prevViewState != null ? r1.getCheckboxElement() : null)) {
-            this.binding.e.removeAllViewsInLayout();
+        if (!Intrinsics3.areEqual(checkboxElement2, this.prevViewState != null ? r1.getCheckboxElement() : null)) {
+            this.binding.f15533e.removeAllViewsInLayout();
             if (checkboxElement == null || (data = checkboxElement.getData()) == null) {
                 return;
             }
             for (ReportNodeElementData reportNodeElementData : data) {
                 LayoutInflater layoutInflaterFrom = LayoutInflater.from(getContext());
-                LinearLayout linearLayout2 = this.binding.e;
-                View viewInflate = layoutInflaterFrom.inflate(R.layout.view_mobile_reports_multicheck_item, (ViewGroup) linearLayout2, false);
+                LinearLayout linearLayout2 = this.binding.f15533e;
+                View viewInflate = layoutInflaterFrom.inflate(C5419R.layout.view_mobile_reports_multicheck_item, (ViewGroup) linearLayout2, false);
                 linearLayout2.addView(viewInflate);
                 Objects.requireNonNull(viewInflate, "rootView");
                 CheckedSetting checkedSetting = (CheckedSetting) viewInflate;
-                m.checkNotNullExpressionValue(new r2(checkedSetting), "checkbox");
+                Intrinsics3.checkNotNullExpressionValue(new ViewMobileReportsMulticheckItemBinding(checkedSetting), "checkbox");
                 checkedSetting.setText(reportNodeElementData.getElementValue());
-                m.checkNotNullExpressionValue(checkedSetting, "checkbox.root");
+                Intrinsics3.checkNotNullExpressionValue(checkedSetting, "checkbox.root");
                 checkedSetting.setChecked(checkboxElement.getSelections().contains(reportNodeElementData));
-                checkedSetting.setOnCheckedListener(new ReportsMenuNode$setupCheckbox$$inlined$forEach$lambda$1(reportNodeElementData, this, checkboxElement));
+                checkedSetting.setOnCheckedListener(new ReportsMenuNode2(reportNodeElementData, this, checkboxElement));
             }
         }
     }
@@ -262,29 +261,29 @@ public final class ReportsMenuNode extends ConstraintLayout {
     private final void setupChildren(MobileReportsViewModel.NodeState viewState) {
         ReportNode node;
         MobileReportsViewModel.NodeState nodeState = this.prevViewState;
-        if (!m.areEqual((nodeState == null || (node = nodeState.getNode()) == null) ? null : node.b(), viewState.getNode().b())) {
-            LinearLayout linearLayout = this.binding.j;
-            m.checkNotNullExpressionValue(linearLayout, "binding.mobileReportsNodeChildList");
-            Iterator<View> it = ViewGroupKt.getChildren(linearLayout).iterator();
+        if (!Intrinsics3.areEqual((nodeState == null || (node = nodeState.getNode()) == null) ? null : node.m8172b(), viewState.getNode().m8172b())) {
+            LinearLayout linearLayout = this.binding.f15538j;
+            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.mobileReportsNodeChildList");
+            Iterator<View> it = androidx.core.view.ViewGroup.getChildren(linearLayout).iterator();
             while (it.hasNext()) {
                 it.next().setOnClickListener(null);
             }
-            this.binding.j.removeAllViewsInLayout();
-            for (ReportNodeChild reportNodeChild : viewState.getNode().b()) {
+            this.binding.f15538j.removeAllViewsInLayout();
+            for (ReportNodeChild reportNodeChild : viewState.getNode().m8172b()) {
                 LayoutInflater layoutInflaterFrom = LayoutInflater.from(getContext());
-                LinearLayout linearLayout2 = this.binding.j;
-                View viewInflate = layoutInflaterFrom.inflate(R.layout.view_mobile_reports_child, (ViewGroup) linearLayout2, false);
+                LinearLayout linearLayout2 = this.binding.f15538j;
+                View viewInflate = layoutInflaterFrom.inflate(C5419R.layout.view_mobile_reports_child, (ViewGroup) linearLayout2, false);
                 linearLayout2.addView(viewInflate);
-                int i = R.id.mobile_reports_child;
-                CardView cardView = (CardView) viewInflate.findViewById(R.id.mobile_reports_child);
+                int i = C5419R.id.mobile_reports_child;
+                CardView cardView = (CardView) viewInflate.findViewById(C5419R.id.mobile_reports_child);
                 if (cardView != null) {
-                    i = R.id.mobile_reports_child_menu_title;
-                    TextView textView = (TextView) viewInflate.findViewById(R.id.mobile_reports_child_menu_title);
+                    i = C5419R.id.mobile_reports_child_menu_title;
+                    TextView textView = (TextView) viewInflate.findViewById(C5419R.id.mobile_reports_child_menu_title);
                     if (textView != null) {
                         FrameLayout frameLayout = (FrameLayout) viewInflate;
-                        m.checkNotNullExpressionValue(new q2(frameLayout, cardView, textView), "childView");
-                        frameLayout.setOnClickListener(new ReportsMenuNode$setupChildren$$inlined$forEach$lambda$1(reportNodeChild, this));
-                        m.checkNotNullExpressionValue(textView, "childView.mobileReportsChildMenuTitle");
+                        Intrinsics3.checkNotNullExpressionValue(new ViewMobileReportsChildBinding(frameLayout, cardView, textView), "childView");
+                        frameLayout.setOnClickListener(new ReportsMenuNode3(reportNodeChild, this));
+                        Intrinsics3.checkNotNullExpressionValue(textView, "childView.mobileReportsChildMenuTitle");
                         textView.setText(reportNodeChild.getName());
                     }
                 }
@@ -294,44 +293,44 @@ public final class ReportsMenuNode extends ConstraintLayout {
     }
 
     private final void setupDirectoryServerPreview(MobileReportsViewModel.NodeState viewState) {
-        MaterialCardView materialCardView = this.binding.k;
-        m.checkNotNullExpressionValue(materialCardView, "binding.mobileReportsNodeDirectoryChannelPreview");
+        MaterialCardView materialCardView = this.binding.f15539k;
+        Intrinsics3.checkNotNullExpressionValue(materialCardView, "binding.mobileReportsNodeDirectoryChannelPreview");
         materialCardView.setVisibility(viewState.getDirectoryServerPreviewElement() != null ? 0 : 8);
-        TextView textView = this.binding.l;
-        m.checkNotNullExpressionValue(textView, "binding.mobileReportsNod…ectoryChannelPreviewTitle");
+        TextView textView = this.binding.f15540l;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.mobileReportsNod…ectoryChannelPreviewTitle");
         textView.setVisibility(viewState.getDirectoryServerPreviewElement() != null ? 0 : 8);
         MobileReportsViewModel.DirectoryServerPreview directoryServerPreviewElement = viewState.getDirectoryServerPreviewElement();
         if (directoryServerPreviewElement != null) {
-            p2 p2Var = this.binding.c;
-            LinkifiedTextView linkifiedTextView = p2Var.d;
-            m.checkNotNullExpressionValue(linkifiedTextView, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+            ViewMobileReportsChannelPreviewBinding viewMobileReportsChannelPreviewBinding = this.binding.f15531c;
+            LinkifiedTextView linkifiedTextView = viewMobileReportsChannelPreviewBinding.f1133d;
+            Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
             linkifiedTextView.setText(directoryServerPreviewElement.getDirectoryEntry().getGuild().getName());
-            TextView textView2 = p2Var.c;
-            m.checkNotNullExpressionValue(textView2, "kicker");
+            TextView textView2 = viewMobileReportsChannelPreviewBinding.f1132c;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "kicker");
             textView2.setText(directoryServerPreviewElement.getHub().getName());
-            p2Var.f179b.a(IconUtils.getForGuild$default(Long.valueOf(directoryServerPreviewElement.getDirectoryEntry().getGuild().getId()), directoryServerPreviewElement.getDirectoryEntry().getGuild().getIcon(), null, false, null, 28, null), GuildUtilsKt.computeShortName(directoryServerPreviewElement.getDirectoryEntry().getGuild().getName()));
+            viewMobileReportsChannelPreviewBinding.f1131b.m8545a(IconUtils.getForGuild$default(Long.valueOf(directoryServerPreviewElement.getDirectoryEntry().getGuild().getId()), directoryServerPreviewElement.getDirectoryEntry().getGuild().getIcon(), null, false, null, 28, null), GuildUtils.computeShortName(directoryServerPreviewElement.getDirectoryEntry().getGuild().getName()));
         }
     }
 
     private final void setupEventPreview(MobileReportsViewModel.NodeState viewState) {
         MobileReportsViewModel.GuildScheduledEventPreview eventPreviewElement = viewState.getEventPreviewElement();
         ViewReportsMenuNodeBinding viewReportsMenuNodeBinding = this.binding;
-        p2 p2Var = viewReportsMenuNodeBinding.f2206b;
+        ViewMobileReportsChannelPreviewBinding viewMobileReportsChannelPreviewBinding = viewReportsMenuNodeBinding.f15530b;
         if (eventPreviewElement == null) {
-            MaterialCardView materialCardView = viewReportsMenuNodeBinding.i;
-            m.checkNotNullExpressionValue(materialCardView, "binding.mobileReportsNodeChannelPreview");
+            MaterialCardView materialCardView = viewReportsMenuNodeBinding.f15537i;
+            Intrinsics3.checkNotNullExpressionValue(materialCardView, "binding.mobileReportsNodeChannelPreview");
             materialCardView.setVisibility(8);
             return;
         }
-        TextView textView = p2Var.c;
-        m.checkNotNullExpressionValue(textView, "kicker");
+        TextView textView = viewMobileReportsChannelPreviewBinding.f1132c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "kicker");
         textView.setText(eventPreviewElement.getGuild().getName());
-        LinkifiedTextView linkifiedTextView = p2Var.d;
-        m.checkNotNullExpressionValue(linkifiedTextView, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        LinkifiedTextView linkifiedTextView = viewMobileReportsChannelPreviewBinding.f1133d;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         linkifiedTextView.setText(eventPreviewElement.getEvent().getName());
-        p2Var.f179b.a(IconUtils.getForGuild$default(eventPreviewElement.getGuild(), null, false, null, 14, null), eventPreviewElement.getGuild().getShortName());
-        MaterialCardView materialCardView2 = this.binding.i;
-        m.checkNotNullExpressionValue(materialCardView2, "binding.mobileReportsNodeChannelPreview");
+        viewMobileReportsChannelPreviewBinding.f1131b.m8545a(IconUtils.getForGuild$default(eventPreviewElement.getGuild(), null, false, null, 14, null), eventPreviewElement.getGuild().getShortName());
+        MaterialCardView materialCardView2 = this.binding.f15537i;
+        Intrinsics3.checkNotNullExpressionValue(materialCardView2, "binding.mobileReportsNodeChannelPreview");
         materialCardView2.setVisibility(0);
     }
 
@@ -339,55 +338,55 @@ public final class ReportsMenuNode extends ConstraintLayout {
         MobileReportsViewModel.MessagePreview messagePreviewElement = viewState.getMessagePreviewElement();
         ViewReportsMenuNodeBinding viewReportsMenuNodeBinding = this.binding;
         if (messagePreviewElement == null) {
-            z4 z4Var = viewReportsMenuNodeBinding.d;
-            m.checkNotNullExpressionValue(z4Var, "mobileReportsMessagePreview");
-            ConstraintLayout constraintLayout = z4Var.a;
-            m.checkNotNullExpressionValue(constraintLayout, "mobileReportsMessagePreview.root");
+            WidgetChatListAdapterItemSingleLineMessagePreviewBinding widgetChatListAdapterItemSingleLineMessagePreviewBinding = viewReportsMenuNodeBinding.f15532d;
+            Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemSingleLineMessagePreviewBinding, "mobileReportsMessagePreview");
+            ConstraintLayout constraintLayout = widgetChatListAdapterItemSingleLineMessagePreviewBinding.f1444a;
+            Intrinsics3.checkNotNullExpressionValue(constraintLayout, "mobileReportsMessagePreview.root");
             constraintLayout.setVisibility(8);
             return;
         }
-        TextView textView = viewReportsMenuNodeBinding.d.e;
-        m.checkNotNullExpressionValue(textView, "mobileReportsMessagePrev…atListAdapterItemTextName");
+        TextView textView = viewReportsMenuNodeBinding.f15532d.f1448e;
+        Intrinsics3.checkNotNullExpressionValue(textView, "mobileReportsMessagePrev…atListAdapterItemTextName");
         textView.setText(messagePreviewElement.getAuthorName());
-        viewReportsMenuNodeBinding.d.e.setTextColor(messagePreviewElement.getAuthorNameColor());
-        SimpleDraweeView simpleDraweeView = viewReportsMenuNodeBinding.d.d;
-        m.checkNotNullExpressionValue(simpleDraweeView, "mobileReportsMessagePrev…ListAdapterItemTextAvatar");
-        IconUtils.setIcon$default(simpleDraweeView, messagePreviewElement.getAuthor(), R.dimen.avatar_size_small, null, null, null, 56, null);
-        viewReportsMenuNodeBinding.d.c.setDraweeSpanStringBuilder(messagePreviewElement.getText());
-        ImageView imageView = viewReportsMenuNodeBinding.d.f241b;
-        m.checkNotNullExpressionValue(imageView, "mobileReportsMessagePrev…terItemChatAttachmentIcon");
+        viewReportsMenuNodeBinding.f15532d.f1448e.setTextColor(messagePreviewElement.getAuthorNameColor());
+        SimpleDraweeView simpleDraweeView = viewReportsMenuNodeBinding.f15532d.f1447d;
+        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "mobileReportsMessagePrev…ListAdapterItemTextAvatar");
+        IconUtils.setIcon$default(simpleDraweeView, messagePreviewElement.getAuthor(), C5419R.dimen.avatar_size_small, null, null, null, 56, null);
+        viewReportsMenuNodeBinding.f15532d.f1446c.setDraweeSpanStringBuilder(messagePreviewElement.getText());
+        ImageView imageView = viewReportsMenuNodeBinding.f15532d.f1445b;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "mobileReportsMessagePrev…terItemChatAttachmentIcon");
         imageView.setVisibility(messagePreviewElement.getHasEmbeds() ? 0 : 8);
-        z4 z4Var2 = viewReportsMenuNodeBinding.d;
-        m.checkNotNullExpressionValue(z4Var2, "mobileReportsMessagePreview");
-        ConstraintLayout constraintLayout2 = z4Var2.a;
-        m.checkNotNullExpressionValue(constraintLayout2, "mobileReportsMessagePreview.root");
+        WidgetChatListAdapterItemSingleLineMessagePreviewBinding widgetChatListAdapterItemSingleLineMessagePreviewBinding2 = viewReportsMenuNodeBinding.f15532d;
+        Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemSingleLineMessagePreviewBinding2, "mobileReportsMessagePreview");
+        ConstraintLayout constraintLayout2 = widgetChatListAdapterItemSingleLineMessagePreviewBinding2.f1444a;
+        Intrinsics3.checkNotNullExpressionValue(constraintLayout2, "mobileReportsMessagePreview.root");
         constraintLayout2.setVisibility(0);
     }
 
     private final void setupSuccess(boolean showSuccess) {
-        ImageView imageView = this.binding.q;
-        m.checkNotNullExpressionValue(imageView, "binding.mobileReportsNodeSuccessShield");
+        ImageView imageView = this.binding.f15545q;
+        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.mobileReportsNodeSuccessShield");
         imageView.setVisibility(showSuccess ? 0 : 8);
     }
 
     private final void setupTextElements(MobileReportsViewModel.NodeState viewState) {
-        TextView textView = this.binding.m;
-        m.checkNotNullExpressionValue(textView, "binding.mobileReportsNodeHeader");
-        textView.setText(b.l(viewState.getNode().getHeader(), new Object[0], null, 2));
+        TextView textView = this.binding.f15541m;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.mobileReportsNodeHeader");
+        textView.setText(FormatUtils.m220l(viewState.getNode().getHeader(), new Object[0], null, 2));
         String subheader = viewState.getNode().getSubheader();
-        LinkifiedTextView linkifiedTextView = this.binding.p;
-        m.checkNotNullExpressionValue(linkifiedTextView, "binding.mobileReportsNodeSubheader");
+        LinkifiedTextView linkifiedTextView = this.binding.f15544p;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.mobileReportsNodeSubheader");
         linkifiedTextView.setVisibility(subheader != null ? 0 : 8);
-        LinkifiedTextView linkifiedTextView2 = this.binding.p;
-        m.checkNotNullExpressionValue(linkifiedTextView2, "binding.mobileReportsNodeSubheader");
-        b.o(linkifiedTextView2, subheader, new Object[0], null, 4);
+        LinkifiedTextView linkifiedTextView2 = this.binding.f15544p;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView2, "binding.mobileReportsNodeSubheader");
+        FormatUtils.m223o(linkifiedTextView2, subheader, new Object[0], null, 4);
         String info = viewState.getNode().getInfo();
-        MaterialCardView materialCardView = this.binding.n;
-        m.checkNotNullExpressionValue(materialCardView, "binding.mobileReportsNodeInfoBox");
+        MaterialCardView materialCardView = this.binding.f15542n;
+        Intrinsics3.checkNotNullExpressionValue(materialCardView, "binding.mobileReportsNodeInfoBox");
         materialCardView.setVisibility(info != null ? 0 : 8);
-        TextView textView2 = this.binding.o;
-        m.checkNotNullExpressionValue(textView2, "binding.mobileReportsNodeInfoText");
-        b.o(textView2, info, new Object[0], null, 4);
+        TextView textView2 = this.binding.f15543o;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.mobileReportsNodeInfoText");
+        FormatUtils.m223o(textView2, info, new Object[0], null, 4);
     }
 
     public final Function0<Unit> getHandleBlock() {
@@ -436,7 +435,7 @@ public final class ReportsMenuNode extends ConstraintLayout {
     }
 
     public final void setup(MobileReportsViewModel.NodeState viewState) {
-        m.checkNotNullParameter(viewState, "viewState");
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
         setupSuccess(viewState.getSuccessElement());
         setupMessagePreview(viewState);
         setupChannelPreview(viewState);
@@ -454,10 +453,10 @@ public final class ReportsMenuNode extends ConstraintLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReportsMenuNode(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        ViewReportsMenuNodeBinding viewReportsMenuNodeBindingA = ViewReportsMenuNodeBinding.a(LayoutInflater.from(getContext()), this, true);
-        m.checkNotNullExpressionValue(viewReportsMenuNodeBindingA, "ViewReportsMenuNodeBindi…rom(context), this, true)");
-        this.binding = viewReportsMenuNodeBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        ViewReportsMenuNodeBinding viewReportsMenuNodeBindingM8401a = ViewReportsMenuNodeBinding.m8401a(LayoutInflater.from(getContext()), this, true);
+        Intrinsics3.checkNotNullExpressionValue(viewReportsMenuNodeBindingM8401a, "ViewReportsMenuNodeBindi…rom(context), this, true)");
+        this.binding = viewReportsMenuNodeBindingM8401a;
     }
 
     public /* synthetic */ ReportsMenuNode(Context context, AttributeSet attributeSet, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -471,9 +470,9 @@ public final class ReportsMenuNode extends ConstraintLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReportsMenuNode(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        m.checkNotNullParameter(context, "context");
-        ViewReportsMenuNodeBinding viewReportsMenuNodeBindingA = ViewReportsMenuNodeBinding.a(LayoutInflater.from(getContext()), this, true);
-        m.checkNotNullExpressionValue(viewReportsMenuNodeBindingA, "ViewReportsMenuNodeBindi…rom(context), this, true)");
-        this.binding = viewReportsMenuNodeBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        ViewReportsMenuNodeBinding viewReportsMenuNodeBindingM8401a = ViewReportsMenuNodeBinding.m8401a(LayoutInflater.from(getContext()), this, true);
+        Intrinsics3.checkNotNullExpressionValue(viewReportsMenuNodeBindingM8401a, "ViewReportsMenuNodeBindi…rom(context), this, true)");
+        this.binding = viewReportsMenuNodeBindingM8401a;
     }
 }

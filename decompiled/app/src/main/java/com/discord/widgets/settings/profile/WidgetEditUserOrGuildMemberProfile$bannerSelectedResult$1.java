@@ -1,13 +1,13 @@
 package com.discord.widgets.settings.profile;
 
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
 /* loaded from: classes2.dex */
-public final class WidgetEditUserOrGuildMemberProfile$bannerSelectedResult$1 extends o implements Function1<String, Unit> {
+public final class WidgetEditUserOrGuildMemberProfile$bannerSelectedResult$1 extends Lambda implements Function1<String, Unit> {
     public static final WidgetEditUserOrGuildMemberProfile$bannerSelectedResult$1 INSTANCE = new WidgetEditUserOrGuildMemberProfile$bannerSelectedResult$1();
 
     public WidgetEditUserOrGuildMemberProfile$bannerSelectedResult$1() {
@@ -17,11 +17,11 @@ public final class WidgetEditUserOrGuildMemberProfile$bannerSelectedResult$1 ext
     @Override // kotlin.jvm.functions.Function1
     public /* bridge */ /* synthetic */ Unit invoke(String str) {
         invoke2(str);
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str) {
-        m.checkNotNullParameter(str, "it");
+        Intrinsics3.checkNotNullParameter(str, "it");
     }
 }

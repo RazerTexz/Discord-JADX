@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAppFirstLogin.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAppFirstLogin implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackAppFirstLogin implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence platform = null;
     private final transient String analyticsSchemaTypeName = "app_first_login";
@@ -21,7 +21,7 @@ public final /* data */ class TrackAppFirstLogin implements AnalyticsSchema, Tra
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackAppFirstLogin) && m.areEqual(this.platform, ((TrackAppFirstLogin) other).platform);
+            return (other instanceof TrackAppFirstLogin) && Intrinsics3.areEqual(this.platform, ((TrackAppFirstLogin) other).platform);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackAppFirstLogin implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        return a.E(a.U("TrackAppFirstLogin(platform="), this.platform, ")");
+        return outline.m817E(outline.m833U("TrackAppFirstLogin(platform="), this.platform, ")");
     }
 }

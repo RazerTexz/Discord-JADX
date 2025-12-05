@@ -1,0 +1,20 @@
+package p007b.p225i.p361c.p398s;
+
+import com.google.firebase.iid.Registrar;
+import p007b.p225i.p361c.p368l.ComponentContainer;
+import p007b.p225i.p361c.p368l.ComponentFactory;
+
+/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* renamed from: b.i.c.s.r */
+/* loaded from: classes3.dex */
+public final /* synthetic */ class C4827r implements ComponentFactory {
+
+    /* renamed from: a */
+    public static final ComponentFactory f12890a = new C4827r();
+
+    @Override // p007b.p225i.p361c.p368l.ComponentFactory
+    /* renamed from: a */
+    public final Object mo6341a(ComponentContainer componentContainer) {
+        return Registrar.lambda$getComponents$0$Registrar(componentContainer);
+    }
+}

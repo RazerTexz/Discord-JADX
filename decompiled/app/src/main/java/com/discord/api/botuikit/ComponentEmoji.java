@@ -1,9 +1,9 @@
 package com.discord.api.botuikit;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.io.Serializable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ComponentEmoji.kt */
 /* loaded from: classes.dex */
@@ -35,7 +35,7 @@ public final /* data */ class ComponentEmoji implements Serializable {
             return false;
         }
         ComponentEmoji componentEmoji = (ComponentEmoji) other;
-        return m.areEqual(this.id, componentEmoji.id) && m.areEqual(this.name, componentEmoji.name) && m.areEqual(this.animated, componentEmoji.animated);
+        return Intrinsics3.areEqual(this.id, componentEmoji.id) && Intrinsics3.areEqual(this.name, componentEmoji.name) && Intrinsics3.areEqual(this.animated, componentEmoji.animated);
     }
 
     public int hashCode() {
@@ -48,11 +48,11 @@ public final /* data */ class ComponentEmoji implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ComponentEmoji(id=");
-        sbU.append(this.id);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", animated=");
-        return a.D(sbU, this.animated, ")");
+        StringBuilder sbM833U = outline.m833U("ComponentEmoji(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", animated=");
+        return outline.m816D(sbM833U, this.animated, ")");
     }
 }

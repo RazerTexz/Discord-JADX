@@ -1,6 +1,6 @@
 package com.discord.utilities.premium;
 
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: GuildBoostTierAmounts.kt */
 /* loaded from: classes2.dex */
@@ -75,11 +75,11 @@ public final /* data */ class GuildBoostTierAmounts {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildBoostTierAmounts(tier1Boosts=");
-        sbU.append(this.tier1Boosts);
-        sbU.append(", tier2Boosts=");
-        sbU.append(this.tier2Boosts);
-        sbU.append(", tier3Boosts=");
-        return a.B(sbU, this.tier3Boosts, ")");
+        StringBuilder sbM833U = outline.m833U("GuildBoostTierAmounts(tier1Boosts=");
+        sbM833U.append(this.tier1Boosts);
+        sbM833U.append(", tier2Boosts=");
+        sbM833U.append(this.tier2Boosts);
+        sbM833U.append(", tier3Boosts=");
+        return outline.m814B(sbM833U, this.tier3Boosts, ")");
     }
 }

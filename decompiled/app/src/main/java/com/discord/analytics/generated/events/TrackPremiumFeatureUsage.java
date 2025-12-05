@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackSourceMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPremiumFeatureUsage.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumFeatureUsage implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackSourceMetadataReceiver {
+public final /* data */ class TrackPremiumFeatureUsage implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackSourceMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackSourceMetadata trackSourceMetadata;
@@ -39,7 +39,7 @@ public final /* data */ class TrackPremiumFeatureUsage implements AnalyticsSchem
             return false;
         }
         TrackPremiumFeatureUsage trackPremiumFeatureUsage = (TrackPremiumFeatureUsage) other;
-        return m.areEqual(this.featureName, trackPremiumFeatureUsage.featureName) && m.areEqual(this.featureTier, trackPremiumFeatureUsage.featureTier) && m.areEqual(this.guildId, trackPremiumFeatureUsage.guildId) && m.areEqual(this.rtcConnectionId, trackPremiumFeatureUsage.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackPremiumFeatureUsage.mediaSessionId) && m.areEqual(this.inOverlay, trackPremiumFeatureUsage.inOverlay) && m.areEqual(this.applicationName, trackPremiumFeatureUsage.applicationName);
+        return Intrinsics3.areEqual(this.featureName, trackPremiumFeatureUsage.featureName) && Intrinsics3.areEqual(this.featureTier, trackPremiumFeatureUsage.featureTier) && Intrinsics3.areEqual(this.guildId, trackPremiumFeatureUsage.guildId) && Intrinsics3.areEqual(this.rtcConnectionId, trackPremiumFeatureUsage.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackPremiumFeatureUsage.mediaSessionId) && Intrinsics3.areEqual(this.inOverlay, trackPremiumFeatureUsage.inOverlay) && Intrinsics3.areEqual(this.applicationName, trackPremiumFeatureUsage.applicationName);
     }
 
     public int hashCode() {
@@ -60,19 +60,19 @@ public final /* data */ class TrackPremiumFeatureUsage implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPremiumFeatureUsage(featureName=");
-        sbU.append(this.featureName);
-        sbU.append(", featureTier=");
-        sbU.append(this.featureTier);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", rtcConnectionId=");
-        sbU.append(this.rtcConnectionId);
-        sbU.append(", mediaSessionId=");
-        sbU.append(this.mediaSessionId);
-        sbU.append(", inOverlay=");
-        sbU.append(this.inOverlay);
-        sbU.append(", applicationName=");
-        return a.E(sbU, this.applicationName, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPremiumFeatureUsage(featureName=");
+        sbM833U.append(this.featureName);
+        sbM833U.append(", featureTier=");
+        sbM833U.append(this.featureTier);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", rtcConnectionId=");
+        sbM833U.append(this.rtcConnectionId);
+        sbM833U.append(", mediaSessionId=");
+        sbM833U.append(this.mediaSessionId);
+        sbM833U.append(", inOverlay=");
+        sbM833U.append(this.inOverlay);
+        sbM833U.append(", applicationName=");
+        return outline.m817E(sbM833U, this.applicationName, ")");
     }
 }

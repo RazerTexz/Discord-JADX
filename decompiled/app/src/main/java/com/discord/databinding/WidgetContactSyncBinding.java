@@ -4,56 +4,63 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.j0;
-import b.a.i.k0;
-import b.a.i.l0;
-import b.a.i.m0;
-import b.a.i.n0;
-import b.a.i.p0;
 import com.discord.app.AppViewFlipper;
+import p007b.p008a.p025i.LayoutContactSyncAddPhoneBinding;
+import p007b.p008a.p025i.LayoutContactSyncLandingBinding;
+import p007b.p008a.p025i.LayoutContactSyncNameInputBinding;
+import p007b.p008a.p025i.LayoutContactSyncSuggestionsBinding;
+import p007b.p008a.p025i.LayoutContactSyncSuggestionsEmptyBinding;
+import p007b.p008a.p025i.LayoutContactSyncVerifyPhoneBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetContactSyncBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f16409a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final j0 f2355b;
+    public final LayoutContactSyncAddPhoneBinding f16410b;
 
+    /* renamed from: c */
     @NonNull
-    public final m0 c;
+    public final LayoutContactSyncSuggestionsBinding f16411c;
 
+    /* renamed from: d */
     @NonNull
-    public final n0 d;
+    public final LayoutContactSyncSuggestionsEmptyBinding f16412d;
 
+    /* renamed from: e */
     @NonNull
-    public final k0 e;
+    public final LayoutContactSyncLandingBinding f16413e;
 
+    /* renamed from: f */
     @NonNull
-    public final l0 f;
+    public final LayoutContactSyncNameInputBinding f16414f;
 
+    /* renamed from: g */
     @NonNull
-    public final p0 g;
+    public final LayoutContactSyncVerifyPhoneBinding f16415g;
 
+    /* renamed from: h */
     @NonNull
-    public final AppViewFlipper h;
+    public final AppViewFlipper f16416h;
 
-    public WidgetContactSyncBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull j0 j0Var, @NonNull m0 m0Var, @NonNull n0 n0Var, @NonNull k0 k0Var, @NonNull l0 l0Var, @NonNull p0 p0Var, @NonNull AppViewFlipper appViewFlipper) {
-        this.a = coordinatorLayout;
-        this.f2355b = j0Var;
-        this.c = m0Var;
-        this.d = n0Var;
-        this.e = k0Var;
-        this.f = l0Var;
-        this.g = p0Var;
-        this.h = appViewFlipper;
+    public WidgetContactSyncBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LayoutContactSyncAddPhoneBinding layoutContactSyncAddPhoneBinding, @NonNull LayoutContactSyncSuggestionsBinding layoutContactSyncSuggestionsBinding, @NonNull LayoutContactSyncSuggestionsEmptyBinding layoutContactSyncSuggestionsEmptyBinding, @NonNull LayoutContactSyncLandingBinding layoutContactSyncLandingBinding, @NonNull LayoutContactSyncNameInputBinding layoutContactSyncNameInputBinding, @NonNull LayoutContactSyncVerifyPhoneBinding layoutContactSyncVerifyPhoneBinding, @NonNull AppViewFlipper appViewFlipper) {
+        this.f16409a = coordinatorLayout;
+        this.f16410b = layoutContactSyncAddPhoneBinding;
+        this.f16411c = layoutContactSyncSuggestionsBinding;
+        this.f16412d = layoutContactSyncSuggestionsEmptyBinding;
+        this.f16413e = layoutContactSyncLandingBinding;
+        this.f16414f = layoutContactSyncNameInputBinding;
+        this.f16415g = layoutContactSyncVerifyPhoneBinding;
+        this.f16416h = appViewFlipper;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16409a;
     }
 }

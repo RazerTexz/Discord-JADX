@@ -1,6 +1,6 @@
 package com.discord.utilities.logging;
 
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: LoggingProvider.kt */
 /* loaded from: classes2.dex */
@@ -14,13 +14,13 @@ public final class LoggingProvider {
     public final Logger get() {
         Logger logger2 = logger;
         if (logger2 == null) {
-            m.throwUninitializedPropertyAccessException("logger");
+            Intrinsics3.throwUninitializedPropertyAccessException("logger");
         }
         return logger2;
     }
 
     public final void init(Logger logger2) {
-        m.checkNotNullParameter(logger2, "logger");
+        Intrinsics3.checkNotNullParameter(logger2, "logger");
         logger = logger2;
     }
 }

@@ -1,45 +1,45 @@
 package com.discord.widgets.chat.input.models;
 
-import b.d.b.a.a;
-import d0.z.d.m;
-import kotlin.ranges.IntRange;
+import kotlin.ranges.Ranges2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: OptionRange.kt */
 /* loaded from: classes2.dex */
 public final /* data */ class OptionRange {
-    private final IntRange param;
-    private final IntRange value;
+    private final Ranges2 param;
+    private final Ranges2 value;
 
-    public OptionRange(IntRange intRange, IntRange intRange2) {
-        m.checkNotNullParameter(intRange, "param");
-        m.checkNotNullParameter(intRange2, "value");
-        this.param = intRange;
-        this.value = intRange2;
+    public OptionRange(Ranges2 ranges2, Ranges2 ranges22) {
+        Intrinsics3.checkNotNullParameter(ranges2, "param");
+        Intrinsics3.checkNotNullParameter(ranges22, "value");
+        this.param = ranges2;
+        this.value = ranges22;
     }
 
-    public static /* synthetic */ OptionRange copy$default(OptionRange optionRange, IntRange intRange, IntRange intRange2, int i, Object obj) {
+    public static /* synthetic */ OptionRange copy$default(OptionRange optionRange, Ranges2 ranges2, Ranges2 ranges22, int i, Object obj) {
         if ((i & 1) != 0) {
-            intRange = optionRange.param;
+            ranges2 = optionRange.param;
         }
         if ((i & 2) != 0) {
-            intRange2 = optionRange.value;
+            ranges22 = optionRange.value;
         }
-        return optionRange.copy(intRange, intRange2);
+        return optionRange.copy(ranges2, ranges22);
     }
 
     /* renamed from: component1, reason: from getter */
-    public final IntRange getParam() {
+    public final Ranges2 getParam() {
         return this.param;
     }
 
     /* renamed from: component2, reason: from getter */
-    public final IntRange getValue() {
+    public final Ranges2 getValue() {
         return this.value;
     }
 
-    public final OptionRange copy(IntRange param, IntRange value) {
-        m.checkNotNullParameter(param, "param");
-        m.checkNotNullParameter(value, "value");
+    public final OptionRange copy(Ranges2 param, Ranges2 value) {
+        Intrinsics3.checkNotNullParameter(param, "param");
+        Intrinsics3.checkNotNullParameter(value, "value");
         return new OptionRange(param, value);
     }
 
@@ -51,30 +51,30 @@ public final /* data */ class OptionRange {
             return false;
         }
         OptionRange optionRange = (OptionRange) other;
-        return m.areEqual(this.param, optionRange.param) && m.areEqual(this.value, optionRange.value);
+        return Intrinsics3.areEqual(this.param, optionRange.param) && Intrinsics3.areEqual(this.value, optionRange.value);
     }
 
-    public final IntRange getParam() {
+    public final Ranges2 getParam() {
         return this.param;
     }
 
-    public final IntRange getValue() {
+    public final Ranges2 getValue() {
         return this.value;
     }
 
     public int hashCode() {
-        IntRange intRange = this.param;
-        int iHashCode = (intRange != null ? intRange.hashCode() : 0) * 31;
-        IntRange intRange2 = this.value;
-        return iHashCode + (intRange2 != null ? intRange2.hashCode() : 0);
+        Ranges2 ranges2 = this.param;
+        int iHashCode = (ranges2 != null ? ranges2.hashCode() : 0) * 31;
+        Ranges2 ranges22 = this.value;
+        return iHashCode + (ranges22 != null ? ranges22.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("OptionRange(param=");
-        sbU.append(this.param);
-        sbU.append(", value=");
-        sbU.append(this.value);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("OptionRange(param=");
+        sbM833U.append(this.param);
+        sbM833U.append(", value=");
+        sbM833U.append(this.value);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

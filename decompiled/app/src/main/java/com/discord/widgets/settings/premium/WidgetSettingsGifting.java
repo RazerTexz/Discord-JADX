@@ -15,15 +15,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.a.a0.a;
-import b.a.a.a0.c;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.a.k.b;
-import b.d.b.a.a;
 import com.android.billingclient.api.SkuDetails;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.premium.SubscriptionPlan;
 import com.discord.app.AppFragment;
 import com.discord.app.AppViewFlipper;
@@ -35,24 +28,24 @@ import com.discord.models.domain.ModelGift;
 import com.discord.models.domain.ModelSku;
 import com.discord.stores.StoreGifting;
 import com.discord.stores.StoreStream;
-import com.discord.utilities.KotlinExtensionsKt;
+import com.discord.utilities.KotlinExtensions;
 import com.discord.utilities.accessibility.AccessibilityUtils;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.billing.GooglePlayInAppSku;
-import com.discord.utilities.billing.GooglePlayInAppSkuKt;
+import com.discord.utilities.billing.GooglePlayInAppSku2;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.dimmer.DimmerView;
 import com.discord.utilities.drawable.DrawableCompat;
 import com.discord.utilities.gifting.GiftingUtils;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.premium.BlockRussianPurchasesUtils;
 import com.discord.utilities.recycler.SpaceBetweenItemDecoration;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.premium.GiftSelectView;
 import com.discord.widgets.settings.premium.ClaimStatus;
 import com.discord.widgets.settings.premium.SettingsGiftingViewModel;
@@ -60,16 +53,6 @@ import com.discord.widgets.settings.premium.WidgetOutboundPromoTerms;
 import com.discord.widgets.settings.premium.WidgetSettingsGiftingAdapter;
 import com.discord.widgets.settings.premium.WidgetSettingsPremium;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g0.t;
-import d0.t.h0;
-import d0.t.n;
-import d0.t.p;
-import d0.t.u;
-import d0.t.z;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -86,12 +69,32 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p008a.p009a.p011a0.GiftPurchasedDialog;
+import p007b.p008a.p009a.p011a0.WidgetGiftAcceptDialog;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p008a.p062y.p066m0.GiftSelectView2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.IndexedValue;
+import p507d0.p580t.Iterators7;
+import p507d0.p580t.Maps6;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: WidgetSettingsGifting.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsGifting extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsGifting.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsGiftingBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsGifting.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsGiftingBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -121,13 +124,13 @@ public final class WidgetSettingsGifting extends AppFragment {
         }
 
         public final void launch(Context context, Traits.Location location) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             if (BlockRussianPurchasesUtils.INSTANCE.getINSTANCE().showDialog()) {
                 return;
             }
             Intent intent = new Intent();
             intent.putExtra("com.discord.intent.extra.EXTRA_LOCATION", location);
-            j.d(context, WidgetSettingsGifting.class, intent);
+            AppScreen2.m156d(context, WidgetSettingsGifting.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -136,16 +139,16 @@ public final class WidgetSettingsGifting extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function2<Long, Long, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$1 */
+    public static final class C99021 extends Lambda implements Function2<Long, Long, Unit> {
+        public C99021() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Long l, Long l2) {
             invoke(l.longValue(), l2);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j, Long l) {
@@ -154,21 +157,21 @@ public final class WidgetSettingsGifting extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<String, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$2 */
+    public static final class C99032 extends Lambda implements Function1<String, Unit> {
+        public C99032() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            m.checkNotNullParameter(str, "giftCode");
+            Intrinsics3.checkNotNullParameter(str, "giftCode");
             Context context = WidgetSettingsGifting.this.getContext();
             Object systemService = context != null ? context.getSystemService("clipboard") : null;
             ClipboardManager clipboardManager = (ClipboardManager) (systemService instanceof ClipboardManager ? systemService : null);
@@ -180,40 +183,40 @@ public final class WidgetSettingsGifting extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<ModelGift, Unit> {
-        public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$3 */
+    public static final class C99043 extends Lambda implements Function1<ModelGift, Unit> {
+        public static final C99043 INSTANCE = new C99043();
 
-        public AnonymousClass3() {
+        public C99043() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelGift modelGift) {
             invoke2(modelGift);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
-            m.checkNotNullParameter(modelGift, "gift");
+            Intrinsics3.checkNotNullParameter(modelGift, "gift");
             StoreStream.INSTANCE.getGifting().revokeGiftCode(modelGift);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function2<Long, Long, Unit> {
-        public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$4 */
+    public static final class C99054 extends Lambda implements Function2<Long, Long, Unit> {
+        public static final C99054 INSTANCE = new C99054();
 
-        public AnonymousClass4() {
+        public C99054() {
             super(2);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Long l, Long l2) {
             invoke(l.longValue(), l2);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j, Long l) {
@@ -222,36 +225,36 @@ public final class WidgetSettingsGifting extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$handleEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ClaimStatus.Claimed, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$handleEvent$1 */
+    public static final class C99061 extends Lambda implements Function1<ClaimStatus.Claimed, Unit> {
+        public C99061() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ClaimStatus.Claimed claimed) {
             invoke2(claimed);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ClaimStatus.Claimed claimed) {
-            m.checkNotNullParameter(claimed, "it");
+            Intrinsics3.checkNotNullParameter(claimed, "it");
             WidgetSettingsGifting.access$getViewModel$p(WidgetSettingsGifting.this).handleClaimedPromo(claimed);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$handleGiftPurchaseEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$handleGiftPurchaseEvent$1 */
+    public static final class C99071 extends Lambda implements Function0<Unit> {
+        public C99071() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -261,9 +264,9 @@ public final class WidgetSettingsGifting extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$1 */
+    public static final class ViewOnClickListenerC99081 implements View.OnClickListener {
+        public static final ViewOnClickListenerC99081 INSTANCE = new ViewOnClickListenerC99081();
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
@@ -272,75 +275,75 @@ public final class WidgetSettingsGifting extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<TextView, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$2 */
+    public static final class C99092 extends Lambda implements Function1<TextView, Unit> {
+        public C99092() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(TextView textView) {
             invoke2(textView);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            m.checkNotNullParameter(textView, "it");
-            TextInputLayout textInputLayout = WidgetSettingsGifting.access$getBinding$p(WidgetSettingsGifting.this).k;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.settingsGiftingGiftCodeInputWrap");
-            WidgetSettingsGifting.access$getViewModel$p(WidgetSettingsGifting.this).redeemGiftCode(t.replace$default(t.replace$default(ViewExtensions.getTextOrEmpty(textInputLayout), "https://discord.gift/", "", false, 4, (Object) null), "-", "", false, 4, (Object) null), WidgetSettingsGifting.this);
+            Intrinsics3.checkNotNullParameter(textView, "it");
+            TextInputLayout textInputLayout = WidgetSettingsGifting.access$getBinding$p(WidgetSettingsGifting.this).f17963k;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.settingsGiftingGiftCodeInputWrap");
+            WidgetSettingsGifting.access$getViewModel$p(WidgetSettingsGifting.this).redeemGiftCode(StringsJVM.replace$default(StringsJVM.replace$default(ViewExtensions.getTextOrEmpty(textInputLayout), "https://discord.gift/", "", false, 4, (Object) null), "-", "", false, 4, (Object) null), WidgetSettingsGifting.this);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$3, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass3 extends k implements Function1<SettingsGiftingViewModel.OutboundPromoItem, Unit> {
-        public AnonymousClass3(SettingsGiftingViewModel settingsGiftingViewModel) {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$3 */
+    public static final /* synthetic */ class C99103 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.OutboundPromoItem, Unit> {
+        public C99103(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(1, settingsGiftingViewModel, SettingsGiftingViewModel.class, "handlePromoMoreDetailsClicked", "handlePromoMoreDetailsClicked(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$OutboundPromoItem;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(SettingsGiftingViewModel.OutboundPromoItem outboundPromoItem) {
             invoke2(outboundPromoItem);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.OutboundPromoItem outboundPromoItem) {
-            m.checkNotNullParameter(outboundPromoItem, "p1");
+            Intrinsics3.checkNotNullParameter(outboundPromoItem, "p1");
             ((SettingsGiftingViewModel) this.receiver).handlePromoMoreDetailsClicked(outboundPromoItem);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends k implements Function1<SettingsGiftingViewModel.OutboundPromoItem, Unit> {
-        public AnonymousClass4(SettingsGiftingViewModel settingsGiftingViewModel) {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$4 */
+    public static final /* synthetic */ class C99114 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.OutboundPromoItem, Unit> {
+        public C99114(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(1, settingsGiftingViewModel, SettingsGiftingViewModel.class, "handlePromoButtonClicked", "handlePromoButtonClicked(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$OutboundPromoItem;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(SettingsGiftingViewModel.OutboundPromoItem outboundPromoItem) {
             invoke2(outboundPromoItem);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.OutboundPromoItem outboundPromoItem) {
-            m.checkNotNullParameter(outboundPromoItem, "p1");
+            Intrinsics3.checkNotNullParameter(outboundPromoItem, "p1");
             ((SettingsGiftingViewModel) this.receiver).handlePromoButtonClicked(outboundPromoItem);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$7, reason: invalid class name */
-    public static final class AnonymousClass7 extends o implements Function1<RenderContext, Unit> {
-        public static final AnonymousClass7 INSTANCE = new AnonymousClass7();
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$7 */
+    public static final class C99127 extends Lambda implements Function1<RenderContext, Unit> {
+        public static final C99127 INSTANCE = new C99127();
 
         /* compiled from: WidgetSettingsGifting.kt */
         /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$7$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -350,44 +353,44 @@ public final class WidgetSettingsGifting extends AppFragment {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(View view) {
                 invoke2(view);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                m.checkNotNullParameter(view, "view");
+                Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
                 Context context = view.getContext();
-                m.checkNotNullExpressionValue(context, "view.context");
+                Intrinsics3.checkNotNullExpressionValue(context, "view.context");
                 WidgetSettingsPremium.Companion.launch$default(companion, context, 0, null, 4, null);
             }
         }
 
-        public AnonymousClass7() {
+        public C99127() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(RenderContext renderContext) {
             invoke2(renderContext);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            m.checkNotNullParameter(renderContext, "$receiver");
-            renderContext.b("onClick", AnonymousClass1.INSTANCE);
+            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            renderContext.m8423b("onClick", AnonymousClass1.INSTANCE);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$8, reason: invalid class name */
-    public static final class AnonymousClass8 extends o implements Function1<RenderContext, Unit> {
-        public static final AnonymousClass8 INSTANCE = new AnonymousClass8();
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$8 */
+    public static final class C99138 extends Lambda implements Function1<RenderContext, Unit> {
+        public static final C99138 INSTANCE = new C99138();
 
         /* compiled from: WidgetSettingsGifting.kt */
         /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$8$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -397,124 +400,124 @@ public final class WidgetSettingsGifting extends AppFragment {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(View view) {
                 invoke2(view);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                m.checkNotNullParameter(view, "view");
+                Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
                 Context context = view.getContext();
-                m.checkNotNullExpressionValue(context, "view.context");
+                Intrinsics3.checkNotNullExpressionValue(context, "view.context");
                 WidgetSettingsPremium.Companion.launch$default(companion, context, 1, null, 4, null);
             }
         }
 
-        public AnonymousClass8() {
+        public C99138() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(RenderContext renderContext) {
             invoke2(renderContext);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            m.checkNotNullParameter(renderContext, "$receiver");
-            renderContext.b("onClick", AnonymousClass1.INSTANCE);
+            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            renderContext.m8423b("onClick", AnonymousClass1.INSTANCE);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<SettingsGiftingViewModel.ViewState, Unit> {
-        public AnonymousClass1(WidgetSettingsGifting widgetSettingsGifting) {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C99151 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.ViewState, Unit> {
+        public C99151(WidgetSettingsGifting widgetSettingsGifting) {
             super(1, widgetSettingsGifting, WidgetSettingsGifting.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(SettingsGiftingViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "p1");
+            Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetSettingsGifting.access$configureUI((WidgetSettingsGifting) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<SettingsGiftingViewModel.GiftPurchaseEvent, Unit> {
-        public AnonymousClass2(WidgetSettingsGifting widgetSettingsGifting) {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$2 */
+    public static final /* synthetic */ class C99162 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.GiftPurchaseEvent, Unit> {
+        public C99162(WidgetSettingsGifting widgetSettingsGifting) {
             super(1, widgetSettingsGifting, WidgetSettingsGifting.class, "handleGiftPurchaseEvent", "handleGiftPurchaseEvent(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$GiftPurchaseEvent;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(SettingsGiftingViewModel.GiftPurchaseEvent giftPurchaseEvent) {
             invoke2(giftPurchaseEvent);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.GiftPurchaseEvent giftPurchaseEvent) {
-            m.checkNotNullParameter(giftPurchaseEvent, "p1");
+            Intrinsics3.checkNotNullParameter(giftPurchaseEvent, "p1");
             WidgetSettingsGifting.access$handleGiftPurchaseEvent((WidgetSettingsGifting) this.receiver, giftPurchaseEvent);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$3, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass3 extends k implements Function1<SettingsGiftingViewModel.Event, Unit> {
-        public AnonymousClass3(WidgetSettingsGifting widgetSettingsGifting) {
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$3 */
+    public static final /* synthetic */ class C99173 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.Event, Unit> {
+        public C99173(WidgetSettingsGifting widgetSettingsGifting) {
             super(1, widgetSettingsGifting, WidgetSettingsGifting.class, "handleEvent", "handleEvent(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$Event;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(SettingsGiftingViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.Event event) {
-            m.checkNotNullParameter(event, "p1");
+            Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetSettingsGifting.access$handleEvent((WidgetSettingsGifting) this.receiver, event);
         }
     }
 
     /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<String, Unit> {
-        public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
+    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$4 */
+    public static final class C99184 extends Lambda implements Function1<String, Unit> {
+        public static final C99184 INSTANCE = new C99184();
 
-        public AnonymousClass4() {
+        public C99184() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            m.checkNotNullParameter(str, "giftCode");
-            c.INSTANCE.a(str, "Settings - Gifting", 0L);
+            Intrinsics3.checkNotNullParameter(str, "giftCode");
+            WidgetGiftAcceptDialog.INSTANCE.m107a(str, "Settings - Gifting", 0L);
         }
     }
 
     public WidgetSettingsGifting() {
-        super(R.layout.widget_settings_gifting);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsGifting$binding$2.INSTANCE, null, 2, null);
-        WidgetSettingsGifting$viewModel$2 widgetSettingsGifting$viewModel$2 = WidgetSettingsGifting$viewModel$2.INSTANCE;
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(SettingsGiftingViewModel.class), new WidgetSettingsGifting$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetSettingsGifting$viewModel$2));
+        super(C5419R.layout.widget_settings_gifting);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsGifting2.INSTANCE, null, 2, null);
+        WidgetSettingsGifting4 widgetSettingsGifting4 = WidgetSettingsGifting4.INSTANCE;
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(SettingsGiftingViewModel.class), new WidgetSettingsGifting$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetSettingsGifting4));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetSettingsGifting widgetSettingsGifting, SettingsGiftingViewModel.ViewState viewState) {
@@ -545,19 +548,19 @@ public final class WidgetSettingsGifting extends AppFragment {
         if (entries.isEmpty()) {
             return;
         }
-        ModelEntitlement modelEntitlement = (ModelEntitlement) u.first((List) entries);
+        ModelEntitlement modelEntitlement = (ModelEntitlement) _Collections.first((List) entries);
         Set<Long> expandedSkuOrPlanIds = viewState.getExpandedSkuOrPlanIds();
         SubscriptionPlan subscriptionPlan = modelEntitlement.getSubscriptionPlan();
         boolean zContains = expandedSkuOrPlanIds.contains(Long.valueOf(subscriptionPlan != null ? subscriptionPlan.getId() : modelEntitlement.getSku().getId()));
         ModelSku sku = modelEntitlement.getSku();
         SubscriptionPlan subscriptionPlan2 = modelEntitlement.getSubscriptionPlan();
         listItems.add(new WidgetSettingsGiftingAdapter.GiftItem(1, null, null, Boolean.valueOf(zContains), sku, Integer.valueOf(entries.size()), subscriptionPlan2 != null ? Long.valueOf(subscriptionPlan2.getId()) : null, null, null, 390, null));
-        Iterator itWithIndex = p.withIndex(entries.iterator());
+        Iterator itWithIndex = Iterators7.withIndex(entries.iterator());
         boolean z2 = false;
         while (itWithIndex.hasNext()) {
-            z zVar = (z) itWithIndex.next();
-            int iComponent1 = zVar.component1();
-            ModelEntitlement modelEntitlement2 = (ModelEntitlement) zVar.component2();
+            IndexedValue indexedValue = (IndexedValue) itWithIndex.next();
+            int iComponent1 = indexedValue.component1();
+            ModelEntitlement modelEntitlement2 = (ModelEntitlement) indexedValue.component2();
             Map<Long, List<ModelGift>> myPurchasedGifts = viewState.getMyPurchasedGifts();
             SubscriptionPlan subscriptionPlan3 = modelEntitlement2.getSubscriptionPlan();
             List<ModelGift> list = myPurchasedGifts.get(Long.valueOf(subscriptionPlan3 != null ? subscriptionPlan3.getId() : modelEntitlement2.getSkuId()));
@@ -568,72 +571,72 @@ public final class WidgetSettingsGifting extends AppFragment {
                 }
             }
             SubscriptionPlan subscriptionPlan4 = modelEntitlement2.getSubscriptionPlan();
-            listItems.add(new WidgetSettingsGiftingAdapter.GiftItem(2, modelGift, modelEntitlement2, Boolean.valueOf(zContains), null, null, subscriptionPlan4 != null ? Long.valueOf(subscriptionPlan4.getId()) : null, Boolean.valueOf(iComponent1 == entries.size() - 1), Boolean.valueOf(modelGift != null && m.areEqual(modelGift.getCode(), viewState.getLastCopiedCode())), 48, null));
+            listItems.add(new WidgetSettingsGiftingAdapter.GiftItem(2, modelGift, modelEntitlement2, Boolean.valueOf(zContains), null, null, subscriptionPlan4 != null ? Long.valueOf(subscriptionPlan4.getId()) : null, Boolean.valueOf(iComponent1 == entries.size() - 1), Boolean.valueOf(modelGift != null && Intrinsics3.areEqual(modelGift.getCode(), viewState.getLastCopiedCode())), 48, null));
         }
     }
 
     private final void configureUI(SettingsGiftingViewModel.ViewState viewState) {
         if (viewState instanceof SettingsGiftingViewModel.ViewState.Loading) {
-            AppViewFlipper appViewFlipper = getBinding().i;
-            m.checkNotNullExpressionValue(appViewFlipper, "binding.settingsGiftingFlipper");
+            AppViewFlipper appViewFlipper = getBinding().f17961i;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.settingsGiftingFlipper");
             appViewFlipper.setDisplayedChild(0);
             return;
         }
         if (viewState instanceof SettingsGiftingViewModel.ViewState.Failure) {
-            AppViewFlipper appViewFlipper2 = getBinding().i;
-            m.checkNotNullExpressionValue(appViewFlipper2, "binding.settingsGiftingFlipper");
+            AppViewFlipper appViewFlipper2 = getBinding().f17961i;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.settingsGiftingFlipper");
             appViewFlipper2.setDisplayedChild(1);
             return;
         }
         if (viewState instanceof SettingsGiftingViewModel.ViewState.Loaded) {
-            AppViewFlipper appViewFlipper3 = getBinding().i;
-            m.checkNotNullExpressionValue(appViewFlipper3, "binding.settingsGiftingFlipper");
+            AppViewFlipper appViewFlipper3 = getBinding().f17961i;
+            Intrinsics3.checkNotNullExpressionValue(appViewFlipper3, "binding.settingsGiftingFlipper");
             appViewFlipper3.setDisplayedChild(2);
         }
         SettingsGiftingViewModel.ViewState.Loaded loaded = (SettingsGiftingViewModel.ViewState.Loaded) viewState;
         boolean z2 = loaded.getResolvingGiftState() instanceof SettingsGiftingViewModel.ResolvingGiftState.Resolving;
-        CharSequence charSequenceK = loaded.getResolvingGiftState() instanceof SettingsGiftingViewModel.ResolvingGiftState.Error ? b.k(this, R.string.application_entitlement_code_redemption_invalid, new Object[0], null, 4) : null;
-        ProgressBar progressBar = getBinding().j;
-        m.checkNotNullExpressionValue(progressBar, "binding.settingsGiftingGiftCodeInputProgress");
+        CharSequence charSequenceM219k = loaded.getResolvingGiftState() instanceof SettingsGiftingViewModel.ResolvingGiftState.Error ? FormatUtils.m219k(this, C5419R.string.application_entitlement_code_redemption_invalid, new Object[0], null, 4) : null;
+        ProgressBar progressBar = getBinding().f17962j;
+        Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.settingsGiftingGiftCodeInputProgress");
         progressBar.setVisibility(z2 ? 0 : 8);
-        TextInputLayout textInputLayout = getBinding().k;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.settingsGiftingGiftCodeInputWrap");
+        TextInputLayout textInputLayout = getBinding().f17963k;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.settingsGiftingGiftCodeInputWrap");
         ViewExtensions.setEnabledAlpha$default(textInputLayout, !z2, 0.0f, 2, null);
-        TextInputLayout textInputLayout2 = getBinding().k;
-        m.checkNotNullExpressionValue(textInputLayout2, "binding.settingsGiftingGiftCodeInputWrap");
+        TextInputLayout textInputLayout2 = getBinding().f17963k;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.settingsGiftingGiftCodeInputWrap");
         EditText editText = textInputLayout2.getEditText();
         if (editText != null) {
             editText.setInputType(z2 ? 0 : 524288);
         }
-        TextInputLayout textInputLayout3 = getBinding().k;
-        m.checkNotNullExpressionValue(textInputLayout3, "binding.settingsGiftingGiftCodeInputWrap");
-        textInputLayout3.setError(charSequenceK);
+        TextInputLayout textInputLayout3 = getBinding().f17963k;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.settingsGiftingGiftCodeInputWrap");
+        textInputLayout3.setError(charSequenceM219k);
         boolean z3 = !loaded.getOutboundPromos().isEmpty();
-        TextView textView = getBinding().r;
-        m.checkNotNullExpressionValue(textView, "binding.settingsGiftingYourGiftsHeader");
+        TextView textView = getBinding().f17970r;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.settingsGiftingYourGiftsHeader");
         textView.setVisibility(z3 ? 0 : 8);
-        RecyclerView recyclerView = getBinding().f2621s;
-        m.checkNotNullExpressionValue(recyclerView, "binding.settingsGiftingYourGiftsRecycler");
+        RecyclerView recyclerView = getBinding().f17971s;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.settingsGiftingYourGiftsRecycler");
         recyclerView.setVisibility(z3 ? 0 : 8);
         WidgetSettingsGiftingOutboundPromosAdapter widgetSettingsGiftingOutboundPromosAdapter = this.promosAdapter;
         if (widgetSettingsGiftingOutboundPromosAdapter == null) {
-            m.throwUninitializedPropertyAccessException("promosAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("promosAdapter");
         }
         widgetSettingsGiftingOutboundPromosAdapter.submitList(loaded.getOutboundPromos());
         WidgetSettingsGiftingAdapter widgetSettingsGiftingAdapter = this.giftingAdapter;
         if (widgetSettingsGiftingAdapter == null) {
-            m.throwUninitializedPropertyAccessException("giftingAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("giftingAdapter");
         }
-        widgetSettingsGiftingAdapter.configure(generateListItems(loaded), new AnonymousClass1(), new AnonymousClass2(), AnonymousClass3.INSTANCE, AnonymousClass4.INSTANCE);
+        widgetSettingsGiftingAdapter.configure(generateListItems(loaded), new C99021(), new C99032(), C99043.INSTANCE, C99054.INSTANCE);
     }
 
     private final void enableGiftingButtons() {
         Map<GiftSelectView, GooglePlayInAppSku> map = this.chooseGiftViews;
         if (map == null) {
-            m.throwUninitializedPropertyAccessException("chooseGiftViews");
+            Intrinsics3.throwUninitializedPropertyAccessException("chooseGiftViews");
         }
         for (GiftSelectView giftSelectView : map.keySet()) {
-            giftSelectView.binding.c.setOnClickListener(new b.a.y.m0.a(giftSelectView));
+            giftSelectView.binding.f16378c.setOnClickListener(new GiftSelectView2(giftSelectView));
         }
     }
 
@@ -678,55 +681,55 @@ public final class WidgetSettingsGifting extends AppFragment {
             WidgetOutboundPromoTerms.Companion companion = WidgetOutboundPromoTerms.INSTANCE;
             String content = ((SettingsGiftingViewModel.Event.ShowPromoBottomSheet) event).getContent();
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(content, parentFragmentManager);
-            unit = Unit.a;
+            unit = Unit.f27425a;
         } else {
             if (!(event instanceof SettingsGiftingViewModel.Event.ShowPromoDialog)) {
                 throw new NoWhenBranchMatchedException();
             }
-            WidgetClaimOutboundPromo.INSTANCE.showAndRegisterForClaimResult(((SettingsGiftingViewModel.Event.ShowPromoDialog) event).getClaimStatus(), this, new AnonymousClass1());
-            unit = Unit.a;
+            WidgetClaimOutboundPromo.INSTANCE.showAndRegisterForClaimResult(((SettingsGiftingViewModel.Event.ShowPromoDialog) event).getClaimStatus(), this, new C99061());
+            unit = Unit.f27425a;
         }
-        KotlinExtensionsKt.getExhaustive(unit);
+        KotlinExtensions.getExhaustive(unit);
     }
 
     private final void handleGiftPurchaseEvent(SettingsGiftingViewModel.GiftPurchaseEvent event) {
         enableGiftingButtons();
         if (event instanceof SettingsGiftingViewModel.GiftPurchaseEvent.StartGiftPurchase) {
-            DimmerView.setDimmed$default(getBinding().f2620b, true, false, 2, null);
+            DimmerView.setDimmed$default(getBinding().f17954b, true, false, 2, null);
             return;
         }
         if (event instanceof SettingsGiftingViewModel.GiftPurchaseEvent.NotInProgress) {
-            DimmerView.setDimmed$default(getBinding().f2620b, false, false, 2, null);
+            DimmerView.setDimmed$default(getBinding().f17954b, false, false, 2, null);
             return;
         }
         if (event instanceof SettingsGiftingViewModel.GiftPurchaseEvent.ErrorGiftPurchase) {
-            DimmerView.setDimmed$default(getBinding().f2620b, false, false, 2, null);
-            b.a.d.m.i(this, ((SettingsGiftingViewModel.GiftPurchaseEvent.ErrorGiftPurchase) event).getMessage(), 0, 4);
+            DimmerView.setDimmed$default(getBinding().f17954b, false, false, 2, null);
+            AppToast.m171i(this, ((SettingsGiftingViewModel.GiftPurchaseEvent.ErrorGiftPurchase) event).getMessage(), 0, 4);
             return;
         }
         if (event instanceof SettingsGiftingViewModel.GiftPurchaseEvent.CompleteGiftPurchase) {
-            DimmerView.setDimmed$default(getBinding().f2620b, false, false, 2, null);
-            a.Companion companion = b.a.a.a0.a.INSTANCE;
+            DimmerView.setDimmed$default(getBinding().f17954b, false, false, 2, null);
+            GiftPurchasedDialog.Companion companion = GiftPurchasedDialog.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1();
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            C99071 c99071 = new C99071();
             SettingsGiftingViewModel.GiftPurchaseEvent.CompleteGiftPurchase completeGiftPurchase = (SettingsGiftingViewModel.GiftPurchaseEvent.CompleteGiftPurchase) event;
             String skuName = completeGiftPurchase.getSkuName();
             String newGiftCode = completeGiftPurchase.getNewGiftCode();
             Objects.requireNonNull(companion);
-            m.checkNotNullParameter(parentFragmentManager, "fragmentManager");
-            m.checkNotNullParameter(anonymousClass1, "onDismiss");
-            m.checkNotNullParameter(skuName, "skuName");
-            m.checkNotNullParameter(newGiftCode, "giftCode");
-            b.a.a.a0.a aVar = new b.a.a.a0.a();
-            aVar.onDismiss = anonymousClass1;
+            Intrinsics3.checkNotNullParameter(parentFragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(c99071, "onDismiss");
+            Intrinsics3.checkNotNullParameter(skuName, "skuName");
+            Intrinsics3.checkNotNullParameter(newGiftCode, "giftCode");
+            GiftPurchasedDialog giftPurchasedDialog = new GiftPurchasedDialog();
+            giftPurchasedDialog.onDismiss = c99071;
             Bundle bundle = new Bundle();
             bundle.putString("ARG_SKU_NAME", skuName);
             bundle.putString("ARG_GIFT_CODE", newGiftCode);
-            aVar.setArguments(bundle);
-            aVar.show(parentFragmentManager, b.a.a.a0.a.class.getSimpleName());
+            giftPurchasedDialog.setArguments(bundle);
+            giftPurchasedDialog.show(parentFragmentManager, GiftPurchasedDialog.class.getSimpleName());
         }
     }
 
@@ -736,96 +739,96 @@ public final class WidgetSettingsGifting extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        this.chooseGiftViews = h0.mapOf(d0.o.to(getBinding().c, GooglePlayInAppSkuKt.getPremiumTier1Month()), d0.o.to(getBinding().d, GooglePlayInAppSkuKt.getPremiumTier1Year()), d0.o.to(getBinding().e, GooglePlayInAppSkuKt.getPremiumTier2Month()), d0.o.to(getBinding().f, GooglePlayInAppSkuKt.getPremiumTier2Year()));
+        this.chooseGiftViews = Maps6.mapOf(Tuples.m10073to(getBinding().f17955c, GooglePlayInAppSku2.getPremiumTier1Month()), Tuples.m10073to(getBinding().f17956d, GooglePlayInAppSku2.getPremiumTier1Year()), Tuples.m10073to(getBinding().f17957e, GooglePlayInAppSku2.getPremiumTier2Month()), Tuples.m10073to(getBinding().f17958f, GooglePlayInAppSku2.getPremiumTier2Year()));
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
-        getBinding().o.setOnClickListener(AnonymousClass1.INSTANCE);
-        TextInputLayout textInputLayout = getBinding().k;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.settingsGiftingGiftCodeInputWrap");
-        ViewExtensions.setOnImeActionDone$default(textInputLayout, false, new AnonymousClass2(), 1, null);
-        getBinding().k.setErrorTextColor(ColorStateList.valueOf(ColorCompat.getColor(requireContext(), R.color.status_red_500)));
-        WidgetSettingsGiftingOutboundPromosAdapter widgetSettingsGiftingOutboundPromosAdapter = new WidgetSettingsGiftingOutboundPromosAdapter(new AnonymousClass3(getViewModel()), new AnonymousClass4(getViewModel()));
-        RecyclerView recyclerView = getBinding().f2621s;
-        m.checkNotNullExpressionValue(recyclerView, "binding.settingsGiftingYourGiftsRecycler");
+        getBinding().f17967o.setOnClickListener(ViewOnClickListenerC99081.INSTANCE);
+        TextInputLayout textInputLayout = getBinding().f17963k;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.settingsGiftingGiftCodeInputWrap");
+        ViewExtensions.setOnImeActionDone$default(textInputLayout, false, new C99092(), 1, null);
+        getBinding().f17963k.setErrorTextColor(ColorStateList.valueOf(ColorCompat.getColor(requireContext(), C5419R.color.status_red_500)));
+        WidgetSettingsGiftingOutboundPromosAdapter widgetSettingsGiftingOutboundPromosAdapter = new WidgetSettingsGiftingOutboundPromosAdapter(new C99103(getViewModel()), new C99114(getViewModel()));
+        RecyclerView recyclerView = getBinding().f17971s;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.settingsGiftingYourGiftsRecycler");
         recyclerView.setAdapter(widgetSettingsGiftingOutboundPromosAdapter);
         this.promosAdapter = widgetSettingsGiftingOutboundPromosAdapter;
-        RecyclerView recyclerView2 = getBinding().f2621s;
+        RecyclerView recyclerView2 = getBinding().f17971s;
         WidgetSettingsGiftingOutboundPromosAdapter widgetSettingsGiftingOutboundPromosAdapter2 = this.promosAdapter;
         if (widgetSettingsGiftingOutboundPromosAdapter2 == null) {
-            m.throwUninitializedPropertyAccessException("promosAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("promosAdapter");
         }
         recyclerView2.setAdapter(widgetSettingsGiftingOutboundPromosAdapter2);
         Context context = recyclerView2.getContext();
-        m.checkNotNullExpressionValue(context, "context");
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
         RecyclerView.LayoutManager layoutManager = recyclerView2.getLayoutManager();
         Objects.requireNonNull(layoutManager, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
         int orientation = ((LinearLayoutManager) layoutManager).getOrientation();
         WidgetSettingsGiftingOutboundPromosAdapter widgetSettingsGiftingOutboundPromosAdapter3 = this.promosAdapter;
         if (widgetSettingsGiftingOutboundPromosAdapter3 == null) {
-            m.throwUninitializedPropertyAccessException("promosAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("promosAdapter");
         }
         recyclerView2.addItemDecoration(new SpaceBetweenItemDecoration(context, orientation, widgetSettingsGiftingOutboundPromosAdapter3, DimenUtils.dpToPixels(16), 0, 16, null));
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-        RecyclerView recyclerView3 = getBinding().m;
-        m.checkNotNullExpressionValue(recyclerView3, "binding.settingsGiftingGiftsYouPurchasedRecycler");
+        RecyclerView recyclerView3 = getBinding().f17965m;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.settingsGiftingGiftsYouPurchasedRecycler");
         this.giftingAdapter = (WidgetSettingsGiftingAdapter) companion.configure(new WidgetSettingsGiftingAdapter(recyclerView3));
-        LinkifiedTextView linkifiedTextView = getBinding().g;
-        m.checkNotNullExpressionValue(linkifiedTextView, "binding.premiumTier1GiftLearnMore");
-        b.m(linkifiedTextView, R.string.premium_classic_payment_gift_blurb_mobile, new Object[0], AnonymousClass7.INSTANCE);
-        LinkifiedTextView linkifiedTextView2 = getBinding().h;
-        m.checkNotNullExpressionValue(linkifiedTextView2, "binding.premiumTier2GiftLearnMore");
-        b.m(linkifiedTextView2, R.string.premium_payment_gift_blurb_mobile, new Object[0], AnonymousClass8.INSTANCE);
+        LinkifiedTextView linkifiedTextView = getBinding().f17959g;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.premiumTier1GiftLearnMore");
+        FormatUtils.m221m(linkifiedTextView, C5419R.string.premium_classic_payment_gift_blurb_mobile, new Object[0], C99127.INSTANCE);
+        LinkifiedTextView linkifiedTextView2 = getBinding().f17960h;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView2, "binding.premiumTier2GiftLearnMore");
+        FormatUtils.m221m(linkifiedTextView2, C5419R.string.premium_payment_gift_blurb_mobile, new Object[0], C99138.INSTANCE);
         Serializable serializableExtra = getMostRecentIntent().getSerializableExtra("com.discord.intent.extra.EXTRA_LOCATION");
         if (!(serializableExtra instanceof Traits.Location)) {
             serializableExtra = null;
         }
-        WidgetSettingsGifting$onViewBound$chooseGiftCallback$1 widgetSettingsGifting$onViewBound$chooseGiftCallback$1 = new WidgetSettingsGifting$onViewBound$chooseGiftCallback$1(this, (Traits.Location) serializableExtra);
+        WidgetSettingsGifting3 widgetSettingsGifting3 = new WidgetSettingsGifting3(this, (Traits.Location) serializableExtra);
         Map<GiftSelectView, GooglePlayInAppSku> map = this.chooseGiftViews;
         if (map == null) {
-            m.throwUninitializedPropertyAccessException("chooseGiftViews");
+            Intrinsics3.throwUninitializedPropertyAccessException("chooseGiftViews");
         }
         for (Map.Entry<GiftSelectView, GooglePlayInAppSku> entry : map.entrySet()) {
             GiftSelectView key = entry.getKey();
             GooglePlayInAppSku value = entry.getValue();
             Objects.requireNonNull(key);
-            m.checkNotNullParameter(value, "inAppSku");
-            m.checkNotNullParameter(widgetSettingsGifting$onViewBound$chooseGiftCallback$1, "onClickPlan");
-            key.onClickPlan = widgetSettingsGifting$onViewBound$chooseGiftCallback$1;
+            Intrinsics3.checkNotNullParameter(value, "inAppSku");
+            Intrinsics3.checkNotNullParameter(widgetSettingsGifting3, "onClickPlan");
+            key.onClickPlan = widgetSettingsGifting3;
             key.inAppSku = value;
             SkuDetails skuDetails = value.getSkuDetails();
             if (skuDetails != null) {
-                TextView textView = key.binding.f;
-                m.checkNotNullExpressionValue(textView, "binding.planItemName");
-                textView.setText(skuDetails.a());
-                TextView textView2 = key.binding.g;
-                m.checkNotNullExpressionValue(textView2, "binding.planItemPrice");
-                textView2.setText(skuDetails.b());
-                TextView textView3 = key.binding.d;
-                m.checkNotNullExpressionValue(textView3, "binding.planItemCurrentPlan");
+                TextView textView = key.binding.f16381f;
+                Intrinsics3.checkNotNullExpressionValue(textView, "binding.planItemName");
+                textView.setText(skuDetails.m7500a());
+                TextView textView2 = key.binding.f16382g;
+                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.planItemPrice");
+                textView2.setText(skuDetails.m7501b());
+                TextView textView3 = key.binding.f16379d;
+                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.planItemCurrentPlan");
                 textView3.setVisibility(8);
                 Integer iconForSku = GiftingUtils.INSTANCE.getIconForSku(value);
                 if (iconForSku != null) {
-                    key.binding.e.setImageResource(iconForSku.intValue());
+                    key.binding.f16380e.setImageResource(iconForSku.intValue());
                 }
-                TextView textView4 = key.binding.g;
-                m.checkNotNullExpressionValue(textView4, "binding.planItemPrice");
+                TextView textView4 = key.binding.f16382g;
+                Intrinsics3.checkNotNullExpressionValue(textView4, "binding.planItemPrice");
                 Context context2 = textView4.getContext();
-                m.checkNotNullExpressionValue(context2, "binding.planItemPrice.context");
-                int themedDrawableRes$default = DrawableCompat.getThemedDrawableRes$default(context2, R.attr.ic_navigate_next, 0, 2, (Object) null);
-                TextView textView5 = key.binding.g;
-                m.checkNotNullExpressionValue(textView5, "binding.planItemPrice");
+                Intrinsics3.checkNotNullExpressionValue(context2, "binding.planItemPrice.context");
+                int themedDrawableRes$default = DrawableCompat.getThemedDrawableRes$default(context2, C5419R.attr.ic_navigate_next, 0, 2, (Object) null);
+                TextView textView5 = key.binding.f16382g;
+                Intrinsics3.checkNotNullExpressionValue(textView5, "binding.planItemPrice");
                 DrawableCompat.setCompoundDrawablesCompat$default(textView5, 0, 0, themedDrawableRes$default, 0, 11, (Object) null);
-                key.binding.c.setOnClickListener(new b.a.y.m0.a(key));
+                key.binding.f16378c.setOnClickListener(new GiftSelectView2(key));
             }
         }
-        RecyclerView recyclerView4 = getBinding().m;
-        m.checkNotNullExpressionValue(recyclerView4, "binding.settingsGiftingGiftsYouPurchasedRecycler");
+        RecyclerView recyclerView4 = getBinding().f17965m;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView4, "binding.settingsGiftingGiftsYouPurchasedRecycler");
         recyclerView4.setItemAnimator(null);
-        getBinding().m.setHasFixedSize(false);
-        for (TextView textView6 : n.listOf((Object[]) new TextView[]{getBinding().n, getBinding().l, getBinding().q, getBinding().p})) {
+        getBinding().f17965m.setHasFixedSize(false);
+        for (TextView textView6 : Collections2.listOf((Object[]) new TextView[]{getBinding().f17966n, getBinding().f17964l, getBinding().f17969q, getBinding().f17968p})) {
             AccessibilityUtils accessibilityUtils = AccessibilityUtils.INSTANCE;
-            m.checkNotNullExpressionValue(textView6, "header");
+            Intrinsics3.checkNotNullExpressionValue(textView6, "header");
             accessibilityUtils.setViewIsHeading(textView6);
         }
     }
@@ -833,12 +836,12 @@ public final class WidgetSettingsGifting extends AppFragment {
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        Observable<SettingsGiftingViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetSettingsGifting.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getViewModel().observeGiftPurchaseEvents(), this, null, 2, null), WidgetSettingsGifting.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetSettingsGifting.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(this), 62, (Object) null);
-        getViewModel().setOnGiftCodeResolved(AnonymousClass4.INSTANCE);
+        Observable<SettingsGiftingViewModel.ViewState> observableM11112r = getViewModel().observeViewState().m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "viewModel\n        .obser…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11112r, this, null, 2, null), WidgetSettingsGifting.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C99151(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getViewModel().observeGiftPurchaseEvents(), this, null, 2, null), WidgetSettingsGifting.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C99162(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetSettingsGifting.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C99173(this), 62, (Object) null);
+        getViewModel().setOnGiftCodeResolved(C99184.INSTANCE);
         enableGiftingButtons();
     }
 }

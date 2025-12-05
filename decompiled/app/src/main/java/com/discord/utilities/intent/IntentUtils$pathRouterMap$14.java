@@ -3,14 +3,14 @@ package com.discord.utilities.intent;
 import android.content.Context;
 import android.net.Uri;
 import com.discord.utilities.intent.RouteHandlers;
-import d0.z.d.k;
-import d0.z.d.m;
 import kotlin.jvm.functions.Function3;
 import kotlin.text.MatchResult;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: IntentUtils.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class IntentUtils$pathRouterMap$14 extends k implements Function3<Uri, MatchResult, Context, RouteHandlers.AnalyticsMetadata> {
+public final /* synthetic */ class IntentUtils$pathRouterMap$14 extends FunctionReferenceImpl implements Function3<Uri, MatchResult, Context, RouteHandlers.AnalyticsMetadata> {
     public IntentUtils$pathRouterMap$14(RouteHandlers routeHandlers) {
         super(3, routeHandlers, RouteHandlers.class, "handleQuery", "handleQuery(Landroid/net/Uri;Lkotlin/text/MatchResult;Landroid/content/Context;)Lcom/discord/utilities/intent/RouteHandlers$AnalyticsMetadata;", 0);
     }
@@ -22,8 +22,8 @@ public final /* synthetic */ class IntentUtils$pathRouterMap$14 extends k implem
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final RouteHandlers.AnalyticsMetadata invoke2(Uri uri, MatchResult matchResult, Context context) {
-        m.checkNotNullParameter(uri, "p1");
-        m.checkNotNullParameter(context, "p3");
+        Intrinsics3.checkNotNullParameter(uri, "p1");
+        Intrinsics3.checkNotNullParameter(context, "p3");
         return ((RouteHandlers) this.receiver).handleQuery(uri, matchResult, context);
     }
 }

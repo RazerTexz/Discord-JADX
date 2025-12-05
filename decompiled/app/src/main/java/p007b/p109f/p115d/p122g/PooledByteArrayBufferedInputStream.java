@@ -1,0 +1,130 @@
+package p007b.p109f.p115d.p122g;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Objects;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p115d.p120e.FLog;
+import p007b.p109f.p115d.p123h.ResourceReleaser;
+
+/* compiled from: PooledByteArrayBufferedInputStream.java */
+/* renamed from: b.f.d.g.f, reason: use source file name */
+/* loaded from: classes.dex */
+public class PooledByteArrayBufferedInputStream extends InputStream {
+
+    /* renamed from: j */
+    public final InputStream f3108j;
+
+    /* renamed from: k */
+    public final byte[] f3109k;
+
+    /* renamed from: l */
+    public final ResourceReleaser<byte[]> f3110l;
+
+    /* renamed from: m */
+    public int f3111m;
+
+    /* renamed from: n */
+    public int f3112n;
+
+    /* renamed from: o */
+    public boolean f3113o;
+
+    public PooledByteArrayBufferedInputStream(InputStream inputStream, byte[] bArr, ResourceReleaser<byte[]> resourceReleaser) {
+        this.f3108j = inputStream;
+        Objects.requireNonNull(bArr);
+        this.f3109k = bArr;
+        Objects.requireNonNull(resourceReleaser);
+        this.f3110l = resourceReleaser;
+        this.f3111m = 0;
+        this.f3112n = 0;
+        this.f3113o = false;
+    }
+
+    /* renamed from: a */
+    public final boolean m991a() throws IOException {
+        if (this.f3112n < this.f3111m) {
+            return true;
+        }
+        int i = this.f3108j.read(this.f3109k);
+        if (i <= 0) {
+            return false;
+        }
+        this.f3111m = i;
+        this.f3112n = 0;
+        return true;
+    }
+
+    @Override // java.io.InputStream
+    public int available() throws IOException {
+        AnimatableValueParser.m419B(this.f3112n <= this.f3111m);
+        m992b();
+        return this.f3108j.available() + (this.f3111m - this.f3112n);
+    }
+
+    /* renamed from: b */
+    public final void m992b() throws IOException {
+        if (this.f3113o) {
+            throw new IOException("stream already closed");
+        }
+    }
+
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        if (this.f3113o) {
+            return;
+        }
+        this.f3113o = true;
+        this.f3110l.release(this.f3109k);
+        super.close();
+    }
+
+    public void finalize() throws Throwable {
+        if (!this.f3113o) {
+            FLog.m977e("PooledByteInputStream", "Finalized without closing");
+            close();
+        }
+        super.finalize();
+    }
+
+    @Override // java.io.InputStream
+    public int read() throws IOException {
+        AnimatableValueParser.m419B(this.f3112n <= this.f3111m);
+        m992b();
+        if (!m991a()) {
+            return -1;
+        }
+        byte[] bArr = this.f3109k;
+        int i = this.f3112n;
+        this.f3112n = i + 1;
+        return bArr[i] & 255;
+    }
+
+    @Override // java.io.InputStream
+    public long skip(long j) throws IOException {
+        AnimatableValueParser.m419B(this.f3112n <= this.f3111m);
+        m992b();
+        int i = this.f3111m;
+        int i2 = this.f3112n;
+        long j2 = i - i2;
+        if (j2 >= j) {
+            this.f3112n = (int) (i2 + j);
+            return j;
+        }
+        this.f3112n = i;
+        return this.f3108j.skip(j - j2) + j2;
+    }
+
+    @Override // java.io.InputStream
+    public int read(byte[] bArr, int i, int i2) throws IOException {
+        AnimatableValueParser.m419B(this.f3112n <= this.f3111m);
+        m992b();
+        if (!m991a()) {
+            return -1;
+        }
+        int iMin = Math.min(this.f3111m - this.f3112n, i2);
+        System.arraycopy(this.f3109k, this.f3112n, bArr, i, iMin);
+        this.f3112n += iMin;
+        return iMin;
+    }
+}

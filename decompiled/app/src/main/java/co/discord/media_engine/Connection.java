@@ -1,9 +1,9 @@
 package co.discord.media_engine;
 
 import co.discord.media_engine.internal.TransformStats;
-import d0.z.d.m;
 import org.webrtc.MediaStreamTrack;
 import org.webrtc.VideoCapturer;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Connection.kt */
 /* loaded from: classes.dex */
@@ -28,7 +28,7 @@ public final class Connection {
         private final GetStatsCallback callback;
 
         public GetStatsCallbackNative(GetStatsCallback getStatsCallback) {
-            m.checkNotNullParameter(getStatsCallback, "callback");
+            Intrinsics3.checkNotNullParameter(getStatsCallback, "callback");
             this.callback = getStatsCallback;
         }
 
@@ -37,7 +37,7 @@ public final class Connection {
         }
 
         public final void onStats(String stats) {
-            m.checkNotNullParameter(stats, "stats");
+            Intrinsics3.checkNotNullParameter(stats, "stats");
             try {
                 this.callback.onStats(TransformStats.transform(stats));
             } catch (Exception e) {
@@ -91,7 +91,7 @@ public final class Connection {
     }
 
     public final void getStats(GetStatsCallback callback) {
-        m.checkNotNullParameter(callback, "callback");
+        Intrinsics3.checkNotNullParameter(callback, "callback");
         getStatsNative(new GetStatsCallbackNative(callback), -1);
     }
 
@@ -101,7 +101,7 @@ public final class Connection {
 
     public final native void setAudioInputMode(int mode);
 
-    public final native void setCodecs(AudioEncoder audioEncoder, VideoEncoder videoEncoder, AudioDecoder[] audioDecoders, VideoDecoder[] videoDecoder);
+    public final native void setCodecs(Codecs3 audioEncoder, Codecs5 videoEncoder, Codecs2[] audioDecoders, Codecs4[] videoDecoder);
 
     public final native void setEncodingQuality(int minBitrate, int maxBitrate, int width, int height, int framerate);
 
@@ -120,7 +120,7 @@ public final class Connection {
     public final native void setUserPlayoutVolume(long userId, float volume);
 
     public final void setUserSpeakingStatusChangedCallback(UserSpeakingStatusChangedCallback callback) {
-        m.checkNotNullParameter(callback, "callback");
+        Intrinsics3.checkNotNullParameter(callback, "callback");
         this.userSpeakingStatusChangedCallback = callback;
     }
 
@@ -143,7 +143,7 @@ public final class Connection {
     public final native void stopScreenshareBroadcast();
 
     public final void getStats(GetStatsCallback callback, int filter) {
-        m.checkNotNullParameter(callback, "callback");
+        Intrinsics3.checkNotNullParameter(callback, "callback");
         getStatsNative(new GetStatsCallbackNative(callback), filter);
     }
 }

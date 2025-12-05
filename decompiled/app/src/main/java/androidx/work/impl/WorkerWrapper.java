@@ -25,7 +25,6 @@ import androidx.work.impl.utils.WorkForegroundUpdater;
 import androidx.work.impl.utils.WorkProgressUpdater;
 import androidx.work.impl.utils.futures.SettableFuture;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
-import b.i.b.d.a.a;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -33,6 +32,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -62,13 +62,13 @@ public class WorkerWrapper implements Runnable {
     public SettableFuture<Boolean> mFuture = SettableFuture.create();
 
     @Nullable
-    public a<ListenableWorker.Result> mInnerFuture = null;
+    public ListenableFuture8<ListenableWorker.Result> mInnerFuture = null;
 
-    /* renamed from: androidx.work.impl.WorkerWrapper$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.work.impl.WorkerWrapper$1 */
+    public class RunnableC07331 implements Runnable {
         public final /* synthetic */ SettableFuture val$future;
 
-        public AnonymousClass1(SettableFuture settableFuture) {
+        public RunnableC07331(SettableFuture settableFuture) {
             this.val$future = settableFuture;
         }
 
@@ -85,12 +85,12 @@ public class WorkerWrapper implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkerWrapper$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.work.impl.WorkerWrapper$2 */
+    public class RunnableC07342 implements Runnable {
         public final /* synthetic */ SettableFuture val$future;
         public final /* synthetic */ String val$workDescription;
 
-        public AnonymousClass2(SettableFuture settableFuture, String str) {
+        public RunnableC07342(SettableFuture settableFuture, String str) {
             this.val$future = settableFuture;
             this.val$workDescription = str;
         }
@@ -385,8 +385,8 @@ public class WorkerWrapper implements Runnable {
                     return;
                 }
                 SettableFuture settableFutureCreate = SettableFuture.create();
-                this.mWorkTaskExecutor.getMainThreadExecutor().execute(new AnonymousClass1(settableFutureCreate));
-                settableFutureCreate.addListener(new AnonymousClass2(settableFutureCreate, this.mWorkDescription), this.mWorkTaskExecutor.getBackgroundExecutor());
+                this.mWorkTaskExecutor.getMainThreadExecutor().execute(new RunnableC07331(settableFutureCreate));
+                settableFutureCreate.addListener(new RunnableC07342(settableFutureCreate, this.mWorkDescription), this.mWorkTaskExecutor.getBackgroundExecutor());
             }
         } finally {
             this.mWorkDatabase.endTransaction();
@@ -444,7 +444,7 @@ public class WorkerWrapper implements Runnable {
     }
 
     @NonNull
-    public a<Boolean> getFuture() {
+    public ListenableFuture8<Boolean> getFuture() {
         return this.mFuture;
     }
 
@@ -453,9 +453,9 @@ public class WorkerWrapper implements Runnable {
         boolean zIsDone;
         this.mInterrupted = true;
         tryCheckForInterruptionAndResolve();
-        a<ListenableWorker.Result> aVar = this.mInnerFuture;
-        if (aVar != null) {
-            zIsDone = aVar.isDone();
+        ListenableFuture8<ListenableWorker.Result> listenableFuture8 = this.mInnerFuture;
+        if (listenableFuture8 != null) {
+            zIsDone = listenableFuture8.isDone();
             this.mInnerFuture.cancel(true);
         } else {
             zIsDone = false;

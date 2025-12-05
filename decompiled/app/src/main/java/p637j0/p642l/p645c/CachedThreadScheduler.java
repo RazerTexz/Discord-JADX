@@ -1,0 +1,300 @@
+package p637j0.p642l.p645c;
+
+import java.util.Objects;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicReference;
+import p637j0.p642l.p645c.ScheduledAction;
+import p637j0.p642l.p647e.RxThreadFactory;
+import p637j0.p655r.Subscriptions;
+import p658rx.Scheduler;
+import p658rx.Subscription;
+import p658rx.functions.Action0;
+import p658rx.subscriptions.CompositeSubscription;
+
+/* compiled from: CachedThreadScheduler.java */
+/* renamed from: j0.l.c.a, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class CachedThreadScheduler extends Scheduler implements SchedulerLifecycle {
+
+    /* renamed from: a */
+    public static final long f27166a;
+
+    /* renamed from: b */
+    public static final TimeUnit f27167b = TimeUnit.SECONDS;
+
+    /* renamed from: c */
+    public static final c f27168c;
+
+    /* renamed from: d */
+    public static final a f27169d;
+
+    /* renamed from: e */
+    public final ThreadFactory f27170e;
+
+    /* renamed from: f */
+    public final AtomicReference<a> f27171f;
+
+    /* compiled from: CachedThreadScheduler.java */
+    /* renamed from: j0.l.c.a$a */
+    public static final class a {
+
+        /* renamed from: a */
+        public final ThreadFactory f27172a;
+
+        /* renamed from: b */
+        public final long f27173b;
+
+        /* renamed from: c */
+        public final ConcurrentLinkedQueue<c> f27174c;
+
+        /* renamed from: d */
+        public final CompositeSubscription f27175d;
+
+        /* renamed from: e */
+        public final ScheduledExecutorService f27176e;
+
+        /* renamed from: f */
+        public final Future<?> f27177f;
+
+        /* compiled from: CachedThreadScheduler.java */
+        /* renamed from: j0.l.c.a$a$a, reason: collision with other inner class name */
+        public class ThreadFactoryC13351a implements ThreadFactory {
+
+            /* renamed from: j */
+            public final /* synthetic */ ThreadFactory f27178j;
+
+            public ThreadFactoryC13351a(a aVar, ThreadFactory threadFactory) {
+                this.f27178j = threadFactory;
+            }
+
+            @Override // java.util.concurrent.ThreadFactory
+            public Thread newThread(Runnable runnable) {
+                Thread threadNewThread = this.f27178j.newThread(runnable);
+                threadNewThread.setName(threadNewThread.getName() + " (Evictor)");
+                return threadNewThread;
+            }
+        }
+
+        /* compiled from: CachedThreadScheduler.java */
+        /* renamed from: j0.l.c.a$a$b */
+        public class b implements Runnable {
+            public b() {
+            }
+
+            @Override // java.lang.Runnable
+            public void run() {
+                a aVar = a.this;
+                if (aVar.f27174c.isEmpty()) {
+                    return;
+                }
+                long jNanoTime = System.nanoTime();
+                for (c cVar : aVar.f27174c) {
+                    if (cVar.f27186r > jNanoTime) {
+                        return;
+                    }
+                    if (aVar.f27174c.remove(cVar)) {
+                        aVar.f27175d.m11138c(cVar);
+                    }
+                }
+            }
+        }
+
+        public a(ThreadFactory threadFactory, long j, TimeUnit timeUnit) throws SecurityException {
+            ScheduledFuture<?> scheduledFutureScheduleWithFixedDelay;
+            this.f27172a = threadFactory;
+            long nanos = timeUnit != null ? timeUnit.toNanos(j) : 0L;
+            this.f27173b = nanos;
+            this.f27174c = new ConcurrentLinkedQueue<>();
+            this.f27175d = new CompositeSubscription();
+            ScheduledExecutorService scheduledExecutorServiceNewScheduledThreadPool = null;
+            if (timeUnit != null) {
+                scheduledExecutorServiceNewScheduledThreadPool = Executors.newScheduledThreadPool(1, new ThreadFactoryC13351a(this, threadFactory));
+                NewThreadWorker.m10804g(scheduledExecutorServiceNewScheduledThreadPool);
+                scheduledFutureScheduleWithFixedDelay = scheduledExecutorServiceNewScheduledThreadPool.scheduleWithFixedDelay(new b(), nanos, nanos, TimeUnit.NANOSECONDS);
+            } else {
+                scheduledFutureScheduleWithFixedDelay = null;
+            }
+            this.f27176e = scheduledExecutorServiceNewScheduledThreadPool;
+            this.f27177f = scheduledFutureScheduleWithFixedDelay;
+        }
+
+        /* renamed from: a */
+        public void m10800a() {
+            try {
+                Future<?> future = this.f27177f;
+                if (future != null) {
+                    future.cancel(true);
+                }
+                ScheduledExecutorService scheduledExecutorService = this.f27176e;
+                if (scheduledExecutorService != null) {
+                    scheduledExecutorService.shutdownNow();
+                }
+            } finally {
+                this.f27175d.unsubscribe();
+            }
+        }
+    }
+
+    /* compiled from: CachedThreadScheduler.java */
+    /* renamed from: j0.l.c.a$b */
+    public static final class b extends Scheduler.Worker implements Action0 {
+
+        /* renamed from: k */
+        public final a f27181k;
+
+        /* renamed from: l */
+        public final c f27182l;
+
+        /* renamed from: j */
+        public final CompositeSubscription f27180j = new CompositeSubscription();
+
+        /* renamed from: m */
+        public final AtomicBoolean f27183m = new AtomicBoolean();
+
+        /* compiled from: CachedThreadScheduler.java */
+        /* renamed from: j0.l.c.a$b$a */
+        public class a implements Action0 {
+
+            /* renamed from: j */
+            public final /* synthetic */ Action0 f27184j;
+
+            public a(Action0 action0) {
+                this.f27184j = action0;
+            }
+
+            @Override // p658rx.functions.Action0
+            public void call() {
+                if (b.this.f27180j.f27656k) {
+                    return;
+                }
+                this.f27184j.call();
+            }
+        }
+
+        public b(a aVar) {
+            c cVar;
+            c cVar2;
+            this.f27181k = aVar;
+            if (aVar.f27175d.f27656k) {
+                cVar2 = CachedThreadScheduler.f27168c;
+            } else {
+                while (true) {
+                    if (aVar.f27174c.isEmpty()) {
+                        cVar = new c(aVar.f27172a);
+                        aVar.f27175d.m11136a(cVar);
+                        break;
+                    } else {
+                        cVar = aVar.f27174c.poll();
+                        if (cVar != null) {
+                            break;
+                        }
+                    }
+                }
+                cVar2 = cVar;
+            }
+            this.f27182l = cVar2;
+        }
+
+        @Override // rx.Scheduler.Worker
+        /* renamed from: a */
+        public Subscription mo10740a(Action0 action0) {
+            return mo10741b(action0, 0L, null);
+        }
+
+        @Override // rx.Scheduler.Worker
+        /* renamed from: b */
+        public Subscription mo10741b(Action0 action0, long j, TimeUnit timeUnit) {
+            if (this.f27180j.f27656k) {
+                return Subscriptions.f27422a;
+            }
+            ScheduledAction scheduledActionM10805f = this.f27182l.m10805f(new a(action0), j, timeUnit);
+            this.f27180j.m11136a(scheduledActionM10805f);
+            scheduledActionM10805f.cancel.m11128a(new ScheduledAction.c(scheduledActionM10805f, this.f27180j));
+            return scheduledActionM10805f;
+        }
+
+        @Override // p658rx.functions.Action0
+        public void call() {
+            a aVar = this.f27181k;
+            c cVar = this.f27182l;
+            Objects.requireNonNull(aVar);
+            cVar.f27186r = System.nanoTime() + aVar.f27173b;
+            aVar.f27174c.offer(cVar);
+        }
+
+        @Override // p658rx.Subscription
+        public boolean isUnsubscribed() {
+            return this.f27180j.f27656k;
+        }
+
+        @Override // p658rx.Subscription
+        public void unsubscribe() {
+            if (this.f27183m.compareAndSet(false, true)) {
+                this.f27182l.mo10740a(this);
+            }
+            this.f27180j.unsubscribe();
+        }
+    }
+
+    /* compiled from: CachedThreadScheduler.java */
+    /* renamed from: j0.l.c.a$c */
+    public static final class c extends NewThreadWorker {
+
+        /* renamed from: r */
+        public long f27186r;
+
+        public c(ThreadFactory threadFactory) {
+            super(threadFactory);
+            this.f27186r = 0L;
+        }
+    }
+
+    static {
+        c cVar = new c(RxThreadFactory.f27286j);
+        f27168c = cVar;
+        cVar.unsubscribe();
+        a aVar = new a(null, 0L, null);
+        f27169d = aVar;
+        aVar.m10800a();
+        f27166a = Integer.getInteger("rx.io-scheduler.keepalive", 60).intValue();
+    }
+
+    public CachedThreadScheduler(ThreadFactory threadFactory) {
+        this.f27170e = threadFactory;
+        a aVar = f27169d;
+        AtomicReference<a> atomicReference = new AtomicReference<>(aVar);
+        this.f27171f = atomicReference;
+        a aVar2 = new a(threadFactory, f27166a, f27167b);
+        if (atomicReference.compareAndSet(aVar, aVar2)) {
+            return;
+        }
+        aVar2.m10800a();
+    }
+
+    @Override // p658rx.Scheduler
+    /* renamed from: a */
+    public Scheduler.Worker mo10739a() {
+        return new b(this.f27171f.get());
+    }
+
+    @Override // p637j0.p642l.p645c.SchedulerLifecycle
+    public void shutdown() {
+        a aVar;
+        a aVar2;
+        do {
+            aVar = this.f27171f.get();
+            aVar2 = f27169d;
+            if (aVar == aVar2) {
+                return;
+            }
+        } while (!this.f27171f.compareAndSet(aVar, aVar2));
+        aVar.m10800a();
+    }
+}

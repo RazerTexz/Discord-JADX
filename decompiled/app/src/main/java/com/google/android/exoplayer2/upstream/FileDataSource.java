@@ -8,24 +8,30 @@ import androidx.annotation.DoNotInline;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.view.PointerIconCompat;
-import b.i.a.c.e3.g;
-import b.i.a.c.e3.n;
-import b.i.a.c.f3.e0;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Objects;
+import p007b.p225i.p226a.p242c.p257e3.BaseDataSource;
+import p007b.p225i.p226a.p242c.p257e3.DataSpec;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
 
 /* loaded from: classes3.dex */
-public final class FileDataSource extends g {
+public final class FileDataSource extends BaseDataSource {
 
+    /* renamed from: e */
     @Nullable
-    public RandomAccessFile e;
+    public RandomAccessFile f20225e;
 
+    /* renamed from: f */
     @Nullable
-    public Uri f;
-    public long g;
-    public boolean h;
+    public Uri f20226f;
+
+    /* renamed from: g */
+    public long f20227g;
+
+    /* renamed from: h */
+    public boolean f20228h;
 
     public static class FileDataSourceException extends DataSourceException {
         public FileDataSourceException(Throwable th, int i) {
@@ -38,13 +44,16 @@ public final class FileDataSource extends g {
     }
 
     @RequiresApi(21)
-    public static final class a {
-        public static /* synthetic */ boolean a(Throwable th) {
-            return b(th);
+    /* renamed from: com.google.android.exoplayer2.upstream.FileDataSource$a */
+    public static final class C10765a {
+        /* renamed from: a */
+        public static /* synthetic */ boolean m8935a(Throwable th) {
+            return m8936b(th);
         }
 
         @DoNotInline
-        private static boolean b(@Nullable Throwable th) {
+        /* renamed from: b */
+        private static boolean m8936b(@Nullable Throwable th) {
             return (th instanceof ErrnoException) && ((ErrnoException) th).errno == OsConstants.EACCES;
         }
     }
@@ -53,35 +62,36 @@ public final class FileDataSource extends g {
         super(false);
     }
 
-    @Override // b.i.a.c.e3.l
-    public long a(n nVar) throws FileDataSourceException {
-        Uri uri = nVar.a;
-        this.f = uri;
-        r(nVar);
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
+    /* renamed from: a */
+    public long mo2586a(DataSpec dataSpec) throws FileDataSourceException {
+        Uri uri = dataSpec.f6542a;
+        this.f20226f = uri;
+        m2850r(dataSpec);
         try {
             String path = uri.getPath();
             Objects.requireNonNull(path);
             RandomAccessFile randomAccessFile = new RandomAccessFile(path, "r");
-            this.e = randomAccessFile;
+            this.f20225e = randomAccessFile;
             try {
-                randomAccessFile.seek(nVar.f);
-                long length = nVar.g;
+                randomAccessFile.seek(dataSpec.f6547f);
+                long length = dataSpec.f6548g;
                 if (length == -1) {
-                    length = this.e.length() - nVar.f;
+                    length = this.f20225e.length() - dataSpec.f6547f;
                 }
-                this.g = length;
+                this.f20227g = length;
                 if (length < 0) {
                     throw new FileDataSourceException(null, null, 2008);
                 }
-                this.h = true;
-                s(nVar);
-                return this.g;
+                this.f20228h = true;
+                m2851s(dataSpec);
+                return this.f20227g;
             } catch (IOException e) {
                 throw new FileDataSourceException(e, 2000);
             }
         } catch (FileNotFoundException e2) {
             if (TextUtils.isEmpty(uri.getQuery()) && TextUtils.isEmpty(uri.getFragment())) {
-                throw new FileDataSourceException(e2, (e0.a < 21 || !a.a(e2.getCause())) ? 2005 : 2006);
+                throw new FileDataSourceException(e2, (Util2.f6708a < 21 || !C10765a.m8935a(e2.getCause())) ? 2005 : 2006);
             }
             throw new FileDataSourceException(String.format("uri has query and/or fragment, which are not supported. Did you call Uri.parse() on a string containing '?' or '#'? Use Uri.fromFile(new File(path)) to avoid this. path=%s,query=%s,fragment=%s", uri.getPath(), uri.getQuery(), uri.getFragment()), e2, PointerIconCompat.TYPE_WAIT);
         } catch (SecurityException e3) {
@@ -91,12 +101,12 @@ public final class FileDataSource extends g {
         }
     }
 
-    @Override // b.i.a.c.e3.l
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     public void close() throws FileDataSourceException {
-        this.f = null;
+        this.f20226f = null;
         try {
             try {
-                RandomAccessFile randomAccessFile = this.e;
+                RandomAccessFile randomAccessFile = this.f20225e;
                 if (randomAccessFile != null) {
                     randomAccessFile.close();
                 }
@@ -104,36 +114,37 @@ public final class FileDataSource extends g {
                 throw new FileDataSourceException(e, 2000);
             }
         } finally {
-            this.e = null;
-            if (this.h) {
-                this.h = false;
-                q();
+            this.f20225e = null;
+            if (this.f20228h) {
+                this.f20228h = false;
+                m2849q();
             }
         }
     }
 
-    @Override // b.i.a.c.e3.l
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    public Uri n() {
-        return this.f;
+    /* renamed from: n */
+    public Uri mo2589n() {
+        return this.f20226f;
     }
 
-    @Override // b.i.a.c.e3.h
+    @Override // p007b.p225i.p226a.p242c.p257e3.DataReader
     public int read(byte[] bArr, int i, int i2) throws FileDataSourceException {
         if (i2 == 0) {
             return 0;
         }
-        long j = this.g;
+        long j = this.f20227g;
         if (j == 0) {
             return -1;
         }
         try {
-            RandomAccessFile randomAccessFile = this.e;
-            int i3 = e0.a;
+            RandomAccessFile randomAccessFile = this.f20225e;
+            int i3 = Util2.f6708a;
             int i4 = randomAccessFile.read(bArr, i, (int) Math.min(j, i2));
             if (i4 > 0) {
-                this.g -= i4;
-                p(i4);
+                this.f20227g -= i4;
+                m2848p(i4);
             }
             return i4;
         } catch (IOException e) {

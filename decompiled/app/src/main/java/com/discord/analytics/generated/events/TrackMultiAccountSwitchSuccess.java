@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMultiAccountSwitchSuccess.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMultiAccountSwitchSuccess implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackMultiAccountSwitchSuccess implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long fromUserId = null;
     private final List<Long> linkedUserIds = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackMultiAccountSwitchSuccess implements Analytic
             return false;
         }
         TrackMultiAccountSwitchSuccess trackMultiAccountSwitchSuccess = (TrackMultiAccountSwitchSuccess) other;
-        return m.areEqual(this.fromUserId, trackMultiAccountSwitchSuccess.fromUserId) && m.areEqual(this.linkedUserIds, trackMultiAccountSwitchSuccess.linkedUserIds);
+        return Intrinsics3.areEqual(this.fromUserId, trackMultiAccountSwitchSuccess.fromUserId) && Intrinsics3.areEqual(this.linkedUserIds, trackMultiAccountSwitchSuccess.linkedUserIds);
     }
 
     public int hashCode() {
@@ -40,9 +40,9 @@ public final /* data */ class TrackMultiAccountSwitchSuccess implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMultiAccountSwitchSuccess(fromUserId=");
-        sbU.append(this.fromUserId);
-        sbU.append(", linkedUserIds=");
-        return a.L(sbU, this.linkedUserIds, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMultiAccountSwitchSuccess(fromUserId=");
+        sbM833U.append(this.fromUserId);
+        sbM833U.append(", linkedUserIds=");
+        return outline.m824L(sbM833U, this.linkedUserIds, ")");
     }
 }

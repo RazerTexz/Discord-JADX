@@ -1,5 +1,6 @@
 package com.discord.widgets.channels.permissions;
 
+import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -8,8 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.permission.PermissionOverwrite;
 import com.discord.databinding.WidgetChannelSettingsAddMemberCategoryBinding;
 import com.discord.databinding.WidgetChannelSettingsAddMemberItemBinding;
@@ -21,11 +21,12 @@ import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.permissions.ChannelPermissionOwnerView;
 import com.discord.widgets.channels.permissions.PermissionOwner;
 import com.google.android.material.checkbox.MaterialCheckBox;
-import d0.z.d.m;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: AddMemberAdapter.kt */
 /* loaded from: classes2.dex */
@@ -50,15 +51,15 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AddMemberAdapterCategoryItem(AddMemberAdapter addMemberAdapter) {
-            super(R.layout.widget_channel_settings_add_member_category, addMemberAdapter);
-            m.checkNotNullParameter(addMemberAdapter, "adapter");
+            super(C5419R.layout.widget_channel_settings_add_member_category, addMemberAdapter);
+            Intrinsics3.checkNotNullParameter(addMemberAdapter, "adapter");
             View view = this.itemView;
-            TextView textView = (TextView) view.findViewById(R.id.label);
+            TextView textView = (TextView) view.findViewById(C5419R.id.label);
             if (textView == null) {
-                throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.label)));
+                throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(C5419R.id.label)));
             }
             WidgetChannelSettingsAddMemberCategoryBinding widgetChannelSettingsAddMemberCategoryBinding = new WidgetChannelSettingsAddMemberCategoryBinding((LinearLayout) view, textView);
-            m.checkNotNullExpressionValue(widgetChannelSettingsAddMemberCategoryBinding, "WidgetChannelSettingsAdd…oryBinding.bind(itemView)");
+            Intrinsics3.checkNotNullExpressionValue(widgetChannelSettingsAddMemberCategoryBinding, "WidgetChannelSettingsAdd…oryBinding.bind(itemView)");
             this.binding = widgetChannelSettingsAddMemberCategoryBinding;
         }
 
@@ -70,18 +71,18 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             String string;
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
-            TextView textView = this.binding.f2270b;
-            m.checkNotNullExpressionValue(textView, "binding.label");
+            TextView textView = this.binding.f15899b;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.label");
             int iOrdinal = ((Item.CategoryItem) data).getCategoryType().ordinal();
             if (iOrdinal == 0) {
-                string = ((AddMemberAdapter) this.adapter).getRecycler().getContext().getString(R.string.roles);
+                string = ((AddMemberAdapter) this.adapter).getRecycler().getContext().getString(C5419R.string.roles);
             } else {
                 if (iOrdinal != 1) {
                     throw new NoWhenBranchMatchedException();
                 }
-                string = ((AddMemberAdapter) this.adapter).getRecycler().getContext().getString(R.string.members);
+                string = ((AddMemberAdapter) this.adapter).getRecycler().getContext().getString(C5419R.string.members);
             }
             textView.setText(string);
         }
@@ -104,20 +105,20 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AddMemberAdapterItemItem(AddMemberAdapter addMemberAdapter) {
-            super(R.layout.widget_channel_settings_add_member_item, addMemberAdapter);
-            m.checkNotNullParameter(addMemberAdapter, "adapter");
+            super(C5419R.layout.widget_channel_settings_add_member_item, addMemberAdapter);
+            Intrinsics3.checkNotNullParameter(addMemberAdapter, "adapter");
             View view = this.itemView;
-            int i = R.id.channel_permission_owner_view;
-            ChannelPermissionOwnerView channelPermissionOwnerView = (ChannelPermissionOwnerView) view.findViewById(R.id.channel_permission_owner_view);
+            int i = C5419R.id.channel_permission_owner_view;
+            ChannelPermissionOwnerView channelPermissionOwnerView = (ChannelPermissionOwnerView) view.findViewById(C5419R.id.channel_permission_owner_view);
             if (channelPermissionOwnerView != null) {
-                i = R.id.checkbox;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) view.findViewById(R.id.checkbox);
+                i = C5419R.id.checkbox;
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) view.findViewById(C5419R.id.checkbox);
                 if (materialCheckBox != null) {
-                    i = R.id.container;
-                    ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(R.id.container);
+                    i = C5419R.id.container;
+                    ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(C5419R.id.container);
                     if (constraintLayout != null) {
                         WidgetChannelSettingsAddMemberItemBinding widgetChannelSettingsAddMemberItemBinding = new WidgetChannelSettingsAddMemberItemBinding((FrameLayout) view, channelPermissionOwnerView, materialCheckBox, constraintLayout);
-                        m.checkNotNullExpressionValue(widgetChannelSettingsAddMemberItemBinding, "WidgetChannelSettingsAdd…temBinding.bind(itemView)");
+                        Intrinsics3.checkNotNullExpressionValue(widgetChannelSettingsAddMemberItemBinding, "WidgetChannelSettingsAdd…temBinding.bind(itemView)");
                         this.binding = widgetChannelSettingsAddMemberItemBinding;
                         return;
                     }
@@ -126,19 +127,19 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i)));
         }
 
-        public static final /* synthetic */ void access$handleClick(AddMemberAdapterItemItem addMemberAdapterItemItem, Item.PermissionOwnerItem permissionOwnerItem) {
+        public static final /* synthetic */ void access$handleClick(AddMemberAdapterItemItem addMemberAdapterItemItem, Item.PermissionOwnerItem permissionOwnerItem) throws Resources.NotFoundException {
             addMemberAdapterItemItem.handleClick(permissionOwnerItem);
         }
 
-        private final void handleClick(Item.PermissionOwnerItem item) {
+        private final void handleClick(Item.PermissionOwnerItem item) throws Resources.NotFoundException {
             PermissionOwner permissionOwner = item.getPermissionOwner();
             Item.PermissionOwnerItem.Companion.AddStatus addStatus = item.getAddStatus();
-            if (m.areEqual(addStatus, Item.PermissionOwnerItem.Companion.AddStatus.CanAdd.INSTANCE)) {
+            if (Intrinsics3.areEqual(addStatus, Item.PermissionOwnerItem.Companion.AddStatus.CanAdd.INSTANCE)) {
                 handleOnClickForPermissionOwner(permissionOwner);
             } else if ((addStatus instanceof Item.PermissionOwnerItem.Companion.AddStatus.CannotAdd) && ((Item.PermissionOwnerItem.Companion.AddStatus.CannotAdd) item.getAddStatus()).getReason().ordinal() == 0) {
-                FrameLayout frameLayout = this.binding.a;
-                m.checkNotNullExpressionValue(frameLayout, "binding.root");
-                Toast.makeText(frameLayout.getContext(), R.string.channel_permissions_add_has_guild_permissions, 0).show();
+                FrameLayout frameLayout = this.binding.f15900a;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
+                Toast.makeText(frameLayout.getContext(), C5419R.string.channel_permissions_add_has_guild_permissions, 0).show();
             }
         }
 
@@ -160,18 +161,18 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             Item.PermissionOwnerItem permissionOwnerItem = (Item.PermissionOwnerItem) data;
-            this.binding.f2271b.a(permissionOwnerItem.getPermissionOwner());
-            MaterialCheckBox materialCheckBox = this.binding.c;
-            m.checkNotNullExpressionValue(materialCheckBox, "binding.checkbox");
+            this.binding.f15901b.m8598a(permissionOwnerItem.getPermissionOwner());
+            MaterialCheckBox materialCheckBox = this.binding.f15902c;
+            Intrinsics3.checkNotNullExpressionValue(materialCheckBox, "binding.checkbox");
             materialCheckBox.setChecked(permissionOwnerItem.getChecked());
-            this.binding.c.setOnClickListener(new AddMemberAdapter$AddMemberAdapterItemItem$onConfigure$1(this, permissionOwnerItem));
-            this.binding.d.setOnClickListener(new AddMemberAdapter$AddMemberAdapterItemItem$onConfigure$2(this, permissionOwnerItem));
-            ConstraintLayout constraintLayout = this.binding.d;
-            m.checkNotNullExpressionValue(constraintLayout, "binding.container");
-            ViewExtensions.setEnabledAlpha$default(constraintLayout, m.areEqual(permissionOwnerItem.getAddStatus(), Item.PermissionOwnerItem.Companion.AddStatus.CanAdd.INSTANCE), 0.0f, 2, null);
+            this.binding.f15902c.setOnClickListener(new AddMemberAdapter2(this, permissionOwnerItem));
+            this.binding.f15903d.setOnClickListener(new AddMemberAdapter3(this, permissionOwnerItem));
+            ConstraintLayout constraintLayout = this.binding.f15903d;
+            Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.container");
+            ViewExtensions.setEnabledAlpha$default(constraintLayout, Intrinsics3.areEqual(permissionOwnerItem.getAddStatus(), Item.PermissionOwnerItem.Companion.AddStatus.CanAdd.INSTANCE), 0.0f, 2, null);
         }
     }
 
@@ -189,7 +190,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public CategoryItem(Companion.CategoryType categoryType) {
                 super(null);
-                m.checkNotNullParameter(categoryType, "categoryType");
+                Intrinsics3.checkNotNullParameter(categoryType, "categoryType");
                 this.categoryType = categoryType;
                 this.key = categoryType.toString();
             }
@@ -207,13 +208,13 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             }
 
             public final CategoryItem copy(Companion.CategoryType categoryType) {
-                m.checkNotNullParameter(categoryType, "categoryType");
+                Intrinsics3.checkNotNullParameter(categoryType, "categoryType");
                 return new CategoryItem(categoryType);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof CategoryItem) && m.areEqual(this.categoryType, ((CategoryItem) other).categoryType);
+                    return (other instanceof CategoryItem) && Intrinsics3.areEqual(this.categoryType, ((CategoryItem) other).categoryType);
                 }
                 return true;
             }
@@ -241,10 +242,10 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("CategoryItem(categoryType=");
-                sbU.append(this.categoryType);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("CategoryItem(categoryType=");
+                sbM833U.append(this.categoryType);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -260,8 +261,8 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             public PermissionOwnerItem(PermissionOwner permissionOwner, boolean z2, Companion.AddStatus addStatus) {
                 String strValueOf;
                 super(null);
-                m.checkNotNullParameter(permissionOwner, "permissionOwner");
-                m.checkNotNullParameter(addStatus, "addStatus");
+                Intrinsics3.checkNotNullParameter(permissionOwner, "permissionOwner");
+                Intrinsics3.checkNotNullParameter(addStatus, "addStatus");
                 this.permissionOwner = permissionOwner;
                 this.checked = z2;
                 this.addStatus = addStatus;
@@ -306,8 +307,8 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             }
 
             public final PermissionOwnerItem copy(PermissionOwner permissionOwner, boolean checked, Companion.AddStatus addStatus) {
-                m.checkNotNullParameter(permissionOwner, "permissionOwner");
-                m.checkNotNullParameter(addStatus, "addStatus");
+                Intrinsics3.checkNotNullParameter(permissionOwner, "permissionOwner");
+                Intrinsics3.checkNotNullParameter(addStatus, "addStatus");
                 return new PermissionOwnerItem(permissionOwner, checked, addStatus);
             }
 
@@ -319,7 +320,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
                     return false;
                 }
                 PermissionOwnerItem permissionOwnerItem = (PermissionOwnerItem) other;
-                return m.areEqual(this.permissionOwner, permissionOwnerItem.permissionOwner) && this.checked == permissionOwnerItem.checked && m.areEqual(this.addStatus, permissionOwnerItem.addStatus);
+                return Intrinsics3.areEqual(this.permissionOwner, permissionOwnerItem.permissionOwner) && this.checked == permissionOwnerItem.checked && Intrinsics3.areEqual(this.addStatus, permissionOwnerItem.addStatus);
             }
 
             public final Companion.AddStatus getAddStatus() {
@@ -359,14 +360,14 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("PermissionOwnerItem(permissionOwner=");
-                sbU.append(this.permissionOwner);
-                sbU.append(", checked=");
-                sbU.append(this.checked);
-                sbU.append(", addStatus=");
-                sbU.append(this.addStatus);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("PermissionOwnerItem(permissionOwner=");
+                sbM833U.append(this.permissionOwner);
+                sbM833U.append(", checked=");
+                sbM833U.append(this.checked);
+                sbM833U.append(", addStatus=");
+                sbM833U.append(this.addStatus);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -381,7 +382,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AddMemberAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recyclerView");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
     }
 
     public static final /* synthetic */ Function2 access$getOnClickListener$p(AddMemberAdapter addMemberAdapter) {
@@ -403,7 +404,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<AddMemberAdapter, Item> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new AddMemberAdapterCategoryItem(this);
         }

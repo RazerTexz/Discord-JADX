@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.util.Log;
 import android.view.WindowManager;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: OverlayDialog.kt */
 /* loaded from: classes.dex */
@@ -12,20 +12,21 @@ public class OverlayDialog extends OverlayBubbleWrap {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OverlayDialog(Context context) {
         super(context);
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         WindowManager.LayoutParams windowLayoutParams = getWindowLayoutParams();
         windowLayoutParams.width = -1;
         windowLayoutParams.height = -1;
         windowLayoutParams.x = 0;
         windowLayoutParams.y = 0;
-        m.checkNotNullParameter(windowLayoutParams, "$this$addFlag");
+        Intrinsics3.checkNotNullParameter(windowLayoutParams, "$this$addFlag");
         windowLayoutParams.flags |= 2;
         windowLayoutParams.dimAmount = 0.5f;
         setStateListAnimator(null);
     }
 
     @Override // com.discord.overlay.views.OverlayBubbleWrap
-    public boolean f() {
+    /* renamed from: f */
+    public boolean mo8437f() {
         return false;
     }
 

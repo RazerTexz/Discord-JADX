@@ -1,19 +1,20 @@
 package com.discord.utilities.system;
 
-import a0.a.a.b;
 import android.system.Os;
 import android.system.OsConstants;
 import androidx.annotation.AnyThread;
-import b.d.b.a.a;
 import com.discord.api.permission.Permission;
 import com.discord.utilities.system.ProcfsReader;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.TimeSpan;
-import d0.k;
-import d0.l;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Result2;
+import p507d0.Result3;
+import p507d0.p583v.Thread2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: DeviceResourceUsageMonitor.kt */
 /* loaded from: classes2.dex */
@@ -96,64 +97,64 @@ public final class DeviceResourceUsageMonitor {
         }
 
         public int hashCode() {
-            return ((b.a(this.memoryRssBytes) + (this.cpuUsagePercent * 31)) * 31) + this.cpuCoreCount;
+            return ((C0002b.m3a(this.memoryRssBytes) + (this.cpuUsagePercent * 31)) * 31) + this.cpuCoreCount;
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ResourceUsage(cpuUsagePercent=");
-            sbU.append(this.cpuUsagePercent);
-            sbU.append(", memoryRssBytes=");
-            sbU.append(this.memoryRssBytes);
-            sbU.append(", cpuCoreCount=");
-            return a.B(sbU, this.cpuCoreCount, ")");
+            StringBuilder sbM833U = outline.m833U("ResourceUsage(cpuUsagePercent=");
+            sbM833U.append(this.cpuUsagePercent);
+            sbM833U.append(", memoryRssBytes=");
+            sbM833U.append(this.memoryRssBytes);
+            sbM833U.append(", cpuCoreCount=");
+            return outline.m814B(sbM833U, this.cpuCoreCount, ")");
         }
     }
 
     static {
-        Object objM97constructorimpl;
-        Object objM97constructorimpl2;
-        Object objM97constructorimpl3;
+        Object objM11474constructorimpl;
+        Object objM11474constructorimpl2;
+        Object objM11474constructorimpl3;
         try {
-            k.a aVar = k.j;
-            objM97constructorimpl = k.m97constructorimpl(Long.valueOf(Os.sysconf(OsConstants._SC_CLK_TCK)));
+            Result2.a aVar = Result2.f25169j;
+            objM11474constructorimpl = Result2.m11474constructorimpl(Long.valueOf(Os.sysconf(OsConstants._SC_CLK_TCK)));
         } catch (Throwable th) {
-            k.a aVar2 = k.j;
-            objM97constructorimpl = k.m97constructorimpl(l.createFailure(th));
+            Result2.a aVar2 = Result2.f25169j;
+            objM11474constructorimpl = Result2.m11474constructorimpl(Result3.createFailure(th));
         }
-        if (k.m101isFailureimpl(objM97constructorimpl)) {
-            objM97constructorimpl = 100L;
+        if (Result2.m11478isFailureimpl(objM11474constructorimpl)) {
+            objM11474constructorimpl = 100L;
         }
-        SC_CLK_TCK = ((Number) objM97constructorimpl).longValue();
+        SC_CLK_TCK = ((Number) objM11474constructorimpl).longValue();
         try {
-            k.a aVar3 = k.j;
-            objM97constructorimpl2 = k.m97constructorimpl(Long.valueOf(Os.sysconf(OsConstants._SC_PAGE_SIZE)));
+            Result2.a aVar3 = Result2.f25169j;
+            objM11474constructorimpl2 = Result2.m11474constructorimpl(Long.valueOf(Os.sysconf(OsConstants._SC_PAGE_SIZE)));
         } catch (Throwable th2) {
-            k.a aVar4 = k.j;
-            objM97constructorimpl2 = k.m97constructorimpl(l.createFailure(th2));
+            Result2.a aVar4 = Result2.f25169j;
+            objM11474constructorimpl2 = Result2.m11474constructorimpl(Result3.createFailure(th2));
         }
         Long lValueOf = Long.valueOf(Permission.SEND_TTS_MESSAGES);
-        if (k.m101isFailureimpl(objM97constructorimpl2)) {
-            objM97constructorimpl2 = lValueOf;
+        if (Result2.m11478isFailureimpl(objM11474constructorimpl2)) {
+            objM11474constructorimpl2 = lValueOf;
         }
-        SC_PAGE_SIZE = ((Number) objM97constructorimpl2).longValue();
+        SC_PAGE_SIZE = ((Number) objM11474constructorimpl2).longValue();
         try {
-            k.a aVar5 = k.j;
-            objM97constructorimpl3 = k.m97constructorimpl(Integer.valueOf(Runtime.getRuntime().availableProcessors()));
+            Result2.a aVar5 = Result2.f25169j;
+            objM11474constructorimpl3 = Result2.m11474constructorimpl(Integer.valueOf(Runtime.getRuntime().availableProcessors()));
         } catch (Throwable th3) {
-            k.a aVar6 = k.j;
-            objM97constructorimpl3 = k.m97constructorimpl(l.createFailure(th3));
+            Result2.a aVar6 = Result2.f25169j;
+            objM11474constructorimpl3 = Result2.m11474constructorimpl(Result3.createFailure(th3));
         }
-        if (k.m101isFailureimpl(objM97constructorimpl3)) {
-            objM97constructorimpl3 = 1;
+        if (Result2.m11478isFailureimpl(objM11474constructorimpl3)) {
+            objM11474constructorimpl3 = 1;
         }
-        cpuCoreCount = ((Number) objM97constructorimpl3).intValue();
+        cpuCoreCount = ((Number) objM11474constructorimpl3).intValue();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public DeviceResourceUsageMonitor(TimeSpan timeSpan, Clock clock, Function1<? super ResourceUsage, Unit> function1) {
-        m.checkNotNullParameter(timeSpan, "timeSpan");
-        m.checkNotNullParameter(clock, "clock");
-        m.checkNotNullParameter(function1, "callback");
+        Intrinsics3.checkNotNullParameter(timeSpan, "timeSpan");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(function1, "callback");
         this.timeSpan = timeSpan;
         this.clock = clock;
         this.callback = function1;
@@ -178,7 +179,7 @@ public final class DeviceResourceUsageMonitor {
             synchronized (this.threadSync) {
                 Long l = this.activeThreadId;
                 Thread threadCurrentThread = Thread.currentThread();
-                m.checkNotNullExpressionValue(threadCurrentThread, "Thread.currentThread()");
+                Intrinsics3.checkNotNullExpressionValue(threadCurrentThread, "Thread.currentThread()");
                 long id2 = threadCurrentThread.getId();
                 if (l == null || l.longValue() != id2) {
                     break;
@@ -213,7 +214,7 @@ public final class DeviceResourceUsageMonitor {
         Thread thread;
         synchronized (this.threadSync) {
             thread = this.thread;
-            Thread threadThread$default = d0.v.a.thread$default(true, true, null, "DeviceResourceUsageMonitor", 2, new DeviceResourceUsageMonitor$start$$inlined$synchronized$lambda$1(this), 4, null);
+            Thread threadThread$default = Thread2.thread$default(true, true, null, "DeviceResourceUsageMonitor", 2, new DeviceResourceUsageMonitor2(this), 4, null);
             this.activeThreadId = Long.valueOf(threadThread$default.getId());
             this.thread = threadThread$default;
         }

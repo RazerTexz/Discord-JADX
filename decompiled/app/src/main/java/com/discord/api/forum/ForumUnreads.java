@@ -1,8 +1,8 @@
 package com.discord.api.forum;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ForumUnreads.kt */
 /* loaded from: classes.dex */
@@ -16,7 +16,8 @@ public final /* data */ class ForumUnreads {
         return this.permissionDenied;
     }
 
-    public final List<ForumUnread> b() {
+    /* renamed from: b */
+    public final List<ForumUnread> m7825b() {
         return this.threads;
     }
 
@@ -28,7 +29,7 @@ public final /* data */ class ForumUnreads {
             return false;
         }
         ForumUnreads forumUnreads = (ForumUnreads) other;
-        return this.channelId == forumUnreads.channelId && this.permissionDenied == forumUnreads.permissionDenied && m.areEqual(this.threads, forumUnreads.threads);
+        return this.channelId == forumUnreads.channelId && this.permissionDenied == forumUnreads.permissionDenied && Intrinsics3.areEqual(this.threads, forumUnreads.threads);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -46,11 +47,11 @@ public final /* data */ class ForumUnreads {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ForumUnreads(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", permissionDenied=");
-        sbU.append(this.permissionDenied);
-        sbU.append(", threads=");
-        return a.L(sbU, this.threads, ")");
+        StringBuilder sbM833U = outline.m833U("ForumUnreads(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", permissionDenied=");
+        sbM833U.append(this.permissionDenied);
+        sbM833U.append(", threads=");
+        return outline.m824L(sbM833U, this.threads, ")");
     }
 }

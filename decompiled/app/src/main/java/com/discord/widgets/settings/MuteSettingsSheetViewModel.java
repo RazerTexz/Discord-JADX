@@ -1,10 +1,7 @@
 package com.discord.widgets.settings;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.models.domain.ModelMuteConfig;
@@ -15,25 +12,28 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreThreadsJoined;
 import com.discord.stores.StoreUserGuildSettings;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.time.TimeUtils;
-import com.discord.widgets.chat.input.MentionUtilsKt;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: MuteSettingsSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class MuteSettingsSheetViewModel extends d0<ViewState> {
+public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -47,21 +47,21 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
     private final StoreUserGuildSettings storeUserGuildSettings;
 
     /* compiled from: MuteSettingsSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.MuteSettingsSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.MuteSettingsSheetViewModel$1 */
+    public static final class C95971 extends Lambda implements Function1<StoreState, Unit> {
+        public C95971() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             MuteSettingsSheetViewModel.access$handleStoreState(MuteSettingsSheetViewModel.this, storeState);
         }
     }
@@ -76,9 +76,9 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(long guildId, long channelId, StoreGuilds storeGuilds, StoreChannels storeChannels, StoreUserGuildSettings storeUserGuildSettings, StoreThreadsJoined storeThreadsJoined) {
-            Observable<StoreState> observableH = Observable.h(storeGuilds.observeGuild(guildId), storeChannels.observeChannel(channelId), storeUserGuildSettings.observeGuildSettings(), storeThreadsJoined.observeJoinedThread(channelId), MuteSettingsSheetViewModel$Companion$observeStoreState$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableH, "Observable.combineLatest…dThread\n        )\n      }");
-            return observableH;
+            Observable<StoreState> observableM11073h = Observable.m11073h(storeGuilds.observeGuild(guildId), storeChannels.observeChannel(channelId), storeUserGuildSettings.observeGuildSettings(), storeThreadsJoined.observeJoinedThread(channelId), MuteSettingsSheetViewModel2.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11073h, "Observable.combineLatest…dThread\n        )\n      }");
+            return observableM11073h;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -126,11 +126,11 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.channelId);
+                return C0002b.m3a(this.channelId);
             }
 
             public String toString() {
-                return a.C(a.U("Channel(channelId="), this.channelId, ")");
+                return outline.m815C(outline.m833U("Channel(channelId="), this.channelId, ")");
             }
         }
 
@@ -171,11 +171,11 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.guildId);
+                return C0002b.m3a(this.guildId);
             }
 
             public String toString() {
-                return a.C(a.U("Guild(guildId="), this.guildId, ")");
+                return outline.m815C(outline.m833U("Guild(guildId="), this.guildId, ")");
             }
         }
 
@@ -236,11 +236,11 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.channelId);
+                return C0002b.m3a(this.channelId);
             }
 
             public String toString() {
-                return a.C(a.U("NavigateToChannelSettings(channelId="), this.channelId, ")");
+                return outline.m815C(outline.m833U("NavigateToChannelSettings(channelId="), this.channelId, ")");
             }
         }
 
@@ -325,7 +325,7 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.guild, storeState.guild) && m.areEqual(this.channel, storeState.channel) && m.areEqual(this.guildNotificationSettings, storeState.guildNotificationSettings) && m.areEqual(this.joinedThread, storeState.joinedThread);
+            return Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.channel, storeState.channel) && Intrinsics3.areEqual(this.guildNotificationSettings, storeState.guildNotificationSettings) && Intrinsics3.areEqual(this.joinedThread, storeState.joinedThread);
         }
 
         public final Channel getChannel() {
@@ -356,16 +356,16 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(guild=");
-            sbU.append(this.guild);
-            sbU.append(", channel=");
-            sbU.append(this.channel);
-            sbU.append(", guildNotificationSettings=");
-            sbU.append(this.guildNotificationSettings);
-            sbU.append(", joinedThread=");
-            sbU.append(this.joinedThread);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("StoreState(guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", guildNotificationSettings=");
+            sbM833U.append(this.guildNotificationSettings);
+            sbM833U.append(", joinedThread=");
+            sbM833U.append(this.joinedThread);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
 
         public /* synthetic */ StoreState(Guild guild, Channel channel, ModelNotificationSettings modelNotificationSettings, StoreThreadsJoined.JoinedThread joinedThread, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -455,8 +455,8 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(SettingsType settingsType, String subtitle, boolean isChannelMuted, boolean isGuildMuted, String muteEndTime, int notificationSetting) {
-                m.checkNotNullParameter(settingsType, "settingsType");
-                m.checkNotNullParameter(subtitle, "subtitle");
+                Intrinsics3.checkNotNullParameter(settingsType, "settingsType");
+                Intrinsics3.checkNotNullParameter(subtitle, "subtitle");
                 return new Loaded(settingsType, subtitle, isChannelMuted, isGuildMuted, muteEndTime, notificationSetting);
             }
 
@@ -468,7 +468,7 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return m.areEqual(this.settingsType, loaded.settingsType) && m.areEqual(this.subtitle, loaded.subtitle) && this.isChannelMuted == loaded.isChannelMuted && this.isGuildMuted == loaded.isGuildMuted && m.areEqual(this.muteEndTime, loaded.muteEndTime) && this.notificationSetting == loaded.notificationSetting;
+                return Intrinsics3.areEqual(this.settingsType, loaded.settingsType) && Intrinsics3.areEqual(this.subtitle, loaded.subtitle) && this.isChannelMuted == loaded.isChannelMuted && this.isGuildMuted == loaded.isGuildMuted && Intrinsics3.areEqual(this.muteEndTime, loaded.muteEndTime) && this.notificationSetting == loaded.notificationSetting;
             }
 
             public final String getMuteEndTime() {
@@ -514,25 +514,25 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(settingsType=");
-                sbU.append(this.settingsType);
-                sbU.append(", subtitle=");
-                sbU.append(this.subtitle);
-                sbU.append(", isChannelMuted=");
-                sbU.append(this.isChannelMuted);
-                sbU.append(", isGuildMuted=");
-                sbU.append(this.isGuildMuted);
-                sbU.append(", muteEndTime=");
-                sbU.append(this.muteEndTime);
-                sbU.append(", notificationSetting=");
-                return a.B(sbU, this.notificationSetting, ")");
+                StringBuilder sbM833U = outline.m833U("Loaded(settingsType=");
+                sbM833U.append(this.settingsType);
+                sbM833U.append(", subtitle=");
+                sbM833U.append(this.subtitle);
+                sbM833U.append(", isChannelMuted=");
+                sbM833U.append(this.isChannelMuted);
+                sbM833U.append(", isGuildMuted=");
+                sbM833U.append(this.isGuildMuted);
+                sbM833U.append(", muteEndTime=");
+                sbM833U.append(this.muteEndTime);
+                sbM833U.append(", notificationSetting=");
+                return outline.m814B(sbM833U, this.notificationSetting, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(SettingsType settingsType, String str, boolean z2, boolean z3, String str2, int i) {
                 super(null);
-                m.checkNotNullParameter(settingsType, "settingsType");
-                m.checkNotNullParameter(str, "subtitle");
+                Intrinsics3.checkNotNullParameter(settingsType, "settingsType");
+                Intrinsics3.checkNotNullParameter(str, "subtitle");
                 this.settingsType = settingsType;
                 this.subtitle = str;
                 this.isChannelMuted = z2;
@@ -595,7 +595,7 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
     @MainThread
     private final void emitDismissEvent() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.Dismiss.INSTANCE);
+        publishSubject.f27650k.onNext(Event.Dismiss.INSTANCE);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:38:0x0091  */
@@ -616,30 +616,30 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
         Object next;
         Guild guild = storeState.getGuild();
         Channel channel = storeState.getChannel();
-        SettingsType settingsType = guild != null ? SettingsType.GUILD : channel != null ? ChannelUtils.m(channel) ? SettingsType.DM : ChannelUtils.p(channel) ? SettingsType.GROUP_DM : ChannelUtils.k(channel) ? SettingsType.CATEGORY : ChannelUtils.H(channel) ? SettingsType.THREAD : SettingsType.GUILD_CHANNEL : SettingsType.UNKNOWN;
+        SettingsType settingsType = guild != null ? SettingsType.GUILD : channel != null ? ChannelUtils.m7689m(channel) ? SettingsType.DM : ChannelUtils.m7692p(channel) ? SettingsType.GROUP_DM : ChannelUtils.m7687k(channel) ? SettingsType.CATEGORY : ChannelUtils.m7673H(channel) ? SettingsType.THREAD : SettingsType.GUILD_CHANNEL : SettingsType.UNKNOWN;
         if (settingsType == SettingsType.UNKNOWN) {
             updateViewState(ViewState.Failure.INSTANCE);
             return;
         }
         int iOrdinal = settingsType.ordinal();
         if (iOrdinal == 0) {
-            m.checkNotNull(guild);
+            Intrinsics3.checkNotNull(guild);
             name = guild.getName();
         } else if (iOrdinal == 1 || iOrdinal == 2) {
-            m.checkNotNull(channel);
-            name = ChannelUtils.c(channel);
+            Intrinsics3.checkNotNull(channel);
+            name = ChannelUtils.m7679c(channel);
         } else if (iOrdinal == 3) {
             StringBuilder sb = new StringBuilder();
             sb.append('\"');
-            m.checkNotNull(channel);
-            sb.append(ChannelUtils.c(channel));
+            Intrinsics3.checkNotNull(channel);
+            sb.append(ChannelUtils.m7679c(channel));
             sb.append('\"');
             name = sb.toString();
         } else if (iOrdinal == 4) {
             StringBuilder sb2 = new StringBuilder();
-            sb2.append(MentionUtilsKt.CHANNELS_CHAR);
-            m.checkNotNull(channel);
-            sb2.append(ChannelUtils.c(channel));
+            sb2.append(MentionUtils.CHANNELS_CHAR);
+            Intrinsics3.checkNotNull(channel);
+            sb2.append(ChannelUtils.m7679c(channel));
             name = sb2.toString();
         } else if (iOrdinal != 5) {
             name = "";
@@ -659,7 +659,7 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
                 Channel channel2 = storeState.getChannel();
                 if (channel2 != null) {
                     long id2 = channel2.getId();
-                    m.checkNotNullExpressionValue(channelOverride2, "channelOverride");
+                    Intrinsics3.checkNotNullExpressionValue(channelOverride2, "channelOverride");
                     boolean z2 = id2 == channelOverride2.getChannelId();
                     if (z2) {
                         break;
@@ -668,8 +668,8 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
             }
             channelOverride = (ModelNotificationSettings.ChannelOverride) next;
         }
-        boolean z3 = channel == null || !ChannelUtils.H(channel) ? !(channelOverride == null || !channelOverride.isMuted()) : !((joinedThread = storeState.getJoinedThread()) == null || !joinedThread.getMuted());
-        if (channel == null || !ChannelUtils.H(channel)) {
+        boolean z3 = channel == null || !ChannelUtils.m7673H(channel) ? !(channelOverride == null || !channelOverride.isMuted()) : !((joinedThread = storeState.getJoinedThread()) == null || !joinedThread.getMuted());
+        if (channel == null || !ChannelUtils.m7673H(channel)) {
             muteEndTime = channelOverride != null ? channelOverride.getMuteEndTime() : null;
         } else {
             StoreThreadsJoined.JoinedThread joinedThread2 = storeState.getJoinedThread();
@@ -677,20 +677,20 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
                 muteEndTime = muteConfig.getEndTime();
             }
         }
-        if (channel != null && ChannelUtils.H(channel)) {
+        if (channel != null && ChannelUtils.m7673H(channel)) {
             StoreThreadsJoined.JoinedThread joinedThread3 = storeState.getJoinedThread();
             numValueOf = joinedThread3 != null ? Integer.valueOf(joinedThread3.getFlags()) : null;
             numValueOf = Integer.valueOf((numValueOf != null && numValueOf.intValue() == 8) ? ModelNotificationSettings.FREQUENCY_NOTHING : (numValueOf != null && numValueOf.intValue() == 4) ? ModelNotificationSettings.FREQUENCY_MENTIONS : ModelNotificationSettings.FREQUENCY_ALL);
         } else if (channelOverride != null) {
             numValueOf = Integer.valueOf(channelOverride.getMessageNotifications());
         }
-        updateViewState(new ViewState.Loaded(settingsType, name, z3, (channel == null || ChannelUtils.B(channel) || (guildNotificationSettings = storeState.getGuildNotificationSettings()) == null || !guildNotificationSettings.isMuted()) ? false : true, muteEndTime, numValueOf != null ? numValueOf.intValue() : ModelNotificationSettings.FREQUENCY_UNSET));
+        updateViewState(new ViewState.Loaded(settingsType, name, z3, (channel == null || ChannelUtils.m7667B(channel) || (guildNotificationSettings = storeState.getGuildNotificationSettings()) == null || !guildNotificationSettings.isMuted()) ? false : true, muteEndTime, numValueOf != null ? numValueOf.intValue() : ModelNotificationSettings.FREQUENCY_UNSET));
     }
 
     @MainThread
     public final void emitNotificationSettingsEvent(long channelId) {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new Event.NavigateToChannelSettings(channelId));
+        publishSubject.f27650k.onNext(new Event.NavigateToChannelSettings(channelId));
     }
 
     public final long getChannelId() {
@@ -719,7 +719,7 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -733,7 +733,7 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
 
     @MainThread
     public final void selectMuteDurationMs(long muteDurationMs, Context appContext) {
-        m.checkNotNullParameter(appContext, "appContext");
+        Intrinsics3.checkNotNullParameter(appContext, "appContext");
         ModelMuteConfig modelMuteConfig = muteDurationMs != 0 ? new ModelMuteConfig(TimeUtils.toUTCDateTime$default(Long.valueOf(this.clock.currentTimeMillis() + muteDurationMs), null, 2, null)) : null;
         Config config = this.config;
         if (config instanceof Config.Guild) {
@@ -746,7 +746,7 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
 
     @MainThread
     public final void unmute(Context appContext) {
-        m.checkNotNullParameter(appContext, "appContext");
+        Intrinsics3.checkNotNullParameter(appContext, "appContext");
         Config config = this.config;
         if (config instanceof Config.Channel) {
             this.storeUserGuildSettings.setChannelMuted(appContext, ((Config.Channel) config).getChannelId(), false, null);
@@ -758,9 +758,9 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
     public MuteSettingsSheetViewModel(long j, long j2, Observable<StoreState> observable, StoreUserGuildSettings storeUserGuildSettings, Clock clock) {
         Config channel;
         super(ViewState.Uninitialized.INSTANCE);
-        m.checkNotNullParameter(observable, "storeStateObservable");
-        m.checkNotNullParameter(storeUserGuildSettings, "storeUserGuildSettings");
-        m.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(storeUserGuildSettings, "storeUserGuildSettings");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
         this.guildId = j;
         this.channelId = j2;
         this.storeStateObservable = observable;
@@ -772,7 +772,7 @@ public final class MuteSettingsSheetViewModel extends d0<ViewState> {
             channel = new Config.Channel(j2);
         }
         this.config = channel;
-        this.eventSubject = PublishSubject.k0();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), MuteSettingsSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        this.eventSubject = PublishSubject.m11133k0();
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), MuteSettingsSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C95971(), 62, (Object) null);
     }
 }

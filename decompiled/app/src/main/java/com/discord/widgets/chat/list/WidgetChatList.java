@@ -7,35 +7,35 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.f0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetChatListBinding;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.chat.input.AppFlexInputViewModel;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapter;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapterEventsHandler;
 import com.discord.widgets.chat.list.model.WidgetChatListModel;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.KProperty;
-import rx.functions.Action0;
+import p007b.p008a.p018d.AppViewModelDelegates2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.functions.Action0;
 
 /* compiled from: WidgetChatList.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChatList extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChatList.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatListBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChatList.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatListBinding;", 0)};
     private WidgetChatListAdapter adapter;
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
@@ -46,16 +46,16 @@ public final class WidgetChatList extends AppFragment {
     private final Lazy flexInputViewModel;
 
     /* compiled from: WidgetChatList.kt */
-    /* renamed from: com.discord.widgets.chat.list.WidgetChatList$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetChatListModel, Unit> {
-        public AnonymousClass1(WidgetChatList widgetChatList) {
+    /* renamed from: com.discord.widgets.chat.list.WidgetChatList$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C79551 extends FunctionReferenceImpl implements Function1<WidgetChatListModel, Unit> {
+        public C79551(WidgetChatList widgetChatList) {
             super(1, widgetChatList, WidgetChatList.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/list/model/WidgetChatListModel;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetChatListModel widgetChatListModel) {
             invoke2(widgetChatListModel);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -65,16 +65,16 @@ public final class WidgetChatList extends AppFragment {
     }
 
     /* compiled from: WidgetChatList.kt */
-    /* renamed from: com.discord.widgets.chat.list.WidgetChatList$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<Long, Unit> {
-        public AnonymousClass2(WidgetChatList widgetChatList) {
+    /* renamed from: com.discord.widgets.chat.list.WidgetChatList$onViewBoundOrOnResume$2 */
+    public static final /* synthetic */ class C79562 extends FunctionReferenceImpl implements Function1<Long, Unit> {
+        public C79562(WidgetChatList widgetChatList) {
             super(1, widgetChatList, WidgetChatList.class, "scrollTo", "scrollTo(J)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke(l.longValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j) {
@@ -83,9 +83,9 @@ public final class WidgetChatList extends AppFragment {
     }
 
     public WidgetChatList() {
-        super(R.layout.widget_chat_list);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding(this, WidgetChatList$binding$2.INSTANCE, new WidgetChatList$binding$3(this));
-        this.flexInputViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(AppFlexInputViewModel.class), new WidgetChatList$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(new WidgetChatList$flexInputViewModel$2(this)));
+        super(C5419R.layout.widget_chat_list);
+        this.binding = FragmentViewBindingDelegate3.viewBinding(this, WidgetChatList2.INSTANCE, new WidgetChatList3(this));
+        this.flexInputViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(AppFlexInputViewModel.class), new C7953x8161d219(this), new AppViewModelDelegates2(new WidgetChatList4(this)));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetChatList widgetChatList, WidgetChatListModel widgetChatListModel) {
@@ -105,15 +105,15 @@ public final class WidgetChatList extends AppFragment {
     }
 
     private final void addThreadSpineItemDecoration(WidgetChatListAdapter adapter) {
-        getBinding().f2343b.addItemDecoration(new ThreadSpineItemDecoration(requireContext(), adapter));
+        getBinding().f16355b.addItemDecoration(new ThreadSpineItemDecoration(requireContext(), adapter));
     }
 
     private final void configureExistingAdapter(WidgetChatListAdapter widgetChatListAdapter) {
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         widgetChatListAdapter.setFragmentManager(parentFragmentManager);
-        RecyclerView recyclerView = getBinding().f2343b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
+        RecyclerView recyclerView = getBinding().f16355b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
         widgetChatListAdapter.setRecycler(recyclerView);
         LinearLayoutManager layoutManager = ((WidgetChatListAdapter) MGRecyclerAdapter.INSTANCE.configure(widgetChatListAdapter)).getLayoutManager();
         if (layoutManager != null) {
@@ -122,8 +122,8 @@ public final class WidgetChatList extends AppFragment {
     }
 
     private final void configureUI(WidgetChatListModel chatData) {
-        RecyclerView recyclerView = getBinding().f2343b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
+        RecyclerView recyclerView = getBinding().f16355b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
         recyclerView.setVisibility(chatData != null ? 0 : 8);
         WidgetChatListAdapter widgetChatListAdapter = this.adapter;
         if (widgetChatListAdapter == null || chatData == null || widgetChatListAdapter == null) {
@@ -133,10 +133,10 @@ public final class WidgetChatList extends AppFragment {
     }
 
     private final void createAdapter() {
-        RecyclerView recyclerView = getBinding().f2343b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
+        RecyclerView recyclerView = getBinding().f16355b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         WidgetChatListAdapter widgetChatListAdapter = new WidgetChatListAdapter(recyclerView, this, parentFragmentManager, new WidgetChatListAdapterEventsHandler(this, getFlexInputViewModel(), null, null, null, null, null, null, null, null, null, null, 4092, null), getFlexInputViewModel(), ClockFactory.get());
         MGRecyclerAdapter.INSTANCE.configure(widgetChatListAdapter);
         addThreadSpineItemDecoration(widgetChatListAdapter);
@@ -157,28 +157,28 @@ public final class WidgetChatList extends AppFragment {
     }
 
     private final void scrollTo(long messageId) {
-        WidgetChatList$scrollTo$onCompleted$1 widgetChatList$scrollTo$onCompleted$1 = WidgetChatList$scrollTo$onCompleted$1.INSTANCE;
+        WidgetChatList6 widgetChatList6 = WidgetChatList6.INSTANCE;
         WidgetChatListAdapter widgetChatListAdapter = this.adapter;
-        Object widgetChatList$sam$rx_functions_Action0$0 = widgetChatList$scrollTo$onCompleted$1;
+        Object widgetChatList5 = widgetChatList6;
         if (widgetChatListAdapter == null) {
-            widgetChatList$scrollTo$onCompleted$1.invoke();
+            widgetChatList6.invoke();
         } else if (widgetChatListAdapter != null) {
-            if (widgetChatList$scrollTo$onCompleted$1 != null) {
-                widgetChatList$sam$rx_functions_Action0$0 = new WidgetChatList$sam$rx_functions_Action0$0(widgetChatList$scrollTo$onCompleted$1);
+            if (widgetChatList6 != null) {
+                widgetChatList5 = new WidgetChatList5(widgetChatList6);
             }
-            widgetChatListAdapter.scrollToMessageId(messageId, (Action0) widgetChatList$sam$rx_functions_Action0$0);
+            widgetChatListAdapter.scrollToMessageId(messageId, (Action0) widgetChatList5);
         }
     }
 
     public final void disableItemAnimations() {
-        RecyclerView recyclerView = getBinding().f2343b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
+        RecyclerView recyclerView = getBinding().f16355b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
         recyclerView.setItemAnimator(null);
     }
 
     public final void enableItemAnimations() {
-        RecyclerView recyclerView = getBinding().f2343b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
+        RecyclerView recyclerView = getBinding().f16355b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
         recyclerView.setItemAnimator(this.defaultItemAnimator);
     }
 
@@ -197,7 +197,7 @@ public final class WidgetChatList extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setRetainInstance(true);
         WidgetChatListAdapter widgetChatListAdapter = this.adapter;
@@ -219,10 +219,10 @@ public final class WidgetChatList extends AppFragment {
         if (widgetChatListAdapter2 != null) {
             widgetChatListAdapter2.onResume();
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(ObservableExtensionsKt.computationLatest(WidgetChatListModel.INSTANCE.get()), this, this.adapter), WidgetChatList.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getMessagesLoader().getScrollTo(), this, null, 2, null), WidgetChatList.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
-        RecyclerView recyclerView = getBinding().f2343b;
-        m.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.m8519ui(ObservableExtensionsKt.computationLatest(WidgetChatListModel.INSTANCE.get()), this, this.adapter), WidgetChatList.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C79551(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getMessagesLoader().getScrollTo(), this, null, 2, null), WidgetChatList.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C79562(this), 62, (Object) null);
+        RecyclerView recyclerView = getBinding().f16355b;
+        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatListRecycler");
         this.defaultItemAnimator = recyclerView.getItemAnimator();
     }
 }

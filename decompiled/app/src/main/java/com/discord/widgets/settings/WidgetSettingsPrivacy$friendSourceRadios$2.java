@@ -1,14 +1,14 @@
 package com.discord.widgets.settings;
 
 import com.discord.views.CheckedSetting;
-import d0.t.n;
-import d0.z.d.o;
 import java.util.List;
 import kotlin.jvm.functions.Function0;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetSettingsPrivacy.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSettingsPrivacy$friendSourceRadios$2 extends o implements Function0<List<? extends CheckedSetting>> {
+public final class WidgetSettingsPrivacy$friendSourceRadios$2 extends Lambda implements Function0<List<? extends CheckedSetting>> {
     public final /* synthetic */ WidgetSettingsPrivacy this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -25,6 +25,6 @@ public final class WidgetSettingsPrivacy$friendSourceRadios$2 extends o implemen
     @Override // kotlin.jvm.functions.Function0
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends CheckedSetting> invoke2() {
-        return n.listOf((Object[]) new CheckedSetting[]{WidgetSettingsPrivacy.access$getBinding$p(this.this$0).r, WidgetSettingsPrivacy.access$getBinding$p(this.this$0).f2636s, WidgetSettingsPrivacy.access$getBinding$p(this.this$0).t});
+        return Collections2.listOf((Object[]) new CheckedSetting[]{WidgetSettingsPrivacy.access$getBinding$p(this.this$0).f18067r, WidgetSettingsPrivacy.access$getBinding$p(this.this$0).f18068s, WidgetSettingsPrivacy.access$getBinding$p(this.this$0).f18069t});
     }
 }

@@ -39,7 +39,6 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.core.util.Preconditions;
 import androidx.core.view.ViewCompat;
 import androidx.versionedparcelable.CustomVersionedParcelable;
-import b.d.b.a.a;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -50,6 +49,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.Charset;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class IconCompat extends CustomVersionedParcelable {
@@ -387,9 +387,9 @@ public class IconCompat extends CustomVersionedParcelable {
                 drawable2.setBounds(0, 0, bitmapCopy.getWidth(), bitmapCopy.getHeight());
                 drawable2.draw(new Canvas(bitmapCopy));
             } catch (PackageManager.NameNotFoundException e) {
-                StringBuilder sbU = a.U("Can't find package ");
-                sbU.append(this.mObj1);
-                throw new IllegalArgumentException(sbU.toString(), e);
+                StringBuilder sbM833U = outline.m833U("Can't find package ");
+                sbM833U.append(this.mObj1);
+                throw new IllegalArgumentException(sbM833U.toString(), e);
             }
         } else {
             if (i != 5) {
@@ -737,35 +737,29 @@ public class IconCompat extends CustomVersionedParcelable {
                 iconCreateWithBitmap = Icon.createWithContentUri((String) this.mObj1);
                 break;
             case 5:
-                if (Build.VERSION.SDK_INT < 26) {
-                    iconCreateWithBitmap = Icon.createWithBitmap(createLegacyIconFromAdaptiveIcon((Bitmap) this.mObj1, false));
-                } else {
-                    iconCreateWithBitmap = Icon.createWithAdaptiveBitmap((Bitmap) this.mObj1);
-                }
+                iconCreateWithBitmap = Build.VERSION.SDK_INT < 26 ? Icon.createWithBitmap(createLegacyIconFromAdaptiveIcon((Bitmap) this.mObj1, false)) : Icon.createWithAdaptiveBitmap((Bitmap) this.mObj1);
                 break;
             case 6:
                 int i = Build.VERSION.SDK_INT;
                 if (i >= 30) {
                     iconCreateWithBitmap = Icon.createWithAdaptiveBitmapContentUri(getUri());
-                    break;
                 } else {
                     if (context == null) {
-                        StringBuilder sbU = a.U("Context is required to resolve the file uri of the icon: ");
-                        sbU.append(getUri());
-                        throw new IllegalArgumentException(sbU.toString());
+                        StringBuilder sbM833U = outline.m833U("Context is required to resolve the file uri of the icon: ");
+                        sbM833U.append(getUri());
+                        throw new IllegalArgumentException(sbM833U.toString());
                     }
                     InputStream uriInputStream = getUriInputStream(context);
                     if (uriInputStream == null) {
-                        StringBuilder sbU2 = a.U("Cannot load adaptive icon from uri: ");
-                        sbU2.append(getUri());
-                        throw new IllegalStateException(sbU2.toString());
+                        StringBuilder sbM833U2 = outline.m833U("Cannot load adaptive icon from uri: ");
+                        sbM833U2.append(getUri());
+                        throw new IllegalStateException(sbM833U2.toString());
                     }
                     if (i < 26) {
                         iconCreateWithBitmap = Icon.createWithBitmap(createLegacyIconFromAdaptiveIcon(BitmapFactory.decodeStream(uriInputStream), false));
                     } else {
                         iconCreateWithBitmap = Icon.createWithAdaptiveBitmap(BitmapFactory.decodeStream(uriInputStream));
                     }
-                    break;
                 }
                 break;
         }

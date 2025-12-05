@@ -1,9 +1,9 @@
 package com.fasterxml.jackson.databind.exc;
 
-import b.g.a.c.t;
+import p007b.p195g.p196a.p205c.PropertyName;
 
 /* loaded from: classes3.dex */
 public class InvalidNullException extends MismatchedInputException {
     private static final long serialVersionUID = 1;
-    public final t _propertyName;
+    public final PropertyName _propertyName;
 }

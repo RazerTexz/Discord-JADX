@@ -1,9 +1,9 @@
 package com.discord.widgets.channels.list.items;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.stageinstance.StageInstance;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChannelListItemStageVoiceChannel.kt */
 /* loaded from: classes2.dex */
@@ -21,7 +21,7 @@ public final /* data */ class ChannelListItemStageVoiceChannel implements Channe
     private final int type;
 
     public ChannelListItemStageVoiceChannel(Channel channel, boolean z2, Long l, boolean z3, int i, StageInstance stageInstance, boolean z4, boolean z5, boolean z6) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         this.channel = channel;
         this.selected = z2;
         this.permission = l;
@@ -86,7 +86,7 @@ public final /* data */ class ChannelListItemStageVoiceChannel implements Channe
     }
 
     public final ChannelListItemStageVoiceChannel copy(Channel channel, boolean selected, Long permission, boolean isLocked, int numUsersConnected, StageInstance stageInstance, boolean hasSpeakers, boolean isGuildRoleSubscriptionLockedChannel, boolean isGuildRoleSubscriptionChannel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         return new ChannelListItemStageVoiceChannel(channel, selected, permission, isLocked, numUsersConnected, stageInstance, hasSpeakers, isGuildRoleSubscriptionLockedChannel, isGuildRoleSubscriptionChannel);
     }
 
@@ -98,7 +98,7 @@ public final /* data */ class ChannelListItemStageVoiceChannel implements Channe
             return false;
         }
         ChannelListItemStageVoiceChannel channelListItemStageVoiceChannel = (ChannelListItemStageVoiceChannel) other;
-        return m.areEqual(getChannel(), channelListItemStageVoiceChannel.getChannel()) && this.selected == channelListItemStageVoiceChannel.selected && m.areEqual(this.permission, channelListItemStageVoiceChannel.permission) && this.isLocked == channelListItemStageVoiceChannel.isLocked && getNumUsersConnected() == channelListItemStageVoiceChannel.getNumUsersConnected() && m.areEqual(this.stageInstance, channelListItemStageVoiceChannel.stageInstance) && this.hasSpeakers == channelListItemStageVoiceChannel.hasSpeakers && this.isGuildRoleSubscriptionLockedChannel == channelListItemStageVoiceChannel.isGuildRoleSubscriptionLockedChannel && this.isGuildRoleSubscriptionChannel == channelListItemStageVoiceChannel.isGuildRoleSubscriptionChannel;
+        return Intrinsics3.areEqual(getChannel(), channelListItemStageVoiceChannel.getChannel()) && this.selected == channelListItemStageVoiceChannel.selected && Intrinsics3.areEqual(this.permission, channelListItemStageVoiceChannel.permission) && this.isLocked == channelListItemStageVoiceChannel.isLocked && getNumUsersConnected() == channelListItemStageVoiceChannel.getNumUsersConnected() && Intrinsics3.areEqual(this.stageInstance, channelListItemStageVoiceChannel.stageInstance) && this.hasSpeakers == channelListItemStageVoiceChannel.hasSpeakers && this.isGuildRoleSubscriptionLockedChannel == channelListItemStageVoiceChannel.isGuildRoleSubscriptionLockedChannel && this.isGuildRoleSubscriptionChannel == channelListItemStageVoiceChannel.isGuildRoleSubscriptionChannel;
     }
 
     @Override // com.discord.widgets.channels.list.items.ChannelListVocalItem
@@ -190,23 +190,23 @@ public final /* data */ class ChannelListItemStageVoiceChannel implements Channe
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelListItemStageVoiceChannel(channel=");
-        sbU.append(getChannel());
-        sbU.append(", selected=");
-        sbU.append(this.selected);
-        sbU.append(", permission=");
-        sbU.append(this.permission);
-        sbU.append(", isLocked=");
-        sbU.append(this.isLocked);
-        sbU.append(", numUsersConnected=");
-        sbU.append(getNumUsersConnected());
-        sbU.append(", stageInstance=");
-        sbU.append(this.stageInstance);
-        sbU.append(", hasSpeakers=");
-        sbU.append(this.hasSpeakers);
-        sbU.append(", isGuildRoleSubscriptionLockedChannel=");
-        sbU.append(this.isGuildRoleSubscriptionLockedChannel);
-        sbU.append(", isGuildRoleSubscriptionChannel=");
-        return a.O(sbU, this.isGuildRoleSubscriptionChannel, ")");
+        StringBuilder sbM833U = outline.m833U("ChannelListItemStageVoiceChannel(channel=");
+        sbM833U.append(getChannel());
+        sbM833U.append(", selected=");
+        sbM833U.append(this.selected);
+        sbM833U.append(", permission=");
+        sbM833U.append(this.permission);
+        sbM833U.append(", isLocked=");
+        sbM833U.append(this.isLocked);
+        sbM833U.append(", numUsersConnected=");
+        sbM833U.append(getNumUsersConnected());
+        sbM833U.append(", stageInstance=");
+        sbM833U.append(this.stageInstance);
+        sbM833U.append(", hasSpeakers=");
+        sbM833U.append(this.hasSpeakers);
+        sbM833U.append(", isGuildRoleSubscriptionLockedChannel=");
+        sbM833U.append(this.isGuildRoleSubscriptionLockedChannel);
+        sbM833U.append(", isGuildRoleSubscriptionChannel=");
+        return outline.m827O(sbM833U, this.isGuildRoleSubscriptionChannel, ")");
     }
 }

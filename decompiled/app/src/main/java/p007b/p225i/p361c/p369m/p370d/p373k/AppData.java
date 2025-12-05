@@ -1,0 +1,40 @@
+package p007b.p225i.p361c.p369m.p370d.p373k;
+
+import p007b.p225i.p361c.p369m.p370d.p388u.ResourceUnityVersionProvider;
+
+/* compiled from: AppData.java */
+/* renamed from: b.i.c.m.d.k.b, reason: use source file name */
+/* loaded from: classes3.dex */
+public class AppData {
+
+    /* renamed from: a */
+    public final String f12259a;
+
+    /* renamed from: b */
+    public final String f12260b;
+
+    /* renamed from: c */
+    public final String f12261c;
+
+    /* renamed from: d */
+    public final String f12262d;
+
+    /* renamed from: e */
+    public final String f12263e;
+
+    /* renamed from: f */
+    public final String f12264f;
+
+    /* renamed from: g */
+    public final ResourceUnityVersionProvider f12265g;
+
+    public AppData(String str, String str2, String str3, String str4, String str5, String str6, ResourceUnityVersionProvider resourceUnityVersionProvider) {
+        this.f12259a = str;
+        this.f12260b = str2;
+        this.f12261c = str3;
+        this.f12262d = str4;
+        this.f12263e = str5;
+        this.f12264f = str6;
+        this.f12265g = resourceUnityVersionProvider;
+    }
+}

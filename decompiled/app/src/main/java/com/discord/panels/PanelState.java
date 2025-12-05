@@ -7,37 +7,49 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 public abstract class PanelState {
 
     /* compiled from: PanelState.kt */
-    public static final class a extends PanelState {
-        public static final a a = new a();
+    /* renamed from: com.discord.panels.PanelState$a */
+    public static final class C5578a extends PanelState {
 
-        public a() {
+        /* renamed from: a */
+        public static final C5578a f18640a = new C5578a();
+
+        public C5578a() {
             super(null);
         }
     }
 
     /* compiled from: PanelState.kt */
-    public static final class b extends PanelState {
-        public static final b a = new b();
+    /* renamed from: com.discord.panels.PanelState$b */
+    public static final class C5579b extends PanelState {
 
-        public b() {
+        /* renamed from: a */
+        public static final C5579b f18641a = new C5579b();
+
+        public C5579b() {
             super(null);
         }
     }
 
     /* compiled from: PanelState.kt */
-    public static final class c extends PanelState {
-        public static final c a = new c();
+    /* renamed from: com.discord.panels.PanelState$c */
+    public static final class C5580c extends PanelState {
 
-        public c() {
+        /* renamed from: a */
+        public static final C5580c f18642a = new C5580c();
+
+        public C5580c() {
             super(null);
         }
     }
 
     /* compiled from: PanelState.kt */
-    public static final class d extends PanelState {
-        public static final d a = new d();
+    /* renamed from: com.discord.panels.PanelState$d */
+    public static final class C5581d extends PanelState {
 
-        public d() {
+        /* renamed from: a */
+        public static final C5581d f18643a = new C5581d();
+
+        public C5581d() {
             super(null);
         }
     }

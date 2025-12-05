@@ -1,8 +1,8 @@
 package com.discord.api.channel;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChannelRecipientNick.kt */
 /* loaded from: classes.dex */
@@ -11,7 +11,7 @@ public final /* data */ class ChannelRecipientNick {
     private final String nick;
 
     public ChannelRecipientNick(long j, String str) {
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NICK);
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NICK);
         this.id = j;
         this.nick = str;
     }
@@ -21,7 +21,8 @@ public final /* data */ class ChannelRecipientNick {
         return this.id;
     }
 
-    public final long b() {
+    /* renamed from: b */
+    public final long m7664b() {
         return this.id;
     }
 
@@ -38,7 +39,7 @@ public final /* data */ class ChannelRecipientNick {
             return false;
         }
         ChannelRecipientNick channelRecipientNick = (ChannelRecipientNick) other;
-        return this.id == channelRecipientNick.id && m.areEqual(this.nick, channelRecipientNick.nick);
+        return this.id == channelRecipientNick.id && Intrinsics3.areEqual(this.nick, channelRecipientNick.nick);
     }
 
     public int hashCode() {
@@ -49,9 +50,9 @@ public final /* data */ class ChannelRecipientNick {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelRecipientNick(id=");
-        sbU.append(this.id);
-        sbU.append(", nick=");
-        return a.J(sbU, this.nick, ")");
+        StringBuilder sbM833U = outline.m833U("ChannelRecipientNick(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", nick=");
+        return outline.m822J(sbM833U, this.nick, ")");
     }
 }

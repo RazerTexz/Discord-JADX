@@ -255,17 +255,17 @@ public final class CompilerMessageSuppressor {
 
     /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField.SCL.lombok */
     interface WriterField {
-        public static final PrintWriter NO_WRITER = new PrintWriter(new AnonymousClass1());
-        public static final WriterField NONE = new AnonymousClass2();
+        public static final PrintWriter NO_WRITER = new PrintWriter(new C128851());
+        public static final WriterField NONE = new C128862();
 
         void pauze(Log log);
 
         void resume(Log log);
 
-        /* renamed from: lombok.javac.CompilerMessageSuppressor$WriterField$1, reason: invalid class name */
+        /* renamed from: lombok.javac.CompilerMessageSuppressor$WriterField$1 */
         /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField$1.SCL.lombok */
-        class AnonymousClass1 extends OutputStream {
-            AnonymousClass1() {
+        class C128851 extends OutputStream {
+            C128851() {
             }
 
             @Override // java.io.OutputStream
@@ -273,10 +273,10 @@ public final class CompilerMessageSuppressor {
             }
         }
 
-        /* renamed from: lombok.javac.CompilerMessageSuppressor$WriterField$2, reason: invalid class name */
+        /* renamed from: lombok.javac.CompilerMessageSuppressor$WriterField$2 */
         /* loaded from: discord-126021.apk:lombok/javac/CompilerMessageSuppressor$WriterField$2.SCL.lombok */
-        class AnonymousClass2 implements WriterField {
-            AnonymousClass2() {
+        class C128862 implements WriterField {
+            C128862() {
             }
 
             @Override // lombok.javac.CompilerMessageSuppressor.WriterField

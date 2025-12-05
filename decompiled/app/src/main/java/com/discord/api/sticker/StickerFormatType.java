@@ -20,7 +20,8 @@ public enum StickerFormatType {
         public Companion() {
         }
 
-        public final StickerFormatType a(int i) {
+        /* renamed from: a */
+        public final StickerFormatType m8242a(int i) {
             StickerFormatType stickerFormatType;
             StickerFormatType[] stickerFormatTypeArrValues = StickerFormatType.values();
             int i2 = 0;

@@ -1,8 +1,8 @@
 package com.discord.api.guildscheduledevent;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildScheduledEventRsvpGuildMember.kt */
 /* loaded from: classes.dex */
@@ -18,7 +18,7 @@ public final /* data */ class GuildScheduledEventRsvpGuildMember {
             return false;
         }
         GuildScheduledEventRsvpGuildMember guildScheduledEventRsvpGuildMember = (GuildScheduledEventRsvpGuildMember) other;
-        return m.areEqual(this.avatar, guildScheduledEventRsvpGuildMember.avatar) && m.areEqual(this.nick, guildScheduledEventRsvpGuildMember.nick);
+        return Intrinsics3.areEqual(this.avatar, guildScheduledEventRsvpGuildMember.avatar) && Intrinsics3.areEqual(this.nick, guildScheduledEventRsvpGuildMember.nick);
     }
 
     public int hashCode() {
@@ -29,9 +29,9 @@ public final /* data */ class GuildScheduledEventRsvpGuildMember {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildScheduledEventRsvpGuildMember(avatar=");
-        sbU.append(this.avatar);
-        sbU.append(", nick=");
-        return a.J(sbU, this.nick, ")");
+        StringBuilder sbM833U = outline.m833U("GuildScheduledEventRsvpGuildMember(avatar=");
+        sbM833U.append(this.avatar);
+        sbM833U.append(", nick=");
+        return outline.m822J(sbM833U, this.nick, ")");
     }
 }

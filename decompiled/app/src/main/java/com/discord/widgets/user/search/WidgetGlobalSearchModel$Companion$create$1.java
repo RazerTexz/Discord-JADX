@@ -1,13 +1,13 @@
 package com.discord.widgets.user.search;
 
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGlobalSearchModel$Companion$create$1 extends o implements Function1<WidgetGlobalSearchModel.SearchContext, Long> {
+public final class WidgetGlobalSearchModel$Companion$create$1 extends Lambda implements Function1<WidgetGlobalSearchModel.SearchContext, Long> {
     public static final WidgetGlobalSearchModel$Companion$create$1 INSTANCE = new WidgetGlobalSearchModel$Companion$create$1();
 
     public WidgetGlobalSearchModel$Companion$create$1() {
@@ -16,7 +16,7 @@ public final class WidgetGlobalSearchModel$Companion$create$1 extends o implemen
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2(WidgetGlobalSearchModel.SearchContext searchContext) {
-        m.checkNotNullParameter(searchContext, "it");
+        Intrinsics3.checkNotNullParameter(searchContext, "it");
         return 0L;
     }
 

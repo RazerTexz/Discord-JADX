@@ -18,9 +18,7 @@ import androidx.annotation.StyleRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.view.ViewCompat;
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
-import b.i.a.g.g.e;
-import b.i.a.g.g.f;
-import com.google.android.material.R;
+import com.google.android.material.C10817R;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.progressindicator.BaseProgressIndicatorSpec;
@@ -28,11 +26,13 @@ import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Arrays;
+import p007b.p225i.p226a.p341g.p348g.DrawableWithAnimatedVisibilityChange;
+import p007b.p225i.p226a.p341g.p348g.DrawingDelegate;
 
 /* loaded from: classes3.dex */
 public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec> extends ProgressBar {
     public static final float DEFAULT_OPACITY = 0.2f;
-    public static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_ProgressIndicator;
+    public static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_ProgressIndicator;
     public static final int HIDE_INWARD = 2;
     public static final int HIDE_NONE = 0;
     public static final int HIDE_OUTWARD = 1;
@@ -66,8 +66,9 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
     public @interface ShowAnimationBehavior {
     }
 
-    public class a implements Runnable {
-        public a() {
+    /* renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$a */
+    public class RunnableC10955a implements Runnable {
+        public RunnableC10955a() {
         }
 
         @Override // java.lang.Runnable
@@ -76,8 +77,9 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         }
     }
 
-    public class b implements Runnable {
-        public b() {
+    /* renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$b */
+    public class RunnableC10956b implements Runnable {
+        public RunnableC10956b() {
         }
 
         @Override // java.lang.Runnable
@@ -87,8 +89,9 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         }
     }
 
-    public class c extends Animatable2Compat.AnimationCallback {
-        public c() {
+    /* renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$c */
+    public class C10957c extends Animatable2Compat.AnimationCallback {
+        public C10957c() {
         }
 
         @Override // androidx.vectordrawable.graphics.drawable.Animatable2Compat.AnimationCallback
@@ -100,8 +103,9 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         }
     }
 
-    public class d extends Animatable2Compat.AnimationCallback {
-        public d() {
+    /* renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$d */
+    public class C10958d extends Animatable2Compat.AnimationCallback {
+        public C10958d() {
         }
 
         @Override // androidx.vectordrawable.graphics.drawable.Animatable2Compat.AnimationCallback
@@ -120,15 +124,15 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         this.lastShowStartTime = -1L;
         this.isIndeterminateModeChangeRequested = false;
         this.visibilityAfterHide = 4;
-        this.delayedShow = new a();
-        this.delayedHide = new b();
-        this.switchIndeterminateModeCallback = new c();
-        this.hideAnimationCallback = new d();
+        this.delayedShow = new RunnableC10955a();
+        this.delayedHide = new RunnableC10956b();
+        this.switchIndeterminateModeCallback = new C10957c();
+        this.hideAnimationCallback = new C10958d();
         Context context2 = getContext();
         this.spec = (S) createSpec(context2, attributeSet);
-        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, R.styleable.BaseProgressIndicator, i, i2, new int[0]);
-        this.showDelay = typedArrayObtainStyledAttributes.getInt(R.styleable.BaseProgressIndicator_showDelay, -1);
-        this.minHideDelay = Math.min(typedArrayObtainStyledAttributes.getInt(R.styleable.BaseProgressIndicator_minHideDelay, -1), 1000);
+        TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context2, attributeSet, C10817R.styleable.BaseProgressIndicator, i, i2, new int[0]);
+        this.showDelay = typedArrayObtainStyledAttributes.getInt(C10817R.styleable.BaseProgressIndicator_showDelay, -1);
+        this.minHideDelay = Math.min(typedArrayObtainStyledAttributes.getInt(C10817R.styleable.BaseProgressIndicator_minHideDelay, -1), 1000);
         typedArrayObtainStyledAttributes.recycle();
         this.animatorDurationScaleProvider = new AnimatorDurationScaleProvider();
         this.isParentDoneInitializing = true;
@@ -164,7 +168,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
     }
 
     @Nullable
-    private f<S> getCurrentDrawingDelegate() {
+    private DrawingDelegate<S> getCurrentDrawingDelegate() {
         if (isIndeterminate()) {
             if (getIndeterminateDrawable() == null) {
                 return null;
@@ -178,7 +182,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
     }
 
     private void internalHide() {
-        ((e) getCurrentDrawable()).setVisible(false, false, true);
+        ((DrawableWithAnimatedVisibilityChange) getCurrentDrawable()).setVisible(false, false, true);
         if (isNoLongerNeedToBeVisible()) {
             setVisibility(4);
         }
@@ -197,7 +201,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
 
     private void registerAnimationCallbacks() {
         if (getProgressDrawable() != null && getIndeterminateDrawable() != null) {
-            getIndeterminateDrawable().getAnimatorDelegate().d(this.switchIndeterminateModeCallback);
+            getIndeterminateDrawable().getAnimatorDelegate().mo6125d(this.switchIndeterminateModeCallback);
         }
         if (getProgressDrawable() != null) {
             getProgressDrawable().registerAnimationCallback(this.hideAnimationCallback);
@@ -210,7 +214,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
     private void unregisterAnimationCallbacks() {
         if (getIndeterminateDrawable() != null) {
             getIndeterminateDrawable().unregisterAnimationCallback(this.hideAnimationCallback);
-            getIndeterminateDrawable().getAnimatorDelegate().g();
+            getIndeterminateDrawable().getAnimatorDelegate().mo6128g();
         }
         if (getProgressDrawable() != null) {
             getProgressDrawable().unregisterAnimationCallback(this.hideAnimationCallback);
@@ -219,7 +223,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
 
     public void applyNewVisibility(boolean z2) {
         if (this.isParentDoneInitializing) {
-            ((e) getCurrentDrawable()).setVisible(visibleToUser(), false, z2);
+            ((DrawableWithAnimatedVisibilityChange) getCurrentDrawable()).setVisible(visibleToUser(), false, z2);
         }
     }
 
@@ -322,7 +326,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
     public void onDetachedFromWindow() {
         removeCallbacks(this.delayedHide);
         removeCallbacks(this.delayedShow);
-        ((e) getCurrentDrawable()).hideNow();
+        ((DrawableWithAnimatedVisibilityChange) getCurrentDrawable()).hideNow();
         unregisterAnimationCallbacks();
         super.onDetachedFromWindow();
     }
@@ -343,13 +347,13 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
     @Override // android.widget.ProgressBar, android.view.View
     public synchronized void onMeasure(int i, int i2) {
         super.onMeasure(i, i2);
-        f<S> currentDrawingDelegate = getCurrentDrawingDelegate();
+        DrawingDelegate<S> currentDrawingDelegate = getCurrentDrawingDelegate();
         if (currentDrawingDelegate == null) {
             return;
         }
-        int iE = currentDrawingDelegate.e();
-        int iD = currentDrawingDelegate.d();
-        setMeasuredDimension(iE < 0 ? getMeasuredWidth() : iE + getPaddingLeft() + getPaddingRight(), iD < 0 ? getMeasuredHeight() : iD + getPaddingTop() + getPaddingBottom());
+        int iMo6121e = currentDrawingDelegate.mo6121e();
+        int iMo6120d = currentDrawingDelegate.mo6120d();
+        setMeasuredDimension(iMo6121e < 0 ? getMeasuredWidth() : iMo6121e + getPaddingLeft() + getPaddingRight(), iMo6120d < 0 ? getMeasuredHeight() : iMo6120d + getPaddingTop() + getPaddingBottom());
     }
 
     @Override // android.view.View
@@ -389,14 +393,14 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         if (visibleToUser() && z2) {
             throw new IllegalStateException("Cannot switch to indeterminate mode while the progress indicator is visible.");
         }
-        e eVar = (e) getCurrentDrawable();
-        if (eVar != null) {
-            eVar.hideNow();
+        DrawableWithAnimatedVisibilityChange drawableWithAnimatedVisibilityChange = (DrawableWithAnimatedVisibilityChange) getCurrentDrawable();
+        if (drawableWithAnimatedVisibilityChange != null) {
+            drawableWithAnimatedVisibilityChange.hideNow();
         }
         super.setIndeterminate(z2);
-        e eVar2 = (e) getCurrentDrawable();
-        if (eVar2 != null) {
-            eVar2.setVisible(visibleToUser(), false, false);
+        DrawableWithAnimatedVisibilityChange drawableWithAnimatedVisibilityChange2 = (DrawableWithAnimatedVisibilityChange) getCurrentDrawable();
+        if (drawableWithAnimatedVisibilityChange2 != null) {
+            drawableWithAnimatedVisibilityChange2.setVisible(visibleToUser(), false, false);
         }
         this.isIndeterminateModeChangeRequested = false;
     }
@@ -409,20 +413,20 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
             if (!(drawable instanceof IndeterminateDrawable)) {
                 throw new IllegalArgumentException("Cannot set framework drawable as indeterminate drawable.");
             }
-            ((e) drawable).hideNow();
+            ((DrawableWithAnimatedVisibilityChange) drawable).hideNow();
             super.setIndeterminateDrawable(drawable);
         }
     }
 
     public void setIndicatorColor(@ColorInt int... iArr) {
         if (iArr.length == 0) {
-            iArr = new int[]{MaterialColors.getColor(getContext(), R.attr.colorPrimary, -1)};
+            iArr = new int[]{MaterialColors.getColor(getContext(), C10817R.attr.colorPrimary, -1)};
         }
         if (Arrays.equals(getIndicatorColor(), iArr)) {
             return;
         }
         this.spec.indicatorColors = iArr;
-        getIndeterminateDrawable().getAnimatorDelegate().c();
+        getIndeterminateDrawable().getAnimatorDelegate().mo6124c();
         invalidate();
     }
 
@@ -450,7 +454,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
             if (!getIndeterminateDrawable().isVisible() || this.animatorDurationScaleProvider.getSystemAnimatorDurationScale(getContext().getContentResolver()) == 0.0f) {
                 this.switchIndeterminateModeCallback.onAnimationEnd(getIndeterminateDrawable());
             } else {
-                getIndeterminateDrawable().getAnimatorDelegate().e();
+                getIndeterminateDrawable().getAnimatorDelegate().mo6126e();
             }
         }
     }

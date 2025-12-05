@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackInstantInviteShared.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInstantInviteShared implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackInstantInviteShared implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Long channelId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackInstantInviteShared implements AnalyticsSchem
             return false;
         }
         TrackInstantInviteShared trackInstantInviteShared = (TrackInstantInviteShared) other;
-        return m.areEqual(this.guildId, trackInstantInviteShared.guildId) && m.areEqual(this.channelId, trackInstantInviteShared.channelId) && m.areEqual(this.inviteCode, trackInstantInviteShared.inviteCode) && m.areEqual(this.inviteChannelType, trackInstantInviteShared.inviteChannelType) && m.areEqual(this.inviteInviterId, trackInstantInviteShared.inviteInviterId) && m.areEqual(this.inviteGuildScheduledEventId, trackInstantInviteShared.inviteGuildScheduledEventId);
+        return Intrinsics3.areEqual(this.guildId, trackInstantInviteShared.guildId) && Intrinsics3.areEqual(this.channelId, trackInstantInviteShared.channelId) && Intrinsics3.areEqual(this.inviteCode, trackInstantInviteShared.inviteCode) && Intrinsics3.areEqual(this.inviteChannelType, trackInstantInviteShared.inviteChannelType) && Intrinsics3.areEqual(this.inviteInviterId, trackInstantInviteShared.inviteInviterId) && Intrinsics3.areEqual(this.inviteGuildScheduledEventId, trackInstantInviteShared.inviteGuildScheduledEventId);
     }
 
     public int hashCode() {
@@ -51,17 +51,17 @@ public final /* data */ class TrackInstantInviteShared implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackInstantInviteShared(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", inviteCode=");
-        sbU.append(this.inviteCode);
-        sbU.append(", inviteChannelType=");
-        sbU.append(this.inviteChannelType);
-        sbU.append(", inviteInviterId=");
-        sbU.append(this.inviteInviterId);
-        sbU.append(", inviteGuildScheduledEventId=");
-        return a.G(sbU, this.inviteGuildScheduledEventId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackInstantInviteShared(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", inviteCode=");
+        sbM833U.append(this.inviteCode);
+        sbM833U.append(", inviteChannelType=");
+        sbM833U.append(this.inviteChannelType);
+        sbM833U.append(", inviteInviterId=");
+        sbM833U.append(this.inviteInviterId);
+        sbM833U.append(", inviteGuildScheduledEventId=");
+        return outline.m819G(sbM833U, this.inviteGuildScheduledEventId, ")");
     }
 }

@@ -1,14 +1,14 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import h0.c.c0;
 import org.webrtc.VideoEncoder;
+import p617h0.p628c.C12455c0;
 
 /* loaded from: classes3.dex */
 public class VideoEncoderWrapper {
     @CalledByNative
     public static VideoEncoder.Callback createEncoderCallback(long j) {
-        return new c0(j);
+        return new C12455c0(j);
     }
 
     @Nullable
@@ -25,7 +25,7 @@ public class VideoEncoderWrapper {
 
     @CalledByNative
     public static boolean getScalingSettingsOn(VideoEncoder.ScalingSettings scalingSettings) {
-        return scalingSettings.on;
+        return scalingSettings.f27620on;
     }
 
     public static /* synthetic */ void lambda$createEncoderCallback$0(long j, EncodedImage encodedImage, VideoEncoder.CodecSpecificInfo codecSpecificInfo) {

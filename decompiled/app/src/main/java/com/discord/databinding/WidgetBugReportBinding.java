@@ -20,94 +20,112 @@ import com.google.android.material.textview.MaterialTextView;
 /* loaded from: classes.dex */
 public final class WidgetBugReportBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayoutCompat a;
+    public final LinearLayoutCompat f15732a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final AppCompatImageView f2241b;
+    public final AppCompatImageView f15733b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextInputLayout c;
+    public final TextInputLayout f15734c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextInputLayout d;
+    public final TextInputLayout f15735d;
 
+    /* renamed from: e */
     @NonNull
-    public final ProgressBar e;
+    public final ProgressBar f15736e;
 
+    /* renamed from: f */
     @NonNull
-    public final RecyclerView f;
+    public final RecyclerView f15737f;
 
+    /* renamed from: g */
     @NonNull
-    public final SearchInputView g;
+    public final SearchInputView f15738g;
 
+    /* renamed from: h */
     @NonNull
-    public final TextInputLayout h;
+    public final TextInputLayout f15739h;
 
+    /* renamed from: i */
     @NonNull
-    public final MaterialTextView i;
+    public final MaterialTextView f15740i;
 
+    /* renamed from: j */
     @NonNull
-    public final TextInputLayout j;
+    public final TextInputLayout f15741j;
 
+    /* renamed from: k */
     @NonNull
-    public final SimpleDraweeView k;
+    public final SimpleDraweeView f15742k;
 
+    /* renamed from: l */
     @NonNull
-    public final AppCompatImageView l;
+    public final AppCompatImageView f15743l;
 
+    /* renamed from: m */
     @NonNull
-    public final StickerView m;
+    public final StickerView f15744m;
 
+    /* renamed from: n */
     @NonNull
-    public final MaterialTextView n;
+    public final MaterialTextView f15745n;
 
+    /* renamed from: o */
     @NonNull
-    public final MaterialButton o;
+    public final MaterialButton f15746o;
 
+    /* renamed from: p */
     @NonNull
-    public final AppViewFlipper p;
+    public final AppViewFlipper f15747p;
 
+    /* renamed from: q */
     @NonNull
-    public final MaterialButton q;
+    public final MaterialButton f15748q;
 
+    /* renamed from: r */
     @NonNull
-    public final MaterialTextView r;
+    public final MaterialTextView f15749r;
 
-    /* renamed from: s, reason: collision with root package name */
+    /* renamed from: s */
     @NonNull
-    public final View f2242s;
+    public final View f15750s;
 
+    /* renamed from: t */
     @NonNull
-    public final View t;
+    public final View f15751t;
 
     public WidgetBugReportBinding(@NonNull LinearLayoutCompat linearLayoutCompat, @NonNull AppCompatImageView appCompatImageView, @NonNull TextInputLayout textInputLayout, @NonNull TextInputLayout textInputLayout2, @NonNull MaterialCardView materialCardView, @NonNull ImageView imageView, @NonNull ProgressBar progressBar, @NonNull RecyclerView recyclerView, @NonNull SearchInputView searchInputView, @NonNull TextInputLayout textInputLayout3, @NonNull MaterialTextView materialTextView, @NonNull TextInputLayout textInputLayout4, @NonNull MaterialCardView materialCardView2, @NonNull SimpleDraweeView simpleDraweeView, @NonNull AppCompatImageView appCompatImageView2, @NonNull ImageView imageView2, @NonNull StickerView stickerView, @NonNull MaterialTextView materialTextView2, @NonNull MaterialButton materialButton, @NonNull AppViewFlipper appViewFlipper, @NonNull MaterialButton materialButton2, @NonNull MaterialTextView materialTextView3, @NonNull View view, @NonNull View view2) {
-        this.a = linearLayoutCompat;
-        this.f2241b = appCompatImageView;
-        this.c = textInputLayout;
-        this.d = textInputLayout2;
-        this.e = progressBar;
-        this.f = recyclerView;
-        this.g = searchInputView;
-        this.h = textInputLayout3;
-        this.i = materialTextView;
-        this.j = textInputLayout4;
-        this.k = simpleDraweeView;
-        this.l = appCompatImageView2;
-        this.m = stickerView;
-        this.n = materialTextView2;
-        this.o = materialButton;
-        this.p = appViewFlipper;
-        this.q = materialButton2;
-        this.r = materialTextView3;
-        this.f2242s = view;
-        this.t = view2;
+        this.f15732a = linearLayoutCompat;
+        this.f15733b = appCompatImageView;
+        this.f15734c = textInputLayout;
+        this.f15735d = textInputLayout2;
+        this.f15736e = progressBar;
+        this.f15737f = recyclerView;
+        this.f15738g = searchInputView;
+        this.f15739h = textInputLayout3;
+        this.f15740i = materialTextView;
+        this.f15741j = textInputLayout4;
+        this.f15742k = simpleDraweeView;
+        this.f15743l = appCompatImageView2;
+        this.f15744m = stickerView;
+        this.f15745n = materialTextView2;
+        this.f15746o = materialButton;
+        this.f15747p = appViewFlipper;
+        this.f15748q = materialButton2;
+        this.f15749r = materialTextView3;
+        this.f15750s = view;
+        this.f15751t = view2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15732a;
     }
 }

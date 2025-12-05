@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPremiumUpgradeStarted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumUpgradeStarted implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPremiumUpgradeStarted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence plan = null;
     private final Long priceShown = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackPremiumUpgradeStarted implements AnalyticsSch
             return false;
         }
         TrackPremiumUpgradeStarted trackPremiumUpgradeStarted = (TrackPremiumUpgradeStarted) other;
-        return m.areEqual(this.plan, trackPremiumUpgradeStarted.plan) && m.areEqual(this.priceShown, trackPremiumUpgradeStarted.priceShown);
+        return Intrinsics3.areEqual(this.plan, trackPremiumUpgradeStarted.plan) && Intrinsics3.areEqual(this.priceShown, trackPremiumUpgradeStarted.priceShown);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackPremiumUpgradeStarted implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPremiumUpgradeStarted(plan=");
-        sbU.append(this.plan);
-        sbU.append(", priceShown=");
-        return a.G(sbU, this.priceShown, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPremiumUpgradeStarted(plan=");
+        sbM833U.append(this.plan);
+        sbM833U.append(", priceShown=");
+        return outline.m819G(sbM833U, this.priceShown, ")");
     }
 }

@@ -8,12 +8,13 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import androidx.core.content.ContextCompat;
-import b.c.a.a0.d;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.font.FontUtils;
 import com.discord.views.CutoutView;
-import d0.z.d.m;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: NumericBadgingView.kt */
 /* loaded from: classes2.dex */
@@ -25,7 +26,7 @@ public final class NumericBadgingView extends CutoutView {
     /* renamed from: r, reason: from kotlin metadata */
     public int badgeTextPaddingVerticalPx;
 
-    /* renamed from: s, reason: collision with root package name and from kotlin metadata */
+    /* renamed from: s, reason: from kotlin metadata */
     public float badgeInsetSizePx;
 
     /* renamed from: t, reason: from kotlin metadata */
@@ -41,29 +42,33 @@ public final class NumericBadgingView extends CutoutView {
     public final Paint textPaint;
 
     /* compiled from: NumericBadgingView.kt */
-    public static final class a implements CutoutView.a {
-        public final RectF a;
+    /* renamed from: com.discord.views.NumericBadgingView$a */
+    public static final class C7079a implements CutoutView.InterfaceC7075a {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final float f2831b;
+        /* renamed from: a */
+        public final RectF f19090a;
 
-        public a(RectF rectF, float f) {
-            m.checkNotNullParameter(rectF, "badgeRect");
-            this.a = rectF;
-            this.f2831b = f;
+        /* renamed from: b */
+        public final float f19091b;
+
+        public C7079a(RectF rectF, float f) {
+            Intrinsics3.checkNotNullParameter(rectF, "badgeRect");
+            this.f19090a = rectF;
+            this.f19091b = f;
         }
 
-        @Override // com.discord.views.CutoutView.a
-        public Path a(Context context, int i, int i2) {
-            m.checkNotNullParameter(context, "context");
-            RectF rectF = new RectF(0.0f, 0.0f, this.a.width(), this.a.height());
-            if (d.U0(context)) {
-                rectF.offset(i - this.a.width(), 0.0f);
+        @Override // com.discord.views.CutoutView.InterfaceC7075a
+        /* renamed from: a */
+        public Path mo8543a(Context context, int i, int i2) {
+            Intrinsics3.checkNotNullParameter(context, "context");
+            RectF rectF = new RectF(0.0f, 0.0f, this.f19090a.width(), this.f19090a.height());
+            if (AnimatableValueParser.m478U0(context)) {
+                rectF.offset(i - this.f19090a.width(), 0.0f);
             }
-            float f = this.f2831b;
+            float f = this.f19091b;
             rectF.inset(-f, -f);
             Path path = new Path();
-            float fHeight = ((2 * this.f2831b) + this.a.height()) / 2.0f;
+            float fHeight = ((2 * this.f19091b) + this.f19090a.height()) / 2.0f;
             path.addRoundRect(rectF, fHeight, fHeight, Path.Direction.CW);
             Path path2 = new Path();
             path2.addRect(0.0f, 0.0f, i, i2, Path.Direction.CW);
@@ -76,32 +81,32 @@ public final class NumericBadgingView extends CutoutView {
             if (this == obj) {
                 return true;
             }
-            if (!(obj instanceof a)) {
+            if (!(obj instanceof C7079a)) {
                 return false;
             }
-            a aVar = (a) obj;
-            return m.areEqual(this.a, aVar.a) && Float.compare(this.f2831b, aVar.f2831b) == 0;
+            C7079a c7079a = (C7079a) obj;
+            return Intrinsics3.areEqual(this.f19090a, c7079a.f19090a) && Float.compare(this.f19091b, c7079a.f19091b) == 0;
         }
 
         public int hashCode() {
-            RectF rectF = this.a;
-            return Float.floatToIntBits(this.f2831b) + ((rectF != null ? rectF.hashCode() : 0) * 31);
+            RectF rectF = this.f19090a;
+            return Float.floatToIntBits(this.f19091b) + ((rectF != null ? rectF.hashCode() : 0) * 31);
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("BadgeRectStyle(badgeRect=");
-            sbU.append(this.a);
-            sbU.append(", insetPx=");
-            sbU.append(this.f2831b);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("BadgeRectStyle(badgeRect=");
+            sbM833U.append(this.f19090a);
+            sbM833U.append(", insetPx=");
+            sbM833U.append(this.f19091b);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public NumericBadgingView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         this.badgeTextSizePx = DimenUtils.dpToPixels(12);
         this.badgeTextPaddingVerticalPx = DimenUtils.dpToPixels(8);
         this.badgeInsetSizePx = DimenUtils.dpToPixels(4);
@@ -118,34 +123,34 @@ public final class NumericBadgingView extends CutoutView {
         paint2.setColor((int) 4294967295L);
         this.textPaint = paint2;
         setWillNotDraw(false);
-        int[] iArr = R.a.NumericBadgingView;
-        m.checkNotNullExpressionValue(iArr, "R.styleable.NumericBadgingView");
+        int[] iArr = C5419R.a.NumericBadgingView;
+        Intrinsics3.checkNotNullExpressionValue(iArr, "R.styleable.NumericBadgingView");
         Context context2 = getContext();
-        m.checkNotNullExpressionValue(context2, "context");
+        Intrinsics3.checkNotNullExpressionValue(context2, "context");
         TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, iArr);
-        m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(attrs, styleable)");
+        Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(attrs, styleable)");
         paint.setColor(typedArrayObtainStyledAttributes.getColor(0, 0));
         if (paint.getColor() == 0) {
-            paint.setColor(ContextCompat.getColor(context, R.color.status_red_500));
+            paint.setColor(ContextCompat.getColor(context, C5419R.color.status_red_500));
         }
         paint2.setColor(typedArrayObtainStyledAttributes.getColor(1, 0));
         if (paint2.getColor() == 0) {
-            paint2.setColor(ContextCompat.getColor(context, R.color.white));
+            paint2.setColor(ContextCompat.getColor(context, C5419R.color.white));
         }
-        paint2.setTypeface(FontUtils.INSTANCE.getThemedFont(context, R.attr.font_primary_semibold));
+        paint2.setTypeface(FontUtils.INSTANCE.getThemedFont(context, C5419R.attr.font_primary_semibold));
         typedArrayObtainStyledAttributes.recycle();
     }
 
     @Override // com.discord.views.CutoutView, android.view.View
     public void draw(Canvas canvas) {
-        m.checkNotNullParameter(canvas, "canvas");
+        Intrinsics3.checkNotNullParameter(canvas, "canvas");
         super.draw(canvas);
         if (this.badgeString.length() == 0) {
             return;
         }
         Context context = getContext();
-        m.checkNotNullExpressionValue(context, "context");
-        float measuredWidth = d.U0(context) ? getMeasuredWidth() - (this.badgeRect.width() / 2.0f) : this.badgeRect.width() / 2.0f;
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        float measuredWidth = AnimatableValueParser.m478U0(context) ? getMeasuredWidth() - (this.badgeRect.width() / 2.0f) : this.badgeRect.width() / 2.0f;
         float fHeight = this.badgeRect.height() / 2.0f;
         int iSave = canvas.save();
         canvas.translate(measuredWidth, fHeight);
@@ -169,7 +174,7 @@ public final class NumericBadgingView extends CutoutView {
     public final void setBadgeNumber(int number) {
         if (number <= 0) {
             this.badgeString = "";
-            setStyle(CutoutView.a.d.a);
+            setStyle(CutoutView.InterfaceC7075a.d.f19062a);
             return;
         }
         this.badgeString = number >= 100 ? "99+" : String.valueOf(number);
@@ -177,7 +182,7 @@ public final class NumericBadgingView extends CutoutView {
         float f = textSize / 2.0f;
         float fMeasureText = number >= 10 ? (this.textPaint.measureText(this.badgeString) + textSize) / 2.0f : f;
         this.badgeRect.set(-fMeasureText, -f, fMeasureText, f);
-        setStyle(new a(this.badgeRect, this.badgeInsetSizePx));
+        setStyle(new C7079a(this.badgeRect, this.badgeInsetSizePx));
         invalidate();
     }
 }

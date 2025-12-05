@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackUserPremiumGuildSubscriptionSlotUncanceled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserPremiumGuildSubscriptionSlotUncanceled implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackUserPremiumGuildSubscriptionSlotUncanceled implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long slotId = null;
     private final Long subscriptionId = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackUserPremiumGuildSubscriptionSlotUncanceled im
             return false;
         }
         TrackUserPremiumGuildSubscriptionSlotUncanceled trackUserPremiumGuildSubscriptionSlotUncanceled = (TrackUserPremiumGuildSubscriptionSlotUncanceled) other;
-        return m.areEqual(this.slotId, trackUserPremiumGuildSubscriptionSlotUncanceled.slotId) && m.areEqual(this.subscriptionId, trackUserPremiumGuildSubscriptionSlotUncanceled.subscriptionId);
+        return Intrinsics3.areEqual(this.slotId, trackUserPremiumGuildSubscriptionSlotUncanceled.slotId) && Intrinsics3.areEqual(this.subscriptionId, trackUserPremiumGuildSubscriptionSlotUncanceled.subscriptionId);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackUserPremiumGuildSubscriptionSlotUncanceled im
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackUserPremiumGuildSubscriptionSlotUncanceled(slotId=");
-        sbU.append(this.slotId);
-        sbU.append(", subscriptionId=");
-        return a.G(sbU, this.subscriptionId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackUserPremiumGuildSubscriptionSlotUncanceled(slotId=");
+        sbM833U.append(this.slotId);
+        sbM833U.append(", subscriptionId=");
+        return outline.m819G(sbM833U, this.subscriptionId, ")");
     }
 }

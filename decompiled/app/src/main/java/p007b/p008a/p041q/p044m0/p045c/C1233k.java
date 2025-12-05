@@ -1,0 +1,726 @@
+package p007b.p008a.p041q.p044m0.p045c;
+
+import android.content.Context;
+import android.os.Build;
+import androidx.annotation.AnyThread;
+import co.discord.media_engine.DeviceDescription4;
+import co.discord.media_engine.RtcRegion;
+import com.discord.rtcconnection.mediaengine.MediaEngine;
+import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
+import com.discord.utilities.logging.Logger;
+import com.hammerandchisel.libdiscord.Discord;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.Future;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
+import org.webrtc.Logging;
+import org.webrtc.voiceengine.WebRtcAudioManager;
+import org.webrtc.voiceengine.WebRtcAudioUtils;
+import p007b.p008a.p041q.C1197e0;
+import p007b.p008a.p041q.MediaEngineExecutorService;
+import p007b.p008a.p041q.p042k0.EchoCancellation;
+import p007b.p008a.p041q.p044m0.Codec2;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p580t.Sets5;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Emitter;
+import p658rx.Observable;
+import p658rx.functions.Action1;
+
+/* compiled from: MediaEngineLegacy.kt */
+/* renamed from: b.a.q.m0.c.k */
+/* loaded from: classes.dex */
+public final class C1233k implements MediaEngine {
+
+    /* renamed from: a */
+    public static final Set<String> f1721a = Sets5.setOf((Object[]) new String[]{"Pixel", "Pixel XL", "Pixel 3a XL", "Pixel 4", "Pixel 4 XL", "Pixel 5"});
+
+    /* renamed from: b */
+    public static final Set<String> f1722b = Sets5.setOf((Object[]) new String[]{"Pixel 3a", "Redmi Note 8 Pro", "Redmi Note 8 pro"});
+
+    /* renamed from: c */
+    public final NoiseCancellationConfig f1723c;
+
+    /* renamed from: d */
+    public final List<MediaEngineConnection> f1724d;
+
+    /* renamed from: e */
+    public boolean f1725e;
+
+    /* renamed from: f */
+    public Discord f1726f;
+
+    /* renamed from: g */
+    public List<Codec2> f1727g;
+
+    /* renamed from: h */
+    public MediaEngine.OpenSLUsageMode f1728h;
+
+    /* renamed from: i */
+    public MediaEngine.EchoCancellationInfo f1729i;
+
+    /* renamed from: j */
+    public final Context f1730j;
+
+    /* renamed from: k */
+    public final MediaEngine.InterfaceC5642c f1731k;
+
+    /* renamed from: l */
+    public final MediaEngineExecutorService f1732l;
+
+    /* renamed from: m */
+    public final MediaEngine.OpenSLESConfig f1733m;
+
+    /* renamed from: n */
+    public final Logger f1734n;
+
+    /* renamed from: o */
+    public final EchoCancellation f1735o;
+
+    /* renamed from: p */
+    public final MediaEngine.InterfaceC5641b f1736p;
+
+    /* renamed from: q */
+    public final Set<String> f1737q;
+
+    /* renamed from: r */
+    public final Set<String> f1738r;
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$a */
+    public static final class a extends Lambda implements Function0<Unit> {
+        public a() {
+            super(0);
+        }
+
+        @Override // kotlin.jvm.functions.Function0
+        public Unit invoke() {
+            C1233k c1233k = C1233k.this;
+            C1232j c1232j = C1232j.f1720j;
+            Set<String> set = C1233k.f1721a;
+            c1233k.m333n(c1232j);
+            return Unit.f27425a;
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$b */
+    public static final class b extends Lambda implements Function1<MediaEngine.InterfaceC5642c, Unit> {
+        public final /* synthetic */ MediaEngineConnectionLegacy5 $connection;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        public b(MediaEngineConnectionLegacy5 mediaEngineConnectionLegacy5) {
+            super(1);
+            this.$connection = mediaEngineConnectionLegacy5;
+        }
+
+        @Override // kotlin.jvm.functions.Function1
+        public Unit invoke(MediaEngine.InterfaceC5642c interfaceC5642c) {
+            MediaEngine.InterfaceC5642c interfaceC5642c2 = interfaceC5642c;
+            Intrinsics3.checkNotNullParameter(interfaceC5642c2, "it");
+            interfaceC5642c2.onNewConnection(this.$connection);
+            return Unit.f27425a;
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$c */
+    public static final class c extends MediaEngineConnection.AbstractC5645a {
+
+        /* compiled from: MediaEngineLegacy.kt */
+        /* renamed from: b.a.q.m0.c.k$c$a */
+        public static final class a extends Lambda implements Function0<Unit> {
+            public a() {
+                super(0);
+            }
+
+            @Override // kotlin.jvm.functions.Function0
+            public Unit invoke() {
+                C1233k c1233k = C1233k.this;
+                C1234l c1234l = C1234l.f1748j;
+                Set<String> set = C1233k.f1721a;
+                c1233k.m333n(c1234l);
+                return Unit.f27425a;
+            }
+        }
+
+        /* compiled from: MediaEngineLegacy.kt */
+        /* renamed from: b.a.q.m0.c.k$c$b */
+        public static final class b extends Lambda implements Function0<Unit> {
+            public final /* synthetic */ MediaEngineConnection $connection;
+
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            public b(MediaEngineConnection mediaEngineConnection) {
+                super(0);
+                this.$connection = mediaEngineConnection;
+            }
+
+            @Override // kotlin.jvm.functions.Function0
+            public Unit invoke() {
+                C1233k.m320m(C1233k.this, this.$connection);
+                return Unit.f27425a;
+            }
+        }
+
+        /* compiled from: MediaEngineLegacy.kt */
+        /* renamed from: b.a.q.m0.c.k$c$c, reason: collision with other inner class name */
+        public static final class C13212c extends Lambda implements Function0<Unit> {
+            public final /* synthetic */ MediaEngineConnection $connection;
+
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            public C13212c(MediaEngineConnection mediaEngineConnection) {
+                super(0);
+                this.$connection = mediaEngineConnection;
+            }
+
+            @Override // kotlin.jvm.functions.Function0
+            public Unit invoke() {
+                C1233k.m320m(C1233k.this, this.$connection);
+                return Unit.f27425a;
+            }
+        }
+
+        /* compiled from: MediaEngineLegacy.kt */
+        /* renamed from: b.a.q.m0.c.k$c$d */
+        public static final class d extends Lambda implements Function0<Unit> {
+            public final /* synthetic */ MediaEngineConnection $connection;
+
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            public d(MediaEngineConnection mediaEngineConnection) {
+                super(0);
+                this.$connection = mediaEngineConnection;
+            }
+
+            @Override // kotlin.jvm.functions.Function0
+            public Unit invoke() {
+                C1233k.m320m(C1233k.this, this.$connection);
+                return Unit.f27425a;
+            }
+        }
+
+        public c() {
+        }
+
+        @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.AbstractC5645a, com.discord.rtcconnection.mediaengine.MediaEngineConnection.InterfaceC5648d
+        public void onConnected(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.TransportInfo transportInfo, List<Codec2> list) {
+            Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
+            Intrinsics3.checkNotNullParameter(transportInfo, "transportInfo");
+            Intrinsics3.checkNotNullParameter(list, "supportedVideoCodecs");
+            C1233k.this.m334o(new a());
+        }
+
+        @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.AbstractC5645a, com.discord.rtcconnection.mediaengine.MediaEngineConnection.InterfaceC5648d
+        public void onConnectionStateChange(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.ConnectionState connectionState) {
+            Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
+            Intrinsics3.checkNotNullParameter(connectionState, "connectionState");
+            if (connectionState == MediaEngineConnection.ConnectionState.DISCONNECTED) {
+                C1233k.this.m334o(new b(mediaEngineConnection));
+            }
+        }
+
+        @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.AbstractC5645a, com.discord.rtcconnection.mediaengine.MediaEngineConnection.InterfaceC5648d
+        public void onDestroy(MediaEngineConnection mediaEngineConnection) {
+            Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
+            C1233k.this.m334o(new C13212c(mediaEngineConnection));
+        }
+
+        @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.AbstractC5645a, com.discord.rtcconnection.mediaengine.MediaEngineConnection.InterfaceC5648d
+        public void onError(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.FailedConnectionException failedConnectionException) {
+            Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
+            Intrinsics3.checkNotNullParameter(failedConnectionException, "exception");
+            C1233k.this.m334o(new d(mediaEngineConnection));
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$d */
+    public static final class d<T> implements Action1<Emitter<MediaEngine.AudioInfo>> {
+        public d() {
+        }
+
+        @Override // p658rx.functions.Action1
+        public void call(Emitter<MediaEngine.AudioInfo> emitter) {
+            Emitter<MediaEngine.AudioInfo> emitter2 = emitter;
+            Discord discord = C1233k.this.f1726f;
+            if (discord != null) {
+                discord.getAudioSubsystem(new C1237o(emitter2));
+            }
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$e */
+    public static final class e<T> implements Action1<List<? extends Codec2>> {
+        public e() {
+        }
+
+        /* JADX WARN: Multi-variable type inference failed */
+        @Override // p658rx.functions.Action1
+        public void call(List<? extends Codec2> list) {
+            List<? extends Codec2> list2 = list;
+            C1233k c1233k = C1233k.this;
+            Intrinsics3.checkNotNullExpressionValue(list2, "codecs");
+            c1233k.f1727g = list2;
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$f */
+    public static final class f<T, R> implements Func1<List<? extends Codec2>, Unit> {
+
+        /* renamed from: j */
+        public static final f f1742j = new f();
+
+        @Override // p637j0.p641k.Func1
+        public Unit call(List<? extends Codec2> list) {
+            return Unit.f27425a;
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$g */
+    public static final class g implements Discord.LocalVoiceLevelChangedCallback {
+
+        /* renamed from: a */
+        public final /* synthetic */ Function1 f1743a;
+
+        public g(Function1 function1) {
+            this.f1743a = function1;
+        }
+
+        @Override // com.hammerandchisel.libdiscord.Discord.LocalVoiceLevelChangedCallback
+        public final void onLocalVoiceLevelChanged(float f, int i) {
+            this.f1743a.invoke(new MediaEngine.LocalVoiceStatus(f, (i & 1) != 0));
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$h */
+    public static final class h implements Discord.BuiltinAECCallback {
+
+        /* renamed from: a */
+        public final /* synthetic */ EchoCancellation f1744a;
+
+        /* renamed from: b */
+        public final /* synthetic */ C1233k f1745b;
+
+        /* compiled from: MediaEngineLegacy.kt */
+        /* renamed from: b.a.q.m0.c.k$h$a */
+        public static final class a extends Lambda implements Function0<Unit> {
+            public final /* synthetic */ boolean $available;
+            public final /* synthetic */ boolean $enabled;
+            public final /* synthetic */ boolean $requestEnabled;
+
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            public a(boolean z2, boolean z3, boolean z4) {
+                super(0);
+                this.$enabled = z2;
+                this.$requestEnabled = z3;
+                this.$available = z4;
+            }
+
+            @Override // kotlin.jvm.functions.Function0
+            public Unit invoke() {
+                h.this.f1744a.f1663d = this.$enabled;
+                C1233k c1233k = h.this.f1745b;
+                boolean z2 = this.$requestEnabled;
+                boolean z3 = this.$available;
+                Objects.requireNonNull(c1233k.f1735o);
+                c1233k.f1729i = new MediaEngine.EchoCancellationInfo(z2, z3, WebRtcAudioUtils.isAcousticEchoCancelerSupported(), this.$enabled, false, false, false, false, false, 496);
+                return Unit.f27425a;
+            }
+        }
+
+        public h(EchoCancellation echoCancellation, Discord discord, C1233k c1233k) {
+            this.f1744a = echoCancellation;
+            this.f1745b = c1233k;
+        }
+
+        @Override // com.hammerandchisel.libdiscord.Discord.BuiltinAECCallback
+        public final void onConfigureBuiltinAEC(boolean z2, boolean z3, boolean z4) {
+            this.f1745b.m334o(new a(z4, z2, z3));
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$i */
+    public static final class i implements Logging.ExternalReporter {
+        public i() {
+        }
+
+        @Override // org.webrtc.Logging.ExternalReporter
+        /* renamed from: e */
+        public final void mo336e(String str, String str2, Throwable th) {
+            Logger logger = C1233k.this.f1734n;
+            Intrinsics3.checkNotNullExpressionValue(str, "tag");
+            Intrinsics3.checkNotNullExpressionValue(str2, "message");
+            Logger.e$default(logger, str, str2, th, null, 8, null);
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$j */
+    public static final /* synthetic */ class j extends FunctionReferenceImpl implements Function1<MediaEngine.InterfaceC5642c, Unit> {
+
+        /* renamed from: j */
+        public static final j f1747j = new j();
+
+        public j() {
+            super(1, MediaEngine.InterfaceC5642c.class, "onNativeEngineInitialized", "onNativeEngineInitialized()V", 0);
+        }
+
+        @Override // kotlin.jvm.functions.Function1
+        public Unit invoke(MediaEngine.InterfaceC5642c interfaceC5642c) {
+            MediaEngine.InterfaceC5642c interfaceC5642c2 = interfaceC5642c;
+            Intrinsics3.checkNotNullParameter(interfaceC5642c2, "p1");
+            interfaceC5642c2.onNativeEngineInitialized();
+            return Unit.f27425a;
+        }
+    }
+
+    /* compiled from: MediaEngineLegacy.kt */
+    /* renamed from: b.a.q.m0.c.k$k */
+    public static final class k extends Lambda implements Function0<Unit> {
+        public final /* synthetic */ MediaEngine.VoiceConfig $voiceConfig;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        public k(MediaEngine.VoiceConfig voiceConfig) {
+            super(0);
+            this.$voiceConfig = voiceConfig;
+        }
+
+        @Override // kotlin.jvm.functions.Function0
+        public Unit invoke() {
+            boolean z2;
+            StringBuilder sbM833U = outline.m833U("updateVoiceConfig: ");
+            sbM833U.append(this.$voiceConfig);
+            AnimatableValueParser.m501b1("MediaEngineLegacy", sbM833U.toString());
+            MediaEngine.VoiceConfig voiceConfig = this.$voiceConfig;
+            C1233k c1233k = C1233k.this;
+            float f = voiceConfig.outputVolume;
+            Discord discord = c1233k.f1726f;
+            if (discord != null) {
+                discord.setSpeakerVolume(Math.min(300.0f, Math.max(0.0f, f)) / 100.0f);
+            }
+            C1233k c1233k2 = C1233k.this;
+            boolean z3 = voiceConfig.echoCancellation;
+            c1233k2.f1732l.m266a();
+            EchoCancellation echoCancellation = c1233k2.f1735o;
+            if (echoCancellation.f1666g && echoCancellation.f1663d) {
+                z2 = false;
+            } else {
+                EchoCancellation echoCancellation2 = c1233k2.f1735o;
+                z2 = echoCancellation2.f1665f && !echoCancellation2.f1663d ? true : z3;
+            }
+            if (z2 != z3) {
+                AnimatableValueParser.m501b1("MediaEngineLegacy", "ignoring call to setEchoCancellation(" + z3 + "), config=" + c1233k2.f1735o);
+            }
+            Discord discord2 = c1233k2.f1726f;
+            if (discord2 != null) {
+                discord2.setEchoCancellation(z2, false, new C1235m(c1233k2));
+            }
+            C1233k c1233k3 = C1233k.this;
+            boolean z4 = voiceConfig.noiseSuppression;
+            Discord discord3 = c1233k3.f1726f;
+            if (discord3 != null) {
+                discord3.setNoiseSuppression(z4);
+            }
+            C1233k c1233k4 = C1233k.this;
+            boolean z5 = voiceConfig.noiseCancellation;
+            c1233k4.f1723c.f1757a = z5;
+            Discord discord4 = c1233k4.f1726f;
+            if (discord4 != null) {
+                discord4.setNoiseCancellation(z5);
+            }
+            C1233k c1233k5 = C1233k.this;
+            boolean z6 = voiceConfig.automaticGainControl;
+            Discord discord5 = c1233k5.f1726f;
+            if (discord5 != null) {
+                discord5.setAutomaticGainControl(z6);
+            }
+            for (MediaEngineConnection mediaEngineConnection : C1233k.this.getConnections()) {
+                mediaEngineConnection.mo305k(voiceConfig.inputMode, voiceConfig.inputModeOptions);
+                mediaEngineConnection.mo316v(voiceConfig.isSelfDeafened);
+                mediaEngineConnection.mo297c(voiceConfig.isSelfMuted || mediaEngineConnection.getType() == MediaEngineConnection.Type.STREAM);
+            }
+            return Unit.f27425a;
+        }
+    }
+
+    public C1233k(Context context, MediaEngine.InterfaceC5642c interfaceC5642c, MediaEngineExecutorService mediaEngineExecutorService, MediaEngine.OpenSLESConfig openSLESConfig, Logger logger, EchoCancellation echoCancellation, MediaEngine.InterfaceC5641b interfaceC5641b, Set set, Set set2, int i2) {
+        Set<String> set3 = (i2 & 128) != 0 ? f1721a : null;
+        Set<String> set4 = (i2 & 256) != 0 ? f1722b : null;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(interfaceC5642c, "listener");
+        Intrinsics3.checkNotNullParameter(mediaEngineExecutorService, "mediaEngineThreadExecutor");
+        Intrinsics3.checkNotNullParameter(openSLESConfig, "openSLESConfig");
+        Intrinsics3.checkNotNullParameter(logger, "logger");
+        Intrinsics3.checkNotNullParameter(echoCancellation, "echoCancellation");
+        Intrinsics3.checkNotNullParameter(interfaceC5641b, "echoCancellationCallback");
+        Intrinsics3.checkNotNullParameter(set3, "defaultOpenSLAllowList");
+        Intrinsics3.checkNotNullParameter(set4, "defaultOpenSLExcludeList");
+        this.f1730j = context;
+        this.f1731k = interfaceC5642c;
+        this.f1732l = mediaEngineExecutorService;
+        this.f1733m = openSLESConfig;
+        this.f1734n = logger;
+        this.f1735o = echoCancellation;
+        this.f1736p = interfaceC5641b;
+        this.f1737q = set3;
+        this.f1738r = set4;
+        this.f1723c = new NoiseCancellationConfig();
+        this.f1724d = new ArrayList();
+        this.f1725e = true;
+        this.f1728h = MediaEngine.OpenSLUsageMode.ALLOW_LIST;
+    }
+
+    /* renamed from: m */
+    public static final void m320m(C1233k c1233k, MediaEngineConnection mediaEngineConnection) {
+        synchronized (c1233k) {
+            Discord discord = c1233k.f1726f;
+            if (discord != null) {
+                discord.setLocalVoiceLevelChangedCallback(null);
+            }
+            c1233k.f1724d.remove(mediaEngineConnection);
+        }
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: a */
+    public Observable<Unit> mo321a() {
+        if (this.f1727g != null) {
+            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(Unit.f27425a);
+            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(Unit)");
+            return scalarSynchronousObservable;
+        }
+        m335p();
+        if (this.f1726f == null) {
+            Observable<Unit> observableM11081x = Observable.m11081x(new IllegalStateException("Failed to initialize native media engine"));
+            Intrinsics3.checkNotNullExpressionValue(observableM11081x, "Observable.error(Illegal…ze native media engine\"))");
+            return observableM11081x;
+        }
+        Observable observableM11080o = Observable.m11080o(new C1239q(this), Emitter.BackpressureMode.NONE);
+        Intrinsics3.checkNotNullExpressionValue(observableM11080o, "Observable.create({ emit…er.BackpressureMode.NONE)");
+        Observable<Unit> observableM11083G = observableM11080o.m11115u(new e()).m11083G(f.f1742j);
+        Intrinsics3.checkNotNullExpressionValue(observableM11083G, "getSupportedVideoCodecs(…s }\n        .map { Unit }");
+        return observableM11083G;
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: b */
+    public void mo322b(RtcRegion[] rtcRegionArr, Function1<? super String[], Unit> function1) {
+        Intrinsics3.checkNotNullParameter(rtcRegionArr, "regionsWithIps");
+        Intrinsics3.checkNotNullParameter(function1, "callback");
+        m335p();
+        Discord discord = this.f1726f;
+        if (discord != null) {
+            discord.getRankedRtcRegions(rtcRegionArr, new C1240r(function1));
+        }
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: c */
+    public MediaEngineExecutorService mo323c() {
+        return this.f1732l;
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    @AnyThread
+    /* renamed from: d */
+    public void mo324d(MediaEngine.VoiceConfig voiceConfig) {
+        Intrinsics3.checkNotNullParameter(voiceConfig, "voiceConfig");
+        m334o(new k(voiceConfig));
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: e */
+    public Observable<MediaEngine.AudioInfo> mo325e() {
+        Observable<MediaEngine.AudioInfo> observableM11080o = Observable.m11080o(new d(), Emitter.BackpressureMode.LATEST);
+        Intrinsics3.checkNotNullExpressionValue(observableM11080o, "Observable.create({ emit….BackpressureMode.LATEST)");
+        return observableM11080o;
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: f */
+    public void mo326f(int i2) {
+        Discord discord = this.f1726f;
+        if (discord != null) {
+            discord.setVideoInputDevice(i2);
+        }
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: g */
+    public synchronized MediaEngineConnection mo327g(long j2, MediaEngine.C5640a c5640a, MediaEngineConnection.Type type, Function1<? super Exception, Unit> function1) {
+        Intrinsics3.checkNotNullParameter(c5640a, "options");
+        Intrinsics3.checkNotNullParameter(type, "type");
+        Intrinsics3.checkNotNullParameter(function1, "onFailure");
+        if (!(this.f1727g != null)) {
+            ((C1197e0) function1).invoke(new IllegalStateException("connect() called on unprepared media engine."));
+            return null;
+        }
+        Discord discord = this.f1726f;
+        if (discord == null) {
+            Logger.e$default(this.f1734n, "MediaEngineLegacy", "connect() called without voiceEngineLegacy.", null, null, 12, null);
+            return null;
+        }
+        m334o(new a());
+        Logger.i$default(this.f1734n, "MediaEngineLegacy", "Connecting with options: " + c5640a, null, 4, null);
+        c cVar = new c();
+        MediaEngineExecutorService mediaEngineExecutorService = this.f1732l;
+        Logger logger = this.f1734n;
+        NoiseCancellationConfig noiseCancellationConfig = this.f1723c;
+        List<Codec2> list = this.f1727g;
+        if (list == null) {
+            Intrinsics3.throwUninitializedPropertyAccessException("supportedVideoCodecs");
+        }
+        MediaEngineConnectionLegacy5 mediaEngineConnectionLegacy5 = new MediaEngineConnectionLegacy5(mediaEngineExecutorService, logger, noiseCancellationConfig, discord, list, type, j2, c5640a, CollectionsJVM.listOf(cVar));
+        this.f1724d.add(mediaEngineConnectionLegacy5);
+        m333n(new b(mediaEngineConnectionLegacy5));
+        return mediaEngineConnectionLegacy5;
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    public synchronized List<MediaEngineConnection> getConnections() {
+        return _Collections.toList(this.f1724d);
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: h */
+    public void mo328h(MediaEngine.OpenSLUsageMode openSLUsageMode) {
+        Intrinsics3.checkNotNullParameter(openSLUsageMode, "openSLUsageMode");
+        if (this.f1726f != null) {
+            Logger.e$default(this.f1734n, "MediaEngineLegacy", "setting openSLUsageMode too late", null, null, 12, null);
+        }
+        this.f1728h = openSLUsageMode;
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: i */
+    public Discord mo329i() {
+        return this.f1726f;
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: j */
+    public void mo330j(Function1<? super DeviceDescription4[], Unit> function1) {
+        Intrinsics3.checkNotNullParameter(function1, "devicesCallback");
+        m335p();
+        Discord discord = this.f1726f;
+        if (discord != null) {
+            discord.getVideoInputDevices(new C1241s(function1));
+        }
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: k */
+    public void mo331k(boolean z2) {
+        this.f1725e = z2;
+        Discord discord = this.f1726f;
+        if (discord != null) {
+            discord.setAudioInputEnabled(z2);
+        }
+    }
+
+    @Override // com.discord.rtcconnection.mediaengine.MediaEngine
+    /* renamed from: l */
+    public void mo332l(Function1<? super MediaEngine.LocalVoiceStatus, Unit> function1) {
+        if (function1 == null) {
+            Discord discord = this.f1726f;
+            if (discord != null) {
+                discord.setLocalVoiceLevelChangedCallback(null);
+                return;
+            }
+            return;
+        }
+        m335p();
+        Discord discord2 = this.f1726f;
+        if (discord2 != null) {
+            discord2.setLocalVoiceLevelChangedCallback(new g(function1));
+        }
+    }
+
+    /* renamed from: n */
+    public final void m333n(Function1<? super MediaEngine.InterfaceC5642c, Unit> function1) {
+        try {
+            function1.invoke(this.f1731k);
+        } catch (Exception e2) {
+            Logger.e$default(this.f1734n, "MediaEngineLegacy", "Error in listener", e2, null, 8, null);
+        }
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v0, types: [b.a.q.m0.c.t] */
+    /* renamed from: o */
+    public final Future<?> m334o(Function0<Unit> function0) {
+        MediaEngineExecutorService mediaEngineExecutorService = this.f1732l;
+        if (function0 != null) {
+            function0 = new RunnableC1242t(function0);
+        }
+        return mediaEngineExecutorService.submit((Runnable) function0);
+    }
+
+    /* renamed from: p */
+    public final void m335p() {
+        if (this.f1726f != null) {
+            return;
+        }
+        Logger logger = this.f1734n;
+        StringBuilder sbM833U = outline.m833U("initializing voice engine. OpenSL ES: ");
+        sbM833U.append(this.f1733m);
+        sbM833U.append(", OpenSL usage mode: ");
+        sbM833U.append(this.f1728h);
+        Logger.i$default(logger, "MediaEngineLegacy", sbM833U.toString(), null, 4, null);
+        int iOrdinal = this.f1733m.ordinal();
+        boolean zContains = false;
+        if (iOrdinal == 0) {
+            if (this.f1728h == MediaEngine.OpenSLUsageMode.ALLOW_LIST) {
+                zContains = this.f1737q.contains(Build.MODEL);
+            } else if (!this.f1738r.contains(Build.MODEL)) {
+                zContains = true;
+            }
+            Logger logger2 = this.f1734n;
+            StringBuilder sbM833U2 = outline.m833U("OpenSL ES default. mode: ");
+            sbM833U2.append(this.f1728h);
+            sbM833U2.append(", enableOpenSL: ");
+            sbM833U2.append(zContains);
+            sbM833U2.append(", model: '");
+            Logger.i$default(logger2, "MediaEngineLegacy", outline.m820H(sbM833U2, Build.MODEL, '\''), null, 4, null);
+            WebRtcAudioManager.setBlacklistDeviceForOpenSLESUsage(!zContains);
+        } else if (iOrdinal == 1) {
+            WebRtcAudioManager.setBlacklistDeviceForOpenSLESUsage(false);
+        } else if (iOrdinal == 2) {
+            WebRtcAudioManager.setBlacklistDeviceForOpenSLESUsage(true);
+        }
+        Logging.externalReporter = new i();
+        try {
+            Discord discord = new Discord(this.f1730j, 2);
+            EchoCancellation echoCancellation = this.f1735o;
+            if (echoCancellation.f1664e) {
+                discord.enableBuiltInAEC(true, new h(echoCancellation, discord, this));
+            }
+            discord.setAudioInputEnabled(this.f1725e);
+            this.f1726f = discord;
+        } catch (ExceptionInInitializerError e2) {
+            Logger.e$default(this.f1734n, "MediaEngineLegacy", "Unable to initialize voice engine.", e2, null, 8, null);
+        } catch (UnsatisfiedLinkError e3) {
+            Logger.e$default(this.f1734n, "MediaEngineLegacy", "Unable to initialize voice engine.", e3, null, 8, null);
+        } catch (Throwable th) {
+            Logger.e$default(this.f1734n, "MediaEngineLegacy", "Unable to initialize voice engine, new error discovered", th, null, 8, null);
+        }
+        if (this.f1726f != null) {
+            m333n(j.f1747j);
+        }
+    }
+}

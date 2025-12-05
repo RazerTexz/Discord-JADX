@@ -9,21 +9,22 @@ import com.discord.views.sticker.StickerView;
 /* loaded from: classes.dex */
 public final class StickerPickerStickerItemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final FrameLayout a;
+    public final FrameLayout f15275a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final StickerView f2153b;
+    public final StickerView f15276b;
 
     public StickerPickerStickerItemBinding(@NonNull FrameLayout frameLayout, @NonNull StickerView stickerView) {
-        this.a = frameLayout;
-        this.f2153b = stickerView;
+        this.f15275a = frameLayout;
+        this.f15276b = stickerView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15275a;
     }
 }

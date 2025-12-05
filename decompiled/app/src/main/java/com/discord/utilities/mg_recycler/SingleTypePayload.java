@@ -1,9 +1,9 @@
 package com.discord.utilities.mg_recycler;
 
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SingleTypePayload.kt */
 /* loaded from: classes2.dex */
@@ -13,7 +13,7 @@ public final /* data */ class SingleTypePayload<T> implements MGRecyclerDataPayl
     private final int type;
 
     public SingleTypePayload(T t, String str, int i) {
-        m.checkNotNullParameter(str, "key");
+        Intrinsics3.checkNotNullParameter(str, "key");
         this.data = t;
         this.key = str;
         this.type = i;
@@ -46,7 +46,7 @@ public final /* data */ class SingleTypePayload<T> implements MGRecyclerDataPayl
     }
 
     public final SingleTypePayload<T> copy(T data, String key, int type) {
-        m.checkNotNullParameter(key, "key");
+        Intrinsics3.checkNotNullParameter(key, "key");
         return new SingleTypePayload<>(data, key, type);
     }
 
@@ -58,7 +58,7 @@ public final /* data */ class SingleTypePayload<T> implements MGRecyclerDataPayl
             return false;
         }
         SingleTypePayload singleTypePayload = (SingleTypePayload) other;
-        return m.areEqual(this.data, singleTypePayload.data) && m.areEqual(getKey(), singleTypePayload.getKey()) && getType() == singleTypePayload.getType();
+        return Intrinsics3.areEqual(this.data, singleTypePayload.data) && Intrinsics3.areEqual(getKey(), singleTypePayload.getKey()) && getType() == singleTypePayload.getType();
     }
 
     public final T getData() {
@@ -83,14 +83,14 @@ public final /* data */ class SingleTypePayload<T> implements MGRecyclerDataPayl
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("SingleTypePayload(data=");
-        sbU.append(this.data);
-        sbU.append(", key=");
-        sbU.append(getKey());
-        sbU.append(", type=");
-        sbU.append(getType());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("SingleTypePayload(data=");
+        sbM833U.append(this.data);
+        sbM833U.append(", key=");
+        sbM833U.append(getKey());
+        sbM833U.append(", type=");
+        sbM833U.append(getType());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public /* synthetic */ SingleTypePayload(Object obj, String str, int i, int i2, DefaultConstructorMarker defaultConstructorMarker) {

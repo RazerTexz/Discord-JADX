@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMktgPageCtaClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMktgPageCtaClicked implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackMktgPageCtaClicked implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence pageName = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackMktgPageCtaClicked implements AnalyticsSchema
             return false;
         }
         TrackMktgPageCtaClicked trackMktgPageCtaClicked = (TrackMktgPageCtaClicked) other;
-        return m.areEqual(this.pageName, trackMktgPageCtaClicked.pageName) && m.areEqual(this.rpcConnected, trackMktgPageCtaClicked.rpcConnected);
+        return Intrinsics3.areEqual(this.pageName, trackMktgPageCtaClicked.pageName) && Intrinsics3.areEqual(this.rpcConnected, trackMktgPageCtaClicked.rpcConnected);
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class TrackMktgPageCtaClicked implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMktgPageCtaClicked(pageName=");
-        sbU.append(this.pageName);
-        sbU.append(", rpcConnected=");
-        return a.D(sbU, this.rpcConnected, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMktgPageCtaClicked(pageName=");
+        sbM833U.append(this.pageName);
+        sbM833U.append(", rpcConnected=");
+        return outline.m816D(sbM833U, this.rpcConnected, ")");
     }
 }

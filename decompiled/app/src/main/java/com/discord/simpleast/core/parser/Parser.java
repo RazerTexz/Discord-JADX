@@ -2,21 +2,21 @@ package com.discord.simpleast.core.parser;
 
 import android.util.Log;
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.a;
 import com.discord.simpleast.core.node.Node;
-import d0.o;
-import d0.t.j;
-import d0.t.u;
-import d0.z.d.e0;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 import java.util.regex.Matcher;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p580t._ArraysJvm;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.TypeIntrinsics;
 
 /* compiled from: Parser.kt */
 /* loaded from: classes.dex */
@@ -30,7 +30,7 @@ public class Parser<R, T extends Node<R>, S> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ParseException(String str, CharSequence charSequence, Throwable th) {
             super("Error while parsing: " + str + " \n Source: " + charSequence, th);
-            m.checkNotNullParameter(str, "message");
+            Intrinsics3.checkNotNullParameter(str, "message");
         }
     }
 
@@ -45,21 +45,21 @@ public class Parser<R, T extends Node<R>, S> {
 
     private final <R, T extends Node<R>, S> void logMatch(Rule<R, T, S> rule, CharSequence source) {
         if (this.enableDebugging) {
-            StringBuilder sbU = a.U("MATCH: with rule with pattern: ");
-            sbU.append(rule.getMatcher().pattern().toString());
-            sbU.append(" to source: ");
-            sbU.append(source);
-            Log.i(TAG, sbU.toString());
+            StringBuilder sbM833U = outline.m833U("MATCH: with rule with pattern: ");
+            sbM833U.append(rule.getMatcher().pattern().toString());
+            sbM833U.append(" to source: ");
+            sbM833U.append(source);
+            Log.i(TAG, sbM833U.toString());
         }
     }
 
     private final <R, T extends Node<R>, S> void logMiss(Rule<R, T, S> rule, CharSequence source) {
         if (this.enableDebugging) {
-            StringBuilder sbU = a.U("MISS: with rule with pattern: ");
-            sbU.append(rule.getMatcher().pattern().toString());
-            sbU.append(" to source: ");
-            sbU.append(source);
-            Log.i(TAG, sbU.toString());
+            StringBuilder sbM833U = outline.m833U("MISS: with rule with pattern: ");
+            sbM833U.append(rule.getMatcher().pattern().toString());
+            sbM833U.append(" to source: ");
+            sbM833U.append(source);
+            Log.i(TAG, sbM833U.toString());
         }
     }
 
@@ -75,14 +75,14 @@ public class Parser<R, T extends Node<R>, S> {
     }
 
     public final Parser<R, T, S> addRule(Rule<R, ? extends T, S> rule) {
-        m.checkNotNullParameter(rule, "rule");
+        Intrinsics3.checkNotNullParameter(rule, "rule");
         this.rules.add(rule);
         return this;
     }
 
     public final Parser<R, T, S> addRules(Rule<R, ? extends T, S>... newRules) {
-        m.checkNotNullParameter(newRules, "newRules");
-        return addRules(j.asList(newRules));
+        Intrinsics3.checkNotNullParameter(newRules, "newRules");
+        return addRules(_ArraysJvm.asList(newRules));
     }
 
     public final List<T> parse(CharSequence charSequence, S s2) {
@@ -93,9 +93,9 @@ public class Parser<R, T extends Node<R>, S> {
         ParseSpec parseSpec;
         int i;
         int i2;
-        Pair pair;
-        m.checkNotNullParameter(source, "source");
-        m.checkNotNullParameter(rules, "rules");
+        Tuples2 tuples2M10073to;
+        Intrinsics3.checkNotNullParameter(source, "source");
+        Intrinsics3.checkNotNullParameter(rules, "rules");
         Stack stack = new Stack();
         Node node = new Node(null, 1, null);
         if (source.length() > 0) {
@@ -108,27 +108,27 @@ public class Parser<R, T extends Node<R>, S> {
             Iterator<? extends Rule<R, ? extends T, S>> it = rules.iterator();
             while (true) {
                 if (!it.hasNext()) {
-                    pair = null;
+                    tuples2M10073to = null;
                     break;
                 }
                 Rule<R, ? extends T, S> next = it.next();
                 Matcher matcherMatch = next.match(charSequenceSubSequence, strGroup, parseSpec.state);
                 if (matcherMatch == null) {
                     logMiss(next, charSequenceSubSequence);
-                    pair = null;
+                    tuples2M10073to = null;
                 } else {
                     logMatch(next, charSequenceSubSequence);
-                    pair = o.to(next, matcherMatch);
+                    tuples2M10073to = Tuples.m10073to(next, matcherMatch);
                 }
-                if (pair != null) {
+                if (tuples2M10073to != null) {
                     break;
                 }
             }
-            if (pair == null) {
+            if (tuples2M10073to == null) {
                 throw new ParseException("failed to find rule to match source", source, null);
             }
-            Rule rule = (Rule) pair.component1();
-            Matcher matcher = (Matcher) pair.component2();
+            Rule rule = (Rule) tuples2M10073to.component1();
+            Matcher matcher = (Matcher) tuples2M10073to.component2();
             int iEnd = matcher.end() + i3;
             ParseSpec<R, S> parseSpec2 = rule.parse(matcher, this, parseSpec.state);
             Node<R> node2 = parseSpec.root;
@@ -136,7 +136,7 @@ public class Parser<R, T extends Node<R>, S> {
             int i4 = parseSpec.endIndex;
             if (iEnd != i4) {
                 S s2 = parseSpec.state;
-                m.checkNotNullParameter(node2, "node");
+                Intrinsics3.checkNotNullParameter(node2, "node");
                 stack.push(new ParseSpec(node2, s2, iEnd, i4));
             }
             if (!parseSpec2.isTerminal) {
@@ -151,13 +151,13 @@ public class Parser<R, T extends Node<R>, S> {
             }
         }
         Collection<Node<R>> children = node.getChildren();
-        List<T> mutableList = children != null ? u.toMutableList((Collection) children) : null;
-        List<T> list = e0.isMutableList(mutableList) ? mutableList : null;
+        List<T> mutableList = children != null ? _Collections.toMutableList((Collection) children) : null;
+        List<T> list = TypeIntrinsics.isMutableList(mutableList) ? mutableList : null;
         return list != null ? list : new ArrayList();
     }
 
     public final Parser<R, T, S> addRules(Collection<? extends Rule<R, ? extends T, S>> newRules) {
-        m.checkNotNullParameter(newRules, "newRules");
+        Intrinsics3.checkNotNullParameter(newRules, "newRules");
         this.rules.addAll(newRules);
         return this;
     }

@@ -1,68 +1,104 @@
 package com.facebook.imagepipeline.request;
 
 import android.net.Uri;
-import b.f.j.d.a;
-import b.f.j.d.b;
-import b.f.j.d.d;
-import b.f.j.d.f;
-import b.f.j.k.e;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.facebook.imagepipeline.request.ImageRequest;
 import java.util.Objects;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p109f.p115d.p127l.UriUtil;
+import p007b.p109f.p161j.p169d.BytesRange;
+import p007b.p109f.p161j.p169d.ImageDecodeOptions;
+import p007b.p109f.p161j.p169d.Priority2;
+import p007b.p109f.p161j.p169d.ResizeOptions;
+import p007b.p109f.p161j.p169d.RotationOptions;
+import p007b.p109f.p161j.p176k.RequestListener;
+import p007b.p109f.p161j.p182q.Postprocessor;
 
 /* loaded from: classes3.dex */
 public class ImageRequestBuilder {
-    public e n;
-    public int p;
-    public Uri a = null;
 
-    /* renamed from: b, reason: collision with root package name */
-    public ImageRequest.c f2904b = ImageRequest.c.FULL_FETCH;
-    public int c = 0;
-    public b.f.j.d.e d = null;
-    public f e = null;
-    public b f = b.a;
-    public ImageRequest.b g = ImageRequest.b.DEFAULT;
-    public boolean h = false;
-    public boolean i = false;
-    public boolean j = false;
-    public d k = d.HIGH;
-    public b.f.j.q.b l = null;
-    public Boolean m = null;
-    public a o = null;
+    /* renamed from: n */
+    public RequestListener f19625n;
+
+    /* renamed from: p */
+    public int f19627p;
+
+    /* renamed from: a */
+    public Uri f19612a = null;
+
+    /* renamed from: b */
+    public ImageRequest.EnumC10667c f19613b = ImageRequest.EnumC10667c.FULL_FETCH;
+
+    /* renamed from: c */
+    public int f19614c = 0;
+
+    /* renamed from: d */
+    public ResizeOptions f19615d = null;
+
+    /* renamed from: e */
+    public RotationOptions f19616e = null;
+
+    /* renamed from: f */
+    public ImageDecodeOptions f19617f = ImageDecodeOptions.f3706a;
+
+    /* renamed from: g */
+    public ImageRequest.EnumC10666b f19618g = ImageRequest.EnumC10666b.DEFAULT;
+
+    /* renamed from: h */
+    public boolean f19619h = false;
+
+    /* renamed from: i */
+    public boolean f19620i = false;
+
+    /* renamed from: j */
+    public boolean f19621j = false;
+
+    /* renamed from: k */
+    public Priority2 f19622k = Priority2.HIGH;
+
+    /* renamed from: l */
+    public Postprocessor f19623l = null;
+
+    /* renamed from: m */
+    public Boolean f19624m = null;
+
+    /* renamed from: o */
+    public BytesRange f19626o = null;
 
     public static class BuilderException extends RuntimeException {
         public BuilderException(String str) {
-            super(b.d.b.a.a.w("Invalid request builder: ", str));
+            super(outline.m883w("Invalid request builder: ", str));
         }
     }
 
-    public static ImageRequestBuilder b(Uri uri) {
+    /* renamed from: b */
+    public static ImageRequestBuilder m8723b(Uri uri) {
         ImageRequestBuilder imageRequestBuilder = new ImageRequestBuilder();
         Objects.requireNonNull(uri);
-        imageRequestBuilder.a = uri;
+        imageRequestBuilder.f19612a = uri;
         return imageRequestBuilder;
     }
 
-    public ImageRequest a() {
-        Uri uri = this.a;
+    /* renamed from: a */
+    public ImageRequest m8724a() {
+        Uri uri = this.f19612a;
         if (uri == null) {
             throw new BuilderException("Source must be set!");
         }
-        if ("res".equals(b.f.d.l.b.a(uri))) {
-            if (!this.a.isAbsolute()) {
+        if ("res".equals(UriUtil.m1005a(uri))) {
+            if (!this.f19612a.isAbsolute()) {
                 throw new BuilderException("Resource URI path must be absolute.");
             }
-            if (this.a.getPath().isEmpty()) {
+            if (this.f19612a.getPath().isEmpty()) {
                 throw new BuilderException("Resource URI must not be empty");
             }
             try {
-                Integer.parseInt(this.a.getPath().substring(1));
+                Integer.parseInt(this.f19612a.getPath().substring(1));
             } catch (NumberFormatException unused) {
                 throw new BuilderException("Resource URI path must be a resource id.");
             }
         }
-        if (!ModelAuditLogEntry.CHANGE_KEY_ASSET.equals(b.f.d.l.b.a(this.a)) || this.a.isAbsolute()) {
+        if (!ModelAuditLogEntry.CHANGE_KEY_ASSET.equals(UriUtil.m1005a(this.f19612a)) || this.f19612a.isAbsolute()) {
             return new ImageRequest(this);
         }
         throw new BuilderException("Asset URI path must be absolute.");

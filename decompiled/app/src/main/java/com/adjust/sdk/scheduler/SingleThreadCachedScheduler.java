@@ -15,11 +15,11 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
     private boolean isThreadProcessing = false;
     private boolean isTeardown = false;
 
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$1, reason: invalid class name */
-    public class AnonymousClass1 implements RejectedExecutionHandler {
+    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$1 */
+    public class RejectedExecutionHandlerC53981 implements RejectedExecutionHandler {
         public final /* synthetic */ String val$source;
 
-        public AnonymousClass1(String str) {
+        public RejectedExecutionHandlerC53981(String str) {
             this.val$source = str;
         }
 
@@ -29,12 +29,12 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$2 */
+    public class RunnableC53992 implements Runnable {
         public final /* synthetic */ long val$millisecondsDelay;
         public final /* synthetic */ Runnable val$task;
 
-        public AnonymousClass2(long j, Runnable runnable) {
+        public RunnableC53992(long j, Runnable runnable) {
             this.val$millisecondsDelay = j;
             this.val$task = runnable;
         }
@@ -50,11 +50,11 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: com.adjust.sdk.scheduler.SingleThreadCachedScheduler$3 */
+    public class RunnableC54003 implements Runnable {
         public final /* synthetic */ Runnable val$firstRunnable;
 
-        public AnonymousClass3(Runnable runnable) {
+        public RunnableC54003(Runnable runnable) {
             this.val$firstRunnable = runnable;
         }
 
@@ -81,7 +81,7 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
     }
 
     public SingleThreadCachedScheduler(String str) {
-        this.threadPoolExecutor = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue(), new ThreadFactoryWrapper(str), new AnonymousClass1(str));
+        this.threadPoolExecutor = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue(), new ThreadFactoryWrapper(str), new RejectedExecutionHandlerC53981(str));
     }
 
     public static /* synthetic */ void access$000(SingleThreadCachedScheduler singleThreadCachedScheduler, Runnable runnable) {
@@ -102,7 +102,7 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
     }
 
     private void processQueue(Runnable runnable) {
-        this.threadPoolExecutor.submit(new AnonymousClass3(runnable));
+        this.threadPoolExecutor.submit(new RunnableC54003(runnable));
     }
 
     private void tryExecuteRunnable(Runnable runnable) {
@@ -122,7 +122,7 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
             if (this.isTeardown) {
                 return;
             }
-            this.threadPoolExecutor.submit(new AnonymousClass2(j, runnable));
+            this.threadPoolExecutor.submit(new RunnableC53992(j, runnable));
         }
     }
 

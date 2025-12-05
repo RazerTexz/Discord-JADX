@@ -38,7 +38,7 @@ public class ConfigurationApp extends LombokApp {
     private PrintStream out = System.out;
     private PrintStream err = System.err;
     private static final URI NO_CONFIG = URI.create("");
-    private static final ConfigurationProblemReporter VOID = new AnonymousClass1();
+    private static final ConfigurationProblemReporter VOID = new C128191();
 
     @Override // lombok.core.LombokApp
     public String getAppName() {
@@ -97,7 +97,7 @@ public class ConfigurationApp extends LombokApp {
 
     @Override // lombok.core.LombokApp
     public int runApp(List<String> raw) throws Exception {
-        CmdReader<CmdArgs> reader = CmdReader.of(CmdArgs.class);
+        CmdReader<CmdArgs> reader = CmdReader.m9327of(CmdArgs.class);
         try {
             CmdArgs args = reader.make((String[]) raw.toArray(new String[0]));
             if (args.help) {
@@ -187,7 +187,7 @@ public class ConfigurationApp extends LombokApp {
             }
         }
         List<String> problems = new ArrayList<>();
-        ConfigurationProblemReporter reporter = new AnonymousClass2(problems);
+        ConfigurationProblemReporter reporter = new C128202(problems);
         FileSystemSourceCache cache = new FileSystemSourceCache();
         ConfigurationParser parser = new ConfigurationParser(reporter);
         boolean first = true;
@@ -237,12 +237,12 @@ public class ConfigurationApp extends LombokApp {
         return 0;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationApp$2, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationApp$2 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$2.SCL.lombok */
-    class AnonymousClass2 implements ConfigurationProblemReporter {
+    class C128202 implements ConfigurationProblemReporter {
         private final /* synthetic */ List val$problems;
 
-        AnonymousClass2(List list) {
+        C128202(List list) {
             this.val$problems = list;
         }
 
@@ -276,10 +276,10 @@ public class ConfigurationApp extends LombokApp {
         }
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationApp$1, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationApp$1 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$1.SCL.lombok */
-    class AnonymousClass1 implements ConfigurationProblemReporter {
-        AnonymousClass1() {
+    class C128191 implements ConfigurationProblemReporter {
+        C128191() {
         }
 
         @Override // lombok.core.configuration.ConfigurationProblemReporter
@@ -359,19 +359,19 @@ public class ConfigurationApp extends LombokApp {
 
     private Map<ConfigurationKey<?>, List<String>> trace(ConfigurationFile context, Collection<ConfigurationKey<?>> keys, Deque<Source> round) throws IOException {
         Map<ConfigurationKey<?>, List<String>> result = new HashMap<>();
-        ConfigurationParser.Collector collector = new AnonymousClass3(round, keys, result);
+        ConfigurationParser.Collector collector = new C128213(round, keys, result);
         new ConfigurationParser(VOID).parse(context, collector);
         return result;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationApp$3, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationApp$3 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$3.SCL.lombok */
-    class AnonymousClass3 implements ConfigurationParser.Collector {
+    class C128213 implements ConfigurationParser.Collector {
         private final /* synthetic */ Deque val$round;
         private final /* synthetic */ Collection val$keys;
         private final /* synthetic */ Map val$result;
 
-        AnonymousClass3(Deque deque, Collection collection, Map map) {
+        C128213(Deque deque, Collection collection, Map map) {
             this.val$round = deque;
             this.val$keys = collection;
             this.val$result = map;
@@ -436,15 +436,15 @@ public class ConfigurationApp extends LombokApp {
         return keys;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationApp$4, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationApp$4 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationApp$4.SCL.lombok */
-    class AnonymousClass4 implements Comparator<URI> {
+    class C128224 implements Comparator<URI> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(URI uri, URI uri2) {
             return compare2(uri, uri2);
         }
 
-        AnonymousClass4() {
+        C128224() {
         }
 
         /* renamed from: compare, reason: avoid collision after fix types in other method */
@@ -454,7 +454,7 @@ public class ConfigurationApp extends LombokApp {
     }
 
     private TreeMap<URI, Set<String>> findSharedDirectories(Collection<String> paths) {
-        TreeMap<URI, Set<String>> sharedDirectories = new TreeMap<>(new AnonymousClass4());
+        TreeMap<URI, Set<String>> sharedDirectories = new TreeMap<>(new C128224());
         for (String path : paths) {
             File file = new File(path);
             if (!file.exists()) {

@@ -1,30 +1,31 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStageDiscoveryStartStageCompleted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStageDiscoveryStartStageCompleted implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
+public final /* data */ class TrackStageDiscoveryStartStageCompleted implements AnalyticsSchema, TrackBase2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final Long stageInstanceId = null;
     private final Boolean createdNewStageChannel = null;
     private final transient String analyticsSchemaTypeName = "stage_discovery_start_stage_completed";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -42,7 +43,7 @@ public final /* data */ class TrackStageDiscoveryStartStageCompleted implements 
             return false;
         }
         TrackStageDiscoveryStartStageCompleted trackStageDiscoveryStartStageCompleted = (TrackStageDiscoveryStartStageCompleted) other;
-        return m.areEqual(this.stageInstanceId, trackStageDiscoveryStartStageCompleted.stageInstanceId) && m.areEqual(this.createdNewStageChannel, trackStageDiscoveryStartStageCompleted.createdNewStageChannel);
+        return Intrinsics3.areEqual(this.stageInstanceId, trackStageDiscoveryStartStageCompleted.stageInstanceId) && Intrinsics3.areEqual(this.createdNewStageChannel, trackStageDiscoveryStartStageCompleted.createdNewStageChannel);
     }
 
     public int hashCode() {
@@ -53,9 +54,9 @@ public final /* data */ class TrackStageDiscoveryStartStageCompleted implements 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStageDiscoveryStartStageCompleted(stageInstanceId=");
-        sbU.append(this.stageInstanceId);
-        sbU.append(", createdNewStageChannel=");
-        return a.D(sbU, this.createdNewStageChannel, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStageDiscoveryStartStageCompleted(stageInstanceId=");
+        sbM833U.append(this.stageInstanceId);
+        sbM833U.append(", createdNewStageChannel=");
+        return outline.m816D(sbM833U, this.createdNewStageChannel, ")");
     }
 }

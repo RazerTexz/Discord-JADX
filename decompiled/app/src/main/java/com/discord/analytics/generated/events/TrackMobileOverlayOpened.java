@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMobileOverlayOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
+public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -21,14 +21,15 @@ public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchem
     private final Boolean previewEnabled = null;
     private final transient String analyticsSchemaTypeName = "mobile_overlay_opened";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -46,7 +47,7 @@ public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchem
             return false;
         }
         TrackMobileOverlayOpened trackMobileOverlayOpened = (TrackMobileOverlayOpened) other;
-        return m.areEqual(this.type, trackMobileOverlayOpened.type) && m.areEqual(this.rtcConnectionId, trackMobileOverlayOpened.rtcConnectionId) && m.areEqual(this.previewEnabled, trackMobileOverlayOpened.previewEnabled);
+        return Intrinsics3.areEqual(this.type, trackMobileOverlayOpened.type) && Intrinsics3.areEqual(this.rtcConnectionId, trackMobileOverlayOpened.rtcConnectionId) && Intrinsics3.areEqual(this.previewEnabled, trackMobileOverlayOpened.previewEnabled);
     }
 
     public int hashCode() {
@@ -59,11 +60,11 @@ public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMobileOverlayOpened(type=");
-        sbU.append(this.type);
-        sbU.append(", rtcConnectionId=");
-        sbU.append(this.rtcConnectionId);
-        sbU.append(", previewEnabled=");
-        return a.D(sbU, this.previewEnabled, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMobileOverlayOpened(type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", rtcConnectionId=");
+        sbM833U.append(this.rtcConnectionId);
+        sbM833U.append(", previewEnabled=");
+        return outline.m816D(sbM833U, this.previewEnabled, ")");
     }
 }

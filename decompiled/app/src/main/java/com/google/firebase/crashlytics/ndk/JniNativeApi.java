@@ -7,19 +7,21 @@ import android.content.res.AssetManager;
 import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
-import b.d.b.a.a;
-import b.i.c.m.d.b;
-import b.i.c.m.e.d;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p361c.p369m.p370d.Logger3;
+import p007b.p225i.p361c.p369m.p389e.NativeApi;
 
 /* loaded from: classes3.dex */
-public class JniNativeApi implements d {
-    public static final boolean a;
+public class JniNativeApi implements NativeApi {
 
-    /* renamed from: b, reason: collision with root package name */
-    public Context f3110b;
+    /* renamed from: a */
+    public static final boolean f21419a;
+
+    /* renamed from: b */
+    public Context f21420b;
 
     static {
         boolean z2;
@@ -27,23 +29,24 @@ public class JniNativeApi implements d {
             System.loadLibrary("crashlytics");
             z2 = true;
         } catch (UnsatisfiedLinkError e) {
-            b bVar = b.a;
-            StringBuilder sbU = a.U("libcrashlytics could not be loaded. This APK may not have been compiled for this device's architecture. NDK crashes will not be reported to Crashlytics:\n");
-            sbU.append(e.getLocalizedMessage());
-            bVar.d(sbU.toString());
+            Logger3 logger3 = Logger3.f12227a;
+            StringBuilder sbM833U = outline.m833U("libcrashlytics could not be loaded. This APK may not have been compiled for this device's architecture. NDK crashes will not be reported to Crashlytics:\n");
+            sbM833U.append(e.getLocalizedMessage());
+            logger3.m6373d(sbM833U.toString());
             z2 = false;
         }
-        a = z2;
+        f21419a = z2;
     }
 
     public JniNativeApi(Context context) {
-        this.f3110b = context;
+        this.f21420b = context;
     }
 
-    public boolean a(String str, AssetManager assetManager) {
+    /* renamed from: a */
+    public boolean m9176a(String str, AssetManager assetManager) {
         String str2 = Build.CPU_ABI;
         try {
-            PackageInfo packageInfo = this.f3110b.getPackageManager().getPackageInfo(this.f3110b.getPackageName(), 9216);
+            PackageInfo packageInfo = this.f21420b.getPackageManager().getPackageInfo(this.f21420b.getPackageName(), 9216);
             ArrayList<String> arrayList = new ArrayList(10);
             arrayList.add(packageInfo.applicationInfo.sourceDir);
             String[] strArr = packageInfo.applicationInfo.splitSourceDirs;
@@ -73,9 +76,9 @@ public class JniNativeApi implements d {
             arrayList2.add(packageInfo.applicationInfo.nativeLibraryDir);
             String str4 = File.pathSeparator;
             String[] strArr3 = {TextUtils.join(str4, arrayList), TextUtils.join(str4, arrayList2)};
-            return a && nativeInit(new String[]{strArr3[0], strArr3[1], str}, assetManager);
+            return f21419a && nativeInit(new String[]{strArr3[0], strArr3[1], str}, assetManager);
         } catch (PackageManager.NameNotFoundException e) {
-            if (b.a.a(6)) {
+            if (Logger3.f12227a.m6370a(6)) {
                 Log.e("FirebaseCrashlytics", "Unable to compose package paths", e);
             }
             throw new RuntimeException(e);

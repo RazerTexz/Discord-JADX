@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackInviteOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInviteOpened implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackInviteOpened implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence inviteCode = null;
     private final Long loadTime = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackInviteOpened implements AnalyticsSchema, Trac
             return false;
         }
         TrackInviteOpened trackInviteOpened = (TrackInviteOpened) other;
-        return m.areEqual(this.inviteCode, trackInviteOpened.inviteCode) && m.areEqual(this.loadTime, trackInviteOpened.loadTime);
+        return Intrinsics3.areEqual(this.inviteCode, trackInviteOpened.inviteCode) && Intrinsics3.areEqual(this.loadTime, trackInviteOpened.loadTime);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackInviteOpened implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackInviteOpened(inviteCode=");
-        sbU.append(this.inviteCode);
-        sbU.append(", loadTime=");
-        return a.G(sbU, this.loadTime, ")");
+        StringBuilder sbM833U = outline.m833U("TrackInviteOpened(inviteCode=");
+        sbM833U.append(this.inviteCode);
+        sbM833U.append(", loadTime=");
+        return outline.m819G(sbM833U, this.loadTime, ")");
     }
 }

@@ -1,9 +1,9 @@
 package com.discord.api.emoji;
 
-import b.d.b.a.a;
 import com.discord.api.guildhash.GuildHashes;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildEmojisUpdate.kt */
 /* loaded from: classes.dex */
@@ -12,7 +12,8 @@ public final /* data */ class GuildEmojisUpdate {
     private final GuildHashes guildHashes;
     private final long guildId;
 
-    public final List<GuildEmoji> a() {
+    /* renamed from: a */
+    public final List<GuildEmoji> m7816a() {
         return this.emojis;
     }
 
@@ -34,7 +35,7 @@ public final /* data */ class GuildEmojisUpdate {
             return false;
         }
         GuildEmojisUpdate guildEmojisUpdate = (GuildEmojisUpdate) other;
-        return this.guildId == guildEmojisUpdate.guildId && m.areEqual(this.emojis, guildEmojisUpdate.emojis) && m.areEqual(this.guildHashes, guildEmojisUpdate.guildHashes);
+        return this.guildId == guildEmojisUpdate.guildId && Intrinsics3.areEqual(this.emojis, guildEmojisUpdate.emojis) && Intrinsics3.areEqual(this.guildHashes, guildEmojisUpdate.guildHashes);
     }
 
     public int hashCode() {
@@ -47,13 +48,13 @@ public final /* data */ class GuildEmojisUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildEmojisUpdate(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", emojis=");
-        sbU.append(this.emojis);
-        sbU.append(", guildHashes=");
-        sbU.append(this.guildHashes);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("GuildEmojisUpdate(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", emojis=");
+        sbM833U.append(this.emojis);
+        sbM833U.append(", guildHashes=");
+        sbM833U.append(this.guildHashes);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

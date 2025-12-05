@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackDiscoverySetupCtaClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDiscoverySetupCtaClicked implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
+public final /* data */ class TrackDiscoverySetupCtaClicked implements AnalyticsSchema, TrackBase2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final CharSequence ctaName = null;
@@ -19,14 +19,15 @@ public final /* data */ class TrackDiscoverySetupCtaClicked implements Analytics
     private final CharSequence modalStep = null;
     private final transient String analyticsSchemaTypeName = "discovery_setup_cta_clicked";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -44,7 +45,7 @@ public final /* data */ class TrackDiscoverySetupCtaClicked implements Analytics
             return false;
         }
         TrackDiscoverySetupCtaClicked trackDiscoverySetupCtaClicked = (TrackDiscoverySetupCtaClicked) other;
-        return m.areEqual(this.ctaName, trackDiscoverySetupCtaClicked.ctaName) && m.areEqual(this.discoverySettingsView, trackDiscoverySetupCtaClicked.discoverySettingsView) && m.areEqual(this.helpCenterArticleId, trackDiscoverySetupCtaClicked.helpCenterArticleId) && m.areEqual(this.modalStep, trackDiscoverySetupCtaClicked.modalStep);
+        return Intrinsics3.areEqual(this.ctaName, trackDiscoverySetupCtaClicked.ctaName) && Intrinsics3.areEqual(this.discoverySettingsView, trackDiscoverySetupCtaClicked.discoverySettingsView) && Intrinsics3.areEqual(this.helpCenterArticleId, trackDiscoverySetupCtaClicked.helpCenterArticleId) && Intrinsics3.areEqual(this.modalStep, trackDiscoverySetupCtaClicked.modalStep);
     }
 
     public int hashCode() {
@@ -59,13 +60,13 @@ public final /* data */ class TrackDiscoverySetupCtaClicked implements Analytics
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackDiscoverySetupCtaClicked(ctaName=");
-        sbU.append(this.ctaName);
-        sbU.append(", discoverySettingsView=");
-        sbU.append(this.discoverySettingsView);
-        sbU.append(", helpCenterArticleId=");
-        sbU.append(this.helpCenterArticleId);
-        sbU.append(", modalStep=");
-        return a.E(sbU, this.modalStep, ")");
+        StringBuilder sbM833U = outline.m833U("TrackDiscoverySetupCtaClicked(ctaName=");
+        sbM833U.append(this.ctaName);
+        sbM833U.append(", discoverySettingsView=");
+        sbM833U.append(this.discoverySettingsView);
+        sbM833U.append(", helpCenterArticleId=");
+        sbM833U.append(this.helpCenterArticleId);
+        sbM833U.append(", modalStep=");
+        return outline.m817E(sbM833U, this.modalStep, ")");
     }
 }

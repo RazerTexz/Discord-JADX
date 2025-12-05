@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackVideoStreamQualityChanged.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVideoStreamQualityChanged implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackVideoStreamQualityChanged implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long guildId = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackVideoStreamQualityChanged implements Analytic
             return false;
         }
         TrackVideoStreamQualityChanged trackVideoStreamQualityChanged = (TrackVideoStreamQualityChanged) other;
-        return m.areEqual(this.channelId, trackVideoStreamQualityChanged.channelId) && m.areEqual(this.guildId, trackVideoStreamQualityChanged.guildId) && m.areEqual(this.rtcConnectionId, trackVideoStreamQualityChanged.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackVideoStreamQualityChanged.mediaSessionId) && m.areEqual(this.senderUserId, trackVideoStreamQualityChanged.senderUserId) && m.areEqual(this.previousQuality, trackVideoStreamQualityChanged.previousQuality) && m.areEqual(this.quality, trackVideoStreamQualityChanged.quality);
+        return Intrinsics3.areEqual(this.channelId, trackVideoStreamQualityChanged.channelId) && Intrinsics3.areEqual(this.guildId, trackVideoStreamQualityChanged.guildId) && Intrinsics3.areEqual(this.rtcConnectionId, trackVideoStreamQualityChanged.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackVideoStreamQualityChanged.mediaSessionId) && Intrinsics3.areEqual(this.senderUserId, trackVideoStreamQualityChanged.senderUserId) && Intrinsics3.areEqual(this.previousQuality, trackVideoStreamQualityChanged.previousQuality) && Intrinsics3.areEqual(this.quality, trackVideoStreamQualityChanged.quality);
     }
 
     public int hashCode() {
@@ -54,19 +54,19 @@ public final /* data */ class TrackVideoStreamQualityChanged implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackVideoStreamQualityChanged(channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", rtcConnectionId=");
-        sbU.append(this.rtcConnectionId);
-        sbU.append(", mediaSessionId=");
-        sbU.append(this.mediaSessionId);
-        sbU.append(", senderUserId=");
-        sbU.append(this.senderUserId);
-        sbU.append(", previousQuality=");
-        sbU.append(this.previousQuality);
-        sbU.append(", quality=");
-        return a.E(sbU, this.quality, ")");
+        StringBuilder sbM833U = outline.m833U("TrackVideoStreamQualityChanged(channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", rtcConnectionId=");
+        sbM833U.append(this.rtcConnectionId);
+        sbM833U.append(", mediaSessionId=");
+        sbM833U.append(this.mediaSessionId);
+        sbM833U.append(", senderUserId=");
+        sbM833U.append(this.senderUserId);
+        sbM833U.append(", previousQuality=");
+        sbM833U.append(this.previousQuality);
+        sbM833U.append(", quality=");
+        return outline.m817E(sbM833U, this.quality, ")");
     }
 }

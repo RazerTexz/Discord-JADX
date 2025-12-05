@@ -1,0 +1,69 @@
+package p007b.p225i.p226a.p288f.p333j.p334b.p335e;
+
+import android.app.PendingIntent;
+import android.os.IBinder;
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.android.gms.nearby.messages.internal.ClientAppContext;
+import com.google.android.gms.nearby.messages.internal.zzcg;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+
+/* renamed from: b.i.a.f.j.b.e.j0 */
+/* loaded from: classes3.dex */
+public final class C4289j0 implements Parcelable.Creator<zzcg> {
+    @Override // android.os.Parcelable.Creator
+    public final zzcg createFromParcel(Parcel parcel) {
+        int iM546m2 = AnimatableValueParser.m546m2(parcel);
+        IBinder iBinderM434F1 = null;
+        IBinder iBinderM434F12 = null;
+        PendingIntent pendingIntent = null;
+        String strM468R = null;
+        String strM468R2 = null;
+        ClientAppContext clientAppContext = null;
+        int iM437G1 = 0;
+        int iM437G12 = 0;
+        boolean zM431E1 = false;
+        while (parcel.dataPosition() < iM546m2) {
+            int i = parcel.readInt();
+            switch ((char) i) {
+                case 1:
+                    iM437G1 = AnimatableValueParser.m437G1(parcel, i);
+                    break;
+                case 2:
+                    iBinderM434F1 = AnimatableValueParser.m434F1(parcel, i);
+                    break;
+                case 3:
+                    iBinderM434F12 = AnimatableValueParser.m434F1(parcel, i);
+                    break;
+                case 4:
+                    pendingIntent = (PendingIntent) AnimatableValueParser.m465Q(parcel, i, PendingIntent.CREATOR);
+                    break;
+                case 5:
+                    iM437G12 = AnimatableValueParser.m437G1(parcel, i);
+                    break;
+                case 6:
+                    strM468R = AnimatableValueParser.m468R(parcel, i);
+                    break;
+                case 7:
+                    strM468R2 = AnimatableValueParser.m468R(parcel, i);
+                    break;
+                case '\b':
+                    zM431E1 = AnimatableValueParser.m431E1(parcel, i);
+                    break;
+                case '\t':
+                    clientAppContext = (ClientAppContext) AnimatableValueParser.m465Q(parcel, i, ClientAppContext.CREATOR);
+                    break;
+                default:
+                    AnimatableValueParser.m510d2(parcel, i);
+                    break;
+            }
+        }
+        AnimatableValueParser.m516f0(parcel, iM546m2);
+        return new zzcg(iM437G1, iBinderM434F1, iBinderM434F12, pendingIntent, iM437G12, strM468R, strM468R2, zM431E1, clientAppContext);
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final /* synthetic */ zzcg[] newArray(int i) {
+        return new zzcg[i];
+    }
+}

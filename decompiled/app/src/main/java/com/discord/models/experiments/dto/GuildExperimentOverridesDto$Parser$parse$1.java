@@ -3,10 +3,10 @@ package com.discord.models.experiments.dto;
 import androidx.core.app.NotificationCompat;
 import com.discord.models.domain.Model;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import kotlin.jvm.internal.Ref$IntRef;
 import kotlin.jvm.internal.Ref$ObjectRef;
-import rx.functions.Action1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.functions.Action1;
 
 /* compiled from: GuildExperimentDto.kt */
 /* loaded from: classes.dex */
@@ -16,9 +16,9 @@ public final class GuildExperimentOverridesDto$Parser$parse$1<T> implements Acti
     public final /* synthetic */ Model.JsonReader $reader;
 
     /* compiled from: GuildExperimentDto.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentOverridesDto$Parser$parse$1$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<Long> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentOverridesDto$Parser$parse$1$1 */
+    public static final class C55591<T> implements Model.JsonReader.ItemFactory<Long> {
+        public C55591() {
         }
 
         @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
@@ -39,7 +39,7 @@ public final class GuildExperimentOverridesDto$Parser$parse$1<T> implements Acti
         this.$guildIds = ref$ObjectRef;
     }
 
-    @Override // rx.functions.Action1
+    @Override // p658rx.functions.Action1
     public /* bridge */ /* synthetic */ void call(String str) {
         call2(str);
     }
@@ -60,8 +60,8 @@ public final class GuildExperimentOverridesDto$Parser$parse$1<T> implements Acti
         }
         if (iHashCode == 107 && str.equals("k")) {
             Ref$ObjectRef ref$ObjectRef = this.$guildIds;
-            T t = (T) this.$reader.nextList(new AnonymousClass1());
-            m.checkNotNullExpressionValue(t, "reader.nextList { reader.nextLong(-1L) }");
+            T t = (T) this.$reader.nextList(new C55591());
+            Intrinsics3.checkNotNullExpressionValue(t, "reader.nextList { reader.nextLong(-1L) }");
             ref$ObjectRef.element = t;
         }
     }

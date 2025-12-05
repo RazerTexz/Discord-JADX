@@ -1,0 +1,46 @@
+package com.discord.widgets.stage.sheet;
+
+import android.view.View;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.discord.C5419R;
+import com.discord.databinding.WidgetStageAudienceBlockedBottomSheetBinding;
+import com.discord.utilities.view.recycler.MaxHeightRecyclerView;
+import com.google.android.material.button.MaterialButton;
+import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
+/* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$binding$2, reason: use source file name */
+/* loaded from: classes2.dex */
+public final /* synthetic */ class WidgetStageAudienceBlockedBottomSheet2 extends FunctionReferenceImpl implements Function1<View, WidgetStageAudienceBlockedBottomSheetBinding> {
+    public static final WidgetStageAudienceBlockedBottomSheet2 INSTANCE = new WidgetStageAudienceBlockedBottomSheet2();
+
+    public WidgetStageAudienceBlockedBottomSheet2() {
+        super(1, WidgetStageAudienceBlockedBottomSheetBinding.class, "bind", "bind(Landroid/view/View;)Lcom/discord/databinding/WidgetStageAudienceBlockedBottomSheetBinding;", 0);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ WidgetStageAudienceBlockedBottomSheetBinding invoke(View view) {
+        return invoke2(view);
+    }
+
+    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final WidgetStageAudienceBlockedBottomSheetBinding invoke2(View view) {
+        Intrinsics3.checkNotNullParameter(view, "p1");
+        int i = C5419R.id.accept_button;
+        MaterialButton materialButton = (MaterialButton) view.findViewById(C5419R.id.accept_button);
+        if (materialButton != null) {
+            i = C5419R.id.blocked_users;
+            MaxHeightRecyclerView maxHeightRecyclerView = (MaxHeightRecyclerView) view.findViewById(C5419R.id.blocked_users);
+            if (maxHeightRecyclerView != null) {
+                i = C5419R.id.cancel_button;
+                MaterialButton materialButton2 = (MaterialButton) view.findViewById(C5419R.id.cancel_button);
+                if (materialButton2 != null) {
+                    return new WidgetStageAudienceBlockedBottomSheetBinding((ConstraintLayout) view, materialButton, maxHeightRecyclerView, materialButton2);
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i)));
+    }
+}

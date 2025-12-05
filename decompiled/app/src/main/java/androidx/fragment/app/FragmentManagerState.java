@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @SuppressLint({"BanParcelableUsage"})
 /* loaded from: classes.dex */
 public final class FragmentManagerState implements Parcelable {
-    public static final Parcelable.Creator<FragmentManagerState> CREATOR = new AnonymousClass1();
+    public static final Parcelable.Creator<FragmentManagerState> CREATOR = new C03881();
     public ArrayList<FragmentState> mActive;
     public ArrayList<String> mAdded;
     public BackStackState[] mBackStack;
@@ -20,8 +20,8 @@ public final class FragmentManagerState implements Parcelable {
     public ArrayList<String> mResultKeys;
     public ArrayList<Bundle> mResults;
 
-    /* renamed from: androidx.fragment.app.FragmentManagerState$1, reason: invalid class name */
-    public class AnonymousClass1 implements Parcelable.Creator<FragmentManagerState> {
+    /* renamed from: androidx.fragment.app.FragmentManagerState$1 */
+    public class C03881 implements Parcelable.Creator<FragmentManagerState> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ FragmentManagerState createFromParcel(Parcel parcel) {
             return createFromParcel(parcel);

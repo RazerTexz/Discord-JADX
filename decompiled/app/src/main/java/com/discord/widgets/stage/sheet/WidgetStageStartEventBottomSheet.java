@@ -5,40 +5,42 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.TextView;
-import androidx.core.os.BundleKt;
+import androidx.core.os.Bundle2;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetStageStartEventBottomSheetBinding;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
-import com.discord.utilities.view.text.TextWatcherKt;
+import com.discord.utilities.view.text.TextWatcher4;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g;
-import d0.o;
-import d0.z.d.a0;
-import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.Tuples;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: WidgetStageStartEventBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetStageStartEventBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageStartEventBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStageStartEventBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageStartEventBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -67,10 +69,10 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
         }
 
         public final WidgetStageStartEventBottomSheet show(FragmentManager fragmentManager, long channelId, Function0<Unit> onDismiss) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetStageStartEventBottomSheet widgetStageStartEventBottomSheet = new WidgetStageStartEventBottomSheet();
             widgetStageStartEventBottomSheet.setOnDismiss(onDismiss);
-            widgetStageStartEventBottomSheet.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId))));
+            widgetStageStartEventBottomSheet.setArguments(Bundle2.bundleOf(Tuples.m10073to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId))));
             widgetStageStartEventBottomSheet.show(fragmentManager, WidgetStageStartEventBottomSheet.class.getSimpleName());
             return widgetStageStartEventBottomSheet;
         }
@@ -81,75 +83,75 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
     }
 
     /* compiled from: WidgetStageStartEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<WidgetStageStartEventBottomSheetViewModel.Event, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onResume$1 */
+    public static final class C100551 extends Lambda implements Function1<WidgetStageStartEventBottomSheetViewModel.Event, Unit> {
+        public C100551() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetStageStartEventBottomSheetViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetStageStartEventBottomSheetViewModel.Event event) {
-            m.checkNotNullParameter(event, "event");
+            Intrinsics3.checkNotNullParameter(event, "event");
             WidgetStageStartEventBottomSheet.access$handleEvent(WidgetStageStartEventBottomSheet.this, event);
         }
     }
 
     /* compiled from: WidgetStageStartEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<WidgetStageStartEventBottomSheetViewModel.ViewState, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onResume$2 */
+    public static final class C100562 extends Lambda implements Function1<WidgetStageStartEventBottomSheetViewModel.ViewState, Unit> {
+        public C100562() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetStageStartEventBottomSheetViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetStageStartEventBottomSheetViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "viewState");
+            Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetStageStartEventBottomSheet.access$configureUI(WidgetStageStartEventBottomSheet.this, viewState);
         }
     }
 
     /* compiled from: WidgetStageStartEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Editable, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$1 */
+    public static final class C100571 extends Lambda implements Function1<Editable, Unit> {
+        public C100571() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Editable editable) {
             invoke2(editable);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
-            m.checkNotNullParameter(editable, "editable");
-            TextInputLayout textInputLayout = WidgetStageStartEventBottomSheet.access$getBinding$p(WidgetStageStartEventBottomSheet.this).g;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.topicLayout");
+            Intrinsics3.checkNotNullParameter(editable, "editable");
+            TextInputLayout textInputLayout = WidgetStageStartEventBottomSheet.access$getBinding$p(WidgetStageStartEventBottomSheet.this).f18179g;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.topicLayout");
             textInputLayout.setError(null);
             WidgetStageStartEventBottomSheet.access$getViewModel$p(WidgetStageStartEventBottomSheet.this).setTopic(editable.toString());
         }
     }
 
     /* compiled from: WidgetStageStartEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2 */
+    public static final class ViewOnClickListenerC100582 implements View.OnClickListener {
 
         /* compiled from: WidgetStageStartEventBottomSheet.kt */
         /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends d0.z.d.o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -157,7 +159,7 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -171,16 +173,16 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
         }
 
         /* compiled from: WidgetStageStartEventBottomSheet.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2$2, reason: invalid class name and collision with other inner class name */
-        public static final class C04672 extends d0.z.d.o implements Function0<Unit> {
-            public C04672() {
+        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2$2, reason: invalid class name */
+        public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+            public AnonymousClass2() {
                 super(0);
             }
 
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -193,22 +195,22 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
             }
         }
 
-        public AnonymousClass2() {
+        public ViewOnClickListenerC100582() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetStageStartEventBottomSheet.this.requestMicrophone(new AnonymousClass1(), new C04672());
+            WidgetStageStartEventBottomSheet.this.requestMicrophone(new AnonymousClass1(), new AnonymousClass2());
         }
     }
 
     public WidgetStageStartEventBottomSheet() {
         super(true);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetStageStartEventBottomSheet$binding$2.INSTANCE, null, 2, null);
-        this.channelId = g.lazy(new WidgetStageStartEventBottomSheet$channelId$2(this));
-        WidgetStageStartEventBottomSheet$viewModel$2 widgetStageStartEventBottomSheet$viewModel$2 = new WidgetStageStartEventBottomSheet$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetStageStartEventBottomSheetViewModel.class), new WidgetStageStartEventBottomSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetStageStartEventBottomSheet$viewModel$2));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetStageStartEventBottomSheet2.INSTANCE, null, 2, null);
+        this.channelId = LazyJVM.lazy(new WidgetStageStartEventBottomSheet3(this));
+        WidgetStageStartEventBottomSheet4 widgetStageStartEventBottomSheet4 = new WidgetStageStartEventBottomSheet4(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetStageStartEventBottomSheetViewModel.class), new C10054x3bfafd43(appViewModelDelegates3), new AppViewModelDelegates5(widgetStageStartEventBottomSheet4));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetStageStartEventBottomSheet widgetStageStartEventBottomSheet, WidgetStageStartEventBottomSheetViewModel.ViewState viewState) {
@@ -237,26 +239,26 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
 
     private final void configureUI(WidgetStageStartEventBottomSheetViewModel.ViewState viewState) {
         if (viewState instanceof WidgetStageStartEventBottomSheetViewModel.ViewState.Loaded) {
-            MaterialButton materialButton = getBinding().c;
-            m.checkNotNullExpressionValue(materialButton, "binding.startStageButton");
+            MaterialButton materialButton = getBinding().f18175c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.startStageButton");
             WidgetStageStartEventBottomSheetViewModel.ViewState.Loaded loaded = (WidgetStageStartEventBottomSheetViewModel.ViewState.Loaded) viewState;
             ViewExtensions.setEnabledAndAlpha$default(materialButton, loaded.getTopic().length() > 0, 0.0f, 2, null);
             String topic = loaded.getTopic();
-            m.checkNotNullExpressionValue(getBinding().g, "binding.topicLayout");
-            if (!m.areEqual(topic, ViewExtensions.getTextOrEmpty(r2))) {
-                getBinding().f.setText(loaded.getTopic());
+            Intrinsics3.checkNotNullExpressionValue(getBinding().f18179g, "binding.topicLayout");
+            if (!Intrinsics3.areEqual(topic, ViewExtensions.getTextOrEmpty(r2))) {
+                getBinding().f18178f.setText(loaded.getTopic());
             }
-            TextView textView = getBinding().e;
-            m.checkNotNullExpressionValue(textView, "binding.title");
-            textView.setText(getString(loaded.getStageInstance() == null ? R.string.start_stage_channel_event_modal_title : R.string.edit_stage_title));
-            TextView textView2 = getBinding().d;
-            m.checkNotNullExpressionValue(textView2, "binding.subtitle");
-            textView2.setText(getString(loaded.getStageInstance() == null ? R.string.start_stage_channel_event_modal_subtitle : R.string.edit_stage_subtitle));
-            MaterialButton materialButton2 = getBinding().c;
-            m.checkNotNullExpressionValue(materialButton2, "binding.startStageButton");
-            materialButton2.setText(getString(loaded.getStageInstance() == null ? R.string.start_stage_channel_event_modal_button : R.string.save_changes));
-            TextView textView3 = getBinding().f2658b;
-            m.checkNotNullExpressionValue(textView3, "binding.speakerHint");
+            TextView textView = getBinding().f18177e;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.title");
+            textView.setText(getString(loaded.getStageInstance() == null ? C5419R.string.start_stage_channel_event_modal_title : C5419R.string.edit_stage_title));
+            TextView textView2 = getBinding().f18176d;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.subtitle");
+            textView2.setText(getString(loaded.getStageInstance() == null ? C5419R.string.start_stage_channel_event_modal_subtitle : C5419R.string.edit_stage_subtitle));
+            MaterialButton materialButton2 = getBinding().f18175c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.startStageButton");
+            materialButton2.setText(getString(loaded.getStageInstance() == null ? C5419R.string.start_stage_channel_event_modal_button : C5419R.string.save_changes));
+            TextView textView3 = getBinding().f18174b;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.speakerHint");
             textView3.setVisibility(loaded.getStageInstance() == null ? 0 : 8);
         }
     }
@@ -278,17 +280,17 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
             AppBottomSheet.hideKeyboard$default(this, null, 1, null);
             dismiss();
         } else if (event instanceof WidgetStageStartEventBottomSheetViewModel.Event.SetTopicFailure) {
-            b.a.d.m.i(this, ((WidgetStageStartEventBottomSheetViewModel.Event.SetTopicFailure) event).getFailureMessageStringRes(), 0, 4);
+            AppToast.m171i(this, ((WidgetStageStartEventBottomSheetViewModel.Event.SetTopicFailure) event).getFailureMessageStringRes(), 0, 4);
         } else if (event instanceof WidgetStageStartEventBottomSheetViewModel.Event.InvalidTopic) {
-            TextInputLayout textInputLayout = getBinding().g;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.topicLayout");
+            TextInputLayout textInputLayout = getBinding().f18179g;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.topicLayout");
             textInputLayout.setError(getString(((WidgetStageStartEventBottomSheetViewModel.Event.InvalidTopic) event).getFailureMessageStringRes()));
         }
     }
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.widget_stage_start_event_bottom_sheet;
+        return C5419R.layout.widget_stage_start_event_bottom_sheet;
     }
 
     public final Function0<Unit> getOnDismiss() {
@@ -298,18 +300,18 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onResume() {
         super.onResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetStageStartEventBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetStageStartEventBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetStageStartEventBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C100551(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetStageStartEventBottomSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C100562(), 62, (Object) null);
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
-        TextInputEditText textInputEditText = getBinding().f;
-        m.checkNotNullExpressionValue(textInputEditText, "binding.topicInput");
-        TextWatcherKt.addBindedTextWatcher(textInputEditText, this, new AnonymousClass1());
-        getBinding().c.setOnClickListener(new AnonymousClass2());
+        TextInputEditText textInputEditText = getBinding().f18178f;
+        Intrinsics3.checkNotNullExpressionValue(textInputEditText, "binding.topicInput");
+        TextWatcher4.addBindedTextWatcher(textInputEditText, this, new C100571());
+        getBinding().f18175c.setOnClickListener(new ViewOnClickListenerC100582());
     }
 
     public final void setOnDismiss(Function0<Unit> function0) {

@@ -1,11 +1,11 @@
 package com.discord.stores;
 
 import com.discord.stores.updates.ObservationDeck;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
-import rx.Observable;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreAutocomplete.kt */
 /* loaded from: classes2.dex */
@@ -15,9 +15,9 @@ public final class StoreAutocomplete extends StoreV2 {
     private final ObservationDeck observationDeck;
 
     /* compiled from: StoreAutocomplete.kt */
-    /* renamed from: com.discord.stores.StoreAutocomplete$observeAutocompleteVisibility$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreAutocomplete$observeAutocompleteVisibility$1 */
+    public static final class C57921 extends Lambda implements Function0<Boolean> {
+        public C57921() {
             super(0);
         }
 
@@ -33,12 +33,12 @@ public final class StoreAutocomplete extends StoreV2 {
     }
 
     /* compiled from: StoreAutocomplete.kt */
-    /* renamed from: com.discord.stores.StoreAutocomplete$setAutocompleteVisible$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreAutocomplete$setAutocompleteVisible$1 */
+    public static final class C57931 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $visible;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2) {
+        public C57931(boolean z2) {
             super(0);
             this.$visible = z2;
         }
@@ -46,7 +46,7 @@ public final class StoreAutocomplete extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -57,8 +57,8 @@ public final class StoreAutocomplete extends StoreV2 {
     }
 
     public StoreAutocomplete(ObservationDeck observationDeck, Dispatcher dispatcher) {
-        m.checkNotNullParameter(observationDeck, "observationDeck");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
         this.observationDeck = observationDeck;
         this.dispatcher = dispatcher;
     }
@@ -72,12 +72,12 @@ public final class StoreAutocomplete extends StoreV2 {
     }
 
     public final Observable<Boolean> observeAutocompleteVisibility() {
-        Observable<Boolean> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
-        return observableR;
+        Observable<Boolean> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C57921(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final void setAutocompleteVisible(boolean visible) {
-        this.dispatcher.schedule(new AnonymousClass1(visible));
+        this.dispatcher.schedule(new C57931(visible));
     }
 }

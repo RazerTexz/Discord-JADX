@@ -9,8 +9,8 @@ import android.util.TypedValue;
 import androidx.annotation.AttrRes;
 import androidx.core.content.res.ResourcesCompat;
 import com.discord.stores.StoreStream;
-import d0.a0.a;
-import d0.z.d.m;
+import p507d0.p508a0.MathJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: FontUtils.kt */
 /* loaded from: classes2.dex */
@@ -24,17 +24,17 @@ public final class FontUtils {
     }
 
     public final int getSystemFontScaleInt(ContentResolver contentResolver) {
-        m.checkNotNullParameter(contentResolver, "contentResolver");
-        return a.roundToInt(Settings.System.getFloat(contentResolver, "font_scale", 1.0f) * 100);
+        Intrinsics3.checkNotNullParameter(contentResolver, "contentResolver");
+        return MathJVM.roundToInt(Settings.System.getFloat(contentResolver, "font_scale", 1.0f) * 100);
     }
 
     public final float getTargetFontScaleFloat(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         return StoreStream.INSTANCE.getUserSettingsSystem().getFontScale() == -1 ? Settings.System.getFloat(context.getContentResolver(), "font_scale", 1.0f) : r0.getUserSettingsSystem().getFontScale() / 100.0f;
     }
 
     public final Typeface getThemedFont(Context context, @AttrRes int attrResourceId) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         return ResourcesCompat.getFont(context, getThemedFontResId(context, attrResourceId));
     }
 

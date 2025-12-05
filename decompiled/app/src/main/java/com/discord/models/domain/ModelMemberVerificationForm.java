@@ -1,14 +1,14 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
 import com.discord.models.domain.Model;
-import d0.z.d.m;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.internal.Ref$BooleanRef;
 import kotlin.jvm.internal.Ref$ObjectRef;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelMemberVerificationForm.kt */
 /* loaded from: classes.dex */
@@ -41,8 +41,8 @@ public final /* data */ class ModelMemberVerificationForm {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // com.discord.models.domain.Model.Parser
             public FormField parse(Model.JsonReader reader) throws IOException {
-                Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
-                ref$ObjectRefC0.element = null;
+                Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(reader, "reader");
+                ref$ObjectRefM844c0.element = null;
                 Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
                 ref$ObjectRef.element = null;
                 Ref$BooleanRef ref$BooleanRef = new Ref$BooleanRef();
@@ -53,42 +53,42 @@ public final /* data */ class ModelMemberVerificationForm {
                 ref$ObjectRef3.element = null;
                 Ref$ObjectRef ref$ObjectRef4 = new Ref$ObjectRef();
                 ref$ObjectRef4.element = null;
-                reader.nextObject(new ModelMemberVerificationForm$FormField$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef, ref$BooleanRef, ref$ObjectRef2, ref$ObjectRef3, ref$ObjectRef4));
-                T t = ref$ObjectRefC0.element;
+                reader.nextObject(new ModelMemberVerificationForm2(ref$ObjectRefM844c0, reader, ref$ObjectRef, ref$BooleanRef, ref$ObjectRef2, ref$ObjectRef3, ref$ObjectRef4));
+                T t = ref$ObjectRefM844c0.element;
                 if (t == 0) {
-                    m.throwUninitializedPropertyAccessException("fieldType");
+                    Intrinsics3.throwUninitializedPropertyAccessException("fieldType");
                 }
                 String str = (String) t;
                 T t2 = ref$ObjectRef.element;
                 if (t2 == 0) {
-                    m.throwUninitializedPropertyAccessException("label");
+                    Intrinsics3.throwUninitializedPropertyAccessException("label");
                 }
                 String str2 = (String) t2;
                 boolean z2 = ref$BooleanRef.element;
                 T t3 = ref$ObjectRef2.element;
                 if (t3 == 0) {
-                    m.throwUninitializedPropertyAccessException("values");
+                    Intrinsics3.throwUninitializedPropertyAccessException("values");
                 }
                 List list = (List) t3;
                 T t4 = ref$ObjectRef3.element;
                 if (t4 == 0) {
-                    m.throwUninitializedPropertyAccessException("choices");
+                    Intrinsics3.throwUninitializedPropertyAccessException("choices");
                 }
                 List list2 = (List) t4;
                 T t5 = ref$ObjectRef4.element;
                 if (t5 == 0) {
-                    m.throwUninitializedPropertyAccessException("response");
+                    Intrinsics3.throwUninitializedPropertyAccessException("response");
                 }
                 return new FormField(str, str2, z2, list, list2, t5);
             }
         }
 
         public FormField(String str, String str2, boolean z2, List<String> list, List<String> list2, Object obj) {
-            m.checkNotNullParameter(str, "fieldType");
-            m.checkNotNullParameter(str2, "label");
-            m.checkNotNullParameter(list, "values");
-            m.checkNotNullParameter(list2, "choices");
-            m.checkNotNullParameter(obj, "response");
+            Intrinsics3.checkNotNullParameter(str, "fieldType");
+            Intrinsics3.checkNotNullParameter(str2, "label");
+            Intrinsics3.checkNotNullParameter(list, "values");
+            Intrinsics3.checkNotNullParameter(list2, "choices");
+            Intrinsics3.checkNotNullParameter(obj, "response");
             this.fieldType = str;
             this.label = str2;
             this.required = z2;
@@ -152,11 +152,11 @@ public final /* data */ class ModelMemberVerificationForm {
         }
 
         public final FormField copy(String fieldType, String label, boolean required, List<String> values, List<String> choices, Object response) {
-            m.checkNotNullParameter(fieldType, "fieldType");
-            m.checkNotNullParameter(label, "label");
-            m.checkNotNullParameter(values, "values");
-            m.checkNotNullParameter(choices, "choices");
-            m.checkNotNullParameter(response, "response");
+            Intrinsics3.checkNotNullParameter(fieldType, "fieldType");
+            Intrinsics3.checkNotNullParameter(label, "label");
+            Intrinsics3.checkNotNullParameter(values, "values");
+            Intrinsics3.checkNotNullParameter(choices, "choices");
+            Intrinsics3.checkNotNullParameter(response, "response");
             return new FormField(fieldType, label, required, values, choices, response);
         }
 
@@ -168,7 +168,7 @@ public final /* data */ class ModelMemberVerificationForm {
                 return false;
             }
             FormField formField = (FormField) other;
-            return m.areEqual(this.fieldType, formField.fieldType) && m.areEqual(this.label, formField.label) && this.required == formField.required && m.areEqual(this.values, formField.values) && m.areEqual(this.choices, formField.choices) && m.areEqual(this.response, formField.response);
+            return Intrinsics3.areEqual(this.fieldType, formField.fieldType) && Intrinsics3.areEqual(this.label, formField.label) && this.required == formField.required && Intrinsics3.areEqual(this.values, formField.values) && Intrinsics3.areEqual(this.choices, formField.choices) && Intrinsics3.areEqual(this.response, formField.response);
         }
 
         public final List<String> getChoices() {
@@ -244,25 +244,25 @@ public final /* data */ class ModelMemberVerificationForm {
         }
 
         public final void setResponse(Object obj) {
-            m.checkNotNullParameter(obj, "<set-?>");
+            Intrinsics3.checkNotNullParameter(obj, "<set-?>");
             this.response = obj;
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("FormField(fieldType=");
-            sbU.append(this.fieldType);
-            sbU.append(", label=");
-            sbU.append(this.label);
-            sbU.append(", required=");
-            sbU.append(this.required);
-            sbU.append(", values=");
-            sbU.append(this.values);
-            sbU.append(", choices=");
-            sbU.append(this.choices);
-            sbU.append(", response=");
-            sbU.append(this.response);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("FormField(fieldType=");
+            sbM833U.append(this.fieldType);
+            sbM833U.append(", label=");
+            sbM833U.append(this.label);
+            sbM833U.append(", required=");
+            sbM833U.append(this.required);
+            sbM833U.append(", values=");
+            sbM833U.append(this.values);
+            sbM833U.append(", choices=");
+            sbM833U.append(this.choices);
+            sbM833U.append(", response=");
+            sbM833U.append(this.response);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -291,27 +291,27 @@ public final /* data */ class ModelMemberVerificationForm {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.discord.models.domain.Model.Parser
         public ModelMemberVerificationForm parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
-            ref$ObjectRefC0.element = null;
+            Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(reader, "reader");
+            ref$ObjectRefM844c0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
-            reader.nextObject(new ModelMemberVerificationForm$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef));
-            T t = ref$ObjectRefC0.element;
+            reader.nextObject(new ModelMemberVerificationForm3(ref$ObjectRefM844c0, reader, ref$ObjectRef));
+            T t = ref$ObjectRefM844c0.element;
             if (t == 0) {
-                m.throwUninitializedPropertyAccessException("version");
+                Intrinsics3.throwUninitializedPropertyAccessException("version");
             }
             String str = (String) t;
             T t2 = ref$ObjectRef.element;
             if (t2 == 0) {
-                m.throwUninitializedPropertyAccessException("formFields");
+                Intrinsics3.throwUninitializedPropertyAccessException("formFields");
             }
             return new ModelMemberVerificationForm(str, (List) t2);
         }
     }
 
     public ModelMemberVerificationForm(String str, List<FormField> list) {
-        m.checkNotNullParameter(str, "version");
-        m.checkNotNullParameter(list, "formFields");
+        Intrinsics3.checkNotNullParameter(str, "version");
+        Intrinsics3.checkNotNullParameter(list, "formFields");
         this.version = str;
         this.formFields = list;
     }
@@ -337,8 +337,8 @@ public final /* data */ class ModelMemberVerificationForm {
     }
 
     public final ModelMemberVerificationForm copy(String version, List<FormField> formFields) {
-        m.checkNotNullParameter(version, "version");
-        m.checkNotNullParameter(formFields, "formFields");
+        Intrinsics3.checkNotNullParameter(version, "version");
+        Intrinsics3.checkNotNullParameter(formFields, "formFields");
         return new ModelMemberVerificationForm(version, formFields);
     }
 
@@ -350,7 +350,7 @@ public final /* data */ class ModelMemberVerificationForm {
             return false;
         }
         ModelMemberVerificationForm modelMemberVerificationForm = (ModelMemberVerificationForm) other;
-        return m.areEqual(this.version, modelMemberVerificationForm.version) && m.areEqual(this.formFields, modelMemberVerificationForm.formFields);
+        return Intrinsics3.areEqual(this.version, modelMemberVerificationForm.version) && Intrinsics3.areEqual(this.formFields, modelMemberVerificationForm.formFields);
     }
 
     public final List<FormField> getFormFields() {
@@ -382,9 +382,9 @@ public final /* data */ class ModelMemberVerificationForm {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelMemberVerificationForm(version=");
-        sbU.append(this.version);
-        sbU.append(", formFields=");
-        return a.L(sbU, this.formFields, ")");
+        StringBuilder sbM833U = outline.m833U("ModelMemberVerificationForm(version=");
+        sbM833U.append(this.version);
+        sbM833U.append(", formFields=");
+        return outline.m824L(sbM833U, this.formFields, ")");
     }
 }

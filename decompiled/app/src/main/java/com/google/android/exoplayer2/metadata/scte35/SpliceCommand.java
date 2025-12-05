@@ -1,9 +1,9 @@
 package com.google.android.exoplayer2.metadata.scte35;
 
-import b.i.a.c.j1;
-import b.i.a.c.p1;
-import b.i.a.c.z2.a;
 import com.google.android.exoplayer2.metadata.Metadata;
+import p007b.p225i.p226a.p242c.Format2;
+import p007b.p225i.p226a.p242c.MediaMetadata;
+import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
 /* loaded from: classes3.dex */
 public abstract class SpliceCommand implements Metadata.Entry {
@@ -13,13 +13,15 @@ public abstract class SpliceCommand implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ void n(p1.b bVar) {
-        a.c(this, bVar);
+    /* renamed from: n */
+    public /* synthetic */ void mo8878n(MediaMetadata.b bVar) {
+        Metadata2.m3894c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ byte[] o0() {
-        return a.a(this);
+    /* renamed from: o0 */
+    public /* synthetic */ byte[] mo8879o0() {
+        return Metadata2.m3892a(this);
     }
 
     public String toString() {
@@ -28,7 +30,8 @@ public abstract class SpliceCommand implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ j1 y() {
-        return a.b(this);
+    /* renamed from: y */
+    public /* synthetic */ Format2 mo8880y() {
+        return Metadata2.m3893b(this);
     }
 }

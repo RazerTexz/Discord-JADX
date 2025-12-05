@@ -37,9 +37,9 @@ public class DrawableContainer extends Drawable implements Drawable.Callback {
     private int mAlpha = 255;
     private int mCurIndex = -1;
 
-    /* renamed from: androidx.appcompat.graphics.drawable.DrawableContainer$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.graphics.drawable.DrawableContainer$1 */
+    public class RunnableC00791 implements Runnable {
+        public RunnableC00791() {
         }
 
         @Override // java.lang.Runnable
@@ -978,7 +978,7 @@ public class DrawableContainer extends Drawable implements Drawable.Callback {
         if (this.mEnterAnimationEnd != 0 || this.mExitAnimationEnd != 0) {
             Runnable runnable = this.mAnimationRunnable;
             if (runnable == null) {
-                this.mAnimationRunnable = new AnonymousClass1();
+                this.mAnimationRunnable = new RunnableC00791();
             } else {
                 unscheduleSelf(runnable);
             }

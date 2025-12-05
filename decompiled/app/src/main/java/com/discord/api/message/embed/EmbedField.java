@@ -1,8 +1,8 @@
 package com.discord.api.message.embed;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: EmbedField.kt */
 /* loaded from: classes.dex */
@@ -29,7 +29,7 @@ public final /* data */ class EmbedField {
             return false;
         }
         EmbedField embedField = (EmbedField) other;
-        return m.areEqual(this.name, embedField.name) && m.areEqual(this.value, embedField.value) && m.areEqual(this.inline, embedField.inline);
+        return Intrinsics3.areEqual(this.name, embedField.name) && Intrinsics3.areEqual(this.value, embedField.value) && Intrinsics3.areEqual(this.inline, embedField.inline);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class EmbedField {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("EmbedField(name=");
-        sbU.append(this.name);
-        sbU.append(", value=");
-        sbU.append(this.value);
-        sbU.append(", inline=");
-        return a.D(sbU, this.inline, ")");
+        StringBuilder sbM833U = outline.m833U("EmbedField(name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", value=");
+        sbM833U.append(this.value);
+        sbM833U.append(", inline=");
+        return outline.m816D(sbM833U, this.inline, ")");
     }
 }

@@ -12,7 +12,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import androidx.appcompat.R;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.view.ActionMode;
 import androidx.core.view.KeyEventDispatcher;
 
@@ -21,9 +21,9 @@ public class AppCompatDialog extends Dialog implements AppCompatCallback {
     private AppCompatDelegate mDelegate;
     private final KeyEventDispatcher.Component mKeyDispatcher;
 
-    /* renamed from: androidx.appcompat.app.AppCompatDialog$1, reason: invalid class name */
-    public class AnonymousClass1 implements KeyEventDispatcher.Component {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.app.AppCompatDialog$1 */
+    public class C00721 implements KeyEventDispatcher.Component {
+        public C00721() {
         }
 
         @Override // androidx.core.view.KeyEventDispatcher.Component
@@ -41,7 +41,7 @@ public class AppCompatDialog extends Dialog implements AppCompatCallback {
             return i;
         }
         TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(R.attr.dialogTheme, typedValue, true);
+        context.getTheme().resolveAttribute(C0051R.attr.dialogTheme, typedValue, true);
         return typedValue.resourceId;
     }
 
@@ -132,7 +132,7 @@ public class AppCompatDialog extends Dialog implements AppCompatCallback {
 
     public AppCompatDialog(Context context, int i) {
         super(context, getThemeResId(context, i));
-        this.mKeyDispatcher = new AnonymousClass1();
+        this.mKeyDispatcher = new C00721();
         AppCompatDelegate delegate = getDelegate();
         delegate.setTheme(getThemeResId(context, i));
         delegate.onCreate(null);
@@ -156,6 +156,6 @@ public class AppCompatDialog extends Dialog implements AppCompatCallback {
 
     public AppCompatDialog(Context context, boolean z2, DialogInterface.OnCancelListener onCancelListener) {
         super(context, z2, onCancelListener);
-        this.mKeyDispatcher = new AnonymousClass1();
+        this.mKeyDispatcher = new C00721();
     }
 }

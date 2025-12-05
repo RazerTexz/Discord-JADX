@@ -64,7 +64,6 @@ import androidx.view.ViewModelStoreOwner;
 import androidx.view.ViewTreeLifecycleOwner;
 import androidx.view.ViewTreeSavedStateRegistryOwner;
 import androidx.view.ViewTreeViewModelStoreOwner;
-import b.d.b.a.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
@@ -74,6 +73,7 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuListener, LifecycleOwner, ViewModelStoreOwner, HasDefaultViewModelProviderFactory, SavedStateRegistryOwner, ActivityResultCaller {
@@ -150,9 +150,9 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     @NonNull
     public String mWho;
 
-    /* renamed from: androidx.fragment.app.Fragment$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.fragment.app.Fragment$1 */
+    public class RunnableC03611 implements Runnable {
+        public RunnableC03611() {
         }
 
         @Override // java.lang.Runnable
@@ -161,9 +161,9 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.fragment.app.Fragment$2 */
+    public class RunnableC03622 implements Runnable {
+        public RunnableC03622() {
         }
 
         @Override // java.lang.Runnable
@@ -172,11 +172,11 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: androidx.fragment.app.Fragment$3 */
+    public class RunnableC03633 implements Runnable {
         public final /* synthetic */ SpecialEffectsController val$controller;
 
-        public AnonymousClass3(SpecialEffectsController specialEffectsController) {
+        public RunnableC03633(SpecialEffectsController specialEffectsController) {
             this.val$controller = specialEffectsController;
         }
 
@@ -186,9 +186,9 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$4, reason: invalid class name */
-    public class AnonymousClass4 extends FragmentContainer {
-        public AnonymousClass4() {
+    /* renamed from: androidx.fragment.app.Fragment$4 */
+    public class C03644 extends FragmentContainer {
+        public C03644() {
         }
 
         @Override // androidx.fragment.app.FragmentContainer
@@ -198,10 +198,10 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
             if (view != null) {
                 return view.findViewById(i);
             }
-            StringBuilder sbU = a.U("Fragment ");
-            sbU.append(Fragment.this);
-            sbU.append(" does not have a view");
-            throw new IllegalStateException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Fragment ");
+            sbM833U.append(Fragment.this);
+            sbM833U.append(" does not have a view");
+            throw new IllegalStateException(sbM833U.toString());
         }
 
         @Override // androidx.fragment.app.FragmentContainer
@@ -210,9 +210,9 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$5, reason: invalid class name */
-    public class AnonymousClass5 implements LifecycleEventObserver {
-        public AnonymousClass5() {
+    /* renamed from: androidx.fragment.app.Fragment$5 */
+    public class C03655 implements LifecycleEventObserver {
+        public C03655() {
         }
 
         @Override // androidx.view.LifecycleEventObserver
@@ -225,9 +225,9 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$6, reason: invalid class name */
-    public class AnonymousClass6 implements Function<Void, ActivityResultRegistry> {
-        public AnonymousClass6() {
+    /* renamed from: androidx.fragment.app.Fragment$6 */
+    public class C03666 implements Function<Void, ActivityResultRegistry> {
+        public C03666() {
         }
 
         @Override // androidx.arch.core.util.Function
@@ -243,11 +243,11 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$7, reason: invalid class name */
-    public class AnonymousClass7 implements Function<Void, ActivityResultRegistry> {
+    /* renamed from: androidx.fragment.app.Fragment$7 */
+    public class C03677 implements Function<Void, ActivityResultRegistry> {
         public final /* synthetic */ ActivityResultRegistry val$registry;
 
-        public AnonymousClass7(ActivityResultRegistry activityResultRegistry) {
+        public C03677(ActivityResultRegistry activityResultRegistry) {
             this.val$registry = activityResultRegistry;
         }
 
@@ -262,15 +262,15 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$8, reason: invalid class name */
-    public class AnonymousClass8 extends OnPreAttachedListener {
+    /* renamed from: androidx.fragment.app.Fragment$8 */
+    public class C03688 extends OnPreAttachedListener {
         public final /* synthetic */ ActivityResultCallback val$callback;
         public final /* synthetic */ ActivityResultContract val$contract;
         public final /* synthetic */ AtomicReference val$ref;
         public final /* synthetic */ Function val$registryProvider;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass8(Function function, AtomicReference atomicReference, ActivityResultContract activityResultContract, ActivityResultCallback activityResultCallback) {
+        public C03688(Function function, AtomicReference atomicReference, ActivityResultContract activityResultContract, ActivityResultCallback activityResultCallback) {
             super(null);
             this.val$registryProvider = function;
             this.val$ref = atomicReference;
@@ -286,12 +286,12 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     }
 
     /* JADX INFO: Add missing generic type declarations: [I] */
-    /* renamed from: androidx.fragment.app.Fragment$9, reason: invalid class name */
-    public class AnonymousClass9<I> extends ActivityResultLauncher<I> {
+    /* renamed from: androidx.fragment.app.Fragment$9 */
+    public class C03699<I> extends ActivityResultLauncher<I> {
         public final /* synthetic */ ActivityResultContract val$contract;
         public final /* synthetic */ AtomicReference val$ref;
 
-        public AnonymousClass9(AtomicReference atomicReference, ActivityResultContract activityResultContract) {
+        public C03699(AtomicReference atomicReference, ActivityResultContract activityResultContract) {
             this.val$ref = atomicReference;
             this.val$contract = activityResultContract;
         }
@@ -369,7 +369,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
 
         public abstract void onPreAttached();
 
-        public /* synthetic */ OnPreAttachedListener(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ OnPreAttachedListener(RunnableC03611 runnableC03611) {
             this();
         }
     }
@@ -388,7 +388,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mChildFragmentManager = new FragmentManagerImpl();
         this.mMenuVisible = true;
         this.mUserVisibleHint = true;
-        this.mPostponedDurationRunnable = new AnonymousClass1();
+        this.mPostponedDurationRunnable = new RunnableC03611();
         this.mMaxState = Lifecycle.State.RESUMED;
         this.mViewLifecycleOwnerLiveData = new MutableLiveData<>();
         this.mNextLocalRequestCode = new AtomicInteger();
@@ -422,11 +422,11 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     @NonNull
     private <I, O> ActivityResultLauncher<I> prepareCallInternal(@NonNull ActivityResultContract<I, O> activityResultContract, @NonNull Function<Void, ActivityResultRegistry> function, @NonNull ActivityResultCallback<O> activityResultCallback) {
         if (this.mState > 1) {
-            throw new IllegalStateException(a.u("Fragment ", this, " is attempting to registerForActivityResult after being created. Fragments must call registerForActivityResult() before they are created (i.e. initialization, onAttach(), or onCreate())."));
+            throw new IllegalStateException(outline.m879u("Fragment ", this, " is attempting to registerForActivityResult after being created. Fragments must call registerForActivityResult() before they are created (i.e. initialization, onAttach(), or onCreate())."));
         }
         AtomicReference atomicReference = new AtomicReference();
-        registerOnPreAttachListener(new AnonymousClass8(function, atomicReference, activityResultContract, activityResultCallback));
-        return new AnonymousClass9(atomicReference, activityResultContract);
+        registerOnPreAttachListener(new C03688(function, atomicReference, activityResultContract, activityResultCallback));
+        return new C03699(atomicReference, activityResultContract);
     }
 
     private void registerOnPreAttachListener(@NonNull OnPreAttachedListener onPreAttachedListener) {
@@ -458,7 +458,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         SpecialEffectsController orCreateController = SpecialEffectsController.getOrCreateController(viewGroup, fragmentManager);
         orCreateController.markPostponedState();
         if (z2) {
-            this.mHost.getHandler().post(new AnonymousClass3(orCreateController));
+            this.mHost.getHandler().post(new RunnableC03633(orCreateController));
         } else {
             orCreateController.executePendingOperations();
         }
@@ -466,7 +466,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
 
     @NonNull
     public FragmentContainer createFragmentContainer() {
-        return new AnonymousClass4();
+        return new C03644();
     }
 
     public void dump(@NonNull String str, @Nullable FileDescriptor fileDescriptor, @NonNull PrintWriter printWriter, @Nullable String[] strArr) {
@@ -575,10 +575,11 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
         printWriter.print(str);
         printWriter.println("Child " + this.mChildFragmentManager + ":");
-        this.mChildFragmentManager.dump(a.w(str, "  "), fileDescriptor, printWriter, strArr);
+        this.mChildFragmentManager.dump(outline.m883w(str, "  "), fileDescriptor, printWriter, strArr);
     }
 
-    public /* bridge */ /* synthetic */ Activity e() {
+    /* renamed from: e */
+    public /* bridge */ /* synthetic */ Activity m95e() {
         return getActivity();
     }
 
@@ -593,11 +594,11 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
 
     @NonNull
     public String generateActivityResultKey() {
-        StringBuilder sbU = a.U("fragment_");
-        sbU.append(this.mWho);
-        sbU.append("_rq#");
-        sbU.append(this.mNextLocalRequestCode.getAndIncrement());
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("fragment_");
+        sbM833U.append(this.mWho);
+        sbM833U.append("_rq#");
+        sbM833U.append(this.mNextLocalRequestCode.getAndIncrement());
+        return sbM833U.toString();
     }
 
     @Nullable
@@ -653,7 +654,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         if (this.mHost != null) {
             return this.mChildFragmentManager;
         }
-        throw new IllegalStateException(a.u("Fragment ", this, " has not been attached yet."));
+        throw new IllegalStateException(outline.m879u("Fragment ", this, " has not been attached yet."));
     }
 
     @Nullable
@@ -685,10 +686,10 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
                 applicationContext = ((ContextWrapper) applicationContext).getBaseContext();
             }
             if (application == null && FragmentManager.isLoggingEnabled(3)) {
-                StringBuilder sbU = a.U("Could not find Application instance from Context ");
-                sbU.append(requireContext().getApplicationContext());
-                sbU.append(", you will not be able to use AndroidViewModel with the default ViewModelProvider.Factory");
-                Log.d(FragmentManager.TAG, sbU.toString());
+                StringBuilder sbM833U = outline.m833U("Could not find Application instance from Context ");
+                sbM833U.append(requireContext().getApplicationContext());
+                sbM833U.append(", you will not be able to use AndroidViewModel with the default ViewModelProvider.Factory");
+                Log.d(FragmentManager.TAG, sbM833U.toString());
             }
             this.mDefaultFactory = new SavedStateViewModelFactory(application, this, getArguments());
         }
@@ -801,7 +802,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         if (fragmentManager != null) {
             return fragmentManager;
         }
-        throw new IllegalStateException(a.u("Fragment ", this, " not associated with a fragment manager."));
+        throw new IllegalStateException(outline.m879u("Fragment ", this, " not associated with a fragment manager."));
     }
 
     public float getPostOnViewCreatedAlpha() {
@@ -1260,7 +1261,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mCalled = false;
         onActivityCreated(bundle);
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onActivityCreated()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onActivityCreated()"));
         }
         restoreViewState();
         this.mChildFragmentManager.dispatchActivityCreated();
@@ -1277,7 +1278,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mCalled = false;
         onAttach(this.mHost.getContext());
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onAttach()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onAttach()"));
         }
         this.mFragmentManager.dispatchOnAttachFragment(this);
         this.mChildFragmentManager.dispatchAttach();
@@ -1302,12 +1303,12 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mChildFragmentManager.noteStateNotSaved();
         this.mState = 1;
         this.mCalled = false;
-        this.mLifecycleRegistry.addObserver(new AnonymousClass5());
+        this.mLifecycleRegistry.addObserver(new C03655());
         this.mSavedStateRegistryController.performRestore(bundle);
         onCreate(bundle);
         this.mIsCreated = true;
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onCreate()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onCreate()"));
         }
         this.mLifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
@@ -1352,7 +1353,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mIsCreated = false;
         onDestroy();
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onDestroy()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onDestroy()"));
         }
     }
 
@@ -1365,7 +1366,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mCalled = false;
         onDestroyView();
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onDestroyView()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onDestroyView()"));
         }
         LoaderManager.getInstance(this).markForRedelivery();
         this.mPerformedCreateView = false;
@@ -1377,7 +1378,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         onDetach();
         this.mLayoutInflater = null;
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onDetach()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onDetach()"));
         }
         if (this.mChildFragmentManager.isDestroyed()) {
             return;
@@ -1433,7 +1434,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mCalled = false;
         onPause();
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onPause()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onPause()"));
         }
     }
 
@@ -1471,7 +1472,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mCalled = false;
         onResume();
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onResume()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onResume()"));
         }
         LifecycleRegistry lifecycleRegistry = this.mLifecycleRegistry;
         Lifecycle.Event event = Lifecycle.Event.ON_RESUME;
@@ -1498,7 +1499,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mCalled = false;
         onStart();
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onStart()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onStart()"));
         }
         LifecycleRegistry lifecycleRegistry = this.mLifecycleRegistry;
         Lifecycle.Event event = Lifecycle.Event.ON_START;
@@ -1519,7 +1520,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mCalled = false;
         onStop();
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onStop()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onStop()"));
         }
     }
 
@@ -1536,7 +1537,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     @NonNull
     @MainThread
     public final <I, O> ActivityResultLauncher<I> registerForActivityResult(@NonNull ActivityResultContract<I, O> activityResultContract, @NonNull ActivityResultCallback<O> activityResultCallback) {
-        return prepareCallInternal(activityResultContract, new AnonymousClass6(), activityResultCallback);
+        return prepareCallInternal(activityResultContract, new C03666(), activityResultCallback);
     }
 
     public void registerForContextMenu(@NonNull View view) {
@@ -1546,7 +1547,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     @Deprecated
     public final void requestPermissions(@NonNull String[] strArr, int i) {
         if (this.mHost == null) {
-            throw new IllegalStateException(a.u("Fragment ", this, " not attached to Activity"));
+            throw new IllegalStateException(outline.m879u("Fragment ", this, " not attached to Activity"));
         }
         getParentFragmentManager().launchRequestPermissions(this, strArr, i);
     }
@@ -1557,7 +1558,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         if (activity != null) {
             return activity;
         }
-        throw new IllegalStateException(a.u("Fragment ", this, " not attached to an activity."));
+        throw new IllegalStateException(outline.m879u("Fragment ", this, " not attached to an activity."));
     }
 
     @NonNull
@@ -1566,7 +1567,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         if (arguments != null) {
             return arguments;
         }
-        throw new IllegalStateException(a.u("Fragment ", this, " does not have any arguments."));
+        throw new IllegalStateException(outline.m879u("Fragment ", this, " does not have any arguments."));
     }
 
     @NonNull
@@ -1575,7 +1576,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         if (context != null) {
             return context;
         }
-        throw new IllegalStateException(a.u("Fragment ", this, " not attached to a context."));
+        throw new IllegalStateException(outline.m879u("Fragment ", this, " not attached to a context."));
     }
 
     @NonNull
@@ -1590,7 +1591,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         if (host != null) {
             return host;
         }
-        throw new IllegalStateException(a.u("Fragment ", this, " not attached to a host."));
+        throw new IllegalStateException(outline.m879u("Fragment ", this, " not attached to a host."));
     }
 
     @NonNull
@@ -1600,7 +1601,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
             return parentFragment;
         }
         if (getContext() == null) {
-            throw new IllegalStateException(a.u("Fragment ", this, " is not attached to any Fragment or host"));
+            throw new IllegalStateException(outline.m879u("Fragment ", this, " is not attached to any Fragment or host"));
         }
         throw new IllegalStateException("Fragment " + this + " is not a child Fragment, it is directly attached to " + getContext());
     }
@@ -1611,7 +1612,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         if (view != null) {
             return view;
         }
-        throw new IllegalStateException(a.u("Fragment ", this, " did not return a View from onCreateView() or this was called before onCreateView()."));
+        throw new IllegalStateException(outline.m879u("Fragment ", this, " did not return a View from onCreateView() or this was called before onCreateView()."));
     }
 
     public void restoreChildFragmentState(@Nullable Bundle bundle) {
@@ -1636,7 +1637,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mCalled = false;
         onViewStateRestored(bundle);
         if (!this.mCalled) {
-            throw new SuperNotCalledException(a.u("Fragment ", this, " did not call through to super.onViewStateRestored()"));
+            throw new SuperNotCalledException(outline.m879u("Fragment ", this, " did not call through to super.onViewStateRestored()"));
         }
         if (this.mView != null) {
             this.mViewLifecycleOwner.handleLifecycleEvent(Lifecycle.Event.ON_CREATE);
@@ -1798,7 +1799,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         FragmentManager fragmentManager = this.mFragmentManager;
         FragmentManager fragmentManager2 = fragment != null ? fragment.mFragmentManager : null;
         if (fragmentManager != null && fragmentManager2 != null && fragmentManager != fragmentManager2) {
-            throw new IllegalArgumentException(a.u("Fragment ", fragment, " must share the same FragmentManager to be set as a target fragment"));
+            throw new IllegalArgumentException(outline.m879u("Fragment ", fragment, " must share the same FragmentManager to be set as a target fragment"));
         }
         for (Fragment targetFragment = fragment; targetFragment != null; targetFragment = targetFragment.getTargetFragment()) {
             if (targetFragment.equals(this)) {
@@ -1851,7 +1852,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     @Deprecated
     public void startIntentSenderForResult(@SuppressLint({"UnknownNullness"}) IntentSender intentSender, int i, @Nullable Intent intent, int i2, int i3, int i4, @Nullable Bundle bundle) throws IntentSender.SendIntentException {
         if (this.mHost == null) {
-            throw new IllegalStateException(a.u("Fragment ", this, " not attached to Activity"));
+            throw new IllegalStateException(outline.m879u("Fragment ", this, " not attached to Activity"));
         }
         if (FragmentManager.isLoggingEnabled(2)) {
             Log.v(FragmentManager.TAG, "Fragment " + this + " received the following in startIntentSenderForResult() requestCode: " + i + " IntentSender: " + intentSender + " fillInIntent: " + intent + " options: " + bundle);
@@ -1866,7 +1867,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         if (this.mHost == null) {
             ensureAnimationInfo().mEnterTransitionPostponed = false;
         } else if (Looper.myLooper() != this.mHost.getHandler().getLooper()) {
-            this.mHost.getHandler().postAtFrontOfQueue(new AnonymousClass2());
+            this.mHost.getHandler().postAtFrontOfQueue(new RunnableC03622());
         } else {
             callStartTransitionListener(true);
         }
@@ -1902,11 +1903,11 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     public static class SavedState implements Parcelable {
 
         @NonNull
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C03701();
         public final Bundle mState;
 
-        /* renamed from: androidx.fragment.app.Fragment$SavedState$1, reason: invalid class name */
-        public class AnonymousClass1 implements Parcelable.ClassLoaderCreator<SavedState> {
+        /* renamed from: androidx.fragment.app.Fragment$SavedState$1 */
+        public class C03701 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -1974,13 +1975,13 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
             }
             return fragmentNewInstance;
         } catch (IllegalAccessException e) {
-            throw new InstantiationException(a.y("Unable to instantiate fragment ", str, ": make sure class name exists, is public, and has an empty constructor that is public"), e);
+            throw new InstantiationException(outline.m886y("Unable to instantiate fragment ", str, ": make sure class name exists, is public, and has an empty constructor that is public"), e);
         } catch (java.lang.InstantiationException e2) {
-            throw new InstantiationException(a.y("Unable to instantiate fragment ", str, ": make sure class name exists, is public, and has an empty constructor that is public"), e2);
+            throw new InstantiationException(outline.m886y("Unable to instantiate fragment ", str, ": make sure class name exists, is public, and has an empty constructor that is public"), e2);
         } catch (NoSuchMethodException e3) {
-            throw new InstantiationException(a.y("Unable to instantiate fragment ", str, ": could not find Fragment constructor"), e3);
+            throw new InstantiationException(outline.m886y("Unable to instantiate fragment ", str, ": could not find Fragment constructor"), e3);
         } catch (InvocationTargetException e4) {
-            throw new InstantiationException(a.y("Unable to instantiate fragment ", str, ": calling Fragment constructor caused an exception"), e4);
+            throw new InstantiationException(outline.m886y("Unable to instantiate fragment ", str, ": calling Fragment constructor caused an exception"), e4);
         }
     }
 
@@ -2001,13 +2002,13 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     @NonNull
     @MainThread
     public final <I, O> ActivityResultLauncher<I> registerForActivityResult(@NonNull ActivityResultContract<I, O> activityResultContract, @NonNull ActivityResultRegistry activityResultRegistry, @NonNull ActivityResultCallback<O> activityResultCallback) {
-        return prepareCallInternal(activityResultContract, new AnonymousClass7(activityResultRegistry), activityResultCallback);
+        return prepareCallInternal(activityResultContract, new C03677(activityResultRegistry), activityResultCallback);
     }
 
     public void startActivity(@SuppressLint({"UnknownNullness"}) Intent intent, @Nullable Bundle bundle) {
         FragmentHostCallback<?> fragmentHostCallback = this.mHost;
         if (fragmentHostCallback == null) {
-            throw new IllegalStateException(a.u("Fragment ", this, " not attached to Activity"));
+            throw new IllegalStateException(outline.m879u("Fragment ", this, " not attached to Activity"));
         }
         fragmentHostCallback.onStartActivityFromFragment(this, intent, -1, bundle);
     }
@@ -2015,7 +2016,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     @Deprecated
     public void startActivityForResult(@SuppressLint({"UnknownNullness"}) Intent intent, int i, @Nullable Bundle bundle) {
         if (this.mHost == null) {
-            throw new IllegalStateException(a.u("Fragment ", this, " not attached to Activity"));
+            throw new IllegalStateException(outline.m879u("Fragment ", this, " not attached to Activity"));
         }
         getParentFragmentManager().launchStartActivityForResult(this, intent, i, bundle);
     }

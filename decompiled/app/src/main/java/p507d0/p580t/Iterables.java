@@ -1,0 +1,26 @@
+package p507d0.p580t;
+
+import java.util.Iterator;
+import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.p595g0.KMarkers;
+
+/* compiled from: Iterables.kt */
+/* renamed from: d0.t.a0, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class Iterables<T> implements Iterable<IndexedValue<? extends T>>, KMarkers {
+
+    /* renamed from: j */
+    public final Function0<Iterator<T>> f25172j;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public Iterables(Function0<? extends Iterator<? extends T>> function0) {
+        Intrinsics3.checkNotNullParameter(function0, "iteratorFactory");
+        this.f25172j = function0;
+    }
+
+    @Override // java.lang.Iterable
+    public Iterator<IndexedValue<T>> iterator() {
+        return new Iterators3(this.f25172j.invoke());
+    }
+}

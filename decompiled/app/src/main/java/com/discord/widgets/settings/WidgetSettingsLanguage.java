@@ -7,9 +7,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsLanguageBinding;
@@ -19,25 +17,28 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserSettings;
 import com.discord.stores.StoreUserSettingsSystem;
 import com.discord.utilities.accessibility.AccessibilityUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.functions.Action1;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppToast;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.functions.Action1;
 
 /* compiled from: WidgetSettingsLanguage.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsLanguage extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsLanguage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsLanguageBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsLanguage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsLanguageBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -195,7 +196,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
         @DrawableRes
         public final int getLocaleFlagResId(String locale) {
             if (locale == null) {
-                return R.drawable.icon_flag_en_us;
+                return C5419R.drawable.icon_flag_en_us;
             }
             switch (locale.hashCode()) {
                 case 3141:
@@ -318,7 +319,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
                     }
                     break;
             }
-            return R.drawable.icon_flag_en_us;
+            return C5419R.drawable.icon_flag_en_us;
         }
 
         /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
@@ -331,7 +332,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
         @StringRes
         public final int getLocaleResId(String locale) {
             if (locale == null) {
-                return R.string.en_us;
+                return C5419R.string.en_us;
             }
             switch (locale.hashCode()) {
                 case 3141:
@@ -454,12 +455,12 @@ public final class WidgetSettingsLanguage extends AppFragment {
                     }
                     break;
             }
-            return R.string.en_us;
+            return C5419R.string.en_us;
         }
 
         public final void launch(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetSettingsLanguage.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetSettingsLanguage.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -468,36 +469,36 @@ public final class WidgetSettingsLanguage extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsLanguage.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1 */
+    public static final class C96411 extends Lambda implements Function1<String, Unit> {
 
         /* compiled from: WidgetSettingsLanguage.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C04451 extends o implements Function0<Unit> {
+        /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $locale;
 
             /* compiled from: WidgetSettingsLanguage.kt */
             /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C04461 extends o implements Function1<ModelUserSettings, Unit> {
-                public C04461() {
+            public static final class C132891 extends Lambda implements Function1<ModelUserSettings, Unit> {
+                public C132891() {
                     super(1);
                 }
 
                 @Override // kotlin.jvm.functions.Function1
                 public /* bridge */ /* synthetic */ Unit invoke(ModelUserSettings modelUserSettings) {
                     invoke2(modelUserSettings);
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(ModelUserSettings modelUserSettings) {
-                    m.checkNotNullParameter(modelUserSettings, "it");
-                    b.a.d.m.g(WidgetSettingsLanguage.this.requireContext(), R.string.language_updated, 0, null, 12);
+                    Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
+                    AppToast.m169g(WidgetSettingsLanguage.this.requireContext(), C5419R.string.language_updated, 0, null, 12);
                 }
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C04451(String str) {
+            public AnonymousClass1(String str) {
                 super(0);
                 this.$locale = str;
             }
@@ -505,29 +506,29 @@ public final class WidgetSettingsLanguage extends AppFragment {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updateUserSettings(RestAPIParams.UserSettings.INSTANCE.createWithLocale(this.$locale)), false, 1, null), WidgetSettingsLanguage.this, null, 2, null), StoreUserSettings.class, WidgetSettingsLanguage.this.requireContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C04461(), 60, (Object) null);
+                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updateUserSettings(RestAPIParams.UserSettings.INSTANCE.createWithLocale(this.$locale)), false, 1, null), WidgetSettingsLanguage.this, null, 2, null), StoreUserSettings.class, WidgetSettingsLanguage.this.requireContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C132891(), 60, (Object) null);
             }
         }
 
-        public AnonymousClass1() {
+        public C96411() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            m.checkNotNullParameter(str, "locale");
-            StoreStream.INSTANCE.getUserSettingsSystem().setLocale(str, true, new C04451(str));
+            Intrinsics3.checkNotNullParameter(str, "locale");
+            StoreStream.INSTANCE.getUserSettingsSystem().setLocale(str, true, new AnonymousClass1(str));
             AppActivity appActivity = WidgetSettingsLanguage.this.getAppActivity();
             if (appActivity != null) {
                 appActivity.recreate();
@@ -536,31 +537,31 @@ public final class WidgetSettingsLanguage extends AppFragment {
     }
 
     /* compiled from: WidgetSettingsLanguage.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreUserSettingsSystem.Settings, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$1 */
+    public static final class C96421 extends Lambda implements Function1<StoreUserSettingsSystem.Settings, Unit> {
+        public C96421() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreUserSettingsSystem.Settings settings) {
             invoke2(settings);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreUserSettingsSystem.Settings settings) {
-            m.checkNotNullParameter(settings, "settings");
+            Intrinsics3.checkNotNullParameter(settings, "settings");
             WidgetSettingsLanguage.access$configureUI(WidgetSettingsLanguage.this, settings.getLocale());
         }
     }
 
     /* compiled from: WidgetSettingsLanguage.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2<T> implements Action1<Boolean> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$2 */
+    public static final class C96432<T> implements Action1<Boolean> {
+        public static final C96432 INSTANCE = new C96432();
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Boolean bool) {
             call2(bool);
         }
@@ -568,15 +569,15 @@ public final class WidgetSettingsLanguage extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettingsSystem userSettingsSystem = StoreStream.INSTANCE.getUserSettingsSystem();
-            m.checkNotNullExpressionValue(bool, "checked");
+            Intrinsics3.checkNotNullExpressionValue(bool, "checked");
             userSettingsSystem.setIsLocaleSyncEnabled(bool.booleanValue());
         }
     }
 
     /* compiled from: WidgetSettingsLanguage.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$3 */
+    public static final class ViewOnClickListenerC96443 implements View.OnClickListener {
+        public ViewOnClickListenerC96443() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -586,8 +587,8 @@ public final class WidgetSettingsLanguage extends AppFragment {
     }
 
     public WidgetSettingsLanguage() {
-        super(R.layout.widget_settings_language);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsLanguage$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_settings_language);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsLanguage2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetSettingsLanguage widgetSettingsLanguage, String str) {
@@ -595,11 +596,11 @@ public final class WidgetSettingsLanguage extends AppFragment {
     }
 
     private final void configureUI(String locale) {
-        TextView textView = getBinding().d;
-        m.checkNotNullExpressionValue(textView, "binding.settingsLanguageCurrentText");
+        TextView textView = getBinding().f17995d;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.settingsLanguageCurrentText");
         Companion companion = INSTANCE;
         textView.setText(getString(companion.getLocaleResId(locale)));
-        getBinding().c.setImageResource(companion.getLocaleFlagResId(locale));
+        getBinding().f17994c.setImageResource(companion.getLocaleFlagResId(locale));
     }
 
     private final WidgetSettingsLanguageBinding getBinding() {
@@ -608,27 +609,27 @@ public final class WidgetSettingsLanguage extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        setActionBarSubtitle(R.string.user_settings);
-        setActionBarTitle(R.string.language);
+        setActionBarSubtitle(C5419R.string.user_settings);
+        setActionBarTitle(C5419R.string.language);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
-        WidgetSettingsLanguageSelect.INSTANCE.registerForResult(this, new AnonymousClass1());
+        WidgetSettingsLanguageSelect.INSTANCE.registerForResult(this, new C96411());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         StoreStream.Companion companion = StoreStream.INSTANCE;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(companion.getUserSettingsSystem().observeSettings(false), this, null, 2, null), WidgetSettingsLanguage.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        CheckedSetting checkedSetting = getBinding().f;
-        m.checkNotNullExpressionValue(checkedSetting, "binding.settingsLanguageSyncCheck");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(companion.getUserSettingsSystem().observeSettings(false), this, null, 2, null), WidgetSettingsLanguage.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C96421(), 62, (Object) null);
+        CheckedSetting checkedSetting = getBinding().f17997f;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsLanguageSyncCheck");
         checkedSetting.setChecked(companion.getUserSettingsSystem().getIsLocaleSyncEnabled());
-        getBinding().f.setOnCheckedListener(AnonymousClass2.INSTANCE);
-        getBinding().f2627b.setOnClickListener(new AnonymousClass3());
-        for (TextView textView : n.listOf((Object[]) new TextView[]{getBinding().e, getBinding().g})) {
+        getBinding().f17997f.setOnCheckedListener(C96432.INSTANCE);
+        getBinding().f17993b.setOnClickListener(new ViewOnClickListenerC96443());
+        for (TextView textView : Collections2.listOf((Object[]) new TextView[]{getBinding().f17996e, getBinding().f17998g})) {
             AccessibilityUtils accessibilityUtils = AccessibilityUtils.INSTANCE;
-            m.checkNotNullExpressionValue(textView, "header");
+            Intrinsics3.checkNotNullExpressionValue(textView, "header");
             accessibilityUtils.setViewIsHeading(textView);
         }
     }

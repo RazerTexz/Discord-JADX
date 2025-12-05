@@ -17,10 +17,10 @@ public final class ConfigurationDataType {
     private final boolean isList;
     private final ConfigurationValueParser parser;
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$1, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationDataType$1 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$1.SCL.lombok */
-    class AnonymousClass1 implements ConfigurationValueParser {
-        AnonymousClass1() {
+    class C128231 implements ConfigurationValueParser {
+        C128231() {
         }
 
         @Override // lombok.core.configuration.ConfigurationValueParser
@@ -41,18 +41,18 @@ public final class ConfigurationDataType {
 
     static {
         Map<Class<?>, ConfigurationValueParser> map = new HashMap<>();
-        map.put(String.class, new AnonymousClass1());
-        map.put(Integer.class, new AnonymousClass2());
-        map.put(Long.class, new AnonymousClass3());
-        map.put(Double.class, new AnonymousClass4());
-        map.put(Boolean.class, new AnonymousClass5());
+        map.put(String.class, new C128231());
+        map.put(Integer.class, new C128242());
+        map.put(Long.class, new C128253());
+        map.put(Double.class, new C128264());
+        map.put(Boolean.class, new C128275());
         SIMPLE_TYPES = map;
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$2, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationDataType$2 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$2.SCL.lombok */
-    class AnonymousClass2 implements ConfigurationValueParser {
-        AnonymousClass2() {
+    class C128242 implements ConfigurationValueParser {
+        C128242() {
         }
 
         @Override // lombok.core.configuration.ConfigurationValueParser
@@ -71,10 +71,10 @@ public final class ConfigurationDataType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$3, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationDataType$3 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$3.SCL.lombok */
-    class AnonymousClass3 implements ConfigurationValueParser {
-        AnonymousClass3() {
+    class C128253 implements ConfigurationValueParser {
+        C128253() {
         }
 
         @Override // lombok.core.configuration.ConfigurationValueParser
@@ -93,10 +93,10 @@ public final class ConfigurationDataType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$4, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationDataType$4 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$4.SCL.lombok */
-    class AnonymousClass4 implements ConfigurationValueParser {
-        AnonymousClass4() {
+    class C128264 implements ConfigurationValueParser {
+        C128264() {
         }
 
         @Override // lombok.core.configuration.ConfigurationValueParser
@@ -115,10 +115,10 @@ public final class ConfigurationDataType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$5, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationDataType$5 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$5.SCL.lombok */
-    class AnonymousClass5 implements ConfigurationValueParser {
-        AnonymousClass5() {
+    class C128275 implements ConfigurationValueParser {
+        C128275() {
         }
 
         @Override // lombok.core.configuration.ConfigurationValueParser
@@ -139,16 +139,16 @@ public final class ConfigurationDataType {
 
     private static ConfigurationValueParser enumParser(Type enumType) {
         Class<?> type = (Class) enumType;
-        return new AnonymousClass6(type, type);
+        return new C128286(type, type);
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$6, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationDataType$6 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$6.SCL.lombok */
-    class AnonymousClass6 implements ConfigurationValueParser {
+    class C128286 implements ConfigurationValueParser {
         private final /* synthetic */ Class val$rawType;
         private final /* synthetic */ Class val$type;
 
-        AnonymousClass6(Class cls, Class cls2) {
+        C128286(Class cls, Class cls2) {
             this.val$rawType = cls;
             this.val$type = cls2;
         }
@@ -187,17 +187,17 @@ public final class ConfigurationDataType {
         Method valueOfMethod = getMethod(type, "valueOf", String.class);
         Method descriptionMethod = getMethod(type, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION, new Class[0]);
         Method exampleValueMethod = getMethod(type, "exampleValue", new Class[0]);
-        return new AnonymousClass7(valueOfMethod, descriptionMethod, exampleValueMethod);
+        return new C128297(valueOfMethod, descriptionMethod, exampleValueMethod);
     }
 
-    /* renamed from: lombok.core.configuration.ConfigurationDataType$7, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationDataType$7 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationDataType$7.SCL.lombok */
-    class AnonymousClass7 implements ConfigurationValueParser {
+    class C128297 implements ConfigurationValueParser {
         private final /* synthetic */ Method val$valueOfMethod;
         private final /* synthetic */ Method val$descriptionMethod;
         private final /* synthetic */ Method val$exampleValueMethod;
 
-        AnonymousClass7(Method method, Method method2, Method method3) {
+        C128297(Method method, Method method2, Method method3) {
             this.val$valueOfMethod = method;
             this.val$descriptionMethod = method2;
             this.val$exampleValueMethod = method3;

@@ -51,11 +51,11 @@ public class CircularProgressDrawable extends Drawable implements Animatable {
     private static final Interpolator MATERIAL_INTERPOLATOR = new FastOutSlowInInterpolator();
     private static final int[] COLORS = {ViewCompat.MEASURED_STATE_MASK};
 
-    /* renamed from: androidx.swiperefreshlayout.widget.CircularProgressDrawable$1, reason: invalid class name */
-    public class AnonymousClass1 implements ValueAnimator.AnimatorUpdateListener {
+    /* renamed from: androidx.swiperefreshlayout.widget.CircularProgressDrawable$1 */
+    public class C06221 implements ValueAnimator.AnimatorUpdateListener {
         public final /* synthetic */ Ring val$ring;
 
-        public AnonymousClass1(Ring ring) {
+        public C06221(Ring ring) {
             this.val$ring = ring;
         }
 
@@ -68,11 +68,11 @@ public class CircularProgressDrawable extends Drawable implements Animatable {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.CircularProgressDrawable$2, reason: invalid class name */
-    public class AnonymousClass2 implements Animator.AnimatorListener {
+    /* renamed from: androidx.swiperefreshlayout.widget.CircularProgressDrawable$2 */
+    public class C06232 implements Animator.AnimatorListener {
         public final /* synthetic */ Ring val$ring;
 
-        public AnonymousClass2(Ring ring) {
+        public C06232(Ring ring) {
             this.val$ring = ring;
         }
 
@@ -413,11 +413,11 @@ public class CircularProgressDrawable extends Drawable implements Animatable {
     private void setupAnimators() {
         Ring ring = this.mRing;
         ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
-        valueAnimatorOfFloat.addUpdateListener(new AnonymousClass1(ring));
+        valueAnimatorOfFloat.addUpdateListener(new C06221(ring));
         valueAnimatorOfFloat.setRepeatCount(-1);
         valueAnimatorOfFloat.setRepeatMode(1);
         valueAnimatorOfFloat.setInterpolator(LINEAR_INTERPOLATOR);
-        valueAnimatorOfFloat.addListener(new AnonymousClass2(ring));
+        valueAnimatorOfFloat.addListener(new C06232(ring));
         this.mAnimator = valueAnimatorOfFloat;
     }
 

@@ -5,54 +5,61 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.i5;
-import b.a.i.l5;
-import b.a.i.m5;
-import b.a.i.n5;
 import com.discord.widgets.home.HomePanelsLayout;
+import p007b.p008a.p025i.WidgetHomePanelCenterBinding;
+import p007b.p008a.p025i.WidgetHomePanelLeftBinding;
+import p007b.p008a.p025i.WidgetHomePanelLoadingBinding;
+import p007b.p008a.p025i.WidgetHomePanelRightBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetHomeBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final FrameLayout a;
+    public final FrameLayout f17124a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final m5 f2465b;
+    public final WidgetHomePanelLoadingBinding f17125b;
 
+    /* renamed from: c */
     @NonNull
-    public final HomePanelsLayout c;
+    public final HomePanelsLayout f17126c;
 
+    /* renamed from: d */
     @NonNull
-    public final i5 d;
+    public final WidgetHomePanelCenterBinding f17127d;
 
+    /* renamed from: e */
     @NonNull
-    public final l5 e;
+    public final WidgetHomePanelLeftBinding f17128e;
 
+    /* renamed from: f */
     @NonNull
-    public final n5 f;
+    public final WidgetHomePanelRightBinding f17129f;
 
+    /* renamed from: g */
     @NonNull
-    public final ImageView g;
+    public final ImageView f17130g;
 
+    /* renamed from: h */
     @NonNull
-    public final FrameLayout h;
+    public final FrameLayout f17131h;
 
-    public WidgetHomeBinding(@NonNull FrameLayout frameLayout, @NonNull m5 m5Var, @NonNull HomePanelsLayout homePanelsLayout, @NonNull i5 i5Var, @NonNull l5 l5Var, @NonNull n5 n5Var, @NonNull ImageView imageView, @NonNull FrameLayout frameLayout2) {
-        this.a = frameLayout;
-        this.f2465b = m5Var;
-        this.c = homePanelsLayout;
-        this.d = i5Var;
-        this.e = l5Var;
-        this.f = n5Var;
-        this.g = imageView;
-        this.h = frameLayout2;
+    public WidgetHomeBinding(@NonNull FrameLayout frameLayout, @NonNull WidgetHomePanelLoadingBinding widgetHomePanelLoadingBinding, @NonNull HomePanelsLayout homePanelsLayout, @NonNull WidgetHomePanelCenterBinding widgetHomePanelCenterBinding, @NonNull WidgetHomePanelLeftBinding widgetHomePanelLeftBinding, @NonNull WidgetHomePanelRightBinding widgetHomePanelRightBinding, @NonNull ImageView imageView, @NonNull FrameLayout frameLayout2) {
+        this.f17124a = frameLayout;
+        this.f17125b = widgetHomePanelLoadingBinding;
+        this.f17126c = homePanelsLayout;
+        this.f17127d = widgetHomePanelCenterBinding;
+        this.f17128e = widgetHomePanelLeftBinding;
+        this.f17129f = widgetHomePanelRightBinding;
+        this.f17130g = imageView;
+        this.f17131h = frameLayout2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17124a;
     }
 }

@@ -29,18 +29,18 @@ public interface CameraVideoCapturer extends VideoCapturer {
         private int freezePeriodCount;
         private final SurfaceTextureHelper surfaceTextureHelper;
 
-        /* renamed from: org.webrtc.CameraVideoCapturer$CameraStatistics$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
-            public AnonymousClass1() {
+        /* renamed from: org.webrtc.CameraVideoCapturer$CameraStatistics$1 */
+        public class RunnableC129591 implements Runnable {
+            public RunnableC129591() {
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                Logging.d(CameraStatistics.TAG, "Camera fps: " + Math.round((CameraStatistics.access$000(CameraStatistics.this) * 1000.0f) / 2000.0f) + ".");
+                Logging.m11027d(CameraStatistics.TAG, "Camera fps: " + Math.round((CameraStatistics.access$000(CameraStatistics.this) * 1000.0f) / 2000.0f) + ".");
                 if (CameraStatistics.access$000(CameraStatistics.this) == 0) {
                     CameraStatistics.access$104(CameraStatistics.this);
                     if (CameraStatistics.access$100(CameraStatistics.this) * 2000 >= 4000 && CameraStatistics.access$200(CameraStatistics.this) != null) {
-                        Logging.e(CameraStatistics.TAG, "Camera freezed.");
+                        Logging.m11028e(CameraStatistics.TAG, "Camera freezed.");
                         if (CameraStatistics.access$300(CameraStatistics.this).isTextureInUse()) {
                             CameraStatistics.access$200(CameraStatistics.this).onCameraFreezed("Camera failure. Client must return video buffers.");
                             return;
@@ -58,8 +58,8 @@ public interface CameraVideoCapturer extends VideoCapturer {
         }
 
         public CameraStatistics(SurfaceTextureHelper surfaceTextureHelper, CameraEventsHandler cameraEventsHandler) {
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-            this.cameraObserver = anonymousClass1;
+            RunnableC129591 runnableC129591 = new RunnableC129591();
+            this.cameraObserver = runnableC129591;
             if (surfaceTextureHelper == null) {
                 throw new IllegalArgumentException("SurfaceTextureHelper is null");
             }
@@ -67,7 +67,7 @@ public interface CameraVideoCapturer extends VideoCapturer {
             this.eventsHandler = cameraEventsHandler;
             this.frameCount = 0;
             this.freezePeriodCount = 0;
-            surfaceTextureHelper.getHandler().postDelayed(anonymousClass1, 2000L);
+            surfaceTextureHelper.getHandler().postDelayed(runnableC129591, 2000L);
         }
 
         public static /* synthetic */ int access$000(CameraStatistics cameraStatistics) {

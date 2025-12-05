@@ -2,9 +2,7 @@ package com.discord.widgets.channels.threads.browser;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.guild.Guild;
@@ -17,12 +15,10 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.widgets.channels.threads.browser.ThreadBrowserThreadView;
 import com.discord.widgets.channels.threads.browser.WidgetThreadBrowserAdapter;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -31,12 +27,16 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
+public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -53,21 +53,21 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
     private final BehaviorSubject<ViewMode> viewModeSubject;
 
     /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$1 */
+    public static final class C76601 extends Lambda implements Function1<StoreState, Unit> {
+        public C76601() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetThreadBrowserArchivedViewModel.access$handleStoreState(WidgetThreadBrowserArchivedViewModel.this, storeState);
         }
     }
@@ -82,9 +82,9 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(ViewMode viewMode, long guildId, long channelId, StoreGuilds storeGuilds, StoreChannels storeChannels, StoreUser storeUser, ArchivedThreadsStore storeArchivedThreads, StorePermissions storePermissions) {
-            Observable<StoreState> observableY = Observable.j(storeArchivedThreads.loadAndObserveThreadListing(channelId, viewMode.getThreadListingType()), storeChannels.observeChannel(channelId), WidgetThreadBrowserArchivedViewModel$Companion$observeStoreState$1.INSTANCE).Y(new WidgetThreadBrowserArchivedViewModel$Companion$observeStoreState$2(storeUser, storeGuilds, guildId, storePermissions, viewMode));
-            m.checkNotNullExpressionValue(observableY, "Observable.combineLatest…            }\n          }");
-            return observableY;
+            Observable<StoreState> observableM11099Y = Observable.m11076j(storeArchivedThreads.loadAndObserveThreadListing(channelId, viewMode.getThreadListingType()), storeChannels.observeChannel(channelId), WidgetThreadBrowserArchivedViewModel2.INSTANCE).m11099Y(new WidgetThreadBrowserArchivedViewModel3(storeUser, storeGuilds, guildId, storePermissions, viewMode));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "Observable.combineLatest…            }\n          }");
+            return observableM11099Y;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -105,11 +105,11 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(ViewMode viewMode, Map<Long, GuildMember> map, Map<Long, ? extends User> map2, ArchivedThreadsStore.ThreadListingState threadListingState, boolean z2, Channel channel, Guild guild, Long l) {
-            m.checkNotNullParameter(viewMode, "viewMode");
-            m.checkNotNullParameter(map, "guildMembers");
-            m.checkNotNullParameter(map2, "users");
-            m.checkNotNullParameter(threadListingState, "listingState");
-            m.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(viewMode, "viewMode");
+            Intrinsics3.checkNotNullParameter(map, "guildMembers");
+            Intrinsics3.checkNotNullParameter(map2, "users");
+            Intrinsics3.checkNotNullParameter(threadListingState, "listingState");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
             this.viewMode = viewMode;
             this.guildMembers = map;
             this.users = map2;
@@ -163,11 +163,11 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
         }
 
         public final StoreState copy(ViewMode viewMode, Map<Long, GuildMember> guildMembers, Map<Long, ? extends User> users, ArchivedThreadsStore.ThreadListingState listingState, boolean isModerator, Channel channel, Guild guild, Long permissions) {
-            m.checkNotNullParameter(viewMode, "viewMode");
-            m.checkNotNullParameter(guildMembers, "guildMembers");
-            m.checkNotNullParameter(users, "users");
-            m.checkNotNullParameter(listingState, "listingState");
-            m.checkNotNullParameter(channel, "channel");
+            Intrinsics3.checkNotNullParameter(viewMode, "viewMode");
+            Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+            Intrinsics3.checkNotNullParameter(users, "users");
+            Intrinsics3.checkNotNullParameter(listingState, "listingState");
+            Intrinsics3.checkNotNullParameter(channel, "channel");
             return new StoreState(viewMode, guildMembers, users, listingState, isModerator, channel, guild, permissions);
         }
 
@@ -179,7 +179,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.viewMode, storeState.viewMode) && m.areEqual(this.guildMembers, storeState.guildMembers) && m.areEqual(this.users, storeState.users) && m.areEqual(this.listingState, storeState.listingState) && this.isModerator == storeState.isModerator && m.areEqual(this.channel, storeState.channel) && m.areEqual(this.guild, storeState.guild) && m.areEqual(this.permissions, storeState.permissions);
+            return Intrinsics3.areEqual(this.viewMode, storeState.viewMode) && Intrinsics3.areEqual(this.guildMembers, storeState.guildMembers) && Intrinsics3.areEqual(this.users, storeState.users) && Intrinsics3.areEqual(this.listingState, storeState.listingState) && this.isModerator == storeState.isModerator && Intrinsics3.areEqual(this.channel, storeState.channel) && Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.permissions, storeState.permissions);
         }
 
         public final Channel getChannel() {
@@ -239,22 +239,22 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(viewMode=");
-            sbU.append(this.viewMode);
-            sbU.append(", guildMembers=");
-            sbU.append(this.guildMembers);
-            sbU.append(", users=");
-            sbU.append(this.users);
-            sbU.append(", listingState=");
-            sbU.append(this.listingState);
-            sbU.append(", isModerator=");
-            sbU.append(this.isModerator);
-            sbU.append(", channel=");
-            sbU.append(this.channel);
-            sbU.append(", guild=");
-            sbU.append(this.guild);
-            sbU.append(", permissions=");
-            return a.G(sbU, this.permissions, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(viewMode=");
+            sbM833U.append(this.viewMode);
+            sbM833U.append(", guildMembers=");
+            sbM833U.append(this.guildMembers);
+            sbM833U.append(", users=");
+            sbM833U.append(this.users);
+            sbM833U.append(", listingState=");
+            sbM833U.append(this.listingState);
+            sbM833U.append(", isModerator=");
+            sbM833U.append(this.isModerator);
+            sbM833U.append(", channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", permissions=");
+            return outline.m819G(sbM833U, this.permissions, ")");
         }
     }
 
@@ -277,7 +277,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
 
         public ViewMode(VisibilityMode visibilityMode, boolean z2) {
             ArchivedThreadsStore.ThreadListingType threadListingType;
-            m.checkNotNullParameter(visibilityMode, "visibility");
+            Intrinsics3.checkNotNullParameter(visibilityMode, "visibility");
             this.visibility = visibilityMode;
             this.isModeratorMode = z2;
             if (visibilityMode.ordinal() == 0) {
@@ -314,7 +314,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
         }
 
         public final ViewMode copy(VisibilityMode visibility, boolean isModeratorMode) {
-            m.checkNotNullParameter(visibility, "visibility");
+            Intrinsics3.checkNotNullParameter(visibility, "visibility");
             return new ViewMode(visibility, isModeratorMode);
         }
 
@@ -326,7 +326,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
                 return false;
             }
             ViewMode viewMode = (ViewMode) other;
-            return m.areEqual(this.visibility, viewMode.visibility) && this.isModeratorMode == viewMode.isModeratorMode;
+            return Intrinsics3.areEqual(this.visibility, viewMode.visibility) && this.isModeratorMode == viewMode.isModeratorMode;
         }
 
         public final ArchivedThreadsStore.ThreadListingType getThreadListingType() {
@@ -354,10 +354,10 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewMode(visibility=");
-            sbU.append(this.visibility);
-            sbU.append(", isModeratorMode=");
-            return a.O(sbU, this.isModeratorMode, ")");
+            StringBuilder sbM833U = outline.m833U("ViewMode(visibility=");
+            sbM833U.append(this.visibility);
+            sbM833U.append(", isModeratorMode=");
+            return outline.m827O(sbM833U, this.isModeratorMode, ")");
         }
     }
 
@@ -371,8 +371,8 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public ViewState(ViewMode viewMode, List<? extends WidgetThreadBrowserAdapter.Item> list, boolean z2, boolean z3, boolean z4) {
-            m.checkNotNullParameter(viewMode, "viewMode");
-            m.checkNotNullParameter(list, "listItems");
+            Intrinsics3.checkNotNullParameter(viewMode, "viewMode");
+            Intrinsics3.checkNotNullParameter(list, "listItems");
             this.viewMode = viewMode;
             this.listItems = list;
             this.isModerator = z2;
@@ -427,8 +427,8 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
         }
 
         public final ViewState copy(ViewMode viewMode, List<? extends WidgetThreadBrowserAdapter.Item> listItems, boolean isModerator, boolean isError, boolean canCreateThread) {
-            m.checkNotNullParameter(viewMode, "viewMode");
-            m.checkNotNullParameter(listItems, "listItems");
+            Intrinsics3.checkNotNullParameter(viewMode, "viewMode");
+            Intrinsics3.checkNotNullParameter(listItems, "listItems");
             return new ViewState(viewMode, listItems, isModerator, isError, canCreateThread);
         }
 
@@ -440,7 +440,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return m.areEqual(this.viewMode, viewState.viewMode) && m.areEqual(this.listItems, viewState.listItems) && this.isModerator == viewState.isModerator && this.isError == viewState.isError && this.canCreateThread == viewState.canCreateThread;
+            return Intrinsics3.areEqual(this.viewMode, viewState.viewMode) && Intrinsics3.areEqual(this.listItems, viewState.listItems) && this.isModerator == viewState.isModerator && this.isError == viewState.isError && this.canCreateThread == viewState.canCreateThread;
         }
 
         public final boolean getCanCreateThread() {
@@ -486,16 +486,16 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewState(viewMode=");
-            sbU.append(this.viewMode);
-            sbU.append(", listItems=");
-            sbU.append(this.listItems);
-            sbU.append(", isModerator=");
-            sbU.append(this.isModerator);
-            sbU.append(", isError=");
-            sbU.append(this.isError);
-            sbU.append(", canCreateThread=");
-            return a.O(sbU, this.canCreateThread, ")");
+            StringBuilder sbM833U = outline.m833U("ViewState(viewMode=");
+            sbM833U.append(this.viewMode);
+            sbM833U.append(", listItems=");
+            sbM833U.append(this.listItems);
+            sbM833U.append(", isModerator=");
+            sbM833U.append(this.isModerator);
+            sbM833U.append(", isError=");
+            sbM833U.append(this.isError);
+            sbM833U.append(", canCreateThread=");
+            return outline.m827O(sbM833U, this.canCreateThread, ")");
         }
     }
 
@@ -577,12 +577,12 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
             if (!listing.getThreads().isEmpty()) {
                 int iOrdinal = viewMode.getVisibility().ordinal();
                 if (iOrdinal == 0) {
-                    i = R.string.thread_browser_public_header;
+                    i = C5419R.string.thread_browser_public_header;
                 } else {
                     if (iOrdinal != 1) {
                         throw new NoWhenBranchMatchedException();
                     }
-                    i = R.string.thread_browser_private_header;
+                    i = C5419R.string.thread_browser_private_header;
                 }
                 arrayList.add(new WidgetThreadBrowserAdapter.Item.Header("header", i, listing.getThreads().size()));
                 for (Channel channel2 : listing.getThreads()) {
@@ -629,30 +629,30 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
     @MainThread
     public final void maybeLoadMore(boolean force) {
         if (this.canLoadMore || force) {
-            ArchivedThreadsStore.fetchListing$default(this.storeArchivedThreads, this.channelId, this.viewModeSubject.n0().getThreadListingType(), false, null, 12, null);
+            ArchivedThreadsStore.fetchListing$default(this.storeArchivedThreads, this.channelId, this.viewModeSubject.m11132n0().getThreadListingType(), false, null, 12, null);
         }
     }
 
     @MainThread
     public final void onModeratorModeChanged(boolean isModeratorMode) {
         BehaviorSubject<ViewMode> behaviorSubject = this.viewModeSubject;
-        behaviorSubject.onNext(ViewMode.copy$default(behaviorSubject.n0(), null, isModeratorMode, 1, null));
+        behaviorSubject.onNext(ViewMode.copy$default(behaviorSubject.m11132n0(), null, isModeratorMode, 1, null));
         trackTabChanged();
     }
 
     @MainThread
     public final void onVisibilityChanged(VisibilityMode visibility) {
-        m.checkNotNullParameter(visibility, "visibility");
+        Intrinsics3.checkNotNullParameter(visibility, "visibility");
         BehaviorSubject<ViewMode> behaviorSubject = this.viewModeSubject;
-        behaviorSubject.onNext(ViewMode.copy$default(behaviorSubject.n0(), visibility, false, 2, null));
+        behaviorSubject.onNext(ViewMode.copy$default(behaviorSubject.m11132n0(), visibility, false, 2, null));
         trackTabChanged();
     }
 
     public final void trackTabChanged() {
         String str;
-        ViewMode viewModeN0 = this.viewModeSubject.n0();
-        if (viewModeN0 != null) {
-            int iOrdinal = viewModeN0.getThreadListingType().ordinal();
+        ViewMode viewModeM11132n0 = this.viewModeSubject.m11132n0();
+        if (viewModeM11132n0 != null) {
+            int iOrdinal = viewModeM11132n0.getThreadListingType().ordinal();
             if (iOrdinal == 0) {
                 str = "My Private Archived Threads";
             } else if (iOrdinal == 1) {
@@ -670,12 +670,12 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetThreadBrowserArchivedViewModel(long j, long j2, StoreGuilds storeGuilds, StoreChannels storeChannels, StoreUser storeUser, ArchivedThreadsStore archivedThreadsStore, StorePermissions storePermissions, StoreGuildMemberRequester storeGuildMemberRequester) {
         super(null, 1, null);
-        m.checkNotNullParameter(storeGuilds, "storeGuilds");
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(storeUser, "storeUser");
-        m.checkNotNullParameter(archivedThreadsStore, "storeArchivedThreads");
-        m.checkNotNullParameter(storePermissions, "storePermissions");
-        m.checkNotNullParameter(storeGuildMemberRequester, "storeGuildMemberRequester");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+        Intrinsics3.checkNotNullParameter(archivedThreadsStore, "storeArchivedThreads");
+        Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
+        Intrinsics3.checkNotNullParameter(storeGuildMemberRequester, "storeGuildMemberRequester");
         this.guildId = j;
         this.channelId = j2;
         this.storeGuilds = storeGuilds;
@@ -684,12 +684,12 @@ public final class WidgetThreadBrowserArchivedViewModel extends d0<ViewState> {
         this.storeArchivedThreads = archivedThreadsStore;
         this.storePermissions = storePermissions;
         this.storeGuildMemberRequester = storeGuildMemberRequester;
-        BehaviorSubject<ViewMode> behaviorSubjectL0 = BehaviorSubject.l0(new ViewMode(VisibilityMode.PublicThreads, false));
-        m.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(\n…rMode = false\n      )\n  )");
-        this.viewModeSubject = behaviorSubjectL0;
-        Observable observableY = behaviorSubjectL0.Y(new WidgetThreadBrowserArchivedViewModel$storeStateObservable$1(this));
-        m.checkNotNullExpressionValue(observableY, "viewModeSubject\n        …            )\n          }");
-        this.storeStateObservable = observableY;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableY, this, null, 2, null), WidgetThreadBrowserArchivedViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        BehaviorSubject<ViewMode> behaviorSubjectM11130l0 = BehaviorSubject.m11130l0(new ViewMode(VisibilityMode.PublicThreads, false));
+        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectM11130l0, "BehaviorSubject.create(\n…rMode = false\n      )\n  )");
+        this.viewModeSubject = behaviorSubjectM11130l0;
+        Observable observableM11099Y = behaviorSubjectM11130l0.m11099Y(new WidgetThreadBrowserArchivedViewModel4(this));
+        Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "viewModeSubject\n        …            )\n          }");
+        this.storeStateObservable = observableM11099Y;
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableM11099Y, this, null, 2, null), WidgetThreadBrowserArchivedViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C76601(), 62, (Object) null);
     }
 }

@@ -6,7 +6,6 @@ import android.view.View;
 import androidx.constraintlayout.motion.utils.CurveFit;
 import androidx.constraintlayout.motion.utils.Oscillator;
 import androidx.constraintlayout.widget.ConstraintAttribute;
-import b.d.b.a.a;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -15,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class KeyCycleOscillator {
@@ -27,9 +27,9 @@ public abstract class KeyCycleOscillator {
     public int mVariesBy = 0;
     public ArrayList<WavePoint> mWavePoints = new ArrayList<>();
 
-    /* renamed from: androidx.constraintlayout.motion.widget.KeyCycleOscillator$1, reason: invalid class name */
-    public class AnonymousClass1 implements Comparator<WavePoint> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.constraintlayout.motion.widget.KeyCycleOscillator$1 */
+    public class C01761 implements Comparator<WavePoint> {
+        public C01761() {
         }
 
         @Override // java.util.Comparator
@@ -98,9 +98,9 @@ public abstract class KeyCycleOscillator {
             if (constraintAttribute2.getType() == attributeType) {
                 return constraintAttribute2;
             }
-            StringBuilder sbU = a.U("ConstraintAttribute is already a ");
-            sbU.append(constraintAttribute2.getType().name());
-            throw new IllegalArgumentException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("ConstraintAttribute is already a ");
+            sbM833U.append(constraintAttribute2.getType().name());
+            throw new IllegalArgumentException(sbM833U.toString());
         }
 
         public double getSlope(float f) {
@@ -470,7 +470,7 @@ public abstract class KeyCycleOscillator {
         if (size == 0) {
             return;
         }
-        Collections.sort(this.mWavePoints, new AnonymousClass1());
+        Collections.sort(this.mWavePoints, new C01761());
         double[] dArr = new double[size];
         double[][] dArr2 = (double[][]) Array.newInstance((Class<?>) double.class, size, 2);
         this.mCycleOscillator = new CycleOscillator(this.mWaveShape, this.mVariesBy, size);
@@ -495,12 +495,12 @@ public abstract class KeyCycleOscillator {
         String string = this.mType;
         DecimalFormat decimalFormat = new DecimalFormat("##.##");
         for (WavePoint wavePoint : this.mWavePoints) {
-            StringBuilder sbX = a.X(string, "[");
-            sbX.append(wavePoint.mPosition);
-            sbX.append(" , ");
-            sbX.append(decimalFormat.format(wavePoint.mValue));
-            sbX.append("] ");
-            string = sbX.toString();
+            StringBuilder sbM836X = outline.m836X(string, "[");
+            sbM836X.append(wavePoint.mPosition);
+            sbM836X.append(" , ");
+            sbM836X.append(decimalFormat.format(wavePoint.mValue));
+            sbM836X.append("] ");
+            string = sbM836X.toString();
         }
         return string;
     }

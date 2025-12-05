@@ -1,7 +1,0 @@
-package b.c.a;
-
-/* compiled from: LottieListener.java */
-/* loaded from: classes.dex */
-public interface l<T> {
-    void a(T t);
-}

@@ -6,12 +6,7 @@ import com.discord.api.channel.Channel;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.utilities.channel.ChannelSelector;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.g0.s;
-import d0.t.n0;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -21,7 +16,13 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p507d0.p579g0.StringNumberConversions;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Sets5;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreGuildsNsfw.kt */
 /* loaded from: classes2.dex */
@@ -47,12 +48,12 @@ public final class StoreGuildsNsfw extends StoreV2 {
     }
 
     /* compiled from: StoreGuildsNsfw.kt */
-    /* renamed from: com.discord.stores.StoreGuildsNsfw$allow$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGuildsNsfw$allow$1 */
+    public static final class C61151 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C61151(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -60,7 +61,7 @@ public final class StoreGuildsNsfw extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -71,18 +72,18 @@ public final class StoreGuildsNsfw extends StoreV2 {
     }
 
     /* compiled from: StoreGuildsNsfw.kt */
-    /* renamed from: com.discord.stores.StoreGuildsNsfw$deny$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StoreGuildsNsfw$deny$1 */
+    public static final class C61161 extends Lambda implements Function1<Channel, Unit> {
+        public static final C61161 INSTANCE = new C61161();
 
-        public AnonymousClass1() {
+        public C61161() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Channel channel) {
             invoke2(channel);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -96,12 +97,12 @@ public final class StoreGuildsNsfw extends StoreV2 {
     }
 
     /* compiled from: StoreGuildsNsfw.kt */
-    /* renamed from: com.discord.stores.StoreGuildsNsfw$observeIsGuildNsfwGateAgreed$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
+    /* renamed from: com.discord.stores.StoreGuildsNsfw$observeIsGuildNsfwGateAgreed$1 */
+    public static final class C61171 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C61171(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -118,14 +119,14 @@ public final class StoreGuildsNsfw extends StoreV2 {
     }
 
     public StoreGuildsNsfw(Dispatcher dispatcher, StoreChannels storeChannels, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.storeChannels = storeChannels;
         this.observationDeck = observationDeck;
         this.guildIdsAllowed = new LinkedHashSet();
-        this.guildIdsAllowedSnapshot = n0.emptySet();
+        this.guildIdsAllowedSnapshot = Sets5.emptySet();
     }
 
     public static final /* synthetic */ Set access$getGuildIdsAllowed$p(StoreGuildsNsfw storeGuildsNsfw) {
@@ -136,40 +137,40 @@ public final class StoreGuildsNsfw extends StoreV2 {
         ArrayList arrayList = new ArrayList();
         Iterator<T> it = set.iterator();
         while (it.hasNext()) {
-            Long longOrNull = s.toLongOrNull((String) it.next());
+            Long longOrNull = StringNumberConversions.toLongOrNull((String) it.next());
             if (longOrNull != null) {
                 arrayList.add(longOrNull);
             }
         }
-        return u.toSet(arrayList);
+        return _Collections.toSet(arrayList);
     }
 
     private final Set<String> toStringSet(Set<Long> set) {
-        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(set, 10));
+        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(set, 10));
         Iterator<T> it = set.iterator();
         while (it.hasNext()) {
             arrayList.add(String.valueOf(((Number) it.next()).longValue()));
         }
-        return u.toSet(arrayList);
+        return _Collections.toSet(arrayList);
     }
 
     public final void allow(long guildId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId));
+        this.dispatcher.schedule(new C61151(guildId));
     }
 
     public final void deny(long guildId) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(this.storeChannels.observeDefaultChannel(guildId), 0L, false, 3, null), StoreGuildsNsfw.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass1.INSTANCE, 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(this.storeChannels.observeDefaultChannel(guildId), 0L, false, 3, null), StoreGuildsNsfw.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C61161.INSTANCE, 62, (Object) null);
     }
 
     @Override // com.discord.stores.Store
-    @StoreThread
+    @Store3
     public void init(Context context) {
         Set<Long> setEmptySet;
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         super.init(context);
-        Set<String> stringSet = getPrefs().getStringSet(GUILDS_ALLOWED_KEY, n0.emptySet());
+        Set<String> stringSet = getPrefs().getStringSet(GUILDS_ALLOWED_KEY, Sets5.emptySet());
         if (stringSet == null || (setEmptySet = toGuildIdSet(stringSet)) == null) {
-            setEmptySet = n0.emptySet();
+            setEmptySet = Sets5.emptySet();
         }
         this.guildIdsAllowed.addAll(setEmptySet);
         markChanged();
@@ -180,16 +181,16 @@ public final class StoreGuildsNsfw extends StoreV2 {
     }
 
     public final Observable<Boolean> observeIsGuildNsfwGateAgreed(long guildId) {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(guildId), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C61171(guildId), 14, null);
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         super.snapshotData();
         this.guildIdsAllowedSnapshot = new HashSet(this.guildIdsAllowed);
         SharedPreferences.Editor editorEdit = getPrefs().edit();
-        m.checkNotNullExpressionValue(editorEdit, "editor");
+        Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
         editorEdit.putStringSet(GUILDS_ALLOWED_KEY, toStringSet(this.guildIdsAllowed));
         editorEdit.apply();
     }

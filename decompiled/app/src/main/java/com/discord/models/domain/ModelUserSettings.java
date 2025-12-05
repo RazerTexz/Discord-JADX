@@ -1,8 +1,6 @@
 package com.discord.models.domain;
 
 import android.text.TextUtils;
-import b.a.m.a.d0;
-import b.d.b.a.a;
 import com.discord.api.presence.ClientStatus;
 import com.discord.models.deserialization.gson.InboundGatewayGsonParser;
 import com.discord.models.domain.Model;
@@ -12,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+import p007b.p008a.p033m.p034a.C1130a;
+import p007b.p008a.p033m.p034a.C1137d0;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ModelUserSettings implements Model {
@@ -98,14 +99,14 @@ public class ModelUserSettings implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelUserSettings.FriendSourceFlags(all=");
-            sbU.append(isAll());
-            sbU.append(", mutualGuilds=");
-            sbU.append(isMutualGuilds());
-            sbU.append(", mutualFriends=");
-            sbU.append(isMutualFriends());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelUserSettings.FriendSourceFlags(all=");
+            sbM833U.append(isAll());
+            sbM833U.append(", mutualGuilds=");
+            sbM833U.append(isMutualGuilds());
+            sbM833U.append(", mutualFriends=");
+            sbM833U.append(isMutualFriends());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -130,9 +131,9 @@ public class ModelUserSettings implements Model {
         if (TextUtils.isEmpty(locale.getCountry())) {
             string = "";
         } else {
-            StringBuilder sbQ = a.Q('-');
-            sbQ.append(locale.getCountry().toUpperCase(Locale.getDefault()));
-            string = sbQ.toString();
+            StringBuilder sbM829Q = outline.m829Q('-');
+            sbM829Q.append(locale.getCountry().toUpperCase(Locale.getDefault()));
+            string = sbM829Q.toString();
         }
         return locale.getLanguage() + string;
     }
@@ -154,7 +155,7 @@ public class ModelUserSettings implements Model {
             case "guild_positions":
                 List<ModelGuildFolder> list = this.guildFolders;
                 if (list == null || list.isEmpty()) {
-                    this.guildFolders = convertFromPositions(jsonReader.nextList(new b.a.m.a.a(jsonReader)));
+                    this.guildFolders = convertFromPositions(jsonReader.nextList(new C1130a(jsonReader)));
                     break;
                 }
                 break;
@@ -162,7 +163,7 @@ public class ModelUserSettings implements Model {
                 this.showCurrentGame = Boolean.valueOf(jsonReader.nextBoolean(false));
                 break;
             case "restricted_guilds":
-                this.restrictedGuilds = jsonReader.nextList(new b.a.m.a.a(jsonReader));
+                this.restrictedGuilds = jsonReader.nextList(new C1130a(jsonReader));
                 break;
             case "render_embeds":
                 this.renderEmbeds = jsonReader.nextBooleanOrNull();
@@ -177,7 +178,7 @@ public class ModelUserSettings implements Model {
                 this.status = (ClientStatus) InboundGatewayGsonParser.fromJson(jsonReader, ClientStatus.class);
                 break;
             case "guild_folders":
-                List<ModelGuildFolder> listNextList = jsonReader.nextList(new d0(jsonReader));
+                List<ModelGuildFolder> listNextList = jsonReader.nextList(new C1137d0(jsonReader));
                 if (!listNextList.isEmpty()) {
                     this.guildFolders = listNextList;
                     break;
@@ -444,45 +445,45 @@ public class ModelUserSettings implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelUserSettings(theme=");
-        sbU.append(getTheme());
-        sbU.append(", guildFolders=");
-        sbU.append(getGuildFolders());
-        sbU.append(", renderEmbeds=");
-        sbU.append(getRenderEmbeds());
-        sbU.append(", inlineEmbedMedia=");
-        sbU.append(getInlineEmbedMedia());
-        sbU.append(", inlineAttachmentMedia=");
-        sbU.append(getInlineAttachmentMedia());
-        sbU.append(", developerMode=");
-        sbU.append(getDeveloperMode());
-        sbU.append(", locale=");
-        sbU.append(getLocale());
-        sbU.append(", restrictedGuilds=");
-        sbU.append(getRestrictedGuilds());
-        sbU.append(", defaultGuildsRestricted=");
-        sbU.append(getDefaultGuildsRestricted());
-        sbU.append(", friendSourceFlags=");
-        sbU.append(getFriendSourceFlags());
-        sbU.append(", explicitContentFilter=");
-        sbU.append(getExplicitContentFilter());
-        sbU.append(", friendDiscoveryFlags=");
-        sbU.append(getFriendDiscoveryFlags());
-        sbU.append(", contactSyncUpsellShown=");
-        sbU.append(getContactSyncUpsellShown());
-        sbU.append(", status=");
-        sbU.append(getStatus());
-        sbU.append(", customStatus=");
-        sbU.append(getCustomStatus());
-        sbU.append(", showCurrentGame=");
-        sbU.append(getShowCurrentGame());
-        sbU.append(", animateEmoji=");
-        sbU.append(getAnimateEmoji());
-        sbU.append(", allowAccessibilityDetection=");
-        sbU.append(getAllowAccessibilityDetection());
-        sbU.append(", animateStickers=");
-        sbU.append(getAnimateStickers());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ModelUserSettings(theme=");
+        sbM833U.append(getTheme());
+        sbM833U.append(", guildFolders=");
+        sbM833U.append(getGuildFolders());
+        sbM833U.append(", renderEmbeds=");
+        sbM833U.append(getRenderEmbeds());
+        sbM833U.append(", inlineEmbedMedia=");
+        sbM833U.append(getInlineEmbedMedia());
+        sbM833U.append(", inlineAttachmentMedia=");
+        sbM833U.append(getInlineAttachmentMedia());
+        sbM833U.append(", developerMode=");
+        sbM833U.append(getDeveloperMode());
+        sbM833U.append(", locale=");
+        sbM833U.append(getLocale());
+        sbM833U.append(", restrictedGuilds=");
+        sbM833U.append(getRestrictedGuilds());
+        sbM833U.append(", defaultGuildsRestricted=");
+        sbM833U.append(getDefaultGuildsRestricted());
+        sbM833U.append(", friendSourceFlags=");
+        sbM833U.append(getFriendSourceFlags());
+        sbM833U.append(", explicitContentFilter=");
+        sbM833U.append(getExplicitContentFilter());
+        sbM833U.append(", friendDiscoveryFlags=");
+        sbM833U.append(getFriendDiscoveryFlags());
+        sbM833U.append(", contactSyncUpsellShown=");
+        sbM833U.append(getContactSyncUpsellShown());
+        sbM833U.append(", status=");
+        sbM833U.append(getStatus());
+        sbM833U.append(", customStatus=");
+        sbM833U.append(getCustomStatus());
+        sbM833U.append(", showCurrentGame=");
+        sbM833U.append(getShowCurrentGame());
+        sbM833U.append(", animateEmoji=");
+        sbM833U.append(getAnimateEmoji());
+        sbM833U.append(", allowAccessibilityDetection=");
+        sbM833U.append(getAllowAccessibilityDetection());
+        sbM833U.append(", animateStickers=");
+        sbM833U.append(getAnimateStickers());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

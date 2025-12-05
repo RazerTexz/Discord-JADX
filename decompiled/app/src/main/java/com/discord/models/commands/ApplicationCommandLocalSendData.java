@@ -1,19 +1,20 @@
 package com.discord.models.commands;
 
-import a0.a.a.b;
-import b.d.b.a.a;
-import com.discord.api.commands.ApplicationCommandAttachment;
 import com.discord.api.commands.ApplicationCommandData;
+import com.discord.api.commands.ApplicationCommandData2;
+import com.discord.api.commands.ApplicationCommandData3;
 import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StoreApplicationCommandsKt;
 import com.discord.widgets.chat.input.models.ApplicationCommandValue;
-import d0.t.n;
-import d0.t.o;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Ref$IntRef;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ApplicationCommandLocalSendData.kt */
 /* loaded from: classes.dex */
@@ -32,10 +33,10 @@ public final /* data */ class ApplicationCommandLocalSendData {
     private final String version;
 
     public ApplicationCommandLocalSendData(long j, long j2, Long l, Long l2, Application application, String str, String str2, String str3, List<ApplicationCommandValue> list, String str4, Long l3) {
-        m.checkNotNullParameter(application, "application");
-        m.checkNotNullParameter(str2, "applicationCommandName");
-        m.checkNotNullParameter(str3, "applicationCommandId");
-        m.checkNotNullParameter(list, "applicationCommandsValues");
+        Intrinsics3.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(str2, "applicationCommandName");
+        Intrinsics3.checkNotNullParameter(str3, "applicationCommandId");
+        Intrinsics3.checkNotNullParameter(list, "applicationCommandsValues");
         this.nonce = j;
         this.channelId = j2;
         this.guildId = l;
@@ -109,10 +110,10 @@ public final /* data */ class ApplicationCommandLocalSendData {
     }
 
     public final ApplicationCommandLocalSendData copy(long nonce, long channelId, Long guildId, Long commandGuildId, Application application, String sessionId, String applicationCommandName, String applicationCommandId, List<ApplicationCommandValue> applicationCommandsValues, String version, Long interactionId) {
-        m.checkNotNullParameter(application, "application");
-        m.checkNotNullParameter(applicationCommandName, "applicationCommandName");
-        m.checkNotNullParameter(applicationCommandId, "applicationCommandId");
-        m.checkNotNullParameter(applicationCommandsValues, "applicationCommandsValues");
+        Intrinsics3.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(applicationCommandName, "applicationCommandName");
+        Intrinsics3.checkNotNullParameter(applicationCommandId, "applicationCommandId");
+        Intrinsics3.checkNotNullParameter(applicationCommandsValues, "applicationCommandsValues");
         return new ApplicationCommandLocalSendData(nonce, channelId, guildId, commandGuildId, application, sessionId, applicationCommandName, applicationCommandId, applicationCommandsValues, version, interactionId);
     }
 
@@ -124,7 +125,7 @@ public final /* data */ class ApplicationCommandLocalSendData {
             return false;
         }
         ApplicationCommandLocalSendData applicationCommandLocalSendData = (ApplicationCommandLocalSendData) other;
-        return this.nonce == applicationCommandLocalSendData.nonce && this.channelId == applicationCommandLocalSendData.channelId && m.areEqual(this.guildId, applicationCommandLocalSendData.guildId) && m.areEqual(this.commandGuildId, applicationCommandLocalSendData.commandGuildId) && m.areEqual(this.application, applicationCommandLocalSendData.application) && m.areEqual(this.sessionId, applicationCommandLocalSendData.sessionId) && m.areEqual(this.applicationCommandName, applicationCommandLocalSendData.applicationCommandName) && m.areEqual(this.applicationCommandId, applicationCommandLocalSendData.applicationCommandId) && m.areEqual(this.applicationCommandsValues, applicationCommandLocalSendData.applicationCommandsValues) && m.areEqual(this.version, applicationCommandLocalSendData.version) && m.areEqual(this.interactionId, applicationCommandLocalSendData.interactionId);
+        return this.nonce == applicationCommandLocalSendData.nonce && this.channelId == applicationCommandLocalSendData.channelId && Intrinsics3.areEqual(this.guildId, applicationCommandLocalSendData.guildId) && Intrinsics3.areEqual(this.commandGuildId, applicationCommandLocalSendData.commandGuildId) && Intrinsics3.areEqual(this.application, applicationCommandLocalSendData.application) && Intrinsics3.areEqual(this.sessionId, applicationCommandLocalSendData.sessionId) && Intrinsics3.areEqual(this.applicationCommandName, applicationCommandLocalSendData.applicationCommandName) && Intrinsics3.areEqual(this.applicationCommandId, applicationCommandLocalSendData.applicationCommandId) && Intrinsics3.areEqual(this.applicationCommandsValues, applicationCommandLocalSendData.applicationCommandsValues) && Intrinsics3.areEqual(this.version, applicationCommandLocalSendData.version) && Intrinsics3.areEqual(this.interactionId, applicationCommandLocalSendData.interactionId);
     }
 
     public final Application getApplication() {
@@ -176,9 +177,9 @@ public final /* data */ class ApplicationCommandLocalSendData {
     }
 
     public int hashCode() {
-        int iA = (b.a(this.channelId) + (b.a(this.nonce) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.channelId) + (C0002b.m3a(this.nonce) * 31)) * 31;
         Long l = this.guildId;
-        int iHashCode = (iA + (l != null ? l.hashCode() : 0)) * 31;
+        int iHashCode = (iM3a + (l != null ? l.hashCode() : 0)) * 31;
         Long l2 = this.commandGuildId;
         int iHashCode2 = (iHashCode + (l2 != null ? l2.hashCode() : 0)) * 31;
         Application application = this.application;
@@ -201,7 +202,7 @@ public final /* data */ class ApplicationCommandLocalSendData {
         Ref$IntRef ref$IntRef = new Ref$IntRef();
         int i = 0;
         ref$IntRef.element = 0;
-        List<com.discord.api.commands.ApplicationCommandValue> restParams = ApplicationCommandLocalSendDataKt.toRestParams(this.applicationCommandsValues, new ApplicationCommandLocalSendData$toRestApiApplicationCommandDataParam$attachmentConvertedOptions$1(ref$IntRef));
+        List<ApplicationCommandData3> restParams = ApplicationCommandLocalSendData3.toRestParams(this.applicationCommandsValues, new ApplicationCommandLocalSendData2(ref$IntRef));
         String str = this.version;
         String str2 = this.applicationCommandId;
         Long l = this.commandGuildId;
@@ -214,13 +215,13 @@ public final /* data */ class ApplicationCommandLocalSendData {
                 arrayList.add(obj);
             }
         }
-        ArrayList arrayList2 = new ArrayList(o.collectionSizeOrDefault(arrayList, 10));
+        ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
         for (Object obj2 : arrayList) {
             int i2 = i + 1;
             if (i < 0) {
-                n.throwIndexOverflow();
+                Collections2.throwIndexOverflow();
             }
-            arrayList2.add(new ApplicationCommandAttachment(String.valueOf(((ApplicationCommandValue) obj2).getValue()), String.valueOf(i)));
+            arrayList2.add(new ApplicationCommandData2(String.valueOf(((ApplicationCommandValue) obj2).getValue()), String.valueOf(i)));
             i = i2;
         }
         return new ApplicationCommandData(str, strValueOf, str2, str3, restParams, arrayList2);
@@ -237,28 +238,28 @@ public final /* data */ class ApplicationCommandLocalSendData {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ApplicationCommandLocalSendData(nonce=");
-        sbU.append(this.nonce);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", commandGuildId=");
-        sbU.append(this.commandGuildId);
-        sbU.append(", application=");
-        sbU.append(this.application);
-        sbU.append(", sessionId=");
-        sbU.append(this.sessionId);
-        sbU.append(", applicationCommandName=");
-        sbU.append(this.applicationCommandName);
-        sbU.append(", applicationCommandId=");
-        sbU.append(this.applicationCommandId);
-        sbU.append(", applicationCommandsValues=");
-        sbU.append(this.applicationCommandsValues);
-        sbU.append(", version=");
-        sbU.append(this.version);
-        sbU.append(", interactionId=");
-        return a.G(sbU, this.interactionId, ")");
+        StringBuilder sbM833U = outline.m833U("ApplicationCommandLocalSendData(nonce=");
+        sbM833U.append(this.nonce);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", commandGuildId=");
+        sbM833U.append(this.commandGuildId);
+        sbM833U.append(", application=");
+        sbM833U.append(this.application);
+        sbM833U.append(", sessionId=");
+        sbM833U.append(this.sessionId);
+        sbM833U.append(", applicationCommandName=");
+        sbM833U.append(this.applicationCommandName);
+        sbM833U.append(", applicationCommandId=");
+        sbM833U.append(this.applicationCommandId);
+        sbM833U.append(", applicationCommandsValues=");
+        sbM833U.append(this.applicationCommandsValues);
+        sbM833U.append(", version=");
+        sbM833U.append(this.version);
+        sbM833U.append(", interactionId=");
+        return outline.m819G(sbM833U, this.interactionId, ")");
     }
 
     public /* synthetic */ ApplicationCommandLocalSendData(long j, long j2, Long l, Long l2, Application application, String str, String str2, String str3, List list, String str4, Long l3, int i, DefaultConstructorMarker defaultConstructorMarker) {

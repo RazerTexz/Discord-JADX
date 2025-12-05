@@ -7,9 +7,9 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 import androidx.annotation.StyleableRes;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: RoundedCornerViewCoordinator.kt */
 /* loaded from: classes2.dex */
@@ -44,8 +44,8 @@ public final class RoundedCornerViewCoordinator {
     }
 
     public final void draw(Canvas canvas, Function1<? super Canvas, Unit> onDraw) {
-        m.checkNotNullParameter(canvas, "canvas");
-        m.checkNotNullParameter(onDraw, "onDraw");
+        Intrinsics3.checkNotNullParameter(canvas, "canvas");
+        Intrinsics3.checkNotNullParameter(onDraw, "onDraw");
         canvas.save();
         canvas.clipPath(this.path);
         onDraw.invoke(canvas);
@@ -53,11 +53,11 @@ public final class RoundedCornerViewCoordinator {
     }
 
     public final void initialize(View view, AttributeSet attrs, @StyleableRes int[] attrsIndexArray, @StyleableRes int attrsIndexTopLeftRadius, @StyleableRes int attrsIndexTopRightRadius, @StyleableRes int attrsIndexBottomLeftRadius, @StyleableRes int attrsIndexBottomRightRadius) {
-        m.checkNotNullParameter(view, "view");
-        m.checkNotNullParameter(attrsIndexArray, "attrsIndexArray");
+        Intrinsics3.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(attrsIndexArray, "attrsIndexArray");
         view.setWillNotDraw(false);
         TypedArray typedArrayObtainStyledAttributes = view.getContext().obtainStyledAttributes(attrs, attrsIndexArray);
-        m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "view.context.obtainStyle…s(attrs, attrsIndexArray)");
+        Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "view.context.obtainStyle…s(attrs, attrsIndexArray)");
         try {
             this.topLeftRadius = typedArrayObtainStyledAttributes.getDimension(attrsIndexTopLeftRadius, 0.0f);
             this.topRightRadius = typedArrayObtainStyledAttributes.getDimension(attrsIndexTopRightRadius, 0.0f);
@@ -89,8 +89,8 @@ public final class RoundedCornerViewCoordinator {
     }
 
     public final void updateRadius(View view, float radius, Corner corner) {
-        m.checkNotNullParameter(view, "view");
-        m.checkNotNullParameter(corner, "corner");
+        Intrinsics3.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(corner, "corner");
         int iOrdinal = corner.ordinal();
         if (iOrdinal == 0) {
             this.topLeftRadius = radius;

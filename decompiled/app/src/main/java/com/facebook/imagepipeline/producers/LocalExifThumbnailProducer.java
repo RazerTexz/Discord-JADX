@@ -9,16 +9,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.util.Pair;
 import androidx.core.util.Pools;
-import b.f.d.d.f;
-import b.f.d.g.g;
-import b.f.d.g.h;
-import b.f.j.j.e;
-import b.f.j.p.e1;
-import b.f.j.p.k1;
-import b.f.j.p.l;
-import b.f.j.p.x0;
-import b.f.j.p.z0;
-import b.f.m.d;
 import com.facebook.common.memory.PooledByteBuffer;
 import com.facebook.common.references.CloseableReference;
 import com.facebook.imagepipeline.request.ImageRequest;
@@ -29,62 +19,89 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.Executor;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p115d.p119d.ImmutableMap;
+import p007b.p109f.p115d.p120e.FLog;
+import p007b.p109f.p115d.p122g.PooledByteBufferFactory;
+import p007b.p109f.p115d.p122g.PooledByteBufferInputStream;
+import p007b.p109f.p115d.p127l.UriUtil;
+import p007b.p109f.p160i.DefaultImageFormats;
+import p007b.p109f.p161j.p169d.ResizeOptions;
+import p007b.p109f.p161j.p175j.EncodedImage2;
+import p007b.p109f.p161j.p181p.BaseProducerContextCallbacks;
+import p007b.p109f.p161j.p181p.Consumer2;
+import p007b.p109f.p161j.p181p.ProducerContext;
+import p007b.p109f.p161j.p181p.ProducerListener2;
+import p007b.p109f.p161j.p181p.StatefulProducerRunnable;
+import p007b.p109f.p161j.p181p.ThumbnailProducer;
+import p007b.p109f.p186k.BitmapUtil;
+import p007b.p109f.p190m.DoNotOptimize;
 
 /* loaded from: classes3.dex */
-public class LocalExifThumbnailProducer implements k1<e> {
-    public final Executor a;
+public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImage2> {
 
-    /* renamed from: b, reason: collision with root package name */
-    public final g f2901b;
-    public final ContentResolver c;
+    /* renamed from: a */
+    public final Executor f19577a;
 
-    @d
+    /* renamed from: b */
+    public final PooledByteBufferFactory f19578b;
+
+    /* renamed from: c */
+    public final ContentResolver f19579c;
+
+    @DoNotOptimize
     public class Api24Utils {
     }
 
-    public class a extends e1<e> {
-        public final /* synthetic */ ImageRequest o;
+    /* renamed from: com.facebook.imagepipeline.producers.LocalExifThumbnailProducer$a */
+    public class C10663a extends StatefulProducerRunnable<EncodedImage2> {
+
+        /* renamed from: o */
+        public final /* synthetic */ ImageRequest f19580o;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public a(l lVar, z0 z0Var, x0 x0Var, String str, ImageRequest imageRequest) {
-            super(lVar, z0Var, x0Var, str);
-            this.o = imageRequest;
+        public C10663a(Consumer2 consumer2, ProducerListener2 producerListener2, ProducerContext producerContext, String str, ImageRequest imageRequest) {
+            super(consumer2, producerListener2, producerContext, str);
+            this.f19580o = imageRequest;
         }
 
-        @Override // b.f.j.p.e1
-        public void b(e eVar) {
-            e eVar2 = eVar;
-            if (eVar2 != null) {
-                eVar2.close();
+        @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
+        /* renamed from: b */
+        public void mo1465b(EncodedImage2 encodedImage2) {
+            EncodedImage2 encodedImage22 = encodedImage2;
+            if (encodedImage22 != null) {
+                encodedImage22.close();
             }
         }
 
-        @Override // b.f.j.p.e1
-        public Map c(e eVar) {
-            return f.of("createdThumbnail", Boolean.toString(eVar != null));
+        @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
+        /* renamed from: c */
+        public Map mo1466c(EncodedImage2 encodedImage2) {
+            return ImmutableMap.m967of("createdThumbnail", Boolean.toString(encodedImage2 != null));
         }
 
         /* JADX WARN: Removed duplicated region for block: B:15:0x0031  */
         /* JADX WARN: Removed duplicated region for block: B:52:0x009b  */
-        @Override // b.f.j.p.e1
+        @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
+        /* renamed from: d */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public e d() throws Exception {
+        public EncodedImage2 mo1467d() throws Exception {
             String path;
             ExifInterface exifInterface;
             AssetFileDescriptor assetFileDescriptorOpenAssetFileDescriptor;
             int i;
             int columnIndex;
-            Uri uri = this.o.c;
+            Uri uri = this.f19580o.f19585c;
             LocalExifThumbnailProducer localExifThumbnailProducer = LocalExifThumbnailProducer.this;
-            ContentResolver contentResolver = localExifThumbnailProducer.c;
-            e eVar = null;
+            ContentResolver contentResolver = localExifThumbnailProducer.f19579c;
+            EncodedImage2 encodedImage2 = null;
             Cursor cursor = null;
             pair = null;
             Pair pair = null;
-            eVar = null;
-            if (b.f.d.l.b.c(uri)) {
+            encodedImage2 = null;
+            if (UriUtil.m1007c(uri)) {
                 try {
                     Cursor cursorQuery = contentResolver.query(uri, null, null, null, null);
                     if (cursorQuery != null) {
@@ -106,7 +123,7 @@ public class LocalExifThumbnailProducer implements k1<e> {
                     th = th2;
                 }
             } else {
-                path = b.f.d.l.b.d(uri) ? uri.getPath() : null;
+                path = UriUtil.m1008d(uri) ? uri.getPath() : null;
             }
             if (path == null) {
                 exifInterface = null;
@@ -119,13 +136,13 @@ public class LocalExifThumbnailProducer implements k1<e> {
                     }
                 } catch (IOException unused) {
                 } catch (StackOverflowError unused2) {
-                    b.f.d.e.a.a(LocalExifThumbnailProducer.class, "StackOverflowError in ExifInterface constructor");
+                    FLog.m973a(LocalExifThumbnailProducer.class, "StackOverflowError in ExifInterface constructor");
                 }
                 if (z2) {
                     exifInterface = new ExifInterface(path);
                 } else {
-                    ContentResolver contentResolver2 = localExifThumbnailProducer.c;
-                    if (b.f.d.l.b.c(uri)) {
+                    ContentResolver contentResolver2 = localExifThumbnailProducer.f19579c;
+                    if (UriUtil.m1007c(uri)) {
                         try {
                             assetFileDescriptorOpenAssetFileDescriptor = contentResolver2.openAssetFileDescriptor(uri, "r");
                         } catch (FileNotFoundException unused3) {
@@ -146,11 +163,11 @@ public class LocalExifThumbnailProducer implements k1<e> {
             if (exifInterface != null && exifInterface.hasThumbnail()) {
                 byte[] thumbnail = exifInterface.getThumbnail();
                 Objects.requireNonNull(thumbnail);
-                PooledByteBuffer pooledByteBufferB = LocalExifThumbnailProducer.this.f2901b.b(thumbnail);
+                PooledByteBuffer pooledByteBufferMo994b = LocalExifThumbnailProducer.this.f19578b.mo994b(thumbnail);
                 Objects.requireNonNull(LocalExifThumbnailProducer.this);
-                h hVar = new h(pooledByteBufferB);
-                Pools.SynchronizedPool<ByteBuffer> synchronizedPool = b.f.k.a.a;
-                Pools.SynchronizedPool<ByteBuffer> synchronizedPool2 = b.f.k.a.a;
+                PooledByteBufferInputStream pooledByteBufferInputStream = new PooledByteBufferInputStream(pooledByteBufferMo994b);
+                Pools.SynchronizedPool<ByteBuffer> synchronizedPool = BitmapUtil.f4275a;
+                Pools.SynchronizedPool<ByteBuffer> synchronizedPool2 = BitmapUtil.f4275a;
                 ByteBuffer byteBufferAcquire = synchronizedPool2.acquire();
                 if (byteBufferAcquire == null) {
                     byteBufferAcquire = ByteBuffer.allocate(16384);
@@ -159,68 +176,74 @@ public class LocalExifThumbnailProducer implements k1<e> {
                 options.inJustDecodeBounds = true;
                 try {
                     options.inTempStorage = byteBufferAcquire.array();
-                    BitmapFactory.decodeStream(hVar, null, options);
+                    BitmapFactory.decodeStream(pooledByteBufferInputStream, null, options);
                     if (options.outWidth != -1 && options.outHeight != -1) {
                         pair = new Pair(Integer.valueOf(options.outWidth), Integer.valueOf(options.outHeight));
                     }
                     synchronizedPool2.release(byteBufferAcquire);
                     String attribute = exifInterface.getAttribute(androidx.exifinterface.media.ExifInterface.TAG_ORIENTATION);
                     Objects.requireNonNull(attribute);
-                    int iS0 = b.c.a.a0.d.s0(Integer.parseInt(attribute));
+                    int iM568s0 = AnimatableValueParser.m568s0(Integer.parseInt(attribute));
                     int iIntValue = pair != null ? ((Integer) pair.first).intValue() : -1;
                     int iIntValue2 = pair != null ? ((Integer) pair.second).intValue() : -1;
-                    CloseableReference closeableReferenceA = CloseableReference.A(pooledByteBufferB);
+                    CloseableReference closeableReferenceM8632A = CloseableReference.m8632A(pooledByteBufferMo994b);
                     try {
-                        eVar = new e(closeableReferenceA);
-                        eVar.l = b.f.i.b.a;
-                        eVar.m = iS0;
-                        eVar.o = iIntValue;
-                        eVar.p = iIntValue2;
+                        encodedImage2 = new EncodedImage2(closeableReferenceM8632A);
+                        encodedImage2.f3893l = DefaultImageFormats.f3585a;
+                        encodedImage2.f3894m = iM568s0;
+                        encodedImage2.f3896o = iIntValue;
+                        encodedImage2.f3897p = iIntValue2;
                     } finally {
-                        if (closeableReferenceA != null) {
-                            closeableReferenceA.close();
+                        if (closeableReferenceM8632A != null) {
+                            closeableReferenceM8632A.close();
                         }
                     }
                 } catch (Throwable th3) {
-                    b.f.k.a.a.release(byteBufferAcquire);
+                    BitmapUtil.f4275a.release(byteBufferAcquire);
                     throw th3;
                 }
             }
-            return eVar;
+            return encodedImage2;
         }
     }
 
-    public class b extends b.f.j.p.e {
-        public final /* synthetic */ e1 a;
+    /* renamed from: com.facebook.imagepipeline.producers.LocalExifThumbnailProducer$b */
+    public class C10664b extends BaseProducerContextCallbacks {
 
-        public b(LocalExifThumbnailProducer localExifThumbnailProducer, e1 e1Var) {
-            this.a = e1Var;
+        /* renamed from: a */
+        public final /* synthetic */ StatefulProducerRunnable f19582a;
+
+        public C10664b(LocalExifThumbnailProducer localExifThumbnailProducer, StatefulProducerRunnable statefulProducerRunnable) {
+            this.f19582a = statefulProducerRunnable;
         }
 
-        @Override // b.f.j.p.y0
-        public void a() {
-            this.a.a();
+        @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
+        /* renamed from: a */
+        public void mo1438a() {
+            this.f19582a.m1464a();
         }
     }
 
-    public LocalExifThumbnailProducer(Executor executor, g gVar, ContentResolver contentResolver) {
-        this.a = executor;
-        this.f2901b = gVar;
-        this.c = contentResolver;
+    public LocalExifThumbnailProducer(Executor executor, PooledByteBufferFactory pooledByteBufferFactory, ContentResolver contentResolver) {
+        this.f19577a = executor;
+        this.f19578b = pooledByteBufferFactory;
+        this.f19579c = contentResolver;
     }
 
-    @Override // b.f.j.p.k1
-    public boolean a(b.f.j.d.e eVar) {
-        return b.c.a.a0.d.S0(512, 512, eVar);
+    @Override // p007b.p109f.p161j.p181p.ThumbnailProducer
+    /* renamed from: a */
+    public boolean mo1474a(ResizeOptions resizeOptions) {
+        return AnimatableValueParser.m472S0(512, 512, resizeOptions);
     }
 
-    @Override // b.f.j.p.w0
-    public void b(l<e> lVar, x0 x0Var) {
-        z0 z0VarO = x0Var.o();
-        ImageRequest imageRequestE = x0Var.e();
-        x0Var.i("local", "exif");
-        a aVar = new a(lVar, z0VarO, x0Var, "LocalExifThumbnailProducer", imageRequestE);
-        x0Var.f(new b(this, aVar));
-        this.a.execute(aVar);
+    @Override // p007b.p109f.p161j.p181p.Producer2
+    /* renamed from: b */
+    public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
+        ProducerListener2 producerListener2Mo1457o = producerContext.mo1457o();
+        ImageRequest imageRequestMo1447e = producerContext.mo1447e();
+        producerContext.mo1451i("local", "exif");
+        C10663a c10663a = new C10663a(consumer2, producerListener2Mo1457o, producerContext, "LocalExifThumbnailProducer", imageRequestMo1447e);
+        producerContext.mo1448f(new C10664b(this, c10663a));
+        this.f19577a.execute(c10663a);
     }
 }

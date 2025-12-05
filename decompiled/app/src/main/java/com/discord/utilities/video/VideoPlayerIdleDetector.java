@@ -1,18 +1,19 @@
 package com.discord.utilities.video;
 
 import android.content.Context;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.j.b.a;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import java.util.concurrent.TimeUnit;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.Scheduler;
-import rx.Subscription;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p638j.p640b.AndroidSchedulers;
+import p637j0.p653p.Schedulers2;
+import p658rx.Observable;
+import p658rx.Scheduler;
+import p658rx.Subscription;
 
 /* compiled from: VideoPlayerIdleDetector.kt */
 /* loaded from: classes2.dex */
@@ -25,16 +26,16 @@ public final class VideoPlayerIdleDetector {
     private final Function1<Boolean, Unit> onIdleStateChanged;
 
     /* compiled from: VideoPlayerIdleDetector.kt */
-    /* renamed from: com.discord.utilities.video.VideoPlayerIdleDetector$beginIdleDetectionTimer$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Long, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.utilities.video.VideoPlayerIdleDetector$beginIdleDetectionTimer$1 */
+    public static final class C69871 extends Lambda implements Function1<Long, Unit> {
+        public C69871() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke2(l);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -44,30 +45,30 @@ public final class VideoPlayerIdleDetector {
     }
 
     /* compiled from: VideoPlayerIdleDetector.kt */
-    /* renamed from: com.discord.utilities.video.VideoPlayerIdleDetector$beginIdleDetectionTimer$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Subscription, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.utilities.video.VideoPlayerIdleDetector$beginIdleDetectionTimer$2 */
+    public static final class C69882 extends Lambda implements Function1<Subscription, Unit> {
+        public C69882() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Subscription subscription) {
             invoke2(subscription);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            m.checkNotNullParameter(subscription, "it");
+            Intrinsics3.checkNotNullParameter(subscription, "it");
             VideoPlayerIdleDetector.access$setIdleDetectionSubscription$p(VideoPlayerIdleDetector.this, subscription);
         }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public VideoPlayerIdleDetector(long j, Scheduler scheduler, Scheduler scheduler2, Function1<? super Boolean, Unit> function1) {
-        m.checkNotNullParameter(scheduler, "idleDetectionScheduler");
-        m.checkNotNullParameter(scheduler2, "backgroundThreadScheduler");
-        m.checkNotNullParameter(function1, "onIdleStateChanged");
+        Intrinsics3.checkNotNullParameter(scheduler, "idleDetectionScheduler");
+        Intrinsics3.checkNotNullParameter(scheduler2, "backgroundThreadScheduler");
+        Intrinsics3.checkNotNullParameter(function1, "onIdleStateChanged");
         this.idleDetectionMs = j;
         this.idleDetectionScheduler = scheduler;
         this.backgroundThreadScheduler = scheduler2;
@@ -88,9 +89,9 @@ public final class VideoPlayerIdleDetector {
 
     private final void beginIdleDetectionTimer() {
         cancelIdleDetectionTimer();
-        Observable<Long> observableJ = Observable.e0(this.idleDetectionMs, TimeUnit.MILLISECONDS, this.backgroundThreadScheduler).J(this.idleDetectionScheduler);
-        m.checkNotNullExpressionValue(observableJ, "Observable\n        .time…n(idleDetectionScheduler)");
-        ObservableExtensionsKt.appSubscribe$default(observableJ, VideoPlayerIdleDetector.class, (Context) null, new AnonymousClass2(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 58, (Object) null);
+        Observable<Long> observableM11084J = Observable.m11070e0(this.idleDetectionMs, TimeUnit.MILLISECONDS, this.backgroundThreadScheduler).m11084J(this.idleDetectionScheduler);
+        Intrinsics3.checkNotNullExpressionValue(observableM11084J, "Observable\n        .time…n(idleDetectionScheduler)");
+        ObservableExtensionsKt.appSubscribe$default(observableM11084J, VideoPlayerIdleDetector.class, (Context) null, new C69882(), (Function1) null, (Function0) null, (Function0) null, new C69871(), 58, (Object) null);
     }
 
     private final void cancelIdleDetectionTimer() {
@@ -158,13 +159,13 @@ public final class VideoPlayerIdleDetector {
     public /* synthetic */ VideoPlayerIdleDetector(long j, Scheduler scheduler, Scheduler scheduler2, Function1 function1, int i, DefaultConstructorMarker defaultConstructorMarker) {
         long j2 = (i & 1) != 0 ? 3000L : j;
         if ((i & 2) != 0) {
-            scheduler = a.a();
-            m.checkNotNullExpressionValue(scheduler, "AndroidSchedulers.mainThread()");
+            scheduler = AndroidSchedulers.m10738a();
+            Intrinsics3.checkNotNullExpressionValue(scheduler, "AndroidSchedulers.mainThread()");
         }
         Scheduler scheduler3 = scheduler;
         if ((i & 4) != 0) {
-            scheduler2 = j0.p.a.a();
-            m.checkNotNullExpressionValue(scheduler2, "Schedulers.computation()");
+            scheduler2 = Schedulers2.m10873a();
+            Intrinsics3.checkNotNullExpressionValue(scheduler2, "Schedulers.computation()");
         }
         this(j2, scheduler3, scheduler2, function1);
     }

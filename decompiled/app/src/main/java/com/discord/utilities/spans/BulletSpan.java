@@ -9,8 +9,8 @@ import android.text.Spanned;
 import android.text.style.LeadingMarginSpan;
 import androidx.core.app.NotificationCompat;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: BulletSpan.kt */
 /* loaded from: classes2.dex */
@@ -33,10 +33,10 @@ public final class BulletSpan implements LeadingMarginSpan {
     @Override // android.text.style.LeadingMarginSpan
     @SuppressLint({"NewApi"})
     public void drawLeadingMargin(Canvas c, Paint p, int x2, int dir, int top, int baseline, int bottom, CharSequence text, int start, int end, boolean first, Layout l) {
-        m.checkNotNullParameter(c, "c");
-        m.checkNotNullParameter(p, "p");
-        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
-        m.checkNotNullParameter(l, "l");
+        Intrinsics3.checkNotNullParameter(c, "c");
+        Intrinsics3.checkNotNullParameter(p, "p");
+        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        Intrinsics3.checkNotNullParameter(l, "l");
         if (((Spanned) text).getSpanStart(this) == start) {
             Paint.Style style = p.getStyle();
             int color = 0;
@@ -53,13 +53,13 @@ public final class BulletSpan implements LeadingMarginSpan {
                 if (sBulletPath == null) {
                     Path path = new Path();
                     sBulletPath = path;
-                    m.checkNotNull(path);
+                    Intrinsics3.checkNotNull(path);
                     path.addCircle(0.0f, 0.0f, this.mBulletRadius * 1.2f, Path.Direction.CW);
                 }
                 c.save();
                 c.translate((dir * 1.2f * this.mBulletRadius) + x2, (top + bottom) / 2.0f);
                 Path path2 = sBulletPath;
-                m.checkNotNull(path2);
+                Intrinsics3.checkNotNull(path2);
                 c.drawPath(path2, p);
                 c.restore();
             } else {
@@ -78,7 +78,7 @@ public final class BulletSpan implements LeadingMarginSpan {
     }
 
     public BulletSpan(int i, int i2, float f, Paint.Style style) {
-        m.checkNotNullParameter(style, "style");
+        Intrinsics3.checkNotNullParameter(style, "style");
         this.mGapWidth = i;
         this.mBulletRadius = i2;
         this.mWantColor = false;
@@ -92,7 +92,7 @@ public final class BulletSpan implements LeadingMarginSpan {
     }
 
     public BulletSpan(int i, int i2, int i3, float f, Paint.Style style) {
-        m.checkNotNullParameter(style, "style");
+        Intrinsics3.checkNotNullParameter(style, "style");
         this.mGapWidth = i;
         this.mBulletRadius = i3;
         this.mWantColor = true;

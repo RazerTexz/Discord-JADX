@@ -1,8 +1,8 @@
 package com.discord.api.user;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Phone.kt */
 /* loaded from: classes.dex */
@@ -24,7 +24,7 @@ public abstract class Phone {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public PhoneNumber(String str) {
             super(null);
-            m.checkNotNullParameter(str, "number");
+            Intrinsics3.checkNotNullParameter(str, "number");
             this.number = str;
         }
 
@@ -35,7 +35,7 @@ public abstract class Phone {
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof PhoneNumber) && m.areEqual(this.number, ((PhoneNumber) other).number);
+                return (other instanceof PhoneNumber) && Intrinsics3.areEqual(this.number, ((PhoneNumber) other).number);
             }
             return true;
         }
@@ -49,7 +49,7 @@ public abstract class Phone {
         }
 
         public String toString() {
-            return a.J(a.U("PhoneNumber(number="), this.number, ")");
+            return outline.m822J(outline.m833U("PhoneNumber(number="), this.number, ")");
         }
     }
 

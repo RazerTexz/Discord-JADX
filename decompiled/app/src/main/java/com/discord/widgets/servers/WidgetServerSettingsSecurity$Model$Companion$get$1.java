@@ -4,14 +4,14 @@ import androidx.core.app.NotificationCompat;
 import com.discord.models.guild.Guild;
 import com.discord.models.user.MeUser;
 import com.discord.widgets.servers.WidgetServerSettingsSecurity;
-import rx.functions.Func2;
+import p658rx.functions.Func2;
 
 /* compiled from: WidgetServerSettingsSecurity.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsSecurity$Model$Companion$get$1<T1, T2, R> implements Func2<MeUser, Guild, WidgetServerSettingsSecurity.Model> {
     public static final WidgetServerSettingsSecurity$Model$Companion$get$1 INSTANCE = new WidgetServerSettingsSecurity$Model$Companion$get$1();
 
-    @Override // rx.functions.Func2
+    @Override // p658rx.functions.Func2
     public /* bridge */ /* synthetic */ WidgetServerSettingsSecurity.Model call(MeUser meUser, Guild guild) {
         return call2(meUser, guild);
     }

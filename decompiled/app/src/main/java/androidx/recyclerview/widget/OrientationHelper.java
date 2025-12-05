@@ -14,9 +14,9 @@ public abstract class OrientationHelper {
     public final RecyclerView.LayoutManager mLayoutManager;
     public final Rect mTmpRect;
 
-    /* renamed from: androidx.recyclerview.widget.OrientationHelper$1, reason: invalid class name */
-    public class AnonymousClass1 extends OrientationHelper {
-        public AnonymousClass1(RecyclerView.LayoutManager layoutManager) {
+    /* renamed from: androidx.recyclerview.widget.OrientationHelper$1 */
+    public class C05631 extends OrientationHelper {
+        public C05631(RecyclerView.LayoutManager layoutManager) {
             super(layoutManager, null);
         }
 
@@ -100,9 +100,9 @@ public abstract class OrientationHelper {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.OrientationHelper$2, reason: invalid class name */
-    public class AnonymousClass2 extends OrientationHelper {
-        public AnonymousClass2(RecyclerView.LayoutManager layoutManager) {
+    /* renamed from: androidx.recyclerview.widget.OrientationHelper$2 */
+    public class C05642 extends OrientationHelper {
+        public C05642(RecyclerView.LayoutManager layoutManager) {
             super(layoutManager, null);
         }
 
@@ -186,12 +186,12 @@ public abstract class OrientationHelper {
         }
     }
 
-    public /* synthetic */ OrientationHelper(RecyclerView.LayoutManager layoutManager, AnonymousClass1 anonymousClass1) {
+    public /* synthetic */ OrientationHelper(RecyclerView.LayoutManager layoutManager, C05631 c05631) {
         this(layoutManager);
     }
 
     public static OrientationHelper createHorizontalHelper(RecyclerView.LayoutManager layoutManager) {
-        return new AnonymousClass1(layoutManager);
+        return new C05631(layoutManager);
     }
 
     public static OrientationHelper createOrientationHelper(RecyclerView.LayoutManager layoutManager, int i) {
@@ -205,7 +205,7 @@ public abstract class OrientationHelper {
     }
 
     public static OrientationHelper createVerticalHelper(RecyclerView.LayoutManager layoutManager) {
-        return new AnonymousClass2(layoutManager);
+        return new C05642(layoutManager);
     }
 
     public abstract int getDecoratedEnd(View view);

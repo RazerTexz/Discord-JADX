@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPaymentException.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPaymentException implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPaymentException implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence errorMessage = null;
     private final Long requestStatus = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackPaymentException implements AnalyticsSchema, 
             return false;
         }
         TrackPaymentException trackPaymentException = (TrackPaymentException) other;
-        return m.areEqual(this.errorMessage, trackPaymentException.errorMessage) && m.areEqual(this.requestStatus, trackPaymentException.requestStatus);
+        return Intrinsics3.areEqual(this.errorMessage, trackPaymentException.errorMessage) && Intrinsics3.areEqual(this.requestStatus, trackPaymentException.requestStatus);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackPaymentException implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPaymentException(errorMessage=");
-        sbU.append(this.errorMessage);
-        sbU.append(", requestStatus=");
-        return a.G(sbU, this.requestStatus, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPaymentException(errorMessage=");
+        sbM833U.append(this.errorMessage);
+        sbM833U.append(", requestStatus=");
+        return outline.m819G(sbM833U, this.requestStatus, ")");
     }
 }

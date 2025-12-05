@@ -25,16 +25,16 @@ public class Slide extends Visibility {
     private int mSlideEdge;
     private static final TimeInterpolator sDecelerate = new DecelerateInterpolator();
     private static final TimeInterpolator sAccelerate = new AccelerateInterpolator();
-    private static final CalculateSlide sCalculateLeft = new AnonymousClass1();
-    private static final CalculateSlide sCalculateStart = new AnonymousClass2();
-    private static final CalculateSlide sCalculateTop = new AnonymousClass3();
-    private static final CalculateSlide sCalculateRight = new AnonymousClass4();
-    private static final CalculateSlide sCalculateEnd = new AnonymousClass5();
-    private static final CalculateSlide sCalculateBottom = new AnonymousClass6();
+    private static final CalculateSlide sCalculateLeft = new C06591();
+    private static final CalculateSlide sCalculateStart = new C06602();
+    private static final CalculateSlide sCalculateTop = new C06613();
+    private static final CalculateSlide sCalculateRight = new C06624();
+    private static final CalculateSlide sCalculateEnd = new C06635();
+    private static final CalculateSlide sCalculateBottom = new C06646();
 
-    /* renamed from: androidx.transition.Slide$1, reason: invalid class name */
-    public static class AnonymousClass1 extends CalculateSlideHorizontal {
-        public AnonymousClass1() {
+    /* renamed from: androidx.transition.Slide$1 */
+    public static class C06591 extends CalculateSlideHorizontal {
+        public C06591() {
             super(null);
         }
 
@@ -44,9 +44,9 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$2, reason: invalid class name */
-    public static class AnonymousClass2 extends CalculateSlideHorizontal {
-        public AnonymousClass2() {
+    /* renamed from: androidx.transition.Slide$2 */
+    public static class C06602 extends CalculateSlideHorizontal {
+        public C06602() {
             super(null);
         }
 
@@ -56,9 +56,9 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$3, reason: invalid class name */
-    public static class AnonymousClass3 extends CalculateSlideVertical {
-        public AnonymousClass3() {
+    /* renamed from: androidx.transition.Slide$3 */
+    public static class C06613 extends CalculateSlideVertical {
+        public C06613() {
             super(null);
         }
 
@@ -68,9 +68,9 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$4, reason: invalid class name */
-    public static class AnonymousClass4 extends CalculateSlideHorizontal {
-        public AnonymousClass4() {
+    /* renamed from: androidx.transition.Slide$4 */
+    public static class C06624 extends CalculateSlideHorizontal {
+        public C06624() {
             super(null);
         }
 
@@ -80,9 +80,9 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$5, reason: invalid class name */
-    public static class AnonymousClass5 extends CalculateSlideHorizontal {
-        public AnonymousClass5() {
+    /* renamed from: androidx.transition.Slide$5 */
+    public static class C06635 extends CalculateSlideHorizontal {
+        public C06635() {
             super(null);
         }
 
@@ -92,9 +92,9 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$6, reason: invalid class name */
-    public static class AnonymousClass6 extends CalculateSlideVertical {
-        public AnonymousClass6() {
+    /* renamed from: androidx.transition.Slide$6 */
+    public static class C06646 extends CalculateSlideVertical {
+        public C06646() {
             super(null);
         }
 
@@ -119,7 +119,7 @@ public class Slide extends Visibility {
             return view.getTranslationY();
         }
 
-        public /* synthetic */ CalculateSlideHorizontal(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ CalculateSlideHorizontal(C06591 c06591) {
             this();
         }
     }
@@ -133,7 +133,7 @@ public class Slide extends Visibility {
             return view.getTranslationX();
         }
 
-        public /* synthetic */ CalculateSlideVertical(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ CalculateSlideVertical(C06591 c06591) {
             this();
         }
     }

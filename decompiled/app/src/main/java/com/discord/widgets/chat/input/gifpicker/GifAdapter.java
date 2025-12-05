@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.MarginLayoutParamsCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppComponent;
 import com.discord.databinding.GifItemViewBinding;
 import com.discord.databinding.GifSuggestedTermViewBinding;
@@ -20,14 +20,14 @@ import com.discord.widgets.chat.input.gifpicker.GifAdapterItem;
 import com.discord.widgets.chat.input.gifpicker.GifViewHolder;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.flexbox.FlexboxLayout;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: GifAdapter.kt */
 /* loaded from: classes2.dex */
@@ -49,16 +49,16 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
         }
 
         public final int calculateColumnCount(RecyclerView recyclerView) {
-            m.checkNotNullParameter(recyclerView, "recyclerView");
+            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
             Resources resources = recyclerView.getResources();
-            m.checkNotNullExpressionValue(resources, "recyclerView.resources");
+            Intrinsics3.checkNotNullExpressionValue(resources, "recyclerView.resources");
             return Math.max(2, Math.max(resources.getDisplayMetrics().widthPixels, 1) / DimenUtils.dpToPixels(164));
         }
 
         public final int calculateColumnWidth(RecyclerView recyclerView, int numColumns, int columnSpacePx) {
-            m.checkNotNullParameter(recyclerView, "recyclerView");
+            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
             Resources resources = recyclerView.getResources();
-            m.checkNotNullExpressionValue(resources, "resources");
+            Intrinsics3.checkNotNullExpressionValue(resources, "resources");
             int i = resources.getDisplayMetrics().widthPixels;
             ViewGroup.LayoutParams layoutParams = recyclerView.getLayoutParams();
             int marginStart = i - (layoutParams instanceof ViewGroup.MarginLayoutParams ? MarginLayoutParamsCompat.getMarginStart((ViewGroup.MarginLayoutParams) layoutParams) : 0);
@@ -84,21 +84,21 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
     }
 
     /* compiled from: GifAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.GifAdapter$setItems$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<List<? extends GifAdapterItem>, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.gifpicker.GifAdapter$setItems$1 */
+    public static final class C78651 extends Lambda implements Function1<List<? extends GifAdapterItem>, Unit> {
+        public C78651() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends GifAdapterItem> list) {
             invoke2(list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends GifAdapterItem> list) {
-            m.checkNotNullParameter(list, "items");
+            Intrinsics3.checkNotNullParameter(list, "items");
             GifAdapter.access$setItems$p(GifAdapter.this, list);
         }
     }
@@ -116,7 +116,7 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
     }
 
     public final void clearItems() {
-        setItems(n.emptyList());
+        setItems(Collections2.emptyList());
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -141,23 +141,23 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
     }
 
     public final void setItems(List<? extends GifAdapterItem> newItems) {
-        m.checkNotNullParameter(newItems, "newItems");
-        this.diffCreator.dispatchDiffUpdatesAsync(this, new AnonymousClass1(), this.items, newItems);
+        Intrinsics3.checkNotNullParameter(newItems, "newItems");
+        this.diffCreator.dispatchDiffUpdatesAsync(this, new C78651(), this.items, newItems);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public GifAdapter(AppComponent appComponent, Function1<? super GifAdapterItem.GifItem, Unit> function1, int i, Function1<? super String, Unit> function12, DiffCreator<List<GifAdapterItem>, GifViewHolder> diffCreator) {
-        m.checkNotNullParameter(appComponent, "appComponent");
-        m.checkNotNullParameter(diffCreator, "diffCreator");
+        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
+        Intrinsics3.checkNotNullParameter(diffCreator, "diffCreator");
         this.onSelectGif = function1;
         this.columnWidthPx = i;
         this.onSelectSuggestedTerm = function12;
         this.diffCreator = diffCreator;
-        this.items = n.emptyList();
+        this.items = Collections2.emptyList();
     }
 
     public void onBindViewHolder(GifViewHolder holder, int position) {
-        m.checkNotNullParameter(holder, "holder");
+        Intrinsics3.checkNotNullParameter(holder, "holder");
         GifAdapterItem gifAdapterItem = this.items.get(position);
         if (gifAdapterItem instanceof GifAdapterItem.GifItem) {
             ((GifViewHolder.Gif) holder).configure((GifAdapterItem.GifItem) gifAdapterItem, this.columnWidthPx, this.onSelectGif);
@@ -171,35 +171,35 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public GifViewHolder onCreateViewHolder(ViewGroup parent, int viewTypeInt) {
         GifViewHolder gif;
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(parent.getContext());
         int iOrdinal = GifAdapterItem.ViewType.INSTANCE.fromInt(viewTypeInt).ordinal();
         if (iOrdinal != 0) {
             if (iOrdinal != 1 && iOrdinal != 2) {
                 throw new NoWhenBranchMatchedException();
             }
-            View viewInflate = layoutInflaterFrom.inflate(R.layout.gif_suggested_term_view, parent, false);
+            View viewInflate = layoutInflaterFrom.inflate(C5419R.layout.gif_suggested_term_view, parent, false);
             LinearLayout linearLayout = (LinearLayout) viewInflate;
-            int i = R.id.gif_search_suggested_terms_flex_box;
-            FlexboxLayout flexboxLayout = (FlexboxLayout) viewInflate.findViewById(R.id.gif_search_suggested_terms_flex_box);
+            int i = C5419R.id.gif_search_suggested_terms_flex_box;
+            FlexboxLayout flexboxLayout = (FlexboxLayout) viewInflate.findViewById(C5419R.id.gif_search_suggested_terms_flex_box);
             if (flexboxLayout != null) {
-                i = R.id.gif_search_suggested_terms_icon_text;
-                TextView textView = (TextView) viewInflate.findViewById(R.id.gif_search_suggested_terms_icon_text);
+                i = C5419R.id.gif_search_suggested_terms_icon_text;
+                TextView textView = (TextView) viewInflate.findViewById(C5419R.id.gif_search_suggested_terms_icon_text);
                 if (textView != null) {
                     GifSuggestedTermViewBinding gifSuggestedTermViewBinding = new GifSuggestedTermViewBinding((LinearLayout) viewInflate, linearLayout, flexboxLayout, textView);
-                    m.checkNotNullExpressionValue(gifSuggestedTermViewBinding, "GifSuggestedTermViewBind…(inflater, parent, false)");
+                    Intrinsics3.checkNotNullExpressionValue(gifSuggestedTermViewBinding, "GifSuggestedTermViewBind…(inflater, parent, false)");
                     gif = new GifViewHolder.SuggestedTerms(gifSuggestedTermViewBinding);
                 }
             }
             throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
         }
-        View viewInflate2 = layoutInflaterFrom.inflate(R.layout.gif_item_view, parent, false);
-        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) viewInflate2.findViewById(R.id.gif_item_image);
+        View viewInflate2 = layoutInflaterFrom.inflate(C5419R.layout.gif_item_view, parent, false);
+        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) viewInflate2.findViewById(C5419R.id.gif_item_image);
         if (simpleDraweeView == null) {
-            throw new NullPointerException("Missing required view with ID: ".concat(viewInflate2.getResources().getResourceName(R.id.gif_item_image)));
+            throw new NullPointerException("Missing required view with ID: ".concat(viewInflate2.getResources().getResourceName(C5419R.id.gif_item_image)));
         }
         GifItemViewBinding gifItemViewBinding = new GifItemViewBinding((CardView) viewInflate2, simpleDraweeView);
-        m.checkNotNullExpressionValue(gifItemViewBinding, "GifItemViewBinding.infla…(inflater, parent, false)");
+        Intrinsics3.checkNotNullExpressionValue(gifItemViewBinding, "GifItemViewBinding.infla…(inflater, parent, false)");
         gif = new GifViewHolder.Gif(gifItemViewBinding);
         return gif;
     }

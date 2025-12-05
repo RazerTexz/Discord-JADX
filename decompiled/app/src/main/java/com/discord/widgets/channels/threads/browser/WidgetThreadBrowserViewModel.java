@@ -2,8 +2,6 @@ package com.discord.widgets.channels.threads.browser;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -12,19 +10,21 @@ import com.discord.stores.StoreChannels;
 import com.discord.stores.StoreGuilds;
 import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetThreadBrowserViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
+public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -35,21 +35,21 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
     private final StorePermissions storePermissions;
 
     /* compiled from: WidgetThreadBrowserViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserViewModel$1 */
+    public static final class C76691 extends Lambda implements Function1<StoreState, Unit> {
+        public C76691() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetThreadBrowserViewModel.access$handleStoreState(WidgetThreadBrowserViewModel.this, storeState);
         }
     }
@@ -64,9 +64,9 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(long channelId, long guildId, StoreChannels storeChannels, StoreGuilds storeGuilds, StorePermissions storePermissions) {
-            Observable<StoreState> observableI = Observable.i(storeChannels.observeChannel(channelId), storeGuilds.observeGuild(guildId), storePermissions.observePermissionsForChannel(channelId), WidgetThreadBrowserViewModel$Companion$observeStoreState$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…issions\n        )\n      }");
-            return observableI;
+            Observable<StoreState> observableM11075i = Observable.m11075i(storeChannels.observeChannel(channelId), storeGuilds.observeGuild(guildId), storePermissions.observePermissionsForChannel(channelId), WidgetThreadBrowserViewModel2.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11075i, "Observable.combineLatest…issions\n        )\n      }");
+            return observableM11075i;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -126,7 +126,7 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.channel, storeState.channel) && m.areEqual(this.guild, storeState.guild) && m.areEqual(this.permissions, storeState.permissions);
+            return Intrinsics3.areEqual(this.channel, storeState.channel) && Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.permissions, storeState.permissions);
         }
 
         public final Channel getChannel() {
@@ -151,12 +151,12 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(channel=");
-            sbU.append(this.channel);
-            sbU.append(", guild=");
-            sbU.append(this.guild);
-            sbU.append(", permissions=");
-            return a.G(sbU, this.permissions, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", guild=");
+            sbM833U.append(this.guild);
+            sbM833U.append(", permissions=");
+            return outline.m819G(sbM833U, this.permissions, ")");
         }
     }
 
@@ -226,7 +226,7 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
                     return false;
                 }
                 Browser browser = (Browser) other;
-                return m.areEqual(this.channelName, browser.channelName) && this.canCreateThread == browser.canCreateThread && this.canViewArchivedThreads == browser.canViewArchivedThreads && this.isForumChannel == browser.isForumChannel;
+                return Intrinsics3.areEqual(this.channelName, browser.channelName) && this.canCreateThread == browser.canCreateThread && this.canViewArchivedThreads == browser.canViewArchivedThreads && this.isForumChannel == browser.isForumChannel;
             }
 
             public final boolean getCanCreateThread() {
@@ -266,14 +266,14 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Browser(channelName=");
-                sbU.append(this.channelName);
-                sbU.append(", canCreateThread=");
-                sbU.append(this.canCreateThread);
-                sbU.append(", canViewArchivedThreads=");
-                sbU.append(this.canViewArchivedThreads);
-                sbU.append(", isForumChannel=");
-                return a.O(sbU, this.isForumChannel, ")");
+                StringBuilder sbM833U = outline.m833U("Browser(channelName=");
+                sbM833U.append(this.channelName);
+                sbM833U.append(", canCreateThread=");
+                sbM833U.append(this.canCreateThread);
+                sbM833U.append(", canViewArchivedThreads=");
+                sbM833U.append(this.canViewArchivedThreads);
+                sbM833U.append(", isForumChannel=");
+                return outline.m827O(sbM833U, this.isForumChannel, ")");
             }
         }
 
@@ -284,7 +284,7 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public GoToChannel(Channel channel) {
                 super(null);
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 this.channel = channel;
             }
 
@@ -301,13 +301,13 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
             }
 
             public final GoToChannel copy(Channel channel) {
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 return new GoToChannel(channel);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof GoToChannel) && m.areEqual(this.channel, ((GoToChannel) other).channel);
+                    return (other instanceof GoToChannel) && Intrinsics3.areEqual(this.channel, ((GoToChannel) other).channel);
                 }
                 return true;
             }
@@ -325,10 +325,10 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("GoToChannel(channel=");
-                sbU.append(this.channel);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("GoToChannel(channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -358,12 +358,12 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
             return;
         }
         Channel channel = storeState.getChannel();
-        String strC = channel != null ? ChannelUtils.c(channel) : null;
+        String strM7679c = channel != null ? ChannelUtils.m7679c(channel) : null;
         ThreadUtils threadUtils = ThreadUtils.INSTANCE;
         boolean zCanCreateThread = threadUtils.canCreateThread(storeState.getPermissions(), storeState.getChannel(), null, storeState.getGuild());
         boolean zCanViewAllPublicArchivedThreads = threadUtils.canViewAllPublicArchivedThreads(storeState.getChannel(), storeState.getPermissions());
         Channel channel2 = storeState.getChannel();
-        updateViewState(new ViewState.Browser(strC, zCanCreateThread, zCanViewAllPublicArchivedThreads, channel2 != null && channel2.getType() == 15));
+        updateViewState(new ViewState.Browser(strM7679c, zCanCreateThread, zCanViewAllPublicArchivedThreads, channel2 != null && channel2.getType() == 15));
     }
 
     public final long getChannelId() {
@@ -375,22 +375,22 @@ public final class WidgetThreadBrowserViewModel extends d0<ViewState> {
     }
 
     public final void openThread(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         updateViewState(new ViewState.GoToChannel(channel));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetThreadBrowserViewModel(long j, long j2, StoreChannels storeChannels, StoreGuilds storeGuilds, StorePermissions storePermissions, Observable<StoreState> observable) {
         super(null, 1, null);
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(storeGuilds, "storeGuilds");
-        m.checkNotNullParameter(storePermissions, "storePermissions");
-        m.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
         this.guildId = j;
         this.channelId = j2;
         this.storeChannels = storeChannels;
         this.storeGuilds = storeGuilds;
         this.storePermissions = storePermissions;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetThreadBrowserViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetThreadBrowserViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C76691(), 62, (Object) null);
     }
 }

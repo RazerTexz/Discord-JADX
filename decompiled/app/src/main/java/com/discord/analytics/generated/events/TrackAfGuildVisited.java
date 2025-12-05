@@ -1,24 +1,24 @@
 package com.discord.analytics.generated.events;
 
 import com.discord.analytics.generated.traits.TrackAfCard;
-import com.discord.analytics.generated.traits.TrackAfCardReceiver;
+import com.discord.analytics.generated.traits.TrackAfCard2;
 import com.discord.analytics.generated.traits.TrackAfGame;
-import com.discord.analytics.generated.traits.TrackAfGameReceiver;
+import com.discord.analytics.generated.traits.TrackAfGame2;
 import com.discord.analytics.generated.traits.TrackAfParty;
-import com.discord.analytics.generated.traits.TrackAfPartyReceiver;
+import com.discord.analytics.generated.traits.TrackAfParty2;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackSourceMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 
 /* compiled from: TrackAfGuildVisited.kt */
 /* loaded from: classes.dex */
-public final class TrackAfGuildVisited implements AnalyticsSchema, TrackBaseReceiver, TrackAfCardReceiver, TrackAfGameReceiver, TrackAfPartyReceiver, TrackGuildReceiver, TrackChannelReceiver, TrackSourceMetadataReceiver {
+public final class TrackAfGuildVisited implements AnalyticsSchema, TrackBase2, TrackAfCard2, TrackAfGame2, TrackAfParty2, TrackGuild2, TrackChannel2, TrackSourceMetadata2 {
     private final transient String analyticsSchemaTypeName = "af_guild_visited";
     private TrackAfCard trackAfCard;
     private TrackAfGame trackAfGame;
@@ -28,14 +28,15 @@ public final class TrackAfGuildVisited implements AnalyticsSchema, TrackBaseRece
     private TrackGuild trackGuild;
     private TrackSourceMetadata trackSourceMetadata;
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 

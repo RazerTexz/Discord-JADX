@@ -36,7 +36,9 @@ import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 public class HandleLog {
     private static final IdentifierName LOG = IdentifierName.valueOf("log");
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
-    private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter;
+
+    /* renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
+    private static /* synthetic */ int[] f27472xeb5c83f5;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
         int[] iArr = $SWITCH_TABLE$lombok$core$AST$Kind;
@@ -88,8 +90,9 @@ public class HandleLog {
         return iArr2;
     }
 
-    static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter() {
-        int[] iArr = $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter;
+    /* renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
+    static /* synthetic */ int[] m10932xeb5c83f5() {
+        int[] iArr = f27472xeb5c83f5;
         if (iArr != null) {
             return iArr;
         }
@@ -110,7 +113,7 @@ public class HandleLog {
             iArr2[LogDeclaration.LogFactoryParameter.TYPE.ordinal()] = 1;
         } catch (NoSuchFieldError unused4) {
         }
-        $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter = iArr2;
+        f27472xeb5c83f5 = iArr2;
         return iArr2;
     }
 
@@ -119,7 +122,7 @@ public class HandleLog {
     }
 
     public static void processAnnotation(LoggingFramework framework, AnnotationValues<? extends Annotation> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
-        EclipseNode owner = annotationNode.up();
+        EclipseNode owner = annotationNode.m10925up();
         switch ($SWITCH_TABLE$lombok$core$AST$Kind()[owner.getKind().ordinal()]) {
             case 2:
                 IdentifierName logFieldName = (IdentifierName) annotationNode.getAst().readConfiguration(ConfigurationKeys.LOG_ANY_FIELD_NAME);
@@ -127,39 +130,32 @@ public class HandleLog {
                     logFieldName = LOG;
                 }
                 boolean useStatic = !Boolean.FALSE.equals(annotationNode.getAst().readConfiguration(ConfigurationKeys.LOG_ANY_FIELD_IS_STATIC));
-                TypeDeclaration typeDecl = null;
-                if (owner.get() instanceof TypeDeclaration) {
-                    typeDecl = (TypeDeclaration) owner.get();
-                }
+                TypeDeclaration typeDecl = owner.get() instanceof TypeDeclaration ? (TypeDeclaration) owner.get() : null;
                 int modifiers = typeDecl == null ? 0 : typeDecl.modifiers;
                 boolean notAClass = (modifiers & 8704) != 0;
                 if (typeDecl == null || notAClass) {
                     annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " is legal only on classes and enums.");
-                    break;
+                } else if (EclipseHandlerUtil.fieldExists(logFieldName.getName(), owner) != EclipseHandlerUtil.MemberExistsResult.NOT_EXISTS) {
+                    annotationNode.addWarning("Field '" + logFieldName + "' already exists.");
                 } else {
-                    if (EclipseHandlerUtil.fieldExists(logFieldName.getName(), owner) != EclipseHandlerUtil.MemberExistsResult.NOT_EXISTS) {
-                        annotationNode.addWarning("Field '" + logFieldName + "' already exists.");
-                    } else {
-                        Object valueGuess = annotation.getValueGuess(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
-                        StringLiteral stringLiteral = (Expression) annotation.getActualExpression(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
-                        if ((valueGuess instanceof String) && ((String) valueGuess).trim().isEmpty()) {
-                            stringLiteral = null;
-                        }
-                        if (framework.getDeclaration().getParametersWithTopic() == null && stringLiteral != null) {
-                            annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " does not allow a topic.");
-                            stringLiteral = null;
-                        }
-                        if (framework.getDeclaration().getParametersWithoutTopic() == null && stringLiteral == null) {
-                            annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " requires a topic.");
-                            stringLiteral = new StringLiteral(new char[0], 0, 0, 0);
-                        }
-                        ClassLiteralAccess loggingType = selfType(owner, source);
-                        FieldDeclaration fieldDeclaration = createField(framework, source, loggingType, logFieldName.getName(), useStatic, stringLiteral);
-                        fieldDeclaration.traverse(new SetGeneratedByVisitor(source), typeDecl.staticInitializerScope);
-                        EclipseHandlerUtil.injectField(owner, fieldDeclaration);
-                        owner.rebuild();
+                    Object valueGuess = annotation.getValueGuess(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
+                    StringLiteral stringLiteral = (Expression) annotation.getActualExpression(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
+                    if ((valueGuess instanceof String) && ((String) valueGuess).trim().isEmpty()) {
+                        stringLiteral = null;
                     }
-                    break;
+                    if (framework.getDeclaration().getParametersWithTopic() == null && stringLiteral != null) {
+                        annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " does not allow a topic.");
+                        stringLiteral = null;
+                    }
+                    if (framework.getDeclaration().getParametersWithoutTopic() == null && stringLiteral == null) {
+                        annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " requires a topic.");
+                        stringLiteral = new StringLiteral(new char[0], 0, 0, 0);
+                    }
+                    ClassLiteralAccess loggingType = selfType(owner, source);
+                    FieldDeclaration fieldDeclaration = createField(framework, source, loggingType, logFieldName.getName(), useStatic, stringLiteral);
+                    fieldDeclaration.traverse(new SetGeneratedByVisitor(source), typeDecl.staticInitializerScope);
+                    EclipseHandlerUtil.injectField(owner, fieldDeclaration);
+                    owner.rebuild();
                 }
                 break;
         }
@@ -207,7 +203,7 @@ public class HandleLog {
         int pE = source.sourceEnd;
         for (int i = 0; i < parameters.size(); i++) {
             LogDeclaration.LogFactoryParameter parameter = parameters.get(i);
-            switch ($SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter()[parameter.ordinal()]) {
+            switch (m10932xeb5c83f5()[parameter.ordinal()]) {
                 case 1:
                     expressions[i] = createFactoryTypeParameter(loggingType, source);
                     break;

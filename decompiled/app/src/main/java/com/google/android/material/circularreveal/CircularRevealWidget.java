@@ -15,7 +15,7 @@ public interface CircularRevealWidget extends CircularRevealHelper.Delegate {
 
     public static class CircularRevealEvaluator implements TypeEvaluator<RevealInfo> {
         public static final TypeEvaluator<RevealInfo> CIRCULAR_REVEAL = new CircularRevealEvaluator();
-        private final RevealInfo revealInfo = new RevealInfo((a) null);
+        private final RevealInfo revealInfo = new RevealInfo((C10877a) null);
 
         @Override // android.animation.TypeEvaluator
         @NonNull
@@ -97,7 +97,7 @@ public interface CircularRevealWidget extends CircularRevealHelper.Delegate {
         public float centerY;
         public float radius;
 
-        public /* synthetic */ RevealInfo(a aVar) {
+        public /* synthetic */ RevealInfo(C10877a c10877a) {
             this();
         }
 

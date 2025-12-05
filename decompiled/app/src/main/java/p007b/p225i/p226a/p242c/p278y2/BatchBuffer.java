@@ -1,0 +1,80 @@
+package p007b.p225i.p226a.p242c.p278y2;
+
+import com.google.android.exoplayer2.decoder.DecoderInputBuffer;
+import java.nio.ByteBuffer;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+
+/* compiled from: BatchBuffer.java */
+/* renamed from: b.i.a.c.y2.p, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class BatchBuffer extends DecoderInputBuffer {
+
+    /* renamed from: r */
+    public long f9096r;
+
+    /* renamed from: s */
+    public int f9097s;
+
+    /* renamed from: t */
+    public int f9098t;
+
+    public BatchBuffer() {
+        super(2);
+        this.f9098t = 32;
+    }
+
+    @Override // com.google.android.exoplayer2.decoder.DecoderInputBuffer
+    /* renamed from: p */
+    public void mo3856p() {
+        super.mo3856p();
+        this.f9097s = 0;
+    }
+
+    /* renamed from: u */
+    public boolean m3857u(DecoderInputBuffer decoderInputBuffer) {
+        ByteBuffer byteBuffer;
+        boolean z2;
+        AnimatableValueParser.m531j(!decoderInputBuffer.m8814t());
+        AnimatableValueParser.m531j(!decoderInputBuffer.m3553l());
+        AnimatableValueParser.m531j(!decoderInputBuffer.m3555n());
+        if (m3858v()) {
+            if (this.f9097s < this.f9098t && decoderInputBuffer.m3554m() == m3554m()) {
+                ByteBuffer byteBuffer2 = decoderInputBuffer.f19778l;
+                if (byteBuffer2 != null && (byteBuffer = this.f19778l) != null) {
+                    if (byteBuffer2.remaining() + byteBuffer.position() > 3072000) {
+                    }
+                }
+                z2 = true;
+            }
+            z2 = false;
+        } else {
+            z2 = true;
+        }
+        if (!z2) {
+            return false;
+        }
+        int i = this.f9097s;
+        this.f9097s = i + 1;
+        if (i == 0) {
+            this.f19780n = decoderInputBuffer.f19780n;
+            if (decoderInputBuffer.m3556o()) {
+                this.f7901j = 1;
+            }
+        }
+        if (decoderInputBuffer.m3554m()) {
+            this.f7901j = Integer.MIN_VALUE;
+        }
+        ByteBuffer byteBuffer3 = decoderInputBuffer.f19778l;
+        if (byteBuffer3 != null) {
+            m8812r(byteBuffer3.remaining());
+            this.f19778l.put(byteBuffer3);
+        }
+        this.f9096r = decoderInputBuffer.f19780n;
+        return true;
+    }
+
+    /* renamed from: v */
+    public boolean m3858v() {
+        return this.f9097s > 0;
+    }
+}

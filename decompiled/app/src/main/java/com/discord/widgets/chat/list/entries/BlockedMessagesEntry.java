@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
-import b.d.b.a.a;
 import com.discord.models.message.Message;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: BlockedMessagesEntry.kt */
 /* loaded from: classes2.dex */
@@ -14,7 +14,7 @@ public final /* data */ class BlockedMessagesEntry extends ChatListEntry {
     private final int type;
 
     public BlockedMessagesEntry(Message message, int i, boolean z2) {
-        m.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(message, "message");
         this.message = message;
         this.blockedCount = i;
         this.isExpandedBlock = z2;
@@ -51,7 +51,7 @@ public final /* data */ class BlockedMessagesEntry extends ChatListEntry {
     }
 
     public final BlockedMessagesEntry copy(Message message, int blockedCount, boolean isExpandedBlock) {
-        m.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(message, "message");
         return new BlockedMessagesEntry(message, blockedCount, isExpandedBlock);
     }
 
@@ -63,7 +63,7 @@ public final /* data */ class BlockedMessagesEntry extends ChatListEntry {
             return false;
         }
         BlockedMessagesEntry blockedMessagesEntry = (BlockedMessagesEntry) other;
-        return m.areEqual(this.message, blockedMessagesEntry.message) && this.blockedCount == blockedMessagesEntry.blockedCount && this.isExpandedBlock == blockedMessagesEntry.isExpandedBlock;
+        return Intrinsics3.areEqual(this.message, blockedMessagesEntry.message) && this.blockedCount == blockedMessagesEntry.blockedCount && this.isExpandedBlock == blockedMessagesEntry.isExpandedBlock;
     }
 
     public final int getBlockedCount() {
@@ -102,11 +102,11 @@ public final /* data */ class BlockedMessagesEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("BlockedMessagesEntry(message=");
-        sbU.append(this.message);
-        sbU.append(", blockedCount=");
-        sbU.append(this.blockedCount);
-        sbU.append(", isExpandedBlock=");
-        return a.O(sbU, this.isExpandedBlock, ")");
+        StringBuilder sbM833U = outline.m833U("BlockedMessagesEntry(message=");
+        sbM833U.append(this.message);
+        sbM833U.append(", blockedCount=");
+        sbM833U.append(this.blockedCount);
+        sbM833U.append(", isExpandedBlock=");
+        return outline.m827O(sbM833U, this.isExpandedBlock, ")");
     }
 }

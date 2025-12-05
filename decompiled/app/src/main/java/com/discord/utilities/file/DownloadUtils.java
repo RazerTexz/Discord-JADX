@@ -4,10 +4,8 @@ import android.content.Context;
 import androidx.annotation.RequiresPermission;
 import androidx.core.app.NotificationCompat;
 import com.discord.utilities.auth.GoogleSmartLockManager;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,9 +14,11 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import okhttp3.ResponseBody;
-import rx.Emitter;
-import rx.Observable;
-import rx.functions.Action1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Emitter;
+import p658rx.Observable;
+import p658rx.functions.Action1;
 
 /* compiled from: DownloadUtils.kt */
 /* loaded from: classes2.dex */
@@ -35,7 +35,7 @@ public final class DownloadUtils {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Completed(File file) {
                 super(null);
-                m.checkNotNullParameter(file, "file");
+                Intrinsics3.checkNotNullParameter(file, "file");
                 this.file = file;
             }
 
@@ -51,7 +51,7 @@ public final class DownloadUtils {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Failure(Exception exc) {
                 super(null);
-                m.checkNotNullParameter(exc, "exception");
+                Intrinsics3.checkNotNullParameter(exc, "exception");
                 this.exception = exc;
             }
 
@@ -83,19 +83,19 @@ public final class DownloadUtils {
     }
 
     /* compiled from: DownloadUtils.kt */
-    /* renamed from: com.discord.utilities.file.DownloadUtils$downloadFile$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Action1<Emitter<DownloadState>> {
+    /* renamed from: com.discord.utilities.file.DownloadUtils$downloadFile$1 */
+    public static final class C67551<T> implements Action1<Emitter<DownloadState>> {
         public final /* synthetic */ File $downloadDirectory;
         public final /* synthetic */ String $fileName;
         public final /* synthetic */ String $fileUrl;
 
         /* compiled from: DownloadUtils.kt */
-        /* renamed from: com.discord.utilities.file.DownloadUtils$downloadFile$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03331 extends o implements Function1<ResponseBody, Unit> {
+        /* renamed from: com.discord.utilities.file.DownloadUtils$downloadFile$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<ResponseBody, Unit> {
             public final /* synthetic */ Emitter $emitter;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C03331(Emitter emitter) {
+            public AnonymousClass1(Emitter emitter) {
                 super(1);
                 this.$emitter = emitter;
             }
@@ -103,27 +103,27 @@ public final class DownloadUtils {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(ResponseBody responseBody) {
                 invoke2(responseBody);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ResponseBody responseBody) {
-                m.checkNotNullParameter(responseBody, "responseBody");
+                Intrinsics3.checkNotNullParameter(responseBody, "responseBody");
                 try {
                     try {
-                        AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                        File file = new File(anonymousClass1.$downloadDirectory, anonymousClass1.$fileName);
+                        C67551 c67551 = C67551.this;
+                        File file = new File(c67551.$downloadDirectory, c67551.$fileName);
                         byte[] bArr = new byte[8192];
                         FileOutputStream fileOutputStream = new FileOutputStream(file);
-                        float fA = responseBody.a();
+                        float fMo10103a = responseBody.mo10103a();
                         int i = 0;
                         while (true) {
-                            int i2 = responseBody.c().u0().read(bArr);
+                            int i2 = responseBody.mo10105c().mo10470u0().read(bArr);
                             if (i2 == -1) {
                                 break;
                             }
                             i += i2;
-                            this.$emitter.onNext(new DownloadState.InProgress(i / fA));
+                            this.$emitter.onNext(new DownloadState.InProgress(i / fMo10103a));
                             fileOutputStream.write(bArr, 0, i2);
                         }
                         this.$emitter.onNext(new DownloadState.Completed(file));
@@ -138,22 +138,22 @@ public final class DownloadUtils {
             }
         }
 
-        public AnonymousClass1(String str, File file, String str2) {
+        public C67551(String str, File file, String str2) {
             this.$fileUrl = str;
             this.$downloadDirectory = file;
             this.$fileName = str2;
         }
 
-        @Override // rx.functions.Action1
+        @Override // p658rx.functions.Action1
         public /* bridge */ /* synthetic */ void call(Emitter<DownloadState> emitter) {
             call2(emitter);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<DownloadState> emitter) {
-            m.checkNotNullParameter(emitter, "emitter");
+            Intrinsics3.checkNotNullParameter(emitter, "emitter");
             emitter.onNext(new DownloadState.InProgress(0.0f));
-            ObservableExtensionsKt.appSubscribe$default(RestAPI.INSTANCE.getApiFiles().getFile(this.$fileUrl), DownloadUtils.INSTANCE.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C03331(emitter), 62, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(RestAPI.INSTANCE.getApiFiles().getFile(this.$fileUrl), DownloadUtils.INSTANCE.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(emitter), 62, (Object) null);
         }
     }
 
@@ -162,19 +162,19 @@ public final class DownloadUtils {
 
     @RequiresPermission(conditional = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS, value = "android.permission.WRITE_EXTERNAL_STORAGE")
     public static final Observable<DownloadState> downloadFile(Context context, String fileUrl, String fileName, File downloadDirectory) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(fileUrl, "fileUrl");
-        m.checkNotNullParameter(fileName, "fileName");
-        m.checkNotNullParameter(downloadDirectory, "downloadDirectory");
-        Observable<DownloadState> observableO = Observable.o(new AnonymousClass1(fileUrl, downloadDirectory, fileName), Emitter.BackpressureMode.BUFFER);
-        m.checkNotNullExpressionValue(observableO, "Observable.create({ emit….BackpressureMode.BUFFER)");
-        return observableO;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(fileUrl, "fileUrl");
+        Intrinsics3.checkNotNullParameter(fileName, "fileName");
+        Intrinsics3.checkNotNullParameter(downloadDirectory, "downloadDirectory");
+        Observable<DownloadState> observableM11080o = Observable.m11080o(new C67551(fileUrl, downloadDirectory, fileName), Emitter.BackpressureMode.BUFFER);
+        Intrinsics3.checkNotNullExpressionValue(observableM11080o, "Observable.create({ emit….BackpressureMode.BUFFER)");
+        return observableM11080o;
     }
 
     public static /* synthetic */ Observable downloadFile$default(Context context, String str, String str2, File file, int i, Object obj) {
         if ((i & 8) != 0) {
             file = context.getCacheDir();
-            m.checkNotNullExpressionValue(file, "context.cacheDir");
+            Intrinsics3.checkNotNullExpressionValue(file, "context.cacheDir");
         }
         return downloadFile(context, str, str2, file);
     }

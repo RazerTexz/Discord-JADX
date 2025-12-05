@@ -1,12 +1,12 @@
 package com.discord.utilities.search.suggestion.entries;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.utilities.search.suggestion.entries.SearchSuggestion;
-import d0.g0.w;
-import d0.g0.y;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.Strings4;
+import p507d0.p579g0._Strings;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChannelSuggestion.kt */
 /* loaded from: classes2.dex */
@@ -24,12 +24,12 @@ public final /* data */ class ChannelSuggestion implements SearchSuggestion {
         }
 
         public final boolean canComplete(String channelName, CharSequence currentInput) {
-            m.checkNotNullParameter(channelName, "channelName");
-            m.checkNotNullParameter(currentInput, "currentInput");
+            Intrinsics3.checkNotNullParameter(channelName, "channelName");
+            Intrinsics3.checkNotNullParameter(currentInput, "currentInput");
             if ((currentInput.length() > 0) && currentInput.charAt(0) == '#') {
-                currentInput = y.drop(currentInput, 1);
+                currentInput = _Strings.drop(currentInput, 1);
             }
-            return w.contains((CharSequence) channelName, currentInput, true);
+            return Strings4.contains((CharSequence) channelName, currentInput, true);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -38,7 +38,7 @@ public final /* data */ class ChannelSuggestion implements SearchSuggestion {
     }
 
     public ChannelSuggestion(String str, long j) {
-        m.checkNotNullParameter(str, "channelName");
+        Intrinsics3.checkNotNullParameter(str, "channelName");
         this.channelName = str;
         this.channelId = j;
         this.category = SearchSuggestion.Category.IN_CHANNEL;
@@ -65,7 +65,7 @@ public final /* data */ class ChannelSuggestion implements SearchSuggestion {
     }
 
     public final ChannelSuggestion copy(String channelName, long channelId) {
-        m.checkNotNullParameter(channelName, "channelName");
+        Intrinsics3.checkNotNullParameter(channelName, "channelName");
         return new ChannelSuggestion(channelName, channelId);
     }
 
@@ -77,7 +77,7 @@ public final /* data */ class ChannelSuggestion implements SearchSuggestion {
             return false;
         }
         ChannelSuggestion channelSuggestion = (ChannelSuggestion) other;
-        return m.areEqual(this.channelName, channelSuggestion.channelName) && this.channelId == channelSuggestion.channelId;
+        return Intrinsics3.areEqual(this.channelName, channelSuggestion.channelName) && this.channelId == channelSuggestion.channelId;
     }
 
     @Override // com.discord.utilities.search.suggestion.entries.SearchSuggestion
@@ -95,13 +95,13 @@ public final /* data */ class ChannelSuggestion implements SearchSuggestion {
 
     public int hashCode() {
         String str = this.channelName;
-        return b.a(this.channelId) + ((str != null ? str.hashCode() : 0) * 31);
+        return C0002b.m3a(this.channelId) + ((str != null ? str.hashCode() : 0) * 31);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelSuggestion(channelName=");
-        sbU.append(this.channelName);
-        sbU.append(", channelId=");
-        return a.C(sbU, this.channelId, ")");
+        StringBuilder sbM833U = outline.m833U("ChannelSuggestion(channelName=");
+        sbM833U.append(this.channelName);
+        sbM833U.append(", channelId=");
+        return outline.m815C(sbM833U, this.channelId, ")");
     }
 }

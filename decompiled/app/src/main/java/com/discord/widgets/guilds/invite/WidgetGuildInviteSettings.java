@@ -19,33 +19,22 @@ import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.g0;
-import b.a.d.i0;
-import b.a.d.j;
-import b.a.i.e0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.app.AppFragment;
-import com.discord.app.LoggingConfig;
+import com.discord.app.AppLogger2;
 import com.discord.databinding.WidgetGuildInviteSettingsBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelInvite;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.dimen.DimenUtils;
-import com.discord.utilities.resources.DurationUtilsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.resources.DurationUtils3;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel;
-import d0.d0.f;
-import d0.t.c0;
-import d0.z.d.a0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -56,14 +45,27 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import kotlin.ranges.IntRange;
+import kotlin.ranges.Ranges2;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModelDelegates3;
+import p007b.p008a.p018d.AppViewModelDelegates5;
+import p007b.p008a.p025i.InviteSettingsRadioButtonBinding;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p512d0._Ranges;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Iterators4;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
+import p658rx.Observable;
 
 /* compiled from: WidgetGuildInviteSettings.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildInviteSettings extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildInviteSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteSettingsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildInviteSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteSettingsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -72,7 +74,7 @@ public final class WidgetGuildInviteSettings extends AppFragment {
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private ChannelsSpinnerAdapter channelsSpinnerAdapter;
-    private final LoggingConfig loggingConfig;
+    private final AppLogger2 loggingConfig;
 
     /* renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
@@ -89,16 +91,16 @@ public final class WidgetGuildInviteSettings extends AppFragment {
             if (convertView == null) {
                 convertView = View.inflate(getContext(), layoutId, null);
             }
-            m.checkNotNullExpressionValue(convertView, "view");
+            Intrinsics3.checkNotNullExpressionValue(convertView, "view");
             setupViews(convertView, position, dropDownMode);
             return convertView;
         }
 
         private final void setupViews(View convertView, int position, boolean dropDownMode) {
-            TextView textView = (TextView) convertView.findViewById(new WidgetGuildInviteSettings$ChannelsSpinnerAdapter$setupViews$1(dropDownMode).invoke2());
-            m.checkNotNullExpressionValue(textView, "label");
-            String str = String.format("#%s", Arrays.copyOf(new Object[]{ChannelUtils.c(this.channels[position])}, 1));
-            m.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
+            TextView textView = (TextView) convertView.findViewById(new WidgetGuildInviteSettings2(dropDownMode).invoke2());
+            Intrinsics3.checkNotNullExpressionValue(textView, "label");
+            String str = String.format("#%s", Arrays.copyOf(new Object[]{ChannelUtils.m7679c(this.channels[position])}, 1));
+            Intrinsics3.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
             textView.setText(str);
         }
 
@@ -109,8 +111,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
 
         @Override // android.widget.ArrayAdapter, android.widget.BaseAdapter, android.widget.SpinnerAdapter
         public View getDropDownView(int position, View convertView, ViewGroup parent) {
-            m.checkNotNullParameter(parent, "parent");
-            return getItemView(position, R.layout.view_invite_settngs_channel_spinner_item_open, convertView, true);
+            Intrinsics3.checkNotNullParameter(parent, "parent");
+            return getItemView(position, C5419R.layout.view_invite_settngs_channel_spinner_item_open, convertView, true);
         }
 
         @Override // android.widget.ArrayAdapter, android.widget.Adapter
@@ -120,12 +122,12 @@ public final class WidgetGuildInviteSettings extends AppFragment {
 
         @Override // android.widget.ArrayAdapter, android.widget.Adapter
         public View getView(int position, View convertView, ViewGroup parent) {
-            m.checkNotNullParameter(parent, "parent");
-            return getItemView(position, R.layout.view_invite_settings_channel_spinner_item, convertView, false);
+            Intrinsics3.checkNotNullParameter(parent, "parent");
+            return getItemView(position, C5419R.layout.view_invite_settings_channel_spinner_item, convertView, false);
         }
 
         public final void setData(Channel[] newData) {
-            m.checkNotNullParameter(newData, "newData");
+            Intrinsics3.checkNotNullParameter(newData, "newData");
             this.channels = newData;
             notifyDataSetChanged();
         }
@@ -133,8 +135,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ChannelsSpinnerAdapter(Context context, int i, Channel[] channelArr) {
             super(context, i, channelArr);
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(channelArr, "channels");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(channelArr, "channels");
             this.channels = channelArr;
         }
 
@@ -150,23 +152,23 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
 
         public final void launch(Context context, ActivityResultLauncher<Intent> launcher, Long channelId, long guildId, String source) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(launcher, "launcher");
-            m.checkNotNullParameter(source, "source");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(launcher, "launcher");
+            Intrinsics3.checkNotNullParameter(source, "source");
             AnalyticsTracker.openModal$default("Link Settings", source, null, 4, null);
             Intent intent = new Intent();
             if (channelId != null) {
                 intent.putExtra("com.discord.intent.extra.EXTRA_CHANNEL_ID", channelId.longValue());
             }
             intent.putExtra("com.discord.intent.extra.EXTRA_GUILD_ID", guildId);
-            j.g.f(context, launcher, WidgetGuildInviteSettings.class, intent);
+            AppScreen2.f524g.m160f(context, launcher, WidgetGuildInviteSettings.class, intent);
         }
 
         public final ActivityResultLauncher<Intent> registerForResult(DialogFragment fragment, Function1<? super GuildInvite, Unit> callback) {
-            m.checkNotNullParameter(fragment, "fragment");
-            m.checkNotNullParameter(callback, "callback");
-            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetGuildInviteSettings$Companion$registerForResult$1(callback));
-            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…  }\n          }\n        }");
+            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            Intrinsics3.checkNotNullParameter(callback, "callback");
+            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetGuildInviteSettings3(callback));
+            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…  }\n          }\n        }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
@@ -176,9 +178,9 @@ public final class WidgetGuildInviteSettings extends AppFragment {
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$10, reason: invalid class name */
-    public static final class AnonymousClass10 implements View.OnClickListener {
-        public AnonymousClass10() {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$10 */
+    public static final class ViewOnClickListenerC865010 implements View.OnClickListener {
+        public ViewOnClickListenerC865010() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -188,11 +190,11 @@ public final class WidgetGuildInviteSettings extends AppFragment {
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements RadioGroup.OnCheckedChangeListener {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$4 */
+    public static final class C86514 implements RadioGroup.OnCheckedChangeListener {
         public final /* synthetic */ ModelInvite.Settings $inviteSettings;
 
-        public AnonymousClass4(ModelInvite.Settings settings) {
+        public C86514(ModelInvite.Settings settings) {
             this.$inviteSettings = settings;
         }
 
@@ -200,17 +202,17 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         public final void onCheckedChanged(RadioGroup radioGroup, int i) {
             GuildInviteSettingsViewModel guildInviteSettingsViewModelAccess$getViewModel$p = WidgetGuildInviteSettings.access$getViewModel$p(WidgetGuildInviteSettings.this);
             ModelInvite.Settings settingsMergeMaxAge = this.$inviteSettings.mergeMaxAge(i);
-            m.checkNotNullExpressionValue(settingsMergeMaxAge, "inviteSettings.mergeMaxAge(checkedId)");
+            Intrinsics3.checkNotNullExpressionValue(settingsMergeMaxAge, "inviteSettings.mergeMaxAge(checkedId)");
             guildInviteSettingsViewModelAccess$getViewModel$p.updatePendingInviteSettings(settingsMergeMaxAge);
         }
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$8, reason: invalid class name */
-    public static final class AnonymousClass8 implements RadioGroup.OnCheckedChangeListener {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$8 */
+    public static final class C86528 implements RadioGroup.OnCheckedChangeListener {
         public final /* synthetic */ ModelInvite.Settings $inviteSettings;
 
-        public AnonymousClass8(ModelInvite.Settings settings) {
+        public C86528(ModelInvite.Settings settings) {
             this.$inviteSettings = settings;
         }
 
@@ -218,37 +220,37 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         public final void onCheckedChanged(RadioGroup radioGroup, int i) {
             GuildInviteSettingsViewModel guildInviteSettingsViewModelAccess$getViewModel$p = WidgetGuildInviteSettings.access$getViewModel$p(WidgetGuildInviteSettings.this);
             ModelInvite.Settings settingsMergeMaxUses = this.$inviteSettings.mergeMaxUses(i);
-            m.checkNotNullExpressionValue(settingsMergeMaxUses, "inviteSettings.mergeMaxUses(checkedId)");
+            Intrinsics3.checkNotNullExpressionValue(settingsMergeMaxUses, "inviteSettings.mergeMaxUses(checkedId)");
             guildInviteSettingsViewModelAccess$getViewModel$p.updatePendingInviteSettings(settingsMergeMaxUses);
         }
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$9, reason: invalid class name */
-    public static final class AnonymousClass9 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$9 */
+    public static final class ViewOnClickListenerC86539 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite.Settings $inviteSettings;
 
-        public AnonymousClass9(ModelInvite.Settings settings) {
+        public ViewOnClickListenerC86539(ModelInvite.Settings settings) {
             this.$inviteSettings = settings;
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetGuildInviteSettings.access$getBinding$p(WidgetGuildInviteSettings.this).f.toggle();
+            WidgetGuildInviteSettings.access$getBinding$p(WidgetGuildInviteSettings.this).f16803f.toggle();
             GuildInviteSettingsViewModel guildInviteSettingsViewModelAccess$getViewModel$p = WidgetGuildInviteSettings.access$getViewModel$p(WidgetGuildInviteSettings.this);
             ModelInvite.Settings settings = this.$inviteSettings;
-            CheckedSetting checkedSetting = WidgetGuildInviteSettings.access$getBinding$p(WidgetGuildInviteSettings.this).f;
-            m.checkNotNullExpressionValue(checkedSetting, "binding.guildInviteTemporaryMembership");
+            CheckedSetting checkedSetting = WidgetGuildInviteSettings.access$getBinding$p(WidgetGuildInviteSettings.this).f16803f;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.guildInviteTemporaryMembership");
             ModelInvite.Settings settingsMergeTemporary = settings.mergeTemporary(checkedSetting.isChecked());
-            m.checkNotNullExpressionValue(settingsMergeTemporary, "inviteSettings.mergeTemp…raryMembership.isChecked)");
+            Intrinsics3.checkNotNullExpressionValue(settingsMergeTemporary, "inviteSettings.mergeTemp…raryMembership.isChecked)");
             guildInviteSettingsViewModelAccess$getViewModel$p.updatePendingInviteSettings(settingsMergeTemporary);
         }
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Integer, CharSequence> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBound$1 */
+    public static final class C86541 extends Lambda implements Function1<Integer, CharSequence> {
+        public C86541() {
             super(1);
         }
 
@@ -258,14 +260,14 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
 
         public final CharSequence invoke(int i) {
-            return DurationUtilsKt.formatInviteExpireAfterString(WidgetGuildInviteSettings.this.requireContext(), i);
+            return DurationUtils3.formatInviteExpireAfterString(WidgetGuildInviteSettings.this.requireContext(), i);
         }
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBound$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<Integer, String> {
-        public AnonymousClass2(WidgetGuildInviteSettings widgetGuildInviteSettings) {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBound$2 */
+    public static final /* synthetic */ class C86552 extends FunctionReferenceImpl implements Function1<Integer, String> {
+        public C86552(WidgetGuildInviteSettings widgetGuildInviteSettings) {
             super(1, widgetGuildInviteSettings, WidgetGuildInviteSettings.class, "getMaxUsesString", "getMaxUsesString(I)Ljava/lang/String;", 0);
         }
 
@@ -280,72 +282,72 @@ public final class WidgetGuildInviteSettings extends AppFragment {
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<GuildInviteSettingsViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBoundOrOnResume$1 */
+    public static final class C86561 extends Lambda implements Function1<GuildInviteSettingsViewModel.ViewState, Unit> {
+        public C86561() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(GuildInviteSettingsViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildInviteSettingsViewModel.ViewState viewState) {
             WidgetGuildInviteSettings widgetGuildInviteSettings = WidgetGuildInviteSettings.this;
-            m.checkNotNullExpressionValue(viewState, "viewState");
+            Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
             widgetGuildInviteSettings.configureUi(viewState);
         }
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<GuildInviteSettingsViewModel.Event, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBoundOrOnResume$2 */
+    public static final class C86572 extends Lambda implements Function1<GuildInviteSettingsViewModel.Event, Unit> {
+        public C86572() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(GuildInviteSettingsViewModel.Event event) {
             invoke2(event);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildInviteSettingsViewModel.Event event) {
-            m.checkNotNullParameter(event, "event");
+            Intrinsics3.checkNotNullParameter(event, "event");
             WidgetGuildInviteSettings.this.handleEvent(event);
         }
     }
 
     /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$setOnItemSelected$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements AdapterView.OnItemSelectedListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$setOnItemSelected$1 */
+    public static final class C86581 implements AdapterView.OnItemSelectedListener {
+        public C86581() {
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id2) {
-            m.checkNotNullParameter(parent, "parent");
-            m.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(parent, "parent");
+            Intrinsics3.checkNotNullParameter(view, "view");
             WidgetGuildInviteSettings.access$getViewModel$p(WidgetGuildInviteSettings.this).selectChannel(WidgetGuildInviteSettings.access$getChannelsSpinnerAdapter$p(WidgetGuildInviteSettings.this).getItem(position));
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
         public void onNothingSelected(AdapterView<?> parent) {
-            m.checkNotNullParameter(parent, "parent");
+            Intrinsics3.checkNotNullParameter(parent, "parent");
         }
     }
 
     public WidgetGuildInviteSettings() {
-        super(R.layout.widget_guild_invite_settings);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildInviteSettings$binding$2.INSTANCE, null, 2, null);
-        WidgetGuildInviteSettings$viewModel$2 widgetGuildInviteSettings$viewModel$2 = new WidgetGuildInviteSettings$viewModel$2(this);
-        g0 g0Var = new g0(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildInviteSettingsViewModel.class), new WidgetGuildInviteSettings$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildInviteSettings$viewModel$2));
-        this.loggingConfig = new LoggingConfig(false, null, WidgetGuildInviteSettings$loggingConfig$1.INSTANCE, 3);
+        super(C5419R.layout.widget_guild_invite_settings);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildInviteSettings4.INSTANCE, null, 2, null);
+        WidgetGuildInviteSettings6 widgetGuildInviteSettings6 = new WidgetGuildInviteSettings6(this);
+        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildInviteSettingsViewModel.class), new WidgetGuildInviteSettings$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildInviteSettings6));
+        this.loggingConfig = new AppLogger2(false, null, WidgetGuildInviteSettings5.INSTANCE, 3);
     }
 
     public static final /* synthetic */ WidgetGuildInviteSettingsBinding access$getBinding$p(WidgetGuildInviteSettings widgetGuildInviteSettings) {
@@ -355,7 +357,7 @@ public final class WidgetGuildInviteSettings extends AppFragment {
     public static final /* synthetic */ ChannelsSpinnerAdapter access$getChannelsSpinnerAdapter$p(WidgetGuildInviteSettings widgetGuildInviteSettings) {
         ChannelsSpinnerAdapter channelsSpinnerAdapter = widgetGuildInviteSettings.channelsSpinnerAdapter;
         if (channelsSpinnerAdapter == null) {
-            m.throwUninitializedPropertyAccessException("channelsSpinnerAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("channelsSpinnerAdapter");
         }
         return channelsSpinnerAdapter;
     }
@@ -379,21 +381,21 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
         boolean z2 = false;
         for (int i : valueSet) {
-            View viewInflate = LayoutInflater.from(getContext()).inflate(R.layout.invite_settings_radio_button, (ViewGroup) radioGroup, false);
+            View viewInflate = LayoutInflater.from(getContext()).inflate(C5419R.layout.invite_settings_radio_button, (ViewGroup) radioGroup, false);
             Objects.requireNonNull(viewInflate, "rootView");
             AppCompatRadioButton appCompatRadioButton = (AppCompatRadioButton) viewInflate;
-            m.checkNotNullExpressionValue(new e0(appCompatRadioButton), "InviteSettingsRadioButto…text), radioGroup, false)");
-            m.checkNotNullExpressionValue(appCompatRadioButton, "binding.root");
+            Intrinsics3.checkNotNullExpressionValue(new InviteSettingsRadioButtonBinding(appCompatRadioButton), "InviteSettingsRadioButto…text), radioGroup, false)");
+            Intrinsics3.checkNotNullExpressionValue(appCompatRadioButton, "binding.root");
             appCompatRadioButton.setId(i);
-            m.checkNotNullExpressionValue(appCompatRadioButton, "binding.root");
+            Intrinsics3.checkNotNullExpressionValue(appCompatRadioButton, "binding.root");
             appCompatRadioButton.setText(textFactory.invoke(Integer.valueOf(i)));
             if (!z2) {
-                m.checkNotNullExpressionValue(appCompatRadioButton, "binding.root");
+                Intrinsics3.checkNotNullExpressionValue(appCompatRadioButton, "binding.root");
                 ViewGroup.LayoutParams layoutParams = appCompatRadioButton.getLayoutParams();
                 Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.widget.RadioGroup.LayoutParams");
                 RadioGroup.LayoutParams layoutParams2 = (RadioGroup.LayoutParams) layoutParams;
                 layoutParams2.leftMargin = DimenUtils.dpToPixels(16);
-                m.checkNotNullExpressionValue(appCompatRadioButton, "binding.root");
+                Intrinsics3.checkNotNullExpressionValue(appCompatRadioButton, "binding.root");
                 appCompatRadioButton.setLayoutParams(layoutParams2);
                 z2 = true;
             }
@@ -414,19 +416,19 @@ public final class WidgetGuildInviteSettings extends AppFragment {
     }
 
     private final void setOnItemSelected() {
-        Spinner spinner = getBinding().f2417b;
-        m.checkNotNullExpressionValue(spinner, "binding.guildInviteChannelSpinner");
-        spinner.setOnItemSelectedListener(new AnonymousClass1());
+        Spinner spinner = getBinding().f16799b;
+        Intrinsics3.checkNotNullExpressionValue(spinner, "binding.guildInviteChannelSpinner");
+        spinner.setOnItemSelectedListener(new C86581());
     }
 
     public final void configureUi(GuildInviteSettingsViewModel.ViewState viewState) {
         Object obj;
         Object next;
-        m.checkNotNullParameter(viewState, "viewState");
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
         List<Channel> invitableChannels = viewState.getInvitableChannels();
         ChannelsSpinnerAdapter channelsSpinnerAdapter = this.channelsSpinnerAdapter;
         if (channelsSpinnerAdapter == null) {
-            m.throwUninitializedPropertyAccessException("channelsSpinnerAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("channelsSpinnerAdapter");
         }
         Object[] array = invitableChannels.toArray(new Channel[0]);
         Objects.requireNonNull(array, "null cannot be cast to non-null type kotlin.Array<T>");
@@ -446,15 +448,15 @@ public final class WidgetGuildInviteSettings extends AppFragment {
                 i++;
             }
         }
-        getBinding().f2417b.setSelection(Math.max(i, 0), false);
+        getBinding().f16799b.setSelection(Math.max(i, 0), false);
         ModelInvite.Settings inviteSettings = viewState.getInviteSettings();
-        RadioGroup radioGroup = getBinding().c;
-        m.checkNotNullExpressionValue(radioGroup, "binding.guildInviteExpiresAfterRadiogroup");
-        IntRange intRangeUntil = f.until(0, radioGroup.getChildCount());
-        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(intRangeUntil, 10));
-        Iterator<Integer> it2 = intRangeUntil.iterator();
+        RadioGroup radioGroup = getBinding().f16800c;
+        Intrinsics3.checkNotNullExpressionValue(radioGroup, "binding.guildInviteExpiresAfterRadiogroup");
+        Ranges2 ranges2Until = _Ranges.until(0, radioGroup.getChildCount());
+        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(ranges2Until, 10));
+        Iterator<Integer> it2 = ranges2Until.iterator();
         while (it2.hasNext()) {
-            View childAt = getBinding().c.getChildAt(((c0) it2).nextInt());
+            View childAt = getBinding().f16800c.getChildAt(((Iterators4) it2).nextInt());
             Objects.requireNonNull(childAt, "null cannot be cast to non-null type android.widget.RadioButton");
             arrayList.add((RadioButton) childAt);
         }
@@ -475,14 +477,14 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         if (radioButton != null) {
             radioButton.setChecked(true);
         }
-        getBinding().c.setOnCheckedChangeListener(new AnonymousClass4(inviteSettings));
-        RadioGroup radioGroup2 = getBinding().e;
-        m.checkNotNullExpressionValue(radioGroup2, "binding.guildInviteMaxUsesRadiogroup");
-        IntRange intRangeUntil2 = f.until(0, radioGroup2.getChildCount());
-        ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(intRangeUntil2, 10));
-        Iterator<Integer> it4 = intRangeUntil2.iterator();
+        getBinding().f16800c.setOnCheckedChangeListener(new C86514(inviteSettings));
+        RadioGroup radioGroup2 = getBinding().f16802e;
+        Intrinsics3.checkNotNullExpressionValue(radioGroup2, "binding.guildInviteMaxUsesRadiogroup");
+        Ranges2 ranges2Until2 = _Ranges.until(0, radioGroup2.getChildCount());
+        ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(ranges2Until2, 10));
+        Iterator<Integer> it4 = ranges2Until2.iterator();
         while (it4.hasNext()) {
-            View childAt2 = getBinding().e.getChildAt(((c0) it4).nextInt());
+            View childAt2 = getBinding().f16802e.getChildAt(((Iterators4) it4).nextInt());
             Objects.requireNonNull(childAt2, "null cannot be cast to non-null type android.widget.RadioButton");
             arrayList2.add((RadioButton) childAt2);
         }
@@ -501,24 +503,24 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         if (radioButton2 != null) {
             radioButton2.setChecked(true);
         }
-        getBinding().e.setOnCheckedChangeListener(new AnonymousClass8(inviteSettings));
-        CheckedSetting checkedSetting = getBinding().f;
-        m.checkNotNullExpressionValue(checkedSetting, "binding.guildInviteTemporaryMembership");
+        getBinding().f16802e.setOnCheckedChangeListener(new C86528(inviteSettings));
+        CheckedSetting checkedSetting = getBinding().f16803f;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.guildInviteTemporaryMembership");
         checkedSetting.setChecked(inviteSettings.isTemporary());
-        getBinding().f.e(new AnonymousClass9(inviteSettings));
-        getBinding().d.setOnClickListener(new AnonymousClass10());
+        getBinding().f16803f.m8527e(new ViewOnClickListenerC86539(inviteSettings));
+        getBinding().f16801d.setOnClickListener(new ViewOnClickListenerC865010());
     }
 
-    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public LoggingConfig getLoggingConfig() {
+    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.InterfaceC5455a
+    public AppLogger2 getLoggingConfig() {
         return this.loggingConfig;
     }
 
     public final void handleEvent(GuildInviteSettingsViewModel.Event event) {
-        m.checkNotNullParameter(event, "event");
+        Intrinsics3.checkNotNullParameter(event, "event");
         if (!(event instanceof GuildInviteSettingsViewModel.Event.InviteCreationSuccess)) {
-            if (m.areEqual(event, GuildInviteSettingsViewModel.Event.InviteCreationFailure.INSTANCE)) {
-                b.a.d.m.g(requireContext(), R.string.default_failure_to_perform_action_message, 0, null, 12);
+            if (Intrinsics3.areEqual(event, GuildInviteSettingsViewModel.Event.InviteCreationFailure.INSTANCE)) {
+                AppToast.m169g(requireContext(), C5419R.string.default_failure_to_perform_action_message, 0, null, 12);
             }
         } else {
             Intent intent = new Intent();
@@ -530,35 +532,35 @@ public final class WidgetGuildInviteSettings extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        this.channelsSpinnerAdapter = new ChannelsSpinnerAdapter(requireContext(), R.layout.view_invite_settings_channel_spinner_item, null, 4, null);
-        Spinner spinner = getBinding().f2417b;
-        m.checkNotNullExpressionValue(spinner, "binding.guildInviteChannelSpinner");
+        this.channelsSpinnerAdapter = new ChannelsSpinnerAdapter(requireContext(), C5419R.layout.view_invite_settings_channel_spinner_item, null, 4, null);
+        Spinner spinner = getBinding().f16799b;
+        Intrinsics3.checkNotNullExpressionValue(spinner, "binding.guildInviteChannelSpinner");
         ChannelsSpinnerAdapter channelsSpinnerAdapter = this.channelsSpinnerAdapter;
         if (channelsSpinnerAdapter == null) {
-            m.throwUninitializedPropertyAccessException("channelsSpinnerAdapter");
+            Intrinsics3.throwUninitializedPropertyAccessException("channelsSpinnerAdapter");
         }
         spinner.setAdapter((SpinnerAdapter) channelsSpinnerAdapter);
-        RadioGroup radioGroup = getBinding().c;
-        m.checkNotNullExpressionValue(radioGroup, "binding.guildInviteExpiresAfterRadiogroup");
+        RadioGroup radioGroup = getBinding().f16800c;
+        Intrinsics3.checkNotNullExpressionValue(radioGroup, "binding.guildInviteExpiresAfterRadiogroup");
         int[] iArr = ModelInvite.Settings.EXPIRES_AFTER_ARRAY;
-        m.checkNotNullExpressionValue(iArr, "ModelInvite.Settings.EXPIRES_AFTER_ARRAY");
-        createHorizontalCheckableButtons(radioGroup, iArr, new AnonymousClass1());
-        RadioGroup radioGroup2 = getBinding().e;
-        m.checkNotNullExpressionValue(radioGroup2, "binding.guildInviteMaxUsesRadiogroup");
+        Intrinsics3.checkNotNullExpressionValue(iArr, "ModelInvite.Settings.EXPIRES_AFTER_ARRAY");
+        createHorizontalCheckableButtons(radioGroup, iArr, new C86541());
+        RadioGroup radioGroup2 = getBinding().f16802e;
+        Intrinsics3.checkNotNullExpressionValue(radioGroup2, "binding.guildInviteMaxUsesRadiogroup");
         int[] iArr2 = ModelInvite.Settings.MAX_USES_ARRAY;
-        m.checkNotNullExpressionValue(iArr2, "ModelInvite.Settings.MAX_USES_ARRAY");
-        createHorizontalCheckableButtons(radioGroup2, iArr2, new AnonymousClass2(this));
+        Intrinsics3.checkNotNullExpressionValue(iArr2, "ModelInvite.Settings.MAX_USES_ARRAY");
+        createHorizontalCheckableButtons(radioGroup2, iArr2, new C86552(this));
         setOnItemSelected();
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        Observable<GuildInviteSettingsViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        m.checkNotNullExpressionValue(observableR, "viewModel.observeViewSta…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetGuildInviteSettings.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetGuildInviteSettings.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        Observable<GuildInviteSettingsViewModel.ViewState> observableM11112r = getViewModel().observeViewState().m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "viewModel.observeViewSta…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableM11112r, this, null, 2, null), WidgetGuildInviteSettings.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C86561(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetGuildInviteSettings.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C86572(), 62, (Object) null);
     }
 }

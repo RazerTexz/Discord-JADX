@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import androidx.appcompat.R;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.view.ActionMode;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
@@ -35,11 +35,11 @@ public class ActionBarContextView extends AbsActionBarView {
     private int mTitleStyleRes;
     private TextView mTitleView;
 
-    /* renamed from: androidx.appcompat.widget.ActionBarContextView$1, reason: invalid class name */
-    public class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: androidx.appcompat.widget.ActionBarContextView$1 */
+    public class ViewOnClickListenerC00901 implements View.OnClickListener {
         public final /* synthetic */ ActionMode val$mode;
 
-        public AnonymousClass1(ActionMode actionMode) {
+        public ViewOnClickListenerC00901(ActionMode actionMode) {
             this.val$mode = actionMode;
         }
 
@@ -55,11 +55,11 @@ public class ActionBarContextView extends AbsActionBarView {
 
     private void initTitle() {
         if (this.mTitleLayout == null) {
-            LayoutInflater.from(getContext()).inflate(R.layout.abc_action_bar_title_item, this);
+            LayoutInflater.from(getContext()).inflate(C0051R.layout.abc_action_bar_title_item, this);
             LinearLayout linearLayout = (LinearLayout) getChildAt(getChildCount() - 1);
             this.mTitleLayout = linearLayout;
-            this.mTitleView = (TextView) linearLayout.findViewById(R.id.action_bar_title);
-            this.mSubtitleView = (TextView) this.mTitleLayout.findViewById(R.id.action_bar_subtitle);
+            this.mTitleView = (TextView) linearLayout.findViewById(C0051R.id.action_bar_title);
+            this.mSubtitleView = (TextView) this.mTitleLayout.findViewById(C0051R.id.action_bar_subtitle);
             if (this.mTitleStyleRes != 0) {
                 this.mTitleView.setTextAppearance(getContext(), this.mTitleStyleRes);
             }
@@ -150,7 +150,7 @@ public class ActionBarContextView extends AbsActionBarView {
         } else if (view.getParent() == null) {
             addView(this.mClose);
         }
-        this.mClose.findViewById(R.id.action_mode_close_button).setOnClickListener(new AnonymousClass1(actionMode));
+        this.mClose.findViewById(C0051R.id.action_mode_close_button).setOnClickListener(new ViewOnClickListenerC00901(actionMode));
         MenuBuilder menuBuilder = (MenuBuilder) actionMode.getMenu();
         ActionMenuPresenter actionMenuPresenter = this.mActionMenuPresenter;
         if (actionMenuPresenter != null) {
@@ -403,17 +403,17 @@ public class ActionBarContextView extends AbsActionBarView {
     }
 
     public ActionBarContextView(@NonNull Context context, @Nullable AttributeSet attributeSet) {
-        this(context, attributeSet, R.attr.actionModeStyle);
+        this(context, attributeSet, C0051R.attr.actionModeStyle);
     }
 
     public ActionBarContextView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        TintTypedArray tintTypedArrayObtainStyledAttributes = TintTypedArray.obtainStyledAttributes(context, attributeSet, R.styleable.ActionMode, i, 0);
-        ViewCompat.setBackground(this, tintTypedArrayObtainStyledAttributes.getDrawable(R.styleable.ActionMode_background));
-        this.mTitleStyleRes = tintTypedArrayObtainStyledAttributes.getResourceId(R.styleable.ActionMode_titleTextStyle, 0);
-        this.mSubtitleStyleRes = tintTypedArrayObtainStyledAttributes.getResourceId(R.styleable.ActionMode_subtitleTextStyle, 0);
-        this.mContentHeight = tintTypedArrayObtainStyledAttributes.getLayoutDimension(R.styleable.ActionMode_height, 0);
-        this.mCloseItemLayout = tintTypedArrayObtainStyledAttributes.getResourceId(R.styleable.ActionMode_closeItemLayout, R.layout.abc_action_mode_close_item_material);
+        TintTypedArray tintTypedArrayObtainStyledAttributes = TintTypedArray.obtainStyledAttributes(context, attributeSet, C0051R.styleable.ActionMode, i, 0);
+        ViewCompat.setBackground(this, tintTypedArrayObtainStyledAttributes.getDrawable(C0051R.styleable.ActionMode_background));
+        this.mTitleStyleRes = tintTypedArrayObtainStyledAttributes.getResourceId(C0051R.styleable.ActionMode_titleTextStyle, 0);
+        this.mSubtitleStyleRes = tintTypedArrayObtainStyledAttributes.getResourceId(C0051R.styleable.ActionMode_subtitleTextStyle, 0);
+        this.mContentHeight = tintTypedArrayObtainStyledAttributes.getLayoutDimension(C0051R.styleable.ActionMode_height, 0);
+        this.mCloseItemLayout = tintTypedArrayObtainStyledAttributes.getResourceId(C0051R.styleable.ActionMode_closeItemLayout, C0051R.layout.abc_action_mode_close_item_material);
         tintTypedArrayObtainStyledAttributes.recycle();
     }
 }

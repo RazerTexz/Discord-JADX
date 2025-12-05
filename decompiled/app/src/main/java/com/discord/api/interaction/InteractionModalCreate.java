@@ -1,12 +1,12 @@
 package com.discord.api.interaction;
 
-import b.d.b.a.a;
 import com.discord.api.botuikit.Component;
 import com.discord.api.commands.Application;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.io.Serializable;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: InteractionModalCreate.kt */
 /* loaded from: classes.dex */
@@ -23,7 +23,8 @@ public final /* data */ class InteractionModalCreate implements Serializable {
         return this.application;
     }
 
-    public final List<Component> b() {
+    /* renamed from: b */
+    public final List<Component> m8010b() {
         return this.components;
     }
 
@@ -50,7 +51,7 @@ public final /* data */ class InteractionModalCreate implements Serializable {
             return false;
         }
         InteractionModalCreate interactionModalCreate = (InteractionModalCreate) other;
-        return this.id == interactionModalCreate.id && m.areEqual(this.customId, interactionModalCreate.customId) && m.areEqual(this.application, interactionModalCreate.application) && m.areEqual(this.title, interactionModalCreate.title) && m.areEqual(this.components, interactionModalCreate.components) && m.areEqual(this.nonce, interactionModalCreate.nonce);
+        return this.id == interactionModalCreate.id && Intrinsics3.areEqual(this.customId, interactionModalCreate.customId) && Intrinsics3.areEqual(this.application, interactionModalCreate.application) && Intrinsics3.areEqual(this.title, interactionModalCreate.title) && Intrinsics3.areEqual(this.components, interactionModalCreate.components) && Intrinsics3.areEqual(this.nonce, interactionModalCreate.nonce);
     }
 
     public final long getId() {
@@ -73,17 +74,17 @@ public final /* data */ class InteractionModalCreate implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("InteractionModalCreate(id=");
-        sbU.append(this.id);
-        sbU.append(", customId=");
-        sbU.append(this.customId);
-        sbU.append(", application=");
-        sbU.append(this.application);
-        sbU.append(", title=");
-        sbU.append(this.title);
-        sbU.append(", components=");
-        sbU.append(this.components);
-        sbU.append(", nonce=");
-        return a.J(sbU, this.nonce, ")");
+        StringBuilder sbM833U = outline.m833U("InteractionModalCreate(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", customId=");
+        sbM833U.append(this.customId);
+        sbM833U.append(", application=");
+        sbM833U.append(this.application);
+        sbM833U.append(", title=");
+        sbM833U.append(this.title);
+        sbM833U.append(", components=");
+        sbM833U.append(this.components);
+        sbM833U.append(", nonce=");
+        return outline.m822J(sbM833U, this.nonce, ")");
     }
 }

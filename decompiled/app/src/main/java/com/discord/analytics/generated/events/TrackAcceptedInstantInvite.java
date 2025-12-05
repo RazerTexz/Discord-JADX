@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAcceptedInstantInvite.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAcceptedInstantInvite implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackAcceptedInstantInvite implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long channel = null;
     private final Long channelType = null;
@@ -49,7 +49,7 @@ public final /* data */ class TrackAcceptedInstantInvite implements AnalyticsSch
             return false;
         }
         TrackAcceptedInstantInvite trackAcceptedInstantInvite = (TrackAcceptedInstantInvite) other;
-        return m.areEqual(this.channel, trackAcceptedInstantInvite.channel) && m.areEqual(this.channelType, trackAcceptedInstantInvite.channelType) && m.areEqual(this.custom, trackAcceptedInstantInvite.custom) && m.areEqual(this.guild, trackAcceptedInstantInvite.guild) && m.areEqual(this.guildOwner, trackAcceptedInstantInvite.guildOwner) && m.areEqual(this.ownerId, trackAcceptedInstantInvite.ownerId) && m.areEqual(this.invite, trackAcceptedInstantInvite.invite) && m.areEqual(this.inviter, trackAcceptedInstantInvite.inviter) && m.areEqual(this.userDay, trackAcceptedInstantInvite.userDay) && m.areEqual(this.userGuilds, trackAcceptedInstantInvite.userGuilds) && m.areEqual(this.locationGuildId, trackAcceptedInstantInvite.locationGuildId) && m.areEqual(this.locationChannelId, trackAcceptedInstantInvite.locationChannelId) && m.areEqual(this.locationChannelType, trackAcceptedInstantInvite.locationChannelType) && m.areEqual(this.locationMessageId, trackAcceptedInstantInvite.locationMessageId) && m.areEqual(this.guildSizeTotal, trackAcceptedInstantInvite.guildSizeTotal) && m.areEqual(this.guildSizeOnline, trackAcceptedInstantInvite.guildSizeOnline) && m.areEqual(this.sizeTotal, trackAcceptedInstantInvite.sizeTotal) && m.areEqual(this.sizeOnline, trackAcceptedInstantInvite.sizeOnline) && m.areEqual(this.inviteType, trackAcceptedInstantInvite.inviteType) && m.areEqual(this.destinationUserId, trackAcceptedInstantInvite.destinationUserId) && m.areEqual(this.guildVerificationLevel, trackAcceptedInstantInvite.guildVerificationLevel) && m.areEqual(this.hasMutualGuild, trackAcceptedInstantInvite.hasMutualGuild) && m.areEqual(this.inviteGuildScheduledEventId, trackAcceptedInstantInvite.inviteGuildScheduledEventId);
+        return Intrinsics3.areEqual(this.channel, trackAcceptedInstantInvite.channel) && Intrinsics3.areEqual(this.channelType, trackAcceptedInstantInvite.channelType) && Intrinsics3.areEqual(this.custom, trackAcceptedInstantInvite.custom) && Intrinsics3.areEqual(this.guild, trackAcceptedInstantInvite.guild) && Intrinsics3.areEqual(this.guildOwner, trackAcceptedInstantInvite.guildOwner) && Intrinsics3.areEqual(this.ownerId, trackAcceptedInstantInvite.ownerId) && Intrinsics3.areEqual(this.invite, trackAcceptedInstantInvite.invite) && Intrinsics3.areEqual(this.inviter, trackAcceptedInstantInvite.inviter) && Intrinsics3.areEqual(this.userDay, trackAcceptedInstantInvite.userDay) && Intrinsics3.areEqual(this.userGuilds, trackAcceptedInstantInvite.userGuilds) && Intrinsics3.areEqual(this.locationGuildId, trackAcceptedInstantInvite.locationGuildId) && Intrinsics3.areEqual(this.locationChannelId, trackAcceptedInstantInvite.locationChannelId) && Intrinsics3.areEqual(this.locationChannelType, trackAcceptedInstantInvite.locationChannelType) && Intrinsics3.areEqual(this.locationMessageId, trackAcceptedInstantInvite.locationMessageId) && Intrinsics3.areEqual(this.guildSizeTotal, trackAcceptedInstantInvite.guildSizeTotal) && Intrinsics3.areEqual(this.guildSizeOnline, trackAcceptedInstantInvite.guildSizeOnline) && Intrinsics3.areEqual(this.sizeTotal, trackAcceptedInstantInvite.sizeTotal) && Intrinsics3.areEqual(this.sizeOnline, trackAcceptedInstantInvite.sizeOnline) && Intrinsics3.areEqual(this.inviteType, trackAcceptedInstantInvite.inviteType) && Intrinsics3.areEqual(this.destinationUserId, trackAcceptedInstantInvite.destinationUserId) && Intrinsics3.areEqual(this.guildVerificationLevel, trackAcceptedInstantInvite.guildVerificationLevel) && Intrinsics3.areEqual(this.hasMutualGuild, trackAcceptedInstantInvite.hasMutualGuild) && Intrinsics3.areEqual(this.inviteGuildScheduledEventId, trackAcceptedInstantInvite.inviteGuildScheduledEventId);
     }
 
     public int hashCode() {
@@ -102,51 +102,51 @@ public final /* data */ class TrackAcceptedInstantInvite implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAcceptedInstantInvite(channel=");
-        sbU.append(this.channel);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", custom=");
-        sbU.append(this.custom);
-        sbU.append(", guild=");
-        sbU.append(this.guild);
-        sbU.append(", guildOwner=");
-        sbU.append(this.guildOwner);
-        sbU.append(", ownerId=");
-        sbU.append(this.ownerId);
-        sbU.append(", invite=");
-        sbU.append(this.invite);
-        sbU.append(", inviter=");
-        sbU.append(this.inviter);
-        sbU.append(", userDay=");
-        sbU.append(this.userDay);
-        sbU.append(", userGuilds=");
-        sbU.append(this.userGuilds);
-        sbU.append(", locationGuildId=");
-        sbU.append(this.locationGuildId);
-        sbU.append(", locationChannelId=");
-        sbU.append(this.locationChannelId);
-        sbU.append(", locationChannelType=");
-        sbU.append(this.locationChannelType);
-        sbU.append(", locationMessageId=");
-        sbU.append(this.locationMessageId);
-        sbU.append(", guildSizeTotal=");
-        sbU.append(this.guildSizeTotal);
-        sbU.append(", guildSizeOnline=");
-        sbU.append(this.guildSizeOnline);
-        sbU.append(", sizeTotal=");
-        sbU.append(this.sizeTotal);
-        sbU.append(", sizeOnline=");
-        sbU.append(this.sizeOnline);
-        sbU.append(", inviteType=");
-        sbU.append(this.inviteType);
-        sbU.append(", destinationUserId=");
-        sbU.append(this.destinationUserId);
-        sbU.append(", guildVerificationLevel=");
-        sbU.append(this.guildVerificationLevel);
-        sbU.append(", hasMutualGuild=");
-        sbU.append(this.hasMutualGuild);
-        sbU.append(", inviteGuildScheduledEventId=");
-        return a.G(sbU, this.inviteGuildScheduledEventId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAcceptedInstantInvite(channel=");
+        sbM833U.append(this.channel);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", custom=");
+        sbM833U.append(this.custom);
+        sbM833U.append(", guild=");
+        sbM833U.append(this.guild);
+        sbM833U.append(", guildOwner=");
+        sbM833U.append(this.guildOwner);
+        sbM833U.append(", ownerId=");
+        sbM833U.append(this.ownerId);
+        sbM833U.append(", invite=");
+        sbM833U.append(this.invite);
+        sbM833U.append(", inviter=");
+        sbM833U.append(this.inviter);
+        sbM833U.append(", userDay=");
+        sbM833U.append(this.userDay);
+        sbM833U.append(", userGuilds=");
+        sbM833U.append(this.userGuilds);
+        sbM833U.append(", locationGuildId=");
+        sbM833U.append(this.locationGuildId);
+        sbM833U.append(", locationChannelId=");
+        sbM833U.append(this.locationChannelId);
+        sbM833U.append(", locationChannelType=");
+        sbM833U.append(this.locationChannelType);
+        sbM833U.append(", locationMessageId=");
+        sbM833U.append(this.locationMessageId);
+        sbM833U.append(", guildSizeTotal=");
+        sbM833U.append(this.guildSizeTotal);
+        sbM833U.append(", guildSizeOnline=");
+        sbM833U.append(this.guildSizeOnline);
+        sbM833U.append(", sizeTotal=");
+        sbM833U.append(this.sizeTotal);
+        sbM833U.append(", sizeOnline=");
+        sbM833U.append(this.sizeOnline);
+        sbM833U.append(", inviteType=");
+        sbM833U.append(this.inviteType);
+        sbM833U.append(", destinationUserId=");
+        sbM833U.append(this.destinationUserId);
+        sbM833U.append(", guildVerificationLevel=");
+        sbM833U.append(this.guildVerificationLevel);
+        sbM833U.append(", hasMutualGuild=");
+        sbM833U.append(this.hasMutualGuild);
+        sbM833U.append(", inviteGuildScheduledEventId=");
+        return outline.m819G(sbM833U, this.inviteGuildScheduledEventId, ")");
     }
 }

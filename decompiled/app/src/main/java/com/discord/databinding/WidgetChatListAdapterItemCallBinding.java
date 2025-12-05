@@ -12,41 +12,47 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetChatListAdapterItemCallBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CardView a;
+    public final CardView f16173a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ImageView f2314b;
+    public final ImageView f16174b;
 
+    /* renamed from: c */
     @NonNull
-    public final RecyclerView c;
+    public final RecyclerView f16175c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f16176d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16177e;
 
+    /* renamed from: f */
     @NonNull
-    public final LinearLayout f;
+    public final LinearLayout f16178f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f16179g;
 
     public WidgetChatListAdapterItemCallBinding(@NonNull CardView cardView, @NonNull ImageView imageView, @NonNull RecyclerView recyclerView, @NonNull TextView textView, @NonNull TextView textView2, @NonNull LinearLayout linearLayout, @NonNull TextView textView3) {
-        this.a = cardView;
-        this.f2314b = imageView;
-        this.c = recyclerView;
-        this.d = textView;
-        this.e = textView2;
-        this.f = linearLayout;
-        this.g = textView3;
+        this.f16173a = cardView;
+        this.f16174b = imageView;
+        this.f16175c = recyclerView;
+        this.f16176d = textView;
+        this.f16177e = textView2;
+        this.f16178f = linearLayout;
+        this.f16179g = textView3;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16173a;
     }
 }

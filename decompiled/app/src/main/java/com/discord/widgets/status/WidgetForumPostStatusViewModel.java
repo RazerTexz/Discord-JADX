@@ -1,12 +1,9 @@
 package com.discord.widgets.status;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.fragment.app.FragmentManager;
 import androidx.media.AudioAttributesCompat;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.message.reaction.MessageReaction;
 import com.discord.app.AppFragment;
 import com.discord.restapi.RestAPIParams;
@@ -22,22 +19,26 @@ import com.discord.stores.StoreThreadsJoined;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.guilds.MemberVerificationUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapterEventsHandler;
 import com.discord.widgets.chat.managereactions.WidgetManageReactions;
 import com.discord.widgets.forums.ForumUtils;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetForumPostStatusViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
+public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -55,22 +56,22 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     private final WidgetChatListAdapterEventsHandler.UserReactionHandler userReactionHandler;
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$1 */
+    public static final class C100901 extends Lambda implements Function1<StoreState, Unit> {
+        public C100901() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetForumPostStatusViewModel widgetForumPostStatusViewModel = WidgetForumPostStatusViewModel.this;
-            m.checkNotNullExpressionValue(storeState, "storeState");
+            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
             widgetForumPostStatusViewModel.handleStoreState(storeState);
         }
     }
@@ -81,17 +82,17 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         }
 
         public final Observable<StoreState> observeStoreState(StoreUser storeUser, StoreChannels storeChannels, StoreChannelsSelected storeChannelsSelected, StoreThreadsJoined storeThreadsJoined, StoreForumPostMessages storeForumPostMessages, StoreThreadMessages storeThreadMessages, StorePermissions storePermissions, StoreEmoji storeEmoji) {
-            m.checkNotNullParameter(storeUser, "storeUser");
-            m.checkNotNullParameter(storeChannels, "storeChannels");
-            m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-            m.checkNotNullParameter(storeThreadsJoined, "storeThreadsJoined");
-            m.checkNotNullParameter(storeForumPostMessages, "storeForumPostMessages");
-            m.checkNotNullParameter(storeThreadMessages, "storeThreadMessages");
-            m.checkNotNullParameter(storePermissions, "storePermissions");
-            m.checkNotNullParameter(storeEmoji, "storeEmoji");
-            Observable<StoreState> observableY = ForumUtils.observeSelectedPostChannel$default(ForumUtils.INSTANCE, storeChannels, storeChannelsSelected, null, null, 12, null).Y(new WidgetForumPostStatusViewModel$Companion$observeStoreState$1(storeUser, storeThreadsJoined, storeForumPostMessages, storeThreadMessages, storePermissions, storeEmoji));
-            m.checkNotNullExpressionValue(observableY, "ForumUtils.observeSelect…      }\n        }\n      }");
-            return observableY;
+            Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+            Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+            Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+            Intrinsics3.checkNotNullParameter(storeThreadsJoined, "storeThreadsJoined");
+            Intrinsics3.checkNotNullParameter(storeForumPostMessages, "storeForumPostMessages");
+            Intrinsics3.checkNotNullParameter(storeThreadMessages, "storeThreadMessages");
+            Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
+            Intrinsics3.checkNotNullParameter(storeEmoji, "storeEmoji");
+            Observable<StoreState> observableM11099Y = ForumUtils.observeSelectedPostChannel$default(ForumUtils.INSTANCE, storeChannels, storeChannelsSelected, null, null, 12, null).m11099Y(new WidgetForumPostStatusViewModel2(storeUser, storeThreadsJoined, storeForumPostMessages, storeThreadMessages, storePermissions, storeEmoji));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "ForumUtils.observeSelect…      }\n        }\n      }");
+            return observableM11099Y;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -204,7 +205,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return this.myUserId == loaded.myUserId && this.channelId == loaded.channelId && this.guildId == loaded.guildId && m.areEqual(this.messageId, loaded.messageId) && this.isFollowedThread == loaded.isFollowedThread && this.isArchivedThread == loaded.isArchivedThread && m.areEqual(this.messageCount, loaded.messageCount) && this.hasAddReactionPermission == loaded.hasAddReactionPermission && this.isDefaultReaction == loaded.isDefaultReaction && m.areEqual(this.mostCommonReaction, loaded.mostCommonReaction);
+                return this.myUserId == loaded.myUserId && this.channelId == loaded.channelId && this.guildId == loaded.guildId && Intrinsics3.areEqual(this.messageId, loaded.messageId) && this.isFollowedThread == loaded.isFollowedThread && this.isArchivedThread == loaded.isArchivedThread && Intrinsics3.areEqual(this.messageCount, loaded.messageCount) && this.hasAddReactionPermission == loaded.hasAddReactionPermission && this.isDefaultReaction == loaded.isDefaultReaction && Intrinsics3.areEqual(this.mostCommonReaction, loaded.mostCommonReaction);
             }
 
             public final long getChannelId() {
@@ -237,9 +238,9 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
 
             /* JADX WARN: Multi-variable type inference failed */
             public int hashCode() {
-                int iA = (b.a(this.guildId) + ((b.a(this.channelId) + (b.a(this.myUserId) * 31)) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.guildId) + ((C0002b.m3a(this.channelId) + (C0002b.m3a(this.myUserId) * 31)) * 31)) * 31;
                 Long l = this.messageId;
-                int iHashCode = (iA + (l != null ? l.hashCode() : 0)) * 31;
+                int iHashCode = (iM3a + (l != null ? l.hashCode() : 0)) * 31;
                 boolean z2 = this.isFollowedThread;
                 int i = z2;
                 if (z2 != 0) {
@@ -279,28 +280,28 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(myUserId=");
-                sbU.append(this.myUserId);
-                sbU.append(", channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", guildId=");
-                sbU.append(this.guildId);
-                sbU.append(", messageId=");
-                sbU.append(this.messageId);
-                sbU.append(", isFollowedThread=");
-                sbU.append(this.isFollowedThread);
-                sbU.append(", isArchivedThread=");
-                sbU.append(this.isArchivedThread);
-                sbU.append(", messageCount=");
-                sbU.append(this.messageCount);
-                sbU.append(", hasAddReactionPermission=");
-                sbU.append(this.hasAddReactionPermission);
-                sbU.append(", isDefaultReaction=");
-                sbU.append(this.isDefaultReaction);
-                sbU.append(", mostCommonReaction=");
-                sbU.append(this.mostCommonReaction);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Loaded(myUserId=");
+                sbM833U.append(this.myUserId);
+                sbM833U.append(", channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", guildId=");
+                sbM833U.append(this.guildId);
+                sbM833U.append(", messageId=");
+                sbM833U.append(this.messageId);
+                sbM833U.append(", isFollowedThread=");
+                sbM833U.append(this.isFollowedThread);
+                sbM833U.append(", isArchivedThread=");
+                sbM833U.append(this.isArchivedThread);
+                sbM833U.append(", messageCount=");
+                sbM833U.append(this.messageCount);
+                sbM833U.append(", hasAddReactionPermission=");
+                sbM833U.append(this.hasAddReactionPermission);
+                sbM833U.append(", isDefaultReaction=");
+                sbM833U.append(this.isDefaultReaction);
+                sbM833U.append(", mostCommonReaction=");
+                sbM833U.append(this.mostCommonReaction);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -424,7 +425,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return this.myUserId == valid.myUserId && this.channelId == valid.channelId && this.guildId == valid.guildId && this.isFollowedThread == valid.isFollowedThread && this.isArchivedThread == valid.isArchivedThread && m.areEqual(this.messageId, valid.messageId) && m.areEqual(this.reaction, valid.reaction) && this.isDefaultReaction == valid.isDefaultReaction && this.messageCount == valid.messageCount && this.hasAddReactionPermission == valid.hasAddReactionPermission && this.followRequestInProgress == valid.followRequestInProgress;
+                return this.myUserId == valid.myUserId && this.channelId == valid.channelId && this.guildId == valid.guildId && this.isFollowedThread == valid.isFollowedThread && this.isArchivedThread == valid.isArchivedThread && Intrinsics3.areEqual(this.messageId, valid.messageId) && Intrinsics3.areEqual(this.reaction, valid.reaction) && this.isDefaultReaction == valid.isDefaultReaction && this.messageCount == valid.messageCount && this.hasAddReactionPermission == valid.hasAddReactionPermission && this.followRequestInProgress == valid.followRequestInProgress;
             }
 
             public final long getChannelId() {
@@ -461,13 +462,13 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
 
             /* JADX WARN: Multi-variable type inference failed */
             public int hashCode() {
-                int iA = (b.a(this.guildId) + ((b.a(this.channelId) + (b.a(this.myUserId) * 31)) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.guildId) + ((C0002b.m3a(this.channelId) + (C0002b.m3a(this.myUserId) * 31)) * 31)) * 31;
                 boolean z2 = this.isFollowedThread;
                 int i = z2;
                 if (z2 != 0) {
                     i = 1;
                 }
-                int i2 = (iA + i) * 31;
+                int i2 = (iM3a + i) * 31;
                 boolean z3 = this.isArchivedThread;
                 int i3 = z3;
                 if (z3 != 0) {
@@ -507,28 +508,28 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Valid(myUserId=");
-                sbU.append(this.myUserId);
-                sbU.append(", channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", guildId=");
-                sbU.append(this.guildId);
-                sbU.append(", isFollowedThread=");
-                sbU.append(this.isFollowedThread);
-                sbU.append(", isArchivedThread=");
-                sbU.append(this.isArchivedThread);
-                sbU.append(", messageId=");
-                sbU.append(this.messageId);
-                sbU.append(", reaction=");
-                sbU.append(this.reaction);
-                sbU.append(", isDefaultReaction=");
-                sbU.append(this.isDefaultReaction);
-                sbU.append(", messageCount=");
-                sbU.append(this.messageCount);
-                sbU.append(", hasAddReactionPermission=");
-                sbU.append(this.hasAddReactionPermission);
-                sbU.append(", followRequestInProgress=");
-                return a.O(sbU, this.followRequestInProgress, ")");
+                StringBuilder sbM833U = outline.m833U("Valid(myUserId=");
+                sbM833U.append(this.myUserId);
+                sbM833U.append(", channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", guildId=");
+                sbM833U.append(this.guildId);
+                sbM833U.append(", isFollowedThread=");
+                sbM833U.append(this.isFollowedThread);
+                sbM833U.append(", isArchivedThread=");
+                sbM833U.append(this.isArchivedThread);
+                sbM833U.append(", messageId=");
+                sbM833U.append(this.messageId);
+                sbM833U.append(", reaction=");
+                sbM833U.append(this.reaction);
+                sbM833U.append(", isDefaultReaction=");
+                sbM833U.append(this.isDefaultReaction);
+                sbM833U.append(", messageCount=");
+                sbM833U.append(this.messageCount);
+                sbM833U.append(", hasAddReactionPermission=");
+                sbM833U.append(this.hasAddReactionPermission);
+                sbM833U.append(", followRequestInProgress=");
+                return outline.m827O(sbM833U, this.followRequestInProgress, ")");
             }
         }
 
@@ -541,14 +542,14 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$doPress$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$doPress$1 */
+    public static final class C100921 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ boolean $isArchivedThread;
         public final /* synthetic */ Function0 $onFullMembership;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2, Context context, Function0 function0) {
+        public C100921(boolean z2, Context context, Function0 function0) {
             super(0);
             this.$isArchivedThread = z2;
             this.$context = context;
@@ -558,13 +559,13 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$isArchivedThread) {
-                b.a.d.m.g(this.$context, R.string.thread_archived, 0, null, 12);
+                AppToast.m169g(this.$context, C5419R.string.thread_archived, 0, null, 12);
             } else {
                 this.$onFullMembership.invoke();
             }
@@ -572,14 +573,14 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onFollowPress$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onFollowPress$1 */
+    public static final class C100931 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
         public final /* synthetic */ boolean $isFollowedThread;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Context context, long j, boolean z2) {
+        public C100931(Context context, long j, boolean z2) {
             super(0);
             this.$context = context;
             this.$channelId = j;
@@ -589,7 +590,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -599,15 +600,15 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onReactionLongPress$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onReactionLongPress$1 */
+    public static final class C100941 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ MessageReaction $reaction;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2, Context context, MessageReaction messageReaction) {
+        public C100941(long j, long j2, Context context, MessageReaction messageReaction) {
             super(0);
             this.$channelId = j;
             this.$messageId = j2;
@@ -618,7 +619,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -628,8 +629,8 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onReactionPress$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onReactionPress$1 */
+    public static final class C100951 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ boolean $hasAddReactionPermission;
         public final /* synthetic */ long $messageId;
@@ -637,7 +638,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         public final /* synthetic */ MessageReaction $reaction;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2, long j, long j2, long j3, MessageReaction messageReaction) {
+        public C100951(boolean z2, long j, long j2, long j3, MessageReaction messageReaction) {
             super(0);
             this.$hasAddReactionPermission = z2;
             this.$myUserId = j;
@@ -649,7 +650,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -661,12 +662,12 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$1 */
+    public static final class C100961 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ViewState.Valid $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ViewState.Valid valid) {
+        public C100961(ViewState.Valid valid) {
             super(0);
             this.$viewState = valid;
         }
@@ -674,7 +675,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -685,18 +686,18 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$2 */
+    public static final class C100972 extends Lambda implements Function1<Void, Unit> {
+        public static final C100972 INSTANCE = new C100972();
 
-        public AnonymousClass2() {
+        public C100972() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -705,12 +706,12 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$3 */
+    public static final class C100983 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ViewState.Valid $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(ViewState.Valid valid) {
+        public C100983(ViewState.Valid valid) {
             super(0);
             this.$viewState = valid;
         }
@@ -718,7 +719,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -729,18 +730,18 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<Void, Unit> {
-        public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
+    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$4 */
+    public static final class C100994 extends Lambda implements Function1<Void, Unit> {
+        public static final C100994 INSTANCE = new C100994();
 
-        public AnonymousClass4() {
+        public C100994() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -783,7 +784,7 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     private final void doPress(Context context, FragmentManager fragmentManager, long guildId, boolean isArchivedThread, Function0<Unit> onFullMembership) {
-        MemberVerificationUtils.maybeShowVerificationGate$default(MemberVerificationUtils.INSTANCE, context, fragmentManager, guildId, Traits.Location.Section.EMOJI_PICKER_POPOUT, null, null, new AnonymousClass1(isArchivedThread, context, onFullMembership), 32, null);
+        MemberVerificationUtils.maybeShowVerificationGate$default(MemberVerificationUtils.INSTANCE, context, fragmentManager, guildId, Traits.Location.Section.EMOJI_PICKER_POPOUT, null, null, new C100921(isArchivedThread, context, onFullMembership), 32, null);
     }
 
     private final void toggleFollowPost(Context context, long channelId, boolean isFollowedThread) {
@@ -798,14 +799,14 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         this.followRequestInProgress = true;
         updateViewState(ViewState.Valid.copy$default(valid, 0L, 0L, 0L, false, false, null, null, false, 0, false, true, AudioAttributesCompat.FLAG_ALL, null));
         if (isFollowedThread) {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().leaveThread(channelId, "Forum Split View Toolbar"), false, 1, null), this, null, 2, null), WidgetForumPostStatusViewModel.class, context, (Function1) null, (Function1) null, (Function0) null, new AnonymousClass1(valid), AnonymousClass2.INSTANCE, 28, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().leaveThread(channelId, "Forum Split View Toolbar"), false, 1, null), this, null, 2, null), WidgetForumPostStatusViewModel.class, context, (Function1) null, (Function1) null, (Function0) null, new C100961(valid), C100972.INSTANCE, 28, (Object) null);
         } else {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().joinThread(channelId, "Forum Split View Toolbar", new RestAPIParams.EmptyBody()), false, 1, null), this, null, 2, null), WidgetForumPostStatusViewModel.class, context, (Function1) null, (Function1) null, (Function0) null, new AnonymousClass3(valid), AnonymousClass4.INSTANCE, 28, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().joinThread(channelId, "Forum Split View Toolbar", new RestAPIParams.EmptyBody()), false, 1, null), this, null, 2, null), WidgetForumPostStatusViewModel.class, context, (Function1) null, (Function1) null, (Function0) null, new C100983(valid), C100994.INSTANCE, 28, (Object) null);
         }
     }
 
     public final void handleStoreState(StoreState storeState) {
-        m.checkNotNullParameter(storeState, "storeState");
+        Intrinsics3.checkNotNullParameter(storeState, "storeState");
         if (!(storeState instanceof StoreState.Loaded)) {
             updateViewState(ViewState.Invalid.INSTANCE);
             return;
@@ -831,40 +832,40 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
     }
 
     public final void onFollowPress(Context context, FragmentManager fragmentManager, long guildId, long channelId, boolean isArchivedThread, boolean isFollowedThread) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(fragmentManager, "fragmentManager");
-        doPress(context, fragmentManager, guildId, isArchivedThread, new AnonymousClass1(context, channelId, isFollowedThread));
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        doPress(context, fragmentManager, guildId, isArchivedThread, new C100931(context, channelId, isFollowedThread));
     }
 
     public final void onReactionLongPress(Context context, FragmentManager fragmentManager, long messageId, long guildId, long channelId, boolean isArchivedThread, MessageReaction reaction) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(fragmentManager, "fragmentManager");
-        m.checkNotNullParameter(reaction, "reaction");
-        doPress(context, fragmentManager, guildId, isArchivedThread, new AnonymousClass1(channelId, messageId, context, reaction));
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        Intrinsics3.checkNotNullParameter(reaction, "reaction");
+        doPress(context, fragmentManager, guildId, isArchivedThread, new C100941(channelId, messageId, context, reaction));
     }
 
     public final void onReactionPress(Context context, FragmentManager fragmentManager, long myUserId, long messageId, long guildId, long channelId, boolean isArchivedThread, MessageReaction reaction, boolean hasAddReactionPermission) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(fragmentManager, "fragmentManager");
-        m.checkNotNullParameter(reaction, "reaction");
-        doPress(context, fragmentManager, guildId, isArchivedThread, new AnonymousClass1(hasAddReactionPermission, myUserId, channelId, messageId, reaction));
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        Intrinsics3.checkNotNullParameter(reaction, "reaction");
+        doPress(context, fragmentManager, guildId, isArchivedThread, new C100951(hasAddReactionPermission, myUserId, channelId, messageId, reaction));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetForumPostStatusViewModel(AppFragment appFragment, StoreUser storeUser, StoreChannels storeChannels, StoreChannelsSelected storeChannelsSelected, StoreThreadsJoined storeThreadsJoined, StoreForumPostMessages storeForumPostMessages, StoreThreadMessages storeThreadMessages, StoreMessages storeMessages, StoreEmoji storeEmoji, StorePermissions storePermissions, WidgetChatListAdapterEventsHandler.UserReactionHandler userReactionHandler, Observable<StoreState> observable) {
         super(null, 1, null);
-        m.checkNotNullParameter(appFragment, "appFragment");
-        m.checkNotNullParameter(storeUser, "storeUser");
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        m.checkNotNullParameter(storeThreadsJoined, "storeThreadsJoined");
-        m.checkNotNullParameter(storeForumPostMessages, "storeForumPostMessages");
-        m.checkNotNullParameter(storeThreadMessages, "storeThreadMessages");
-        m.checkNotNullParameter(storeMessages, "storeMessages");
-        m.checkNotNullParameter(storeEmoji, "storeEmoji");
-        m.checkNotNullParameter(storePermissions, "storePermissions");
-        m.checkNotNullParameter(userReactionHandler, "userReactionHandler");
-        m.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(appFragment, "appFragment");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        Intrinsics3.checkNotNullParameter(storeThreadsJoined, "storeThreadsJoined");
+        Intrinsics3.checkNotNullParameter(storeForumPostMessages, "storeForumPostMessages");
+        Intrinsics3.checkNotNullParameter(storeThreadMessages, "storeThreadMessages");
+        Intrinsics3.checkNotNullParameter(storeMessages, "storeMessages");
+        Intrinsics3.checkNotNullParameter(storeEmoji, "storeEmoji");
+        Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
+        Intrinsics3.checkNotNullParameter(userReactionHandler, "userReactionHandler");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
         this.appFragment = appFragment;
         this.storeUser = storeUser;
         this.storeChannels = storeChannels;
@@ -876,8 +877,8 @@ public final class WidgetForumPostStatusViewModel extends d0<ViewState> {
         this.storeEmoji = storeEmoji;
         this.storePermissions = storePermissions;
         this.userReactionHandler = userReactionHandler;
-        Observable observableR = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null).r();
-        m.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(observableR, WidgetForumPostStatusViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Observable observableM11112r = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "storeStateObservable\n   …  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(observableM11112r, WidgetForumPostStatusViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C100901(), 62, (Object) null);
     }
 }

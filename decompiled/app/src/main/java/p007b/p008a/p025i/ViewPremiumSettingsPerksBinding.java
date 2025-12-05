@@ -1,0 +1,47 @@
+package p007b.p008a.p025i;
+
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.viewbinding.ViewBinding;
+
+/* compiled from: ViewPremiumSettingsPerksBinding.java */
+/* renamed from: b.a.i.z2, reason: use source file name */
+/* loaded from: classes.dex */
+public final class ViewPremiumSettingsPerksBinding implements ViewBinding {
+
+    /* renamed from: a */
+    @NonNull
+    public final LinearLayout f1435a;
+
+    /* renamed from: b */
+    @NonNull
+    public final TextView f1436b;
+
+    /* renamed from: c */
+    @NonNull
+    public final TextView f1437c;
+
+    /* renamed from: d */
+    @NonNull
+    public final TextView f1438d;
+
+    /* renamed from: e */
+    @NonNull
+    public final TextView f1439e;
+
+    public ViewPremiumSettingsPerksBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4, @NonNull TextView textView5) {
+        this.f1435a = linearLayout;
+        this.f1436b = textView;
+        this.f1437c = textView3;
+        this.f1438d = textView4;
+        this.f1439e = textView5;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return this.f1435a;
+    }
+}

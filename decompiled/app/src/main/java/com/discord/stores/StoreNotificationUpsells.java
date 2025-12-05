@@ -1,13 +1,13 @@
 package com.discord.stores;
 
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.stores.updates.ObservationDeck4;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreNotificationUpsells.kt */
 /* loaded from: classes2.dex */
@@ -16,16 +16,16 @@ public final class StoreNotificationUpsells extends StoreV2 {
     private final ObservationDeck observationDeck;
 
     /* compiled from: StoreNotificationUpsells.kt */
-    /* renamed from: com.discord.stores.StoreNotificationUpsells$dismissPushNotificationsUpsell$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreNotificationUpsells$dismissPushNotificationsUpsell$1 */
+    public static final class C62911 extends Lambda implements Function0<Unit> {
+        public C62911() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -35,9 +35,9 @@ public final class StoreNotificationUpsells extends StoreV2 {
     }
 
     /* compiled from: StoreNotificationUpsells.kt */
-    /* renamed from: com.discord.stores.StoreNotificationUpsells$observePushNotificationUpsellDismissed$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreNotificationUpsells$observePushNotificationUpsellDismissed$1 */
+    public static final class C62921 extends Lambda implements Function0<Boolean> {
+        public C62921() {
             super(0);
         }
 
@@ -53,12 +53,12 @@ public final class StoreNotificationUpsells extends StoreV2 {
     }
 
     public /* synthetic */ StoreNotificationUpsells(Dispatcher dispatcher, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public final void dismissPushNotificationsUpsell() {
         getPrefsSessionDurable().edit().putBoolean("PUSH_NOTIFICATIONS_DISMISS_UPSELL", true).apply();
-        this.dispatcher.schedule(new AnonymousClass1());
+        this.dispatcher.schedule(new C62911());
     }
 
     public final boolean getPushNotificationsUpsellDismissed() {
@@ -66,14 +66,14 @@ public final class StoreNotificationUpsells extends StoreV2 {
     }
 
     public final Observable<Boolean> observePushNotificationUpsellDismissed() {
-        Observable<Boolean> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
-        return observableR;
+        Observable<Boolean> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C62921(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public StoreNotificationUpsells(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
     }

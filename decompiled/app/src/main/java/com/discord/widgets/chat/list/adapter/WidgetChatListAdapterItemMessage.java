@@ -17,9 +17,7 @@ import androidx.constraintlayout.motion.widget.Key;
 import androidx.core.text.BidiFormatter;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.ViewKt;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.interaction.Interaction;
 import com.discord.api.message.LocalAttachment;
@@ -63,15 +61,17 @@ import com.discord.widgets.chat.list.entries.MessageEntry;
 import com.discord.widgets.chat.list.utils.EmbeddedMessageParser;
 import com.discord.widgets.roles.RoleIconView;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function3;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetChatListAdapterItemMessage.kt */
 /* loaded from: classes2.dex */
@@ -102,11 +102,11 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     private final View threadStarterMessageHeader;
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$1 */
+    public static final class ViewOnClickListenerC80981 implements View.OnClickListener {
         public final /* synthetic */ Message $message;
 
-        public AnonymousClass1(Message message) {
+        public ViewOnClickListenerC80981(Message message) {
             this.$message = message;
         }
 
@@ -117,11 +117,11 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyPreview$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyPreview$1 */
+    public static final class ViewOnClickListenerC81001 implements View.OnClickListener {
         public final /* synthetic */ Message $repliedMessage;
 
-        public AnonymousClass1(Message message) {
+        public ViewOnClickListenerC81001(Message message) {
             this.$repliedMessage = message;
         }
 
@@ -132,59 +132,59 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function3<Context, String, String, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$1 */
+    public static final class C81011 extends Lambda implements Function3<Context, String, String, Unit> {
+        public static final C81011 INSTANCE = new C81011();
 
-        public AnonymousClass1() {
+        public C81011() {
             super(3);
         }
 
         @Override // kotlin.jvm.functions.Function3
         public /* bridge */ /* synthetic */ Unit invoke(Context context, String str, String str2) {
             invoke2(context, str, str2);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
-            m.checkNotNullParameter(context, "clickContext");
-            m.checkNotNullParameter(str, "url");
+            Intrinsics3.checkNotNullParameter(context, "clickContext");
+            Intrinsics3.checkNotNullParameter(str, "url");
             UriHandler.handleOrUntrusted(context, str, str2);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<String, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$2 */
+    public static final class C81022 extends Lambda implements Function1<String, Unit> {
+        public C81022() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(String str) {
             invoke2(str);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            m.checkNotNullParameter(str, "url");
+            Intrinsics3.checkNotNullParameter(str, "url");
             WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getEventHandler().onUrlLongClicked(str);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<Long, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$3 */
+    public static final class C81033 extends Lambda implements Function1<Long, Unit> {
+        public C81033() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke(l.longValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j) {
@@ -194,12 +194,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<Long, Unit> {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$4 */
+    public static final class C81044 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass4(Context context) {
+        public C81044(Context context) {
             super(1);
             this.$context = context;
         }
@@ -207,7 +207,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke(l.longValue());
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         public final void invoke(long j) {
@@ -216,12 +216,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getSpoilerClickHandler$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<SpoilerNode<?>, Unit> {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getSpoilerClickHandler$1 */
+    public static final class C81051 extends Lambda implements Function1<SpoilerNode<?>, Unit> {
         public final /* synthetic */ Message $message;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Message message) {
+        public C81051(Message message) {
             super(1);
             this.$message = message;
         }
@@ -229,23 +229,23 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(SpoilerNode<?> spoilerNode) {
             invoke2(spoilerNode);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SpoilerNode<?> spoilerNode) {
-            m.checkNotNullParameter(spoilerNode, "spoilerNode");
+            Intrinsics3.checkNotNullParameter(spoilerNode, "spoilerNode");
             StoreStream.INSTANCE.getMessageState().revealSpoiler(this.$message.getId(), spoilerNode.getId());
             WidgetChatListAdapterItemMessage.this.itemView.sendAccessibilityEvent(16);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$1 */
+    public static final class ViewOnClickListenerC81061 implements View.OnClickListener {
         public final /* synthetic */ Message $message;
 
-        public AnonymousClass1(Message message) {
+        public ViewOnClickListenerC81061(Message message) {
             this.$message = message;
         }
 
@@ -256,12 +256,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$2 */
+    public static final class C81072 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Message $message;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(Message message) {
+        public C81072(Message message) {
             super(1);
             this.$message = message;
         }
@@ -269,23 +269,23 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getEventHandler().onMessageAuthorLongClicked(this.$message, Long.valueOf(WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getData().getGuildId()));
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$3 */
+    public static final class ViewOnClickListenerC81083 implements View.OnClickListener {
         public final /* synthetic */ boolean $isThreadStarterMessage;
         public final /* synthetic */ Message $message;
 
-        public AnonymousClass3(Message message, boolean z2) {
+        public ViewOnClickListenerC81083(Message message, boolean z2) {
             this.$message = message;
             this.$isThreadStarterMessage = z2;
         }
@@ -297,13 +297,13 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$4 */
+    public static final class C81094 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ boolean $isThreadStarterMessage;
         public final /* synthetic */ Message $message;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass4(Message message, boolean z2) {
+        public C81094(Message message, boolean z2) {
             super(1);
             this.$message = message;
             this.$isThreadStarterMessage = z2;
@@ -312,22 +312,22 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getEventHandler().onMessageLongClicked(this.$message, WidgetChatListAdapterItemMessage.access$getItemText$p(WidgetChatListAdapterItemMessage.this).getText().subSequence(0, Math.max(WidgetChatListAdapterItemMessage.access$getItemText$p(WidgetChatListAdapterItemMessage.this).getText().length() - 1, 0)), this.$isThreadStarterMessage);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$5 */
+    public static final class ViewOnClickListenerC81105 implements View.OnClickListener {
         public final /* synthetic */ Message $message;
 
-        public AnonymousClass5(Message message) {
+        public ViewOnClickListenerC81105(Message message) {
             this.$message = message;
         }
 
@@ -338,12 +338,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends o implements Function1<View, Unit> {
+    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$6 */
+    public static final class C81116 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Message $message;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass6(Message message) {
+        public C81116(Message message) {
             super(1);
             this.$message = message;
         }
@@ -351,12 +351,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getEventHandler().onMessageAuthorLongClicked(this.$message, Long.valueOf(WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getData().getGuildId()));
         }
     }
@@ -364,32 +364,32 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemMessage(@LayoutRes int i, WidgetChatListAdapter widgetChatListAdapter) {
         super(i, widgetChatListAdapter);
-        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
-        View viewFindViewById = this.itemView.findViewById(R.id.chat_list_adapter_item_text);
-        m.checkNotNullExpressionValue(viewFindViewById, "itemView.findViewById(R.…t_list_adapter_item_text)");
+        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        View viewFindViewById = this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text);
+        Intrinsics3.checkNotNullExpressionValue(viewFindViewById, "itemView.findViewById(R.…t_list_adapter_item_text)");
         this.itemText = (SimpleDraweeSpanTextView) viewFindViewById;
-        this.itemAvatar = (ImageView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_avatar);
-        this.itemName = (TextView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_name);
-        this.itemRoleIcon = (RoleIconView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_role_icon);
-        this.itemTag = (TextView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_tag);
-        this.replyHolder = this.itemView.findViewById(R.id.chat_list_adapter_item_text_decorator);
-        this.replyLinkItem = this.itemView.findViewById(R.id.chat_list_adapter_item_text_decorator_reply_link_icon);
-        this.replyLeadingViewsHolder = this.itemView.findViewById(R.id.chat_list_adapter_item_reply_leading_views);
-        this.replyName = (TextView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_decorator_reply_name);
-        this.replyIcon = (ImageView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_decorator_reply_icon);
-        this.replyAvatar = (ImageView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_decorator_avatar);
-        this.replyText = (SimpleDraweeSpanTextView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_reply_content);
-        this.itemTimestamp = (TextView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_timestamp);
-        this.failedUploadList = (FailedUploadList) this.itemView.findViewById(R.id.chat_list_adapter_item_failed_upload_list);
-        this.itemAlertText = (TextView) this.itemView.findViewById(R.id.chat_list_adapter_item_alert_text);
-        this.itemLoadingText = (TextView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_loading);
-        this.backgroundHighlight = this.itemView.findViewById(R.id.chat_list_adapter_item_highlighted_bg);
-        this.gutterHighlight = this.itemView.findViewById(R.id.chat_list_adapter_item_gutter_bg);
-        this.loadingDots = (TypingDots) this.itemView.findViewById(R.id.chat_overlay_typing_dots);
-        this.sendError = (ImageView) this.itemView.findViewById(R.id.chat_list_adapter_item_text_error);
-        this.threadEmbedSpine = (ImageView) this.itemView.findViewById(R.id.chat_list_adapter_item_thread_embed_spine);
-        this.threadStarterMessageHeader = this.itemView.findViewById(R.id.thread_starter_message_header);
-        this.communicationDisabledIcon = (ImageView) this.itemView.findViewById(R.id.chat_list_adapter_item_communication_disabled_icon);
+        this.itemAvatar = (ImageView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_avatar);
+        this.itemName = (TextView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_name);
+        this.itemRoleIcon = (RoleIconView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_role_icon);
+        this.itemTag = (TextView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_tag);
+        this.replyHolder = this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_decorator);
+        this.replyLinkItem = this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_decorator_reply_link_icon);
+        this.replyLeadingViewsHolder = this.itemView.findViewById(C5419R.id.chat_list_adapter_item_reply_leading_views);
+        this.replyName = (TextView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_decorator_reply_name);
+        this.replyIcon = (ImageView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_decorator_reply_icon);
+        this.replyAvatar = (ImageView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_decorator_avatar);
+        this.replyText = (SimpleDraweeSpanTextView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_reply_content);
+        this.itemTimestamp = (TextView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_timestamp);
+        this.failedUploadList = (FailedUploadList) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_failed_upload_list);
+        this.itemAlertText = (TextView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_alert_text);
+        this.itemLoadingText = (TextView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_loading);
+        this.backgroundHighlight = this.itemView.findViewById(C5419R.id.chat_list_adapter_item_highlighted_bg);
+        this.gutterHighlight = this.itemView.findViewById(C5419R.id.chat_list_adapter_item_gutter_bg);
+        this.loadingDots = (TypingDots) this.itemView.findViewById(C5419R.id.chat_overlay_typing_dots);
+        this.sendError = (ImageView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_text_error);
+        this.threadEmbedSpine = (ImageView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_thread_embed_spine);
+        this.threadStarterMessageHeader = this.itemView.findViewById(C5419R.id.thread_starter_message_header);
+        this.communicationDisabledIcon = (ImageView) this.itemView.findViewById(C5419R.id.chat_list_adapter_item_communication_disabled_icon);
     }
 
     public static final /* synthetic */ WidgetChatListAdapter access$getAdapter$p(WidgetChatListAdapterItemMessage widgetChatListAdapterItemMessage) {
@@ -432,13 +432,13 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         if (zShouldShowInteractionMessage) {
             TypingDots typingDots2 = this.loadingDots;
             if (typingDots2 != null) {
-                int i = TypingDots.j;
-                typingDots2.a(false);
+                int i = TypingDots.f19342j;
+                typingDots2.m8619a(false);
             }
         } else {
             TypingDots typingDots3 = this.loadingDots;
             if (typingDots3 != null) {
-                typingDots3.c();
+                typingDots3.m8620c();
             }
         }
         TextView textView = this.itemLoadingText;
@@ -459,12 +459,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
         if (message.isFailed()) {
             View view = this.itemView;
-            m.checkNotNullExpressionValue(view, "itemView");
-            themedColor = ColorCompat.getThemedColor(view, R.attr.colorError);
+            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            themedColor = ColorCompat.getThemedColor(view, C5419R.attr.colorError);
         } else {
             View view2 = this.itemView;
-            m.checkNotNullExpressionValue(view2, "itemView");
-            themedColor = ColorCompat.getThemedColor(view2, R.attr.colorTextMuted);
+            Intrinsics3.checkNotNullExpressionValue(view2, "itemView");
+            themedColor = ColorCompat.getThemedColor(view2, C5419R.attr.colorTextMuted);
         }
         TextView textView3 = this.itemLoadingText;
         if (textView3 != null) {
@@ -474,12 +474,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             TextView textView4 = this.itemLoadingText;
             if (textView4 != null) {
                 Context context = this.itemText.getContext();
-                m.checkNotNullExpressionValue(context, "itemText.context");
+                Intrinsics3.checkNotNullExpressionValue(context, "itemText.context");
                 Object[] objArr = new Object[1];
                 Map<Long, String> nickOrUsernames = messageEntry.getNickOrUsernames();
                 User author = message.getAuthor();
                 objArr[0] = nickOrUsernames.get(author != null ? Long.valueOf(author.getId()) : null);
-                textView4.setText(b.h(context, R.string.application_command_waiting, objArr, null, 4));
+                textView4.setText(FormatUtils.m216h(context, C5419R.string.application_command_waiting, objArr, null, 4));
             }
             ImageView imageView2 = this.sendError;
             if (imageView2 != null) {
@@ -488,7 +488,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         } else if (message.isLocalApplicationCommand() && message.isFailed()) {
             TextView textView5 = this.itemLoadingText;
             if (textView5 != null) {
-                textView5.setText(R.string.application_command_failed);
+                textView5.setText(C5419R.string.application_command_failed);
             }
             ImageView imageView3 = this.sendError;
             if (imageView3 != null) {
@@ -500,12 +500,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             }
             TypingDots typingDots5 = this.loadingDots;
             if (typingDots5 != null) {
-                typingDots5.c();
+                typingDots5.m8620c();
             }
         } else if (message.isLocalApplicationCommand()) {
             TextView textView6 = this.itemLoadingText;
             if (textView6 != null) {
-                textView6.setText(R.string.application_command_sending);
+                textView6.setText(C5419R.string.application_command_sending);
             }
             ImageView imageView4 = this.sendError;
             if (imageView4 != null) {
@@ -519,7 +519,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     private final void configureItemTag(Message message, boolean isGuildForumPostAuthor) {
         if (this.itemTag != null) {
             User author = message.getAuthor();
-            m.checkNotNull(author);
+            Intrinsics3.checkNotNull(author);
             CoreUser coreUser = new CoreUser(author);
             boolean zIsPublicGuildSystemMessage = PublicGuildUtils.INSTANCE.isPublicGuildSystemMessage(message);
             Integer type = message.getType();
@@ -530,14 +530,14 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
                 z2 = false;
             }
             textView.setVisibility(z2 ? 0 : 8);
-            this.itemTag.setText((coreUser.getIsSystemUser() || zIsPublicGuildSystemMessage) ? R.string.system_dm_tag_system : z3 ? R.string.bot_tag_server : isGuildForumPostAuthor ? R.string.bot_tag_forum_original_poster : R.string.bot_tag_bot);
-            this.itemTag.setCompoundDrawablesWithIntrinsicBounds(UserUtils.INSTANCE.isVerifiedBot(coreUser) ? R.drawable.ic_verified_10dp : 0, 0, 0, 0);
+            this.itemTag.setText((coreUser.getIsSystemUser() || zIsPublicGuildSystemMessage) ? C5419R.string.system_dm_tag_system : z3 ? C5419R.string.bot_tag_server : isGuildForumPostAuthor ? C5419R.string.bot_tag_forum_original_poster : C5419R.string.bot_tag_bot);
+            this.itemTag.setCompoundDrawablesWithIntrinsicBounds(UserUtils.INSTANCE.isVerifiedBot(coreUser) ? C5419R.drawable.ic_verified_10dp : 0, 0, 0, 0);
         }
     }
 
     private final void configureReplyAuthor(com.discord.models.user.User replyAuthor, GuildMember replyGuildMember, MessageEntry messageEntry) {
         configureReplyAvatar(replyAuthor, replyGuildMember != null ? replyGuildMember : messageEntry.getAuthor());
-        String username = (String) a.f(replyAuthor, messageEntry.getNickOrUsernames());
+        String username = (String) outline.m849f(replyAuthor, messageEntry.getNickOrUsernames());
         if (username == null) {
             username = replyAuthor.getUsername();
         }
@@ -565,14 +565,14 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         } else {
             imageView.setVisibility(8);
             this.replyAvatar.setVisibility(0);
-            IconUtils.setIcon$default(this.replyAvatar, messageAuthor, R.dimen.avatar_size_reply, null, null, guildMember, 24, null);
+            IconUtils.setIcon$default(this.replyAvatar, messageAuthor, C5419R.dimen.avatar_size_reply, null, null, guildMember, 24, null);
         }
     }
 
     private final void configureReplyContentWithResourceId(int stringResourceId) {
         if (this.replyText != null) {
             Context context = this.replyText.getContext();
-            m.checkNotNullExpressionValue(context, "replyText.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "replyText.context");
             SpannableString spannableString = new SpannableString(context.getResources().getString(stringResourceId));
             spannableString.setSpan(new StyleSpan(2), 0, spannableString.length(), 33);
             configureReplyText(spannableString, 0.64f);
@@ -592,7 +592,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         configureReplyAuthor(coreUser, interactionAuthor, messageEntry);
         TextView textView = this.replyName;
         if (textView != null) {
-            textView.setOnClickListener(new AnonymousClass1(message));
+            textView.setOnClickListener(new ViewOnClickListenerC80981(message));
         }
         SimpleDraweeSpanTextView simpleDraweeSpanTextView = this.replyText;
         if (simpleDraweeSpanTextView != null) {
@@ -604,10 +604,10 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             }
         }
         SimpleDraweeSpanTextView simpleDraweeSpanTextView2 = this.replyText;
-        CharSequence charSequenceD = simpleDraweeSpanTextView2 != null ? b.d(simpleDraweeSpanTextView2, R.string.system_message_application_command_reply, new Object[]{interaction.getName()}, new WidgetChatListAdapterItemMessage$configureReplyInteraction$content$1(this, interaction, message, user)) : null;
-        if (charSequenceD != null) {
-            SpannableString spannableStringValueOf = SpannableString.valueOf(charSequenceD);
-            m.checkNotNullExpressionValue(spannableStringValueOf, "valueOf(this)");
+        CharSequence charSequenceM212d = simpleDraweeSpanTextView2 != null ? FormatUtils.m212d(simpleDraweeSpanTextView2, C5419R.string.system_message_application_command_reply, new Object[]{interaction.getName()}, new WidgetChatListAdapterItemMessage2(this, interaction, message, user)) : null;
+        if (charSequenceM212d != null) {
+            SpannableString spannableStringValueOf = SpannableString.valueOf(charSequenceM212d);
+            Intrinsics3.checkNotNullExpressionValue(spannableStringValueOf, "valueOf(this)");
             configureReplyText(spannableStringValueOf, 1.0f);
         }
     }
@@ -658,22 +658,22 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         MessageEntry messageEntry2 = replyData.getMessageEntry();
         StoreMessageReplies.MessageState messageState = replyData.getMessageState();
         if (replyData.isRepliedUserBlocked()) {
-            configureReplySystemMessage(R.string.reply_quote_message_blocked);
+            configureReplySystemMessage(C5419R.string.reply_quote_message_blocked);
             return;
         }
         if (messageState instanceof StoreMessageReplies.MessageState.Unloaded) {
-            configureReplySystemMessage(R.string.reply_quote_message_not_loaded);
+            configureReplySystemMessage(C5419R.string.reply_quote_message_not_loaded);
             return;
         }
         if (messageState instanceof StoreMessageReplies.MessageState.Deleted) {
-            configureReplySystemMessage(R.string.reply_quote_message_deleted);
+            configureReplySystemMessage(C5419R.string.reply_quote_message_deleted);
             return;
         }
         if (!(messageState instanceof StoreMessageReplies.MessageState.Loaded) || messageEntry2 == null) {
             return;
         }
         Message message2 = messageEntry2.getMessage();
-        this.replyHolder.setOnClickListener(new AnonymousClass1(message2));
+        this.replyHolder.setOnClickListener(new ViewOnClickListenerC81001(message2));
         Integer type2 = message2.getType();
         if (type2 != null && type2.intValue() == 7) {
             configureReplySystemMessageUserJoin(messageEntry2);
@@ -685,7 +685,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             return;
         }
         User author = message2.getAuthor();
-        m.checkNotNull(author);
+        Intrinsics3.checkNotNull(author);
         configureReplyAuthor(new CoreUser(author), messageEntry2.getAuthor(), messageEntry2);
         if (this.replyText == null || this.replyLeadingViewsHolder == null) {
             return;
@@ -697,7 +697,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         if (!(content.length() == 0)) {
             Context context = this.replyText.getContext();
             EmbeddedMessageParser embeddedMessageParser = EmbeddedMessageParser.INSTANCE;
-            m.checkNotNullExpressionValue(context, "context");
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
             DraweeSpanStringBuilder draweeSpanStringBuilder = embeddedMessageParser.parse(new EmbeddedMessageParser.ParserData(context, messageEntry2.getRoles(), messageEntry2.getNickOrUsernames(), messageEntry2.getAnimateEmojis(), new StoreMessageState.State(null, null, 3, null), 50, message2, (WidgetChatListAdapter) this.adapter));
             draweeSpanStringBuilder.setSpan(getLeadingEdgeSpan(), 0, draweeSpanStringBuilder.length(), 33);
             this.replyText.setDraweeSpanStringBuilder(draweeSpanStringBuilder);
@@ -705,14 +705,14 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             return;
         }
         if (message2.hasStickers()) {
-            configureReplyContentWithResourceId(R.string.reply_quote_sticker_mobile);
+            configureReplyContentWithResourceId(C5419R.string.reply_quote_sticker_mobile);
             return;
         }
         if (message2.hasAttachments() || message2.shouldShowReplyPreviewAsAttachment() || message2.hasEmbeds()) {
-            configureReplyContentWithResourceId(R.string.reply_quote_no_text_content_mobile);
+            configureReplyContentWithResourceId(C5419R.string.reply_quote_no_text_content_mobile);
             return;
         }
-        Logger.e$default(AppLog.g, "Unhandled reply preview: " + messageEntry2, null, null, 6, null);
+        Logger.e$default(AppLog.f14950g, "Unhandled reply preview: " + messageEntry2, null, null, 6, null);
     }
 
     private final void configureReplySystemMessage(int stringResourceId) {
@@ -730,7 +730,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         configureReplyAvatar(null, null);
         configureReplyName("", 0, false);
         MessageUtils messageUtils = MessageUtils.INSTANCE;
-        m.checkNotNullExpressionValue(context, "context");
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
         Guild guild = StoreStream.INSTANCE.getGuilds().getGuild(((WidgetChatListAdapter) this.adapter).getData().getGuildId());
         String name = guild != null ? guild.getName() : null;
         Map<Long, String> nickOrUsernames = repliedMessageEntry.getNickOrUsernames();
@@ -745,14 +745,14 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
         imageView.setVisibility(8);
         this.replyAvatar.setVisibility(0);
-        this.replyAvatar.setImageResource(R.drawable.ic_group_join);
+        this.replyAvatar.setImageResource(C5419R.drawable.ic_group_join);
         configureReplyName("", 0, false);
         Context context = this.replyText.getContext();
         Map<Long, String> nickOrUsernames = repliedMessageEntry.getNickOrUsernames();
         User author = repliedMessageEntry.getMessage().getAuthor();
         String str = nickOrUsernames.get(author != null ? Long.valueOf(author.getId()) : null);
-        m.checkNotNullExpressionValue(context, "context");
-        configureReplyText(new SpannableString(b.h(context, MessageUtils.INSTANCE.getSystemMessageUserJoin(context, repliedMessageEntry.getMessage().getId()), new Object[]{str}, null, 4).toString()), 0.64f);
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        configureReplyText(new SpannableString(FormatUtils.m216h(context, MessageUtils.INSTANCE.getSystemMessageUserJoin(context, repliedMessageEntry.getMessage().getId()), new Object[]{str}, null, 4).toString()), 0.64f);
     }
 
     private final void configureReplyText(Spannable content, float alpha) {
@@ -781,8 +781,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
 
     private final int getAuthorTextColor(GuildMember member) {
         View view = this.itemView;
-        m.checkNotNullExpressionValue(view, "itemView");
-        return GuildMember.INSTANCE.getColor(member, ColorCompat.getThemedColor(view.getContext(), R.attr.colorHeaderPrimary));
+        Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+        return GuildMember.INSTANCE.getColor(member, ColorCompat.getThemedColor(view.getContext(), C5419R.attr.colorHeaderPrimary));
     }
 
     private final LeadingMarginSpan getLeadingEdgeSpan() {
@@ -803,12 +803,12 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     private final MessageRenderContext getMessageRenderContext(Context context, MessageEntry messageEntry, Function1<? super SpoilerNode<?>, Unit> spoilerClickHandler) {
-        return new MessageRenderContext(context, ((WidgetChatListAdapter) this.adapter).getData().getUserId(), messageEntry.getAnimateEmojis(), messageEntry.getNickOrUsernames(), ((WidgetChatListAdapter) this.adapter).getData().getChannelNames(), messageEntry.getRoles(), R.attr.colorTextLink, AnonymousClass1.INSTANCE, new AnonymousClass2(), ColorCompat.getThemedColor(context, R.attr.theme_chat_spoiler_bg), ColorCompat.getThemedColor(context, R.attr.theme_chat_spoiler_bg_visible), spoilerClickHandler, new AnonymousClass3(), new AnonymousClass4(context));
+        return new MessageRenderContext(context, ((WidgetChatListAdapter) this.adapter).getData().getUserId(), messageEntry.getAnimateEmojis(), messageEntry.getNickOrUsernames(), ((WidgetChatListAdapter) this.adapter).getData().getChannelNames(), messageEntry.getRoles(), C5419R.attr.colorTextLink, C81011.INSTANCE, new C81022(), ColorCompat.getThemedColor(context, C5419R.attr.theme_chat_spoiler_bg), ColorCompat.getThemedColor(context, C5419R.attr.theme_chat_spoiler_bg_visible), spoilerClickHandler, new C81033(), new C81044(context));
     }
 
     private final Function1<SpoilerNode<?>, Unit> getSpoilerClickHandler(Message message) {
         if (((WidgetChatListAdapter) this.adapter).getData().getIsSpoilerClickAllowed()) {
-            return new AnonymousClass1(message);
+            return new C81051(message);
         }
         return null;
     }
@@ -822,17 +822,17 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         UtcDateTime editedTimestamp = message.getEditedTimestamp();
         boolean z2 = (editedTimestamp != null ? editedTimestamp.getDateTimeMillis() : 0L) > 0;
         if (message.isSourceDeleted()) {
-            m.checkNotNullExpressionValue(context, "context");
-            content = context.getResources().getString(R.string.source_message_deleted);
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            content = context.getResources().getString(C5419R.string.source_message_deleted);
         } else {
             content = message.getContent();
             if (content == null) {
                 content = "";
             }
         }
-        m.checkNotNullExpressionValue(content, "if (message.isSourceDele…ssage.content ?: \"\"\n    }");
+        Intrinsics3.checkNotNullExpressionValue(content, "if (message.isSourceDele…ssage.content ?: \"\"\n    }");
         MessagePreprocessor messagePreprocessor = getMessagePreprocessor(((WidgetChatListAdapter) this.adapter).getData().getUserId(), message, messageEntry.getMessageState());
-        m.checkNotNullExpressionValue(context, "context");
+        Intrinsics3.checkNotNullExpressionValue(context, "context");
         DraweeSpanStringBuilder channelMessage = DiscordParser.parseChannelMessage(context, content, getMessageRenderContext(context, messageEntry, getSpoilerClickHandler(message)), messagePreprocessor, messageEntry.isGuildForumPostFirstMessage() ? DiscordParser.ParserOptions.FORUM_POST_FIRST_MESSAGE : zIsWebhook ? DiscordParser.ParserOptions.ALLOW_MASKED_LINKS : DiscordParser.ParserOptions.DEFAULT, z2);
         textView.setAutoLinkMask((messagePreprocessor.isLinkifyConflicting() || !shouldLinkify(message.getContent())) ? 0 : 6);
         textView.setVisibility(channelMessage.length() > 0 ? 0 : 8);
@@ -876,9 +876,9 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     public void onConfigure(int position, ChatListEntry data) throws Resources.NotFoundException {
         TextView textView;
         List<Long> listEmptyList;
-        NullSerializable<String> nullSerializableA;
+        NullSerializable<String> nullSerializableM8288a;
         View view;
-        m.checkNotNullParameter(data, "data");
+        Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         MessageEntry messageEntry = (MessageEntry) data;
         if (((WidgetChatListAdapter) this.adapter).getData().getUserId() == 0) {
@@ -897,14 +897,14 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             User author = message.getAuthor();
             textView2.setText(nickOrUsernames.get(author != null ? Long.valueOf(author.getId()) : null));
             this.itemName.setTextColor(getAuthorTextColor(messageEntry.getAuthor()));
-            this.itemName.setOnClickListener(new AnonymousClass1(message));
-            ViewExtensions.setOnLongClickListenerConsumeClick(this.itemName, new AnonymousClass2(message));
+            this.itemName.setOnClickListener(new ViewOnClickListenerC81061(message));
+            ViewExtensions.setOnLongClickListenerConsumeClick(this.itemName, new C81072(message));
         }
         TextView textView3 = this.itemTimestamp;
         if (textView3 != null) {
-            Context contextX = a.x(this.itemView, "itemView", "itemView.context");
+            Context contextM885x = outline.m885x(this.itemView, "itemView", "itemView.context");
             UtcDateTime timestamp = message.getTimestamp();
-            textView3.setText(TimeUtils.toReadableTimeString$default(contextX, timestamp != null ? timestamp.getDateTimeMillis() : 0L, null, 4, null));
+            textView3.setText(TimeUtils.toReadableTimeString$default(contextM885x, timestamp != null ? timestamp.getDateTimeMillis() : 0L, null, 4, null));
         }
         configureInteractionMessage(messageEntry);
         if (!shouldShowInteractionMessage(message) || (textView = this.itemLoadingText) == null) {
@@ -916,25 +916,25 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         if (view3 != null) {
             ViewKt.setVisible(view3, zIsThreadStarterMessage);
         }
-        this.itemView.setOnClickListener(new AnonymousClass3(message, zIsThreadStarterMessage));
+        this.itemView.setOnClickListener(new ViewOnClickListenerC81083(message, zIsThreadStarterMessage));
         View view4 = this.itemView;
-        m.checkNotNullExpressionValue(view4, "itemView");
-        ViewExtensions.setOnLongClickListenerConsumeClick(view4, new AnonymousClass4(message, zIsThreadStarterMessage));
+        Intrinsics3.checkNotNullExpressionValue(view4, "itemView");
+        ViewExtensions.setOnLongClickListenerConsumeClick(view4, new C81094(message, zIsThreadStarterMessage));
         configureReplyPreview(messageEntry);
         ImageView imageView = this.itemAvatar;
         if (imageView != null) {
-            imageView.setOnClickListener(new AnonymousClass5(message));
-            ViewExtensions.setOnLongClickListenerConsumeClick(this.itemAvatar, new AnonymousClass6(message));
+            imageView.setOnClickListener(new ViewOnClickListenerC81105(message));
+            ViewExtensions.setOnLongClickListenerConsumeClick(this.itemAvatar, new C81116(message));
             User author2 = message.getAuthor();
-            String strA = (author2 == null || (nullSerializableA = author2.a()) == null) ? null : nullSerializableA.a();
+            String strMo8429a = (author2 == null || (nullSerializableM8288a = author2.m8288a()) == null) ? null : nullSerializableM8288a.mo8429a();
             if (message.getApplicationId() == null) {
                 ImageView imageView2 = this.itemAvatar;
                 User author3 = message.getAuthor();
-                m.checkNotNull(author3);
-                IconUtils.setIcon$default(imageView2, new CoreUser(author3), R.dimen.avatar_size_chat, null, null, messageEntry.getAuthor(), 24, null);
+                Intrinsics3.checkNotNull(author3);
+                IconUtils.setIcon$default(imageView2, new CoreUser(author3), C5419R.dimen.avatar_size_chat, null, null, messageEntry.getAuthor(), 24, null);
             } else {
-                if ((!m.areEqual(message.getAuthor() != null ? r4.getBot() : null, Boolean.TRUE)) && strA != null) {
-                    IconUtils.setIcon$default(this.itemAvatar, IconUtils.getApplicationIcon$default(message.getApplicationId().longValue(), strA, 0, 4, (Object) null), 0, (Function1) null, (MGImages.ChangeDetector) null, 28, (Object) null);
+                if ((!Intrinsics3.areEqual(message.getAuthor() != null ? r4.getBot() : null, Boolean.TRUE)) && strMo8429a != null) {
+                    IconUtils.setIcon$default(this.itemAvatar, IconUtils.getApplicationIcon$default(message.getApplicationId().longValue(), strMo8429a, 0, 4, (Object) null), 0, (Function1) null, (MGImages.ChangeDetector) null, 28, (Object) null);
                 }
             }
         }
@@ -944,7 +944,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             GuildMember.Companion companion2 = GuildMember.INSTANCE;
             GuildMember author4 = messageEntry.getAuthor();
             if (author4 == null || (listEmptyList = author4.getRoles()) == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             this.itemRoleIcon.setRole(companion2.getHighestRoleIconRole(listEmptyList, companion.getGuilds().getRoles().get(channel != null ? Long.valueOf(channel.getGuildId()) : null)), channel != null ? Long.valueOf(channel.getGuildId()) : null);
         }
@@ -961,7 +961,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             if (message.isFailed()) {
                 this.itemAlertText.setVisibility(0);
                 Integer type = message.getType();
-                this.itemAlertText.setText(type != null && type.intValue() == -3 ? R.string.invalid_attachments_failure : R.string.send_message_failure);
+                this.itemAlertText.setText(type != null && type.intValue() == -3 ? C5419R.string.invalid_attachments_failure : C5419R.string.send_message_failure);
             } else {
                 this.itemAlertText.setVisibility(8);
             }

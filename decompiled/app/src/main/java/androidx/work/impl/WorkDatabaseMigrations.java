@@ -6,7 +6,7 @@ import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.room.migration.Migration;
-import androidx.sqlite.db.SupportSQLiteDatabase;
+import androidx.sqlite.p006db.SupportSQLiteDatabase;
 import androidx.work.impl.utils.IdGenerator;
 import androidx.work.impl.utils.PreferenceUtils;
 
@@ -22,22 +22,22 @@ public class WorkDatabaseMigrations {
     private static final String MIGRATE_ALARM_INFO_TO_SYSTEM_ID_INFO = "INSERT INTO SystemIdInfo(work_spec_id, system_id) SELECT work_spec_id, alarm_id AS system_id FROM alarmInfo";
 
     @NonNull
-    public static Migration MIGRATION_1_2 = new AnonymousClass1(1, 2);
+    public static Migration MIGRATION_1_2 = new C07241(1, 2);
 
     @NonNull
-    public static Migration MIGRATION_3_4 = new AnonymousClass2(3, 4);
+    public static Migration MIGRATION_3_4 = new C07252(3, 4);
 
     @NonNull
-    public static Migration MIGRATION_4_5 = new AnonymousClass3(4, 5);
+    public static Migration MIGRATION_4_5 = new C07263(4, 5);
 
     @NonNull
-    public static Migration MIGRATION_6_7 = new AnonymousClass4(6, 7);
+    public static Migration MIGRATION_6_7 = new C07274(6, 7);
 
     @NonNull
-    public static Migration MIGRATION_7_8 = new AnonymousClass5(7, 8);
+    public static Migration MIGRATION_7_8 = new C07285(7, 8);
 
     @NonNull
-    public static Migration MIGRATION_8_9 = new AnonymousClass6(8, 9);
+    public static Migration MIGRATION_8_9 = new C07296(8, 9);
     private static final String PERIODIC_WORK_SET_SCHEDULE_REQUESTED_AT = "UPDATE workspec SET schedule_requested_at=0 WHERE state NOT IN (2, 3, 5) AND schedule_requested_at=-1 AND interval_duration<>0";
     private static final String REMOVE_ALARM_INFO = "DROP TABLE IF EXISTS alarmInfo";
     public static final int VERSION_1 = 1;
@@ -54,9 +54,9 @@ public class WorkDatabaseMigrations {
     private static final String WORKSPEC_ADD_TRIGGER_MAX_CONTENT_DELAY = "ALTER TABLE workspec ADD COLUMN `trigger_max_content_delay` INTEGER NOT NULL DEFAULT -1";
     private static final String WORKSPEC_ADD_TRIGGER_UPDATE_DELAY = "ALTER TABLE workspec ADD COLUMN `trigger_content_update_delay` INTEGER NOT NULL DEFAULT -1";
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$1, reason: invalid class name */
-    public class AnonymousClass1 extends Migration {
-        public AnonymousClass1(int i, int i2) {
+    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$1 */
+    public class C07241 extends Migration {
+        public C07241(int i, int i2) {
             super(i, i2);
         }
 
@@ -69,9 +69,9 @@ public class WorkDatabaseMigrations {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$2, reason: invalid class name */
-    public class AnonymousClass2 extends Migration {
-        public AnonymousClass2(int i, int i2) {
+    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$2 */
+    public class C07252 extends Migration {
+        public C07252(int i, int i2) {
             super(i, i2);
         }
 
@@ -83,9 +83,9 @@ public class WorkDatabaseMigrations {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$3, reason: invalid class name */
-    public class AnonymousClass3 extends Migration {
-        public AnonymousClass3(int i, int i2) {
+    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$3 */
+    public class C07263 extends Migration {
+        public C07263(int i, int i2) {
             super(i, i2);
         }
 
@@ -96,9 +96,9 @@ public class WorkDatabaseMigrations {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$4, reason: invalid class name */
-    public class AnonymousClass4 extends Migration {
-        public AnonymousClass4(int i, int i2) {
+    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$4 */
+    public class C07274 extends Migration {
+        public C07274(int i, int i2) {
             super(i, i2);
         }
 
@@ -108,9 +108,9 @@ public class WorkDatabaseMigrations {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$5, reason: invalid class name */
-    public class AnonymousClass5 extends Migration {
-        public AnonymousClass5(int i, int i2) {
+    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$5 */
+    public class C07285 extends Migration {
+        public C07285(int i, int i2) {
             super(i, i2);
         }
 
@@ -120,9 +120,9 @@ public class WorkDatabaseMigrations {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$6, reason: invalid class name */
-    public class AnonymousClass6 extends Migration {
-        public AnonymousClass6(int i, int i2) {
+    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$6 */
+    public class C07296 extends Migration {
+        public C07296(int i, int i2) {
             super(i, i2);
         }
 

@@ -77,12 +77,12 @@ public class RequestExecutor {
         @NonNull
         private Handler mHandler;
 
-        /* renamed from: androidx.core.provider.RequestExecutor$ReplyRunnable$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
+        /* renamed from: androidx.core.provider.RequestExecutor$ReplyRunnable$1 */
+        public class RunnableC02521 implements Runnable {
             public final /* synthetic */ Consumer val$consumer;
             public final /* synthetic */ Object val$result;
 
-            public AnonymousClass1(Consumer consumer, Object obj) {
+            public RunnableC02521(Consumer consumer, Object obj) {
                 this.val$consumer = consumer;
                 this.val$result = obj;
             }
@@ -108,7 +108,7 @@ public class RequestExecutor {
             } catch (Exception unused) {
                 tCall = null;
             }
-            this.mHandler.post(new AnonymousClass1(this.mConsumer, tCall));
+            this.mHandler.post(new RunnableC02521(this.mConsumer, tCall));
         }
     }
 

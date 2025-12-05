@@ -14,19 +14,19 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.content.res.FontResourcesParserCompat;
 import androidx.core.provider.FontsContractCompat;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class FontProvider {
-    private static final Comparator<byte[]> sByteArrayComparator = new AnonymousClass1();
+    private static final Comparator<byte[]> sByteArrayComparator = new C02471();
 
-    /* renamed from: androidx.core.provider.FontProvider$1, reason: invalid class name */
-    public class AnonymousClass1 implements Comparator<byte[]> {
+    /* renamed from: androidx.core.provider.FontProvider$1 */
+    public class C02471 implements Comparator<byte[]> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(byte[] bArr, byte[] bArr2) {
             return compare2(bArr, bArr2);
@@ -90,12 +90,12 @@ public class FontProvider {
         String providerAuthority = fontRequest.getProviderAuthority();
         ProviderInfo providerInfoResolveContentProvider = packageManager.resolveContentProvider(providerAuthority, 0);
         if (providerInfoResolveContentProvider == null) {
-            throw new PackageManager.NameNotFoundException(a.w("No package found for authority: ", providerAuthority));
+            throw new PackageManager.NameNotFoundException(outline.m883w("No package found for authority: ", providerAuthority));
         }
         if (!providerInfoResolveContentProvider.packageName.equals(fontRequest.getProviderPackage())) {
-            StringBuilder sbY = a.Y("Found content provider ", providerAuthority, ", but package was not ");
-            sbY.append(fontRequest.getProviderPackage());
-            throw new PackageManager.NameNotFoundException(sbY.toString());
+            StringBuilder sbM837Y = outline.m837Y("Found content provider ", providerAuthority, ", but package was not ");
+            sbM837Y.append(fontRequest.getProviderPackage());
+            throw new PackageManager.NameNotFoundException(sbM837Y.toString());
         }
         List<byte[]> listConvertToByteArrayList = convertToByteArrayList(packageManager.getPackageInfo(providerInfoResolveContentProvider.packageName, 64).signatures);
         Collections.sort(listConvertToByteArrayList, sByteArrayComparator);

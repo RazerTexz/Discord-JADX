@@ -2,18 +2,24 @@ package com.discord.rtcconnection;
 
 import co.discord.media_engine.OutboundRtpAudio;
 import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
-import d0.z.d.m;
-import kotlin.Pair;
+import kotlin.Tuples2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: KrispOveruseDetector.kt */
 /* loaded from: classes.dex */
 public final class KrispOveruseDetector {
-    public OutboundRtpAudio a;
 
-    /* renamed from: b, reason: collision with root package name */
-    public OutboundRtpAudio f2770b;
-    public int c;
-    public final MediaEngineConnection d;
+    /* renamed from: a */
+    public OutboundRtpAudio f18736a;
+
+    /* renamed from: b */
+    public OutboundRtpAudio f18737b;
+
+    /* renamed from: c */
+    public int f18738c;
+
+    /* renamed from: d */
+    public final MediaEngineConnection f18739d;
 
     /* compiled from: KrispOveruseDetector.kt */
     public enum Status {
@@ -23,19 +29,20 @@ public final class KrispOveruseDetector {
     }
 
     public KrispOveruseDetector(MediaEngineConnection mediaEngineConnection) {
-        m.checkNotNullParameter(mediaEngineConnection, "connection");
-        this.d = mediaEngineConnection;
+        Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
+        this.f18739d = mediaEngineConnection;
     }
 
-    public final Pair<Boolean, Long> a(OutboundRtpAudio outboundRtpAudio, OutboundRtpAudio outboundRtpAudio2, double d) {
+    /* renamed from: a */
+    public final Tuples2<Boolean, Long> m8451a(OutboundRtpAudio outboundRtpAudio, OutboundRtpAudio outboundRtpAudio2, double d) {
         if (outboundRtpAudio == null || outboundRtpAudio2 == null) {
-            return new Pair<>(Boolean.FALSE, 0L);
+            return new Tuples2<>(Boolean.FALSE, 0L);
         }
         long noiseCancellerProcessTime = outboundRtpAudio2.getNoiseCancellerProcessTime() - outboundRtpAudio.getNoiseCancellerProcessTime();
         long framesCaptured = outboundRtpAudio2.getFramesCaptured() - outboundRtpAudio.getFramesCaptured();
         if (framesCaptured == 0) {
-            return new Pair<>(Boolean.FALSE, Long.valueOf(noiseCancellerProcessTime));
+            return new Tuples2<>(Boolean.FALSE, Long.valueOf(noiseCancellerProcessTime));
         }
-        return new Pair<>(Boolean.valueOf(((double) noiseCancellerProcessTime) / ((double) framesCaptured) > d), Long.valueOf(noiseCancellerProcessTime));
+        return new Tuples2<>(Boolean.valueOf(((double) noiseCancellerProcessTime) / ((double) framesCaptured) > d), Long.valueOf(noiseCancellerProcessTime));
     }
 }

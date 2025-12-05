@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 public final class IntentSenderRequest implements Parcelable {
 
     @NonNull
-    public static final Parcelable.Creator<IntentSenderRequest> CREATOR = new AnonymousClass1();
+    public static final Parcelable.Creator<IntentSenderRequest> CREATOR = new C00491();
 
     @Nullable
     private final Intent mFillInIntent;
@@ -24,8 +24,8 @@ public final class IntentSenderRequest implements Parcelable {
     @NonNull
     private final IntentSender mIntentSender;
 
-    /* renamed from: androidx.activity.result.IntentSenderRequest$1, reason: invalid class name */
-    public class AnonymousClass1 implements Parcelable.Creator<IntentSenderRequest> {
+    /* renamed from: androidx.activity.result.IntentSenderRequest$1 */
+    public class C00491 implements Parcelable.Creator<IntentSenderRequest> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ IntentSenderRequest createFromParcel(Parcel parcel) {
             return createFromParcel(parcel);

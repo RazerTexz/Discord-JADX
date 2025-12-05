@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMultiAccountAssociation.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMultiAccountAssociation implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackMultiAccountAssociation implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long lastUserId = null;
     private final List<Long> linkedUserIds = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackMultiAccountAssociation implements AnalyticsS
             return false;
         }
         TrackMultiAccountAssociation trackMultiAccountAssociation = (TrackMultiAccountAssociation) other;
-        return m.areEqual(this.lastUserId, trackMultiAccountAssociation.lastUserId) && m.areEqual(this.linkedUserIds, trackMultiAccountAssociation.linkedUserIds);
+        return Intrinsics3.areEqual(this.lastUserId, trackMultiAccountAssociation.lastUserId) && Intrinsics3.areEqual(this.linkedUserIds, trackMultiAccountAssociation.linkedUserIds);
     }
 
     public int hashCode() {
@@ -40,9 +40,9 @@ public final /* data */ class TrackMultiAccountAssociation implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMultiAccountAssociation(lastUserId=");
-        sbU.append(this.lastUserId);
-        sbU.append(", linkedUserIds=");
-        return a.L(sbU, this.linkedUserIds, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMultiAccountAssociation(lastUserId=");
+        sbM833U.append(this.lastUserId);
+        sbM833U.append(", linkedUserIds=");
+        return outline.m824L(sbM833U, this.linkedUserIds, ")");
     }
 }

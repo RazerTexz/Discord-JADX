@@ -11,11 +11,9 @@ import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
-import com.discord.app.LoggingConfig;
+import com.discord.app.AppLogger2;
 import com.discord.databinding.WidgetAuthLoginBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelInvite;
@@ -25,29 +23,24 @@ import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StorePhone;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.auth.GoogleSmartLockManager;
-import com.discord.utilities.auth.GoogleSmartLockManagerKt;
+import com.discord.utilities.auth.GoogleSmartLockManager3;
 import com.discord.utilities.auth.RegistrationFlowRepo;
 import com.discord.utilities.captcha.CaptchaHelper;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.validators.ValidationManager;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.auth.WidgetAuthCaptcha;
 import com.discord.widgets.auth.WidgetAuthMfa;
 import com.discord.widgets.auth.WidgetAuthPhoneVerify;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g;
-import d0.g0.t;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -56,11 +49,19 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppToast;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetAuthLogin.kt */
 /* loaded from: classes2.dex */
 public final class WidgetAuthLogin extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetAuthLogin.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthLoginBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthLogin.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthLoginBinding;", 0)};
     public static final String GOOGLE_SMARTLOCK_LOGIN_EXTRA_ID = "smartlock_extra_id";
     public static final String GOOGLE_SMARTLOCK_LOGIN_EXTRA_PASSWORD = "smartlock_extra_password";
 
@@ -69,7 +70,7 @@ public final class WidgetAuthLogin extends AppFragment {
     private final ActivityResultLauncher<Intent> captchaForgotPasswordLauncher;
     private final ActivityResultLauncher<Intent> captchaLoginLauncher;
     public GoogleSmartLockManager googleSmartLockManager;
-    private final LoggingConfig loggingConfig;
+    private final AppLogger2 loggingConfig;
     private final ActivityResultLauncher<Intent> phoneVerifyLoginLauncher;
     private final ActivityResultLauncher<Intent> phoneVerifyPasswordLauncher;
     private GoogleSmartLockManager.SmartLockCredentials smartLockCredentials;
@@ -79,12 +80,12 @@ public final class WidgetAuthLogin extends AppFragment {
     private final Lazy validationManager;
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$forgotPassword$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$forgotPassword$1 */
+    public static final class C71821 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $login;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str) {
+        public C71821(String str) {
             super(1);
             this.$login = str;
         }
@@ -92,7 +93,7 @@ public final class WidgetAuthLogin extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -102,12 +103,12 @@ public final class WidgetAuthLogin extends AppFragment {
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$forgotPassword$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$forgotPassword$2 */
+    public static final class C71832 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $login;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str) {
+        public C71832(String str) {
             super(1);
             this.$login = str;
         }
@@ -115,21 +116,21 @@ public final class WidgetAuthLogin extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             Error.Response response = error.getResponse();
-            m.checkNotNullExpressionValue(response, "error.response");
+            Intrinsics3.checkNotNullExpressionValue(response, "error.response");
             if (response.getCode() != 70007) {
                 ValidationManager validationManagerAccess$getValidationManager$p = WidgetAuthLogin.access$getValidationManager$p(WidgetAuthLogin.this);
                 Error.Response response2 = error.getResponse();
-                m.checkNotNullExpressionValue(response2, "error.response");
+                Intrinsics3.checkNotNullExpressionValue(response2, "error.response");
                 Map<String, List<String>> messages = response2.getMessages();
-                m.checkNotNullExpressionValue(messages, "error.response.messages");
-                WidgetAuthCaptcha.INSTANCE.processErrorsForCaptcha(WidgetAuthLogin.this.requireContext(), WidgetAuthLogin.access$getCaptchaForgotPasswordLauncher$p(WidgetAuthLogin.this), u.toMutableList((Collection) validationManagerAccess$getValidationManager$p.setErrors(messages)), error);
+                Intrinsics3.checkNotNullExpressionValue(messages, "error.response.messages");
+                WidgetAuthCaptcha.INSTANCE.processErrorsForCaptcha(WidgetAuthLogin.this.requireContext(), WidgetAuthLogin.access$getCaptchaForgotPasswordLauncher$p(WidgetAuthLogin.this), _Collections.toMutableList((Collection) validationManagerAccess$getValidationManager$p.setErrors(messages)), error);
                 error.setShowErrorToasts(!r0.isEmpty());
                 return;
             }
@@ -137,24 +138,24 @@ public final class WidgetAuthLogin extends AppFragment {
             Context contextRequireContext = WidgetAuthLogin.this.requireContext();
             ActivityResultLauncher<Intent> activityResultLauncherAccess$getPhoneVerifyPasswordLauncher$p = WidgetAuthLogin.access$getPhoneVerifyPasswordLauncher$p(WidgetAuthLogin.this);
             String str = this.$login;
-            String string = WidgetAuthLogin.this.getString(R.string.password_recovery_verify_phone_title);
-            m.checkNotNullExpressionValue(string, "getString(R.string.passw…overy_verify_phone_title)");
-            String string2 = WidgetAuthLogin.this.getString(R.string.password_recovery_verify_phone_subtitle);
-            m.checkNotNullExpressionValue(string2, "getString(R.string.passw…ry_verify_phone_subtitle)");
+            String string = WidgetAuthLogin.this.getString(C5419R.string.password_recovery_verify_phone_title);
+            Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.passw…overy_verify_phone_title)");
+            String string2 = WidgetAuthLogin.this.getString(C5419R.string.password_recovery_verify_phone_subtitle);
+            Intrinsics3.checkNotNullExpressionValue(string2, "getString(R.string.passw…ry_verify_phone_subtitle)");
             companion.launch(contextRequireContext, activityResultLauncherAccess$getPhoneVerifyPasswordLauncher$p, str, string, string2);
             error.setShowErrorToasts(false);
         }
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$login$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ModelLoginResult, Unit> {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$login$1 */
+    public static final class C71841 extends Lambda implements Function1<ModelLoginResult, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ String $id;
         public final /* synthetic */ String $password;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(String str, String str2, Context context) {
+        public C71841(String str, String str2, Context context) {
             super(1);
             this.$id = str;
             this.$password = str2;
@@ -164,12 +165,12 @@ public final class WidgetAuthLogin extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelLoginResult modelLoginResult) {
             invoke2(modelLoginResult);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelLoginResult modelLoginResult) {
-            m.checkNotNullParameter(modelLoginResult, "it");
+            Intrinsics3.checkNotNullParameter(modelLoginResult, "it");
             WidgetAuthLogin.access$onLoginSuccess(WidgetAuthLogin.this, this.$id, this.$password);
             if (!modelLoginResult.getMfa()) {
                 AnalyticsTracker.INSTANCE.loginAttempt(true);
@@ -178,18 +179,18 @@ public final class WidgetAuthLogin extends AppFragment {
             WidgetAuthMfa.Companion companion = WidgetAuthMfa.INSTANCE;
             Context context = this.$context;
             String ticket = modelLoginResult.getTicket();
-            m.checkNotNull(ticket);
+            Intrinsics3.checkNotNull(ticket);
             companion.start(context, ticket);
         }
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$login$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$login$2 */
+    public static final class C71852 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $id;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str) {
+        public C71852(String str) {
             super(1);
             this.$id = str;
         }
@@ -197,30 +198,30 @@ public final class WidgetAuthLogin extends AppFragment {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             WidgetAuthLogin.access$handleError(WidgetAuthLogin.this, error, this.$id);
             AnalyticsTracker.INSTANCE.loginAttempt(false);
         }
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ModelInvite, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$1 */
+    public static final class C71861 extends Lambda implements Function1<ModelInvite, Unit> {
+        public static final C71861 INSTANCE = new C71861();
 
-        public AnonymousClass1() {
+        public C71861() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelInvite modelInvite) {
             invoke2(modelInvite);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -230,9 +231,9 @@ public final class WidgetAuthLogin extends AppFragment {
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$2 */
+    public static final class ViewOnClickListenerC71872 implements View.OnClickListener {
+        public ViewOnClickListenerC71872() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -242,29 +243,29 @@ public final class WidgetAuthLogin extends AppFragment {
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<TextView, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$3 */
+    public static final class C71883 extends Lambda implements Function1<TextView, Unit> {
+        public C71883() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(TextView textView) {
             invoke2(textView);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            m.checkNotNullParameter(textView, "it");
+            Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetAuthLogin.login$default(WidgetAuthLogin.this, null, false, 3, null);
         }
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$4 */
+    public static final class ViewOnClickListenerC71894 implements View.OnClickListener {
+        public ViewOnClickListenerC71894() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -274,12 +275,12 @@ public final class WidgetAuthLogin extends AppFragment {
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$5 */
+    public static final class ViewOnClickListenerC71905 implements View.OnClickListener {
 
         /* compiled from: WidgetAuthLogin.kt */
         /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$5$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -289,36 +290,36 @@ public final class WidgetAuthLogin extends AppFragment {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(View view) {
                 invoke2(view);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                m.checkNotNullParameter(view, "it");
+                Intrinsics3.checkNotNullParameter(view, "it");
                 try {
                     view.getContext().startActivity(new Intent("android.settings.ACCESSIBILITY_SETTINGS"));
                 } catch (ActivityNotFoundException unused) {
-                    b.a.d.m.g(view.getContext(), R.string.password_manager_open_settings_error, 0, null, 12);
+                    AppToast.m169g(view.getContext(), C5419R.string.password_manager_open_settings_error, 0, null, 12);
                 }
             }
         }
 
-        public AnonymousClass5() {
+        public ViewOnClickListenerC71905() {
         }
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetNoticeDialog.Builder negativeButton$default = WidgetNoticeDialog.Builder.setNegativeButton$default(new WidgetNoticeDialog.Builder(WidgetAuthLogin.this.requireContext()).setTitle(R.string.password_manager).setMessage(R.string.password_manager_info_android).setPositiveButton(R.string.password_manager_open_settings, AnonymousClass1.INSTANCE), R.string.cancel, (Function1) null, 2, (Object) null);
+            WidgetNoticeDialog.Builder negativeButton$default = WidgetNoticeDialog.Builder.setNegativeButton$default(new WidgetNoticeDialog.Builder(WidgetAuthLogin.this.requireContext()).setTitle(C5419R.string.password_manager).setMessage(C5419R.string.password_manager_info_android).setPositiveButton(C5419R.string.password_manager_open_settings, AnonymousClass1.INSTANCE), C5419R.string.cancel, (Function1) null, 2, (Object) null);
             FragmentManager parentFragmentManager = WidgetAuthLogin.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             negativeButton$default.show(parentFragmentManager);
         }
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$6, reason: invalid class name */
-    public static final class AnonymousClass6 implements View.OnClickListener {
-        public AnonymousClass6() {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$6 */
+    public static final class ViewOnClickListenerC71916 implements View.OnClickListener {
+        public ViewOnClickListenerC71916() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -328,12 +329,12 @@ public final class WidgetAuthLogin extends AppFragment {
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$8, reason: invalid class name */
-    public static final class AnonymousClass8 extends o implements Function0<PhoneCountryCode> {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$8 */
+    public static final class C71928 extends Lambda implements Function0<PhoneCountryCode> {
         public final /* synthetic */ StorePhone $phoneStore;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass8(StorePhone storePhone) {
+        public C71928(StorePhone storePhone) {
             super(0);
             this.$phoneStore = storePhone;
         }
@@ -351,37 +352,37 @@ public final class WidgetAuthLogin extends AppFragment {
     }
 
     /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$9, reason: invalid class name */
-    public static final class AnonymousClass9 extends o implements Function1<PhoneCountryCode, Unit> {
-        public AnonymousClass9() {
+    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$9 */
+    public static final class C71939 extends Lambda implements Function1<PhoneCountryCode, Unit> {
+        public C71939() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(PhoneCountryCode phoneCountryCode) {
             invoke2(phoneCountryCode);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PhoneCountryCode phoneCountryCode) {
-            m.checkNotNullParameter(phoneCountryCode, "it");
-            WidgetAuthLogin.access$getBinding$p(WidgetAuthLogin.this).e.setCountryCode(phoneCountryCode);
+            Intrinsics3.checkNotNullParameter(phoneCountryCode, "it");
+            WidgetAuthLogin.access$getBinding$p(WidgetAuthLogin.this).f15684e.setCountryCode(phoneCountryCode);
         }
     }
 
     public WidgetAuthLogin() {
-        super(R.layout.widget_auth_login);
-        this.loggingConfig = new LoggingConfig(false, null, WidgetAuthLogin$loggingConfig$1.INSTANCE, 3);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetAuthLogin$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.widget_auth_login);
+        this.loggingConfig = new AppLogger2(false, null, WidgetAuthLogin5.INSTANCE, 3);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetAuthLogin2.INSTANCE, null, 2, null);
         WidgetAuthCaptcha.Companion companion = WidgetAuthCaptcha.INSTANCE;
-        this.captchaForgotPasswordLauncher = companion.registerForResult(this, new WidgetAuthLogin$captchaForgotPasswordLauncher$1(this));
-        this.captchaLoginLauncher = companion.registerForResult(this, new WidgetAuthLogin$captchaLoginLauncher$1(this));
+        this.captchaForgotPasswordLauncher = companion.registerForResult(this, new WidgetAuthLogin3(this));
+        this.captchaLoginLauncher = companion.registerForResult(this, new WidgetAuthLogin4(this));
         WidgetAuthPhoneVerify.Companion companion2 = WidgetAuthPhoneVerify.INSTANCE;
-        this.phoneVerifyLoginLauncher = companion2.registerForResult(this, new WidgetAuthLogin$phoneVerifyLoginLauncher$1(this));
-        this.phoneVerifyPasswordLauncher = companion2.registerForResult(this, new WidgetAuthLogin$phoneVerifyPasswordLauncher$1(this));
-        this.undeleteAccountLauncher = WidgetAuthUndeleteAccount.INSTANCE.registerForResult(this, new WidgetAuthLogin$undeleteAccountLauncher$1(this));
-        this.validationManager = g.lazy(new WidgetAuthLogin$validationManager$2(this));
+        this.phoneVerifyLoginLauncher = companion2.registerForResult(this, new WidgetAuthLogin6(this));
+        this.phoneVerifyPasswordLauncher = companion2.registerForResult(this, new WidgetAuthLogin7(this));
+        this.undeleteAccountLauncher = WidgetAuthUndeleteAccount.INSTANCE.registerForResult(this, new WidgetAuthLogin8(this));
+        this.validationManager = LazyJVM.lazy(new WidgetAuthLogin9(this));
     }
 
     public static final /* synthetic */ void access$forgotPassword(WidgetAuthLogin widgetAuthLogin, CaptchaHelper.CaptchaPayload captchaPayload) {
@@ -417,11 +418,11 @@ public final class WidgetAuthLogin extends AppFragment {
     }
 
     private final void forgotPassword(CaptchaHelper.CaptchaPayload captchaPayload) {
-        String textOrEmpty = getBinding().e.getTextOrEmpty();
+        String textOrEmpty = getBinding().f15684e.getTextOrEmpty();
         if (textOrEmpty.length() == 0) {
-            b.a.d.m.g(getContext(), R.string.login_required, 0, null, 12);
+            AppToast.m169g(getContext(), C5419R.string.login_required, 0, null, 12);
         } else {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui(StoreStream.INSTANCE.getAuthentication().forgotPassword(textOrEmpty, captchaPayload)), getBinding().h, 0L, 2, null), getContext(), "REST: forgotPassword", (Function1) null, new AnonymousClass1(textOrEmpty), new AnonymousClass2(textOrEmpty), (Function0) null, (Function0) null, 100, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.m8518ui(StoreStream.INSTANCE.getAuthentication().forgotPassword(textOrEmpty, captchaPayload)), getBinding().f15687h, 0L, 2, null), getContext(), "REST: forgotPassword", (Function1) null, new C71821(textOrEmpty), new C71832(textOrEmpty), (Function0) null, (Function0) null, 100, (Object) null);
         }
     }
 
@@ -442,7 +443,7 @@ public final class WidgetAuthLogin extends AppFragment {
 
     private final void handleError(Error error, String login) {
         Error.Response response = error.getResponse();
-        m.checkNotNullExpressionValue(response, "error.response");
+        Intrinsics3.checkNotNullExpressionValue(response, "error.response");
         boolean z2 = response.getCode() == 20011;
         boolean z3 = response.getCode() == 20013;
         boolean z4 = response.getCode() == 70007;
@@ -452,16 +453,16 @@ public final class WidgetAuthLogin extends AppFragment {
             }
             GoogleSmartLockManager googleSmartLockManager = this.googleSmartLockManager;
             if (googleSmartLockManager == null) {
-                m.throwUninitializedPropertyAccessException("googleSmartLockManager");
+                Intrinsics3.throwUninitializedPropertyAccessException("googleSmartLockManager");
             }
             googleSmartLockManager.getSmartLockRepo().onSmartLockCredentialsFailed();
             GoogleSmartLockManager googleSmartLockManager2 = this.googleSmartLockManager;
             if (googleSmartLockManager2 == null) {
-                m.throwUninitializedPropertyAccessException("googleSmartLockManager");
+                Intrinsics3.throwUninitializedPropertyAccessException("googleSmartLockManager");
             }
             googleSmartLockManager2.deleteCredentials(login);
             this.smartLockCredentials = null;
-            GoogleSmartLockManagerKt.clearSmartLockCredentials(getMostRecentIntent());
+            GoogleSmartLockManager3.clearSmartLockCredentials(getMostRecentIntent());
             return;
         }
         if (z2) {
@@ -476,23 +477,23 @@ public final class WidgetAuthLogin extends AppFragment {
             WidgetAuthPhoneVerify.Companion companion = WidgetAuthPhoneVerify.INSTANCE;
             Context contextRequireContext = requireContext();
             ActivityResultLauncher<Intent> activityResultLauncher = this.phoneVerifyLoginLauncher;
-            String textOrEmpty = getBinding().e.getTextOrEmpty();
-            String string = getString(R.string.phone_ip_authorization_title);
-            m.checkNotNullExpressionValue(string, "getString(R.string.phone_ip_authorization_title)");
-            String string2 = getString(R.string.phone_ip_authorization_subtitle);
-            m.checkNotNullExpressionValue(string2, "getString(R.string.phone…p_authorization_subtitle)");
+            String textOrEmpty = getBinding().f15684e.getTextOrEmpty();
+            String string = getString(C5419R.string.phone_ip_authorization_title);
+            Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.phone_ip_authorization_title)");
+            String string2 = getString(C5419R.string.phone_ip_authorization_subtitle);
+            Intrinsics3.checkNotNullExpressionValue(string2, "getString(R.string.phone…p_authorization_subtitle)");
             companion.launch(contextRequireContext, activityResultLauncher, textOrEmpty, string, string2);
             return;
         }
         Error.Response response2 = error.getResponse();
-        m.checkNotNullExpressionValue(response2, "error.response");
+        Intrinsics3.checkNotNullExpressionValue(response2, "error.response");
         if (response2.getMessages().isEmpty()) {
             return;
         }
         ValidationManager validationManager = getValidationManager();
         Map<String, List<String>> messages = response.getMessages();
-        m.checkNotNullExpressionValue(messages, "errorResponse.messages");
-        WidgetAuthCaptcha.INSTANCE.processErrorsForCaptcha(requireContext(), this.captchaLoginLauncher, u.toMutableList((Collection) validationManager.setErrors(messages)), error);
+        Intrinsics3.checkNotNullExpressionValue(messages, "errorResponse.messages");
+        WidgetAuthCaptcha.INSTANCE.processErrorsForCaptcha(requireContext(), this.captchaLoginLauncher, _Collections.toMutableList((Collection) validationManager.setErrors(messages)), error);
         error.setShowErrorToasts(!r13.isEmpty());
     }
 
@@ -505,19 +506,19 @@ public final class WidgetAuthLogin extends AppFragment {
 
     private final void loadCachedLogin() {
         String savedLogin = StoreStream.INSTANCE.getAuthentication().getSavedLogin();
-        if (savedLogin == null || !(!t.isBlank(savedLogin))) {
-            getBinding().e.requestFocus();
+        if (savedLogin == null || !(!StringsJVM.isBlank(savedLogin))) {
+            getBinding().f15684e.requestFocus();
         } else {
-            getBinding().e.setText(savedLogin);
-            getBinding().g.requestFocus();
+            getBinding().f15684e.setText(savedLogin);
+            getBinding().f15686g.requestFocus();
         }
     }
 
     private final void login(CaptchaHelper.CaptchaPayload captchaPayload, boolean undelete) {
         if (ValidationManager.validate$default(getValidationManager(), false, 1, null)) {
-            String textOrEmpty = getBinding().e.getTextOrEmpty();
-            TextInputLayout textInputLayout = getBinding().g;
-            m.checkNotNullExpressionValue(textInputLayout, "binding.authLoginPasswordWrap");
+            String textOrEmpty = getBinding().f15684e.getTextOrEmpty();
+            TextInputLayout textInputLayout = getBinding().f15686g;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.authLoginPasswordWrap");
             login(textOrEmpty, ViewExtensions.getTextOrEmpty(textInputLayout), captchaPayload, undelete);
         }
     }
@@ -533,34 +534,34 @@ public final class WidgetAuthLogin extends AppFragment {
     }
 
     private final void onLoginSuccess(String id2, String password) {
-        if (GoogleSmartLockManagerKt.hasSmartLockCredentials(getMostRecentIntent())) {
+        if (GoogleSmartLockManager3.hasSmartLockCredentials(getMostRecentIntent())) {
             GoogleSmartLockManager googleSmartLockManager = this.googleSmartLockManager;
             if (googleSmartLockManager == null) {
-                m.throwUninitializedPropertyAccessException("googleSmartLockManager");
+                Intrinsics3.throwUninitializedPropertyAccessException("googleSmartLockManager");
             }
             googleSmartLockManager.getSmartLockRepo().onLoginWithSmartLockSuccess();
         }
         GoogleSmartLockManager googleSmartLockManager2 = this.googleSmartLockManager;
         if (googleSmartLockManager2 == null) {
-            m.throwUninitializedPropertyAccessException("googleSmartLockManager");
+            Intrinsics3.throwUninitializedPropertyAccessException("googleSmartLockManager");
         }
         googleSmartLockManager2.saveCredentials(id2, password);
     }
 
     private final void showEmailSentToast(String email) {
-        b.a.d.m.h(getContext(), b.h(requireContext(), R.string.email_verification_instructions_body, new Object[]{email}, null, 4), 0, null, 12);
+        AppToast.m170h(getContext(), FormatUtils.m216h(requireContext(), C5419R.string.email_verification_instructions_body, new Object[]{email}, null, 4), 0, null, 12);
     }
 
     public final GoogleSmartLockManager getGoogleSmartLockManager() {
         GoogleSmartLockManager googleSmartLockManager = this.googleSmartLockManager;
         if (googleSmartLockManager == null) {
-            m.throwUninitializedPropertyAccessException("googleSmartLockManager");
+            Intrinsics3.throwUninitializedPropertyAccessException("googleSmartLockManager");
         }
         return googleSmartLockManager;
     }
 
-    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public LoggingConfig getLoggingConfig() {
+    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.InterfaceC5455a
+    public AppLogger2 getLoggingConfig() {
         return this.loggingConfig;
     }
 
@@ -573,40 +574,40 @@ public final class WidgetAuthLogin extends AppFragment {
         super.onCreate(savedInstanceState);
         RegistrationFlowRepo.INSTANCE.getINSTANCE().setRegistering(false);
         FragmentActivity fragmentActivityRequireActivity = requireActivity();
-        m.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
+        Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
         this.googleSmartLockManager = new GoogleSmartLockManager(fragmentActivityRequireActivity, null, 2, null);
-        this.smartLockCredentials = GoogleSmartLockManagerKt.toSmartLockCredentials(getMostRecentIntent());
+        this.smartLockCredentials = GoogleSmartLockManager3.toSmartLockCredentials(getMostRecentIntent());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         StoreStream.Companion companion = StoreStream.INSTANCE;
-        companion.getInviteSettings().trackWithInvite$app_productionGoogleRelease(WidgetAuthLogin.class, AnonymousClass1.INSTANCE);
+        companion.getInviteSettings().trackWithInvite$app_productionGoogleRelease(WidgetAuthLogin.class, C71861.INSTANCE);
         loadCachedLogin();
-        getBinding().f2232b.setOnClickListener(new AnonymousClass2());
-        TextInputLayout textInputLayout = getBinding().g;
-        m.checkNotNullExpressionValue(textInputLayout, "binding.authLoginPasswordWrap");
-        ViewExtensions.setOnImeActionDone$default(textInputLayout, false, new AnonymousClass3(), 1, null);
-        getBinding().d.setOnClickListener(new AnonymousClass4());
-        getBinding().f.setOnClickListener(new AnonymousClass5());
-        getBinding().c.setOnClickListener(new AnonymousClass6());
-        getBinding().e.b(this);
+        getBinding().f15681b.setOnClickListener(new ViewOnClickListenerC71872());
+        TextInputLayout textInputLayout = getBinding().f15686g;
+        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.authLoginPasswordWrap");
+        ViewExtensions.setOnImeActionDone$default(textInputLayout, false, new C71883(), 1, null);
+        getBinding().f15683d.setOnClickListener(new ViewOnClickListenerC71894());
+        getBinding().f15685f.setOnClickListener(new ViewOnClickListenerC71905());
+        getBinding().f15682c.setOnClickListener(new ViewOnClickListenerC71916());
+        getBinding().f15684e.m8600b(this);
         GoogleSmartLockManager.SmartLockCredentials smartLockCredentials = this.smartLockCredentials;
         if (smartLockCredentials != null) {
-            getBinding().e.setText(smartLockCredentials.getId());
-            TextInputLayout textInputLayout2 = getBinding().g;
-            m.checkNotNullExpressionValue(textInputLayout2, "binding.authLoginPasswordWrap");
+            getBinding().f15684e.setText(smartLockCredentials.getId());
+            TextInputLayout textInputLayout2 = getBinding().f15686g;
+            Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.authLoginPasswordWrap");
             ViewExtensions.setText(textInputLayout2, smartLockCredentials.getPassword());
             login$default(this, null, false, 3, null);
         }
         StorePhone phone = companion.getPhone();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{phone}, false, null, null, new AnonymousClass8(phone), 14, null), this, null, 2, null), WidgetAuthLogin.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass9(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{phone}, false, null, null, new C71928(phone), 14, null), this, null, 2, null), WidgetAuthLogin.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C71939(), 62, (Object) null);
     }
 
     public final void setGoogleSmartLockManager(GoogleSmartLockManager googleSmartLockManager) {
-        m.checkNotNullParameter(googleSmartLockManager, "<set-?>");
+        Intrinsics3.checkNotNullParameter(googleSmartLockManager, "<set-?>");
         this.googleSmartLockManager = googleSmartLockManager;
     }
 
@@ -627,8 +628,8 @@ public final class WidgetAuthLogin extends AppFragment {
     private final void login(String id2, String password, CaptchaHelper.CaptchaPayload captchaPayload, boolean undelete) {
         Context context = getContext();
         if (context != null) {
-            m.checkNotNullExpressionValue(context, "context ?: return");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getAuthentication().login(id2, password, captchaPayload, undelete, GoogleSmartLockManagerKt.hasSmartLockCredentials(getMostRecentIntent()) ? RestAPIParams.AuthLogin.LoginSource.LOGIN_SOURCE_KEYCHAIN_AUTO : null), this, null, 2, null), getBinding().h, 0L, 2, null), context, "REST: login", (Function1) null, new AnonymousClass1(id2, password, context), new AnonymousClass2(id2), (Function0) null, (Function0) null, 100, (Object) null);
+            Intrinsics3.checkNotNullExpressionValue(context, "context ?: return");
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getAuthentication().login(id2, password, captchaPayload, undelete, GoogleSmartLockManager3.hasSmartLockCredentials(getMostRecentIntent()) ? RestAPIParams.AuthLogin.LoginSource.LOGIN_SOURCE_KEYCHAIN_AUTO : null), this, null, 2, null), getBinding().f15687h, 0L, 2, null), context, "REST: login", (Function1) null, new C71841(id2, password, context), new C71852(id2), (Function0) null, (Function0) null, 100, (Object) null);
         }
     }
 }

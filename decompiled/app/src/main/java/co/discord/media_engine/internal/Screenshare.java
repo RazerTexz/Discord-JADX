@@ -1,6 +1,6 @@
 package co.discord.media_engine.internal;
 
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -89,13 +89,13 @@ public final /* data */ class Screenshare {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("Screenshare(capturedFramesDropped=");
-        sbU.append(this.capturedFramesDropped);
-        sbU.append(", capturedFramesCount=");
-        sbU.append(this.capturedFramesCount);
-        sbU.append(", capturedFramesMean=");
-        sbU.append(this.capturedFramesMean);
-        sbU.append(", capturedFramesStdev=");
-        return a.B(sbU, this.capturedFramesStdev, ")");
+        StringBuilder sbM833U = outline.m833U("Screenshare(capturedFramesDropped=");
+        sbM833U.append(this.capturedFramesDropped);
+        sbM833U.append(", capturedFramesCount=");
+        sbM833U.append(this.capturedFramesCount);
+        sbM833U.append(", capturedFramesMean=");
+        sbM833U.append(this.capturedFramesMean);
+        sbM833U.append(", capturedFramesStdev=");
+        return outline.m814B(sbM833U, this.capturedFramesStdev, ")");
     }
 }

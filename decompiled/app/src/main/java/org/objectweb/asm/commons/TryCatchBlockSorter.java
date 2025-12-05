@@ -18,24 +18,24 @@ public class TryCatchBlockSorter extends MethodNode {
 
     protected TryCatchBlockSorter(int api, MethodVisitor methodVisitor, int access, String name, String descriptor, String signature, String[] exceptions) {
         super(api, access, name, descriptor, signature, exceptions);
-        this.mv = methodVisitor;
+        this.f27600mv = methodVisitor;
     }
 
     @Override // org.objectweb.asm.tree.MethodNode, org.objectweb.asm.MethodVisitor
     public void visitEnd() {
-        Collections.sort(this.tryCatchBlocks, new AnonymousClass1());
+        Collections.sort(this.tryCatchBlocks, new C129421());
         for (int i = 0; i < this.tryCatchBlocks.size(); i++) {
             this.tryCatchBlocks.get(i).updateIndex(i);
         }
-        if (this.mv != null) {
-            accept(this.mv);
+        if (this.f27600mv != null) {
+            accept(this.f27600mv);
         }
     }
 
-    /* renamed from: org.objectweb.asm.commons.TryCatchBlockSorter$1, reason: invalid class name */
+    /* renamed from: org.objectweb.asm.commons.TryCatchBlockSorter$1 */
     /* loaded from: discord-126021.apk:org/objectweb/asm/commons/TryCatchBlockSorter$1.SCL.lombok */
-    class AnonymousClass1 implements Comparator<TryCatchBlockNode> {
-        AnonymousClass1() {
+    class C129421 implements Comparator<TryCatchBlockNode> {
+        C129421() {
         }
 
         @Override // java.util.Comparator

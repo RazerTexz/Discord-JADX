@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.net.Uri;
 import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.fragment.app.FragmentActivity;
-import b.d.b.a.a;
 import com.discord.app.AppActivity;
 import com.discord.models.authentication.AuthState;
 import com.discord.models.requiredaction.RequiredAction;
@@ -15,22 +14,23 @@ import com.discord.stores.StoreInviteSettings;
 import com.discord.stores.StoreNotices;
 import com.discord.stores.StoreNux;
 import com.discord.stores.StoreStream;
-import com.discord.utilities.rx.ActivityLifecycleCallbacks;
-import com.discord.utilities.rx.ObservableCombineLatestOverloadsKt;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ActivityLifecycleCallbacks;
+import com.discord.utilities.p501rx.ObservableCombineLatestOverloads2;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.home.PanelLayout;
 import com.discord.widgets.tabs.NavigationTab;
-import d0.t.n;
-import d0.z.d.m;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import org.objectweb.asm.Opcodes;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
-import rx.subjects.SerializedSubject;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
+import p658rx.subjects.SerializedSubject;
 
 /* compiled from: StoreNavigation.kt */
 /* loaded from: classes2.dex */
@@ -74,10 +74,10 @@ public final class StoreNavigation {
             private final RequiredAction userRequiredAction;
 
             public ModelGlobalNavigation(StoreNux.NuxState nuxState, boolean z2, AuthState authState, boolean z3, boolean z4, RequiredAction requiredAction, boolean z5, StoreInviteSettings.InviteCode inviteCode, String str, StoreNotices.Notice notice, AgeGate ageGate, Uri uri, NavigationTab navigationTab, boolean z6) {
-                m.checkNotNullParameter(nuxState, "nuxState");
-                m.checkNotNullParameter(requiredAction, "userRequiredAction");
-                m.checkNotNullParameter(uri, "oAuthUri");
-                m.checkNotNullParameter(navigationTab, "navigationTab");
+                Intrinsics3.checkNotNullParameter(nuxState, "nuxState");
+                Intrinsics3.checkNotNullParameter(requiredAction, "userRequiredAction");
+                Intrinsics3.checkNotNullParameter(uri, "oAuthUri");
+                Intrinsics3.checkNotNullParameter(navigationTab, "navigationTab");
                 this.nuxState = nuxState;
                 this.initialized = z2;
                 this.authState = authState;
@@ -169,10 +169,10 @@ public final class StoreNavigation {
             }
 
             public final ModelGlobalNavigation copy(StoreNux.NuxState nuxState, boolean initialized, AuthState authState, boolean isInitializedForAuthedUser, boolean incomingCall, RequiredAction userRequiredAction, boolean clientOutdated, StoreInviteSettings.InviteCode inviteCode, String guildTemplateCode, StoreNotices.Notice notice, AgeGate shouldShowAgeGate, Uri oAuthUri, NavigationTab navigationTab, boolean userHasPhone) {
-                m.checkNotNullParameter(nuxState, "nuxState");
-                m.checkNotNullParameter(userRequiredAction, "userRequiredAction");
-                m.checkNotNullParameter(oAuthUri, "oAuthUri");
-                m.checkNotNullParameter(navigationTab, "navigationTab");
+                Intrinsics3.checkNotNullParameter(nuxState, "nuxState");
+                Intrinsics3.checkNotNullParameter(userRequiredAction, "userRequiredAction");
+                Intrinsics3.checkNotNullParameter(oAuthUri, "oAuthUri");
+                Intrinsics3.checkNotNullParameter(navigationTab, "navigationTab");
                 return new ModelGlobalNavigation(nuxState, initialized, authState, isInitializedForAuthedUser, incomingCall, userRequiredAction, clientOutdated, inviteCode, guildTemplateCode, notice, shouldShowAgeGate, oAuthUri, navigationTab, userHasPhone);
             }
 
@@ -184,7 +184,7 @@ public final class StoreNavigation {
                     return false;
                 }
                 ModelGlobalNavigation modelGlobalNavigation = (ModelGlobalNavigation) other;
-                return m.areEqual(this.nuxState, modelGlobalNavigation.nuxState) && this.initialized == modelGlobalNavigation.initialized && m.areEqual(this.authState, modelGlobalNavigation.authState) && this.isInitializedForAuthedUser == modelGlobalNavigation.isInitializedForAuthedUser && this.incomingCall == modelGlobalNavigation.incomingCall && m.areEqual(this.userRequiredAction, modelGlobalNavigation.userRequiredAction) && this.clientOutdated == modelGlobalNavigation.clientOutdated && m.areEqual(this.inviteCode, modelGlobalNavigation.inviteCode) && m.areEqual(this.guildTemplateCode, modelGlobalNavigation.guildTemplateCode) && m.areEqual(this.notice, modelGlobalNavigation.notice) && m.areEqual(this.shouldShowAgeGate, modelGlobalNavigation.shouldShowAgeGate) && m.areEqual(this.oAuthUri, modelGlobalNavigation.oAuthUri) && m.areEqual(this.navigationTab, modelGlobalNavigation.navigationTab) && this.userHasPhone == modelGlobalNavigation.userHasPhone;
+                return Intrinsics3.areEqual(this.nuxState, modelGlobalNavigation.nuxState) && this.initialized == modelGlobalNavigation.initialized && Intrinsics3.areEqual(this.authState, modelGlobalNavigation.authState) && this.isInitializedForAuthedUser == modelGlobalNavigation.isInitializedForAuthedUser && this.incomingCall == modelGlobalNavigation.incomingCall && Intrinsics3.areEqual(this.userRequiredAction, modelGlobalNavigation.userRequiredAction) && this.clientOutdated == modelGlobalNavigation.clientOutdated && Intrinsics3.areEqual(this.inviteCode, modelGlobalNavigation.inviteCode) && Intrinsics3.areEqual(this.guildTemplateCode, modelGlobalNavigation.guildTemplateCode) && Intrinsics3.areEqual(this.notice, modelGlobalNavigation.notice) && Intrinsics3.areEqual(this.shouldShowAgeGate, modelGlobalNavigation.shouldShowAgeGate) && Intrinsics3.areEqual(this.oAuthUri, modelGlobalNavigation.oAuthUri) && Intrinsics3.areEqual(this.navigationTab, modelGlobalNavigation.navigationTab) && this.userHasPhone == modelGlobalNavigation.userHasPhone;
             }
 
             public final AuthState getAuthState() {
@@ -292,52 +292,52 @@ public final class StoreNavigation {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("ModelGlobalNavigation(nuxState=");
-                sbU.append(this.nuxState);
-                sbU.append(", initialized=");
-                sbU.append(this.initialized);
-                sbU.append(", authState=");
-                sbU.append(this.authState);
-                sbU.append(", isInitializedForAuthedUser=");
-                sbU.append(this.isInitializedForAuthedUser);
-                sbU.append(", incomingCall=");
-                sbU.append(this.incomingCall);
-                sbU.append(", userRequiredAction=");
-                sbU.append(this.userRequiredAction);
-                sbU.append(", clientOutdated=");
-                sbU.append(this.clientOutdated);
-                sbU.append(", inviteCode=");
-                sbU.append(this.inviteCode);
-                sbU.append(", guildTemplateCode=");
-                sbU.append(this.guildTemplateCode);
-                sbU.append(", notice=");
-                sbU.append(this.notice);
-                sbU.append(", shouldShowAgeGate=");
-                sbU.append(this.shouldShowAgeGate);
-                sbU.append(", oAuthUri=");
-                sbU.append(this.oAuthUri);
-                sbU.append(", navigationTab=");
-                sbU.append(this.navigationTab);
-                sbU.append(", userHasPhone=");
-                return a.O(sbU, this.userHasPhone, ")");
+                StringBuilder sbM833U = outline.m833U("ModelGlobalNavigation(nuxState=");
+                sbM833U.append(this.nuxState);
+                sbM833U.append(", initialized=");
+                sbM833U.append(this.initialized);
+                sbM833U.append(", authState=");
+                sbM833U.append(this.authState);
+                sbM833U.append(", isInitializedForAuthedUser=");
+                sbM833U.append(this.isInitializedForAuthedUser);
+                sbM833U.append(", incomingCall=");
+                sbM833U.append(this.incomingCall);
+                sbM833U.append(", userRequiredAction=");
+                sbM833U.append(this.userRequiredAction);
+                sbM833U.append(", clientOutdated=");
+                sbM833U.append(this.clientOutdated);
+                sbM833U.append(", inviteCode=");
+                sbM833U.append(this.inviteCode);
+                sbM833U.append(", guildTemplateCode=");
+                sbM833U.append(this.guildTemplateCode);
+                sbM833U.append(", notice=");
+                sbM833U.append(this.notice);
+                sbM833U.append(", shouldShowAgeGate=");
+                sbM833U.append(this.shouldShowAgeGate);
+                sbM833U.append(", oAuthUri=");
+                sbM833U.append(this.oAuthUri);
+                sbM833U.append(", navigationTab=");
+                sbM833U.append(this.navigationTab);
+                sbM833U.append(", userHasPhone=");
+                return outline.m827O(sbM833U, this.userHasPhone, ")");
             }
         }
 
         public ActivityNavigationLifecycleCallbacks(StoreStream storeStream) {
-            m.checkNotNullParameter(storeStream, "stream");
+            Intrinsics3.checkNotNullParameter(storeStream, "stream");
             this.stream = storeStream;
-            this.clientInitializedNavHandler = StoreNavigation$ActivityNavigationLifecycleCallbacks$clientInitializedNavHandler$1.INSTANCE;
-            this.clientOutdatedNavHandler = StoreNavigation$ActivityNavigationLifecycleCallbacks$clientOutdatedNavHandler$1.INSTANCE;
-            this.authNavHandler = StoreNavigation$ActivityNavigationLifecycleCallbacks$authNavHandler$1.INSTANCE;
-            this.tosNavHandler = StoreNavigation$ActivityNavigationLifecycleCallbacks$tosNavHandler$1.INSTANCE;
-            this.ageGateNavHandler = StoreNavigation$ActivityNavigationLifecycleCallbacks$ageGateNavHandler$1.INSTANCE;
-            this.verificationNavHandler = StoreNavigation$ActivityNavigationLifecycleCallbacks$verificationNavHandler$1.INSTANCE;
-            this.callNavHandler = StoreNavigation$ActivityNavigationLifecycleCallbacks$callNavHandler$1.INSTANCE;
-            this.inviteCodeNavHandler = new StoreNavigation$ActivityNavigationLifecycleCallbacks$inviteCodeNavHandler$1(this);
-            this.guildTemplateCodeNavHandler = new StoreNavigation$ActivityNavigationLifecycleCallbacks$guildTemplateCodeNavHandler$1(this);
-            this.nuxStateNavHandler = new StoreNavigation$ActivityNavigationLifecycleCallbacks$nuxStateNavHandler$1(this);
-            this.oAuthStateHandler = new StoreNavigation$ActivityNavigationLifecycleCallbacks$oAuthStateHandler$1(this);
-            this.noticeHandler = StoreNavigation$ActivityNavigationLifecycleCallbacks$noticeHandler$1.INSTANCE;
+            this.clientInitializedNavHandler = C6275x2348ce0f.INSTANCE;
+            this.clientOutdatedNavHandler = C6276xe14e3735.INSTANCE;
+            this.authNavHandler = C6273xb464920a.INSTANCE;
+            this.tosNavHandler = C6285xb48ce25e.INSTANCE;
+            this.ageGateNavHandler = C6272x785eaf70.INSTANCE;
+            this.verificationNavHandler = C6286xacd9c7fd.INSTANCE;
+            this.callNavHandler = C6274x1d81cdc0.INSTANCE;
+            this.inviteCodeNavHandler = new C6280x79e1178(this);
+            this.guildTemplateCodeNavHandler = new C6279xfe317ba0(this);
+            this.nuxStateNavHandler = new C6282xff154e2(this);
+            this.oAuthStateHandler = new C6283xf2a8aacf(this);
+            this.noticeHandler = C6281x4890bed1.INSTANCE;
         }
 
         public static final /* synthetic */ StoreStream access$getStream$p(ActivityNavigationLifecycleCallbacks activityNavigationLifecycleCallbacks) {
@@ -351,7 +351,7 @@ public final class StoreNavigation {
         private final Observable<ModelGlobalNavigation> getGlobalNavigationData() {
             Observable<StoreNux.NuxState> nuxState = this.stream.getNux().getNuxState();
             Observable<Boolean> observableIsInitializedObservable = StoreStream.INSTANCE.isInitializedObservable();
-            Observable<AuthState> observableM8getAuthState$app_productionGoogleRelease = this.stream.getAuthentication().m8getAuthState$app_productionGoogleRelease();
+            Observable<AuthState> observableM11385getAuthState$app_productionGoogleRelease = this.stream.getAuthentication().m11385getAuthState$app_productionGoogleRelease();
             Observable<Boolean> observableObserveInitializedForAuthedUser = this.stream.getChannelsSelected().observeInitializedForAuthedUser();
             Observable<Boolean> observableObserveHasIncoming = this.stream.getCallsIncoming().observeHasIncoming();
             Observable<RequiredAction> observableObserveUserRequiredAction = this.stream.getUserRequiredAction().observeUserRequiredAction();
@@ -362,15 +362,15 @@ public final class StoreNavigation {
             Observable<AgeGate> shouldShowAgeGate = this.stream.getAuthentication().getShouldShowAgeGate();
             Observable<Uri> oAuthUriObservable = this.stream.getAuthentication().getOAuthUriObservable();
             Observable<NavigationTab> observableObserveSelectedTab = this.stream.getTabsNavigation().observeSelectedTab();
-            Observable<R> observableG = this.stream.getUsers().observeMe(true).G(StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableG, "stream\n              .us….hasPhone\n              }");
-            Observable<ModelGlobalNavigation> observableR = ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.leadingEdgeThrottle(ObservableCombineLatestOverloadsKt.combineLatest(nuxState, observableIsInitializedObservable, observableM8getAuthState$app_productionGoogleRelease, observableObserveInitializedForAuthedUser, observableObserveHasIncoming, observableObserveUserRequiredAction, clientOutdated, inviteCode, observableObserveDynamicLinkGuildTemplateCode, notices, shouldShowAgeGate, oAuthUriObservable, observableObserveSelectedTab, observableG, StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$2.INSTANCE), 500L, TimeUnit.MILLISECONDS)).r();
-            m.checkNotNullExpressionValue(observableR, "combineLatest(\n         …  .distinctUntilChanged()");
-            return observableR;
+            Observable<R> observableM11083G = this.stream.getUsers().observeMe(true).m11083G(C6277x99818c96.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11083G, "stream\n              .us….hasPhone\n              }");
+            Observable<ModelGlobalNavigation> observableM11112r = ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.leadingEdgeThrottle(ObservableCombineLatestOverloads2.combineLatest(nuxState, observableIsInitializedObservable, observableM11385getAuthState$app_productionGoogleRelease, observableObserveInitializedForAuthedUser, observableObserveHasIncoming, observableObserveUserRequiredAction, clientOutdated, inviteCode, observableObserveDynamicLinkGuildTemplateCode, notices, shouldShowAgeGate, oAuthUriObservable, observableObserveSelectedTab, observableM11083G, C6278x99818c97.INSTANCE), 500L, TimeUnit.MILLISECONDS)).m11112r();
+            Intrinsics3.checkNotNullExpressionValue(observableM11112r, "combineLatest(\n         …  .distinctUntilChanged()");
+            return observableM11112r;
         }
 
         private final void handleGlobalNavigationData(AppActivity appActivity, ModelGlobalNavigation modelGlobalNavigation) {
-            Iterator it = n.listOf((Object[]) new Function2[]{this.clientInitializedNavHandler, this.clientOutdatedNavHandler, this.authNavHandler, this.tosNavHandler, this.ageGateNavHandler, this.verificationNavHandler, this.callNavHandler, this.inviteCodeNavHandler, this.guildTemplateCodeNavHandler, this.nuxStateNavHandler, this.oAuthStateHandler, this.noticeHandler}).iterator();
+            Iterator it = Collections2.listOf((Object[]) new Function2[]{this.clientInitializedNavHandler, this.clientOutdatedNavHandler, this.authNavHandler, this.tosNavHandler, this.ageGateNavHandler, this.verificationNavHandler, this.callNavHandler, this.inviteCodeNavHandler, this.guildTemplateCodeNavHandler, this.nuxStateNavHandler, this.oAuthStateHandler, this.noticeHandler}).iterator();
             while (it.hasNext() && !((Boolean) ((Function2) it.next()).invoke(appActivity, modelGlobalNavigation)).booleanValue()) {
             }
         }
@@ -424,27 +424,27 @@ public final class StoreNavigation {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:9:0x0031  */
-        @Override // com.discord.utilities.rx.ActivityLifecycleCallbacks
+        @Override // com.discord.utilities.p501rx.ActivityLifecycleCallbacks
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
         public void onActivityCreatedOrResumed(AppActivity activity) {
             boolean z2;
-            m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+            Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             super.onActivityCreatedOrResumed(activity);
             if (activity.isTaskRoot() || !activity.getIntent().hasCategory("android.intent.category.LAUNCHER")) {
                 z2 = false;
             } else {
                 Intent intent = activity.getIntent();
-                m.checkNotNullExpressionValue(intent, "activity.intent");
-                if (m.areEqual(intent.getAction(), "android.intent.action.MAIN")) {
+                Intrinsics3.checkNotNullExpressionValue(intent, "activity.intent");
+                if (Intrinsics3.areEqual(intent.getAction(), "android.intent.action.MAIN")) {
                     z2 = true;
                 }
             }
             if (z2) {
                 activity.finish();
             } else {
-                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getGlobalNavigationData(), activity, null, 2, null), ActivityNavigationLifecycleCallbacks.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new StoreNavigation$ActivityNavigationLifecycleCallbacks$onActivityCreatedOrResumed$1(this, activity), 62, (Object) null);
+                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(getGlobalNavigationData(), activity, null, 2, null), ActivityNavigationLifecycleCallbacks.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C6284xb63f3475(this, activity), 62, (Object) null);
             }
         }
     }
@@ -476,12 +476,12 @@ public final class StoreNavigation {
     }
 
     public StoreNavigation(StoreStream storeStream) {
-        m.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
         this.stream = storeStream;
-        this.navigationPanelActionSubject = new SerializedSubject<>(BehaviorSubject.l0(PanelAction.NOOP));
-        PanelState.a aVar = PanelState.a.a;
-        this.leftPanelStateSubject = BehaviorSubject.l0(aVar);
-        this.rightPanelStateSubject = BehaviorSubject.l0(aVar);
+        this.navigationPanelActionSubject = new SerializedSubject<>(BehaviorSubject.m11130l0(PanelAction.NOOP));
+        PanelState.C5578a c5578a = PanelState.C5578a.f18640a;
+        this.leftPanelStateSubject = BehaviorSubject.m11130l0(c5578a);
+        this.rightPanelStateSubject = BehaviorSubject.m11130l0(c5578a);
     }
 
     public static /* synthetic */ void setNavigationPanelAction$default(StoreNavigation storeNavigation, PanelAction panelAction, PanelLayout panelLayout, int i, Object obj) {
@@ -492,25 +492,25 @@ public final class StoreNavigation {
     }
 
     public final Observable<PanelAction> getNavigationPanelAction() {
-        Observable<PanelAction> observableR = ObservableExtensionsKt.computationLatest(this.navigationPanelActionSubject).r();
-        m.checkNotNullExpressionValue(observableR, "navigationPanelActionSub…  .distinctUntilChanged()");
-        return observableR;
+        Observable<PanelAction> observableM11112r = ObservableExtensionsKt.computationLatest(this.navigationPanelActionSubject).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "navigationPanelActionSub…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
-    @StoreThread
+    @Store3
     public final void handleHomeTabSelected(PanelAction panelAction) {
-        m.checkNotNullParameter(panelAction, "panelAction");
+        Intrinsics3.checkNotNullParameter(panelAction, "panelAction");
         setNavigationPanelAction$default(this, panelAction, null, 2, null);
     }
 
     public final void init(Application application) {
-        m.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(application, "application");
         application.registerActivityLifecycleCallbacks(new ActivityNavigationLifecycleCallbacks(this.stream));
     }
 
     public final void launchNotice(String noticeName, Function1<? super FragmentActivity, Boolean> showAction) {
-        m.checkNotNullParameter(noticeName, "noticeName");
-        m.checkNotNullParameter(showAction, "showAction");
+        Intrinsics3.checkNotNullParameter(noticeName, "noticeName");
+        Intrinsics3.checkNotNullParameter(showAction, "showAction");
         StoreNotices.Notice notice = new StoreNotices.Notice(noticeName, null, 0L, 0, false, null, 0L, false, 0L, new StoreNavigation$launchNotice$notice$1(noticeName, showAction), Opcodes.I2F, null);
         StoreStream.Companion companion = StoreStream.INSTANCE;
         companion.getNotices().markInAppSeen();
@@ -518,19 +518,19 @@ public final class StoreNavigation {
     }
 
     public final Observable<PanelState> observeLeftPanelState() {
-        Observable<PanelState> observableR = this.leftPanelStateSubject.r();
-        m.checkNotNullExpressionValue(observableR, "leftPanelStateSubject.distinctUntilChanged()");
-        return observableR;
+        Observable<PanelState> observableM11112r = this.leftPanelStateSubject.m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "leftPanelStateSubject.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final Observable<PanelState> observeRightPanelState() {
-        Observable<PanelState> observableR = this.rightPanelStateSubject.r();
-        m.checkNotNullExpressionValue(observableR, "rightPanelStateSubject.distinctUntilChanged()");
-        return observableR;
+        Observable<PanelState> observableM11112r = this.rightPanelStateSubject.m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "rightPanelStateSubject.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final void setLeftPanelState(PanelState panelState) {
-        m.checkNotNullParameter(panelState, "panelState");
+        Intrinsics3.checkNotNullParameter(panelState, "panelState");
         this.leftPanelStateSubject.onNext(panelState);
     }
 
@@ -539,9 +539,9 @@ public final class StoreNavigation {
     }
 
     public final void setNavigationPanelAction(PanelAction actionType, PanelLayout panelLayout) {
-        m.checkNotNullParameter(actionType, "actionType");
+        Intrinsics3.checkNotNullParameter(actionType, "actionType");
         if (panelLayout == null) {
-            this.navigationPanelActionSubject.k.onNext(actionType);
+            this.navigationPanelActionSubject.f27653k.onNext(actionType);
             return;
         }
         int iOrdinal = actionType.ordinal();
@@ -551,11 +551,11 @@ public final class StoreNavigation {
             panelLayout.closePanels();
         }
         SerializedSubject<PanelAction, PanelAction> serializedSubject = this.navigationPanelActionSubject;
-        serializedSubject.k.onNext(PanelAction.NOOP);
+        serializedSubject.f27653k.onNext(PanelAction.NOOP);
     }
 
     public final void setRightPanelState(PanelState panelState) {
-        m.checkNotNullParameter(panelState, "panelState");
+        Intrinsics3.checkNotNullParameter(panelState, "panelState");
         this.rightPanelStateSubject.onNext(panelState);
     }
 }

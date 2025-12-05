@@ -1,0 +1,290 @@
+package p637j0.p642l.p643a;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p658rx.Observable;
+import p658rx.Scheduler;
+import p658rx.Subscriber;
+import p658rx.functions.Action0;
+import p658rx.observers.SerializedSubscriber;
+
+/* compiled from: OperatorBufferWithTime.java */
+/* renamed from: j0.l.a.n0, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class OperatorBufferWithTime2<T> implements Observable.InterfaceC13006b<List<T>, T> {
+
+    /* renamed from: j */
+    public final long f26931j;
+
+    /* renamed from: k */
+    public final long f26932k;
+
+    /* renamed from: l */
+    public final TimeUnit f26933l;
+
+    /* renamed from: m */
+    public final int f26934m;
+
+    /* renamed from: n */
+    public final Scheduler f26935n;
+
+    /* compiled from: OperatorBufferWithTime.java */
+    /* renamed from: j0.l.a.n0$a */
+    public final class a extends Subscriber<T> {
+
+        /* renamed from: j */
+        public final Subscriber<? super List<T>> f26936j;
+
+        /* renamed from: k */
+        public final Scheduler.Worker f26937k;
+
+        /* renamed from: l */
+        public List<T> f26938l = new ArrayList();
+
+        /* renamed from: m */
+        public boolean f26939m;
+
+        public a(Subscriber<? super List<T>> subscriber, Scheduler.Worker worker) {
+            this.f26936j = subscriber;
+            this.f26937k = worker;
+        }
+
+        @Override // p637j0.Observer2
+        public void onCompleted() {
+            try {
+                this.f26937k.unsubscribe();
+                synchronized (this) {
+                    if (this.f26939m) {
+                        return;
+                    }
+                    this.f26939m = true;
+                    List<T> list = this.f26938l;
+                    this.f26938l = null;
+                    this.f26936j.onNext(list);
+                    this.f26936j.onCompleted();
+                    unsubscribe();
+                }
+            } catch (Throwable th) {
+                Subscriber<? super List<T>> subscriber = this.f26936j;
+                C3404f.m4325o1(th);
+                subscriber.onError(th);
+            }
+        }
+
+        @Override // p637j0.Observer2
+        public void onError(Throwable th) {
+            synchronized (this) {
+                if (this.f26939m) {
+                    return;
+                }
+                this.f26939m = true;
+                this.f26938l = null;
+                this.f26936j.onError(th);
+                unsubscribe();
+            }
+        }
+
+        @Override // p637j0.Observer2
+        public void onNext(T t) {
+            List<T> list;
+            synchronized (this) {
+                if (this.f26939m) {
+                    return;
+                }
+                this.f26938l.add(t);
+                if (this.f26938l.size() == OperatorBufferWithTime2.this.f26934m) {
+                    list = this.f26938l;
+                    this.f26938l = new ArrayList();
+                } else {
+                    list = null;
+                }
+                if (list != null) {
+                    this.f26936j.onNext(list);
+                }
+            }
+        }
+    }
+
+    /* compiled from: OperatorBufferWithTime.java */
+    /* renamed from: j0.l.a.n0$b */
+    public final class b extends Subscriber<T> {
+
+        /* renamed from: j */
+        public final Subscriber<? super List<T>> f26941j;
+
+        /* renamed from: k */
+        public final Scheduler.Worker f26942k;
+
+        /* renamed from: l */
+        public final List<List<T>> f26943l = new LinkedList();
+
+        /* renamed from: m */
+        public boolean f26944m;
+
+        /* compiled from: OperatorBufferWithTime.java */
+        /* renamed from: j0.l.a.n0$b$a */
+        public class a implements Action0 {
+
+            /* renamed from: j */
+            public final /* synthetic */ List f26946j;
+
+            public a(List list) {
+                this.f26946j = list;
+            }
+
+            @Override // p658rx.functions.Action0
+            public void call() {
+                boolean z2;
+                b bVar = b.this;
+                List<T> list = this.f26946j;
+                synchronized (bVar) {
+                    if (bVar.f26944m) {
+                        return;
+                    }
+                    Iterator<List<T>> it = bVar.f26943l.iterator();
+                    while (true) {
+                        if (!it.hasNext()) {
+                            z2 = false;
+                            break;
+                        } else if (it.next() == list) {
+                            it.remove();
+                            z2 = true;
+                            break;
+                        }
+                    }
+                    if (z2) {
+                        try {
+                            bVar.f26941j.onNext(list);
+                        } catch (Throwable th) {
+                            C3404f.m4325o1(th);
+                            bVar.onError(th);
+                        }
+                    }
+                }
+            }
+        }
+
+        public b(Subscriber<? super List<T>> subscriber, Scheduler.Worker worker) {
+            this.f26941j = subscriber;
+            this.f26942k = worker;
+        }
+
+        /* renamed from: a */
+        public void m10774a() {
+            ArrayList arrayList = new ArrayList();
+            synchronized (this) {
+                if (this.f26944m) {
+                    return;
+                }
+                this.f26943l.add(arrayList);
+                Scheduler.Worker worker = this.f26942k;
+                a aVar = new a(arrayList);
+                OperatorBufferWithTime2 operatorBufferWithTime2 = OperatorBufferWithTime2.this;
+                worker.mo10741b(aVar, operatorBufferWithTime2.f26931j, operatorBufferWithTime2.f26933l);
+            }
+        }
+
+        @Override // p637j0.Observer2
+        public void onCompleted() {
+            try {
+                synchronized (this) {
+                    if (this.f26944m) {
+                        return;
+                    }
+                    this.f26944m = true;
+                    LinkedList linkedList = new LinkedList(this.f26943l);
+                    this.f26943l.clear();
+                    Iterator it = linkedList.iterator();
+                    while (it.hasNext()) {
+                        this.f26941j.onNext((List) it.next());
+                    }
+                    this.f26941j.onCompleted();
+                    unsubscribe();
+                }
+            } catch (Throwable th) {
+                Subscriber<? super List<T>> subscriber = this.f26941j;
+                C3404f.m4325o1(th);
+                subscriber.onError(th);
+            }
+        }
+
+        @Override // p637j0.Observer2
+        public void onError(Throwable th) {
+            synchronized (this) {
+                if (this.f26944m) {
+                    return;
+                }
+                this.f26944m = true;
+                this.f26943l.clear();
+                this.f26941j.onError(th);
+                unsubscribe();
+            }
+        }
+
+        @Override // p637j0.Observer2
+        public void onNext(T t) {
+            synchronized (this) {
+                if (this.f26944m) {
+                    return;
+                }
+                Iterator<List<T>> it = this.f26943l.iterator();
+                LinkedList linkedList = null;
+                while (it.hasNext()) {
+                    List<T> next = it.next();
+                    next.add(t);
+                    if (next.size() == OperatorBufferWithTime2.this.f26934m) {
+                        it.remove();
+                        if (linkedList == null) {
+                            linkedList = new LinkedList();
+                        }
+                        linkedList.add(next);
+                    }
+                }
+                if (linkedList != null) {
+                    Iterator it2 = linkedList.iterator();
+                    while (it2.hasNext()) {
+                        this.f26941j.onNext((List) it2.next());
+                    }
+                }
+            }
+        }
+    }
+
+    public OperatorBufferWithTime2(long j, long j2, TimeUnit timeUnit, int i, Scheduler scheduler) {
+        this.f26931j = j;
+        this.f26932k = j2;
+        this.f26933l = timeUnit;
+        this.f26934m = i;
+        this.f26935n = scheduler;
+    }
+
+    @Override // p637j0.p641k.Func1
+    public Object call(Object obj) {
+        Subscriber subscriber = (Subscriber) obj;
+        Scheduler.Worker workerMo10739a = this.f26935n.mo10739a();
+        SerializedSubscriber serializedSubscriber = new SerializedSubscriber(subscriber);
+        if (this.f26931j == this.f26932k) {
+            a aVar = new a(serializedSubscriber, workerMo10739a);
+            aVar.add(workerMo10739a);
+            subscriber.add(aVar);
+            Scheduler.Worker worker = aVar.f26937k;
+            OperatorBufferWithTime operatorBufferWithTime = new OperatorBufferWithTime(aVar);
+            long j = this.f26931j;
+            worker.m11120c(operatorBufferWithTime, j, j, this.f26933l);
+            return aVar;
+        }
+        b bVar = new b(serializedSubscriber, workerMo10739a);
+        bVar.add(workerMo10739a);
+        subscriber.add(bVar);
+        bVar.m10774a();
+        Scheduler.Worker worker2 = bVar.f26942k;
+        OperatorBufferWithTime3 operatorBufferWithTime3 = new OperatorBufferWithTime3(bVar);
+        long j2 = this.f26932k;
+        worker2.m11120c(operatorBufferWithTime3, j2, j2, this.f26933l);
+        return bVar;
+    }
+}

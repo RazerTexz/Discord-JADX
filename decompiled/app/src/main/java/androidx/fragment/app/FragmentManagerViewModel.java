@@ -14,7 +14,7 @@ import java.util.Map;
 
 /* loaded from: classes.dex */
 public final class FragmentManagerViewModel extends ViewModel {
-    private static final ViewModelProvider.Factory FACTORY = new AnonymousClass1();
+    private static final ViewModelProvider.Factory FACTORY = new C03891();
     private static final String TAG = "FragmentManager";
     private final boolean mStateAutomaticallySaved;
     private final HashMap<String, Fragment> mRetainedFragments = new HashMap<>();
@@ -24,8 +24,8 @@ public final class FragmentManagerViewModel extends ViewModel {
     private boolean mHasSavedSnapshot = false;
     private boolean mIsStateSaved = false;
 
-    /* renamed from: androidx.fragment.app.FragmentManagerViewModel$1, reason: invalid class name */
-    public class AnonymousClass1 implements ViewModelProvider.Factory {
+    /* renamed from: androidx.fragment.app.FragmentManagerViewModel$1 */
+    public class C03891 implements ViewModelProvider.Factory {
         @Override // androidx.lifecycle.ViewModelProvider.Factory
         @NonNull
         public <T extends ViewModel> T create(@NonNull Class<T> cls) {

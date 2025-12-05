@@ -1,7 +1,7 @@
 package org.webrtc;
 
-import h0.c.p0;
 import org.webrtc.VideoDecoder;
+import p617h0.p628c.VideoDecoder2;
 
 /* loaded from: classes3.dex */
 public abstract class WrappedNativeVideoDecoder implements VideoDecoder {
@@ -20,7 +20,7 @@ public abstract class WrappedNativeVideoDecoder implements VideoDecoder {
 
     @Override // org.webrtc.VideoDecoder
     public /* synthetic */ boolean getPrefersLateDecoding() {
-        return p0.b(this);
+        return VideoDecoder2.m10670b(this);
     }
 
     @Override // org.webrtc.VideoDecoder

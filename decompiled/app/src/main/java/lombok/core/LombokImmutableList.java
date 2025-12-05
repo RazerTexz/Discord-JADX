@@ -16,31 +16,38 @@ public final class LombokImmutableList<T> implements Iterable<T> {
         return lombokImmutableList.content;
     }
 
-    public static <T> LombokImmutableList<T> of() {
+    /* renamed from: of */
+    public static <T> LombokImmutableList<T> m10918of() {
         return (LombokImmutableList<T>) EMPTY;
     }
 
-    public static <T> LombokImmutableList<T> of(T a) {
+    /* renamed from: of */
+    public static <T> LombokImmutableList<T> m10919of(T a) {
         return new LombokImmutableList<>(new Object[]{a});
     }
 
-    public static <T> LombokImmutableList<T> of(T a, T b2) {
+    /* renamed from: of */
+    public static <T> LombokImmutableList<T> m10920of(T a, T b2) {
         return new LombokImmutableList<>(new Object[]{a, b2});
     }
 
-    public static <T> LombokImmutableList<T> of(T a, T b2, T c) {
+    /* renamed from: of */
+    public static <T> LombokImmutableList<T> m10921of(T a, T b2, T c) {
         return new LombokImmutableList<>(new Object[]{a, b2, c});
     }
 
-    public static <T> LombokImmutableList<T> of(T a, T b2, T c, T d) {
+    /* renamed from: of */
+    public static <T> LombokImmutableList<T> m10922of(T a, T b2, T c, T d) {
         return new LombokImmutableList<>(new Object[]{a, b2, c, d});
     }
 
-    public static <T> LombokImmutableList<T> of(T a, T b2, T c, T d, T e) {
+    /* renamed from: of */
+    public static <T> LombokImmutableList<T> m10923of(T a, T b2, T c, T d, T e) {
         return new LombokImmutableList<>(new Object[]{a, b2, c, d, e});
     }
 
-    public static <T> LombokImmutableList<T> of(T a, T b2, T c, T d, T e, T f, T... tArr) {
+    /* renamed from: of */
+    public static <T> LombokImmutableList<T> m10924of(T a, T b2, T c, T d, T e, T f, T... tArr) {
         Object[] rest = tArr == null ? new Object[1] : tArr;
         Object[] val = new Object[rest.length + 6];
         System.arraycopy(rest, 0, val, 6, rest.length);
@@ -161,12 +168,12 @@ public final class LombokImmutableList<T> implements Iterable<T> {
         return false;
     }
 
-    /* renamed from: lombok.core.LombokImmutableList$1, reason: invalid class name */
+    /* renamed from: lombok.core.LombokImmutableList$1 */
     /* loaded from: discord-126021.apk:lombok/core/LombokImmutableList$1.SCL.lombok */
-    class AnonymousClass1 implements Iterator<T> {
+    class C128161 implements Iterator<T> {
         private int idx = 0;
 
-        AnonymousClass1() {
+        C128161() {
         }
 
         @Override // java.util.Iterator
@@ -193,7 +200,7 @@ public final class LombokImmutableList<T> implements Iterable<T> {
 
     @Override // java.lang.Iterable
     public Iterator<T> iterator() {
-        return new AnonymousClass1();
+        return new C128161();
     }
 
     public String toString() {

@@ -12,33 +12,37 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /* loaded from: classes.dex */
 public final class WidgetStickerPackStoreSheetBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final RelativeLayout a;
+    public final RelativeLayout f18183a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final RelativeLayout f2660b;
+    public final RelativeLayout f18184b;
 
+    /* renamed from: c */
     @NonNull
-    public final RecyclerView c;
+    public final RecyclerView f18185c;
 
+    /* renamed from: d */
     @NonNull
-    public final SimpleDraweeView d;
+    public final SimpleDraweeView f18186d;
 
+    /* renamed from: e */
     @NonNull
-    public final LoadingButton e;
+    public final LoadingButton f18187e;
 
     public WidgetStickerPackStoreSheetBinding(@NonNull RelativeLayout relativeLayout, @NonNull FrameLayout frameLayout, @NonNull RelativeLayout relativeLayout2, @NonNull RecyclerView recyclerView, @NonNull SimpleDraweeView simpleDraweeView, @NonNull LoadingButton loadingButton) {
-        this.a = relativeLayout;
-        this.f2660b = relativeLayout2;
-        this.c = recyclerView;
-        this.d = simpleDraweeView;
-        this.e = loadingButton;
+        this.f18183a = relativeLayout;
+        this.f18184b = relativeLayout2;
+        this.f18185c = recyclerView;
+        this.f18186d = simpleDraweeView;
+        this.f18187e = loadingButton;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18183a;
     }
 }

@@ -9,25 +9,27 @@ import com.google.android.material.textview.MaterialTextView;
 /* loaded from: classes.dex */
 public final class StageAudienceBlockedBottomSheetHeaderItemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f15242a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialTextView f2144b;
+    public final MaterialTextView f15243b;
 
+    /* renamed from: c */
     @NonNull
-    public final MaterialTextView c;
+    public final MaterialTextView f15244c;
 
     public StageAudienceBlockedBottomSheetHeaderItemBinding(@NonNull ConstraintLayout constraintLayout, @NonNull MaterialTextView materialTextView, @NonNull MaterialTextView materialTextView2) {
-        this.a = constraintLayout;
-        this.f2144b = materialTextView;
-        this.c = materialTextView2;
+        this.f15242a = constraintLayout;
+        this.f15243b = materialTextView;
+        this.f15244c = materialTextView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15242a;
     }
 }

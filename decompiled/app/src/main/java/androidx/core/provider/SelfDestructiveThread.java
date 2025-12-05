@@ -29,14 +29,14 @@ public class SelfDestructiveThread {
     private HandlerThread mThread;
     private final String mThreadName;
     private final Object mLock = new Object();
-    private Handler.Callback mCallback = new AnonymousClass1();
+    private Handler.Callback mCallback = new C02531();
 
     @GuardedBy("mLock")
     private int mGeneration = 0;
 
-    /* renamed from: androidx.core.provider.SelfDestructiveThread$1, reason: invalid class name */
-    public class AnonymousClass1 implements Handler.Callback {
-        public AnonymousClass1() {
+    /* renamed from: androidx.core.provider.SelfDestructiveThread$1 */
+    public class C02531 implements Handler.Callback {
+        public C02531() {
         }
 
         @Override // android.os.Handler.Callback
@@ -54,8 +54,8 @@ public class SelfDestructiveThread {
         }
     }
 
-    /* renamed from: androidx.core.provider.SelfDestructiveThread$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.core.provider.SelfDestructiveThread$2 */
+    public class RunnableC02542 implements Runnable {
         public final /* synthetic */ Callable val$callable;
         public final /* synthetic */ Handler val$calleeHandler;
         public final /* synthetic */ ReplyCallback val$reply;
@@ -70,11 +70,11 @@ public class SelfDestructiveThread {
 
             @Override // java.lang.Runnable
             public void run() {
-                AnonymousClass2.this.val$reply.onReply(this.val$result);
+                RunnableC02542.this.val$reply.onReply(this.val$result);
             }
         }
 
-        public AnonymousClass2(Callable callable, Handler handler, ReplyCallback replyCallback) {
+        public RunnableC02542(Callable callable, Handler handler, ReplyCallback replyCallback) {
             this.val$callable = callable;
             this.val$calleeHandler = handler;
             this.val$reply = replyCallback;
@@ -92,15 +92,15 @@ public class SelfDestructiveThread {
         }
     }
 
-    /* renamed from: androidx.core.provider.SelfDestructiveThread$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: androidx.core.provider.SelfDestructiveThread$3 */
+    public class RunnableC02553 implements Runnable {
         public final /* synthetic */ Callable val$callable;
         public final /* synthetic */ Condition val$cond;
         public final /* synthetic */ AtomicReference val$holder;
         public final /* synthetic */ ReentrantLock val$lock;
         public final /* synthetic */ AtomicBoolean val$running;
 
-        public AnonymousClass3(AtomicReference atomicReference, Callable callable, ReentrantLock reentrantLock, AtomicBoolean atomicBoolean, Condition condition) {
+        public RunnableC02553(AtomicReference atomicReference, Callable callable, ReentrantLock reentrantLock, AtomicBoolean atomicBoolean, Condition condition) {
             this.val$holder = atomicReference;
             this.val$callable = callable;
             this.val$lock = reentrantLock;
@@ -188,7 +188,7 @@ public class SelfDestructiveThread {
     }
 
     public <T> void postAndReply(Callable<T> callable, ReplyCallback<T> replyCallback) {
-        post(new AnonymousClass2(callable, CalleeHandler.create(), replyCallback));
+        post(new RunnableC02542(callable, CalleeHandler.create(), replyCallback));
     }
 
     public <T> T postAndWait(Callable<T> callable, int i) throws InterruptedException {
@@ -196,7 +196,7 @@ public class SelfDestructiveThread {
         Condition conditionNewCondition = reentrantLock.newCondition();
         AtomicReference atomicReference = new AtomicReference();
         AtomicBoolean atomicBoolean = new AtomicBoolean(true);
-        post(new AnonymousClass3(atomicReference, callable, reentrantLock, atomicBoolean, conditionNewCondition));
+        post(new RunnableC02553(atomicReference, callable, reentrantLock, atomicBoolean, conditionNewCondition));
         reentrantLock.lock();
         try {
             if (!atomicBoolean.get()) {

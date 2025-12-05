@@ -1,18 +1,12 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.a;
 import com.discord.models.domain.ModelVoiceRegion;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.g0;
-import d0.t.h0;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -21,7 +15,13 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreGuildVoiceRegions.kt */
 /* loaded from: classes2.dex */
@@ -60,7 +60,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(List<? extends ModelVoiceRegion> list) {
                 super(null);
-                m.checkNotNullParameter(list, "data");
+                Intrinsics3.checkNotNullParameter(list, "data");
                 this.data = list;
             }
 
@@ -77,13 +77,13 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
             }
 
             public final Loaded copy(List<? extends ModelVoiceRegion> data) {
-                m.checkNotNullParameter(data, "data");
+                Intrinsics3.checkNotNullParameter(data, "data");
                 return new Loaded(data);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && m.areEqual(this.data, ((Loaded) other).data);
+                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.data, ((Loaded) other).data);
                 }
                 return true;
             }
@@ -101,7 +101,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
             }
 
             public String toString() {
-                return a.L(a.U("Loaded(data="), this.data, ")");
+                return outline.m824L(outline.m833U("Loaded(data="), this.data, ")");
             }
         }
 
@@ -114,21 +114,21 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
     }
 
     /* compiled from: StoreGuildVoiceRegions.kt */
-    /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1 */
+    public static final class C60891 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreGuildVoiceRegions.kt */
-        /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02541 extends o implements Function1<List<? extends ModelVoiceRegion>, Unit> {
+        /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends ModelVoiceRegion>, Unit> {
 
             /* compiled from: StoreGuildVoiceRegions.kt */
             /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02551 extends o implements Function0<Unit> {
+            public static final class C132581 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $voiceRegions;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C02551(List list) {
+                public C132581(List list) {
                     super(0);
                     this.$voiceRegions = list;
                 }
@@ -136,54 +136,54 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
-                    AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                    StoreGuildVoiceRegions.access$handleGuildVoiceRegions(StoreGuildVoiceRegions.this, anonymousClass1.$guildId, this.$voiceRegions);
+                    C60891 c60891 = C60891.this;
+                    StoreGuildVoiceRegions.access$handleGuildVoiceRegions(StoreGuildVoiceRegions.this, c60891.$guildId, this.$voiceRegions);
                 }
             }
 
-            public C02541() {
+            public AnonymousClass1() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(List<? extends ModelVoiceRegion> list) {
                 invoke2(list);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<? extends ModelVoiceRegion> list) {
-                m.checkNotNullParameter(list, "voiceRegions");
-                StoreGuildVoiceRegions.access$getDispatcher$p(StoreGuildVoiceRegions.this).schedule(new C02551(list));
+                Intrinsics3.checkNotNullParameter(list, "voiceRegions");
+                StoreGuildVoiceRegions.access$getDispatcher$p(StoreGuildVoiceRegions.this).schedule(new C132581(list));
             }
         }
 
         /* compiled from: StoreGuildVoiceRegions.kt */
         /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
             /* compiled from: StoreGuildVoiceRegions.kt */
-            /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02561 extends o implements Function0<Unit> {
-                public C02561() {
+            /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$2$1, reason: invalid class name */
+            public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+                public AnonymousClass1() {
                     super(0);
                 }
 
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     invoke2();
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
-                    AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                    StoreGuildVoiceRegions.access$handleGuildVoiceRegionsFetchFailed(StoreGuildVoiceRegions.this, anonymousClass1.$guildId);
+                    C60891 c60891 = C60891.this;
+                    StoreGuildVoiceRegions.access$handleGuildVoiceRegionsFetchFailed(StoreGuildVoiceRegions.this, c60891.$guildId);
                 }
             }
 
@@ -194,18 +194,18 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Error error) {
                 invoke2(error);
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                m.checkNotNullParameter(error, "it");
-                StoreGuildVoiceRegions.access$getDispatcher$p(StoreGuildVoiceRegions.this).schedule(new C02561());
+                Intrinsics3.checkNotNullParameter(error, "it");
+                StoreGuildVoiceRegions.access$getDispatcher$p(StoreGuildVoiceRegions.this).schedule(new AnonymousClass1());
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C60891(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -213,7 +213,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -223,17 +223,17 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
                 return;
             }
             StoreGuildVoiceRegions.access$handleGuildVoiceRegionsFetchStart(StoreGuildVoiceRegions.this, this.$guildId);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn(RestAPI.INSTANCE.getApi().getGuildVoiceRegions(this.$guildId), false), StoreGuildVoiceRegions.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C02541(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn(RestAPI.INSTANCE.getApi().getGuildVoiceRegions(this.$guildId), false), StoreGuildVoiceRegions.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreGuildVoiceRegions.kt */
-    /* renamed from: com.discord.stores.StoreGuildVoiceRegions$observeGuildVoiceRegions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<List<? extends ModelVoiceRegion>> {
+    /* renamed from: com.discord.stores.StoreGuildVoiceRegions$observeGuildVoiceRegions$1 */
+    public static final class C60901 extends Lambda implements Function0<List<? extends ModelVoiceRegion>> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C60901(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -251,7 +251,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
     }
 
     public /* synthetic */ StoreGuildVoiceRegions(Dispatcher dispatcher, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(StoreGuildVoiceRegions storeGuildVoiceRegions) {
@@ -274,37 +274,37 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
         storeGuildVoiceRegions.handleGuildVoiceRegionsFetchStart(j);
     }
 
-    @StoreThread
+    @Store3
     private final void handleGuildVoiceRegions(long guildId, List<? extends ModelVoiceRegion> voiceRegions) {
         this.guildVoiceRegionsState.put(Long.valueOf(guildId), new State.Loaded(voiceRegions));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void handleGuildVoiceRegionsFetchFailed(long guildId) {
         this.guildVoiceRegionsState.put(Long.valueOf(guildId), State.Failure.INSTANCE);
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void handleGuildVoiceRegionsFetchStart(long guildId) {
         this.guildVoiceRegionsState.put(Long.valueOf(guildId), State.Fetching.INSTANCE);
         markChanged();
     }
 
     public final void fetchIfNonexisting(long guildId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId));
+        this.dispatcher.schedule(new C60891(guildId));
     }
 
     public final List<ModelVoiceRegion> getGuildVoiceRegions(long guildId) {
         List<ModelVoiceRegion> list = (List) this.guildVoiceRegionsSnapshot.get(Long.valueOf(guildId));
-        return list != null ? list : n.emptyList();
+        return list != null ? list : Collections2.emptyList();
     }
 
     public final Observable<List<ModelVoiceRegion>> observeGuildVoiceRegions(long guildId) {
-        Observable<List<ModelVoiceRegion>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(guildId), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
-        return observableR;
+        Observable<List<ModelVoiceRegion>> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C60901(guildId), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2
@@ -318,7 +318,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
                 linkedHashMap.put(entry.getKey(), entry.getValue());
             }
         }
-        LinkedHashMap linkedHashMap2 = new LinkedHashMap(g0.mapCapacity(linkedHashMap.size()));
+        LinkedHashMap linkedHashMap2 = new LinkedHashMap(MapsJVM.mapCapacity(linkedHashMap.size()));
         for (Map.Entry entry2 : linkedHashMap.entrySet()) {
             Object key = entry2.getKey();
             Object value = entry2.getValue();
@@ -327,7 +327,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
             }
             State.Loaded loaded = (State.Loaded) value;
             if (loaded == null || (listEmptyList = loaded.getData()) == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             linkedHashMap2.put(key, listEmptyList);
         }
@@ -335,11 +335,11 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
     }
 
     public StoreGuildVoiceRegions(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
-        this.guildVoiceRegionsSnapshot = h0.emptyMap();
+        this.guildVoiceRegionsSnapshot = Maps6.emptyMap();
         this.guildVoiceRegionsState = new HashMap<>();
     }
 }

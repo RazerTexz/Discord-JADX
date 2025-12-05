@@ -8,38 +8,38 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.NotificationCompat;
-import b.a.i.f;
-import b.a.y.n0.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.widgets.chat.input.gifpicker.ViewScalingOnTouchListener;
-import d0.z.d.m;
+import p007b.p008a.p025i.CardSegmentViewBinding;
+import p007b.p008a.p062y.p067n0.SegmentedControlSegment;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: CardSegment.kt */
 /* loaded from: classes2.dex */
-public final class CardSegment extends CardView implements a {
+public final class CardSegment extends CardView implements SegmentedControlSegment {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final f binding;
+    public final CardSegmentViewBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CardSegment(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        LayoutInflater.from(getContext()).inflate(R.layout.card_segment_view, this);
-        int i = R.id.card_segment_badge;
-        TextView textView = (TextView) findViewById(R.id.card_segment_badge);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        LayoutInflater.from(getContext()).inflate(C5419R.layout.card_segment_view, this);
+        int i = C5419R.id.card_segment_badge;
+        TextView textView = (TextView) findViewById(C5419R.id.card_segment_badge);
         if (textView != null) {
-            i = R.id.card_segment_text;
-            TextView textView2 = (TextView) findViewById(R.id.card_segment_text);
+            i = C5419R.id.card_segment_text;
+            TextView textView2 = (TextView) findViewById(C5419R.id.card_segment_text);
             if (textView2 != null) {
-                f fVar = new f(this, textView, textView2);
-                m.checkNotNullExpressionValue(fVar, "CardSegmentViewBinding.i…ater.from(context), this)");
-                this.binding = fVar;
+                CardSegmentViewBinding cardSegmentViewBinding = new CardSegmentViewBinding(this, textView, textView2);
+                Intrinsics3.checkNotNullExpressionValue(cardSegmentViewBinding, "CardSegmentViewBinding.i…ater.from(context), this)");
+                this.binding = cardSegmentViewBinding;
                 if (attributeSet != null) {
-                    TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.a.CardSegment, 0, 0);
-                    m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…leable.CardSegment, 0, 0)");
+                    TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C5419R.a.CardSegment, 0, 0);
+                    Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…leable.CardSegment, 0, 0)");
                     try {
                         setText(typedArrayObtainStyledAttributes.getString(0));
                     } finally {
@@ -53,29 +53,30 @@ public final class CardSegment extends CardView implements a {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    @Override // b.a.y.n0.a
-    public void a(boolean selected) {
-        int themedColor = selected ? ColorCompat.getThemedColor(this, R.attr.colorBackgroundAccent) : ColorCompat.getColor(this, R.color.transparent);
-        int color = selected ? ColorCompat.getColor(this, R.color.white) : ColorCompat.getThemedColor(this, R.attr.colorInteractiveMuted);
+    @Override // p007b.p008a.p062y.p067n0.SegmentedControlSegment
+    /* renamed from: a */
+    public void mo388a(boolean selected) {
+        int themedColor = selected ? ColorCompat.getThemedColor(this, C5419R.attr.colorBackgroundAccent) : ColorCompat.getColor(this, C5419R.color.transparent);
+        int color = selected ? ColorCompat.getColor(this, C5419R.color.white) : ColorCompat.getThemedColor(this, C5419R.attr.colorInteractiveMuted);
         setCardBackgroundColor(themedColor);
-        this.binding.c.setTextColor(color);
+        this.binding.f829c.setTextColor(color);
     }
 
     public final View getCardText() {
-        TextView textView = this.binding.c;
-        m.checkNotNullExpressionValue(textView, "binding.cardSegmentText");
+        TextView textView = this.binding.f829c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.cardSegmentText");
         return textView;
     }
 
     public final void setBadgeText(CharSequence text) {
-        TextView textView = this.binding.f109b;
-        m.checkNotNullExpressionValue(textView, "binding.cardSegmentBadge");
+        TextView textView = this.binding.f828b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.cardSegmentBadge");
         ViewExtensions.setTextAndVisibilityBy(textView, text);
     }
 
     public final void setText(CharSequence text) {
-        TextView textView = this.binding.c;
-        m.checkNotNullExpressionValue(textView, "binding.cardSegmentText");
+        TextView textView = this.binding.f829c;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.cardSegmentText");
         textView.setText(text);
     }
 }

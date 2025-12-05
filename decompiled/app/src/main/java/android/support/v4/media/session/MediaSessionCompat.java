@@ -17,20 +17,25 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.core.os.BuildCompat;
 import androidx.versionedparcelable.VersionedParcelable;
-import x.a.b.b.a.b;
+import p007b.p100d.p104b.p105a.outline;
+import p668x.p669a.p672b.p674b.p675a.IMediaSession;
 
 /* loaded from: classes.dex */
 public class MediaSessionCompat {
 
+    /* renamed from: a */
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    public static final int a;
+    public static final int f46a;
 
     @SuppressLint({"BanParcelableUsage"})
     public static final class ResultReceiverWrapper implements Parcelable {
-        public static final Parcelable.Creator<ResultReceiverWrapper> CREATOR = new a();
-        public ResultReceiver j;
+        public static final Parcelable.Creator<ResultReceiverWrapper> CREATOR = new C0023a();
 
-        public class a implements Parcelable.Creator<ResultReceiverWrapper> {
+        /* renamed from: j */
+        public ResultReceiver f49j;
+
+        /* renamed from: android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper$a */
+        public class C0023a implements Parcelable.Creator<ResultReceiverWrapper> {
             @Override // android.os.Parcelable.Creator
             public ResultReceiverWrapper createFromParcel(Parcel parcel) {
                 return new ResultReceiverWrapper(parcel);
@@ -43,7 +48,7 @@ public class MediaSessionCompat {
         }
 
         public ResultReceiverWrapper(Parcel parcel) {
-            this.j = (ResultReceiver) ResultReceiver.CREATOR.createFromParcel(parcel);
+            this.f49j = (ResultReceiver) ResultReceiver.CREATOR.createFromParcel(parcel);
         }
 
         @Override // android.os.Parcelable
@@ -53,16 +58,17 @@ public class MediaSessionCompat {
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
-            this.j.writeToParcel(parcel, i);
+            this.f49j.writeToParcel(parcel, i);
         }
     }
 
     static {
-        a = BuildCompat.isAtLeastS() ? 33554432 : 0;
+        f46a = BuildCompat.isAtLeastS() ? 33554432 : 0;
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    public static void a(@Nullable Bundle bundle) {
+    /* renamed from: a */
+    public static void m40a(@Nullable Bundle bundle) {
         if (bundle != null) {
             bundle.setClassLoader(MediaSessionCompat.class.getClassLoader());
         }
@@ -70,8 +76,9 @@ public class MediaSessionCompat {
 
     @Nullable
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    public static Bundle b(@Nullable Bundle bundle) {
-        a(bundle);
+    /* renamed from: b */
+    public static Bundle m41b(@Nullable Bundle bundle) {
+        m40a(bundle);
         try {
             bundle.isEmpty();
             return bundle;
@@ -83,17 +90,24 @@ public class MediaSessionCompat {
 
     @SuppressLint({"BanParcelableUsage"})
     public static final class Token implements Parcelable {
-        public static final Parcelable.Creator<Token> CREATOR = new a();
-        public final Object j;
-        public final Object k;
+        public static final Parcelable.Creator<Token> CREATOR = new C0024a();
 
+        /* renamed from: j */
+        public final Object f50j;
+
+        /* renamed from: k */
+        public final Object f51k;
+
+        /* renamed from: l */
         @GuardedBy("mLock")
-        public b l;
+        public IMediaSession f52l;
 
+        /* renamed from: m */
         @GuardedBy("mLock")
-        public VersionedParcelable m;
+        public VersionedParcelable f53m;
 
-        public class a implements Parcelable.Creator<Token> {
+        /* renamed from: android.support.v4.media.session.MediaSessionCompat$Token$a */
+        public class C0024a implements Parcelable.Creator<Token> {
             @Override // android.os.Parcelable.Creator
             public Token createFromParcel(Parcel parcel) {
                 return new Token(parcel.readParcelable(null));
@@ -106,29 +120,31 @@ public class MediaSessionCompat {
         }
 
         public Token(Object obj) {
-            this.j = new Object();
-            this.k = obj;
-            this.l = null;
+            this.f50j = new Object();
+            this.f51k = obj;
+            this.f52l = null;
         }
 
         @RestrictTo({RestrictTo.Scope.LIBRARY})
-        public static Token a(Object obj, b bVar) {
+        /* renamed from: a */
+        public static Token m45a(Object obj, IMediaSession iMediaSession) {
             if (obj == null) {
                 return null;
             }
             if (obj instanceof MediaSession.Token) {
-                return new Token(obj, bVar);
+                return new Token(obj, iMediaSession);
             }
             throw new IllegalArgumentException("token is not a valid MediaSession.Token object");
         }
 
         @RestrictTo({RestrictTo.Scope.LIBRARY})
-        public b b() {
-            b bVar;
-            synchronized (this.j) {
-                bVar = this.l;
+        /* renamed from: b */
+        public IMediaSession m46b() {
+            IMediaSession iMediaSession;
+            synchronized (this.f50j) {
+                iMediaSession = this.f52l;
             }
-            return bVar;
+            return iMediaSession;
         }
 
         @Override // android.os.Parcelable
@@ -144,11 +160,11 @@ public class MediaSessionCompat {
                 return false;
             }
             Token token = (Token) obj;
-            Object obj2 = this.k;
+            Object obj2 = this.f51k;
             if (obj2 == null) {
-                return token.k == null;
+                return token.f51k == null;
             }
-            Object obj3 = token.k;
+            Object obj3 = token.f51k;
             if (obj3 == null) {
                 return false;
             }
@@ -156,7 +172,7 @@ public class MediaSessionCompat {
         }
 
         public int hashCode() {
-            Object obj = this.k;
+            Object obj = this.f51k;
             if (obj == null) {
                 return 0;
             }
@@ -165,23 +181,28 @@ public class MediaSessionCompat {
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
-            parcel.writeParcelable((Parcelable) this.k, i);
+            parcel.writeParcelable((Parcelable) this.f51k, i);
         }
 
-        public Token(Object obj, b bVar) {
-            this.j = new Object();
-            this.k = obj;
-            this.l = bVar;
+        public Token(Object obj, IMediaSession iMediaSession) {
+            this.f50j = new Object();
+            this.f51k = obj;
+            this.f52l = iMediaSession;
         }
     }
 
     @SuppressLint({"BanParcelableUsage"})
     public static final class QueueItem implements Parcelable {
-        public static final Parcelable.Creator<QueueItem> CREATOR = new a();
-        public final MediaDescriptionCompat j;
-        public final long k;
+        public static final Parcelable.Creator<QueueItem> CREATOR = new C0021a();
 
-        public class a implements Parcelable.Creator<QueueItem> {
+        /* renamed from: j */
+        public final MediaDescriptionCompat f47j;
+
+        /* renamed from: k */
+        public final long f48k;
+
+        /* renamed from: android.support.v4.media.session.MediaSessionCompat$QueueItem$a */
+        public class C0021a implements Parcelable.Creator<QueueItem> {
             @Override // android.os.Parcelable.Creator
             public QueueItem createFromParcel(Parcel parcel) {
                 return new QueueItem(parcel);
@@ -194,19 +215,23 @@ public class MediaSessionCompat {
         }
 
         @RequiresApi(21)
-        public static class b {
+        /* renamed from: android.support.v4.media.session.MediaSessionCompat$QueueItem$b */
+        public static class C0022b {
             @DoNotInline
-            public static MediaSession.QueueItem a(MediaDescription mediaDescription, long j) {
+            /* renamed from: a */
+            public static MediaSession.QueueItem m42a(MediaDescription mediaDescription, long j) {
                 return new MediaSession.QueueItem(mediaDescription, j);
             }
 
             @DoNotInline
-            public static MediaDescription b(MediaSession.QueueItem queueItem) {
+            /* renamed from: b */
+            public static MediaDescription m43b(MediaSession.QueueItem queueItem) {
                 return queueItem.getDescription();
             }
 
             @DoNotInline
-            public static long c(MediaSession.QueueItem queueItem) {
+            /* renamed from: c */
+            public static long m44c(MediaSession.QueueItem queueItem) {
                 return queueItem.getQueueId();
             }
         }
@@ -218,8 +243,8 @@ public class MediaSessionCompat {
             if (j == -1) {
                 throw new IllegalArgumentException("Id cannot be QueueItem.UNKNOWN_ID");
             }
-            this.j = mediaDescriptionCompat;
-            this.k = j;
+            this.f47j = mediaDescriptionCompat;
+            this.f48k = j;
         }
 
         @Override // android.os.Parcelable
@@ -228,21 +253,21 @@ public class MediaSessionCompat {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("MediaSession.QueueItem {Description=");
-            sbU.append(this.j);
-            sbU.append(", Id=");
-            return b.d.b.a.a.C(sbU, this.k, " }");
+            StringBuilder sbM833U = outline.m833U("MediaSession.QueueItem {Description=");
+            sbM833U.append(this.f47j);
+            sbM833U.append(", Id=");
+            return outline.m815C(sbM833U, this.f48k, " }");
         }
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
-            this.j.writeToParcel(parcel, i);
-            parcel.writeLong(this.k);
+            this.f47j.writeToParcel(parcel, i);
+            parcel.writeLong(this.f48k);
         }
 
         public QueueItem(Parcel parcel) {
-            this.j = MediaDescriptionCompat.CREATOR.createFromParcel(parcel);
-            this.k = parcel.readLong();
+            this.f47j = MediaDescriptionCompat.CREATOR.createFromParcel(parcel);
+            this.f48k = parcel.readLong();
         }
     }
 }

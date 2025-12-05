@@ -7,17 +7,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.voice.state.StageRequestToSpeakState;
 import com.discord.databinding.UserProfileStageActionsViewBinding;
 import com.discord.utilities.drawable.DrawableCompat;
 import com.discord.widgets.stage.StageRoles;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: UserProfileStageActionsView.kt */
 /* loaded from: classes2.dex */
@@ -47,8 +47,8 @@ public final class UserProfileStageActionsView extends LinearLayout {
         }
 
         /* renamed from: copy-am1GJgw$default, reason: not valid java name */
-        public static /* synthetic */ ViewState m51copyam1GJgw$default(ViewState viewState, boolean z2, Channel channel, StageRoles stageRoles, StageRequestToSpeakState stageRequestToSpeakState, boolean z3, boolean z4, boolean z5, boolean z6, int i, Object obj) {
-            return viewState.m53copyam1GJgw((i & 1) != 0 ? viewState.isMe : z2, (i & 2) != 0 ? viewState.channel : channel, (i & 4) != 0 ? viewState.userStageRole : stageRoles, (i & 8) != 0 ? viewState.userRequestToSpeakState : stageRequestToSpeakState, (i & 16) != 0 ? viewState.userInSameVoiceChannel : z3, (i & 32) != 0 ? viewState.canMuteMembers : z4, (i & 64) != 0 ? viewState.isUpdatingSuppressed : z5, (i & 128) != 0 ? viewState.isInvitingToSpeak : z6);
+        public static /* synthetic */ ViewState m11428copyam1GJgw$default(ViewState viewState, boolean z2, Channel channel, StageRoles stageRoles, StageRequestToSpeakState stageRequestToSpeakState, boolean z3, boolean z4, boolean z5, boolean z6, int i, Object obj) {
+            return viewState.m11430copyam1GJgw((i & 1) != 0 ? viewState.isMe : z2, (i & 2) != 0 ? viewState.channel : channel, (i & 4) != 0 ? viewState.userStageRole : stageRoles, (i & 8) != 0 ? viewState.userRequestToSpeakState : stageRequestToSpeakState, (i & 16) != 0 ? viewState.userInSameVoiceChannel : z3, (i & 32) != 0 ? viewState.canMuteMembers : z4, (i & 64) != 0 ? viewState.isUpdatingSuppressed : z5, (i & 128) != 0 ? viewState.isInvitingToSpeak : z6);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -92,8 +92,8 @@ public final class UserProfileStageActionsView extends LinearLayout {
         }
 
         /* renamed from: copy-am1GJgw, reason: not valid java name */
-        public final ViewState m53copyam1GJgw(boolean isMe, Channel channel, StageRoles userStageRole, StageRequestToSpeakState userRequestToSpeakState, boolean userInSameVoiceChannel, boolean canMuteMembers, boolean isUpdatingSuppressed, boolean isInvitingToSpeak) {
-            m.checkNotNullParameter(userRequestToSpeakState, "userRequestToSpeakState");
+        public final ViewState m11430copyam1GJgw(boolean isMe, Channel channel, StageRoles userStageRole, StageRequestToSpeakState userRequestToSpeakState, boolean userInSameVoiceChannel, boolean canMuteMembers, boolean isUpdatingSuppressed, boolean isInvitingToSpeak) {
+            Intrinsics3.checkNotNullParameter(userRequestToSpeakState, "userRequestToSpeakState");
             return new ViewState(isMe, channel, userStageRole, userRequestToSpeakState, userInSameVoiceChannel, canMuteMembers, isUpdatingSuppressed, isInvitingToSpeak);
         }
 
@@ -105,7 +105,7 @@ public final class UserProfileStageActionsView extends LinearLayout {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return this.isMe == viewState.isMe && m.areEqual(this.channel, viewState.channel) && m.areEqual(this.userStageRole, viewState.userStageRole) && m.areEqual(this.userRequestToSpeakState, viewState.userRequestToSpeakState) && this.userInSameVoiceChannel == viewState.userInSameVoiceChannel && this.canMuteMembers == viewState.canMuteMembers && this.isUpdatingSuppressed == viewState.isUpdatingSuppressed && this.isInvitingToSpeak == viewState.isInvitingToSpeak;
+            return this.isMe == viewState.isMe && Intrinsics3.areEqual(this.channel, viewState.channel) && Intrinsics3.areEqual(this.userStageRole, viewState.userStageRole) && Intrinsics3.areEqual(this.userRequestToSpeakState, viewState.userRequestToSpeakState) && this.userInSameVoiceChannel == viewState.userInSameVoiceChannel && this.canMuteMembers == viewState.canMuteMembers && this.isUpdatingSuppressed == viewState.isUpdatingSuppressed && this.isInvitingToSpeak == viewState.isInvitingToSpeak;
         }
 
         public final boolean getCanMuteMembers() {
@@ -125,7 +125,7 @@ public final class UserProfileStageActionsView extends LinearLayout {
         }
 
         /* renamed from: getUserStageRole-twRsX-0, reason: not valid java name */
-        public final StageRoles m54getUserStageRoletwRsX0() {
+        public final StageRoles m11431getUserStageRoletwRsX0() {
             return this.userStageRole;
         }
 
@@ -184,22 +184,22 @@ public final class UserProfileStageActionsView extends LinearLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewState(isMe=");
-            sbU.append(this.isMe);
-            sbU.append(", channel=");
-            sbU.append(this.channel);
-            sbU.append(", userStageRole=");
-            sbU.append(this.userStageRole);
-            sbU.append(", userRequestToSpeakState=");
-            sbU.append(this.userRequestToSpeakState);
-            sbU.append(", userInSameVoiceChannel=");
-            sbU.append(this.userInSameVoiceChannel);
-            sbU.append(", canMuteMembers=");
-            sbU.append(this.canMuteMembers);
-            sbU.append(", isUpdatingSuppressed=");
-            sbU.append(this.isUpdatingSuppressed);
-            sbU.append(", isInvitingToSpeak=");
-            return a.O(sbU, this.isInvitingToSpeak, ")");
+            StringBuilder sbM833U = outline.m833U("ViewState(isMe=");
+            sbM833U.append(this.isMe);
+            sbM833U.append(", channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", userStageRole=");
+            sbM833U.append(this.userStageRole);
+            sbM833U.append(", userRequestToSpeakState=");
+            sbM833U.append(this.userRequestToSpeakState);
+            sbM833U.append(", userInSameVoiceChannel=");
+            sbM833U.append(this.userInSameVoiceChannel);
+            sbM833U.append(", canMuteMembers=");
+            sbM833U.append(this.canMuteMembers);
+            sbM833U.append(", isUpdatingSuppressed=");
+            sbM833U.append(this.isUpdatingSuppressed);
+            sbM833U.append(", isInvitingToSpeak=");
+            return outline.m827O(sbM833U, this.isInvitingToSpeak, ")");
         }
 
         public /* synthetic */ ViewState(boolean z2, Channel channel, StageRoles stageRoles, StageRequestToSpeakState stageRequestToSpeakState, boolean z3, boolean z4, boolean z5, boolean z6, DefaultConstructorMarker defaultConstructorMarker) {
@@ -212,11 +212,11 @@ public final class UserProfileStageActionsView extends LinearLayout {
     }
 
     /* compiled from: UserProfileStageActionsView.kt */
-    /* renamed from: com.discord.widgets.stage.usersheet.UserProfileStageActionsView$setOnInviteToSpeak$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.stage.usersheet.UserProfileStageActionsView$setOnInviteToSpeak$1 */
+    public static final class ViewOnClickListenerC100751 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onInviteToSpeak;
 
-        public AnonymousClass1(Function0 function0) {
+        public ViewOnClickListenerC100751(Function0 function0) {
             this.$onInviteToSpeak = function0;
         }
 
@@ -227,11 +227,11 @@ public final class UserProfileStageActionsView extends LinearLayout {
     }
 
     /* compiled from: UserProfileStageActionsView.kt */
-    /* renamed from: com.discord.widgets.stage.usersheet.UserProfileStageActionsView$setOnMoveToAudience$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.stage.usersheet.UserProfileStageActionsView$setOnMoveToAudience$1 */
+    public static final class ViewOnClickListenerC100761 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onMoveToAudience;
 
-        public AnonymousClass1(Function0 function0) {
+        public ViewOnClickListenerC100761(Function0 function0) {
             this.$onMoveToAudience = function0;
         }
 
@@ -244,18 +244,18 @@ public final class UserProfileStageActionsView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UserProfileStageActionsView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(attributeSet, "attrs");
-        View viewInflate = LayoutInflater.from(context).inflate(R.layout.user_profile_stage_actions_view, (ViewGroup) this, false);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
+        View viewInflate = LayoutInflater.from(context).inflate(C5419R.layout.user_profile_stage_actions_view, (ViewGroup) this, false);
         addView(viewInflate);
-        int i = R.id.user_profile_stage_invite_to_speak;
-        TextView textView = (TextView) viewInflate.findViewById(R.id.user_profile_stage_invite_to_speak);
+        int i = C5419R.id.user_profile_stage_invite_to_speak;
+        TextView textView = (TextView) viewInflate.findViewById(C5419R.id.user_profile_stage_invite_to_speak);
         if (textView != null) {
-            i = R.id.user_profile_stage_move_to_audience;
-            TextView textView2 = (TextView) viewInflate.findViewById(R.id.user_profile_stage_move_to_audience);
+            i = C5419R.id.user_profile_stage_move_to_audience;
+            TextView textView2 = (TextView) viewInflate.findViewById(C5419R.id.user_profile_stage_move_to_audience);
             if (textView2 != null) {
                 UserProfileStageActionsViewBinding userProfileStageActionsViewBinding = new UserProfileStageActionsViewBinding((LinearLayout) viewInflate, textView, textView2);
-                m.checkNotNullExpressionValue(userProfileStageActionsViewBinding, "UserProfileStageActionsV…rom(context), this, true)");
+                Intrinsics3.checkNotNullExpressionValue(userProfileStageActionsViewBinding, "UserProfileStageActionsV…rom(context), this, true)");
                 this.binding = userProfileStageActionsViewBinding;
                 return;
             }
@@ -264,30 +264,30 @@ public final class UserProfileStageActionsView extends LinearLayout {
     }
 
     public final void setOnInviteToSpeak(Function0<Unit> onInviteToSpeak) {
-        m.checkNotNullParameter(onInviteToSpeak, "onInviteToSpeak");
-        this.binding.f2167b.setOnClickListener(new AnonymousClass1(onInviteToSpeak));
+        Intrinsics3.checkNotNullParameter(onInviteToSpeak, "onInviteToSpeak");
+        this.binding.f15353b.setOnClickListener(new ViewOnClickListenerC100751(onInviteToSpeak));
     }
 
     public final void setOnMoveToAudience(Function0<Unit> onMoveToAudience) {
-        m.checkNotNullParameter(onMoveToAudience, "onMoveToAudience");
-        this.binding.c.setOnClickListener(new AnonymousClass1(onMoveToAudience));
+        Intrinsics3.checkNotNullParameter(onMoveToAudience, "onMoveToAudience");
+        this.binding.f15354c.setOnClickListener(new ViewOnClickListenerC100761(onMoveToAudience));
     }
 
     public final void updateView(ViewState viewState) {
-        m.checkNotNullParameter(viewState, "viewState");
+        Intrinsics3.checkNotNullParameter(viewState, "viewState");
         if (!viewState.getUserInSameVoiceChannel() || !viewState.getCanMuteMembers()) {
             setVisibility(8);
             return;
         }
         setVisibility(0);
-        TextView textView = this.binding.f2167b;
+        TextView textView = this.binding.f15353b;
         textView.setVisibility(viewState.getUserRequestToSpeakState().getCanBeInvitedToSpeak() ? 0 : 8);
         textView.setEnabled(!viewState.isInvitingToSpeak());
-        textView.setText(viewState.isMe() ? R.string.moderator_raise_own_hand : R.string.stage_channel_user_invite_to_speak);
-        DrawableCompat.setCompoundDrawablesCompat$default(textView, viewState.isMe() ? R.drawable.ic_stage_move_to_speaker : R.drawable.ic_stage_invite_speak, 0, 0, 0, 14, (Object) null);
-        TextView textView2 = this.binding.c;
-        StageRoles stageRolesM54getUserStageRoletwRsX0 = viewState.m54getUserStageRoletwRsX0();
-        textView2.setVisibility(stageRolesM54getUserStageRoletwRsX0 != null && StageRoles.m33isSpeakerimpl(stageRolesM54getUserStageRoletwRsX0.m35unboximpl()) ? 0 : 8);
+        textView.setText(viewState.isMe() ? C5419R.string.moderator_raise_own_hand : C5419R.string.stage_channel_user_invite_to_speak);
+        DrawableCompat.setCompoundDrawablesCompat$default(textView, viewState.isMe() ? C5419R.drawable.ic_stage_move_to_speaker : C5419R.drawable.ic_stage_invite_speak, 0, 0, 0, 14, (Object) null);
+        TextView textView2 = this.binding.f15354c;
+        StageRoles stageRolesM11431getUserStageRoletwRsX0 = viewState.m11431getUserStageRoletwRsX0();
+        textView2.setVisibility(stageRolesM11431getUserStageRoletwRsX0 != null && StageRoles.m11410isSpeakerimpl(stageRolesM11431getUserStageRoletwRsX0.m11412unboximpl()) ? 0 : 8);
         textView2.setEnabled(!viewState.isUpdatingSuppressed());
     }
 }

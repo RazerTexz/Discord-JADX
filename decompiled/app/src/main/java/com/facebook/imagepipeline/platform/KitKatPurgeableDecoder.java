@@ -4,66 +4,70 @@ import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import androidx.exifinterface.media.ExifInterface;
-import b.c.a.a0.d;
-import b.f.d.d.c;
-import b.f.j.l.n;
 import com.facebook.common.memory.PooledByteBuffer;
 import com.facebook.common.references.CloseableReference;
 import com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p109f.p115d.p119d.DoNotStrip;
+import p007b.p109f.p161j.p177l.FlexByteArrayPool;
 
-@c
+@DoNotStrip
 @TargetApi(19)
 /* loaded from: classes3.dex */
 public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder {
-    public final n c;
 
-    @c
-    public KitKatPurgeableDecoder(n nVar) {
-        this.c = nVar;
+    /* renamed from: c */
+    public final FlexByteArrayPool f19576c;
+
+    @DoNotStrip
+    public KitKatPurgeableDecoder(FlexByteArrayPool flexByteArrayPool) {
+        this.f19576c = flexByteArrayPool;
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
-    public Bitmap c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options) {
-        PooledByteBuffer pooledByteBufferU = closeableReference.u();
-        int size = pooledByteBufferU.size();
-        CloseableReference<byte[]> closeableReferenceA = this.c.a(size);
+    /* renamed from: c */
+    public Bitmap mo8710c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options) {
+        PooledByteBuffer pooledByteBufferM8642u = closeableReference.m8642u();
+        int size = pooledByteBufferM8642u.size();
+        CloseableReference<byte[]> closeableReferenceM1391a = this.f19576c.m1391a(size);
         try {
-            byte[] bArrU = closeableReferenceA.u();
-            pooledByteBufferU.i(0, bArrU, 0, size);
-            Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrU, 0, size, options);
-            d.y(bitmapDecodeByteArray, "BitmapFactory returned null");
-            closeableReferenceA.close();
+            byte[] bArrM8642u = closeableReferenceM1391a.m8642u();
+            pooledByteBufferM8642u.mo1396i(0, bArrM8642u, 0, size);
+            Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrM8642u, 0, size, options);
+            AnimatableValueParser.m591y(bitmapDecodeByteArray, "BitmapFactory returned null");
+            closeableReferenceM1391a.close();
             return bitmapDecodeByteArray;
         } catch (Throwable th) {
-            if (closeableReferenceA != null) {
-                closeableReferenceA.close();
+            if (closeableReferenceM1391a != null) {
+                closeableReferenceM1391a.close();
             }
             throw th;
         }
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
-    public Bitmap d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options) {
-        byte[] bArr = DalvikPurgeableDecoder.e(closeableReference, i) ? null : DalvikPurgeableDecoder.a;
-        PooledByteBuffer pooledByteBufferU = closeableReference.u();
-        d.i(Boolean.valueOf(i <= pooledByteBufferU.size()));
+    /* renamed from: d */
+    public Bitmap mo8711d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options) {
+        byte[] bArr = DalvikPurgeableDecoder.m8709e(closeableReference, i) ? null : DalvikPurgeableDecoder.f19566a;
+        PooledByteBuffer pooledByteBufferM8642u = closeableReference.m8642u();
+        AnimatableValueParser.m527i(Boolean.valueOf(i <= pooledByteBufferM8642u.size()));
         int i2 = i + 2;
-        CloseableReference<byte[]> closeableReferenceA = this.c.a(i2);
+        CloseableReference<byte[]> closeableReferenceM1391a = this.f19576c.m1391a(i2);
         try {
-            byte[] bArrU = closeableReferenceA.u();
-            pooledByteBufferU.i(0, bArrU, 0, i);
+            byte[] bArrM8642u = closeableReferenceM1391a.m8642u();
+            pooledByteBufferM8642u.mo1396i(0, bArrM8642u, 0, i);
             if (bArr != null) {
-                bArrU[i] = -1;
-                bArrU[i + 1] = ExifInterface.MARKER_EOI;
+                bArrM8642u[i] = -1;
+                bArrM8642u[i + 1] = ExifInterface.MARKER_EOI;
                 i = i2;
             }
-            Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrU, 0, i, options);
-            d.y(bitmapDecodeByteArray, "BitmapFactory returned null");
-            closeableReferenceA.close();
+            Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrM8642u, 0, i, options);
+            AnimatableValueParser.m591y(bitmapDecodeByteArray, "BitmapFactory returned null");
+            closeableReferenceM1391a.close();
             return bitmapDecodeByteArray;
         } catch (Throwable th) {
-            if (closeableReferenceA != null) {
-                closeableReferenceA.close();
+            if (closeableReferenceM1391a != null) {
+                closeableReferenceM1391a.close();
             }
             throw th;
         }

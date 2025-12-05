@@ -1,9 +1,9 @@
 package com.discord.widgets.home;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: HomeConfig.kt */
 /* loaded from: classes2.dex */
@@ -62,7 +62,7 @@ public final /* data */ class HomeConfig implements Serializable {
             return false;
         }
         HomeConfig homeConfig = (HomeConfig) other;
-        return m.areEqual(this.guildWelcomeSheetId, homeConfig.guildWelcomeSheetId) && m.areEqual(this.guildScheduledEventId, homeConfig.guildScheduledEventId) && this.ageGated == homeConfig.ageGated;
+        return Intrinsics3.areEqual(this.guildWelcomeSheetId, homeConfig.guildWelcomeSheetId) && Intrinsics3.areEqual(this.guildScheduledEventId, homeConfig.guildScheduledEventId) && this.ageGated == homeConfig.ageGated;
     }
 
     public final boolean getAgeGated() {
@@ -92,12 +92,12 @@ public final /* data */ class HomeConfig implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("HomeConfig(guildWelcomeSheetId=");
-        sbU.append(this.guildWelcomeSheetId);
-        sbU.append(", guildScheduledEventId=");
-        sbU.append(this.guildScheduledEventId);
-        sbU.append(", ageGated=");
-        return a.O(sbU, this.ageGated, ")");
+        StringBuilder sbM833U = outline.m833U("HomeConfig(guildWelcomeSheetId=");
+        sbM833U.append(this.guildWelcomeSheetId);
+        sbM833U.append(", guildScheduledEventId=");
+        sbM833U.append(this.guildScheduledEventId);
+        sbM833U.append(", ageGated=");
+        return outline.m827O(sbM833U, this.ageGated, ")");
     }
 
     public /* synthetic */ HomeConfig(Long l, Long l2, boolean z2, int i, DefaultConstructorMarker defaultConstructorMarker) {

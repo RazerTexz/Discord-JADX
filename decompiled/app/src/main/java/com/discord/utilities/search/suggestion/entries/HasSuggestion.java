@@ -1,12 +1,12 @@
 package com.discord.utilities.search.suggestion.entries;
 
-import b.d.b.a.a;
-import com.discord.utilities.search.query.node.answer.HasAnswerOption;
+import com.discord.utilities.search.query.node.answer.HasNode2;
 import com.discord.utilities.search.strings.SearchStringProvider;
 import com.discord.utilities.search.suggestion.entries.SearchSuggestion;
-import d0.g0.w;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p579g0.Strings4;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: HasSuggestion.kt */
 /* loaded from: classes2.dex */
@@ -15,18 +15,18 @@ public final /* data */ class HasSuggestion implements SearchSuggestion {
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final SearchSuggestion.Category category;
-    private final HasAnswerOption hasAnswerOption;
+    private final HasNode2 hasAnswerOption;
 
     /* compiled from: HasSuggestion.kt */
     public static final class Companion {
         private Companion() {
         }
 
-        public final boolean canComplete(CharSequence currentInput, HasAnswerOption hasAnswerOption, SearchStringProvider searchStringProvider) {
-            m.checkNotNullParameter(currentInput, "currentInput");
-            m.checkNotNullParameter(hasAnswerOption, "hasAnswerOption");
-            m.checkNotNullParameter(searchStringProvider, "searchStringProvider");
-            return w.contains$default((CharSequence) hasAnswerOption.getLocalizedInputText(searchStringProvider), currentInput, false, 2, (Object) null);
+        public final boolean canComplete(CharSequence currentInput, HasNode2 hasAnswerOption, SearchStringProvider searchStringProvider) {
+            Intrinsics3.checkNotNullParameter(currentInput, "currentInput");
+            Intrinsics3.checkNotNullParameter(hasAnswerOption, "hasAnswerOption");
+            Intrinsics3.checkNotNullParameter(searchStringProvider, "searchStringProvider");
+            return Strings4.contains$default((CharSequence) hasAnswerOption.getLocalizedInputText(searchStringProvider), currentInput, false, 2, (Object) null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -34,32 +34,32 @@ public final /* data */ class HasSuggestion implements SearchSuggestion {
         }
     }
 
-    public HasSuggestion(HasAnswerOption hasAnswerOption) {
-        m.checkNotNullParameter(hasAnswerOption, "hasAnswerOption");
-        this.hasAnswerOption = hasAnswerOption;
+    public HasSuggestion(HasNode2 hasNode2) {
+        Intrinsics3.checkNotNullParameter(hasNode2, "hasAnswerOption");
+        this.hasAnswerOption = hasNode2;
         this.category = SearchSuggestion.Category.HAS;
     }
 
-    public static /* synthetic */ HasSuggestion copy$default(HasSuggestion hasSuggestion, HasAnswerOption hasAnswerOption, int i, Object obj) {
+    public static /* synthetic */ HasSuggestion copy$default(HasSuggestion hasSuggestion, HasNode2 hasNode2, int i, Object obj) {
         if ((i & 1) != 0) {
-            hasAnswerOption = hasSuggestion.hasAnswerOption;
+            hasNode2 = hasSuggestion.hasAnswerOption;
         }
-        return hasSuggestion.copy(hasAnswerOption);
+        return hasSuggestion.copy(hasNode2);
     }
 
     /* renamed from: component1, reason: from getter */
-    public final HasAnswerOption getHasAnswerOption() {
+    public final HasNode2 getHasAnswerOption() {
         return this.hasAnswerOption;
     }
 
-    public final HasSuggestion copy(HasAnswerOption hasAnswerOption) {
-        m.checkNotNullParameter(hasAnswerOption, "hasAnswerOption");
+    public final HasSuggestion copy(HasNode2 hasAnswerOption) {
+        Intrinsics3.checkNotNullParameter(hasAnswerOption, "hasAnswerOption");
         return new HasSuggestion(hasAnswerOption);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof HasSuggestion) && m.areEqual(this.hasAnswerOption, ((HasSuggestion) other).hasAnswerOption);
+            return (other instanceof HasSuggestion) && Intrinsics3.areEqual(this.hasAnswerOption, ((HasSuggestion) other).hasAnswerOption);
         }
         return true;
     }
@@ -69,22 +69,22 @@ public final /* data */ class HasSuggestion implements SearchSuggestion {
         return this.category;
     }
 
-    public final HasAnswerOption getHasAnswerOption() {
+    public final HasNode2 getHasAnswerOption() {
         return this.hasAnswerOption;
     }
 
     public int hashCode() {
-        HasAnswerOption hasAnswerOption = this.hasAnswerOption;
-        if (hasAnswerOption != null) {
-            return hasAnswerOption.hashCode();
+        HasNode2 hasNode2 = this.hasAnswerOption;
+        if (hasNode2 != null) {
+            return hasNode2.hashCode();
         }
         return 0;
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("HasSuggestion(hasAnswerOption=");
-        sbU.append(this.hasAnswerOption);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("HasSuggestion(hasAnswerOption=");
+        sbM833U.append(this.hasAnswerOption);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

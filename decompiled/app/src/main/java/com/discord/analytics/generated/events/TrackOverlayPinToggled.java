@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackOverlayPinToggled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOverlayPinToggled implements AnalyticsSchema, TrackBaseReceiver, TrackOverlayClientMetadataReceiver {
+public final /* data */ class TrackOverlayPinToggled implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
     private final Boolean pinned = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackOverlayPinToggled implements AnalyticsSchema,
             return false;
         }
         TrackOverlayPinToggled trackOverlayPinToggled = (TrackOverlayPinToggled) other;
-        return m.areEqual(this.pinned, trackOverlayPinToggled.pinned) && m.areEqual(this.guildId, trackOverlayPinToggled.guildId) && m.areEqual(this.channelId, trackOverlayPinToggled.channelId) && m.areEqual(this.channelType, trackOverlayPinToggled.channelType) && m.areEqual(this.widgetType, trackOverlayPinToggled.widgetType);
+        return Intrinsics3.areEqual(this.pinned, trackOverlayPinToggled.pinned) && Intrinsics3.areEqual(this.guildId, trackOverlayPinToggled.guildId) && Intrinsics3.areEqual(this.channelId, trackOverlayPinToggled.channelId) && Intrinsics3.areEqual(this.channelType, trackOverlayPinToggled.channelType) && Intrinsics3.areEqual(this.widgetType, trackOverlayPinToggled.widgetType);
     }
 
     public int hashCode() {
@@ -51,15 +51,15 @@ public final /* data */ class TrackOverlayPinToggled implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackOverlayPinToggled(pinned=");
-        sbU.append(this.pinned);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", widgetType=");
-        return a.E(sbU, this.widgetType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackOverlayPinToggled(pinned=");
+        sbM833U.append(this.pinned);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", widgetType=");
+        return outline.m817E(sbM833U, this.widgetType, ")");
     }
 }

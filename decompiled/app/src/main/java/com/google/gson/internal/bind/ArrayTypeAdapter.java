@@ -1,7 +1,5 @@
 package com.google.gson.internal.bind;
 
-import b.i.d.o;
-import b.i.d.q.a;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.reflect.TypeToken;
@@ -13,18 +11,24 @@ import java.lang.reflect.Array;
 import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import p007b.p225i.p408d.TypeAdapterFactory2;
+import p007b.p225i.p408d.p410q.C$Gson$Types;
 
 /* loaded from: classes3.dex */
 public final class ArrayTypeAdapter<E> extends TypeAdapter<Object> {
-    public static final o a = new AnonymousClass1();
 
-    /* renamed from: b, reason: collision with root package name */
-    public final Class<E> f3117b;
-    public final TypeAdapter<E> c;
+    /* renamed from: a */
+    public static final TypeAdapterFactory2 f21510a = new C111061();
 
-    /* renamed from: com.google.gson.internal.bind.ArrayTypeAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements o {
-        @Override // b.i.d.o
+    /* renamed from: b */
+    public final Class<E> f21511b;
+
+    /* renamed from: c */
+    public final TypeAdapter<E> f21512c;
+
+    /* renamed from: com.google.gson.internal.bind.ArrayTypeAdapter$1 */
+    public class C111061 implements TypeAdapterFactory2 {
+        @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             Type type = typeToken.getType();
             boolean z2 = type instanceof GenericArrayType;
@@ -32,29 +36,29 @@ public final class ArrayTypeAdapter<E> extends TypeAdapter<Object> {
                 return null;
             }
             Type genericComponentType = z2 ? ((GenericArrayType) type).getGenericComponentType() : ((Class) type).getComponentType();
-            return new ArrayTypeAdapter(gson, gson.h(TypeToken.get(genericComponentType)), a.e(genericComponentType));
+            return new ArrayTypeAdapter(gson, gson.m9204h(TypeToken.get(genericComponentType)), C$Gson$Types.m6864e(genericComponentType));
         }
     }
 
     public ArrayTypeAdapter(Gson gson, TypeAdapter<E> typeAdapter, Class<E> cls) {
-        this.c = new TypeAdapterRuntimeTypeWrapper(gson, typeAdapter, cls);
-        this.f3117b = cls;
+        this.f21512c = new TypeAdapterRuntimeTypeWrapper(gson, typeAdapter, cls);
+        this.f21511b = cls;
     }
 
     @Override // com.google.gson.TypeAdapter
     public Object read(JsonReader jsonReader) throws IOException, ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
-        if (jsonReader.N() == JsonToken.NULL) {
-            jsonReader.H();
+        if (jsonReader.mo6878N() == JsonToken.NULL) {
+            jsonReader.mo6876H();
             return null;
         }
         ArrayList arrayList = new ArrayList();
-        jsonReader.a();
-        while (jsonReader.q()) {
-            arrayList.add(this.c.read(jsonReader));
+        jsonReader.mo6882a();
+        while (jsonReader.mo6888q()) {
+            arrayList.add(this.f21512c.read(jsonReader));
         }
-        jsonReader.e();
+        jsonReader.mo6886e();
         int size = arrayList.size();
-        Object objNewInstance = Array.newInstance((Class<?>) this.f3117b, size);
+        Object objNewInstance = Array.newInstance((Class<?>) this.f21511b, size);
         for (int i = 0; i < size; i++) {
             Array.set(objNewInstance, i, arrayList.get(i));
         }
@@ -64,14 +68,14 @@ public final class ArrayTypeAdapter<E> extends TypeAdapter<Object> {
     @Override // com.google.gson.TypeAdapter
     public void write(JsonWriter jsonWriter, Object obj) throws IOException, ArrayIndexOutOfBoundsException, IllegalArgumentException {
         if (obj == null) {
-            jsonWriter.s();
+            jsonWriter.mo6905s();
             return;
         }
-        jsonWriter.b();
+        jsonWriter.mo6900b();
         int length = Array.getLength(obj);
         for (int i = 0; i < length; i++) {
-            this.c.write(jsonWriter, Array.get(obj, i));
+            this.f21512c.write(jsonWriter, Array.get(obj, i));
         }
-        jsonWriter.e();
+        jsonWriter.mo6902e();
     }
 }

@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
-import a0.a.a.b;
-import b.d.b.a.a;
-import d0.z.d.m;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildWelcomeEntry.kt */
 /* loaded from: classes2.dex */
@@ -16,7 +16,7 @@ public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
     private final int type;
 
     public GuildWelcomeEntry(boolean z2, boolean z3, boolean z4, long j, String str) {
-        m.checkNotNullParameter(str, "guildName");
+        Intrinsics3.checkNotNullParameter(str, "guildName");
         this.isOwner = z2;
         this.guildHasIcon = z3;
         this.canInvite = z4;
@@ -77,7 +77,7 @@ public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
     }
 
     public final GuildWelcomeEntry copy(boolean isOwner, boolean guildHasIcon, boolean canInvite, long guildId, String guildName) {
-        m.checkNotNullParameter(guildName, "guildName");
+        Intrinsics3.checkNotNullParameter(guildName, "guildName");
         return new GuildWelcomeEntry(isOwner, guildHasIcon, canInvite, guildId, guildName);
     }
 
@@ -89,7 +89,7 @@ public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
             return false;
         }
         GuildWelcomeEntry guildWelcomeEntry = (GuildWelcomeEntry) other;
-        return this.isOwner == guildWelcomeEntry.isOwner && this.guildHasIcon == guildWelcomeEntry.guildHasIcon && this.canInvite == guildWelcomeEntry.canInvite && this.guildId == guildWelcomeEntry.guildId && m.areEqual(this.guildName, guildWelcomeEntry.guildName);
+        return this.isOwner == guildWelcomeEntry.isOwner && this.guildHasIcon == guildWelcomeEntry.guildHasIcon && this.canInvite == guildWelcomeEntry.canInvite && this.guildId == guildWelcomeEntry.guildId && Intrinsics3.areEqual(this.guildName, guildWelcomeEntry.guildName);
     }
 
     public final boolean getCanInvite() {
@@ -137,9 +137,9 @@ public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
         }
         int i3 = (i + i2) * 31;
         boolean z3 = this.canInvite;
-        int iA = (b.a(this.guildId) + ((i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.guildId) + ((i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31)) * 31;
         String str = this.guildName;
-        return iA + (str != null ? str.hashCode() : 0);
+        return iM3a + (str != null ? str.hashCode() : 0);
     }
 
     public final boolean isOwner() {
@@ -147,15 +147,15 @@ public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildWelcomeEntry(isOwner=");
-        sbU.append(this.isOwner);
-        sbU.append(", guildHasIcon=");
-        sbU.append(this.guildHasIcon);
-        sbU.append(", canInvite=");
-        sbU.append(this.canInvite);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", guildName=");
-        return a.J(sbU, this.guildName, ")");
+        StringBuilder sbM833U = outline.m833U("GuildWelcomeEntry(isOwner=");
+        sbM833U.append(this.isOwner);
+        sbM833U.append(", guildHasIcon=");
+        sbM833U.append(this.guildHasIcon);
+        sbM833U.append(", canInvite=");
+        sbM833U.append(this.canInvite);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", guildName=");
+        return outline.m822J(sbM833U, this.guildName, ")");
     }
 }

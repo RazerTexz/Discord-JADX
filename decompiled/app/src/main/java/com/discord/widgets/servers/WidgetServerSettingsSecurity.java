@@ -1,6 +1,5 @@
 package com.discord.widgets.servers;
 
-import a0.a.a.b;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,37 +11,39 @@ import android.widget.TextView;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.d.j;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppDialog;
 import com.discord.app.AppFragment;
-import com.discord.app.LoggingConfig;
+import com.discord.app.AppLogger2;
 import com.discord.databinding.WidgetServerSettingsSecurityBinding;
 import com.discord.databinding.WidgetServerSettingsSecurityDialogBinding;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.google.android.material.button.MaterialButton;
-import d0.g;
-import d0.z.d.k;
-import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
 
 /* compiled from: WidgetServerSettingsSecurity.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsSecurity extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsSecurity.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsSecurityBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsSecurity.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsSecurityBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -54,7 +55,7 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
 
     /* renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
-    private final LoggingConfig loggingConfig;
+    private final AppLogger2 loggingConfig;
 
     /* compiled from: WidgetServerSettingsSecurity.kt */
     public static final class Companion {
@@ -62,11 +63,11 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         }
 
         public final void create(Context context, long guildId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             StoreStream.INSTANCE.getAnalytics().onGuildSettingsPaneViewed("SECURITY", guildId);
             Intent intentPutExtra = new Intent().putExtra("INTENT_EXTRA_GUILD_ID", guildId);
-            m.checkNotNullExpressionValue(intentPutExtra, "Intent().putExtra(INTENT_EXTRA_GUILD_ID, guildId)");
-            j.d(context, WidgetServerSettingsSecurity.class, intentPutExtra);
+            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent().putExtra(INTENT_EXTRA_GUILD_ID, guildId)");
+            AppScreen2.m156d(context, WidgetServerSettingsSecurity.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -90,11 +91,11 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
 
             public final Observable<Model> get(long guildId) {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
-                Observable observableJ = Observable.j(StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getGuilds().observeGuild(guildId), WidgetServerSettingsSecurity$Model$Companion$get$1.INSTANCE);
-                m.checkNotNullExpressionValue(observableJ, "Observable\n             …        )\n              }");
-                Observable<Model> observableR = ObservableExtensionsKt.computationLatest(observableJ).r();
-                m.checkNotNullExpressionValue(observableR, "Observable\n             …  .distinctUntilChanged()");
-                return observableR;
+                Observable observableM11076j = Observable.m11076j(StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getGuilds().observeGuild(guildId), WidgetServerSettingsSecurity$Model$Companion$get$1.INSTANCE);
+                Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable\n             …        )\n              }");
+                Observable<Model> observableM11112r = ObservableExtensionsKt.computationLatest(observableM11076j).m11112r();
+                Intrinsics3.checkNotNullExpressionValue(observableM11112r, "Observable\n             …  .distinctUntilChanged()");
+                return observableM11112r;
             }
 
             public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -148,7 +149,7 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return this.guildId == model.guildId && m.areEqual(this.guildName, model.guildName) && this.isMfaEnabled == model.isMfaEnabled;
+            return this.guildId == model.guildId && Intrinsics3.areEqual(this.guildName, model.guildName) && this.isMfaEnabled == model.isMfaEnabled;
         }
 
         public final long getGuildId() {
@@ -161,9 +162,9 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
 
         /* JADX WARN: Multi-variable type inference failed */
         public int hashCode() {
-            int iA = b.a(this.guildId) * 31;
+            int iM3a = C0002b.m3a(this.guildId) * 31;
             String str = this.guildName;
-            int iHashCode = (iA + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.isMfaEnabled;
             int i = z2;
             if (z2 != 0) {
@@ -177,12 +178,12 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Model(guildId=");
-            sbU.append(this.guildId);
-            sbU.append(", guildName=");
-            sbU.append(this.guildName);
-            sbU.append(", isMfaEnabled=");
-            return a.O(sbU, this.isMfaEnabled, ")");
+            StringBuilder sbM833U = outline.m833U("Model(guildId=");
+            sbM833U.append(this.guildId);
+            sbM833U.append(", guildName=");
+            sbM833U.append(this.guildName);
+            sbM833U.append(", isMfaEnabled=");
+            return outline.m827O(sbM833U, this.isMfaEnabled, ")");
         }
     }
 
@@ -199,7 +200,7 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
 
         /* renamed from: mfaEnabled$delegate, reason: from kotlin metadata */
         private final Lazy mfaEnabled;
-        public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(ToggleMfaDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsSecurityDialogBinding;", 0)};
+        public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(ToggleMfaDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsSecurityDialogBinding;", 0)};
 
         /* renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
@@ -210,7 +211,7 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
             }
 
             public final void show(FragmentManager fragmentManager, long guildId, boolean mfaEnabled) {
-                m.checkNotNullParameter(fragmentManager, "fragmentManager");
+                Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
                 ToggleMfaDialog toggleMfaDialog = new ToggleMfaDialog();
                 Bundle bundle = new Bundle();
                 bundle.putLong(ToggleMfaDialog.ARG_GUILD_ID, guildId);
@@ -225,10 +226,10 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         }
 
         public ToggleMfaDialog() {
-            super(R.layout.widget_server_settings_security_dialog);
-            this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsSecurity$ToggleMfaDialog$binding$2.INSTANCE, null, 2, null);
-            this.guildId = g.lazy(new WidgetServerSettingsSecurity$ToggleMfaDialog$guildId$2(this));
-            this.mfaEnabled = g.lazy(new WidgetServerSettingsSecurity$ToggleMfaDialog$mfaEnabled$2(this));
+            super(C5419R.layout.widget_server_settings_security_dialog);
+            this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsSecurity$ToggleMfaDialog$binding$2.INSTANCE, null, 2, null);
+            this.guildId = LazyJVM.lazy(new WidgetServerSettingsSecurity$ToggleMfaDialog$guildId$2(this));
+            this.mfaEnabled = LazyJVM.lazy(new WidgetServerSettingsSecurity$ToggleMfaDialog$mfaEnabled$2(this));
         }
 
         public static final /* synthetic */ Bundle access$getArgumentsOrDefault$p(ToggleMfaDialog toggleMfaDialog) {
@@ -255,21 +256,21 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
             if (guildId <= 0) {
                 dismiss();
             }
-            getBinding().c.setText(mfaEnabled ? R.string.disable : R.string.enable);
-            MaterialButton materialButton = getBinding().c;
-            m.checkNotNullExpressionValue(materialButton, "binding.serverSettingsSecurityDialogConfirm");
+            getBinding().f17757c.setText(mfaEnabled ? C5419R.string.disable : C5419R.string.enable);
+            MaterialButton materialButton = getBinding().f17757c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.serverSettingsSecurityDialogConfirm");
             WidgetServerSettingsSecurityDialogBinding binding = getBinding();
-            m.checkNotNullExpressionValue(binding, "binding");
-            LinearLayout linearLayout = binding.a;
-            m.checkNotNullExpressionValue(linearLayout, "binding.root");
-            materialButton.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getColor(linearLayout.getContext(), mfaEnabled ? R.color.status_red_500 : R.color.status_green_600)));
-            getBinding().c.setOnClickListener(new WidgetServerSettingsSecurity$ToggleMfaDialog$configure$1(this, mfaEnabled, guildId));
-            getBinding().f2587b.setOnClickListener(new WidgetServerSettingsSecurity$ToggleMfaDialog$configure$2(this));
+            Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+            LinearLayout linearLayout = binding.f17755a;
+            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
+            materialButton.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getColor(linearLayout.getContext(), mfaEnabled ? C5419R.color.status_red_500 : C5419R.color.status_green_600)));
+            getBinding().f17757c.setOnClickListener(new WidgetServerSettingsSecurity$ToggleMfaDialog$configure$1(this, mfaEnabled, guildId));
+            getBinding().f17756b.setOnClickListener(new WidgetServerSettingsSecurity$ToggleMfaDialog$configure$2(this));
         }
 
         @Override // androidx.fragment.app.DialogFragment, android.content.DialogInterface.OnDismissListener
         public void onDismiss(DialogInterface dialog) {
-            m.checkNotNullParameter(dialog, "dialog");
+            Intrinsics3.checkNotNullParameter(dialog, "dialog");
             super.onDismiss(dialog);
             AppDialog.hideKeyboard$default(this, null, 1, null);
         }
@@ -282,11 +283,11 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
     }
 
     /* compiled from: WidgetServerSettingsSecurity.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$configureUI$1 */
+    public static final class ViewOnClickListenerC93101 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
-        public AnonymousClass1(Model model) {
+        public ViewOnClickListenerC93101(Model model) {
             this.$model = model;
         }
 
@@ -294,22 +295,22 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         public final void onClick(View view) {
             ToggleMfaDialog.Companion companion = ToggleMfaDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetServerSettingsSecurity.this.getParentFragmentManager();
-            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(parentFragmentManager, this.$model.getGuildId(), this.$model.isMfaEnabled());
         }
     }
 
     /* compiled from: WidgetServerSettingsSecurity.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
-        public AnonymousClass1(WidgetServerSettingsSecurity widgetServerSettingsSecurity) {
+    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C93111 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+        public C93111(WidgetServerSettingsSecurity widgetServerSettingsSecurity) {
             super(1, widgetServerSettingsSecurity, WidgetServerSettingsSecurity.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsSecurity$Model;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Model model) throws Exception {
             invoke2(model);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -319,10 +320,10 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
     }
 
     public WidgetServerSettingsSecurity() {
-        super(R.layout.widget_server_settings_security);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsSecurity$binding$2.INSTANCE, null, 2, null);
-        this.guildId = g.lazy(new WidgetServerSettingsSecurity$guildId$2(this));
-        this.loggingConfig = new LoggingConfig(false, null, WidgetServerSettingsSecurity$loggingConfig$1.INSTANCE, 3);
+        super(C5419R.layout.widget_server_settings_security);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsSecurity$binding$2.INSTANCE, null, 2, null);
+        this.guildId = LazyJVM.lazy(new WidgetServerSettingsSecurity$guildId$2(this));
+        this.loggingConfig = new AppLogger2(false, null, WidgetServerSettingsSecurity$loggingConfig$1.INSTANCE, 3);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetServerSettingsSecurity widgetServerSettingsSecurity, Model model) throws Exception {
@@ -338,24 +339,24 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
             }
             return;
         }
-        setActionBarTitle(R.string.security);
+        setActionBarTitle(C5419R.string.security);
         setActionBarSubtitle(model.getGuildName());
         if (model.isMfaEnabled()) {
-            getBinding().c.setText(R.string.guild_security_req_mfa_turn_off);
-            MaterialButton materialButton = getBinding().c;
-            m.checkNotNullExpressionValue(materialButton, "binding.serverSettingsSecurityToggleMfaButton");
-            materialButton.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getColor(requireContext(), R.color.status_red_500)));
+            getBinding().f17754c.setText(C5419R.string.guild_security_req_mfa_turn_off);
+            MaterialButton materialButton = getBinding().f17754c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.serverSettingsSecurityToggleMfaButton");
+            materialButton.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getColor(requireContext(), C5419R.color.status_red_500)));
         } else {
-            getBinding().c.setText(R.string.guild_security_req_mfa_turn_on);
-            MaterialButton materialButton2 = getBinding().c;
-            m.checkNotNullExpressionValue(materialButton2, "binding.serverSettingsSecurityToggleMfaButton");
-            materialButton2.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getColor(requireContext(), R.color.status_green_600)));
+            getBinding().f17754c.setText(C5419R.string.guild_security_req_mfa_turn_on);
+            MaterialButton materialButton2 = getBinding().f17754c;
+            Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.serverSettingsSecurityToggleMfaButton");
+            materialButton2.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getColor(requireContext(), C5419R.color.status_green_600)));
         }
         Fragment fragmentFindFragmentByTag = getParentFragmentManager().findFragmentByTag(TAG_TOGGLE_MFA_DIALOG);
         if (fragmentFindFragmentByTag != null) {
             ((ToggleMfaDialog) fragmentFindFragmentByTag).configure(model.getGuildId(), model.isMfaEnabled());
         }
-        getBinding().c.setOnClickListener(new AnonymousClass1(model));
+        getBinding().f17754c.setOnClickListener(new ViewOnClickListenerC93101(model));
     }
 
     private final WidgetServerSettingsSecurityBinding getBinding() {
@@ -366,28 +367,28 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         return ((Number) this.guildId.getValue()).longValue();
     }
 
-    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public LoggingConfig getLoggingConfig() {
+    @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.InterfaceC5455a
+    public AppLogger2 getLoggingConfig() {
         return this.loggingConfig;
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         Fragment fragmentFindFragmentByTag = getParentFragmentManager().findFragmentByTag(TAG_TOGGLE_MFA_DIALOG);
         if (fragmentFindFragmentByTag != null) {
             getParentFragmentManager().beginTransaction().remove(fragmentFindFragmentByTag).commitAllowingStateLoss();
         }
-        TextView textView = getBinding().f2586b;
-        m.checkNotNullExpressionValue(textView, "binding.mfaDescriptionText");
-        b.a.k.b.n(textView, R.string.guild_security_req_mfa_body, new Object[0], null, 4);
+        TextView textView = getBinding().f17753b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.mfaDescriptionText");
+        FormatUtils.m222n(textView, C5419R.string.guild_security_req_mfa_body, new Object[0], null, 4);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(getGuildId()), this, null, 2, null), WidgetServerSettingsSecurity.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(getGuildId()), this, null, 2, null), WidgetServerSettingsSecurity.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C93111(this), 62, (Object) null);
     }
 }

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.PreferenceManager;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SharedPreferencesProvider.kt */
 /* loaded from: classes2.dex */
@@ -33,7 +33,7 @@ public final class SharedPreferencesProvider {
     }
 
     public final void init(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         prefsSessionDurable = context.getSharedPreferences("prefsSessionDurable", 0);
     }

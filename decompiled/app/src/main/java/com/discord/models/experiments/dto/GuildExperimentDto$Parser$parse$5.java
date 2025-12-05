@@ -2,9 +2,9 @@ package com.discord.models.experiments.dto;
 
 import com.discord.models.domain.Model;
 import com.discord.models.experiments.dto.GuildExperimentOverridesDto;
-import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildExperimentDto.kt */
 /* loaded from: classes.dex */
@@ -13,9 +13,9 @@ public final class GuildExperimentDto$Parser$parse$5 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $overrides;
 
     /* compiled from: GuildExperimentDto.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentDto$Parser$parse$5$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<GuildExperimentOverridesDto> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentDto$Parser$parse$5$1 */
+    public static final class C55481<T> implements Model.JsonReader.ItemFactory<GuildExperimentOverridesDto> {
+        public C55481() {
         }
 
         @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
@@ -39,8 +39,8 @@ public final class GuildExperimentDto$Parser$parse$5 implements Runnable {
     @Override // java.lang.Runnable
     public final void run() throws IOException {
         Ref$ObjectRef ref$ObjectRef = this.$overrides;
-        ?? NextList = this.$jsonReader.nextList(new AnonymousClass1());
-        m.checkNotNullExpressionValue(NextList, "jsonReader.nextList { Gu…arser.parse(jsonReader) }");
+        ?? NextList = this.$jsonReader.nextList(new C55481());
+        Intrinsics3.checkNotNullExpressionValue(NextList, "jsonReader.nextList { Gu…arser.parse(jsonReader) }");
         ref$ObjectRef.element = NextList;
     }
 }

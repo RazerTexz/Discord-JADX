@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGameNotificationSettingsUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGameNotificationSettingsUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackGameNotificationSettingsUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean desktop = null;
     private final Boolean mobile = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackGameNotificationSettingsUpdated implements An
             return false;
         }
         TrackGameNotificationSettingsUpdated trackGameNotificationSettingsUpdated = (TrackGameNotificationSettingsUpdated) other;
-        return m.areEqual(this.desktop, trackGameNotificationSettingsUpdated.desktop) && m.areEqual(this.mobile, trackGameNotificationSettingsUpdated.mobile) && m.areEqual(this.peakHours, trackGameNotificationSettingsUpdated.peakHours) && m.areEqual(this.autoFollow, trackGameNotificationSettingsUpdated.autoFollow);
+        return Intrinsics3.areEqual(this.desktop, trackGameNotificationSettingsUpdated.desktop) && Intrinsics3.areEqual(this.mobile, trackGameNotificationSettingsUpdated.mobile) && Intrinsics3.areEqual(this.peakHours, trackGameNotificationSettingsUpdated.peakHours) && Intrinsics3.areEqual(this.autoFollow, trackGameNotificationSettingsUpdated.autoFollow);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackGameNotificationSettingsUpdated implements An
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGameNotificationSettingsUpdated(desktop=");
-        sbU.append(this.desktop);
-        sbU.append(", mobile=");
-        sbU.append(this.mobile);
-        sbU.append(", peakHours=");
-        sbU.append(this.peakHours);
-        sbU.append(", autoFollow=");
-        return a.D(sbU, this.autoFollow, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGameNotificationSettingsUpdated(desktop=");
+        sbM833U.append(this.desktop);
+        sbM833U.append(", mobile=");
+        sbM833U.append(this.mobile);
+        sbM833U.append(", peakHours=");
+        sbM833U.append(this.peakHours);
+        sbM833U.append(", autoFollow=");
+        return outline.m816D(sbM833U, this.autoFollow, ")");
     }
 }

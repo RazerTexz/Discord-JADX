@@ -2,16 +2,18 @@ package com.discord.rtcconnection.mediaengine;
 
 import androidx.annotation.AnyThread;
 import androidx.core.app.FrameMetricsAggregator;
+import co.discord.media_engine.DeviceDescription4;
 import co.discord.media_engine.RtcRegion;
 import co.discord.media_engine.StreamParameters;
-import co.discord.media_engine.VideoInputDeviceDescription;
 import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
 import com.hammerandchisel.libdiscord.Discord;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
-import rx.Observable;
+import p007b.p008a.p041q.MediaEngineExecutorService;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
 
 /* compiled from: MediaEngine.kt */
 /* loaded from: classes.dex */
@@ -23,12 +25,12 @@ public interface MediaEngine {
         /* renamed from: a, reason: from kotlin metadata */
         public final String audioSubsystem;
 
-        /* renamed from: b, reason: collision with root package name and from kotlin metadata */
+        /* renamed from: b, reason: from kotlin metadata */
         public final String audioLayer;
 
         public AudioInfo(String str, String str2) {
-            m.checkNotNullParameter(str, "audioSubsystem");
-            m.checkNotNullParameter(str2, "audioLayer");
+            Intrinsics3.checkNotNullParameter(str, "audioSubsystem");
+            Intrinsics3.checkNotNullParameter(str2, "audioLayer");
             this.audioSubsystem = str;
             this.audioLayer = str2;
         }
@@ -41,7 +43,7 @@ public interface MediaEngine {
                 return false;
             }
             AudioInfo audioInfo = (AudioInfo) other;
-            return m.areEqual(this.audioSubsystem, audioInfo.audioSubsystem) && m.areEqual(this.audioLayer, audioInfo.audioLayer);
+            return Intrinsics3.areEqual(this.audioSubsystem, audioInfo.audioSubsystem) && Intrinsics3.areEqual(this.audioLayer, audioInfo.audioLayer);
         }
 
         public int hashCode() {
@@ -52,10 +54,10 @@ public interface MediaEngine {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("AudioInfo(audioSubsystem=");
-            sbU.append(this.audioSubsystem);
-            sbU.append(", audioLayer=");
-            return b.d.b.a.a.J(sbU, this.audioLayer, ")");
+            StringBuilder sbM833U = outline.m833U("AudioInfo(audioSubsystem=");
+            sbM833U.append(this.audioSubsystem);
+            sbM833U.append(", audioLayer=");
+            return outline.m822J(sbM833U, this.audioLayer, ")");
         }
     }
 
@@ -65,7 +67,7 @@ public interface MediaEngine {
         /* renamed from: a, reason: from kotlin metadata */
         public final boolean builtinAecRequested;
 
-        /* renamed from: b, reason: collision with root package name and from kotlin metadata */
+        /* renamed from: b, reason: from kotlin metadata */
         public final boolean builtinAecSupportedNative;
 
         /* renamed from: c, reason: from kotlin metadata */
@@ -181,24 +183,24 @@ public interface MediaEngine {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("EchoCancellationInfo(builtinAecRequested=");
-            sbU.append(this.builtinAecRequested);
-            sbU.append(", builtinAecSupportedNative=");
-            sbU.append(this.builtinAecSupportedNative);
-            sbU.append(", builtinAecSupportedJava=");
-            sbU.append(this.builtinAecSupportedJava);
-            sbU.append(", builtinAecEnabled=");
-            sbU.append(this.builtinAecEnabled);
-            sbU.append(", aecEnabledInSettings=");
-            sbU.append(this.aecEnabledInSettings);
-            sbU.append(", aecEnabledInNativeConfig=");
-            sbU.append(this.aecEnabledInNativeConfig);
-            sbU.append(", aecMobileMode=");
-            sbU.append(this.aecMobileMode);
-            sbU.append(", aecEnabledByDefault=");
-            sbU.append(this.aecEnabledByDefault);
-            sbU.append(", aecMobileModeByDefault=");
-            return b.d.b.a.a.O(sbU, this.aecMobileModeByDefault, ")");
+            StringBuilder sbM833U = outline.m833U("EchoCancellationInfo(builtinAecRequested=");
+            sbM833U.append(this.builtinAecRequested);
+            sbM833U.append(", builtinAecSupportedNative=");
+            sbM833U.append(this.builtinAecSupportedNative);
+            sbM833U.append(", builtinAecSupportedJava=");
+            sbM833U.append(this.builtinAecSupportedJava);
+            sbM833U.append(", builtinAecEnabled=");
+            sbM833U.append(this.builtinAecEnabled);
+            sbM833U.append(", aecEnabledInSettings=");
+            sbM833U.append(this.aecEnabledInSettings);
+            sbM833U.append(", aecEnabledInNativeConfig=");
+            sbM833U.append(this.aecEnabledInNativeConfig);
+            sbM833U.append(", aecMobileMode=");
+            sbM833U.append(this.aecMobileMode);
+            sbM833U.append(", aecEnabledByDefault=");
+            sbM833U.append(this.aecEnabledByDefault);
+            sbM833U.append(", aecMobileModeByDefault=");
+            return outline.m827O(sbM833U, this.aecMobileModeByDefault, ")");
         }
 
         public /* synthetic */ EchoCancellationInfo(boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, boolean z9, boolean z10, int i) {
@@ -212,7 +214,7 @@ public interface MediaEngine {
         /* renamed from: a, reason: from kotlin metadata */
         public final float amplitude;
 
-        /* renamed from: b, reason: collision with root package name and from kotlin metadata */
+        /* renamed from: b, reason: from kotlin metadata */
         public final boolean isSpeaking;
 
         public LocalVoiceStatus(float f, boolean z2) {
@@ -243,10 +245,10 @@ public interface MediaEngine {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("LocalVoiceStatus(amplitude=");
-            sbU.append(this.amplitude);
-            sbU.append(", isSpeaking=");
-            return b.d.b.a.a.O(sbU, this.isSpeaking, ")");
+            StringBuilder sbM833U = outline.m833U("LocalVoiceStatus(amplitude=");
+            sbM833U.append(this.amplitude);
+            sbM833U.append(", isSpeaking=");
+            return outline.m827O(sbM833U, this.isSpeaking, ")");
         }
     }
 
@@ -269,7 +271,7 @@ public interface MediaEngine {
         /* renamed from: a, reason: from kotlin metadata */
         public final float outputVolume;
 
-        /* renamed from: b, reason: collision with root package name and from kotlin metadata */
+        /* renamed from: b, reason: from kotlin metadata */
         public final boolean echoCancellation;
 
         /* renamed from: c, reason: from kotlin metadata */
@@ -285,7 +287,7 @@ public interface MediaEngine {
         public final MediaEngineConnection.InputMode inputMode;
 
         /* renamed from: g, reason: from kotlin metadata */
-        public final MediaEngineConnection.c inputModeOptions;
+        public final MediaEngineConnection.C5647c inputModeOptions;
 
         /* renamed from: h, reason: from kotlin metadata */
         public final boolean isSelfDeafened;
@@ -293,16 +295,16 @@ public interface MediaEngine {
         /* renamed from: i, reason: from kotlin metadata */
         public final boolean isSelfMuted;
 
-        public VoiceConfig(float f, boolean z2, boolean z3, boolean z4, boolean z5, MediaEngineConnection.InputMode inputMode, MediaEngineConnection.c cVar, boolean z6, boolean z7) {
-            m.checkNotNullParameter(inputMode, "inputMode");
-            m.checkNotNullParameter(cVar, "inputModeOptions");
+        public VoiceConfig(float f, boolean z2, boolean z3, boolean z4, boolean z5, MediaEngineConnection.InputMode inputMode, MediaEngineConnection.C5647c c5647c, boolean z6, boolean z7) {
+            Intrinsics3.checkNotNullParameter(inputMode, "inputMode");
+            Intrinsics3.checkNotNullParameter(c5647c, "inputModeOptions");
             this.outputVolume = f;
             this.echoCancellation = z2;
             this.noiseSuppression = z3;
             this.noiseCancellation = z4;
             this.automaticGainControl = z5;
             this.inputMode = inputMode;
-            this.inputModeOptions = cVar;
+            this.inputModeOptions = c5647c;
             this.isSelfDeafened = z6;
             this.isSelfMuted = z7;
         }
@@ -315,7 +317,7 @@ public interface MediaEngine {
                 return false;
             }
             VoiceConfig voiceConfig = (VoiceConfig) other;
-            return Float.compare(this.outputVolume, voiceConfig.outputVolume) == 0 && this.echoCancellation == voiceConfig.echoCancellation && this.noiseSuppression == voiceConfig.noiseSuppression && this.noiseCancellation == voiceConfig.noiseCancellation && this.automaticGainControl == voiceConfig.automaticGainControl && m.areEqual(this.inputMode, voiceConfig.inputMode) && m.areEqual(this.inputModeOptions, voiceConfig.inputModeOptions) && this.isSelfDeafened == voiceConfig.isSelfDeafened && this.isSelfMuted == voiceConfig.isSelfMuted;
+            return Float.compare(this.outputVolume, voiceConfig.outputVolume) == 0 && this.echoCancellation == voiceConfig.echoCancellation && this.noiseSuppression == voiceConfig.noiseSuppression && this.noiseCancellation == voiceConfig.noiseCancellation && this.automaticGainControl == voiceConfig.automaticGainControl && Intrinsics3.areEqual(this.inputMode, voiceConfig.inputMode) && Intrinsics3.areEqual(this.inputModeOptions, voiceConfig.inputModeOptions) && this.isSelfDeafened == voiceConfig.isSelfDeafened && this.isSelfMuted == voiceConfig.isSelfMuted;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -347,8 +349,8 @@ public interface MediaEngine {
             int i8 = (i6 + i7) * 31;
             MediaEngineConnection.InputMode inputMode = this.inputMode;
             int iHashCode = (i8 + (inputMode != null ? inputMode.hashCode() : 0)) * 31;
-            MediaEngineConnection.c cVar = this.inputModeOptions;
-            int iHashCode2 = (iHashCode + (cVar != null ? cVar.hashCode() : 0)) * 31;
+            MediaEngineConnection.C5647c c5647c = this.inputModeOptions;
+            int iHashCode2 = (iHashCode + (c5647c != null ? c5647c.hashCode() : 0)) * 31;
             boolean z6 = this.isSelfDeafened;
             int i9 = z6;
             if (z6 != 0) {
@@ -360,83 +362,92 @@ public interface MediaEngine {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("VoiceConfig(outputVolume=");
-            sbU.append(this.outputVolume);
-            sbU.append(", echoCancellation=");
-            sbU.append(this.echoCancellation);
-            sbU.append(", noiseSuppression=");
-            sbU.append(this.noiseSuppression);
-            sbU.append(", noiseCancellation=");
-            sbU.append(this.noiseCancellation);
-            sbU.append(", automaticGainControl=");
-            sbU.append(this.automaticGainControl);
-            sbU.append(", inputMode=");
-            sbU.append(this.inputMode);
-            sbU.append(", inputModeOptions=");
-            sbU.append(this.inputModeOptions);
-            sbU.append(", isSelfDeafened=");
-            sbU.append(this.isSelfDeafened);
-            sbU.append(", isSelfMuted=");
-            return b.d.b.a.a.O(sbU, this.isSelfMuted, ")");
+            StringBuilder sbM833U = outline.m833U("VoiceConfig(outputVolume=");
+            sbM833U.append(this.outputVolume);
+            sbM833U.append(", echoCancellation=");
+            sbM833U.append(this.echoCancellation);
+            sbM833U.append(", noiseSuppression=");
+            sbM833U.append(this.noiseSuppression);
+            sbM833U.append(", noiseCancellation=");
+            sbM833U.append(this.noiseCancellation);
+            sbM833U.append(", automaticGainControl=");
+            sbM833U.append(this.automaticGainControl);
+            sbM833U.append(", inputMode=");
+            sbM833U.append(this.inputMode);
+            sbM833U.append(", inputModeOptions=");
+            sbM833U.append(this.inputModeOptions);
+            sbM833U.append(", isSelfDeafened=");
+            sbM833U.append(this.isSelfDeafened);
+            sbM833U.append(", isSelfMuted=");
+            return outline.m827O(sbM833U, this.isSelfMuted, ")");
         }
     }
 
     /* compiled from: MediaEngine.kt */
-    public static final class a {
-        public final int a;
+    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$a */
+    public static final class C5640a {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final String f2797b;
-        public final int c;
-        public final List<StreamParameters> d;
+        /* renamed from: a */
+        public final int f18898a;
 
-        public a(int i, String str, int i2, List<StreamParameters> list) {
-            m.checkNotNullParameter(str, "ip");
-            m.checkNotNullParameter(list, "streams");
-            this.a = i;
-            this.f2797b = str;
-            this.c = i2;
-            this.d = list;
+        /* renamed from: b */
+        public final String f18899b;
+
+        /* renamed from: c */
+        public final int f18900c;
+
+        /* renamed from: d */
+        public final List<StreamParameters> f18901d;
+
+        public C5640a(int i, String str, int i2, List<StreamParameters> list) {
+            Intrinsics3.checkNotNullParameter(str, "ip");
+            Intrinsics3.checkNotNullParameter(list, "streams");
+            this.f18898a = i;
+            this.f18899b = str;
+            this.f18900c = i2;
+            this.f18901d = list;
         }
 
         public boolean equals(Object obj) {
             if (this == obj) {
                 return true;
             }
-            if (!(obj instanceof a)) {
+            if (!(obj instanceof C5640a)) {
                 return false;
             }
-            a aVar = (a) obj;
-            return this.a == aVar.a && m.areEqual(this.f2797b, aVar.f2797b) && this.c == aVar.c && m.areEqual(this.d, aVar.d);
+            C5640a c5640a = (C5640a) obj;
+            return this.f18898a == c5640a.f18898a && Intrinsics3.areEqual(this.f18899b, c5640a.f18899b) && this.f18900c == c5640a.f18900c && Intrinsics3.areEqual(this.f18901d, c5640a.f18901d);
         }
 
         public int hashCode() {
-            int i = this.a * 31;
-            String str = this.f2797b;
-            int iHashCode = (((i + (str != null ? str.hashCode() : 0)) * 31) + this.c) * 31;
-            List<StreamParameters> list = this.d;
+            int i = this.f18898a * 31;
+            String str = this.f18899b;
+            int iHashCode = (((i + (str != null ? str.hashCode() : 0)) * 31) + this.f18900c) * 31;
+            List<StreamParameters> list = this.f18901d;
             return iHashCode + (list != null ? list.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("ConnectionOptions(ssrc=");
-            sbU.append(this.a);
-            sbU.append(", ip=");
-            sbU.append(this.f2797b);
-            sbU.append(", port=");
-            sbU.append(this.c);
-            sbU.append(", streams=");
-            return b.d.b.a.a.L(sbU, this.d, ")");
+            StringBuilder sbM833U = outline.m833U("ConnectionOptions(ssrc=");
+            sbM833U.append(this.f18898a);
+            sbM833U.append(", ip=");
+            sbM833U.append(this.f18899b);
+            sbM833U.append(", port=");
+            sbM833U.append(this.f18900c);
+            sbM833U.append(", streams=");
+            return outline.m824L(sbM833U, this.f18901d, ")");
         }
     }
 
     /* compiled from: MediaEngine.kt */
-    public interface b {
+    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$b */
+    public interface InterfaceC5641b {
         void onEchoCancellationUpdated(EchoCancellationInfo echoCancellationInfo);
     }
 
     /* compiled from: MediaEngine.kt */
-    public interface c {
+    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$c */
+    public interface InterfaceC5642c {
         void onConnected();
 
         void onConnecting();
@@ -446,30 +457,42 @@ public interface MediaEngine {
         void onNewConnection(MediaEngineConnection mediaEngineConnection);
     }
 
-    Observable<Unit> a();
+    /* renamed from: a */
+    Observable<Unit> mo321a();
 
-    void b(RtcRegion[] regionsWithIps, Function1<? super String[], Unit> callback);
+    /* renamed from: b */
+    void mo322b(RtcRegion[] regionsWithIps, Function1<? super String[], Unit> callback);
 
-    b.a.q.c c();
+    /* renamed from: c */
+    MediaEngineExecutorService mo323c();
 
     @AnyThread
-    void d(VoiceConfig voiceConfig);
+    /* renamed from: d */
+    void mo324d(VoiceConfig voiceConfig);
 
-    Observable<AudioInfo> e();
+    /* renamed from: e */
+    Observable<AudioInfo> mo325e();
 
-    void f(int deviceIndex);
+    /* renamed from: f */
+    void mo326f(int deviceIndex);
 
-    MediaEngineConnection g(long userId, a options, MediaEngineConnection.Type type, Function1<? super Exception, Unit> onFailure);
+    /* renamed from: g */
+    MediaEngineConnection mo327g(long userId, C5640a options, MediaEngineConnection.Type type, Function1<? super Exception, Unit> onFailure);
 
     List<MediaEngineConnection> getConnections();
 
-    void h(OpenSLUsageMode openSLUsageMode);
+    /* renamed from: h */
+    void mo328h(OpenSLUsageMode openSLUsageMode);
 
-    Discord i();
+    /* renamed from: i */
+    Discord mo329i();
 
-    void j(Function1<? super VideoInputDeviceDescription[], Unit> devicesCallback);
+    /* renamed from: j */
+    void mo330j(Function1<? super DeviceDescription4[], Unit> devicesCallback);
 
-    void k(boolean enabled);
+    /* renamed from: k */
+    void mo331k(boolean enabled);
 
-    void l(Function1<? super LocalVoiceStatus, Unit> voiceStatusListener);
+    /* renamed from: l */
+    void mo332l(Function1<? super LocalVoiceStatus, Unit> voiceStatusListener);
 }

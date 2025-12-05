@@ -1,0 +1,69 @@
+package p668x.p669a.p672b.p674b.p675a;
+
+import android.os.Binder;
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Parcel;
+import android.os.RemoteException;
+import p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback;
+
+/* compiled from: IMediaSession.java */
+/* renamed from: x.a.b.b.a.b, reason: use source file name */
+/* loaded from: classes.dex */
+public interface IMediaSession extends IInterface {
+
+    /* compiled from: IMediaSession.java */
+    /* renamed from: x.a.b.b.a.b$a */
+    public static abstract class a extends Binder implements IMediaSession {
+
+        /* renamed from: a */
+        public static final /* synthetic */ int f27943a = 0;
+
+        /* compiled from: IMediaSession.java */
+        /* renamed from: x.a.b.b.a.b$a$a, reason: collision with other inner class name */
+        public static class C13361a implements IMediaSession {
+
+            /* renamed from: a */
+            public IBinder f27944a;
+
+            public C13361a(IBinder iBinder) {
+                this.f27944a = iBinder;
+            }
+
+            @Override // android.os.IInterface
+            public IBinder asBinder() {
+                return this.f27944a;
+            }
+
+            @Override // p668x.p669a.p672b.p674b.p675a.IMediaSession
+            /* renamed from: k */
+            public void mo11355k(IMediaControllerCallback iMediaControllerCallback) throws RemoteException {
+                Parcel parcelObtain = Parcel.obtain();
+                Parcel parcelObtain2 = Parcel.obtain();
+                try {
+                    parcelObtain.writeInterfaceToken("android.support.v4.media.session.IMediaSession");
+                    parcelObtain.writeStrongBinder((IMediaControllerCallback.a) iMediaControllerCallback);
+                    if (!this.f27944a.transact(3, parcelObtain, parcelObtain2, 0)) {
+                        int i = a.f27943a;
+                    }
+                    parcelObtain2.readException();
+                } finally {
+                    parcelObtain2.recycle();
+                    parcelObtain.recycle();
+                }
+            }
+        }
+
+        /* renamed from: c */
+        public static IMediaSession m11356c(IBinder iBinder) {
+            if (iBinder == null) {
+                return null;
+            }
+            IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface("android.support.v4.media.session.IMediaSession");
+            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof IMediaSession)) ? new C13361a(iBinder) : (IMediaSession) iInterfaceQueryLocalInterface;
+        }
+    }
+
+    /* renamed from: k */
+    void mo11355k(IMediaControllerCallback iMediaControllerCallback) throws RemoteException;
+}

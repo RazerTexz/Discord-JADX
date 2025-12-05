@@ -3,11 +3,11 @@ package com.discord.widgets.servers.guild_role_subscription;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import b.a.d.j;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppFragment;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p018d.AppScreen2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetServerSettingsEnableMonetizationUnavailable.kt */
 /* loaded from: classes2.dex */
@@ -22,8 +22,8 @@ public final class WidgetServerSettingsEnableMonetizationUnavailable extends App
         }
 
         public final void launch(Context context) {
-            m.checkNotNullParameter(context, "context");
-            j.e(context, WidgetServerSettingsEnableMonetizationUnavailable.class, null, 4);
+            Intrinsics3.checkNotNullParameter(context, "context");
+            AppScreen2.m157e(context, WidgetServerSettingsEnableMonetizationUnavailable.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -32,7 +32,7 @@ public final class WidgetServerSettingsEnableMonetizationUnavailable extends App
     }
 
     public WidgetServerSettingsEnableMonetizationUnavailable() {
-        super(R.layout.view_server_settings_guild_role_subscription_unavailable_notice);
+        super(C5419R.layout.view_server_settings_guild_role_subscription_unavailable_notice);
     }
 
     public static final void launch(Context context) {
@@ -41,7 +41,7 @@ public final class WidgetServerSettingsEnableMonetizationUnavailable extends App
 
     @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
     }

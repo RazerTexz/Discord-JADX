@@ -1,12 +1,12 @@
 package com.discord.widgets.forums;
 
-import b.d.b.a.a;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
-import d0.g;
-import d0.z.d.m;
 import java.util.Comparator;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ForumBrowserItem.kt */
 /* loaded from: classes2.dex */
@@ -19,7 +19,7 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy postItemComparatorByMostRecent$delegate = g.lazy(ForumBrowserItem$Companion$postItemComparatorByMostRecent$2.INSTANCE);
+    private static final Lazy postItemComparatorByMostRecent$delegate = LazyJVM.lazy(ForumBrowserItem2.INSTANCE);
 
     /* compiled from: ForumBrowserItem.kt */
     public static final class Companion {
@@ -78,7 +78,7 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
         }
 
         public String toString() {
-            return a.B(a.U("HeaderItem(stringResId="), this.stringResId, ")");
+            return outline.m814B(outline.m833U("HeaderItem(stringResId="), this.stringResId, ")");
         }
     }
 
@@ -98,7 +98,7 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public PostItem(PostData postData) {
             super(String.valueOf(postData.getChannel().getId()), 1, null);
-            m.checkNotNullParameter(postData, "post");
+            Intrinsics3.checkNotNullParameter(postData, "post");
             this.post = postData;
         }
 
@@ -115,13 +115,13 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
         }
 
         public final PostItem copy(PostData post) {
-            m.checkNotNullParameter(post, "post");
+            Intrinsics3.checkNotNullParameter(post, "post");
             return new PostItem(post);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof PostItem) && m.areEqual(this.post, ((PostItem) other).post);
+                return (other instanceof PostItem) && Intrinsics3.areEqual(this.post, ((PostItem) other).post);
             }
             return true;
         }
@@ -139,10 +139,10 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("PostItem(post=");
-            sbU.append(this.post);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("PostItem(post=");
+            sbM833U.append(this.post);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 

@@ -10,25 +10,27 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetVoiceNoiseCancellationBottomSheetBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f18479a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialButton f2704b;
+    public final MaterialButton f18480b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f18481c;
 
     public WidgetVoiceNoiseCancellationBottomSheetBinding(@NonNull LinearLayout linearLayout, @NonNull MaterialButton materialButton, @NonNull TextView textView) {
-        this.a = linearLayout;
-        this.f2704b = materialButton;
-        this.c = textView;
+        this.f18479a = linearLayout;
+        this.f18480b = materialButton;
+        this.f18481c = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f18479a;
     }
 }

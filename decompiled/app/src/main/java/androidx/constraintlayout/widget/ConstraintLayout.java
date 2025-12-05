@@ -62,28 +62,30 @@ public class ConstraintLayout extends ViewGroup {
     private int mOptimizationLevel;
     private SparseArray<ConstraintWidget> mTempMapIdToWidget;
 
-    /* renamed from: androidx.constraintlayout.widget.ConstraintLayout$1, reason: invalid class name */
-    public static /* synthetic */ class AnonymousClass1 {
-        public static final /* synthetic */ int[] $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour;
+    /* renamed from: androidx.constraintlayout.widget.ConstraintLayout$1 */
+    public static /* synthetic */ class C02001 {
+
+        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour */
+        public static final /* synthetic */ int[] f127xdde91696;
 
         static {
             ConstraintWidget.DimensionBehaviour.values();
             int[] iArr = new int[4];
-            $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour = iArr;
+            f127xdde91696 = iArr;
             try {
                 iArr[ConstraintWidget.DimensionBehaviour.FIXED.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour[ConstraintWidget.DimensionBehaviour.WRAP_CONTENT.ordinal()] = 2;
+                f127xdde91696[ConstraintWidget.DimensionBehaviour.WRAP_CONTENT.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour[ConstraintWidget.DimensionBehaviour.MATCH_PARENT.ordinal()] = 3;
+                f127xdde91696[ConstraintWidget.DimensionBehaviour.MATCH_PARENT.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour[ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT.ordinal()] = 4;
+                f127xdde91696[ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
         }
@@ -365,21 +367,21 @@ public class ConstraintLayout extends ViewGroup {
         this.mChildrenByIds.put(getId(), this);
         this.mConstraintSet = null;
         if (attributeSet != null) {
-            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.styleable.ConstraintLayout_Layout, i, i2);
+            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C0201R.styleable.ConstraintLayout_Layout, i, i2);
             int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
             for (int i3 = 0; i3 < indexCount; i3++) {
                 int index = typedArrayObtainStyledAttributes.getIndex(i3);
-                if (index == R.styleable.ConstraintLayout_Layout_android_minWidth) {
+                if (index == C0201R.styleable.ConstraintLayout_Layout_android_minWidth) {
                     this.mMinWidth = typedArrayObtainStyledAttributes.getDimensionPixelOffset(index, this.mMinWidth);
-                } else if (index == R.styleable.ConstraintLayout_Layout_android_minHeight) {
+                } else if (index == C0201R.styleable.ConstraintLayout_Layout_android_minHeight) {
                     this.mMinHeight = typedArrayObtainStyledAttributes.getDimensionPixelOffset(index, this.mMinHeight);
-                } else if (index == R.styleable.ConstraintLayout_Layout_android_maxWidth) {
+                } else if (index == C0201R.styleable.ConstraintLayout_Layout_android_maxWidth) {
                     this.mMaxWidth = typedArrayObtainStyledAttributes.getDimensionPixelOffset(index, this.mMaxWidth);
-                } else if (index == R.styleable.ConstraintLayout_Layout_android_maxHeight) {
+                } else if (index == C0201R.styleable.ConstraintLayout_Layout_android_maxHeight) {
                     this.mMaxHeight = typedArrayObtainStyledAttributes.getDimensionPixelOffset(index, this.mMaxHeight);
-                } else if (index == R.styleable.ConstraintLayout_Layout_layout_optimizationLevel) {
+                } else if (index == C0201R.styleable.ConstraintLayout_Layout_layout_optimizationLevel) {
                     this.mOptimizationLevel = typedArrayObtainStyledAttributes.getInt(index, this.mOptimizationLevel);
-                } else if (index == R.styleable.ConstraintLayout_Layout_layoutDescription) {
+                } else if (index == C0201R.styleable.ConstraintLayout_Layout_layoutDescription) {
                     int resourceId = typedArrayObtainStyledAttributes.getResourceId(index, 0);
                     if (resourceId != 0) {
                         try {
@@ -388,7 +390,7 @@ public class ConstraintLayout extends ViewGroup {
                             this.mConstraintLayoutSpec = null;
                         }
                     }
-                } else if (index == R.styleable.ConstraintLayout_Layout_constraintSet) {
+                } else if (index == C0201R.styleable.ConstraintLayout_Layout_constraintSet) {
                     int resourceId2 = typedArrayObtainStyledAttributes.getResourceId(index, 0);
                     try {
                         ConstraintSet constraintSet = new ConstraintSet();
@@ -1356,57 +1358,57 @@ public class ConstraintLayout extends ViewGroup {
             static {
                 SparseIntArray sparseIntArray = new SparseIntArray();
                 map = sparseIntArray;
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintLeft_toLeftOf, 8);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintLeft_toRightOf, 9);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintRight_toLeftOf, 10);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintRight_toRightOf, 11);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintTop_toTopOf, 12);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintTop_toBottomOf, 13);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintBottom_toTopOf, 14);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintBottom_toBottomOf, 15);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf, 16);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintCircle, 2);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintCircleRadius, 3);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintCircleAngle, 4);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_editor_absoluteX, 49);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_editor_absoluteY, 50);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintGuide_begin, 5);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintGuide_end, 6);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintGuide_percent, 7);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_android_orientation, 1);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintStart_toEndOf, 17);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintStart_toStartOf, 18);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintEnd_toStartOf, 19);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintEnd_toEndOf, 20);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_goneMarginLeft, 21);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_goneMarginTop, 22);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_goneMarginRight, 23);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_goneMarginBottom, 24);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_goneMarginStart, 25);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_goneMarginEnd, 26);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintHorizontal_bias, 29);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintVertical_bias, 30);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintDimensionRatio, 44);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintHorizontal_weight, 45);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintVertical_weight, 46);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle, 47);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintVertical_chainStyle, 48);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constrainedWidth, 27);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constrainedHeight, 28);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintWidth_default, 31);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintHeight_default, 32);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintWidth_min, 33);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintWidth_max, 34);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintWidth_percent, 35);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintHeight_min, 36);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintHeight_max, 37);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintHeight_percent, 38);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintLeft_creator, 39);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintTop_creator, 40);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintRight_creator, 41);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintBottom_creator, 42);
-                sparseIntArray.append(R.styleable.ConstraintLayout_Layout_layout_constraintBaseline_creator, 43);
-                map.append(R.styleable.ConstraintLayout_Layout_layout_constraintTag, 51);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintLeft_toLeftOf, 8);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintLeft_toRightOf, 9);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintRight_toLeftOf, 10);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintRight_toRightOf, 11);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintTop_toTopOf, 12);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintTop_toBottomOf, 13);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintBottom_toTopOf, 14);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintBottom_toBottomOf, 15);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf, 16);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintCircle, 2);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintCircleRadius, 3);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintCircleAngle, 4);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_editor_absoluteX, 49);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_editor_absoluteY, 50);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintGuide_begin, 5);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintGuide_end, 6);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintGuide_percent, 7);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_android_orientation, 1);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintStart_toEndOf, 17);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintStart_toStartOf, 18);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintEnd_toStartOf, 19);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintEnd_toEndOf, 20);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_goneMarginLeft, 21);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_goneMarginTop, 22);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_goneMarginRight, 23);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_goneMarginBottom, 24);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_goneMarginStart, 25);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_goneMarginEnd, 26);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintHorizontal_bias, 29);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintVertical_bias, 30);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintDimensionRatio, 44);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintHorizontal_weight, 45);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintVertical_weight, 46);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle, 47);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintVertical_chainStyle, 48);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constrainedWidth, 27);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constrainedHeight, 28);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintWidth_default, 31);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintHeight_default, 32);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintWidth_min, 33);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintWidth_max, 34);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintWidth_percent, 35);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintHeight_min, 36);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintHeight_max, 37);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintHeight_percent, 38);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintLeft_creator, 39);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintTop_creator, 40);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintRight_creator, 41);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintBottom_creator, 42);
+                sparseIntArray.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintBaseline_creator, 43);
+                map.append(C0201R.styleable.ConstraintLayout_Layout_layout_constraintTag, 51);
             }
 
             private Table() {
@@ -1836,7 +1838,7 @@ public class ConstraintLayout extends ViewGroup {
             this.resolvedHorizontalBias = 0.5f;
             this.widget = new ConstraintWidget();
             this.helped = false;
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.ConstraintLayout_Layout);
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0201R.styleable.ConstraintLayout_Layout);
             int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
             for (int i2 = 0; i2 < indexCount; i2++) {
                 int index = typedArrayObtainStyledAttributes.getIndex(i2);
@@ -2009,23 +2011,19 @@ public class ConstraintLayout extends ViewGroup {
                     case 33:
                         try {
                             this.matchConstraintMinWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.matchConstraintMinWidth);
-                            break;
                         } catch (Exception unused) {
                             if (typedArrayObtainStyledAttributes.getInt(index, this.matchConstraintMinWidth) == -2) {
                                 this.matchConstraintMinWidth = -2;
                             }
-                            break;
                         }
                         break;
                     case 34:
                         try {
                             this.matchConstraintMaxWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.matchConstraintMaxWidth);
-                            break;
                         } catch (Exception unused2) {
                             if (typedArrayObtainStyledAttributes.getInt(index, this.matchConstraintMaxWidth) == -2) {
                                 this.matchConstraintMaxWidth = -2;
                             }
-                            break;
                         }
                         break;
                     case 35:
@@ -2035,23 +2033,19 @@ public class ConstraintLayout extends ViewGroup {
                     case 36:
                         try {
                             this.matchConstraintMinHeight = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.matchConstraintMinHeight);
-                            break;
                         } catch (Exception unused3) {
                             if (typedArrayObtainStyledAttributes.getInt(index, this.matchConstraintMinHeight) == -2) {
                                 this.matchConstraintMinHeight = -2;
                             }
-                            break;
                         }
                         break;
                     case 37:
                         try {
                             this.matchConstraintMaxHeight = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.matchConstraintMaxHeight);
-                            break;
                         } catch (Exception unused4) {
                             if (typedArrayObtainStyledAttributes.getInt(index, this.matchConstraintMaxHeight) == -2) {
                                 this.matchConstraintMaxHeight = -2;
                             }
-                            break;
                         }
                         break;
                     case 38:
@@ -2083,24 +2077,18 @@ public class ConstraintLayout extends ViewGroup {
                                     if (iIndexOf2 >= 0 && iIndexOf2 < length - 1) {
                                         String strSubstring2 = this.dimensionRatio.substring(i, iIndexOf2);
                                         String strSubstring3 = this.dimensionRatio.substring(iIndexOf2 + 1);
-                                        if (strSubstring2.length() <= 0 || strSubstring3.length() <= 0) {
-                                            break;
-                                        } else {
+                                        if (strSubstring2.length() > 0 && strSubstring3.length() > 0) {
                                             try {
                                                 float f2 = Float.parseFloat(strSubstring2);
                                                 float f3 = Float.parseFloat(strSubstring3);
-                                                if (f2 <= 0.0f || f3 <= 0.0f) {
-                                                    break;
-                                                } else {
+                                                if (f2 > 0.0f && f3 > 0.0f) {
                                                     if (this.dimensionRatioSide == 1) {
                                                         this.dimensionRatioValue = Math.abs(f3 / f2);
                                                     } else {
                                                         this.dimensionRatioValue = Math.abs(f2 / f3);
                                                     }
-                                                    break;
                                                 }
                                             } catch (NumberFormatException unused5) {
-                                                break;
                                             }
                                         }
                                     } else {
@@ -2108,10 +2096,7 @@ public class ConstraintLayout extends ViewGroup {
                                         if (strSubstring4.length() > 0) {
                                             this.dimensionRatioValue = Float.parseFloat(strSubstring4);
                                         }
-                                        break;
                                     }
-                                } else {
-                                    break;
                                 }
                                 break;
                             case 45:

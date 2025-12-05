@@ -1,12 +1,12 @@
 package com.discord.utilities.lazy.memberlist;
 
-import a0.a.a.b;
 import androidx.annotation.ColorInt;
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.presence.Presence;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MemberListRow.kt */
 /* loaded from: classes2.dex */
@@ -31,7 +31,7 @@ public abstract class MemberListRow {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Member(long j, String str, boolean z2, Integer num, boolean z3, Presence presence, @ColorInt Integer num2, String str2, boolean z4, String str3, boolean z5, int i) {
             super(String.valueOf(j), null);
-            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
             this.userId = j;
             this.name = str;
             this.isBot = z2;
@@ -111,7 +111,7 @@ public abstract class MemberListRow {
         }
 
         public final Member copy(long userId, String name, boolean isBot, Integer tagText, boolean tagVerified, Presence presence, @ColorInt Integer color, String avatarUrl, boolean showOwnerIndicator, String premiumSince, boolean isApplicationStreaming, int userFlags) {
-            m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             return new Member(userId, name, isBot, tagText, tagVerified, presence, color, avatarUrl, showOwnerIndicator, premiumSince, isApplicationStreaming, userFlags);
         }
 
@@ -123,7 +123,7 @@ public abstract class MemberListRow {
                 return false;
             }
             Member member = (Member) other;
-            return this.userId == member.userId && m.areEqual(this.name, member.name) && this.isBot == member.isBot && m.areEqual(this.tagText, member.tagText) && this.tagVerified == member.tagVerified && m.areEqual(this.presence, member.presence) && m.areEqual(this.color, member.color) && m.areEqual(this.avatarUrl, member.avatarUrl) && this.showOwnerIndicator == member.showOwnerIndicator && m.areEqual(this.premiumSince, member.premiumSince) && this.isApplicationStreaming == member.isApplicationStreaming && this.userFlags == member.userFlags;
+            return this.userId == member.userId && Intrinsics3.areEqual(this.name, member.name) && this.isBot == member.isBot && Intrinsics3.areEqual(this.tagText, member.tagText) && this.tagVerified == member.tagVerified && Intrinsics3.areEqual(this.presence, member.presence) && Intrinsics3.areEqual(this.color, member.color) && Intrinsics3.areEqual(this.avatarUrl, member.avatarUrl) && this.showOwnerIndicator == member.showOwnerIndicator && Intrinsics3.areEqual(this.premiumSince, member.premiumSince) && this.isApplicationStreaming == member.isApplicationStreaming && this.userFlags == member.userFlags;
         }
 
         public final String getAvatarUrl() {
@@ -168,9 +168,9 @@ public abstract class MemberListRow {
 
         /* JADX WARN: Multi-variable type inference failed */
         public int hashCode() {
-            int iA = b.a(this.userId) * 31;
+            int iM3a = C0002b.m3a(this.userId) * 31;
             String str = this.name;
-            int iHashCode = (iA + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.isBot;
             int i = z2;
             if (z2 != 0) {
@@ -212,30 +212,30 @@ public abstract class MemberListRow {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Member(userId=");
-            sbU.append(this.userId);
-            sbU.append(", name=");
-            sbU.append(this.name);
-            sbU.append(", isBot=");
-            sbU.append(this.isBot);
-            sbU.append(", tagText=");
-            sbU.append(this.tagText);
-            sbU.append(", tagVerified=");
-            sbU.append(this.tagVerified);
-            sbU.append(", presence=");
-            sbU.append(this.presence);
-            sbU.append(", color=");
-            sbU.append(this.color);
-            sbU.append(", avatarUrl=");
-            sbU.append(this.avatarUrl);
-            sbU.append(", showOwnerIndicator=");
-            sbU.append(this.showOwnerIndicator);
-            sbU.append(", premiumSince=");
-            sbU.append(this.premiumSince);
-            sbU.append(", isApplicationStreaming=");
-            sbU.append(this.isApplicationStreaming);
-            sbU.append(", userFlags=");
-            return a.B(sbU, this.userFlags, ")");
+            StringBuilder sbM833U = outline.m833U("Member(userId=");
+            sbM833U.append(this.userId);
+            sbM833U.append(", name=");
+            sbM833U.append(this.name);
+            sbM833U.append(", isBot=");
+            sbM833U.append(this.isBot);
+            sbM833U.append(", tagText=");
+            sbM833U.append(this.tagText);
+            sbM833U.append(", tagVerified=");
+            sbM833U.append(this.tagVerified);
+            sbM833U.append(", presence=");
+            sbM833U.append(this.presence);
+            sbM833U.append(", color=");
+            sbM833U.append(this.color);
+            sbM833U.append(", avatarUrl=");
+            sbM833U.append(this.avatarUrl);
+            sbM833U.append(", showOwnerIndicator=");
+            sbM833U.append(this.showOwnerIndicator);
+            sbM833U.append(", premiumSince=");
+            sbM833U.append(this.premiumSince);
+            sbM833U.append(", isApplicationStreaming=");
+            sbM833U.append(this.isApplicationStreaming);
+            sbM833U.append(", userFlags=");
+            return outline.m814B(sbM833U, this.userFlags, ")");
         }
     }
 
@@ -248,7 +248,7 @@ public abstract class MemberListRow {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RoleHeader(long j, String str, int i) {
             super(String.valueOf(j), null);
-            m.checkNotNullParameter(str, "roleName");
+            Intrinsics3.checkNotNullParameter(str, "roleName");
             this.roleId = j;
             this.roleName = str;
             this.memberCount = i;
@@ -283,7 +283,7 @@ public abstract class MemberListRow {
         }
 
         public final RoleHeader copy(long roleId, String roleName, int memberCount) {
-            m.checkNotNullParameter(roleName, "roleName");
+            Intrinsics3.checkNotNullParameter(roleName, "roleName");
             return new RoleHeader(roleId, roleName, memberCount);
         }
 
@@ -295,7 +295,7 @@ public abstract class MemberListRow {
                 return false;
             }
             RoleHeader roleHeader = (RoleHeader) other;
-            return this.roleId == roleHeader.roleId && m.areEqual(this.roleName, roleHeader.roleName) && this.memberCount == roleHeader.memberCount;
+            return this.roleId == roleHeader.roleId && Intrinsics3.areEqual(this.roleName, roleHeader.roleName) && this.memberCount == roleHeader.memberCount;
         }
 
         public final int getMemberCount() {
@@ -311,18 +311,18 @@ public abstract class MemberListRow {
         }
 
         public int hashCode() {
-            int iA = b.a(this.roleId) * 31;
+            int iM3a = C0002b.m3a(this.roleId) * 31;
             String str = this.roleName;
-            return ((iA + (str != null ? str.hashCode() : 0)) * 31) + this.memberCount;
+            return ((iM3a + (str != null ? str.hashCode() : 0)) * 31) + this.memberCount;
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("RoleHeader(roleId=");
-            sbU.append(this.roleId);
-            sbU.append(", roleName=");
-            sbU.append(this.roleName);
-            sbU.append(", memberCount=");
-            return a.B(sbU, this.memberCount, ")");
+            StringBuilder sbM833U = outline.m833U("RoleHeader(roleId=");
+            sbM833U.append(this.roleId);
+            sbM833U.append(", roleName=");
+            sbM833U.append(this.roleName);
+            sbM833U.append(", memberCount=");
+            return outline.m814B(sbM833U, this.memberCount, ")");
         }
     }
 
@@ -351,8 +351,8 @@ public abstract class MemberListRow {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public StatusHeader(String str, Type type, int i) {
             super(str, null);
-            m.checkNotNullParameter(str, "rowId");
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(str, "rowId");
+            Intrinsics3.checkNotNullParameter(type, "type");
             this.rowId = str;
             this.type = type;
             this.memberCount = i;
@@ -386,8 +386,8 @@ public abstract class MemberListRow {
         }
 
         public final StatusHeader copy(String rowId, Type type, int memberCount) {
-            m.checkNotNullParameter(rowId, "rowId");
-            m.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(rowId, "rowId");
+            Intrinsics3.checkNotNullParameter(type, "type");
             return new StatusHeader(rowId, type, memberCount);
         }
 
@@ -399,7 +399,7 @@ public abstract class MemberListRow {
                 return false;
             }
             StatusHeader statusHeader = (StatusHeader) other;
-            return m.areEqual(getRowId(), statusHeader.getRowId()) && m.areEqual(this.type, statusHeader.type) && this.memberCount == statusHeader.memberCount;
+            return Intrinsics3.areEqual(getRowId(), statusHeader.getRowId()) && Intrinsics3.areEqual(this.type, statusHeader.type) && this.memberCount == statusHeader.memberCount;
         }
 
         public final int getMemberCount() {
@@ -423,12 +423,12 @@ public abstract class MemberListRow {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StatusHeader(rowId=");
-            sbU.append(getRowId());
-            sbU.append(", type=");
-            sbU.append(this.type);
-            sbU.append(", memberCount=");
-            return a.B(sbU, this.memberCount, ")");
+            StringBuilder sbM833U = outline.m833U("StatusHeader(rowId=");
+            sbM833U.append(getRowId());
+            sbM833U.append(", type=");
+            sbM833U.append(this.type);
+            sbM833U.append(", memberCount=");
+            return outline.m814B(sbM833U, this.memberCount, ")");
         }
     }
 

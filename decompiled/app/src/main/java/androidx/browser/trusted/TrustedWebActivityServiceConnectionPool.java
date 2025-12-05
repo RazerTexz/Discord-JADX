@@ -11,13 +11,14 @@ import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentTransaction;
-import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.Executor;
-import y.a.b.c;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
+import p677y.p678a.p680b.RunnableC13189c;
 
 /* loaded from: classes.dex */
 public final class TrustedWebActivityServiceConnectionPool {
@@ -119,24 +120,25 @@ public final class TrustedWebActivityServiceConnectionPool {
             return null;
         }
         if (z2) {
-            StringBuilder sbU = a.U("Found ");
-            sbU.append(resolveInfoResolveService.serviceInfo.name);
-            sbU.append(" to handle request for ");
-            sbU.append(uri);
-            Log.i(TAG, sbU.toString());
+            StringBuilder sbM833U = outline.m833U("Found ");
+            sbM833U.append(resolveInfoResolveService.serviceInfo.name);
+            sbM833U.append(" to handle request for ");
+            sbM833U.append(uri);
+            Log.i(TAG, sbM833U.toString());
         }
         Intent intent3 = new Intent();
         intent3.setComponent(new ComponentName(str, resolveInfoResolveService.serviceInfo.name));
         return intent3;
     }
 
-    public /* synthetic */ void a(Uri uri) {
+    /* renamed from: a */
+    public /* synthetic */ void m79a(Uri uri) {
         this.mConnections.remove(uri);
     }
 
     @NonNull
     @MainThread
-    public b.i.b.d.a.a<TrustedWebActivityServiceConnection> connect(@NonNull Uri uri, @NonNull Set<Token> set, @NonNull Executor executor) {
+    public ListenableFuture8<TrustedWebActivityServiceConnection> connect(@NonNull Uri uri, @NonNull Set<Token> set, @NonNull Executor executor) {
         ConnectionHolder connectionHolder = this.mConnections.get(uri);
         if (connectionHolder != null) {
             return connectionHolder.getServiceWrapper();
@@ -145,7 +147,7 @@ public final class TrustedWebActivityServiceConnectionPool {
         if (intentCreateServiceIntent == null) {
             return FutureUtils.immediateFailedFuture(new IllegalArgumentException("No service exists for scope"));
         }
-        ConnectionHolder connectionHolder2 = new ConnectionHolder(new c(this, uri));
+        ConnectionHolder connectionHolder2 = new ConnectionHolder(new RunnableC13189c(this, uri));
         this.mConnections.put(uri, connectionHolder2);
         new BindToServiceAsyncTask(this.mContext, intentCreateServiceIntent, connectionHolder2).executeOnExecutor(executor, new Void[0]);
         return connectionHolder2.getServiceWrapper();

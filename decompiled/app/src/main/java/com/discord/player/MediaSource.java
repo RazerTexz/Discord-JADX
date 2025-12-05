@@ -3,9 +3,9 @@ package com.discord.player;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MediaSource.kt */
 /* loaded from: classes.dex */
@@ -31,15 +31,15 @@ public final /* data */ class MediaSource implements Parcelable {
 
         @Override // android.os.Parcelable.Creator
         public MediaSource createFromParcel(Parcel parcel) {
-            m.checkNotNullParameter(parcel, "parcel");
-            m.checkNotNullParameter(parcel, "parcel");
+            Intrinsics3.checkNotNullParameter(parcel, "parcel");
+            Intrinsics3.checkNotNullParameter(parcel, "parcel");
             Parcelable parcelable = parcel.readParcelable(Uri.class.getClassLoader());
-            m.checkNotNull(parcelable);
+            Intrinsics3.checkNotNull(parcelable);
             String string = parcel.readString();
-            m.checkNotNull(string);
-            m.checkNotNullExpressionValue(string, "parcel.readString()!!");
+            Intrinsics3.checkNotNull(string);
+            Intrinsics3.checkNotNullExpressionValue(string, "parcel.readString()!!");
             Parcelable parcelable2 = parcel.readParcelable(MediaType.class.getClassLoader());
-            m.checkNotNull(parcelable2);
+            Intrinsics3.checkNotNull(parcelable2);
             return new MediaSource((Uri) parcelable, string, (MediaType) parcelable2);
         }
 
@@ -50,9 +50,9 @@ public final /* data */ class MediaSource implements Parcelable {
     }
 
     public MediaSource(Uri uri, String str, MediaType mediaType) {
-        m.checkNotNullParameter(uri, "progressiveMediaUri");
-        m.checkNotNullParameter(str, "featureTag");
-        m.checkNotNullParameter(mediaType, "mediaType");
+        Intrinsics3.checkNotNullParameter(uri, "progressiveMediaUri");
+        Intrinsics3.checkNotNullParameter(str, "featureTag");
+        Intrinsics3.checkNotNullParameter(mediaType, "mediaType");
         this.progressiveMediaUri = uri;
         this.featureTag = str;
         this.mediaType = mediaType;
@@ -71,7 +71,7 @@ public final /* data */ class MediaSource implements Parcelable {
             return false;
         }
         MediaSource mediaSource = (MediaSource) other;
-        return m.areEqual(this.progressiveMediaUri, mediaSource.progressiveMediaUri) && m.areEqual(this.featureTag, mediaSource.featureTag) && m.areEqual(this.mediaType, mediaSource.mediaType);
+        return Intrinsics3.areEqual(this.progressiveMediaUri, mediaSource.progressiveMediaUri) && Intrinsics3.areEqual(this.featureTag, mediaSource.featureTag) && Intrinsics3.areEqual(this.mediaType, mediaSource.mediaType);
     }
 
     public int hashCode() {
@@ -84,19 +84,19 @@ public final /* data */ class MediaSource implements Parcelable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("MediaSource(progressiveMediaUri=");
-        sbU.append(this.progressiveMediaUri);
-        sbU.append(", featureTag=");
-        sbU.append(this.featureTag);
-        sbU.append(", mediaType=");
-        sbU.append(this.mediaType);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("MediaSource(progressiveMediaUri=");
+        sbM833U.append(this.progressiveMediaUri);
+        sbM833U.append(", featureTag=");
+        sbM833U.append(this.featureTag);
+        sbM833U.append(", mediaType=");
+        sbM833U.append(this.mediaType);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int flags) {
-        m.checkNotNullParameter(parcel, "parcel");
+        Intrinsics3.checkNotNullParameter(parcel, "parcel");
         parcel.writeParcelable(this.progressiveMediaUri, flags);
         parcel.writeString(this.featureTag);
         parcel.writeParcelable(this.mediaType, flags);

@@ -14,7 +14,6 @@ import android.os.Looper;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-import b.d.b.a.a;
 import com.adjust.sdk.GooglePlayServicesClient;
 import com.adjust.sdk.scheduler.SingleThreadFutureScheduler;
 import java.io.BufferedInputStream;
@@ -41,6 +40,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.regex.Pattern;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class Util {
@@ -50,11 +50,11 @@ public class Util {
     public static final SimpleDateFormat dateFormatter = new SimpleDateFormat(DATE_FORMAT, Locale.US);
     private static volatile SingleThreadFutureScheduler playAdIdScheduler = null;
 
-    /* renamed from: com.adjust.sdk.Util$1, reason: invalid class name */
-    public static class AnonymousClass1 implements Callable<Object> {
+    /* renamed from: com.adjust.sdk.Util$1 */
+    public static class CallableC53931 implements Callable<Object> {
         public final /* synthetic */ Context val$context;
 
-        public AnonymousClass1(Context context) {
+        public CallableC53931(Context context) {
             this.val$context = context;
         }
 
@@ -68,12 +68,12 @@ public class Util {
         }
     }
 
-    /* renamed from: com.adjust.sdk.Util$2, reason: invalid class name */
-    public static class AnonymousClass2 implements Callable<String> {
+    /* renamed from: com.adjust.sdk.Util$2 */
+    public static class CallableC53942 implements Callable<String> {
         public final /* synthetic */ Object val$advertisingInfoObject;
         public final /* synthetic */ Context val$context;
 
-        public AnonymousClass2(Context context, Object obj) {
+        public CallableC53942(Context context, Object obj) {
             this.val$context = context;
             this.val$advertisingInfoObject = obj;
         }
@@ -90,12 +90,12 @@ public class Util {
         }
     }
 
-    /* renamed from: com.adjust.sdk.Util$3, reason: invalid class name */
-    public static class AnonymousClass3 implements Callable<Boolean> {
+    /* renamed from: com.adjust.sdk.Util$3 */
+    public static class CallableC53953 implements Callable<Boolean> {
         public final /* synthetic */ Object val$advertisingInfoObject;
         public final /* synthetic */ Context val$context;
 
-        public AnonymousClass3(Context context, Object obj) {
+        public CallableC53953(Context context, Object obj) {
             this.val$context = context;
             this.val$advertisingInfoObject = obj;
         }
@@ -112,8 +112,8 @@ public class Util {
         }
     }
 
-    /* renamed from: com.adjust.sdk.Util$4, reason: invalid class name */
-    public static class AnonymousClass4 extends AsyncTask<Object, Void, Void> {
+    /* renamed from: com.adjust.sdk.Util$4 */
+    public static class AsyncTaskC53964 extends AsyncTask<Object, Void, Void> {
         @Override // android.os.AsyncTask
         public /* bridge */ /* synthetic */ Void doInBackground(Object[] objArr) {
             return doInBackground2(objArr);
@@ -127,11 +127,11 @@ public class Util {
         }
     }
 
-    /* renamed from: com.adjust.sdk.Util$5, reason: invalid class name */
-    public static class AnonymousClass5 extends AsyncTask<Context, Void, String> {
+    /* renamed from: com.adjust.sdk.Util$5 */
+    public static class AsyncTaskC53975 extends AsyncTask<Context, Void, String> {
         public final /* synthetic */ OnDeviceIdsRead val$onDeviceIdRead;
 
-        public AnonymousClass5(OnDeviceIdsRead onDeviceIdsRead) {
+        public AsyncTaskC53975(OnDeviceIdsRead onDeviceIdsRead) {
             this.val$onDeviceIdRead = onDeviceIdsRead;
         }
 
@@ -149,7 +149,7 @@ public class Util {
         public String doInBackground2(Context... contextArr) {
             ILogger logger = AdjustFactory.getLogger();
             String strAccess$000 = Util.access$000(contextArr[0]);
-            logger.debug(a.w("GoogleAdId read ", strAccess$000), new Object[0]);
+            logger.debug(outline.m883w("GoogleAdId read ", strAccess$000), new Object[0]);
             return strAccess$000;
         }
 
@@ -174,7 +174,7 @@ public class Util {
     }
 
     public static String convertToHex(byte[] bArr) {
-        return formatString(a.B(a.U("%0"), bArr.length << 1, "x"), new BigInteger(1, bArr));
+        return formatString(outline.m814B(outline.m833U("%0"), bArr.length << 1, "x"), new BigInteger(1, bArr));
     }
 
     public static String createUuid() {
@@ -214,7 +214,7 @@ public class Util {
     }
 
     public static Object getAdvertisingInfoObject(Context context, long j) {
-        return runSyncInPlayAdIdSchedulerWithTimeout(context, new AnonymousClass1(context), j);
+        return runSyncInPlayAdIdSchedulerWithTimeout(context, new CallableC53931(context), j);
     }
 
     public static String getAndroidId(Context context) {
@@ -291,11 +291,11 @@ public class Util {
         ILogger logger = AdjustFactory.getLogger();
         if (Looper.myLooper() == Looper.getMainLooper()) {
             logger.debug("GoogleAdId being read in the foreground", new Object[0]);
-            new AnonymousClass5(onDeviceIdsRead).execute(context);
+            new AsyncTaskC53975(onDeviceIdsRead).execute(context);
         } else {
             logger.debug("GoogleAdId being read in the background", new Object[0]);
             String googleAdId = getGoogleAdId(context);
-            logger.debug(a.w("GoogleAdId read ", googleAdId), new Object[0]);
+            logger.debug(outline.m883w("GoogleAdId read ", googleAdId), new Object[0]);
             onDeviceIdsRead.onGoogleAdIdRead(googleAdId);
         }
     }
@@ -358,7 +358,7 @@ public class Util {
     }
 
     public static String getPlayAdId(Context context, Object obj, long j) {
-        return (String) runSyncInPlayAdIdSchedulerWithTimeout(context, new AnonymousClass2(context, obj), j);
+        return (String) runSyncInPlayAdIdSchedulerWithTimeout(context, new CallableC53942(context, obj), j);
     }
 
     public static String getReasonString(String str, Throwable th) {
@@ -461,7 +461,7 @@ public class Util {
     }
 
     public static Boolean isPlayTrackingEnabled(Context context, Object obj, long j) {
-        return (Boolean) runSyncInPlayAdIdSchedulerWithTimeout(context, new AnonymousClass3(context, obj), j);
+        return (Boolean) runSyncInPlayAdIdSchedulerWithTimeout(context, new CallableC53953(context, obj), j);
     }
 
     public static boolean isUrlFilteredOut(Uri uri) {
@@ -650,7 +650,7 @@ public class Util {
         if (Looper.myLooper() != Looper.getMainLooper()) {
             runnable.run();
         } else {
-            new AnonymousClass4().execute(runnable);
+            new AsyncTaskC53964().execute(runnable);
         }
     }
 

@@ -1,22 +1,22 @@
 package com.discord.widgets.channels.list.items;
 
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChannelListItemActiveEvent.kt */
 /* loaded from: classes2.dex */
 public final class ChannelListItemActiveEvent implements ChannelListItem {
-    private final ChannelListItemActiveEventData data;
+    private final ChannelListItemActiveEvent2 data;
     private final String key;
     private final int type;
 
-    public ChannelListItemActiveEvent(ChannelListItemActiveEventData channelListItemActiveEventData) {
-        m.checkNotNullParameter(channelListItemActiveEventData, "data");
-        this.data = channelListItemActiveEventData;
+    public ChannelListItemActiveEvent(ChannelListItemActiveEvent2 channelListItemActiveEvent2) {
+        Intrinsics3.checkNotNullParameter(channelListItemActiveEvent2, "data");
+        this.data = channelListItemActiveEvent2;
         this.type = 15;
-        this.key = getType() + channelListItemActiveEventData.getLocationInfo().getLocationName();
+        this.key = getType() + channelListItemActiveEvent2.getLocationInfo().getLocationName();
     }
 
-    public final ChannelListItemActiveEventData getData() {
+    public final ChannelListItemActiveEvent2 getData() {
         return this.data;
     }
 

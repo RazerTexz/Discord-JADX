@@ -86,9 +86,9 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
     @Override // lombok.eclipse.EclipseAnnotationHandler
     public void handle(AnnotationValues<UtilityClass> annotation, Annotation ast, EclipseNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.UTILITY_CLASS_FLAG_USAGE, "@UtilityClass");
-        EclipseNode typeNode = annotationNode.up();
+        EclipseNode typeNode = annotationNode.m10925up();
         if (checkLegality(typeNode, annotationNode)) {
-            changeModifiersAndGenerateConstructor(annotationNode.up(), annotationNode);
+            changeModifiersAndGenerateConstructor(annotationNode.m10925up(), annotationNode);
         }
     }
 
@@ -98,7 +98,7 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
         	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.process(SwitchRegionMaker.java:68)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:112)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:103)
+        	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:104)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
@@ -154,7 +154,7 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
             r8 = r0
         L44:
             r0 = r8
-            lombok.core.LombokNode r0 = r0.up()
+            lombok.core.LombokNode r0 = r0.m10925up()
             lombok.eclipse.EclipseNode r0 = (lombok.eclipse.EclipseNode) r0
             r8 = r0
             int[] r0 = $SWITCH_TABLE$lombok$core$AST$Kind()
@@ -178,7 +178,7 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
             goto L44
         L85:
             r0 = r8
-            lombok.core.LombokNode r0 = r0.up()
+            lombok.core.LombokNode r0 = r0.m10925up()
             lombok.eclipse.EclipseNode r0 = (lombok.eclipse.EclipseNode) r0
             lombok.core.AST$Kind r0 = r0.getKind()
             lombok.core.AST$Kind r1 = lombok.core.AST.Kind.COMPILATION_UNIT
@@ -210,9 +210,9 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
         classDecl.modifiers |= 16;
         boolean requiresClInit = false;
         boolean alreadyHasClinit = false;
-        boolean markStatic = typeNode.up().getKind() != AST.Kind.COMPILATION_UNIT;
-        if (markStatic && typeNode.up().getKind() == AST.Kind.TYPE) {
-            TypeDeclaration typeDecl = typeNode.up().get();
+        boolean markStatic = typeNode.m10925up().getKind() != AST.Kind.COMPILATION_UNIT;
+        if (markStatic && typeNode.m10925up().getKind() == AST.Kind.TYPE) {
+            TypeDeclaration typeDecl = typeNode.m10925up().get();
             if ((typeDecl.modifiers & 8704) != 0) {
                 markStatic = false;
             }

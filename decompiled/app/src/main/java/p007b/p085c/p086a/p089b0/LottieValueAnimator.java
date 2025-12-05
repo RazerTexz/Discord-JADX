@@ -1,0 +1,239 @@
+package p007b.p085c.p086a.p089b0;
+
+import android.animation.Animator;
+import android.graphics.PointF;
+import android.view.Choreographer;
+import androidx.annotation.FloatRange;
+import androidx.annotation.MainThread;
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
+import java.util.Iterator;
+import p007b.p085c.p086a.L;
+import p007b.p085c.p086a.LottieComposition;
+
+/* compiled from: LottieValueAnimator.java */
+/* renamed from: b.c.a.b0.d, reason: use source file name */
+/* loaded from: classes.dex */
+public class LottieValueAnimator extends BaseLottieAnimator implements Choreographer.FrameCallback {
+
+    /* renamed from: s */
+    @Nullable
+    public LottieComposition f2304s;
+
+    /* renamed from: l */
+    public float f2297l = 1.0f;
+
+    /* renamed from: m */
+    public boolean f2298m = false;
+
+    /* renamed from: n */
+    public long f2299n = 0;
+
+    /* renamed from: o */
+    public float f2300o = 0.0f;
+
+    /* renamed from: p */
+    public int f2301p = 0;
+
+    /* renamed from: q */
+    public float f2302q = -2.1474836E9f;
+
+    /* renamed from: r */
+    public float f2303r = 2.1474836E9f;
+
+    /* renamed from: t */
+    @VisibleForTesting
+    public boolean f2305t = false;
+
+    @Override // android.animation.ValueAnimator, android.animation.Animator
+    @MainThread
+    public void cancel() {
+        Iterator<Animator.AnimatorListener> it = this.f2294k.iterator();
+        while (it.hasNext()) {
+            it.next().onAnimationCancel(this);
+        }
+        m648m();
+    }
+
+    @Override // android.view.Choreographer.FrameCallback
+    public void doFrame(long j) {
+        m647l();
+        LottieComposition lottieComposition = this.f2304s;
+        if (lottieComposition == null || !this.f2305t) {
+            return;
+        }
+        float fAbs = (this.f2299n != 0 ? j - r1 : 0L) / ((1.0E9f / lottieComposition.f2348m) / Math.abs(this.f2297l));
+        float f = this.f2300o;
+        if (m646k()) {
+            fAbs = -fAbs;
+        }
+        float f2 = f + fAbs;
+        this.f2300o = f2;
+        float fM645j = m645j();
+        float fM644i = m644i();
+        PointF pointF = MiscUtils.f2308a;
+        boolean z2 = !(f2 >= fM645j && f2 <= fM644i);
+        this.f2300o = MiscUtils.m652b(this.f2300o, m645j(), m644i());
+        this.f2299n = j;
+        m638f();
+        if (z2) {
+            if (getRepeatCount() == -1 || this.f2301p < getRepeatCount()) {
+                Iterator<Animator.AnimatorListener> it = this.f2294k.iterator();
+                while (it.hasNext()) {
+                    it.next().onAnimationRepeat(this);
+                }
+                this.f2301p++;
+                if (getRepeatMode() == 2) {
+                    this.f2298m = !this.f2298m;
+                    this.f2297l = -this.f2297l;
+                } else {
+                    this.f2300o = m646k() ? m644i() : m645j();
+                }
+                this.f2299n = j;
+            } else {
+                this.f2300o = this.f2297l < 0.0f ? m645j() : m644i();
+                m648m();
+                m637b(m646k());
+            }
+        }
+        if (this.f2304s != null) {
+            float f3 = this.f2300o;
+            if (f3 < this.f2302q || f3 > this.f2303r) {
+                throw new IllegalStateException(String.format("Frame must be [%f,%f]. It is %f", Float.valueOf(this.f2302q), Float.valueOf(this.f2303r), Float.valueOf(this.f2300o)));
+            }
+        }
+        L.m663a("LottieValueAnimator#doFrame");
+    }
+
+    @MainThread
+    /* renamed from: g */
+    public void m642g() {
+        m648m();
+        m637b(m646k());
+    }
+
+    @Override // android.animation.ValueAnimator
+    @FloatRange(from = 0.0d, m75to = 1.0d)
+    public float getAnimatedFraction() {
+        float fM645j;
+        float fM644i;
+        float fM645j2;
+        if (this.f2304s == null) {
+            return 0.0f;
+        }
+        if (m646k()) {
+            fM645j = m644i() - this.f2300o;
+            fM644i = m644i();
+            fM645j2 = m645j();
+        } else {
+            fM645j = this.f2300o - m645j();
+            fM644i = m644i();
+            fM645j2 = m645j();
+        }
+        return fM645j / (fM644i - fM645j2);
+    }
+
+    @Override // android.animation.ValueAnimator
+    public Object getAnimatedValue() {
+        return Float.valueOf(m643h());
+    }
+
+    @Override // android.animation.ValueAnimator, android.animation.Animator
+    public long getDuration() {
+        LottieComposition lottieComposition = this.f2304s;
+        if (lottieComposition == null) {
+            return 0L;
+        }
+        return (long) lottieComposition.m670b();
+    }
+
+    @FloatRange(from = 0.0d, m75to = 1.0d)
+    /* renamed from: h */
+    public float m643h() {
+        LottieComposition lottieComposition = this.f2304s;
+        if (lottieComposition == null) {
+            return 0.0f;
+        }
+        float f = this.f2300o;
+        float f2 = lottieComposition.f2346k;
+        return (f - f2) / (lottieComposition.f2347l - f2);
+    }
+
+    /* renamed from: i */
+    public float m644i() {
+        LottieComposition lottieComposition = this.f2304s;
+        if (lottieComposition == null) {
+            return 0.0f;
+        }
+        float f = this.f2303r;
+        return f == 2.1474836E9f ? lottieComposition.f2347l : f;
+    }
+
+    @Override // android.animation.ValueAnimator, android.animation.Animator
+    public boolean isRunning() {
+        return this.f2305t;
+    }
+
+    /* renamed from: j */
+    public float m645j() {
+        LottieComposition lottieComposition = this.f2304s;
+        if (lottieComposition == null) {
+            return 0.0f;
+        }
+        float f = this.f2302q;
+        return f == -2.1474836E9f ? lottieComposition.f2346k : f;
+    }
+
+    /* renamed from: k */
+    public final boolean m646k() {
+        return this.f2297l < 0.0f;
+    }
+
+    /* renamed from: l */
+    public void m647l() {
+        if (this.f2305t) {
+            Choreographer.getInstance().removeFrameCallback(this);
+            Choreographer.getInstance().postFrameCallback(this);
+        }
+    }
+
+    @MainThread
+    /* renamed from: m */
+    public void m648m() {
+        Choreographer.getInstance().removeFrameCallback(this);
+        this.f2305t = false;
+    }
+
+    /* renamed from: n */
+    public void m649n(float f) {
+        if (this.f2300o == f) {
+            return;
+        }
+        this.f2300o = MiscUtils.m652b(f, m645j(), m644i());
+        this.f2299n = 0L;
+        m638f();
+    }
+
+    /* renamed from: o */
+    public void m650o(float f, float f2) {
+        if (f > f2) {
+            throw new IllegalArgumentException(String.format("minFrame (%s) must be <= maxFrame (%s)", Float.valueOf(f), Float.valueOf(f2)));
+        }
+        LottieComposition lottieComposition = this.f2304s;
+        float f3 = lottieComposition == null ? -3.4028235E38f : lottieComposition.f2346k;
+        float f4 = lottieComposition == null ? Float.MAX_VALUE : lottieComposition.f2347l;
+        this.f2302q = MiscUtils.m652b(f, f3, f4);
+        this.f2303r = MiscUtils.m652b(f2, f3, f4);
+        m649n((int) MiscUtils.m652b(this.f2300o, f, f2));
+    }
+
+    @Override // android.animation.ValueAnimator
+    public void setRepeatMode(int i) {
+        super.setRepeatMode(i);
+        if (i == 2 || !this.f2298m) {
+            return;
+        }
+        this.f2298m = false;
+        this.f2297l = -this.f2297l;
+    }
+}

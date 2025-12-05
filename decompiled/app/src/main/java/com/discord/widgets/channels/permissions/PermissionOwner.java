@@ -1,11 +1,11 @@
 package com.discord.widgets.channels.permissions;
 
-import b.d.b.a.a;
 import com.discord.api.role.GuildRole;
 import com.discord.models.user.User;
-import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: PermissionOwner.kt */
 /* loaded from: classes2.dex */
@@ -21,7 +21,7 @@ public abstract class PermissionOwner implements Serializable {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Member(User user, String str, boolean z2) {
             super(user.getId(), null);
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             this.user = user;
             this.nickname = str;
             this.isOwner = z2;
@@ -56,7 +56,7 @@ public abstract class PermissionOwner implements Serializable {
         }
 
         public final Member copy(User user, String nickname, boolean isOwner) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             return new Member(user, nickname, isOwner);
         }
 
@@ -68,7 +68,7 @@ public abstract class PermissionOwner implements Serializable {
                 return false;
             }
             Member member = (Member) other;
-            return m.areEqual(this.user, member.user) && m.areEqual(this.nickname, member.nickname) && this.isOwner == member.isOwner;
+            return Intrinsics3.areEqual(this.user, member.user) && Intrinsics3.areEqual(this.nickname, member.nickname) && this.isOwner == member.isOwner;
         }
 
         public final String getNickname() {
@@ -98,12 +98,12 @@ public abstract class PermissionOwner implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Member(user=");
-            sbU.append(this.user);
-            sbU.append(", nickname=");
-            sbU.append(this.nickname);
-            sbU.append(", isOwner=");
-            return a.O(sbU, this.isOwner, ")");
+            StringBuilder sbM833U = outline.m833U("Member(user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", nickname=");
+            sbM833U.append(this.nickname);
+            sbM833U.append(", isOwner=");
+            return outline.m827O(sbM833U, this.isOwner, ")");
         }
     }
 
@@ -114,7 +114,7 @@ public abstract class PermissionOwner implements Serializable {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Role(GuildRole guildRole) {
             super(guildRole.getId(), null);
-            m.checkNotNullParameter(guildRole, "role");
+            Intrinsics3.checkNotNullParameter(guildRole, "role");
             this.role = guildRole;
         }
 
@@ -131,13 +131,13 @@ public abstract class PermissionOwner implements Serializable {
         }
 
         public final Role copy(GuildRole role) {
-            m.checkNotNullParameter(role, "role");
+            Intrinsics3.checkNotNullParameter(role, "role");
             return new Role(role);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Role) && m.areEqual(this.role, ((Role) other).role);
+                return (other instanceof Role) && Intrinsics3.areEqual(this.role, ((Role) other).role);
             }
             return true;
         }
@@ -155,10 +155,10 @@ public abstract class PermissionOwner implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Role(role=");
-            sbU.append(this.role);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Role(role=");
+            sbM833U.append(this.role);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 

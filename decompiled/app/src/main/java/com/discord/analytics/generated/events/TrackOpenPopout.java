@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackOpenPopout.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver, TrackLocationMetadataReceiver, TrackOverlayClientMetadataReceiver {
+public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackLocationMetadata2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackLocationMetadata trackLocationMetadata;
@@ -61,7 +61,7 @@ public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackB
             return false;
         }
         TrackOpenPopout trackOpenPopout = (TrackOpenPopout) other;
-        return m.areEqual(this.source, trackOpenPopout.source) && m.areEqual(this.type, trackOpenPopout.type) && m.areEqual(this.otherUserId, trackOpenPopout.otherUserId) && m.areEqual(this.applicationId, trackOpenPopout.applicationId) && m.areEqual(this.applicationName, trackOpenPopout.applicationName) && m.areEqual(this.gameId, trackOpenPopout.gameId) && m.areEqual(this.isFriend, trackOpenPopout.isFriend) && m.areEqual(this.hasImages, trackOpenPopout.hasImages) && m.areEqual(this.partyMax, trackOpenPopout.partyMax) && m.areEqual(this.partyId, trackOpenPopout.partyId) && m.areEqual(this.partyPlatform, trackOpenPopout.partyPlatform) && m.areEqual(this.gameName, trackOpenPopout.gameName) && m.areEqual(this.gamePlatform, trackOpenPopout.gamePlatform) && m.areEqual(this.skuId, trackOpenPopout.skuId) && m.areEqual(this.profileUserStatus, trackOpenPopout.profileUserStatus) && m.areEqual(this.isStreaming, trackOpenPopout.isStreaming) && m.areEqual(this.hasCustomStatus, trackOpenPopout.hasCustomStatus) && m.areEqual(this.guildId, trackOpenPopout.guildId) && m.areEqual(this.emojiId, trackOpenPopout.emojiId) && m.areEqual(this.stickerId, trackOpenPopout.stickerId) && m.areEqual(this.stickerPackId, trackOpenPopout.stickerPackId) && m.areEqual(this.profileHasNitroCustomization, trackOpenPopout.profileHasNitroCustomization) && m.areEqual(this.hasNickname, trackOpenPopout.hasNickname) && m.areEqual(this.hasGuildMemberAvatar, trackOpenPopout.hasGuildMemberAvatar) && m.areEqual(this.hasGuildMemberBanner, trackOpenPopout.hasGuildMemberBanner) && m.areEqual(this.hasGuildMemberBio, trackOpenPopout.hasGuildMemberBio);
+        return Intrinsics3.areEqual(this.source, trackOpenPopout.source) && Intrinsics3.areEqual(this.type, trackOpenPopout.type) && Intrinsics3.areEqual(this.otherUserId, trackOpenPopout.otherUserId) && Intrinsics3.areEqual(this.applicationId, trackOpenPopout.applicationId) && Intrinsics3.areEqual(this.applicationName, trackOpenPopout.applicationName) && Intrinsics3.areEqual(this.gameId, trackOpenPopout.gameId) && Intrinsics3.areEqual(this.isFriend, trackOpenPopout.isFriend) && Intrinsics3.areEqual(this.hasImages, trackOpenPopout.hasImages) && Intrinsics3.areEqual(this.partyMax, trackOpenPopout.partyMax) && Intrinsics3.areEqual(this.partyId, trackOpenPopout.partyId) && Intrinsics3.areEqual(this.partyPlatform, trackOpenPopout.partyPlatform) && Intrinsics3.areEqual(this.gameName, trackOpenPopout.gameName) && Intrinsics3.areEqual(this.gamePlatform, trackOpenPopout.gamePlatform) && Intrinsics3.areEqual(this.skuId, trackOpenPopout.skuId) && Intrinsics3.areEqual(this.profileUserStatus, trackOpenPopout.profileUserStatus) && Intrinsics3.areEqual(this.isStreaming, trackOpenPopout.isStreaming) && Intrinsics3.areEqual(this.hasCustomStatus, trackOpenPopout.hasCustomStatus) && Intrinsics3.areEqual(this.guildId, trackOpenPopout.guildId) && Intrinsics3.areEqual(this.emojiId, trackOpenPopout.emojiId) && Intrinsics3.areEqual(this.stickerId, trackOpenPopout.stickerId) && Intrinsics3.areEqual(this.stickerPackId, trackOpenPopout.stickerPackId) && Intrinsics3.areEqual(this.profileHasNitroCustomization, trackOpenPopout.profileHasNitroCustomization) && Intrinsics3.areEqual(this.hasNickname, trackOpenPopout.hasNickname) && Intrinsics3.areEqual(this.hasGuildMemberAvatar, trackOpenPopout.hasGuildMemberAvatar) && Intrinsics3.areEqual(this.hasGuildMemberBanner, trackOpenPopout.hasGuildMemberBanner) && Intrinsics3.areEqual(this.hasGuildMemberBio, trackOpenPopout.hasGuildMemberBio);
     }
 
     public int hashCode() {
@@ -120,57 +120,57 @@ public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackOpenPopout(source=");
-        sbU.append(this.source);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", otherUserId=");
-        sbU.append(this.otherUserId);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", applicationName=");
-        sbU.append(this.applicationName);
-        sbU.append(", gameId=");
-        sbU.append(this.gameId);
-        sbU.append(", isFriend=");
-        sbU.append(this.isFriend);
-        sbU.append(", hasImages=");
-        sbU.append(this.hasImages);
-        sbU.append(", partyMax=");
-        sbU.append(this.partyMax);
-        sbU.append(", partyId=");
-        sbU.append(this.partyId);
-        sbU.append(", partyPlatform=");
-        sbU.append(this.partyPlatform);
-        sbU.append(", gameName=");
-        sbU.append(this.gameName);
-        sbU.append(", gamePlatform=");
-        sbU.append(this.gamePlatform);
-        sbU.append(", skuId=");
-        sbU.append(this.skuId);
-        sbU.append(", profileUserStatus=");
-        sbU.append(this.profileUserStatus);
-        sbU.append(", isStreaming=");
-        sbU.append(this.isStreaming);
-        sbU.append(", hasCustomStatus=");
-        sbU.append(this.hasCustomStatus);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", emojiId=");
-        sbU.append(this.emojiId);
-        sbU.append(", stickerId=");
-        sbU.append(this.stickerId);
-        sbU.append(", stickerPackId=");
-        sbU.append(this.stickerPackId);
-        sbU.append(", profileHasNitroCustomization=");
-        sbU.append(this.profileHasNitroCustomization);
-        sbU.append(", hasNickname=");
-        sbU.append(this.hasNickname);
-        sbU.append(", hasGuildMemberAvatar=");
-        sbU.append(this.hasGuildMemberAvatar);
-        sbU.append(", hasGuildMemberBanner=");
-        sbU.append(this.hasGuildMemberBanner);
-        sbU.append(", hasGuildMemberBio=");
-        return a.D(sbU, this.hasGuildMemberBio, ")");
+        StringBuilder sbM833U = outline.m833U("TrackOpenPopout(source=");
+        sbM833U.append(this.source);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", otherUserId=");
+        sbM833U.append(this.otherUserId);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", applicationName=");
+        sbM833U.append(this.applicationName);
+        sbM833U.append(", gameId=");
+        sbM833U.append(this.gameId);
+        sbM833U.append(", isFriend=");
+        sbM833U.append(this.isFriend);
+        sbM833U.append(", hasImages=");
+        sbM833U.append(this.hasImages);
+        sbM833U.append(", partyMax=");
+        sbM833U.append(this.partyMax);
+        sbM833U.append(", partyId=");
+        sbM833U.append(this.partyId);
+        sbM833U.append(", partyPlatform=");
+        sbM833U.append(this.partyPlatform);
+        sbM833U.append(", gameName=");
+        sbM833U.append(this.gameName);
+        sbM833U.append(", gamePlatform=");
+        sbM833U.append(this.gamePlatform);
+        sbM833U.append(", skuId=");
+        sbM833U.append(this.skuId);
+        sbM833U.append(", profileUserStatus=");
+        sbM833U.append(this.profileUserStatus);
+        sbM833U.append(", isStreaming=");
+        sbM833U.append(this.isStreaming);
+        sbM833U.append(", hasCustomStatus=");
+        sbM833U.append(this.hasCustomStatus);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", emojiId=");
+        sbM833U.append(this.emojiId);
+        sbM833U.append(", stickerId=");
+        sbM833U.append(this.stickerId);
+        sbM833U.append(", stickerPackId=");
+        sbM833U.append(this.stickerPackId);
+        sbM833U.append(", profileHasNitroCustomization=");
+        sbM833U.append(this.profileHasNitroCustomization);
+        sbM833U.append(", hasNickname=");
+        sbM833U.append(this.hasNickname);
+        sbM833U.append(", hasGuildMemberAvatar=");
+        sbM833U.append(this.hasGuildMemberAvatar);
+        sbM833U.append(", hasGuildMemberBanner=");
+        sbM833U.append(this.hasGuildMemberBanner);
+        sbM833U.append(", hasGuildMemberBio=");
+        return outline.m816D(sbM833U, this.hasGuildMemberBio, ")");
     }
 }

@@ -13,11 +13,7 @@ import androidx.annotation.ColorInt;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.ImageViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.i.h3;
-import b.a.k.b;
-import b.d.b.a.a;
-import b.f.g.e.f;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.guild.GuildFeature;
 import com.discord.api.guildjoinrequest.ApplicationStatus;
@@ -34,7 +30,7 @@ import com.discord.tooltips.SparkleView;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
-import com.discord.utilities.resources.StringResourceUtilsKt;
+import com.discord.utilities.resources.StringResourceUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.GuildView;
 import com.discord.views.ServerFolderView;
@@ -42,16 +38,20 @@ import com.discord.widgets.guilds.list.GuildListItem;
 import com.discord.widgets.guilds.list.GuildsDragAndDropCallback;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.g0.t;
-import d0.o;
-import d0.t.g0;
-import d0.t.n;
-import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p025i.ViewServerFolderBinding;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p109f.p132g.p142e.FadeDrawable;
+import p507d0.Tuples;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildListViewHolder.kt */
 /* loaded from: classes2.dex */
@@ -64,21 +64,21 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public DiscordHubViewHolder(View view) {
             super(view, null);
-            m.checkNotNullParameter(view, "view");
-            SparkleView sparkleView = (SparkleView) view.findViewById(R.id.guild_item_sparkle);
+            Intrinsics3.checkNotNullParameter(view, "view");
+            SparkleView sparkleView = (SparkleView) view.findViewById(C5419R.id.guild_item_sparkle);
             if (sparkleView == null) {
-                throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.guild_item_sparkle)));
+                throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(C5419R.id.guild_item_sparkle)));
             }
             WidgetGuildsListItemHubVerificationBinding widgetGuildsListItemHubVerificationBinding = new WidgetGuildsListItemHubVerificationBinding((FrameLayout) view, sparkleView);
-            m.checkNotNullExpressionValue(widgetGuildsListItemHubVerificationBinding, "WidgetGuildsListItemHubV…icationBinding.bind(view)");
+            Intrinsics3.checkNotNullExpressionValue(widgetGuildsListItemHubVerificationBinding, "WidgetGuildsListItemHubV…icationBinding.bind(view)");
             this.binding = widgetGuildsListItemHubVerificationBinding;
         }
 
         public final void configure(GuildListItem.HubItem item) {
-            m.checkNotNullParameter(item, "item");
-            SparkleView sparkleView = this.binding.f2463b;
+            Intrinsics3.checkNotNullParameter(item, "item");
+            SparkleView sparkleView = this.binding.f17119b;
             if (!item.getShowSparkle()) {
-                sparkleView.b();
+                sparkleView.m8511b();
             }
             sparkleView.setVisibility(item.getShowSparkle() ? 0 : 8);
         }
@@ -104,36 +104,36 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         /* JADX WARN: Multi-variable type inference failed */
         public FolderViewHolder(View view, Function1<? super GuildListItem.FolderItem, Unit> function1, Function1<? super GuildListItem.FolderItem, Unit> function12) {
             super(view, null);
-            m.checkNotNullParameter(view, "view");
-            m.checkNotNullParameter(function1, "onClicked");
-            m.checkNotNullParameter(function12, "onLongPressed");
+            Intrinsics3.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(function1, "onClicked");
+            Intrinsics3.checkNotNullParameter(function12, "onLongPressed");
             this.onClicked = function1;
             this.onLongPressed = function12;
-            int i = R.id.guilds_item_folder;
-            ServerFolderView serverFolderView = (ServerFolderView) view.findViewById(R.id.guilds_item_folder);
+            int i = C5419R.id.guilds_item_folder;
+            ServerFolderView serverFolderView = (ServerFolderView) view.findViewById(C5419R.id.guilds_item_folder);
             if (serverFolderView != null) {
-                i = R.id.guilds_item_folder_container;
-                FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.guilds_item_folder_container);
+                i = C5419R.id.guilds_item_folder_container;
+                FrameLayout frameLayout = (FrameLayout) view.findViewById(C5419R.id.guilds_item_folder_container);
                 if (frameLayout != null) {
-                    i = R.id.guilds_item_highlight;
-                    View viewFindViewById = view.findViewById(R.id.guilds_item_highlight);
+                    i = C5419R.id.guilds_item_highlight;
+                    View viewFindViewById = view.findViewById(C5419R.id.guilds_item_highlight);
                     if (viewFindViewById != null) {
-                        i = R.id.guilds_item_mentions;
-                        TextView textView = (TextView) view.findViewById(R.id.guilds_item_mentions);
+                        i = C5419R.id.guilds_item_mentions;
+                        TextView textView = (TextView) view.findViewById(C5419R.id.guilds_item_mentions);
                         if (textView != null) {
-                            i = R.id.guilds_item_selected;
-                            View viewFindViewById2 = view.findViewById(R.id.guilds_item_selected);
+                            i = C5419R.id.guilds_item_selected;
+                            View viewFindViewById2 = view.findViewById(C5419R.id.guilds_item_selected);
                             if (viewFindViewById2 != null) {
-                                i = R.id.guilds_item_unread;
-                                ImageView imageView = (ImageView) view.findViewById(R.id.guilds_item_unread);
+                                i = C5419R.id.guilds_item_unread;
+                                ImageView imageView = (ImageView) view.findViewById(C5419R.id.guilds_item_unread);
                                 if (imageView != null) {
-                                    i = R.id.guilds_item_voice;
-                                    ImageView imageView2 = (ImageView) view.findViewById(R.id.guilds_item_voice);
+                                    i = C5419R.id.guilds_item_voice;
+                                    ImageView imageView2 = (ImageView) view.findViewById(C5419R.id.guilds_item_voice);
                                     if (imageView2 != null) {
                                         WidgetGuildsListItemFolderBinding widgetGuildsListItemFolderBinding = new WidgetGuildsListItemFolderBinding((RelativeLayout) view, serverFolderView, frameLayout, viewFindViewById, textView, viewFindViewById2, imageView, imageView2);
-                                        m.checkNotNullExpressionValue(widgetGuildsListItemFolderBinding, "WidgetGuildsListItemFolderBinding.bind(view)");
+                                        Intrinsics3.checkNotNullExpressionValue(widgetGuildsListItemFolderBinding, "WidgetGuildsListItemFolderBinding.bind(view)");
                                         this.binding = widgetGuildsListItemFolderBinding;
-                                        m.checkNotNullExpressionValue(frameLayout, "binding.guildsItemFolderContainer");
+                                        Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.guildsItemFolderContainer");
                                         frameLayout.setClipToOutline(true);
                                         return;
                                     }
@@ -162,26 +162,26 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
 
         public final void configure(GuildListItem.FolderItem data) throws Resources.NotFoundException {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             this.data = data;
             this.color = data.getColor() != null ? Integer.valueOf((int) (r2.intValue() + 4278190080L)) : null;
             this.numChildren = data.isOpen() ? data.getGuilds().size() : 0;
-            this.binding.a.setOnClickListener(new GuildListViewHolder$FolderViewHolder$configure$2(this, data));
-            ServerFolderView serverFolderView = this.binding.f2460b;
+            this.binding.f17098a.setOnClickListener(new GuildListViewHolder2(this, data));
+            ServerFolderView serverFolderView = this.binding.f17099b;
             boolean isPendingGuildsFolder = data.getIsPendingGuildsFolder();
             long folderId = data.getFolderId();
             boolean zIsOpen = data.isOpen();
             List<Guild> guilds = data.getGuilds();
             Integer color = data.getColor();
             Objects.requireNonNull(serverFolderView);
-            m.checkNotNullParameter(guilds, "guilds");
+            Intrinsics3.checkNotNullParameter(guilds, "guilds");
             if (isPendingGuildsFolder) {
                 serverFolderView.folderId = Long.valueOf(folderId);
                 serverFolderView.isOpen = zIsOpen;
-                GridLayout gridLayout = serverFolderView.binding.g;
-                m.checkNotNullExpressionValue(gridLayout, "binding.guildViews");
+                GridLayout gridLayout = serverFolderView.binding.f911g;
+                Intrinsics3.checkNotNullExpressionValue(gridLayout, "binding.guildViews");
                 gridLayout.setVisibility(zIsOpen ? 0 : 8);
-                serverFolderView.binding.f126b.setImageDrawable(ContextCompat.getDrawable(serverFolderView.getContext(), R.drawable.ic_guild_list_pending_folder));
+                serverFolderView.binding.f906b.setImageDrawable(ContextCompat.getDrawable(serverFolderView.getContext(), C5419R.drawable.ic_guild_list_pending_folder));
             } else {
                 Long l = serverFolderView.folderId;
                 boolean z2 = (l == null || l.longValue() != folderId || serverFolderView.isOpen == zIsOpen) ? false : true;
@@ -189,68 +189,68 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
                 if (zIsOpen) {
                     serverFolderView.isOpen = true;
                     if (z2) {
-                        serverFolderView.b(R.anim.anim_folder_slide_in_down);
+                        serverFolderView.m8556b(C5419R.anim.anim_folder_slide_in_down);
                     } else {
-                        serverFolderView.a();
+                        serverFolderView.m8555a();
                     }
-                    ImageViewCompat.setImageTintList(serverFolderView.binding.f126b, ColorStateList.valueOf((int) ((color != null ? color.intValue() : ColorCompat.getThemedColor(serverFolderView.getContext(), R.attr.color_brand_500)) + 4278190080L)));
+                    ImageViewCompat.setImageTintList(serverFolderView.binding.f906b, ColorStateList.valueOf((int) ((color != null ? color.intValue() : ColorCompat.getThemedColor(serverFolderView.getContext(), C5419R.attr.color_brand_500)) + 4278190080L)));
                 } else {
                     serverFolderView.isOpen = false;
                     if (z2) {
-                        serverFolderView.b(R.anim.anim_folder_slide_out_up);
+                        serverFolderView.m8556b(C5419R.anim.anim_folder_slide_out_up);
                     } else {
-                        serverFolderView.a();
+                        serverFolderView.m8555a();
                     }
-                    h3 h3Var = serverFolderView.binding;
+                    ViewServerFolderBinding viewServerFolderBinding = serverFolderView.binding;
                     int i = 0;
-                    for (Object obj : n.listOf((Object[]) new GuildView[]{h3Var.c, h3Var.d, h3Var.e, h3Var.f})) {
+                    for (Object obj : Collections2.listOf((Object[]) new GuildView[]{viewServerFolderBinding.f907c, viewServerFolderBinding.f908d, viewServerFolderBinding.f909e, viewServerFolderBinding.f910f})) {
                         int i2 = i + 1;
                         if (i < 0) {
-                            n.throwIndexOverflow();
+                            Collections2.throwIndexOverflow();
                         }
                         GuildView guildView = (GuildView) obj;
-                        if (n.getLastIndex(guilds) >= i) {
+                        if (Collections2.getLastIndex(guilds) >= i) {
                             Guild guild = guilds.get(i);
                             String forGuild$default = guild.hasIcon() ? IconUtils.getForGuild$default(guild, IconUtils.DEFAULT_ICON, false, null, 12, null) : null;
-                            m.checkNotNullExpressionValue(guildView, "guildView");
+                            Intrinsics3.checkNotNullExpressionValue(guildView, "guildView");
                             guildView.setVisibility(0);
-                            guildView.a(forGuild$default, guild.getShortName());
+                            guildView.m8545a(forGuild$default, guild.getShortName());
                         } else {
-                            m.checkNotNullExpressionValue(guildView, "guildView");
+                            Intrinsics3.checkNotNullExpressionValue(guildView, "guildView");
                             guildView.setVisibility(8);
                         }
                         i = i2;
                     }
                 }
             }
-            View view = this.binding.f;
-            m.checkNotNullExpressionValue(view, "binding.guildsItemSelected");
+            View view = this.binding.f17103f;
+            Intrinsics3.checkNotNullExpressionValue(view, "binding.guildsItemSelected");
             view.setVisibility(!data.isOpen() && data.isAnyGuildSelected() ? 0 : 8);
-            ImageView imageView = this.binding.g;
-            m.checkNotNullExpressionValue(imageView, "binding.guildsItemUnread");
+            ImageView imageView = this.binding.f17104g;
+            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.guildsItemUnread");
             imageView.setVisibility(!data.isOpen() && data.getIsUnread() ? 0 : 8);
-            ImageView imageView2 = this.binding.h;
+            ImageView imageView2 = this.binding.f17105h;
             imageView2.setActivated(data.isAnyGuildConnectedToVoice());
             imageView2.setVisibility(!data.isOpen() && data.isAnyGuildConnectedToVoice() ? 0 : 8);
-            imageView2.setImageResource(data.isAnyGuildConnectedToStageChannel() ? R.drawable.ic_channel_stage_24dp_white : R.drawable.ic_volume_up_white_24dp);
-            View view2 = this.binding.d;
-            m.checkNotNullExpressionValue(view2, "binding.guildsItemHighlight");
+            imageView2.setImageResource(data.isAnyGuildConnectedToStageChannel() ? C5419R.drawable.ic_channel_stage_24dp_white : C5419R.drawable.ic_volume_up_white_24dp);
+            View view2 = this.binding.f17101d;
+            Intrinsics3.checkNotNullExpressionValue(view2, "binding.guildsItemHighlight");
             view2.setVisibility(data.isTargetedForFolderAddition() ? 0 : 8);
             int mentionCount = data.getMentionCount();
-            String i18nPluralString = mentionCount > 0 ? StringResourceUtilsKt.getI18nPluralString(a.x(this.itemView, "itemView", "itemView.context"), R.plurals.guild_folder_tooltip_a11y_label_mentions, mentionCount, Integer.valueOf(mentionCount)) : "";
+            String i18nPluralString = mentionCount > 0 ? StringResourceUtils.getI18nPluralString(outline.m885x(this.itemView, "itemView", "itemView.context"), C5419R.plurals.guild_folder_tooltip_a11y_label_mentions, mentionCount, Integer.valueOf(mentionCount)) : "";
             View view3 = this.itemView;
-            m.checkNotNullExpressionValue(view3, "itemView");
-            CharSequence charSequenceJ = b.j(view3, data.isOpen() ? R.string.expanded : R.string.collapsed, new Object[0], null, 4);
+            Intrinsics3.checkNotNullExpressionValue(view3, "itemView");
+            CharSequence charSequenceM218j = FormatUtils.m218j(view3, data.isOpen() ? C5419R.string.expanded : C5419R.string.collapsed, new Object[0], null, 4);
             View view4 = this.itemView;
-            m.checkNotNullExpressionValue(view4, "itemView");
+            Intrinsics3.checkNotNullExpressionValue(view4, "itemView");
             View view5 = this.itemView;
-            m.checkNotNullExpressionValue(view5, "itemView");
-            view4.setContentDescription(b.j(view5, R.string.guild_folder_tooltip_a11y_label_with_expanded_state, new Object[]{data.getName(), i18nPluralString, charSequenceJ}, null, 4));
+            Intrinsics3.checkNotNullExpressionValue(view5, "itemView");
+            view4.setContentDescription(FormatUtils.m218j(view5, C5419R.string.guild_folder_tooltip_a11y_label_with_expanded_state, new Object[]{data.getName(), i18nPluralString, charSequenceM218j}, null, 4));
             View view6 = this.itemView;
-            m.checkNotNullExpressionValue(view6, "itemView");
-            ViewExtensions.setOnLongClickListenerConsumeClick(view6, new GuildListViewHolder$FolderViewHolder$configure$4(this, data));
-            TextView textView = this.binding.e;
-            m.checkNotNullExpressionValue(textView, "binding.guildsItemMentions");
+            Intrinsics3.checkNotNullExpressionValue(view6, "itemView");
+            ViewExtensions.setOnLongClickListenerConsumeClick(view6, new GuildListViewHolder3(this, data));
+            TextView textView = this.binding.f17102e;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildsItemMentions");
             configureMentionsCount(textView, data.isOpen() ? 0 : data.getMentionCount());
         }
 
@@ -265,19 +265,19 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         @Override // com.discord.widgets.guilds.list.GuildListViewHolder
         public void onDragEnded(boolean wasMerge) {
             this.isDragging = false;
-            ServerFolderView serverFolderView = this.binding.f2460b;
-            m.checkNotNullExpressionValue(serverFolderView, "binding.guildsItemFolder");
+            ServerFolderView serverFolderView = this.binding.f17099b;
+            Intrinsics3.checkNotNullExpressionValue(serverFolderView, "binding.guildsItemFolder");
             serverFolderView.setBackground(null);
         }
 
         @Override // com.discord.widgets.guilds.list.GuildListViewHolder
         public void onDragStarted() {
             this.isDragging = true;
-            ServerFolderView serverFolderView = this.binding.f2460b;
-            m.checkNotNullExpressionValue(serverFolderView, "binding.guildsItemFolder");
-            ServerFolderView serverFolderView2 = this.binding.f2460b;
-            m.checkNotNullExpressionValue(serverFolderView2, "binding.guildsItemFolder");
-            serverFolderView.setBackground(ContextCompat.getDrawable(serverFolderView2.getContext(), R.drawable.drawable_squircle_primary_600));
+            ServerFolderView serverFolderView = this.binding.f17099b;
+            Intrinsics3.checkNotNullExpressionValue(serverFolderView, "binding.guildsItemFolder");
+            ServerFolderView serverFolderView2 = this.binding.f17099b;
+            Intrinsics3.checkNotNullExpressionValue(serverFolderView2, "binding.guildsItemFolder");
+            serverFolderView.setBackground(ContextCompat.getDrawable(serverFolderView2.getContext(), C5419R.drawable.drawable_squircle_primary_600));
         }
 
         public final void setColor(Integer num) {
@@ -298,20 +298,20 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         /* JADX WARN: Multi-variable type inference failed */
         public FriendsViewHolder(View view, Function1<? super GuildListItem.FriendsItem, Unit> function1) {
             super(view, null);
-            m.checkNotNullParameter(view, "view");
-            m.checkNotNullParameter(function1, "onClicked");
+            Intrinsics3.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(function1, "onClicked");
             this.onClicked = function1;
-            int i = R.id.guilds_item_profile_avatar;
-            ImageView imageView = (ImageView) view.findViewById(R.id.guilds_item_profile_avatar);
+            int i = C5419R.id.guilds_item_profile_avatar;
+            ImageView imageView = (ImageView) view.findViewById(C5419R.id.guilds_item_profile_avatar);
             if (imageView != null) {
-                i = R.id.guilds_item_profile_avatar_wrap;
-                FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.guilds_item_profile_avatar_wrap);
+                i = C5419R.id.guilds_item_profile_avatar_wrap;
+                FrameLayout frameLayout = (FrameLayout) view.findViewById(C5419R.id.guilds_item_profile_avatar_wrap);
                 if (frameLayout != null) {
-                    i = R.id.guilds_item_profile_selected;
-                    ImageView imageView2 = (ImageView) view.findViewById(R.id.guilds_item_profile_selected);
+                    i = C5419R.id.guilds_item_profile_selected;
+                    ImageView imageView2 = (ImageView) view.findViewById(C5419R.id.guilds_item_profile_selected);
                     if (imageView2 != null) {
                         WidgetGuildsListItemProfileBinding widgetGuildsListItemProfileBinding = new WidgetGuildsListItemProfileBinding((RelativeLayout) view, imageView, frameLayout, imageView2);
-                        m.checkNotNullExpressionValue(widgetGuildsListItemProfileBinding, "WidgetGuildsListItemProfileBinding.bind(view)");
+                        Intrinsics3.checkNotNullExpressionValue(widgetGuildsListItemProfileBinding, "WidgetGuildsListItemProfileBinding.bind(view)");
                         this.binding = widgetGuildsListItemProfileBinding;
                         return;
                     }
@@ -325,38 +325,38 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
 
         public final void configure(GuildListItem.FriendsItem data) {
-            m.checkNotNullParameter(data, "data");
-            ImageView imageView = this.binding.d;
-            m.checkNotNullExpressionValue(imageView, "binding.guildsItemProfileSelected");
+            Intrinsics3.checkNotNullParameter(data, "data");
+            ImageView imageView = this.binding.f17123d;
+            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.guildsItemProfileSelected");
             imageView.setVisibility(data.isSelected() ? 0 : 8);
-            this.binding.a.setOnClickListener(new GuildListViewHolder$FriendsViewHolder$configure$1(this, data));
+            this.binding.f17120a.setOnClickListener(new GuildListViewHolder4(this, data));
             if (data.isSelected()) {
-                this.binding.c.setBackgroundResource(R.drawable.drawable_squircle_brand_500);
-                FrameLayout frameLayout = this.binding.c;
-                m.checkNotNullExpressionValue(frameLayout, "binding.guildsItemProfileAvatarWrap");
+                this.binding.f17122c.setBackgroundResource(C5419R.drawable.drawable_squircle_brand_500);
+                FrameLayout frameLayout = this.binding.f17122c;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.guildsItemProfileAvatarWrap");
                 frameLayout.setBackgroundTintList(null);
             } else {
-                this.binding.c.setBackgroundResource(R.drawable.drawable_circle_black);
-                FrameLayout frameLayout2 = this.binding.c;
-                m.checkNotNullExpressionValue(frameLayout2, "binding.guildsItemProfileAvatarWrap");
-                int themedColor = ColorCompat.getThemedColor(frameLayout2, R.attr.colorBackgroundSecondary);
-                FrameLayout frameLayout3 = this.binding.c;
-                m.checkNotNullExpressionValue(frameLayout3, "binding.guildsItemProfileAvatarWrap");
+                this.binding.f17122c.setBackgroundResource(C5419R.drawable.drawable_circle_black);
+                FrameLayout frameLayout2 = this.binding.f17122c;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout2, "binding.guildsItemProfileAvatarWrap");
+                int themedColor = ColorCompat.getThemedColor(frameLayout2, C5419R.attr.colorBackgroundSecondary);
+                FrameLayout frameLayout3 = this.binding.f17122c;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout3, "binding.guildsItemProfileAvatarWrap");
                 frameLayout3.setBackgroundTintList(ColorStateList.valueOf(themedColor));
             }
             if (data.isSelected()) {
-                ImageView imageView2 = this.binding.f2464b;
-                m.checkNotNullExpressionValue(imageView2, "binding.guildsItemProfileAvatar");
+                ImageView imageView2 = this.binding.f17121b;
+                Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.guildsItemProfileAvatar");
                 View view = this.itemView;
-                m.checkNotNullExpressionValue(view, "itemView");
-                imageView2.setImageTintList(ColorStateList.valueOf(ColorCompat.getColor(view, R.color.white)));
+                Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+                imageView2.setImageTintList(ColorStateList.valueOf(ColorCompat.getColor(view, C5419R.color.white)));
                 return;
             }
-            ImageView imageView3 = this.binding.f2464b;
-            m.checkNotNullExpressionValue(imageView3, "binding.guildsItemProfileAvatar");
+            ImageView imageView3 = this.binding.f17121b;
+            Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.guildsItemProfileAvatar");
             View view2 = this.itemView;
-            m.checkNotNullExpressionValue(view2, "itemView");
-            imageView3.setImageTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(view2, R.attr.primary_300)));
+            Intrinsics3.checkNotNullExpressionValue(view2, "itemView");
+            imageView3.setImageTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(view2, C5419R.attr.primary_300)));
         }
     }
 
@@ -395,33 +395,33 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         /* JADX WARN: Multi-variable type inference failed */
         public GuildViewHolder(View view, @ColorInt int i, @ColorInt int i2, Function1<? super GuildListItem.GuildItem, Unit> function1, Function1<? super GuildListItem.GuildItem, Unit> function12) {
             super(view, null);
-            m.checkNotNullParameter(view, "itemView");
-            m.checkNotNullParameter(function1, "onClicked");
-            m.checkNotNullParameter(function12, "onLongPressed");
+            Intrinsics3.checkNotNullParameter(view, "itemView");
+            Intrinsics3.checkNotNullParameter(function1, "onClicked");
+            Intrinsics3.checkNotNullParameter(function12, "onLongPressed");
             this.overlayColor = i;
             this.overlayColorInFolder = i2;
             this.onClicked = function1;
             this.onLongPressed = function12;
-            int i3 = R.id.guilds_item_selected;
-            ImageView imageView = (ImageView) view.findViewById(R.id.guilds_item_selected);
+            int i3 = C5419R.id.guilds_item_selected;
+            ImageView imageView = (ImageView) view.findViewById(C5419R.id.guilds_item_selected);
             if (imageView != null) {
-                i3 = R.id.guilds_item_unread;
-                ImageView imageView2 = (ImageView) view.findViewById(R.id.guilds_item_unread);
+                i3 = C5419R.id.guilds_item_unread;
+                ImageView imageView2 = (ImageView) view.findViewById(C5419R.id.guilds_item_unread);
                 if (imageView2 != null) {
                     WidgetGuildsListItemGuildVerticalBinding widgetGuildsListItemGuildVerticalBinding = new WidgetGuildsListItemGuildVerticalBinding((RelativeLayout) view, imageView, imageView2);
-                    m.checkNotNullExpressionValue(widgetGuildsListItemGuildVerticalBinding, "WidgetGuildsListItemGuil…calBinding.bind(itemView)");
+                    Intrinsics3.checkNotNullExpressionValue(widgetGuildsListItemGuildVerticalBinding, "WidgetGuildsListItemGuil…calBinding.bind(itemView)");
                     this.binding = widgetGuildsListItemGuildVerticalBinding;
-                    WidgetGuildsListItemGuildBinding widgetGuildsListItemGuildBindingA = WidgetGuildsListItemGuildBinding.a(view);
-                    m.checkNotNullExpressionValue(widgetGuildsListItemGuildBindingA, "WidgetGuildsListItemGuildBinding.bind(itemView)");
-                    this.bindingGuild = widgetGuildsListItemGuildBindingA;
-                    this.defaultAvatarSize = view.getResources().getDimensionPixelSize(R.dimen.avatar_size_large);
-                    this.targetedAvatarSize = view.getResources().getDimensionPixelSize(R.dimen.folder_guild_size);
-                    this.targetedAvatarMargin = view.getResources().getDimensionPixelSize(R.dimen.folder_guild_outer_margin);
-                    FrameLayout frameLayout = widgetGuildsListItemGuildBindingA.f;
-                    m.checkNotNullExpressionValue(frameLayout, "bindingGuild.guildsItemAvatarWrap");
+                    WidgetGuildsListItemGuildBinding widgetGuildsListItemGuildBindingM8419a = WidgetGuildsListItemGuildBinding.m8419a(view);
+                    Intrinsics3.checkNotNullExpressionValue(widgetGuildsListItemGuildBindingM8419a, "WidgetGuildsListItemGuildBinding.bind(itemView)");
+                    this.bindingGuild = widgetGuildsListItemGuildBindingM8419a;
+                    this.defaultAvatarSize = view.getResources().getDimensionPixelSize(C5419R.dimen.avatar_size_large);
+                    this.targetedAvatarSize = view.getResources().getDimensionPixelSize(C5419R.dimen.folder_guild_size);
+                    this.targetedAvatarMargin = view.getResources().getDimensionPixelSize(C5419R.dimen.folder_guild_outer_margin);
+                    FrameLayout frameLayout = widgetGuildsListItemGuildBindingM8419a.f17111f;
+                    Intrinsics3.checkNotNullExpressionValue(frameLayout, "bindingGuild.guildsItemAvatarWrap");
                     frameLayout.setClipToOutline(true);
-                    SimpleDraweeView simpleDraweeView = widgetGuildsListItemGuildBindingA.d;
-                    m.checkNotNullExpressionValue(simpleDraweeView, "bindingGuild.guildsItemAvatar");
+                    SimpleDraweeView simpleDraweeView = widgetGuildsListItemGuildBindingM8419a.f17109d;
+                    Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "bindingGuild.guildsItemAvatar");
                     this.imageRequestSize = IconUtils.getMediaProxySize(simpleDraweeView.getLayoutParams().height);
                     return;
                 }
@@ -439,87 +439,87 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
 
         private final void configureApplicationStatus(ApplicationStatus applicationStatus, boolean isInFolder, boolean hasMentions) {
             if (applicationStatus == null || hasMentions) {
-                ImageView imageView = this.bindingGuild.f2461b;
-                m.checkNotNullExpressionValue(imageView, "bindingGuild.guildsItemApplicationStatus");
+                ImageView imageView = this.bindingGuild.f17107b;
+                Intrinsics3.checkNotNullExpressionValue(imageView, "bindingGuild.guildsItemApplicationStatus");
                 imageView.setVisibility(8);
                 return;
             }
-            int i = isInFolder ? R.attr.colorBackgroundSecondary : R.attr.colorBackgroundTertiary;
-            ImageView imageView2 = this.bindingGuild.f2461b;
-            m.checkNotNullExpressionValue(imageView2, "bindingGuild.guildsItemApplicationStatus");
+            int i = isInFolder ? C5419R.attr.colorBackgroundSecondary : C5419R.attr.colorBackgroundTertiary;
+            ImageView imageView2 = this.bindingGuild.f17107b;
+            Intrinsics3.checkNotNullExpressionValue(imageView2, "bindingGuild.guildsItemApplicationStatus");
             int themedColor = ColorCompat.getThemedColor(imageView2, i);
-            ImageView imageView3 = this.bindingGuild.f2461b;
-            m.checkNotNullExpressionValue(imageView3, "bindingGuild.guildsItemApplicationStatus");
+            ImageView imageView3 = this.bindingGuild.f17107b;
+            Intrinsics3.checkNotNullExpressionValue(imageView3, "bindingGuild.guildsItemApplicationStatus");
             imageView3.setBackgroundTintList(ColorStateList.valueOf(themedColor));
-            ImageView imageView4 = this.bindingGuild.f2461b;
-            m.checkNotNullExpressionValue(imageView4, "bindingGuild.guildsItemApplicationStatus");
+            ImageView imageView4 = this.bindingGuild.f17107b;
+            Intrinsics3.checkNotNullExpressionValue(imageView4, "bindingGuild.guildsItemApplicationStatus");
             imageView4.setVisibility(0);
             int iOrdinal = applicationStatus.ordinal();
             if (iOrdinal == 0) {
-                this.bindingGuild.f2461b.setImageResource(R.drawable.ic_application_status_started);
+                this.bindingGuild.f17107b.setImageResource(C5419R.drawable.ic_application_status_started);
                 return;
             }
             if (iOrdinal == 1) {
-                this.bindingGuild.f2461b.setImageResource(R.drawable.ic_application_status_pending);
+                this.bindingGuild.f17107b.setImageResource(C5419R.drawable.ic_application_status_pending);
                 return;
             }
             if (iOrdinal == 2) {
-                this.bindingGuild.f2461b.setImageResource(R.drawable.ic_application_status_rejected);
+                this.bindingGuild.f17107b.setImageResource(C5419R.drawable.ic_application_status_rejected);
             } else {
                 if (iOrdinal == 3) {
-                    this.bindingGuild.f2461b.setImageResource(R.drawable.ic_application_status_approved);
+                    this.bindingGuild.f17107b.setImageResource(C5419R.drawable.ic_application_status_approved);
                     return;
                 }
-                ImageView imageView5 = this.bindingGuild.f2461b;
-                m.checkNotNullExpressionValue(imageView5, "bindingGuild.guildsItemApplicationStatus");
+                ImageView imageView5 = this.bindingGuild.f17107b;
+                Intrinsics3.checkNotNullExpressionValue(imageView5, "bindingGuild.guildsItemApplicationStatus");
                 imageView5.setVisibility(8);
             }
         }
 
         private final void configureDraggingAlpha() {
             if (this.isDragging) {
-                FrameLayout frameLayout = this.bindingGuild.f;
-                m.checkNotNullExpressionValue(frameLayout, "bindingGuild.guildsItemAvatarWrap");
+                FrameLayout frameLayout = this.bindingGuild.f17111f;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout, "bindingGuild.guildsItemAvatarWrap");
                 frameLayout.setAlpha(0.5f);
             } else {
-                FrameLayout frameLayout2 = this.bindingGuild.f;
-                m.checkNotNullExpressionValue(frameLayout2, "bindingGuild.guildsItemAvatarWrap");
+                FrameLayout frameLayout2 = this.bindingGuild.f17111f;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout2, "bindingGuild.guildsItemAvatarWrap");
                 frameLayout2.setAlpha(1.0f);
             }
         }
 
         private final void configureGuildIconBackground(boolean isSelected, boolean isInFolder, boolean guildHasIcon) {
-            SimpleDraweeView simpleDraweeView = this.bindingGuild.d;
-            m.checkNotNullExpressionValue(simpleDraweeView, "bindingGuild.guildsItemAvatar");
-            float dimensionPixelSize = simpleDraweeView.getResources().getDimensionPixelSize(R.dimen.guild_icon_radius);
-            SimpleDraweeView simpleDraweeView2 = this.bindingGuild.d;
-            m.checkNotNullExpressionValue(simpleDraweeView2, "bindingGuild.guildsItemAvatar");
+            SimpleDraweeView simpleDraweeView = this.bindingGuild.f17109d;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "bindingGuild.guildsItemAvatar");
+            float dimensionPixelSize = simpleDraweeView.getResources().getDimensionPixelSize(C5419R.dimen.guild_icon_radius);
+            SimpleDraweeView simpleDraweeView2 = this.bindingGuild.f17109d;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "bindingGuild.guildsItemAvatar");
             MGImages.setRoundingParams$default(simpleDraweeView2, dimensionPixelSize, !isSelected, Integer.valueOf(isInFolder ? this.overlayColorInFolder : this.overlayColor), null, null, 48, null);
             if (guildHasIcon) {
                 if (isSelected) {
-                    this.bindingGuild.f.setBackgroundResource(R.drawable.drawable_squircle_transparent);
+                    this.bindingGuild.f17111f.setBackgroundResource(C5419R.drawable.drawable_squircle_transparent);
                 } else {
-                    this.bindingGuild.f.setBackgroundResource(R.drawable.drawable_circle_transparent);
+                    this.bindingGuild.f17111f.setBackgroundResource(C5419R.drawable.drawable_circle_transparent);
                 }
-                FrameLayout frameLayout = this.bindingGuild.f;
-                m.checkNotNullExpressionValue(frameLayout, "bindingGuild.guildsItemAvatarWrap");
+                FrameLayout frameLayout = this.bindingGuild.f17111f;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout, "bindingGuild.guildsItemAvatarWrap");
                 frameLayout.setBackgroundTintList(null);
                 return;
             }
             if (isSelected) {
-                this.bindingGuild.f.setBackgroundResource(R.drawable.drawable_squircle_brand_500);
-                FrameLayout frameLayout2 = this.bindingGuild.f;
-                m.checkNotNullExpressionValue(frameLayout2, "bindingGuild.guildsItemAvatarWrap");
+                this.bindingGuild.f17111f.setBackgroundResource(C5419R.drawable.drawable_squircle_brand_500);
+                FrameLayout frameLayout2 = this.bindingGuild.f17111f;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout2, "bindingGuild.guildsItemAvatarWrap");
                 frameLayout2.setBackgroundTintList(null);
                 return;
             }
-            this.bindingGuild.f.setBackgroundResource(R.drawable.drawable_circle_black);
-            int i = isInFolder ? R.attr.colorBackgroundSecondary : R.attr.colorBackgroundPrimary;
-            FrameLayout frameLayout3 = this.bindingGuild.f;
-            m.checkNotNullExpressionValue(frameLayout3, "bindingGuild.guildsItemAvatarWrap");
+            this.bindingGuild.f17111f.setBackgroundResource(C5419R.drawable.drawable_circle_black);
+            int i = isInFolder ? C5419R.attr.colorBackgroundSecondary : C5419R.attr.colorBackgroundPrimary;
+            FrameLayout frameLayout3 = this.bindingGuild.f17111f;
+            Intrinsics3.checkNotNullExpressionValue(frameLayout3, "bindingGuild.guildsItemAvatarWrap");
             int themedColor = ColorCompat.getThemedColor(frameLayout3, i);
-            FrameLayout frameLayout4 = this.bindingGuild.f;
-            m.checkNotNullExpressionValue(frameLayout4, "bindingGuild.guildsItemAvatarWrap");
+            FrameLayout frameLayout4 = this.bindingGuild.f17111f;
+            Intrinsics3.checkNotNullExpressionValue(frameLayout4, "bindingGuild.guildsItemAvatarWrap");
             frameLayout4.setBackgroundTintList(ColorStateList.valueOf(themedColor));
         }
 
@@ -529,63 +529,63 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
             try {
                 zContains = guild.getFeatures().contains(GuildFeature.ANIMATED_ICON);
             } catch (Exception e) {
-                AppLog.g.e("Guild is missing feature set", e, g0.mapOf(o.to(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID, String.valueOf(guild.getId()))));
+                AppLog.f14950g.mo8364e("Guild is missing feature set", e, MapsJVM.mapOf(Tuples.m10073to(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID, String.valueOf(guild.getId()))));
                 zContains = false;
             }
-            if (zContains && (icon = guild.getIcon()) != null && t.startsWith$default(icon, "a", false, 2, null)) {
-                SimpleDraweeView simpleDraweeView = this.bindingGuild.d;
-                m.checkNotNullExpressionValue(simpleDraweeView, "bindingGuild.guildsItemAvatar");
-                simpleDraweeView.getHierarchy().o(1, null);
-                SimpleDraweeView simpleDraweeView2 = this.bindingGuild.d;
-                m.checkNotNullExpressionValue(simpleDraweeView2, "bindingGuild.guildsItemAvatar");
+            if (zContains && (icon = guild.getIcon()) != null && StringsJVM.startsWith$default(icon, "a", false, 2, null)) {
+                SimpleDraweeView simpleDraweeView = this.bindingGuild.f17109d;
+                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "bindingGuild.guildsItemAvatar");
+                simpleDraweeView.getHierarchy().m8679o(1, null);
+                SimpleDraweeView simpleDraweeView2 = this.bindingGuild.f17109d;
+                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "bindingGuild.guildsItemAvatar");
                 GenericDraweeHierarchy hierarchy = simpleDraweeView2.getHierarchy();
-                m.checkNotNullExpressionValue(hierarchy, "bindingGuild.guildsItemAvatar.hierarchy");
-                f fVar = hierarchy.e;
-                fVar.w = 0;
-                if (fVar.v == 1) {
-                    fVar.v = 0;
+                Intrinsics3.checkNotNullExpressionValue(hierarchy, "bindingGuild.guildsItemAvatar.hierarchy");
+                FadeDrawable fadeDrawable = hierarchy.f19510e;
+                fadeDrawable.f3355w = 0;
+                if (fadeDrawable.f3354v == 1) {
+                    fadeDrawable.f3354v = 0;
                 }
             } else {
-                SimpleDraweeView simpleDraweeView3 = this.bindingGuild.d;
-                m.checkNotNullExpressionValue(simpleDraweeView3, "bindingGuild.guildsItemAvatar");
-                simpleDraweeView3.getHierarchy().p(R.drawable.asset_default_avatar_64dp);
-                SimpleDraweeView simpleDraweeView4 = this.bindingGuild.d;
-                m.checkNotNullExpressionValue(simpleDraweeView4, "bindingGuild.guildsItemAvatar");
+                SimpleDraweeView simpleDraweeView3 = this.bindingGuild.f17109d;
+                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "bindingGuild.guildsItemAvatar");
+                simpleDraweeView3.getHierarchy().m8680p(C5419R.drawable.asset_default_avatar_64dp);
+                SimpleDraweeView simpleDraweeView4 = this.bindingGuild.f17109d;
+                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView4, "bindingGuild.guildsItemAvatar");
                 GenericDraweeHierarchy hierarchy2 = simpleDraweeView4.getHierarchy();
-                m.checkNotNullExpressionValue(hierarchy2, "bindingGuild.guildsItemAvatar.hierarchy");
-                f fVar2 = hierarchy2.e;
-                fVar2.w = 50;
-                if (fVar2.v == 1) {
-                    fVar2.v = 0;
+                Intrinsics3.checkNotNullExpressionValue(hierarchy2, "bindingGuild.guildsItemAvatar.hierarchy");
+                FadeDrawable fadeDrawable2 = hierarchy2.f19510e;
+                fadeDrawable2.f3355w = 50;
+                if (fadeDrawable2.f3354v == 1) {
+                    fadeDrawable2.f3354v = 0;
                 }
             }
             if (!guild.hasIcon()) {
-                SimpleDraweeView simpleDraweeView5 = this.bindingGuild.d;
-                m.checkNotNullExpressionValue(simpleDraweeView5, "bindingGuild.guildsItemAvatar");
+                SimpleDraweeView simpleDraweeView5 = this.bindingGuild.f17109d;
+                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView5, "bindingGuild.guildsItemAvatar");
                 simpleDraweeView5.setVisibility(8);
                 return;
             }
             String forGuild$default = IconUtils.getForGuild$default(guild, null, isSelected, null, 10, null);
-            StringBuilder sbU = a.U("?size=");
-            sbU.append(this.imageRequestSize);
-            String strStringPlus = m.stringPlus(forGuild$default, sbU.toString());
-            SimpleDraweeView simpleDraweeView6 = this.bindingGuild.d;
-            m.checkNotNullExpressionValue(simpleDraweeView6, "bindingGuild.guildsItemAvatar");
+            StringBuilder sbM833U = outline.m833U("?size=");
+            sbM833U.append(this.imageRequestSize);
+            String strStringPlus = Intrinsics3.stringPlus(forGuild$default, sbM833U.toString());
+            SimpleDraweeView simpleDraweeView6 = this.bindingGuild.f17109d;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView6, "bindingGuild.guildsItemAvatar");
             int i = this.imageRequestSize;
             MGImages.setImage$default(simpleDraweeView6, strStringPlus, i, i, false, null, null, 112, null);
-            SimpleDraweeView simpleDraweeView7 = this.bindingGuild.d;
-            m.checkNotNullExpressionValue(simpleDraweeView7, "bindingGuild.guildsItemAvatar");
+            SimpleDraweeView simpleDraweeView7 = this.bindingGuild.f17109d;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView7, "bindingGuild.guildsItemAvatar");
             simpleDraweeView7.setVisibility(0);
         }
 
         private final void configureGuildIconPositioning(boolean isTargetedForFolderCreation) {
-            SimpleDraweeView simpleDraweeView = this.bindingGuild.d;
-            m.checkNotNullExpressionValue(simpleDraweeView, "bindingGuild.guildsItemAvatar");
+            SimpleDraweeView simpleDraweeView = this.bindingGuild.f17109d;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "bindingGuild.guildsItemAvatar");
             ViewGroup.LayoutParams layoutParams = simpleDraweeView.getLayoutParams();
             Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams");
             FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) layoutParams;
-            SimpleDraweeView simpleDraweeView2 = this.bindingGuild.d;
-            m.checkNotNullExpressionValue(simpleDraweeView2, "bindingGuild.guildsItemAvatar");
+            SimpleDraweeView simpleDraweeView2 = this.bindingGuild.f17109d;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "bindingGuild.guildsItemAvatar");
             ViewGroup.LayoutParams layoutParams3 = simpleDraweeView2.getLayoutParams();
             Objects.requireNonNull(layoutParams3, "null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams");
             FrameLayout.LayoutParams layoutParams4 = (FrameLayout.LayoutParams) layoutParams3;
@@ -602,23 +602,23 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
                 layoutParams2.width = i3;
             }
             if (isTargetedForFolderCreation) {
-                this.bindingGuild.e.setTextSize(1, TARGETED_AVATAR_TEXT_SIZE_DP);
+                this.bindingGuild.f17110e.setTextSize(1, TARGETED_AVATAR_TEXT_SIZE_DP);
                 int i4 = this.targetedAvatarMargin;
                 layoutParams4.setMargins(i4, i4, 0, 0);
                 int i5 = this.targetedAvatarSize;
                 layoutParams4.height = i5;
                 layoutParams4.width = i5;
             } else {
-                this.bindingGuild.e.setTextSize(2, DEFAULT_AVATAR_TEXT_SIZE_SP);
+                this.bindingGuild.f17110e.setTextSize(2, DEFAULT_AVATAR_TEXT_SIZE_SP);
                 layoutParams4.setMargins(0, 0, 0, 0);
                 layoutParams4.height = -1;
                 layoutParams4.width = -1;
             }
-            SimpleDraweeView simpleDraweeView3 = this.bindingGuild.d;
-            m.checkNotNullExpressionValue(simpleDraweeView3, "bindingGuild.guildsItemAvatar");
+            SimpleDraweeView simpleDraweeView3 = this.bindingGuild.f17109d;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "bindingGuild.guildsItemAvatar");
             simpleDraweeView3.setLayoutParams(layoutParams2);
-            TextView textView = this.bindingGuild.e;
-            m.checkNotNullExpressionValue(textView, "bindingGuild.guildsItemAvatarText");
+            TextView textView = this.bindingGuild.f17110e;
+            Intrinsics3.checkNotNullExpressionValue(textView, "bindingGuild.guildsItemAvatarText");
             textView.setLayoutParams(layoutParams4);
         }
 
@@ -633,25 +633,25 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
             int themedColor;
             GuildListItem.GuildItem guildItem;
             Guild guild;
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             GuildListItem.GuildItem guildItem2 = this.data;
             String icon = (guildItem2 == null || (guild = guildItem2.getGuild()) == null) ? null : guild.getIcon();
             GuildListItem.GuildItem guildItem3 = this.data;
             boolean z2 = guildItem3 == null || guildItem3.isSelected() != data.isSelected();
-            boolean z3 = icon == null || (m.areEqual(icon, data.getGuild().getIcon()) ^ true);
+            boolean z3 = icon == null || (Intrinsics3.areEqual(icon, data.getGuild().getIcon()) ^ true);
             GuildListItem.GuildItem guildItem4 = this.data;
             boolean z4 = (guildItem4 != null ? Boolean.valueOf(guildItem4.isTargetedForFolderCreation()) : null) != null && ((guildItem = this.data) == null || guildItem.isTargetedForFolderCreation() != data.isTargetedForFolderCreation());
             this.data = data;
             View view = this.itemView;
-            m.checkNotNullExpressionValue(view, "itemView");
+            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
             view.setVisibility(0);
             View view2 = this.itemView;
-            m.checkNotNullExpressionValue(view2, "itemView");
+            Intrinsics3.checkNotNullExpressionValue(view2, "itemView");
             view2.setSelected(data.isSelected());
-            this.itemView.setOnClickListener(new GuildListViewHolder$GuildViewHolder$configure$1(this, data));
+            this.itemView.setOnClickListener(new GuildListViewHolder5(this, data));
             View view3 = this.itemView;
-            m.checkNotNullExpressionValue(view3, "itemView");
-            ViewExtensions.setOnLongClickListenerConsumeClick(view3, new GuildListViewHolder$GuildViewHolder$configure$2(this, data));
+            Intrinsics3.checkNotNullExpressionValue(view3, "itemView");
+            ViewExtensions.setOnLongClickListenerConsumeClick(view3, new GuildListViewHolder6(this, data));
             boolean z5 = data.getFolderId() != null || data.isTargetedForFolderCreation();
             configureGuildIconBackground(data.isSelected(), z5, data.getGuild().hasIcon());
             if (z4) {
@@ -661,46 +661,46 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
                 configureGuildIconImage(data.getGuild(), data.isSelected());
             }
             configureDraggingAlpha();
-            TextView textView = this.bindingGuild.e;
-            m.checkNotNullExpressionValue(textView, "bindingGuild.guildsItemAvatarText");
+            TextView textView = this.bindingGuild.f17110e;
+            Intrinsics3.checkNotNullExpressionValue(textView, "bindingGuild.guildsItemAvatarText");
             textView.setText(data.getGuild().hasIcon() ? null : data.getGuild().getShortName());
             if (z2) {
                 if (data.isSelected()) {
-                    TextView textView2 = this.bindingGuild.e;
-                    m.checkNotNullExpressionValue(textView2, "bindingGuild.guildsItemAvatarText");
-                    themedColor = ColorCompat.getColor(textView2.getContext(), R.color.white);
+                    TextView textView2 = this.bindingGuild.f17110e;
+                    Intrinsics3.checkNotNullExpressionValue(textView2, "bindingGuild.guildsItemAvatarText");
+                    themedColor = ColorCompat.getColor(textView2.getContext(), C5419R.color.white);
                 } else {
-                    TextView textView3 = this.bindingGuild.e;
-                    m.checkNotNullExpressionValue(textView3, "bindingGuild.guildsItemAvatarText");
-                    themedColor = ColorCompat.getThemedColor(textView3.getContext(), R.attr.colorHeaderPrimary);
+                    TextView textView3 = this.bindingGuild.f17110e;
+                    Intrinsics3.checkNotNullExpressionValue(textView3, "bindingGuild.guildsItemAvatarText");
+                    themedColor = ColorCompat.getThemedColor(textView3.getContext(), C5419R.attr.colorHeaderPrimary);
                 }
-                this.bindingGuild.e.setTextColor(themedColor);
+                this.bindingGuild.f17110e.setTextColor(themedColor);
             }
-            TextView textView4 = this.bindingGuild.h;
-            m.checkNotNullExpressionValue(textView4, "bindingGuild.guildsItemMentions");
+            TextView textView4 = this.bindingGuild.f17113h;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "bindingGuild.guildsItemMentions");
             configureMentionsCount(textView4, data.getMentionCount());
             int mentionCount = data.getMentionCount();
-            String i18nPluralString = mentionCount > 0 ? StringResourceUtilsKt.getI18nPluralString(a.x(this.itemView, "itemView", "itemView.context"), R.plurals.guild_tooltip_a11y_label_mentions, mentionCount, Integer.valueOf(mentionCount)) : "";
+            String i18nPluralString = mentionCount > 0 ? StringResourceUtils.getI18nPluralString(outline.m885x(this.itemView, "itemView", "itemView.context"), C5419R.plurals.guild_tooltip_a11y_label_mentions, mentionCount, Integer.valueOf(mentionCount)) : "";
             View view4 = this.itemView;
-            m.checkNotNullExpressionValue(view4, "itemView");
+            Intrinsics3.checkNotNullExpressionValue(view4, "itemView");
             View view5 = this.itemView;
-            m.checkNotNullExpressionValue(view5, "itemView");
-            view4.setContentDescription(b.j(view5, R.string.guild_tooltip_a11y_label, new Object[]{i18nPluralString, data.getGuild().getName()}, null, 4));
-            ImageView imageView = this.bindingGuild.i;
+            Intrinsics3.checkNotNullExpressionValue(view5, "itemView");
+            view4.setContentDescription(FormatUtils.m218j(view5, C5419R.string.guild_tooltip_a11y_label, new Object[]{i18nPluralString, data.getGuild().getName()}, null, 4));
+            ImageView imageView = this.bindingGuild.f17114i;
             imageView.setVisibility(data.isConnectedToVoice() || (data.getHasActiveStageChannel() && !data.getHasActiveScheduledEvent()) ? 0 : 8);
             imageView.setActivated(data.isConnectedToVoice());
-            imageView.setImageResource((!data.isConnectedToVoice() || data.isConnectedToStageChannel()) ? R.drawable.ic_channel_stage_24dp_white : R.drawable.ic_volume_up_white_24dp);
-            ImageView imageView2 = this.bindingGuild.g;
-            m.checkNotNullExpressionValue(imageView2, "bindingGuild.guildsItemEventStatus");
+            imageView.setImageResource((!data.isConnectedToVoice() || data.isConnectedToStageChannel()) ? C5419R.drawable.ic_channel_stage_24dp_white : C5419R.drawable.ic_volume_up_white_24dp);
+            ImageView imageView2 = this.bindingGuild.f17112g;
+            Intrinsics3.checkNotNullExpressionValue(imageView2, "bindingGuild.guildsItemEventStatus");
             imageView2.setVisibility(!data.isConnectedToVoice() && data.getHasActiveScheduledEvent() ? 0 : 8);
-            ImageView imageView3 = this.bindingGuild.c;
-            m.checkNotNullExpressionValue(imageView3, "bindingGuild.guildsItemApplicationStream");
+            ImageView imageView3 = this.bindingGuild.f17108c;
+            Intrinsics3.checkNotNullExpressionValue(imageView3, "bindingGuild.guildsItemApplicationStream");
             imageView3.setVisibility(!data.isConnectedToVoice() && data.getHasOngoingApplicationStream() ? 0 : 8);
-            ImageView imageView4 = this.binding.c;
-            m.checkNotNullExpressionValue(imageView4, "binding.guildsItemUnread");
+            ImageView imageView4 = this.binding.f17117c;
+            Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.guildsItemUnread");
             imageView4.setVisibility(data.getIsUnread() ? 0 : 8);
-            ImageView imageView5 = this.binding.f2462b;
-            m.checkNotNullExpressionValue(imageView5, "binding.guildsItemSelected");
+            ImageView imageView5 = this.binding.f17116b;
+            Intrinsics3.checkNotNullExpressionValue(imageView5, "binding.guildsItemSelected");
             imageView5.setVisibility(data.isSelected() ? 0 : 8);
             configureApplicationStatus(null, z5, mentionCount > 0);
         }
@@ -731,7 +731,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
             super.onDragEnded(wasMerge);
             if (wasMerge) {
                 View view = this.itemView;
-                m.checkNotNullExpressionValue(view, "itemView");
+                Intrinsics3.checkNotNullExpressionValue(view, "itemView");
                 view.setVisibility(8);
             }
             this.isDragging = false;
@@ -756,14 +756,14 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         /* JADX WARN: Multi-variable type inference failed */
         public PrivateChannelViewHolder(View view, Function1<? super GuildListItem.PrivateChannelItem, Unit> function1, Function1<? super GuildListItem.PrivateChannelItem, Unit> function12) {
             super(view, null);
-            m.checkNotNullParameter(view, "view");
-            m.checkNotNullParameter(function1, "onClicked");
-            m.checkNotNullParameter(function12, "onLongPressed");
+            Intrinsics3.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(function1, "onClicked");
+            Intrinsics3.checkNotNullParameter(function12, "onLongPressed");
             this.onClicked = function1;
             this.onLongPressed = function12;
-            WidgetGuildsListItemDmBinding widgetGuildsListItemDmBindingA = WidgetGuildsListItemDmBinding.a(view);
-            m.checkNotNullExpressionValue(widgetGuildsListItemDmBindingA, "WidgetGuildsListItemDmBinding.bind(view)");
-            this.binding = widgetGuildsListItemDmBindingA;
+            WidgetGuildsListItemDmBinding widgetGuildsListItemDmBindingM8418a = WidgetGuildsListItemDmBinding.m8418a(view);
+            Intrinsics3.checkNotNullExpressionValue(widgetGuildsListItemDmBindingM8418a, "WidgetGuildsListItemDmBinding.bind(view)");
+            this.binding = widgetGuildsListItemDmBindingM8418a;
         }
 
         public static final /* synthetic */ Function1 access$getOnClicked$p(PrivateChannelViewHolder privateChannelViewHolder) {
@@ -775,24 +775,24 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         }
 
         public final void configure(GuildListItem.PrivateChannelItem data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             int mentionCount = data.getMentionCount();
-            TextView textView = this.binding.c;
-            m.checkNotNullExpressionValue(textView, "binding.guildsItemDmCount");
+            TextView textView = this.binding.f17097c;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildsItemDmCount");
             configureMentionsCount(textView, mentionCount);
-            String i18nPluralString = mentionCount > 0 ? StringResourceUtilsKt.getI18nPluralString(a.x(this.itemView, "itemView", "itemView.context"), R.plurals.dm_tooltip_a11y_label_mentions, mentionCount, Integer.valueOf(mentionCount)) : "";
+            String i18nPluralString = mentionCount > 0 ? StringResourceUtils.getI18nPluralString(outline.m885x(this.itemView, "itemView", "itemView.context"), C5419R.plurals.dm_tooltip_a11y_label_mentions, mentionCount, Integer.valueOf(mentionCount)) : "";
             View view = this.itemView;
-            m.checkNotNullExpressionValue(view, "itemView");
+            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
             View view2 = this.itemView;
-            m.checkNotNullExpressionValue(view2, "itemView");
-            view.setContentDescription(b.j(view2, R.string.dm_tooltip_a11y_label, new Object[]{ChannelUtils.c(data.getChannel()), i18nPluralString}, null, 4));
-            SimpleDraweeView simpleDraweeView = this.binding.f2459b;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.guildsItemDmAvatar");
-            IconUtils.setIcon$default(simpleDraweeView, data.getChannel(), R.dimen.avatar_size_large, (MGImages.ChangeDetector) null, 8, (Object) null);
-            this.itemView.setOnClickListener(new GuildListViewHolder$PrivateChannelViewHolder$configure$1(this, data));
+            Intrinsics3.checkNotNullExpressionValue(view2, "itemView");
+            view.setContentDescription(FormatUtils.m218j(view2, C5419R.string.dm_tooltip_a11y_label, new Object[]{ChannelUtils.m7679c(data.getChannel()), i18nPluralString}, null, 4));
+            SimpleDraweeView simpleDraweeView = this.binding.f17096b;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.guildsItemDmAvatar");
+            IconUtils.setIcon$default(simpleDraweeView, data.getChannel(), C5419R.dimen.avatar_size_large, (MGImages.ChangeDetector) null, 8, (Object) null);
+            this.itemView.setOnClickListener(new GuildListViewHolder7(this, data));
             View view3 = this.itemView;
-            m.checkNotNullExpressionValue(view3, "itemView");
-            ViewExtensions.setOnLongClickListenerConsumeClick(view3, new GuildListViewHolder$PrivateChannelViewHolder$configure$2(this, data));
+            Intrinsics3.checkNotNullExpressionValue(view3, "itemView");
+            ViewExtensions.setOnLongClickListenerConsumeClick(view3, new GuildListViewHolder8(this, data));
         }
     }
 
@@ -801,7 +801,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public SimpleViewHolder(View view) {
             super(view, null);
-            m.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(view, "view");
         }
     }
 
@@ -812,7 +812,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public SpaceViewHolder(View view) {
             super(view, null);
-            m.checkNotNullParameter(view, "view");
+            Intrinsics3.checkNotNullParameter(view, "view");
             this.view = view;
         }
 
@@ -832,7 +832,7 @@ public abstract class GuildListViewHolder extends RecyclerView.ViewHolder {
     }
 
     public final void configureMentionsCount(TextView textView, int count) {
-        m.checkNotNullParameter(textView, "textView");
+        Intrinsics3.checkNotNullParameter(textView, "textView");
         if (count < 1) {
             textView.setVisibility(8);
         } else {

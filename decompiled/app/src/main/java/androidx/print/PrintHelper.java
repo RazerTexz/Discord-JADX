@@ -55,8 +55,8 @@ public final class PrintHelper {
     public int mColorMode = 2;
     public int mOrientation = 1;
 
-    /* renamed from: androidx.print.PrintHelper$1, reason: invalid class name */
-    public class AnonymousClass1 extends AsyncTask<Void, Void, Throwable> {
+    /* renamed from: androidx.print.PrintHelper$1 */
+    public class AsyncTaskC05311 extends AsyncTask<Void, Void, Throwable> {
         public final /* synthetic */ PrintAttributes val$attributes;
         public final /* synthetic */ Bitmap val$bitmap;
         public final /* synthetic */ CancellationSignal val$cancellationSignal;
@@ -65,7 +65,7 @@ public final class PrintHelper {
         public final /* synthetic */ PrintAttributes val$pdfAttributes;
         public final /* synthetic */ PrintDocumentAdapter.WriteResultCallback val$writeResultCallback;
 
-        public AnonymousClass1(CancellationSignal cancellationSignal, PrintAttributes printAttributes, Bitmap bitmap, PrintAttributes printAttributes2, int i, ParcelFileDescriptor parcelFileDescriptor, PrintDocumentAdapter.WriteResultCallback writeResultCallback) {
+        public AsyncTaskC05311(CancellationSignal cancellationSignal, PrintAttributes printAttributes, Bitmap bitmap, PrintAttributes printAttributes2, int i, ParcelFileDescriptor parcelFileDescriptor, PrintDocumentAdapter.WriteResultCallback writeResultCallback) {
             this.val$cancellationSignal = cancellationSignal;
             this.val$pdfAttributes = printAttributes;
             this.val$bitmap = bitmap;
@@ -213,26 +213,26 @@ public final class PrintHelper {
         public final String mJobName;
         public AsyncTask<Uri, Boolean, Bitmap> mLoadBitmap;
 
-        /* renamed from: androidx.print.PrintHelper$PrintUriAdapter$1, reason: invalid class name */
-        public class AnonymousClass1 extends AsyncTask<Uri, Boolean, Bitmap> {
+        /* renamed from: androidx.print.PrintHelper$PrintUriAdapter$1 */
+        public class AsyncTaskC05321 extends AsyncTask<Uri, Boolean, Bitmap> {
             public final /* synthetic */ CancellationSignal val$cancellationSignal;
             public final /* synthetic */ PrintDocumentAdapter.LayoutResultCallback val$layoutResultCallback;
             public final /* synthetic */ PrintAttributes val$newPrintAttributes;
             public final /* synthetic */ PrintAttributes val$oldPrintAttributes;
 
-            /* renamed from: androidx.print.PrintHelper$PrintUriAdapter$1$1, reason: invalid class name and collision with other inner class name */
-            public class C00031 implements CancellationSignal.OnCancelListener {
-                public C00031() {
+            /* renamed from: androidx.print.PrintHelper$PrintUriAdapter$1$1, reason: invalid class name */
+            public class AnonymousClass1 implements CancellationSignal.OnCancelListener {
+                public AnonymousClass1() {
                 }
 
                 @Override // android.os.CancellationSignal.OnCancelListener
                 public void onCancel() {
                     PrintUriAdapter.this.cancelLoad();
-                    AnonymousClass1.this.cancel(false);
+                    AsyncTaskC05321.this.cancel(false);
                 }
             }
 
-            public AnonymousClass1(CancellationSignal cancellationSignal, PrintAttributes printAttributes, PrintAttributes printAttributes2, PrintDocumentAdapter.LayoutResultCallback layoutResultCallback) {
+            public AsyncTaskC05321(CancellationSignal cancellationSignal, PrintAttributes printAttributes, PrintAttributes printAttributes2, PrintDocumentAdapter.LayoutResultCallback layoutResultCallback) {
                 this.val$cancellationSignal = cancellationSignal;
                 this.val$newPrintAttributes = printAttributes;
                 this.val$oldPrintAttributes = printAttributes2;
@@ -256,7 +256,7 @@ public final class PrintHelper {
 
             @Override // android.os.AsyncTask
             public void onPreExecute() {
-                this.val$cancellationSignal.setOnCancelListener(new C00031());
+                this.val$cancellationSignal.setOnCancelListener(new AnonymousClass1());
             }
 
             /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
@@ -347,7 +347,7 @@ public final class PrintHelper {
             } else if (this.mBitmap != null) {
                 layoutResultCallback.onLayoutFinished(new PrintDocumentInfo.Builder(this.mJobName).setContentType(1).setPageCount(1).build(), !printAttributes2.equals(printAttributes));
             } else {
-                this.mLoadBitmap = new AnonymousClass1(cancellationSignal, printAttributes2, printAttributes, layoutResultCallback).execute(new Uri[0]);
+                this.mLoadBitmap = new AsyncTaskC05321(cancellationSignal, printAttributes2, printAttributes, layoutResultCallback).execute(new Uri[0]);
             }
         }
 
@@ -522,7 +522,7 @@ public final class PrintHelper {
 
     @RequiresApi(19)
     public void writeBitmap(PrintAttributes printAttributes, int i, Bitmap bitmap, ParcelFileDescriptor parcelFileDescriptor, CancellationSignal cancellationSignal, PrintDocumentAdapter.WriteResultCallback writeResultCallback) {
-        new AnonymousClass1(cancellationSignal, IS_MIN_MARGINS_HANDLING_CORRECT ? printAttributes : copyAttributes(printAttributes).setMinMargins(new PrintAttributes.Margins(0, 0, 0, 0)).build(), bitmap, printAttributes, i, parcelFileDescriptor, writeResultCallback).execute(new Void[0]);
+        new AsyncTaskC05311(cancellationSignal, IS_MIN_MARGINS_HANDLING_CORRECT ? printAttributes : copyAttributes(printAttributes).setMinMargins(new PrintAttributes.Margins(0, 0, 0, 0)).build(), bitmap, printAttributes, i, parcelFileDescriptor, writeResultCallback).execute(new Void[0]);
     }
 
     public void printBitmap(@NonNull String str, @NonNull Bitmap bitmap, @Nullable OnPrintFinishCallback onPrintFinishCallback) {

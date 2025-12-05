@@ -1,8 +1,8 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildMembershipGateMetadata.kt */
 /* loaded from: classes.dex */
@@ -18,7 +18,7 @@ public final /* data */ class TrackGuildMembershipGateMetadata {
             return false;
         }
         TrackGuildMembershipGateMetadata trackGuildMembershipGateMetadata = (TrackGuildMembershipGateMetadata) other;
-        return m.areEqual(this.previewEnabled, trackGuildMembershipGateMetadata.previewEnabled) && m.areEqual(this.requirements, trackGuildMembershipGateMetadata.requirements);
+        return Intrinsics3.areEqual(this.previewEnabled, trackGuildMembershipGateMetadata.previewEnabled) && Intrinsics3.areEqual(this.requirements, trackGuildMembershipGateMetadata.requirements);
     }
 
     public int hashCode() {
@@ -29,9 +29,9 @@ public final /* data */ class TrackGuildMembershipGateMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildMembershipGateMetadata(previewEnabled=");
-        sbU.append(this.previewEnabled);
-        sbU.append(", requirements=");
-        return a.L(sbU, this.requirements, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildMembershipGateMetadata(previewEnabled=");
+        sbM833U.append(this.previewEnabled);
+        sbM833U.append(", requirements=");
+        return outline.m824L(sbM833U, this.requirements, ")");
     }
 }

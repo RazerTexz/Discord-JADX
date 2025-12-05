@@ -1,0 +1,91 @@
+package com.discord.models.domain;
+
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: ModelUserConsents.kt */
+/* renamed from: com.discord.models.domain.Consent, reason: use source file name */
+/* loaded from: classes.dex */
+public final /* data */ class ModelUserConsents {
+    private final String changedAt;
+    private final boolean consented;
+
+    public ModelUserConsents() {
+        this(false, null, 3, null);
+    }
+
+    public ModelUserConsents(boolean z2, String str) {
+        this.consented = z2;
+        this.changedAt = str;
+    }
+
+    public static /* synthetic */ ModelUserConsents copy$default(ModelUserConsents modelUserConsents, boolean z2, String str, int i, Object obj) {
+        if ((i & 1) != 0) {
+            z2 = modelUserConsents.consented;
+        }
+        if ((i & 2) != 0) {
+            str = modelUserConsents.changedAt;
+        }
+        return modelUserConsents.copy(z2, str);
+    }
+
+    /* renamed from: component1, reason: from getter */
+    public final boolean getConsented() {
+        return this.consented;
+    }
+
+    /* renamed from: component2, reason: from getter */
+    public final String getChangedAt() {
+        return this.changedAt;
+    }
+
+    public final ModelUserConsents copy(boolean consented, String changedAt) {
+        return new ModelUserConsents(consented, changedAt);
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof ModelUserConsents)) {
+            return false;
+        }
+        ModelUserConsents modelUserConsents = (ModelUserConsents) other;
+        return this.consented == modelUserConsents.consented && Intrinsics3.areEqual(this.changedAt, modelUserConsents.changedAt);
+    }
+
+    public final String getChangedAt() {
+        return this.changedAt;
+    }
+
+    public final boolean getConsented() {
+        return this.consented;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v4 */
+    /* JADX WARN: Type inference failed for: r0v5 */
+    public int hashCode() {
+        boolean z2 = this.consented;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
+        }
+        int i = r0 * 31;
+        String str = this.changedAt;
+        return i + (str != null ? str.hashCode() : 0);
+    }
+
+    public String toString() {
+        StringBuilder sbM833U = outline.m833U("Consent(consented=");
+        sbM833U.append(this.consented);
+        sbM833U.append(", changedAt=");
+        return outline.m822J(sbM833U, this.changedAt, ")");
+    }
+
+    public /* synthetic */ ModelUserConsents(boolean z2, String str, int i, DefaultConstructorMarker defaultConstructorMarker) {
+        this((i & 1) != 0 ? false : z2, (i & 2) != 0 ? null : str);
+    }
+}

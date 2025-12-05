@@ -7,7 +7,7 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.DBUtil;
 import androidx.room.util.StringUtil;
-import androidx.sqlite.db.SupportSQLiteStatement;
+import androidx.sqlite.p006db.SupportSQLiteStatement;
 import androidx.work.Data;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class WorkProgressDao_Impl implements WorkProgressDao {
     private final SharedSQLiteStatement __preparedStmtOfDelete;
     private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
 
-    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$1, reason: invalid class name */
-    public class AnonymousClass1 extends EntityInsertionAdapter<WorkProgress> {
-        public AnonymousClass1(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$1 */
+    public class C07531 extends EntityInsertionAdapter<WorkProgress> {
+        public C07531(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -52,9 +52,9 @@ public final class WorkProgressDao_Impl implements WorkProgressDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$2, reason: invalid class name */
-    public class AnonymousClass2 extends SharedSQLiteStatement {
-        public AnonymousClass2(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$2 */
+    public class C07542 extends SharedSQLiteStatement {
+        public C07542(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -64,9 +64,9 @@ public final class WorkProgressDao_Impl implements WorkProgressDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$3, reason: invalid class name */
-    public class AnonymousClass3 extends SharedSQLiteStatement {
-        public AnonymousClass3(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$3 */
+    public class C07553 extends SharedSQLiteStatement {
+        public C07553(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -78,9 +78,9 @@ public final class WorkProgressDao_Impl implements WorkProgressDao {
 
     public WorkProgressDao_Impl(RoomDatabase roomDatabase) {
         this.__db = roomDatabase;
-        this.__insertionAdapterOfWorkProgress = new AnonymousClass1(roomDatabase);
-        this.__preparedStmtOfDelete = new AnonymousClass2(roomDatabase);
-        this.__preparedStmtOfDeleteAll = new AnonymousClass3(roomDatabase);
+        this.__insertionAdapterOfWorkProgress = new C07531(roomDatabase);
+        this.__preparedStmtOfDelete = new C07542(roomDatabase);
+        this.__preparedStmtOfDeleteAll = new C07553(roomDatabase);
     }
 
     @Override // androidx.work.impl.model.WorkProgressDao

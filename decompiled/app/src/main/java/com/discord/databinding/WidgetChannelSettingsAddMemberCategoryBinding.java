@@ -9,21 +9,22 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetChannelSettingsAddMemberCategoryBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f15898a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2270b;
+    public final TextView f15899b;
 
     public WidgetChannelSettingsAddMemberCategoryBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView) {
-        this.a = linearLayout;
-        this.f2270b = textView;
+        this.f15898a = linearLayout;
+        this.f15899b = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15898a;
     }
 }

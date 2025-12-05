@@ -2,27 +2,27 @@ package com.discord.widgets.settings.premium;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.premium.ClaimedOutboundPromotion;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.StoreOutboundPromotions;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.settings.premium.ClaimStatus;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: ClaimOutboundPromoViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
+public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
     private ClaimStatus claimStatus;
     private final PublishSubject<Event> eventSubject;
     private final StoreOutboundPromotions storeOutboundPromotions;
@@ -37,7 +37,7 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Claimed(ClaimStatus.Claimed claimed) {
                 super(null);
-                m.checkNotNullParameter(claimed, "claimedStatus");
+                Intrinsics3.checkNotNullParameter(claimed, "claimedStatus");
                 this.claimedStatus = claimed;
             }
 
@@ -54,13 +54,13 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             }
 
             public final Claimed copy(ClaimStatus.Claimed claimedStatus) {
-                m.checkNotNullParameter(claimedStatus, "claimedStatus");
+                Intrinsics3.checkNotNullParameter(claimedStatus, "claimedStatus");
                 return new Claimed(claimedStatus);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Claimed) && m.areEqual(this.claimedStatus, ((Claimed) other).claimedStatus);
+                    return (other instanceof Claimed) && Intrinsics3.areEqual(this.claimedStatus, ((Claimed) other).claimedStatus);
                 }
                 return true;
             }
@@ -78,10 +78,10 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Claimed(claimedStatus=");
-                sbU.append(this.claimedStatus);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Claimed(claimedStatus=");
+                sbM833U.append(this.claimedStatus);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -92,7 +92,7 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public CopyCode(String str) {
                 super(null);
-                m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
+                Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
                 this.code = str;
             }
 
@@ -109,13 +109,13 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             }
 
             public final CopyCode copy(String code) {
-                m.checkNotNullParameter(code, ModelAuditLogEntry.CHANGE_KEY_CODE);
+                Intrinsics3.checkNotNullParameter(code, ModelAuditLogEntry.CHANGE_KEY_CODE);
                 return new CopyCode(code);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof CopyCode) && m.areEqual(this.code, ((CopyCode) other).code);
+                    return (other instanceof CopyCode) && Intrinsics3.areEqual(this.code, ((CopyCode) other).code);
                 }
                 return true;
             }
@@ -133,7 +133,7 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.J(a.U("CopyCode(code="), this.code, ")");
+                return outline.m822J(outline.m833U("CopyCode(code="), this.code, ")");
             }
         }
 
@@ -153,7 +153,7 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public OpenRedemptionUrl(String str) {
                 super(null);
-                m.checkNotNullParameter(str, "url");
+                Intrinsics3.checkNotNullParameter(str, "url");
                 this.url = str;
             }
 
@@ -170,13 +170,13 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             }
 
             public final OpenRedemptionUrl copy(String url) {
-                m.checkNotNullParameter(url, "url");
+                Intrinsics3.checkNotNullParameter(url, "url");
                 return new OpenRedemptionUrl(url);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof OpenRedemptionUrl) && m.areEqual(this.url, ((OpenRedemptionUrl) other).url);
+                    return (other instanceof OpenRedemptionUrl) && Intrinsics3.areEqual(this.url, ((OpenRedemptionUrl) other).url);
                 }
                 return true;
             }
@@ -194,7 +194,7 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.J(a.U("OpenRedemptionUrl(url="), this.url, ")");
+                return outline.m822J(outline.m833U("OpenRedemptionUrl(url="), this.url, ")");
             }
         }
 
@@ -234,7 +234,7 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Claimed(ClaimStatus.Claimed claimed) {
                 super(null);
-                m.checkNotNullParameter(claimed, "claimedStatus");
+                Intrinsics3.checkNotNullParameter(claimed, "claimedStatus");
                 this.claimedStatus = claimed;
             }
 
@@ -251,13 +251,13 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             }
 
             public final Claimed copy(ClaimStatus.Claimed claimedStatus) {
-                m.checkNotNullParameter(claimedStatus, "claimedStatus");
+                Intrinsics3.checkNotNullParameter(claimedStatus, "claimedStatus");
                 return new Claimed(claimedStatus);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Claimed) && m.areEqual(this.claimedStatus, ((Claimed) other).claimedStatus);
+                    return (other instanceof Claimed) && Intrinsics3.areEqual(this.claimedStatus, ((Claimed) other).claimedStatus);
                 }
                 return true;
             }
@@ -275,10 +275,10 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Claimed(claimedStatus=");
-                sbU.append(this.claimedStatus);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Claimed(claimedStatus=");
+                sbM833U.append(this.claimedStatus);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -291,46 +291,46 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
     }
 
     /* compiled from: ClaimOutboundPromoViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.ClaimOutboundPromoViewModel$claimPromo$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ClaimedOutboundPromotion, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.premium.ClaimOutboundPromoViewModel$claimPromo$1 */
+    public static final class C98711 extends Lambda implements Function1<ClaimedOutboundPromotion, Unit> {
+        public C98711() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ClaimedOutboundPromotion claimedOutboundPromotion) {
             invoke2(claimedOutboundPromotion);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ClaimedOutboundPromotion claimedOutboundPromotion) {
-            m.checkNotNullParameter(claimedOutboundPromotion, "claimedPromo");
+            Intrinsics3.checkNotNullParameter(claimedOutboundPromotion, "claimedPromo");
             ClaimOutboundPromoViewModel claimOutboundPromoViewModel = ClaimOutboundPromoViewModel.this;
-            ClaimStatus.Claimed claimed = new ClaimStatus.Claimed(claimedOutboundPromotion.getPromotion().getId(), claimedOutboundPromotion.getCode(), claimedOutboundPromotion.getPromotion().getOutboundRedemptionModalBody(), claimedOutboundPromotion.d(), claimedOutboundPromotion.c());
+            ClaimStatus.Claimed claimed = new ClaimStatus.Claimed(claimedOutboundPromotion.getPromotion().getId(), claimedOutboundPromotion.getCode(), claimedOutboundPromotion.getPromotion().getOutboundRedemptionModalBody(), claimedOutboundPromotion.m8136d(), claimedOutboundPromotion.m8135c());
             ClaimOutboundPromoViewModel.access$updateViewState(ClaimOutboundPromoViewModel.this, new ViewState.Claimed(claimed));
             PublishSubject publishSubjectAccess$getEventSubject$p = ClaimOutboundPromoViewModel.access$getEventSubject$p(ClaimOutboundPromoViewModel.this);
-            publishSubjectAccess$getEventSubject$p.k.onNext(new Event.Claimed(claimed));
+            publishSubjectAccess$getEventSubject$p.f27650k.onNext(new Event.Claimed(claimed));
             ClaimOutboundPromoViewModel.access$setClaimStatus$p(claimOutboundPromoViewModel, claimed);
         }
     }
 
     /* compiled from: ClaimOutboundPromoViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.ClaimOutboundPromoViewModel$claimPromo$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.premium.ClaimOutboundPromoViewModel$claimPromo$2 */
+    public static final class C98722 extends Lambda implements Function1<Error, Unit> {
+        public C98722() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             ClaimOutboundPromoViewModel.access$updateViewState(ClaimOutboundPromoViewModel.this, ViewState.ClaimFailed.INSTANCE);
         }
     }
@@ -356,7 +356,7 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
     }
 
     private final void claimPromo(long promoId) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.storeOutboundPromotions.claimOutboundPromotion(promoId), false, 1, null), this, null, 2, null), ClaimOutboundPromoViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.storeOutboundPromotions.claimOutboundPromotion(promoId), false, 1, null), this, null, 2, null), ClaimOutboundPromoViewModel.class, (Context) null, (Function1) null, new C98722(), (Function0) null, (Function0) null, new C98711(), 54, (Object) null);
     }
 
     @MainThread
@@ -378,25 +378,25 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
         ClaimStatus.Claimed claimed = (ClaimStatus.Claimed) claimStatus;
         if (claimed != null) {
             PublishSubject<Event> publishSubject = this.eventSubject;
-            publishSubject.k.onNext(new Event.CopyCode(claimed.getCode()));
+            publishSubject.f27650k.onNext(new Event.CopyCode(claimed.getCode()));
         }
     }
 
     @MainThread
     public final void failureCloseClicked() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.Dismiss.INSTANCE);
+        publishSubject.f27650k.onNext(Event.Dismiss.INSTANCE);
     }
 
     @MainThread
     public final void maybeLaterClicked() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(Event.Dismiss.INSTANCE);
+        publishSubject.f27650k.onNext(Event.Dismiss.INSTANCE);
     }
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -409,18 +409,18 @@ public final class ClaimOutboundPromoViewModel extends d0<ViewState> {
         ClaimStatus.Claimed claimed = (ClaimStatus.Claimed) claimStatus;
         if (claimed != null) {
             PublishSubject<Event> publishSubject = this.eventSubject;
-            publishSubject.k.onNext(new Event.OpenRedemptionUrl(claimed.getLink()));
+            publishSubject.f27650k.onNext(new Event.OpenRedemptionUrl(claimed.getLink()));
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ClaimOutboundPromoViewModel(ClaimStatus claimStatus, StoreOutboundPromotions storeOutboundPromotions) {
         super(ViewState.ClaimInProgress.INSTANCE);
-        m.checkNotNullParameter(claimStatus, "claimStatus");
-        m.checkNotNullParameter(storeOutboundPromotions, "storeOutboundPromotions");
+        Intrinsics3.checkNotNullParameter(claimStatus, "claimStatus");
+        Intrinsics3.checkNotNullParameter(storeOutboundPromotions, "storeOutboundPromotions");
         this.claimStatus = claimStatus;
         this.storeOutboundPromotions = storeOutboundPromotions;
-        this.eventSubject = PublishSubject.k0();
+        this.eventSubject = PublishSubject.m11133k0();
         handleClaimStatus();
     }
 }

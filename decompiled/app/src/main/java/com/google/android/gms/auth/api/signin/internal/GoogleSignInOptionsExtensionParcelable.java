@@ -3,34 +3,40 @@ package com.google.android.gms.auth.api.signin.internal;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.d;
-import b.i.a.f.c.a.f.b.b;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p292c.p293a.p296f.p297b.C3199b;
 
 /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
 /* loaded from: classes3.dex */
 public class GoogleSignInOptionsExtensionParcelable extends AbstractSafeParcelable {
-    public static final Parcelable.Creator<GoogleSignInOptionsExtensionParcelable> CREATOR = new b();
-    public final int j;
-    public int k;
-    public Bundle l;
+    public static final Parcelable.Creator<GoogleSignInOptionsExtensionParcelable> CREATOR = new C3199b();
+
+    /* renamed from: j */
+    public final int f20458j;
+
+    /* renamed from: k */
+    public int f20459k;
+
+    /* renamed from: l */
+    public Bundle f20460l;
 
     public GoogleSignInOptionsExtensionParcelable(int i, int i2, Bundle bundle) {
-        this.j = i;
-        this.k = i2;
-        this.l = bundle;
+        this.f20458j = i;
+        this.f20459k = i2;
+        this.f20460l = bundle;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = d.y2(parcel, 20293);
-        int i2 = this.j;
+        int iM594y2 = AnimatableValueParser.m594y2(parcel, 20293);
+        int i2 = this.f20458j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
-        int i3 = this.k;
+        int i3 = this.f20459k;
         parcel.writeInt(262146);
         parcel.writeInt(i3);
-        d.p2(parcel, 3, this.l, false);
-        d.A2(parcel, iY2);
+        AnimatableValueParser.m558p2(parcel, 3, this.f20460l, false);
+        AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 }

@@ -2,26 +2,26 @@ package com.discord.models.hubs;
 
 import android.content.Context;
 import androidx.annotation.StringRes;
-import com.discord.R;
-import d0.z.d.m;
+import com.discord.C5419R;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: DirectoryEntryCategory.kt */
 /* loaded from: classes.dex */
 public enum DirectoryEntryCategory {
-    Home(-1, R.string.directory_category_all, 70),
-    Uncategorized(0, R.string.uncategorized, 0, 4, null),
-    SchoolClub(1, R.string.directory_category_school_club, 100),
-    Class(2, R.string.directory_category_class, 0, 4, null),
-    StudySocial(3, R.string.directory_category_study_social, 50),
-    SubjectMajor(4, R.string.directory_category_subject_major, 0, 4, null),
-    Misc(5, R.string.directory_category_miscellaneous, 0, 4, null),
-    HQSocial(1, R.string.directory_category_internal_1, 0, 4, null),
-    HQErgs(2, R.string.directory_category_internal_2, 0, 4, null),
-    HQMisc(3, R.string.directory_category_internal_3, 0, 4, null),
-    HQArchives(5, R.string.directory_category_internal_5, 0, 4, null);
+    Home(-1, C5419R.string.directory_category_all, 70),
+    Uncategorized(0, C5419R.string.uncategorized, 0, 4, null),
+    SchoolClub(1, C5419R.string.directory_category_school_club, 100),
+    Class(2, C5419R.string.directory_category_class, 0, 4, null),
+    StudySocial(3, C5419R.string.directory_category_study_social, 50),
+    SubjectMajor(4, C5419R.string.directory_category_subject_major, 0, 4, null),
+    Misc(5, C5419R.string.directory_category_miscellaneous, 0, 4, null),
+    HQSocial(1, C5419R.string.directory_category_internal_1, 0, 4, null),
+    HQErgs(2, C5419R.string.directory_category_internal_2, 0, 4, null),
+    HQMisc(3, C5419R.string.directory_category_internal_3, 0, 4, null),
+    HQArchives(5, C5419R.string.directory_category_internal_5, 0, 4, null);
 
 
     /* renamed from: Companion, reason: from kotlin metadata */
@@ -53,7 +53,7 @@ public enum DirectoryEntryCategory {
         }
 
         public final List<DirectoryEntryCategory> getCategories(boolean isHQDirectoryChannel) {
-            return isHQDirectoryChannel ? DirectoryEntryCategoryKt.access$getHQ_DIRECTORY_CATEGORIES$p() : DirectoryEntryCategoryKt.access$getHUB_CATEGORIES$p();
+            return isHQDirectoryChannel ? DirectoryEntryCategory2.access$getHQ_DIRECTORY_CATEGORIES$p() : DirectoryEntryCategory2.access$getHUB_CATEGORIES$p();
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -76,9 +76,9 @@ public enum DirectoryEntryCategory {
     }
 
     public final String getTitle(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         String string = context.getString(this.titleRes);
-        m.checkNotNullExpressionValue(string, "context.getString(titleRes)");
+        Intrinsics3.checkNotNullExpressionValue(string, "context.getString(titleRes)");
         return string;
     }
 

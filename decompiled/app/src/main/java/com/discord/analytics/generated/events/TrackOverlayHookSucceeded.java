@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackOverlay;
-import com.discord.analytics.generated.traits.TrackOverlayReceiver;
+import com.discord.analytics.generated.traits.TrackOverlay2;
 import com.discord.api.science.AnalyticsSchema;
 
 /* compiled from: TrackOverlayHookSucceeded.kt */
 /* loaded from: classes.dex */
-public final class TrackOverlayHookSucceeded implements AnalyticsSchema, TrackBaseReceiver, TrackOverlayReceiver {
+public final class TrackOverlayHookSucceeded implements AnalyticsSchema, TrackBase2, TrackOverlay2 {
     private final transient String analyticsSchemaTypeName = "overlay_hook_succeeded";
     private TrackBase trackBase;
     private TrackOverlay trackOverlay;

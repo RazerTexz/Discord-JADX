@@ -44,9 +44,9 @@ public class PagerTabStrip extends PagerTitleStrip {
     private final Rect mTempRect;
     private int mTouchSlop;
 
-    /* renamed from: androidx.viewpager.widget.PagerTabStrip$1, reason: invalid class name */
-    public class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.viewpager.widget.PagerTabStrip$1 */
+    public class ViewOnClickListenerC06861 implements View.OnClickListener {
+        public ViewOnClickListenerC06861() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -55,9 +55,9 @@ public class PagerTabStrip extends PagerTitleStrip {
         }
     }
 
-    /* renamed from: androidx.viewpager.widget.PagerTabStrip$2, reason: invalid class name */
-    public class AnonymousClass2 implements View.OnClickListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.viewpager.widget.PagerTabStrip$2 */
+    public class ViewOnClickListenerC06872 implements View.OnClickListener {
+        public ViewOnClickListenerC06872() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -225,9 +225,9 @@ public class PagerTabStrip extends PagerTitleStrip {
         setTextSpacing(getTextSpacing());
         setWillNotDraw(false);
         this.mPrevText.setFocusable(true);
-        this.mPrevText.setOnClickListener(new AnonymousClass1());
+        this.mPrevText.setOnClickListener(new ViewOnClickListenerC06861());
         this.mNextText.setFocusable(true);
-        this.mNextText.setOnClickListener(new AnonymousClass2());
+        this.mNextText.setOnClickListener(new ViewOnClickListenerC06872());
         if (getBackground() == null) {
             this.mDrawFullUnderline = true;
         }

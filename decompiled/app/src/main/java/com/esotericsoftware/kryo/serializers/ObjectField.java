@@ -1,16 +1,16 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.d.b.a.a;
-import b.e.a.a;
-import b.e.b.c;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Registration;
 import com.esotericsoftware.kryo.Serializer;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.p502io.Input;
+import com.esotericsoftware.kryo.p502io.Output;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import java.lang.reflect.Field;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p106e.p107a.Log;
+import p007b.p106e.p108b.FieldAccess2;
 
 /* loaded from: classes.dex */
 public class ObjectField extends FieldSerializer.CachedField {
@@ -34,7 +34,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -53,7 +53,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -67,7 +67,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -88,7 +88,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -107,7 +107,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -121,7 +121,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -142,7 +142,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -161,7 +161,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -175,7 +175,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -196,7 +196,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -215,7 +215,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -229,7 +229,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -250,7 +250,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -269,7 +269,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -283,7 +283,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -304,7 +304,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -327,7 +327,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -345,7 +345,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -366,7 +366,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -389,7 +389,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -407,7 +407,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -428,7 +428,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -447,7 +447,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -461,7 +461,7 @@ public class ObjectField extends FieldSerializer.CachedField {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                a.m0(this.type, sb, ")", kryoException);
+                outline.m864m0(this.type, sb, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -480,27 +480,27 @@ public class ObjectField extends FieldSerializer.CachedField {
             if (i == -1) {
                 setField(obj2, this.kryo.copy(getField(obj)));
             } else {
-                c cVar = (c) this.fieldSerializer.access;
-                cVar.t(obj2, i, this.kryo.copy(cVar.b(obj, i)));
+                FieldAccess2 fieldAccess2 = (FieldAccess2) this.fieldSerializer.access;
+                fieldAccess2.m916t(obj2, i, this.kryo.copy(fieldAccess2.m905b(obj, i)));
             }
         } catch (KryoException e) {
             StringBuilder sb = new StringBuilder();
             sb.append(this);
             sb.append(" (");
-            a.m0(this.type, sb, ")", e);
+            outline.m864m0(this.type, sb, ")", e);
             throw e;
         } catch (IllegalAccessException e2) {
             StringBuilder sb2 = new StringBuilder();
             sb2.append("Error accessing field: ");
             sb2.append(this);
             sb2.append(" (");
-            throw new KryoException(a.o(this.type, sb2, ")"), e2);
+            throw new KryoException(outline.m867o(this.type, sb2, ")"), e2);
         } catch (RuntimeException e3) {
             KryoException kryoException = new KryoException(e3);
             StringBuilder sb3 = new StringBuilder();
             sb3.append(this);
             sb3.append(" (");
-            a.m0(this.type, sb3, ")", kryoException);
+            outline.m864m0(this.type, sb3, ")", kryoException);
             throw kryoException;
         }
     }
@@ -515,7 +515,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         try {
             try {
                 try {
-                    a.C0064a c0064a = b.e.a.a.a;
+                    Log.a aVar = Log.f3007a;
                     Class cls = this.valueClass;
                     Serializer serializer = this.serializer;
                     if (cls == null) {
@@ -560,7 +560,7 @@ public class ObjectField extends FieldSerializer.CachedField {
     public void write(Output output, Object obj) {
         try {
             try {
-                a.C0064a c0064a = b.e.a.a.a;
+                Log.a aVar = Log.f3007a;
                 Object field = getField(obj);
                 Serializer serializer = this.serializer;
                 Class cls = this.valueClass;

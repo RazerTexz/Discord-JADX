@@ -28,9 +28,9 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
     private static void registerPatchScripts(Instrumentation instrumentation, boolean reloadExistingClasses, Class<?> launchingContext) {
         ScriptManager sm = new ScriptManager();
         sm.registerTransformer(instrumentation);
-        sm.setFilter(new AnonymousClass1());
+        sm.setFilter(new C128501());
         boolean forceBaseResourceNames = shouldForceBaseResourceNames();
-        sm.setTransplantMapper(new AnonymousClass2(forceBaseResourceNames));
+        sm.setTransplantMapper(new C128512(forceBaseResourceNames));
         EclipseLoaderPatcher.patchEquinoxLoaders(sm, launchingContext);
         patchCatchReparse(sm);
         patchIdentifierEndReparse(sm);
@@ -63,10 +63,10 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
         }
     }
 
-    /* renamed from: lombok.eclipse.agent.EclipsePatcher$1, reason: invalid class name */
+    /* renamed from: lombok.eclipse.agent.EclipsePatcher$1 */
     /* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$1.SCL.lombok */
-    class AnonymousClass1 implements Filter {
-        AnonymousClass1() {
+    class C128501 implements Filter {
+        C128501() {
         }
 
         @Override // lombok.patcher.Filter
@@ -79,12 +79,12 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
         }
     }
 
-    /* renamed from: lombok.eclipse.agent.EclipsePatcher$2, reason: invalid class name */
+    /* renamed from: lombok.eclipse.agent.EclipsePatcher$2 */
     /* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$2.SCL.lombok */
-    class AnonymousClass2 implements TransplantMapper {
+    class C128512 implements TransplantMapper {
         private final /* synthetic */ boolean val$forceBaseResourceNames;
 
-        AnonymousClass2(boolean z2) {
+        C128512(boolean z2) {
             this.val$forceBaseResourceNames = z2;
         }
 
@@ -205,10 +205,10 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
     private static void patchSetGeneratedFlag(ScriptManager sm) {
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.addField().targetClass("org.eclipse.jdt.internal.compiler.ast.ASTNode").fieldName("$generatedBy").fieldType("Lorg/eclipse/jdt/internal/compiler/ast/ASTNode;").setPublic().setTransient().build());
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.addField().targetClass("org.eclipse.jdt.core.dom.ASTNode").fieldName("$isGenerated").fieldType("Z").setPublic().setTransient().build());
-        sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapReturnValue().target(new AnonymousClass3()).request(StackRequest.PARAM1, StackRequest.RETURN_VALUE).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlag", "void", "org.eclipse.jdt.core.dom.ASTNode", "org.eclipse.jdt.internal.compiler.ast.ASTNode")).transplant().build());
+        sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapReturnValue().target(new C128523()).request(StackRequest.PARAM1, StackRequest.RETURN_VALUE).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlag", "void", "org.eclipse.jdt.core.dom.ASTNode", "org.eclipse.jdt.internal.compiler.ast.ASTNode")).transplant().build());
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapReturnValue().target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convert", "org.eclipse.jdt.core.dom.ASTNode", "boolean", "org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration")).request(StackRequest.PARAM2, StackRequest.RETURN_VALUE).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlag", "void", "org.eclipse.jdt.core.dom.ASTNode", "org.eclipse.jdt.internal.compiler.ast.ASTNode")).transplant().build());
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapReturnValue().target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertToFieldDeclaration", "org.eclipse.jdt.core.dom.FieldDeclaration", "org.eclipse.jdt.internal.compiler.ast.FieldDeclaration")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertToType", "org.eclipse.jdt.core.dom.Type", "org.eclipse.jdt.internal.compiler.ast.NameReference")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertType", "org.eclipse.jdt.core.dom.Type", "org.eclipse.jdt.internal.compiler.ast.TypeReference")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertToVariableDeclarationExpression", "org.eclipse.jdt.core.dom.VariableDeclarationExpression", "org.eclipse.jdt.internal.compiler.ast.LocalDeclaration")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertToSingleVariableDeclaration", "org.eclipse.jdt.core.dom.SingleVariableDeclaration", "org.eclipse.jdt.internal.compiler.ast.LocalDeclaration")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertToVariableDeclarationFragment", "org.eclipse.jdt.core.dom.VariableDeclarationFragment", "org.eclipse.jdt.internal.compiler.ast.FieldDeclaration")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertToVariableDeclarationFragment", "org.eclipse.jdt.core.dom.VariableDeclarationFragment", "org.eclipse.jdt.internal.compiler.ast.LocalDeclaration")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertToVariableDeclarationStatement", "org.eclipse.jdt.core.dom.VariableDeclarationStatement", "org.eclipse.jdt.internal.compiler.ast.LocalDeclaration")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "createBaseType", "org.eclipse.jdt.core.dom.Type", "org.eclipse.jdt.internal.compiler.ast.TypeReference", "long[]", "org.eclipse.jdt.internal.compiler.ast.Annotation[][]", "char[][]", "int", "int", "boolean")).target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "createQualifiedType", "org.eclipse.jdt.core.dom.QualifiedType", "org.eclipse.jdt.internal.compiler.ast.TypeReference", "long[]", "org.eclipse.jdt.internal.compiler.ast.Annotation[][]", "char[][]", "int", "org.eclipse.jdt.core.dom.Type")).request(StackRequest.PARAM1, StackRequest.RETURN_VALUE).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlag", "void", "org.eclipse.jdt.core.dom.ASTNode", "org.eclipse.jdt.internal.compiler.ast.ASTNode")).transplant().build());
-        sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapMethodCall().target(new AnonymousClass4()).methodToWrap(new Hook("org.eclipse.jdt.core.dom.SimpleName", "<init>", "void", "org.eclipse.jdt.core.dom.AST")).requestExtra(StackRequest.PARAM1).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlagForName", "void", "org.eclipse.jdt.core.dom.Name", "java.lang.Object")).transplant().build());
+        sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapMethodCall().target(new C128534()).methodToWrap(new Hook("org.eclipse.jdt.core.dom.SimpleName", "<init>", "void", "org.eclipse.jdt.core.dom.AST")).requestExtra(StackRequest.PARAM1).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlagForName", "void", "org.eclipse.jdt.core.dom.Name", "java.lang.Object")).transplant().build());
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapMethodCall().target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convert", "org.eclipse.jdt.core.dom.ASTNode", "boolean", "org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration")).methodToWrap(new Hook("org.eclipse.jdt.core.dom.SimpleName", "<init>", "void", "org.eclipse.jdt.core.dom.AST")).requestExtra(StackRequest.PARAM2).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlagForName", "void", "org.eclipse.jdt.core.dom.Name", "java.lang.Object")).transplant().build());
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapMethodCall().target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertType", "org.eclipse.jdt.core.dom.Type", "org.eclipse.jdt.internal.compiler.ast.TypeReference")).methodToWrap(new Hook("org.eclipse.jdt.core.dom.PrimitiveType", "<init>", "void", "org.eclipse.jdt.core.dom.AST")).requestExtra(StackRequest.PARAM1).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlag", "void", "org.eclipse.jdt.core.dom.ASTNode", "org.eclipse.jdt.internal.compiler.ast.ASTNode")).transplant().build());
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapMethodCall().target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "convertType", "org.eclipse.jdt.core.dom.Type", "org.eclipse.jdt.internal.compiler.ast.TypeReference")).methodToWrap(new Hook("org.eclipse.jdt.core.dom.SimpleType", "<init>", "void", "org.eclipse.jdt.core.dom.AST")).requestExtra(StackRequest.PARAM1).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlag", "void", "org.eclipse.jdt.core.dom.ASTNode", "org.eclipse.jdt.internal.compiler.ast.ASTNode")).transplant().build());
@@ -222,10 +222,10 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapMethodCall().target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "setTypeNameForAnnotation", "void", "org.eclipse.jdt.internal.compiler.ast.Annotation", "org.eclipse.jdt.core.dom.Annotation")).methodToWrap(new Hook("org.eclipse.jdt.core.dom.QualifiedName", "<init>", "void", "org.eclipse.jdt.core.dom.AST")).requestExtra(StackRequest.PARAM1).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlagForName", "void", "org.eclipse.jdt.core.dom.Name", "java.lang.Object")).transplant().build());
     }
 
-    /* renamed from: lombok.eclipse.agent.EclipsePatcher$3, reason: invalid class name */
+    /* renamed from: lombok.eclipse.agent.EclipsePatcher$3 */
     /* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$3.SCL.lombok */
-    class AnonymousClass3 implements TargetMatcher {
-        AnonymousClass3() {
+    class C128523 implements TargetMatcher {
+        C128523() {
         }
 
         @Override // lombok.patcher.TargetMatcher
@@ -248,10 +248,10 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
         }
     }
 
-    /* renamed from: lombok.eclipse.agent.EclipsePatcher$4, reason: invalid class name */
+    /* renamed from: lombok.eclipse.agent.EclipsePatcher$4 */
     /* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$4.SCL.lombok */
-    class AnonymousClass4 implements TargetMatcher {
-        AnonymousClass4() {
+    class C128534 implements TargetMatcher {
+        C128534() {
         }
 
         @Override // lombok.patcher.TargetMatcher

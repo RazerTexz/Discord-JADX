@@ -5,7 +5,7 @@ import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.DBUtil;
-import androidx.sqlite.db.SupportSQLiteStatement;
+import androidx.sqlite.p006db.SupportSQLiteStatement;
 import androidx.view.LiveData;
 import java.util.concurrent.Callable;
 
@@ -14,9 +14,9 @@ public final class PreferenceDao_Impl implements PreferenceDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<Preference> __insertionAdapterOfPreference;
 
-    /* renamed from: androidx.work.impl.model.PreferenceDao_Impl$1, reason: invalid class name */
-    public class AnonymousClass1 extends EntityInsertionAdapter<Preference> {
-        public AnonymousClass1(RoomDatabase roomDatabase) {
+    /* renamed from: androidx.work.impl.model.PreferenceDao_Impl$1 */
+    public class C07471 extends EntityInsertionAdapter<Preference> {
+        public C07471(RoomDatabase roomDatabase) {
             super(roomDatabase);
         }
 
@@ -47,11 +47,11 @@ public final class PreferenceDao_Impl implements PreferenceDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.PreferenceDao_Impl$2, reason: invalid class name */
-    public class AnonymousClass2 implements Callable<Long> {
+    /* renamed from: androidx.work.impl.model.PreferenceDao_Impl$2 */
+    public class CallableC07482 implements Callable<Long> {
         public final /* synthetic */ RoomSQLiteQuery val$_statement;
 
-        public AnonymousClass2(RoomSQLiteQuery roomSQLiteQuery) {
+        public CallableC07482(RoomSQLiteQuery roomSQLiteQuery) {
             this.val$_statement = roomSQLiteQuery;
         }
 
@@ -82,7 +82,7 @@ public final class PreferenceDao_Impl implements PreferenceDao {
 
     public PreferenceDao_Impl(RoomDatabase roomDatabase) {
         this.__db = roomDatabase;
-        this.__insertionAdapterOfPreference = new AnonymousClass1(roomDatabase);
+        this.__insertionAdapterOfPreference = new C07471(roomDatabase);
     }
 
     public static /* synthetic */ RoomDatabase access$000(PreferenceDao_Impl preferenceDao_Impl) {
@@ -119,7 +119,7 @@ public final class PreferenceDao_Impl implements PreferenceDao {
         } else {
             roomSQLiteQueryAcquire.bindString(1, str);
         }
-        return this.__db.getInvalidationTracker().createLiveData(new String[]{"Preference"}, false, new AnonymousClass2(roomSQLiteQueryAcquire));
+        return this.__db.getInvalidationTracker().createLiveData(new String[]{"Preference"}, false, new CallableC07482(roomSQLiteQueryAcquire));
     }
 
     @Override // androidx.work.impl.model.PreferenceDao

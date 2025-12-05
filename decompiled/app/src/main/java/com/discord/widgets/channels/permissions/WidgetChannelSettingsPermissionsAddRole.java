@@ -5,14 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.j;
-import b.a.d.n;
-import b.a.d.o;
-import b.a.z.a.a.p;
-import b.a.z.a.a.q;
-import b.a.z.a.a.u;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
@@ -21,12 +14,19 @@ import com.discord.models.guild.Guild;
 import com.discord.models.user.MeUser;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.permissions.PermissionUtils;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.channels.SimpleRolesAdapter;
-import d0.z.d.m;
 import java.util.List;
-import rx.Observable;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p018d.C0878n;
+import p007b.p008a.p018d.C0879o;
+import p007b.p008a.p073z.p074a.p075a.C1406p;
+import p007b.p008a.p073z.p074a.p075a.C1407q;
+import p007b.p008a.p073z.p074a.p075a.C1411u;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
 
 /* loaded from: classes2.dex */
 public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
@@ -59,7 +59,7 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
         }
 
         public static Observable<Model> get(long j) {
-            return StoreStream.getChannels().observeChannel(j).Y(new q(j)).k(n.j);
+            return StoreStream.getChannels().observeChannel(j).m11099Y(new C1407q(j)).m11108k(C0878n.f565j);
         }
 
         private static boolean isValid(Guild guild, Channel channel) {
@@ -107,28 +107,28 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("WidgetChannelSettingsPermissionsAddRole.Model(channel=");
-            sbU.append(this.channel);
-            sbU.append(", roleItems=");
-            sbU.append(this.roleItems);
-            sbU.append(", canManage=");
-            return a.O(sbU, this.canManage, ")");
+            StringBuilder sbM833U = outline.m833U("WidgetChannelSettingsPermissionsAddRole.Model(channel=");
+            sbM833U.append(this.channel);
+            sbM833U.append(", roleItems=");
+            sbM833U.append(this.roleItems);
+            sbM833U.append(", canManage=");
+            return outline.m827O(sbM833U, this.canManage, ")");
         }
     }
 
     public WidgetChannelSettingsPermissionsAddRole() {
-        super(R.layout.widget_channel_settings_permissions_add_role);
+        super(C5419R.layout.widget_channel_settings_permissions_add_role);
     }
 
     private void configureToolbar(Channel channel) {
-        setActionBarTitle(R.string.add_a_role);
-        setActionBarSubtitle(ChannelUtils.d(channel, requireContext(), true));
+        setActionBarTitle(C5419R.string.add_a_role);
+        setActionBarSubtitle(ChannelUtils.m7680d(channel, requireContext(), true));
     }
 
     private void configureUI(Model model) {
         if (model != null && Model.access$000(model) && !Model.access$100(model).isEmpty()) {
             configureToolbar(Model.access$200(model));
-            this.rolesAdapter.setData(Model.access$100(model), new u(this, model));
+            this.rolesAdapter.setData(Model.access$100(model), new C1411u(this, model));
         } else if (getActivity() != null) {
             getActivity().onBackPressed();
         }
@@ -137,10 +137,11 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
     public static void create(Context context, long j) {
         Intent intent = new Intent();
         intent.putExtra(INTENT_EXTRA_CHANNEL_ID, j);
-        j.d(context, WidgetChannelSettingsPermissionsAddRole.class, intent);
+        AppScreen2.m156d(context, WidgetChannelSettingsPermissionsAddRole.class, intent);
     }
 
-    public static /* synthetic */ void g(WidgetChannelSettingsPermissionsAddRole widgetChannelSettingsPermissionsAddRole, Model model) {
+    /* renamed from: g */
+    public static /* synthetic */ void m8627g(WidgetChannelSettingsPermissionsAddRole widgetChannelSettingsPermissionsAddRole, Model model) {
         widgetChannelSettingsPermissionsAddRole.configureUI(model);
     }
 
@@ -148,7 +149,7 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
     public void onViewBound(@NonNull View view) {
         super.onViewBound(view);
         setActionBarDisplayHomeAsUpEnabled();
-        this.rolesRecycler = (RecyclerView) view.findViewById(R.id.channel_settings_permissions_add_role_recycler);
+        this.rolesRecycler = (RecyclerView) view.findViewById(C5419R.id.channel_settings_permissions_add_role_recycler);
         this.rolesAdapter = (SimpleRolesAdapter) MGRecyclerAdapter.configure(new SimpleRolesAdapter(this.rolesRecycler));
     }
 
@@ -156,8 +157,8 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable<Model> observable = Model.get(getMostRecentIntent().getLongExtra(INTENT_EXTRA_CHANNEL_ID, -1L));
-        m.checkNotNullParameter(this, "appComponent");
-        m.checkNotNullExpressionValue(observable, "it");
-        ObservableExtensionsKt.ui(observable, this, null).k(o.e(new p(this), getClass()));
+        Intrinsics3.checkNotNullParameter(this, "appComponent");
+        Intrinsics3.checkNotNullExpressionValue(observable, "it");
+        ObservableExtensionsKt.m8519ui(observable, this, null).m11108k(C0879o.m179e(new C1406p(this), getClass()));
     }
 }

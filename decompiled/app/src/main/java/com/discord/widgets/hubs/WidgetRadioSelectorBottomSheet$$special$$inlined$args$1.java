@@ -1,14 +1,14 @@
 package com.discord.widgets.hubs;
 
 import android.os.Bundle;
-import b.d.b.a.a;
 import com.discord.app.AppBottomSheet;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: ArgUtils.kt */
 /* loaded from: classes2.dex */
-public final class WidgetRadioSelectorBottomSheet$$special$$inlined$args$1 extends o implements Function0<RadioSelectorItems> {
+public final class WidgetRadioSelectorBottomSheet$$special$$inlined$args$1 extends Lambda implements Function0<WidgetRadioSelectorBottomSheet3> {
     public final /* synthetic */ String $argsKey;
     public final /* synthetic */ AppBottomSheet $this_args;
 
@@ -21,21 +21,21 @@ public final class WidgetRadioSelectorBottomSheet$$special$$inlined$args$1 exten
 
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // kotlin.jvm.functions.Function0
-    public final RadioSelectorItems invoke() {
+    public final WidgetRadioSelectorBottomSheet3 invoke() {
         Bundle arguments = this.$this_args.getArguments();
         Object obj = arguments != null ? arguments.get(this.$argsKey) : null;
-        RadioSelectorItems radioSelectorItems = (RadioSelectorItems) (obj instanceof RadioSelectorItems ? obj : null);
-        if (radioSelectorItems != null) {
-            return radioSelectorItems;
+        WidgetRadioSelectorBottomSheet3 widgetRadioSelectorBottomSheet3 = (WidgetRadioSelectorBottomSheet3) (obj instanceof WidgetRadioSelectorBottomSheet3 ? obj : null);
+        if (widgetRadioSelectorBottomSheet3 != null) {
+            return widgetRadioSelectorBottomSheet3;
         }
-        StringBuilder sbU = a.U("Missing args for class type ");
-        a.l0(RadioSelectorItems.class, sbU, " + key ");
-        throw new IllegalStateException(a.H(sbU, this.$argsKey, '!'));
+        StringBuilder sbM833U = outline.m833U("Missing args for class type ");
+        outline.m862l0(WidgetRadioSelectorBottomSheet3.class, sbM833U, " + key ");
+        throw new IllegalStateException(outline.m820H(sbM833U, this.$argsKey, '!'));
     }
 
     /* JADX WARN: Type inference failed for: r0v0, types: [android.os.Parcelable, com.discord.widgets.hubs.RadioSelectorItems] */
     @Override // kotlin.jvm.functions.Function0
-    public /* bridge */ /* synthetic */ RadioSelectorItems invoke() {
+    public /* bridge */ /* synthetic */ WidgetRadioSelectorBottomSheet3 invoke() {
         return invoke();
     }
 }

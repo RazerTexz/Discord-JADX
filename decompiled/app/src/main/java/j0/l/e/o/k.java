@@ -1,9 +1,0 @@
-package j0.l.e.o;
-
-/* compiled from: SpmcArrayQueue.java */
-/* loaded from: classes3.dex */
-public abstract class k<E> extends l<E> {
-    public k(int i) {
-        super(i);
-    }
-}

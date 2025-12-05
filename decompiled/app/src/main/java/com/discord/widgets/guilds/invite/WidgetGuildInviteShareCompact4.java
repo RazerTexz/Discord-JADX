@@ -1,0 +1,74 @@
+package com.discord.widgets.guilds.invite;
+
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import com.discord.C5419R;
+import com.discord.app.AppViewFlipper;
+import com.discord.databinding.WidgetGuildInviteShareCompactBinding;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputLayout;
+import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: WidgetGuildInviteShareCompact.kt */
+/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$binding$2, reason: use source file name */
+/* loaded from: classes2.dex */
+public final /* synthetic */ class WidgetGuildInviteShareCompact4 extends FunctionReferenceImpl implements Function1<View, WidgetGuildInviteShareCompactBinding> {
+    public static final WidgetGuildInviteShareCompact4 INSTANCE = new WidgetGuildInviteShareCompact4();
+
+    public WidgetGuildInviteShareCompact4() {
+        super(1, WidgetGuildInviteShareCompactBinding.class, "bind", "bind(Landroid/view/View;)Lcom/discord/databinding/WidgetGuildInviteShareCompactBinding;", 0);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ WidgetGuildInviteShareCompactBinding invoke(View view) {
+        return invoke2(view);
+    }
+
+    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final WidgetGuildInviteShareCompactBinding invoke2(View view) {
+        Intrinsics3.checkNotNullParameter(view, "p1");
+        int i = C5419R.id.bottom_sheet_tint;
+        View viewFindViewById = view.findViewById(C5419R.id.bottom_sheet_tint);
+        if (viewFindViewById != null) {
+            i = C5419R.id.guild_invite_empty_results;
+            TextView textView = (TextView) view.findViewById(C5419R.id.guild_invite_empty_results);
+            if (textView != null) {
+                i = C5419R.id.guild_invite_never_expire;
+                TextView textView2 = (TextView) view.findViewById(C5419R.id.guild_invite_never_expire);
+                if (textView2 != null) {
+                    i = C5419R.id.guild_invite_settings_edit;
+                    ImageView imageView = (ImageView) view.findViewById(C5419R.id.guild_invite_settings_edit);
+                    if (imageView != null) {
+                        i = C5419R.id.guild_invite_share_btn;
+                        MaterialButton materialButton = (MaterialButton) view.findViewById(C5419R.id.guild_invite_share_btn);
+                        if (materialButton != null) {
+                            i = C5419R.id.guild_invite_share_compact_search;
+                            TextInputLayout textInputLayout = (TextInputLayout) view.findViewById(C5419R.id.guild_invite_share_compact_search);
+                            if (textInputLayout != null) {
+                                i = C5419R.id.guild_invite_suggestion_list;
+                                RecyclerView recyclerView = (RecyclerView) view.findViewById(C5419R.id.guild_invite_suggestion_list);
+                                if (recyclerView != null) {
+                                    i = C5419R.id.guild_invite_suggestions_flipper;
+                                    AppViewFlipper appViewFlipper = (AppViewFlipper) view.findViewById(C5419R.id.guild_invite_suggestions_flipper);
+                                    if (appViewFlipper != null) {
+                                        i = C5419R.id.invite_settings_bottom_sheet;
+                                        ViewInviteSettingsSheet viewInviteSettingsSheet = (ViewInviteSettingsSheet) view.findViewById(C5419R.id.invite_settings_bottom_sheet);
+                                        if (viewInviteSettingsSheet != null) {
+                                            return new WidgetGuildInviteShareCompactBinding((CoordinatorLayout) view, viewFindViewById, textView, textView2, imageView, materialButton, textInputLayout, recyclerView, appViewFlipper, viewInviteSettingsSheet);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i)));
+    }
+}

@@ -1,36 +1,41 @@
 package com.google.gson;
 
-import b.i.d.j;
-import b.i.d.k;
 import com.google.gson.internal.LinkedTreeMap;
 import java.util.Map;
 import java.util.Set;
+import p007b.p225i.p408d.JsonNull;
+import p007b.p225i.p408d.JsonPrimitive;
 
 /* loaded from: classes3.dex */
 public final class JsonObject extends JsonElement {
-    public final LinkedTreeMap<String, JsonElement> a = new LinkedTreeMap<>();
+
+    /* renamed from: a */
+    public final LinkedTreeMap<String, JsonElement> f21481a = new LinkedTreeMap<>();
 
     public boolean equals(Object obj) {
-        return obj == this || ((obj instanceof JsonObject) && ((JsonObject) obj).a.equals(this.a));
+        return obj == this || ((obj instanceof JsonObject) && ((JsonObject) obj).f21481a.equals(this.f21481a));
     }
 
-    public void h(String str, JsonElement jsonElement) {
-        LinkedTreeMap<String, JsonElement> linkedTreeMap = this.a;
+    /* renamed from: h */
+    public void m9214h(String str, JsonElement jsonElement) {
+        LinkedTreeMap<String, JsonElement> linkedTreeMap = this.f21481a;
         if (jsonElement == null) {
-            jsonElement = j.a;
+            jsonElement = JsonNull.f13106a;
         }
         linkedTreeMap.put(str, jsonElement);
     }
 
     public int hashCode() {
-        return this.a.hashCode();
+        return this.f21481a.hashCode();
     }
 
-    public void i(String str, Number number) {
-        this.a.put(str, number == null ? j.a : new k(number));
+    /* renamed from: i */
+    public void m9215i(String str, Number number) {
+        this.f21481a.put(str, number == null ? JsonNull.f13106a : new JsonPrimitive(number));
     }
 
-    public Set<Map.Entry<String, JsonElement>> j() {
-        return this.a.entrySet();
+    /* renamed from: j */
+    public Set<Map.Entry<String, JsonElement>> m9216j() {
+        return this.f21481a.entrySet();
     }
 }

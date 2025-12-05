@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStopSpeaking.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStopSpeaking implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackStopSpeaking implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long duration = null;
     private final CharSequence gamePlatform = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackStopSpeaking implements AnalyticsSchema, Trac
             return false;
         }
         TrackStopSpeaking trackStopSpeaking = (TrackStopSpeaking) other;
-        return m.areEqual(this.duration, trackStopSpeaking.duration) && m.areEqual(this.gamePlatform, trackStopSpeaking.gamePlatform) && m.areEqual(this.gameName, trackStopSpeaking.gameName) && m.areEqual(this.gameId, trackStopSpeaking.gameId);
+        return Intrinsics3.areEqual(this.duration, trackStopSpeaking.duration) && Intrinsics3.areEqual(this.gamePlatform, trackStopSpeaking.gamePlatform) && Intrinsics3.areEqual(this.gameName, trackStopSpeaking.gameName) && Intrinsics3.areEqual(this.gameId, trackStopSpeaking.gameId);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackStopSpeaking implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStopSpeaking(duration=");
-        sbU.append(this.duration);
-        sbU.append(", gamePlatform=");
-        sbU.append(this.gamePlatform);
-        sbU.append(", gameName=");
-        sbU.append(this.gameName);
-        sbU.append(", gameId=");
-        return a.G(sbU, this.gameId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStopSpeaking(duration=");
+        sbM833U.append(this.duration);
+        sbM833U.append(", gamePlatform=");
+        sbM833U.append(this.gamePlatform);
+        sbM833U.append(", gameName=");
+        sbM833U.append(this.gameName);
+        sbM833U.append(", gameId=");
+        return outline.m819G(sbM833U, this.gameId, ")");
     }
 }

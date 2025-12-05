@@ -11,12 +11,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.browser.R;
+import androidx.browser.C0143R;
 import androidx.core.content.res.ResourcesCompat;
-import b.i.b.d.a.a;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @Deprecated
 /* loaded from: classes.dex */
@@ -24,16 +24,16 @@ public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
     private final Context mContext;
     private final List<BrowserActionItem> mMenuItems;
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public final /* synthetic */ a val$bitmapFuture;
+    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$1 */
+    public class RunnableC01441 implements Runnable {
+        public final /* synthetic */ ListenableFuture8 val$bitmapFuture;
         public final /* synthetic */ String val$titleText;
         public final /* synthetic */ ViewHolderItem val$viewHolder;
 
-        public AnonymousClass1(String str, ViewHolderItem viewHolderItem, a aVar) {
+        public RunnableC01441(String str, ViewHolderItem viewHolderItem, ListenableFuture8 listenableFuture8) {
             this.val$titleText = str;
             this.val$viewHolder = viewHolderItem;
-            this.val$bitmapFuture = aVar;
+            this.val$bitmapFuture = listenableFuture8;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -57,9 +57,9 @@ public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
         }
     }
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$2, reason: invalid class name */
-    public class AnonymousClass2 implements Executor {
-        public AnonymousClass2() {
+    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$2 */
+    public class ExecutorC01452 implements Executor {
+        public ExecutorC01452() {
         }
 
         @Override // java.util.concurrent.Executor
@@ -103,9 +103,9 @@ public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
         ViewHolderItem viewHolderItem;
         BrowserActionItem browserActionItem = this.mMenuItems.get(i);
         if (view == null) {
-            view = LayoutInflater.from(this.mContext).inflate(R.layout.browser_actions_context_menu_row, (ViewGroup) null);
-            ImageView imageView = (ImageView) view.findViewById(R.id.browser_actions_menu_item_icon);
-            TextView textView = (TextView) view.findViewById(R.id.browser_actions_menu_item_text);
+            view = LayoutInflater.from(this.mContext).inflate(C0143R.layout.browser_actions_context_menu_row, (ViewGroup) null);
+            ImageView imageView = (ImageView) view.findViewById(C0143R.id.browser_actions_menu_item_icon);
+            TextView textView = (TextView) view.findViewById(C0143R.id.browser_actions_menu_item_text);
             if (imageView == null || textView == null) {
                 throw new IllegalStateException("Browser Actions fallback UI does not contain necessary Views.");
             }
@@ -119,8 +119,8 @@ public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
         if (browserActionItem.getIconId() != 0) {
             viewHolderItem.mIcon.setImageDrawable(ResourcesCompat.getDrawable(this.mContext.getResources(), browserActionItem.getIconId(), null));
         } else if (browserActionItem.getIconUri() != null) {
-            a<Bitmap> aVarLoadBitmap = BrowserServiceFileProvider.loadBitmap(this.mContext.getContentResolver(), browserActionItem.getIconUri());
-            aVarLoadBitmap.addListener(new AnonymousClass1(title, viewHolderItem, aVarLoadBitmap), new AnonymousClass2());
+            ListenableFuture8<Bitmap> listenableFuture8LoadBitmap = BrowserServiceFileProvider.loadBitmap(this.mContext.getContentResolver(), browserActionItem.getIconUri());
+            listenableFuture8LoadBitmap.addListener(new RunnableC01441(title, viewHolderItem, listenableFuture8LoadBitmap), new ExecutorC01452());
         } else {
             viewHolderItem.mIcon.setImageBitmap(null);
             viewHolderItem.mIcon.setVisibility(4);

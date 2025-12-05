@@ -6,8 +6,8 @@ import androidx.annotation.Nullable;
 import androidx.arch.core.executor.ArchTaskExecutor;
 import androidx.arch.core.internal.SafeIterableMap;
 import androidx.view.Lifecycle;
-import b.d.b.a.a;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class LiveData<T> {
@@ -24,9 +24,9 @@ public abstract class LiveData<T> {
     private final Runnable mPostValueRunnable;
     private int mVersion;
 
-    /* renamed from: androidx.lifecycle.LiveData$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.lifecycle.LiveData$1 */
+    public class RunnableC04431 implements Runnable {
+        public RunnableC04431() {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -128,14 +128,14 @@ public abstract class LiveData<T> {
         this.mObservers = new SafeIterableMap<>();
         this.mActiveCount = 0;
         this.mPendingData = NOT_SET;
-        this.mPostValueRunnable = new AnonymousClass1();
+        this.mPostValueRunnable = new RunnableC04431();
         this.mData = t;
         this.mVersion = 0;
     }
 
     public static void assertMainThread(String str) {
         if (!ArchTaskExecutor.getInstance().isMainThread()) {
-            throw new IllegalStateException(a.y("Cannot invoke ", str, " on a background thread"));
+            throw new IllegalStateException(outline.m886y("Cannot invoke ", str, " on a background thread"));
         }
     }
 
@@ -311,7 +311,7 @@ public abstract class LiveData<T> {
         this.mActiveCount = 0;
         Object obj = NOT_SET;
         this.mPendingData = obj;
-        this.mPostValueRunnable = new AnonymousClass1();
+        this.mPostValueRunnable = new RunnableC04431();
         this.mData = obj;
         this.mVersion = -1;
     }

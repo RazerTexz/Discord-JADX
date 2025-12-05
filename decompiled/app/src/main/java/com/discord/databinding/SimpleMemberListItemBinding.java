@@ -9,21 +9,22 @@ import com.discord.views.user.SettingsMemberView;
 /* loaded from: classes.dex */
 public final class SimpleMemberListItemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final FrameLayout a;
+    public final FrameLayout f15238a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final SettingsMemberView f2142b;
+    public final SettingsMemberView f15239b;
 
     public SimpleMemberListItemBinding(@NonNull FrameLayout frameLayout, @NonNull SettingsMemberView settingsMemberView) {
-        this.a = frameLayout;
-        this.f2142b = settingsMemberView;
+        this.f15238a = frameLayout;
+        this.f15239b = settingsMemberView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15238a;
     }
 }

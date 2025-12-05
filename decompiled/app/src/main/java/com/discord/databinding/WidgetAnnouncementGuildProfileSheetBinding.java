@@ -11,21 +11,22 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /* loaded from: classes.dex */
 public final class WidgetAnnouncementGuildProfileSheetBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final NestedScrollView a;
+    public final NestedScrollView f15648a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final SimpleDraweeView f2225b;
+    public final SimpleDraweeView f15649b;
 
     public WidgetAnnouncementGuildProfileSheetBinding(@NonNull NestedScrollView nestedScrollView, @NonNull SimpleDraweeView simpleDraweeView, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull ImageView imageView) {
-        this.a = nestedScrollView;
-        this.f2225b = simpleDraweeView;
+        this.f15648a = nestedScrollView;
+        this.f15649b = simpleDraweeView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15648a;
     }
 }

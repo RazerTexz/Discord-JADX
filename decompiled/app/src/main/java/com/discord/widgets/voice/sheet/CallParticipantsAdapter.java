@@ -1,6 +1,5 @@
 package com.discord.widgets.voice.sheet;
 
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +11,7 @@ import androidx.annotation.StringRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.b;
-import b.a.y.a0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.databinding.VoiceUserListItemEmbeddedActivityBinding;
@@ -31,7 +27,7 @@ import com.discord.stores.StoreApplicationStreamPreviews;
 import com.discord.stores.StoreVoiceParticipants;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.colors.RepresentativeColorsKt;
+import com.discord.utilities.colors.RepresentativeColors2;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
@@ -45,8 +41,6 @@ import com.discord.views.VoiceUserView;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
-import d0.t.o;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -55,6 +49,11 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p008a.p062y.PileView2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: CallParticipantsAdapter.kt */
 /* loaded from: classes.dex */
@@ -111,9 +110,9 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public EmbeddedActivityItem(EmbeddedActivity embeddedActivity, List<UserGuildMember> list, Application application) {
                 super(null);
-                m.checkNotNullParameter(embeddedActivity, "embeddedActivity");
-                m.checkNotNullParameter(list, "participants");
-                m.checkNotNullParameter(application, "application");
+                Intrinsics3.checkNotNullParameter(embeddedActivity, "embeddedActivity");
+                Intrinsics3.checkNotNullParameter(list, "participants");
+                Intrinsics3.checkNotNullParameter(application, "application");
                 this.embeddedActivity = embeddedActivity;
                 this.participants = list;
                 this.application = application;
@@ -150,9 +149,9 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public final EmbeddedActivityItem copy(EmbeddedActivity embeddedActivity, List<UserGuildMember> participants, Application application) {
-                m.checkNotNullParameter(embeddedActivity, "embeddedActivity");
-                m.checkNotNullParameter(participants, "participants");
-                m.checkNotNullParameter(application, "application");
+                Intrinsics3.checkNotNullParameter(embeddedActivity, "embeddedActivity");
+                Intrinsics3.checkNotNullParameter(participants, "participants");
+                Intrinsics3.checkNotNullParameter(application, "application");
                 return new EmbeddedActivityItem(embeddedActivity, participants, application);
             }
 
@@ -164,7 +163,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
                     return false;
                 }
                 EmbeddedActivityItem embeddedActivityItem = (EmbeddedActivityItem) other;
-                return m.areEqual(this.embeddedActivity, embeddedActivityItem.embeddedActivity) && m.areEqual(this.participants, embeddedActivityItem.participants) && m.areEqual(this.application, embeddedActivityItem.application);
+                return Intrinsics3.areEqual(this.embeddedActivity, embeddedActivityItem.embeddedActivity) && Intrinsics3.areEqual(this.participants, embeddedActivityItem.participants) && Intrinsics3.areEqual(this.application, embeddedActivityItem.application);
             }
 
             public final Application getApplication() {
@@ -199,14 +198,14 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("EmbeddedActivityItem(embeddedActivity=");
-                sbU.append(this.embeddedActivity);
-                sbU.append(", participants=");
-                sbU.append(this.participants);
-                sbU.append(", application=");
-                sbU.append(this.application);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("EmbeddedActivityItem(embeddedActivity=");
+                sbM833U.append(this.embeddedActivity);
+                sbM833U.append(", participants=");
+                sbM833U.append(this.participants);
+                sbM833U.append(", application=");
+                sbM833U.append(this.application);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -221,7 +220,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Event(GuildScheduledEvent guildScheduledEvent, boolean z2, boolean z3) {
                 super(null);
-                m.checkNotNullParameter(guildScheduledEvent, "event");
+                Intrinsics3.checkNotNullParameter(guildScheduledEvent, "event");
                 this.event = guildScheduledEvent;
                 this.canStartEvent = z2;
                 this.isCurrentUserInCall = z3;
@@ -258,7 +257,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public final Event copy(GuildScheduledEvent event, boolean canStartEvent, boolean isCurrentUserInCall) {
-                m.checkNotNullParameter(event, "event");
+                Intrinsics3.checkNotNullParameter(event, "event");
                 return new Event(event, canStartEvent, isCurrentUserInCall);
             }
 
@@ -270,7 +269,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
                     return false;
                 }
                 Event event = (Event) other;
-                return m.areEqual(this.event, event.event) && this.canStartEvent == event.canStartEvent && this.isCurrentUserInCall == event.isCurrentUserInCall;
+                return Intrinsics3.areEqual(this.event, event.event) && this.canStartEvent == event.canStartEvent && this.isCurrentUserInCall == event.isCurrentUserInCall;
             }
 
             public final boolean getCanStartEvent() {
@@ -310,12 +309,12 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Event(event=");
-                sbU.append(this.event);
-                sbU.append(", canStartEvent=");
-                sbU.append(this.canStartEvent);
-                sbU.append(", isCurrentUserInCall=");
-                return a.O(sbU, this.isCurrentUserInCall, ")");
+                StringBuilder sbM833U = outline.m833U("Event(event=");
+                sbM833U.append(this.event);
+                sbM833U.append(", canStartEvent=");
+                sbM833U.append(this.canStartEvent);
+                sbM833U.append(", isCurrentUserInCall=");
+                return outline.m827O(sbM833U, this.isCurrentUserInCall, ")");
             }
         }
 
@@ -374,7 +373,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public String toString() {
-                return a.B(a.U("Header(stringResId="), this.stringResId, ")");
+                return outline.m814B(outline.m833U("Header(stringResId="), this.stringResId, ")");
             }
         }
 
@@ -408,7 +407,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public SpectatorsHeader(String str) {
                 super(null);
-                m.checkNotNullParameter(str, "streamerName");
+                Intrinsics3.checkNotNullParameter(str, "streamerName");
                 this.streamerName = str;
                 this.type = 2;
                 this.key = "SpectatorsHeader";
@@ -427,13 +426,13 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public final SpectatorsHeader copy(String streamerName) {
-                m.checkNotNullParameter(streamerName, "streamerName");
+                Intrinsics3.checkNotNullParameter(streamerName, "streamerName");
                 return new SpectatorsHeader(streamerName);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof SpectatorsHeader) && m.areEqual(this.streamerName, ((SpectatorsHeader) other).streamerName);
+                    return (other instanceof SpectatorsHeader) && Intrinsics3.areEqual(this.streamerName, ((SpectatorsHeader) other).streamerName);
                 }
                 return true;
             }
@@ -461,7 +460,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public String toString() {
-                return a.J(a.U("SpectatorsHeader(streamerName="), this.streamerName, ")");
+                return outline.m822J(outline.m833U("SpectatorsHeader(streamerName="), this.streamerName, ")");
             }
         }
 
@@ -476,7 +475,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public VoiceUser(StoreVoiceParticipants.VoiceUser voiceUser, boolean z2, boolean z3) {
                 super(null);
-                m.checkNotNullParameter(voiceUser, "participant");
+                Intrinsics3.checkNotNullParameter(voiceUser, "participant");
                 this.participant = voiceUser;
                 this.canRing = z2;
                 this.isSpectatingSameStream = z3;
@@ -512,7 +511,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public final VoiceUser copy(StoreVoiceParticipants.VoiceUser participant, boolean canRing, boolean isSpectatingSameStream) {
-                m.checkNotNullParameter(participant, "participant");
+                Intrinsics3.checkNotNullParameter(participant, "participant");
                 return new VoiceUser(participant, canRing, isSpectatingSameStream);
             }
 
@@ -524,7 +523,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
                     return false;
                 }
                 VoiceUser voiceUser = (VoiceUser) other;
-                return m.areEqual(this.participant, voiceUser.participant) && this.canRing == voiceUser.canRing && this.isSpectatingSameStream == voiceUser.isSpectatingSameStream;
+                return Intrinsics3.areEqual(this.participant, voiceUser.participant) && this.canRing == voiceUser.canRing && this.isSpectatingSameStream == voiceUser.isSpectatingSameStream;
             }
 
             public final boolean getCanRing() {
@@ -564,12 +563,12 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("VoiceUser(participant=");
-                sbU.append(this.participant);
-                sbU.append(", canRing=");
-                sbU.append(this.canRing);
-                sbU.append(", isSpectatingSameStream=");
-                return a.O(sbU, this.isSpectatingSameStream, ")");
+                StringBuilder sbM833U = outline.m833U("VoiceUser(participant=");
+                sbM833U.append(this.participant);
+                sbM833U.append(", canRing=");
+                sbM833U.append(this.canRing);
+                sbM833U.append(", isSpectatingSameStream=");
+                return outline.m827O(sbM833U, this.isSpectatingSameStream, ")");
             }
         }
 
@@ -585,8 +584,8 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
     public static final class ViewHolderDivider extends MGRecyclerViewHolder<CallParticipantsAdapter, MGRecyclerDataPayload> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolderDivider(CallParticipantsAdapter callParticipantsAdapter) {
-            super(R.layout.voice_user_list_item_divider, callParticipantsAdapter);
-            m.checkNotNullParameter(callParticipantsAdapter, "adapter");
+            super(C5419R.layout.voice_user_list_item_divider, callParticipantsAdapter);
+            Intrinsics3.checkNotNullParameter(callParticipantsAdapter, "adapter");
         }
     }
 
@@ -598,24 +597,24 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolderEmbeddedActivity(CallParticipantsAdapter callParticipantsAdapter, boolean z2) {
-            super(R.layout.voice_user_list_item_embedded_activity, callParticipantsAdapter);
-            m.checkNotNullParameter(callParticipantsAdapter, "adapter");
+            super(C5419R.layout.voice_user_list_item_embedded_activity, callParticipantsAdapter);
+            Intrinsics3.checkNotNullParameter(callParticipantsAdapter, "adapter");
             this.isCallPreview = z2;
             View view = this.itemView;
-            int i = R.id.app_icon;
-            SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.app_icon);
+            int i = C5419R.id.app_icon;
+            SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.app_icon);
             if (simpleDraweeView != null) {
-                i = R.id.app_name;
-                TextView textView = (TextView) view.findViewById(R.id.app_name);
+                i = C5419R.id.app_name;
+                TextView textView = (TextView) view.findViewById(C5419R.id.app_name);
                 if (textView != null) {
-                    i = R.id.clickable_container;
-                    ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(R.id.clickable_container);
+                    i = C5419R.id.clickable_container;
+                    ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(C5419R.id.clickable_container);
                     if (constraintLayout != null) {
-                        i = R.id.participant_avatars;
-                        PileView pileView = (PileView) view.findViewById(R.id.participant_avatars);
+                        i = C5419R.id.participant_avatars;
+                        PileView pileView = (PileView) view.findViewById(C5419R.id.participant_avatars);
                         if (pileView != null) {
                             VoiceUserListItemEmbeddedActivityBinding voiceUserListItemEmbeddedActivityBinding = new VoiceUserListItemEmbeddedActivityBinding((FrameLayout) view, simpleDraweeView, textView, constraintLayout, pileView);
-                            m.checkNotNullExpressionValue(voiceUserListItemEmbeddedActivityBinding, "VoiceUserListItemEmbedde…ityBinding.bind(itemView)");
+                            Intrinsics3.checkNotNullExpressionValue(voiceUserListItemEmbeddedActivityBinding, "VoiceUserListItemEmbedde…ityBinding.bind(itemView)");
                             this.binding = voiceUserListItemEmbeddedActivityBinding;
                             this.distinctChangeDetector = new MGImages.DistinctChangeDetector();
                             return;
@@ -638,47 +637,47 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Drawable drawable;
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             ListItem.EmbeddedActivityItem embeddedActivityItem = (ListItem.EmbeddedActivityItem) data;
             Application application = embeddedActivityItem.getApplication();
             if (!this.isCallPreview) {
-                FrameLayout frameLayout = this.binding.a;
-                m.checkNotNullExpressionValue(frameLayout, "binding.root");
-                this.binding.a.setBackgroundColor(ColorCompat.getThemedColor(frameLayout.getContext(), R.attr.colorBackgroundPrimary));
+                FrameLayout frameLayout = this.binding.f15614a;
+                Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
+                this.binding.f15614a.setBackgroundColor(ColorCompat.getThemedColor(frameLayout.getContext(), C5419R.attr.colorBackgroundPrimary));
             }
-            TextView textView = this.binding.c;
-            m.checkNotNullExpressionValue(textView, "binding.appName");
+            TextView textView = this.binding.f15616c;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.appName");
             textView.setText(application.getName());
             boolean z2 = application.getIcon() != null;
-            SimpleDraweeView simpleDraweeView = this.binding.f2219b;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.appIcon");
+            SimpleDraweeView simpleDraweeView = this.binding.f15615b;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.appIcon");
             if (z2) {
                 drawable = null;
             } else {
-                SimpleDraweeView simpleDraweeView2 = this.binding.f2219b;
-                m.checkNotNullExpressionValue(simpleDraweeView2, "binding.appIcon");
-                drawable = ContextCompat.getDrawable(simpleDraweeView2.getContext(), R.drawable.ic_activity_24dp);
+                SimpleDraweeView simpleDraweeView2 = this.binding.f15615b;
+                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.appIcon");
+                drawable = ContextCompat.getDrawable(simpleDraweeView2.getContext(), C5419R.drawable.ic_activity_24dp);
             }
             simpleDraweeView.setBackground(drawable);
             String applicationIcon = IconUtils.INSTANCE.getApplicationIcon(application, DimenUtils.dpToPixels(32));
-            SimpleDraweeView simpleDraweeView3 = this.binding.f2219b;
-            m.checkNotNullExpressionValue(simpleDraweeView3, "binding.appIcon");
+            SimpleDraweeView simpleDraweeView3 = this.binding.f15615b;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "binding.appIcon");
             MGImages.setImage$default(simpleDraweeView3, z2 ? applicationIcon : null, DimenUtils.dpToPixels(32), DimenUtils.dpToPixels(32), false, null, this.distinctChangeDetector, 48, null);
             List<UserGuildMember> participants = embeddedActivityItem.getParticipants();
             int iDpToPixels = DimenUtils.dpToPixels(16);
-            m.checkNotNullParameter(participants, "userGuildMembers");
-            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(participants, 10));
+            Intrinsics3.checkNotNullParameter(participants, "userGuildMembers");
+            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(participants, 10));
             for (UserGuildMember userGuildMember : participants) {
                 arrayList.add(IconUtils.INSTANCE.getForGuildMemberOrUser(userGuildMember.getUser(), userGuildMember.getGuildMember(), Integer.valueOf(iDpToPixels), false));
             }
-            ArrayList arrayList2 = new ArrayList(o.collectionSizeOrDefault(arrayList, 10));
+            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
             Iterator it = arrayList.iterator();
             while (it.hasNext()) {
-                arrayList2.add(new PileView.c(new a0((String) it.next()), null));
+                arrayList2.add(new PileView.C7089c(new PileView2((String) it.next()), null));
             }
-            this.binding.e.setItems(arrayList2);
-            this.binding.d.setOnClickListener(new CallParticipantsAdapter$ViewHolderEmbeddedActivity$onConfigure$1(this));
+            this.binding.f15618e.setItems(arrayList2);
+            this.binding.f15617d.setOnClickListener(new CallParticipantsAdapter$ViewHolderEmbeddedActivity$onConfigure$1(this));
         }
     }
 
@@ -689,16 +688,16 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolderEvent(CallParticipantsAdapter callParticipantsAdapter, boolean z2) {
-            super(R.layout.voice_user_list_item_event, callParticipantsAdapter);
-            m.checkNotNullParameter(callParticipantsAdapter, "adapter");
+            super(C5419R.layout.voice_user_list_item_event, callParticipantsAdapter);
+            Intrinsics3.checkNotNullParameter(callParticipantsAdapter, "adapter");
             this.isCallPreview = z2;
             View view = this.itemView;
-            GuildScheduledEventItemView guildScheduledEventItemView = (GuildScheduledEventItemView) view.findViewById(R.id.event_card);
+            GuildScheduledEventItemView guildScheduledEventItemView = (GuildScheduledEventItemView) view.findViewById(C5419R.id.event_card);
             if (guildScheduledEventItemView == null) {
-                throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.event_card)));
+                throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(C5419R.id.event_card)));
             }
             VoiceUserListItemEventBinding voiceUserListItemEventBinding = new VoiceUserListItemEventBinding((FrameLayout) view, guildScheduledEventItemView);
-            m.checkNotNullExpressionValue(voiceUserListItemEventBinding, "VoiceUserListItemEventBinding.bind(itemView)");
+            Intrinsics3.checkNotNullExpressionValue(voiceUserListItemEventBinding, "VoiceUserListItemEventBinding.bind(itemView)");
             this.binding = voiceUserListItemEventBinding;
         }
 
@@ -707,17 +706,17 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-        public /* bridge */ /* synthetic */ void onConfigure(int i, MGRecyclerDataPayload mGRecyclerDataPayload) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ void onConfigure(int i, MGRecyclerDataPayload mGRecyclerDataPayload) {
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
-        public void onConfigure2(int position, MGRecyclerDataPayload data) throws Resources.NotFoundException {
-            m.checkNotNullParameter(data, "data");
+        public void onConfigure2(int position, MGRecyclerDataPayload data) {
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             if (data instanceof ListItem.Event) {
                 ListItem.Event event = (ListItem.Event) data;
-                this.binding.f2220b.configureInVoiceChannel(event.getEvent(), null, event.getCanStartEvent() && event.isCurrentUserInCall(), event.isCurrentUserInCall(), event.isCurrentUserInCall(), this.isCallPreview, new CallParticipantsAdapter$ViewHolderEvent$onConfigure$1(this, data), new CallParticipantsAdapter$ViewHolderEvent$onConfigure$2(this, data));
+                this.binding.f15620b.configureInVoiceChannel(event.getEvent(), null, event.getCanStartEvent() && event.isCurrentUserInCall(), event.isCurrentUserInCall(), event.isCurrentUserInCall(), this.isCallPreview, new CallParticipantsAdapter$ViewHolderEvent$onConfigure$1(this, data), new CallParticipantsAdapter$ViewHolderEvent$onConfigure$2(this, data));
             }
         }
     }
@@ -728,13 +727,13 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolderHeader(CallParticipantsAdapter callParticipantsAdapter) {
-            super(R.layout.voice_user_list_item_header, callParticipantsAdapter);
-            m.checkNotNullParameter(callParticipantsAdapter, "adapter");
+            super(C5419R.layout.voice_user_list_item_header, callParticipantsAdapter);
+            Intrinsics3.checkNotNullParameter(callParticipantsAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             TextView textView = (TextView) view;
             VoiceUserListItemHeaderBinding voiceUserListItemHeaderBinding = new VoiceUserListItemHeaderBinding(textView, textView);
-            m.checkNotNullExpressionValue(voiceUserListItemHeaderBinding, "VoiceUserListItemHeaderBinding.bind(itemView)");
+            Intrinsics3.checkNotNullExpressionValue(voiceUserListItemHeaderBinding, "VoiceUserListItemHeaderBinding.bind(itemView)");
             this.binding = voiceUserListItemHeaderBinding;
         }
 
@@ -745,18 +744,18 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             if (data instanceof ListItem.Header) {
-                this.binding.f2221b.setText(((ListItem.Header) data).getStringResId());
+                this.binding.f15622b.setText(((ListItem.Header) data).getStringResId());
                 return;
             }
             if (data instanceof ListItem.SpectatorsHeader) {
-                TextView textView = this.binding.f2221b;
-                m.checkNotNullExpressionValue(textView, "binding.voiceUserListItemHeaderLabel");
-                TextView textView2 = this.binding.f2221b;
-                m.checkNotNullExpressionValue(textView2, "binding.voiceUserListItemHeaderLabel");
-                textView.setText(b.j(textView2, R.string.go_live_watching_user, new Object[]{((ListItem.SpectatorsHeader) data).getStreamerName()}, null, 4));
+                TextView textView = this.binding.f15622b;
+                Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserListItemHeaderLabel");
+                TextView textView2 = this.binding.f15622b;
+                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.voiceUserListItemHeaderLabel");
+                textView.setText(FormatUtils.m218j(textView2, C5419R.string.go_live_watching_user, new Object[]{((ListItem.SpectatorsHeader) data).getStreamerName()}, null, 4));
             }
         }
     }
@@ -768,13 +767,13 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolderInvite(CallParticipantsAdapter callParticipantsAdapter, boolean z2) {
-            super(R.layout.voice_user_list_item_invite, callParticipantsAdapter);
-            m.checkNotNullParameter(callParticipantsAdapter, "adapter");
+            super(C5419R.layout.voice_user_list_item_invite, callParticipantsAdapter);
+            Intrinsics3.checkNotNullParameter(callParticipantsAdapter, "adapter");
             this.isCallPreview = z2;
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             VoiceUserListItemInviteBinding voiceUserListItemInviteBinding = new VoiceUserListItemInviteBinding((LinearLayout) view);
-            m.checkNotNullExpressionValue(voiceUserListItemInviteBinding, "VoiceUserListItemInviteBinding.bind(itemView)");
+            Intrinsics3.checkNotNullExpressionValue(voiceUserListItemInviteBinding, "VoiceUserListItemInviteBinding.bind(itemView)");
             this.binding = voiceUserListItemInviteBinding;
         }
 
@@ -789,16 +788,16 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             if (data instanceof ListItem.Invite) {
                 this.itemView.setOnClickListener(new CallParticipantsAdapter$ViewHolderInvite$onConfigure$1(this));
                 if (this.isCallPreview) {
                     return;
                 }
-                LinearLayout linearLayout = this.binding.a;
-                m.checkNotNullExpressionValue(linearLayout, "binding.root");
-                this.binding.a.setBackgroundColor(ColorCompat.getThemedColor(linearLayout.getContext(), R.attr.colorBackgroundPrimary));
+                LinearLayout linearLayout = this.binding.f15623a;
+                Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
+                this.binding.f15623a.setBackgroundColor(ColorCompat.getThemedColor(linearLayout.getContext(), C5419R.attr.colorBackgroundPrimary));
             }
         }
     }
@@ -811,40 +810,40 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolderUser(CallParticipantsAdapter callParticipantsAdapter, boolean z2, boolean z3) {
-            super(R.layout.voice_user_list_item_user, callParticipantsAdapter);
-            m.checkNotNullParameter(callParticipantsAdapter, "adapter");
+            super(C5419R.layout.voice_user_list_item_user, callParticipantsAdapter);
+            Intrinsics3.checkNotNullParameter(callParticipantsAdapter, "adapter");
             this.isCallPreview = z2;
             this.quantizeUserAvatar = z3;
             View view = this.itemView;
-            int i = R.id.voice_user_list_item_deafen_indicator;
-            ImageView imageView = (ImageView) view.findViewById(R.id.voice_user_list_item_deafen_indicator);
+            int i = C5419R.id.voice_user_list_item_deafen_indicator;
+            ImageView imageView = (ImageView) view.findViewById(C5419R.id.voice_user_list_item_deafen_indicator);
             if (imageView != null) {
-                i = R.id.voice_user_list_item_live_indicator;
-                TextView textView = (TextView) view.findViewById(R.id.voice_user_list_item_live_indicator);
+                i = C5419R.id.voice_user_list_item_live_indicator;
+                TextView textView = (TextView) view.findViewById(C5419R.id.voice_user_list_item_live_indicator);
                 if (textView != null) {
-                    i = R.id.voice_user_list_item_mute_indicator;
-                    ImageView imageView2 = (ImageView) view.findViewById(R.id.voice_user_list_item_mute_indicator);
+                    i = C5419R.id.voice_user_list_item_mute_indicator;
+                    ImageView imageView2 = (ImageView) view.findViewById(C5419R.id.voice_user_list_item_mute_indicator);
                     if (imageView2 != null) {
-                        i = R.id.voice_user_list_item_spectating_indicator;
-                        ImageView imageView3 = (ImageView) view.findViewById(R.id.voice_user_list_item_spectating_indicator);
+                        i = C5419R.id.voice_user_list_item_spectating_indicator;
+                        ImageView imageView3 = (ImageView) view.findViewById(C5419R.id.voice_user_list_item_spectating_indicator);
                         if (imageView3 != null) {
-                            i = R.id.voice_user_list_item_toggle_ringing;
-                            MaterialButton materialButton = (MaterialButton) view.findViewById(R.id.voice_user_list_item_toggle_ringing);
+                            i = C5419R.id.voice_user_list_item_toggle_ringing;
+                            MaterialButton materialButton = (MaterialButton) view.findViewById(C5419R.id.voice_user_list_item_toggle_ringing);
                             if (materialButton != null) {
-                                i = R.id.voice_user_list_item_user_avatar;
-                                VoiceUserView voiceUserView = (VoiceUserView) view.findViewById(R.id.voice_user_list_item_user_avatar);
+                                i = C5419R.id.voice_user_list_item_user_avatar;
+                                VoiceUserView voiceUserView = (VoiceUserView) view.findViewById(C5419R.id.voice_user_list_item_user_avatar);
                                 if (voiceUserView != null) {
-                                    i = R.id.voice_user_list_item_user_name;
-                                    TextView textView2 = (TextView) view.findViewById(R.id.voice_user_list_item_user_name);
+                                    i = C5419R.id.voice_user_list_item_user_name;
+                                    TextView textView2 = (TextView) view.findViewById(C5419R.id.voice_user_list_item_user_name);
                                     if (textView2 != null) {
-                                        i = R.id.voice_user_list_item_user_stream_preview;
-                                        StreamPreviewView streamPreviewView = (StreamPreviewView) view.findViewById(R.id.voice_user_list_item_user_stream_preview);
+                                        i = C5419R.id.voice_user_list_item_user_stream_preview;
+                                        StreamPreviewView streamPreviewView = (StreamPreviewView) view.findViewById(C5419R.id.voice_user_list_item_user_stream_preview);
                                         if (streamPreviewView != null) {
-                                            i = R.id.voice_user_list_item_video_indicator;
-                                            ImageView imageView4 = (ImageView) view.findViewById(R.id.voice_user_list_item_video_indicator);
+                                            i = C5419R.id.voice_user_list_item_video_indicator;
+                                            ImageView imageView4 = (ImageView) view.findViewById(C5419R.id.voice_user_list_item_video_indicator);
                                             if (imageView4 != null) {
                                                 VoiceUserListItemUserBinding voiceUserListItemUserBinding = new VoiceUserListItemUserBinding((LinearLayout) view, imageView, textView, imageView2, imageView3, materialButton, voiceUserView, textView2, streamPreviewView, imageView4);
-                                                m.checkNotNullExpressionValue(voiceUserListItemUserBinding, "VoiceUserListItemUserBinding.bind(itemView)");
+                                                Intrinsics3.checkNotNullExpressionValue(voiceUserListItemUserBinding, "VoiceUserListItemUserBinding.bind(itemView)");
                                                 this.binding = voiceUserListItemUserBinding;
                                                 return;
                                             }
@@ -870,121 +869,121 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            CharSequence charSequenceJ;
-            CharSequence charSequenceJ2;
-            m.checkNotNullParameter(data, "data");
+            CharSequence charSequenceM218j;
+            CharSequence charSequenceM218j2;
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             ListItem.VoiceUser voiceUser = (ListItem.VoiceUser) data;
             StoreVoiceParticipants.VoiceUser participant = voiceUser.getParticipant();
-            String colorId = RepresentativeColorsKt.getColorId(participant.getUser());
+            String colorId = RepresentativeColors2.getColorId(participant.getUser());
             if (this.quantizeUserAvatar) {
-                this.binding.g.setOnBitmapLoadedListener(new CallParticipantsAdapter$ViewHolderUser$onConfigure$1(colorId));
+                this.binding.f15630g.setOnBitmapLoadedListener(new CallParticipantsAdapter$ViewHolderUser$onConfigure$1(colorId));
             }
             if (!this.isCallPreview) {
-                LinearLayout linearLayout = this.binding.a;
-                m.checkNotNullExpressionValue(linearLayout, "binding.root");
-                this.binding.a.setBackgroundColor(ColorCompat.getThemedColor(linearLayout.getContext(), R.attr.colorBackgroundPrimary));
+                LinearLayout linearLayout = this.binding.f15624a;
+                Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
+                this.binding.f15624a.setBackgroundColor(ColorCompat.getThemedColor(linearLayout.getContext(), C5419R.attr.colorBackgroundPrimary));
             }
-            this.binding.g.a(participant, R.dimen.avatar_size_standard);
-            TextView textView = this.binding.h;
-            m.checkNotNullExpressionValue(textView, "binding.voiceUserListItemUserName");
+            this.binding.f15630g.m8570a(participant, C5419R.dimen.avatar_size_standard);
+            TextView textView = this.binding.f15631h;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserListItemUserName");
             textView.setText(participant.getDisplayName());
             this.itemView.setOnClickListener(new CallParticipantsAdapter$ViewHolderUser$onConfigure$2(this, participant));
-            MaterialButton materialButton = this.binding.f;
-            m.checkNotNullExpressionValue(materialButton, "binding.voiceUserListItemToggleRinging");
+            MaterialButton materialButton = this.binding.f15629f;
+            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.voiceUserListItemToggleRinging");
             boolean z2 = false;
             materialButton.setVisibility(voiceUser.getCanRing() ? 0 : 8);
-            MaterialButton materialButton2 = this.binding.f;
-            m.checkNotNullExpressionValue(materialButton2, "binding.voiceUserListItemToggleRinging");
+            MaterialButton materialButton2 = this.binding.f15629f;
+            Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.voiceUserListItemToggleRinging");
             if (participant.isRinging()) {
-                MaterialButton materialButton3 = this.binding.f;
-                m.checkNotNullExpressionValue(materialButton3, "binding.voiceUserListItemToggleRinging");
-                charSequenceJ = b.j(materialButton3, R.string.stop_ringing, new Object[0], null, 4);
+                MaterialButton materialButton3 = this.binding.f15629f;
+                Intrinsics3.checkNotNullExpressionValue(materialButton3, "binding.voiceUserListItemToggleRinging");
+                charSequenceM218j = FormatUtils.m218j(materialButton3, C5419R.string.stop_ringing, new Object[0], null, 4);
             } else {
-                MaterialButton materialButton4 = this.binding.f;
-                m.checkNotNullExpressionValue(materialButton4, "binding.voiceUserListItemToggleRinging");
-                charSequenceJ = b.j(materialButton4, R.string.ring, new Object[0], null, 4);
+                MaterialButton materialButton4 = this.binding.f15629f;
+                Intrinsics3.checkNotNullExpressionValue(materialButton4, "binding.voiceUserListItemToggleRinging");
+                charSequenceM218j = FormatUtils.m218j(materialButton4, C5419R.string.ring, new Object[0], null, 4);
             }
-            materialButton2.setText(charSequenceJ);
-            this.binding.f.setOnClickListener(new CallParticipantsAdapter$ViewHolderUser$onConfigure$3(this, participant));
-            MaterialButton materialButton5 = this.binding.f;
-            m.checkNotNullExpressionValue(materialButton5, "binding.voiceUserListItemToggleRinging");
+            materialButton2.setText(charSequenceM218j);
+            this.binding.f15629f.setOnClickListener(new CallParticipantsAdapter$ViewHolderUser$onConfigure$3(this, participant));
+            MaterialButton materialButton5 = this.binding.f15629f;
+            Intrinsics3.checkNotNullExpressionValue(materialButton5, "binding.voiceUserListItemToggleRinging");
             if (participant.isRinging()) {
-                MaterialButton materialButton6 = this.binding.f;
-                m.checkNotNullExpressionValue(materialButton6, "binding.voiceUserListItemToggleRinging");
-                charSequenceJ2 = b.j(materialButton6, R.string.stop_ringing_username_a11y_label, new Object[]{participant.getDisplayName()}, null, 4);
+                MaterialButton materialButton6 = this.binding.f15629f;
+                Intrinsics3.checkNotNullExpressionValue(materialButton6, "binding.voiceUserListItemToggleRinging");
+                charSequenceM218j2 = FormatUtils.m218j(materialButton6, C5419R.string.stop_ringing_username_a11y_label, new Object[]{participant.getDisplayName()}, null, 4);
             } else {
-                MaterialButton materialButton7 = this.binding.f;
-                m.checkNotNullExpressionValue(materialButton7, "binding.voiceUserListItemToggleRinging");
-                charSequenceJ2 = b.j(materialButton7, R.string.ring_username_a11y_label, new Object[]{participant.getDisplayName()}, null, 4);
+                MaterialButton materialButton7 = this.binding.f15629f;
+                Intrinsics3.checkNotNullExpressionValue(materialButton7, "binding.voiceUserListItemToggleRinging");
+                charSequenceM218j2 = FormatUtils.m218j(materialButton7, C5419R.string.ring_username_a11y_label, new Object[]{participant.getDisplayName()}, null, 4);
             }
-            materialButton5.setContentDescription(charSequenceJ2);
+            materialButton5.setContentDescription(charSequenceM218j2);
             if (!participant.isConnected() || participant.getVoiceState() == null) {
-                ImageView imageView = this.binding.f2222b;
-                m.checkNotNullExpressionValue(imageView, "binding.voiceUserListItemDeafenIndicator");
+                ImageView imageView = this.binding.f15625b;
+                Intrinsics3.checkNotNullExpressionValue(imageView, "binding.voiceUserListItemDeafenIndicator");
                 imageView.setVisibility(8);
-                ImageView imageView2 = this.binding.d;
-                m.checkNotNullExpressionValue(imageView2, "binding.voiceUserListItemMuteIndicator");
+                ImageView imageView2 = this.binding.f15627d;
+                Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.voiceUserListItemMuteIndicator");
                 imageView2.setVisibility(8);
-                StreamPreviewView streamPreviewView = this.binding.i;
-                m.checkNotNullExpressionValue(streamPreviewView, "binding.voiceUserListItemUserStreamPreview");
+                StreamPreviewView streamPreviewView = this.binding.f15632i;
+                Intrinsics3.checkNotNullExpressionValue(streamPreviewView, "binding.voiceUserListItemUserStreamPreview");
                 streamPreviewView.setVisibility(8);
-                ImageView imageView3 = this.binding.j;
-                m.checkNotNullExpressionValue(imageView3, "binding.voiceUserListItemVideoIndicator");
+                ImageView imageView3 = this.binding.f15633j;
+                Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.voiceUserListItemVideoIndicator");
                 imageView3.setVisibility(8);
-                ImageView imageView4 = this.binding.e;
-                m.checkNotNullExpressionValue(imageView4, "binding.voiceUserListItemSpectatingIndicator");
+                ImageView imageView4 = this.binding.f15628e;
+                Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.voiceUserListItemSpectatingIndicator");
                 imageView4.setVisibility(8);
-                TextView textView2 = this.binding.c;
-                m.checkNotNullExpressionValue(textView2, "binding.voiceUserListItemLiveIndicator");
+                TextView textView2 = this.binding.f15626c;
+                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.voiceUserListItemLiveIndicator");
                 textView2.setVisibility(8);
                 return;
             }
-            ImageView imageView5 = this.binding.f2222b;
-            m.checkNotNullExpressionValue(imageView5, "binding.voiceUserListItemDeafenIndicator");
+            ImageView imageView5 = this.binding.f15625b;
+            Intrinsics3.checkNotNullExpressionValue(imageView5, "binding.voiceUserListItemDeafenIndicator");
             imageView5.setVisibility(0);
-            ImageView imageView6 = this.binding.d;
-            m.checkNotNullExpressionValue(imageView6, "binding.voiceUserListItemMuteIndicator");
+            ImageView imageView6 = this.binding.f15627d;
+            Intrinsics3.checkNotNullExpressionValue(imageView6, "binding.voiceUserListItemMuteIndicator");
             imageView6.setVisibility(0);
             VoiceState voiceState = participant.getVoiceState();
             boolean z3 = voiceState.getSelfDeaf() || voiceState.getDeaf();
             boolean z4 = voiceState.getSelfMute() || voiceState.getMute() || voiceState.getSuppress();
             boolean selfVideo = voiceState.getSelfVideo();
-            ImageView imageView7 = this.binding.e;
-            m.checkNotNullExpressionValue(imageView7, "binding.voiceUserListItemSpectatingIndicator");
+            ImageView imageView7 = this.binding.f15628e;
+            Intrinsics3.checkNotNullExpressionValue(imageView7, "binding.voiceUserListItemSpectatingIndicator");
             imageView7.setVisibility(voiceUser.isSpectatingSameStream() ? 0 : 8);
-            ImageView imageView8 = this.binding.f2222b;
-            m.checkNotNullExpressionValue(imageView8, "binding.voiceUserListItemDeafenIndicator");
+            ImageView imageView8 = this.binding.f15625b;
+            Intrinsics3.checkNotNullExpressionValue(imageView8, "binding.voiceUserListItemDeafenIndicator");
             imageView8.setVisibility(z3 ? 0 : 8);
-            ImageView imageView9 = this.binding.d;
-            m.checkNotNullExpressionValue(imageView9, "binding.voiceUserListItemMuteIndicator");
+            ImageView imageView9 = this.binding.f15627d;
+            Intrinsics3.checkNotNullExpressionValue(imageView9, "binding.voiceUserListItemMuteIndicator");
             imageView9.setVisibility(z4 ? 0 : 8);
-            ImageView imageView10 = this.binding.j;
-            m.checkNotNullExpressionValue(imageView10, "binding.voiceUserListItemVideoIndicator");
+            ImageView imageView10 = this.binding.f15633j;
+            Intrinsics3.checkNotNullExpressionValue(imageView10, "binding.voiceUserListItemVideoIndicator");
             imageView10.setVisibility(selfVideo ? 0 : 8);
             StreamContext streamContext = participant.getStreamContext();
-            TextView textView3 = this.binding.c;
-            m.checkNotNullExpressionValue(textView3, "binding.voiceUserListItemLiveIndicator");
+            TextView textView3 = this.binding.f15626c;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.voiceUserListItemLiveIndicator");
             textView3.setVisibility(streamContext != null ? 0 : 8);
             StoreApplicationStreamPreviews.StreamPreview preview = streamContext != null ? streamContext.getPreview() : null;
             if (preview != null) {
                 StreamContext.Joinability joinability = streamContext.getJoinability();
                 StreamContext.Joinability joinability2 = StreamContext.Joinability.CAN_CONNECT;
                 if (joinability == joinability2) {
-                    StreamPreviewView streamPreviewView2 = this.binding.i;
-                    m.checkNotNullExpressionValue(streamPreviewView2, "binding.voiceUserListItemUserStreamPreview");
+                    StreamPreviewView streamPreviewView2 = this.binding.f15632i;
+                    Intrinsics3.checkNotNullExpressionValue(streamPreviewView2, "binding.voiceUserListItemUserStreamPreview");
                     streamPreviewView2.setVisibility(0);
-                    this.binding.i.setOnClickListener(new CallParticipantsAdapter$ViewHolderUser$onConfigure$4(this, participant));
+                    this.binding.f15632i.setOnClickListener(new CallParticipantsAdapter$ViewHolderUser$onConfigure$4(this, participant));
                     StreamContext streamContext2 = voiceUser.getParticipant().getStreamContext();
                     if (streamContext2 != null && streamContext2.isCurrentUserParticipating()) {
                         z2 = true;
                     }
-                    this.binding.i.a(preview, joinability2, z2);
+                    this.binding.f15632i.m8557a(preview, joinability2, z2);
                     return;
                 }
             }
-            StreamPreviewView streamPreviewView3 = this.binding.i;
-            m.checkNotNullExpressionValue(streamPreviewView3, "binding.voiceUserListItemUserStreamPreview");
+            StreamPreviewView streamPreviewView3 = this.binding.f15632i;
+            Intrinsics3.checkNotNullExpressionValue(streamPreviewView3, "binding.voiceUserListItemUserStreamPreview");
             streamPreviewView3.setVisibility(8);
         }
     }
@@ -1027,44 +1026,44 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
     }
 
     public final void setOnEmbeddedActivityClicked(Function0<Unit> function0) {
-        m.checkNotNullParameter(function0, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function0, "<set-?>");
         this.onEmbeddedActivityClicked = function0;
     }
 
     public final void setOnEventClicked(Function1<? super GuildScheduledEvent, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onEventClicked = function1;
     }
 
     public final void setOnInviteFriendsClicked(Function1<? super View, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onInviteFriendsClicked = function1;
     }
 
     public final void setOnStartEventClicked(Function1<? super GuildScheduledEvent, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onStartEventClicked = function1;
     }
 
     public final void setOnStreamPreviewClicked(Function1<? super StreamContext, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onStreamPreviewClicked = function1;
     }
 
     public final void setOnToggleRingingClicked(Function1<? super StoreVoiceParticipants.VoiceUser, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onToggleRingingClicked = function1;
     }
 
     public final void setOnVoiceUserClicked(Function1<? super StoreVoiceParticipants.VoiceUser, Unit> function1) {
-        m.checkNotNullParameter(function1, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
         this.onVoiceUserClicked = function1;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CallParticipantsAdapter(RecyclerView recyclerView, boolean z2, boolean z3) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
         this.isCallPreview = z2;
         this.quantizeUserAvatars = z3;
         this.onVoiceUserClicked = CallParticipantsAdapter$onVoiceUserClicked$1.INSTANCE;
@@ -1078,7 +1077,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, MGRecyclerDataPayload> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         switch (viewType) {
             case 0:
                 return new ViewHolderUser(this, this.isCallPreview, this.quantizeUserAvatars);

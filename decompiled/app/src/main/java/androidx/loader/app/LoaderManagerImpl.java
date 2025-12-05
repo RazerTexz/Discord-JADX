@@ -16,10 +16,10 @@ import androidx.view.Observer;
 import androidx.view.ViewModel;
 import androidx.view.ViewModelProvider;
 import androidx.view.ViewModelStore;
-import b.d.b.a.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.lang.reflect.Modifier;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class LoaderManagerImpl extends LoaderManager {
@@ -83,7 +83,7 @@ public class LoaderManagerImpl extends LoaderManager {
             printWriter.print(str);
             printWriter.print("mLoader=");
             printWriter.println(this.mLoader);
-            this.mLoader.dump(a.w(str, "  "), fileDescriptor, printWriter, strArr);
+            this.mLoader.dump(outline.m883w(str, "  "), fileDescriptor, printWriter, strArr);
             if (this.mObserver != null) {
                 printWriter.print(str);
                 printWriter.print("mCallbacks=");
@@ -221,11 +221,11 @@ public class LoaderManagerImpl extends LoaderManager {
         @Override // androidx.view.Observer
         public void onChanged(@Nullable D d) {
             if (LoaderManagerImpl.DEBUG) {
-                StringBuilder sbU = a.U("  onLoadFinished in ");
-                sbU.append(this.mLoader);
-                sbU.append(": ");
-                sbU.append(this.mLoader.dataToString(d));
-                Log.v(LoaderManagerImpl.TAG, sbU.toString());
+                StringBuilder sbM833U = outline.m833U("  onLoadFinished in ");
+                sbM833U.append(this.mLoader);
+                sbM833U.append(": ");
+                sbM833U.append(this.mLoader.dataToString(d));
+                Log.v(LoaderManagerImpl.TAG, sbM833U.toString());
             }
             this.mCallback.onLoadFinished(this.mLoader, d);
             this.mDeliveredData = true;
@@ -235,9 +235,9 @@ public class LoaderManagerImpl extends LoaderManager {
         public void reset() {
             if (this.mDeliveredData) {
                 if (LoaderManagerImpl.DEBUG) {
-                    StringBuilder sbU = a.U("  Resetting: ");
-                    sbU.append(this.mLoader);
-                    Log.v(LoaderManagerImpl.TAG, sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("  Resetting: ");
+                    sbM833U.append(this.mLoader);
+                    Log.v(LoaderManagerImpl.TAG, sbM833U.toString());
                 }
                 this.mCallback.onLoaderReset(this.mLoader);
             }
@@ -249,12 +249,12 @@ public class LoaderManagerImpl extends LoaderManager {
     }
 
     public static class LoaderViewModel extends ViewModel {
-        private static final ViewModelProvider.Factory FACTORY = new AnonymousClass1();
+        private static final ViewModelProvider.Factory FACTORY = new C04691();
         private SparseArrayCompat<LoaderInfo> mLoaders = new SparseArrayCompat<>();
         private boolean mCreatingLoader = false;
 
-        /* renamed from: androidx.loader.app.LoaderManagerImpl$LoaderViewModel$1, reason: invalid class name */
-        public static class AnonymousClass1 implements ViewModelProvider.Factory {
+        /* renamed from: androidx.loader.app.LoaderManagerImpl$LoaderViewModel$1 */
+        public static class C04691 implements ViewModelProvider.Factory {
             @Override // androidx.lifecycle.ViewModelProvider.Factory
             @NonNull
             public <T extends ViewModel> T create(@NonNull Class<T> cls) {

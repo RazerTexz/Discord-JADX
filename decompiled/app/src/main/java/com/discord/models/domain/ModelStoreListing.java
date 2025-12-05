@@ -1,10 +1,10 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
 import com.discord.models.domain.Model;
-import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelStoreListing.kt */
 /* loaded from: classes.dex */
@@ -28,20 +28,20 @@ public final /* data */ class ModelStoreListing {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.discord.models.domain.Model.Parser
         public ModelStoreListing parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
-            ref$ObjectRefC0.element = null;
+            Ref$ObjectRef ref$ObjectRefM844c0 = outline.m844c0(reader, "reader");
+            ref$ObjectRefM844c0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
-            reader.nextObject(new ModelStoreListing$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef));
-            ModelSku modelSku = (ModelSku) ref$ObjectRefC0.element;
-            m.checkNotNull(modelSku);
+            reader.nextObject(new ModelStoreListing2(ref$ObjectRefM844c0, reader, ref$ObjectRef));
+            ModelSku modelSku = (ModelSku) ref$ObjectRefM844c0.element;
+            Intrinsics3.checkNotNull(modelSku);
             Long l = (Long) ref$ObjectRef.element;
             return new ModelStoreListing(modelSku, l != null ? l.longValue() : 0L);
         }
     }
 
     public ModelStoreListing(ModelSku modelSku, long j) {
-        m.checkNotNullParameter(modelSku, "sku");
+        Intrinsics3.checkNotNullParameter(modelSku, "sku");
         this.sku = modelSku;
         this.id = j;
     }
@@ -67,7 +67,7 @@ public final /* data */ class ModelStoreListing {
     }
 
     public final ModelStoreListing copy(ModelSku sku, long id2) {
-        m.checkNotNullParameter(sku, "sku");
+        Intrinsics3.checkNotNullParameter(sku, "sku");
         return new ModelStoreListing(sku, id2);
     }
 
@@ -79,7 +79,7 @@ public final /* data */ class ModelStoreListing {
             return false;
         }
         ModelStoreListing modelStoreListing = (ModelStoreListing) other;
-        return m.areEqual(this.sku, modelStoreListing.sku) && this.id == modelStoreListing.id;
+        return Intrinsics3.areEqual(this.sku, modelStoreListing.sku) && this.id == modelStoreListing.id;
     }
 
     public final long getId() {
@@ -98,9 +98,9 @@ public final /* data */ class ModelStoreListing {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelStoreListing(sku=");
-        sbU.append(this.sku);
-        sbU.append(", id=");
-        return a.C(sbU, this.id, ")");
+        StringBuilder sbM833U = outline.m833U("ModelStoreListing(sku=");
+        sbM833U.append(this.sku);
+        sbM833U.append(", id=");
+        return outline.m815C(sbM833U, this.id, ")");
     }
 }

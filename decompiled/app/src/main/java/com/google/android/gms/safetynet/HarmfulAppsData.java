@@ -2,31 +2,37 @@ package com.google.android.gms.safetynet;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.d;
-import b.i.a.f.k.c;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p336k.C4329c;
 
 /* loaded from: classes3.dex */
 public class HarmfulAppsData extends AbstractSafeParcelable {
-    public static final Parcelable.Creator<HarmfulAppsData> CREATOR = new c();
-    public final String j;
-    public final byte[] k;
-    public final int l;
+    public static final Parcelable.Creator<HarmfulAppsData> CREATOR = new C4329c();
+
+    /* renamed from: j */
+    public final String f20818j;
+
+    /* renamed from: k */
+    public final byte[] f20819k;
+
+    /* renamed from: l */
+    public final int f20820l;
 
     public HarmfulAppsData(String str, byte[] bArr, int i) {
-        this.j = str;
-        this.k = bArr;
-        this.l = i;
+        this.f20818j = str;
+        this.f20819k = bArr;
+        this.f20820l = i;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = d.y2(parcel, 20293);
-        d.t2(parcel, 2, this.j, false);
-        d.q2(parcel, 3, this.k, false);
-        int i2 = this.l;
+        int iM594y2 = AnimatableValueParser.m594y2(parcel, 20293);
+        AnimatableValueParser.m574t2(parcel, 2, this.f20818j, false);
+        AnimatableValueParser.m562q2(parcel, 3, this.f20819k, false);
+        int i2 = this.f20820l;
         parcel.writeInt(262148);
         parcel.writeInt(i2);
-        d.A2(parcel, iY2);
+        AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 }

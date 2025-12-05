@@ -4,7 +4,6 @@ import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,13 +12,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class DiffUtil {
-    private static final Comparator<Diagonal> DIAGONAL_COMPARATOR = new AnonymousClass1();
+    private static final Comparator<Diagonal> DIAGONAL_COMPARATOR = new C05461();
 
-    /* renamed from: androidx.recyclerview.widget.DiffUtil$1, reason: invalid class name */
-    public class AnonymousClass1 implements Comparator<Diagonal> {
+    /* renamed from: androidx.recyclerview.widget.DiffUtil$1 */
+    public class C05461 implements Comparator<Diagonal> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Diagonal diagonal, Diagonal diagonal2) {
             return compare2(diagonal, diagonal2);
@@ -27,7 +27,7 @@ public class DiffUtil {
 
         /* renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(Diagonal diagonal, Diagonal diagonal2) {
-            return diagonal.f36x - diagonal2.f36x;
+            return diagonal.f149x - diagonal2.f149x;
         }
     }
 
@@ -76,24 +76,24 @@ public class DiffUtil {
     public static class Diagonal {
         public final int size;
 
-        /* renamed from: x, reason: collision with root package name */
-        public final int f36x;
+        /* renamed from: x */
+        public final int f149x;
 
-        /* renamed from: y, reason: collision with root package name */
-        public final int f37y;
+        /* renamed from: y */
+        public final int f150y;
 
         public Diagonal(int i, int i2, int i3) {
-            this.f36x = i;
-            this.f37y = i2;
+            this.f149x = i;
+            this.f150y = i2;
             this.size = i3;
         }
 
         public int endX() {
-            return this.f36x + this.size;
+            return this.f149x + this.size;
         }
 
         public int endY() {
-            return this.f37y + this.size;
+            return this.f150y + this.size;
         }
     }
 
@@ -130,7 +130,7 @@ public class DiffUtil {
 
         private void addEdgeDiagonals() {
             Diagonal diagonal = this.mDiagonals.isEmpty() ? null : this.mDiagonals.get(0);
-            if (diagonal == null || diagonal.f36x != 0 || diagonal.f37y != 0) {
+            if (diagonal == null || diagonal.f149x != 0 || diagonal.f150y != 0) {
                 this.mDiagonals.add(0, new Diagonal(0, 0, 0));
             }
             this.mDiagonals.add(new Diagonal(this.mOldListSize, this.mNewListSize, 0));
@@ -141,7 +141,7 @@ public class DiffUtil {
             int iEndY = 0;
             for (int i2 = 0; i2 < size; i2++) {
                 Diagonal diagonal = this.mDiagonals.get(i2);
-                while (iEndY < diagonal.f37y) {
+                while (iEndY < diagonal.f150y) {
                     if (this.mNewItemStatuses[iEndY] == 0 && this.mCallback.areItemsTheSame(i, iEndY)) {
                         int i3 = this.mCallback.areContentsTheSame(i, iEndY) ? 8 : 4;
                         this.mOldItemStatuses[i] = (iEndY << 4) | i3;
@@ -157,8 +157,8 @@ public class DiffUtil {
         private void findMatchingItems() {
             for (Diagonal diagonal : this.mDiagonals) {
                 for (int i = 0; i < diagonal.size; i++) {
-                    int i2 = diagonal.f36x + i;
-                    int i3 = diagonal.f37y + i;
+                    int i2 = diagonal.f149x + i;
+                    int i3 = diagonal.f150y + i;
                     int i4 = this.mCallback.areContentsTheSame(i2, i3) ? 1 : 2;
                     this.mOldItemStatuses[i2] = (i3 << 4) | i4;
                     this.mNewItemStatuses[i3] = (i2 << 4) | i4;
@@ -172,7 +172,7 @@ public class DiffUtil {
         private void findMoveMatches() {
             int iEndX = 0;
             for (Diagonal diagonal : this.mDiagonals) {
-                while (iEndX < diagonal.f36x) {
+                while (iEndX < diagonal.f149x) {
                     if (this.mOldItemStatuses[iEndX] == 0) {
                         findMatchingAddition(iEndX);
                     }
@@ -210,9 +210,9 @@ public class DiffUtil {
 
         public int convertNewPositionToOld(@IntRange(from = 0) int i) {
             if (i < 0 || i >= this.mNewListSize) {
-                StringBuilder sbV = a.V("Index out of bounds - passed position = ", i, ", new list size = ");
-                sbV.append(this.mNewListSize);
-                throw new IndexOutOfBoundsException(sbV.toString());
+                StringBuilder sbM834V = outline.m834V("Index out of bounds - passed position = ", i, ", new list size = ");
+                sbM834V.append(this.mNewListSize);
+                throw new IndexOutOfBoundsException(sbM834V.toString());
             }
             int i2 = this.mNewItemStatuses[i];
             if ((i2 & 15) == 0) {
@@ -223,9 +223,9 @@ public class DiffUtil {
 
         public int convertOldPositionToNew(@IntRange(from = 0) int i) {
             if (i < 0 || i >= this.mOldListSize) {
-                StringBuilder sbV = a.V("Index out of bounds - passed position = ", i, ", old list size = ");
-                sbV.append(this.mOldListSize);
-                throw new IndexOutOfBoundsException(sbV.toString());
+                StringBuilder sbM834V = outline.m834V("Index out of bounds - passed position = ", i, ", old list size = ");
+                sbM834V.append(this.mOldListSize);
+                throw new IndexOutOfBoundsException(sbM834V.toString());
             }
             int i2 = this.mOldItemStatuses[i];
             if ((i2 & 15) == 0) {
@@ -291,8 +291,8 @@ public class DiffUtil {
                         i2++;
                     }
                 }
-                int i10 = diagonal.f36x;
-                int i11 = diagonal.f37y;
+                int i10 = diagonal.f149x;
+                int i11 = diagonal.f150y;
                 for (i = 0; i < diagonal.size; i++) {
                     if ((this.mOldItemStatuses[i10] & 15) == 2) {
                         batchingListUpdateCallback.onChanged(i10, 1, this.mCallback.getChangePayload(i10, i11));
@@ -300,8 +300,8 @@ public class DiffUtil {
                     i10++;
                     i11++;
                 }
-                i3 = diagonal.f36x;
-                i4 = diagonal.f37y;
+                i3 = diagonal.f149x;
+                i4 = diagonal.f150y;
             }
             batchingListUpdateCallback.dispatchLastEvent();
         }

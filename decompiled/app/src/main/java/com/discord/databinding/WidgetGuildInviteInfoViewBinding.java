@@ -13,41 +13,47 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetGuildInviteInfoViewBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final View a;
+    public final View f16787a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialButton f2415b;
+    public final MaterialButton f16788b;
 
+    /* renamed from: c */
     @NonNull
-    public final GuildView c;
+    public final GuildView f16789c;
 
+    /* renamed from: d */
     @NonNull
-    public final SimpleDraweeView d;
+    public final SimpleDraweeView f16790d;
 
+    /* renamed from: e */
     @NonNull
-    public final ServerMemberCount e;
+    public final ServerMemberCount f16791e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextView f;
+    public final TextView f16792f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f16793g;
 
     public WidgetGuildInviteInfoViewBinding(@NonNull View view, @NonNull MaterialButton materialButton, @NonNull GuildView guildView, @NonNull SimpleDraweeView simpleDraweeView, @NonNull ServerMemberCount serverMemberCount, @NonNull TextView textView, @NonNull TextView textView2, @NonNull LinearLayout linearLayout) {
-        this.a = view;
-        this.f2415b = materialButton;
-        this.c = guildView;
-        this.d = simpleDraweeView;
-        this.e = serverMemberCount;
-        this.f = textView;
-        this.g = textView2;
+        this.f16787a = view;
+        this.f16788b = materialButton;
+        this.f16789c = guildView;
+        this.f16790d = simpleDraweeView;
+        this.f16791e = serverMemberCount;
+        this.f16792f = textView;
+        this.f16793g = textView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16787a;
     }
 }

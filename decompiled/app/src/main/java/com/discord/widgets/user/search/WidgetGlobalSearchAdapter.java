@@ -4,17 +4,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetChannelSearchItemHeaderBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.z.d.m;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function4;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetGlobalSearchAdapter.kt */
 /* loaded from: classes.dex */
@@ -26,7 +26,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ChannelViewHolder(WidgetGlobalSearchAdapter widgetGlobalSearchAdapter) {
             super(widgetGlobalSearchAdapter);
-            m.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
+            Intrinsics3.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
         }
 
         @Override // com.discord.widgets.user.search.WidgetGlobalSearchAdapter.SearchViewHolder, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
@@ -37,7 +37,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // com.discord.widgets.user.search.WidgetGlobalSearchAdapter.SearchViewHolder
         public void onConfigure(int position, WidgetGlobalSearchModel.ItemDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             getViewGlobalSearchItem().onConfigure((WidgetGlobalSearchModel.ItemChannel) data);
         }
@@ -48,7 +48,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public GuildViewHolder(WidgetGlobalSearchAdapter widgetGlobalSearchAdapter) {
             super(widgetGlobalSearchAdapter);
-            m.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
+            Intrinsics3.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
         }
 
         @Override // com.discord.widgets.user.search.WidgetGlobalSearchAdapter.SearchViewHolder, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
@@ -59,7 +59,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // com.discord.widgets.user.search.WidgetGlobalSearchAdapter.SearchViewHolder
         public void onConfigure(int position, WidgetGlobalSearchModel.ItemDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             getViewGlobalSearchItem().onConfigure((WidgetGlobalSearchModel.ItemGuild) data);
         }
@@ -71,13 +71,13 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public HeaderViewHolder(WidgetGlobalSearchAdapter widgetGlobalSearchAdapter) {
-            super(R.layout.widget_channel_search_item_header, widgetGlobalSearchAdapter);
-            m.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
+            super(C5419R.layout.widget_channel_search_item_header, widgetGlobalSearchAdapter);
+            Intrinsics3.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             TextView textView = (TextView) view;
             WidgetChannelSearchItemHeaderBinding widgetChannelSearchItemHeaderBinding = new WidgetChannelSearchItemHeaderBinding(textView, textView);
-            m.checkNotNullExpressionValue(widgetChannelSearchItemHeaderBinding, "WidgetChannelSearchItemH…derBinding.bind(itemView)");
+            Intrinsics3.checkNotNullExpressionValue(widgetChannelSearchItemHeaderBinding, "WidgetChannelSearchItemH…derBinding.bind(itemView)");
             this.binding = widgetChannelSearchItemHeaderBinding;
         }
 
@@ -92,13 +92,13 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetGlobalSearchModel.ItemDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
-            this.binding.f2266b.setText(((WidgetGlobalSearchModel.ItemHeader) data).getName());
-            this.binding.a.setOnClickListener(new WidgetGlobalSearchAdapter$HeaderViewHolder$onConfigure$1(this, position, data));
-            TextView textView = this.binding.a;
-            m.checkNotNullExpressionValue(textView, "binding.root");
-            ViewExtensions.setOnLongClickListenerConsumeClick(textView, new WidgetGlobalSearchAdapter$HeaderViewHolder$onConfigure$2(this, position, data));
+            this.binding.f15890b.setText(((WidgetGlobalSearchModel.ItemHeader) data).getName());
+            this.binding.f15889a.setOnClickListener(new WidgetGlobalSearchAdapter2(this, position, data));
+            TextView textView = this.binding.f15889a;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.root");
+            ViewExtensions.setOnLongClickListenerConsumeClick(textView, new WidgetGlobalSearchAdapter3(this, position, data));
         }
     }
 
@@ -108,8 +108,8 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public SearchViewHolder(WidgetGlobalSearchAdapter widgetGlobalSearchAdapter) {
-            super(R.layout.widget_channel_search_item, widgetGlobalSearchAdapter);
-            m.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
+            super(C5419R.layout.widget_channel_search_item, widgetGlobalSearchAdapter);
+            Intrinsics3.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "null cannot be cast to non-null type com.discord.widgets.user.search.ViewGlobalSearchItem");
             ViewGlobalSearchItem viewGlobalSearchItem = (ViewGlobalSearchItem) view;
@@ -132,12 +132,12 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
 
         /* JADX WARN: Can't rename method to resolve collision */
         public void onConfigure(int position, WidgetGlobalSearchModel.ItemDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
-            this.itemView.setOnClickListener(new WidgetGlobalSearchAdapter$SearchViewHolder$onConfigure$1(this, position, data));
+            this.itemView.setOnClickListener(new WidgetGlobalSearchAdapter4(this, position, data));
             View view = this.itemView;
-            m.checkNotNullExpressionValue(view, "itemView");
-            ViewExtensions.setOnLongClickListenerConsumeClick(view, new WidgetGlobalSearchAdapter$SearchViewHolder$onConfigure$2(this, position, data));
+            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            ViewExtensions.setOnLongClickListenerConsumeClick(view, new WidgetGlobalSearchAdapter5(this, position, data));
         }
     }
 
@@ -146,7 +146,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UserViewHolder(WidgetGlobalSearchAdapter widgetGlobalSearchAdapter) {
             super(widgetGlobalSearchAdapter);
-            m.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
+            Intrinsics3.checkNotNullParameter(widgetGlobalSearchAdapter, "adapter");
         }
 
         @Override // com.discord.widgets.user.search.WidgetGlobalSearchAdapter.SearchViewHolder, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
@@ -157,7 +157,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // com.discord.widgets.user.search.WidgetGlobalSearchAdapter.SearchViewHolder
         public void onConfigure(int position, WidgetGlobalSearchModel.ItemDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             getViewGlobalSearchItem().onConfigure((WidgetGlobalSearchModel.ItemUser) data);
         }
@@ -166,8 +166,8 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGlobalSearchAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
-        this.onSelectedListener = WidgetGlobalSearchAdapter$onSelectedListener$1.INSTANCE;
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        this.onSelectedListener = WidgetGlobalSearchAdapter6.INSTANCE;
     }
 
     public final Function4<View, Integer, WidgetGlobalSearchModel.ItemDataPayload, Boolean, Unit> getOnSelectedListener() {
@@ -180,13 +180,13 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
     }
 
     public final void setOnSelectedListener(Function4<? super View, ? super Integer, ? super WidgetGlobalSearchModel.ItemDataPayload, ? super Boolean, Unit> function4) {
-        m.checkNotNullParameter(function4, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function4, "<set-?>");
         this.onSelectedListener = function4;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<WidgetGlobalSearchAdapter, WidgetGlobalSearchModel.ItemDataPayload> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == -1) {
             return new HeaderViewHolder(this);
         }

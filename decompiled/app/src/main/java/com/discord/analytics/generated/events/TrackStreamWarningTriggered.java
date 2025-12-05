@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackStreamWarningTriggered.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStreamWarningTriggered implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackStreamWarningTriggered implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence noticeType = null;
     private final Long streamerUserId = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackStreamWarningTriggered implements AnalyticsSc
             return false;
         }
         TrackStreamWarningTriggered trackStreamWarningTriggered = (TrackStreamWarningTriggered) other;
-        return m.areEqual(this.noticeType, trackStreamWarningTriggered.noticeType) && m.areEqual(this.streamerUserId, trackStreamWarningTriggered.streamerUserId) && m.areEqual(this.streamChannelId, trackStreamWarningTriggered.streamChannelId) && m.areEqual(this.streamRegion, trackStreamWarningTriggered.streamRegion) && m.areEqual(this.guildRegion, trackStreamWarningTriggered.guildRegion) && m.areEqual(this.videoEnabled, trackStreamWarningTriggered.videoEnabled) && m.areEqual(this.applicationName, trackStreamWarningTriggered.applicationName) && m.areEqual(this.applicationId, trackStreamWarningTriggered.applicationId) && m.areEqual(this.videoLayout, trackStreamWarningTriggered.videoLayout) && m.areEqual(this.mediaSessionId, trackStreamWarningTriggered.mediaSessionId);
+        return Intrinsics3.areEqual(this.noticeType, trackStreamWarningTriggered.noticeType) && Intrinsics3.areEqual(this.streamerUserId, trackStreamWarningTriggered.streamerUserId) && Intrinsics3.areEqual(this.streamChannelId, trackStreamWarningTriggered.streamChannelId) && Intrinsics3.areEqual(this.streamRegion, trackStreamWarningTriggered.streamRegion) && Intrinsics3.areEqual(this.guildRegion, trackStreamWarningTriggered.guildRegion) && Intrinsics3.areEqual(this.videoEnabled, trackStreamWarningTriggered.videoEnabled) && Intrinsics3.areEqual(this.applicationName, trackStreamWarningTriggered.applicationName) && Intrinsics3.areEqual(this.applicationId, trackStreamWarningTriggered.applicationId) && Intrinsics3.areEqual(this.videoLayout, trackStreamWarningTriggered.videoLayout) && Intrinsics3.areEqual(this.mediaSessionId, trackStreamWarningTriggered.mediaSessionId);
     }
 
     public int hashCode() {
@@ -63,25 +63,25 @@ public final /* data */ class TrackStreamWarningTriggered implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackStreamWarningTriggered(noticeType=");
-        sbU.append(this.noticeType);
-        sbU.append(", streamerUserId=");
-        sbU.append(this.streamerUserId);
-        sbU.append(", streamChannelId=");
-        sbU.append(this.streamChannelId);
-        sbU.append(", streamRegion=");
-        sbU.append(this.streamRegion);
-        sbU.append(", guildRegion=");
-        sbU.append(this.guildRegion);
-        sbU.append(", videoEnabled=");
-        sbU.append(this.videoEnabled);
-        sbU.append(", applicationName=");
-        sbU.append(this.applicationName);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", videoLayout=");
-        sbU.append(this.videoLayout);
-        sbU.append(", mediaSessionId=");
-        return a.E(sbU, this.mediaSessionId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackStreamWarningTriggered(noticeType=");
+        sbM833U.append(this.noticeType);
+        sbM833U.append(", streamerUserId=");
+        sbM833U.append(this.streamerUserId);
+        sbM833U.append(", streamChannelId=");
+        sbM833U.append(this.streamChannelId);
+        sbM833U.append(", streamRegion=");
+        sbM833U.append(this.streamRegion);
+        sbM833U.append(", guildRegion=");
+        sbM833U.append(this.guildRegion);
+        sbM833U.append(", videoEnabled=");
+        sbM833U.append(this.videoEnabled);
+        sbM833U.append(", applicationName=");
+        sbM833U.append(this.applicationName);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", videoLayout=");
+        sbM833U.append(this.videoLayout);
+        sbM833U.append(", mediaSessionId=");
+        return outline.m817E(sbM833U, this.mediaSessionId, ")");
     }
 }

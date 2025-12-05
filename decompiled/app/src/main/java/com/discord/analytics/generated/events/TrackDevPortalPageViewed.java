@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackDevPortalPageViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDevPortalPageViewed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackDevPortalPageViewed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence pageName = null;
     private final CharSequence previousPageName = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackDevPortalPageViewed implements AnalyticsSchem
             return false;
         }
         TrackDevPortalPageViewed trackDevPortalPageViewed = (TrackDevPortalPageViewed) other;
-        return m.areEqual(this.pageName, trackDevPortalPageViewed.pageName) && m.areEqual(this.previousPageName, trackDevPortalPageViewed.previousPageName) && m.areEqual(this.previousLinkLocation, trackDevPortalPageViewed.previousLinkLocation) && m.areEqual(this.hasSession, trackDevPortalPageViewed.hasSession) && m.areEqual(this.applicationId, trackDevPortalPageViewed.applicationId) && m.areEqual(this.botId, trackDevPortalPageViewed.botId) && m.areEqual(this.applicationName, trackDevPortalPageViewed.applicationName) && m.areEqual(this.hasBot, trackDevPortalPageViewed.hasBot) && m.areEqual(this.hasRedirectUri, trackDevPortalPageViewed.hasRedirectUri) && m.areEqual(this.guildId, trackDevPortalPageViewed.guildId);
+        return Intrinsics3.areEqual(this.pageName, trackDevPortalPageViewed.pageName) && Intrinsics3.areEqual(this.previousPageName, trackDevPortalPageViewed.previousPageName) && Intrinsics3.areEqual(this.previousLinkLocation, trackDevPortalPageViewed.previousLinkLocation) && Intrinsics3.areEqual(this.hasSession, trackDevPortalPageViewed.hasSession) && Intrinsics3.areEqual(this.applicationId, trackDevPortalPageViewed.applicationId) && Intrinsics3.areEqual(this.botId, trackDevPortalPageViewed.botId) && Intrinsics3.areEqual(this.applicationName, trackDevPortalPageViewed.applicationName) && Intrinsics3.areEqual(this.hasBot, trackDevPortalPageViewed.hasBot) && Intrinsics3.areEqual(this.hasRedirectUri, trackDevPortalPageViewed.hasRedirectUri) && Intrinsics3.areEqual(this.guildId, trackDevPortalPageViewed.guildId);
     }
 
     public int hashCode() {
@@ -63,25 +63,25 @@ public final /* data */ class TrackDevPortalPageViewed implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackDevPortalPageViewed(pageName=");
-        sbU.append(this.pageName);
-        sbU.append(", previousPageName=");
-        sbU.append(this.previousPageName);
-        sbU.append(", previousLinkLocation=");
-        sbU.append(this.previousLinkLocation);
-        sbU.append(", hasSession=");
-        sbU.append(this.hasSession);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", botId=");
-        sbU.append(this.botId);
-        sbU.append(", applicationName=");
-        sbU.append(this.applicationName);
-        sbU.append(", hasBot=");
-        sbU.append(this.hasBot);
-        sbU.append(", hasRedirectUri=");
-        sbU.append(this.hasRedirectUri);
-        sbU.append(", guildId=");
-        return a.G(sbU, this.guildId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackDevPortalPageViewed(pageName=");
+        sbM833U.append(this.pageName);
+        sbM833U.append(", previousPageName=");
+        sbM833U.append(this.previousPageName);
+        sbM833U.append(", previousLinkLocation=");
+        sbM833U.append(this.previousLinkLocation);
+        sbM833U.append(", hasSession=");
+        sbM833U.append(this.hasSession);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", botId=");
+        sbM833U.append(this.botId);
+        sbM833U.append(", applicationName=");
+        sbM833U.append(this.applicationName);
+        sbM833U.append(", hasBot=");
+        sbM833U.append(this.hasBot);
+        sbM833U.append(", hasRedirectUri=");
+        sbM833U.append(this.hasRedirectUri);
+        sbM833U.append(", guildId=");
+        return outline.m819G(sbM833U, this.guildId, ")");
     }
 }

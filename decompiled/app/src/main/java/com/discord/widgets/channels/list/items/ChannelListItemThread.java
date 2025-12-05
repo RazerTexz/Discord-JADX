@@ -1,10 +1,10 @@
 package com.discord.widgets.channels.list.items;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
 import com.discord.widgets.channels.list.WidgetChannelListUnreads;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChannelListItemThread.kt */
 /* loaded from: classes2.dex */
@@ -19,7 +19,7 @@ public final /* data */ class ChannelListItemThread implements ChannelListItem, 
     private final int type;
 
     public ChannelListItemThread(Channel channel, boolean z2, int i, boolean z3, boolean z4, boolean z5) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         this.channel = channel;
         this.selected = z2;
         this.mentionCount = i;
@@ -85,7 +85,7 @@ public final /* data */ class ChannelListItemThread implements ChannelListItem, 
     }
 
     public final ChannelListItemThread copy(Channel channel, boolean selected, int mentionCount, boolean isUnread, boolean isLocked, boolean muted) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         return new ChannelListItemThread(channel, selected, mentionCount, isUnread, isLocked, muted);
     }
 
@@ -97,7 +97,7 @@ public final /* data */ class ChannelListItemThread implements ChannelListItem, 
             return false;
         }
         ChannelListItemThread channelListItemThread = (ChannelListItemThread) other;
-        return m.areEqual(this.channel, channelListItemThread.channel) && this.selected == channelListItemThread.selected && getMentionCount() == channelListItemThread.getMentionCount() && getIsUnread() == channelListItemThread.getIsUnread() && this.isLocked == channelListItemThread.isLocked && this.muted == channelListItemThread.muted;
+        return Intrinsics3.areEqual(this.channel, channelListItemThread.channel) && this.selected == channelListItemThread.selected && getMentionCount() == channelListItemThread.getMentionCount() && getIsUnread() == channelListItemThread.getIsUnread() && this.isLocked == channelListItemThread.isLocked && this.muted == channelListItemThread.muted;
     }
 
     public final Channel getChannel() {
@@ -173,22 +173,22 @@ public final /* data */ class ChannelListItemThread implements ChannelListItem, 
     }
 
     public final void setSpineType(WidgetChannelListModel.ThreadSpineType threadSpineType) {
-        m.checkNotNullParameter(threadSpineType, "<set-?>");
+        Intrinsics3.checkNotNullParameter(threadSpineType, "<set-?>");
         this.spineType = threadSpineType;
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelListItemThread(channel=");
-        sbU.append(this.channel);
-        sbU.append(", selected=");
-        sbU.append(this.selected);
-        sbU.append(", mentionCount=");
-        sbU.append(getMentionCount());
-        sbU.append(", isUnread=");
-        sbU.append(getIsUnread());
-        sbU.append(", isLocked=");
-        sbU.append(this.isLocked);
-        sbU.append(", muted=");
-        return a.O(sbU, this.muted, ")");
+        StringBuilder sbM833U = outline.m833U("ChannelListItemThread(channel=");
+        sbM833U.append(this.channel);
+        sbM833U.append(", selected=");
+        sbM833U.append(this.selected);
+        sbM833U.append(", mentionCount=");
+        sbM833U.append(getMentionCount());
+        sbM833U.append(", isUnread=");
+        sbM833U.append(getIsUnread());
+        sbM833U.append(", isLocked=");
+        sbM833U.append(this.isLocked);
+        sbM833U.append(", muted=");
+        return outline.m827O(sbM833U, this.muted, ")");
     }
 }

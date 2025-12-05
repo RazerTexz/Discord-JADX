@@ -6,13 +6,6 @@ import android.util.Log;
 import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.i.a.f.e.h.d;
-import b.i.a.f.e.h.f;
-import b.i.a.f.e.h.h;
-import b.i.a.f.e.h.i;
-import b.i.a.f.e.h.j.l0;
-import b.i.a.f.e.h.j.w0;
-import b.i.a.f.h.e.c;
 import com.google.android.gms.common.annotation.KeepName;
 import com.google.android.gms.common.api.Status;
 import java.lang.ref.WeakReference;
@@ -20,33 +13,63 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicReference;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3268c;
+import p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3269d;
+import p007b.p225i.p226a.p288f.p299e.p300h.InterfaceC3271f;
+import p007b.p225i.p226a.p288f.p299e.p300h.InterfaceC3273h;
+import p007b.p225i.p226a.p288f.p299e.p300h.InterfaceC3274i;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3326w0;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3304l0;
+import p007b.p225i.p226a.p288f.p313h.p318e.HandlerC3479c;
 
 /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
 @KeepName
 /* loaded from: classes3.dex */
-public abstract class BasePendingResult<R extends h> extends d<R> {
-    public static final ThreadLocal<Boolean> a = new w0();
+public abstract class BasePendingResult<R extends InterfaceC3273h> extends AbstractC3269d<R> {
 
-    /* renamed from: b, reason: collision with root package name */
-    public final Object f3004b;
-    public final a<R> c;
-    public final CountDownLatch d;
-    public final ArrayList<d.a> e;
-    public final AtomicReference<l0> f;
+    /* renamed from: a */
+    public static final ThreadLocal<Boolean> f20499a = new C3326w0();
 
+    /* renamed from: b */
+    public final Object f20500b;
+
+    /* renamed from: c */
+    public final HandlerC10801a<R> f20501c;
+
+    /* renamed from: d */
+    public final CountDownLatch f20502d;
+
+    /* renamed from: e */
+    public final ArrayList<AbstractC3269d.a> f20503e;
+
+    /* renamed from: f */
+    public final AtomicReference<InterfaceC3304l0> f20504f;
+
+    /* renamed from: g */
     @Nullable
-    public R g;
-    public Status h;
-    public volatile boolean i;
-    public boolean j;
-    public boolean k;
+    public R f20505g;
+
+    /* renamed from: h */
+    public Status f20506h;
+
+    /* renamed from: i */
+    public volatile boolean f20507i;
+
+    /* renamed from: j */
+    public boolean f20508j;
+
+    /* renamed from: k */
+    public boolean f20509k;
 
     @KeepName
-    public b mResultGuardian;
+    public C10802b mResultGuardian;
 
     /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    public static class a<R extends h> extends c {
-        public a(Looper looper) {
+    /* renamed from: com.google.android.gms.common.api.internal.BasePendingResult$a */
+    public static class HandlerC10801a<R extends InterfaceC3273h> extends HandlerC3479c {
+        public HandlerC10801a(Looper looper) {
             super(looper);
         }
 
@@ -56,53 +79,55 @@ public abstract class BasePendingResult<R extends h> extends d<R> {
             int i = message.what;
             if (i != 1) {
                 if (i != 2) {
-                    Log.wtf("BasePendingResult", b.d.b.a.a.g(45, "Don't know how to handle message: ", i), new Exception());
+                    Log.wtf("BasePendingResult", outline.m851g(45, "Don't know how to handle message: ", i), new Exception());
                     return;
                 } else {
-                    ((BasePendingResult) message.obj).e(Status.m);
+                    ((BasePendingResult) message.obj).m9033e(Status.f20492m);
                     return;
                 }
             }
             Pair pair = (Pair) message.obj;
-            i iVar = (i) pair.first;
-            h hVar = (h) pair.second;
+            InterfaceC3274i interfaceC3274i = (InterfaceC3274i) pair.first;
+            InterfaceC3273h interfaceC3273h = (InterfaceC3273h) pair.second;
             try {
-                iVar.a(hVar);
+                interfaceC3274i.m4054a(interfaceC3273h);
             } catch (RuntimeException e) {
-                BasePendingResult.h(hVar);
+                BasePendingResult.m9032h(interfaceC3273h);
                 throw e;
             }
         }
     }
 
     /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    public final class b {
-        public b(w0 w0Var) {
+    /* renamed from: com.google.android.gms.common.api.internal.BasePendingResult$b */
+    public final class C10802b {
+        public C10802b(C3326w0 c3326w0) {
         }
 
         public final void finalize() throws Throwable {
-            BasePendingResult.h(BasePendingResult.this.g);
+            BasePendingResult.m9032h(BasePendingResult.this.f20505g);
             super.finalize();
         }
     }
 
     @Deprecated
     public BasePendingResult() {
-        this.f3004b = new Object();
-        this.d = new CountDownLatch(1);
-        this.e = new ArrayList<>();
-        this.f = new AtomicReference<>();
-        this.k = false;
-        this.c = new a<>(Looper.getMainLooper());
+        this.f20500b = new Object();
+        this.f20502d = new CountDownLatch(1);
+        this.f20503e = new ArrayList<>();
+        this.f20504f = new AtomicReference<>();
+        this.f20509k = false;
+        this.f20501c = new HandlerC10801a<>(Looper.getMainLooper());
         new WeakReference(null);
     }
 
-    public static void h(@Nullable h hVar) {
-        if (hVar instanceof f) {
+    /* renamed from: h */
+    public static void m9032h(@Nullable InterfaceC3273h interfaceC3273h) {
+        if (interfaceC3273h instanceof InterfaceC3271f) {
             try {
-                ((f) hVar).release();
+                ((InterfaceC3271f) interfaceC3273h).release();
             } catch (RuntimeException e) {
-                String strValueOf = String.valueOf(hVar);
+                String strValueOf = String.valueOf(interfaceC3273h);
                 StringBuilder sb = new StringBuilder(strValueOf.length() + 18);
                 sb.append("Unable to release ");
                 sb.append(strValueOf);
@@ -111,98 +136,106 @@ public abstract class BasePendingResult<R extends h> extends d<R> {
         }
     }
 
-    public /* bridge */ /* synthetic */ void b(Object obj) {
-        g((h) obj);
+    /* renamed from: b */
+    public /* bridge */ /* synthetic */ void mo3989b(Object obj) {
+        m9035g((InterfaceC3273h) obj);
     }
 
-    @Override // b.i.a.f.e.h.d
-    public final void c(d.a aVar) {
-        b.c.a.a0.d.o(true, "Callback cannot be null.");
-        synchronized (this.f3004b) {
-            if (f()) {
-                aVar.a(this.h);
+    @Override // p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3269d
+    /* renamed from: c */
+    public final void mo4051c(AbstractC3269d.a aVar) {
+        AnimatableValueParser.m551o(true, "Callback cannot be null.");
+        synchronized (this.f20500b) {
+            if (m9034f()) {
+                aVar.mo4052a(this.f20506h);
             } else {
-                this.e.add(aVar);
+                this.f20503e.add(aVar);
             }
         }
     }
 
     @NonNull
-    public abstract R d(Status status);
+    /* renamed from: d */
+    public abstract R mo3987d(Status status);
 
     @Deprecated
-    public final void e(Status status) {
-        synchronized (this.f3004b) {
-            if (!f()) {
-                g(d(status));
-                this.j = true;
+    /* renamed from: e */
+    public final void m9033e(Status status) {
+        synchronized (this.f20500b) {
+            if (!m9034f()) {
+                m9035g(mo3987d(status));
+                this.f20508j = true;
             }
         }
     }
 
-    public final boolean f() {
-        return this.d.getCount() == 0;
+    /* renamed from: f */
+    public final boolean m9034f() {
+        return this.f20502d.getCount() == 0;
     }
 
-    public final void g(R r) {
-        synchronized (this.f3004b) {
-            if (this.j) {
-                h(r);
+    /* renamed from: g */
+    public final void m9035g(R r) {
+        synchronized (this.f20500b) {
+            if (this.f20508j) {
+                m9032h(r);
                 return;
             }
-            f();
+            m9034f();
             boolean z2 = true;
-            b.c.a.a0.d.G(!f(), "Results have already been set");
-            if (this.i) {
+            AnimatableValueParser.m435G(!m9034f(), "Results have already been set");
+            if (this.f20507i) {
                 z2 = false;
             }
-            b.c.a.a0.d.G(z2, "Result has already been consumed");
-            i(r);
+            AnimatableValueParser.m435G(z2, "Result has already been consumed");
+            m9036i(r);
         }
     }
 
-    public final void i(R r) {
-        this.g = r;
-        this.h = r.b0();
-        this.d.countDown();
-        if (this.g instanceof f) {
-            this.mResultGuardian = new b(null);
+    /* renamed from: i */
+    public final void m9036i(R r) {
+        this.f20505g = r;
+        this.f20506h = r.mo4053b0();
+        this.f20502d.countDown();
+        if (this.f20505g instanceof InterfaceC3271f) {
+            this.mResultGuardian = new C10802b(null);
         }
-        ArrayList<d.a> arrayList = this.e;
+        ArrayList<AbstractC3269d.a> arrayList = this.f20503e;
         int size = arrayList.size();
         int i = 0;
         while (i < size) {
-            d.a aVar = arrayList.get(i);
+            AbstractC3269d.a aVar = arrayList.get(i);
             i++;
-            aVar.a(this.h);
+            aVar.mo4052a(this.f20506h);
         }
-        this.e.clear();
+        this.f20503e.clear();
     }
 
-    public final R j() {
+    /* renamed from: j */
+    public final R m9037j() {
         R r;
-        synchronized (this.f3004b) {
-            b.c.a.a0.d.G(!this.i, "Result has already been consumed.");
-            b.c.a.a0.d.G(f(), "Result is not ready.");
-            r = this.g;
-            this.g = null;
-            this.i = true;
+        synchronized (this.f20500b) {
+            AnimatableValueParser.m435G(!this.f20507i, "Result has already been consumed.");
+            AnimatableValueParser.m435G(m9034f(), "Result is not ready.");
+            r = this.f20505g;
+            this.f20505g = null;
+            this.f20507i = true;
         }
-        l0 andSet = this.f.getAndSet(null);
+        InterfaceC3304l0 andSet = this.f20504f.getAndSet(null);
         if (andSet != null) {
-            andSet.a(this);
+            andSet.m4110a(this);
         }
         Objects.requireNonNull(r, "null reference");
         return r;
     }
 
-    public BasePendingResult(@Nullable b.i.a.f.e.h.c cVar) {
-        this.f3004b = new Object();
-        this.d = new CountDownLatch(1);
-        this.e = new ArrayList<>();
-        this.f = new AtomicReference<>();
-        this.k = false;
-        this.c = new a<>(cVar != null ? cVar.c() : Looper.getMainLooper());
-        new WeakReference(cVar);
+    public BasePendingResult(@Nullable AbstractC3268c abstractC3268c) {
+        this.f20500b = new Object();
+        this.f20502d = new CountDownLatch(1);
+        this.f20503e = new ArrayList<>();
+        this.f20504f = new AtomicReference<>();
+        this.f20509k = false;
+        this.f20501c = new HandlerC10801a<>(abstractC3268c != null ? abstractC3268c.mo4050c() : Looper.getMainLooper());
+        new WeakReference(abstractC3268c);
     }
 }

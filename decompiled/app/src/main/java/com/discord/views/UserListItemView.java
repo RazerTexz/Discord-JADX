@@ -5,39 +5,41 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import b.a.i.d4;
-import com.discord.R;
+import com.discord.C5419R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.m;
+import p007b.p008a.p025i.ViewUserListItemBinding;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: UserListItemView.kt */
 /* loaded from: classes2.dex */
 public final class UserListItemView extends RelativeLayout {
-    public static final /* synthetic */ int j = 0;
+
+    /* renamed from: j */
+    public static final /* synthetic */ int f19171j = 0;
 
     /* renamed from: k, reason: from kotlin metadata */
-    public final d4 binding;
+    public final ViewUserListItemBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UserListItemView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
-        m.checkNotNullParameter(context, "context");
-        LayoutInflater.from(context).inflate(R.layout.view_user_list_item, this);
-        int i = R.id.user_list_item_avatar;
-        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) findViewById(R.id.user_list_item_avatar);
+        Intrinsics3.checkNotNullParameter(context, "context");
+        LayoutInflater.from(context).inflate(C5419R.layout.view_user_list_item, this);
+        int i = C5419R.id.user_list_item_avatar;
+        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) findViewById(C5419R.id.user_list_item_avatar);
         if (simpleDraweeView != null) {
-            i = R.id.user_list_item_name;
-            TextView textView = (TextView) findViewById(R.id.user_list_item_name);
+            i = C5419R.id.user_list_item_name;
+            TextView textView = (TextView) findViewById(C5419R.id.user_list_item_name);
             if (textView != null) {
-                i = R.id.user_list_item_name_secondary;
-                TextView textView2 = (TextView) findViewById(R.id.user_list_item_name_secondary);
+                i = C5419R.id.user_list_item_name_secondary;
+                TextView textView2 = (TextView) findViewById(C5419R.id.user_list_item_name_secondary);
                 if (textView2 != null) {
-                    i = R.id.user_list_item_status;
-                    StatusView statusView = (StatusView) findViewById(R.id.user_list_item_status);
+                    i = C5419R.id.user_list_item_status;
+                    StatusView statusView = (StatusView) findViewById(C5419R.id.user_list_item_status);
                     if (statusView != null) {
-                        d4 d4Var = new d4(this, simpleDraweeView, textView, textView2, statusView);
-                        m.checkNotNullExpressionValue(d4Var, "ViewUserListItemBinding.…ater.from(context), this)");
-                        this.binding = d4Var;
+                        ViewUserListItemBinding viewUserListItemBinding = new ViewUserListItemBinding(this, simpleDraweeView, textView, textView2, statusView);
+                        Intrinsics3.checkNotNullExpressionValue(viewUserListItemBinding, "ViewUserListItemBinding.…ater.from(context), this)");
+                        this.binding = viewUserListItemBinding;
                         setClickable(true);
                         return;
                     }

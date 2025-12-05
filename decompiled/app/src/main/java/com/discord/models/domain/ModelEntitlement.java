@@ -1,8 +1,8 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
 import com.discord.api.premium.SubscriptionPlan;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelEntitlement.kt */
 /* loaded from: classes.dex */
@@ -19,7 +19,7 @@ public final /* data */ class ModelEntitlement {
     private final long userId;
 
     public ModelEntitlement(long j, long j2, int i, long j3, long j4, ModelSku modelSku, SubscriptionPlan subscriptionPlan, Long l, Boolean bool, Long l2) {
-        m.checkNotNullParameter(modelSku, "sku");
+        Intrinsics3.checkNotNullParameter(modelSku, "sku");
         this.id = j;
         this.applicationId = j2;
         this.type = i;
@@ -87,7 +87,7 @@ public final /* data */ class ModelEntitlement {
     }
 
     public final ModelEntitlement copy(long id2, long applicationId, int type, long userId, long skuId, ModelSku sku, SubscriptionPlan subscriptionPlan, Long parentId, Boolean consumed, Long promotionId) {
-        m.checkNotNullParameter(sku, "sku");
+        Intrinsics3.checkNotNullParameter(sku, "sku");
         return new ModelEntitlement(id2, applicationId, type, userId, skuId, sku, subscriptionPlan, parentId, consumed, promotionId);
     }
 
@@ -99,7 +99,7 @@ public final /* data */ class ModelEntitlement {
             return false;
         }
         ModelEntitlement modelEntitlement = (ModelEntitlement) other;
-        return this.id == modelEntitlement.id && this.applicationId == modelEntitlement.applicationId && this.type == modelEntitlement.type && this.userId == modelEntitlement.userId && this.skuId == modelEntitlement.skuId && m.areEqual(this.sku, modelEntitlement.sku) && m.areEqual(this.subscriptionPlan, modelEntitlement.subscriptionPlan) && m.areEqual(this.parentId, modelEntitlement.parentId) && m.areEqual(this.consumed, modelEntitlement.consumed) && m.areEqual(this.promotionId, modelEntitlement.promotionId);
+        return this.id == modelEntitlement.id && this.applicationId == modelEntitlement.applicationId && this.type == modelEntitlement.type && this.userId == modelEntitlement.userId && this.skuId == modelEntitlement.skuId && Intrinsics3.areEqual(this.sku, modelEntitlement.sku) && Intrinsics3.areEqual(this.subscriptionPlan, modelEntitlement.subscriptionPlan) && Intrinsics3.areEqual(this.parentId, modelEntitlement.parentId) && Intrinsics3.areEqual(this.consumed, modelEntitlement.consumed) && Intrinsics3.areEqual(this.promotionId, modelEntitlement.promotionId);
     }
 
     public final long getApplicationId() {
@@ -163,25 +163,25 @@ public final /* data */ class ModelEntitlement {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelEntitlement(id=");
-        sbU.append(this.id);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", userId=");
-        sbU.append(this.userId);
-        sbU.append(", skuId=");
-        sbU.append(this.skuId);
-        sbU.append(", sku=");
-        sbU.append(this.sku);
-        sbU.append(", subscriptionPlan=");
-        sbU.append(this.subscriptionPlan);
-        sbU.append(", parentId=");
-        sbU.append(this.parentId);
-        sbU.append(", consumed=");
-        sbU.append(this.consumed);
-        sbU.append(", promotionId=");
-        return a.G(sbU, this.promotionId, ")");
+        StringBuilder sbM833U = outline.m833U("ModelEntitlement(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", userId=");
+        sbM833U.append(this.userId);
+        sbM833U.append(", skuId=");
+        sbM833U.append(this.skuId);
+        sbM833U.append(", sku=");
+        sbM833U.append(this.sku);
+        sbM833U.append(", subscriptionPlan=");
+        sbM833U.append(this.subscriptionPlan);
+        sbM833U.append(", parentId=");
+        sbM833U.append(this.parentId);
+        sbM833U.append(", consumed=");
+        sbM833U.append(this.consumed);
+        sbM833U.append(", promotionId=");
+        return outline.m819G(sbM833U, this.promotionId, ")");
     }
 }

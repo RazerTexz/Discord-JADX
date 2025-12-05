@@ -3,16 +3,17 @@ package com.discord.restapi;
 import androidx.exifinterface.media.ExifInterface;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import d0.z.d.m;
-import i0.e0.a.a;
-import i0.e0.a.b;
-import i0.h;
-import i0.y;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Objects;
 import okhttp3.RequestBody;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p630i0.Converter2;
+import p630i0.Retrofit2;
+import p630i0.p633e0.p634a.GsonConverterFactory;
+import p630i0.p633e0.p634a.GsonRequestBodyConverter;
 
 /* compiled from: PayloadJSON.kt */
 /* loaded from: classes.dex */
@@ -20,51 +21,51 @@ public final /* data */ class PayloadJSON<T> {
     private final T data;
 
     /* compiled from: PayloadJSON.kt */
-    public static final class ConverterFactory extends h.a {
-        private final a gsonConverterFactory;
+    public static final class ConverterFactory extends Converter2.a {
+        private final GsonConverterFactory gsonConverterFactory;
 
         /* compiled from: PayloadJSON.kt */
-        public static final class RequestBodyConverter<T> implements h<PayloadJSON<T>, RequestBody> {
-            private final h<T, RequestBody> gsonRequestBodyConverter;
+        public static final class RequestBodyConverter<T> implements Converter2<PayloadJSON<T>, RequestBody> {
+            private final Converter2<T, RequestBody> gsonRequestBodyConverter;
 
-            public RequestBodyConverter(h<T, RequestBody> hVar) {
-                m.checkNotNullParameter(hVar, "gsonRequestBodyConverter");
-                this.gsonRequestBodyConverter = hVar;
+            public RequestBodyConverter(Converter2<T, RequestBody> converter2) {
+                Intrinsics3.checkNotNullParameter(converter2, "gsonRequestBodyConverter");
+                this.gsonRequestBodyConverter = converter2;
             }
 
-            @Override // i0.h
+            @Override // p630i0.Converter2
             public /* bridge */ /* synthetic */ RequestBody convert(Object obj) {
                 return convert((PayloadJSON) obj);
             }
 
             public RequestBody convert(PayloadJSON<T> value) {
-                m.checkNotNullParameter(value, "value");
+                Intrinsics3.checkNotNullParameter(value, "value");
                 return (RequestBody) this.gsonRequestBodyConverter.convert(PayloadJSON.access$getData$p(value));
             }
         }
 
         public ConverterFactory(Gson gson) {
-            m.checkNotNullParameter(gson, "gson");
+            Intrinsics3.checkNotNullParameter(gson, "gson");
             Objects.requireNonNull(gson, "gson == null");
-            this.gsonConverterFactory = new a(gson);
+            this.gsonConverterFactory = new GsonConverterFactory(gson);
         }
 
-        @Override // i0.h.a
-        public h<?, RequestBody> requestBodyConverter(Type type, Annotation[] parameterAnnotations, Annotation[] methodAnnotations, y retrofit) {
-            m.checkNotNullParameter(type, "type");
-            m.checkNotNullParameter(parameterAnnotations, "parameterAnnotations");
-            m.checkNotNullParameter(methodAnnotations, "methodAnnotations");
-            m.checkNotNullParameter(retrofit, "retrofit");
+        @Override // p630i0.Converter2.a
+        public Converter2<?, RequestBody> requestBodyConverter(Type type, Annotation[] parameterAnnotations, Annotation[] methodAnnotations, Retrofit2 retrofit) {
+            Intrinsics3.checkNotNullParameter(type, "type");
+            Intrinsics3.checkNotNullParameter(parameterAnnotations, "parameterAnnotations");
+            Intrinsics3.checkNotNullParameter(methodAnnotations, "methodAnnotations");
+            Intrinsics3.checkNotNullParameter(retrofit, "retrofit");
             if (!(type instanceof ParameterizedType)) {
                 type = null;
             }
             ParameterizedType parameterizedType = (ParameterizedType) type;
-            if (parameterizedType == null || (!m.areEqual(parameterizedType.getRawType(), PayloadJSON.class))) {
+            if (parameterizedType == null || (!Intrinsics3.areEqual(parameterizedType.getRawType(), PayloadJSON.class))) {
                 return null;
             }
             Type type2 = parameterizedType.getActualTypeArguments()[0];
-            a aVar = this.gsonConverterFactory;
-            return new RequestBodyConverter(new b(aVar.a, aVar.a.h(TypeToken.get(type2))));
+            GsonConverterFactory gsonConverterFactory = this.gsonConverterFactory;
+            return new RequestBodyConverter(new GsonRequestBodyConverter(gsonConverterFactory.f26510a, gsonConverterFactory.f26510a.m9204h(TypeToken.get(type2))));
         }
     }
 
@@ -94,7 +95,7 @@ public final /* data */ class PayloadJSON<T> {
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof PayloadJSON) && m.areEqual(this.data, ((PayloadJSON) other).data);
+            return (other instanceof PayloadJSON) && Intrinsics3.areEqual(this.data, ((PayloadJSON) other).data);
         }
         return true;
     }
@@ -108,9 +109,9 @@ public final /* data */ class PayloadJSON<T> {
     }
 
     public String toString() {
-        StringBuilder sbU = b.d.b.a.a.U("PayloadJSON(data=");
-        sbU.append(this.data);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("PayloadJSON(data=");
+        sbM833U.append(this.data);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

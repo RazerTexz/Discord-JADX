@@ -2,8 +2,6 @@ package com.discord.widgets.chat.list.sheet;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.commands.ApplicationCommandData;
 import com.discord.api.role.GuildRole;
@@ -19,13 +17,8 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.u;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
+import com.discord.stores.updates.ObservationDeck4;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -34,11 +27,18 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
 
 /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewState> {
+public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -51,31 +51,31 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
     private final String messageNonce;
 
     /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
-        public AnonymousClass1(WidgetApplicationCommandBottomSheetViewModel widgetApplicationCommandBottomSheetViewModel) {
+    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$1 */
+    public static final /* synthetic */ class C81691 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+        public C81691(WidgetApplicationCommandBottomSheetViewModel widgetApplicationCommandBottomSheetViewModel) {
             super(1, widgetApplicationCommandBottomSheetViewModel, WidgetApplicationCommandBottomSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/list/sheet/WidgetApplicationCommandBottomSheetViewModel$StoreState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "p1");
+            Intrinsics3.checkNotNullParameter(storeState, "p1");
             WidgetApplicationCommandBottomSheetViewModel.access$handleStoreState((WidgetApplicationCommandBottomSheetViewModel) this.receiver, storeState);
         }
     }
 
     /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements b<StoreState, UserData> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$2 */
+    public static final class C81702<T, R> implements Func1<StoreState, UserData> {
+        public static final C81702 INSTANCE = new C81702();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ UserData call(StoreState storeState) {
             return call2(storeState);
         }
@@ -87,25 +87,25 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
     }
 
     /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function1<UserData, Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$3 */
+    public static final class C81713 extends Lambda implements Function1<UserData, Unit> {
+        public C81713() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(UserData userData) {
             invoke2(userData);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(UserData userData) {
             if (WidgetApplicationCommandBottomSheetViewModel.this.getGuildId() != null) {
-                StoreGatewayConnection.requestGuildMembers$default(StoreStream.INSTANCE.getGatewaySocket(), WidgetApplicationCommandBottomSheetViewModel.this.getGuildId().longValue(), null, u.toList(userData.getMentionedUserIds()), null, 10, null);
+                StoreGatewayConnection.requestGuildMembers$default(StoreStream.INSTANCE.getGatewaySocket(), WidgetApplicationCommandBottomSheetViewModel.this.getGuildId().longValue(), null, _Collections.toList(userData.getMentionedUserIds()), null, 10, null);
             }
             if (userData.getUsers().size() != userData.getMentionedUserIds().size()) {
-                StoreStream.INSTANCE.getUsers().fetchUsers(u.toList(userData.getMentionedUserIds()));
+                StoreStream.INSTANCE.getUsers().fetchUsers(_Collections.toList(userData.getMentionedUserIds()));
             }
         }
     }
@@ -120,7 +120,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         }
 
         private final Observable<StoreState> observeStores(ObservationDeck observationDeck, long interactionId, Long guildId, long userId, long applicationId, StoreGuilds storeGuilds, StoreChannels storeChannels, StoreUser storeUsers, StoreApplicationInteractions storeInteractions, StoreApplicationCommands storeApplicationCommands) {
-            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{storeApplicationCommands, storeChannels, storeInteractions, storeGuilds, storeUsers}, false, null, null, new WidgetApplicationCommandBottomSheetViewModel$Companion$observeStores$1(storeInteractions, interactionId, storeApplicationCommands, applicationId, userId, storeGuilds, guildId, storeUsers, storeChannels), 14, null);
+            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{storeApplicationCommands, storeChannels, storeInteractions, storeGuilds, storeUsers}, false, null, null, new WidgetApplicationCommandBottomSheetViewModel2(storeInteractions, interactionId, storeApplicationCommands, applicationId, userId, storeGuilds, guildId, storeUsers, storeChannels), 14, null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -136,7 +136,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         private final Integer valueColor;
 
         public SlashCommandParam(String str, String str2, Integer num, String str3) {
-            a.q0(str, ModelAuditLogEntry.CHANGE_KEY_NAME, str2, "value", str3, "copyText");
+            outline.m872q0(str, ModelAuditLogEntry.CHANGE_KEY_NAME, str2, "value", str3, "copyText");
             this.name = str;
             this.value = str2;
             this.valueColor = num;
@@ -180,9 +180,9 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         }
 
         public final SlashCommandParam copy(String name, String value, Integer valueColor, String copyText) {
-            m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
-            m.checkNotNullParameter(value, "value");
-            m.checkNotNullParameter(copyText, "copyText");
+            Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            Intrinsics3.checkNotNullParameter(value, "value");
+            Intrinsics3.checkNotNullParameter(copyText, "copyText");
             return new SlashCommandParam(name, value, valueColor, copyText);
         }
 
@@ -194,7 +194,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
                 return false;
             }
             SlashCommandParam slashCommandParam = (SlashCommandParam) other;
-            return m.areEqual(this.name, slashCommandParam.name) && m.areEqual(this.value, slashCommandParam.value) && m.areEqual(this.valueColor, slashCommandParam.valueColor) && m.areEqual(this.copyText, slashCommandParam.copyText);
+            return Intrinsics3.areEqual(this.name, slashCommandParam.name) && Intrinsics3.areEqual(this.value, slashCommandParam.value) && Intrinsics3.areEqual(this.valueColor, slashCommandParam.valueColor) && Intrinsics3.areEqual(this.copyText, slashCommandParam.copyText);
         }
 
         public final String getCopyText() {
@@ -225,14 +225,14 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("SlashCommandParam(name=");
-            sbU.append(this.name);
-            sbU.append(", value=");
-            sbU.append(this.value);
-            sbU.append(", valueColor=");
-            sbU.append(this.valueColor);
-            sbU.append(", copyText=");
-            return a.J(sbU, this.copyText, ")");
+            StringBuilder sbM833U = outline.m833U("SlashCommandParam(name=");
+            sbM833U.append(this.name);
+            sbM833U.append(", value=");
+            sbM833U.append(this.value);
+            sbM833U.append(", valueColor=");
+            sbM833U.append(this.valueColor);
+            sbM833U.append(", copyText=");
+            return outline.m822J(sbM833U, this.copyText, ")");
         }
     }
 
@@ -251,10 +251,10 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(User user, GuildMember guildMember, StoreApplicationInteractions.State state, Application application, Set<Long> set, Map<Long, GuildMember> map, Map<Long, GuildRole> map2, Map<Long, ? extends User> map3, Map<Long, Channel> map4, Map<String, SlashCommandParam> map5) {
-            m.checkNotNullParameter(set, "mentionedUsers");
-            m.checkNotNullParameter(map3, "users");
-            m.checkNotNullParameter(map4, "channels");
-            m.checkNotNullParameter(map5, "commandValues");
+            Intrinsics3.checkNotNullParameter(set, "mentionedUsers");
+            Intrinsics3.checkNotNullParameter(map3, "users");
+            Intrinsics3.checkNotNullParameter(map4, "channels");
+            Intrinsics3.checkNotNullParameter(map5, "commandValues");
             this.user = user;
             this.interactionUser = guildMember;
             this.interactionState = state;
@@ -316,10 +316,10 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         }
 
         public final StoreState copy(User user, GuildMember interactionUser, StoreApplicationInteractions.State interactionState, Application application, Set<Long> mentionedUsers, Map<Long, GuildMember> guildMembers, Map<Long, GuildRole> guildRoles, Map<Long, ? extends User> users, Map<Long, Channel> channels, Map<String, SlashCommandParam> commandValues) {
-            m.checkNotNullParameter(mentionedUsers, "mentionedUsers");
-            m.checkNotNullParameter(users, "users");
-            m.checkNotNullParameter(channels, "channels");
-            m.checkNotNullParameter(commandValues, "commandValues");
+            Intrinsics3.checkNotNullParameter(mentionedUsers, "mentionedUsers");
+            Intrinsics3.checkNotNullParameter(users, "users");
+            Intrinsics3.checkNotNullParameter(channels, "channels");
+            Intrinsics3.checkNotNullParameter(commandValues, "commandValues");
             return new StoreState(user, interactionUser, interactionState, application, mentionedUsers, guildMembers, guildRoles, users, channels, commandValues);
         }
 
@@ -331,7 +331,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.user, storeState.user) && m.areEqual(this.interactionUser, storeState.interactionUser) && m.areEqual(this.interactionState, storeState.interactionState) && m.areEqual(this.application, storeState.application) && m.areEqual(this.mentionedUsers, storeState.mentionedUsers) && m.areEqual(this.guildMembers, storeState.guildMembers) && m.areEqual(this.guildRoles, storeState.guildRoles) && m.areEqual(this.users, storeState.users) && m.areEqual(this.channels, storeState.channels) && m.areEqual(this.commandValues, storeState.commandValues);
+            return Intrinsics3.areEqual(this.user, storeState.user) && Intrinsics3.areEqual(this.interactionUser, storeState.interactionUser) && Intrinsics3.areEqual(this.interactionState, storeState.interactionState) && Intrinsics3.areEqual(this.application, storeState.application) && Intrinsics3.areEqual(this.mentionedUsers, storeState.mentionedUsers) && Intrinsics3.areEqual(this.guildMembers, storeState.guildMembers) && Intrinsics3.areEqual(this.guildRoles, storeState.guildRoles) && Intrinsics3.areEqual(this.users, storeState.users) && Intrinsics3.areEqual(this.channels, storeState.channels) && Intrinsics3.areEqual(this.commandValues, storeState.commandValues);
         }
 
         public final Application getApplication() {
@@ -398,26 +398,26 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(user=");
-            sbU.append(this.user);
-            sbU.append(", interactionUser=");
-            sbU.append(this.interactionUser);
-            sbU.append(", interactionState=");
-            sbU.append(this.interactionState);
-            sbU.append(", application=");
-            sbU.append(this.application);
-            sbU.append(", mentionedUsers=");
-            sbU.append(this.mentionedUsers);
-            sbU.append(", guildMembers=");
-            sbU.append(this.guildMembers);
-            sbU.append(", guildRoles=");
-            sbU.append(this.guildRoles);
-            sbU.append(", users=");
-            sbU.append(this.users);
-            sbU.append(", channels=");
-            sbU.append(this.channels);
-            sbU.append(", commandValues=");
-            return a.M(sbU, this.commandValues, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", interactionUser=");
+            sbM833U.append(this.interactionUser);
+            sbM833U.append(", interactionState=");
+            sbM833U.append(this.interactionState);
+            sbM833U.append(", application=");
+            sbM833U.append(this.application);
+            sbM833U.append(", mentionedUsers=");
+            sbM833U.append(this.mentionedUsers);
+            sbM833U.append(", guildMembers=");
+            sbM833U.append(this.guildMembers);
+            sbM833U.append(", guildRoles=");
+            sbM833U.append(this.guildRoles);
+            sbM833U.append(", users=");
+            sbM833U.append(this.users);
+            sbM833U.append(", channels=");
+            sbM833U.append(this.channels);
+            sbM833U.append(", commandValues=");
+            return outline.m825M(sbM833U, this.commandValues, ")");
         }
 
         public /* synthetic */ StoreState(User user, GuildMember guildMember, StoreApplicationInteractions.State state, Application application, Set set, Map map, Map map2, Map map3, Map map4, Map map5, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -432,8 +432,8 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
 
         /* JADX WARN: Multi-variable type inference failed */
         public UserData(Set<Long> set, Map<Long, ? extends User> map) {
-            m.checkNotNullParameter(set, "mentionedUserIds");
-            m.checkNotNullParameter(map, "users");
+            Intrinsics3.checkNotNullParameter(set, "mentionedUserIds");
+            Intrinsics3.checkNotNullParameter(map, "users");
             this.mentionedUserIds = set;
             this.users = map;
         }
@@ -458,8 +458,8 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         }
 
         public final UserData copy(Set<Long> mentionedUserIds, Map<Long, ? extends User> users) {
-            m.checkNotNullParameter(mentionedUserIds, "mentionedUserIds");
-            m.checkNotNullParameter(users, "users");
+            Intrinsics3.checkNotNullParameter(mentionedUserIds, "mentionedUserIds");
+            Intrinsics3.checkNotNullParameter(users, "users");
             return new UserData(mentionedUserIds, users);
         }
 
@@ -471,7 +471,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
                 return false;
             }
             UserData userData = (UserData) other;
-            return m.areEqual(this.mentionedUserIds, userData.mentionedUserIds) && m.areEqual(this.users, userData.users);
+            return Intrinsics3.areEqual(this.mentionedUserIds, userData.mentionedUserIds) && Intrinsics3.areEqual(this.users, userData.users);
         }
 
         public final Set<Long> getMentionedUserIds() {
@@ -490,10 +490,10 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("UserData(mentionedUserIds=");
-            sbU.append(this.mentionedUserIds);
-            sbU.append(", users=");
-            return a.M(sbU, this.users, ")");
+            StringBuilder sbM833U = outline.m833U("UserData(mentionedUserIds=");
+            sbM833U.append(this.mentionedUserIds);
+            sbM833U.append(", users=");
+            return outline.m825M(sbM833U, this.users, ")");
         }
     }
 
@@ -527,9 +527,9 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(long j, User user, GuildMember guildMember, Application application, ApplicationCommandData applicationCommandData, Long l, Long l2, Map<Long, GuildMember> map, Map<Long, GuildRole> map2, Map<Long, Channel> map3, Map<Long, String> map4, Map<String, SlashCommandParam> map5) {
                 super(null);
-                m.checkNotNullParameter(applicationCommandData, "applicationCommandData");
-                m.checkNotNullParameter(map4, "usernamesOrNicks");
-                m.checkNotNullParameter(map5, "commandValues");
+                Intrinsics3.checkNotNullParameter(applicationCommandData, "applicationCommandData");
+                Intrinsics3.checkNotNullParameter(map4, "usernamesOrNicks");
+                Intrinsics3.checkNotNullParameter(map5, "commandValues");
                 this.id = j;
                 this.user = user;
                 this.interactionUser = guildMember;
@@ -615,7 +615,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         Observable observableAccess$observeStores;
         if ((i & 128) != 0) {
             Companion companion = INSTANCE;
-            ObservationDeck observationDeck = ObservationDeckProvider.get();
+            ObservationDeck observationDeck = ObservationDeck4.get();
             StoreStream.Companion companion2 = StoreStream.INSTANCE;
             observableAccess$observeStores = Companion.access$observeStores(companion, observationDeck, j, l, j4, j5, companion2.getGuilds(), companion2.getChannels(), companion2.getUsers(), companion2.getInteractions(), companion2.getApplicationCommands());
         } else {
@@ -631,11 +631,11 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
     private final void handleStoreState(StoreState storeState) {
         String username;
         StoreApplicationInteractions.State interactionState = storeState.getInteractionState();
-        if (m.areEqual(interactionState, StoreApplicationInteractions.State.Failure.INSTANCE)) {
+        if (Intrinsics3.areEqual(interactionState, StoreApplicationInteractions.State.Failure.INSTANCE)) {
             updateViewState(ViewState.Failed.INSTANCE);
             return;
         }
-        if (m.areEqual(interactionState, StoreApplicationInteractions.State.Fetching.INSTANCE)) {
+        if (Intrinsics3.areEqual(interactionState, StoreApplicationInteractions.State.Fetching.INSTANCE)) {
             updateViewState(ViewState.Loading.INSTANCE);
             return;
         }
@@ -705,7 +705,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetApplicationCommandBottomSheetViewModel(long j, long j2, long j3, Long l, long j4, long j5, String str, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        m.checkNotNullParameter(observable, "storeObservable");
+        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
         this.interactionId = j;
         this.messageId = j2;
         this.channelId = j3;
@@ -713,10 +713,10 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends d0<ViewS
         this.interactionUserId = j4;
         this.applicationId = j5;
         this.messageNonce = str;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetApplicationCommandBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetApplicationCommandBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C81691(this), 62, (Object) null);
         requestInteractionData();
-        Observable observableR = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null).G(AnonymousClass2.INSTANCE).r();
-        m.checkNotNullExpressionValue(observableR, "storeObservable.computat…  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(observableR, WidgetApplicationCommandBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
+        Observable observableM11112r = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null).m11083G(C81702.INSTANCE).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "storeObservable.computat…  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(observableM11112r, WidgetApplicationCommandBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C81713(), 62, (Object) null);
     }
 }

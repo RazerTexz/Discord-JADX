@@ -6,12 +6,12 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseIntArray;
 import androidx.constraintlayout.motion.widget.SplineSet;
+import androidx.constraintlayout.widget.C0201R;
 import androidx.constraintlayout.widget.ConstraintAttribute;
-import androidx.constraintlayout.widget.R;
-import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class KeyAttributes extends Key {
@@ -60,24 +60,24 @@ public class KeyAttributes extends Key {
         static {
             SparseIntArray sparseIntArray = new SparseIntArray();
             mAttrMap = sparseIntArray;
-            sparseIntArray.append(R.styleable.KeyAttribute_android_alpha, 1);
-            mAttrMap.append(R.styleable.KeyAttribute_android_elevation, 2);
-            mAttrMap.append(R.styleable.KeyAttribute_android_rotation, 4);
-            mAttrMap.append(R.styleable.KeyAttribute_android_rotationX, 5);
-            mAttrMap.append(R.styleable.KeyAttribute_android_rotationY, 6);
-            mAttrMap.append(R.styleable.KeyAttribute_android_transformPivotX, 19);
-            mAttrMap.append(R.styleable.KeyAttribute_android_transformPivotY, 20);
-            mAttrMap.append(R.styleable.KeyAttribute_android_scaleX, 7);
-            mAttrMap.append(R.styleable.KeyAttribute_transitionPathRotate, 8);
-            mAttrMap.append(R.styleable.KeyAttribute_transitionEasing, 9);
-            mAttrMap.append(R.styleable.KeyAttribute_motionTarget, 10);
-            mAttrMap.append(R.styleable.KeyAttribute_framePosition, 12);
-            mAttrMap.append(R.styleable.KeyAttribute_curveFit, 13);
-            mAttrMap.append(R.styleable.KeyAttribute_android_scaleY, 14);
-            mAttrMap.append(R.styleable.KeyAttribute_android_translationX, 15);
-            mAttrMap.append(R.styleable.KeyAttribute_android_translationY, 16);
-            mAttrMap.append(R.styleable.KeyAttribute_android_translationZ, 17);
-            mAttrMap.append(R.styleable.KeyAttribute_motionProgress, 18);
+            sparseIntArray.append(C0201R.styleable.KeyAttribute_android_alpha, 1);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_elevation, 2);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_rotation, 4);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_rotationX, 5);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_rotationY, 6);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_transformPivotX, 19);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_transformPivotY, 20);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_scaleX, 7);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_transitionPathRotate, 8);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_transitionEasing, 9);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_motionTarget, 10);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_framePosition, 12);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_curveFit, 13);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_scaleY, 14);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_translationX, 15);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_translationY, 16);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_android_translationZ, 17);
+            mAttrMap.append(C0201R.styleable.KeyAttribute_motionProgress, 18);
         }
 
         private Loader() {
@@ -97,11 +97,11 @@ public class KeyAttributes extends Key {
                     case 3:
                     case 11:
                     default:
-                        StringBuilder sbU = a.U("unused attribute 0x");
-                        sbU.append(Integer.toHexString(index));
-                        sbU.append("   ");
-                        sbU.append(mAttrMap.get(index));
-                        Log.e("KeyAttribute", sbU.toString());
+                        StringBuilder sbM833U = outline.m833U("unused attribute 0x");
+                        sbM833U.append(Integer.toHexString(index));
+                        sbM833U.append("   ");
+                        sbM833U.append(mAttrMap.get(index));
+                        Log.e("KeyAttribute", sbM833U.toString());
                         break;
                     case 4:
                         KeyAttributes.access$202(keyAttributes, typedArray.getFloat(index, KeyAttributes.access$200(keyAttributes)));
@@ -128,14 +128,10 @@ public class KeyAttributes extends Key {
                             if (resourceId == -1) {
                                 keyAttributes.mTargetString = typedArray.getString(index);
                             }
-                            break;
+                        } else if (typedArray.peekValue(index).type == 3) {
+                            keyAttributes.mTargetString = typedArray.getString(index);
                         } else {
-                            if (typedArray.peekValue(index).type == 3) {
-                                keyAttributes.mTargetString = typedArray.getString(index);
-                            } else {
-                                keyAttributes.mTargetId = typedArray.getResourceId(index, keyAttributes.mTargetId);
-                            }
-                            break;
+                            keyAttributes.mTargetId = typedArray.getResourceId(index, keyAttributes.mTargetId);
                         }
                         break;
                     case 12:
@@ -329,11 +325,7 @@ public class KeyAttributes extends Key {
             if (!str.startsWith(Key.CUSTOM)) {
                 switch (str.hashCode()) {
                     case -1249320806:
-                        if (str.equals(Key.ROTATION_X)) {
-                            c = 0;
-                        } else {
-                            c = 65535;
-                        }
+                        c = str.equals(Key.ROTATION_X) ? (char) 0 : (char) 65535;
                         break;
                     case -1249320805:
                         if (str.equals(Key.ROTATION_Y)) {
@@ -414,86 +406,72 @@ public class KeyAttributes extends Key {
                 }
                 switch (c) {
                     case 0:
-                        if (Float.isNaN(this.mRotationX)) {
-                        } else {
+                        if (!Float.isNaN(this.mRotationX)) {
                             splineSet.setPoint(this.mFramePosition, this.mRotationX);
                         }
                         break;
                     case 1:
-                        if (Float.isNaN(this.mRotationY)) {
-                        } else {
+                        if (!Float.isNaN(this.mRotationY)) {
                             splineSet.setPoint(this.mFramePosition, this.mRotationY);
                         }
                         break;
                     case 2:
-                        if (Float.isNaN(this.mTranslationX)) {
-                        } else {
+                        if (!Float.isNaN(this.mTranslationX)) {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationX);
                         }
                         break;
                     case 3:
-                        if (Float.isNaN(this.mTranslationY)) {
-                        } else {
+                        if (!Float.isNaN(this.mTranslationY)) {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationY);
                         }
                         break;
                     case 4:
-                        if (Float.isNaN(this.mTranslationZ)) {
-                        } else {
+                        if (!Float.isNaN(this.mTranslationZ)) {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationZ);
                         }
                         break;
                     case 5:
-                        if (Float.isNaN(this.mProgress)) {
-                        } else {
+                        if (!Float.isNaN(this.mProgress)) {
                             splineSet.setPoint(this.mFramePosition, this.mProgress);
                         }
                         break;
                     case 6:
-                        if (Float.isNaN(this.mScaleX)) {
-                        } else {
+                        if (!Float.isNaN(this.mScaleX)) {
                             splineSet.setPoint(this.mFramePosition, this.mScaleX);
                         }
                         break;
                     case 7:
-                        if (Float.isNaN(this.mScaleY)) {
-                        } else {
+                        if (!Float.isNaN(this.mScaleY)) {
                             splineSet.setPoint(this.mFramePosition, this.mScaleY);
                         }
                         break;
                     case '\b':
-                        if (Float.isNaN(this.mRotationX)) {
-                        } else {
+                        if (!Float.isNaN(this.mRotationX)) {
                             splineSet.setPoint(this.mFramePosition, this.mPivotX);
                         }
                         break;
                     case '\t':
-                        if (Float.isNaN(this.mRotationY)) {
-                        } else {
+                        if (!Float.isNaN(this.mRotationY)) {
                             splineSet.setPoint(this.mFramePosition, this.mPivotY);
                         }
                         break;
                     case '\n':
-                        if (Float.isNaN(this.mRotation)) {
-                        } else {
+                        if (!Float.isNaN(this.mRotation)) {
                             splineSet.setPoint(this.mFramePosition, this.mRotation);
                         }
                         break;
                     case 11:
-                        if (Float.isNaN(this.mElevation)) {
-                        } else {
+                        if (!Float.isNaN(this.mElevation)) {
                             splineSet.setPoint(this.mFramePosition, this.mElevation);
                         }
                         break;
                     case '\f':
-                        if (Float.isNaN(this.mTransitionPathRotate)) {
-                        } else {
+                        if (!Float.isNaN(this.mTransitionPathRotate)) {
                             splineSet.setPoint(this.mFramePosition, this.mTransitionPathRotate);
                         }
                         break;
                     case '\r':
-                        if (Float.isNaN(this.mAlpha)) {
-                        } else {
+                        if (!Float.isNaN(this.mAlpha)) {
                             splineSet.setPoint(this.mFramePosition, this.mAlpha);
                         }
                         break;
@@ -568,7 +546,7 @@ public class KeyAttributes extends Key {
 
     @Override // androidx.constraintlayout.motion.widget.Key
     public void load(Context context, AttributeSet attributeSet) {
-        Loader.read(this, context.obtainStyledAttributes(attributeSet, R.styleable.KeyAttribute));
+        Loader.read(this, context.obtainStyledAttributes(attributeSet, C0201R.styleable.KeyAttribute));
     }
 
     @Override // androidx.constraintlayout.motion.widget.Key
@@ -621,7 +599,7 @@ public class KeyAttributes extends Key {
         if (this.mCustomConstraints.size() > 0) {
             Iterator<String> it = this.mCustomConstraints.keySet().iterator();
             while (it.hasNext()) {
-                map.put(a.w("CUSTOM,", it.next()), Integer.valueOf(this.mCurveFit));
+                map.put(outline.m883w("CUSTOM,", it.next()), Integer.valueOf(this.mCurveFit));
             }
         }
     }

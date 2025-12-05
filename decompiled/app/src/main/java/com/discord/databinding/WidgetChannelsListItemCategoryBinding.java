@@ -10,29 +10,32 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class WidgetChannelsListItemCategoryBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f16007a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ImageView f2286b;
+    public final ImageView f16008b;
 
+    /* renamed from: c */
     @NonNull
-    public final ImageView c;
+    public final ImageView f16009c;
 
+    /* renamed from: d */
     @NonNull
-    public final TextView d;
+    public final TextView f16010d;
 
     public WidgetChannelsListItemCategoryBinding(@NonNull LinearLayout linearLayout, @NonNull ImageView imageView, @NonNull ImageView imageView2, @NonNull TextView textView) {
-        this.a = linearLayout;
-        this.f2286b = imageView;
-        this.c = imageView2;
-        this.d = textView;
+        this.f16007a = linearLayout;
+        this.f16008b = imageView;
+        this.f16009c = imageView2;
+        this.f16010d = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16007a;
     }
 }

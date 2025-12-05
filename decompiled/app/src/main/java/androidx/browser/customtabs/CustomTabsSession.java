@@ -14,72 +14,72 @@ import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
 import androidx.browser.customtabs.CustomTabsSessionToken;
 import java.util.List;
-import x.a.a.a;
-import x.a.a.b;
+import p668x.p669a.p670a.ICustomTabsCallback;
+import p668x.p669a.p670a.ICustomTabsService;
 
 /* loaded from: classes.dex */
 public final class CustomTabsSession {
     private static final String TAG = "CustomTabsSession";
-    private final a mCallback;
+    private final ICustomTabsCallback mCallback;
     private final ComponentName mComponentName;
 
     @Nullable
     private final PendingIntent mId;
     private final Object mLock = new Object();
-    private final b mService;
+    private final ICustomTabsService mService;
 
-    public static class MockSession extends b.a {
-        @Override // x.a.a.b
+    public static class MockSession extends ICustomTabsService.a {
+        @Override // p668x.p669a.p670a.ICustomTabsService
         public Bundle extraCommand(String str, Bundle bundle) throws RemoteException {
             return null;
         }
 
-        @Override // x.a.a.b
-        public boolean mayLaunchUrl(a aVar, Uri uri, Bundle bundle, List<Bundle> list) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public boolean mayLaunchUrl(ICustomTabsCallback iCustomTabsCallback, Uri uri, Bundle bundle, List<Bundle> list) throws RemoteException {
             return false;
         }
 
-        @Override // x.a.a.b
-        public boolean newSession(a aVar) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public boolean newSession(ICustomTabsCallback iCustomTabsCallback) throws RemoteException {
             return false;
         }
 
-        @Override // x.a.a.b
-        public boolean newSessionWithExtras(a aVar, Bundle bundle) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public boolean newSessionWithExtras(ICustomTabsCallback iCustomTabsCallback, Bundle bundle) throws RemoteException {
             return false;
         }
 
-        @Override // x.a.a.b
-        public int postMessage(a aVar, String str, Bundle bundle) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public int postMessage(ICustomTabsCallback iCustomTabsCallback, String str, Bundle bundle) throws RemoteException {
             return 0;
         }
 
-        @Override // x.a.a.b
-        public boolean receiveFile(a aVar, Uri uri, int i, Bundle bundle) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public boolean receiveFile(ICustomTabsCallback iCustomTabsCallback, Uri uri, int i, Bundle bundle) throws RemoteException {
             return false;
         }
 
-        @Override // x.a.a.b
-        public boolean requestPostMessageChannel(a aVar, Uri uri) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public boolean requestPostMessageChannel(ICustomTabsCallback iCustomTabsCallback, Uri uri) throws RemoteException {
             return false;
         }
 
-        @Override // x.a.a.b
-        public boolean requestPostMessageChannelWithExtras(a aVar, Uri uri, Bundle bundle) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public boolean requestPostMessageChannelWithExtras(ICustomTabsCallback iCustomTabsCallback, Uri uri, Bundle bundle) throws RemoteException {
             return false;
         }
 
-        @Override // x.a.a.b
-        public boolean updateVisuals(a aVar, Bundle bundle) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public boolean updateVisuals(ICustomTabsCallback iCustomTabsCallback, Bundle bundle) throws RemoteException {
             return false;
         }
 
-        @Override // x.a.a.b
-        public boolean validateRelationship(a aVar, int i, Uri uri, Bundle bundle) throws RemoteException {
+        @Override // p668x.p669a.p670a.ICustomTabsService
+        public boolean validateRelationship(ICustomTabsCallback iCustomTabsCallback, int i, Uri uri, Bundle bundle) throws RemoteException {
             return false;
         }
 
-        @Override // x.a.a.b
+        @Override // p668x.p669a.p670a.ICustomTabsService
         public boolean warmup(long j) throws RemoteException {
             return false;
         }
@@ -110,9 +110,9 @@ public final class CustomTabsSession {
         }
     }
 
-    public CustomTabsSession(b bVar, a aVar, ComponentName componentName, @Nullable PendingIntent pendingIntent) {
-        this.mService = bVar;
-        this.mCallback = aVar;
+    public CustomTabsSession(ICustomTabsService iCustomTabsService, ICustomTabsCallback iCustomTabsCallback, ComponentName componentName, @Nullable PendingIntent pendingIntent) {
+        this.mService = iCustomTabsService;
+        this.mCallback = iCustomTabsCallback;
         this.mComponentName = componentName;
         this.mId = pendingIntent;
     }

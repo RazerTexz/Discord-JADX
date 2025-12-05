@@ -11,10 +11,6 @@ import com.discord.models.domain.ModelReadState;
 import com.discord.stores.StoreMessageAck;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.widgets.forums.ForumUtils;
-import d0.t.h0;
-import d0.t.n0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -24,10 +20,16 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
-import rx.Observable;
+import p507d0.Tuples;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t.Maps6;
+import p507d0.p580t.Sets5;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreForumPostReadStates.kt */
 /* loaded from: classes2.dex */
@@ -46,9 +48,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
     private Map<Long, Integer> threadUnreadCountsSnapshot;
 
     /* compiled from: StoreForumPostReadStates.kt */
-    /* renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadIdsWithPersistedReadStates$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Set<? extends Long>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadIdsWithPersistedReadStates$1 */
+    public static final class C59381 extends Lambda implements Function0<Set<? extends Long>> {
+        public C59381() {
             super(0);
         }
 
@@ -65,9 +67,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
     }
 
     /* compiled from: StoreForumPostReadStates.kt */
-    /* renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadUnreadCounts$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends Integer>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadUnreadCounts$1 */
+    public static final class C59391 extends Lambda implements Function0<Map<Long, ? extends Integer>> {
+        public C59391() {
             super(0);
         }
 
@@ -84,13 +86,13 @@ public final class StoreForumPostReadStates extends StoreV2 {
     }
 
     /* compiled from: StoreForumPostReadStates.kt */
-    /* renamed from: com.discord.stores.StoreForumPostReadStates$requestForumUnreads$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreForumPostReadStates$requestForumUnreads$1 */
+    public static final class C59401 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2) {
+        public C59401(long j, long j2) {
             super(0);
             this.$guildId = j;
             this.$channelId = j2;
@@ -99,7 +101,7 @@ public final class StoreForumPostReadStates extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -110,7 +112,7 @@ public final class StoreForumPostReadStates extends StoreV2 {
             StoreForumPostReadStates.access$getProcessedForumUnreadRequests$p(StoreForumPostReadStates.this).add(Long.valueOf(this.$channelId));
             Map<Long, Channel> mapEmptyMap = StoreForumPostReadStates.access$getStoreThreadsActive$p(StoreForumPostReadStates.this).getAllActiveThreadsInternal$app_productionGoogleRelease().get(Long.valueOf(this.$guildId));
             if (mapEmptyMap == null) {
-                mapEmptyMap = h0.emptyMap();
+                mapEmptyMap = Maps6.emptyMap();
             }
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             for (Map.Entry<Long, Channel> entry : mapEmptyMap.entrySet()) {
@@ -125,9 +127,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
             while (it.hasNext()) {
                 long jLongValue = ((Number) it.next()).longValue();
                 StoreMessageAck.Ack ack = all.get(Long.valueOf(jLongValue));
-                Pair pair = ack != null ? d0.o.to(Long.valueOf(jLongValue), Long.valueOf(ack.getMessageId())) : null;
-                if (pair != null) {
-                    arrayList.add(pair);
+                Tuples2 tuples2M10073to = ack != null ? Tuples.m10073to(Long.valueOf(jLongValue), Long.valueOf(ack.getMessageId())) : null;
+                if (tuples2M10073to != null) {
+                    arrayList.add(tuples2M10073to);
                 }
             }
             StoreForumPostReadStates.access$getStoreGatewayConnection$p(StoreForumPostReadStates.this).requestForumUnreads(this.$guildId, this.$channelId, arrayList);
@@ -135,13 +137,13 @@ public final class StoreForumPostReadStates extends StoreV2 {
     }
 
     public StoreForumPostReadStates(Dispatcher dispatcher, StoreGatewayConnection storeGatewayConnection, StoreThreadsActive storeThreadsActive, StoreMessageAck storeMessageAck, StoreChannels storeChannels, StoreUser storeUser, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(storeGatewayConnection, "storeGatewayConnection");
-        m.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
-        m.checkNotNullParameter(storeMessageAck, "storeMessageAck");
-        m.checkNotNullParameter(storeChannels, "storeChannels");
-        m.checkNotNullParameter(storeUser, "storeUser");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(storeGatewayConnection, "storeGatewayConnection");
+        Intrinsics3.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
+        Intrinsics3.checkNotNullParameter(storeMessageAck, "storeMessageAck");
+        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
+        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.storeGatewayConnection = storeGatewayConnection;
         this.storeThreadsActive = storeThreadsActive;
@@ -150,9 +152,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
         this.storeUser = storeUser;
         this.observationDeck = observationDeck;
         this.threadIdsWithPersistedAcks = new LinkedHashSet();
-        this.threadIdsWithPersistedAcksSnapshot = n0.emptySet();
+        this.threadIdsWithPersistedAcksSnapshot = Sets5.emptySet();
         this.threadUnreadCounts = new LinkedHashMap();
-        this.threadUnreadCountsSnapshot = h0.emptyMap();
+        this.threadUnreadCountsSnapshot = Maps6.emptyMap();
         this.processedForumUnreadRequests = new LinkedHashSet();
     }
 
@@ -188,21 +190,21 @@ public final class StoreForumPostReadStates extends StoreV2 {
         storeForumPostReadStates.threadUnreadCountsSnapshot = map;
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         ModelPayload.VersionedReadStates readState = payload.getReadState();
-        m.checkNotNullExpressionValue(readState, "payload.readState");
+        Intrinsics3.checkNotNullExpressionValue(readState, "payload.readState");
         if (!readState.isPartial()) {
             this.threadIdsWithPersistedAcks.clear();
         }
         this.processedForumUnreadRequests.clear();
         this.threadUnreadCounts.clear();
         ModelPayload.VersionedReadStates readState2 = payload.getReadState();
-        m.checkNotNullExpressionValue(readState2, "payload.readState");
+        Intrinsics3.checkNotNullExpressionValue(readState2, "payload.readState");
         List<ModelReadState> entries = readState2.getEntries();
-        m.checkNotNullExpressionValue(entries, "payload.readState.entries");
-        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(entries, 10));
+        Intrinsics3.checkNotNullExpressionValue(entries, "payload.readState.entries");
+        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(entries, 10));
         Iterator<T> it = entries.iterator();
         while (it.hasNext()) {
             arrayList.add(Long.valueOf(((ModelReadState) it.next()).getChannelId()));
@@ -211,13 +213,13 @@ public final class StoreForumPostReadStates extends StoreV2 {
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleForumUnreads(ForumUnreads forumUnreads) {
-        m.checkNotNullParameter(forumUnreads, "forumUnreads");
+        Intrinsics3.checkNotNullParameter(forumUnreads, "forumUnreads");
         if (forumUnreads.getPermissionDenied()) {
             return;
         }
-        for (ForumUnread forumUnread : forumUnreads.b()) {
+        for (ForumUnread forumUnread : forumUnreads.m7825b()) {
             Map<Long, Integer> map = this.threadUnreadCounts;
             Long lValueOf = Long.valueOf(forumUnread.getThreadId());
             Integer count = forumUnread.getCount();
@@ -226,9 +228,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageAck(ModelReadState readState) {
-        m.checkNotNullParameter(readState, "readState");
+        Intrinsics3.checkNotNullParameter(readState, "readState");
         long channelId = readState.getChannelId();
         if (this.threadUnreadCounts.containsKey(Long.valueOf(channelId))) {
             this.threadUnreadCounts.put(Long.valueOf(channelId), 0);
@@ -236,13 +238,13 @@ public final class StoreForumPostReadStates extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageCreate(Message message) {
         Channel channel;
-        m.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(message, "message");
         long channelId = message.getChannelId();
         Channel channel2 = this.storeChannels.getChannel(channelId);
-        if (channel2 == null || (channel = this.storeChannels.getChannel(channel2.getParentId())) == null || !ChannelUtils.r(channel2, channel)) {
+        if (channel2 == null || (channel = this.storeChannels.getChannel(channel2.getParentId())) == null || !ChannelUtils.m7694r(channel2, channel)) {
             return;
         }
         User author = message.getAuthor();
@@ -255,33 +257,33 @@ public final class StoreForumPostReadStates extends StoreV2 {
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadCreateOrUpdate(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
-        if (!ChannelUtils.j(channel) || this.threadUnreadCounts.remove(Long.valueOf(channel.getId())) == null) {
+        Intrinsics3.checkNotNullParameter(channel, "channel");
+        if (!ChannelUtils.m7686j(channel) || this.threadUnreadCounts.remove(Long.valueOf(channel.getId())) == null) {
             return;
         }
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadDelete(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         if (this.threadUnreadCounts.remove(Long.valueOf(channel.getId())) != null) {
             markChanged();
         }
     }
 
     public final Observable<Set<Long>> observeThreadIdsWithPersistedReadStates() {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C59381(), 14, null);
     }
 
     public final Observable<Map<Long, Integer>> observeThreadUnreadCounts() {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C59391(), 14, null);
     }
 
     public final void requestForumUnreads(long guildId, long channelId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId, channelId));
+        this.dispatcher.schedule(new C59401(guildId, channelId));
     }
 
     @Override // com.discord.stores.StoreV2

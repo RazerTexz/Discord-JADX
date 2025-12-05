@@ -1,9 +1,5 @@
 package com.google.gson.internal.bind;
 
-import b.i.d.o;
-import b.i.d.q.a;
-import b.i.d.q.g;
-import b.i.d.q.r;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.reflect.TypeToken;
@@ -16,69 +12,77 @@ import java.lang.reflect.Type;
 import java.lang.reflect.WildcardType;
 import java.util.Collection;
 import java.util.Iterator;
+import p007b.p225i.p408d.TypeAdapterFactory2;
+import p007b.p225i.p408d.p410q.C$Gson$Types;
+import p007b.p225i.p408d.p410q.C4922g;
+import p007b.p225i.p408d.p410q.ObjectConstructor;
 
 /* loaded from: classes3.dex */
-public final class CollectionTypeAdapterFactory implements o {
-    public final g j;
+public final class CollectionTypeAdapterFactory implements TypeAdapterFactory2 {
+
+    /* renamed from: j */
+    public final C4922g f21513j;
 
     public static final class Adapter<E> extends TypeAdapter<Collection<E>> {
-        public final TypeAdapter<E> a;
 
-        /* renamed from: b, reason: collision with root package name */
-        public final r<? extends Collection<E>> f3118b;
+        /* renamed from: a */
+        public final TypeAdapter<E> f21514a;
 
-        public Adapter(Gson gson, Type type, TypeAdapter<E> typeAdapter, r<? extends Collection<E>> rVar) {
-            this.a = new TypeAdapterRuntimeTypeWrapper(gson, typeAdapter, type);
-            this.f3118b = rVar;
+        /* renamed from: b */
+        public final ObjectConstructor<? extends Collection<E>> f21515b;
+
+        public Adapter(Gson gson, Type type, TypeAdapter<E> typeAdapter, ObjectConstructor<? extends Collection<E>> objectConstructor) {
+            this.f21514a = new TypeAdapterRuntimeTypeWrapper(gson, typeAdapter, type);
+            this.f21515b = objectConstructor;
         }
 
         @Override // com.google.gson.TypeAdapter
         public Object read(JsonReader jsonReader) throws IOException {
-            if (jsonReader.N() == JsonToken.NULL) {
-                jsonReader.H();
+            if (jsonReader.mo6878N() == JsonToken.NULL) {
+                jsonReader.mo6876H();
                 return null;
             }
-            Collection<E> collectionA = this.f3118b.a();
-            jsonReader.a();
-            while (jsonReader.q()) {
-                collectionA.add(this.a.read(jsonReader));
+            Collection<E> collectionMo6869a = this.f21515b.mo6869a();
+            jsonReader.mo6882a();
+            while (jsonReader.mo6888q()) {
+                collectionMo6869a.add(this.f21514a.read(jsonReader));
             }
-            jsonReader.e();
-            return collectionA;
+            jsonReader.mo6886e();
+            return collectionMo6869a;
         }
 
         @Override // com.google.gson.TypeAdapter
         public void write(JsonWriter jsonWriter, Object obj) throws IOException {
             Collection collection = (Collection) obj;
             if (collection == null) {
-                jsonWriter.s();
+                jsonWriter.mo6905s();
                 return;
             }
-            jsonWriter.b();
+            jsonWriter.mo6900b();
             Iterator<E> it = collection.iterator();
             while (it.hasNext()) {
-                this.a.write(jsonWriter, it.next());
+                this.f21514a.write(jsonWriter, it.next());
             }
-            jsonWriter.e();
+            jsonWriter.mo6902e();
         }
     }
 
-    public CollectionTypeAdapterFactory(g gVar) {
-        this.j = gVar;
+    public CollectionTypeAdapterFactory(C4922g c4922g) {
+        this.f21513j = c4922g;
     }
 
-    @Override // b.i.d.o
+    @Override // p007b.p225i.p408d.TypeAdapterFactory2
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
         Type type = typeToken.getType();
         Class<? super T> rawType = typeToken.getRawType();
         if (!Collection.class.isAssignableFrom(rawType)) {
             return null;
         }
-        Type typeF = a.f(type, rawType, Collection.class);
-        if (typeF instanceof WildcardType) {
-            typeF = ((WildcardType) typeF).getUpperBounds()[0];
+        Type typeM6865f = C$Gson$Types.m6865f(type, rawType, Collection.class);
+        if (typeM6865f instanceof WildcardType) {
+            typeM6865f = ((WildcardType) typeM6865f).getUpperBounds()[0];
         }
-        Class cls = typeF instanceof ParameterizedType ? ((ParameterizedType) typeF).getActualTypeArguments()[0] : Object.class;
-        return new Adapter(gson, cls, gson.h(TypeToken.get(cls)), this.j.a(typeToken));
+        Class cls = typeM6865f instanceof ParameterizedType ? ((ParameterizedType) typeM6865f).getActualTypeArguments()[0] : Object.class;
+        return new Adapter(gson, cls, gson.m9204h(TypeToken.get(cls)), this.f21513j.m6870a(typeToken));
     }
 }

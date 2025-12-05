@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackMicTestingStarted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMicTestingStarted implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackMicTestingStarted implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence inputDeviceName = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackMicTestingStarted implements AnalyticsSchema,
             return false;
         }
         TrackMicTestingStarted trackMicTestingStarted = (TrackMicTestingStarted) other;
-        return m.areEqual(this.inputDeviceName, trackMicTestingStarted.inputDeviceName) && m.areEqual(this.inputDeviceVolume, trackMicTestingStarted.inputDeviceVolume) && m.areEqual(this.outputDeviceName, trackMicTestingStarted.outputDeviceName) && m.areEqual(this.outputDeviceVolume, trackMicTestingStarted.outputDeviceVolume) && m.areEqual(this.inputMode, trackMicTestingStarted.inputMode) && m.areEqual(this.inputSensitivityIsAutomatic, trackMicTestingStarted.inputSensitivityIsAutomatic) && m.areEqual(this.inputSensitivityThreshold, trackMicTestingStarted.inputSensitivityThreshold);
+        return Intrinsics3.areEqual(this.inputDeviceName, trackMicTestingStarted.inputDeviceName) && Intrinsics3.areEqual(this.inputDeviceVolume, trackMicTestingStarted.inputDeviceVolume) && Intrinsics3.areEqual(this.outputDeviceName, trackMicTestingStarted.outputDeviceName) && Intrinsics3.areEqual(this.outputDeviceVolume, trackMicTestingStarted.outputDeviceVolume) && Intrinsics3.areEqual(this.inputMode, trackMicTestingStarted.inputMode) && Intrinsics3.areEqual(this.inputSensitivityIsAutomatic, trackMicTestingStarted.inputSensitivityIsAutomatic) && Intrinsics3.areEqual(this.inputSensitivityThreshold, trackMicTestingStarted.inputSensitivityThreshold);
     }
 
     public int hashCode() {
@@ -57,19 +57,19 @@ public final /* data */ class TrackMicTestingStarted implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackMicTestingStarted(inputDeviceName=");
-        sbU.append(this.inputDeviceName);
-        sbU.append(", inputDeviceVolume=");
-        sbU.append(this.inputDeviceVolume);
-        sbU.append(", outputDeviceName=");
-        sbU.append(this.outputDeviceName);
-        sbU.append(", outputDeviceVolume=");
-        sbU.append(this.outputDeviceVolume);
-        sbU.append(", inputMode=");
-        sbU.append(this.inputMode);
-        sbU.append(", inputSensitivityIsAutomatic=");
-        sbU.append(this.inputSensitivityIsAutomatic);
-        sbU.append(", inputSensitivityThreshold=");
-        return a.G(sbU, this.inputSensitivityThreshold, ")");
+        StringBuilder sbM833U = outline.m833U("TrackMicTestingStarted(inputDeviceName=");
+        sbM833U.append(this.inputDeviceName);
+        sbM833U.append(", inputDeviceVolume=");
+        sbM833U.append(this.inputDeviceVolume);
+        sbM833U.append(", outputDeviceName=");
+        sbM833U.append(this.outputDeviceName);
+        sbM833U.append(", outputDeviceVolume=");
+        sbM833U.append(this.outputDeviceVolume);
+        sbM833U.append(", inputMode=");
+        sbM833U.append(this.inputMode);
+        sbM833U.append(", inputSensitivityIsAutomatic=");
+        sbM833U.append(this.inputSensitivityIsAutomatic);
+        sbM833U.append(", inputSensitivityThreshold=");
+        return outline.m819G(sbM833U, this.inputSensitivityThreshold, ")");
     }
 }

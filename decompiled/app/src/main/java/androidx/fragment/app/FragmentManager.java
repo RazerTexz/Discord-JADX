@@ -39,7 +39,7 @@ import androidx.annotation.RestrictTo;
 import androidx.annotation.StringRes;
 import androidx.collection.ArraySet;
 import androidx.core.os.CancellationSignal;
-import androidx.fragment.R;
+import androidx.fragment.C0344R;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentAnim;
 import androidx.fragment.app.FragmentTransaction;
@@ -49,7 +49,6 @@ import androidx.view.LifecycleEventObserver;
 import androidx.view.LifecycleOwner;
 import androidx.view.ViewModelStore;
 import androidx.view.ViewModelStoreOwner;
-import b.d.b.a.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayDeque;
@@ -63,6 +62,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class FragmentManager implements FragmentResultOwner {
@@ -98,25 +98,25 @@ public abstract class FragmentManager implements FragmentResultOwner {
     private final ArrayList<OpGenerator> mPendingActions = new ArrayList<>();
     private final FragmentStore mFragmentStore = new FragmentStore();
     private final FragmentLayoutInflaterFactory mLayoutInflaterFactory = new FragmentLayoutInflaterFactory(this);
-    private final OnBackPressedCallback mOnBackPressedCallback = new AnonymousClass1(false);
+    private final OnBackPressedCallback mOnBackPressedCallback = new C03761(false);
     private final AtomicInteger mBackStackIndex = new AtomicInteger();
     private final Map<String, Bundle> mResults = Collections.synchronizedMap(new HashMap());
     private final Map<String, LifecycleAwareResultListener> mResultListeners = Collections.synchronizedMap(new HashMap());
     private Map<Fragment, HashSet<CancellationSignal>> mExitAnimationCancellationSignals = Collections.synchronizedMap(new HashMap());
-    private final FragmentTransition.Callback mFragmentTransitionCallback = new AnonymousClass2();
+    private final FragmentTransition.Callback mFragmentTransitionCallback = new C03792();
     private final FragmentLifecycleCallbacksDispatcher mLifecycleCallbacksDispatcher = new FragmentLifecycleCallbacksDispatcher(this);
     private final CopyOnWriteArrayList<FragmentOnAttachListener> mOnAttachListeners = new CopyOnWriteArrayList<>();
     public int mCurState = -1;
     private FragmentFactory mFragmentFactory = null;
-    private FragmentFactory mHostFragmentFactory = new AnonymousClass3();
+    private FragmentFactory mHostFragmentFactory = new C03803();
     private SpecialEffectsControllerFactory mSpecialEffectsControllerFactory = null;
-    private SpecialEffectsControllerFactory mDefaultSpecialEffectsControllerFactory = new AnonymousClass4();
+    private SpecialEffectsControllerFactory mDefaultSpecialEffectsControllerFactory = new C03814();
     public ArrayDeque<LaunchedFragmentInfo> mLaunchedFragments = new ArrayDeque<>();
-    private Runnable mExecCommit = new AnonymousClass5();
+    private Runnable mExecCommit = new RunnableC03825();
 
-    /* renamed from: androidx.fragment.app.FragmentManager$1, reason: invalid class name */
-    public class AnonymousClass1 extends OnBackPressedCallback {
-        public AnonymousClass1(boolean z2) {
+    /* renamed from: androidx.fragment.app.FragmentManager$1 */
+    public class C03761 extends OnBackPressedCallback {
+        public C03761(boolean z2) {
             super(z2);
         }
 
@@ -126,9 +126,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$10, reason: invalid class name */
-    public class AnonymousClass10 implements ActivityResultCallback<ActivityResult> {
-        public AnonymousClass10() {
+    /* renamed from: androidx.fragment.app.FragmentManager$10 */
+    public class C037710 implements ActivityResultCallback<ActivityResult> {
+        public C037710() {
         }
 
         @Override // androidx.activity.result.ActivityResultCallback
@@ -154,9 +154,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$11, reason: invalid class name */
-    public class AnonymousClass11 implements ActivityResultCallback<Map<String, Boolean>> {
-        public AnonymousClass11() {
+    /* renamed from: androidx.fragment.app.FragmentManager$11 */
+    public class C037811 implements ActivityResultCallback<Map<String, Boolean>> {
+        public C037811() {
         }
 
         @Override // androidx.activity.result.ActivityResultCallback
@@ -190,9 +190,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$2, reason: invalid class name */
-    public class AnonymousClass2 implements FragmentTransition.Callback {
-        public AnonymousClass2() {
+    /* renamed from: androidx.fragment.app.FragmentManager$2 */
+    public class C03792 implements FragmentTransition.Callback {
+        public C03792() {
         }
 
         @Override // androidx.fragment.app.FragmentTransition.Callback
@@ -209,9 +209,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$3, reason: invalid class name */
-    public class AnonymousClass3 extends FragmentFactory {
-        public AnonymousClass3() {
+    /* renamed from: androidx.fragment.app.FragmentManager$3 */
+    public class C03803 extends FragmentFactory {
+        public C03803() {
         }
 
         @Override // androidx.fragment.app.FragmentFactory
@@ -221,9 +221,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$4, reason: invalid class name */
-    public class AnonymousClass4 implements SpecialEffectsControllerFactory {
-        public AnonymousClass4() {
+    /* renamed from: androidx.fragment.app.FragmentManager$4 */
+    public class C03814 implements SpecialEffectsControllerFactory {
+        public C03814() {
         }
 
         @Override // androidx.fragment.app.SpecialEffectsControllerFactory
@@ -233,9 +233,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$5, reason: invalid class name */
-    public class AnonymousClass5 implements Runnable {
-        public AnonymousClass5() {
+    /* renamed from: androidx.fragment.app.FragmentManager$5 */
+    public class RunnableC03825 implements Runnable {
+        public RunnableC03825() {
         }
 
         @Override // java.lang.Runnable
@@ -244,13 +244,13 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$6, reason: invalid class name */
-    public class AnonymousClass6 implements LifecycleEventObserver {
+    /* renamed from: androidx.fragment.app.FragmentManager$6 */
+    public class C03836 implements LifecycleEventObserver {
         public final /* synthetic */ Lifecycle val$lifecycle;
         public final /* synthetic */ FragmentResultListener val$listener;
         public final /* synthetic */ String val$requestKey;
 
-        public AnonymousClass6(String str, FragmentResultListener fragmentResultListener, Lifecycle lifecycle) {
+        public C03836(String str, FragmentResultListener fragmentResultListener, Lifecycle lifecycle) {
             this.val$requestKey = str;
             this.val$listener = fragmentResultListener;
             this.val$lifecycle = lifecycle;
@@ -270,13 +270,13 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$7, reason: invalid class name */
-    public class AnonymousClass7 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.fragment.app.FragmentManager$7 */
+    public class C03847 extends AnimatorListenerAdapter {
         public final /* synthetic */ View val$animatingView;
         public final /* synthetic */ ViewGroup val$container;
         public final /* synthetic */ Fragment val$fragment;
 
-        public AnonymousClass7(ViewGroup viewGroup, View view, Fragment fragment) {
+        public C03847(ViewGroup viewGroup, View view, Fragment fragment) {
             this.val$container = viewGroup;
             this.val$animatingView = view;
             this.val$fragment = fragment;
@@ -295,11 +295,11 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$8, reason: invalid class name */
-    public class AnonymousClass8 implements FragmentOnAttachListener {
+    /* renamed from: androidx.fragment.app.FragmentManager$8 */
+    public class C03858 implements FragmentOnAttachListener {
         public final /* synthetic */ Fragment val$parent;
 
-        public AnonymousClass8(Fragment fragment) {
+        public C03858(Fragment fragment) {
             this.val$parent = fragment;
         }
 
@@ -309,9 +309,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$9, reason: invalid class name */
-    public class AnonymousClass9 implements ActivityResultCallback<ActivityResult> {
-        public AnonymousClass9() {
+    /* renamed from: androidx.fragment.app.FragmentManager$9 */
+    public class C03869 implements ActivityResultCallback<ActivityResult> {
+        public C03869() {
         }
 
         @Override // androidx.activity.result.ActivityResultCallback
@@ -617,7 +617,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         ViewGroup viewGroup;
         HashSet hashSet = new HashSet();
         while (i < i2) {
-            Iterator<FragmentTransaction.Op> it = arrayList.get(i).mOps.iterator();
+            Iterator<FragmentTransaction.C0394Op> it = arrayList.get(i).mOps.iterator();
             while (it.hasNext()) {
                 Fragment fragment = it.next().mFragment;
                 if (fragment != null && (viewGroup = fragment.mContainer) != null) {
@@ -652,7 +652,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
                     ViewGroup viewGroup = fragment.mContainer;
                     View view = fragment.mView;
                     viewGroup.startViewTransition(view);
-                    animationOrAnimatorLoadAnimation.animator.addListener(new AnonymousClass7(viewGroup, view, fragment));
+                    animationOrAnimatorLoadAnimation.animator.addListener(new C03847(viewGroup, view, fragment));
                 }
                 animationOrAnimatorLoadAnimation.animator.start();
             }
@@ -811,7 +811,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
             r1 = 1;
         } else if (USE_STATE_MANAGER) {
             for (int i8 = i; i8 < i2; i8++) {
-                Iterator<FragmentTransaction.Op> it = arrayList.get(i8).mOps.iterator();
+                Iterator<FragmentTransaction.C0394Op> it = arrayList.get(i8).mOps.iterator();
                 while (it.hasNext()) {
                     Fragment fragment = it.next().mFragment;
                     if (fragment != null && fragment.mFragmentManager != null) {
@@ -837,7 +837,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
                         }
                     }
                 } else {
-                    Iterator<FragmentTransaction.Op> it2 = backStackRecord2.mOps.iterator();
+                    Iterator<FragmentTransaction.C0394Op> it2 = backStackRecord2.mOps.iterator();
                     while (it2.hasNext()) {
                         Fragment fragment3 = it2.next().mFragment;
                         if (fragment3 != null) {
@@ -1029,7 +1029,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
 
     @Nullable
     public static Fragment getViewFragment(@NonNull View view) {
-        Object tag = view.getTag(R.id.fragment_container_view_tag);
+        Object tag = view.getTag(C0344R.id.fragment_container_view_tag);
         if (tag instanceof Fragment) {
             return (Fragment) tag;
         }
@@ -1142,7 +1142,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         if (fragmentContainer == null || fragment.getNextAnim() <= 0) {
             return;
         }
-        int i = R.id.visible_removing_fragment_view_tag;
+        int i = C0344R.id.visible_removing_fragment_view_tag;
         if (fragmentContainer.getTag(i) == null) {
             fragmentContainer.setTag(i, fragment);
         }
@@ -1252,7 +1252,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         this.mContainer = fragmentContainer;
         this.mParent = fragment;
         if (fragment != null) {
-            addFragmentOnAttachListener(new AnonymousClass8(fragment));
+            addFragmentOnAttachListener(new C03858(fragment));
         } else if (fragmentHostCallback instanceof FragmentOnAttachListener) {
             addFragmentOnAttachListener((FragmentOnAttachListener) fragmentHostCallback);
         }
@@ -1281,10 +1281,10 @@ public abstract class FragmentManager implements FragmentResultOwner {
         Object obj = this.mHost;
         if (obj instanceof ActivityResultRegistryOwner) {
             ActivityResultRegistry activityResultRegistry = ((ActivityResultRegistryOwner) obj).getActivityResultRegistry();
-            String strW = a.w("FragmentManager:", fragment != null ? a.J(new StringBuilder(), fragment.mWho, ":") : "");
-            this.mStartActivityForResult = activityResultRegistry.register(a.w(strW, "StartActivityForResult"), new ActivityResultContracts.StartActivityForResult(), new AnonymousClass9());
-            this.mStartIntentSenderForResult = activityResultRegistry.register(a.w(strW, "StartIntentSenderForResult"), new FragmentIntentSenderContract(), new AnonymousClass10());
-            this.mRequestPermissions = activityResultRegistry.register(a.w(strW, "RequestPermissions"), new ActivityResultContracts.RequestMultiplePermissions(), new AnonymousClass11());
+            String strM883w = outline.m883w("FragmentManager:", fragment != null ? outline.m822J(new StringBuilder(), fragment.mWho, ":") : "");
+            this.mStartActivityForResult = activityResultRegistry.register(outline.m883w(strM883w, "StartActivityForResult"), new ActivityResultContracts.StartActivityForResult(), new C03869());
+            this.mStartIntentSenderForResult = activityResultRegistry.register(outline.m883w(strM883w, "StartIntentSenderForResult"), new FragmentIntentSenderContract(), new C037710());
+            this.mRequestPermissions = activityResultRegistry.register(outline.m883w(strM883w, "RequestPermissions"), new ActivityResultContracts.RequestMultiplePermissions(), new C037811());
         }
     }
 
@@ -1597,7 +1597,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
     public void dump(@NonNull String str, @Nullable FileDescriptor fileDescriptor, @NonNull PrintWriter printWriter, @Nullable String[] strArr) {
         int size;
         int size2;
-        String strW = a.w(str, "    ");
+        String strM883w = outline.m883w(str, "    ");
         this.mFragmentStore.dump(str, fileDescriptor, printWriter, strArr);
         ArrayList<Fragment> arrayList = this.mCreatedMenus;
         if (arrayList != null && (size2 = arrayList.size()) > 0) {
@@ -1623,7 +1623,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
                 printWriter.print(i2);
                 printWriter.print(": ");
                 printWriter.println(backStackRecord.toString());
-                backStackRecord.dump(strW, printWriter);
+                backStackRecord.dump(strM883w, printWriter);
             }
         }
         printWriter.print(str);
@@ -2251,7 +2251,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
 
     public void putFragment(@NonNull Bundle bundle, @NonNull String str, @NonNull Fragment fragment) {
         if (fragment.mFragmentManager != this) {
-            throwException(new IllegalStateException(a.u("Fragment ", fragment, " is not currently in the FragmentManager")));
+            throwException(new IllegalStateException(outline.m879u("Fragment ", fragment, " is not currently in the FragmentManager")));
         }
         bundle.putString(str, fragment.mWho);
     }
@@ -2333,11 +2333,11 @@ public abstract class FragmentManager implements FragmentResultOwner {
                 Fragment fragment = fragmentStateManager.getFragment();
                 fragment.mFragmentManager = this;
                 if (isLoggingEnabled(2)) {
-                    StringBuilder sbU = a.U("restoreSaveState: active (");
-                    sbU.append(fragment.mWho);
-                    sbU.append("): ");
-                    sbU.append(fragment);
-                    Log.v(TAG, sbU.toString());
+                    StringBuilder sbM833U = outline.m833U("restoreSaveState: active (");
+                    sbM833U.append(fragment.mWho);
+                    sbM833U.append("): ");
+                    sbM833U.append(fragment);
+                    Log.v(TAG, sbM833U.toString());
                 }
                 fragmentStateManager.restoreState(this.mHost.getContext().getClassLoader());
                 this.mFragmentStore.makeActive(fragmentStateManager);
@@ -2369,11 +2369,11 @@ public abstract class FragmentManager implements FragmentResultOwner {
                 }
                 BackStackRecord backStackRecordInstantiate = backStackStateArr[i].instantiate(this);
                 if (isLoggingEnabled(2)) {
-                    StringBuilder sbV = a.V("restoreAllState: back stack #", i, " (index ");
-                    sbV.append(backStackRecordInstantiate.mIndex);
-                    sbV.append("): ");
-                    sbV.append(backStackRecordInstantiate);
-                    Log.v(TAG, sbV.toString());
+                    StringBuilder sbM834V = outline.m834V("restoreAllState: back stack #", i, " (index ");
+                    sbM834V.append(backStackRecordInstantiate.mIndex);
+                    sbM834V.append("): ");
+                    sbM834V.append(backStackRecordInstantiate);
+                    Log.v(TAG, sbM834V.toString());
                     PrintWriter printWriter = new PrintWriter(new LogWriter(TAG));
                     backStackRecordInstantiate.dump("  ", printWriter, false);
                     printWriter.close();
@@ -2430,9 +2430,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
             for (int i = 0; i < size; i++) {
                 backStackStateArr[i] = new BackStackState(this.mBackStack.get(i));
                 if (isLoggingEnabled(2)) {
-                    StringBuilder sbV = a.V("saveAllState: adding back stack #", i, ": ");
-                    sbV.append(this.mBackStack.get(i));
-                    Log.v(TAG, sbV.toString());
+                    StringBuilder sbM834V = outline.m834V("saveAllState: adding back stack #", i, ": ");
+                    sbM834V.append(this.mBackStack.get(i));
+                    Log.v(TAG, sbM834V.toString());
                 }
             }
         }
@@ -2455,7 +2455,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
     public Fragment.SavedState saveFragmentInstanceState(@NonNull Fragment fragment) {
         FragmentStateManager fragmentStateManager = this.mFragmentStore.getFragmentStateManager(fragment.mWho);
         if (fragmentStateManager == null || !fragmentStateManager.getFragment().equals(fragment)) {
-            throwException(new IllegalStateException(a.u("Fragment ", fragment, " is not currently in the FragmentManager")));
+            throwException(new IllegalStateException(outline.m879u("Fragment ", fragment, " is not currently in the FragmentManager")));
         }
         return fragmentStateManager.saveInstanceState();
     }
@@ -2502,9 +2502,9 @@ public abstract class FragmentManager implements FragmentResultOwner {
         if (lifecycle.getCurrentState() == Lifecycle.State.DESTROYED) {
             return;
         }
-        AnonymousClass6 anonymousClass6 = new AnonymousClass6(str, fragmentResultListener, lifecycle);
-        lifecycle.addObserver(anonymousClass6);
-        LifecycleAwareResultListener lifecycleAwareResultListenerPut = this.mResultListeners.put(str, new LifecycleAwareResultListener(lifecycle, fragmentResultListener, anonymousClass6));
+        C03836 c03836 = new C03836(str, fragmentResultListener, lifecycle);
+        lifecycle.addObserver(c03836);
+        LifecycleAwareResultListener lifecycleAwareResultListenerPut = this.mResultListeners.put(str, new LifecycleAwareResultListener(lifecycle, fragmentResultListener, c03836));
         if (lifecycleAwareResultListenerPut != null) {
             lifecycleAwareResultListenerPut.removeObserver();
         }
@@ -2584,12 +2584,12 @@ public abstract class FragmentManager implements FragmentResultOwner {
 
     @SuppressLint({"BanParcelableUsage"})
     public static class LaunchedFragmentInfo implements Parcelable {
-        public static final Parcelable.Creator<LaunchedFragmentInfo> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<LaunchedFragmentInfo> CREATOR = new C03871();
         public int mRequestCode;
         public String mWho;
 
-        /* renamed from: androidx.fragment.app.FragmentManager$LaunchedFragmentInfo$1, reason: invalid class name */
-        public class AnonymousClass1 implements Parcelable.Creator<LaunchedFragmentInfo> {
+        /* renamed from: androidx.fragment.app.FragmentManager$LaunchedFragmentInfo$1 */
+        public class C03871 implements Parcelable.Creator<LaunchedFragmentInfo> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ LaunchedFragmentInfo createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -2640,14 +2640,14 @@ public abstract class FragmentManager implements FragmentResultOwner {
             enqueueAction(new PopBackStackState(null, i, i2), false);
             return;
         }
-        throw new IllegalArgumentException(a.q("Bad id: ", i));
+        throw new IllegalArgumentException(outline.m871q("Bad id: ", i));
     }
 
     public boolean popBackStackImmediate(int i, int i2) {
         if (i >= 0) {
             return popBackStackImmediate(null, i, i2);
         }
-        throw new IllegalArgumentException(a.q("Bad id: ", i));
+        throw new IllegalArgumentException(outline.m871q("Bad id: ", i));
     }
 
     private boolean popBackStackImmediate(@Nullable String str, int i, int i2) {

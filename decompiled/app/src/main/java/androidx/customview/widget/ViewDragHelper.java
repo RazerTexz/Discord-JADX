@@ -13,8 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.Px;
 import androidx.core.view.ViewCompat;
-import b.d.b.a.a;
 import java.util.Arrays;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ViewDragHelper {
@@ -34,7 +34,7 @@ public class ViewDragHelper {
     public static final int STATE_IDLE = 0;
     public static final int STATE_SETTLING = 2;
     private static final String TAG = "ViewDragHelper";
-    private static final Interpolator sInterpolator = new AnonymousClass1();
+    private static final Interpolator sInterpolator = new InterpolatorC03161();
     private final Callback mCallback;
     private View mCapturedView;
     private int mDragState;
@@ -56,10 +56,10 @@ public class ViewDragHelper {
     private int mTrackingEdges;
     private VelocityTracker mVelocityTracker;
     private int mActivePointerId = -1;
-    private final Runnable mSetIdleRunnable = new AnonymousClass2();
+    private final Runnable mSetIdleRunnable = new RunnableC03172();
 
-    /* renamed from: androidx.customview.widget.ViewDragHelper$1, reason: invalid class name */
-    public static class AnonymousClass1 implements Interpolator {
+    /* renamed from: androidx.customview.widget.ViewDragHelper$1 */
+    public static class InterpolatorC03161 implements Interpolator {
         @Override // android.animation.TimeInterpolator
         public float getInterpolation(float f) {
             float f2 = f - 1.0f;
@@ -67,9 +67,9 @@ public class ViewDragHelper {
         }
     }
 
-    /* renamed from: androidx.customview.widget.ViewDragHelper$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.customview.widget.ViewDragHelper$2 */
+    public class RunnableC03172 implements Runnable {
+        public RunnableC03172() {
         }
 
         @Override // java.lang.Runnable
@@ -434,10 +434,10 @@ public class ViewDragHelper {
 
     public void captureChildView(@NonNull View view, int i) {
         if (view.getParent() != this.mParentView) {
-            StringBuilder sbU = a.U("captureChildView: parameter must be a descendant of the ViewDragHelper's tracked parent view (");
-            sbU.append(this.mParentView);
-            sbU.append(")");
-            throw new IllegalArgumentException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("captureChildView: parameter must be a descendant of the ViewDragHelper's tracked parent view (");
+            sbM833U.append(this.mParentView);
+            sbM833U.append(")");
+            throw new IllegalArgumentException(sbM833U.toString());
         }
         this.mCapturedView = view;
         this.mActivePointerId = i;

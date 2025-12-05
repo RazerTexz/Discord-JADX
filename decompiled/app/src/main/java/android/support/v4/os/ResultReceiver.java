@@ -9,16 +9,19 @@ import android.os.Parcelable;
 import android.os.RemoteException;
 import androidx.annotation.RestrictTo;
 import java.util.Objects;
-import x.a.b.c.a;
+import p668x.p669a.p672b.p676c.IResultReceiver;
 
 @SuppressLint({"BanParcelableUsage"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
 public class ResultReceiver implements Parcelable {
-    public static final Parcelable.Creator<ResultReceiver> CREATOR = new a();
-    public x.a.b.c.a j;
+    public static final Parcelable.Creator<ResultReceiver> CREATOR = new C0030a();
 
-    public class a implements Parcelable.Creator<ResultReceiver> {
+    /* renamed from: j */
+    public IResultReceiver f74j;
+
+    /* renamed from: android.support.v4.os.ResultReceiver$a */
+    public class C0030a implements Parcelable.Creator<ResultReceiver> {
         @Override // android.os.Parcelable.Creator
         public ResultReceiver createFromParcel(Parcel parcel) {
             return new ResultReceiver(parcel);
@@ -30,38 +33,42 @@ public class ResultReceiver implements Parcelable {
         }
     }
 
-    public class b extends a.AbstractBinderC0661a {
-        public b() {
+    /* renamed from: android.support.v4.os.ResultReceiver$b */
+    public class BinderC0031b extends IResultReceiver.a {
+        public BinderC0031b() {
         }
 
-        @Override // x.a.b.c.a
-        public void r0(int i, Bundle bundle) {
+        @Override // p668x.p669a.p672b.p676c.IResultReceiver
+        /* renamed from: r0 */
+        public void mo74r0(int i, Bundle bundle) {
             Objects.requireNonNull(ResultReceiver.this);
-            ResultReceiver.this.a(i, bundle);
+            ResultReceiver.this.mo4a(i, bundle);
         }
     }
 
     public ResultReceiver(Parcel parcel) {
-        x.a.b.c.a c0662a;
+        IResultReceiver c13362a;
         IBinder strongBinder = parcel.readStrongBinder();
-        int i = a.AbstractBinderC0661a.a;
+        int i = IResultReceiver.a.f27948a;
         if (strongBinder == null) {
-            c0662a = null;
+            c13362a = null;
         } else {
             IInterface iInterfaceQueryLocalInterface = strongBinder.queryLocalInterface("android.support.v4.os.IResultReceiver");
-            c0662a = (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof x.a.b.c.a)) ? new a.AbstractBinderC0661a.C0662a(strongBinder) : (x.a.b.c.a) iInterfaceQueryLocalInterface;
+            c13362a = (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof IResultReceiver)) ? new IResultReceiver.a.C13362a(strongBinder) : (IResultReceiver) iInterfaceQueryLocalInterface;
         }
-        this.j = c0662a;
+        this.f74j = c13362a;
     }
 
-    public void a(int i, Bundle bundle) {
+    /* renamed from: a */
+    public void mo4a(int i, Bundle bundle) {
     }
 
-    public void b(int i, Bundle bundle) {
-        x.a.b.c.a aVar = this.j;
-        if (aVar != null) {
+    /* renamed from: b */
+    public void m73b(int i, Bundle bundle) {
+        IResultReceiver iResultReceiver = this.f74j;
+        if (iResultReceiver != null) {
             try {
-                aVar.r0(i, bundle);
+                iResultReceiver.mo74r0(i, bundle);
             } catch (RemoteException unused) {
             }
         }
@@ -75,10 +82,10 @@ public class ResultReceiver implements Parcelable {
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
         synchronized (this) {
-            if (this.j == null) {
-                this.j = new b();
+            if (this.f74j == null) {
+                this.f74j = new BinderC0031b();
             }
-            parcel.writeStrongBinder(this.j.asBinder());
+            parcel.writeStrongBinder(this.f74j.asBinder());
         }
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.utilities.search.query.node.answer;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.utilities.search.network.SearchQuery;
 import com.discord.utilities.search.query.FilterType;
 import com.discord.utilities.search.validation.SearchData;
-import d0.t.n0;
-import d0.z.d.m;
 import java.util.Arrays;
 import java.util.Set;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Sets5;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: UserNode.kt */
 /* loaded from: classes2.dex */
@@ -29,7 +29,7 @@ public final /* data */ class UserNode extends AnswerNode {
     }
 
     public UserNode(String str, int i) {
-        m.checkNotNullParameter(str, "userName");
+        Intrinsics3.checkNotNullParameter(str, "userName");
         this.userName = str;
         this.discriminator = i;
     }
@@ -55,7 +55,7 @@ public final /* data */ class UserNode extends AnswerNode {
     }
 
     public final UserNode copy(String userName, int discriminator) {
-        m.checkNotNullParameter(userName, "userName");
+        Intrinsics3.checkNotNullParameter(userName, "userName");
         return new UserNode(userName, discriminator);
     }
 
@@ -67,7 +67,7 @@ public final /* data */ class UserNode extends AnswerNode {
             return false;
         }
         UserNode userNode = (UserNode) other;
-        return m.areEqual(this.userName, userNode.userName) && this.discriminator == userNode.discriminator;
+        return Intrinsics3.areEqual(this.userName, userNode.userName) && this.discriminator == userNode.discriminator;
     }
 
     @Override // com.discord.utilities.search.query.node.QueryNode
@@ -81,7 +81,7 @@ public final /* data */ class UserNode extends AnswerNode {
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public Set<FilterType> getValidFilters() {
-        return n0.setOf((Object[]) new FilterType[]{FilterType.FROM, FilterType.MENTIONS});
+        return Sets5.setOf((Object[]) new FilterType[]{FilterType.FROM, FilterType.MENTIONS});
     }
 
     public int hashCode() {
@@ -91,22 +91,22 @@ public final /* data */ class UserNode extends AnswerNode {
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public boolean isValid(SearchData searchData) {
-        m.checkNotNullParameter(searchData, "searchData");
+        Intrinsics3.checkNotNullParameter(searchData, "searchData");
         return searchData.getUserId(this.userName, this.discriminator) != null;
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("UserNode(userName=");
-        sbU.append(this.userName);
-        sbU.append(", discriminator=");
-        return a.B(sbU, this.discriminator, ")");
+        StringBuilder sbM833U = outline.m833U("UserNode(userName=");
+        sbM833U.append(this.userName);
+        sbM833U.append(", discriminator=");
+        return outline.m814B(sbM833U, this.discriminator, ")");
     }
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public void updateQuery(SearchQuery.Builder queryBuilder, SearchData searchData, FilterType filterType) {
         String str;
-        m.checkNotNullParameter(queryBuilder, "queryBuilder");
-        m.checkNotNullParameter(searchData, "searchData");
+        Intrinsics3.checkNotNullParameter(queryBuilder, "queryBuilder");
+        Intrinsics3.checkNotNullParameter(searchData, "searchData");
         if (filterType == null) {
             return;
         }
@@ -127,7 +127,7 @@ public final /* data */ class UserNode extends AnswerNode {
         sb.append(this.userName);
         sb.append("#");
         String str = String.format("%04d", Arrays.copyOf(new Object[]{Integer.valueOf(this.discriminator)}, 1));
-        m.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
+        Intrinsics3.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
         sb.append(str);
         return sb.toString();
     }

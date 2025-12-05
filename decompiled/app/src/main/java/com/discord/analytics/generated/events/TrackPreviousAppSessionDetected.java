@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPreviousAppSessionDetected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPreviousAppSessionDetected implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPreviousAppSessionDetected implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence deviceMemoryState = null;
     private final Boolean wasConnectedToVoice = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackPreviousAppSessionDetected implements Analyti
             return false;
         }
         TrackPreviousAppSessionDetected trackPreviousAppSessionDetected = (TrackPreviousAppSessionDetected) other;
-        return m.areEqual(this.deviceMemoryState, trackPreviousAppSessionDetected.deviceMemoryState) && m.areEqual(this.wasConnectedToVoice, trackPreviousAppSessionDetected.wasConnectedToVoice) && m.areEqual(this.wasAppBackgrounded, trackPreviousAppSessionDetected.wasAppBackgrounded);
+        return Intrinsics3.areEqual(this.deviceMemoryState, trackPreviousAppSessionDetected.deviceMemoryState) && Intrinsics3.areEqual(this.wasConnectedToVoice, trackPreviousAppSessionDetected.wasConnectedToVoice) && Intrinsics3.areEqual(this.wasAppBackgrounded, trackPreviousAppSessionDetected.wasAppBackgrounded);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackPreviousAppSessionDetected implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPreviousAppSessionDetected(deviceMemoryState=");
-        sbU.append(this.deviceMemoryState);
-        sbU.append(", wasConnectedToVoice=");
-        sbU.append(this.wasConnectedToVoice);
-        sbU.append(", wasAppBackgrounded=");
-        return a.D(sbU, this.wasAppBackgrounded, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPreviousAppSessionDetected(deviceMemoryState=");
+        sbM833U.append(this.deviceMemoryState);
+        sbM833U.append(", wasConnectedToVoice=");
+        sbM833U.append(this.wasConnectedToVoice);
+        sbM833U.append(", wasAppBackgrounded=");
+        return outline.m816D(sbM833U, this.wasAppBackgrounded, ")");
     }
 }

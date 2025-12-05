@@ -3,7 +3,7 @@ package androidx.room;
 import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.room.RoomDatabase;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class Room {
@@ -40,20 +40,20 @@ public class Room {
             }
             return (T) Class.forName(str2).newInstance();
         } catch (ClassNotFoundException unused) {
-            StringBuilder sbU = a.U("cannot find implementation for ");
-            sbU.append(cls.getCanonicalName());
-            sbU.append(". ");
-            sbU.append(str3);
-            sbU.append(" does not exist");
-            throw new RuntimeException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("cannot find implementation for ");
+            sbM833U.append(cls.getCanonicalName());
+            sbM833U.append(". ");
+            sbM833U.append(str3);
+            sbM833U.append(" does not exist");
+            throw new RuntimeException(sbM833U.toString());
         } catch (IllegalAccessException unused2) {
-            StringBuilder sbU2 = a.U("Cannot access the constructor");
-            sbU2.append(cls.getCanonicalName());
-            throw new RuntimeException(sbU2.toString());
+            StringBuilder sbM833U2 = outline.m833U("Cannot access the constructor");
+            sbM833U2.append(cls.getCanonicalName());
+            throw new RuntimeException(sbM833U2.toString());
         } catch (InstantiationException unused3) {
-            StringBuilder sbU3 = a.U("Failed to create an instance of ");
-            sbU3.append(cls.getCanonicalName());
-            throw new RuntimeException(sbU3.toString());
+            StringBuilder sbM833U3 = outline.m833U("Failed to create an instance of ");
+            sbM833U3.append(cls.getCanonicalName());
+            throw new RuntimeException(sbM833U3.toString());
         }
     }
 

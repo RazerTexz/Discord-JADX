@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 
 /* compiled from: TrackLibraryRepairInitiated.kt */
 /* loaded from: classes.dex */
-public final class TrackLibraryRepairInitiated implements AnalyticsSchema, TrackBaseReceiver, TrackStoreSkuMetadataReceiver {
+public final class TrackLibraryRepairInitiated implements AnalyticsSchema, TrackBase2, TrackStoreSkuMetadata2 {
     private final transient String analyticsSchemaTypeName = "library_repair_initiated";
     private TrackBase trackBase;
     private TrackStoreSkuMetadata trackStoreSkuMetadata;

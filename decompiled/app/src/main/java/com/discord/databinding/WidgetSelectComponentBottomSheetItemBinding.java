@@ -11,41 +11,47 @@ import com.google.android.material.textview.MaterialTextView;
 /* loaded from: classes.dex */
 public final class WidgetSelectComponentBottomSheetItemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final ConstraintLayout a;
+    public final ConstraintLayout f17454a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialTextView f2533b;
+    public final MaterialTextView f17455b;
 
+    /* renamed from: c */
     @NonNull
-    public final View c;
+    public final View f17456c;
 
+    /* renamed from: d */
     @NonNull
-    public final View d;
+    public final View f17457d;
 
+    /* renamed from: e */
     @NonNull
-    public final SimpleDraweeView e;
+    public final SimpleDraweeView f17458e;
 
+    /* renamed from: f */
     @NonNull
-    public final MaterialCheckBox f;
+    public final MaterialCheckBox f17459f;
 
+    /* renamed from: g */
     @NonNull
-    public final MaterialTextView g;
+    public final MaterialTextView f17460g;
 
     public WidgetSelectComponentBottomSheetItemBinding(@NonNull ConstraintLayout constraintLayout, @NonNull MaterialTextView materialTextView, @NonNull View view, @NonNull View view2, @NonNull SimpleDraweeView simpleDraweeView, @NonNull MaterialCheckBox materialCheckBox, @NonNull MaterialTextView materialTextView2) {
-        this.a = constraintLayout;
-        this.f2533b = materialTextView;
-        this.c = view;
-        this.d = view2;
-        this.e = simpleDraweeView;
-        this.f = materialCheckBox;
-        this.g = materialTextView2;
+        this.f17454a = constraintLayout;
+        this.f17455b = materialTextView;
+        this.f17456c = view;
+        this.f17457d = view2;
+        this.f17458e = simpleDraweeView;
+        this.f17459f = materialCheckBox;
+        this.f17460g = materialTextView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17454a;
     }
 }

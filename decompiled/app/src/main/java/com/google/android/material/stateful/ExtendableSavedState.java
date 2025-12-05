@@ -7,15 +7,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.collection.SimpleArrayMap;
 import androidx.customview.view.AbsSavedState;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class ExtendableSavedState extends AbsSavedState {
-    public static final Parcelable.Creator<ExtendableSavedState> CREATOR = new a();
+    public static final Parcelable.Creator<ExtendableSavedState> CREATOR = new C11004a();
 
     @NonNull
     public final SimpleArrayMap<String, Bundle> extendableStates;
 
-    public static class a implements Parcelable.ClassLoaderCreator<ExtendableSavedState> {
+    /* renamed from: com.google.android.material.stateful.ExtendableSavedState$a */
+    public static class C11004a implements Parcelable.ClassLoaderCreator<ExtendableSavedState> {
         @Override // android.os.Parcelable.ClassLoaderCreator
         @NonNull
         public ExtendableSavedState createFromParcel(@NonNull Parcel parcel, ClassLoader classLoader) {
@@ -35,18 +37,18 @@ public class ExtendableSavedState extends AbsSavedState {
         }
     }
 
-    public /* synthetic */ ExtendableSavedState(Parcel parcel, ClassLoader classLoader, a aVar) {
+    public /* synthetic */ ExtendableSavedState(Parcel parcel, ClassLoader classLoader, C11004a c11004a) {
         this(parcel, classLoader);
     }
 
     @NonNull
     public String toString() {
-        StringBuilder sbU = b.d.b.a.a.U("ExtendableSavedState{");
-        sbU.append(Integer.toHexString(System.identityHashCode(this)));
-        sbU.append(" states=");
-        sbU.append(this.extendableStates);
-        sbU.append("}");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ExtendableSavedState{");
+        sbM833U.append(Integer.toHexString(System.identityHashCode(this)));
+        sbM833U.append(" states=");
+        sbM833U.append(this.extendableStates);
+        sbM833U.append("}");
+        return sbM833U.toString();
     }
 
     @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable

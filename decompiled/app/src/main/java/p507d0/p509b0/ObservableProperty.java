@@ -1,0 +1,41 @@
+package p507d0.p509b0;
+
+import kotlin.properties.Interfaces;
+import kotlin.reflect.KProperty;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: ObservableProperty.kt */
+/* renamed from: d0.b0.a, reason: use source file name */
+/* loaded from: classes3.dex */
+public abstract class ObservableProperty<V> implements Interfaces<Object, V> {
+    private V value;
+
+    public ObservableProperty(V v) {
+        this.value = v;
+    }
+
+    public void afterChange(KProperty<?> kProperty, V v, V v2) {
+        Intrinsics3.checkNotNullParameter(kProperty, "property");
+    }
+
+    public boolean beforeChange(KProperty<?> kProperty, V v, V v2) {
+        Intrinsics3.checkNotNullParameter(kProperty, "property");
+        return true;
+    }
+
+    @Override // kotlin.properties.Interfaces
+    public V getValue(Object obj, KProperty<?> kProperty) {
+        Intrinsics3.checkNotNullParameter(kProperty, "property");
+        return this.value;
+    }
+
+    @Override // kotlin.properties.Interfaces
+    public void setValue(Object obj, KProperty<?> kProperty, V v) {
+        Intrinsics3.checkNotNullParameter(kProperty, "property");
+        V v2 = this.value;
+        if (beforeChange(kProperty, v2, v)) {
+            this.value = v;
+            afterChange(kProperty, v2, v);
+        }
+    }
+}

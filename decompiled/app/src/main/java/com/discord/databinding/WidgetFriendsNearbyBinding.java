@@ -12,41 +12,47 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetFriendsNearbyBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final NestedScrollView a;
+    public final NestedScrollView f16686a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialButton f2399b;
+    public final MaterialButton f16687b;
 
+    /* renamed from: c */
     @NonNull
-    public final TextView c;
+    public final TextView f16688c;
 
+    /* renamed from: d */
     @NonNull
-    public final RecyclerView d;
+    public final RecyclerView f16689d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16690e;
 
+    /* renamed from: f */
     @NonNull
-    public final RLottieImageView f;
+    public final RLottieImageView f16691f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f16692g;
 
     public WidgetFriendsNearbyBinding(@NonNull NestedScrollView nestedScrollView, @NonNull MaterialButton materialButton, @NonNull TextView textView, @NonNull RecyclerView recyclerView, @NonNull TextView textView2, @NonNull RLottieImageView rLottieImageView, @NonNull TextView textView3) {
-        this.a = nestedScrollView;
-        this.f2399b = materialButton;
-        this.c = textView;
-        this.d = recyclerView;
-        this.e = textView2;
-        this.f = rLottieImageView;
-        this.g = textView3;
+        this.f16686a = nestedScrollView;
+        this.f16687b = materialButton;
+        this.f16688c = textView;
+        this.f16689d = recyclerView;
+        this.f16690e = textView2;
+        this.f16691f = rLottieImageView;
+        this.f16692g = textView3;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16686a;
     }
 }

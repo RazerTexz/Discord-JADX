@@ -4,14 +4,14 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.databinding.GuildEventPromptListViewBinding;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt;
-import d0.z.d.m;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities5;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildEventPromptListView.kt */
 /* loaded from: classes2.dex */
@@ -24,8 +24,8 @@ public final class GuildEventPromptListView extends LinearLayout {
         private final Function0<Unit> onScheduledEventClick;
 
         public ScheduledEventData(GuildScheduledEvent guildScheduledEvent, Function0<Unit> function0) {
-            m.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
-            m.checkNotNullParameter(function0, "onScheduledEventClick");
+            Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
+            Intrinsics3.checkNotNullParameter(function0, "onScheduledEventClick");
             this.guildScheduledEvent = guildScheduledEvent;
             this.onScheduledEventClick = function0;
         }
@@ -51,8 +51,8 @@ public final class GuildEventPromptListView extends LinearLayout {
         }
 
         public final ScheduledEventData copy(GuildScheduledEvent guildScheduledEvent, Function0<Unit> onScheduledEventClick) {
-            m.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
-            m.checkNotNullParameter(onScheduledEventClick, "onScheduledEventClick");
+            Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
+            Intrinsics3.checkNotNullParameter(onScheduledEventClick, "onScheduledEventClick");
             return new ScheduledEventData(guildScheduledEvent, onScheduledEventClick);
         }
 
@@ -64,7 +64,7 @@ public final class GuildEventPromptListView extends LinearLayout {
                 return false;
             }
             ScheduledEventData scheduledEventData = (ScheduledEventData) other;
-            return m.areEqual(this.guildScheduledEvent, scheduledEventData.guildScheduledEvent) && m.areEqual(this.onScheduledEventClick, scheduledEventData.onScheduledEventClick);
+            return Intrinsics3.areEqual(this.guildScheduledEvent, scheduledEventData.guildScheduledEvent) && Intrinsics3.areEqual(this.onScheduledEventClick, scheduledEventData.onScheduledEventClick);
         }
 
         public final GuildScheduledEvent getGuildScheduledEvent() {
@@ -83,22 +83,22 @@ public final class GuildEventPromptListView extends LinearLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ScheduledEventData(guildScheduledEvent=");
-            sbU.append(this.guildScheduledEvent);
-            sbU.append(", onScheduledEventClick=");
-            sbU.append(this.onScheduledEventClick);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ScheduledEventData(guildScheduledEvent=");
+            sbM833U.append(this.guildScheduledEvent);
+            sbM833U.append(", onScheduledEventClick=");
+            sbM833U.append(this.onScheduledEventClick);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildEventPromptListView(Context context) {
         super(context);
-        m.checkNotNullParameter(context, "context");
-        GuildEventPromptListViewBinding guildEventPromptListViewBindingA = GuildEventPromptListViewBinding.a(LayoutInflater.from(getContext()), this, true);
-        m.checkNotNullExpressionValue(guildEventPromptListViewBindingA, "GuildEventPromptListView…rom(context), this, true)");
-        this.binding = guildEventPromptListViewBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        GuildEventPromptListViewBinding guildEventPromptListViewBindingM8384a = GuildEventPromptListViewBinding.m8384a(LayoutInflater.from(getContext()), this, true);
+        Intrinsics3.checkNotNullExpressionValue(guildEventPromptListViewBindingM8384a, "GuildEventPromptListView…rom(context), this, true)");
+        this.binding = guildEventPromptListViewBindingM8384a;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -116,49 +116,49 @@ public final class GuildEventPromptListView extends LinearLayout {
     }
 
     public final void configure(ScheduledEventData scheduledEventData, Function0<Unit> onCreateEventClick, Function0<Unit> onStartStageClick) {
-        GuildEventPromptView guildEventPromptView = this.binding.d;
+        GuildEventPromptView guildEventPromptView = this.binding.f15120d;
         guildEventPromptView.setVisibility(onStartStageClick != null ? 0 : 8);
-        String string = guildEventPromptView.getContext().getString(R.string.stage_channel_start_title);
-        m.checkNotNullExpressionValue(string, "context.getString(R.stri…tage_channel_start_title)");
-        String string2 = guildEventPromptView.getContext().getString(R.string.stage_channel_start_subtitle);
-        m.checkNotNullExpressionValue(string2, "context.getString(R.stri…e_channel_start_subtitle)");
-        guildEventPromptView.configure(R.drawable.ic_channel_stage_24dp, R.color.status_green_600, string, string2);
-        guildEventPromptView.setOnClickListener(new GuildEventPromptListView$configure$$inlined$apply$lambda$1(onStartStageClick));
-        GuildEventPromptView guildEventPromptView2 = this.binding.f2116b;
+        String string = guildEventPromptView.getContext().getString(C5419R.string.stage_channel_start_title);
+        Intrinsics3.checkNotNullExpressionValue(string, "context.getString(R.stri…tage_channel_start_title)");
+        String string2 = guildEventPromptView.getContext().getString(C5419R.string.stage_channel_start_subtitle);
+        Intrinsics3.checkNotNullExpressionValue(string2, "context.getString(R.stri…e_channel_start_subtitle)");
+        guildEventPromptView.configure(C5419R.drawable.ic_channel_stage_24dp, C5419R.color.status_green_600, string, string2);
+        guildEventPromptView.setOnClickListener(new GuildEventPromptListView2(onStartStageClick));
+        GuildEventPromptView guildEventPromptView2 = this.binding.f15118b;
         guildEventPromptView2.setVisibility(onCreateEventClick != null ? 0 : 8);
-        String string3 = guildEventPromptView2.getContext().getString(R.string.schedule_event);
-        m.checkNotNullExpressionValue(string3, "context.getString(R.string.schedule_event)");
-        String string4 = guildEventPromptView2.getContext().getString(R.string.schedule_event_description);
-        m.checkNotNullExpressionValue(string4, "context.getString(R.stri…hedule_event_description)");
-        guildEventPromptView2.configure(R.drawable.ic_event_20dp, R.color.brand_new_500, string3, string4);
-        guildEventPromptView2.setOnClickListener(new GuildEventPromptListView$configure$$inlined$apply$lambda$2(onCreateEventClick));
-        GuildEventPromptView guildEventPromptView3 = this.binding.c;
+        String string3 = guildEventPromptView2.getContext().getString(C5419R.string.schedule_event);
+        Intrinsics3.checkNotNullExpressionValue(string3, "context.getString(R.string.schedule_event)");
+        String string4 = guildEventPromptView2.getContext().getString(C5419R.string.schedule_event_description);
+        Intrinsics3.checkNotNullExpressionValue(string4, "context.getString(R.stri…hedule_event_description)");
+        guildEventPromptView2.configure(C5419R.drawable.ic_event_20dp, C5419R.color.brand_new_500, string3, string4);
+        guildEventPromptView2.setOnClickListener(new GuildEventPromptListView3(onCreateEventClick));
+        GuildEventPromptView guildEventPromptView3 = this.binding.f15119c;
         guildEventPromptView3.setVisibility(scheduledEventData != null ? 0 : 8);
         if (scheduledEventData != null) {
             GuildScheduledEvent guildScheduledEvent = scheduledEventData.getGuildScheduledEvent();
             String name = guildScheduledEvent.getName();
             Context context = guildEventPromptView3.getContext();
-            m.checkNotNullExpressionValue(context, "context");
-            guildEventPromptView3.configure(R.drawable.ic_event_20dp, R.color.status_green_600, name, GuildScheduledEventUtilitiesKt.getEventStartingTimeString(guildScheduledEvent, context));
-            guildEventPromptView3.setOnClickListener(new GuildEventPromptListView$configure$$inlined$apply$lambda$3(scheduledEventData));
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            guildEventPromptView3.configure(C5419R.drawable.ic_event_20dp, C5419R.color.status_green_600, name, GuildScheduledEventUtilities5.getEventStartingTimeString(guildScheduledEvent, context));
+            guildEventPromptView3.setOnClickListener(new GuildEventPromptListView4(scheduledEventData));
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildEventPromptListView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
-        GuildEventPromptListViewBinding guildEventPromptListViewBindingA = GuildEventPromptListViewBinding.a(LayoutInflater.from(getContext()), this, true);
-        m.checkNotNullExpressionValue(guildEventPromptListViewBindingA, "GuildEventPromptListView…rom(context), this, true)");
-        this.binding = guildEventPromptListViewBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        GuildEventPromptListViewBinding guildEventPromptListViewBindingM8384a = GuildEventPromptListViewBinding.m8384a(LayoutInflater.from(getContext()), this, true);
+        Intrinsics3.checkNotNullExpressionValue(guildEventPromptListViewBindingM8384a, "GuildEventPromptListView…rom(context), this, true)");
+        this.binding = guildEventPromptListViewBindingM8384a;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildEventPromptListView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        m.checkNotNullParameter(context, "context");
-        GuildEventPromptListViewBinding guildEventPromptListViewBindingA = GuildEventPromptListViewBinding.a(LayoutInflater.from(getContext()), this, true);
-        m.checkNotNullExpressionValue(guildEventPromptListViewBindingA, "GuildEventPromptListView…rom(context), this, true)");
-        this.binding = guildEventPromptListViewBindingA;
+        Intrinsics3.checkNotNullParameter(context, "context");
+        GuildEventPromptListViewBinding guildEventPromptListViewBindingM8384a = GuildEventPromptListViewBinding.m8384a(LayoutInflater.from(getContext()), this, true);
+        Intrinsics3.checkNotNullExpressionValue(guildEventPromptListViewBindingM8384a, "GuildEventPromptListView…rom(context), this, true)");
+        this.binding = guildEventPromptListViewBindingM8384a;
     }
 }

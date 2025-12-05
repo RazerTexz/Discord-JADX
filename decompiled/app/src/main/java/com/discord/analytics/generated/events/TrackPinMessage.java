@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPinMessage.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPinMessage implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPinMessage implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Long channelId = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackPinMessage implements AnalyticsSchema, TrackB
             return false;
         }
         TrackPinMessage trackPinMessage = (TrackPinMessage) other;
-        return m.areEqual(this.guildId, trackPinMessage.guildId) && m.areEqual(this.channelId, trackPinMessage.channelId) && m.areEqual(this.authorId, trackPinMessage.authorId) && m.areEqual(this.pinned, trackPinMessage.pinned);
+        return Intrinsics3.areEqual(this.guildId, trackPinMessage.guildId) && Intrinsics3.areEqual(this.channelId, trackPinMessage.channelId) && Intrinsics3.areEqual(this.authorId, trackPinMessage.authorId) && Intrinsics3.areEqual(this.pinned, trackPinMessage.pinned);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackPinMessage implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPinMessage(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", authorId=");
-        sbU.append(this.authorId);
-        sbU.append(", pinned=");
-        return a.D(sbU, this.pinned, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPinMessage(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", authorId=");
+        sbM833U.append(this.authorId);
+        sbM833U.append(", pinned=");
+        return outline.m816D(sbM833U, this.pinned, ")");
     }
 }

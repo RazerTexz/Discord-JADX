@@ -1,0 +1,29 @@
+package p007b.p109f.p115d.p119d;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+/* compiled from: ImmutableMap.java */
+/* renamed from: b.f.d.d.f, reason: use source file name */
+/* loaded from: classes.dex */
+public class ImmutableMap<K, V> extends HashMap<K, V> {
+    public ImmutableMap(Map<? extends K, ? extends V> map) {
+        super(map);
+    }
+
+    /* renamed from: of */
+    public static <K, V> Map<K, V> m967of(K k, V v) {
+        HashMap map = new HashMap(1);
+        map.put(k, v);
+        return Collections.unmodifiableMap(map);
+    }
+
+    /* renamed from: of */
+    public static <K, V> Map<K, V> m968of(K k, V v, K k2, V v2) {
+        HashMap map = new HashMap(2);
+        map.put(k, v);
+        map.put(k2, v2);
+        return Collections.unmodifiableMap(map);
+    }
+}

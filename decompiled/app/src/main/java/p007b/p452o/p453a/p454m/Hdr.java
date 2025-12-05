@@ -1,0 +1,35 @@
+package p007b.p452o.p453a.p454m;
+
+import androidx.annotation.NonNull;
+
+/* compiled from: Hdr.java */
+/* renamed from: b.o.a.m.h, reason: use source file name */
+/* loaded from: classes3.dex */
+public enum Hdr implements Control {
+    OFF(0),
+    ON(1);
+
+    private int value;
+
+    Hdr(int i) {
+        this.value = i;
+    }
+
+    @NonNull
+    /* renamed from: f */
+    public static Hdr m7178f(int i) {
+        Hdr[] hdrArrValues = values();
+        for (int i2 = 0; i2 < 2; i2++) {
+            Hdr hdr = hdrArrValues[i2];
+            if (hdr.value == i) {
+                return hdr;
+            }
+        }
+        return OFF;
+    }
+
+    /* renamed from: g */
+    public int m7179g() {
+        return this.value;
+    }
+}

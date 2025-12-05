@@ -1,10 +1,8 @@
 package com.discord.stores;
 
-import a0.a.a.b;
 import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
 import com.discord.api.activity.Activity;
 import com.discord.api.activity.ActivityEmoji;
 import com.discord.api.activity.ActivityType;
@@ -26,13 +24,10 @@ import com.discord.models.presence.Presence;
 import com.discord.models.user.MeUser;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.utilities.collections.SnowflakePartitionMap;
-import com.discord.utilities.presence.ActivityUtilsKt;
+import com.discord.utilities.presence.ActivityUtils;
 import com.discord.utilities.presence.PresenceUtils;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.TimeUtils;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -41,12 +36,18 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import kotlin.jvm.functions.Function0;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p658rx.Observable;
 
 /* compiled from: StoreUserPresence.kt */
 /* loaded from: classes2.dex */
 public final class StoreUserPresence extends StoreV2 {
-    private static final StoreUserPresence$Companion$LocalPresenceUpdateSource$1 LocalPresenceUpdateSource = new StoreUserPresence$Companion$LocalPresenceUpdateSource$1();
+    private static final StoreUserPresence2 LocalPresenceUpdateSource = new StoreUserPresence2();
     private final Clock clock;
     private Presence localPresence;
     private Presence localPresenceSnapshot;
@@ -63,7 +64,7 @@ public final class StoreUserPresence extends StoreV2 {
         private final long timestamp;
 
         public TimestampedPresence(Presence presence, long j) {
-            m.checkNotNullParameter(presence, "presence");
+            Intrinsics3.checkNotNullParameter(presence, "presence");
             this.presence = presence;
             this.timestamp = j;
         }
@@ -89,7 +90,7 @@ public final class StoreUserPresence extends StoreV2 {
         }
 
         public final TimestampedPresence copy(Presence presence, long timestamp) {
-            m.checkNotNullParameter(presence, "presence");
+            Intrinsics3.checkNotNullParameter(presence, "presence");
             return new TimestampedPresence(presence, timestamp);
         }
 
@@ -101,7 +102,7 @@ public final class StoreUserPresence extends StoreV2 {
                 return false;
             }
             TimestampedPresence timestampedPresence = (TimestampedPresence) other;
-            return m.areEqual(this.presence, timestampedPresence.presence) && this.timestamp == timestampedPresence.timestamp;
+            return Intrinsics3.areEqual(this.presence, timestampedPresence.presence) && this.timestamp == timestampedPresence.timestamp;
         }
 
         public final Presence getPresence() {
@@ -114,21 +115,21 @@ public final class StoreUserPresence extends StoreV2 {
 
         public int hashCode() {
             Presence presence = this.presence;
-            return b.a(this.timestamp) + ((presence != null ? presence.hashCode() : 0) * 31);
+            return C0002b.m3a(this.timestamp) + ((presence != null ? presence.hashCode() : 0) * 31);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("TimestampedPresence(presence=");
-            sbU.append(this.presence);
-            sbU.append(", timestamp=");
-            return a.C(sbU, this.timestamp, ")");
+            StringBuilder sbM833U = outline.m833U("TimestampedPresence(presence=");
+            sbM833U.append(this.presence);
+            sbM833U.append(", timestamp=");
+            return outline.m815C(sbM833U, this.timestamp, ")");
         }
     }
 
     /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observeAllPresences$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends Presence>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreUserPresence$observeAllPresences$1 */
+    public static final class C65831 extends Lambda implements Function0<Map<Long, ? extends Presence>> {
+        public C65831() {
             super(0);
         }
 
@@ -140,20 +141,20 @@ public final class StoreUserPresence extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Presence> invoke2() {
-            return StoreUserPresence.this.m19getPresences();
+            return StoreUserPresence.this.m11396getPresences();
         }
     }
 
     /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observeApplicationActivity$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements j0.k.b<Presence, Activity> {
+    /* renamed from: com.discord.stores.StoreUserPresence$observeApplicationActivity$1 */
+    public static final class C65841<T, R> implements Func1<Presence, Activity> {
         public final /* synthetic */ long $applicationId;
 
-        public AnonymousClass1(long j) {
+        public C65841(long j) {
             this.$applicationId = j;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Activity call(Presence presence) {
             return call2(presence);
         }
@@ -182,9 +183,9 @@ public final class StoreUserPresence extends StoreV2 {
     }
 
     /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observeLocalPresence$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Presence> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreUserPresence$observeLocalPresence$1 */
+    public static final class C65851 extends Lambda implements Function0<Presence> {
+        public C65851() {
             super(0);
         }
 
@@ -201,15 +202,15 @@ public final class StoreUserPresence extends StoreV2 {
     }
 
     /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observePresenceForUser$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements j0.k.b<Map<Long, ? extends Presence>, Presence> {
+    /* renamed from: com.discord.stores.StoreUserPresence$observePresenceForUser$1 */
+    public static final class C65861<T, R> implements Func1<Map<Long, ? extends Presence>, Presence> {
         public final /* synthetic */ long $userId;
 
-        public AnonymousClass1(long j) {
+        public C65861(long j) {
             this.$userId = j;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Presence call(Map<Long, ? extends Presence> map) {
             return call2((Map<Long, Presence>) map);
         }
@@ -221,22 +222,22 @@ public final class StoreUserPresence extends StoreV2 {
     }
 
     /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observePresencesForUsers$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements j0.k.b<Map<Long, ? extends Presence>, Map<Long, ? extends Presence>> {
+    /* renamed from: com.discord.stores.StoreUserPresence$observePresencesForUsers$1 */
+    public static final class C65871<T, R> implements Func1<Map<Long, ? extends Presence>, Map<Long, ? extends Presence>> {
         public final /* synthetic */ Collection $userIds;
 
-        public AnonymousClass1(Collection collection) {
+        public C65871(Collection collection) {
             this.$userIds = collection;
         }
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Map<Long, ? extends Presence> call(Map<Long, ? extends Presence> map) {
             return call2((Map<Long, Presence>) map);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Presence> call2(Map<Long, Presence> map) {
-            m.checkNotNullExpressionValue(map, "it");
+            Intrinsics3.checkNotNullExpressionValue(map, "it");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             for (Map.Entry<Long, Presence> entry : map.entrySet()) {
                 if (this.$userIds.contains(Long.valueOf(entry.getKey().longValue()))) {
@@ -248,9 +249,9 @@ public final class StoreUserPresence extends StoreV2 {
     }
 
     public StoreUserPresence(Clock clock, StoreStream storeStream, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(clock, "clock");
-        m.checkNotNullParameter(storeStream, "stream");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(clock, "clock");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.clock = clock;
         this.stream = storeStream;
         this.observationDeck = observationDeck;
@@ -272,7 +273,7 @@ public final class StoreUserPresence extends StoreV2 {
         storeUserPresence.localPresenceSnapshot = presence;
     }
 
-    @StoreThread
+    @Store3
     private final void clearPresences(long guildId) {
         HashMap<Long, Map<Long, TimestampedPresence>> map = this.userGuildPresences;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -288,7 +289,7 @@ public final class StoreUserPresence extends StoreV2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:21:0x0053  */
-    @StoreThread
+    @Store3
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -328,7 +329,7 @@ public final class StoreUserPresence extends StoreV2 {
         if (presence == null || (status = presence.getStatus()) == null) {
             status = ClientStatus.OFFLINE;
         }
-        List listReversed = (presence == null || (activities = presence.getActivities()) == null || (listSortedWith = u.sortedWith(activities, PresenceUtils.INSTANCE.getACTIVITY_COMPARATOR$app_productionGoogleRelease())) == null) ? null : u.reversed(listSortedWith);
+        List listReversed = (presence == null || (activities = presence.getActivities()) == null || (listSortedWith = _Collections.sortedWith(activities, PresenceUtils.INSTANCE.getACTIVITY_COMPARATOR$app_productionGoogleRelease())) == null) ? null : _Collections.reversed(listSortedWith);
         ClientStatuses clientStatuses = presence != null ? presence.getClientStatuses() : null;
         ClientStatus clientStatus = ClientStatus.OFFLINE;
         if (status == clientStatus) {
@@ -340,7 +341,7 @@ public final class StoreUserPresence extends StoreV2 {
             return;
         }
         Presence presence2 = this.presences.get(Long.valueOf(userId));
-        if ((presence2 != null ? presence2.getStatus() : null) != status || (!m.areEqual(presence2.getActivities(), listReversed)) || (!m.areEqual(presence2.getClientStatuses(), clientStatuses))) {
+        if ((presence2 != null ? presence2.getStatus() : null) != status || (!Intrinsics3.areEqual(presence2.getActivities(), listReversed)) || (!Intrinsics3.areEqual(presence2.getClientStatuses(), clientStatuses))) {
             SnowflakePartitionMap.CopiablePartitionMap<Presence> copiablePartitionMap = this.presences;
             Long lValueOf = Long.valueOf(userId);
             if (clientStatuses == null) {
@@ -351,7 +352,7 @@ public final class StoreUserPresence extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     private final Activity getCustomStatusActivityFromSetting(ModelCustomStatusSetting customStatusSetting) {
         ActivityEmoji activityEmoji = null;
         if (customStatusSetting == ModelCustomStatusSetting.INSTANCE.getCLEAR()) {
@@ -363,7 +364,7 @@ public final class StoreUserPresence extends StoreV2 {
         if (customStatusSetting.getEmojiId() != null) {
             StoreEmoji emojis = this.stream.getEmojis();
             Long emojiId = customStatusSetting.getEmojiId();
-            m.checkNotNull(emojiId);
+            Intrinsics3.checkNotNull(emojiId);
             ModelEmojiCustom customEmojiInternal = emojis.getCustomEmojiInternal(emojiId.longValue());
             if (customEmojiInternal != null) {
                 activityEmoji = new ActivityEmoji(String.valueOf(customEmojiInternal.getId()), customEmojiInternal.getName(), customEmojiInternal.isAnimated());
@@ -371,19 +372,19 @@ public final class StoreUserPresence extends StoreV2 {
         } else if (customStatusSetting.getEmojiName() != null) {
             Map<String, ModelEmojiUnicode> unicodeEmojiSurrogateMap = this.stream.getEmojis().getUnicodeEmojiSurrogateMap();
             String emojiName = customStatusSetting.getEmojiName();
-            m.checkNotNull(emojiName);
+            Intrinsics3.checkNotNull(emojiName);
             ModelEmojiUnicode modelEmojiUnicode = unicodeEmojiSurrogateMap.get(emojiName);
             if (modelEmojiUnicode != null) {
                 activityEmoji = new ActivityEmoji(null, modelEmojiUnicode.getSurrogates(), false);
             }
         }
-        return ActivityUtilsKt.createCustomStatusActivity(customStatusSetting.getText(), activityEmoji, this.clock.currentTimeMillis());
+        return ActivityUtils.createCustomStatusActivity(customStatusSetting.getText(), activityEmoji, this.clock.currentTimeMillis());
     }
 
     private final List<Activity> removeActivityInList(ActivityType type, List<Activity> oldActivities) {
         List<Activity> arrayList;
         int i;
-        if (oldActivities == null || (arrayList = u.toMutableList((Collection) oldActivities)) == null) {
+        if (oldActivities == null || (arrayList = _Collections.toMutableList((Collection) oldActivities)) == null) {
             arrayList = new ArrayList<>();
         }
         if (oldActivities != null) {
@@ -419,7 +420,7 @@ public final class StoreUserPresence extends StoreV2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:24:0x0045  */
-    @StoreThread
+    @Store3
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -435,7 +436,7 @@ public final class StoreUserPresence extends StoreV2 {
                 status = this.localPresence.getStatus();
             }
             ClientStatus clientStatus = status;
-            m.checkNotNullExpressionValue(clientStatus, "userSettings?.status\n   …  ?: localPresence.status");
+            Intrinsics3.checkNotNullExpressionValue(clientStatus, "userSettings?.status\n   …  ?: localPresence.status");
             if (sessions != null) {
                 Iterator<T> it = sessions.iterator();
                 while (true) {
@@ -469,7 +470,7 @@ public final class StoreUserPresence extends StoreV2 {
             } else {
                 activities = this.localPresence.getActivities();
             }
-            if (clientStatus != this.localPresence.getStatus() || (!m.areEqual(activities, this.localPresence.getActivities()))) {
+            if (clientStatus != this.localPresence.getStatus() || (!Intrinsics3.areEqual(activities, this.localPresence.getActivities()))) {
                 this.localPresence = new Presence(clientStatus, null, activities);
                 markChanged(LocalPresenceUpdateSource);
             }
@@ -525,47 +526,47 @@ public final class StoreUserPresence extends StoreV2 {
         return this.stream;
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         this.userGuildPresences.clear();
         this.presences.clear();
         User me2 = payload.getMe();
-        m.checkNotNullExpressionValue(me2, "payload.me");
+        Intrinsics3.checkNotNullExpressionValue(me2, "payload.me");
         this.meUser = new MeUser(me2);
         List<Guild> guilds = payload.getGuilds();
-        m.checkNotNullExpressionValue(guilds, "payload.guilds");
+        Intrinsics3.checkNotNullExpressionValue(guilds, "payload.guilds");
         Iterator<T> it = guilds.iterator();
         while (it.hasNext()) {
             handleGuildAdd((Guild) it.next());
         }
         List<com.discord.api.presence.Presence> presences = payload.getPresences();
-        m.checkNotNullExpressionValue(presences, "payload.presences");
+        Intrinsics3.checkNotNullExpressionValue(presences, "payload.presences");
         for (com.discord.api.presence.Presence presence : presences) {
             User user = presence.getUser();
             if (user != null) {
-                handlePresenceUpdate(RecyclerView.FOREVER_NS, user.getId(), presence.getStatus(), presence.getClientStatus(), presence.b());
+                handlePresenceUpdate(RecyclerView.FOREVER_NS, user.getId(), presence.getStatus(), presence.getClientStatus(), presence.m8153b());
             }
         }
         updateSelfPresence(payload.getUserSettings(), payload.getSessions(), false);
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildAdd(Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
-        List<com.discord.api.presence.Presence> listD = guild.D();
-        if (listD != null) {
-            for (com.discord.api.presence.Presence presence : listD) {
+        Intrinsics3.checkNotNullParameter(guild, "guild");
+        List<com.discord.api.presence.Presence> listM7839D = guild.m7839D();
+        if (listM7839D != null) {
+            for (com.discord.api.presence.Presence presence : listM7839D) {
                 User user = presence.getUser();
                 if (user != null) {
-                    handlePresenceUpdate(guild.getId(), user.getId(), presence.getStatus(), presence.getClientStatus(), presence.b());
+                    handlePresenceUpdate(guild.getId(), user.getId(), presence.getStatus(), presence.getClientStatus(), presence.m8153b());
                 }
             }
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildMemberRemove(long guildId, long userId) {
         Map<Long, TimestampedPresence> map = this.userGuildPresences.get(Long.valueOf(userId));
         if ((map != null ? map.remove(Long.valueOf(guildId)) : null) != null) {
@@ -573,15 +574,15 @@ public final class StoreUserPresence extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildRemove(Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         clearPresences(guild.getId());
     }
 
-    @StoreThread
+    @Store3
     public final void handlePresenceReplace(List<com.discord.api.presence.Presence> presencesList) {
-        m.checkNotNullParameter(presencesList, "presencesList");
+        Intrinsics3.checkNotNullParameter(presencesList, "presencesList");
         clearPresences(RecyclerView.FOREVER_NS);
         for (com.discord.api.presence.Presence presence : presencesList) {
             User user = presence.getUser();
@@ -593,106 +594,106 @@ public final class StoreUserPresence extends StoreV2 {
                     ClientStatus clientStatus2 = ClientStatus.OFFLINE;
                     clientStatus = new ClientStatuses(clientStatus2, clientStatus2, clientStatus2);
                 }
-                handlePresenceUpdate(RecyclerView.FOREVER_NS, id2, status, clientStatus, presence.b());
+                handlePresenceUpdate(RecyclerView.FOREVER_NS, id2, status, clientStatus, presence.m8153b());
             }
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handlePresenceUpdate(long guildId, com.discord.api.presence.Presence presence) {
-        m.checkNotNullParameter(presence, "presence");
+        Intrinsics3.checkNotNullParameter(presence, "presence");
         User user = presence.getUser();
         if (user != null) {
-            handlePresenceUpdate(guildId, user.getId(), presence.getStatus(), presence.getClientStatus(), presence.b());
+            handlePresenceUpdate(guildId, user.getId(), presence.getStatus(), presence.getClientStatus(), presence.m8153b());
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleSessionsReplace(List<? extends ModelSession> sessions) {
-        m.checkNotNullParameter(sessions, "sessions");
+        Intrinsics3.checkNotNullParameter(sessions, "sessions");
         updateSelfPresence(null, sessions, true);
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadMemberListUpdate(ThreadMemberListUpdate threadMemberListUpdate) {
-        m.checkNotNullParameter(threadMemberListUpdate, "threadMemberListUpdate");
-        List<ThreadListMember> listB = threadMemberListUpdate.b();
-        if (listB != null) {
-            for (ThreadListMember threadListMember : listB) {
-                com.discord.api.presence.Presence presenceB = threadListMember.getPresence();
-                if (presenceB != null) {
-                    handlePresenceUpdate(threadMemberListUpdate.getGuildId(), threadListMember.getUserId(), presenceB.getStatus(), presenceB.getClientStatus(), presenceB.b());
+        Intrinsics3.checkNotNullParameter(threadMemberListUpdate, "threadMemberListUpdate");
+        List<ThreadListMember> listM8266b = threadMemberListUpdate.m8266b();
+        if (listM8266b != null) {
+            for (ThreadListMember threadListMember : listM8266b) {
+                com.discord.api.presence.Presence presenceM8254b = threadListMember.getPresence();
+                if (presenceM8254b != null) {
+                    handlePresenceUpdate(threadMemberListUpdate.getGuildId(), threadListMember.getUserId(), presenceM8254b.getStatus(), presenceM8254b.getClientStatus(), presenceM8254b.m8153b());
                 }
             }
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleThreadMembersUpdate(ThreadMembersUpdate threadMembersUpdate) {
-        m.checkNotNullParameter(threadMembersUpdate, "threadMembersUpdate");
-        List<AugmentedThreadMember> listA = threadMembersUpdate.a();
-        if (listA != null) {
-            for (AugmentedThreadMember augmentedThreadMember : listA) {
+        Intrinsics3.checkNotNullParameter(threadMembersUpdate, "threadMembersUpdate");
+        List<AugmentedThreadMember> listM8275a = threadMembersUpdate.m8275a();
+        if (listM8275a != null) {
+            for (AugmentedThreadMember augmentedThreadMember : listM8275a) {
                 com.discord.api.presence.Presence presence = augmentedThreadMember.getPresence();
                 if (presence != null) {
-                    handlePresenceUpdate(threadMembersUpdate.getGuildId(), augmentedThreadMember.getUserId(), presence.getStatus(), presence.getClientStatus(), presence.b());
+                    handlePresenceUpdate(threadMembersUpdate.getGuildId(), augmentedThreadMember.getUserId(), presence.getStatus(), presence.getClientStatus(), presence.m8153b());
                 }
             }
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleUserSettingsUpdate(ModelUserSettings userSettings) {
-        m.checkNotNullParameter(userSettings, "userSettings");
+        Intrinsics3.checkNotNullParameter(userSettings, "userSettings");
         updateSelfPresence(userSettings, null, true);
     }
 
     public final Observable<Map<Long, Presence>> observeAllPresences() {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C65831(), 14, null);
     }
 
     public final Observable<Activity> observeApplicationActivity(long userId, long applicationId) {
-        Observable<Activity> observableR = observePresenceForUser(userId).G(new AnonymousClass1(applicationId)).r();
-        m.checkNotNullExpressionValue(observableR, "observePresenceForUser(u…  .distinctUntilChanged()");
-        return observableR;
+        Observable<Activity> observableM11112r = observePresenceForUser(userId).m11083G(new C65841(applicationId)).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observePresenceForUser(u…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final Observable<Presence> observeLocalPresence() {
-        Observable<Presence> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{LocalPresenceUpdateSource}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck\n      .c…  .distinctUntilChanged()");
-        return observableR;
+        Observable<Presence> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{LocalPresenceUpdateSource}, false, null, null, new C65851(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck\n      .c…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final Observable<Presence> observePresenceForUser(long userId) {
-        Observable<Presence> observableR = observeAllPresences().G(new AnonymousClass1(userId)).r();
-        m.checkNotNullExpressionValue(observableR, "observeAllPresences()\n  …  .distinctUntilChanged()");
-        return observableR;
+        Observable<Presence> observableM11112r = observeAllPresences().m11083G(new C65861(userId)).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observeAllPresences()\n  …  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final Observable<Map<Long, Presence>> observePresencesForUsers(Collection<Long> userIds) {
-        m.checkNotNullParameter(userIds, "userIds");
-        Observable<Map<Long, Presence>> observableR = observeAllPresences().G(new AnonymousClass1(userIds)).r();
-        m.checkNotNullExpressionValue(observableR, "observeAllPresences()\n  …  .distinctUntilChanged()");
-        return observableR;
+        Intrinsics3.checkNotNullParameter(userIds, "userIds");
+        Observable<Map<Long, Presence>> observableM11112r = observeAllPresences().m11083G(new C65871(userIds)).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observeAllPresences()\n  …  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         this.presencesSnapshot = this.presences.fastCopy();
         Presence presence = this.localPresence;
         List<Activity> activities = presence.getActivities();
-        this.localPresenceSnapshot = Presence.copy$default(presence, null, null, activities != null ? u.toList(activities) : null, 3, null);
+        this.localPresenceSnapshot = Presence.copy$default(presence, null, null, activities != null ? _Collections.toList(activities) : null, 3, null);
         if (getUpdateSources().contains(LocalPresenceUpdateSource)) {
             StoreGatewayConnection.presenceUpdate$default(StoreStream.INSTANCE.getGatewaySocket(), this.localPresence.getStatus(), null, this.localPresence.getActivities(), null, 10, null);
         }
     }
 
-    @StoreThread
+    @Store3
     public final void updateActivity(ActivityType type, Activity activity, boolean forceDirty) {
         Activity activity2;
         Object next;
-        m.checkNotNullParameter(type, "type");
+        Intrinsics3.checkNotNullParameter(type, "type");
         if (!forceDirty) {
             List<Activity> activities = this.localPresence.getActivities();
             if (activities != null) {
@@ -712,7 +713,7 @@ public final class StoreUserPresence extends StoreV2 {
             } else {
                 activity2 = null;
             }
-            if (!(!m.areEqual(activity, activity2))) {
+            if (!(!Intrinsics3.areEqual(activity, activity2))) {
                 return;
             }
         }
@@ -728,7 +729,7 @@ public final class StoreUserPresence extends StoreV2 {
         MeUser meUser = this.meUser;
         if (meUser != null) {
             long id2 = meUser.getId();
-            if (!m.areEqual(this.presences.get(Long.valueOf(id2)), this.localPresence)) {
+            if (!Intrinsics3.areEqual(this.presences.get(Long.valueOf(id2)), this.localPresence)) {
                 this.presences.put(Long.valueOf(id2), this.localPresence);
                 markChanged();
             }
@@ -736,13 +737,13 @@ public final class StoreUserPresence extends StoreV2 {
     }
 
     /* renamed from: getPresences, reason: collision with other method in class */
-    public final Map<Long, Presence> m19getPresences() {
+    public final Map<Long, Presence> m11396getPresences() {
         return this.presencesSnapshot;
     }
 
-    @StoreThread
+    @Store3
     public final void handlePresenceUpdate(long guildId, long userId, ClientStatus status, ClientStatuses clientStatuses, List<Activity> activities) {
-        m.checkNotNullParameter(status, "status");
+        Intrinsics3.checkNotNullParameter(status, "status");
         if (guildId == 0) {
             guildId = Long.MAX_VALUE;
         }

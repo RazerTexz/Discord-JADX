@@ -1,9 +1,9 @@
 package com.discord.api.thread;
 
-import b.d.b.a.a;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ThreadMemberUpdate.kt */
 /* loaded from: classes.dex */
@@ -49,7 +49,7 @@ public final /* data */ class ThreadMemberUpdate {
             return false;
         }
         ThreadMemberUpdate threadMemberUpdate = (ThreadMemberUpdate) other;
-        return this.id == threadMemberUpdate.id && this.guildId == threadMemberUpdate.guildId && this.userId == threadMemberUpdate.userId && this.flags == threadMemberUpdate.flags && m.areEqual(this.joinTimestamp, threadMemberUpdate.joinTimestamp) && this.muted == threadMemberUpdate.muted && m.areEqual(this.muteConfig, threadMemberUpdate.muteConfig);
+        return this.id == threadMemberUpdate.id && this.guildId == threadMemberUpdate.guildId && this.userId == threadMemberUpdate.userId && this.flags == threadMemberUpdate.flags && Intrinsics3.areEqual(this.joinTimestamp, threadMemberUpdate.joinTimestamp) && this.muted == threadMemberUpdate.muted && Intrinsics3.areEqual(this.muteConfig, threadMemberUpdate.muteConfig);
     }
 
     /* renamed from: f, reason: from getter */
@@ -82,21 +82,21 @@ public final /* data */ class ThreadMemberUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ThreadMemberUpdate(id=");
-        sbU.append(this.id);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", userId=");
-        sbU.append(this.userId);
-        sbU.append(", flags=");
-        sbU.append(this.flags);
-        sbU.append(", joinTimestamp=");
-        sbU.append(this.joinTimestamp);
-        sbU.append(", muted=");
-        sbU.append(this.muted);
-        sbU.append(", muteConfig=");
-        sbU.append(this.muteConfig);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ThreadMemberUpdate(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", userId=");
+        sbM833U.append(this.userId);
+        sbM833U.append(", flags=");
+        sbM833U.append(this.flags);
+        sbM833U.append(", joinTimestamp=");
+        sbM833U.append(this.joinTimestamp);
+        sbM833U.append(", muted=");
+        sbM833U.append(this.muted);
+        sbM833U.append(", muteConfig=");
+        sbM833U.append(this.muteConfig);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

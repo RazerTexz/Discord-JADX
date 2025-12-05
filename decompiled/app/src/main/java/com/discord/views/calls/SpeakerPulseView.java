@@ -8,16 +8,10 @@ import android.view.ViewPropertyAnimator;
 import android.view.animation.PathInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.utilities.accessibility.AccessibilityUtils;
-import com.discord.utilities.animations.AnimationCoroutineUtilsKt;
-import com.discord.utilities.views.ViewCoroutineScopeKt;
-import d0.g;
-import d0.i;
-import d0.l;
-import d0.w.i.a.k;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.utilities.animations.AnimationCoroutineUtils;
+import com.discord.utilities.views.ViewCoroutineScope;
 import java.util.Iterator;
 import java.util.Objects;
 import kotlin.Lazy;
@@ -28,8 +22,19 @@ import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.Job;
 import org.objectweb.asm.Opcodes;
-import s.a.f0;
-import s.a.u;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.Lazy5;
+import p507d0.LazyJVM;
+import p507d0.Result3;
+import p507d0.p512d0._Ranges;
+import p507d0.p584w.p585h.Intrinsics2;
+import p507d0.p584w.p586i.p587a.ContinuationImpl3;
+import p507d0.p584w.p586i.p587a.ContinuationImpl6;
+import p507d0.p584w.p586i.p587a.DebugMetadata;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p659s.p660a.CompletableJob;
+import p659s.p660a.Deferred;
 
 /* compiled from: SpeakerPulseView.kt */
 /* loaded from: classes2.dex */
@@ -45,7 +50,7 @@ public final class SpeakerPulseView extends FrameLayout {
     public boolean hasEverAnimated;
 
     /* renamed from: m, reason: from kotlin metadata */
-    public final u animationSupervisor;
+    public final CompletableJob animationSupervisor;
 
     /* renamed from: n, reason: from kotlin metadata */
     public Job animationJob;
@@ -60,167 +65,178 @@ public final class SpeakerPulseView extends FrameLayout {
     public boolean isPulsing;
 
     /* compiled from: kotlin-style lambda group */
-    public static final class a extends o implements Function0<ImageView> {
-        public final /* synthetic */ int j;
-        public final /* synthetic */ Object k;
+    /* renamed from: com.discord.views.calls.SpeakerPulseView$a */
+    public static final class C7101a extends Lambda implements Function0<ImageView> {
+
+        /* renamed from: j */
+        public final /* synthetic */ int f19218j;
+
+        /* renamed from: k */
+        public final /* synthetic */ Object f19219k;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public a(int i, Object obj) {
+        public C7101a(int i, Object obj) {
             super(0);
-            this.j = i;
-            this.k = obj;
+            this.f19218j = i;
+            this.f19219k = obj;
         }
 
         @Override // kotlin.jvm.functions.Function0
         public final ImageView invoke() {
-            int i = this.j;
+            int i = this.f19218j;
             if (i == 0) {
-                return SpeakerPulseView.a((SpeakerPulseView) this.k, 0);
+                return SpeakerPulseView.m8574a((SpeakerPulseView) this.f19219k, 0);
             }
             if (i == 1) {
-                return SpeakerPulseView.a((SpeakerPulseView) this.k, 1);
+                return SpeakerPulseView.m8574a((SpeakerPulseView) this.f19219k, 1);
             }
             throw null;
         }
     }
 
     /* compiled from: SpeakerPulseView.kt */
-    @d0.w.i.a.e(c = "com.discord.views.calls.SpeakerPulseView", f = "SpeakerPulseView.kt", l = {Opcodes.LOR, Opcodes.I2D}, m = "animatePulse")
-    public static final class b extends d0.w.i.a.d {
+    @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView", m10085f = "SpeakerPulseView.kt", m10086l = {Opcodes.LOR, Opcodes.I2D}, m10087m = "animatePulse")
+    /* renamed from: com.discord.views.calls.SpeakerPulseView$b */
+    public static final class C7102b extends ContinuationImpl3 {
         public long J$0;
         public Object L$0;
         public Object L$1;
         public int label;
         public /* synthetic */ Object result;
 
-        public b(Continuation continuation) {
+        public C7102b(Continuation continuation) {
             super(continuation);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Object invokeSuspend(Object obj) {
             this.result = obj;
             this.label |= Integer.MIN_VALUE;
-            return SpeakerPulseView.this.d(null, 0L, 0L, this);
+            return SpeakerPulseView.this.m8577d(null, 0L, 0L, this);
         }
     }
 
     /* compiled from: SpeakerPulseView.kt */
-    @d0.w.i.a.e(c = "com.discord.views.calls.SpeakerPulseView", f = "SpeakerPulseView.kt", l = {117}, m = "performPulseAnimation")
-    public static final class c extends d0.w.i.a.d {
+    @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView", m10085f = "SpeakerPulseView.kt", m10086l = {117}, m10087m = "performPulseAnimation")
+    /* renamed from: com.discord.views.calls.SpeakerPulseView$c */
+    public static final class C7103c extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
         public int label;
         public /* synthetic */ Object result;
 
-        public c(Continuation continuation) {
+        public C7103c(Continuation continuation) {
             super(continuation);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Object invokeSuspend(Object obj) {
             this.result = obj;
             this.label |= Integer.MIN_VALUE;
-            return SpeakerPulseView.this.e(null, this);
+            return SpeakerPulseView.this.m8578e(null, this);
         }
     }
 
     /* compiled from: SpeakerPulseView.kt */
-    @d0.w.i.a.e(c = "com.discord.views.calls.SpeakerPulseView$performPulseAnimation$inner$1", f = "SpeakerPulseView.kt", l = {106}, m = "invokeSuspend")
-    public static final class d extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView$performPulseAnimation$inner$1", m10085f = "SpeakerPulseView.kt", m10086l = {106}, m10087m = "invokeSuspend")
+    /* renamed from: com.discord.views.calls.SpeakerPulseView$d */
+    public static final class C7104d extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
-        public d(Continuation continuation) {
+        public C7104d(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            m.checkNotNullParameter(continuation, "completion");
-            return SpeakerPulseView.this.new d(continuation);
+            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            return SpeakerPulseView.this.new C7104d(continuation);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
             Continuation<? super Unit> continuation2 = continuation;
-            m.checkNotNullParameter(continuation2, "completion");
-            return SpeakerPulseView.this.new d(continuation2).invokeSuspend(Unit.a);
+            Intrinsics3.checkNotNullParameter(continuation2, "completion");
+            return SpeakerPulseView.this.new C7104d(continuation2).invokeSuspend(Unit.f27425a);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Object invokeSuspend(Object obj) {
-            Object coroutine_suspended = d0.w.h.c.getCOROUTINE_SUSPENDED();
+            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
             int i = this.label;
             if (i == 0) {
-                l.throwOnFailure(obj);
+                Result3.throwOnFailure(obj);
                 SpeakerPulseView speakerPulseView = SpeakerPulseView.this;
-                ImageView imageViewB = SpeakerPulseView.b(speakerPulseView);
+                ImageView imageViewM8575b = SpeakerPulseView.m8575b(speakerPulseView);
                 this.label = 1;
-                if (speakerPulseView.d(imageViewB, 200L, 500L, this) == coroutine_suspended) {
+                if (speakerPulseView.m8577d(imageViewM8575b, 200L, 500L, this) == coroutine_suspended) {
                     return coroutine_suspended;
                 }
             } else {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                l.throwOnFailure(obj);
+                Result3.throwOnFailure(obj);
             }
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: SpeakerPulseView.kt */
-    @d0.w.i.a.e(c = "com.discord.views.calls.SpeakerPulseView$performPulseAnimation$outer$1", f = "SpeakerPulseView.kt", l = {113}, m = "invokeSuspend")
-    public static final class e extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView$performPulseAnimation$outer$1", m10085f = "SpeakerPulseView.kt", m10086l = {113}, m10087m = "invokeSuspend")
+    /* renamed from: com.discord.views.calls.SpeakerPulseView$e */
+    public static final class C7105e extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
-        public e(Continuation continuation) {
+        public C7105e(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            m.checkNotNullParameter(continuation, "completion");
-            return SpeakerPulseView.this.new e(continuation);
+            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            return SpeakerPulseView.this.new C7105e(continuation);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
             Continuation<? super Unit> continuation2 = continuation;
-            m.checkNotNullParameter(continuation2, "completion");
-            return SpeakerPulseView.this.new e(continuation2).invokeSuspend(Unit.a);
+            Intrinsics3.checkNotNullParameter(continuation2, "completion");
+            return SpeakerPulseView.this.new C7105e(continuation2).invokeSuspend(Unit.f27425a);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Object invokeSuspend(Object obj) {
-            Object coroutine_suspended = d0.w.h.c.getCOROUTINE_SUSPENDED();
+            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
             int i = this.label;
             if (i == 0) {
-                l.throwOnFailure(obj);
+                Result3.throwOnFailure(obj);
                 SpeakerPulseView speakerPulseView = SpeakerPulseView.this;
-                ImageView imageViewC = SpeakerPulseView.c(speakerPulseView);
+                ImageView imageViewM8576c = SpeakerPulseView.m8576c(speakerPulseView);
                 this.label = 1;
-                if (speakerPulseView.d(imageViewC, 700L, 0L, this) == coroutine_suspended) {
+                if (speakerPulseView.m8577d(imageViewM8576c, 700L, 0L, this) == coroutine_suspended) {
                     return coroutine_suspended;
                 }
             } else {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                l.throwOnFailure(obj);
+                Result3.throwOnFailure(obj);
             }
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
     /* compiled from: SpeakerPulseView.kt */
-    @d0.w.i.a.e(c = "com.discord.views.calls.SpeakerPulseView$startAnimating$1", f = "SpeakerPulseView.kt", l = {87}, m = "invokeSuspend")
-    public static final class f extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView$startAnimating$1", m10085f = "SpeakerPulseView.kt", m10086l = {87}, m10087m = "invokeSuspend")
+    /* renamed from: com.discord.views.calls.SpeakerPulseView$f */
+    public static final class C7106f extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
         /* compiled from: SpeakerPulseView.kt */
-        @d0.w.i.a.e(c = "com.discord.views.calls.SpeakerPulseView$startAnimating$1$1", f = "SpeakerPulseView.kt", l = {88}, m = "invokeSuspend")
-        public static final class a extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+        @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView$startAnimating$1$1", m10085f = "SpeakerPulseView.kt", m10086l = {88}, m10087m = "invokeSuspend")
+        /* renamed from: com.discord.views.calls.SpeakerPulseView$f$a */
+        public static final class a extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             private /* synthetic */ Object L$0;
             public int label;
 
@@ -228,10 +244,10 @@ public final class SpeakerPulseView extends FrameLayout {
                 super(2, continuation);
             }
 
-            @Override // d0.w.i.a.a
+            @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
             public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-                m.checkNotNullParameter(continuation, "completion");
-                a aVar = f.this.new a(continuation);
+                Intrinsics3.checkNotNullParameter(continuation, "completion");
+                a aVar = C7106f.this.new a(continuation);
                 aVar.L$0 = obj;
                 return aVar;
             }
@@ -239,112 +255,115 @@ public final class SpeakerPulseView extends FrameLayout {
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
                 Continuation<? super Unit> continuation2 = continuation;
-                m.checkNotNullParameter(continuation2, "completion");
-                a aVar = f.this.new a(continuation2);
+                Intrinsics3.checkNotNullParameter(continuation2, "completion");
+                a aVar = C7106f.this.new a(continuation2);
                 aVar.L$0 = coroutineScope;
-                return aVar.invokeSuspend(Unit.a);
+                return aVar.invokeSuspend(Unit.f27425a);
             }
 
-            @Override // d0.w.i.a.a
+            @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
             public final Object invokeSuspend(Object obj) {
-                Object coroutine_suspended = d0.w.h.c.getCOROUTINE_SUSPENDED();
+                Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
                 int i = this.label;
                 if (i == 0) {
-                    l.throwOnFailure(obj);
+                    Result3.throwOnFailure(obj);
                     CoroutineScope coroutineScope = (CoroutineScope) this.L$0;
                     SpeakerPulseView speakerPulseView = SpeakerPulseView.this;
                     this.label = 1;
-                    if (speakerPulseView.e(coroutineScope, this) == coroutine_suspended) {
+                    if (speakerPulseView.m8578e(coroutineScope, this) == coroutine_suspended) {
                         return coroutine_suspended;
                     }
                 } else {
                     if (i != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    l.throwOnFailure(obj);
+                    Result3.throwOnFailure(obj);
                 }
-                return Unit.a;
+                return Unit.f27425a;
             }
         }
 
-        public f(Continuation continuation) {
+        public C7106f(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            m.checkNotNullParameter(continuation, "completion");
-            return SpeakerPulseView.this.new f(continuation);
+            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            return SpeakerPulseView.this.new C7106f(continuation);
         }
 
         @Override // kotlin.jvm.functions.Function2
         public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
             Continuation<? super Unit> continuation2 = continuation;
-            m.checkNotNullParameter(continuation2, "completion");
-            return SpeakerPulseView.this.new f(continuation2).invokeSuspend(Unit.a);
+            Intrinsics3.checkNotNullParameter(continuation2, "completion");
+            return SpeakerPulseView.this.new C7106f(continuation2).invokeSuspend(Unit.f27425a);
         }
 
-        @Override // d0.w.i.a.a
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
         public final Object invokeSuspend(Object obj) {
-            Object coroutine_suspended = d0.w.h.c.getCOROUTINE_SUSPENDED();
+            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
             int i = this.label;
             if (i == 0) {
-                l.throwOnFailure(obj);
-                u uVar = SpeakerPulseView.this.animationSupervisor;
+                Result3.throwOnFailure(obj);
+                CompletableJob completableJob = SpeakerPulseView.this.animationSupervisor;
                 a aVar = new a(null);
                 this.label = 1;
-                if (b.i.a.f.e.o.f.C1(uVar, aVar, this) == coroutine_suspended) {
+                if (C3404f.m4197C1(completableJob, aVar, this) == coroutine_suspended) {
                     return coroutine_suspended;
                 }
             } else {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                l.throwOnFailure(obj);
+                Result3.throwOnFailure(obj);
             }
-            return Unit.a;
+            return Unit.f27425a;
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SpeakerPulseView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         PathInterpolator pathInterpolator = new PathInterpolator(0.4f, 0.0f, 1.0f, 1.0f);
         this.rampUpInterpolator = pathInterpolator;
         this.fadeOutInterpolator = pathInterpolator;
-        this.animationSupervisor = b.i.a.f.e.o.f.d(null, 1);
-        i iVar = i.NONE;
-        this.innerView = g.lazy(iVar, new a(0, this));
-        this.outerView = g.lazy(iVar, new a(1, this));
+        this.animationSupervisor = C3404f.m4279d(null, 1);
+        Lazy5 lazy5 = Lazy5.NONE;
+        this.innerView = LazyJVM.lazy(lazy5, new C7101a(0, this));
+        this.outerView = LazyJVM.lazy(lazy5, new C7101a(1, this));
         setClipChildren(false);
         setClipToOutline(false);
         setClipToPadding(false);
     }
 
-    public static final ImageView a(SpeakerPulseView speakerPulseView, int i) {
+    /* renamed from: a */
+    public static final ImageView m8574a(SpeakerPulseView speakerPulseView, int i) {
         Objects.requireNonNull(speakerPulseView);
         ImageView imageView = new ImageView(speakerPulseView.getContext());
         View childAt = speakerPulseView.getChildAt(speakerPulseView.getChildCount() - 1);
         float paddingLeft = speakerPulseView.getPaddingLeft() / 2.0f;
         int i2 = i + 1;
-        m.checkNotNullExpressionValue(childAt, "actualChild");
+        Intrinsics3.checkNotNullExpressionValue(childAt, "actualChild");
         ViewGroup.LayoutParams layoutParams = childAt.getLayoutParams();
         Integer numValueOf = layoutParams != null ? Integer.valueOf(layoutParams.width + ((int) (2 * paddingLeft * i2))) : null;
         imageView.setAlpha(0.0f);
-        imageView.setImageResource(R.drawable.drawable_circle_white);
-        int iCoerceAtLeast = d0.d0.f.coerceAtLeast(speakerPulseView.getChildCount() - 1, 0);
+        imageView.setImageResource(C5419R.drawable.drawable_circle_white);
+        int iCoerceAtLeast = _Ranges.coerceAtLeast(speakerPulseView.getChildCount() - 1, 0);
         FrameLayout.LayoutParams layoutParams2 = new FrameLayout.LayoutParams(numValueOf != null ? numValueOf.intValue() : -1, numValueOf != null ? numValueOf.intValue() : -1);
         layoutParams2.gravity = 17;
         speakerPulseView.addView(imageView, iCoerceAtLeast, layoutParams2);
         return imageView;
     }
 
-    public static final /* synthetic */ ImageView b(SpeakerPulseView speakerPulseView) {
+    /* renamed from: b */
+    public static final /* synthetic */ ImageView m8575b(SpeakerPulseView speakerPulseView) {
         return speakerPulseView.getInnerView();
     }
 
-    public static final /* synthetic */ ImageView c(SpeakerPulseView speakerPulseView) {
+    /* renamed from: c */
+    public static final /* synthetic */ ImageView m8576c(SpeakerPulseView speakerPulseView) {
         return speakerPulseView.getOuterView();
     }
 
@@ -357,33 +376,34 @@ public final class SpeakerPulseView extends FrameLayout {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
+    /* renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final /* synthetic */ Object d(View view, long j, long j2, Continuation<? super Unit> continuation) {
-        b bVar;
+    public final /* synthetic */ Object m8577d(View view, long j, long j2, Continuation<? super Unit> continuation) {
+        C7102b c7102b;
         SpeakerPulseView speakerPulseView;
-        if (continuation instanceof b) {
-            bVar = (b) continuation;
-            int i = bVar.label;
+        if (continuation instanceof C7102b) {
+            c7102b = (C7102b) continuation;
+            int i = c7102b.label;
             if ((i & Integer.MIN_VALUE) != 0) {
-                bVar.label = i - Integer.MIN_VALUE;
+                c7102b.label = i - Integer.MIN_VALUE;
             } else {
-                bVar = new b(continuation);
+                c7102b = new C7102b(continuation);
             }
         }
-        Object obj = bVar.result;
-        Object coroutine_suspended = d0.w.h.c.getCOROUTINE_SUSPENDED();
-        int i2 = bVar.label;
+        Object obj = c7102b.result;
+        Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+        int i2 = c7102b.label;
         if (i2 == 0) {
-            l.throwOnFailure(obj);
+            Result3.throwOnFailure(obj);
             ViewPropertyAnimator viewPropertyAnimatorAlpha = view.animate().setInterpolator(this.rampUpInterpolator).setStartDelay(j).setDuration(500L).alpha(0.16f);
-            m.checkNotNullExpressionValue(viewPropertyAnimatorAlpha, "animate()\n        .setIn…    .alpha(PULSE_OPACITY)");
-            bVar.L$0 = this;
-            bVar.L$1 = view;
-            bVar.J$0 = j2;
-            bVar.label = 1;
-            if (AnimationCoroutineUtilsKt.await(viewPropertyAnimatorAlpha, bVar) == coroutine_suspended) {
+            Intrinsics3.checkNotNullExpressionValue(viewPropertyAnimatorAlpha, "animate()\n        .setIn…    .alpha(PULSE_OPACITY)");
+            c7102b.L$0 = this;
+            c7102b.L$1 = view;
+            c7102b.J$0 = j2;
+            c7102b.label = 1;
+            if (AnimationCoroutineUtils.await(viewPropertyAnimatorAlpha, c7102b) == coroutine_suspended) {
                 return coroutine_suspended;
             }
             speakerPulseView = this;
@@ -392,92 +412,94 @@ public final class SpeakerPulseView extends FrameLayout {
                 if (i2 != 2) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                l.throwOnFailure(obj);
-                return Unit.a;
+                Result3.throwOnFailure(obj);
+                return Unit.f27425a;
             }
-            j2 = bVar.J$0;
-            view = (View) bVar.L$1;
-            speakerPulseView = (SpeakerPulseView) bVar.L$0;
-            l.throwOnFailure(obj);
+            j2 = c7102b.J$0;
+            view = (View) c7102b.L$1;
+            speakerPulseView = (SpeakerPulseView) c7102b.L$0;
+            Result3.throwOnFailure(obj);
         }
         ViewPropertyAnimator viewPropertyAnimatorAlpha2 = view.animate().setInterpolator(speakerPulseView.fadeOutInterpolator).setStartDelay(j2).setDuration(1000L).alpha(0.0f);
-        m.checkNotNullExpressionValue(viewPropertyAnimatorAlpha2, "animate()\n        .setIn…ON_MS)\n        .alpha(0f)");
-        bVar.L$0 = null;
-        bVar.L$1 = null;
-        bVar.label = 2;
-        if (AnimationCoroutineUtilsKt.await(viewPropertyAnimatorAlpha2, bVar) == coroutine_suspended) {
+        Intrinsics3.checkNotNullExpressionValue(viewPropertyAnimatorAlpha2, "animate()\n        .setIn…ON_MS)\n        .alpha(0f)");
+        c7102b.L$0 = null;
+        c7102b.L$1 = null;
+        c7102b.label = 2;
+        if (AnimationCoroutineUtils.await(viewPropertyAnimatorAlpha2, c7102b) == coroutine_suspended) {
             return coroutine_suspended;
         }
-        return Unit.a;
+        return Unit.f27425a;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0017  */
+    /* renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final /* synthetic */ Object e(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
-        c cVar;
+    public final /* synthetic */ Object m8578e(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
+        C7103c c7103c;
         SpeakerPulseView speakerPulseView;
         CoroutineScope coroutineScope2;
         SpeakerPulseView speakerPulseView2;
-        if (continuation instanceof c) {
-            cVar = (c) continuation;
-            int i = cVar.label;
+        if (continuation instanceof C7103c) {
+            c7103c = (C7103c) continuation;
+            int i = c7103c.label;
             if ((i & Integer.MIN_VALUE) != 0) {
-                cVar.label = i - Integer.MIN_VALUE;
+                c7103c.label = i - Integer.MIN_VALUE;
                 speakerPulseView = this;
             } else {
                 speakerPulseView = this;
-                cVar = speakerPulseView.new c(continuation);
+                c7103c = speakerPulseView.new C7103c(continuation);
             }
         }
-        Object obj = cVar.result;
-        Object coroutine_suspended = d0.w.h.c.getCOROUTINE_SUSPENDED();
-        int i2 = cVar.label;
+        Object obj = c7103c.result;
+        Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+        int i2 = c7103c.label;
         if (i2 == 0) {
-            l.throwOnFailure(obj);
+            Result3.throwOnFailure(obj);
             coroutineScope2 = coroutineScope;
             speakerPulseView2 = speakerPulseView;
         } else {
             if (i2 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            coroutineScope2 = (CoroutineScope) cVar.L$1;
-            SpeakerPulseView speakerPulseView3 = (SpeakerPulseView) cVar.L$0;
-            l.throwOnFailure(obj);
+            coroutineScope2 = (CoroutineScope) c7103c.L$1;
+            SpeakerPulseView speakerPulseView3 = (SpeakerPulseView) c7103c.L$0;
+            Result3.throwOnFailure(obj);
             speakerPulseView2 = speakerPulseView3;
         }
-        while (b.i.a.f.e.o.f.y0(coroutineScope2)) {
+        while (C3404f.m4364y0(coroutineScope2)) {
             CoroutineScope coroutineScope3 = coroutineScope2;
-            f0[] f0VarArr = {b.i.a.f.e.o.f.i(coroutineScope3, null, null, speakerPulseView2.new d(null), 3, null), b.i.a.f.e.o.f.i(coroutineScope3, null, null, speakerPulseView2.new e(null), 3, null)};
-            cVar.L$0 = speakerPulseView2;
-            cVar.L$1 = coroutineScope2;
-            cVar.label = 1;
-            if (b.i.a.f.e.o.f.l(f0VarArr, cVar) == coroutine_suspended) {
+            Deferred[] deferredArr = {C3404f.m4299i(coroutineScope3, null, null, speakerPulseView2.new C7104d(null), 3, null), C3404f.m4299i(coroutineScope3, null, null, speakerPulseView2.new C7105e(null), 3, null)};
+            c7103c.L$0 = speakerPulseView2;
+            c7103c.L$1 = coroutineScope2;
+            c7103c.label = 1;
+            if (C3404f.m4311l(deferredArr, c7103c) == coroutine_suspended) {
                 return coroutine_suspended;
             }
         }
-        return Unit.a;
+        return Unit.f27425a;
     }
 
-    public final void f() {
-        CoroutineScope coroutineScope = ViewCoroutineScopeKt.getCoroutineScope(this);
+    /* renamed from: f */
+    public final void m8579f() {
+        CoroutineScope coroutineScope = ViewCoroutineScope.getCoroutineScope(this);
         if (coroutineScope == null || AccessibilityUtils.INSTANCE.isReducedMotionEnabled()) {
             return;
         }
         this.hasEverAnimated = true;
         Job job = this.animationJob;
         if (job != null) {
-            b.i.a.f.e.o.f.t(job, null, 1, null);
+            C3404f.m4343t(job, null, 1, null);
         }
-        this.animationJob = b.i.a.f.e.o.f.H0(coroutineScope, null, null, new f(null), 3, null);
+        this.animationJob = C3404f.m4211H0(coroutineScope, null, null, new C7106f(null), 3, null);
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         if (this.isPulsing) {
-            f();
+            m8579f();
         }
     }
 
@@ -485,12 +507,12 @@ public final class SpeakerPulseView extends FrameLayout {
         if (this.isPulsing != z2) {
             this.isPulsing = z2;
             if (z2) {
-                f();
+                m8579f();
                 return;
             }
-            Iterator<Job> it = this.animationSupervisor.e().iterator();
+            Iterator<Job> it = this.animationSupervisor.mo10912e().iterator();
             while (it.hasNext()) {
-                it.next().b(null);
+                it.next().mo10911b(null);
             }
             if (this.hasEverAnimated) {
                 getInnerView().animate().setDuration(500L).alpha(0.0f);

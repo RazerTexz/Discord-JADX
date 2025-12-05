@@ -1,7 +1,5 @@
 package com.google.gson;
 
-import b.i.d.q.x.a;
-import b.i.d.q.x.b;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
@@ -10,28 +8,30 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
+import p007b.p225i.p408d.p410q.p411x.JsonTreeReader;
+import p007b.p225i.p408d.p410q.p411x.JsonTreeWriter;
 
 /* loaded from: classes3.dex */
 public abstract class TypeAdapter<T> {
 
-    /* renamed from: com.google.gson.TypeAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 extends TypeAdapter<T> {
-        public AnonymousClass1() {
+    /* renamed from: com.google.gson.TypeAdapter$1 */
+    public class C110991 extends TypeAdapter<T> {
+        public C110991() {
         }
 
         @Override // com.google.gson.TypeAdapter
         public T read(JsonReader jsonReader) throws IOException {
-            if (jsonReader.N() != JsonToken.NULL) {
+            if (jsonReader.mo6878N() != JsonToken.NULL) {
                 return (T) TypeAdapter.this.read(jsonReader);
             }
-            jsonReader.H();
+            jsonReader.mo6876H();
             return null;
         }
 
         @Override // com.google.gson.TypeAdapter
         public void write(JsonWriter jsonWriter, T t) throws IOException {
             if (t == null) {
-                jsonWriter.s();
+                jsonWriter.mo6905s();
             } else {
                 TypeAdapter.this.write(jsonWriter, t);
             }
@@ -44,14 +44,14 @@ public abstract class TypeAdapter<T> {
 
     public final T fromJsonTree(JsonElement jsonElement) {
         try {
-            return read(new a(jsonElement));
+            return read(new JsonTreeReader(jsonElement));
         } catch (IOException e) {
             throw new JsonIOException(e);
         }
     }
 
     public final TypeAdapter<T> nullSafe() {
-        return new AnonymousClass1();
+        return new C110991();
     }
 
     public abstract T read(JsonReader jsonReader) throws IOException;
@@ -62,9 +62,9 @@ public abstract class TypeAdapter<T> {
 
     public final JsonElement toJsonTree(T t) {
         try {
-            b bVar = new b();
-            write(bVar, t);
-            return bVar.L();
+            JsonTreeWriter jsonTreeWriter = new JsonTreeWriter();
+            write(jsonTreeWriter, t);
+            return jsonTreeWriter.m6897L();
         } catch (IOException e) {
             throw new JsonIOException(e);
         }

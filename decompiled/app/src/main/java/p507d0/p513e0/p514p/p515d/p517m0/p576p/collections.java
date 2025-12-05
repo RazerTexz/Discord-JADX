@@ -1,0 +1,72 @@
+package p507d0.p513e0.p514p.p515d.p517m0.p576p;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: collections.kt */
+/* renamed from: d0.e0.p.d.m0.p.a, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class collections {
+    /* renamed from: a */
+    public static final int m10042a(int i) {
+        if (i < 3) {
+            return 3;
+        }
+        return (i / 3) + i + 1;
+    }
+
+    public static final <T> void addIfNotNull(Collection<T> collection, T t) {
+        Intrinsics3.checkNotNullParameter(collection, "<this>");
+        if (t != null) {
+            collection.add(t);
+        }
+    }
+
+    public static final <T> List<T> compact(ArrayList<T> arrayList) {
+        Intrinsics3.checkNotNullParameter(arrayList, "<this>");
+        int size = arrayList.size();
+        if (size == 0) {
+            return Collections2.emptyList();
+        }
+        if (size == 1) {
+            return CollectionsJVM.listOf(_Collections.first((List) arrayList));
+        }
+        arrayList.trimToSize();
+        return arrayList;
+    }
+
+    public static final <K> Map<K, Integer> mapToIndex(Iterable<? extends K> iterable) {
+        Intrinsics3.checkNotNullParameter(iterable, "<this>");
+        LinkedHashMap linkedHashMap = new LinkedHashMap();
+        Iterator<? extends K> it = iterable.iterator();
+        int i = 0;
+        while (it.hasNext()) {
+            linkedHashMap.put(it.next(), Integer.valueOf(i));
+            i++;
+        }
+        return linkedHashMap;
+    }
+
+    public static final <K, V> HashMap<K, V> newHashMapWithExpectedSize(int i) {
+        return new HashMap<>(m10042a(i));
+    }
+
+    public static final <E> HashSet<E> newHashSetWithExpectedSize(int i) {
+        return new HashSet<>(m10042a(i));
+    }
+
+    public static final <E> LinkedHashSet<E> newLinkedHashSetWithExpectedSize(int i) {
+        return new LinkedHashSet<>(m10042a(i));
+    }
+}

@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Process;
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.d.b.a.a;
 import com.adjust.sdk.scheduler.SingleThreadCachedScheduler;
 import com.adjust.sdk.scheduler.ThreadExecutor;
 import com.adjust.sdk.scheduler.TimerCycle;
@@ -21,6 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import org.json.JSONObject;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ActivityHandler implements IActivityHandler {
@@ -58,9 +58,9 @@ public class ActivityHandler implements IActivityHandler {
     private SessionParameters sessionParameters;
     private String subscriptionPath;
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$1 */
+    public class RunnableC53191 implements Runnable {
+        public RunnableC53191() {
         }
 
         @Override // java.lang.Runnable
@@ -69,14 +69,14 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$10, reason: invalid class name */
-    public class AnonymousClass10 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$10 */
+    public class RunnableC532010 implements Runnable {
         public final /* synthetic */ long val$installBeginTimestampSeconds;
         public final /* synthetic */ String val$installReferrer;
         public final /* synthetic */ String val$referrerApi;
         public final /* synthetic */ long val$referrerClickTimestampSeconds;
 
-        public AnonymousClass10(String str, long j, long j2, String str2) {
+        public RunnableC532010(String str, long j, long j2, String str2) {
             this.val$installReferrer = str;
             this.val$referrerClickTimestampSeconds = j;
             this.val$installBeginTimestampSeconds = j2;
@@ -89,11 +89,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$11, reason: invalid class name */
-    public class AnonymousClass11 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$11 */
+    public class RunnableC532111 implements Runnable {
         public final /* synthetic */ EventResponseData val$eventResponseData;
 
-        public AnonymousClass11(EventResponseData eventResponseData) {
+        public RunnableC532111(EventResponseData eventResponseData) {
             this.val$eventResponseData = eventResponseData;
         }
 
@@ -103,11 +103,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$12, reason: invalid class name */
-    public class AnonymousClass12 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$12 */
+    public class RunnableC532212 implements Runnable {
         public final /* synthetic */ SdkClickResponseData val$sdkClickResponseData;
 
-        public AnonymousClass12(SdkClickResponseData sdkClickResponseData) {
+        public RunnableC532212(SdkClickResponseData sdkClickResponseData) {
             this.val$sdkClickResponseData = sdkClickResponseData;
         }
 
@@ -117,11 +117,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$13, reason: invalid class name */
-    public class AnonymousClass13 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$13 */
+    public class RunnableC532313 implements Runnable {
         public final /* synthetic */ SessionResponseData val$sessionResponseData;
 
-        public AnonymousClass13(SessionResponseData sessionResponseData) {
+        public RunnableC532313(SessionResponseData sessionResponseData) {
             this.val$sessionResponseData = sessionResponseData;
         }
 
@@ -131,11 +131,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$14, reason: invalid class name */
-    public class AnonymousClass14 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$14 */
+    public class RunnableC532414 implements Runnable {
         public final /* synthetic */ AttributionResponseData val$attributionResponseData;
 
-        public AnonymousClass14(AttributionResponseData attributionResponseData) {
+        public RunnableC532414(AttributionResponseData attributionResponseData) {
             this.val$attributionResponseData = attributionResponseData;
         }
 
@@ -145,9 +145,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$15, reason: invalid class name */
-    public class AnonymousClass15 implements Runnable {
-        public AnonymousClass15() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$15 */
+    public class RunnableC532515 implements Runnable {
+        public RunnableC532515() {
         }
 
         @Override // java.lang.Runnable
@@ -156,12 +156,12 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$16, reason: invalid class name */
-    public class AnonymousClass16 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$16 */
+    public class RunnableC532616 implements Runnable {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ String val$value;
 
-        public AnonymousClass16(String str, String str2) {
+        public RunnableC532616(String str, String str2) {
             this.val$key = str;
             this.val$value = str2;
         }
@@ -172,12 +172,12 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$17, reason: invalid class name */
-    public class AnonymousClass17 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$17 */
+    public class RunnableC532717 implements Runnable {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ String val$value;
 
-        public AnonymousClass17(String str, String str2) {
+        public RunnableC532717(String str, String str2) {
             this.val$key = str;
             this.val$value = str2;
         }
@@ -188,11 +188,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$18, reason: invalid class name */
-    public class AnonymousClass18 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$18 */
+    public class RunnableC532818 implements Runnable {
         public final /* synthetic */ String val$key;
 
-        public AnonymousClass18(String str) {
+        public RunnableC532818(String str) {
             this.val$key = str;
         }
 
@@ -202,11 +202,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$19, reason: invalid class name */
-    public class AnonymousClass19 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$19 */
+    public class RunnableC532919 implements Runnable {
         public final /* synthetic */ String val$key;
 
-        public AnonymousClass19(String str) {
+        public RunnableC532919(String str) {
             this.val$key = str;
         }
 
@@ -216,9 +216,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$2 */
+    public class RunnableC53302 implements Runnable {
+        public RunnableC53302() {
         }
 
         @Override // java.lang.Runnable
@@ -231,9 +231,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$20, reason: invalid class name */
-    public class AnonymousClass20 implements Runnable {
-        public AnonymousClass20() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$20 */
+    public class RunnableC533120 implements Runnable {
+        public RunnableC533120() {
         }
 
         @Override // java.lang.Runnable
@@ -242,9 +242,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$21, reason: invalid class name */
-    public class AnonymousClass21 implements Runnable {
-        public AnonymousClass21() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$21 */
+    public class RunnableC533221 implements Runnable {
+        public RunnableC533221() {
         }
 
         @Override // java.lang.Runnable
@@ -253,12 +253,12 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$22, reason: invalid class name */
-    public class AnonymousClass22 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$22 */
+    public class RunnableC533322 implements Runnable {
         public final /* synthetic */ boolean val$preSaved;
         public final /* synthetic */ String val$token;
 
-        public AnonymousClass22(boolean z2, String str) {
+        public RunnableC533322(boolean z2, String str) {
             this.val$preSaved = z2;
             this.val$token = str;
         }
@@ -275,9 +275,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$23, reason: invalid class name */
-    public class AnonymousClass23 implements Runnable {
-        public AnonymousClass23() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$23 */
+    public class RunnableC533423 implements Runnable {
+        public RunnableC533423() {
         }
 
         @Override // java.lang.Runnable
@@ -286,9 +286,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$24, reason: invalid class name */
-    public class AnonymousClass24 implements Runnable {
-        public AnonymousClass24() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$24 */
+    public class RunnableC533524 implements Runnable {
+        public RunnableC533524() {
         }
 
         @Override // java.lang.Runnable
@@ -297,12 +297,12 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$25, reason: invalid class name */
-    public class AnonymousClass25 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$25 */
+    public class RunnableC533625 implements Runnable {
         public final /* synthetic */ JSONObject val$adRevenueJson;
         public final /* synthetic */ String val$source;
 
-        public AnonymousClass25(String str, JSONObject jSONObject) {
+        public RunnableC533625(String str, JSONObject jSONObject) {
             this.val$source = str;
             this.val$adRevenueJson = jSONObject;
         }
@@ -313,11 +313,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$26, reason: invalid class name */
-    public class AnonymousClass26 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$26 */
+    public class RunnableC533726 implements Runnable {
         public final /* synthetic */ AdjustPlayStoreSubscription val$subscription;
 
-        public AnonymousClass26(AdjustPlayStoreSubscription adjustPlayStoreSubscription) {
+        public RunnableC533726(AdjustPlayStoreSubscription adjustPlayStoreSubscription) {
             this.val$subscription = adjustPlayStoreSubscription;
         }
 
@@ -327,9 +327,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$27, reason: invalid class name */
-    public class AnonymousClass27 implements Runnable {
-        public AnonymousClass27() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$27 */
+    public class RunnableC533827 implements Runnable {
+        public RunnableC533827() {
         }
 
         @Override // java.lang.Runnable
@@ -338,9 +338,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$28, reason: invalid class name */
-    public class AnonymousClass28 implements Runnable {
-        public AnonymousClass28() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$28 */
+    public class RunnableC533928 implements Runnable {
+        public RunnableC533928() {
         }
 
         @Override // java.lang.Runnable
@@ -349,9 +349,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$29, reason: invalid class name */
-    public class AnonymousClass29 implements Runnable {
-        public AnonymousClass29() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$29 */
+    public class RunnableC534029 implements Runnable {
+        public RunnableC534029() {
         }
 
         @Override // java.lang.Runnable
@@ -360,9 +360,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
-        public AnonymousClass3() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$3 */
+    public class RunnableC53413 implements Runnable {
+        public RunnableC53413() {
         }
 
         @Override // java.lang.Runnable
@@ -374,9 +374,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$30, reason: invalid class name */
-    public class AnonymousClass30 implements IRunActivityHandler {
-        public AnonymousClass30() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$30 */
+    public class C534230 implements IRunActivityHandler {
+        public C534230() {
         }
 
         @Override // com.adjust.sdk.IRunActivityHandler
@@ -385,9 +385,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$31, reason: invalid class name */
-    public class AnonymousClass31 implements Runnable {
-        public AnonymousClass31() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$31 */
+    public class RunnableC534331 implements Runnable {
+        public RunnableC534331() {
         }
 
         @Override // java.lang.Runnable
@@ -396,9 +396,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$32, reason: invalid class name */
-    public class AnonymousClass32 implements Runnable {
-        public AnonymousClass32() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$32 */
+    public class RunnableC534432 implements Runnable {
+        public RunnableC534432() {
         }
 
         @Override // java.lang.Runnable
@@ -407,9 +407,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$33, reason: invalid class name */
-    public class AnonymousClass33 implements Runnable {
-        public AnonymousClass33() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$33 */
+    public class RunnableC534533 implements Runnable {
+        public RunnableC534533() {
         }
 
         @Override // java.lang.Runnable
@@ -418,9 +418,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$34, reason: invalid class name */
-    public class AnonymousClass34 implements InstallReferrerReadListener {
-        public AnonymousClass34() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$34 */
+    public class C534634 implements InstallReferrerReadListener {
+        public C534634() {
         }
 
         @Override // com.adjust.sdk.InstallReferrerReadListener
@@ -429,9 +429,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$35, reason: invalid class name */
-    public class AnonymousClass35 implements InstallReferrerReadListener {
-        public AnonymousClass35() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$35 */
+    public class C534735 implements InstallReferrerReadListener {
+        public C534735() {
         }
 
         @Override // com.adjust.sdk.InstallReferrerReadListener
@@ -440,11 +440,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$36, reason: invalid class name */
-    public class AnonymousClass36 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$36 */
+    public class RunnableC534836 implements Runnable {
         public final /* synthetic */ EventResponseData val$eventResponseData;
 
-        public AnonymousClass36(EventResponseData eventResponseData) {
+        public RunnableC534836(EventResponseData eventResponseData) {
             this.val$eventResponseData = eventResponseData;
         }
 
@@ -457,11 +457,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$37, reason: invalid class name */
-    public class AnonymousClass37 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$37 */
+    public class RunnableC534937 implements Runnable {
         public final /* synthetic */ EventResponseData val$eventResponseData;
 
-        public AnonymousClass37(EventResponseData eventResponseData) {
+        public RunnableC534937(EventResponseData eventResponseData) {
             this.val$eventResponseData = eventResponseData;
         }
 
@@ -474,11 +474,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$38, reason: invalid class name */
-    public class AnonymousClass38 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$38 */
+    public class RunnableC535038 implements Runnable {
         public final /* synthetic */ SessionResponseData val$sessionResponseData;
 
-        public AnonymousClass38(SessionResponseData sessionResponseData) {
+        public RunnableC535038(SessionResponseData sessionResponseData) {
             this.val$sessionResponseData = sessionResponseData;
         }
 
@@ -491,11 +491,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$39, reason: invalid class name */
-    public class AnonymousClass39 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$39 */
+    public class RunnableC535139 implements Runnable {
         public final /* synthetic */ SessionResponseData val$sessionResponseData;
 
-        public AnonymousClass39(SessionResponseData sessionResponseData) {
+        public RunnableC535139(SessionResponseData sessionResponseData) {
             this.val$sessionResponseData = sessionResponseData;
         }
 
@@ -508,11 +508,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$4, reason: invalid class name */
-    public class AnonymousClass4 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$4 */
+    public class RunnableC53524 implements Runnable {
         public final /* synthetic */ AdjustEvent val$event;
 
-        public AnonymousClass4(AdjustEvent adjustEvent) {
+        public RunnableC53524(AdjustEvent adjustEvent) {
             this.val$event = adjustEvent;
         }
 
@@ -526,9 +526,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$40, reason: invalid class name */
-    public class AnonymousClass40 implements Runnable {
-        public AnonymousClass40() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$40 */
+    public class RunnableC535340 implements Runnable {
+        public RunnableC535340() {
         }
 
         @Override // java.lang.Runnable
@@ -540,12 +540,12 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$41, reason: invalid class name */
-    public class AnonymousClass41 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$41 */
+    public class RunnableC535441 implements Runnable {
         public final /* synthetic */ Uri val$deeplink;
         public final /* synthetic */ Intent val$deeplinkIntent;
 
-        public AnonymousClass41(Uri uri, Intent intent) {
+        public RunnableC535441(Uri uri, Intent intent) {
             this.val$deeplink = uri;
             this.val$deeplinkIntent = intent;
         }
@@ -561,11 +561,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$5, reason: invalid class name */
-    public class AnonymousClass5 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$5 */
+    public class RunnableC53555 implements Runnable {
         public final /* synthetic */ boolean val$enabled;
 
-        public AnonymousClass5(boolean z2) {
+        public RunnableC53555(boolean z2) {
             this.val$enabled = z2;
         }
 
@@ -575,11 +575,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$6, reason: invalid class name */
-    public class AnonymousClass6 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$6 */
+    public class RunnableC53566 implements Runnable {
         public final /* synthetic */ boolean val$offline;
 
-        public AnonymousClass6(boolean z2) {
+        public RunnableC53566(boolean z2) {
             this.val$offline = z2;
         }
 
@@ -589,12 +589,12 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$7, reason: invalid class name */
-    public class AnonymousClass7 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$7 */
+    public class RunnableC53577 implements Runnable {
         public final /* synthetic */ long val$clickTime;
         public final /* synthetic */ Uri val$url;
 
-        public AnonymousClass7(Uri uri, long j) {
+        public RunnableC53577(Uri uri, long j) {
             this.val$url = uri;
             this.val$clickTime = j;
         }
@@ -605,11 +605,11 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$8, reason: invalid class name */
-    public class AnonymousClass8 implements Runnable {
+    /* renamed from: com.adjust.sdk.ActivityHandler$8 */
+    public class RunnableC53588 implements Runnable {
         public final /* synthetic */ boolean val$askingAttribution;
 
-        public AnonymousClass8(boolean z2) {
+        public RunnableC53588(boolean z2) {
             this.val$askingAttribution = z2;
         }
 
@@ -619,9 +619,9 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$9, reason: invalid class name */
-    public class AnonymousClass9 implements Runnable {
-        public AnonymousClass9() {
+    /* renamed from: com.adjust.sdk.ActivityHandler$9 */
+    public class RunnableC53599 implements Runnable {
+        public RunnableC53599() {
         }
 
         @Override // java.lang.Runnable
@@ -717,7 +717,7 @@ public class ActivityHandler implements IActivityHandler {
         internalState2.updatePackages = false;
         internalState2.sessionResponseProcessed = false;
         internalState2.firstSdkStart = false;
-        this.executor.submit(new AnonymousClass1());
+        this.executor.submit(new RunnableC53191());
     }
 
     public static /* synthetic */ void access$000(ActivityHandler activityHandler) {
@@ -1117,7 +1117,7 @@ public class ActivityHandler implements IActivityHandler {
             if (adjustConfig.preLaunchActionsArray == null) {
                 adjustConfig.preLaunchActionsArray = new ArrayList();
             }
-            this.adjustConfig.preLaunchActionsArray.add(new AnonymousClass30());
+            this.adjustConfig.preLaunchActionsArray.add(new C534230());
         }
         if (this.internalState.hasFirstSdkStartOcurred()) {
             InternalState internalState = this.internalState;
@@ -1167,15 +1167,15 @@ public class ActivityHandler implements IActivityHandler {
                 disableThirdPartySharing();
             }
         }
-        this.foregroundTimer = new TimerCycle(new AnonymousClass31(), FOREGROUND_TIMER_START, FOREGROUND_TIMER_INTERVAL, FOREGROUND_TIMER_NAME);
+        this.foregroundTimer = new TimerCycle(new RunnableC534331(), FOREGROUND_TIMER_START, FOREGROUND_TIMER_INTERVAL, FOREGROUND_TIMER_NAME);
         if (this.adjustConfig.sendInBackground) {
             this.logger.info("Send in background configured", new Object[0]);
-            this.backgroundTimer = new TimerOnce(new AnonymousClass32(), BACKGROUND_TIMER_NAME);
+            this.backgroundTimer = new TimerOnce(new RunnableC534432(), BACKGROUND_TIMER_NAME);
         }
         if (this.internalState.hasFirstSdkStartNotOcurred() && (d = this.adjustConfig.delayStart) != null && d.doubleValue() > 0.0d) {
             this.logger.info("Delay start configured", new Object[0]);
             this.internalState.delayStart = true;
-            this.delayStartTimer = new TimerOnce(new AnonymousClass33(), DELAY_START_TIMER_NAME);
+            this.delayStartTimer = new TimerOnce(new RunnableC534533(), DELAY_START_TIMER_NAME);
         }
         UtilNetworking.setUserAgent(this.adjustConfig.userAgent);
         AdjustConfig adjustConfig3 = this.adjustConfig;
@@ -1188,8 +1188,8 @@ public class ActivityHandler implements IActivityHandler {
         if (isToUpdatePackagesI()) {
             updatePackagesI();
         }
-        this.installReferrer = new InstallReferrer(this.adjustConfig.context, new AnonymousClass34());
-        this.installReferrerHuawei = new InstallReferrerHuawei(this.adjustConfig.context, new AnonymousClass35());
+        this.installReferrer = new InstallReferrer(this.adjustConfig.context, new C534634());
+        this.installReferrerHuawei = new InstallReferrerHuawei(this.adjustConfig.context, new C534735());
         preLaunchActionsI(this.adjustConfig.preLaunchActionsArray);
         sendReftagReferrerI();
     }
@@ -1208,7 +1208,7 @@ public class ActivityHandler implements IActivityHandler {
         if (this.adjustConfig.onAttributionChangedListener == null) {
             return;
         }
-        handler.post(new AnonymousClass40());
+        handler.post(new RunnableC535340());
     }
 
     private void launchAttributionResponseTasksI(AttributionResponseData attributionResponseData) {
@@ -1235,13 +1235,13 @@ public class ActivityHandler implements IActivityHandler {
         boolean z2 = eventResponseData.success;
         if (z2 && this.adjustConfig.onEventTrackingSucceededListener != null) {
             this.logger.debug("Launching success event tracking listener", new Object[0]);
-            handler.post(new AnonymousClass36(eventResponseData));
+            handler.post(new RunnableC534836(eventResponseData));
         } else {
             if (z2 || this.adjustConfig.onEventTrackingFailedListener == null) {
                 return;
             }
             this.logger.debug("Launching failed event tracking listener", new Object[0]);
-            handler.post(new AnonymousClass37(eventResponseData));
+            handler.post(new RunnableC534937(eventResponseData));
         }
     }
 
@@ -1257,13 +1257,13 @@ public class ActivityHandler implements IActivityHandler {
         boolean z2 = sessionResponseData.success;
         if (z2 && this.adjustConfig.onSessionTrackingSucceededListener != null) {
             this.logger.debug("Launching success session tracking listener", new Object[0]);
-            handler.post(new AnonymousClass38(sessionResponseData));
+            handler.post(new RunnableC535038(sessionResponseData));
         } else {
             if (z2 || this.adjustConfig.onSessionTrackingFailedListener == null) {
                 return;
             }
             this.logger.debug("Launching failed session tracking listener", new Object[0]);
-            handler.post(new AnonymousClass39(sessionResponseData));
+            handler.post(new RunnableC535139(sessionResponseData));
         }
     }
 
@@ -1312,7 +1312,7 @@ public class ActivityHandler implements IActivityHandler {
             return;
         }
         this.logger.info("Deferred deeplink received (%s)", uri);
-        handler.post(new AnonymousClass41(uri, createDeeplinkIntentI(uri)));
+        handler.post(new RunnableC535441(uri, createDeeplinkIntentI(uri)));
     }
 
     private void processCachedDeeplinkI() {
@@ -1407,10 +1407,10 @@ public class ActivityHandler implements IActivityHandler {
                 return;
             }
             ILogger iLogger = this.logger;
-            StringBuilder sbU = a.U("Deep link (");
-            sbU.append(uri.toString());
-            sbU.append(") processing skipped");
-            iLogger.debug(sbU.toString(), new Object[0]);
+            StringBuilder sbM833U = outline.m833U("Deep link (");
+            sbM833U.append(uri.toString());
+            sbM833U.append(") processing skipped");
+            iLogger.debug(sbM833U.toString(), new Object[0]);
         }
     }
 
@@ -1741,7 +1741,7 @@ public class ActivityHandler implements IActivityHandler {
         } else if (pausedI(true)) {
             this.logger.info(str2, new Object[0]);
         } else {
-            this.logger.info(a.w(str2, ", except the Sdk Click Handler"), new Object[0]);
+            this.logger.info(outline.m883w(str2, ", except the Sdk Click Handler"), new Object[0]);
         }
         updateHandlersStatusAndSendI();
     }
@@ -1788,7 +1788,7 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void addSessionCallbackParameter(String str, String str2) {
-        this.executor.submit(new AnonymousClass16(str, str2));
+        this.executor.submit(new RunnableC532616(str, str2));
     }
 
     public void addSessionCallbackParameterI(String str, String str2) {
@@ -1812,7 +1812,7 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void addSessionPartnerParameter(String str, String str2) {
-        this.executor.submit(new AnonymousClass17(str, str2));
+        this.executor.submit(new RunnableC532717(str, str2));
     }
 
     public void addSessionPartnerParameterI(String str, String str2) {
@@ -1835,12 +1835,12 @@ public class ActivityHandler implements IActivityHandler {
     }
 
     public void backgroundTimerFired() {
-        this.executor.submit(new AnonymousClass29());
+        this.executor.submit(new RunnableC534029());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void disableThirdPartySharing() {
-        this.executor.submit(new AnonymousClass24());
+        this.executor.submit(new RunnableC533524());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
@@ -1859,12 +1859,12 @@ public class ActivityHandler implements IActivityHandler {
     }
 
     public void foregroundTimerFired() {
-        this.executor.submit(new AnonymousClass28());
+        this.executor.submit(new RunnableC533928());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void gdprForgetMe() {
-        this.executor.submit(new AnonymousClass23());
+        this.executor.submit(new RunnableC533423());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
@@ -1927,7 +1927,7 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void gotOptOutResponse() {
-        this.executor.submit(new AnonymousClass27());
+        this.executor.submit(new RunnableC533827());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
@@ -1942,44 +1942,44 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void launchAttributionResponseTasks(AttributionResponseData attributionResponseData) {
-        this.executor.submit(new AnonymousClass14(attributionResponseData));
+        this.executor.submit(new RunnableC532414(attributionResponseData));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void launchEventResponseTasks(EventResponseData eventResponseData) {
-        this.executor.submit(new AnonymousClass11(eventResponseData));
+        this.executor.submit(new RunnableC532111(eventResponseData));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void launchSdkClickResponseTasks(SdkClickResponseData sdkClickResponseData) {
-        this.executor.submit(new AnonymousClass12(sdkClickResponseData));
+        this.executor.submit(new RunnableC532212(sdkClickResponseData));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void launchSessionResponseTasks(SessionResponseData sessionResponseData) {
-        this.executor.submit(new AnonymousClass13(sessionResponseData));
+        this.executor.submit(new RunnableC532313(sessionResponseData));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void onPause() {
         this.internalState.background = true;
-        this.executor.submit(new AnonymousClass3());
+        this.executor.submit(new RunnableC53413());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void onResume() {
         this.internalState.background = false;
-        this.executor.submit(new AnonymousClass2());
+        this.executor.submit(new RunnableC53302());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void readOpenUrl(Uri uri, long j) {
-        this.executor.submit(new AnonymousClass7(uri, j));
+        this.executor.submit(new RunnableC53577(uri, j));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void removeSessionCallbackParameter(String str) {
-        this.executor.submit(new AnonymousClass18(str));
+        this.executor.submit(new RunnableC532818(str));
     }
 
     public void removeSessionCallbackParameterI(String str) {
@@ -1998,7 +1998,7 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void removeSessionPartnerParameter(String str) {
-        this.executor.submit(new AnonymousClass19(str));
+        this.executor.submit(new RunnableC532919(str));
     }
 
     public void removeSessionPartnerParameterI(String str) {
@@ -2017,7 +2017,7 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void resetSessionCallbackParameters() {
-        this.executor.submit(new AnonymousClass20());
+        this.executor.submit(new RunnableC533120());
     }
 
     public void resetSessionCallbackParametersI() {
@@ -2030,7 +2030,7 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void resetSessionPartnerParameters() {
-        this.executor.submit(new AnonymousClass21());
+        this.executor.submit(new RunnableC533221());
     }
 
     public void resetSessionPartnerParametersI() {
@@ -2043,37 +2043,37 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void sendFirstPackages() {
-        this.executor.submit(new AnonymousClass15());
+        this.executor.submit(new RunnableC532515());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void sendInstallReferrer(String str, long j, long j2, String str2) {
-        this.executor.submit(new AnonymousClass10(str, j, j2, str2));
+        this.executor.submit(new RunnableC532010(str, j, j2, str2));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void sendReftagReferrer() {
-        this.executor.submit(new AnonymousClass9());
+        this.executor.submit(new RunnableC53599());
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void setAskingAttribution(boolean z2) {
-        this.executor.submit(new AnonymousClass8(z2));
+        this.executor.submit(new RunnableC53588(z2));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void setEnabled(boolean z2) {
-        this.executor.submit(new AnonymousClass5(z2));
+        this.executor.submit(new RunnableC53555(z2));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void setOfflineMode(boolean z2) {
-        this.executor.submit(new AnonymousClass6(z2));
+        this.executor.submit(new RunnableC53566(z2));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void setPushToken(String str, boolean z2) {
-        this.executor.submit(new AnonymousClass22(z2, str));
+        this.executor.submit(new RunnableC533322(z2, str));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
@@ -2136,17 +2136,17 @@ public class ActivityHandler implements IActivityHandler {
 
     @Override // com.adjust.sdk.IActivityHandler
     public void trackAdRevenue(String str, JSONObject jSONObject) {
-        this.executor.submit(new AnonymousClass25(str, jSONObject));
+        this.executor.submit(new RunnableC533625(str, jSONObject));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void trackEvent(AdjustEvent adjustEvent) {
-        this.executor.submit(new AnonymousClass4(adjustEvent));
+        this.executor.submit(new RunnableC53524(adjustEvent));
     }
 
     @Override // com.adjust.sdk.IActivityHandler
     public void trackPlayStoreSubscription(AdjustPlayStoreSubscription adjustPlayStoreSubscription) {
-        this.executor.submit(new AnonymousClass26(adjustPlayStoreSubscription));
+        this.executor.submit(new RunnableC533726(adjustPlayStoreSubscription));
     }
 
     @Override // com.adjust.sdk.IActivityHandler

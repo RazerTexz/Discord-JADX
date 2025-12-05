@@ -1,7 +1,7 @@
 package co.discord.media_engine.internal;
 
-import a0.a.a.b;
-import b.d.b.a.a;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -96,21 +96,21 @@ public final /* data */ class InboundRtpStats {
     }
 
     public int hashCode() {
-        return b.a(this.payloadBytes) + ((b.a(this.paddingBytes) + ((b.a(this.headerBytes) + ((((b.a(this.jitter) + (b.a(this.packets) * 31)) * 31) + this.packetsLost) * 31)) * 31)) * 31);
+        return C0002b.m3a(this.payloadBytes) + ((C0002b.m3a(this.paddingBytes) + ((C0002b.m3a(this.headerBytes) + ((((C0002b.m3a(this.jitter) + (C0002b.m3a(this.packets) * 31)) * 31) + this.packetsLost) * 31)) * 31)) * 31);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("InboundRtpStats(packets=");
-        sbU.append(this.packets);
-        sbU.append(", jitter=");
-        sbU.append(this.jitter);
-        sbU.append(", packetsLost=");
-        sbU.append(this.packetsLost);
-        sbU.append(", headerBytes=");
-        sbU.append(this.headerBytes);
-        sbU.append(", paddingBytes=");
-        sbU.append(this.paddingBytes);
-        sbU.append(", payloadBytes=");
-        return a.C(sbU, this.payloadBytes, ")");
+        StringBuilder sbM833U = outline.m833U("InboundRtpStats(packets=");
+        sbM833U.append(this.packets);
+        sbM833U.append(", jitter=");
+        sbM833U.append(this.jitter);
+        sbM833U.append(", packetsLost=");
+        sbM833U.append(this.packetsLost);
+        sbM833U.append(", headerBytes=");
+        sbM833U.append(this.headerBytes);
+        sbM833U.append(", paddingBytes=");
+        sbM833U.append(this.paddingBytes);
+        sbM833U.append(", payloadBytes=");
+        return outline.m815C(sbM833U, this.payloadBytes, ")");
     }
 }

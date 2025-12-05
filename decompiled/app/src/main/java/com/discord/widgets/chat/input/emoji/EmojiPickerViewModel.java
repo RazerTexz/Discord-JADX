@@ -1,12 +1,9 @@
 package com.discord.widgets.chat.input.emoji;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.annotation.StringRes;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.emoji.Emoji;
 import com.discord.models.domain.emoji.EmojiCategory;
@@ -23,17 +20,10 @@ import com.discord.stores.StoreUserSettings;
 import com.discord.utilities.analytics.SearchType;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.input.emoji.EmojiCategoryItem;
 import com.discord.widgets.chat.input.emoji.EmojiPickerContextType;
 import com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter;
-import d0.f0.q;
-import d0.g;
-import d0.t.n;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.l.e.k;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -45,19 +35,29 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.Lazy;
-import kotlin.Pair;
+import kotlin.Tuples2;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.sequences.Sequence;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
-import rx.subjects.PublishSubject;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p578f0._Sequences2;
+import p507d0.p580t.Collections2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: EmojiPickerViewModel.kt */
 /* loaded from: classes2.dex */
-public class EmojiPickerViewModel extends d0<ViewState> {
+public class EmojiPickerViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -70,21 +70,21 @@ public class EmojiPickerViewModel extends d0<ViewState> {
     private final StoreAnalytics storeAnalytics;
 
     /* compiled from: EmojiPickerViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.EmojiPickerViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.emoji.EmojiPickerViewModel$1 */
+    public static final class C78121 extends Lambda implements Function1<StoreState, Unit> {
+        public C78121() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             EmojiPickerViewModel.access$handleStoreState(EmojiPickerViewModel.this, storeState);
         }
     }
@@ -100,7 +100,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
 
                 /* renamed from: Companion, reason: from kotlin metadata */
                 public static final Companion INSTANCE = new Companion(null);
-                private static final Partitioned Empty = new Partitioned(n.emptyList(), n.emptyList());
+                private static final Partitioned Empty = new Partitioned(Collections2.emptyList(), Collections2.emptyList());
                 private final List<MGRecyclerDataPayload> premiumItems;
                 private final List<MGRecyclerDataPayload> regularItems;
 
@@ -122,8 +122,8 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                 /* JADX WARN: Multi-variable type inference failed */
                 public Partitioned(List<? extends MGRecyclerDataPayload> list, List<? extends MGRecyclerDataPayload> list2) {
                     super(null);
-                    m.checkNotNullParameter(list, "regularItems");
-                    m.checkNotNullParameter(list2, "premiumItems");
+                    Intrinsics3.checkNotNullParameter(list, "regularItems");
+                    Intrinsics3.checkNotNullParameter(list2, "premiumItems");
                     this.regularItems = list;
                     this.premiumItems = list2;
                 }
@@ -152,8 +152,8 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                 }
 
                 public final Partitioned copy(List<? extends MGRecyclerDataPayload> regularItems, List<? extends MGRecyclerDataPayload> premiumItems) {
-                    m.checkNotNullParameter(regularItems, "regularItems");
-                    m.checkNotNullParameter(premiumItems, "premiumItems");
+                    Intrinsics3.checkNotNullParameter(regularItems, "regularItems");
+                    Intrinsics3.checkNotNullParameter(premiumItems, "premiumItems");
                     return new Partitioned(regularItems, premiumItems);
                 }
 
@@ -165,7 +165,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                         return false;
                     }
                     Partitioned partitioned = (Partitioned) other;
-                    return m.areEqual(this.regularItems, partitioned.regularItems) && m.areEqual(this.premiumItems, partitioned.premiumItems);
+                    return Intrinsics3.areEqual(this.regularItems, partitioned.regularItems) && Intrinsics3.areEqual(this.premiumItems, partitioned.premiumItems);
                 }
 
                 public final List<MGRecyclerDataPayload> getPremiumItems() {
@@ -184,16 +184,16 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("Partitioned(regularItems=");
-                    sbU.append(this.regularItems);
-                    sbU.append(", premiumItems=");
-                    return a.L(sbU, this.premiumItems, ")");
+                    StringBuilder sbM833U = outline.m833U("Partitioned(regularItems=");
+                    sbM833U.append(this.regularItems);
+                    sbM833U.append(", premiumItems=");
+                    return outline.m824L(sbM833U, this.premiumItems, ")");
                 }
 
                 /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
-                public Partitioned(Pair<? extends List<? extends MGRecyclerDataPayload>, ? extends List<? extends MGRecyclerDataPayload>> pair) {
-                    this(pair.getFirst(), pair.getSecond());
-                    m.checkNotNullParameter(pair, "p");
+                public Partitioned(Tuples2<? extends List<? extends MGRecyclerDataPayload>, ? extends List<? extends MGRecyclerDataPayload>> tuples2) {
+                    this(tuples2.getFirst(), tuples2.getSecond());
+                    Intrinsics3.checkNotNullParameter(tuples2, "p");
                 }
             }
 
@@ -202,7 +202,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
 
                 /* renamed from: Companion, reason: from kotlin metadata */
                 public static final Companion INSTANCE = new Companion(null);
-                private static final Regular Empty = new Regular(n.emptyList());
+                private static final Regular Empty = new Regular(Collections2.emptyList());
                 private final List<MGRecyclerDataPayload> items;
 
                 /* compiled from: EmojiPickerViewModel.kt */
@@ -223,7 +223,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                 /* JADX WARN: Multi-variable type inference failed */
                 public Regular(List<? extends MGRecyclerDataPayload> list) {
                     super(null);
-                    m.checkNotNullParameter(list, "items");
+                    Intrinsics3.checkNotNullParameter(list, "items");
                     this.items = list;
                 }
 
@@ -244,13 +244,13 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                 }
 
                 public final Regular copy(List<? extends MGRecyclerDataPayload> items) {
-                    m.checkNotNullParameter(items, "items");
+                    Intrinsics3.checkNotNullParameter(items, "items");
                     return new Regular(items);
                 }
 
                 public boolean equals(Object other) {
                     if (this != other) {
-                        return (other instanceof Regular) && m.areEqual(this.items, ((Regular) other).items);
+                        return (other instanceof Regular) && Intrinsics3.areEqual(this.items, ((Regular) other).items);
                     }
                     return true;
                 }
@@ -268,7 +268,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                 }
 
                 public String toString() {
-                    return a.L(a.U("Regular(items="), this.items, ")");
+                    return outline.m824L(outline.m833U("Regular(items="), this.items, ")");
                 }
             }
 
@@ -293,11 +293,11 @@ public class EmojiPickerViewModel extends d0<ViewState> {
 
         private final EmojiItems buildEmojiListItems(Collection<? extends Emoji> emojis, Function1<? super Long, Guild> getGuild, String searchInputLower, boolean allowEmojisToAnimate, boolean partition, boolean includeUnavailable) {
             if (emojis == null) {
-                emojis = n.emptyList();
+                emojis = Collections2.emptyList();
             }
-            Sequence sequenceMapNotNull = q.mapNotNull(q.filter(u.asSequence(emojis), new EmojiPickerViewModel$Companion$buildEmojiListItems$items$1(includeUnavailable)), new EmojiPickerViewModel$Companion$buildEmojiListItems$items$2(searchInputLower, getGuild, allowEmojisToAnimate));
+            Sequence sequenceMapNotNull = _Sequences2.mapNotNull(_Sequences2.filter(_Collections.asSequence(emojis), new EmojiPickerViewModel$Companion$buildEmojiListItems$items$1(includeUnavailable)), new EmojiPickerViewModel$Companion$buildEmojiListItems$items$2(searchInputLower, getGuild, allowEmojisToAnimate));
             if (!partition) {
-                return new EmojiItems.Regular(q.toList(sequenceMapNotNull));
+                return new EmojiItems.Regular(_Sequences2.toList(sequenceMapNotNull));
             }
             ArrayList arrayList = new ArrayList();
             ArrayList arrayList2 = new ArrayList();
@@ -308,7 +308,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                     arrayList2.add(obj);
                 }
             }
-            return new EmojiItems.Partitioned(new Pair(arrayList, arrayList2));
+            return new EmojiItems.Partitioned(new Tuples2(arrayList, arrayList2));
         }
 
         /* JADX WARN: Removed duplicated region for block: B:6:0x002b  */
@@ -319,25 +319,25 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             EmojiItems emojiItemsBuildEmojiListItems;
             if (guild != null) {
                 List<Emoji> list = emojiSet.customEmojis.get(Long.valueOf(guild.getId()));
-                emojiItemsBuildEmojiListItems = list != null ? EmojiPickerViewModel.INSTANCE.buildEmojiListItems(list, new EmojiPickerViewModel$Companion$buildGuildEmojiListItems$$inlined$let$lambda$1(guild, searchInputLower, allowEmojisToAnimate, partition, includeUnavailable), searchInputLower, allowEmojisToAnimate, partition, includeUnavailable) : null;
+                emojiItemsBuildEmojiListItems = list != null ? EmojiPickerViewModel.INSTANCE.buildEmojiListItems(list, new C7813x8d1f8ac3(guild, searchInputLower, allowEmojisToAnimate, partition, includeUnavailable), searchInputLower, allowEmojisToAnimate, partition, includeUnavailable) : null;
             }
             return emojiItemsBuildEmojiListItems != null ? emojiItemsBuildEmojiListItems : partition ? EmojiItems.Partitioned.INSTANCE.getEmpty() : EmojiItems.Regular.INSTANCE.getEmpty();
         }
 
         private final Observable<StoreEmoji.EmojiContext> getEmojiContextObservable(EmojiPickerContextType emojiPickerContextType, StoreChannelsSelected storeChannelsSelected) {
-            if (m.areEqual(emojiPickerContextType, EmojiPickerContextType.Global.INSTANCE)) {
-                k kVar = new k(StoreEmoji.EmojiContext.Global.INSTANCE);
-                m.checkNotNullExpressionValue(kVar, "Observable.just(\n       …ontext.Global\n          )");
-                return kVar;
+            if (Intrinsics3.areEqual(emojiPickerContextType, EmojiPickerContextType.Global.INSTANCE)) {
+                ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(StoreEmoji.EmojiContext.Global.INSTANCE);
+                Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(\n       …ontext.Global\n          )");
+                return scalarSynchronousObservable;
             }
             if (emojiPickerContextType instanceof EmojiPickerContextType.Guild) {
-                k kVar2 = new k(new StoreEmoji.EmojiContext.Guild(((EmojiPickerContextType.Guild) emojiPickerContextType).getGuildId()));
-                m.checkNotNullExpressionValue(kVar2, "Observable.just(\n       …pe.guildId)\n            )");
-                return kVar2;
+                ScalarSynchronousObservable scalarSynchronousObservable2 = new ScalarSynchronousObservable(new StoreEmoji.EmojiContext.Guild(((EmojiPickerContextType.Guild) emojiPickerContextType).getGuildId()));
+                Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable2, "Observable.just(\n       …pe.guildId)\n            )");
+                return scalarSynchronousObservable2;
             }
-            Observable observableG = storeChannelsSelected.observeResolvedSelectedChannel().G(EmojiPickerViewModel$Companion$getEmojiContextObservable$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableG, "storeChannelsSelected.ob…      }\n                }");
-            return observableG;
+            Observable observableM11083G = storeChannelsSelected.observeResolvedSelectedChannel().m11083G(EmojiPickerViewModel$Companion$getEmojiContextObservable$1.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11083G, "storeChannelsSelected.ob…      }\n                }");
+            return observableM11083G;
         }
 
         public static /* synthetic */ Observable getEmojiContextObservable$default(Companion companion, EmojiPickerContextType emojiPickerContextType, StoreChannelsSelected storeChannelsSelected, int i, Object obj) {
@@ -352,16 +352,16 @@ public class EmojiPickerViewModel extends d0<ViewState> {
         }
 
         public final Observable<StoreState> observeStoreState(Observable<StoreEmoji.EmojiContext> emojiContextObservable, BehaviorSubject<String> searchSubject, BehaviorSubject<Long> selectedCategoryItemIdSubject, StoreEmoji storeEmoji, StoreGuildsSorted storeGuildsSorted, StoreUserSettings storeUserSettings, StoreAccessibility storeAccessibility) {
-            m.checkNotNullParameter(emojiContextObservable, "emojiContextObservable");
-            m.checkNotNullParameter(searchSubject, "searchSubject");
-            m.checkNotNullParameter(selectedCategoryItemIdSubject, "selectedCategoryItemIdSubject");
-            m.checkNotNullParameter(storeEmoji, "storeEmoji");
-            m.checkNotNullParameter(storeGuildsSorted, "storeGuildsSorted");
-            m.checkNotNullParameter(storeUserSettings, "storeUserSettings");
-            m.checkNotNullParameter(storeAccessibility, "storeAccessibility");
-            Observable observableY = emojiContextObservable.Y(new EmojiPickerViewModel$Companion$observeStoreState$1(storeEmoji, storeGuildsSorted, searchSubject, storeUserSettings, storeAccessibility, selectedCategoryItemIdSubject));
-            m.checkNotNullExpressionValue(observableY, "emojiContextObservable.s…  )\n          }\n        }");
-            return observableY;
+            Intrinsics3.checkNotNullParameter(emojiContextObservable, "emojiContextObservable");
+            Intrinsics3.checkNotNullParameter(searchSubject, "searchSubject");
+            Intrinsics3.checkNotNullParameter(selectedCategoryItemIdSubject, "selectedCategoryItemIdSubject");
+            Intrinsics3.checkNotNullParameter(storeEmoji, "storeEmoji");
+            Intrinsics3.checkNotNullParameter(storeGuildsSorted, "storeGuildsSorted");
+            Intrinsics3.checkNotNullParameter(storeUserSettings, "storeUserSettings");
+            Intrinsics3.checkNotNullParameter(storeAccessibility, "storeAccessibility");
+            Observable observableM11099Y = emojiContextObservable.m11099Y(new EmojiPickerViewModel$Companion$observeStoreState$1(storeEmoji, storeGuildsSorted, searchSubject, storeUserSettings, storeAccessibility, selectedCategoryItemIdSubject));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "emojiContextObservable.s…  )\n          }\n        }");
+            return observableM11099Y;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -413,7 +413,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.B(a.U("ScrollToEmojiListPosition(position="), this.position, ")");
+                return outline.m814B(outline.m833U("ScrollToEmojiListPosition(position="), this.position, ")");
             }
         }
 
@@ -429,7 +429,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public ShowPremiumUpsellDialog(int i, @StringRes int i2, @StringRes int i3, String str, boolean z2, boolean z3) {
                 super(null);
-                m.checkNotNullParameter(str, "sectionName");
+                Intrinsics3.checkNotNullParameter(str, "sectionName");
                 this.pageNumber = i;
                 this.header = i2;
                 this.body = i3;
@@ -495,7 +495,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
 
             public final ShowPremiumUpsellDialog copy(int pageNumber, @StringRes int header, @StringRes int body, String sectionName, boolean showOtherPages, boolean showLearnMore) {
-                m.checkNotNullParameter(sectionName, "sectionName");
+                Intrinsics3.checkNotNullParameter(sectionName, "sectionName");
                 return new ShowPremiumUpsellDialog(pageNumber, header, body, sectionName, showOtherPages, showLearnMore);
             }
 
@@ -507,7 +507,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                     return false;
                 }
                 ShowPremiumUpsellDialog showPremiumUpsellDialog = (ShowPremiumUpsellDialog) other;
-                return this.pageNumber == showPremiumUpsellDialog.pageNumber && this.header == showPremiumUpsellDialog.header && this.body == showPremiumUpsellDialog.body && m.areEqual(this.sectionName, showPremiumUpsellDialog.sectionName) && this.showOtherPages == showPremiumUpsellDialog.showOtherPages && this.showLearnMore == showPremiumUpsellDialog.showLearnMore;
+                return this.pageNumber == showPremiumUpsellDialog.pageNumber && this.header == showPremiumUpsellDialog.header && this.body == showPremiumUpsellDialog.body && Intrinsics3.areEqual(this.sectionName, showPremiumUpsellDialog.sectionName) && this.showOtherPages == showPremiumUpsellDialog.showOtherPages && this.showLearnMore == showPremiumUpsellDialog.showLearnMore;
             }
 
             public final int getBody() {
@@ -550,18 +550,18 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("ShowPremiumUpsellDialog(pageNumber=");
-                sbU.append(this.pageNumber);
-                sbU.append(", header=");
-                sbU.append(this.header);
-                sbU.append(", body=");
-                sbU.append(this.body);
-                sbU.append(", sectionName=");
-                sbU.append(this.sectionName);
-                sbU.append(", showOtherPages=");
-                sbU.append(this.showOtherPages);
-                sbU.append(", showLearnMore=");
-                return a.O(sbU, this.showLearnMore, ")");
+                StringBuilder sbM833U = outline.m833U("ShowPremiumUpsellDialog(pageNumber=");
+                sbM833U.append(this.pageNumber);
+                sbM833U.append(", header=");
+                sbM833U.append(this.header);
+                sbM833U.append(", body=");
+                sbM833U.append(this.body);
+                sbM833U.append(", sectionName=");
+                sbM833U.append(this.sectionName);
+                sbM833U.append(", showOtherPages=");
+                sbM833U.append(this.showOtherPages);
+                sbM833U.append(", showLearnMore=");
+                return outline.m827O(sbM833U, this.showLearnMore, ")");
             }
         }
 
@@ -578,8 +578,8 @@ public class EmojiPickerViewModel extends d0<ViewState> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Inline(EmojiPickerContextType emojiPickerContextType, Locale locale) {
             super(emojiPickerContextType, locale, null, null, null, null, 60, null);
-            m.checkNotNullParameter(emojiPickerContextType, "emojiPickerContextType");
-            m.checkNotNullParameter(locale, "locale");
+            Intrinsics3.checkNotNullParameter(emojiPickerContextType, "emojiPickerContextType");
+            Intrinsics3.checkNotNullParameter(locale, "locale");
         }
     }
 
@@ -588,8 +588,8 @@ public class EmojiPickerViewModel extends d0<ViewState> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Sheet(EmojiPickerContextType emojiPickerContextType, Locale locale) {
             super(emojiPickerContextType, locale, null, null, null, null, 60, null);
-            m.checkNotNullParameter(emojiPickerContextType, "emojiPickerContextType");
-            m.checkNotNullParameter(locale, "locale");
+            Intrinsics3.checkNotNullParameter(emojiPickerContextType, "emojiPickerContextType");
+            Intrinsics3.checkNotNullParameter(locale, "locale");
         }
     }
 
@@ -610,11 +610,11 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Emoji(EmojiSet emojiSet, StoreEmoji.EmojiContext emojiContext, LinkedHashMap<Long, Guild> linkedHashMap, String str, boolean z2, long j, Set<? extends com.discord.models.domain.emoji.Emoji> set) {
                 super(null);
-                m.checkNotNullParameter(emojiSet, "emojiSet");
-                m.checkNotNullParameter(emojiContext, "emojiContext");
-                m.checkNotNullParameter(linkedHashMap, "allGuilds");
-                m.checkNotNullParameter(str, "searchInputStringUpper");
-                m.checkNotNullParameter(set, "favoriteEmoji");
+                Intrinsics3.checkNotNullParameter(emojiSet, "emojiSet");
+                Intrinsics3.checkNotNullParameter(emojiContext, "emojiContext");
+                Intrinsics3.checkNotNullParameter(linkedHashMap, "allGuilds");
+                Intrinsics3.checkNotNullParameter(str, "searchInputStringUpper");
+                Intrinsics3.checkNotNullParameter(set, "favoriteEmoji");
                 this.emojiSet = emojiSet;
                 this.emojiContext = emojiContext;
                 this.allGuilds = linkedHashMap;
@@ -662,11 +662,11 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
 
             public final Emoji copy(EmojiSet emojiSet, StoreEmoji.EmojiContext emojiContext, LinkedHashMap<Long, Guild> allGuilds, String searchInputStringUpper, boolean allowEmojisToAnimate, long selectedCategoryItemId, Set<? extends com.discord.models.domain.emoji.Emoji> favoriteEmoji) {
-                m.checkNotNullParameter(emojiSet, "emojiSet");
-                m.checkNotNullParameter(emojiContext, "emojiContext");
-                m.checkNotNullParameter(allGuilds, "allGuilds");
-                m.checkNotNullParameter(searchInputStringUpper, "searchInputStringUpper");
-                m.checkNotNullParameter(favoriteEmoji, "favoriteEmoji");
+                Intrinsics3.checkNotNullParameter(emojiSet, "emojiSet");
+                Intrinsics3.checkNotNullParameter(emojiContext, "emojiContext");
+                Intrinsics3.checkNotNullParameter(allGuilds, "allGuilds");
+                Intrinsics3.checkNotNullParameter(searchInputStringUpper, "searchInputStringUpper");
+                Intrinsics3.checkNotNullParameter(favoriteEmoji, "favoriteEmoji");
                 return new Emoji(emojiSet, emojiContext, allGuilds, searchInputStringUpper, allowEmojisToAnimate, selectedCategoryItemId, favoriteEmoji);
             }
 
@@ -678,7 +678,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                     return false;
                 }
                 Emoji emoji = (Emoji) other;
-                return m.areEqual(this.emojiSet, emoji.emojiSet) && m.areEqual(this.emojiContext, emoji.emojiContext) && m.areEqual(this.allGuilds, emoji.allGuilds) && m.areEqual(this.searchInputStringUpper, emoji.searchInputStringUpper) && this.allowEmojisToAnimate == emoji.allowEmojisToAnimate && this.selectedCategoryItemId == emoji.selectedCategoryItemId && m.areEqual(this.favoriteEmoji, emoji.favoriteEmoji);
+                return Intrinsics3.areEqual(this.emojiSet, emoji.emojiSet) && Intrinsics3.areEqual(this.emojiContext, emoji.emojiContext) && Intrinsics3.areEqual(this.allGuilds, emoji.allGuilds) && Intrinsics3.areEqual(this.searchInputStringUpper, emoji.searchInputStringUpper) && this.allowEmojisToAnimate == emoji.allowEmojisToAnimate && this.selectedCategoryItemId == emoji.selectedCategoryItemId && Intrinsics3.areEqual(this.favoriteEmoji, emoji.favoriteEmoji);
             }
 
             public final LinkedHashMap<Long, Guild> getAllGuilds() {
@@ -724,26 +724,26 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                 if (z2 != 0) {
                     i = 1;
                 }
-                int iA = (b.a(this.selectedCategoryItemId) + ((iHashCode4 + i) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.selectedCategoryItemId) + ((iHashCode4 + i) * 31)) * 31;
                 Set<com.discord.models.domain.emoji.Emoji> set = this.favoriteEmoji;
-                return iA + (set != null ? set.hashCode() : 0);
+                return iM3a + (set != null ? set.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Emoji(emojiSet=");
-                sbU.append(this.emojiSet);
-                sbU.append(", emojiContext=");
-                sbU.append(this.emojiContext);
-                sbU.append(", allGuilds=");
-                sbU.append(this.allGuilds);
-                sbU.append(", searchInputStringUpper=");
-                sbU.append(this.searchInputStringUpper);
-                sbU.append(", allowEmojisToAnimate=");
-                sbU.append(this.allowEmojisToAnimate);
-                sbU.append(", selectedCategoryItemId=");
-                sbU.append(this.selectedCategoryItemId);
-                sbU.append(", favoriteEmoji=");
-                return a.N(sbU, this.favoriteEmoji, ")");
+                StringBuilder sbM833U = outline.m833U("Emoji(emojiSet=");
+                sbM833U.append(this.emojiSet);
+                sbM833U.append(", emojiContext=");
+                sbM833U.append(this.emojiContext);
+                sbM833U.append(", allGuilds=");
+                sbM833U.append(this.allGuilds);
+                sbM833U.append(", searchInputStringUpper=");
+                sbM833U.append(this.searchInputStringUpper);
+                sbM833U.append(", allowEmojisToAnimate=");
+                sbM833U.append(this.allowEmojisToAnimate);
+                sbM833U.append(", selectedCategoryItemId=");
+                sbM833U.append(this.selectedCategoryItemId);
+                sbM833U.append(", favoriteEmoji=");
+                return outline.m826N(sbM833U, this.favoriteEmoji, ")");
             }
         }
 
@@ -775,7 +775,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public EmptySearch(String str) {
                 super(str, null);
-                m.checkNotNullParameter(str, "searchQuery");
+                Intrinsics3.checkNotNullParameter(str, "searchQuery");
                 this.searchQuery = str;
             }
 
@@ -791,13 +791,13 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
 
             public final EmptySearch copy(String searchQuery) {
-                m.checkNotNullParameter(searchQuery, "searchQuery");
+                Intrinsics3.checkNotNullParameter(searchQuery, "searchQuery");
                 return new EmptySearch(searchQuery);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof EmptySearch) && m.areEqual(getSearchQuery(), ((EmptySearch) other).getSearchQuery());
+                    return (other instanceof EmptySearch) && Intrinsics3.areEqual(getSearchQuery(), ((EmptySearch) other).getSearchQuery());
                 }
                 return true;
             }
@@ -816,10 +816,10 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("EmptySearch(searchQuery=");
-                sbU.append(getSearchQuery());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("EmptySearch(searchQuery=");
+                sbM833U.append(getSearchQuery());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -836,13 +836,13 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Results(String str, List<? extends MGRecyclerDataPayload> list, List<? extends EmojiCategoryItem> list2) {
                 super(str, null);
-                m.checkNotNullParameter(str, "searchQuery");
-                m.checkNotNullParameter(list, "resultItems");
-                m.checkNotNullParameter(list2, "categoryItems");
+                Intrinsics3.checkNotNullParameter(str, "searchQuery");
+                Intrinsics3.checkNotNullParameter(list, "resultItems");
+                Intrinsics3.checkNotNullParameter(list2, "categoryItems");
                 this.searchQuery = str;
                 this.resultItems = list;
                 this.categoryItems = list2;
-                this.firstUnicodeEmojiCategoryItem = g.lazy(new EmojiPickerViewModel$ViewState$Results$firstUnicodeEmojiCategoryItem$2(this));
+                this.firstUnicodeEmojiCategoryItem = LazyJVM.lazy(new C7815xf92f8d5e(this));
             }
 
             /* JADX WARN: Multi-variable type inference failed */
@@ -872,9 +872,9 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
 
             public final Results copy(String searchQuery, List<? extends MGRecyclerDataPayload> resultItems, List<? extends EmojiCategoryItem> categoryItems) {
-                m.checkNotNullParameter(searchQuery, "searchQuery");
-                m.checkNotNullParameter(resultItems, "resultItems");
-                m.checkNotNullParameter(categoryItems, "categoryItems");
+                Intrinsics3.checkNotNullParameter(searchQuery, "searchQuery");
+                Intrinsics3.checkNotNullParameter(resultItems, "resultItems");
+                Intrinsics3.checkNotNullParameter(categoryItems, "categoryItems");
                 return new Results(searchQuery, resultItems, categoryItems);
             }
 
@@ -886,7 +886,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                     return false;
                 }
                 Results results = (Results) other;
-                return m.areEqual(getSearchQuery(), results.getSearchQuery()) && m.areEqual(this.resultItems, results.resultItems) && m.areEqual(this.categoryItems, results.categoryItems);
+                return Intrinsics3.areEqual(getSearchQuery(), results.getSearchQuery()) && Intrinsics3.areEqual(this.resultItems, results.resultItems) && Intrinsics3.areEqual(this.categoryItems, results.categoryItems);
             }
 
             public final List<EmojiCategoryItem> getCategoryItems() {
@@ -920,12 +920,12 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Results(searchQuery=");
-                sbU.append(getSearchQuery());
-                sbU.append(", resultItems=");
-                sbU.append(this.resultItems);
-                sbU.append(", categoryItems=");
-                return a.L(sbU, this.categoryItems, ")");
+                StringBuilder sbM833U = outline.m833U("Results(searchQuery=");
+                sbM833U.append(getSearchQuery());
+                sbM833U.append(", resultItems=");
+                sbM833U.append(this.resultItems);
+                sbM833U.append(", categoryItems=");
+                return outline.m824L(sbM833U, this.categoryItems, ")");
             }
         }
 
@@ -944,28 +944,28 @@ public class EmojiPickerViewModel extends d0<ViewState> {
 
     /* JADX WARN: Illegal instructions before constructor call */
     public /* synthetic */ EmojiPickerViewModel(EmojiPickerContextType emojiPickerContextType, Locale locale, BehaviorSubject behaviorSubject, BehaviorSubject behaviorSubject2, Observable observable, StoreAnalytics storeAnalytics, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        BehaviorSubject behaviorSubjectL0;
-        BehaviorSubject behaviorSubjectL02;
+        BehaviorSubject behaviorSubjectM11130l0;
+        BehaviorSubject behaviorSubjectM11130l02;
         Observable observableObserveStoreState$default;
         if ((i & 4) != 0) {
-            behaviorSubjectL0 = BehaviorSubject.l0("");
-            m.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(\"\")");
+            behaviorSubjectM11130l0 = BehaviorSubject.m11130l0("");
+            Intrinsics3.checkNotNullExpressionValue(behaviorSubjectM11130l0, "BehaviorSubject.create(\"\")");
         } else {
-            behaviorSubjectL0 = behaviorSubject;
+            behaviorSubjectM11130l0 = behaviorSubject;
         }
         if ((i & 8) != 0) {
-            behaviorSubjectL02 = BehaviorSubject.l0(Long.valueOf(EmojiCategoryItem.INSTANCE.mapEmojiCategoryToItemId(EmojiCategory.FAVORITE)));
-            m.checkNotNullExpressionValue(behaviorSubjectL02, "BehaviorSubject.create(\n…ojiCategory.FAVORITE)\n  )");
+            behaviorSubjectM11130l02 = BehaviorSubject.m11130l0(Long.valueOf(EmojiCategoryItem.INSTANCE.mapEmojiCategoryToItemId(EmojiCategory.FAVORITE)));
+            Intrinsics3.checkNotNullExpressionValue(behaviorSubjectM11130l02, "BehaviorSubject.create(\n…ojiCategory.FAVORITE)\n  )");
         } else {
-            behaviorSubjectL02 = behaviorSubject2;
+            behaviorSubjectM11130l02 = behaviorSubject2;
         }
         if ((i & 16) != 0) {
             Companion companion = INSTANCE;
-            observableObserveStoreState$default = Companion.observeStoreState$default(companion, Companion.getEmojiContextObservable$default(companion, emojiPickerContextType, null, 2, null), behaviorSubjectL0, behaviorSubjectL02, null, null, null, null, 120, null);
+            observableObserveStoreState$default = Companion.observeStoreState$default(companion, Companion.getEmojiContextObservable$default(companion, emojiPickerContextType, null, 2, null), behaviorSubjectM11130l0, behaviorSubjectM11130l02, null, null, null, null, 120, null);
         } else {
             observableObserveStoreState$default = observable;
         }
-        this(emojiPickerContextType, locale, behaviorSubjectL0, behaviorSubjectL02, observableObserveStoreState$default, (i & 32) != 0 ? StoreStream.INSTANCE.getAnalytics() : storeAnalytics);
+        this(emojiPickerContextType, locale, behaviorSubjectM11130l0, behaviorSubjectM11130l02, observableObserveStoreState$default, (i & 32) != 0 ? StoreStream.INSTANCE.getAnalytics() : storeAnalytics);
     }
 
     public static final /* synthetic */ void access$handleStoreState(EmojiPickerViewModel emojiPickerViewModel, StoreState storeState) {
@@ -989,13 +989,13 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             Locale locale = this.locale;
             Objects.requireNonNull(searchInputStringUpper, "null cannot be cast to non-null type java.lang.String");
             String lowerCase = searchInputStringUpper.toLowerCase(locale);
-            m.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
+            Intrinsics3.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
             boolean z2 = lowerCase.length() > 0;
             ArrayList arrayList = new ArrayList();
             LinkedHashMap<Long, Guild> allGuilds = emoji.getAllGuilds();
             Collection<Guild> collectionValues = emoji.getAllGuilds().values();
-            m.checkNotNullExpressionValue(collectionValues, "storeState.allGuilds.values");
-            List list = u.toList(collectionValues);
+            Intrinsics3.checkNotNullExpressionValue(collectionValues, "storeState.allGuilds.values");
+            List list = _Collections.toList(collectionValues);
             Collection<MGRecyclerDataPayload> linkedHashSet = z2 ? new LinkedHashSet() : new ArrayList();
             Collection linkedHashSet2 = z2 ? new LinkedHashSet() : new ArrayList();
             boolean z3 = !z2;
@@ -1015,7 +1015,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                     linkedHashSet.addAll(regular.getItems());
                     EmojiCategoryItem.Companion companion2 = EmojiCategoryItem.INSTANCE;
                     EmojiCategory emojiCategory2 = EmojiCategory.FAVORITE;
-                    arrayList.add(new EmojiCategoryItem.StandardItem(emojiCategory2, new Pair(Integer.valueOf(size), Integer.valueOf(linkedHashSet.size())), companion2.mapEmojiCategoryToItemId(emojiCategory2) == selectedCategoryItemId));
+                    arrayList.add(new EmojiCategoryItem.StandardItem(emojiCategory2, new Tuples2(Integer.valueOf(size), Integer.valueOf(linkedHashSet.size())), companion2.mapEmojiCategoryToItemId(emojiCategory2) == selectedCategoryItemId));
                 }
             }
             Companion.EmojiItems emojiItemsAccess$buildEmojiListItems2 = Companion.access$buildEmojiListItems(companion, emojiSet.recentEmojis, new EmojiPickerViewModel$handleStoreState$frequentItems$1(allGuilds), lowerCase, allowEmojisToAnimate, z2, z3);
@@ -1033,7 +1033,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                     linkedHashSet.addAll(regular2.getItems());
                     EmojiCategoryItem.Companion companion3 = EmojiCategoryItem.INSTANCE;
                     EmojiCategory emojiCategory3 = EmojiCategory.RECENT;
-                    arrayList.add(new EmojiCategoryItem.StandardItem(emojiCategory3, new Pair(Integer.valueOf(size2), Integer.valueOf(linkedHashSet.size())), companion3.mapEmojiCategoryToItemId(emojiCategory3) == selectedCategoryItemId));
+                    arrayList.add(new EmojiCategoryItem.StandardItem(emojiCategory3, new Tuples2(Integer.valueOf(size2), Integer.valueOf(linkedHashSet.size())), companion3.mapEmojiCategoryToItemId(emojiCategory3) == selectedCategoryItemId));
                 }
             }
             StoreEmoji.EmojiContext emojiContext = emoji.getEmojiContext();
@@ -1058,10 +1058,10 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                             linkedHashSet.add(new WidgetEmojiAdapter.HeaderItem.GuildHeaderItem(guild));
                         }
                         linkedHashSet.addAll(regular3.getItems());
-                        arrayList.add(new EmojiCategoryItem.GuildItem(guild, new Pair(Integer.valueOf(size3), Integer.valueOf(linkedHashSet.size())), EmojiCategoryItem.INSTANCE.mapGuildToItemId(guild) == selectedCategoryItemId));
+                        arrayList.add(new EmojiCategoryItem.GuildItem(guild, new Tuples2(Integer.valueOf(size3), Integer.valueOf(linkedHashSet.size())), EmojiCategoryItem.INSTANCE.mapGuildToItemId(guild) == selectedCategoryItemId));
                     }
                 }
-                listMinus = u.minus(list, guild);
+                listMinus = _Collections.minus(list, guild);
             }
             Iterator it = listMinus.iterator();
             while (it.hasNext()) {
@@ -1077,13 +1077,13 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                     if (!regular4.getItems().isEmpty()) {
                         int size4 = linkedHashSet.size();
                         if (!z2) {
-                            m.checkNotNullExpressionValue(guild2, "guild");
+                            Intrinsics3.checkNotNullExpressionValue(guild2, "guild");
                             linkedHashSet.add(new WidgetEmojiAdapter.HeaderItem.GuildHeaderItem(guild2));
                         }
                         linkedHashSet.addAll(regular4.getItems());
                         EmojiCategoryItem.Companion companion4 = EmojiCategoryItem.INSTANCE;
-                        m.checkNotNullExpressionValue(guild2, "guild");
-                        arrayList.add(new EmojiCategoryItem.GuildItem(guild2, new Pair(Integer.valueOf(size4), Integer.valueOf(linkedHashSet.size())), companion4.mapGuildToItemId(guild2) == selectedCategoryItemId));
+                        Intrinsics3.checkNotNullExpressionValue(guild2, "guild");
+                        arrayList.add(new EmojiCategoryItem.GuildItem(guild2, new Tuples2(Integer.valueOf(size4), Integer.valueOf(linkedHashSet.size())), companion4.mapGuildToItemId(guild2) == selectedCategoryItemId));
                     }
                 }
                 it = it2;
@@ -1109,7 +1109,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                                 linkedHashSet.add(new WidgetEmojiAdapter.HeaderItem.StandardHeaderItem(emojiCategory));
                             }
                             linkedHashSet.addAll(regular5.getItems());
-                            arrayList.add(new EmojiCategoryItem.StandardItem(emojiCategory, new Pair(Integer.valueOf(size5), Integer.valueOf(linkedHashSet.size())), EmojiCategoryItem.INSTANCE.mapEmojiCategoryToItemId(emojiCategory) == selectedCategoryItemId));
+                            arrayList.add(new EmojiCategoryItem.StandardItem(emojiCategory, new Tuples2(Integer.valueOf(size5), Integer.valueOf(linkedHashSet.size())), EmojiCategoryItem.INSTANCE.mapEmojiCategoryToItemId(emojiCategory) == selectedCategoryItemId));
                         }
                     }
                 } else {
@@ -1120,7 +1120,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
                 linkedHashMap = linkedHashMap2;
             }
             if (z2 && (!linkedHashSet2.isEmpty())) {
-                linkedHashSet.add(new WidgetEmojiAdapter.HeaderItem.StringHeaderItem(R.string.emoji_available_with_premium));
+                linkedHashSet.add(new WidgetEmojiAdapter.HeaderItem.StringHeaderItem(C5419R.string.emoji_available_with_premium));
                 linkedHashSet.addAll(linkedHashSet2);
                 linkedHashSet.add(WidgetEmojiAdapter.UpsellItem.INSTANCE);
             }
@@ -1152,7 +1152,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             }
             List list3 = (List) (!(linkedHashSet instanceof List) ? null : linkedHashSet);
             if (list3 == null) {
-                list3 = u.toList(linkedHashSet);
+                list3 = _Collections.toList(linkedHashSet);
             }
             emojiPickerViewModel.updateViewState(new ViewState.Results(emoji.getSearchInputStringUpper(), list3, arrayList));
         }
@@ -1173,13 +1173,13 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             return;
         }
         setSelectedCategoryItemId(firstUnicodeEmojiCategoryItem.getStableId());
-        this.eventSubject.k.onNext(new Event.ScrollToEmojiListPosition(firstUnicodeEmojiCategoryItem.getCategoryRange().getFirst().intValue()));
+        this.eventSubject.f27650k.onNext(new Event.ScrollToEmojiListPosition(firstUnicodeEmojiCategoryItem.getCategoryRange().getFirst().intValue()));
     }
 
     public final void onEmojiSelected(Emoji emoji, Function1<? super Emoji, Unit> validEmojiSelected) {
         int i;
-        m.checkNotNullParameter(emoji, "emoji");
-        m.checkNotNullParameter(validEmojiSelected, "validEmojiSelected");
+        Intrinsics3.checkNotNullParameter(emoji, "emoji");
+        Intrinsics3.checkNotNullParameter(validEmojiSelected, "validEmojiSelected");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Results)) {
             viewState = null;
@@ -1187,7 +1187,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
         ViewState.Results results = (ViewState.Results) viewState;
         List<MGRecyclerDataPayload> resultItems = results != null ? results.getResultItems() : null;
         if (resultItems == null) {
-            resultItems = n.emptyList();
+            resultItems = Collections2.emptyList();
         }
         boolean z2 = false;
         if ((resultItems instanceof Collection) && resultItems.isEmpty()) {
@@ -1197,7 +1197,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             int i2 = 0;
             while (it.hasNext()) {
                 if ((((MGRecyclerDataPayload) it.next()) instanceof WidgetEmojiAdapter.EmojiItem) && (i2 = i2 + 1) < 0) {
-                    n.throwCountOverflow();
+                    Collections2.throwCountOverflow();
                 }
             }
             i = i2;
@@ -1212,7 +1212,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
             if ((emoji instanceof ModelEmojiCustom) && ((ModelEmojiCustom) emoji).isAnimated()) {
                 z2 = true;
             }
-            this.eventSubject.k.onNext(new Event.ShowPremiumUpsellDialog(z2 ? 2 : 1, z2 ? R.string.premium_upsell_animated_emojis_active_mobile : R.string.premium_upsell_emoji_active_mobile, z2 ? R.string.premium_upsell_animated_emojis_description_mobile : R.string.premium_upsell_emoji_description_mobile, Traits.Location.Section.EMOJI_PICKER_POPOUT, false, false));
+            this.eventSubject.f27650k.onNext(new Event.ShowPremiumUpsellDialog(z2 ? 2 : 1, z2 ? C5419R.string.premium_upsell_animated_emojis_active_mobile : C5419R.string.premium_upsell_emoji_active_mobile, z2 ? C5419R.string.premium_upsell_animated_emojis_description_mobile : C5419R.string.premium_upsell_emoji_description_mobile, Traits.Location.Section.EMOJI_PICKER_POPOUT, false, false));
             this.storeAnalytics.emojiPickerUpsellLockedItemClicked(this.emojiPickerContextType, z2);
         }
     }
@@ -1223,7 +1223,7 @@ public class EmojiPickerViewModel extends d0<ViewState> {
     }
 
     public final void setSearchText(String searchText) {
-        m.checkNotNullParameter(searchText, "searchText");
+        Intrinsics3.checkNotNullParameter(searchText, "searchText");
         this.searchSubject.onNext(searchText);
         StoreAnalytics storeAnalytics = this.storeAnalytics;
         storeAnalytics.trackSearchStarted(SearchType.EMOJI, storeAnalytics.getEmojiPickerUpsellLocation(), true);
@@ -1236,20 +1236,20 @@ public class EmojiPickerViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public EmojiPickerViewModel(EmojiPickerContextType emojiPickerContextType, Locale locale, BehaviorSubject<String> behaviorSubject, BehaviorSubject<Long> behaviorSubject2, Observable<StoreState> observable, StoreAnalytics storeAnalytics) {
         super(null);
-        m.checkNotNullParameter(emojiPickerContextType, "emojiPickerContextType");
-        m.checkNotNullParameter(locale, "locale");
-        m.checkNotNullParameter(behaviorSubject, "searchSubject");
-        m.checkNotNullParameter(behaviorSubject2, "selectedCategoryItemIdSubject");
-        m.checkNotNullParameter(observable, "storeStateObservable");
-        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        Intrinsics3.checkNotNullParameter(emojiPickerContextType, "emojiPickerContextType");
+        Intrinsics3.checkNotNullParameter(locale, "locale");
+        Intrinsics3.checkNotNullParameter(behaviorSubject, "searchSubject");
+        Intrinsics3.checkNotNullParameter(behaviorSubject2, "selectedCategoryItemIdSubject");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
         this.emojiPickerContextType = emojiPickerContextType;
         this.locale = locale;
         this.searchSubject = behaviorSubject;
         this.selectedCategoryItemIdSubject = behaviorSubject2;
         this.storeAnalytics = storeAnalytics;
-        PublishSubject<Event> publishSubjectK0 = PublishSubject.k0();
-        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
-        this.eventSubject = publishSubjectK0;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        PublishSubject<Event> publishSubjectM11133k0 = PublishSubject.m11133k0();
+        Intrinsics3.checkNotNullExpressionValue(publishSubjectM11133k0, "PublishSubject.create()");
+        this.eventSubject = publishSubjectM11133k0;
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C78121(), 62, (Object) null);
     }
 }

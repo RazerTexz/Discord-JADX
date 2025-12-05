@@ -3,7 +3,7 @@ package com.discord.widgets.directories;
 import android.view.View;
 import android.widget.TextView;
 import com.discord.databinding.DirectoryAddServerListItemBinding;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetDirectoryEntryViewHolder.kt */
 /* loaded from: classes2.dex */
@@ -11,11 +11,11 @@ public final class AddServerViewHolder extends DirectoryChannelViewHolder {
     private final DirectoryAddServerListItemBinding viewBinding;
 
     /* compiled from: WidgetDirectoryEntryViewHolder.kt */
-    /* renamed from: com.discord.widgets.directories.AddServerViewHolder$bind$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.directories.AddServerViewHolder$bind$1 */
+    public static final class ViewOnClickListenerC82701 implements View.OnClickListener {
         public final /* synthetic */ DirectoryChannelItemClickInterface $listener;
 
-        public AnonymousClass1(DirectoryChannelItemClickInterface directoryChannelItemClickInterface) {
+        public ViewOnClickListenerC82701(DirectoryChannelItemClickInterface directoryChannelItemClickInterface) {
             this.$listener = directoryChannelItemClickInterface;
         }
 
@@ -27,18 +27,18 @@ public final class AddServerViewHolder extends DirectoryChannelViewHolder {
 
     /* JADX WARN: Illegal instructions before constructor call */
     public AddServerViewHolder(DirectoryAddServerListItemBinding directoryAddServerListItemBinding) {
-        m.checkNotNullParameter(directoryAddServerListItemBinding, "viewBinding");
-        TextView textView = directoryAddServerListItemBinding.a;
-        m.checkNotNullExpressionValue(textView, "viewBinding.root");
+        Intrinsics3.checkNotNullParameter(directoryAddServerListItemBinding, "viewBinding");
+        TextView textView = directoryAddServerListItemBinding.f15040a;
+        Intrinsics3.checkNotNullExpressionValue(textView, "viewBinding.root");
         super(textView);
         this.viewBinding = directoryAddServerListItemBinding;
     }
 
     @Override // com.discord.widgets.directories.DirectoryChannelViewHolder
     public void bind(DirectoryChannelItem item, DirectoryChannelItemClickInterface listener) {
-        m.checkNotNullParameter(item, "item");
-        m.checkNotNullParameter(listener, "listener");
-        this.viewBinding.f2095b.setOnClickListener(new AnonymousClass1(listener));
+        Intrinsics3.checkNotNullParameter(item, "item");
+        Intrinsics3.checkNotNullParameter(listener, "listener");
+        this.viewBinding.f15041b.setOnClickListener(new ViewOnClickListenerC82701(listener));
     }
 
     public final DirectoryAddServerListItemBinding getViewBinding() {

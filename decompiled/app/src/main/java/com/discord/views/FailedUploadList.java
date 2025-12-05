@@ -9,98 +9,109 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import b.a.i.d2;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.message.LocalAttachment;
-import com.discord.utilities.attachments.AttachmentUtilsKt;
+import com.discord.utilities.attachments.AttachmentUtils;
 import com.discord.utilities.drawable.DrawableCompat;
-import com.discord.utilities.file.FileUtilsKt;
-import com.discord.utilities.resources.StringResourceUtilsKt;
-import com.discord.utilities.rest.SendUtilsKt;
+import com.discord.utilities.file.FileUtils2;
+import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.rest.SendUtils5;
 import com.lytefast.flexinput.model.Attachment;
-import d0.t.n;
-import d0.t.o;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p025i.ViewChatUploadListBinding;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Iterables2;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: FailedUploadList.kt */
 /* loaded from: classes2.dex */
 public final class FailedUploadList extends LinearLayout {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final d2 binding;
+    public final ViewChatUploadListBinding binding;
 
     /* compiled from: FailedUploadList.kt */
-    public static final class a {
-        public final String a;
+    /* renamed from: com.discord.views.FailedUploadList$a */
+    public static final class C7076a {
 
-        /* renamed from: b, reason: collision with root package name */
-        public final long f2828b;
-        public final String c;
+        /* renamed from: a */
+        public final String f19064a;
 
-        public a(String str, long j, String str2) {
-            m.checkNotNullParameter(str, "displayName");
-            m.checkNotNullParameter(str2, "mimeType");
-            this.a = str;
-            this.f2828b = j;
-            this.c = str2;
+        /* renamed from: b */
+        public final long f19065b;
+
+        /* renamed from: c */
+        public final String f19066c;
+
+        public C7076a(String str, long j, String str2) {
+            Intrinsics3.checkNotNullParameter(str, "displayName");
+            Intrinsics3.checkNotNullParameter(str2, "mimeType");
+            this.f19064a = str;
+            this.f19065b = j;
+            this.f19066c = str2;
         }
 
         public boolean equals(Object obj) {
             if (this == obj) {
                 return true;
             }
-            if (!(obj instanceof a)) {
+            if (!(obj instanceof C7076a)) {
                 return false;
             }
-            a aVar = (a) obj;
-            return m.areEqual(this.a, aVar.a) && this.f2828b == aVar.f2828b && m.areEqual(this.c, aVar.c);
+            C7076a c7076a = (C7076a) obj;
+            return Intrinsics3.areEqual(this.f19064a, c7076a.f19064a) && this.f19065b == c7076a.f19065b && Intrinsics3.areEqual(this.f19066c, c7076a.f19066c);
         }
 
         public int hashCode() {
-            String str = this.a;
-            int iA = (a0.a.a.b.a(this.f2828b) + ((str != null ? str.hashCode() : 0) * 31)) * 31;
-            String str2 = this.c;
-            return iA + (str2 != null ? str2.hashCode() : 0);
+            String str = this.f19064a;
+            int iM3a = (C0002b.m3a(this.f19065b) + ((str != null ? str.hashCode() : 0) * 31)) * 31;
+            String str2 = this.f19066c;
+            return iM3a + (str2 != null ? str2.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("SingleFailedUpload(displayName=");
-            sbU.append(this.a);
-            sbU.append(", sizeBytes=");
-            sbU.append(this.f2828b);
-            sbU.append(", mimeType=");
-            return b.d.b.a.a.J(sbU, this.c, ")");
+            StringBuilder sbM833U = outline.m833U("SingleFailedUpload(displayName=");
+            sbM833U.append(this.f19064a);
+            sbM833U.append(", sizeBytes=");
+            sbM833U.append(this.f19065b);
+            sbM833U.append(", mimeType=");
+            return outline.m822J(sbM833U, this.f19066c, ")");
         }
     }
 
     /* compiled from: FailedUploadList.kt */
-    public static abstract class b {
+    /* renamed from: com.discord.views.FailedUploadList$b */
+    public static abstract class AbstractC7077b {
 
         /* compiled from: FailedUploadList.kt */
-        public static final class a extends b {
-            public final List<a> a;
+        /* renamed from: com.discord.views.FailedUploadList$b$a */
+        public static final class a extends AbstractC7077b {
+
+            /* renamed from: a */
+            public final List<C7076a> f19067a;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public a(List<a> list) {
+            public a(List<C7076a> list) {
                 super(null);
-                m.checkNotNullParameter(list, "uploads");
-                this.a = list;
+                Intrinsics3.checkNotNullParameter(list, "uploads");
+                this.f19067a = list;
             }
 
             public boolean equals(Object obj) {
                 if (this != obj) {
-                    return (obj instanceof a) && m.areEqual(this.a, ((a) obj).a);
+                    return (obj instanceof a) && Intrinsics3.areEqual(this.f19067a, ((a) obj).f19067a);
                 }
                 return true;
             }
 
             public int hashCode() {
-                List<a> list = this.a;
+                List<C7076a> list = this.f19067a;
                 if (list != null) {
                     return list.hashCode();
                 }
@@ -108,67 +119,69 @@ public final class FailedUploadList extends LinearLayout {
             }
 
             public String toString() {
-                return b.d.b.a.a.L(b.d.b.a.a.U("FewFailedUploads(uploads="), this.a, ")");
+                return outline.m824L(outline.m833U("FewFailedUploads(uploads="), this.f19067a, ")");
             }
         }
 
         /* compiled from: FailedUploadList.kt */
-        /* renamed from: com.discord.views.FailedUploadList$b$b, reason: collision with other inner class name */
-        public static final class C0354b extends b {
-            public final int a;
+        /* renamed from: com.discord.views.FailedUploadList$b$b */
+        public static final class b extends AbstractC7077b {
 
-            /* renamed from: b, reason: collision with root package name */
-            public final long f2829b;
+            /* renamed from: a */
+            public final int f19068a;
 
-            public C0354b(int i, long j) {
+            /* renamed from: b */
+            public final long f19069b;
+
+            public b(int i, long j) {
                 super(null);
-                this.a = i;
-                this.f2829b = j;
+                this.f19068a = i;
+                this.f19069b = j;
             }
 
             public boolean equals(Object obj) {
                 if (this == obj) {
                     return true;
                 }
-                if (!(obj instanceof C0354b)) {
+                if (!(obj instanceof b)) {
                     return false;
                 }
-                C0354b c0354b = (C0354b) obj;
-                return this.a == c0354b.a && this.f2829b == c0354b.f2829b;
+                b bVar = (b) obj;
+                return this.f19068a == bVar.f19068a && this.f19069b == bVar.f19069b;
             }
 
             public int hashCode() {
-                return a0.a.a.b.a(this.f2829b) + (this.a * 31);
+                return C0002b.m3a(this.f19069b) + (this.f19068a * 31);
             }
 
             public String toString() {
-                StringBuilder sbU = b.d.b.a.a.U("ManyFailedUploads(uploadCount=");
-                sbU.append(this.a);
-                sbU.append(", sizeBytes=");
-                return b.d.b.a.a.C(sbU, this.f2829b, ")");
+                StringBuilder sbM833U = outline.m833U("ManyFailedUploads(uploadCount=");
+                sbM833U.append(this.f19068a);
+                sbM833U.append(", sizeBytes=");
+                return outline.m815C(sbM833U, this.f19069b, ")");
             }
         }
 
-        public b(DefaultConstructorMarker defaultConstructorMarker) {
+        public AbstractC7077b(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
     public FailedUploadList(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        View viewInflate = LayoutInflater.from(getContext()).inflate(R.layout.view_chat_upload_list, (ViewGroup) this, false);
+        View viewInflate = LayoutInflater.from(getContext()).inflate(C5419R.layout.view_chat_upload_list, (ViewGroup) this, false);
         addView(viewInflate);
-        int i = R.id.chat_upload_1;
-        FailedUploadView failedUploadView = (FailedUploadView) viewInflate.findViewById(R.id.chat_upload_1);
+        int i = C5419R.id.chat_upload_1;
+        FailedUploadView failedUploadView = (FailedUploadView) viewInflate.findViewById(C5419R.id.chat_upload_1);
         if (failedUploadView != null) {
-            i = R.id.chat_upload_2;
-            FailedUploadView failedUploadView2 = (FailedUploadView) viewInflate.findViewById(R.id.chat_upload_2);
+            i = C5419R.id.chat_upload_2;
+            FailedUploadView failedUploadView2 = (FailedUploadView) viewInflate.findViewById(C5419R.id.chat_upload_2);
             if (failedUploadView2 != null) {
-                i = R.id.chat_upload_3;
-                FailedUploadView failedUploadView3 = (FailedUploadView) viewInflate.findViewById(R.id.chat_upload_3);
+                i = C5419R.id.chat_upload_3;
+                FailedUploadView failedUploadView3 = (FailedUploadView) viewInflate.findViewById(C5419R.id.chat_upload_3);
                 if (failedUploadView3 != null) {
-                    d2 d2Var = new d2((LinearLayout) viewInflate, failedUploadView, failedUploadView2, failedUploadView3);
-                    m.checkNotNullExpressionValue(d2Var, "ViewChatUploadListBindin…rom(context), this, true)");
-                    this.binding = d2Var;
+                    ViewChatUploadListBinding viewChatUploadListBinding = new ViewChatUploadListBinding((LinearLayout) viewInflate, failedUploadView, failedUploadView2, failedUploadView3);
+                    Intrinsics3.checkNotNullExpressionValue(viewChatUploadListBinding, "ViewChatUploadListBindin…rom(context), this, true)");
+                    this.binding = viewChatUploadListBinding;
                     return;
                 }
             }
@@ -177,84 +190,84 @@ public final class FailedUploadList extends LinearLayout {
     }
 
     private final List<FailedUploadView> getFailedUploadViews() {
-        FailedUploadView failedUploadView = this.binding.f98b;
-        m.checkNotNullExpressionValue(failedUploadView, "binding.chatUpload1");
-        FailedUploadView failedUploadView2 = this.binding.c;
-        m.checkNotNullExpressionValue(failedUploadView2, "binding.chatUpload2");
-        FailedUploadView failedUploadView3 = this.binding.d;
-        m.checkNotNullExpressionValue(failedUploadView3, "binding.chatUpload3");
-        return n.listOf((Object[]) new FailedUploadView[]{failedUploadView, failedUploadView2, failedUploadView3});
+        FailedUploadView failedUploadView = this.binding.f779b;
+        Intrinsics3.checkNotNullExpressionValue(failedUploadView, "binding.chatUpload1");
+        FailedUploadView failedUploadView2 = this.binding.f780c;
+        Intrinsics3.checkNotNullExpressionValue(failedUploadView2, "binding.chatUpload2");
+        FailedUploadView failedUploadView3 = this.binding.f781d;
+        Intrinsics3.checkNotNullExpressionValue(failedUploadView3, "binding.chatUpload3");
+        return Collections2.listOf((Object[]) new FailedUploadView[]{failedUploadView, failedUploadView2, failedUploadView3});
     }
 
     public final void setUp(List<LocalAttachment> localAttachments) {
-        Object c0354b;
-        m.checkNotNullParameter(localAttachments, "localAttachments");
+        Object bVar;
+        Intrinsics3.checkNotNullParameter(localAttachments, "localAttachments");
         Iterator<T> it = getFailedUploadViews().iterator();
         while (it.hasNext()) {
             ((FailedUploadView) it.next()).setVisibility(8);
         }
         if (!localAttachments.isEmpty()) {
-            ArrayList<Attachment> arrayList = new ArrayList(o.collectionSizeOrDefault(localAttachments, 10));
+            ArrayList<Attachment> arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(localAttachments, 10));
             Iterator<T> it2 = localAttachments.iterator();
             while (it2.hasNext()) {
-                arrayList.add(AttachmentUtilsKt.toAttachment((LocalAttachment) it2.next()));
+                arrayList.add(AttachmentUtils.toAttachment((LocalAttachment) it2.next()));
             }
             if (arrayList.size() <= 3) {
-                ArrayList arrayList2 = new ArrayList(o.collectionSizeOrDefault(arrayList, 10));
+                ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
                 for (Attachment attachment : arrayList) {
                     String displayName = attachment.getDisplayName();
                     Uri uri = attachment.getUri();
                     Context context = getContext();
-                    m.checkNotNullExpressionValue(context, "context");
+                    Intrinsics3.checkNotNullExpressionValue(context, "context");
                     ContentResolver contentResolver = context.getContentResolver();
-                    m.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
-                    long jComputeFileSizeBytes = SendUtilsKt.computeFileSizeBytes(uri, contentResolver);
+                    Intrinsics3.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
+                    long jComputeFileSizeBytes = SendUtils5.computeFileSizeBytes(uri, contentResolver);
                     Context context2 = getContext();
-                    m.checkNotNullExpressionValue(context2, "context");
-                    arrayList2.add(new a(displayName, jComputeFileSizeBytes, AttachmentUtilsKt.getMimeType(attachment, context2.getContentResolver())));
+                    Intrinsics3.checkNotNullExpressionValue(context2, "context");
+                    arrayList2.add(new C7076a(displayName, jComputeFileSizeBytes, AttachmentUtils.getMimeType(attachment, context2.getContentResolver())));
                 }
-                c0354b = new b.a(arrayList2);
+                bVar = new AbstractC7077b.a(arrayList2);
             } else {
                 long jComputeFileSizeBytes2 = 0;
                 Iterator it3 = arrayList.iterator();
                 while (it3.hasNext()) {
                     Uri uri2 = ((Attachment) it3.next()).getUri();
                     Context context3 = getContext();
-                    m.checkNotNullExpressionValue(context3, "context");
+                    Intrinsics3.checkNotNullExpressionValue(context3, "context");
                     ContentResolver contentResolver2 = context3.getContentResolver();
-                    m.checkNotNullExpressionValue(contentResolver2, "context.contentResolver");
-                    jComputeFileSizeBytes2 += SendUtilsKt.computeFileSizeBytes(uri2, contentResolver2);
+                    Intrinsics3.checkNotNullExpressionValue(contentResolver2, "context.contentResolver");
+                    jComputeFileSizeBytes2 += SendUtils5.computeFileSizeBytes(uri2, contentResolver2);
                 }
-                c0354b = new b.C0354b(arrayList.size(), jComputeFileSizeBytes2);
+                bVar = new AbstractC7077b.b(arrayList.size(), jComputeFileSizeBytes2);
             }
-            if (c0354b instanceof b.a) {
-                List<a> list = ((b.a) c0354b).a;
+            if (bVar instanceof AbstractC7077b.a) {
+                List<C7076a> list = ((AbstractC7077b.a) bVar).f19067a;
                 int size = list.size();
                 for (int i = 0; i < size; i++) {
-                    a aVar = list.get(i);
+                    C7076a c7076a = list.get(i);
                     FailedUploadView failedUploadView = getFailedUploadViews().get(i);
                     failedUploadView.setVisibility(0);
-                    String str = aVar.a;
+                    String str = c7076a.f19064a;
                     Context context4 = failedUploadView.getContext();
-                    m.checkNotNullExpressionValue(context4, "context");
-                    failedUploadView.a(str, FileUtilsKt.getIconForFiletype(context4, aVar.c), FileUtilsKt.getSizeSubtitle(aVar.f2828b));
+                    Intrinsics3.checkNotNullExpressionValue(context4, "context");
+                    failedUploadView.m8544a(str, FileUtils2.getIconForFiletype(context4, c7076a.f19066c), FileUtils2.getSizeSubtitle(c7076a.f19065b));
                 }
                 return;
             }
-            if (c0354b instanceof b.C0354b) {
-                b.C0354b c0354b2 = (b.C0354b) c0354b;
-                int i2 = c0354b2.a;
-                long j = c0354b2.f2829b;
-                ((View) u.first((List) getFailedUploadViews())).setVisibility(0);
-                FailedUploadView failedUploadView2 = (FailedUploadView) u.first((List) getFailedUploadViews());
+            if (bVar instanceof AbstractC7077b.b) {
+                AbstractC7077b.b bVar2 = (AbstractC7077b.b) bVar;
+                int i2 = bVar2.f19068a;
+                long j = bVar2.f19069b;
+                ((View) _Collections.first((List) getFailedUploadViews())).setVisibility(0);
+                FailedUploadView failedUploadView2 = (FailedUploadView) _Collections.first((List) getFailedUploadViews());
                 Resources resources = failedUploadView2.getResources();
-                m.checkNotNullExpressionValue(resources, "resources");
+                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
                 Context context5 = failedUploadView2.getContext();
-                m.checkNotNullExpressionValue(context5, "context");
-                CharSequence quantityString = StringResourceUtilsKt.getQuantityString(resources, context5, R.plurals.uploading_files_failed_count, i2, Integer.valueOf(i2));
+                Intrinsics3.checkNotNullExpressionValue(context5, "context");
+                CharSequence quantityString = StringResourceUtils.getQuantityString(resources, context5, C5419R.plurals.uploading_files_failed_count, i2, Integer.valueOf(i2));
                 Context context6 = failedUploadView2.getContext();
-                m.checkNotNullExpressionValue(context6, "context");
-                failedUploadView2.a(quantityString, DrawableCompat.getThemedDrawableRes$default(context6, R.attr.ic_uploads_generic, 0, 2, (Object) null), FileUtilsKt.getSizeSubtitle(j));
+                Intrinsics3.checkNotNullExpressionValue(context6, "context");
+                failedUploadView2.m8544a(quantityString, DrawableCompat.getThemedDrawableRes$default(context6, C5419R.attr.ic_uploads_generic, 0, 2, (Object) null), FileUtils2.getSizeSubtitle(j));
             }
         }
     }

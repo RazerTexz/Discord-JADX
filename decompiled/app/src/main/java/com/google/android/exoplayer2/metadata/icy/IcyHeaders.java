@@ -4,31 +4,43 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 import androidx.annotation.Nullable;
-import b.c.a.a0.d;
-import b.i.a.c.f3.e0;
-import b.i.a.c.j1;
-import b.i.a.c.p1;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.List;
 import java.util.Map;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p242c.Format2;
+import p007b.p225i.p226a.p242c.MediaMetadata;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
+import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
 /* loaded from: classes3.dex */
 public final class IcyHeaders implements Metadata.Entry {
-    public static final Parcelable.Creator<IcyHeaders> CREATOR = new a();
-    public final int j;
+    public static final Parcelable.Creator<IcyHeaders> CREATOR = new C10724a();
 
+    /* renamed from: j */
+    public final int f19957j;
+
+    /* renamed from: k */
     @Nullable
-    public final String k;
+    public final String f19958k;
 
+    /* renamed from: l */
     @Nullable
-    public final String l;
+    public final String f19959l;
 
+    /* renamed from: m */
     @Nullable
-    public final String m;
-    public final boolean n;
-    public final int o;
+    public final String f19960m;
 
-    public class a implements Parcelable.Creator<IcyHeaders> {
+    /* renamed from: n */
+    public final boolean f19961n;
+
+    /* renamed from: o */
+    public final int f19962o;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.icy.IcyHeaders$a */
+    public class C10724a implements Parcelable.Creator<IcyHeaders> {
         @Override // android.os.Parcelable.Creator
         public IcyHeaders createFromParcel(Parcel parcel) {
             return new IcyHeaders(parcel);
@@ -41,13 +53,13 @@ public final class IcyHeaders implements Metadata.Entry {
     }
 
     public IcyHeaders(int i, @Nullable String str, @Nullable String str2, @Nullable String str3, boolean z2, int i2) {
-        d.j(i2 == -1 || i2 > 0);
-        this.j = i;
-        this.k = str;
-        this.l = str2;
-        this.m = str3;
-        this.n = z2;
-        this.o = i2;
+        AnimatableValueParser.m531j(i2 == -1 || i2 > 0);
+        this.f19957j = i;
+        this.f19958k = str;
+        this.f19959l = str2;
+        this.f19960m = str3;
+        this.f19961n = z2;
+        this.f19962o = i2;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:26:0x006b  */
@@ -62,10 +74,11 @@ public final class IcyHeaders implements Metadata.Entry {
     /* JADX WARN: Removed duplicated region for block: B:61:0x0105  */
     /* JADX WARN: Removed duplicated region for block: B:71:? A[RETURN, SYNTHETIC] */
     @Nullable
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static IcyHeaders a(Map<String, List<String>> map) {
+    public static IcyHeaders m8881a(Map<String, List<String>> map) {
         boolean z2;
         int i;
         List<String> list;
@@ -196,66 +209,69 @@ public final class IcyHeaders implements Metadata.Entry {
             return false;
         }
         IcyHeaders icyHeaders = (IcyHeaders) obj;
-        return this.j == icyHeaders.j && e0.a(this.k, icyHeaders.k) && e0.a(this.l, icyHeaders.l) && e0.a(this.m, icyHeaders.m) && this.n == icyHeaders.n && this.o == icyHeaders.o;
+        return this.f19957j == icyHeaders.f19957j && Util2.m2993a(this.f19958k, icyHeaders.f19958k) && Util2.m2993a(this.f19959l, icyHeaders.f19959l) && Util2.m2993a(this.f19960m, icyHeaders.f19960m) && this.f19961n == icyHeaders.f19961n && this.f19962o == icyHeaders.f19962o;
     }
 
     public int hashCode() {
-        int i = (527 + this.j) * 31;
-        String str = this.k;
+        int i = (527 + this.f19957j) * 31;
+        String str = this.f19958k;
         int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.l;
+        String str2 = this.f19959l;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
-        String str3 = this.m;
-        return ((((iHashCode2 + (str3 != null ? str3.hashCode() : 0)) * 31) + (this.n ? 1 : 0)) * 31) + this.o;
+        String str3 = this.f19960m;
+        return ((((iHashCode2 + (str3 != null ? str3.hashCode() : 0)) * 31) + (this.f19961n ? 1 : 0)) * 31) + this.f19962o;
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ void n(p1.b bVar) {
-        b.i.a.c.z2.a.c(this, bVar);
+    /* renamed from: n */
+    public /* synthetic */ void mo8878n(MediaMetadata.b bVar) {
+        Metadata2.m3894c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ byte[] o0() {
-        return b.i.a.c.z2.a.a(this);
+    /* renamed from: o0 */
+    public /* synthetic */ byte[] mo8879o0() {
+        return Metadata2.m3892a(this);
     }
 
     public String toString() {
-        String str = this.l;
-        String str2 = this.k;
-        int i = this.j;
-        int i2 = this.o;
-        StringBuilder sbS = b.d.b.a.a.S(b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 80)), "IcyHeaders: name=\"", str, "\", genre=\"", str2);
-        sbS.append("\", bitrate=");
-        sbS.append(i);
-        sbS.append(", metadataInterval=");
-        sbS.append(i2);
-        return sbS.toString();
+        String str = this.f19959l;
+        String str2 = this.f19958k;
+        int i = this.f19957j;
+        int i2 = this.f19962o;
+        StringBuilder sbM831S = outline.m831S(outline.m841b(str2, outline.m841b(str, 80)), "IcyHeaders: name=\"", str, "\", genre=\"", str2);
+        sbM831S.append("\", bitrate=");
+        sbM831S.append(i);
+        sbM831S.append(", metadataInterval=");
+        sbM831S.append(i2);
+        return sbM831S.toString();
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(this.j);
-        parcel.writeString(this.k);
-        parcel.writeString(this.l);
-        parcel.writeString(this.m);
-        boolean z2 = this.n;
-        int i2 = e0.a;
+        parcel.writeInt(this.f19957j);
+        parcel.writeString(this.f19958k);
+        parcel.writeString(this.f19959l);
+        parcel.writeString(this.f19960m);
+        boolean z2 = this.f19961n;
+        int i2 = Util2.f6708a;
         parcel.writeInt(z2 ? 1 : 0);
-        parcel.writeInt(this.o);
+        parcel.writeInt(this.f19962o);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ j1 y() {
-        return b.i.a.c.z2.a.b(this);
+    /* renamed from: y */
+    public /* synthetic */ Format2 mo8880y() {
+        return Metadata2.m3893b(this);
     }
 
     public IcyHeaders(Parcel parcel) {
-        this.j = parcel.readInt();
-        this.k = parcel.readString();
-        this.l = parcel.readString();
-        this.m = parcel.readString();
-        int i = e0.a;
-        this.n = parcel.readInt() != 0;
-        this.o = parcel.readInt();
+        this.f19957j = parcel.readInt();
+        this.f19958k = parcel.readString();
+        this.f19959l = parcel.readString();
+        this.f19960m = parcel.readString();
+        int i = Util2.f6708a;
+        this.f19961n = parcel.readInt() != 0;
+        this.f19962o = parcel.readInt();
     }
 }

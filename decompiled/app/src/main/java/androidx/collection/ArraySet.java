@@ -29,9 +29,9 @@ public final class ArraySet<E> implements Collection<E>, Set<E> {
     private int[] mHashes;
     public int mSize;
 
-    /* renamed from: androidx.collection.ArraySet$1, reason: invalid class name */
-    public class AnonymousClass1 extends MapCollections<E, E> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.collection.ArraySet$1 */
+    public class C01641 extends MapCollections<E, E> {
+        public C01641() {
         }
 
         @Override // androidx.collection.MapCollections
@@ -148,7 +148,7 @@ public final class ArraySet<E> implements Collection<E>, Set<E> {
 
     private MapCollections<E, E> getCollection() {
         if (this.mCollections == null) {
-            this.mCollections = new AnonymousClass1();
+            this.mCollections = new C01641();
         }
         return this.mCollections;
     }

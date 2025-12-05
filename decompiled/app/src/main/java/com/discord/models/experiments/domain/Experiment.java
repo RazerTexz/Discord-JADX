@@ -1,9 +1,9 @@
 package com.discord.models.experiments.domain;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Experiment.kt */
 /* loaded from: classes.dex */
@@ -15,7 +15,7 @@ public final /* data */ class Experiment {
     private final Function0<Unit> trackExposure;
 
     public Experiment(int i, int i2, int i3, boolean z2, Function0<Unit> function0) {
-        m.checkNotNullParameter(function0, "trackExposure");
+        Intrinsics3.checkNotNullParameter(function0, "trackExposure");
         this.revision = i;
         this.bucket = i2;
         this.population = i3;
@@ -70,7 +70,7 @@ public final /* data */ class Experiment {
     }
 
     public final Experiment copy(int revision, int bucket, int population, boolean isOverride, Function0<Unit> trackExposure) {
-        m.checkNotNullParameter(trackExposure, "trackExposure");
+        Intrinsics3.checkNotNullParameter(trackExposure, "trackExposure");
         return new Experiment(revision, bucket, population, isOverride, trackExposure);
     }
 
@@ -82,7 +82,7 @@ public final /* data */ class Experiment {
             return false;
         }
         Experiment experiment = (Experiment) other;
-        return this.revision == experiment.revision && this.bucket == experiment.bucket && this.population == experiment.population && this.isOverride == experiment.isOverride && m.areEqual(this.trackExposure, experiment.trackExposure);
+        return this.revision == experiment.revision && this.bucket == experiment.bucket && this.population == experiment.population && this.isOverride == experiment.isOverride && Intrinsics3.areEqual(this.trackExposure, experiment.trackExposure);
     }
 
     public final int getBucket() {
@@ -119,17 +119,17 @@ public final /* data */ class Experiment {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("Experiment(revision=");
-        sbU.append(this.revision);
-        sbU.append(", bucket=");
-        sbU.append(this.bucket);
-        sbU.append(", population=");
-        sbU.append(this.population);
-        sbU.append(", isOverride=");
-        sbU.append(this.isOverride);
-        sbU.append(", trackExposure=");
-        sbU.append(this.trackExposure);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("Experiment(revision=");
+        sbM833U.append(this.revision);
+        sbM833U.append(", bucket=");
+        sbM833U.append(this.bucket);
+        sbM833U.append(", population=");
+        sbM833U.append(this.population);
+        sbM833U.append(", isOverride=");
+        sbM833U.append(this.isOverride);
+        sbM833U.append(", trackExposure=");
+        sbM833U.append(this.trackExposure);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

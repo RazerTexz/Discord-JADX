@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAfCard.kt */
 /* loaded from: classes.dex */
@@ -18,7 +18,7 @@ public final /* data */ class TrackAfCard {
             return false;
         }
         TrackAfCard trackAfCard = (TrackAfCard) other;
-        return m.areEqual(this.loadId, trackAfCard.loadId) && m.areEqual(this.cardIndex, trackAfCard.cardIndex) && m.areEqual(this.cardType, trackAfCard.cardType);
+        return Intrinsics3.areEqual(this.loadId, trackAfCard.loadId) && Intrinsics3.areEqual(this.cardIndex, trackAfCard.cardIndex) && Intrinsics3.areEqual(this.cardType, trackAfCard.cardType);
     }
 
     public int hashCode() {
@@ -31,11 +31,11 @@ public final /* data */ class TrackAfCard {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAfCard(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", cardIndex=");
-        sbU.append(this.cardIndex);
-        sbU.append(", cardType=");
-        return a.E(sbU, this.cardType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAfCard(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", cardIndex=");
+        sbM833U.append(this.cardIndex);
+        sbM833U.append(", cardType=");
+        return outline.m817E(sbM833U, this.cardType, ")");
     }
 }

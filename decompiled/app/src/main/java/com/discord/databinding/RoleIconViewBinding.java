@@ -8,21 +8,22 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /* loaded from: classes.dex */
 public final class RoleIconViewBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final View a;
+    public final View f15228a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final SimpleDraweeView f2139b;
+    public final SimpleDraweeView f15229b;
 
     public RoleIconViewBinding(@NonNull View view, @NonNull SimpleDraweeView simpleDraweeView) {
-        this.a = view;
-        this.f2139b = simpleDraweeView;
+        this.f15228a = view;
+        this.f15229b = simpleDraweeView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15228a;
     }
 }

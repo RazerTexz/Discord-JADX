@@ -1,0 +1,39 @@
+package p007b.p225i.p408d.p410q;
+
+import com.google.gson.JsonIOException;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.EnumSet;
+import p007b.p100d.p104b.p105a.outline;
+
+/* JADX INFO: Add missing generic type declarations: [T] */
+/* compiled from: ConstructorConstructor.java */
+/* renamed from: b.i.d.q.j */
+/* loaded from: classes3.dex */
+public class C4925j<T> implements ObjectConstructor<T> {
+
+    /* renamed from: a */
+    public final /* synthetic */ Type f13122a;
+
+    public C4925j(C4922g c4922g, Type type) {
+        this.f13122a = type;
+    }
+
+    @Override // p007b.p225i.p408d.p410q.ObjectConstructor
+    /* renamed from: a */
+    public T mo6869a() {
+        Type type = this.f13122a;
+        if (!(type instanceof ParameterizedType)) {
+            StringBuilder sbM833U = outline.m833U("Invalid EnumSet type: ");
+            sbM833U.append(this.f13122a.toString());
+            throw new JsonIOException(sbM833U.toString());
+        }
+        Type type2 = ((ParameterizedType) type).getActualTypeArguments()[0];
+        if (type2 instanceof Class) {
+            return (T) EnumSet.noneOf((Class) type2);
+        }
+        StringBuilder sbM833U2 = outline.m833U("Invalid EnumSet type: ");
+        sbM833U2.append(this.f13122a.toString());
+        throw new JsonIOException(sbM833U2.toString());
+    }
+}

@@ -1,0 +1,33 @@
+package p007b.p008a.p025i;
+
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.viewbinding.ViewBinding;
+
+/* compiled from: ViewInteractionFailedLabelBinding.java */
+/* renamed from: b.a.i.m2, reason: use source file name */
+/* loaded from: classes.dex */
+public final class ViewInteractionFailedLabelBinding implements ViewBinding {
+
+    /* renamed from: a */
+    @NonNull
+    public final ConstraintLayout f1047a;
+
+    /* renamed from: b */
+    @NonNull
+    public final TextView f1048b;
+
+    public ViewInteractionFailedLabelBinding(@NonNull ConstraintLayout constraintLayout, @NonNull ImageView imageView, @NonNull TextView textView) {
+        this.f1047a = constraintLayout;
+        this.f1048b = textView;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    @NonNull
+    public View getRoot() {
+        return this.f1047a;
+    }
+}

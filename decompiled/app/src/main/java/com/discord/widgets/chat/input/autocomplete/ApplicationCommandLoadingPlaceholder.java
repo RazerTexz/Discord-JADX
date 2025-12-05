@@ -1,11 +1,11 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import b.d.b.a.a;
 import com.discord.models.commands.Application;
-import d0.t.n;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Autocompletable.kt */
 /* loaded from: classes2.dex */
@@ -38,7 +38,7 @@ public final /* data */ class ApplicationCommandLoadingPlaceholder extends Autoc
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ApplicationCommandLoadingPlaceholder) && m.areEqual(this.application, ((ApplicationCommandLoadingPlaceholder) other).application);
+            return (other instanceof ApplicationCommandLoadingPlaceholder) && Intrinsics3.areEqual(this.application, ((ApplicationCommandLoadingPlaceholder) other).application);
         }
         return true;
     }
@@ -54,7 +54,7 @@ public final /* data */ class ApplicationCommandLoadingPlaceholder extends Autoc
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable
     public List<String> getInputTextMatchers() {
-        return n.emptyList();
+        return Collections2.emptyList();
     }
 
     public int hashCode() {
@@ -66,10 +66,10 @@ public final /* data */ class ApplicationCommandLoadingPlaceholder extends Autoc
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ApplicationCommandLoadingPlaceholder(application=");
-        sbU.append(this.application);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ApplicationCommandLoadingPlaceholder(application=");
+        sbM833U.append(this.application);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public ApplicationCommandLoadingPlaceholder(Application application) {

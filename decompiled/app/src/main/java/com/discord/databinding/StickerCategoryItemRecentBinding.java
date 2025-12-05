@@ -4,26 +4,27 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.n;
+import p007b.p008a.p025i.ExpressionPickerCategorySelectionOverlineViewBinding;
 
 /* loaded from: classes.dex */
 public final class StickerCategoryItemRecentBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final FrameLayout a;
+    public final FrameLayout f15265a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final n f2150b;
+    public final ExpressionPickerCategorySelectionOverlineViewBinding f15266b;
 
-    public StickerCategoryItemRecentBinding(@NonNull FrameLayout frameLayout, @NonNull n nVar) {
-        this.a = frameLayout;
-        this.f2150b = nVar;
+    public StickerCategoryItemRecentBinding(@NonNull FrameLayout frameLayout, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding) {
+        this.f15265a = frameLayout;
+        this.f15266b = expressionPickerCategorySelectionOverlineViewBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15265a;
     }
 }

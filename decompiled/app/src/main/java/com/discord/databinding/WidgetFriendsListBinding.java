@@ -11,33 +11,37 @@ import com.discord.widgets.friends.EmptyFriendsStateView;
 /* loaded from: classes.dex */
 public final class WidgetFriendsListBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final RelativeLayout a;
+    public final RelativeLayout f16676a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final EmptyFriendsStateView f2396b;
+    public final EmptyFriendsStateView f16677b;
 
+    /* renamed from: c */
     @NonNull
-    public final AppViewFlipper c;
+    public final AppViewFlipper f16678c;
 
+    /* renamed from: d */
     @NonNull
-    public final RecyclerView d;
+    public final RecyclerView f16679d;
 
+    /* renamed from: e */
     @NonNull
-    public final RecyclerView e;
+    public final RecyclerView f16680e;
 
     public WidgetFriendsListBinding(@NonNull RelativeLayout relativeLayout, @NonNull EmptyFriendsStateView emptyFriendsStateView, @NonNull AppViewFlipper appViewFlipper, @NonNull RecyclerView recyclerView, @NonNull RecyclerView recyclerView2) {
-        this.a = relativeLayout;
-        this.f2396b = emptyFriendsStateView;
-        this.c = appViewFlipper;
-        this.d = recyclerView;
-        this.e = recyclerView2;
+        this.f16676a = relativeLayout;
+        this.f16677b = emptyFriendsStateView;
+        this.f16678c = appViewFlipper;
+        this.f16679d = recyclerView;
+        this.f16680e = recyclerView2;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16676a;
     }
 }

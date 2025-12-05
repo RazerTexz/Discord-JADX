@@ -1,0 +1,1131 @@
+package p659s.p660a;
+
+import com.discord.widgets.chat.input.MentionUtils;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.CoroutineContext;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
+import kotlin.sequences.Sequence;
+import kotlinx.coroutines.CompletionHandlerException;
+import kotlinx.coroutines.Exceptions7;
+import kotlinx.coroutines.Job;
+import kotlinx.coroutines.Timeout3;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p507d0.Exceptions;
+import p507d0.Result3;
+import p507d0.p578f0.SequenceBuilder2;
+import p507d0.p578f0.SequenceBuilder3;
+import p507d0.p584w.p585h.Intrinsics2;
+import p507d0.p584w.p586i.p587a.ContinuationImpl5;
+import p507d0.p584w.p586i.p587a.DebugMetadata;
+import p507d0.p592z.p594d.Intrinsics3;
+import p659s.p660a.p661a.Atomic3;
+import p659s.p660a.p661a.LockFreeLinkedList;
+import p659s.p660a.p661a.LockFreeLinkedList2;
+import p659s.p660a.p661a.LockFreeLinkedList3;
+import p659s.p660a.p661a.Symbol3;
+
+/* compiled from: JobSupport.kt */
+/* renamed from: s.a.h1 */
+/* loaded from: classes3.dex */
+public class C13116h1 implements Job, Job6, Job5 {
+
+    /* renamed from: j */
+    public static final AtomicReferenceFieldUpdater f27846j = AtomicReferenceFieldUpdater.newUpdater(C13116h1.class, Object.class, "_state");
+    public volatile Object _parentHandle;
+    public volatile Object _state;
+
+    /* compiled from: JobSupport.kt */
+    /* renamed from: s.a.h1$a */
+    public static final class a extends AbstractC13113g1<Job> {
+
+        /* renamed from: n */
+        public final C13116h1 f27847n;
+
+        /* renamed from: o */
+        public final b f27848o;
+
+        /* renamed from: p */
+        public final C13141q f27849p;
+
+        /* renamed from: q */
+        public final Object f27850q;
+
+        public a(C13116h1 c13116h1, b bVar, C13141q c13141q, Object obj) {
+            super(c13141q.f27882n);
+            this.f27847n = c13116h1;
+            this.f27848o = bVar;
+            this.f27849p = c13141q;
+            this.f27850q = obj;
+        }
+
+        @Override // kotlin.jvm.functions.Function1
+        public /* bridge */ /* synthetic */ Unit invoke(Throwable th) {
+            mo11198q(th);
+            return Unit.f27425a;
+        }
+
+        @Override // p659s.p660a.CompletionHandler2
+        /* renamed from: q */
+        public void mo11198q(Throwable th) {
+            C13116h1 c13116h1 = this.f27847n;
+            b bVar = this.f27848o;
+            C13141q c13141q = this.f27849p;
+            Object obj = this.f27850q;
+            C13141q c13141qM11297U = c13116h1.m11297U(c13141q);
+            if (c13141qM11297U == null || !c13116h1.m11303d0(bVar, c13141qM11297U, obj)) {
+                c13116h1.mo11173v(c13116h1.m11289H(bVar, obj));
+            }
+        }
+
+        @Override // p659s.p660a.p661a.LockFreeLinkedList3
+        public String toString() {
+            StringBuilder sbM833U = outline.m833U("ChildCompletion[");
+            sbM833U.append(this.f27849p);
+            sbM833U.append(", ");
+            sbM833U.append(this.f27850q);
+            sbM833U.append(']');
+            return sbM833U.toString();
+        }
+    }
+
+    /* compiled from: JobSupport.kt */
+    /* renamed from: s.a.h1$b */
+    public static final class b implements InterfaceC13169z0 {
+        public volatile Object _exceptionsHolder = null;
+        public volatile int _isCompleting;
+        public volatile Object _rootCause;
+
+        /* renamed from: j */
+        public final C13131m1 f27851j;
+
+        public b(C13131m1 c13131m1, boolean z2, Throwable th) {
+            this.f27851j = c13131m1;
+            this._isCompleting = z2 ? 1 : 0;
+            this._rootCause = th;
+        }
+
+        @Override // p659s.p660a.InterfaceC13169z0
+        /* renamed from: a */
+        public boolean mo11281a() {
+            return ((Throwable) this._rootCause) == null;
+        }
+
+        /* JADX WARN: Multi-variable type inference failed */
+        /* renamed from: b */
+        public final void m11309b(Throwable th) {
+            Throwable th2 = (Throwable) this._rootCause;
+            if (th2 == null) {
+                this._rootCause = th;
+                return;
+            }
+            if (th == th2) {
+                return;
+            }
+            Object obj = this._exceptionsHolder;
+            if (obj == null) {
+                this._exceptionsHolder = th;
+                return;
+            }
+            if (!(obj instanceof Throwable)) {
+                if (!(obj instanceof ArrayList)) {
+                    throw new IllegalStateException(outline.m881v("State is ", obj).toString());
+                }
+                ((ArrayList) obj).add(th);
+            } else {
+                if (th == obj) {
+                    return;
+                }
+                ArrayList<Throwable> arrayListM11310c = m11310c();
+                arrayListM11310c.add(obj);
+                arrayListM11310c.add(th);
+                this._exceptionsHolder = arrayListM11310c;
+            }
+        }
+
+        /* renamed from: c */
+        public final ArrayList<Throwable> m11310c() {
+            return new ArrayList<>(4);
+        }
+
+        /* renamed from: d */
+        public final boolean m11311d() {
+            return ((Throwable) this._rootCause) != null;
+        }
+
+        /* renamed from: e */
+        public final boolean m11312e() {
+            return this._exceptionsHolder == C13119i1.f27861e;
+        }
+
+        /* JADX WARN: Multi-variable type inference failed */
+        /* renamed from: f */
+        public final List<Throwable> m11313f(Throwable th) {
+            ArrayList<Throwable> arrayListM11310c;
+            Object obj = this._exceptionsHolder;
+            if (obj == null) {
+                arrayListM11310c = m11310c();
+            } else if (obj instanceof Throwable) {
+                ArrayList<Throwable> arrayListM11310c2 = m11310c();
+                arrayListM11310c2.add(obj);
+                arrayListM11310c = arrayListM11310c2;
+            } else {
+                if (!(obj instanceof ArrayList)) {
+                    throw new IllegalStateException(outline.m881v("State is ", obj).toString());
+                }
+                arrayListM11310c = (ArrayList) obj;
+            }
+            Throwable th2 = (Throwable) this._rootCause;
+            if (th2 != null) {
+                arrayListM11310c.add(0, th2);
+            }
+            if (th != null && (!Intrinsics3.areEqual(th, th2))) {
+                arrayListM11310c.add(th);
+            }
+            this._exceptionsHolder = C13119i1.f27861e;
+            return arrayListM11310c;
+        }
+
+        @Override // p659s.p660a.InterfaceC13169z0
+        public C13131m1 getList() {
+            return this.f27851j;
+        }
+
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v2, types: [boolean, int] */
+        public String toString() {
+            StringBuilder sbM833U = outline.m833U("Finishing[cancelling=");
+            sbM833U.append(m11311d());
+            sbM833U.append(", completing=");
+            sbM833U.append((boolean) this._isCompleting);
+            sbM833U.append(", rootCause=");
+            sbM833U.append((Throwable) this._rootCause);
+            sbM833U.append(", exceptions=");
+            sbM833U.append(this._exceptionsHolder);
+            sbM833U.append(", list=");
+            sbM833U.append(this.f27851j);
+            sbM833U.append(']');
+            return sbM833U.toString();
+        }
+    }
+
+    /* compiled from: LockFreeLinkedList.kt */
+    /* renamed from: s.a.h1$c */
+    public static final class c extends LockFreeLinkedList3.a {
+
+        /* renamed from: d */
+        public final /* synthetic */ C13116h1 f27852d;
+
+        /* renamed from: e */
+        public final /* synthetic */ Object f27853e;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        public c(LockFreeLinkedList3 lockFreeLinkedList3, LockFreeLinkedList3 lockFreeLinkedList32, C13116h1 c13116h1, Object obj) {
+            super(lockFreeLinkedList32);
+            this.f27852d = c13116h1;
+            this.f27853e = obj;
+        }
+
+        @Override // p659s.p660a.p661a.Atomic2
+        /* renamed from: c */
+        public Object mo11144c(LockFreeLinkedList3 lockFreeLinkedList3) {
+            if (this.f27852d.m11292M() == this.f27853e) {
+                return null;
+            }
+            return LockFreeLinkedList2.f27683a;
+        }
+    }
+
+    /* compiled from: JobSupport.kt */
+    @DebugMetadata(m10084c = "kotlinx.coroutines.JobSupport$children$1", m10085f = "JobSupport.kt", m10086l = {949, 951}, m10087m = "invokeSuspend")
+    /* renamed from: s.a.h1$d */
+    public static final class d extends ContinuationImpl5 implements Function2<SequenceBuilder2<? super Job6>, Continuation<? super Unit>, Object> {
+        public Object L$0;
+        public Object L$1;
+        public Object L$2;
+        public Object L$3;
+        public Object L$4;
+        public Object L$5;
+        public int label;
+
+        /* renamed from: p$ */
+        private SequenceBuilder2 f27854p$;
+
+        public d(Continuation continuation) {
+            super(2, continuation);
+        }
+
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
+        public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
+            d dVar = C13116h1.this.new d(continuation);
+            dVar.f27854p$ = (SequenceBuilder2) obj;
+            return dVar;
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(SequenceBuilder2<? super Job6> sequenceBuilder2, Continuation<? super Unit> continuation) {
+            d dVar = C13116h1.this.new d(continuation);
+            dVar.f27854p$ = sequenceBuilder2;
+            return dVar.invokeSuspend(Unit.f27425a);
+        }
+
+        /* JADX WARN: Removed duplicated region for block: B:22:0x007f  */
+        /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:23:0x0081 -> B:27:0x009d). Please report as a decompilation issue!!! */
+        /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:25:0x009a -> B:27:0x009d). Please report as a decompilation issue!!! */
+        @Override // p507d0.p584w.p586i.p587a.ContinuationImpl
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+        */
+        public final Object invokeSuspend(Object obj) {
+            LockFreeLinkedList list;
+            SequenceBuilder2 sequenceBuilder2;
+            Object obj2;
+            LockFreeLinkedList3 lockFreeLinkedList3M11156j;
+            d dVar;
+            LockFreeLinkedList lockFreeLinkedList;
+            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+            int i = this.label;
+            if (i == 0) {
+                Result3.throwOnFailure(obj);
+                SequenceBuilder2 sequenceBuilder22 = this.f27854p$;
+                Object objM11292M = C13116h1.this.m11292M();
+                if (objM11292M instanceof C13141q) {
+                    Job6 job6 = ((C13141q) objM11292M).f27882n;
+                    this.L$0 = sequenceBuilder22;
+                    this.L$1 = objM11292M;
+                    this.label = 1;
+                    if (sequenceBuilder22.yield(job6, this) == coroutine_suspended) {
+                        return coroutine_suspended;
+                    }
+                } else if ((objM11292M instanceof InterfaceC13169z0) && (list = ((InterfaceC13169z0) objM11292M).getList()) != null) {
+                    Object objM11155i = list.m11155i();
+                    Objects.requireNonNull(objM11155i, "null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                    sequenceBuilder2 = sequenceBuilder22;
+                    obj2 = objM11292M;
+                    lockFreeLinkedList3M11156j = (LockFreeLinkedList3) objM11155i;
+                    dVar = this;
+                    lockFreeLinkedList = list;
+                    if (!Intrinsics3.areEqual(lockFreeLinkedList3M11156j, list)) {
+                    }
+                }
+            } else if (i == 1) {
+                Result3.throwOnFailure(obj);
+            } else {
+                if (i != 2) {
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                }
+                lockFreeLinkedList3M11156j = (LockFreeLinkedList3) this.L$4;
+                list = (LockFreeLinkedList) this.L$3;
+                lockFreeLinkedList = (C13131m1) this.L$2;
+                obj2 = this.L$1;
+                sequenceBuilder2 = (SequenceBuilder2) this.L$0;
+                Result3.throwOnFailure(obj);
+                dVar = this;
+                lockFreeLinkedList3M11156j = lockFreeLinkedList3M11156j.m11156j();
+                if (!Intrinsics3.areEqual(lockFreeLinkedList3M11156j, list)) {
+                    if (lockFreeLinkedList3M11156j instanceof C13141q) {
+                        C13141q c13141q = (C13141q) lockFreeLinkedList3M11156j;
+                        Job6 job62 = c13141q.f27882n;
+                        dVar.L$0 = sequenceBuilder2;
+                        dVar.L$1 = obj2;
+                        dVar.L$2 = lockFreeLinkedList;
+                        dVar.L$3 = list;
+                        dVar.L$4 = lockFreeLinkedList3M11156j;
+                        dVar.L$5 = c13141q;
+                        dVar.label = 2;
+                        if (sequenceBuilder2.yield(job62, dVar) == coroutine_suspended) {
+                            return coroutine_suspended;
+                        }
+                    }
+                    lockFreeLinkedList3M11156j = lockFreeLinkedList3M11156j.m11156j();
+                    if (!Intrinsics3.areEqual(lockFreeLinkedList3M11156j, list)) {
+                    }
+                }
+            }
+            return Unit.f27425a;
+        }
+    }
+
+    public C13116h1(boolean z2) {
+        this._state = z2 ? C13119i1.f27863g : C13119i1.f27862f;
+        this._parentHandle = null;
+    }
+
+    /* renamed from: b0 */
+    public static /* synthetic */ CancellationException m11284b0(C13116h1 c13116h1, Throwable th, String str, int i, Object obj) {
+        int i2 = i & 1;
+        return c13116h1.m11301a0(th, null);
+    }
+
+    @Override // p659s.p660a.Job5
+    /* renamed from: A */
+    public CancellationException mo11285A() {
+        Throwable th;
+        Object objM11292M = m11292M();
+        if (objM11292M instanceof b) {
+            th = (Throwable) ((b) objM11292M)._rootCause;
+        } else if (objM11292M instanceof CompletionState2) {
+            th = ((CompletionState2) objM11292M).f27913b;
+        } else {
+            if (objM11292M instanceof InterfaceC13169z0) {
+                throw new IllegalStateException(outline.m881v("Cannot be cancelling child in this state: ", objM11292M).toString());
+            }
+            th = null;
+        }
+        CancellationException cancellationException = (CancellationException) (th instanceof CancellationException ? th : null);
+        if (cancellationException != null) {
+            return cancellationException;
+        }
+        StringBuilder sbM833U = outline.m833U("Parent job is ");
+        sbM833U.append(m11300Z(objM11292M));
+        return new Exceptions7(sbM833U.toString(), th, this);
+    }
+
+    /* renamed from: B */
+    public String mo11182B() {
+        return "Job was cancelled";
+    }
+
+    @Override // kotlinx.coroutines.Job
+    /* renamed from: D */
+    public final Job4 mo10909D(Job6 job6) {
+        Job2 job2M4356w0 = C3404f.m4356w0(this, true, false, new C13141q(this, job6), 2, null);
+        Objects.requireNonNull(job2M4356w0, "null cannot be cast to non-null type kotlinx.coroutines.ChildHandle");
+        return (Job4) job2M4356w0;
+    }
+
+    /* renamed from: E */
+    public boolean mo11286E(Throwable th) {
+        if (th instanceof CancellationException) {
+            return true;
+        }
+        return m11306w(th) && mo11279J();
+    }
+
+    /* renamed from: F */
+    public final void m11287F(InterfaceC13169z0 interfaceC13169z0, Object obj) throws Throwable {
+        Job4 job4 = (Job4) this._parentHandle;
+        if (job4 != null) {
+            job4.dispose();
+            this._parentHandle = Job3.f27880j;
+        }
+        CompletionHandlerException completionHandlerException = null;
+        if (!(obj instanceof CompletionState2)) {
+            obj = null;
+        }
+        CompletionState2 completionState2 = (CompletionState2) obj;
+        Throwable th = completionState2 != null ? completionState2.f27913b : null;
+        if (interfaceC13169z0 instanceof AbstractC13113g1) {
+            try {
+                ((AbstractC13113g1) interfaceC13169z0).mo11198q(th);
+                return;
+            } catch (Throwable th2) {
+                mo11183O(new CompletionHandlerException("Exception in completion handler " + interfaceC13169z0 + " for " + this, th2));
+                return;
+            }
+        }
+        C13131m1 list = interfaceC13169z0.getList();
+        if (list != null) {
+            Object objM11155i = list.m11155i();
+            Objects.requireNonNull(objM11155i, "null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+            for (LockFreeLinkedList3 lockFreeLinkedList3M11156j = (LockFreeLinkedList3) objM11155i; !Intrinsics3.areEqual(lockFreeLinkedList3M11156j, list); lockFreeLinkedList3M11156j = lockFreeLinkedList3M11156j.m11156j()) {
+                if (lockFreeLinkedList3M11156j instanceof AbstractC13113g1) {
+                    AbstractC13113g1 abstractC13113g1 = (AbstractC13113g1) lockFreeLinkedList3M11156j;
+                    try {
+                        abstractC13113g1.mo11198q(th);
+                    } catch (Throwable th3) {
+                        if (completionHandlerException != null) {
+                            Exceptions.addSuppressed(completionHandlerException, th3);
+                        } else {
+                            completionHandlerException = new CompletionHandlerException("Exception in completion handler " + abstractC13113g1 + " for " + this, th3);
+                        }
+                    }
+                }
+            }
+            if (completionHandlerException != null) {
+                mo11183O(completionHandlerException);
+            }
+        }
+    }
+
+    /* renamed from: G */
+    public final Throwable m11288G(Object obj) {
+        if (obj != null ? obj instanceof Throwable : true) {
+            return obj != null ? (Throwable) obj : new Exceptions7(mo11182B(), null, this);
+        }
+        Objects.requireNonNull(obj, "null cannot be cast to non-null type kotlinx.coroutines.ParentJob");
+        return ((Job5) obj).mo11285A();
+    }
+
+    /* renamed from: H */
+    public final Object m11289H(b bVar, Object obj) throws Throwable {
+        Throwable thM11290I;
+        CompletionState2 completionState2 = (CompletionState2) (!(obj instanceof CompletionState2) ? null : obj);
+        Throwable th = completionState2 != null ? completionState2.f27913b : null;
+        synchronized (bVar) {
+            bVar.m11311d();
+            List<Throwable> listM11313f = bVar.m11313f(th);
+            thM11290I = m11290I(bVar, listM11313f);
+            if (thM11290I != null && listM11313f.size() > 1) {
+                Set setNewSetFromMap = Collections.newSetFromMap(new IdentityHashMap(listM11313f.size()));
+                for (Throwable th2 : listM11313f) {
+                    if (th2 != thM11290I && th2 != thM11290I && !(th2 instanceof CancellationException) && setNewSetFromMap.add(th2)) {
+                        Exceptions.addSuppressed(thM11290I, th2);
+                    }
+                }
+            }
+        }
+        if (thM11290I != null && thM11290I != th) {
+            obj = new CompletionState2(thM11290I, false, 2);
+        }
+        if (thM11290I != null) {
+            if (m11308z(thM11290I) || mo11293N(thM11290I)) {
+                Objects.requireNonNull(obj, "null cannot be cast to non-null type kotlinx.coroutines.CompletedExceptionally");
+                CompletionState2.f27912a.compareAndSet((CompletionState2) obj, 0, 1);
+            }
+        }
+        mo11185W(obj);
+        f27846j.compareAndSet(this, bVar, obj instanceof InterfaceC13169z0 ? new C13043a1((InterfaceC13169z0) obj) : obj);
+        m11287F(bVar, obj);
+        return obj;
+    }
+
+    /* renamed from: I */
+    public final Throwable m11290I(b bVar, List<? extends Throwable> list) {
+        Object next;
+        Object obj = null;
+        if (list.isEmpty()) {
+            if (bVar.m11311d()) {
+                return new Exceptions7(mo11182B(), null, this);
+            }
+            return null;
+        }
+        Iterator<T> it = list.iterator();
+        while (true) {
+            if (!it.hasNext()) {
+                next = null;
+                break;
+            }
+            next = it.next();
+            if (!(((Throwable) next) instanceof CancellationException)) {
+                break;
+            }
+        }
+        Throwable th = (Throwable) next;
+        if (th != null) {
+            return th;
+        }
+        Throwable th2 = list.get(0);
+        if (th2 instanceof Timeout3) {
+            Iterator<T> it2 = list.iterator();
+            while (true) {
+                if (!it2.hasNext()) {
+                    break;
+                }
+                Object next2 = it2.next();
+                Throwable th3 = (Throwable) next2;
+                if (th3 != th2 && (th3 instanceof Timeout3)) {
+                    obj = next2;
+                    break;
+                }
+            }
+            Throwable th4 = (Throwable) obj;
+            if (th4 != null) {
+                return th4;
+            }
+        }
+        return th2;
+    }
+
+    /* renamed from: J */
+    public boolean mo11279J() {
+        return true;
+    }
+
+    /* renamed from: K */
+    public boolean mo11280K() {
+        return false;
+    }
+
+    /* renamed from: L */
+    public final C13131m1 m11291L(InterfaceC13169z0 interfaceC13169z0) {
+        C13131m1 list = interfaceC13169z0.getList();
+        if (list != null) {
+            return list;
+        }
+        if (interfaceC13169z0 instanceof C13139p0) {
+            return new C13131m1();
+        }
+        if (interfaceC13169z0 instanceof AbstractC13113g1) {
+            m11299Y((AbstractC13113g1) interfaceC13169z0);
+            return null;
+        }
+        throw new IllegalStateException(("State should have list: " + interfaceC13169z0).toString());
+    }
+
+    /* renamed from: M */
+    public final Object m11292M() {
+        while (true) {
+            Object obj = this._state;
+            if (!(obj instanceof Atomic3)) {
+                return obj;
+            }
+            ((Atomic3) obj).mo11142a(this);
+        }
+    }
+
+    /* renamed from: N */
+    public boolean mo11293N(Throwable th) {
+        return false;
+    }
+
+    /* renamed from: O */
+    public void mo11183O(Throwable th) throws Throwable {
+        throw th;
+    }
+
+    /* renamed from: P */
+    public final void m11294P(Job job) {
+        if (job == null) {
+            this._parentHandle = Job3.f27880j;
+            return;
+        }
+        job.start();
+        Job4 job4Mo10909D = job.mo10909D(this);
+        this._parentHandle = job4Mo10909D;
+        if (!(m11292M() instanceof InterfaceC13169z0)) {
+            job4Mo10909D.dispose();
+            this._parentHandle = Job3.f27880j;
+        }
+    }
+
+    /* renamed from: Q */
+    public boolean mo11171Q() {
+        return this instanceof Builders4;
+    }
+
+    /* renamed from: R */
+    public final Object m11295R(Object obj) throws Throwable {
+        Object objM11302c0;
+        do {
+            objM11302c0 = m11302c0(m11292M(), obj);
+            if (objM11302c0 == C13119i1.f27857a) {
+                String str = "Job " + this + " is already complete or completing, but is being completed with " + obj;
+                if (!(obj instanceof CompletionState2)) {
+                    obj = null;
+                }
+                CompletionState2 completionState2 = (CompletionState2) obj;
+                throw new IllegalStateException(str, completionState2 != null ? completionState2.f27913b : null);
+            }
+        } while (objM11302c0 == C13119i1.f27859c);
+        return objM11302c0;
+    }
+
+    /* renamed from: S */
+    public final AbstractC13113g1<?> m11296S(Function1<? super Throwable, Unit> function1, boolean z2) {
+        if (z2) {
+            AbstractC13094e1 abstractC13094e1 = (AbstractC13094e1) (function1 instanceof AbstractC13094e1 ? function1 : null);
+            return abstractC13094e1 != null ? abstractC13094e1 : new C13053c1(this, function1);
+        }
+        AbstractC13113g1<?> abstractC13113g1 = (AbstractC13113g1) (function1 instanceof AbstractC13113g1 ? function1 : null);
+        return abstractC13113g1 != null ? abstractC13113g1 : new C13078d1(this, function1);
+    }
+
+    /* renamed from: T */
+    public String mo11184T() {
+        return getClass().getSimpleName();
+    }
+
+    /* renamed from: U */
+    public final C13141q m11297U(LockFreeLinkedList3 lockFreeLinkedList3) {
+        while (lockFreeLinkedList3.mo11150m()) {
+            lockFreeLinkedList3 = lockFreeLinkedList3.m11157k();
+        }
+        while (true) {
+            lockFreeLinkedList3 = lockFreeLinkedList3.m11156j();
+            if (!lockFreeLinkedList3.mo11150m()) {
+                if (lockFreeLinkedList3 instanceof C13141q) {
+                    return (C13141q) lockFreeLinkedList3;
+                }
+                if (lockFreeLinkedList3 instanceof C13131m1) {
+                    return null;
+                }
+            }
+        }
+    }
+
+    /* renamed from: V */
+    public final void m11298V(C13131m1 c13131m1, Throwable th) throws Throwable {
+        CompletionHandlerException completionHandlerException = null;
+        Object objM11155i = c13131m1.m11155i();
+        Objects.requireNonNull(objM11155i, "null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+        for (LockFreeLinkedList3 lockFreeLinkedList3M11156j = (LockFreeLinkedList3) objM11155i; !Intrinsics3.areEqual(lockFreeLinkedList3M11156j, c13131m1); lockFreeLinkedList3M11156j = lockFreeLinkedList3M11156j.m11156j()) {
+            if (lockFreeLinkedList3M11156j instanceof AbstractC13094e1) {
+                AbstractC13113g1 abstractC13113g1 = (AbstractC13113g1) lockFreeLinkedList3M11156j;
+                try {
+                    abstractC13113g1.mo11198q(th);
+                } catch (Throwable th2) {
+                    if (completionHandlerException != null) {
+                        Exceptions.addSuppressed(completionHandlerException, th2);
+                    } else {
+                        completionHandlerException = new CompletionHandlerException("Exception in completion handler " + abstractC13113g1 + " for " + this, th2);
+                    }
+                }
+            }
+        }
+        if (completionHandlerException != null) {
+            mo11183O(completionHandlerException);
+        }
+        m11308z(th);
+    }
+
+    /* renamed from: W */
+    public void mo11185W(Object obj) {
+    }
+
+    /* renamed from: X */
+    public void mo11186X() {
+    }
+
+    /* renamed from: Y */
+    public final void m11299Y(AbstractC13113g1<?> abstractC13113g1) {
+        C13131m1 c13131m1 = new C13131m1();
+        LockFreeLinkedList3.f27685k.lazySet(c13131m1, abstractC13113g1);
+        LockFreeLinkedList3.f27684j.lazySet(c13131m1, abstractC13113g1);
+        while (true) {
+            if (abstractC13113g1.m11155i() != abstractC13113g1) {
+                break;
+            } else if (LockFreeLinkedList3.f27684j.compareAndSet(abstractC13113g1, abstractC13113g1, c13131m1)) {
+                c13131m1.m11154g(abstractC13113g1);
+                break;
+            }
+        }
+        f27846j.compareAndSet(this, abstractC13113g1, abstractC13113g1.m11156j());
+    }
+
+    /* renamed from: Z */
+    public final String m11300Z(Object obj) {
+        if (!(obj instanceof b)) {
+            return obj instanceof InterfaceC13169z0 ? ((InterfaceC13169z0) obj).mo11281a() ? "Active" : "New" : obj instanceof CompletionState2 ? "Cancelled" : "Completed";
+        }
+        b bVar = (b) obj;
+        return bVar.m11311d() ? "Cancelling" : bVar._isCompleting != 0 ? "Completing" : "Active";
+    }
+
+    @Override // kotlinx.coroutines.Job
+    /* renamed from: a */
+    public boolean mo10910a() {
+        Object objM11292M = m11292M();
+        return (objM11292M instanceof InterfaceC13169z0) && ((InterfaceC13169z0) objM11292M).mo11281a();
+    }
+
+    /* renamed from: a0 */
+    public final CancellationException m11301a0(Throwable th, String str) {
+        CancellationException exceptions7 = (CancellationException) (!(th instanceof CancellationException) ? null : th);
+        if (exceptions7 == null) {
+            if (str == null) {
+                str = mo11182B();
+            }
+            exceptions7 = new Exceptions7(str, th, this);
+        }
+        return exceptions7;
+    }
+
+    @Override // kotlinx.coroutines.Job
+    /* renamed from: b */
+    public void mo10911b(CancellationException cancellationException) throws Throwable {
+        if (cancellationException == null) {
+            cancellationException = new Exceptions7(mo11182B(), null, this);
+        }
+        m11307x(cancellationException);
+    }
+
+    /* renamed from: c0 */
+    public final Object m11302c0(Object obj, Object obj2) throws Throwable {
+        if (!(obj instanceof InterfaceC13169z0)) {
+            return C13119i1.f27857a;
+        }
+        boolean z2 = true;
+        if (((obj instanceof C13139p0) || (obj instanceof AbstractC13113g1)) && !(obj instanceof C13141q) && !(obj2 instanceof CompletionState2)) {
+            InterfaceC13169z0 interfaceC13169z0 = (InterfaceC13169z0) obj;
+            if (f27846j.compareAndSet(this, interfaceC13169z0, obj2 instanceof InterfaceC13169z0 ? new C13043a1((InterfaceC13169z0) obj2) : obj2)) {
+                mo11185W(obj2);
+                m11287F(interfaceC13169z0, obj2);
+            } else {
+                z2 = false;
+            }
+            return z2 ? obj2 : C13119i1.f27859c;
+        }
+        InterfaceC13169z0 interfaceC13169z02 = (InterfaceC13169z0) obj;
+        C13131m1 c13131m1M11291L = m11291L(interfaceC13169z02);
+        if (c13131m1M11291L == null) {
+            return C13119i1.f27859c;
+        }
+        C13141q c13141qM11297U = null;
+        b bVar = (b) (!(interfaceC13169z02 instanceof b) ? null : interfaceC13169z02);
+        if (bVar == null) {
+            bVar = new b(c13131m1M11291L, false, null);
+        }
+        synchronized (bVar) {
+            if (bVar._isCompleting != 0) {
+                return C13119i1.f27857a;
+            }
+            bVar._isCompleting = 1;
+            if (bVar != interfaceC13169z02 && !f27846j.compareAndSet(this, interfaceC13169z02, bVar)) {
+                return C13119i1.f27859c;
+            }
+            boolean zM11311d = bVar.m11311d();
+            CompletionState2 completionState2 = (CompletionState2) (!(obj2 instanceof CompletionState2) ? null : obj2);
+            if (completionState2 != null) {
+                bVar.m11309b(completionState2.f27913b);
+            }
+            Throwable th = (Throwable) bVar._rootCause;
+            if (!(true ^ zM11311d)) {
+                th = null;
+            }
+            if (th != null) {
+                m11298V(c13131m1M11291L, th);
+            }
+            C13141q c13141q = (C13141q) (!(interfaceC13169z02 instanceof C13141q) ? null : interfaceC13169z02);
+            if (c13141q != null) {
+                c13141qM11297U = c13141q;
+            } else {
+                C13131m1 list = interfaceC13169z02.getList();
+                if (list != null) {
+                    c13141qM11297U = m11297U(list);
+                }
+            }
+            return (c13141qM11297U == null || !m11303d0(bVar, c13141qM11297U, obj2)) ? m11289H(bVar, obj2) : C13119i1.f27858b;
+        }
+    }
+
+    /* renamed from: d0 */
+    public final boolean m11303d0(b bVar, C13141q c13141q, Object obj) {
+        while (C3404f.m4356w0(c13141q.f27882n, false, false, new a(this, bVar, c13141q, obj), 1, null) == Job3.f27880j) {
+            c13141q = m11297U(c13141q);
+            if (c13141q == null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override // kotlinx.coroutines.Job
+    /* renamed from: e */
+    public final Sequence<Job> mo10912e() {
+        return SequenceBuilder3.sequence(new d(null));
+    }
+
+    @Override // kotlin.coroutines.CoroutineContext
+    public <R> R fold(R r, Function2<? super R, ? super CoroutineContext.Element, ? extends R> function2) {
+        return (R) CoroutineContext.Element.C12790a.fold(this, r, function2);
+    }
+
+    @Override // kotlin.coroutines.CoroutineContext.Element, kotlin.coroutines.CoroutineContext
+    public <E extends CoroutineContext.Element> E get(CoroutineContext.Key<E> key) {
+        return (E) CoroutineContext.Element.C12790a.get(this, key);
+    }
+
+    @Override // kotlin.coroutines.CoroutineContext.Element
+    public final CoroutineContext.Key<?> getKey() {
+        return Job.INSTANCE;
+    }
+
+    @Override // kotlin.coroutines.CoroutineContext
+    public CoroutineContext minusKey(CoroutineContext.Key<?> key) {
+        return CoroutineContext.Element.C12790a.minusKey(this, key);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Removed duplicated region for block: B:55:0x008e  */
+    /* JADX WARN: Removed duplicated region for block: B:83:0x0088 A[SYNTHETIC] */
+    /* JADX WARN: Type inference failed for: r4v3, types: [s.a.y0] */
+    @Override // kotlinx.coroutines.Job
+    /* renamed from: n */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public final Job2 mo10913n(boolean z2, boolean z3, Function1<? super Throwable, Unit> function1) {
+        Throwable th;
+        AbstractC13113g1<?> abstractC13113g1M11296S = null;
+        while (true) {
+            Object objM11292M = m11292M();
+            if (objM11292M instanceof C13139p0) {
+                C13139p0 c13139p0 = (C13139p0) objM11292M;
+                if (c13139p0.f27881j) {
+                    if (abstractC13113g1M11296S == null) {
+                        abstractC13113g1M11296S = m11296S(function1, z2);
+                    }
+                    if (f27846j.compareAndSet(this, objM11292M, abstractC13113g1M11296S)) {
+                        return abstractC13113g1M11296S;
+                    }
+                } else {
+                    C13131m1 c13131m1 = new C13131m1();
+                    if (!c13139p0.f27881j) {
+                        c13131m1 = new C13166y0(c13131m1);
+                    }
+                    f27846j.compareAndSet(this, c13139p0, c13131m1);
+                }
+            } else {
+                if (!(objM11292M instanceof InterfaceC13169z0)) {
+                    if (z3) {
+                        if (!(objM11292M instanceof CompletionState2)) {
+                            objM11292M = null;
+                        }
+                        CompletionState2 completionState2 = (CompletionState2) objM11292M;
+                        function1.invoke(completionState2 != null ? completionState2.f27913b : null);
+                    }
+                    return Job3.f27880j;
+                }
+                C13131m1 list = ((InterfaceC13169z0) objM11292M).getList();
+                if (list == null) {
+                    Objects.requireNonNull(objM11292M, "null cannot be cast to non-null type kotlinx.coroutines.JobNode<*>");
+                    m11299Y((AbstractC13113g1) objM11292M);
+                } else {
+                    Job2 job2 = Job3.f27880j;
+                    if (z2 && (objM11292M instanceof b)) {
+                        synchronized (objM11292M) {
+                            th = (Throwable) ((b) objM11292M)._rootCause;
+                            if (th == null || ((function1 instanceof C13141q) && ((b) objM11292M)._isCompleting == 0)) {
+                                if (abstractC13113g1M11296S == null) {
+                                    abstractC13113g1M11296S = m11296S(function1, z2);
+                                }
+                                if (m11305t(objM11292M, list, abstractC13113g1M11296S)) {
+                                    if (th == null) {
+                                        return abstractC13113g1M11296S;
+                                    }
+                                    job2 = abstractC13113g1M11296S;
+                                }
+                            }
+                        }
+                        if (th == null) {
+                        }
+                    } else {
+                        th = null;
+                        if (th == null) {
+                            if (z3) {
+                                function1.invoke(th);
+                            }
+                            return job2;
+                        }
+                        if (abstractC13113g1M11296S == null) {
+                            abstractC13113g1M11296S = m11296S(function1, z2);
+                        }
+                        if (m11305t(objM11292M, list, abstractC13113g1M11296S)) {
+                            return abstractC13113g1M11296S;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @Override // kotlin.coroutines.CoroutineContext
+    public CoroutineContext plus(CoroutineContext coroutineContext) {
+        return CoroutineContext.Element.C12790a.plus(this, coroutineContext);
+    }
+
+    @Override // kotlinx.coroutines.Job
+    /* renamed from: q */
+    public final CancellationException mo10914q() {
+        Object objM11292M = m11292M();
+        if (objM11292M instanceof b) {
+            Throwable th = (Throwable) ((b) objM11292M)._rootCause;
+            if (th != null) {
+                return m11301a0(th, getClass().getSimpleName() + " is cancelling");
+            }
+            throw new IllegalStateException(("Job is still new or active: " + this).toString());
+        }
+        if (objM11292M instanceof InterfaceC13169z0) {
+            throw new IllegalStateException(("Job is still new or active: " + this).toString());
+        }
+        if (objM11292M instanceof CompletionState2) {
+            return m11284b0(this, ((CompletionState2) objM11292M).f27913b, null, 1, null);
+        }
+        return new Exceptions7(getClass().getSimpleName() + " has completed normally", null, this);
+    }
+
+    @Override // p659s.p660a.Job6
+    /* renamed from: s */
+    public final void mo11304s(Job5 job5) throws Throwable {
+        m11306w(job5);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:18:0x0039  */
+    @Override // kotlinx.coroutines.Job
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public final boolean start() {
+        char c2;
+        do {
+            Object objM11292M = m11292M();
+            c2 = 65535;
+            if (objM11292M instanceof C13139p0) {
+                if (((C13139p0) objM11292M).f27881j) {
+                    c2 = 0;
+                } else if (f27846j.compareAndSet(this, objM11292M, C13119i1.f27863g)) {
+                    mo11186X();
+                    c2 = 1;
+                }
+            } else if (objM11292M instanceof C13166y0) {
+                if (f27846j.compareAndSet(this, objM11292M, ((C13166y0) objM11292M).f27921j)) {
+                    mo11186X();
+                    c2 = 1;
+                }
+            }
+            if (c2 == 0) {
+                return false;
+            }
+        } while (c2 != 1);
+        return true;
+    }
+
+    /* renamed from: t */
+    public final boolean m11305t(Object obj, C13131m1 c13131m1, AbstractC13113g1<?> abstractC13113g1) {
+        int iM11160p;
+        c cVar = new c(abstractC13113g1, abstractC13113g1, this, obj);
+        do {
+            iM11160p = c13131m1.m11157k().m11160p(abstractC13113g1, c13131m1, cVar);
+            if (iM11160p == 1) {
+                return true;
+            }
+        } while (iM11160p != 2);
+        return false;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(mo11184T() + '{' + m11300Z(m11292M()) + '}');
+        sb.append(MentionUtils.MENTIONS_CHAR);
+        sb.append(C3404f.m4312l0(this));
+        return sb.toString();
+    }
+
+    @Override // kotlinx.coroutines.Job
+    /* renamed from: u */
+    public final Job2 mo10915u(Function1<? super Throwable, Unit> function1) {
+        return mo10913n(false, true, function1);
+    }
+
+    /* renamed from: v */
+    public void mo11173v(Object obj) {
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:60:0x00b6  */
+    /* renamed from: w */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public final boolean m11306w(Object obj) throws Throwable {
+        Symbol3 symbol3;
+        boolean z2;
+        Object objM11302c0 = C13119i1.f27857a;
+        if (mo11280K()) {
+            do {
+                Object objM11292M = m11292M();
+                if (!(objM11292M instanceof InterfaceC13169z0) || ((objM11292M instanceof b) && ((b) objM11292M)._isCompleting != 0)) {
+                    objM11302c0 = C13119i1.f27857a;
+                    break;
+                }
+                objM11302c0 = m11302c0(objM11292M, new CompletionState2(m11288G(obj), false, 2));
+            } while (objM11302c0 == C13119i1.f27859c);
+            if (objM11302c0 == C13119i1.f27858b) {
+                return true;
+            }
+        }
+        if (objM11302c0 == C13119i1.f27857a) {
+            Throwable thM11288G = null;
+            while (true) {
+                Object objM11292M2 = m11292M();
+                if (!(objM11292M2 instanceof b)) {
+                    if (!(objM11292M2 instanceof InterfaceC13169z0)) {
+                        symbol3 = C13119i1.f27860d;
+                        break;
+                    }
+                    if (thM11288G == null) {
+                        thM11288G = m11288G(obj);
+                    }
+                    InterfaceC13169z0 interfaceC13169z0 = (InterfaceC13169z0) objM11292M2;
+                    if (interfaceC13169z0.mo11281a()) {
+                        C13131m1 c13131m1M11291L = m11291L(interfaceC13169z0);
+                        if (c13131m1M11291L != null) {
+                            if (f27846j.compareAndSet(this, interfaceC13169z0, new b(c13131m1M11291L, false, thM11288G))) {
+                                m11298V(c13131m1M11291L, thM11288G);
+                                z2 = true;
+                            } else {
+                                z2 = false;
+                            }
+                            if (z2) {
+                                symbol3 = C13119i1.f27857a;
+                                break;
+                            }
+                        }
+                    } else {
+                        Object objM11302c02 = m11302c0(objM11292M2, new CompletionState2(thM11288G, false, 2));
+                        if (objM11302c02 == C13119i1.f27857a) {
+                            throw new IllegalStateException(outline.m881v("Cannot happen in ", objM11292M2).toString());
+                        }
+                        if (objM11302c02 != C13119i1.f27859c) {
+                            objM11302c0 = objM11302c02;
+                            break;
+                        }
+                    }
+                } else {
+                    synchronized (objM11292M2) {
+                        if (((b) objM11292M2).m11312e()) {
+                            symbol3 = C13119i1.f27860d;
+                        } else {
+                            boolean zM11311d = ((b) objM11292M2).m11311d();
+                            if (obj != null || !zM11311d) {
+                                if (thM11288G == null) {
+                                    thM11288G = m11288G(obj);
+                                }
+                                ((b) objM11292M2).m11309b(thM11288G);
+                            }
+                            Throwable th = zM11311d ^ true ? (Throwable) ((b) objM11292M2)._rootCause : null;
+                            if (th != null) {
+                                m11298V(((b) objM11292M2).f27851j, th);
+                            }
+                            symbol3 = C13119i1.f27857a;
+                        }
+                    }
+                }
+            }
+            objM11302c0 = symbol3;
+        }
+        if (objM11302c0 != C13119i1.f27857a && objM11302c0 != C13119i1.f27858b) {
+            if (objM11302c0 == C13119i1.f27860d) {
+                return false;
+            }
+            mo11173v(objM11302c0);
+        }
+        return true;
+    }
+
+    /* renamed from: x */
+    public void m11307x(Throwable th) throws Throwable {
+        m11306w(th);
+    }
+
+    /* renamed from: z */
+    public final boolean m11308z(Throwable th) {
+        if (mo11171Q()) {
+            return true;
+        }
+        boolean z2 = th instanceof CancellationException;
+        Job4 job4 = (Job4) this._parentHandle;
+        return (job4 == null || job4 == Job3.f27880j) ? z2 : job4.mo11333h(th) || z2;
+    }
+}

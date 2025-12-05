@@ -55,9 +55,9 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
     private int mTheme;
     private boolean mViewDestroyed;
 
-    /* renamed from: androidx.fragment.app.DialogFragment$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.fragment.app.DialogFragment$1 */
+    public class RunnableC03561 implements Runnable {
+        public RunnableC03561() {
         }
 
         @Override // java.lang.Runnable
@@ -67,9 +67,9 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
     }
 
-    /* renamed from: androidx.fragment.app.DialogFragment$2, reason: invalid class name */
-    public class AnonymousClass2 implements DialogInterface.OnCancelListener {
-        public AnonymousClass2() {
+    /* renamed from: androidx.fragment.app.DialogFragment$2 */
+    public class DialogInterfaceOnCancelListenerC03572 implements DialogInterface.OnCancelListener {
+        public DialogInterfaceOnCancelListenerC03572() {
         }
 
         @Override // android.content.DialogInterface.OnCancelListener
@@ -82,9 +82,9 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
     }
 
-    /* renamed from: androidx.fragment.app.DialogFragment$3, reason: invalid class name */
-    public class AnonymousClass3 implements DialogInterface.OnDismissListener {
-        public AnonymousClass3() {
+    /* renamed from: androidx.fragment.app.DialogFragment$3 */
+    public class DialogInterfaceOnDismissListenerC03583 implements DialogInterface.OnDismissListener {
+        public DialogInterfaceOnDismissListenerC03583() {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -97,9 +97,9 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
     }
 
-    /* renamed from: androidx.fragment.app.DialogFragment$4, reason: invalid class name */
-    public class AnonymousClass4 implements Observer<LifecycleOwner> {
-        public AnonymousClass4() {
+    /* renamed from: androidx.fragment.app.DialogFragment$4 */
+    public class C03594 implements Observer<LifecycleOwner> {
+        public C03594() {
         }
 
         @Override // androidx.view.Observer
@@ -127,11 +127,11 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
     }
 
-    /* renamed from: androidx.fragment.app.DialogFragment$5, reason: invalid class name */
-    public class AnonymousClass5 extends FragmentContainer {
+    /* renamed from: androidx.fragment.app.DialogFragment$5 */
+    public class C03605 extends FragmentContainer {
         public final /* synthetic */ FragmentContainer val$fragmentContainer;
 
-        public AnonymousClass5(FragmentContainer fragmentContainer) {
+        public C03605(FragmentContainer fragmentContainer) {
             this.val$fragmentContainer = fragmentContainer;
         }
 
@@ -155,15 +155,15 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
     }
 
     public DialogFragment() {
-        this.mDismissRunnable = new AnonymousClass1();
-        this.mOnCancelListener = new AnonymousClass2();
-        this.mOnDismissListener = new AnonymousClass3();
+        this.mDismissRunnable = new RunnableC03561();
+        this.mOnCancelListener = new DialogInterfaceOnCancelListenerC03572();
+        this.mOnDismissListener = new DialogInterfaceOnDismissListenerC03583();
         this.mStyle = 0;
         this.mTheme = 0;
         this.mCancelable = true;
         this.mShowsDialog = true;
         this.mBackStackId = -1;
-        this.mObserver = new AnonymousClass4();
+        this.mObserver = new C03594();
         this.mDialogCreated = false;
     }
 
@@ -240,7 +240,7 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
     @Override // androidx.fragment.app.Fragment
     @NonNull
     public FragmentContainer createFragmentContainer() {
-        return new AnonymousClass5(super.createFragmentContainer());
+        return new C03605(super.createFragmentContainer());
     }
 
     public void dismiss() {
@@ -532,15 +532,15 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
 
     public DialogFragment(@LayoutRes int i) {
         super(i);
-        this.mDismissRunnable = new AnonymousClass1();
-        this.mOnCancelListener = new AnonymousClass2();
-        this.mOnDismissListener = new AnonymousClass3();
+        this.mDismissRunnable = new RunnableC03561();
+        this.mOnCancelListener = new DialogInterfaceOnCancelListenerC03572();
+        this.mOnDismissListener = new DialogInterfaceOnDismissListenerC03583();
         this.mStyle = 0;
         this.mTheme = 0;
         this.mCancelable = true;
         this.mShowsDialog = true;
         this.mBackStackId = -1;
-        this.mObserver = new AnonymousClass4();
+        this.mObserver = new C03594();
         this.mDialogCreated = false;
     }
 }

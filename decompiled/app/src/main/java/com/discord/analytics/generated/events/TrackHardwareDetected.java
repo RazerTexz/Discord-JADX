@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackHardwareDetected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackHardwareDetected implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackHardwareDetected implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long wave = null;
     private final CharSequence cpuBrand = null;
@@ -50,7 +50,7 @@ public final /* data */ class TrackHardwareDetected implements AnalyticsSchema, 
             return false;
         }
         TrackHardwareDetected trackHardwareDetected = (TrackHardwareDetected) other;
-        return m.areEqual(this.wave, trackHardwareDetected.wave) && m.areEqual(this.cpuBrand, trackHardwareDetected.cpuBrand) && m.areEqual(this.cpuVendor, trackHardwareDetected.cpuVendor) && m.areEqual(this.cpuMemory, trackHardwareDetected.cpuMemory) && m.areEqual(this.gpuBrand, trackHardwareDetected.gpuBrand) && m.areEqual(this.gpuCount, trackHardwareDetected.gpuCount) && m.areEqual(this.gpuMemory, trackHardwareDetected.gpuMemory) && m.areEqual(this.batteries, trackHardwareDetected.batteries) && m.areEqual(this.displayMonitors, trackHardwareDetected.displayMonitors) && m.areEqual(this.displayPrimaryWidth, trackHardwareDetected.displayPrimaryWidth) && m.areEqual(this.displayPrimaryHeight, trackHardwareDetected.displayPrimaryHeight) && m.areEqual(this.displayDesktopWidth, trackHardwareDetected.displayDesktopWidth) && m.areEqual(this.displayDesktopHeight, trackHardwareDetected.displayDesktopHeight) && m.areEqual(this.cameraCount, trackHardwareDetected.cameraCount) && m.areEqual(this.cameraDefaultName, trackHardwareDetected.cameraDefaultName) && m.areEqual(this.cameraDefaultMaxWidth, trackHardwareDetected.cameraDefaultMaxWidth) && m.areEqual(this.cameraDefaultMaxHeight, trackHardwareDetected.cameraDefaultMaxHeight) && m.areEqual(this.cameraDefaultHasI420, trackHardwareDetected.cameraDefaultHasI420) && m.areEqual(this.cameraDefaultHasNv12, trackHardwareDetected.cameraDefaultHasNv12) && m.areEqual(this.cameraDefaultHasYuy2, trackHardwareDetected.cameraDefaultHasYuy2) && m.areEqual(this.cameraDefaultHasMjpg, trackHardwareDetected.cameraDefaultHasMjpg) && m.areEqual(this.cameraDefaultBus, trackHardwareDetected.cameraDefaultBus) && m.areEqual(this.cameraDefaultVendorId, trackHardwareDetected.cameraDefaultVendorId) && m.areEqual(this.cameraDefaultProductId, trackHardwareDetected.cameraDefaultProductId);
+        return Intrinsics3.areEqual(this.wave, trackHardwareDetected.wave) && Intrinsics3.areEqual(this.cpuBrand, trackHardwareDetected.cpuBrand) && Intrinsics3.areEqual(this.cpuVendor, trackHardwareDetected.cpuVendor) && Intrinsics3.areEqual(this.cpuMemory, trackHardwareDetected.cpuMemory) && Intrinsics3.areEqual(this.gpuBrand, trackHardwareDetected.gpuBrand) && Intrinsics3.areEqual(this.gpuCount, trackHardwareDetected.gpuCount) && Intrinsics3.areEqual(this.gpuMemory, trackHardwareDetected.gpuMemory) && Intrinsics3.areEqual(this.batteries, trackHardwareDetected.batteries) && Intrinsics3.areEqual(this.displayMonitors, trackHardwareDetected.displayMonitors) && Intrinsics3.areEqual(this.displayPrimaryWidth, trackHardwareDetected.displayPrimaryWidth) && Intrinsics3.areEqual(this.displayPrimaryHeight, trackHardwareDetected.displayPrimaryHeight) && Intrinsics3.areEqual(this.displayDesktopWidth, trackHardwareDetected.displayDesktopWidth) && Intrinsics3.areEqual(this.displayDesktopHeight, trackHardwareDetected.displayDesktopHeight) && Intrinsics3.areEqual(this.cameraCount, trackHardwareDetected.cameraCount) && Intrinsics3.areEqual(this.cameraDefaultName, trackHardwareDetected.cameraDefaultName) && Intrinsics3.areEqual(this.cameraDefaultMaxWidth, trackHardwareDetected.cameraDefaultMaxWidth) && Intrinsics3.areEqual(this.cameraDefaultMaxHeight, trackHardwareDetected.cameraDefaultMaxHeight) && Intrinsics3.areEqual(this.cameraDefaultHasI420, trackHardwareDetected.cameraDefaultHasI420) && Intrinsics3.areEqual(this.cameraDefaultHasNv12, trackHardwareDetected.cameraDefaultHasNv12) && Intrinsics3.areEqual(this.cameraDefaultHasYuy2, trackHardwareDetected.cameraDefaultHasYuy2) && Intrinsics3.areEqual(this.cameraDefaultHasMjpg, trackHardwareDetected.cameraDefaultHasMjpg) && Intrinsics3.areEqual(this.cameraDefaultBus, trackHardwareDetected.cameraDefaultBus) && Intrinsics3.areEqual(this.cameraDefaultVendorId, trackHardwareDetected.cameraDefaultVendorId) && Intrinsics3.areEqual(this.cameraDefaultProductId, trackHardwareDetected.cameraDefaultProductId);
     }
 
     public int hashCode() {
@@ -105,53 +105,53 @@ public final /* data */ class TrackHardwareDetected implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackHardwareDetected(wave=");
-        sbU.append(this.wave);
-        sbU.append(", cpuBrand=");
-        sbU.append(this.cpuBrand);
-        sbU.append(", cpuVendor=");
-        sbU.append(this.cpuVendor);
-        sbU.append(", cpuMemory=");
-        sbU.append(this.cpuMemory);
-        sbU.append(", gpuBrand=");
-        sbU.append(this.gpuBrand);
-        sbU.append(", gpuCount=");
-        sbU.append(this.gpuCount);
-        sbU.append(", gpuMemory=");
-        sbU.append(this.gpuMemory);
-        sbU.append(", batteries=");
-        sbU.append(this.batteries);
-        sbU.append(", displayMonitors=");
-        sbU.append(this.displayMonitors);
-        sbU.append(", displayPrimaryWidth=");
-        sbU.append(this.displayPrimaryWidth);
-        sbU.append(", displayPrimaryHeight=");
-        sbU.append(this.displayPrimaryHeight);
-        sbU.append(", displayDesktopWidth=");
-        sbU.append(this.displayDesktopWidth);
-        sbU.append(", displayDesktopHeight=");
-        sbU.append(this.displayDesktopHeight);
-        sbU.append(", cameraCount=");
-        sbU.append(this.cameraCount);
-        sbU.append(", cameraDefaultName=");
-        sbU.append(this.cameraDefaultName);
-        sbU.append(", cameraDefaultMaxWidth=");
-        sbU.append(this.cameraDefaultMaxWidth);
-        sbU.append(", cameraDefaultMaxHeight=");
-        sbU.append(this.cameraDefaultMaxHeight);
-        sbU.append(", cameraDefaultHasI420=");
-        sbU.append(this.cameraDefaultHasI420);
-        sbU.append(", cameraDefaultHasNv12=");
-        sbU.append(this.cameraDefaultHasNv12);
-        sbU.append(", cameraDefaultHasYuy2=");
-        sbU.append(this.cameraDefaultHasYuy2);
-        sbU.append(", cameraDefaultHasMjpg=");
-        sbU.append(this.cameraDefaultHasMjpg);
-        sbU.append(", cameraDefaultBus=");
-        sbU.append(this.cameraDefaultBus);
-        sbU.append(", cameraDefaultVendorId=");
-        sbU.append(this.cameraDefaultVendorId);
-        sbU.append(", cameraDefaultProductId=");
-        return a.G(sbU, this.cameraDefaultProductId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackHardwareDetected(wave=");
+        sbM833U.append(this.wave);
+        sbM833U.append(", cpuBrand=");
+        sbM833U.append(this.cpuBrand);
+        sbM833U.append(", cpuVendor=");
+        sbM833U.append(this.cpuVendor);
+        sbM833U.append(", cpuMemory=");
+        sbM833U.append(this.cpuMemory);
+        sbM833U.append(", gpuBrand=");
+        sbM833U.append(this.gpuBrand);
+        sbM833U.append(", gpuCount=");
+        sbM833U.append(this.gpuCount);
+        sbM833U.append(", gpuMemory=");
+        sbM833U.append(this.gpuMemory);
+        sbM833U.append(", batteries=");
+        sbM833U.append(this.batteries);
+        sbM833U.append(", displayMonitors=");
+        sbM833U.append(this.displayMonitors);
+        sbM833U.append(", displayPrimaryWidth=");
+        sbM833U.append(this.displayPrimaryWidth);
+        sbM833U.append(", displayPrimaryHeight=");
+        sbM833U.append(this.displayPrimaryHeight);
+        sbM833U.append(", displayDesktopWidth=");
+        sbM833U.append(this.displayDesktopWidth);
+        sbM833U.append(", displayDesktopHeight=");
+        sbM833U.append(this.displayDesktopHeight);
+        sbM833U.append(", cameraCount=");
+        sbM833U.append(this.cameraCount);
+        sbM833U.append(", cameraDefaultName=");
+        sbM833U.append(this.cameraDefaultName);
+        sbM833U.append(", cameraDefaultMaxWidth=");
+        sbM833U.append(this.cameraDefaultMaxWidth);
+        sbM833U.append(", cameraDefaultMaxHeight=");
+        sbM833U.append(this.cameraDefaultMaxHeight);
+        sbM833U.append(", cameraDefaultHasI420=");
+        sbM833U.append(this.cameraDefaultHasI420);
+        sbM833U.append(", cameraDefaultHasNv12=");
+        sbM833U.append(this.cameraDefaultHasNv12);
+        sbM833U.append(", cameraDefaultHasYuy2=");
+        sbM833U.append(this.cameraDefaultHasYuy2);
+        sbM833U.append(", cameraDefaultHasMjpg=");
+        sbM833U.append(this.cameraDefaultHasMjpg);
+        sbM833U.append(", cameraDefaultBus=");
+        sbM833U.append(this.cameraDefaultBus);
+        sbM833U.append(", cameraDefaultVendorId=");
+        sbM833U.append(this.cameraDefaultVendorId);
+        sbM833U.append(", cameraDefaultProductId=");
+        return outline.m819G(sbM833U, this.cameraDefaultProductId, ")");
     }
 }

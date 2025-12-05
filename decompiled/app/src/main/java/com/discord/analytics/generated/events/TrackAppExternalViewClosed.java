@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackAppExternalViewClosed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAppExternalViewClosed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackAppExternalViewClosed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence type = null;
     private final Long durationOpenMs = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackAppExternalViewClosed implements AnalyticsSch
             return false;
         }
         TrackAppExternalViewClosed trackAppExternalViewClosed = (TrackAppExternalViewClosed) other;
-        return m.areEqual(this.type, trackAppExternalViewClosed.type) && m.areEqual(this.durationOpenMs, trackAppExternalViewClosed.durationOpenMs);
+        return Intrinsics3.areEqual(this.type, trackAppExternalViewClosed.type) && Intrinsics3.areEqual(this.durationOpenMs, trackAppExternalViewClosed.durationOpenMs);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackAppExternalViewClosed implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackAppExternalViewClosed(type=");
-        sbU.append(this.type);
-        sbU.append(", durationOpenMs=");
-        return a.G(sbU, this.durationOpenMs, ")");
+        StringBuilder sbM833U = outline.m833U("TrackAppExternalViewClosed(type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", durationOpenMs=");
+        return outline.m819G(sbM833U, this.durationOpenMs, ")");
     }
 }

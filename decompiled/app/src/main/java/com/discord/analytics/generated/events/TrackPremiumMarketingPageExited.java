@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPremiumMarketingPageExited.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumMarketingPageExited implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPremiumMarketingPageExited implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final List<Long> applicationIdsViewed = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackPremiumMarketingPageExited implements Analyti
             return false;
         }
         TrackPremiumMarketingPageExited trackPremiumMarketingPageExited = (TrackPremiumMarketingPageExited) other;
-        return m.areEqual(this.loadId, trackPremiumMarketingPageExited.loadId) && m.areEqual(this.applicationIdsViewed, trackPremiumMarketingPageExited.applicationIdsViewed) && m.areEqual(this.skuIdsViewed, trackPremiumMarketingPageExited.skuIdsViewed) && m.areEqual(this.durationMs, trackPremiumMarketingPageExited.durationMs);
+        return Intrinsics3.areEqual(this.loadId, trackPremiumMarketingPageExited.loadId) && Intrinsics3.areEqual(this.applicationIdsViewed, trackPremiumMarketingPageExited.applicationIdsViewed) && Intrinsics3.areEqual(this.skuIdsViewed, trackPremiumMarketingPageExited.skuIdsViewed) && Intrinsics3.areEqual(this.durationMs, trackPremiumMarketingPageExited.durationMs);
     }
 
     public int hashCode() {
@@ -46,13 +46,13 @@ public final /* data */ class TrackPremiumMarketingPageExited implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPremiumMarketingPageExited(loadId=");
-        sbU.append(this.loadId);
-        sbU.append(", applicationIdsViewed=");
-        sbU.append(this.applicationIdsViewed);
-        sbU.append(", skuIdsViewed=");
-        sbU.append(this.skuIdsViewed);
-        sbU.append(", durationMs=");
-        return a.G(sbU, this.durationMs, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPremiumMarketingPageExited(loadId=");
+        sbM833U.append(this.loadId);
+        sbM833U.append(", applicationIdsViewed=");
+        sbM833U.append(this.applicationIdsViewed);
+        sbM833U.append(", skuIdsViewed=");
+        sbM833U.append(this.skuIdsViewed);
+        sbM833U.append(", durationMs=");
+        return outline.m819G(sbM833U, this.durationMs, ")");
     }
 }

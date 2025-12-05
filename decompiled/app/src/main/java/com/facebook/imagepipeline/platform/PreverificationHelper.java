@@ -2,12 +2,12 @@ package com.facebook.imagepipeline.platform;
 
 import android.annotation.TargetApi;
 import android.graphics.Bitmap;
-import b.f.m.d;
+import p007b.p109f.p190m.DoNotOptimize;
 
-@d
+@DoNotOptimize
 /* loaded from: classes3.dex */
 public class PreverificationHelper {
-    @d
+    @DoNotOptimize
     @TargetApi(26)
     public boolean shouldUseHardwareBitmapConfig(Bitmap.Config config) {
         return config == Bitmap.Config.HARDWARE;

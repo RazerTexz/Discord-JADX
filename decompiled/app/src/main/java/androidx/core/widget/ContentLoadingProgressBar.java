@@ -6,10 +6,10 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.UiThread;
-import y.b.b.a;
-import y.b.b.b;
-import y.b.b.c;
-import y.b.b.d;
+import p677y.p681b.p684b.RunnableC13191a;
+import p677y.p681b.p684b.RunnableC13192b;
+import p677y.p681b.p684b.RunnableC13193c;
+import p677y.p681b.p684b.RunnableC13194d;
 
 /* loaded from: classes.dex */
 public class ContentLoadingProgressBar extends ProgressBar {
@@ -26,11 +26,13 @@ public class ContentLoadingProgressBar extends ProgressBar {
         this(context, null);
     }
 
-    public static /* synthetic */ void a(ContentLoadingProgressBar contentLoadingProgressBar) {
+    /* renamed from: a */
+    public static /* synthetic */ void m93a(ContentLoadingProgressBar contentLoadingProgressBar) {
         contentLoadingProgressBar.hideOnUiThread();
     }
 
-    public static /* synthetic */ void b(ContentLoadingProgressBar contentLoadingProgressBar) {
+    /* renamed from: b */
+    public static /* synthetic */ void m94b(ContentLoadingProgressBar contentLoadingProgressBar) {
         contentLoadingProgressBar.showOnUiThread();
     }
 
@@ -72,7 +74,7 @@ public class ContentLoadingProgressBar extends ProgressBar {
     }
 
     public void hide() {
-        post(new b(this));
+        post(new RunnableC13192b(this));
     }
 
     @Override // android.widget.ProgressBar, android.view.View
@@ -88,7 +90,7 @@ public class ContentLoadingProgressBar extends ProgressBar {
     }
 
     public void show() {
-        post(new d(this));
+        post(new RunnableC13194d(this));
     }
 
     public ContentLoadingProgressBar(@NonNull Context context, @Nullable AttributeSet attributeSet) {
@@ -97,7 +99,7 @@ public class ContentLoadingProgressBar extends ProgressBar {
         this.mPostedHide = false;
         this.mPostedShow = false;
         this.mDismissed = false;
-        this.mDelayedHide = new a(this);
-        this.mDelayedShow = new c(this);
+        this.mDelayedHide = new RunnableC13191a(this);
+        this.mDelayedShow = new RunnableC13193c(this);
     }
 }

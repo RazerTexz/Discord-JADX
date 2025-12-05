@@ -19,11 +19,11 @@ public class ChangeClipBounds extends Transition {
     private static final String PROPNAME_CLIP = "android:clipBounds:clip";
     private static final String[] sTransitionProperties = {PROPNAME_CLIP};
 
-    /* renamed from: androidx.transition.ChangeClipBounds$1, reason: invalid class name */
-    public class AnonymousClass1 extends AnimatorListenerAdapter {
+    /* renamed from: androidx.transition.ChangeClipBounds$1 */
+    public class C06441 extends AnimatorListenerAdapter {
         public final /* synthetic */ View val$endView;
 
-        public AnonymousClass1(View view) {
+        public C06441(View view) {
             this.val$endView = view;
         }
 
@@ -79,7 +79,7 @@ public class ChangeClipBounds extends Transition {
             ViewCompat.setClipBounds(transitionValues2.view, rect);
             objectAnimatorOfObject = ObjectAnimator.ofObject(transitionValues2.view, (Property<View, V>) ViewUtils.CLIP_BOUNDS, (TypeEvaluator) new RectEvaluator(new Rect()), (Object[]) new Rect[]{rect, rect2});
             if (z2) {
-                objectAnimatorOfObject.addListener(new AnonymousClass1(transitionValues2.view));
+                objectAnimatorOfObject.addListener(new C06441(transitionValues2.view));
             }
         }
         return objectAnimatorOfObject;

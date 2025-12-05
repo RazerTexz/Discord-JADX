@@ -2,24 +2,24 @@ package com.discord.widgets.servers.member_verification;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: MemberVerificationSuccessViewModel.kt */
 /* loaded from: classes2.dex */
-public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
+public final class MemberVerificationSuccessViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -28,21 +28,21 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
     private final RestAPI restAPI;
 
     /* compiled from: MemberVerificationSuccessViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessViewModel$1 */
+    public static final class C95541 extends Lambda implements Function1<StoreState, Unit> {
+        public C95541() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             MemberVerificationSuccessViewModel.access$handleStoreState(MemberVerificationSuccessViewModel.this, storeState);
         }
     }
@@ -58,9 +58,9 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
 
         private final Observable<StoreState> observeStores(long guildId) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable<StoreState> observableJ = Observable.j(companion.getGuildJoinRequests().observeGuildJoinRequest(guildId), companion.getGuilds().observeGuild(guildId), MemberVerificationSuccessViewModel$Companion$observeStores$1.INSTANCE);
-            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…?.name,\n        )\n      }");
-            return observableJ;
+            Observable<StoreState> observableM11076j = Observable.m11076j(companion.getGuildJoinRequests().observeGuildJoinRequest(guildId), companion.getGuilds().observeGuild(guildId), MemberVerificationSuccessViewModel2.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable.combineLatest…?.name,\n        )\n      }");
+            return observableM11076j;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -139,7 +139,7 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return m.areEqual(this.lastSeen, storeState.lastSeen) && m.areEqual(this.guildName, storeState.guildName);
+            return Intrinsics3.areEqual(this.lastSeen, storeState.lastSeen) && Intrinsics3.areEqual(this.guildName, storeState.guildName);
         }
 
         public final String getGuildName() {
@@ -158,10 +158,10 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("StoreState(lastSeen=");
-            sbU.append(this.lastSeen);
-            sbU.append(", guildName=");
-            return a.J(sbU, this.guildName, ")");
+            StringBuilder sbM833U = outline.m833U("StoreState(lastSeen=");
+            sbM833U.append(this.lastSeen);
+            sbM833U.append(", guildName=");
+            return outline.m822J(sbM833U, this.guildName, ")");
         }
     }
 
@@ -204,7 +204,7 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && m.areEqual(this.guildName, ((Loaded) other).guildName);
+                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.guildName, ((Loaded) other).guildName);
                 }
                 return true;
             }
@@ -222,7 +222,7 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.J(a.U("Loaded(guildName="), this.guildName, ")");
+                return outline.m822J(outline.m833U("Loaded(guildName="), this.guildName, ")");
             }
         }
 
@@ -235,43 +235,43 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
     }
 
     /* compiled from: MemberVerificationSuccessViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessViewModel$ackGuildJoinRequest$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessViewModel$ackGuildJoinRequest$1 */
+    public static final class C95551 extends Lambda implements Function1<Error, Unit> {
+        public C95551() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = MemberVerificationSuccessViewModel.access$getEventSubject$p(MemberVerificationSuccessViewModel.this);
-            publishSubjectAccess$getEventSubject$p.k.onNext(Event.Error.INSTANCE);
+            publishSubjectAccess$getEventSubject$p.f27650k.onNext(Event.Error.INSTANCE);
         }
     }
 
     /* compiled from: MemberVerificationSuccessViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessViewModel$ackGuildJoinRequest$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessViewModel$ackGuildJoinRequest$2 */
+    public static final class C95562 extends Lambda implements Function1<Void, Unit> {
+        public C95562() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             PublishSubject publishSubjectAccess$getEventSubject$p = MemberVerificationSuccessViewModel.access$getEventSubject$p(MemberVerificationSuccessViewModel.this);
-            publishSubjectAccess$getEventSubject$p.k.onNext(Event.Success.INSTANCE);
+            publishSubjectAccess$getEventSubject$p.f27650k.onNext(Event.Success.INSTANCE);
         }
     }
 
@@ -297,7 +297,7 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
     }
 
     public final void ackGuildJoinRequest() {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.ackGuildJoinRequest(this.guildId), false, 1, null), this, null, 2, null), MemberVerificationSuccessViewModel.class, (Context) null, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.ackGuildJoinRequest(this.guildId), false, 1, null), this, null, 2, null), MemberVerificationSuccessViewModel.class, (Context) null, (Function1) null, new C95551(), (Function0) null, (Function0) null, new C95562(), 54, (Object) null);
     }
 
     public final long getGuildId() {
@@ -307,13 +307,13 @@ public final class MemberVerificationSuccessViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MemberVerificationSuccessViewModel(long j, RestAPI restAPI, Observable<StoreState> observable) {
         super(null);
-        m.checkNotNullParameter(restAPI, "restAPI");
-        m.checkNotNullParameter(observable, "storeObservable");
+        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
+        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
         this.guildId = j;
         this.restAPI = restAPI;
-        PublishSubject<Event> publishSubjectK0 = PublishSubject.k0();
-        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
-        this.eventSubject = publishSubjectK0;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), MemberVerificationSuccessViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        PublishSubject<Event> publishSubjectM11133k0 = PublishSubject.m11133k0();
+        Intrinsics3.checkNotNullExpressionValue(publishSubjectM11133k0, "PublishSubject.create()");
+        this.eventSubject = publishSubjectM11133k0;
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), MemberVerificationSuccessViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C95541(), 62, (Object) null);
     }
 }

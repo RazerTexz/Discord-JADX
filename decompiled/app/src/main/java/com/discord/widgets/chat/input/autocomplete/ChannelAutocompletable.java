@@ -1,9 +1,10 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.CollectionsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Autocompletable.kt */
 /* loaded from: classes2.dex */
@@ -14,9 +15,9 @@ public final /* data */ class ChannelAutocompletable extends Autocompletable {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ChannelAutocompletable(Channel channel) {
         super(null);
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         this.channel = channel;
-        this.textMatchers = d0.t.m.listOf(leadingIdentifier().getIdentifier() + channel.getName());
+        this.textMatchers = CollectionsJVM.listOf(leadingIdentifier().getIdentifier() + channel.getName());
     }
 
     public static /* synthetic */ ChannelAutocompletable copy$default(ChannelAutocompletable channelAutocompletable, Channel channel, int i, Object obj) {
@@ -32,13 +33,13 @@ public final /* data */ class ChannelAutocompletable extends Autocompletable {
     }
 
     public final ChannelAutocompletable copy(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         return new ChannelAutocompletable(channel);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ChannelAutocompletable) && m.areEqual(this.channel, ((ChannelAutocompletable) other).channel);
+            return (other instanceof ChannelAutocompletable) && Intrinsics3.areEqual(this.channel, ((ChannelAutocompletable) other).channel);
         }
         return true;
     }
@@ -49,10 +50,10 @@ public final /* data */ class ChannelAutocompletable extends Autocompletable {
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable
     public String getInputReplacement() {
-        StringBuilder sbU = a.U("<#");
-        sbU.append(this.channel.getId());
-        sbU.append('>');
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("<#");
+        sbM833U.append(this.channel.getId());
+        sbM833U.append('>');
+        return sbM833U.toString();
     }
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable
@@ -78,9 +79,9 @@ public final /* data */ class ChannelAutocompletable extends Autocompletable {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelAutocompletable(channel=");
-        sbU.append(this.channel);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ChannelAutocompletable(channel=");
+        sbM833U.append(this.channel);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

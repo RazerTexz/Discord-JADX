@@ -8,8 +8,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.b;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetServerSettingsAuditLogListItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.member.GuildMember;
@@ -21,10 +20,11 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
+import p007b.p008a.p027k.FormatUtils;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetServerSettingsAuditLogAdapter.kt */
 /* loaded from: classes2.dex */
@@ -48,8 +48,8 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
         private final User user;
 
         public AuditLogEntryItem(ModelAuditLogEntry modelAuditLogEntry, boolean z2, User user, GuildMember guildMember, CharSequence charSequence, CharSequence charSequence2, boolean z3, CharSequence charSequence3) {
-            m.checkNotNullParameter(modelAuditLogEntry, "auditLogEntry");
-            m.checkNotNullParameter(charSequence3, "timeStampText");
+            Intrinsics3.checkNotNullParameter(modelAuditLogEntry, "auditLogEntry");
+            Intrinsics3.checkNotNullParameter(charSequence3, "timeStampText");
             this.auditLogEntry = modelAuditLogEntry;
             this.isSelected = z2;
             this.user = user;
@@ -111,38 +111,38 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AuditLogEntryViewHolder(WidgetServerSettingsAuditLogAdapter widgetServerSettingsAuditLogAdapter) {
-            super(R.layout.widget_server_settings_audit_log_list_item, widgetServerSettingsAuditLogAdapter);
-            m.checkNotNullParameter(widgetServerSettingsAuditLogAdapter, "adapter");
+            super(C5419R.layout.widget_server_settings_audit_log_list_item, widgetServerSettingsAuditLogAdapter);
+            Intrinsics3.checkNotNullParameter(widgetServerSettingsAuditLogAdapter, "adapter");
             View view = this.itemView;
-            int i = R.id.audit_log_listitem_action_container;
-            FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.audit_log_listitem_action_container);
+            int i = C5419R.id.audit_log_listitem_action_container;
+            FrameLayout frameLayout = (FrameLayout) view.findViewById(C5419R.id.audit_log_listitem_action_container);
             if (frameLayout != null) {
-                i = R.id.audit_log_listitem_actiontype_image;
-                ImageView imageView = (ImageView) view.findViewById(R.id.audit_log_listitem_actiontype_image);
+                i = C5419R.id.audit_log_listitem_actiontype_image;
+                ImageView imageView = (ImageView) view.findViewById(C5419R.id.audit_log_listitem_actiontype_image);
                 if (imageView != null) {
-                    i = R.id.audit_log_listitem_arrow;
-                    ImageView imageView2 = (ImageView) view.findViewById(R.id.audit_log_listitem_arrow);
+                    i = C5419R.id.audit_log_listitem_arrow;
+                    ImageView imageView2 = (ImageView) view.findViewById(C5419R.id.audit_log_listitem_arrow);
                     if (imageView2 != null) {
-                        i = R.id.audit_log_listitem_avatar;
-                        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.audit_log_listitem_avatar);
+                        i = C5419R.id.audit_log_listitem_avatar;
+                        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.audit_log_listitem_avatar);
                         if (simpleDraweeView != null) {
-                            i = R.id.audit_log_listitem_change_text;
-                            TextView textView = (TextView) view.findViewById(R.id.audit_log_listitem_change_text);
+                            i = C5419R.id.audit_log_listitem_change_text;
+                            TextView textView = (TextView) view.findViewById(C5419R.id.audit_log_listitem_change_text);
                             if (textView != null) {
-                                i = R.id.audit_log_listitem_date_text;
-                                TextView textView2 = (TextView) view.findViewById(R.id.audit_log_listitem_date_text);
+                                i = C5419R.id.audit_log_listitem_date_text;
+                                TextView textView2 = (TextView) view.findViewById(C5419R.id.audit_log_listitem_date_text);
                                 if (textView2 != null) {
-                                    i = R.id.audit_log_listitem_header_text;
-                                    TextView textView3 = (TextView) view.findViewById(R.id.audit_log_listitem_header_text);
+                                    i = C5419R.id.audit_log_listitem_header_text;
+                                    TextView textView3 = (TextView) view.findViewById(C5419R.id.audit_log_listitem_header_text);
                                     if (textView3 != null) {
-                                        i = R.id.audit_log_listitem_targettype_image;
-                                        ImageView imageView3 = (ImageView) view.findViewById(R.id.audit_log_listitem_targettype_image);
+                                        i = C5419R.id.audit_log_listitem_targettype_image;
+                                        ImageView imageView3 = (ImageView) view.findViewById(C5419R.id.audit_log_listitem_targettype_image);
                                         if (imageView3 != null) {
-                                            i = R.id.audit_log_listitem_top_container;
-                                            RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.audit_log_listitem_top_container);
+                                            i = C5419R.id.audit_log_listitem_top_container;
+                                            RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(C5419R.id.audit_log_listitem_top_container);
                                             if (relativeLayout != null) {
                                                 WidgetServerSettingsAuditLogListItemBinding widgetServerSettingsAuditLogListItemBinding = new WidgetServerSettingsAuditLogListItemBinding((CardView) view, frameLayout, imageView, imageView2, simpleDraweeView, textView, textView2, textView3, imageView3, relativeLayout);
-                                                m.checkNotNullExpressionValue(widgetServerSettingsAuditLogListItemBinding, "WidgetServerSettingsAudi…temBinding.bind(itemView)");
+                                                Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsAuditLogListItemBinding, "WidgetServerSettingsAudi…temBinding.bind(itemView)");
                                                 this.binding = widgetServerSettingsAuditLogListItemBinding;
                                                 return;
                                             }
@@ -168,57 +168,57 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             AuditLogEntryItem auditLogEntryItem = (AuditLogEntryItem) data;
             ModelAuditLogEntry auditLogEntry = auditLogEntryItem.getAuditLogEntry();
             User user = auditLogEntryItem.getUser();
             GuildMember guildMember = auditLogEntryItem.getGuildMember();
-            ImageView imageView = this.binding.f2542b;
+            ImageView imageView = this.binding.f17522b;
             AuditLogUtils auditLogUtils = AuditLogUtils.INSTANCE;
             imageView.setImageResource(auditLogUtils.getActionTypeImage(auditLogEntry.getActionTypeId()));
-            ImageView imageView2 = this.binding.h;
+            ImageView imageView2 = this.binding.f17528h;
             View view = this.itemView;
-            m.checkNotNullExpressionValue(view, "itemView");
+            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
             imageView2.setImageResource(auditLogUtils.getTargetTypeImage(view, auditLogEntry.getActionTypeId()));
-            SimpleDraweeView simpleDraweeView = this.binding.d;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.auditLogListitemAvatar");
+            SimpleDraweeView simpleDraweeView = this.binding.f17524d;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.auditLogListitemAvatar");
             IconUtils.setIcon$default(simpleDraweeView, user, 0, null, null, guildMember, 28, null);
-            this.binding.d.setOnClickListener(new WidgetServerSettingsAuditLogAdapter$AuditLogEntryViewHolder$onConfigure$1(this, user, guildMember));
-            TextView textView = this.binding.f;
-            m.checkNotNullExpressionValue(textView, "binding.auditLogListitemDateText");
+            this.binding.f17524d.setOnClickListener(new WidgetServerSettingsAuditLogAdapter2(this, user, guildMember));
+            TextView textView = this.binding.f17526f;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.auditLogListitemDateText");
             textView.setText(auditLogEntryItem.getTimeStampText());
-            TextView textView2 = this.binding.g;
-            m.checkNotNullExpressionValue(textView2, "binding.auditLogListitemHeaderText");
+            TextView textView2 = this.binding.f17527g;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.auditLogListitemHeaderText");
             CharSequence headerText = auditLogEntryItem.getHeaderText();
-            textView2.setText(headerText != null ? b.l(headerText, new Object[0], null, 2) : null);
-            TextView textView3 = this.binding.e;
-            m.checkNotNullExpressionValue(textView3, "binding.auditLogListitemChangeText");
+            textView2.setText(headerText != null ? FormatUtils.m220l(headerText, new Object[0], null, 2) : null);
+            TextView textView3 = this.binding.f17525e;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.auditLogListitemChangeText");
             textView3.setVisibility(auditLogEntryItem.getIsSelected() && auditLogEntryItem.getHasChangesToRender() ? 0 : 8);
-            ImageView imageView3 = this.binding.c;
-            m.checkNotNullExpressionValue(imageView3, "binding.auditLogListitemArrow");
+            ImageView imageView3 = this.binding.f17523c;
+            Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.auditLogListitemArrow");
             imageView3.setVisibility(auditLogEntryItem.getHasChangesToRender() ? 0 : 4);
             if (auditLogEntryItem.getIsSelected() && auditLogEntryItem.getHasChangesToRender()) {
-                TextView textView4 = this.binding.e;
-                m.checkNotNullExpressionValue(textView4, "binding.auditLogListitemChangeText");
+                TextView textView4 = this.binding.f17525e;
+                Intrinsics3.checkNotNullExpressionValue(textView4, "binding.auditLogListitemChangeText");
                 textView4.setText(auditLogEntryItem.getChangeText());
-                this.binding.c.setImageResource(R.drawable.ic_chevron_down_grey_12dp);
-                RelativeLayout relativeLayout = this.binding.i;
+                this.binding.f17523c.setImageResource(C5419R.drawable.ic_chevron_down_grey_12dp);
+                RelativeLayout relativeLayout = this.binding.f17529i;
                 View view2 = this.itemView;
-                m.checkNotNullExpressionValue(view2, "itemView");
-                relativeLayout.setBackgroundColor(ColorCompat.getThemedColor(view2, R.attr.primary_700_alpha_60));
+                Intrinsics3.checkNotNullExpressionValue(view2, "itemView");
+                relativeLayout.setBackgroundColor(ColorCompat.getThemedColor(view2, C5419R.attr.primary_700_alpha_60));
                 if (WidgetServerSettingsAuditLogAdapter.access$getEnsureExpandedIsVisible$p((WidgetServerSettingsAuditLogAdapter) this.adapter)) {
                     WidgetServerSettingsAuditLogAdapter.access$setEnsureExpandedIsVisible$p((WidgetServerSettingsAuditLogAdapter) this.adapter, false);
-                    ((WidgetServerSettingsAuditLogAdapter) this.adapter).getRecycler().post(new WidgetServerSettingsAuditLogAdapter$AuditLogEntryViewHolder$onConfigure$2(this));
+                    ((WidgetServerSettingsAuditLogAdapter) this.adapter).getRecycler().post(new WidgetServerSettingsAuditLogAdapter3(this));
                 }
             } else {
-                this.binding.c.setImageResource(R.drawable.ic_chevron_right_grey_12dp);
-                RelativeLayout relativeLayout2 = this.binding.i;
+                this.binding.f17523c.setImageResource(C5419R.drawable.ic_chevron_right_grey_12dp);
+                RelativeLayout relativeLayout2 = this.binding.f17529i;
                 View view3 = this.itemView;
-                m.checkNotNullExpressionValue(view3, "itemView");
-                relativeLayout2.setBackgroundColor(ColorCompat.getThemedColor(view3, R.attr.primary_630));
+                Intrinsics3.checkNotNullExpressionValue(view3, "itemView");
+                relativeLayout2.setBackgroundColor(ColorCompat.getThemedColor(view3, C5419R.attr.primary_630));
             }
-            this.itemView.setOnClickListener(new WidgetServerSettingsAuditLogAdapter$AuditLogEntryViewHolder$onConfigure$3(this, data));
+            this.itemView.setOnClickListener(new WidgetServerSettingsAuditLogAdapter4(this, data));
         }
     }
 
@@ -242,16 +242,16 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
     public static final class AuditLogLoadingViewHolder extends MGRecyclerViewHolder<WidgetServerSettingsAuditLogAdapter, MGRecyclerDataPayload> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AuditLogLoadingViewHolder(WidgetServerSettingsAuditLogAdapter widgetServerSettingsAuditLogAdapter) {
-            super(R.layout.widget_server_settings_audit_log_loading_listitem, widgetServerSettingsAuditLogAdapter);
-            m.checkNotNullParameter(widgetServerSettingsAuditLogAdapter, "adapter");
+            super(C5419R.layout.widget_server_settings_audit_log_loading_listitem, widgetServerSettingsAuditLogAdapter);
+            Intrinsics3.checkNotNullParameter(widgetServerSettingsAuditLogAdapter, "adapter");
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetServerSettingsAuditLogAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
-        this.onAuditLogAvatarClicked = WidgetServerSettingsAuditLogAdapter$onAuditLogAvatarClicked$1.INSTANCE;
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        this.onAuditLogAvatarClicked = WidgetServerSettingsAuditLogAdapter5.INSTANCE;
     }
 
     public static final /* synthetic */ boolean access$getEnsureExpandedIsVisible$p(WidgetServerSettingsAuditLogAdapter widgetServerSettingsAuditLogAdapter) {
@@ -263,7 +263,7 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
     }
 
     public final void configure(List<? extends MGRecyclerDataPayload> auditLogEntryItems) {
-        m.checkNotNullParameter(auditLogEntryItems, "auditLogEntryItems");
+        Intrinsics3.checkNotNullParameter(auditLogEntryItems, "auditLogEntryItems");
         setData(auditLogEntryItems);
     }
 
@@ -277,13 +277,13 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
     }
 
     public final void setOnAuditLogAvatarClicked(Function2<? super Long, ? super Long, Unit> function2) {
-        m.checkNotNullParameter(function2, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function2, "<set-?>");
         this.onAuditLogAvatarClicked = function2;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, MGRecyclerDataPayload> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new AuditLogEntryViewHolder(this);
         }

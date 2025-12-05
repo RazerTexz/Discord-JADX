@@ -1,0 +1,44 @@
+package p000;
+
+import android.view.View;
+import com.lytefast.flexinput.adapters.AttachmentPreviewAdapter;
+import com.lytefast.flexinput.model.Attachment;
+
+/* compiled from: java-style lambda group */
+/* renamed from: e */
+/* loaded from: classes.dex */
+public final class ViewOnClickListenerC12252e implements View.OnClickListener {
+
+    /* renamed from: j */
+    public final /* synthetic */ int f25293j;
+
+    /* renamed from: k */
+    public final /* synthetic */ Object f25294k;
+
+    /* renamed from: l */
+    public final /* synthetic */ Object f25295l;
+
+    public ViewOnClickListenerC12252e(int i, Object obj, Object obj2) {
+        this.f25293j = i;
+        this.f25294k = obj;
+        this.f25295l = obj2;
+    }
+
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View view) {
+        int i = this.f25293j;
+        if (i == 0) {
+            ((AttachmentPreviewAdapter.C11172b) this.f25294k).f22020r.selectionAggregator.unselectItem((Attachment) this.f25295l);
+            return;
+        }
+        if (i == 1) {
+            AttachmentPreviewAdapter.C11172b c11172b = (AttachmentPreviewAdapter.C11172b) this.f25294k;
+            c11172b.f22019q.invoke(c11172b.f22020r.selectionAggregator, (Attachment) this.f25295l);
+        } else {
+            if (i != 2) {
+                throw null;
+            }
+            ((AttachmentPreviewAdapter.C11172b) this.f25294k).f22020r.selectionAggregator.unselectItem((Attachment) this.f25295l);
+        }
+    }
+}

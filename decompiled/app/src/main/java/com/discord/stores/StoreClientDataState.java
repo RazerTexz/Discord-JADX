@@ -1,7 +1,5 @@
 package com.discord.stores;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.emoji.GuildEmojisUpdate;
 import com.discord.api.guild.Guild;
@@ -9,16 +7,13 @@ import com.discord.api.guildhash.GuildHash;
 import com.discord.api.guildhash.GuildHashes;
 import com.discord.api.message.Message;
 import com.discord.api.sticker.GuildStickersUpdate;
-import com.discord.gateway.io.OutgoingPayload;
+import com.discord.gateway.p498io.Outgoing2;
 import com.discord.models.domain.ModelNotificationSettings;
 import com.discord.models.domain.ModelPayload;
 import com.discord.models.domain.ModelReadState;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
-import com.discord.utilities.guildhash.GuildHashUtilsKt;
-import d0.t.g0;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.stores.updates.ObservationDeck4;
+import com.discord.utilities.guildhash.GuildHashUtils;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -26,7 +21,12 @@ import java.util.List;
 import java.util.Map;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.MapsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreClientDataState.kt */
 /* loaded from: classes2.dex */
@@ -50,7 +50,7 @@ public final class StoreClientDataState extends StoreV2 {
         }
 
         public ClientDataState(Map<Long, GuildHashes> map, long j, int i, int i2) {
-            m.checkNotNullParameter(map, "guildHashes");
+            Intrinsics3.checkNotNullParameter(map, "guildHashes");
             this.guildHashes = map;
             this.highestLastMessageId = j;
             this.readStateVersion = i;
@@ -108,7 +108,7 @@ public final class StoreClientDataState extends StoreV2 {
         }
 
         public final ClientDataState copy(Map<Long, GuildHashes> guildHashes, long highestLastMessageId, int readStateVersion, int userGuildSettingsVersion) {
-            m.checkNotNullParameter(guildHashes, "guildHashes");
+            Intrinsics3.checkNotNullParameter(guildHashes, "guildHashes");
             return new ClientDataState(guildHashes, highestLastMessageId, readStateVersion, userGuildSettingsVersion);
         }
 
@@ -120,7 +120,7 @@ public final class StoreClientDataState extends StoreV2 {
                 return false;
             }
             ClientDataState clientDataState = (ClientDataState) other;
-            return m.areEqual(this.guildHashes, clientDataState.guildHashes) && this.highestLastMessageId == clientDataState.highestLastMessageId && this.readStateVersion == clientDataState.readStateVersion && this.userGuildSettingsVersion == clientDataState.userGuildSettingsVersion;
+            return Intrinsics3.areEqual(this.guildHashes, clientDataState.guildHashes) && this.highestLastMessageId == clientDataState.highestLastMessageId && this.readStateVersion == clientDataState.readStateVersion && this.userGuildSettingsVersion == clientDataState.userGuildSettingsVersion;
         }
 
         public final Map<Long, GuildHashes> getGuildHashes() {
@@ -141,12 +141,12 @@ public final class StoreClientDataState extends StoreV2 {
 
         public int hashCode() {
             Map<Long, GuildHashes> map = this.guildHashes;
-            return ((((b.a(this.highestLastMessageId) + ((map != null ? map.hashCode() : 0) * 31)) * 31) + this.readStateVersion) * 31) + this.userGuildSettingsVersion;
+            return ((((C0002b.m3a(this.highestLastMessageId) + ((map != null ? map.hashCode() : 0) * 31)) * 31) + this.readStateVersion) * 31) + this.userGuildSettingsVersion;
         }
 
-        public final OutgoingPayload.IdentifyClientState toIdentifyData() {
+        public final Outgoing2.IdentifyClientState toIdentifyData() {
             Map<Long, GuildHashes> map = this.guildHashes;
-            LinkedHashMap linkedHashMap = new LinkedHashMap(g0.mapCapacity(map.size()));
+            LinkedHashMap linkedHashMap = new LinkedHashMap(MapsJVM.mapCapacity(map.size()));
             Iterator<T> it = map.entrySet().iterator();
             while (it.hasNext()) {
                 Map.Entry entry = (Map.Entry) it.next();
@@ -158,25 +158,25 @@ public final class StoreClientDataState extends StoreV2 {
                     linkedHashMap2.put(entry2.getKey(), entry2.getValue());
                 }
             }
-            LinkedHashMap linkedHashMap3 = new LinkedHashMap(g0.mapCapacity(linkedHashMap2.size()));
+            LinkedHashMap linkedHashMap3 = new LinkedHashMap(MapsJVM.mapCapacity(linkedHashMap2.size()));
             for (Map.Entry entry3 : linkedHashMap2.entrySet()) {
                 Object key = entry3.getKey();
                 Object value = entry3.getValue();
-                m.checkNotNull(value);
+                Intrinsics3.checkNotNull(value);
                 linkedHashMap3.put(key, (String[]) value);
             }
-            return new OutgoingPayload.IdentifyClientState(linkedHashMap3, this.highestLastMessageId, this.readStateVersion, this.userGuildSettingsVersion);
+            return new Outgoing2.IdentifyClientState(linkedHashMap3, this.highestLastMessageId, this.readStateVersion, this.userGuildSettingsVersion);
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ClientDataState(guildHashes=");
-            sbU.append(this.guildHashes);
-            sbU.append(", highestLastMessageId=");
-            sbU.append(this.highestLastMessageId);
-            sbU.append(", readStateVersion=");
-            sbU.append(this.readStateVersion);
-            sbU.append(", userGuildSettingsVersion=");
-            return a.B(sbU, this.userGuildSettingsVersion, ")");
+            StringBuilder sbM833U = outline.m833U("ClientDataState(guildHashes=");
+            sbM833U.append(this.guildHashes);
+            sbM833U.append(", highestLastMessageId=");
+            sbM833U.append(this.highestLastMessageId);
+            sbM833U.append(", readStateVersion=");
+            sbM833U.append(this.readStateVersion);
+            sbM833U.append(", userGuildSettingsVersion=");
+            return outline.m814B(sbM833U, this.userGuildSettingsVersion, ")");
         }
 
         public /* synthetic */ ClientDataState(Map map, long j, int i, int i2, int i3, DefaultConstructorMarker defaultConstructorMarker) {
@@ -185,9 +185,9 @@ public final class StoreClientDataState extends StoreV2 {
     }
 
     /* compiled from: StoreClientDataState.kt */
-    /* renamed from: com.discord.stores.StoreClientDataState$observeClientState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<ClientDataState> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreClientDataState$observeClientState$1 */
+    public static final class C58461 extends Lambda implements Function0<ClientDataState> {
+        public C58461() {
             super(0);
         }
 
@@ -208,7 +208,7 @@ public final class StoreClientDataState extends StoreV2 {
     }
 
     public /* synthetic */ StoreClientDataState(ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i & 1) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this((i & 1) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ ClientDataState access$getClientDataStateSnapshot$p(StoreClientDataState storeClientDataState) {
@@ -219,28 +219,28 @@ public final class StoreClientDataState extends StoreV2 {
         storeClientDataState.clientDataStateSnapshot = clientDataState;
     }
 
-    @StoreThread
+    @Store3
     private final void updateGuildHash(Guild guild) {
         GuildHashes guildHashes;
-        if (guild.getUnavailable() || (guildHashes = guild.getGuildHashes()) == null || !GuildHashUtilsKt.isSupported(guildHashes)) {
+        if (guild.getUnavailable() || (guildHashes = guild.getGuildHashes()) == null || !GuildHashUtils.isSupported(guildHashes)) {
             this.guildHashes.remove(Long.valueOf(guild.getId()));
             return;
         }
         Map<Long, GuildHashes> map = this.guildHashes;
         Long lValueOf = Long.valueOf(guild.getId());
         GuildHashes guildHashes2 = guild.getGuildHashes();
-        m.checkNotNull(guildHashes2);
+        Intrinsics3.checkNotNull(guildHashes2);
         map.put(lValueOf, guildHashes2);
     }
 
-    @StoreThread
+    @Store3
     private final void updateHighestLastMessageId(long newMessageId) {
         if (newMessageId > this.highestLastMessageId) {
             this.highestLastMessageId = newMessageId;
         }
     }
 
-    @StoreThread
+    @Store3
     public final void clear() {
         this.guildHashes.clear();
         this.highestLastMessageId = 0L;
@@ -249,31 +249,31 @@ public final class StoreClientDataState extends StoreV2 {
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleChannelCreateOrUpdateOrDelete(Channel channel) {
-        m.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(channel, "channel");
         GuildHashes guildHashes = channel.getGuildHashes();
-        if (guildHashes == null || !GuildHashUtilsKt.isSupported(guildHashes)) {
+        if (guildHashes == null || !GuildHashUtils.isSupported(guildHashes)) {
             return;
         }
         Map<Long, GuildHashes> map = this.guildHashes;
         Long lValueOf = Long.valueOf(channel.getGuildId());
         GuildHashes guildHashes2 = channel.getGuildHashes();
-        m.checkNotNull(guildHashes2);
+        Intrinsics3.checkNotNull(guildHashes2);
         map.put(lValueOf, guildHashes2);
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
+        Intrinsics3.checkNotNullParameter(payload, "payload");
         clear();
         for (Guild guild : payload.getGuilds()) {
-            m.checkNotNullExpressionValue(guild, "guild");
+            Intrinsics3.checkNotNullExpressionValue(guild, "guild");
             updateGuildHash(guild);
-            List<Channel> listG = guild.g();
-            if (listG != null) {
-                Iterator<T> it = listG.iterator();
+            List<Channel> listM7860g = guild.m7860g();
+            if (listM7860g != null) {
+                Iterator<T> it = listM7860g.iterator();
                 while (it.hasNext()) {
                     updateHighestLastMessageId(((Channel) it.next()).getLastMessageId());
                 }
@@ -284,82 +284,82 @@ public final class StoreClientDataState extends StoreV2 {
             updateHighestLastMessageId(it2.next().getLastMessageId());
         }
         ModelPayload.VersionedReadStates readState = payload.getReadState();
-        m.checkNotNullExpressionValue(readState, "payload.readState");
+        Intrinsics3.checkNotNullExpressionValue(readState, "payload.readState");
         this.readStateVersion = readState.getVersion();
         ModelPayload.VersionedUserGuildSettings userGuildSettings = payload.getUserGuildSettings();
-        m.checkNotNullExpressionValue(userGuildSettings, "payload.userGuildSettings");
+        Intrinsics3.checkNotNullExpressionValue(userGuildSettings, "payload.userGuildSettings");
         this.userGuildSettingsVersion = userGuildSettings.getVersion();
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleEmojiUpdate(GuildEmojisUpdate payload) {
-        m.checkNotNullParameter(payload, "payload");
-        if (GuildHashUtilsKt.isSupported(payload.getGuildHashes())) {
+        Intrinsics3.checkNotNullParameter(payload, "payload");
+        if (GuildHashUtils.isSupported(payload.getGuildHashes())) {
             this.guildHashes.put(Long.valueOf(payload.getGuildId()), payload.getGuildHashes());
             markChanged();
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildAdd(Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         updateGuildHash(guild);
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildRemove(Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         this.guildHashes.remove(Long.valueOf(guild.getId()));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildSettingUpdated(ModelNotificationSettings userGuildSettings) {
-        m.checkNotNullParameter(userGuildSettings, "userGuildSettings");
+        Intrinsics3.checkNotNullParameter(userGuildSettings, "userGuildSettings");
         if (userGuildSettings.getVersion() > this.userGuildSettingsVersion) {
             this.userGuildSettingsVersion = userGuildSettings.getVersion();
             markChanged();
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageAck(ModelReadState readState) {
-        m.checkNotNullParameter(readState, "readState");
+        Intrinsics3.checkNotNullParameter(readState, "readState");
         if (readState.getVersion() > this.readStateVersion) {
             this.readStateVersion = readState.getVersion();
             markChanged();
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleMessageCreate(Message message) {
-        m.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(message, "message");
         updateHighestLastMessageId(message.getId());
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleRoleAddOrRemove(long guildId, GuildHashes guildHashes) {
-        if (guildHashes == null || !GuildHashUtilsKt.isSupported(guildHashes)) {
+        if (guildHashes == null || !GuildHashUtils.isSupported(guildHashes)) {
             return;
         }
         this.guildHashes.put(Long.valueOf(guildId), guildHashes);
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleStickersUpdate(GuildStickersUpdate payload) {
-        m.checkNotNullParameter(payload, "payload");
-        if (GuildHashUtilsKt.isSupported(payload.getGuildHashes())) {
+        Intrinsics3.checkNotNullParameter(payload, "payload");
+        if (GuildHashUtils.isSupported(payload.getGuildHashes())) {
             this.guildHashes.put(Long.valueOf(payload.getGuildId()), payload.getGuildHashes());
             markChanged();
         }
     }
 
     public final Observable<ClientDataState> observeClientState() {
-        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
+        return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C58461(), 14, null);
     }
 
     @Override // com.discord.stores.StoreV2
@@ -369,7 +369,7 @@ public final class StoreClientDataState extends StoreV2 {
     }
 
     public StoreClientDataState(ObservationDeck observationDeck) {
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.observationDeck = observationDeck;
         this.guildHashes = new HashMap();
         this.readStateVersion = -1;

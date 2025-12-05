@@ -155,12 +155,12 @@ public class Installer {
     /* JADX WARN: Type inference failed for: r0v4, types: [java.lang.Throwable] */
     private static int guiInstaller() {
         int iIntValue;
-        if (OsUtils.getOS() == OsUtils.OS.MAC_OS_X) {
+        if (OsUtils.getOS() == OsUtils.EnumC12884OS.MAC_OS_X) {
             System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Lombok Installer");
             System.setProperty("com.apple.macos.use-file-dialog-packages", "true");
         }
         try {
-            SwingUtilities.invokeLater(new AnonymousClass1());
+            SwingUtilities.invokeLater(new RunnableC128691());
             ?? r0 = InstallerGUI.exitMarker;
             synchronized (r0) {
                 while (!Thread.interrupted() && InstallerGUI.exitMarker.get() == null) {
@@ -181,10 +181,10 @@ public class Installer {
         }
     }
 
-    /* renamed from: lombok.installer.Installer$1, reason: invalid class name */
+    /* renamed from: lombok.installer.Installer$1 */
     /* loaded from: discord-126021.apk:lombok/installer/Installer$1.SCL.lombok */
-    class AnonymousClass1 implements Runnable {
-        AnonymousClass1() {
+    class RunnableC128691 implements Runnable {
+        RunnableC128691() {
         }
 
         @Override // java.lang.Runnable
@@ -217,7 +217,7 @@ public class Installer {
     }
 
     public static int cliInstaller(boolean uninstall, List<String> rawArgs) throws SecurityException, IllegalArgumentException {
-        CmdReader<CmdArgs> reader = CmdReader.of(CmdArgs.class);
+        CmdReader<CmdArgs> reader = CmdReader.m9327of(CmdArgs.class);
         try {
             CmdArgs args = reader.make((String[]) rawArgs.toArray(new String[0]));
             if (args.help) {

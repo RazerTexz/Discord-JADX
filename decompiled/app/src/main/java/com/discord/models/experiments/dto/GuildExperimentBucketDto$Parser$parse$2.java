@@ -2,10 +2,10 @@ package com.discord.models.experiments.dto;
 
 import com.discord.models.domain.Model;
 import com.discord.models.experiments.dto.GuildExperimentBucketDto;
-import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
-import kotlin.ranges.IntRange;
+import kotlin.ranges.Ranges2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildExperimentDto.kt */
 /* loaded from: classes.dex */
@@ -14,19 +14,19 @@ public final class GuildExperimentBucketDto$Parser$parse$2 implements Runnable {
     public final /* synthetic */ Model.JsonReader $reader;
 
     /* compiled from: GuildExperimentDto.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentBucketDto$Parser$parse$2$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<IntRange> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.models.experiments.dto.GuildExperimentBucketDto$Parser$parse$2$1 */
+    public static final class C55461<T> implements Model.JsonReader.ItemFactory<Ranges2> {
+        public C55461() {
         }
 
         @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
-        public /* bridge */ /* synthetic */ IntRange get() {
+        public /* bridge */ /* synthetic */ Ranges2 get() {
             return get2();
         }
 
         @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
         /* renamed from: get, reason: avoid collision after fix types in other method */
-        public final IntRange get2() {
+        public final Ranges2 get2() {
             return GuildExperimentBucketDto.Parser.access$parsePosition(GuildExperimentBucketDto.Parser.INSTANCE, GuildExperimentBucketDto$Parser$parse$2.this.$reader);
         }
     }
@@ -40,8 +40,8 @@ public final class GuildExperimentBucketDto$Parser$parse$2 implements Runnable {
     @Override // java.lang.Runnable
     public final void run() throws IOException {
         Ref$ObjectRef ref$ObjectRef = this.$positions;
-        ?? NextList = this.$reader.nextList(new AnonymousClass1());
-        m.checkNotNullExpressionValue(NextList, "reader.nextList { parsePosition(reader) }");
+        ?? NextList = this.$reader.nextList(new C55461());
+        Intrinsics3.checkNotNullExpressionValue(NextList, "reader.nextList { parsePosition(reader) }");
         ref$ObjectRef.element = NextList;
     }
 }

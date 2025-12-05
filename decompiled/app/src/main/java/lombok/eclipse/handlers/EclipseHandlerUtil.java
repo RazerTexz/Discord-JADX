@@ -615,7 +615,7 @@ public class EclipseHandlerUtil {
     public static TypeReference namePlusTypeParamsToTypeReference(EclipseNode type, TypeParameter[] params, long p) {
         TypeDeclaration td = type.get();
         boolean instance = (td.modifiers & MODIFIERS_INDICATING_STATIC) == 0;
-        return namePlusTypeParamsToTypeReference(type.up(), td.name, instance, params, p);
+        return namePlusTypeParamsToTypeReference(type.m10925up(), td.name, instance, params, p);
     }
 
     public static TypeReference namePlusTypeParamsToTypeReference(EclipseNode parentType, char[] typeName, boolean instance, TypeParameter[] params, long p) {
@@ -894,7 +894,7 @@ public class EclipseHandlerUtil {
                     }
                 }
             }
-            node = node.up();
+            node = node.m10925up();
         }
         return null;
     }
@@ -1058,7 +1058,7 @@ public class EclipseHandlerUtil {
         EclipseNode type = context;
         TypeReference result = null;
         while (type != null && type.getKind() != AST.Kind.TYPE) {
-            type = type.up();
+            type = type.m10925up();
         }
         if (type != null && (type.get() instanceof TypeDeclaration)) {
             TypeDeclaration typeDecl = type.get();
@@ -1088,7 +1088,7 @@ public class EclipseHandlerUtil {
     /* JADX WARN: Type inference failed for: r0v16, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[], org.eclipse.jdt.internal.compiler.ast.TypeReference[][]] */
     public static TypeReference generateParameterizedTypeReference(EclipseNode type, TypeReference[] typeParams, long p) {
         TypeDeclaration td = type.get();
-        char[][] tn = getQualifiedInnerName(type.up(), td.name);
+        char[][] tn = getQualifiedInnerName(type.m10925up(), td.name);
         if (tn.length == 1) {
             return new ParameterizedSingleTypeReference(tn[0], typeParams, 0, p);
         }
@@ -1101,7 +1101,7 @@ public class EclipseHandlerUtil {
         r0[tnLen - 1] = typeParams;
         boolean instance = (td.modifiers & MODIFIERS_INDICATING_STATIC) == 0;
         if (instance) {
-            fillOuterTypeParams(r0, tnLen - 2, type.up(), p);
+            fillOuterTypeParams(r0, tnLen - 2, type.m10925up(), p);
         }
         return new ParameterizedQualifiedTypeReference(tn, (TypeReference[][]) r0, 0, ps);
     }
@@ -1146,12 +1146,12 @@ public class EclipseHandlerUtil {
         if ((td.modifiers & MODIFIERS_INDICATING_STATIC) != 0) {
             return filled;
         }
-        boolean f2 = fillOuterTypeParams(rr, idx - 1, node.up(), p);
+        boolean f2 = fillOuterTypeParams(rr, idx - 1, node.m10925up(), p);
         return f2 || filled;
     }
 
     public static NameReference generateNameReference(EclipseNode type, long p) {
-        char[][] tn = getQualifiedInnerName(type.up(), type.get().name);
+        char[][] tn = getQualifiedInnerName(type.m10925up(), type.get().name);
         if (tn.length == 1) {
             return new SingleNameReference(tn[0], p);
         }
@@ -1183,7 +1183,7 @@ public class EclipseHandlerUtil {
     /* JADX WARN: Type inference failed for: r0v24, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[], org.eclipse.jdt.internal.compiler.ast.TypeReference[][]] */
     public static TypeReference generateTypeReference(EclipseNode type, long p) {
         TypeDeclaration td = type.get();
-        char[][] tn = getQualifiedInnerName(type.up(), td.name);
+        char[][] tn = getQualifiedInnerName(type.m10925up(), td.name);
         if (tn.length == 1) {
             return new SingleTypeReference(tn[0], p);
         }
@@ -1192,10 +1192,10 @@ public class EclipseHandlerUtil {
         for (int i = 0; i < tnLen; i++) {
             ps[i] = p;
         }
-        boolean instance = (td.modifiers & MODIFIERS_INDICATING_STATIC) == 0 && type.up() != null && (type.up().get() instanceof TypeDeclaration);
+        boolean instance = (td.modifiers & MODIFIERS_INDICATING_STATIC) == 0 && type.m10925up() != null && (type.m10925up().get() instanceof TypeDeclaration);
         if (instance) {
             ?? r0 = new TypeReference[tn.length];
-            boolean filled = fillOuterTypeParams(r0, r0.length - 2, type.up(), p);
+            boolean filled = fillOuterTypeParams(r0, r0.length - 2, type.m10925up(), p);
             if (filled) {
                 return new ParameterizedQualifiedTypeReference(tn, (TypeReference[][]) r0, 0, ps);
             }
@@ -1238,7 +1238,7 @@ public class EclipseHandlerUtil {
                 break;
             }
             count++;
-            eclipseNodeUp = n.up();
+            eclipseNodeUp = n.m10925up();
         }
         if (count == 0) {
             return new char[]{name};
@@ -1253,7 +1253,7 @@ public class EclipseHandlerUtil {
             }
             count--;
             r0[count] = n2.get().name;
-            eclipseNodeUp2 = n2.up();
+            eclipseNodeUp2 = n2.m10925up();
         }
         return r0;
     }
@@ -1545,30 +1545,30 @@ public class EclipseHandlerUtil {
                     }
                 }
                 Expression[] exprs = expressions;
-                values.put(mName, new AnonymousClass1(annotationNode, raws, expressionValues, guesses, true, arrayInitializer, exprs, annotation, annotationNode));
+                values.put(mName, new C128571(annotationNode, raws, expressionValues, guesses, true, arrayInitializer, exprs, annotation, annotationNode));
             }
         }
         for (Method m : type.getDeclaredMethods()) {
             if (Modifier.isPublic(m.getModifiers())) {
                 String name = m.getName();
                 if (!values.containsKey(name)) {
-                    values.put(name, new AnonymousClass2(annotationNode, new ArrayList(), new ArrayList(), new ArrayList(), false, annotationNode));
+                    values.put(name, new C128582(annotationNode, new ArrayList(), new ArrayList(), new ArrayList(), false, annotationNode));
                 }
             }
         }
         return new AnnotationValues<>(type, values, annotationNode);
     }
 
-    /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$1, reason: invalid class name */
+    /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$1 */
     /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$1.SCL.lombok */
-    class AnonymousClass1 extends AnnotationValues.AnnotationValue {
+    class C128571 extends AnnotationValues.AnnotationValue {
         private final /* synthetic */ Expression val$rhs;
         private final /* synthetic */ Expression[] val$exprs;
         private final /* synthetic */ Annotation val$annotation;
         private final /* synthetic */ EclipseNode val$annotationNode;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        AnonymousClass1(LombokNode lombokNode, List list, List list2, List list3, boolean $anonymous4, Expression expression, Expression[] expressionArr, Annotation annotation, EclipseNode eclipseNode) {
+        C128571(LombokNode lombokNode, List list, List list2, List list3, boolean $anonymous4, Expression expression, Expression[] expressionArr, Annotation annotation, EclipseNode eclipseNode) {
             super(lombokNode, list, list2, list3, $anonymous4);
             this.val$rhs = expression;
             this.val$exprs = expressionArr;
@@ -1609,13 +1609,13 @@ public class EclipseHandlerUtil {
         }
     }
 
-    /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$2, reason: invalid class name */
+    /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$2 */
     /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$2.SCL.lombok */
-    class AnonymousClass2 extends AnnotationValues.AnnotationValue {
+    class C128582 extends AnnotationValues.AnnotationValue {
         private final /* synthetic */ EclipseNode val$annotationNode;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        AnonymousClass2(LombokNode lombokNode, List list, List list2, List list3, boolean $anonymous4, EclipseNode eclipseNode) {
+        C128582(LombokNode lombokNode, List list, List list2, List list3, boolean $anonymous4, EclipseNode eclipseNode) {
             super(lombokNode, list, list2, list3, $anonymous4);
             this.val$annotationNode = eclipseNode;
         }
@@ -1683,7 +1683,7 @@ public class EclipseHandlerUtil {
         boolean forceBool = EcjAugments.FieldDeclaration_booleanLazyGetter.get(fieldDeclaration).booleanValue();
         TypeReference fieldType = fieldDeclaration.type;
         boolean isBoolean = forceBool || isBoolean(fieldType);
-        EclipseNode typeNode = field.up();
+        EclipseNode typeNode = field.m10925up();
         for (String potentialGetterName : toAllGetterNames(field, isBoolean)) {
             for (EclipseNode potentialGetter : typeNode.down()) {
                 if (potentialGetter.getKind() == AST.Kind.METHOD && (potentialGetter.get() instanceof MethodDeclaration)) {
@@ -1704,7 +1704,7 @@ public class EclipseHandlerUtil {
                 hasGetterAnnotation = true;
             }
         }
-        if (!hasGetterAnnotation && HandleGetter.fieldQualifiesForGetterGeneration(field) && (containingType = field.up()) != null) {
+        if (!hasGetterAnnotation && HandleGetter.fieldQualifiesForGetterGeneration(field) && (containingType = field.m10925up()) != null) {
             for (EclipseNode child2 : containingType.down()) {
                 if (child2.getKind() == AST.Kind.ANNOTATION && annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Data.class, child2)) {
                     hasGetterAnnotation = true;
@@ -1764,7 +1764,7 @@ public class EclipseHandlerUtil {
             FieldDeclaration fieldDecl = field.get();
             FieldReference ref = new FieldReference(fieldDecl.name, p);
             if ((fieldDecl.modifiers & 8) != 0) {
-                EclipseNode containerNode = field.up();
+                EclipseNode containerNode = field.m10925up();
                 if (containerNode != null && (containerNode.get() instanceof TypeDeclaration)) {
                     ref.receiver = new SingleNameReference(containerNode.get().name, p);
                 } else {
@@ -1832,7 +1832,7 @@ public class EclipseHandlerUtil {
             call.receiver = new ThisReference(pS, pE);
             setGeneratedBy(call.receiver, source);
         } else {
-            EclipseNode containerNode = method.up();
+            EclipseNode containerNode = method.m10925up();
             if (containerNode != null && (containerNode.get() instanceof TypeDeclaration)) {
                 call.receiver = new SingleNameReference(containerNode.get().name, p);
                 setGeneratedBy(call.receiver, source);
@@ -1929,7 +1929,7 @@ public class EclipseHandlerUtil {
             }
         }
         if (prefixes == null) {
-            EclipseNode eclipseNodeUp = field.up();
+            EclipseNode eclipseNodeUp = field.m10925up();
             while (true) {
                 EclipseNode current = eclipseNodeUp;
                 if (current == null) {
@@ -1943,7 +1943,7 @@ public class EclipseHandlerUtil {
                         }
                     }
                 }
-                eclipseNodeUp = current.up();
+                eclipseNodeUp = current.m10925up();
             }
         }
         if (prefixes == null) {
@@ -1958,7 +1958,7 @@ public class EclipseHandlerUtil {
                 return createAnnotation(Accessors.class, node);
             }
         }
-        EclipseNode eclipseNodeUp = field.up();
+        EclipseNode eclipseNodeUp = field.m10925up();
         while (true) {
             EclipseNode current = eclipseNodeUp;
             if (current != null) {
@@ -1967,9 +1967,9 @@ public class EclipseHandlerUtil {
                         return createAnnotation(Accessors.class, node2);
                     }
                 }
-                eclipseNodeUp = current.up();
+                eclipseNodeUp = current.m10925up();
             } else {
-                return AnnotationValues.of(Accessors.class, field);
+                return AnnotationValues.m10917of(Accessors.class, field);
             }
         }
     }
@@ -1979,7 +1979,7 @@ public class EclipseHandlerUtil {
             throw new NullPointerException("node");
         }
         while (node != null && !(node.get() instanceof TypeDeclaration)) {
-            node = node.up();
+            node = node.m10925up();
         }
         return node;
     }
@@ -2017,7 +2017,7 @@ public class EclipseHandlerUtil {
     public static MemberExistsResult methodExists(String methodName, EclipseNode node, boolean caseSensitive, int params) {
         char[] mName;
         while (node != null && !(node.get() instanceof TypeDeclaration)) {
-            node = node.up();
+            node = node.m10925up();
         }
         if (node != null && (node.get() instanceof TypeDeclaration)) {
             TypeDeclaration typeDecl = node.get();
@@ -2139,7 +2139,7 @@ public class EclipseHandlerUtil {
                         System.arraycopy(parent.methods, i + 1, withoutGeneratedConstructor, i, (parent.methods.length - i) - 1);
                         parent.methods = withoutGeneratedConstructor;
                         if (tossMe != null) {
-                            tossMe.up().removeChild(tossMe);
+                            tossMe.m10925up().removeChild(tossMe);
                         }
                     }
                 }
@@ -2833,11 +2833,11 @@ public class EclipseHandlerUtil {
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
     /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc.SCL.lombok */
     public static abstract class CopyJavadoc {
-        public static final CopyJavadoc VERBATIM = new AnonymousClass1("VERBATIM", 0);
-        public static final CopyJavadoc GETTER = new AnonymousClass2("GETTER", 1);
-        public static final CopyJavadoc SETTER = new AnonymousClass3("SETTER", 2);
-        public static final CopyJavadoc WITH = new AnonymousClass4("WITH", 3);
-        public static final CopyJavadoc WITH_BY = new AnonymousClass5("WITH_BY", 4);
+        public static final CopyJavadoc VERBATIM = new C128591("VERBATIM", 0);
+        public static final CopyJavadoc GETTER = new C128602("GETTER", 1);
+        public static final CopyJavadoc SETTER = new C128613("SETTER", 2);
+        public static final CopyJavadoc WITH = new C128624("WITH", 3);
+        public static final CopyJavadoc WITH_BY = new C128635("WITH_BY", 4);
         private static final /* synthetic */ CopyJavadoc[] ENUM$VALUES = {VERBATIM, GETTER, SETTER, WITH, WITH_BY};
 
         public abstract String apply(CompilationUnitDeclaration compilationUnitDeclaration, EclipseNode eclipseNode);
@@ -2854,10 +2854,10 @@ public class EclipseHandlerUtil {
             return (CopyJavadoc) Enum.valueOf(CopyJavadoc.class, str);
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$1, reason: invalid class name */
+        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$1 */
         /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$1.SCL.lombok */
-        enum AnonymousClass1 extends CopyJavadoc {
-            AnonymousClass1(String str, int i) {
+        enum C128591 extends CopyJavadoc {
+            C128591(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2874,10 +2874,10 @@ public class EclipseHandlerUtil {
             this(str, i);
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$2, reason: invalid class name */
+        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$2 */
         /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$2.SCL.lombok */
-        enum AnonymousClass2 extends CopyJavadoc {
-            AnonymousClass2(String str, int i) {
+        enum C128602 extends CopyJavadoc {
+            C128602(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2894,10 +2894,10 @@ public class EclipseHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$3, reason: invalid class name */
+        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$3 */
         /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$3.SCL.lombok */
-        enum AnonymousClass3 extends CopyJavadoc {
-            AnonymousClass3(String str, int i) {
+        enum C128613 extends CopyJavadoc {
+            C128613(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2907,10 +2907,10 @@ public class EclipseHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$4, reason: invalid class name */
+        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$4 */
         /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$4.SCL.lombok */
-        enum AnonymousClass4 extends CopyJavadoc {
-            AnonymousClass4(String str, int i) {
+        enum C128624 extends CopyJavadoc {
+            C128624(String str, int i) {
                 super(str, i, null);
             }
 
@@ -2920,10 +2920,10 @@ public class EclipseHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$5, reason: invalid class name */
+        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$5 */
         /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$5.SCL.lombok */
-        enum AnonymousClass5 extends CopyJavadoc {
-            AnonymousClass5(String str, int i) {
+        enum C128635 extends CopyJavadoc {
+            C128635(String str, int i) {
                 super(str, i, null);
             }
 

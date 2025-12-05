@@ -13,7 +13,7 @@ import android.widget.FilterQueryProvider;
 import android.widget.Filterable;
 import androidx.annotation.RestrictTo;
 import androidx.cursoradapter.widget.CursorFilter;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public abstract class CursorAdapter extends BaseAdapter implements Filterable, CursorFilter.CursorFilterClient {
@@ -166,7 +166,7 @@ public abstract class CursorAdapter extends BaseAdapter implements Filterable, C
             throw new IllegalStateException("this should only be called when the cursor is valid");
         }
         if (!this.mCursor.moveToPosition(i)) {
-            throw new IllegalStateException(a.q("couldn't move cursor to position ", i));
+            throw new IllegalStateException(outline.m871q("couldn't move cursor to position ", i));
         }
         if (view == null) {
             view = newView(this.mContext, this.mCursor, viewGroup);

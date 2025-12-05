@@ -12,37 +12,42 @@ import com.google.android.material.textfield.TextInputLayout;
 /* loaded from: classes.dex */
 public final class WidgetEnableSmsBackupDialogBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f16592a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2381b;
+    public final TextView f16593b;
 
+    /* renamed from: c */
     @NonNull
-    public final MaterialButton c;
+    public final MaterialButton f16594c;
 
+    /* renamed from: d */
     @NonNull
-    public final LoadingButton d;
+    public final LoadingButton f16595d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16596e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextInputLayout f;
+    public final TextInputLayout f16597f;
 
     public WidgetEnableSmsBackupDialogBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull MaterialButton materialButton, @NonNull LoadingButton loadingButton, @NonNull TextView textView2, @NonNull TextInputLayout textInputLayout, @NonNull LinearLayout linearLayout2) {
-        this.a = linearLayout;
-        this.f2381b = textView;
-        this.c = materialButton;
-        this.d = loadingButton;
-        this.e = textView2;
-        this.f = textInputLayout;
+        this.f16592a = linearLayout;
+        this.f16593b = textView;
+        this.f16594c = materialButton;
+        this.f16595d = loadingButton;
+        this.f16596e = textView2;
+        this.f16597f = textInputLayout;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16592a;
     }
 }

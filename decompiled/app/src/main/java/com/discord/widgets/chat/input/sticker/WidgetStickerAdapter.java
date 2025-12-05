@@ -4,19 +4,19 @@ import android.content.Context;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppComponent;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter;
-import d0.t.m0;
-import d0.t.u;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.subjects.BehaviorSubject;
+import p507d0.p580t.SetsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: WidgetStickerAdapter.kt */
 /* loaded from: classes2.dex */
@@ -28,15 +28,15 @@ public final class WidgetStickerAdapter extends WidgetExpressionPickerAdapter {
     private final AppComponent appComponent;
     private final GridLayoutManager layoutManager;
     private final int numColumns;
-    private final Function1<StoreHeaderItem, Unit> onStickerHeaderItemsClicked;
-    private final Function1<StickerItem, Unit> onStickerItemSelected;
+    private final Function1<StickerAdapterItems4, Unit> onStickerHeaderItemsClicked;
+    private final Function1<StickerAdapterItems3, Unit> onStickerItemSelected;
     private final BehaviorSubject<Boolean> recyclerScrollingWithinThresholdSubject;
     private final boolean showStickerPackDescriptions;
 
     /* compiled from: WidgetStickerAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerAdapter$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends GridLayoutManager.SpanSizeLookup {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerAdapter$1 */
+    public static final class C79011 extends GridLayoutManager.SpanSizeLookup {
+        public C79011() {
         }
 
         @Override // androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup
@@ -72,11 +72,11 @@ public final class WidgetStickerAdapter extends WidgetExpressionPickerAdapter {
         return this.numColumns;
     }
 
-    public final Function1<StoreHeaderItem, Unit> getOnStickerHeaderItemsClicked() {
+    public final Function1<StickerAdapterItems4, Unit> getOnStickerHeaderItemsClicked() {
         return this.onStickerHeaderItemsClicked;
     }
 
-    public final Function1<StickerItem, Unit> getOnStickerItemSelected() {
+    public final Function1<StickerAdapterItems3, Unit> getOnStickerItemSelected() {
         return this.onStickerItemSelected;
     }
 
@@ -90,7 +90,7 @@ public final class WidgetStickerAdapter extends WidgetExpressionPickerAdapter {
 
     @Override // com.discord.utilities.views.StickyHeaderItemDecoration.StickyHeaderAdapter
     public boolean isHeader(int position) {
-        return ((MGRecyclerDataPayload) u.getOrNull(getInternalData(), position)) instanceof HeaderItem;
+        return ((MGRecyclerDataPayload) _Collections.getOrNull(getInternalData(), position)) instanceof StickerAdapterItems;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -100,42 +100,42 @@ public final class WidgetStickerAdapter extends WidgetExpressionPickerAdapter {
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     /* JADX WARN: Multi-variable type inference failed */
-    public WidgetStickerAdapter(RecyclerView recyclerView, Function1<? super StickerItem, Unit> function1, Function1<? super StoreHeaderItem, Unit> function12, BehaviorSubject<Boolean> behaviorSubject, AppComponent appComponent, boolean z2) {
-        super(recyclerView, m0.setOf(0));
-        m.checkNotNullParameter(recyclerView, "recycler");
-        m.checkNotNullParameter(function1, "onStickerItemSelected");
-        m.checkNotNullParameter(appComponent, "appComponent");
+    public WidgetStickerAdapter(RecyclerView recyclerView, Function1<? super StickerAdapterItems3, Unit> function1, Function1<? super StickerAdapterItems4, Unit> function12, BehaviorSubject<Boolean> behaviorSubject, AppComponent appComponent, boolean z2) {
+        super(recyclerView, SetsJVM.setOf(0));
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        Intrinsics3.checkNotNullParameter(function1, "onStickerItemSelected");
+        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
         this.onStickerItemSelected = function1;
         this.onStickerHeaderItemsClicked = function12;
         this.recyclerScrollingWithinThresholdSubject = behaviorSubject;
         this.appComponent = appComponent;
         this.showStickerPackDescriptions = z2;
         Context context = recyclerView.getContext();
-        m.checkNotNullExpressionValue(context, "recycler.context");
-        this.numColumns = WidgetExpressionPickerAdapter.INSTANCE.calculateNumOfColumns(recyclerView, context.getResources().getDimension(R.dimen.chat_input_sticker_size), 4);
+        Intrinsics3.checkNotNullExpressionValue(context, "recycler.context");
+        this.numColumns = WidgetExpressionPickerAdapter.INSTANCE.calculateNumOfColumns(recyclerView, context.getResources().getDimension(C5419R.dimen.chat_input_sticker_size), 4);
         this.layoutManager = new GridLayoutManager(recyclerView.getContext(), getNumColumns());
-        getLayoutManager().setSpanSizeLookup(new AnonymousClass1());
+        getLayoutManager().setSpanSizeLookup(new C79011());
         recyclerView.setLayoutManager(getLayoutManager());
         recyclerView.setAdapter(this);
     }
 
     @Override // com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter
-    public OwnedHeaderViewHolder createStickyHeaderViewHolder(WidgetExpressionPickerAdapter adapter) {
-        m.checkNotNullParameter(adapter, "adapter");
-        return new OwnedHeaderViewHolder((WidgetStickerAdapter) adapter);
+    public StickerAdapterViewHolders createStickyHeaderViewHolder(WidgetExpressionPickerAdapter adapter) {
+        Intrinsics3.checkNotNullParameter(adapter, "adapter");
+        return new StickerAdapterViewHolders((WidgetStickerAdapter) adapter);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<WidgetStickerAdapter, MGRecyclerDataPayload> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
-            return new OwnedHeaderViewHolder(this);
+            return new StickerAdapterViewHolders(this);
         }
         if (viewType == 1) {
-            return new StickerViewHolder(viewType, this, this.recyclerScrollingWithinThresholdSubject, this.appComponent);
+            return new StickerAdapterViewHolders2(viewType, this, this.recyclerScrollingWithinThresholdSubject, this.appComponent);
         }
         if (viewType == 2) {
-            return new StoreHeaderViewHolder(this);
+            return new StickerAdapterViewHolders3(this);
         }
         throw invalidViewTypeException(viewType);
     }

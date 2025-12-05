@@ -2,76 +2,92 @@ package com.google.firebase.messaging;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
-import b.i.a.b.e;
-import b.i.a.b.f;
-import b.i.a.b.h;
-import b.i.c.l.d;
-import b.i.c.l.g;
-import b.i.c.l.o;
-import b.i.c.r.d;
-import b.i.c.w.l;
 import com.google.firebase.iid.FirebaseInstanceId;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import p007b.p225i.p226a.p228b.Encoding2;
+import p007b.p225i.p226a.p228b.Event2;
+import p007b.p225i.p226a.p228b.Transformer;
+import p007b.p225i.p226a.p228b.Transport2;
+import p007b.p225i.p226a.p228b.TransportFactory;
+import p007b.p225i.p226a.p228b.TransportScheduleCallback;
+import p007b.p225i.p226a.p228b.p229i.CCTDestination;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p007b.p225i.p361c.FirebaseApp2;
+import p007b.p225i.p361c.p368l.Component4;
+import p007b.p225i.p361c.p368l.ComponentContainer;
+import p007b.p225i.p361c.p368l.ComponentRegistrar;
+import p007b.p225i.p361c.p368l.Dependency2;
+import p007b.p225i.p361c.p369m.p370d.p383r.DataTransportCrashlyticsReportSender;
+import p007b.p225i.p361c.p396q.Subscriber2;
+import p007b.p225i.p361c.p397r.HeartBeatInfo;
+import p007b.p225i.p361c.p401u.InterfaceC4843g;
+import p007b.p225i.p361c.p406w.C4874l;
+import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
 /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
 @Keep
 /* loaded from: classes3.dex */
-public class FirebaseMessagingRegistrar implements g {
+public class FirebaseMessagingRegistrar implements ComponentRegistrar {
 
     /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    public static class b<T> implements f<T> {
-        public b(a aVar) {
+    /* renamed from: com.google.firebase.messaging.FirebaseMessagingRegistrar$b */
+    public static class C11090b<T> implements Transport2<T> {
+        public C11090b(C11089a c11089a) {
         }
 
-        @Override // b.i.a.b.f
-        public void a(b.i.a.b.c<T> cVar) {
+        @Override // p007b.p225i.p226a.p228b.Transport2
+        /* renamed from: a */
+        public void mo2289a(Event2<T> event2) {
         }
 
-        @Override // b.i.a.b.f
-        public void b(b.i.a.b.c<T> cVar, h hVar) {
-            ((b.i.c.m.d.r.a) hVar).a(null);
+        @Override // p007b.p225i.p226a.p228b.Transport2
+        /* renamed from: b */
+        public void mo2290b(Event2<T> event2, TransportScheduleCallback transportScheduleCallback) {
+            ((DataTransportCrashlyticsReportSender) transportScheduleCallback).mo2292a(null);
         }
     }
 
     /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     @VisibleForTesting
-    public static class c implements b.i.a.b.g {
-        @Override // b.i.a.b.g
-        public <T> f<T> a(String str, Class<T> cls, b.i.a.b.b bVar, e<T, byte[]> eVar) {
-            return new b(null);
+    /* renamed from: com.google.firebase.messaging.FirebaseMessagingRegistrar$c */
+    public static class C11091c implements TransportFactory {
+        @Override // p007b.p225i.p226a.p228b.TransportFactory
+        /* renamed from: a */
+        public <T> Transport2<T> mo2291a(String str, Class<T> cls, Encoding2 encoding2, Transformer<T, byte[]> transformer) {
+            return new C11090b(null);
         }
     }
 
     @VisibleForTesting
-    public static b.i.a.b.g determineFactory(b.i.a.b.g gVar) {
-        if (gVar != null) {
-            Objects.requireNonNull(b.i.a.b.i.a.e);
-            if (b.i.a.b.i.a.d.contains(new b.i.a.b.b("json"))) {
-                return gVar;
+    public static TransportFactory determineFactory(TransportFactory transportFactory) {
+        if (transportFactory != null) {
+            Objects.requireNonNull(CCTDestination.f5127e);
+            if (CCTDestination.f5126d.contains(new Encoding2("json"))) {
+                return transportFactory;
             }
         }
-        return new c();
+        return new C11091c();
     }
 
-    public static final /* synthetic */ FirebaseMessaging lambda$getComponents$0$FirebaseMessagingRegistrar(b.i.c.l.e eVar) {
-        return new FirebaseMessaging((b.i.c.c) eVar.a(b.i.c.c.class), (FirebaseInstanceId) eVar.a(FirebaseInstanceId.class), eVar.b(b.i.c.x.h.class), eVar.b(d.class), (b.i.c.u.g) eVar.a(b.i.c.u.g.class), determineFactory((b.i.a.b.g) eVar.a(b.i.a.b.g.class)), (b.i.c.q.d) eVar.a(b.i.c.q.d.class));
+    public static final /* synthetic */ FirebaseMessaging lambda$getComponents$0$FirebaseMessagingRegistrar(ComponentContainer componentContainer) {
+        return new FirebaseMessaging((FirebaseApp2) componentContainer.mo6346a(FirebaseApp2.class), (FirebaseInstanceId) componentContainer.mo6346a(FirebaseInstanceId.class), componentContainer.mo6355b(UserAgentPublisher.class), componentContainer.mo6355b(HeartBeatInfo.class), (InterfaceC4843g) componentContainer.mo6346a(InterfaceC4843g.class), determineFactory((TransportFactory) componentContainer.mo6346a(TransportFactory.class)), (Subscriber2) componentContainer.mo6346a(Subscriber2.class));
     }
 
-    @Override // b.i.c.l.g
+    @Override // p007b.p225i.p361c.p368l.ComponentRegistrar
     @Keep
-    public List<b.i.c.l.d<?>> getComponents() {
-        d.b bVarA = b.i.c.l.d.a(FirebaseMessaging.class);
-        bVarA.a(new o(b.i.c.c.class, 1, 0));
-        bVarA.a(new o(FirebaseInstanceId.class, 1, 0));
-        bVarA.a(new o(b.i.c.x.h.class, 0, 1));
-        bVarA.a(new o(b.i.c.r.d.class, 0, 1));
-        bVarA.a(new o(b.i.a.b.g.class, 0, 0));
-        bVarA.a(new o(b.i.c.u.g.class, 1, 0));
-        bVarA.a(new o(b.i.c.q.d.class, 1, 0));
-        bVarA.c(l.a);
-        bVarA.d(1);
-        return Arrays.asList(bVarA.b(), b.i.a.f.e.o.f.N("fire-fcm", "20.1.7_1p"));
+    public List<Component4<?>> getComponents() {
+        Component4.b bVarM6348a = Component4.m6348a(FirebaseMessaging.class);
+        bVarM6348a.m6351a(new Dependency2(FirebaseApp2.class, 1, 0));
+        bVarM6348a.m6351a(new Dependency2(FirebaseInstanceId.class, 1, 0));
+        bVarM6348a.m6351a(new Dependency2(UserAgentPublisher.class, 0, 1));
+        bVarM6348a.m6351a(new Dependency2(HeartBeatInfo.class, 0, 1));
+        bVarM6348a.m6351a(new Dependency2(TransportFactory.class, 0, 0));
+        bVarM6348a.m6351a(new Dependency2(InterfaceC4843g.class, 1, 0));
+        bVarM6348a.m6351a(new Dependency2(Subscriber2.class, 1, 0));
+        bVarM6348a.m6353c(C4874l.f13029a);
+        bVarM6348a.m6354d(1);
+        return Arrays.asList(bVarM6348a.m6352b(), C3404f.m4228N("fire-fcm", "20.1.7_1p"));
     }
 }

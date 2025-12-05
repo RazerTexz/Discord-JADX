@@ -1,19 +1,19 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create;
 
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.guildrolesubscription.SubscriptionTrialInterval;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.widgets.guild_role_subscriptions.tier.model.Benefit;
 import com.discord.widgets.guild_role_subscriptions.tier.model.GuildRoleSubscriptionTier;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.Collection;
 import java.util.List;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildRoleSubscriptionTierViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
+public final class GuildRoleSubscriptionTierViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: GuildRoleSubscriptionTierViewModel.kt */
     public static final /* data */ class ViewState {
@@ -25,7 +25,7 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
         }
 
         public ViewState(GuildRoleSubscriptionTier guildRoleSubscriptionTier, Boolean bool) {
-            m.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
+            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
             this.guildRoleSubscriptionTier = guildRoleSubscriptionTier;
             this.isFullServerGating = bool;
         }
@@ -51,7 +51,7 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
         }
 
         public final ViewState copy(GuildRoleSubscriptionTier guildRoleSubscriptionTier, Boolean isFullServerGating) {
-            m.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
+            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
             return new ViewState(guildRoleSubscriptionTier, isFullServerGating);
         }
 
@@ -63,7 +63,7 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return m.areEqual(this.guildRoleSubscriptionTier, viewState.guildRoleSubscriptionTier) && m.areEqual(this.isFullServerGating, viewState.isFullServerGating);
+            return Intrinsics3.areEqual(this.guildRoleSubscriptionTier, viewState.guildRoleSubscriptionTier) && Intrinsics3.areEqual(this.isFullServerGating, viewState.isFullServerGating);
         }
 
         public final GuildRoleSubscriptionTier getGuildRoleSubscriptionTier() {
@@ -82,10 +82,10 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ViewState(guildRoleSubscriptionTier=");
-            sbU.append(this.guildRoleSubscriptionTier);
-            sbU.append(", isFullServerGating=");
-            return a.D(sbU, this.isFullServerGating, ")");
+            StringBuilder sbM833U = outline.m833U("ViewState(guildRoleSubscriptionTier=");
+            sbM833U.append(this.guildRoleSubscriptionTier);
+            sbM833U.append(", isFullServerGating=");
+            return outline.m816D(sbM833U, this.isFullServerGating, ")");
         }
 
         /*  JADX ERROR: NullPointerException in pass: InitCodeVariables
@@ -147,27 +147,27 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
 
     private final void addChannelBenefit(Benefit.ChannelBenefit channelBenefit) {
         GuildRoleSubscriptionTier guildRoleSubscriptionTier = requireViewState().getGuildRoleSubscriptionTier();
-        updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(guildRoleSubscriptionTier, null, null, null, null, null, null, null, null, null, null, null, u.plus((Collection<? extends Benefit.ChannelBenefit>) guildRoleSubscriptionTier.getChannelBenefits(), channelBenefit), null, null, null, 30719, null), null, 2, null));
+        updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(guildRoleSubscriptionTier, null, null, null, null, null, null, null, null, null, null, null, _Collections.plus((Collection<? extends Benefit.ChannelBenefit>) guildRoleSubscriptionTier.getChannelBenefits(), channelBenefit), null, null, null, 30719, null), null, 2, null));
     }
 
     private final void addIntangibleBenefit(Benefit.IntangibleBenefit intangibleBenefit) {
         GuildRoleSubscriptionTier guildRoleSubscriptionTier = requireViewState().getGuildRoleSubscriptionTier();
-        updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(guildRoleSubscriptionTier, null, null, null, null, null, null, null, null, null, null, null, null, u.plus((Collection<? extends Benefit.IntangibleBenefit>) guildRoleSubscriptionTier.getIntangibleBenefits(), intangibleBenefit), null, null, 28671, null), null, 2, null));
+        updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(guildRoleSubscriptionTier, null, null, null, null, null, null, null, null, null, null, null, null, _Collections.plus((Collection<? extends Benefit.IntangibleBenefit>) guildRoleSubscriptionTier.getIntangibleBenefits(), intangibleBenefit), null, null, 28671, null), null, 2, null));
     }
 
     private final void removeChannelBenefit(Benefit.ChannelBenefit channelBenefit) {
         GuildRoleSubscriptionTier guildRoleSubscriptionTier = requireViewState().getGuildRoleSubscriptionTier();
-        updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(guildRoleSubscriptionTier, null, null, null, null, null, null, null, null, null, null, null, u.minus(guildRoleSubscriptionTier.getChannelBenefits(), channelBenefit), null, null, null, 30719, null), null, 2, null));
+        updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(guildRoleSubscriptionTier, null, null, null, null, null, null, null, null, null, null, null, _Collections.minus(guildRoleSubscriptionTier.getChannelBenefits(), channelBenefit), null, null, null, 30719, null), null, 2, null));
     }
 
     private final void removeIntangibleBenefit(Benefit.IntangibleBenefit intangibleBenefit) {
         GuildRoleSubscriptionTier guildRoleSubscriptionTier = requireViewState().getGuildRoleSubscriptionTier();
-        updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(guildRoleSubscriptionTier, null, null, null, null, null, null, null, null, null, null, null, null, u.minus(guildRoleSubscriptionTier.getIntangibleBenefits(), intangibleBenefit), null, null, 28671, null), null, 2, null));
+        updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(guildRoleSubscriptionTier, null, null, null, null, null, null, null, null, null, null, null, null, _Collections.minus(guildRoleSubscriptionTier.getIntangibleBenefits(), intangibleBenefit), null, null, 28671, null), null, 2, null));
     }
 
     private final void replaceChannelBenefit(Benefit.ChannelBenefit existingChannelBenefit, Benefit.ChannelBenefit newChannelBenefit) {
         GuildRoleSubscriptionTier guildRoleSubscriptionTier = requireViewState().getGuildRoleSubscriptionTier();
-        List mutableList = u.toMutableList((Collection) guildRoleSubscriptionTier.getChannelBenefits());
+        List mutableList = _Collections.toMutableList((Collection) guildRoleSubscriptionTier.getChannelBenefits());
         int iIndexOf = mutableList.indexOf(existingChannelBenefit);
         if (iIndexOf != -1) {
             mutableList.set(iIndexOf, newChannelBenefit);
@@ -177,7 +177,7 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
 
     private final void replaceIntangibleBenefit(Benefit.IntangibleBenefit existingIntangibleBenefit, Benefit.IntangibleBenefit newIntangibleBenefit) {
         GuildRoleSubscriptionTier guildRoleSubscriptionTier = requireViewState().getGuildRoleSubscriptionTier();
-        List mutableList = u.toMutableList((Collection) guildRoleSubscriptionTier.getIntangibleBenefits());
+        List mutableList = _Collections.toMutableList((Collection) guildRoleSubscriptionTier.getIntangibleBenefits());
         int iIndexOf = mutableList.indexOf(existingIntangibleBenefit);
         if (iIndexOf != -1) {
             mutableList.set(iIndexOf, newIntangibleBenefit);
@@ -229,7 +229,7 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
     }
 
     public final void setTier(GuildRoleSubscriptionTier guildRoleSubscriptionTier) {
-        m.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
+        Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
         updateViewState(ViewState.copy$default(requireViewState(), guildRoleSubscriptionTier, null, 2, null));
     }
 
@@ -272,7 +272,7 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
     }
 
     public final void updateDescription(String description) {
-        m.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        Intrinsics3.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
         updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(requireViewState().getGuildRoleSubscriptionTier(), null, null, null, null, null, null, null, null, description, null, null, null, null, null, null, 32511, null), null, 2, null));
     }
 
@@ -318,7 +318,7 @@ public final class GuildRoleSubscriptionTierViewModel extends d0<ViewState> {
     }
 
     public final void updateTierName(String tierName) {
-        m.checkNotNullParameter(tierName, "tierName");
+        Intrinsics3.checkNotNullParameter(tierName, "tierName");
         updateViewState(ViewState.copy$default(requireViewState(), GuildRoleSubscriptionTier.copy$default(requireViewState().getGuildRoleSubscriptionTier(), tierName, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 32766, null), null, 2, null));
     }
 }

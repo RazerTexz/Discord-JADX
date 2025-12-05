@@ -11,41 +11,47 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /* loaded from: classes.dex */
 public final class WidgetChatListAdapterItemPrivateChannelStartBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f16261a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final TextView f2328b;
+    public final TextView f16262b;
 
+    /* renamed from: c */
     @NonNull
-    public final PileView c;
+    public final PileView f16263c;
 
+    /* renamed from: d */
     @NonNull
-    public final LinearLayout d;
+    public final LinearLayout f16264d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextView e;
+    public final TextView f16265e;
 
+    /* renamed from: f */
     @NonNull
-    public final SimpleDraweeView f;
+    public final SimpleDraweeView f16266f;
 
+    /* renamed from: g */
     @NonNull
-    public final TextView g;
+    public final TextView f16267g;
 
     public WidgetChatListAdapterItemPrivateChannelStartBinding(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull PileView pileView, @NonNull LinearLayout linearLayout2, @NonNull TextView textView2, @NonNull SimpleDraweeView simpleDraweeView, @NonNull TextView textView3) {
-        this.a = linearLayout;
-        this.f2328b = textView;
-        this.c = pileView;
-        this.d = linearLayout2;
-        this.e = textView2;
-        this.f = simpleDraweeView;
-        this.g = textView3;
+        this.f16261a = linearLayout;
+        this.f16262b = textView;
+        this.f16263c = pileView;
+        this.f16264d = linearLayout2;
+        this.f16265e = textView2;
+        this.f16266f = simpleDraweeView;
+        this.f16267g = textView3;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16261a;
     }
 }

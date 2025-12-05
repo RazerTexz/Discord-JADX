@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackExperimentGuildTriggered.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackExperimentGuildTriggered implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackExperimentGuildTriggered implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence name = null;
     private final Long bucket = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackExperimentGuildTriggered implements Analytics
             return false;
         }
         TrackExperimentGuildTriggered trackExperimentGuildTriggered = (TrackExperimentGuildTriggered) other;
-        return m.areEqual(this.name, trackExperimentGuildTriggered.name) && m.areEqual(this.bucket, trackExperimentGuildTriggered.bucket) && m.areEqual(this.revision, trackExperimentGuildTriggered.revision) && m.areEqual(this.guildId, trackExperimentGuildTriggered.guildId) && m.areEqual(this.linkedUserExperimentName, trackExperimentGuildTriggered.linkedUserExperimentName) && m.areEqual(this.linkedUserExperimentBucket, trackExperimentGuildTriggered.linkedUserExperimentBucket) && m.areEqual(this.linkedUserExperimentRevision, trackExperimentGuildTriggered.linkedUserExperimentRevision);
+        return Intrinsics3.areEqual(this.name, trackExperimentGuildTriggered.name) && Intrinsics3.areEqual(this.bucket, trackExperimentGuildTriggered.bucket) && Intrinsics3.areEqual(this.revision, trackExperimentGuildTriggered.revision) && Intrinsics3.areEqual(this.guildId, trackExperimentGuildTriggered.guildId) && Intrinsics3.areEqual(this.linkedUserExperimentName, trackExperimentGuildTriggered.linkedUserExperimentName) && Intrinsics3.areEqual(this.linkedUserExperimentBucket, trackExperimentGuildTriggered.linkedUserExperimentBucket) && Intrinsics3.areEqual(this.linkedUserExperimentRevision, trackExperimentGuildTriggered.linkedUserExperimentRevision);
     }
 
     public int hashCode() {
@@ -55,19 +55,19 @@ public final /* data */ class TrackExperimentGuildTriggered implements Analytics
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackExperimentGuildTriggered(name=");
-        sbU.append(this.name);
-        sbU.append(", bucket=");
-        sbU.append(this.bucket);
-        sbU.append(", revision=");
-        sbU.append(this.revision);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", linkedUserExperimentName=");
-        sbU.append(this.linkedUserExperimentName);
-        sbU.append(", linkedUserExperimentBucket=");
-        sbU.append(this.linkedUserExperimentBucket);
-        sbU.append(", linkedUserExperimentRevision=");
-        return a.G(sbU, this.linkedUserExperimentRevision, ")");
+        StringBuilder sbM833U = outline.m833U("TrackExperimentGuildTriggered(name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", bucket=");
+        sbM833U.append(this.bucket);
+        sbM833U.append(", revision=");
+        sbM833U.append(this.revision);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", linkedUserExperimentName=");
+        sbM833U.append(this.linkedUserExperimentName);
+        sbM833U.append(", linkedUserExperimentBucket=");
+        sbM833U.append(this.linkedUserExperimentBucket);
+        sbM833U.append(", linkedUserExperimentRevision=");
+        return outline.m819G(sbM833U, this.linkedUserExperimentRevision, ")");
     }
 }

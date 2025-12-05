@@ -5,13 +5,13 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.core.view.AccessibilityDelegateCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
-import d0.t.u;
-import d0.z.d.m;
-import defpackage.SpoilerSpan;
+import com.discord.C5419R;
 import java.util.ArrayList;
+import p000.SpoilerSpan;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChatListItemMessageAccessibilityDelegate.kt */
 /* loaded from: classes2.dex */
@@ -22,7 +22,7 @@ public final class ChatListItemMessageAccessibilityDelegate extends Accessibilit
     private final TextView timestampView;
 
     public ChatListItemMessageAccessibilityDelegate(TextView textView, TextView textView2, TextView textView3, TextView textView4) {
-        m.checkNotNullParameter(textView, "textView");
+        Intrinsics3.checkNotNullParameter(textView, "textView");
         this.textView = textView;
         this.nameView = textView2;
         this.tagView = textView3;
@@ -37,33 +37,33 @@ public final class ChatListItemMessageAccessibilityDelegate extends Accessibilit
         }
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(this.textView.getText());
         for (SpoilerSpan spoilerSpan : (SpoilerSpan[]) spannableStringBuilder.getSpans(0, spannableStringBuilder.length(), SpoilerSpan.class)) {
-            if (!spoilerSpan.l) {
-                spannableStringBuilder.replace(spannableStringBuilder.getSpanStart(spoilerSpan), spannableStringBuilder.getSpanEnd(spoilerSpan), b.j(host, R.string.spoiler_hidden_a11y_label, new Object[0], null, 4));
+            if (!spoilerSpan.f2l) {
+                spannableStringBuilder.replace(spannableStringBuilder.getSpanStart(spoilerSpan), spannableStringBuilder.getSpanEnd(spoilerSpan), FormatUtils.m218j(host, C5419R.string.spoiler_hidden_a11y_label, new Object[0], null, 4));
             }
         }
         ArrayList arrayList = new ArrayList();
         TextView textView = this.nameView;
         if (textView != null) {
             CharSequence text = textView.getText();
-            m.checkNotNullExpressionValue(text, "nameView.text");
+            Intrinsics3.checkNotNullExpressionValue(text, "nameView.text");
             arrayList.add(text);
         }
         TextView textView2 = this.tagView;
         if (textView2 != null) {
             if (textView2.getVisibility() == 0) {
                 CharSequence text2 = this.tagView.getText();
-                m.checkNotNullExpressionValue(text2, "tagView.text");
+                Intrinsics3.checkNotNullExpressionValue(text2, "tagView.text");
                 arrayList.add(text2);
             }
         }
         TextView textView3 = this.timestampView;
         if (textView3 != null) {
             CharSequence text3 = textView3.getText();
-            m.checkNotNullExpressionValue(text3, "timestampView.text");
+            Intrinsics3.checkNotNullExpressionValue(text3, "timestampView.text");
             arrayList.add(text3);
         }
         if (!arrayList.isEmpty()) {
-            spannableStringBuilder.replace(0, 0, (CharSequence) a.J(new StringBuilder(), u.joinToString$default(arrayList, ", ", null, null, 0, null, null, 62, null), "\n"));
+            spannableStringBuilder.replace(0, 0, (CharSequence) outline.m822J(new StringBuilder(), _Collections.joinToString$default(arrayList, ", ", null, null, 0, null, null, 62, null), "\n"));
         }
         TextView textView4 = this.nameView;
         if (textView4 != null) {

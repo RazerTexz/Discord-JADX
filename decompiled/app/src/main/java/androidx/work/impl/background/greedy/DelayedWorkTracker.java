@@ -16,17 +16,17 @@ public class DelayedWorkTracker {
     private final RunnableScheduler mRunnableScheduler;
     private final Map<String, Runnable> mRunnables = new HashMap();
 
-    /* renamed from: androidx.work.impl.background.greedy.DelayedWorkTracker$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.work.impl.background.greedy.DelayedWorkTracker$1 */
+    public class RunnableC07351 implements Runnable {
         public final /* synthetic */ WorkSpec val$workSpec;
 
-        public AnonymousClass1(WorkSpec workSpec) {
+        public RunnableC07351(WorkSpec workSpec) {
             this.val$workSpec = workSpec;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            Logger.get().debug(DelayedWorkTracker.TAG, String.format("Scheduling work %s", this.val$workSpec.f38id), new Throwable[0]);
+            Logger.get().debug(DelayedWorkTracker.TAG, String.format("Scheduling work %s", this.val$workSpec.f163id), new Throwable[0]);
             DelayedWorkTracker.this.mGreedyScheduler.schedule(this.val$workSpec);
         }
     }
@@ -37,13 +37,13 @@ public class DelayedWorkTracker {
     }
 
     public void schedule(@NonNull WorkSpec workSpec) {
-        Runnable runnableRemove = this.mRunnables.remove(workSpec.f38id);
+        Runnable runnableRemove = this.mRunnables.remove(workSpec.f163id);
         if (runnableRemove != null) {
             this.mRunnableScheduler.cancel(runnableRemove);
         }
-        AnonymousClass1 anonymousClass1 = new AnonymousClass1(workSpec);
-        this.mRunnables.put(workSpec.f38id, anonymousClass1);
-        this.mRunnableScheduler.scheduleWithDelay(workSpec.calculateNextRunTime() - System.currentTimeMillis(), anonymousClass1);
+        RunnableC07351 runnableC07351 = new RunnableC07351(workSpec);
+        this.mRunnables.put(workSpec.f163id, runnableC07351);
+        this.mRunnableScheduler.scheduleWithDelay(workSpec.calculateNextRunTime() - System.currentTimeMillis(), runnableC07351);
     }
 
     public void unschedule(@NonNull String str) {

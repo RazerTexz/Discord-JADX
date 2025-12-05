@@ -1,15 +1,15 @@
 package com.discord.models.domain;
 
 import androidx.core.app.FrameMetricsAggregator;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.message.Message;
 import com.discord.api.thread.ThreadMember;
-import d0.g;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelSearchResponse.kt */
 /* loaded from: classes.dex */
@@ -44,7 +44,7 @@ public final /* data */ class ModelSearchResponse {
         this.documentIndexed = num2;
         this.retryAfter = num3;
         this.retryMillis = (num3 != null ? num3.intValue() : 0L) * 1000;
-        this.hits = g.lazy(new ModelSearchResponse$hits$2(this));
+        this.hits = LazyJVM.lazy(new ModelSearchResponse2(this));
     }
 
     /* renamed from: component9, reason: from getter */
@@ -105,7 +105,7 @@ public final /* data */ class ModelSearchResponse {
             return false;
         }
         ModelSearchResponse modelSearchResponse = (ModelSearchResponse) other;
-        return this.totalResults == modelSearchResponse.totalResults && m.areEqual(this.messages, modelSearchResponse.messages) && m.areEqual(this.threads, modelSearchResponse.threads) && m.areEqual(this.members, modelSearchResponse.members) && m.areEqual(this.analyticsId, modelSearchResponse.analyticsId) && m.areEqual(this.message, modelSearchResponse.message) && m.areEqual(this.errorCode, modelSearchResponse.errorCode) && m.areEqual(this.documentIndexed, modelSearchResponse.documentIndexed) && m.areEqual(this.retryAfter, modelSearchResponse.retryAfter);
+        return this.totalResults == modelSearchResponse.totalResults && Intrinsics3.areEqual(this.messages, modelSearchResponse.messages) && Intrinsics3.areEqual(this.threads, modelSearchResponse.threads) && Intrinsics3.areEqual(this.members, modelSearchResponse.members) && Intrinsics3.areEqual(this.analyticsId, modelSearchResponse.analyticsId) && Intrinsics3.areEqual(this.message, modelSearchResponse.message) && Intrinsics3.areEqual(this.errorCode, modelSearchResponse.errorCode) && Intrinsics3.areEqual(this.documentIndexed, modelSearchResponse.documentIndexed) && Intrinsics3.areEqual(this.retryAfter, modelSearchResponse.retryAfter);
     }
 
     public final String getAnalyticsId() {
@@ -169,24 +169,24 @@ public final /* data */ class ModelSearchResponse {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelSearchResponse(totalResults=");
-        sbU.append(this.totalResults);
-        sbU.append(", messages=");
-        sbU.append(this.messages);
-        sbU.append(", threads=");
-        sbU.append(this.threads);
-        sbU.append(", members=");
-        sbU.append(this.members);
-        sbU.append(", analyticsId=");
-        sbU.append(this.analyticsId);
-        sbU.append(", message=");
-        sbU.append(this.message);
-        sbU.append(", errorCode=");
-        sbU.append(this.errorCode);
-        sbU.append(", documentIndexed=");
-        sbU.append(this.documentIndexed);
-        sbU.append(", retryAfter=");
-        return a.F(sbU, this.retryAfter, ")");
+        StringBuilder sbM833U = outline.m833U("ModelSearchResponse(totalResults=");
+        sbM833U.append(this.totalResults);
+        sbM833U.append(", messages=");
+        sbM833U.append(this.messages);
+        sbM833U.append(", threads=");
+        sbM833U.append(this.threads);
+        sbM833U.append(", members=");
+        sbM833U.append(this.members);
+        sbM833U.append(", analyticsId=");
+        sbM833U.append(this.analyticsId);
+        sbM833U.append(", message=");
+        sbM833U.append(this.message);
+        sbM833U.append(", errorCode=");
+        sbM833U.append(this.errorCode);
+        sbM833U.append(", documentIndexed=");
+        sbM833U.append(this.documentIndexed);
+        sbM833U.append(", retryAfter=");
+        return outline.m818F(sbM833U, this.retryAfter, ")");
     }
 
     public /* synthetic */ ModelSearchResponse(int i, List list, List list2, List list3, String str, String str2, Integer num, Integer num2, Integer num3, int i2, DefaultConstructorMarker defaultConstructorMarker) {

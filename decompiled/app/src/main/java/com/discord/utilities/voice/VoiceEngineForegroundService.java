@@ -13,30 +13,30 @@ import android.os.PowerManager;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.PointerIconCompat;
-import b.a.d.l;
-import b.d.b.a.a;
 import com.discord.app.AppActivity;
 import com.discord.app.AppComponent;
 import com.discord.app.AppLog;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.extensions.PendingIntentExtensionsKt;
+import com.discord.utilities.extensions.PendingIntentExtensions;
 import com.discord.utilities.fcm.NotificationClient;
 import com.discord.utilities.logging.Logger;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.utilities.system.SystemServiceExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
+import com.discord.utilities.system.SystemServiceExtensions;
 import com.discord.widgets.stage.StageChannelAPI;
 import com.discord.widgets.stage.StageChannelNotifications;
 import com.discord.widgets.voice.fullscreen.WidgetCallFullscreen;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
-import rx.subjects.Subject;
+import p007b.p008a.p018d.AppState2;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
+import p658rx.subjects.Subject;
 
 /* compiled from: VoiceEngineForegroundService.kt */
 /* loaded from: classes2.dex */
@@ -54,9 +54,9 @@ public final class VoiceEngineForegroundService extends IntentService implements
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static Function0<Unit> onDisconnect = VoiceEngineForegroundService$Companion$onDisconnect$1.INSTANCE;
-    private static Function0<Unit> onToggleSelfDeafen = VoiceEngineForegroundService$Companion$onToggleSelfDeafen$1.INSTANCE;
-    private static Function0<Unit> onToggleSelfMute = VoiceEngineForegroundService$Companion$onToggleSelfMute$1.INSTANCE;
+    private static Function0<Unit> onDisconnect = VoiceEngineForegroundService2.INSTANCE;
+    private static Function0<Unit> onToggleSelfDeafen = VoiceEngineForegroundService3.INSTANCE;
+    private static Function0<Unit> onToggleSelfMute = VoiceEngineForegroundService4.INSTANCE;
 
     /* compiled from: VoiceEngineForegroundService.kt */
     public static final class Companion {
@@ -145,22 +145,22 @@ public final class VoiceEngineForegroundService extends IntentService implements
         }
 
         public final void setOnDisconnect(Function0<Unit> function0) {
-            m.checkNotNullParameter(function0, "<set-?>");
+            Intrinsics3.checkNotNullParameter(function0, "<set-?>");
             VoiceEngineForegroundService.access$setOnDisconnect$cp(function0);
         }
 
         public final void setOnToggleSelfDeafen(Function0<Unit> function0) {
-            m.checkNotNullParameter(function0, "<set-?>");
+            Intrinsics3.checkNotNullParameter(function0, "<set-?>");
             VoiceEngineForegroundService.access$setOnToggleSelfDeafen$cp(function0);
         }
 
         public final void setOnToggleSelfMute(Function0<Unit> function0) {
-            m.checkNotNullParameter(function0, "<set-?>");
+            Intrinsics3.checkNotNullParameter(function0, "<set-?>");
             VoiceEngineForegroundService.access$setOnToggleSelfMute$cp(function0);
         }
 
         public final Intent stageInviteAckIntent(Context context, long channelId, boolean accept) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             boolean z2 = ContextCompat.checkSelfPermission(context, "android.permission.RECORD_AUDIO") == 0;
             if (accept && !z2) {
                 Intent intent = new Intent(context, (Class<?>) WidgetCallFullscreen.class);
@@ -174,18 +174,18 @@ public final class VoiceEngineForegroundService extends IntentService implements
         }
 
         public final PendingIntent stageInviteAckPendingIntent(Context context, long channelId, boolean accept) {
-            m.checkNotNullParameter(context, "context");
-            PendingIntent service = PendingIntent.getService(context, 0, stageInviteAckIntent(context, channelId, accept), PendingIntentExtensionsKt.immutablePendingIntentFlag(1207959552));
-            m.checkNotNullExpressionValue(service, "PendingIntent.getService…AG_UPDATE_CURRENT),\n    )");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            PendingIntent service = PendingIntent.getService(context, 0, stageInviteAckIntent(context, channelId, accept), PendingIntentExtensions.immutablePendingIntentFlag(1207959552));
+            Intrinsics3.checkNotNullExpressionValue(service, "PendingIntent.getService…AG_UPDATE_CURRENT),\n    )");
             return service;
         }
 
         public final void startForegroundAndBind(Connection connection, CharSequence title, CharSequence subtitle, boolean selfMute, boolean selfDeafen, boolean selfStream, long channelId, Long guildId, boolean isProximityLockEnabled, boolean canSpeak) {
-            m.checkNotNullParameter(connection, "connection");
-            m.checkNotNullParameter(title, "title");
-            m.checkNotNullParameter(subtitle, "subtitle");
+            Intrinsics3.checkNotNullParameter(connection, "connection");
+            Intrinsics3.checkNotNullParameter(title, "title");
+            Intrinsics3.checkNotNullParameter(subtitle, "subtitle");
             try {
-                Logger.v$default(AppLog.g, VoiceEngineForegroundService.LOG_TAG, "Bind service connection.", null, 4, null);
+                Logger.v$default(AppLog.f14950g, VoiceEngineForegroundService.LOG_TAG, "Bind service connection.", null, 4, null);
                 Context context = connection.getContext();
                 Intent intent = new Intent(connection.getContext(), (Class<?>) VoiceEngineForegroundService.class);
                 intent.setAction("com.discord.utilities.voice.action.start_foreground");
@@ -201,13 +201,13 @@ public final class VoiceEngineForegroundService extends IntentService implements
                 context.startService(intent);
                 connection.getContext().bindService(new Intent(connection.getContext(), (Class<?>) VoiceEngineForegroundService.class), connection.getConnection(), 1);
             } catch (Exception e) {
-                AppLog.g.v(VoiceEngineForegroundService.LOG_TAG, "Unable to bind service connection.", e);
+                AppLog.f14950g.m8517v(VoiceEngineForegroundService.LOG_TAG, "Unable to bind service connection.", e);
             }
         }
 
         public final void startStream(Connection connection, Intent permissionIntent) {
-            m.checkNotNullParameter(connection, "connection");
-            m.checkNotNullParameter(permissionIntent, "permissionIntent");
+            Intrinsics3.checkNotNullParameter(connection, "connection");
+            Intrinsics3.checkNotNullParameter(permissionIntent, "permissionIntent");
             Context context = connection.getContext();
             Intent intent = new Intent(context, (Class<?>) VoiceEngineForegroundService.class);
             intent.setAction("com.discord.utilities.voice.action.start_stream");
@@ -216,12 +216,12 @@ public final class VoiceEngineForegroundService extends IntentService implements
         }
 
         public final void stopForegroundAndUnbind(Connection connection) {
-            m.checkNotNullParameter(connection, "connection");
+            Intrinsics3.checkNotNullParameter(connection, "connection");
             try {
                 if (connection.getService() == null || connection.isUnbinding()) {
                     return;
                 }
-                Logger.v$default(AppLog.g, VoiceEngineForegroundService.LOG_TAG, "Unbind service connection.", null, 4, null);
+                Logger.v$default(AppLog.f14950g, VoiceEngineForegroundService.LOG_TAG, "Unbind service connection.", null, 4, null);
                 connection.setUnbinding(true);
                 Context context = connection.getContext();
                 Intent intent = new Intent(connection.getContext(), (Class<?>) VoiceEngineForegroundService.class);
@@ -229,12 +229,12 @@ public final class VoiceEngineForegroundService extends IntentService implements
                 context.startService(intent);
                 connection.getContext().unbindService(connection.getConnection());
             } catch (Exception e) {
-                AppLog.g.v(VoiceEngineForegroundService.LOG_TAG, "Unable to unbind service connection.", e);
+                AppLog.f14950g.m8517v(VoiceEngineForegroundService.LOG_TAG, "Unable to unbind service connection.", e);
             }
         }
 
         public final void stopStream(Connection connection) {
-            m.checkNotNullParameter(connection, "connection");
+            Intrinsics3.checkNotNullParameter(connection, "connection");
             Context context = connection.getContext();
             Intent intent = new Intent(context, (Class<?>) VoiceEngineForegroundService.class);
             intent.setAction("com.discord.utilities.voice.action.stop_stream");
@@ -254,9 +254,9 @@ public final class VoiceEngineForegroundService extends IntentService implements
         private VoiceEngineForegroundService service;
 
         public Connection(Context context) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             this.context = context;
-            this.connection = new VoiceEngineForegroundService$Connection$connection$1(this);
+            this.connection = new VoiceEngineForegroundService5(this);
         }
 
         public static final /* synthetic */ VoiceEngineForegroundService access$getService$p(Connection connection) {
@@ -302,12 +302,12 @@ public final class VoiceEngineForegroundService extends IntentService implements
     }
 
     /* compiled from: VoiceEngineForegroundService.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$ackStageInvite$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$ackStageInvite$1 */
+    public static final class C70491 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C70491(long j) {
             super(1);
             this.$channelId = j;
         }
@@ -315,24 +315,24 @@ public final class VoiceEngineForegroundService extends IntentService implements
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             StageChannelNotifications.INSTANCE.getINSTANCE().onInvitedToSpeakAckFailed(this.$channelId);
         }
     }
 
     /* compiled from: VoiceEngineForegroundService.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$ackStageInvite$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$ackStageInvite$2 */
+    public static final class C70502 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ boolean $accept;
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(boolean z2, long j) {
+        public C70502(boolean z2, long j) {
             super(1);
             this.$accept = z2;
             this.$channelId = j;
@@ -341,7 +341,7 @@ public final class VoiceEngineForegroundService extends IntentService implements
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -355,9 +355,9 @@ public final class VoiceEngineForegroundService extends IntentService implements
 
     public VoiceEngineForegroundService() {
         super("VoiceEngineForegroundService");
-        PublishSubject publishSubjectK0 = PublishSubject.k0();
-        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
-        this.unsubscribeSignal = publishSubjectK0;
+        PublishSubject publishSubjectM11133k0 = PublishSubject.m11133k0();
+        Intrinsics3.checkNotNullExpressionValue(publishSubjectM11133k0, "PublishSubject.create()");
+        this.unsubscribeSignal = publishSubjectM11133k0;
         this.binder = new LocalBinder(this);
         this.ringManager = new CallSoundManager(this, null, null, 6, null);
     }
@@ -390,9 +390,9 @@ public final class VoiceEngineForegroundService extends IntentService implements
         long longExtra = intent.getLongExtra("com.discord.utilities.voice.extra.channel_id", 0L);
         Observable<Void> observableAckInvitationToSpeak = StageChannelAPI.INSTANCE.ackInvitationToSpeak(longExtra, accept);
         if (observableAckInvitationToSpeak != null) {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(ObservableExtensionsKt.restSubscribeOn$default(observableAckInvitationToSpeak, false, 1, null)), VoiceEngineForegroundService.class, (Context) null, (Function1) null, new AnonymousClass1(longExtra), (Function0) null, (Function0) null, new AnonymousClass2(accept, longExtra), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.m8518ui(ObservableExtensionsKt.restSubscribeOn$default(observableAckInvitationToSpeak, false, 1, null)), VoiceEngineForegroundService.class, (Context) null, (Function1) null, new C70491(longExtra), (Function0) null, (Function0) null, new C70502(accept, longExtra), 54, (Object) null);
         } else {
-            Logger.w$default(AppLog.g, LOG_TAG, a.t("Unable to ack stage invite for unknown channel ", longExtra), null, 4, null);
+            Logger.w$default(AppLog.f14950g, LOG_TAG, outline.m877t("Unable to ack stage invite for unknown channel ", longExtra), null, 4, null);
         }
     }
 
@@ -403,32 +403,32 @@ public final class VoiceEngineForegroundService extends IntentService implements
 
     @Override // android.app.IntentService, android.app.Service
     public IBinder onBind(Intent intent) {
-        m.checkNotNullParameter(intent, "intent");
+        Intrinsics3.checkNotNullParameter(intent, "intent");
         return this.binder;
     }
 
     @Override // android.app.IntentService, android.app.Service
     public void onCreate() {
         super.onCreate();
-        Logger.v$default(AppLog.g, LOG_TAG, "Service created.", null, 4, null);
-        l.c.a(this);
+        Logger.v$default(AppLog.f14950g, LOG_TAG, "Service created.", null, 4, null);
+        AppState2.f530c.m161a(this);
         Application application = getApplication();
-        m.checkNotNullExpressionValue(application, "application");
-        WifiManager.WifiLock wifiLockCreateWifiLock$default = SystemServiceExtensionsKt.createWifiLock$default(application, false, 0, null, 7, null);
+        Intrinsics3.checkNotNullExpressionValue(application, "application");
+        WifiManager.WifiLock wifiLockCreateWifiLock$default = SystemServiceExtensions.createWifiLock$default(application, false, 0, null, 7, null);
         this.wakeLockWifi = wifiLockCreateWifiLock$default;
         if (wifiLockCreateWifiLock$default != null) {
             wifiLockCreateWifiLock$default.acquire();
         }
         Application application2 = getApplication();
-        m.checkNotNullExpressionValue(application2, "application");
-        PowerManager.WakeLock wakeLockCreatePartialWakeLock$default = SystemServiceExtensionsKt.createPartialWakeLock$default(application2, false, null, 3, null);
+        Intrinsics3.checkNotNullExpressionValue(application2, "application");
+        PowerManager.WakeLock wakeLockCreatePartialWakeLock$default = SystemServiceExtensions.createPartialWakeLock$default(application2, false, null, 3, null);
         this.wakeLockPartial = wakeLockCreatePartialWakeLock$default;
         if (wakeLockCreatePartialWakeLock$default != null) {
             wakeLockCreatePartialWakeLock$default.acquire(WAKELOCK_TIMEOUT);
         }
         Application application3 = getApplication();
-        m.checkNotNullExpressionValue(application3, "application");
-        PowerManager.WakeLock wakeLockCreateProximityScreenWakeLock$default = SystemServiceExtensionsKt.createProximityScreenWakeLock$default(application3, false, null, 3, null);
+        Intrinsics3.checkNotNullExpressionValue(application3, "application");
+        PowerManager.WakeLock wakeLockCreateProximityScreenWakeLock$default = SystemServiceExtensions.createProximityScreenWakeLock$default(application3, false, null, 3, null);
         this.wakeLockProximity = wakeLockCreateProximityScreenWakeLock$default;
         if (wakeLockCreateProximityScreenWakeLock$default != null) {
             wakeLockCreateProximityScreenWakeLock$default.acquire(WAKELOCK_TIMEOUT);
@@ -438,9 +438,9 @@ public final class VoiceEngineForegroundService extends IntentService implements
     @Override // android.app.IntentService, android.app.Service
     public void onDestroy() {
         super.onDestroy();
-        Logger.v$default(AppLog.g, LOG_TAG, "Service destroyed.", null, 4, null);
+        Logger.v$default(AppLog.f14950g, LOG_TAG, "Service destroyed.", null, 4, null);
         StageChannelNotifications.INSTANCE.getINSTANCE().onInviteToSpeakRescinded();
-        l.c.b(this);
+        AppState2.f530c.m162b(this);
         WifiManager.WifiLock wifiLock = this.wakeLockWifi;
         if (wifiLock != null) {
             wifiLock.release();
@@ -471,8 +471,8 @@ public final class VoiceEngineForegroundService extends IntentService implements
         if (intent == null || (action = intent.getAction()) == null) {
             return;
         }
-        m.checkNotNullExpressionValue(action, "intent?.action ?: return");
-        Logger.v$default(AppLog.g, LOG_TAG, a.w("Received action: ", action), null, 4, null);
+        Intrinsics3.checkNotNullExpressionValue(action, "intent?.action ?: return");
+        Logger.v$default(AppLog.f14950g, LOG_TAG, outline.m883w("Received action: ", action), null, 4, null);
         switch (action.hashCode()) {
             case -2024885008:
                 if (action.equals("com.discord.utilities.voice.action.toggle_deafened")) {
@@ -528,8 +528,8 @@ public final class VoiceEngineForegroundService extends IntentService implements
                     Long l3 = (Long) intent.getSerializableExtra("com.discord.utilities.voice.extra.channel_id");
                     if (l3 != null) {
                         this.ringManager.subscribeToStoreState(l3.longValue());
-                        if (!(!m.areEqual(this.screenShareManager != null ? Long.valueOf(r0.getChannelId()) : null, l3))) {
-                            if (!(!m.areEqual(this.screenShareManager != null ? r0.getGuildId() : null, l2))) {
+                        if (!(!Intrinsics3.areEqual(this.screenShareManager != null ? Long.valueOf(r0.getChannelId()) : null, l3))) {
+                            if (!(!Intrinsics3.areEqual(this.screenShareManager != null ? r0.getGuildId() : null, l2))) {
                                 l = l3;
                                 str = "com.discord.utilities.voice.action.toggle_muted";
                             }

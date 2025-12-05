@@ -1,11 +1,6 @@
 package com.discord.utilities.systemlog;
 
 import com.discord.utilities.collections.FixedSizeLineBuffer;
-import d0.g0.c;
-import d0.g0.w;
-import d0.v.a;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +10,11 @@ import java.io.Reader;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p507d0.p579g0.Charsets2;
+import p507d0.p579g0.Strings4;
+import p507d0.p583v.Thread2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: SystemLogCapture.kt */
 /* loaded from: classes2.dex */
@@ -31,8 +31,8 @@ public final class SystemLogCapture {
         }
 
         public final boolean shouldIncludeLogLine$app_productionGoogleRelease(String line) {
-            m.checkNotNullParameter(line, "line");
-            return !w.contains$default((CharSequence) line, (CharSequence) "chatty  : uid=", false, 2, (Object) null);
+            Intrinsics3.checkNotNullParameter(line, "line");
+            return !Strings4.contains$default((CharSequence) line, (CharSequence) "chatty  : uid=", false, 2, (Object) null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -41,16 +41,16 @@ public final class SystemLogCapture {
     }
 
     /* compiled from: SystemLogCapture.kt */
-    /* renamed from: com.discord.utilities.systemlog.SystemLogCapture$startThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.utilities.systemlog.SystemLogCapture$startThread$1 */
+    public static final class C69331 extends Lambda implements Function0<Unit> {
+        public C69331() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() throws InterruptedException {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -73,10 +73,10 @@ public final class SystemLogCapture {
             try {
                 try {
                     processStart = new ProcessBuilder(SystemLogUtils.logcatPath).redirectErrorStream(true).start();
-                    m.checkNotNullExpressionValue(processStart, "logcatProcess");
+                    Intrinsics3.checkNotNullExpressionValue(processStart, "logcatProcess");
                     InputStream inputStream = processStart.getInputStream();
-                    m.checkNotNullExpressionValue(inputStream, "logcatProcess.inputStream");
-                    Reader inputStreamReader = new InputStreamReader(inputStream, c.a);
+                    Intrinsics3.checkNotNullExpressionValue(inputStream, "logcatProcess.inputStream");
+                    Reader inputStreamReader = new InputStreamReader(inputStream, Charsets2.f25136a);
                     BufferedReader bufferedReader = inputStreamReader instanceof BufferedReader ? (BufferedReader) inputStreamReader : new BufferedReader(inputStreamReader, 8192);
                     while (true) {
                         try {
@@ -98,7 +98,7 @@ public final class SystemLogCapture {
                     e.printStackTrace();
                     this.buffer.addLine("Exception getting system logs '" + e + '\'');
                     StackTraceElement[] stackTrace = e.getStackTrace();
-                    m.checkNotNullExpressionValue(stackTrace, "e.stackTrace");
+                    Intrinsics3.checkNotNullExpressionValue(stackTrace, "e.stackTrace");
                     for (StackTraceElement stackTraceElement : stackTrace) {
                         this.buffer.addLine("    " + stackTraceElement);
                     }
@@ -117,7 +117,7 @@ public final class SystemLogCapture {
     }
 
     public final void appendOutput(StringBuilder sb) {
-        m.checkNotNullParameter(sb, "sb");
+        Intrinsics3.checkNotNullParameter(sb, "sb");
         this.tombstoneBuffer.appendString(sb);
         this.buffer.appendString(sb);
     }
@@ -127,6 +127,6 @@ public final class SystemLogCapture {
     }
 
     public final Thread startThread() {
-        return a.thread$default(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new AnonymousClass1(), 20, null);
+        return Thread2.thread$default(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new C69331(), 20, null);
     }
 }

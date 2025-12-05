@@ -1,11 +1,11 @@
 package com.discord.models.presence;
 
-import b.d.b.a.a;
 import com.discord.api.activity.Activity;
 import com.discord.api.presence.ClientStatus;
 import com.discord.api.presence.ClientStatuses;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Presence.kt */
 /* loaded from: classes.dex */
@@ -15,7 +15,7 @@ public final /* data */ class Presence {
     private final ClientStatus status;
 
     public Presence(ClientStatus clientStatus, ClientStatuses clientStatuses, List<Activity> list) {
-        m.checkNotNullParameter(clientStatus, "status");
+        Intrinsics3.checkNotNullParameter(clientStatus, "status");
         this.status = clientStatus;
         this.clientStatuses = clientStatuses;
         this.activities = list;
@@ -50,7 +50,7 @@ public final /* data */ class Presence {
     }
 
     public final Presence copy(ClientStatus status, ClientStatuses clientStatuses, List<Activity> activities) {
-        m.checkNotNullParameter(status, "status");
+        Intrinsics3.checkNotNullParameter(status, "status");
         return new Presence(status, clientStatuses, activities);
     }
 
@@ -62,7 +62,7 @@ public final /* data */ class Presence {
             return false;
         }
         Presence presence = (Presence) other;
-        return m.areEqual(this.status, presence.status) && m.areEqual(this.clientStatuses, presence.clientStatuses) && m.areEqual(this.activities, presence.activities);
+        return Intrinsics3.areEqual(this.status, presence.status) && Intrinsics3.areEqual(this.clientStatuses, presence.clientStatuses) && Intrinsics3.areEqual(this.activities, presence.activities);
     }
 
     public final List<Activity> getActivities() {
@@ -87,11 +87,11 @@ public final /* data */ class Presence {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("Presence(status=");
-        sbU.append(this.status);
-        sbU.append(", clientStatuses=");
-        sbU.append(this.clientStatuses);
-        sbU.append(", activities=");
-        return a.L(sbU, this.activities, ")");
+        StringBuilder sbM833U = outline.m833U("Presence(status=");
+        sbM833U.append(this.status);
+        sbM833U.append(", clientStatuses=");
+        sbM833U.append(this.clientStatuses);
+        sbM833U.append(", activities=");
+        return outline.m824L(sbM833U, this.activities, ")");
     }
 }

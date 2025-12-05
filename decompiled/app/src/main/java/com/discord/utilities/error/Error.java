@@ -8,13 +8,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
-import b.a.x.a.a;
-import b.a.x.a.b;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.models.domain.Model;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.captcha.CaptchaHelper;
-import com.discord.utilities.guildautomod.AutoModBlockFailure;
+import com.discord.utilities.guildautomod.AutoModUtils2;
 import com.discord.utilities.images.MGImagesBitmap;
 import com.discord.utilities.rest.RestAPIAbortMessages;
 import java.io.IOException;
@@ -38,9 +36,12 @@ import javax.net.ssl.SSLHandshakeException;
 import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.ResponseBody;
+import p007b.p008a.p060x.p061a.C1317a;
+import p007b.p008a.p060x.p061a.C1318b;
+import p007b.p100d.p104b.p105a.outline;
+import p658rx.functions.Action1;
+import p658rx.functions.Action3;
 import retrofit2.HttpException;
-import rx.functions.Action1;
-import rx.functions.Action3;
 
 /* loaded from: classes2.dex */
 public class Error {
@@ -68,8 +69,8 @@ public class Error {
     @NonNull
     private final AtomicBoolean shouldLog = new AtomicBoolean(true);
 
-    /* renamed from: com.discord.utilities.error.Error$1, reason: invalid class name */
-    public static /* synthetic */ class AnonymousClass1 {
+    /* renamed from: com.discord.utilities.error.Error$1 */
+    public static /* synthetic */ class C67441 {
         public static final /* synthetic */ int[] $SwitchMap$com$discord$utilities$error$Error$Type;
 
         static {
@@ -149,7 +150,7 @@ public class Error {
         @Nullable
         private SkemaError skemaError;
 
-        public /* synthetic */ Response(String str, AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ Response(String str, C67441 c67441) {
             this(str);
         }
 
@@ -233,7 +234,7 @@ public class Error {
                     this.message = jsonReader.nextString(this.message);
                     break;
                 default:
-                    this.messages.put(strNextName, jsonReader.nextList(new a(jsonReader)));
+                    this.messages.put(strNextName, jsonReader.nextList(new C1317a(jsonReader)));
                     break;
             }
         }
@@ -308,20 +309,20 @@ public class Error {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("Error.Response(code=");
-            sbU.append(getCode());
-            sbU.append(", retryAfter=");
-            sbU.append(this.retryAfter);
-            sbU.append(", global=");
-            sbU.append(this.global);
-            sbU.append(", skemaError=");
-            sbU.append(this.skemaError);
-            sbU.append(", messages=");
-            sbU.append(getMessages());
-            sbU.append(", message=");
-            sbU.append(getMessage());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Error.Response(code=");
+            sbM833U.append(getCode());
+            sbM833U.append(", retryAfter=");
+            sbM833U.append(this.retryAfter);
+            sbM833U.append(", global=");
+            sbM833U.append(this.global);
+            sbM833U.append(", skemaError=");
+            sbM833U.append(this.skemaError);
+            sbM833U.append(", messages=");
+            sbM833U.append(getMessages());
+            sbM833U.append(", message=");
+            sbM833U.append(getMessage());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
 
         private Response(@Nullable String str) {
@@ -392,13 +393,13 @@ public class Error {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("Error.SkemaErrorItem(code=");
-            sbU.append(this.code);
-            sbU.append(", message=");
-            return b.d.b.a.a.J(sbU, this.message, ")");
+            StringBuilder sbM833U = outline.m833U("Error.SkemaErrorItem(code=");
+            sbM833U.append(this.code);
+            sbM833U.append(", message=");
+            return outline.m822J(sbM833U, this.message, ")");
         }
 
-        public /* synthetic */ SkemaErrorItem(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ SkemaErrorItem(C67441 c67441) {
             this();
         }
     }
@@ -444,86 +445,86 @@ public class Error {
         String str;
         String requestUrl;
         Headers headers;
-        String strD;
+        String strM10998d;
         String str2;
         Type type3;
         Map<String, String> map2;
         message = "";
         if (th instanceof HttpException) {
             HttpException httpException = (HttpException) th;
-            int iA = httpException.a();
-            retrofit2.Response<?> response2 = httpException.j;
+            int iM11055a = httpException.m11055a();
+            retrofit2.Response<?> response2 = httpException.f27630j;
             if (response2 != null) {
-                headers = response2.a.headers;
-                ResponseBody responseBody = response2.c;
+                headers = response2.f27631a.headers;
+                ResponseBody responseBody = response2.f27633c;
                 if (responseBody != null) {
-                    MediaType mediaTypeB = responseBody.b();
-                    str2 = mediaTypeB != null ? mediaTypeB.mediaType : "";
-                    message = mediaTypeB != null ? mediaTypeB.subtype : "";
+                    MediaType mediaTypeMo10104b = responseBody.mo10104b();
+                    str2 = mediaTypeMo10104b != null ? mediaTypeMo10104b.mediaType : "";
+                    message = mediaTypeMo10104b != null ? mediaTypeMo10104b.subtype : "";
                     try {
-                        strD = responseBody.d();
+                        strM10998d = responseBody.m10998d();
                         responseBody.close();
                     } catch (IOException unused) {
                         responseBody.close();
-                        strD = null;
+                        strM10998d = null;
                     } catch (Throwable th2) {
                         responseBody.close();
                         throw th2;
                     }
                 } else {
-                    strD = null;
+                    strM10998d = null;
                     str2 = null;
                 }
-                requestUrl = getRequestUrl(response2.a);
+                requestUrl = getRequestUrl(response2.f27631a);
             } else {
                 requestUrl = null;
                 headers = null;
-                strD = null;
+                strM10998d = null;
                 str2 = null;
             }
-            if (iA == 500) {
+            if (iM11055a == 500) {
                 type3 = Type.INTERNAL_SERVER_ERROR;
-            } else if (iA == 502 || iA == 503 || iA == 520 || iA == 521 || iA == 522 || iA == 525) {
+            } else if (iM11055a == 502 || iM11055a == 503 || iM11055a == 520 || iM11055a == 521 || iM11055a == 522 || iM11055a == 525) {
                 type3 = Type.INTERMITTENT_CLOUD_FLARE;
-            } else if (iA == 401) {
+            } else if (iM11055a == 401) {
                 type3 = Type.UNAUTHORIZED;
-            } else if (iA == 403 && message.contains("html")) {
+            } else if (iM11055a == 403 && message.contains("html")) {
                 type3 = Type.FORBIDDEN_CLOUD_FLARE;
-            } else if (iA == 413) {
+            } else if (iM11055a == 413) {
                 type3 = Type.REQUEST_TOO_LARGE;
             } else {
-                Response response3 = new Response(strD, null);
-                if (iA == 400) {
+                Response response3 = new Response(strM10998d, null);
+                if (iM11055a == 400) {
                     type3 = Type.DISCORD_BAD_REQUEST;
-                } else if (iA == 403) {
+                } else if (iM11055a == 403) {
                     type3 = Type.FORBIDDEN_DISCORD;
                 } else if (response3.isKnownResponse()) {
                     type3 = Type.DISCORD_REQUEST_ERROR;
-                } else if (iA == 404) {
+                } else if (iM11055a == 404) {
                     type3 = Type.DISCORD_REQUEST_RESOURCE_NOT_FOUND;
-                } else if (iA == 429) {
+                } else if (iM11055a == 429) {
                     type3 = Type.RATE_LIMITED;
                 } else {
                     Type type4 = Type.DISCORD_REQUEST_ERROR_UNKNOWN;
-                    Map<String, String> metaData = getMetaData(requestUrl, iA, str2, headers);
+                    Map<String, String> metaData = getMetaData(requestUrl, iM11055a, str2, headers);
                     response = response3;
                     map2 = metaData;
                     type3 = type4;
                     type2 = type3;
                     map = map2;
-                    str = strD;
+                    str = strM10998d;
                 }
                 response = response3;
                 map2 = null;
                 type2 = type3;
                 map = map2;
-                str = strD;
+                str = strM10998d;
             }
             map2 = null;
             response = null;
             type2 = type3;
             map = map2;
-            str = strD;
+            str = strM10998d;
         } else {
             if (th instanceof UnknownHostException) {
                 type = Type.NETWORK;
@@ -531,7 +532,7 @@ public class Error {
                 message = th.getMessage() != null ? th.getMessage() : "";
                 type = (message.contains("Canceled") || message.contains("Connection reset by peer") || message.contains("stream was reset:") || (th instanceof NoRouteToHostException) || (th instanceof SocketException) || (th instanceof InterruptedIOException) || (th.getCause() != null && (th.getCause() instanceof InterruptedException)) || (th.getCause() instanceof SocketTimeoutException)) ? Type.NETWORK : ((th instanceof SSLHandshakeException) || (th instanceof SSLException)) ? Type.SSL : Type.OTHER;
             } else {
-                type = th instanceof TimeoutException ? Type.TIMEOUT : th instanceof CaptchaHelper.Failure ? Type.CAPTCHA_KNOWN_FAILURE : th instanceof MGImagesBitmap.ImageNotFoundException ? Type.IMAGE_NOT_FOUND : th instanceof AutoModBlockFailure ? Type.AUTOMOD_MESSAGE_BLOCKED : Type.OTHER;
+                type = th instanceof TimeoutException ? Type.TIMEOUT : th instanceof CaptchaHelper.Failure ? Type.CAPTCHA_KNOWN_FAILURE : th instanceof MGImagesBitmap.ImageNotFoundException ? Type.IMAGE_NOT_FOUND : th instanceof AutoModUtils2 ? Type.AUTOMOD_MESSAGE_BLOCKED : Type.OTHER;
             }
             type2 = type;
             response = null;
@@ -546,7 +547,7 @@ public class Error {
         map.put("responseCode", String.valueOf(i));
         map.put("requestUrl", str);
         map.put("content-type", str2);
-        map.put("CF-Ray", headers != null ? headers.c("CF-Ray") : null);
+        map.put("CF-Ray", headers != null ? headers.m10954c("CF-Ray") : null);
         return map;
     }
 
@@ -555,40 +556,40 @@ public class Error {
         if (response == null) {
             return null;
         }
-        return response.request.url.l;
+        return response.request.url.f25984l;
     }
 
     @NonNull
     private List<String> getToastMessages(@NonNull Context context) {
         switch (this.type) {
             case FORBIDDEN_CLOUD_FLARE:
-                return Collections.singletonList(context.getString(R.string.network_error_cloudflare_unauthorized));
+                return Collections.singletonList(context.getString(C5419R.string.network_error_cloudflare_unauthorized));
             case FORBIDDEN_DISCORD:
-                return Collections.singletonList(Response.access$100(this.response, context, R.string.network_error_forbidden));
+                return Collections.singletonList(Response.access$100(this.response, context, C5419R.string.network_error_forbidden));
             case INTERMITTENT_CLOUD_FLARE:
-                return Collections.singletonList(context.getString(R.string.network_error_cloudflare_intermittent));
+                return Collections.singletonList(context.getString(C5419R.string.network_error_cloudflare_intermittent));
             case DISCORD_REQUEST_ERROR:
             case DISCORD_REQUEST_ERROR_UNKNOWN:
-                return Collections.singletonList(Response.access$100(this.response, context, R.string.network_error_rest_request));
+                return Collections.singletonList(Response.access$100(this.response, context, C5419R.string.network_error_rest_request));
             case DISCORD_REQUEST_RESOURCE_NOT_FOUND:
             default:
-                return Collections.singletonList(context.getString(R.string.network_error_unknown));
+                return Collections.singletonList(context.getString(C5419R.string.network_error_unknown));
             case DISCORD_BAD_REQUEST:
-                return Collections.singletonList(Response.access$100(this.response, context, R.string.network_error_bad_request));
+                return Collections.singletonList(Response.access$100(this.response, context, C5419R.string.network_error_bad_request));
             case INTERNAL_SERVER_ERROR:
-                return Collections.singletonList(context.getString(R.string.internal_server_error));
+                return Collections.singletonList(context.getString(C5419R.string.internal_server_error));
             case REQUEST_TOO_LARGE:
-                return Collections.singletonList(context.getString(R.string.network_error_request_too_large));
+                return Collections.singletonList(context.getString(C5419R.string.network_error_request_too_large));
             case UNAUTHORIZED:
-                return Collections.singletonList(context.getString(R.string.network_error_unauthorized));
+                return Collections.singletonList(context.getString(C5419R.string.network_error_unauthorized));
             case RATE_LIMITED:
-                return Collections.singletonList(context.getString(R.string.rate_limited));
+                return Collections.singletonList(context.getString(C5419R.string.rate_limited));
             case NETWORK:
-                return Collections.singletonList(context.getString(R.string.network_error_connection));
+                return Collections.singletonList(context.getString(C5419R.string.network_error_connection));
             case SSL:
-                return Collections.singletonList(context.getString(R.string.network_error_ssl));
+                return Collections.singletonList(context.getString(C5419R.string.network_error_ssl));
             case TIMEOUT:
-                return Collections.singletonList(context.getString(R.string.timeout_error));
+                return Collections.singletonList(context.getString(C5419R.string.timeout_error));
         }
     }
 
@@ -600,9 +601,9 @@ public class Error {
             try {
                 action1.call(errorCreate);
             } catch (Exception e) {
-                StringBuilder sbX = b.d.b.a.a.X(str, " / ");
-                sbX.append(errorCreate.toString());
-                onUnhandledError.call(str, new Exception(sbX.toString(), e), null);
+                StringBuilder sbM836X = outline.m836X(str, " / ");
+                sbM836X.append(errorCreate.toString());
+                onUnhandledError.call(str, new Exception(sbM836X.toString(), e), null);
                 return;
             }
         }
@@ -755,22 +756,22 @@ public class Error {
     }
 
     public String toString() {
-        StringBuilder sbU = b.d.b.a.a.U("Error(showErrorToasts=");
-        sbU.append(this.showErrorToasts);
-        sbU.append(", shouldLog=");
-        sbU.append(this.shouldLog);
-        sbU.append(", throwable=");
-        sbU.append(getThrowable());
-        sbU.append(", type=");
-        sbU.append(getType());
-        sbU.append(", response=");
-        sbU.append(getResponse());
-        sbU.append(", metadata=");
-        sbU.append(this.metadata);
-        sbU.append(", bodyText=");
-        sbU.append(getBodyText());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("Error(showErrorToasts=");
+        sbM833U.append(this.showErrorToasts);
+        sbM833U.append(", shouldLog=");
+        sbM833U.append(this.shouldLog);
+        sbM833U.append(", throwable=");
+        sbM833U.append(getThrowable());
+        sbM833U.append(", type=");
+        sbM833U.append(getType());
+        sbM833U.append(", response=");
+        sbM833U.append(getResponse());
+        sbM833U.append(", metadata=");
+        sbM833U.append(this.metadata);
+        sbM833U.append(", bodyText=");
+        sbM833U.append(getBodyText());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public static class SkemaError implements Model {
@@ -799,7 +800,7 @@ public class Error {
         public void assignField(Model.JsonReader jsonReader) throws IOException {
             String strNextName = jsonReader.nextName();
             if ("_errors".equals(strNextName)) {
-                this.errors = jsonReader.nextList(new b(jsonReader));
+                this.errors = jsonReader.nextList(new C1318b(jsonReader));
             } else {
                 this.subErrors.put(strNextName, jsonReader.parse(new SkemaError()));
             }
@@ -838,13 +839,13 @@ public class Error {
         }
 
         public String toString() {
-            StringBuilder sbU = b.d.b.a.a.U("Error.SkemaError(errors=");
-            sbU.append(this.errors);
-            sbU.append(", subErrors=");
-            return b.d.b.a.a.M(sbU, this.subErrors, ")");
+            StringBuilder sbM833U = outline.m833U("Error.SkemaError(errors=");
+            sbM833U.append(this.errors);
+            sbM833U.append(", subErrors=");
+            return outline.m825M(sbM833U, this.subErrors, ")");
         }
 
-        public /* synthetic */ SkemaError(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ SkemaError(C67441 c67441) {
             this();
         }
     }

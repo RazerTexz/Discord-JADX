@@ -1,0 +1,58 @@
+package p007b.p195g.p196a.p205c.p219i0;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.concurrent.ConcurrentHashMap;
+
+/* compiled from: LRUMap.java */
+/* renamed from: b.g.a.c.i0.h, reason: use source file name */
+/* loaded from: classes3.dex */
+public class LRUMap<K, V> implements LookupCache<K, V>, Serializable {
+    private static final long serialVersionUID = 1;
+
+    /* renamed from: j */
+    public final transient int f4954j;
+
+    /* renamed from: k */
+    public final transient ConcurrentHashMap<K, V> f4955k;
+
+    /* renamed from: l */
+    public transient int f4956l;
+
+    public LRUMap(int i, int i2) {
+        this.f4955k = new ConcurrentHashMap<>(i, 0.8f, 4);
+        this.f4954j = i2;
+    }
+
+    private void readObject(ObjectInputStream objectInputStream) throws IOException {
+        this.f4956l = objectInputStream.readInt();
+    }
+
+    private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
+        objectOutputStream.writeInt(this.f4956l);
+    }
+
+    @Override // p007b.p195g.p196a.p205c.p219i0.LookupCache
+    public V get(Object obj) {
+        return this.f4955k.get(obj);
+    }
+
+    @Override // p007b.p195g.p196a.p205c.p219i0.LookupCache
+    public V putIfAbsent(K k, V v) {
+        if (this.f4955k.size() >= this.f4954j) {
+            synchronized (this) {
+                if (this.f4955k.size() >= this.f4954j) {
+                    this.f4955k.clear();
+                }
+            }
+        }
+        return this.f4955k.putIfAbsent(k, v);
+    }
+
+    public Object readResolve() {
+        int i = this.f4956l;
+        return new LRUMap(i, i);
+    }
+}

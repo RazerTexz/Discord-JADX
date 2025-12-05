@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetServerSettingsAuditLogFilterActionListitemBinding;
 import com.discord.databinding.WidgetServerSettingsAuditLogFilterUserListitemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -21,11 +21,11 @@ import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.views.CheckedSetting;
 import com.discord.views.user.SettingsMemberView;
 import com.google.android.material.radiobutton.MaterialRadioButton;
-import d0.z.d.m;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
 /* loaded from: classes2.dex */
@@ -44,7 +44,7 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
         private final int type;
 
         public AuditLogActionFilterItem(int i, String str, boolean z2) {
-            m.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+            Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
             this.actionId = i;
             this.text = str;
             this.isChecked = z2;
@@ -82,23 +82,23 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AuditLogFilterActionViewHolder(WidgetServerSettingsAuditLogFilterAdapter widgetServerSettingsAuditLogFilterAdapter) {
-            super(R.layout.widget_server_settings_audit_log_filter_action_listitem, widgetServerSettingsAuditLogFilterAdapter);
-            m.checkNotNullParameter(widgetServerSettingsAuditLogFilterAdapter, "adapter");
+            super(C5419R.layout.widget_server_settings_audit_log_filter_action_listitem, widgetServerSettingsAuditLogFilterAdapter);
+            Intrinsics3.checkNotNullParameter(widgetServerSettingsAuditLogFilterAdapter, "adapter");
             View view = this.itemView;
-            int i = R.id.audit_log_filter_cs;
-            CheckedSetting checkedSetting = (CheckedSetting) view.findViewById(R.id.audit_log_filter_cs);
+            int i = C5419R.id.audit_log_filter_cs;
+            CheckedSetting checkedSetting = (CheckedSetting) view.findViewById(C5419R.id.audit_log_filter_cs);
             if (checkedSetting != null) {
-                i = R.id.audit_log_filter_image_action;
-                ImageView imageView = (ImageView) view.findViewById(R.id.audit_log_filter_image_action);
+                i = C5419R.id.audit_log_filter_image_action;
+                ImageView imageView = (ImageView) view.findViewById(C5419R.id.audit_log_filter_image_action);
                 if (imageView != null) {
-                    i = R.id.audit_log_filter_image_container;
-                    FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.audit_log_filter_image_container);
+                    i = C5419R.id.audit_log_filter_image_container;
+                    FrameLayout frameLayout = (FrameLayout) view.findViewById(C5419R.id.audit_log_filter_image_container);
                     if (frameLayout != null) {
-                        i = R.id.audit_log_filter_image_target;
-                        ImageView imageView2 = (ImageView) view.findViewById(R.id.audit_log_filter_image_target);
+                        i = C5419R.id.audit_log_filter_image_target;
+                        ImageView imageView2 = (ImageView) view.findViewById(C5419R.id.audit_log_filter_image_target);
                         if (imageView2 != null) {
                             WidgetServerSettingsAuditLogFilterActionListitemBinding widgetServerSettingsAuditLogFilterActionListitemBinding = new WidgetServerSettingsAuditLogFilterActionListitemBinding((LinearLayout) view, checkedSetting, imageView, frameLayout, imageView2);
-                            m.checkNotNullExpressionValue(widgetServerSettingsAuditLogFilterActionListitemBinding, "WidgetServerSettingsAudi…temBinding.bind(itemView)");
+                            Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsAuditLogFilterActionListitemBinding, "WidgetServerSettingsAudi…temBinding.bind(itemView)");
                             this.binding = widgetServerSettingsAuditLogFilterActionListitemBinding;
                             return;
                         }
@@ -119,20 +119,20 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             AuditLogActionFilterItem auditLogActionFilterItem = (AuditLogActionFilterItem) data;
-            ImageView imageView = this.binding.d;
+            ImageView imageView = this.binding.f17515d;
             AuditLogUtils auditLogUtils = AuditLogUtils.INSTANCE;
             View view = this.itemView;
-            m.checkNotNullExpressionValue(view, "itemView");
+            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
             imageView.setImageResource(auditLogUtils.getTargetTypeImage(view, auditLogActionFilterItem.getActionId()));
-            this.binding.c.setImageResource(auditLogUtils.getActionTypeImage(auditLogActionFilterItem.getActionId()));
-            this.binding.f2540b.setText(auditLogActionFilterItem.getText());
-            CheckedSetting checkedSetting = this.binding.f2540b;
-            m.checkNotNullExpressionValue(checkedSetting, "binding.auditLogFilterCs");
+            this.binding.f17514c.setImageResource(auditLogUtils.getActionTypeImage(auditLogActionFilterItem.getActionId()));
+            this.binding.f17513b.setText(auditLogActionFilterItem.getText());
+            CheckedSetting checkedSetting = this.binding.f17513b;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.auditLogFilterCs");
             checkedSetting.setChecked(auditLogActionFilterItem.getIsChecked());
-            this.binding.f2540b.setOnCheckedListener(new WidgetServerSettingsAuditLogFilterAdapter$AuditLogFilterActionViewHolder$onConfigure$1(this, auditLogActionFilterItem));
+            this.binding.f17513b.setOnCheckedListener(new WidgetServerSettingsAuditLogFilterAdapter2(this, auditLogActionFilterItem));
         }
     }
 
@@ -142,23 +142,23 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AuditLogFilterUserViewHolder(WidgetServerSettingsAuditLogFilterAdapter widgetServerSettingsAuditLogFilterAdapter) {
-            super(R.layout.widget_server_settings_audit_log_filter_user_listitem, widgetServerSettingsAuditLogFilterAdapter);
-            m.checkNotNullParameter(widgetServerSettingsAuditLogFilterAdapter, "adapter");
+            super(C5419R.layout.widget_server_settings_audit_log_filter_user_listitem, widgetServerSettingsAuditLogFilterAdapter);
+            Intrinsics3.checkNotNullParameter(widgetServerSettingsAuditLogFilterAdapter, "adapter");
             View view = this.itemView;
-            int i = R.id.audit_log_filter_radio_button;
-            MaterialRadioButton materialRadioButton = (MaterialRadioButton) view.findViewById(R.id.audit_log_filter_radio_button);
+            int i = C5419R.id.audit_log_filter_radio_button;
+            MaterialRadioButton materialRadioButton = (MaterialRadioButton) view.findViewById(C5419R.id.audit_log_filter_radio_button);
             if (materialRadioButton != null) {
-                i = R.id.item_icon;
-                ImageView imageView = (ImageView) view.findViewById(R.id.item_icon);
+                i = C5419R.id.item_icon;
+                ImageView imageView = (ImageView) view.findViewById(C5419R.id.item_icon);
                 if (imageView != null) {
-                    i = R.id.non_member_text;
-                    TextView textView = (TextView) view.findViewById(R.id.non_member_text);
+                    i = C5419R.id.non_member_text;
+                    TextView textView = (TextView) view.findViewById(C5419R.id.non_member_text);
                     if (textView != null) {
-                        i = R.id.settings_member_view;
-                        SettingsMemberView settingsMemberView = (SettingsMemberView) view.findViewById(R.id.settings_member_view);
+                        i = C5419R.id.settings_member_view;
+                        SettingsMemberView settingsMemberView = (SettingsMemberView) view.findViewById(C5419R.id.settings_member_view);
                         if (settingsMemberView != null) {
                             WidgetServerSettingsAuditLogFilterUserListitemBinding widgetServerSettingsAuditLogFilterUserListitemBinding = new WidgetServerSettingsAuditLogFilterUserListitemBinding((FrameLayout) view, materialRadioButton, imageView, textView, settingsMemberView);
-                            m.checkNotNullExpressionValue(widgetServerSettingsAuditLogFilterUserListitemBinding, "WidgetServerSettingsAudi…temBinding.bind(itemView)");
+                            Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsAuditLogFilterUserListitemBinding, "WidgetServerSettingsAudi…temBinding.bind(itemView)");
                             this.binding = widgetServerSettingsAuditLogFilterUserListitemBinding;
                             return;
                         }
@@ -183,38 +183,38 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             AuditLogUserFilterItem auditLogUserFilterItem = (AuditLogUserFilterItem) data;
             User user = auditLogUserFilterItem.getUser();
             boolean z2 = (auditLogUserFilterItem.getId() == 0 || user == null) ? false : true;
-            SettingsMemberView settingsMemberView = this.binding.e;
-            m.checkNotNullExpressionValue(settingsMemberView, "binding.settingsMemberView");
+            SettingsMemberView settingsMemberView = this.binding.f17520e;
+            Intrinsics3.checkNotNullExpressionValue(settingsMemberView, "binding.settingsMemberView");
             settingsMemberView.setVisibility(z2 ? 0 : 8);
-            TextView textView = this.binding.d;
-            m.checkNotNullExpressionValue(textView, "binding.nonMemberText");
+            TextView textView = this.binding.f17519d;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.nonMemberText");
             textView.setVisibility(z2 ^ true ? 0 : 8);
-            ImageView imageView = this.binding.c;
-            m.checkNotNullExpressionValue(imageView, "binding.itemIcon");
+            ImageView imageView = this.binding.f17518c;
+            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.itemIcon");
             imageView.setVisibility(z2 ^ true ? 0 : 8);
             if (z2) {
-                SettingsMemberView settingsMemberView2 = this.binding.e;
-                m.checkNotNull(user);
-                settingsMemberView2.a(user, auditLogUserFilterItem.getGuildMember());
+                SettingsMemberView settingsMemberView2 = this.binding.f17520e;
+                Intrinsics3.checkNotNull(user);
+                settingsMemberView2.m8621a(user, auditLogUserFilterItem.getGuildMember());
             } else {
-                TextView textView2 = this.binding.d;
-                m.checkNotNullExpressionValue(textView2, "binding.nonMemberText");
+                TextView textView2 = this.binding.f17519d;
+                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.nonMemberText");
                 CharSequence text = auditLogUserFilterItem.getText();
                 if (text == null) {
                     text = "";
                 }
                 textView2.setText(text);
             }
-            MaterialRadioButton materialRadioButton = this.binding.f2541b;
-            m.checkNotNullExpressionValue(materialRadioButton, "binding.auditLogFilterRadioButton");
+            MaterialRadioButton materialRadioButton = this.binding.f17517b;
+            Intrinsics3.checkNotNullExpressionValue(materialRadioButton, "binding.auditLogFilterRadioButton");
             materialRadioButton.setChecked(auditLogUserFilterItem.getIsChecked());
-            this.binding.f2541b.setOnCheckedChangeListener(new WidgetServerSettingsAuditLogFilterAdapter$AuditLogFilterUserViewHolder$onConfigure$1(this, auditLogUserFilterItem));
-            this.itemView.setOnClickListener(new WidgetServerSettingsAuditLogFilterAdapter$AuditLogFilterUserViewHolder$onConfigure$2(this));
+            this.binding.f17517b.setOnCheckedChangeListener(new WidgetServerSettingsAuditLogFilterAdapter3(this, auditLogUserFilterItem));
+            this.itemView.setOnClickListener(new WidgetServerSettingsAuditLogFilterAdapter4(this));
         }
     }
 
@@ -278,8 +278,8 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetServerSettingsAuditLogFilterAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
-        this.onAuditLogAvatarClicked = WidgetServerSettingsAuditLogFilterAdapter$onAuditLogAvatarClicked$1.INSTANCE;
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        this.onAuditLogAvatarClicked = WidgetServerSettingsAuditLogFilterAdapter5.INSTANCE;
     }
 
     public static final /* synthetic */ Function0 access$getOnFilterSelectedCallback$p(WidgetServerSettingsAuditLogFilterAdapter widgetServerSettingsAuditLogFilterAdapter) {
@@ -291,8 +291,8 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
     }
 
     public final void configure(List<? extends MGRecyclerDataPayload> listItems, Function0<Unit> onFilterSelectedCallback) {
-        m.checkNotNullParameter(listItems, "listItems");
-        m.checkNotNullParameter(onFilterSelectedCallback, "onFilterSelectedCallback");
+        Intrinsics3.checkNotNullParameter(listItems, "listItems");
+        Intrinsics3.checkNotNullParameter(onFilterSelectedCallback, "onFilterSelectedCallback");
         this.onFilterSelectedCallback = onFilterSelectedCallback;
         setData(listItems);
     }
@@ -307,13 +307,13 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
     }
 
     public final void setOnAuditLogAvatarClicked(Function2<? super Long, ? super Long, Unit> function2) {
-        m.checkNotNullParameter(function2, "<set-?>");
+        Intrinsics3.checkNotNullParameter(function2, "<set-?>");
         this.onAuditLogAvatarClicked = function2;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, MGRecyclerDataPayload> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new AuditLogFilterUserViewHolder(this);
         }

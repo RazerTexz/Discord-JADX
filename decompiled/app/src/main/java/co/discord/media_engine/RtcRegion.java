@@ -1,9 +1,9 @@
 package co.discord.media_engine;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.util.Arrays;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: RtcRegion.kt */
 /* loaded from: classes.dex */
@@ -12,8 +12,8 @@ public final /* data */ class RtcRegion {
     private final String region;
 
     public RtcRegion(String str, String[] strArr) {
-        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_REGION);
-        m.checkNotNullParameter(strArr, "ips");
+        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_REGION);
+        Intrinsics3.checkNotNullParameter(strArr, "ips");
         this.region = str;
         this.ips = strArr;
     }
@@ -39,8 +39,8 @@ public final /* data */ class RtcRegion {
     }
 
     public final RtcRegion copy(String region, String[] ips) {
-        m.checkNotNullParameter(region, ModelAuditLogEntry.CHANGE_KEY_REGION);
-        m.checkNotNullParameter(ips, "ips");
+        Intrinsics3.checkNotNullParameter(region, ModelAuditLogEntry.CHANGE_KEY_REGION);
+        Intrinsics3.checkNotNullParameter(ips, "ips");
         return new RtcRegion(region, ips);
     }
 
@@ -52,7 +52,7 @@ public final /* data */ class RtcRegion {
             return false;
         }
         RtcRegion rtcRegion = (RtcRegion) other;
-        return m.areEqual(this.region, rtcRegion.region) && m.areEqual(this.ips, rtcRegion.ips);
+        return Intrinsics3.areEqual(this.region, rtcRegion.region) && Intrinsics3.areEqual(this.ips, rtcRegion.ips);
     }
 
     public final String[] getIps() {
@@ -71,9 +71,9 @@ public final /* data */ class RtcRegion {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("RtcRegion(region=");
-        sbU.append(this.region);
-        sbU.append(", ips=");
-        return a.J(sbU, Arrays.toString(this.ips), ")");
+        StringBuilder sbM833U = outline.m833U("RtcRegion(region=");
+        sbM833U.append(this.region);
+        sbM833U.append(", ips=");
+        return outline.m822J(sbM833U, Arrays.toString(this.ips), ")");
     }
 }

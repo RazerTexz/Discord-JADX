@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannelReceiver;
+import com.discord.analytics.generated.traits.TrackChannel2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackSearchResultExpanded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSearchResultExpanded implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
+public final /* data */ class TrackSearchResultExpanded implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -25,14 +25,15 @@ public final /* data */ class TrackSearchResultExpanded implements AnalyticsSche
     private final Long resultIndex = null;
     private final transient String analyticsSchemaTypeName = "search_result_expanded";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -50,7 +51,7 @@ public final /* data */ class TrackSearchResultExpanded implements AnalyticsSche
             return false;
         }
         TrackSearchResultExpanded trackSearchResultExpanded = (TrackSearchResultExpanded) other;
-        return m.areEqual(this.searchId, trackSearchResultExpanded.searchId) && m.areEqual(this.messageId, trackSearchResultExpanded.messageId) && m.areEqual(this.limit, trackSearchResultExpanded.limit) && m.areEqual(this.offset, trackSearchResultExpanded.offset) && m.areEqual(this.page, trackSearchResultExpanded.page) && m.areEqual(this.pageResults, trackSearchResultExpanded.pageResults) && m.areEqual(this.resultIndex, trackSearchResultExpanded.resultIndex);
+        return Intrinsics3.areEqual(this.searchId, trackSearchResultExpanded.searchId) && Intrinsics3.areEqual(this.messageId, trackSearchResultExpanded.messageId) && Intrinsics3.areEqual(this.limit, trackSearchResultExpanded.limit) && Intrinsics3.areEqual(this.offset, trackSearchResultExpanded.offset) && Intrinsics3.areEqual(this.page, trackSearchResultExpanded.page) && Intrinsics3.areEqual(this.pageResults, trackSearchResultExpanded.pageResults) && Intrinsics3.areEqual(this.resultIndex, trackSearchResultExpanded.resultIndex);
     }
 
     public int hashCode() {
@@ -71,19 +72,19 @@ public final /* data */ class TrackSearchResultExpanded implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackSearchResultExpanded(searchId=");
-        sbU.append(this.searchId);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", limit=");
-        sbU.append(this.limit);
-        sbU.append(", offset=");
-        sbU.append(this.offset);
-        sbU.append(", page=");
-        sbU.append(this.page);
-        sbU.append(", pageResults=");
-        sbU.append(this.pageResults);
-        sbU.append(", resultIndex=");
-        return a.G(sbU, this.resultIndex, ")");
+        StringBuilder sbM833U = outline.m833U("TrackSearchResultExpanded(searchId=");
+        sbM833U.append(this.searchId);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", limit=");
+        sbM833U.append(this.limit);
+        sbM833U.append(", offset=");
+        sbM833U.append(this.offset);
+        sbM833U.append(", page=");
+        sbM833U.append(this.page);
+        sbM833U.append(", pageResults=");
+        sbM833U.append(this.pageResults);
+        sbM833U.append(", resultIndex=");
+        return outline.m819G(sbM833U, this.resultIndex, ")");
     }
 }

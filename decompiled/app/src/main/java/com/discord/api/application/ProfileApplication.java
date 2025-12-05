@@ -1,15 +1,15 @@
 package com.discord.api.application;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ProfileApplication.kt */
 /* loaded from: classes.dex */
 public final /* data */ class ProfileApplication {
     private final String customInstallUrl;
     private final String id;
-    private final ApplicationInstallParams installParams;
+    private final ProfileApplication2 installParams;
 
     /* renamed from: a, reason: from getter */
     public final String getCustomInstallUrl() {
@@ -22,7 +22,7 @@ public final /* data */ class ProfileApplication {
     }
 
     /* renamed from: c, reason: from getter */
-    public final ApplicationInstallParams getInstallParams() {
+    public final ProfileApplication2 getInstallParams() {
         return this.installParams;
     }
 
@@ -34,7 +34,7 @@ public final /* data */ class ProfileApplication {
             return false;
         }
         ProfileApplication profileApplication = (ProfileApplication) other;
-        return m.areEqual(this.id, profileApplication.id) && m.areEqual(this.customInstallUrl, profileApplication.customInstallUrl) && m.areEqual(this.installParams, profileApplication.installParams);
+        return Intrinsics3.areEqual(this.id, profileApplication.id) && Intrinsics3.areEqual(this.customInstallUrl, profileApplication.customInstallUrl) && Intrinsics3.areEqual(this.installParams, profileApplication.installParams);
     }
 
     public int hashCode() {
@@ -42,18 +42,18 @@ public final /* data */ class ProfileApplication {
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
         String str2 = this.customInstallUrl;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
-        ApplicationInstallParams applicationInstallParams = this.installParams;
-        return iHashCode2 + (applicationInstallParams != null ? applicationInstallParams.hashCode() : 0);
+        ProfileApplication2 profileApplication2 = this.installParams;
+        return iHashCode2 + (profileApplication2 != null ? profileApplication2.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ProfileApplication(id=");
-        sbU.append(this.id);
-        sbU.append(", customInstallUrl=");
-        sbU.append(this.customInstallUrl);
-        sbU.append(", installParams=");
-        sbU.append(this.installParams);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ProfileApplication(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", customInstallUrl=");
+        sbM833U.append(this.customInstallUrl);
+        sbM833U.append(", installParams=");
+        sbM833U.append(this.installParams);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

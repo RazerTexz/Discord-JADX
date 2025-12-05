@@ -3,16 +3,24 @@ package com.google.android.exoplayer2.metadata.id3;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.i.a.c.f3.e0;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
 
 /* loaded from: classes3.dex */
 public final class InternalFrame extends Id3Frame {
-    public static final Parcelable.Creator<InternalFrame> CREATOR = new a();
-    public final String k;
-    public final String l;
-    public final String m;
+    public static final Parcelable.Creator<InternalFrame> CREATOR = new C10732a();
 
-    public class a implements Parcelable.Creator<InternalFrame> {
+    /* renamed from: k */
+    public final String f19990k;
+
+    /* renamed from: l */
+    public final String f19991l;
+
+    /* renamed from: m */
+    public final String f19992m;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.id3.InternalFrame$a */
+    public class C10732a implements Parcelable.Creator<InternalFrame> {
         @Override // android.os.Parcelable.Creator
         public InternalFrame createFromParcel(Parcel parcel) {
             return new InternalFrame(parcel);
@@ -26,9 +34,9 @@ public final class InternalFrame extends Id3Frame {
 
     public InternalFrame(String str, String str2, String str3) {
         super("----");
-        this.k = str;
-        this.l = str2;
-        this.m = str3;
+        this.f19990k = str;
+        this.f19991l = str2;
+        this.f19992m = str3;
     }
 
     public boolean equals(@Nullable Object obj) {
@@ -39,41 +47,41 @@ public final class InternalFrame extends Id3Frame {
             return false;
         }
         InternalFrame internalFrame = (InternalFrame) obj;
-        return e0.a(this.l, internalFrame.l) && e0.a(this.k, internalFrame.k) && e0.a(this.m, internalFrame.m);
+        return Util2.m2993a(this.f19991l, internalFrame.f19991l) && Util2.m2993a(this.f19990k, internalFrame.f19990k) && Util2.m2993a(this.f19992m, internalFrame.f19992m);
     }
 
     public int hashCode() {
-        String str = this.k;
+        String str = this.f19990k;
         int iHashCode = (527 + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.l;
+        String str2 = this.f19991l;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
-        String str3 = this.m;
+        String str3 = this.f19992m;
         return iHashCode2 + (str3 != null ? str3.hashCode() : 0);
     }
 
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame
     public String toString() {
-        String str = this.j;
-        String str2 = this.k;
-        String str3 = this.l;
-        StringBuilder sbS = b.d.b.a.a.S(b.d.b.a.a.b(str3, b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 23))), str, ": domain=", str2, ", description=");
-        sbS.append(str3);
-        return sbS.toString();
+        String str = this.f19989j;
+        String str2 = this.f19990k;
+        String str3 = this.f19991l;
+        StringBuilder sbM831S = outline.m831S(outline.m841b(str3, outline.m841b(str2, outline.m841b(str, 23))), str, ": domain=", str2, ", description=");
+        sbM831S.append(str3);
+        return sbM831S.toString();
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.j);
-        parcel.writeString(this.k);
-        parcel.writeString(this.m);
+        parcel.writeString(this.f19989j);
+        parcel.writeString(this.f19990k);
+        parcel.writeString(this.f19992m);
     }
 
     public InternalFrame(Parcel parcel) {
         super("----");
         String string = parcel.readString();
-        int i = e0.a;
-        this.k = string;
-        this.l = parcel.readString();
-        this.m = parcel.readString();
+        int i = Util2.f6708a;
+        this.f19990k = string;
+        this.f19991l = parcel.readString();
+        this.f19992m = parcel.readString();
     }
 }

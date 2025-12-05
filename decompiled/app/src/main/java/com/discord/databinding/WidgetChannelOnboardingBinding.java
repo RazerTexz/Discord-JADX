@@ -9,21 +9,22 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetChannelOnboardingBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f15881a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final MaterialButton f2263b;
+    public final MaterialButton f15882b;
 
     public WidgetChannelOnboardingBinding(@NonNull LinearLayout linearLayout, @NonNull MaterialButton materialButton) {
-        this.a = linearLayout;
-        this.f2263b = materialButton;
+        this.f15881a = linearLayout;
+        this.f15882b = materialButton;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15881a;
     }
 }

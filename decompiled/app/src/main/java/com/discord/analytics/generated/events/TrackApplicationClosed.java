@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackApplicationClosed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationClosed implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackApplicationClosed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final Long activityDurationS = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackApplicationClosed implements AnalyticsSchema,
             return false;
         }
         TrackApplicationClosed trackApplicationClosed = (TrackApplicationClosed) other;
-        return m.areEqual(this.applicationId, trackApplicationClosed.applicationId) && m.areEqual(this.activityDurationS, trackApplicationClosed.activityDurationS) && m.areEqual(this.totalDurationS, trackApplicationClosed.totalDurationS) && m.areEqual(this.totalDiscordSkuDurationS, trackApplicationClosed.totalDiscordSkuDurationS) && m.areEqual(this.distributor, trackApplicationClosed.distributor);
+        return Intrinsics3.areEqual(this.applicationId, trackApplicationClosed.applicationId) && Intrinsics3.areEqual(this.activityDurationS, trackApplicationClosed.activityDurationS) && Intrinsics3.areEqual(this.totalDurationS, trackApplicationClosed.totalDurationS) && Intrinsics3.areEqual(this.totalDiscordSkuDurationS, trackApplicationClosed.totalDiscordSkuDurationS) && Intrinsics3.areEqual(this.distributor, trackApplicationClosed.distributor);
     }
 
     public int hashCode() {
@@ -48,15 +48,15 @@ public final /* data */ class TrackApplicationClosed implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackApplicationClosed(applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", activityDurationS=");
-        sbU.append(this.activityDurationS);
-        sbU.append(", totalDurationS=");
-        sbU.append(this.totalDurationS);
-        sbU.append(", totalDiscordSkuDurationS=");
-        sbU.append(this.totalDiscordSkuDurationS);
-        sbU.append(", distributor=");
-        return a.E(sbU, this.distributor, ")");
+        StringBuilder sbM833U = outline.m833U("TrackApplicationClosed(applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", activityDurationS=");
+        sbM833U.append(this.activityDurationS);
+        sbM833U.append(", totalDurationS=");
+        sbM833U.append(this.totalDurationS);
+        sbM833U.append(", totalDiscordSkuDurationS=");
+        sbM833U.append(this.totalDiscordSkuDurationS);
+        sbM833U.append(", distributor=");
+        return outline.m817E(sbM833U, this.distributor, ")");
     }
 }

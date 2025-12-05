@@ -8,16 +8,17 @@ import androidx.viewbinding.ViewBinding;
 /* loaded from: classes.dex */
 public final class NuxGuildTemplateTextViewHolderBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final TextView a;
+    public final TextView f15200a;
 
     public NuxGuildTemplateTextViewHolderBinding(@NonNull TextView textView) {
-        this.a = textView;
+        this.f15200a = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15200a;
     }
 }

@@ -4,14 +4,14 @@ import lombok.eclipse.handlers.EclipseHandlerUtil;
 
 /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationProblemReporter.SCL.lombok */
 public interface ConfigurationProblemReporter {
-    public static final ConfigurationProblemReporter CONSOLE = new AnonymousClass1();
+    public static final ConfigurationProblemReporter CONSOLE = new C128311();
 
     void report(String str, String str2, int i, CharSequence charSequence);
 
-    /* renamed from: lombok.core.configuration.ConfigurationProblemReporter$1, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.ConfigurationProblemReporter$1 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationProblemReporter$1.SCL.lombok */
-    class AnonymousClass1 implements ConfigurationProblemReporter {
-        AnonymousClass1() {
+    class C128311 implements ConfigurationProblemReporter {
+        C128311() {
         }
 
         @Override // lombok.core.configuration.ConfigurationProblemReporter

@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackApplicationSuspiciousGrowthDetected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationSuspiciousGrowthDetected implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackApplicationSuspiciousGrowthDetected implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final Long botId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackApplicationSuspiciousGrowthDetected implement
             return false;
         }
         TrackApplicationSuspiciousGrowthDetected trackApplicationSuspiciousGrowthDetected = (TrackApplicationSuspiciousGrowthDetected) other;
-        return m.areEqual(this.applicationId, trackApplicationSuspiciousGrowthDetected.applicationId) && m.areEqual(this.botId, trackApplicationSuspiciousGrowthDetected.botId) && m.areEqual(this.name, trackApplicationSuspiciousGrowthDetected.name) && m.areEqual(this.hasBot, trackApplicationSuspiciousGrowthDetected.hasBot) && m.areEqual(this.hasRedirectUri, trackApplicationSuspiciousGrowthDetected.hasRedirectUri);
+        return Intrinsics3.areEqual(this.applicationId, trackApplicationSuspiciousGrowthDetected.applicationId) && Intrinsics3.areEqual(this.botId, trackApplicationSuspiciousGrowthDetected.botId) && Intrinsics3.areEqual(this.name, trackApplicationSuspiciousGrowthDetected.name) && Intrinsics3.areEqual(this.hasBot, trackApplicationSuspiciousGrowthDetected.hasBot) && Intrinsics3.areEqual(this.hasRedirectUri, trackApplicationSuspiciousGrowthDetected.hasRedirectUri);
     }
 
     public int hashCode() {
@@ -49,15 +49,15 @@ public final /* data */ class TrackApplicationSuspiciousGrowthDetected implement
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackApplicationSuspiciousGrowthDetected(applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", botId=");
-        sbU.append(this.botId);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", hasBot=");
-        sbU.append(this.hasBot);
-        sbU.append(", hasRedirectUri=");
-        return a.D(sbU, this.hasRedirectUri, ")");
+        StringBuilder sbM833U = outline.m833U("TrackApplicationSuspiciousGrowthDetected(applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", botId=");
+        sbM833U.append(this.botId);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", hasBot=");
+        sbM833U.append(this.hasBot);
+        sbM833U.append(", hasRedirectUri=");
+        return outline.m816D(sbM833U, this.hasRedirectUri, ")");
     }
 }

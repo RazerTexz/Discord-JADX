@@ -1,10 +1,10 @@
 package com.discord.models.domain;
 
-import b.d.b.a.a;
 import com.discord.api.application.Application;
 import com.discord.api.auth.OAuthScope;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ModelOAuth2Token.kt */
 /* loaded from: classes.dex */
@@ -15,8 +15,8 @@ public final /* data */ class ModelOAuth2Token {
 
     /* JADX WARN: Multi-variable type inference failed */
     public ModelOAuth2Token(long j, List<? extends OAuthScope> list, Application application) {
-        m.checkNotNullParameter(list, "scopes");
-        m.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(list, "scopes");
+        Intrinsics3.checkNotNullParameter(application, "application");
         this.id = j;
         this.scopes = list;
         this.application = application;
@@ -51,8 +51,8 @@ public final /* data */ class ModelOAuth2Token {
     }
 
     public final ModelOAuth2Token copy(long id2, List<? extends OAuthScope> scopes, Application application) {
-        m.checkNotNullParameter(scopes, "scopes");
-        m.checkNotNullParameter(application, "application");
+        Intrinsics3.checkNotNullParameter(scopes, "scopes");
+        Intrinsics3.checkNotNullParameter(application, "application");
         return new ModelOAuth2Token(id2, scopes, application);
     }
 
@@ -64,7 +64,7 @@ public final /* data */ class ModelOAuth2Token {
             return false;
         }
         ModelOAuth2Token modelOAuth2Token = (ModelOAuth2Token) other;
-        return this.id == modelOAuth2Token.id && m.areEqual(this.scopes, modelOAuth2Token.scopes) && m.areEqual(this.application, modelOAuth2Token.application);
+        return this.id == modelOAuth2Token.id && Intrinsics3.areEqual(this.scopes, modelOAuth2Token.scopes) && Intrinsics3.areEqual(this.application, modelOAuth2Token.application);
     }
 
     public final Application getApplication() {
@@ -89,13 +89,13 @@ public final /* data */ class ModelOAuth2Token {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelOAuth2Token(id=");
-        sbU.append(this.id);
-        sbU.append(", scopes=");
-        sbU.append(this.scopes);
-        sbU.append(", application=");
-        sbU.append(this.application);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ModelOAuth2Token(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", scopes=");
+        sbM833U.append(this.scopes);
+        sbM833U.append(", application=");
+        sbM833U.append(this.application);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

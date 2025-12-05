@@ -10,30 +10,30 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.StickerPackDetailsDialogBinding;
 import com.discord.models.sticker.dto.ModelStickerPack;
 import com.discord.stores.StoreStickers;
 import com.discord.stores.StoreStream;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.stickers.StickerUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetStickerPackDetailsDialog.kt */
 /* loaded from: classes.dex */
 public final class WidgetStickerPackDetailsDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetStickerPackDetailsDialog.class, "binding", "getBinding()Lcom/discord/databinding/StickerPackDetailsDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStickerPackDetailsDialog.class, "binding", "getBinding()Lcom/discord/databinding/StickerPackDetailsDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -56,7 +56,7 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
         }
 
         public final void show(FragmentManager fragmentManager, long stickerPackId, Integer y2) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             Bundle bundle = new Bundle();
             bundle.putLong("com.discord.intent.EXTRA_STICKER_PACK_ID", stickerPackId);
             if (y2 != null) {
@@ -74,9 +74,9 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
     }
 
     /* compiled from: WidgetStickerPackDetailsDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerPackDetailsDialog$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.stickers.WidgetStickerPackDetailsDialog$onViewBound$1 */
+    public static final class ViewOnClickListenerC101341 implements View.OnClickListener {
+        public ViewOnClickListenerC101341() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -86,28 +86,28 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
     }
 
     /* compiled from: WidgetStickerPackDetailsDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerPackDetailsDialog$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreStickers.StickerPackState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.stickers.WidgetStickerPackDetailsDialog$onViewBoundOrOnResume$1 */
+    public static final class C101351 extends Lambda implements Function1<StoreStickers.StickerPackState, Unit> {
+        public C101351() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreStickers.StickerPackState stickerPackState) {
             invoke2(stickerPackState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreStickers.StickerPackState stickerPackState) {
-            m.checkNotNullParameter(stickerPackState, "it");
+            Intrinsics3.checkNotNullParameter(stickerPackState, "it");
             WidgetStickerPackDetailsDialog.access$configureUI(WidgetStickerPackDetailsDialog.this, stickerPackState);
         }
     }
 
     public WidgetStickerPackDetailsDialog() {
-        super(R.layout.sticker_pack_details_dialog);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetStickerPackDetailsDialog$binding$2.INSTANCE, null, 2, null);
+        super(C5419R.layout.sticker_pack_details_dialog);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetStickerPackDetailsDialog2.INSTANCE, null, 2, null);
         setStyle(1, 2131951655);
     }
 
@@ -119,32 +119,32 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
     private final void configureUI(StoreStickers.StickerPackState stickerPackState) {
         if (stickerPackState instanceof StoreStickers.StickerPackState.Loaded) {
             ModelStickerPack stickerPack = ((StoreStickers.StickerPackState.Loaded) stickerPackState).getStickerPack();
-            TextView textView = getBinding().e;
-            m.checkNotNullExpressionValue(textView, "binding.stickerPackDetailsPack");
-            textView.setText(b.k(this, R.string.sticker_picker_pack_details, new Object[]{stickerPack.getName()}, null, 4));
-            TextView textView2 = getBinding().f2152b;
-            m.checkNotNullExpressionValue(textView2, "binding.stickerPackDetailsAnimated");
+            TextView textView = getBinding().f15273e;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.stickerPackDetailsPack");
+            textView.setText(FormatUtils.m219k(this, C5419R.string.sticker_picker_pack_details, new Object[]{stickerPack.getName()}, null, 4));
+            TextView textView2 = getBinding().f15270b;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.stickerPackDetailsAnimated");
             textView2.setVisibility(stickerPack.isAnimatedPack() ? 0 : 8);
-            TextView textView3 = getBinding().f2152b;
-            m.checkNotNullExpressionValue(textView3, "binding.stickerPackDetailsAnimated");
-            textView3.setText("・ " + getString(R.string.sticker_picker_pack_details_animated));
-            TextView textView4 = getBinding().f;
-            m.checkNotNullExpressionValue(textView4, "binding.stickerPackDetailsPremium");
+            TextView textView3 = getBinding().f15270b;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.stickerPackDetailsAnimated");
+            textView3.setText("・ " + getString(C5419R.string.sticker_picker_pack_details_animated));
+            TextView textView4 = getBinding().f15274f;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.stickerPackDetailsPremium");
             textView4.setVisibility(stickerPack.isPremiumPack() ? 0 : 8);
-            TextView textView5 = getBinding().f;
-            m.checkNotNullExpressionValue(textView5, "binding.stickerPackDetailsPremium");
-            textView5.setText("・ " + getString(R.string.sticker_picker_pack_details_premium));
-            TextView textView6 = getBinding().d;
-            m.checkNotNullExpressionValue(textView6, "binding.stickerPackDetailsLimited");
+            TextView textView5 = getBinding().f15274f;
+            Intrinsics3.checkNotNullExpressionValue(textView5, "binding.stickerPackDetailsPremium");
+            textView5.setText("・ " + getString(C5419R.string.sticker_picker_pack_details_premium));
+            TextView textView6 = getBinding().f15272d;
+            Intrinsics3.checkNotNullExpressionValue(textView6, "binding.stickerPackDetailsLimited");
             textView6.setVisibility(stickerPack.isLimitedPack() ? 0 : 8);
-            TextView textView7 = getBinding().d;
-            m.checkNotNullExpressionValue(textView7, "binding.stickerPackDetailsLimited");
+            TextView textView7 = getBinding().f15272d;
+            Intrinsics3.checkNotNullExpressionValue(textView7, "binding.stickerPackDetailsLimited");
             StringBuilder sb = new StringBuilder();
             sb.append("・ ");
             StickerUtils stickerUtils = StickerUtils.INSTANCE;
             Context contextRequireContext = requireContext();
-            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-            sb.append(b.k(this, R.string.sticker_picker_pack_details_limited_time_left, new Object[]{stickerUtils.getLimitedTimeLeftString(contextRequireContext, stickerPack.getStoreListing())}, null, 4));
+            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            sb.append(FormatUtils.m219k(this, C5419R.string.sticker_picker_pack_details_limited_time_left, new Object[]{stickerUtils.getLimitedTimeLeftString(contextRequireContext, stickerPack.getStoreListing())}, null, 4));
             textView7.setText(sb.toString());
         }
     }
@@ -167,8 +167,8 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
         if (window2 != null && (attributes = window2.getAttributes()) != null) {
             if (numValueOf != null && numValueOf.intValue() == 0) {
                 Context context = dialogOnCreateDialog.getContext();
-                m.checkNotNullExpressionValue(context, "context");
-                numValueOf = Integer.valueOf((int) (context.getResources().getDimension(R.dimen.default_keyboard_height) / 2));
+                Intrinsics3.checkNotNullExpressionValue(context, "context");
+                numValueOf = Integer.valueOf((int) (context.getResources().getDimension(C5419R.dimen.default_keyboard_height) / 2));
             }
             attributes.y = numValueOf.intValue();
         }
@@ -177,9 +177,9 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        getBinding().c.setOnClickListener(new AnonymousClass1());
+        getBinding().f15271c.setOnClickListener(new ViewOnClickListenerC101341());
     }
 
     @Override // com.discord.app.AppDialog
@@ -189,7 +189,7 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
         Long lValueOf = arguments != null ? Long.valueOf(arguments.getLong("com.discord.intent.EXTRA_STICKER_PACK_ID")) : null;
         this.stickerPackId = lValueOf;
         if (lValueOf != null) {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getStickers().observeStickerPack(lValueOf.longValue()), this, null, 2, null), WidgetStickerPackDetailsDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreStream.INSTANCE.getStickers().observeStickerPack(lValueOf.longValue()), this, null, 2, null), WidgetStickerPackDetailsDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C101351(), 62, (Object) null);
         }
     }
 }

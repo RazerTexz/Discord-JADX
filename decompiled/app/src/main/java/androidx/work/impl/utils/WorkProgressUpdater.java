@@ -12,8 +12,8 @@ import androidx.work.impl.model.WorkProgress;
 import androidx.work.impl.model.WorkSpec;
 import androidx.work.impl.utils.futures.SettableFuture;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
-import b.i.b.d.a.a;
 import java.util.UUID;
+import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -22,13 +22,13 @@ public class WorkProgressUpdater implements ProgressUpdater {
     public final TaskExecutor mTaskExecutor;
     public final WorkDatabase mWorkDatabase;
 
-    /* renamed from: androidx.work.impl.utils.WorkProgressUpdater$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.work.impl.utils.WorkProgressUpdater$1 */
+    public class RunnableC07831 implements Runnable {
         public final /* synthetic */ Data val$data;
         public final /* synthetic */ SettableFuture val$future;
         public final /* synthetic */ UUID val$id;
 
-        public AnonymousClass1(UUID uuid, Data data, SettableFuture settableFuture) {
+        public RunnableC07831(UUID uuid, Data data, SettableFuture settableFuture) {
             this.val$id = uuid;
             this.val$data = data;
             this.val$future = settableFuture;
@@ -69,9 +69,9 @@ public class WorkProgressUpdater implements ProgressUpdater {
 
     @Override // androidx.work.ProgressUpdater
     @NonNull
-    public a<Void> updateProgress(@NonNull Context context, @NonNull UUID uuid, @NonNull Data data) {
+    public ListenableFuture8<Void> updateProgress(@NonNull Context context, @NonNull UUID uuid, @NonNull Data data) {
         SettableFuture settableFutureCreate = SettableFuture.create();
-        this.mTaskExecutor.executeOnBackgroundThread(new AnonymousClass1(uuid, data, settableFutureCreate));
+        this.mTaskExecutor.executeOnBackgroundThread(new RunnableC07831(uuid, data, settableFutureCreate));
         return settableFutureCreate;
     }
 }

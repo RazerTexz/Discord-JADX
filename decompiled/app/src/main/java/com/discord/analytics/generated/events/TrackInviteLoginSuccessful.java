@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackInviteLoginSuccessful.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInviteLoginSuccessful implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackInviteLoginSuccessful implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence inviteCode = null;
     private final Long guildId = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackInviteLoginSuccessful implements AnalyticsSch
             return false;
         }
         TrackInviteLoginSuccessful trackInviteLoginSuccessful = (TrackInviteLoginSuccessful) other;
-        return m.areEqual(this.inviteCode, trackInviteLoginSuccessful.inviteCode) && m.areEqual(this.guildId, trackInviteLoginSuccessful.guildId) && m.areEqual(this.channelId, trackInviteLoginSuccessful.channelId) && m.areEqual(this.inviterId, trackInviteLoginSuccessful.inviterId) && m.areEqual(this.prevUserId, trackInviteLoginSuccessful.prevUserId);
+        return Intrinsics3.areEqual(this.inviteCode, trackInviteLoginSuccessful.inviteCode) && Intrinsics3.areEqual(this.guildId, trackInviteLoginSuccessful.guildId) && Intrinsics3.areEqual(this.channelId, trackInviteLoginSuccessful.channelId) && Intrinsics3.areEqual(this.inviterId, trackInviteLoginSuccessful.inviterId) && Intrinsics3.areEqual(this.prevUserId, trackInviteLoginSuccessful.prevUserId);
     }
 
     public int hashCode() {
@@ -48,15 +48,15 @@ public final /* data */ class TrackInviteLoginSuccessful implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackInviteLoginSuccessful(inviteCode=");
-        sbU.append(this.inviteCode);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", inviterId=");
-        sbU.append(this.inviterId);
-        sbU.append(", prevUserId=");
-        return a.G(sbU, this.prevUserId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackInviteLoginSuccessful(inviteCode=");
+        sbM833U.append(this.inviteCode);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", inviterId=");
+        sbM833U.append(this.inviterId);
+        sbM833U.append(", prevUserId=");
+        return outline.m819G(sbM833U, this.prevUserId, ")");
     }
 }

@@ -1,9 +1,9 @@
 package com.discord.api.interaction;
 
-import b.d.b.a.a;
 import com.discord.api.user.User;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: Interaction.kt */
 /* loaded from: classes.dex */
@@ -11,7 +11,7 @@ public final /* data */ class Interaction {
     public static final int TYPE_INTERACTION_APPLICATION_COMMAND = 2;
     public static final int TYPE_INTERACTION_PING = 1;
     private final Long id;
-    private final Member member;
+    private final Interaction2 member;
     private final String name;
     private final Integer type;
     private final User user;
@@ -47,7 +47,7 @@ public final /* data */ class Interaction {
             return false;
         }
         Interaction interaction = (Interaction) other;
-        return m.areEqual(this.id, interaction.id) && m.areEqual(this.type, interaction.type) && m.areEqual(this.name, interaction.name) && m.areEqual(this.user, interaction.user) && m.areEqual(this.member, interaction.member);
+        return Intrinsics3.areEqual(this.id, interaction.id) && Intrinsics3.areEqual(this.type, interaction.type) && Intrinsics3.areEqual(this.name, interaction.name) && Intrinsics3.areEqual(this.user, interaction.user) && Intrinsics3.areEqual(this.member, interaction.member);
     }
 
     public int hashCode() {
@@ -59,26 +59,26 @@ public final /* data */ class Interaction {
         int iHashCode3 = (iHashCode2 + (str != null ? str.hashCode() : 0)) * 31;
         User user = this.user;
         int iHashCode4 = (iHashCode3 + (user != null ? user.hashCode() : 0)) * 31;
-        Member member = this.member;
-        return iHashCode4 + (member != null ? member.hashCode() : 0);
+        Interaction2 interaction2 = this.member;
+        return iHashCode4 + (interaction2 != null ? interaction2.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("Interaction(id=");
-        sbU.append(this.id);
-        sbU.append(", type=");
-        sbU.append(this.type);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", user=");
-        sbU.append(this.user);
-        sbU.append(", member=");
-        sbU.append(this.member);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("Interaction(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", user=");
+        sbM833U.append(this.user);
+        sbM833U.append(", member=");
+        sbM833U.append(this.member);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
-    public Interaction(Long l, Integer num, String str, User user, Member member) {
+    public Interaction(Long l, Integer num, String str, User user, Interaction2 interaction2) {
         this.id = l;
         this.type = num;
         this.name = str;

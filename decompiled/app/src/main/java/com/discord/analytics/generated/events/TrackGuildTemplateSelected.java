@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildTemplateSelected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildTemplateSelected implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackGuildTemplateSelected implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence templateName = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackGuildTemplateSelected implements AnalyticsSch
             return false;
         }
         TrackGuildTemplateSelected trackGuildTemplateSelected = (TrackGuildTemplateSelected) other;
-        return m.areEqual(this.templateName, trackGuildTemplateSelected.templateName) && m.areEqual(this.templateCode, trackGuildTemplateSelected.templateCode);
+        return Intrinsics3.areEqual(this.templateName, trackGuildTemplateSelected.templateName) && Intrinsics3.areEqual(this.templateCode, trackGuildTemplateSelected.templateCode);
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class TrackGuildTemplateSelected implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildTemplateSelected(templateName=");
-        sbU.append(this.templateName);
-        sbU.append(", templateCode=");
-        return a.E(sbU, this.templateCode, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildTemplateSelected(templateName=");
+        sbM833U.append(this.templateName);
+        sbM833U.append(", templateCode=");
+        return outline.m817E(sbM833U, this.templateCode, ")");
     }
 }

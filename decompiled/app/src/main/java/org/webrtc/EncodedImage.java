@@ -1,9 +1,9 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
 import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class EncodedImage implements RefCounted {
@@ -14,8 +14,9 @@ public class EncodedImage implements RefCounted {
     public final int encodedWidth;
     public final FrameType frameType;
 
+    /* renamed from: qp */
     @Nullable
-    public final Integer qp;
+    public final Integer f27612qp;
     private final RefCountDelegate refCountDelegate;
     public final int rotation;
 
@@ -26,19 +27,20 @@ public class EncodedImage implements RefCounted {
         private int encodedWidth;
         private FrameType frameType;
 
+        /* renamed from: qp */
         @Nullable
-        private Integer qp;
+        private Integer f27613qp;
 
         @Nullable
         private Runnable releaseCallback;
         private int rotation;
 
-        public /* synthetic */ Builder(AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ Builder(C129631 c129631) {
             this();
         }
 
         public EncodedImage createEncodedImage() {
-            return new EncodedImage(this.buffer, this.releaseCallback, this.encodedWidth, this.encodedHeight, this.captureTimeNs, this.frameType, this.rotation, this.qp, null);
+            return new EncodedImage(this.buffer, this.releaseCallback, this.encodedWidth, this.encodedHeight, this.captureTimeNs, this.frameType, this.rotation, this.f27613qp, null);
         }
 
         public Builder setBuffer(ByteBuffer byteBuffer, @Nullable Runnable runnable) {
@@ -74,7 +76,7 @@ public class EncodedImage implements RefCounted {
         }
 
         public Builder setQp(@Nullable Integer num) {
-            this.qp = num;
+            this.f27613qp = num;
             return this;
         }
 
@@ -107,7 +109,7 @@ public class EncodedImage implements RefCounted {
                     return frameType;
                 }
             }
-            throw new IllegalArgumentException(a.q("Unknown native frame type: ", i));
+            throw new IllegalArgumentException(outline.m871q("Unknown native frame type: ", i));
         }
 
         public int getNative() {
@@ -115,7 +117,7 @@ public class EncodedImage implements RefCounted {
         }
     }
 
-    public /* synthetic */ EncodedImage(ByteBuffer byteBuffer, Runnable runnable, int i, int i2, long j, FrameType frameType, int i3, Integer num, AnonymousClass1 anonymousClass1) {
+    public /* synthetic */ EncodedImage(ByteBuffer byteBuffer, Runnable runnable, int i, int i2, long j, FrameType frameType, int i3, Integer num, C129631 c129631) {
         this(byteBuffer, runnable, i, i2, j, frameType, i3, num);
     }
 
@@ -151,7 +153,7 @@ public class EncodedImage implements RefCounted {
     @Nullable
     @CalledByNative
     private Integer getQp() {
-        return this.qp;
+        return this.f27612qp;
     }
 
     @CalledByNative
@@ -178,7 +180,7 @@ public class EncodedImage implements RefCounted {
         this.captureTimeNs = j;
         this.frameType = frameType;
         this.rotation = i3;
-        this.qp = num;
+        this.f27612qp = num;
         this.refCountDelegate = new RefCountDelegate(runnable);
     }
 }

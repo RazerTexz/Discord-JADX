@@ -1,0 +1,229 @@
+package p007b.p225i.p226a.p242c.p243a3.p244p0;
+
+import android.net.Uri;
+import androidx.annotation.IntRange;
+import androidx.annotation.Nullable;
+import java.util.Arrays;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p242c.Bundleable;
+import p007b.p225i.p226a.p242c.p259f3.Util2;
+
+/* compiled from: AdPlaybackState.java */
+/* renamed from: b.i.a.c.a3.p0.c, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class AdPlaybackState implements Bundleable {
+
+    /* renamed from: j */
+    public static final AdPlaybackState f5680j = new AdPlaybackState(null, new a[0], 0, -9223372036854775807L, 0);
+
+    /* renamed from: k */
+    public static final a f5681k;
+
+    /* renamed from: l */
+    public static final Bundleable.a<AdPlaybackState> f5682l;
+
+    /* renamed from: m */
+    @Nullable
+    public final Object f5683m = null;
+
+    /* renamed from: n */
+    public final int f5684n;
+
+    /* renamed from: o */
+    public final long f5685o;
+
+    /* renamed from: p */
+    public final long f5686p;
+
+    /* renamed from: q */
+    public final int f5687q;
+
+    /* renamed from: r */
+    public final a[] f5688r;
+
+    /* compiled from: AdPlaybackState.java */
+    /* renamed from: b.i.a.c.a3.p0.c$a */
+    public static final class a implements Bundleable {
+
+        /* renamed from: j */
+        public static final /* synthetic */ int f5689j = 0;
+
+        /* renamed from: k */
+        public final long f5690k;
+
+        /* renamed from: l */
+        public final int f5691l;
+
+        /* renamed from: m */
+        public final Uri[] f5692m;
+
+        /* renamed from: n */
+        public final int[] f5693n;
+
+        /* renamed from: o */
+        public final long[] f5694o;
+
+        /* renamed from: p */
+        public final long f5695p;
+
+        /* renamed from: q */
+        public final boolean f5696q;
+
+        public a(long j, int i, int[] iArr, Uri[] uriArr, long[] jArr, long j2, boolean z2) {
+            AnimatableValueParser.m531j(iArr.length == uriArr.length);
+            this.f5690k = j;
+            this.f5691l = i;
+            this.f5693n = iArr;
+            this.f5692m = uriArr;
+            this.f5694o = jArr;
+            this.f5695p = j2;
+            this.f5696q = z2;
+        }
+
+        /* renamed from: c */
+        public static String m2579c(int i) {
+            return Integer.toString(i, 36);
+        }
+
+        /* renamed from: a */
+        public int m2580a(@IntRange(from = -1) int i) {
+            int i2 = i + 1;
+            while (true) {
+                int[] iArr = this.f5693n;
+                if (i2 >= iArr.length || this.f5696q || iArr[i2] == 0 || iArr[i2] == 1) {
+                    break;
+                }
+                i2++;
+            }
+            return i2;
+        }
+
+        /* renamed from: b */
+        public boolean m2581b() {
+            if (this.f5691l == -1) {
+                return true;
+            }
+            for (int i = 0; i < this.f5691l; i++) {
+                int[] iArr = this.f5693n;
+                if (iArr[i] == 0 || iArr[i] == 1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public boolean equals(@Nullable Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (obj == null || a.class != obj.getClass()) {
+                return false;
+            }
+            a aVar = (a) obj;
+            return this.f5690k == aVar.f5690k && this.f5691l == aVar.f5691l && Arrays.equals(this.f5692m, aVar.f5692m) && Arrays.equals(this.f5693n, aVar.f5693n) && Arrays.equals(this.f5694o, aVar.f5694o) && this.f5695p == aVar.f5695p && this.f5696q == aVar.f5696q;
+        }
+
+        public int hashCode() {
+            int i = this.f5691l * 31;
+            long j = this.f5690k;
+            int iHashCode = (Arrays.hashCode(this.f5694o) + ((Arrays.hashCode(this.f5693n) + ((((i + ((int) (j ^ (j >>> 32)))) * 31) + Arrays.hashCode(this.f5692m)) * 31)) * 31)) * 31;
+            long j2 = this.f5695p;
+            return ((iHashCode + ((int) (j2 ^ (j2 >>> 32)))) * 31) + (this.f5696q ? 1 : 0);
+        }
+    }
+
+    static {
+        a aVar = new a(0L, -1, new int[0], new Uri[0], new long[0], 0L, false);
+        int[] iArr = aVar.f5693n;
+        int length = iArr.length;
+        int iMax = Math.max(0, length);
+        int[] iArrCopyOf = Arrays.copyOf(iArr, iMax);
+        Arrays.fill(iArrCopyOf, length, iMax, 0);
+        long[] jArr = aVar.f5694o;
+        int length2 = jArr.length;
+        int iMax2 = Math.max(0, length2);
+        long[] jArrCopyOf = Arrays.copyOf(jArr, iMax2);
+        Arrays.fill(jArrCopyOf, length2, iMax2, -9223372036854775807L);
+        f5681k = new a(aVar.f5690k, 0, iArrCopyOf, (Uri[]) Arrays.copyOf(aVar.f5692m, 0), jArrCopyOf, aVar.f5695p, aVar.f5696q);
+        f5682l = C2561b.f5679a;
+    }
+
+    public AdPlaybackState(@Nullable Object obj, a[] aVarArr, long j, long j2, int i) {
+        this.f5685o = j;
+        this.f5686p = j2;
+        this.f5684n = aVarArr.length + i;
+        this.f5688r = aVarArr;
+        this.f5687q = i;
+    }
+
+    /* renamed from: b */
+    public static String m2577b(int i) {
+        return Integer.toString(i, 36);
+    }
+
+    /* renamed from: a */
+    public a m2578a(@IntRange(from = 0) int i) {
+        int i2 = this.f5687q;
+        return i < i2 ? f5681k : this.f5688r[i - i2];
+    }
+
+    public boolean equals(@Nullable Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || AdPlaybackState.class != obj.getClass()) {
+            return false;
+        }
+        AdPlaybackState adPlaybackState = (AdPlaybackState) obj;
+        return Util2.m2993a(this.f5683m, adPlaybackState.f5683m) && this.f5684n == adPlaybackState.f5684n && this.f5685o == adPlaybackState.f5685o && this.f5686p == adPlaybackState.f5686p && this.f5687q == adPlaybackState.f5687q && Arrays.equals(this.f5688r, adPlaybackState.f5688r);
+    }
+
+    public int hashCode() {
+        int i = this.f5684n * 31;
+        Object obj = this.f5683m;
+        return ((((((((i + (obj == null ? 0 : obj.hashCode())) * 31) + ((int) this.f5685o)) * 31) + ((int) this.f5686p)) * 31) + this.f5687q) * 31) + Arrays.hashCode(this.f5688r);
+    }
+
+    public String toString() {
+        StringBuilder sbM833U = outline.m833U("AdPlaybackState(adsId=");
+        sbM833U.append(this.f5683m);
+        sbM833U.append(", adResumePositionUs=");
+        sbM833U.append(this.f5685o);
+        sbM833U.append(", adGroups=[");
+        for (int i = 0; i < this.f5688r.length; i++) {
+            sbM833U.append("adGroup(timeUs=");
+            sbM833U.append(this.f5688r[i].f5690k);
+            sbM833U.append(", ads=[");
+            for (int i2 = 0; i2 < this.f5688r[i].f5693n.length; i2++) {
+                sbM833U.append("ad(state=");
+                int i3 = this.f5688r[i].f5693n[i2];
+                if (i3 == 0) {
+                    sbM833U.append('_');
+                } else if (i3 == 1) {
+                    sbM833U.append('R');
+                } else if (i3 == 2) {
+                    sbM833U.append('S');
+                } else if (i3 == 3) {
+                    sbM833U.append('P');
+                } else if (i3 != 4) {
+                    sbM833U.append('?');
+                } else {
+                    sbM833U.append('!');
+                }
+                sbM833U.append(", durationUs=");
+                sbM833U.append(this.f5688r[i].f5694o[i2]);
+                sbM833U.append(')');
+                if (i2 < this.f5688r[i].f5693n.length - 1) {
+                    sbM833U.append(", ");
+                }
+            }
+            sbM833U.append("])");
+            if (i < this.f5688r.length - 1) {
+                sbM833U.append(", ");
+            }
+        }
+        sbM833U.append("])");
+        return sbM833U.toString();
+    }
+}

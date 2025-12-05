@@ -1,8 +1,8 @@
 package com.discord.api.friendsuggestions;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: BulkAddFriendsResponse.kt */
 /* loaded from: classes.dex */
@@ -10,11 +10,13 @@ public final /* data */ class BulkAddFriendsResponse {
     private final List<String> failedRequests;
     private final List<String> successfulRequests;
 
-    public final List<String> a() {
+    /* renamed from: a */
+    public final List<String> m7826a() {
         return this.failedRequests;
     }
 
-    public final List<String> b() {
+    /* renamed from: b */
+    public final List<String> m7827b() {
         return this.successfulRequests;
     }
 
@@ -26,7 +28,7 @@ public final /* data */ class BulkAddFriendsResponse {
             return false;
         }
         BulkAddFriendsResponse bulkAddFriendsResponse = (BulkAddFriendsResponse) other;
-        return m.areEqual(this.successfulRequests, bulkAddFriendsResponse.successfulRequests) && m.areEqual(this.failedRequests, bulkAddFriendsResponse.failedRequests);
+        return Intrinsics3.areEqual(this.successfulRequests, bulkAddFriendsResponse.successfulRequests) && Intrinsics3.areEqual(this.failedRequests, bulkAddFriendsResponse.failedRequests);
     }
 
     public int hashCode() {
@@ -37,9 +39,9 @@ public final /* data */ class BulkAddFriendsResponse {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("BulkAddFriendsResponse(successfulRequests=");
-        sbU.append(this.successfulRequests);
-        sbU.append(", failedRequests=");
-        return a.L(sbU, this.failedRequests, ")");
+        StringBuilder sbM833U = outline.m833U("BulkAddFriendsResponse(successfulRequests=");
+        sbM833U.append(this.successfulRequests);
+        sbM833U.append(", failedRequests=");
+        return outline.m824L(sbM833U, this.failedRequests, ")");
     }
 }

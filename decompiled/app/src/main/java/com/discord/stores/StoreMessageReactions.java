@@ -1,20 +1,16 @@
 package com.discord.stores;
 
-import a0.a.a.b;
 import android.content.Context;
-import b.d.b.a.a;
 import com.discord.api.message.reaction.MessageReactionEmoji;
 import com.discord.api.message.reaction.MessageReactionUpdate;
 import com.discord.models.user.CoreUser;
 import com.discord.models.user.User;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.widgets.chat.input.MentionUtilsKt;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.widgets.chat.input.MentionUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -25,7 +21,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreMessageReactions.kt */
 /* loaded from: classes2.dex */
@@ -48,7 +49,7 @@ public final class StoreMessageReactions extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Failure(long j, long j2, MessageReactionEmoji messageReactionEmoji) {
                 super(null);
-                m.checkNotNullParameter(messageReactionEmoji, "emoji");
+                Intrinsics3.checkNotNullParameter(messageReactionEmoji, "emoji");
                 this.channelId = j;
                 this.messageId = j2;
                 this.emoji = messageReactionEmoji;
@@ -85,7 +86,7 @@ public final class StoreMessageReactions extends StoreV2 {
             }
 
             public final Failure copy(long channelId, long messageId, MessageReactionEmoji emoji) {
-                m.checkNotNullParameter(emoji, "emoji");
+                Intrinsics3.checkNotNullParameter(emoji, "emoji");
                 return new Failure(channelId, messageId, emoji);
             }
 
@@ -97,7 +98,7 @@ public final class StoreMessageReactions extends StoreV2 {
                     return false;
                 }
                 Failure failure = (Failure) other;
-                return this.channelId == failure.channelId && this.messageId == failure.messageId && m.areEqual(this.emoji, failure.emoji);
+                return this.channelId == failure.channelId && this.messageId == failure.messageId && Intrinsics3.areEqual(this.emoji, failure.emoji);
             }
 
             public final long getChannelId() {
@@ -113,20 +114,20 @@ public final class StoreMessageReactions extends StoreV2 {
             }
 
             public int hashCode() {
-                int iA = (b.a(this.messageId) + (b.a(this.channelId) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.messageId) + (C0002b.m3a(this.channelId) * 31)) * 31;
                 MessageReactionEmoji messageReactionEmoji = this.emoji;
-                return iA + (messageReactionEmoji != null ? messageReactionEmoji.hashCode() : 0);
+                return iM3a + (messageReactionEmoji != null ? messageReactionEmoji.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Failure(channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", messageId=");
-                sbU.append(this.messageId);
-                sbU.append(", emoji=");
-                sbU.append(this.emoji);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Failure(channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", messageId=");
+                sbM833U.append(this.messageId);
+                sbM833U.append(", emoji=");
+                sbM833U.append(this.emoji);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -149,8 +150,8 @@ public final class StoreMessageReactions extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Users(LinkedHashMap<Long, User> linkedHashMap, long j, long j2, MessageReactionEmoji messageReactionEmoji) {
                 super(null);
-                m.checkNotNullParameter(linkedHashMap, "users");
-                m.checkNotNullParameter(messageReactionEmoji, "emoji");
+                Intrinsics3.checkNotNullParameter(linkedHashMap, "users");
+                Intrinsics3.checkNotNullParameter(messageReactionEmoji, "emoji");
                 this.users = linkedHashMap;
                 this.channelId = j;
                 this.messageId = j2;
@@ -195,8 +196,8 @@ public final class StoreMessageReactions extends StoreV2 {
             }
 
             public final Users copy(LinkedHashMap<Long, User> users, long channelId, long messageId, MessageReactionEmoji emoji) {
-                m.checkNotNullParameter(users, "users");
-                m.checkNotNullParameter(emoji, "emoji");
+                Intrinsics3.checkNotNullParameter(users, "users");
+                Intrinsics3.checkNotNullParameter(emoji, "emoji");
                 return new Users(users, channelId, messageId, emoji);
             }
 
@@ -212,7 +213,7 @@ public final class StoreMessageReactions extends StoreV2 {
                     return false;
                 }
                 Users users = (Users) other;
-                return m.areEqual(this.users, users.users) && this.channelId == users.channelId && this.messageId == users.messageId && m.areEqual(this.emoji, users.emoji);
+                return Intrinsics3.areEqual(this.users, users.users) && this.channelId == users.channelId && this.messageId == users.messageId && Intrinsics3.areEqual(this.emoji, users.emoji);
             }
 
             public final long getChannelId() {
@@ -233,22 +234,22 @@ public final class StoreMessageReactions extends StoreV2 {
 
             public int hashCode() {
                 LinkedHashMap<Long, User> linkedHashMap = this.users;
-                int iA = (b.a(this.messageId) + ((b.a(this.channelId) + ((linkedHashMap != null ? linkedHashMap.hashCode() : 0) * 31)) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.messageId) + ((C0002b.m3a(this.channelId) + ((linkedHashMap != null ? linkedHashMap.hashCode() : 0) * 31)) * 31)) * 31;
                 MessageReactionEmoji messageReactionEmoji = this.emoji;
-                return iA + (messageReactionEmoji != null ? messageReactionEmoji.hashCode() : 0);
+                return iM3a + (messageReactionEmoji != null ? messageReactionEmoji.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Users(users=");
-                sbU.append(this.users);
-                sbU.append(", channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", messageId=");
-                sbU.append(this.messageId);
-                sbU.append(", emoji=");
-                sbU.append(this.emoji);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("Users(users=");
+                sbM833U.append(this.users);
+                sbM833U.append(", channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", messageId=");
+                sbM833U.append(this.messageId);
+                sbM833U.append(", emoji=");
+                sbM833U.append(this.emoji);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -261,18 +262,18 @@ public final class StoreMessageReactions extends StoreV2 {
     }
 
     /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$deleteEmoji$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.stores.StoreMessageReactions$deleteEmoji$1 */
+    public static final class C62141 extends Lambda implements Function1<Void, Unit> {
+        public static final C62141 INSTANCE = new C62141();
 
-        public AnonymousClass1() {
+        public C62141() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -281,19 +282,19 @@ public final class StoreMessageReactions extends StoreV2 {
     }
 
     /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<List<? extends com.discord.api.user.User>, Unit> {
+    /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$1 */
+    public static final class C62151 extends Lambda implements Function1<List<? extends com.discord.api.user.User>, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ MessageReactionEmoji $emoji;
         public final /* synthetic */ long $messageId;
 
         /* compiled from: StoreMessageReactions.kt */
-        /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02731 extends o implements Function0<Unit> {
+        /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $reactionUsers;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C02731(List list) {
+            public AnonymousClass1(List list) {
                 super(0);
                 this.$reactionUsers = list;
             }
@@ -301,18 +302,18 @@ public final class StoreMessageReactions extends StoreV2 {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
+                C62151 c62151 = C62151.this;
                 StoreMessageReactions storeMessageReactions = StoreMessageReactions.this;
-                long j = anonymousClass1.$channelId;
-                long j2 = anonymousClass1.$messageId;
-                MessageReactionEmoji messageReactionEmoji = anonymousClass1.$emoji;
+                long j = c62151.$channelId;
+                long j2 = c62151.$messageId;
+                MessageReactionEmoji messageReactionEmoji = c62151.$emoji;
                 List list = this.$reactionUsers;
-                ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(list, 10));
+                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
                 Iterator it = list.iterator();
                 while (it.hasNext()) {
                     arrayList.add(new CoreUser((com.discord.api.user.User) it.next()));
@@ -322,7 +323,7 @@ public final class StoreMessageReactions extends StoreV2 {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2, MessageReactionEmoji messageReactionEmoji) {
+        public C62151(long j, long j2, MessageReactionEmoji messageReactionEmoji) {
             super(1);
             this.$channelId = j;
             this.$messageId = j2;
@@ -332,26 +333,26 @@ public final class StoreMessageReactions extends StoreV2 {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends com.discord.api.user.User> list) {
             invoke2((List<com.discord.api.user.User>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<com.discord.api.user.User> list) {
-            m.checkNotNullParameter(list, "reactionUsers");
-            StoreMessageReactions.access$getDispatcher$p(StoreMessageReactions.this).schedule(new C02731(list));
+            Intrinsics3.checkNotNullParameter(list, "reactionUsers");
+            StoreMessageReactions.access$getDispatcher$p(StoreMessageReactions.this).schedule(new AnonymousClass1(list));
         }
     }
 
     /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+    /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$2 */
+    public static final class C62162 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ MessageReactionEmoji $emoji;
         public final /* synthetic */ long $messageId;
 
         /* compiled from: StoreMessageReactions.kt */
         /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -359,18 +360,18 @@ public final class StoreMessageReactions extends StoreV2 {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 invoke2();
-                return Unit.a;
+                return Unit.f27425a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
-                StoreMessageReactions.access$handleLoadReactionUsersFailure(StoreMessageReactions.this, anonymousClass2.$channelId, anonymousClass2.$messageId, anonymousClass2.$emoji);
+                C62162 c62162 = C62162.this;
+                StoreMessageReactions.access$handleLoadReactionUsersFailure(StoreMessageReactions.this, c62162.$channelId, c62162.$messageId, c62162.$emoji);
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(long j, long j2, MessageReactionEmoji messageReactionEmoji) {
+        public C62162(long j, long j2, MessageReactionEmoji messageReactionEmoji) {
             super(1);
             this.$channelId = j;
             this.$messageId = j2;
@@ -380,25 +381,25 @@ public final class StoreMessageReactions extends StoreV2 {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             StoreMessageReactions.access$getDispatcher$p(StoreMessageReactions.this).schedule(new AnonymousClass1());
         }
     }
 
     /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$forceRetryFetchReactions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreMessageReactions$forceRetryFetchReactions$1 */
+    public static final class C62171 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ MessageReactionEmoji $emoji;
         public final /* synthetic */ long $messageId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, MessageReactionEmoji messageReactionEmoji, long j2) {
+        public C62171(long j, MessageReactionEmoji messageReactionEmoji, long j2) {
             super(0);
             this.$messageId = j;
             this.$emoji = messageReactionEmoji;
@@ -408,7 +409,7 @@ public final class StoreMessageReactions extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -422,14 +423,14 @@ public final class StoreMessageReactions extends StoreV2 {
     }
 
     /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$observeMessageReactions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreMessageReactions$observeMessageReactions$1 */
+    public static final class C62181 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ MessageReactionEmoji $emoji;
         public final /* synthetic */ long $messageId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2, MessageReactionEmoji messageReactionEmoji) {
+        public C62181(long j, long j2, MessageReactionEmoji messageReactionEmoji) {
             super(0);
             this.$channelId = j;
             this.$messageId = j2;
@@ -439,7 +440,7 @@ public final class StoreMessageReactions extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -449,13 +450,13 @@ public final class StoreMessageReactions extends StoreV2 {
     }
 
     /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$observeMessageReactions$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function0<EmojiResults> {
+    /* renamed from: com.discord.stores.StoreMessageReactions$observeMessageReactions$2 */
+    public static final class C62192 extends Lambda implements Function0<EmojiResults> {
         public final /* synthetic */ MessageReactionEmoji $emoji;
         public final /* synthetic */ long $messageId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(long j, MessageReactionEmoji messageReactionEmoji) {
+        public C62192(long j, MessageReactionEmoji messageReactionEmoji) {
             super(0);
             this.$messageId = j;
             this.$emoji = messageReactionEmoji;
@@ -471,12 +472,12 @@ public final class StoreMessageReactions extends StoreV2 {
         public final EmojiResults invoke() {
             EmojiResults emojiResults;
             Map map = (Map) StoreMessageReactions.access$getReactionsSnapshot$p(StoreMessageReactions.this).get(Long.valueOf(this.$messageId));
-            return (map == null || (emojiResults = (EmojiResults) map.get(this.$emoji.c())) == null) ? EmojiResults.Loading.INSTANCE : emojiResults;
+            return (map == null || (emojiResults = (EmojiResults) map.get(this.$emoji.m8116c())) == null) ? EmojiResults.Loading.INSTANCE : emojiResults;
         }
     }
 
     public /* synthetic */ StoreMessageReactions(Dispatcher dispatcher, StoreUser storeUser, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, storeUser, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(dispatcher, storeUser, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ void access$fetchReactions(StoreMessageReactions storeMessageReactions, long j, long j2, MessageReactionEmoji messageReactionEmoji) {
@@ -507,7 +508,7 @@ public final class StoreMessageReactions extends StoreV2 {
         storeMessageReactions.reactionsSnapshot = map;
     }
 
-    @StoreThread
+    @Store3
     private final EmojiResults ensureReactionResults(long messageId, String emoji) {
         Map<String, EmojiResults> map = this.reactions.get(Long.valueOf(messageId));
         if (map == null) {
@@ -522,62 +523,62 @@ public final class StoreMessageReactions extends StoreV2 {
         return emojiResults;
     }
 
-    @StoreThread
+    @Store3
     private final void fetchReactions(long channelId, long messageId, MessageReactionEmoji emoji) {
-        if ((ensureReactionResults(messageId, emoji.c()) instanceof EmojiResults.Users) && (!((EmojiResults.Users) r0).getUsers().isEmpty())) {
+        if ((ensureReactionResults(messageId, emoji.m8116c()) instanceof EmojiResults.Users) && (!((EmojiResults.Users) r0).getUsers().isEmpty())) {
             return;
         }
         String reactionEmojiRequestParam = getReactionEmojiRequestParam(emoji);
         Map<String, EmojiResults> map = this.reactions.get(Long.valueOf(messageId));
         if (map != null) {
-            map.put(emoji.c(), EmojiResults.Loading.INSTANCE);
+            map.put(emoji.m8116c(), EmojiResults.Loading.INSTANCE);
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getReactionUsers(channelId, messageId, reactionEmojiRequestParam, 100), false, 1, null), StoreMessageReactions.class, (Context) null, (Function1) null, new AnonymousClass2(channelId, messageId, emoji), (Function0) null, (Function0) null, new AnonymousClass1(channelId, messageId, emoji), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getReactionUsers(channelId, messageId, reactionEmojiRequestParam, 100), false, 1, null), StoreMessageReactions.class, (Context) null, (Function1) null, new C62162(channelId, messageId, emoji), (Function0) null, (Function0) null, new C62151(channelId, messageId, emoji), 54, (Object) null);
     }
 
     private final String getReactionEmojiRequestParam(MessageReactionEmoji emoji) {
-        if (!emoji.e()) {
+        if (!emoji.m8118e()) {
             String name = emoji.getName();
             return name != null ? name : "";
         }
-        return emoji.getName() + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + emoji.getId();
+        return emoji.getName() + MentionUtils.EMOJIS_AND_STICKERS_CHAR + emoji.getId();
     }
 
-    @StoreThread
+    @Store3
     private final void handleLoadReactionUsersFailure(long channelId, long messageId, MessageReactionEmoji emoji) {
-        ensureReactionResults(messageId, emoji.c());
+        ensureReactionResults(messageId, emoji.m8116c());
         Map<String, EmojiResults> map = this.reactions.get(Long.valueOf(messageId));
         if (map != null) {
-            map.put(emoji.c(), new EmojiResults.Failure(channelId, messageId, emoji));
+            map.put(emoji.m8116c(), new EmojiResults.Failure(channelId, messageId, emoji));
         }
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     private final void handleReactionUsers(long channelId, long messageId, MessageReactionEmoji emoji, List<? extends User> reactionUsers) {
-        ensureReactionResults(messageId, emoji.c());
+        ensureReactionResults(messageId, emoji.m8116c());
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Object obj : reactionUsers) {
             linkedHashMap.put(Long.valueOf(((User) obj).getId()), obj);
         }
         Map<String, EmojiResults> map = this.reactions.get(Long.valueOf(messageId));
         if (map != null) {
-            map.put(emoji.c(), new EmojiResults.Users(linkedHashMap, channelId, messageId, emoji));
+            map.put(emoji.m8116c(), new EmojiResults.Users(linkedHashMap, channelId, messageId, emoji));
         }
         markChanged();
     }
 
     public final void deleteEmoji(long channelId, long messageId, MessageReactionEmoji emoji, long userId) {
-        m.checkNotNullParameter(emoji, "emoji");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().removeReaction(channelId, messageId, getReactionEmojiRequestParam(emoji), userId), false, 1, null), StoreMessageReactions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass1.INSTANCE, 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(emoji, "emoji");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().removeReaction(channelId, messageId, getReactionEmojiRequestParam(emoji), userId), false, 1, null), StoreMessageReactions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C62141.INSTANCE, 62, (Object) null);
     }
 
     public final void forceRetryFetchReactions(long channelId, long messageId, MessageReactionEmoji emoji) {
-        m.checkNotNullParameter(emoji, "emoji");
-        this.dispatcher.schedule(new AnonymousClass1(messageId, emoji, channelId));
+        Intrinsics3.checkNotNullParameter(emoji, "emoji");
+        this.dispatcher.schedule(new C62171(messageId, emoji, channelId));
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen() {
         if (!this.reactions.isEmpty()) {
             this.reactions.clear();
@@ -585,12 +586,12 @@ public final class StoreMessageReactions extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleReactionAdd(MessageReactionUpdate update) {
-        m.checkNotNullParameter(update, "update");
+        Intrinsics3.checkNotNullParameter(update, "update");
         User user = this.userStore.getUsersInternal$app_productionGoogleRelease().get(Long.valueOf(update.getUserId()));
         if (user != null) {
-            EmojiResults emojiResultsEnsureReactionResults = ensureReactionResults(update.getMessageId(), update.getEmoji().c());
+            EmojiResults emojiResultsEnsureReactionResults = ensureReactionResults(update.getMessageId(), update.getEmoji().m8116c());
             if (!(emojiResultsEnsureReactionResults instanceof EmojiResults.Users)) {
                 emojiResultsEnsureReactionResults = null;
             }
@@ -602,10 +603,10 @@ public final class StoreMessageReactions extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleReactionRemove(MessageReactionUpdate update) {
-        m.checkNotNullParameter(update, "update");
-        EmojiResults emojiResultsEnsureReactionResults = ensureReactionResults(update.getMessageId(), update.getEmoji().c());
+        Intrinsics3.checkNotNullParameter(update, "update");
+        EmojiResults emojiResultsEnsureReactionResults = ensureReactionResults(update.getMessageId(), update.getEmoji().m8116c());
         if (!(emojiResultsEnsureReactionResults instanceof EmojiResults.Users)) {
             emojiResultsEnsureReactionResults = null;
         }
@@ -616,36 +617,36 @@ public final class StoreMessageReactions extends StoreV2 {
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleReactionRemoveAll(MessageReactionUpdate update) {
-        m.checkNotNullParameter(update, "update");
+        Intrinsics3.checkNotNullParameter(update, "update");
         this.reactions.remove(Long.valueOf(update.getMessageId()));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleReactionRemoveEmoji(MessageReactionUpdate update) {
-        m.checkNotNullParameter(update, "update");
+        Intrinsics3.checkNotNullParameter(update, "update");
         long messageId = update.getMessageId();
-        String strC = update.getEmoji().c();
-        ensureReactionResults(messageId, strC);
+        String strM8116c = update.getEmoji().m8116c();
+        ensureReactionResults(messageId, strM8116c);
         Map<String, EmojiResults> map = this.reactions.get(Long.valueOf(messageId));
         if (map != null) {
-            map.remove(strC);
+            map.remove(strM8116c);
         }
         markChanged();
     }
 
     public final Observable<EmojiResults> observeMessageReactions(long channelId, long messageId, MessageReactionEmoji emoji) {
-        m.checkNotNullParameter(emoji, "emoji");
-        this.dispatcher.schedule(new AnonymousClass1(channelId, messageId, emoji));
-        Observable<EmojiResults> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass2(messageId, emoji), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
-        return observableR;
+        Intrinsics3.checkNotNullParameter(emoji, "emoji");
+        this.dispatcher.schedule(new C62181(channelId, messageId, emoji));
+        Observable<EmojiResults> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C62192(messageId, emoji), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         super.snapshotData();
         HashMap map = new HashMap(this.reactions);
@@ -666,9 +667,9 @@ public final class StoreMessageReactions extends StoreV2 {
     }
 
     public StoreMessageReactions(Dispatcher dispatcher, StoreUser storeUser, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(storeUser, "userStore");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(storeUser, "userStore");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.userStore = storeUser;
         this.observationDeck = observationDeck;

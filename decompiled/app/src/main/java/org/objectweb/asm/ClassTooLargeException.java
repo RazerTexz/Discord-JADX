@@ -1,25 +1,20 @@
 package org.objectweb.asm;
 
-/* JADX WARN: Classes with same name are omitted:
+import p007b.p100d.p104b.p105a.outline;
+
+/* JADX WARN: Classes with same name are omitted, all sources:
   classes3.dex
+  discord-126021.apk:org/objectweb/asm/ClassTooLargeException.SCL.lombok
  */
-/* loaded from: discord-126021.apk:org/objectweb/asm/ClassTooLargeException.SCL.lombok */
+/* loaded from: classes3.dex */
 public final class ClassTooLargeException extends IndexOutOfBoundsException {
     private static final long serialVersionUID = 160715609518896765L;
     private final String className;
     private final int constantPoolCount;
 
-    public ClassTooLargeException(String className, int constantPoolCount) {
-        super("Class too large: " + className);
-        this.className = className;
-        this.constantPoolCount = constantPoolCount;
-    }
-
-    public String getClassName() {
-        return this.className;
-    }
-
-    public int getConstantPoolCount() {
-        return this.constantPoolCount;
+    public ClassTooLargeException(String str, int i) {
+        super(outline.m883w("Class too large: ", str));
+        this.className = str;
+        this.constantPoolCount = i;
     }
 }

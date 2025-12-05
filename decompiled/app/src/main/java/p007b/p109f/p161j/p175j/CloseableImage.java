@@ -1,0 +1,71 @@
+package p007b.p109f.p161j.p175j;
+
+import com.facebook.imagepipeline.image.ImageInfo;
+import java.io.Closeable;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import p007b.p109f.p115d.p120e.FLog;
+
+/* compiled from: CloseableImage.java */
+/* renamed from: b.f.j.j.c, reason: use source file name */
+/* loaded from: classes.dex */
+public abstract class CloseableImage implements Closeable, ImageInfo {
+
+    /* renamed from: j */
+    public static final Set<String> f3884j = new HashSet(Arrays.asList("encoded_size", "encoded_width", "encoded_height", "uri_source", "image_format", "bitmap_config", "is_rounded"));
+
+    /* renamed from: k */
+    public Map<String, Object> f3885k = new HashMap();
+
+    @Override // p007b.p109f.p161j.p175j.HasImageMetadata
+    /* renamed from: a */
+    public Map<String, Object> mo1333a() {
+        return this.f3885k;
+    }
+
+    /* renamed from: b */
+    public QualityInfo mo1334b() {
+        return ImmutableQualityInfo.f3908a;
+    }
+
+    /* renamed from: c */
+    public abstract int mo1330c();
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public abstract void close();
+
+    /* renamed from: d */
+    public boolean mo1331d() {
+        return false;
+    }
+
+    /* renamed from: e */
+    public void m1335e(Map<String, Object> map) {
+        if (map == null) {
+            return;
+        }
+        for (String str : f3884j) {
+            Object obj = map.get(str);
+            if (obj != null) {
+                this.f3885k.put(str, obj);
+            }
+        }
+    }
+
+    public void finalize() throws Throwable {
+        if (isClosed()) {
+            return;
+        }
+        FLog.m987o("CloseableImage", "finalize: %s %x still open.", getClass().getSimpleName(), Integer.valueOf(System.identityHashCode(this)));
+        try {
+            close();
+        } finally {
+            super.finalize();
+        }
+    }
+
+    public abstract boolean isClosed();
+}

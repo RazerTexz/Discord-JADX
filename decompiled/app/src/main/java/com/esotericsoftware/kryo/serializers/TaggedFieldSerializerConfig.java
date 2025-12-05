@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.a;
+import p007b.p106e.p107a.Log;
 
 /* loaded from: classes.dex */
 public class TaggedFieldSerializerConfig extends FieldSerializerConfig {
@@ -26,12 +26,12 @@ public class TaggedFieldSerializerConfig extends FieldSerializerConfig {
 
     public void setSkipUnknownTags(boolean z2) {
         this.skipUnknownTags = z2;
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializerConfig
     /* renamed from: clone */
-    public /* bridge */ /* synthetic */ Object mo77clone() throws CloneNotSupportedException {
+    public /* bridge */ /* synthetic */ Object mo11454clone() throws CloneNotSupportedException {
         return clone();
     }
 

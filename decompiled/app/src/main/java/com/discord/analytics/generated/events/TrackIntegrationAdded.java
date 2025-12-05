@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackIntegrationAdded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackIntegrationAdded implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackIntegrationAdded implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long id = null;
     private final Long guildId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackIntegrationAdded implements AnalyticsSchema, 
             return false;
         }
         TrackIntegrationAdded trackIntegrationAdded = (TrackIntegrationAdded) other;
-        return m.areEqual(this.id, trackIntegrationAdded.id) && m.areEqual(this.guildId, trackIntegrationAdded.guildId) && m.areEqual(this.applicationId, trackIntegrationAdded.applicationId) && m.areEqual(this.scopes, trackIntegrationAdded.scopes);
+        return Intrinsics3.areEqual(this.id, trackIntegrationAdded.id) && Intrinsics3.areEqual(this.guildId, trackIntegrationAdded.guildId) && Intrinsics3.areEqual(this.applicationId, trackIntegrationAdded.applicationId) && Intrinsics3.areEqual(this.scopes, trackIntegrationAdded.scopes);
     }
 
     public int hashCode() {
@@ -47,13 +47,13 @@ public final /* data */ class TrackIntegrationAdded implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackIntegrationAdded(id=");
-        sbU.append(this.id);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", scopes=");
-        return a.L(sbU, this.scopes, ")");
+        StringBuilder sbM833U = outline.m833U("TrackIntegrationAdded(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", scopes=");
+        return outline.m824L(sbM833U, this.scopes, ")");
     }
 }

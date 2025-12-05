@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackCreateEmoji.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCreateEmoji implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackCreateEmoji implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Boolean animated = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackCreateEmoji implements AnalyticsSchema, Track
             return false;
         }
         TrackCreateEmoji trackCreateEmoji = (TrackCreateEmoji) other;
-        return m.areEqual(this.guildId, trackCreateEmoji.guildId) && m.areEqual(this.animated, trackCreateEmoji.animated);
+        return Intrinsics3.areEqual(this.guildId, trackCreateEmoji.guildId) && Intrinsics3.areEqual(this.animated, trackCreateEmoji.animated);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackCreateEmoji implements AnalyticsSchema, Track
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackCreateEmoji(guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", animated=");
-        return a.D(sbU, this.animated, ")");
+        StringBuilder sbM833U = outline.m833U("TrackCreateEmoji(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", animated=");
+        return outline.m816D(sbM833U, this.animated, ")");
     }
 }

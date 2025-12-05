@@ -6,10 +6,10 @@ import com.discord.panels.OverlappingPanelsLayout;
 import com.discord.stores.StoreChannelsSelected;
 import com.discord.stores.StoreGuildSelected;
 import com.discord.stores.StoreStream;
-import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.functions.Func2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
+import p658rx.functions.Func2;
 
 /* compiled from: LeftPanelManager.kt */
 /* loaded from: classes2.dex */
@@ -18,11 +18,11 @@ public final class LeftPanelManager {
     private final StoreGuildSelected storeGuildSelected;
 
     /* compiled from: LeftPanelManager.kt */
-    /* renamed from: com.discord.widgets.home.LeftPanelManager$observeLockState$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2, R> implements Func2<StoreChannelsSelected.ResolvedSelectedChannel, Long, OverlappingPanelsLayout.LockState> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.home.LeftPanelManager$observeLockState$1 */
+    public static final class C89381<T1, T2, R> implements Func2<StoreChannelsSelected.ResolvedSelectedChannel, Long, OverlappingPanelsLayout.LockState> {
+        public static final C89381 INSTANCE = new C89381();
 
-        @Override // rx.functions.Func2
+        @Override // p658rx.functions.Func2
         public /* bridge */ /* synthetic */ OverlappingPanelsLayout.LockState call(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel, Long l) {
             return call2(resolvedSelectedChannel, l);
         }
@@ -41,7 +41,7 @@ public final class LeftPanelManager {
             if (!(resolvedSelectedChannel instanceof StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft)) {
                 if (resolvedSelectedChannel instanceof StoreChannelsSelected.ResolvedSelectedChannel.Channel) {
                     StoreChannelsSelected.ResolvedSelectedChannel.Channel channel = (StoreChannelsSelected.ResolvedSelectedChannel.Channel) resolvedSelectedChannel;
-                    if (channel.getPeekParent() != null || ChannelUtils.J(channel.getChannel())) {
+                    if (channel.getPeekParent() != null || ChannelUtils.m7675J(channel.getChannel())) {
                         z2 = true;
                     }
                 }
@@ -55,16 +55,16 @@ public final class LeftPanelManager {
     }
 
     public LeftPanelManager(StoreChannelsSelected storeChannelsSelected, StoreGuildSelected storeGuildSelected) {
-        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        m.checkNotNullParameter(storeGuildSelected, "storeGuildSelected");
+        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        Intrinsics3.checkNotNullParameter(storeGuildSelected, "storeGuildSelected");
         this.storeChannelsSelected = storeChannelsSelected;
         this.storeGuildSelected = storeGuildSelected;
     }
 
     public final Observable<OverlappingPanelsLayout.LockState> observeLockState() {
-        Observable<OverlappingPanelsLayout.LockState> observableR = Observable.j(this.storeChannelsSelected.observeResolvedSelectedChannel(), this.storeGuildSelected.observeSelectedGuildId(), AnonymousClass1.INSTANCE).r();
-        m.checkNotNullExpressionValue(observableR, "Observable.combineLatest… }.distinctUntilChanged()");
-        return observableR;
+        Observable<OverlappingPanelsLayout.LockState> observableM11112r = Observable.m11076j(this.storeChannelsSelected.observeResolvedSelectedChannel(), this.storeGuildSelected.observeSelectedGuildId(), C89381.INSTANCE).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "Observable.combineLatest… }.distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public /* synthetic */ LeftPanelManager(StoreChannelsSelected storeChannelsSelected, StoreGuildSelected storeGuildSelected, int i, DefaultConstructorMarker defaultConstructorMarker) {

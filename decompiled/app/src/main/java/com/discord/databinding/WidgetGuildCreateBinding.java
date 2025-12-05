@@ -4,46 +4,51 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.r0;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.LoadingButton;
 import com.discord.views.ScreenTitleView;
 import com.google.android.material.textfield.TextInputLayout;
+import p007b.p008a.p025i.LayoutIconUploaderBinding;
 
 /* loaded from: classes.dex */
 public final class WidgetGuildCreateBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final CoordinatorLayout a;
+    public final CoordinatorLayout f16768a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final LoadingButton f2412b;
+    public final LoadingButton f16769b;
 
+    /* renamed from: c */
     @NonNull
-    public final LinkifiedTextView c;
+    public final LinkifiedTextView f16770c;
 
+    /* renamed from: d */
     @NonNull
-    public final r0 d;
+    public final LayoutIconUploaderBinding f16771d;
 
+    /* renamed from: e */
     @NonNull
-    public final TextInputLayout e;
+    public final TextInputLayout f16772e;
 
+    /* renamed from: f */
     @NonNull
-    public final ScreenTitleView f;
+    public final ScreenTitleView f16773f;
 
-    public WidgetGuildCreateBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LoadingButton loadingButton, @NonNull LinkifiedTextView linkifiedTextView, @NonNull r0 r0Var, @NonNull TextInputLayout textInputLayout, @NonNull ScreenTitleView screenTitleView) {
-        this.a = coordinatorLayout;
-        this.f2412b = loadingButton;
-        this.c = linkifiedTextView;
-        this.d = r0Var;
-        this.e = textInputLayout;
-        this.f = screenTitleView;
+    public WidgetGuildCreateBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LoadingButton loadingButton, @NonNull LinkifiedTextView linkifiedTextView, @NonNull LayoutIconUploaderBinding layoutIconUploaderBinding, @NonNull TextInputLayout textInputLayout, @NonNull ScreenTitleView screenTitleView) {
+        this.f16768a = coordinatorLayout;
+        this.f16769b = loadingButton;
+        this.f16770c = linkifiedTextView;
+        this.f16771d = layoutIconUploaderBinding;
+        this.f16772e = textInputLayout;
+        this.f16773f = screenTitleView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f16768a;
     }
 }

@@ -1,9 +1,9 @@
 package com.discord.widgets.chat.list.entries;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.api.sticker.Sticker;
-import d0.z.d.m;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: StickerGreetCompactEntry.kt */
 /* loaded from: classes2.dex */
@@ -16,8 +16,8 @@ public final /* data */ class StickerGreetCompactEntry extends ChatListEntry {
     private final int type;
 
     public StickerGreetCompactEntry(Sticker sticker, long j, String str, int i) {
-        m.checkNotNullParameter(sticker, "sticker");
-        m.checkNotNullParameter(str, "channelName");
+        Intrinsics3.checkNotNullParameter(sticker, "sticker");
+        Intrinsics3.checkNotNullParameter(str, "channelName");
         this.sticker = sticker;
         this.channelId = j;
         this.channelName = str;
@@ -65,8 +65,8 @@ public final /* data */ class StickerGreetCompactEntry extends ChatListEntry {
     }
 
     public final StickerGreetCompactEntry copy(Sticker sticker, long channelId, String channelName, int channelType) {
-        m.checkNotNullParameter(sticker, "sticker");
-        m.checkNotNullParameter(channelName, "channelName");
+        Intrinsics3.checkNotNullParameter(sticker, "sticker");
+        Intrinsics3.checkNotNullParameter(channelName, "channelName");
         return new StickerGreetCompactEntry(sticker, channelId, channelName, channelType);
     }
 
@@ -78,7 +78,7 @@ public final /* data */ class StickerGreetCompactEntry extends ChatListEntry {
             return false;
         }
         StickerGreetCompactEntry stickerGreetCompactEntry = (StickerGreetCompactEntry) other;
-        return m.areEqual(this.sticker, stickerGreetCompactEntry.sticker) && this.channelId == stickerGreetCompactEntry.channelId && m.areEqual(this.channelName, stickerGreetCompactEntry.channelName) && this.channelType == stickerGreetCompactEntry.channelType;
+        return Intrinsics3.areEqual(this.sticker, stickerGreetCompactEntry.sticker) && this.channelId == stickerGreetCompactEntry.channelId && Intrinsics3.areEqual(this.channelName, stickerGreetCompactEntry.channelName) && this.channelType == stickerGreetCompactEntry.channelType;
     }
 
     public final long getChannelId() {
@@ -109,19 +109,19 @@ public final /* data */ class StickerGreetCompactEntry extends ChatListEntry {
 
     public int hashCode() {
         Sticker sticker = this.sticker;
-        int iA = (b.a(this.channelId) + ((sticker != null ? sticker.hashCode() : 0) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.channelId) + ((sticker != null ? sticker.hashCode() : 0) * 31)) * 31;
         String str = this.channelName;
-        return ((iA + (str != null ? str.hashCode() : 0)) * 31) + this.channelType;
+        return ((iM3a + (str != null ? str.hashCode() : 0)) * 31) + this.channelType;
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("StickerGreetCompactEntry(sticker=");
-        sbU.append(this.sticker);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", channelName=");
-        sbU.append(this.channelName);
-        sbU.append(", channelType=");
-        return a.B(sbU, this.channelType, ")");
+        StringBuilder sbM833U = outline.m833U("StickerGreetCompactEntry(sticker=");
+        sbM833U.append(this.sticker);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", channelName=");
+        sbM833U.append(this.channelName);
+        sbM833U.append(", channelType=");
+        return outline.m814B(sbM833U, this.channelType, ")");
     }
 }

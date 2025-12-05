@@ -12,7 +12,7 @@ public final class PeerConnectionDependencies {
         private PeerConnection.Observer observer;
         private SSLCertificateVerifier sslCertificateVerifier;
 
-        public /* synthetic */ Builder(PeerConnection.Observer observer, AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ Builder(PeerConnection.Observer observer, C129771 c129771) {
             this(observer);
         }
 
@@ -30,7 +30,7 @@ public final class PeerConnectionDependencies {
         }
     }
 
-    public /* synthetic */ PeerConnectionDependencies(PeerConnection.Observer observer, SSLCertificateVerifier sSLCertificateVerifier, AnonymousClass1 anonymousClass1) {
+    public /* synthetic */ PeerConnectionDependencies(PeerConnection.Observer observer, SSLCertificateVerifier sSLCertificateVerifier, C129771 c129771) {
         this(observer, sSLCertificateVerifier);
     }
 

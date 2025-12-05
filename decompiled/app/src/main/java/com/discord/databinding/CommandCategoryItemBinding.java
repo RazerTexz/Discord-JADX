@@ -4,31 +4,33 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.n;
 import com.facebook.drawee.view.SimpleDraweeView;
+import p007b.p008a.p025i.ExpressionPickerCategorySelectionOverlineViewBinding;
 
 /* loaded from: classes.dex */
 public final class CommandCategoryItemBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final FrameLayout a;
+    public final FrameLayout f15018a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final SimpleDraweeView f2090b;
+    public final SimpleDraweeView f15019b;
 
+    /* renamed from: c */
     @NonNull
-    public final n c;
+    public final ExpressionPickerCategorySelectionOverlineViewBinding f15020c;
 
-    public CommandCategoryItemBinding(@NonNull FrameLayout frameLayout, @NonNull SimpleDraweeView simpleDraweeView, @NonNull n nVar) {
-        this.a = frameLayout;
-        this.f2090b = simpleDraweeView;
-        this.c = nVar;
+    public CommandCategoryItemBinding(@NonNull FrameLayout frameLayout, @NonNull SimpleDraweeView simpleDraweeView, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding) {
+        this.f15018a = frameLayout;
+        this.f15019b = simpleDraweeView;
+        this.f15020c = expressionPickerCategorySelectionOverlineViewBinding;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f15018a;
     }
 }

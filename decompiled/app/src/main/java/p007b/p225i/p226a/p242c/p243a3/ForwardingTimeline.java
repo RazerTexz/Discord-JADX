@@ -1,0 +1,64 @@
+package p007b.p225i.p226a.p242c.p243a3;
+
+import p007b.p225i.p226a.p242c.Timeline;
+
+/* compiled from: ForwardingTimeline.java */
+/* renamed from: b.i.a.c.a3.r, reason: use source file name */
+/* loaded from: classes3.dex */
+public abstract class ForwardingTimeline extends Timeline {
+
+    /* renamed from: k */
+    public final Timeline f5697k;
+
+    public ForwardingTimeline(Timeline timeline) {
+        this.f5697k = timeline;
+    }
+
+    @Override // p007b.p225i.p226a.p242c.Timeline
+    /* renamed from: a */
+    public int mo2582a(boolean z2) {
+        return this.f5697k.mo2582a(z2);
+    }
+
+    @Override // p007b.p225i.p226a.p242c.Timeline
+    /* renamed from: b */
+    public int mo2554b(Object obj) {
+        return this.f5697k.mo2554b(obj);
+    }
+
+    @Override // p007b.p225i.p226a.p242c.Timeline
+    /* renamed from: c */
+    public int mo2583c(boolean z2) {
+        return this.f5697k.mo2583c(z2);
+    }
+
+    @Override // p007b.p225i.p226a.p242c.Timeline
+    /* renamed from: e */
+    public int mo2584e(int i, int i2, boolean z2) {
+        return this.f5697k.mo2584e(i, i2, z2);
+    }
+
+    @Override // p007b.p225i.p226a.p242c.Timeline
+    /* renamed from: i */
+    public int mo2555i() {
+        return this.f5697k.mo2555i();
+    }
+
+    @Override // p007b.p225i.p226a.p242c.Timeline
+    /* renamed from: l */
+    public int mo2585l(int i, int i2, boolean z2) {
+        return this.f5697k.mo2585l(i, i2, z2);
+    }
+
+    @Override // p007b.p225i.p226a.p242c.Timeline
+    /* renamed from: m */
+    public Object mo2556m(int i) {
+        return this.f5697k.mo2556m(i);
+    }
+
+    @Override // p007b.p225i.p226a.p242c.Timeline
+    /* renamed from: p */
+    public int mo2557p() {
+        return this.f5697k.mo2557p();
+    }
+}

@@ -1,9 +1,9 @@
 package com.discord.api.message.call;
 
-import b.d.b.a.a;
 import com.discord.api.utcdatetime.UtcDateTime;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: MessageCall.kt */
 /* loaded from: classes.dex */
@@ -16,7 +16,8 @@ public final /* data */ class MessageCall {
         return this.endedTimestamp;
     }
 
-    public final List<Long> b() {
+    /* renamed from: b */
+    public final List<Long> m8075b() {
         return this.participants;
     }
 
@@ -28,7 +29,7 @@ public final /* data */ class MessageCall {
             return false;
         }
         MessageCall messageCall = (MessageCall) other;
-        return m.areEqual(this.participants, messageCall.participants) && m.areEqual(this.endedTimestamp, messageCall.endedTimestamp);
+        return Intrinsics3.areEqual(this.participants, messageCall.participants) && Intrinsics3.areEqual(this.endedTimestamp, messageCall.endedTimestamp);
     }
 
     public int hashCode() {
@@ -39,11 +40,11 @@ public final /* data */ class MessageCall {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("MessageCall(participants=");
-        sbU.append(this.participants);
-        sbU.append(", endedTimestamp=");
-        sbU.append(this.endedTimestamp);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("MessageCall(participants=");
+        sbM833U.append(this.participants);
+        sbM833U.append(", endedTimestamp=");
+        sbM833U.append(this.endedTimestamp);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

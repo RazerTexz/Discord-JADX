@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackAfCard;
-import com.discord.analytics.generated.traits.TrackAfCardReceiver;
+import com.discord.analytics.generated.traits.TrackAfCard2;
 import com.discord.analytics.generated.traits.TrackAfGame;
-import com.discord.analytics.generated.traits.TrackAfGameReceiver;
+import com.discord.analytics.generated.traits.TrackAfGame2;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGameOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGameOpened implements AnalyticsSchema, TrackBaseReceiver, TrackAfCardReceiver, TrackAfGameReceiver {
+public final /* data */ class TrackGameOpened implements AnalyticsSchema, TrackBase2, TrackAfCard2, TrackAfGame2 {
     private TrackAfCard trackAfCard;
     private TrackAfGame trackAfGame;
     private TrackBase trackBase;
@@ -39,7 +39,7 @@ public final /* data */ class TrackGameOpened implements AnalyticsSchema, TrackB
             return false;
         }
         TrackGameOpened trackGameOpened = (TrackGameOpened) other;
-        return m.areEqual(this.type, trackGameOpened.type) && m.areEqual(this.source, trackGameOpened.source) && m.areEqual(this.applicationId, trackGameOpened.applicationId) && m.areEqual(this.partyId, trackGameOpened.partyId) && m.areEqual(this.otherUserId, trackGameOpened.otherUserId) && m.areEqual(this.messageId, trackGameOpened.messageId) && m.areEqual(this.numLauncherApplications, trackGameOpened.numLauncherApplications);
+        return Intrinsics3.areEqual(this.type, trackGameOpened.type) && Intrinsics3.areEqual(this.source, trackGameOpened.source) && Intrinsics3.areEqual(this.applicationId, trackGameOpened.applicationId) && Intrinsics3.areEqual(this.partyId, trackGameOpened.partyId) && Intrinsics3.areEqual(this.otherUserId, trackGameOpened.otherUserId) && Intrinsics3.areEqual(this.messageId, trackGameOpened.messageId) && Intrinsics3.areEqual(this.numLauncherApplications, trackGameOpened.numLauncherApplications);
     }
 
     public int hashCode() {
@@ -60,19 +60,19 @@ public final /* data */ class TrackGameOpened implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGameOpened(type=");
-        sbU.append(this.type);
-        sbU.append(", source=");
-        sbU.append(this.source);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", partyId=");
-        sbU.append(this.partyId);
-        sbU.append(", otherUserId=");
-        sbU.append(this.otherUserId);
-        sbU.append(", messageId=");
-        sbU.append(this.messageId);
-        sbU.append(", numLauncherApplications=");
-        return a.G(sbU, this.numLauncherApplications, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGameOpened(type=");
+        sbM833U.append(this.type);
+        sbM833U.append(", source=");
+        sbM833U.append(this.source);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", partyId=");
+        sbM833U.append(this.partyId);
+        sbM833U.append(", otherUserId=");
+        sbM833U.append(this.otherUserId);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", numLauncherApplications=");
+        return outline.m819G(sbM833U, this.numLauncherApplications, ")");
     }
 }

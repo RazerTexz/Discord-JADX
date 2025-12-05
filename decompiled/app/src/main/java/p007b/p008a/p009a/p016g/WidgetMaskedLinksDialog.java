@@ -1,0 +1,197 @@
+package p007b.p008a.p009a.p016g;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.fragment.app.Fragment;
+import com.discord.C5419R;
+import com.discord.app.AppDialog;
+import com.discord.stores.StoreNotices;
+import com.discord.stores.StoreStream;
+import com.discord.utilities.string.StringUtils2;
+import com.discord.utilities.uri.UriHandler;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.google.android.material.button.MaterialButton;
+import java.util.Objects;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.reflect.KProperty;
+import p007b.p008a.p025i.WidgetMaskedLinksDialogBinding;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: WidgetMaskedLinksDialog.kt */
+/* renamed from: b.a.a.g.a, reason: use source file name */
+/* loaded from: classes.dex */
+public final class WidgetMaskedLinksDialog extends AppDialog {
+
+    /* renamed from: j */
+    public static final /* synthetic */ KProperty[] f368j = {outline.m846d0(WidgetMaskedLinksDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMaskedLinksDialogBinding;", 0)};
+
+    /* renamed from: k, reason: from kotlin metadata */
+    public static final Companion INSTANCE = new Companion(null);
+
+    /* renamed from: l, reason: from kotlin metadata */
+    public final FragmentViewBindingDelegate binding;
+
+    /* compiled from: java-style lambda group */
+    /* renamed from: b.a.a.g.a$a */
+    public static final class a implements View.OnClickListener {
+
+        /* renamed from: j */
+        public final /* synthetic */ int f371j;
+
+        /* renamed from: k */
+        public final /* synthetic */ Object f372k;
+
+        /* renamed from: l */
+        public final /* synthetic */ Object f373l;
+
+        public a(int i, Object obj, Object obj2) {
+            this.f371j = i;
+            this.f372k = obj;
+            this.f373l = obj2;
+        }
+
+        @Override // android.view.View.OnClickListener
+        public final void onClick(View view) {
+            int i = this.f371j;
+            if (i == 0) {
+                WidgetMaskedLinksDialog widgetMaskedLinksDialog = (WidgetMaskedLinksDialog) this.f372k;
+                Intrinsics3.checkNotNullExpressionValue(view, "v");
+                Context context = view.getContext();
+                Intrinsics3.checkNotNullExpressionValue(context, "v.context");
+                String str = (String) this.f373l;
+                KProperty[] kPropertyArr = WidgetMaskedLinksDialog.f368j;
+                widgetMaskedLinksDialog.m133h(context, str);
+                return;
+            }
+            if (i != 1) {
+                throw null;
+            }
+            WidgetMaskedLinksDialog widgetMaskedLinksDialog2 = (WidgetMaskedLinksDialog) this.f372k;
+            Intrinsics3.checkNotNullExpressionValue(view, "v");
+            Context context2 = view.getContext();
+            Intrinsics3.checkNotNullExpressionValue(context2, "v.context");
+            String str2 = (String) this.f373l;
+            KProperty[] kPropertyArr2 = WidgetMaskedLinksDialog.f368j;
+            Objects.requireNonNull(widgetMaskedLinksDialog2);
+            StoreStream.INSTANCE.getMaskedLinks().trustDomain(str2);
+            widgetMaskedLinksDialog2.m133h(context2, str2);
+        }
+    }
+
+    /* compiled from: WidgetMaskedLinksDialog.kt */
+    /* renamed from: b.a.a.g.a$b, reason: from kotlin metadata */
+    public static final class Companion {
+        public Companion(DefaultConstructorMarker defaultConstructorMarker) {
+        }
+    }
+
+    /* compiled from: WidgetMaskedLinksDialog.kt */
+    /* renamed from: b.a.a.g.a$c */
+    public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, WidgetMaskedLinksDialogBinding> {
+
+        /* renamed from: j */
+        public static final c f374j = new c();
+
+        public c() {
+            super(1, WidgetMaskedLinksDialogBinding.class, "bind", "bind(Landroid/view/View;)Lcom/discord/databinding/WidgetMaskedLinksDialogBinding;", 0);
+        }
+
+        @Override // kotlin.jvm.functions.Function1
+        public WidgetMaskedLinksDialogBinding invoke(View view) {
+            View view2 = view;
+            Intrinsics3.checkNotNullParameter(view2, "p1");
+            int i = C5419R.id.masked_links_body_text;
+            TextView textView = (TextView) view2.findViewById(C5419R.id.masked_links_body_text);
+            if (textView != null) {
+                i = C5419R.id.masked_links_cancel;
+                MaterialButton materialButton = (MaterialButton) view2.findViewById(C5419R.id.masked_links_cancel);
+                if (materialButton != null) {
+                    i = C5419R.id.masked_links_confirm;
+                    MaterialButton materialButton2 = (MaterialButton) view2.findViewById(C5419R.id.masked_links_confirm);
+                    if (materialButton2 != null) {
+                        i = C5419R.id.masked_links_trust_domain;
+                        TextView textView2 = (TextView) view2.findViewById(C5419R.id.masked_links_trust_domain);
+                        if (textView2 != null) {
+                            i = C5419R.id.view_dialog_confirmation_header;
+                            TextView textView3 = (TextView) view2.findViewById(C5419R.id.view_dialog_confirmation_header);
+                            if (textView3 != null) {
+                                return new WidgetMaskedLinksDialogBinding((LinearLayout) view2, textView, materialButton, materialButton2, textView2, textView3);
+                            }
+                        }
+                    }
+                }
+            }
+            throw new NullPointerException("Missing required view with ID: ".concat(view2.getResources().getResourceName(i)));
+        }
+    }
+
+    /* compiled from: WidgetMaskedLinksDialog.kt */
+    /* renamed from: b.a.a.g.a$d */
+    public static final class d implements View.OnClickListener {
+        public d() {
+        }
+
+        @Override // android.view.View.OnClickListener
+        public final void onClick(View view) {
+            WidgetMaskedLinksDialog.this.dismiss();
+        }
+    }
+
+    public WidgetMaskedLinksDialog() {
+        super(C5419R.layout.widget_masked_links_dialog);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, c.f374j, null, 2, null);
+    }
+
+    /* renamed from: g */
+    public final WidgetMaskedLinksDialogBinding m132g() {
+        return (WidgetMaskedLinksDialogBinding) this.binding.getValue((Fragment) this, f368j[0]);
+    }
+
+    /* renamed from: h */
+    public final void m133h(Context context, String url) {
+        UriHandler.handle$default(UriHandler.INSTANCE, context, url, false, false, null, 28, null);
+        dismiss();
+    }
+
+    @Override // androidx.fragment.app.Fragment
+    public void onDestroy() {
+        super.onDestroy();
+        StoreNotices notices = StoreStream.INSTANCE.getNotices();
+        Objects.requireNonNull(INSTANCE);
+        StoreNotices.markSeen$default(notices, "WIDGET_SPOOPY_LINKS_DIALOG", 0L, 2, null);
+    }
+
+    @Override // com.discord.app.AppDialog
+    public void onViewBound(View view) {
+        String string;
+        Object punyCodeASCIIUrl;
+        Intrinsics3.checkNotNullParameter(view, "view");
+        super.onViewBound(view);
+        Bundle arguments = getArguments();
+        if (arguments == null || (string = arguments.getString("WIDGET_SPOOPY_LINKS_DIALOG_URL")) == null) {
+            string = "";
+        }
+        Intrinsics3.checkNotNullExpressionValue(string, "arguments?.getString(DIALOG_URL) ?: \"\"");
+        try {
+            punyCodeASCIIUrl = StringUtils2.toPunyCodeASCIIUrl(string);
+        } catch (Exception unused) {
+            dismiss();
+            punyCodeASCIIUrl = Unit.f27425a;
+        }
+        TextView textView = m132g().f1161b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.maskedLinksBodyText");
+        FormatUtils.m222n(textView, C5419R.string.masked_link_body, new Object[]{punyCodeASCIIUrl}, null, 4);
+        m132g().f1162c.setOnClickListener(new d());
+        m132g().f1163d.setOnClickListener(new a(0, this, string));
+        m132g().f1164e.setOnClickListener(new a(1, this, string));
+    }
+}

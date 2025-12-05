@@ -1,7 +1,6 @@
 package com.adjust.sdk;
 
 import android.content.Context;
-import b.d.b.a.a;
 import com.adjust.sdk.UtilNetworking;
 import com.discord.stores.StoreGuildScheduledEvents;
 import java.io.IOException;
@@ -18,6 +17,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class AdjustFactory {
@@ -42,12 +42,12 @@ public class AdjustFactory {
     private static long timerStart = -1;
     private static boolean tryInstallReferrer = true;
 
-    /* renamed from: com.adjust.sdk.AdjustFactory$1, reason: invalid class name */
-    public static class AnonymousClass1 implements UtilNetworking.IConnectionOptions {
+    /* renamed from: com.adjust.sdk.AdjustFactory$1 */
+    public static class C53611 implements UtilNetworking.IConnectionOptions {
 
-        /* renamed from: com.adjust.sdk.AdjustFactory$1$1, reason: invalid class name and collision with other inner class name */
-        public class C01831 implements X509TrustManager {
-            public C01831() {
+        /* renamed from: com.adjust.sdk.AdjustFactory$1$1, reason: invalid class name */
+        public class AnonymousClass1 implements X509TrustManager {
+            public AnonymousClass1() {
             }
 
             @Override // javax.net.ssl.X509TrustManager
@@ -94,7 +94,7 @@ public class AdjustFactory {
             new UtilNetworking.ConnectionOptions().applyConnectionOptions(httpsURLConnection, str);
             try {
                 SSLContext sSLContext = SSLContext.getInstance("TLS");
-                sSLContext.init(null, new TrustManager[]{new C01831()}, new SecureRandom());
+                sSLContext.init(null, new TrustManager[]{new AnonymousClass1()}, new SecureRandom());
                 httpsURLConnection.setSSLSocketFactory(sSLContext.getSocketFactory());
                 httpsURLConnection.setHostnameVerifier(new AnonymousClass2());
             } catch (Exception e) {
@@ -123,7 +123,7 @@ public class AdjustFactory {
             String hexString = Integer.toHexString(b2);
             int length = hexString.length();
             if (length == 1) {
-                hexString = a.w("0", hexString);
+                hexString = outline.m883w("0", hexString);
             }
             if (length > 2) {
                 hexString = hexString.substring(length - 2, length);
@@ -369,6 +369,6 @@ public class AdjustFactory {
     }
 
     public static void useTestConnectionOptions() {
-        connectionOptions = new AnonymousClass1();
+        connectionOptions = new C53611();
     }
 }

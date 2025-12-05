@@ -27,12 +27,12 @@ public class FileSystemSourceCache {
         }
     }
 
-    /* renamed from: lombok.core.configuration.FileSystemSourceCache$1, reason: invalid class name */
+    /* renamed from: lombok.core.configuration.FileSystemSourceCache$1 */
     /* loaded from: discord-126021.apk:lombok/core/configuration/FileSystemSourceCache$1.SCL.lombok */
-    class AnonymousClass1 implements ConfigurationFileToSource {
+    class C128321 implements ConfigurationFileToSource {
         private final /* synthetic */ ConfigurationParser val$parser;
 
-        AnonymousClass1(ConfigurationParser configurationParser) {
+        C128321(ConfigurationParser configurationParser) {
             this.val$parser = configurationParser;
         }
 
@@ -43,7 +43,7 @@ public class FileSystemSourceCache {
     }
 
     public ConfigurationFileToSource fileToSource(ConfigurationParser parser) {
-        return new AnonymousClass1(parser);
+        return new C128321(parser);
     }
 
     public ConfigurationFile forUri(URI javaFile) {

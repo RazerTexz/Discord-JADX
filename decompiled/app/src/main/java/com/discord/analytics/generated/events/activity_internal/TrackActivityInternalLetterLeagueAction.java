@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackActivityInternalLetterLeagueAction.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalLetterLeagueAction implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
+public final /* data */ class TrackActivityInternalLetterLeagueAction implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence actionName = null;
@@ -38,7 +38,7 @@ public final /* data */ class TrackActivityInternalLetterLeagueAction implements
             return false;
         }
         TrackActivityInternalLetterLeagueAction trackActivityInternalLetterLeagueAction = (TrackActivityInternalLetterLeagueAction) other;
-        return m.areEqual(this.actionName, trackActivityInternalLetterLeagueAction.actionName) && m.areEqual(this.bag, trackActivityInternalLetterLeagueAction.bag) && m.areEqual(this.scoringMode, trackActivityInternalLetterLeagueAction.scoringMode) && m.areEqual(this.numPlayers, trackActivityInternalLetterLeagueAction.numPlayers) && m.areEqual(this.numSpectators, trackActivityInternalLetterLeagueAction.numSpectators) && m.areEqual(this.phase, trackActivityInternalLetterLeagueAction.phase) && m.areEqual(this.durationS, trackActivityInternalLetterLeagueAction.durationS) && m.areEqual(this.score, trackActivityInternalLetterLeagueAction.score) && m.areEqual(this.turnType, trackActivityInternalLetterLeagueAction.turnType);
+        return Intrinsics3.areEqual(this.actionName, trackActivityInternalLetterLeagueAction.actionName) && Intrinsics3.areEqual(this.bag, trackActivityInternalLetterLeagueAction.bag) && Intrinsics3.areEqual(this.scoringMode, trackActivityInternalLetterLeagueAction.scoringMode) && Intrinsics3.areEqual(this.numPlayers, trackActivityInternalLetterLeagueAction.numPlayers) && Intrinsics3.areEqual(this.numSpectators, trackActivityInternalLetterLeagueAction.numSpectators) && Intrinsics3.areEqual(this.phase, trackActivityInternalLetterLeagueAction.phase) && Intrinsics3.areEqual(this.durationS, trackActivityInternalLetterLeagueAction.durationS) && Intrinsics3.areEqual(this.score, trackActivityInternalLetterLeagueAction.score) && Intrinsics3.areEqual(this.turnType, trackActivityInternalLetterLeagueAction.turnType);
     }
 
     public int hashCode() {
@@ -63,23 +63,23 @@ public final /* data */ class TrackActivityInternalLetterLeagueAction implements
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackActivityInternalLetterLeagueAction(actionName=");
-        sbU.append(this.actionName);
-        sbU.append(", bag=");
-        sbU.append(this.bag);
-        sbU.append(", scoringMode=");
-        sbU.append(this.scoringMode);
-        sbU.append(", numPlayers=");
-        sbU.append(this.numPlayers);
-        sbU.append(", numSpectators=");
-        sbU.append(this.numSpectators);
-        sbU.append(", phase=");
-        sbU.append(this.phase);
-        sbU.append(", durationS=");
-        sbU.append(this.durationS);
-        sbU.append(", score=");
-        sbU.append(this.score);
-        sbU.append(", turnType=");
-        return a.E(sbU, this.turnType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackActivityInternalLetterLeagueAction(actionName=");
+        sbM833U.append(this.actionName);
+        sbM833U.append(", bag=");
+        sbM833U.append(this.bag);
+        sbM833U.append(", scoringMode=");
+        sbM833U.append(this.scoringMode);
+        sbM833U.append(", numPlayers=");
+        sbM833U.append(this.numPlayers);
+        sbM833U.append(", numSpectators=");
+        sbM833U.append(this.numSpectators);
+        sbM833U.append(", phase=");
+        sbM833U.append(this.phase);
+        sbM833U.append(", durationS=");
+        sbM833U.append(this.durationS);
+        sbM833U.append(", score=");
+        sbM833U.append(this.score);
+        sbM833U.append(", turnType=");
+        return outline.m817E(sbM833U, this.turnType, ")");
     }
 }

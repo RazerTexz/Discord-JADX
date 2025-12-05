@@ -1,9 +1,9 @@
 package com.esotericsoftware.kryo.util;
 
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class IntMap<V> {
@@ -891,7 +891,7 @@ public class IntMap<V> {
 
     public void shrink(int i) {
         if (i < 0) {
-            throw new IllegalArgumentException(a.q("maximumCapacity must be >= 0: ", i));
+            throw new IllegalArgumentException(outline.m871q("maximumCapacity must be >= 0: ", i));
         }
         int i2 = this.size;
         if (i2 > i) {
@@ -971,7 +971,7 @@ public class IntMap<V> {
 
     public IntMap(int i, float f) {
         if (i < 0) {
-            throw new IllegalArgumentException(a.q("initialCapacity must be >= 0: ", i));
+            throw new IllegalArgumentException(outline.m871q("initialCapacity must be >= 0: ", i));
         }
         if (i <= 1073741824) {
             int iNextPowerOfTwo = ObjectMap.nextPowerOfTwo(i);
@@ -991,7 +991,7 @@ public class IntMap<V> {
             }
             throw new IllegalArgumentException("loadFactor must be > 0: " + f);
         }
-        throw new IllegalArgumentException(a.q("initialCapacity is too large: ", i));
+        throw new IllegalArgumentException(outline.m871q("initialCapacity is too large: ", i));
     }
 
     public void clear() {

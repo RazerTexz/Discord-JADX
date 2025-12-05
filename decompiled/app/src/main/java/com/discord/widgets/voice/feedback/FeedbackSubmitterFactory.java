@@ -4,8 +4,8 @@ import com.discord.widgets.guild_delete_feedback.GuildDeleteFeedbackSubmitter;
 import com.discord.widgets.voice.feedback.PendingFeedback;
 import com.discord.widgets.voice.feedback.call.CallFeedbackSubmitter;
 import com.discord.widgets.voice.feedback.stream.StreamFeedbackSubmitter;
-import d0.z.d.m;
 import kotlin.NoWhenBranchMatchedException;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: FeedbackSubmitterFactory.kt */
 /* loaded from: classes.dex */
@@ -16,7 +16,7 @@ public final class FeedbackSubmitterFactory {
     }
 
     public final FeedbackSubmitter create(PendingFeedback pendingFeedback) {
-        m.checkNotNullParameter(pendingFeedback, "pendingFeedback");
+        Intrinsics3.checkNotNullParameter(pendingFeedback, "pendingFeedback");
         if (pendingFeedback instanceof PendingFeedback.CallFeedback) {
             return new CallFeedbackSubmitter((PendingFeedback.CallFeedback) pendingFeedback, null, 2, null);
         }

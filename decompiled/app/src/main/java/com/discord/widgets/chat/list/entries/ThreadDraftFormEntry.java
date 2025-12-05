@@ -1,11 +1,11 @@
 package com.discord.widgets.chat.list.entries;
 
-import a0.a.a.b;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.models.guild.Guild;
 import com.discord.stores.StoreThreadDraft;
-import d0.z.d.m;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ThreadDraftFormEntry.kt */
 /* loaded from: classes2.dex */
@@ -23,8 +23,8 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
     private final int type;
 
     public ThreadDraftFormEntry(Channel channel, Long l, long j, Guild guild, Integer num, StoreThreadDraft.ThreadDraftState threadDraftState, boolean z2, boolean z3, boolean z4) {
-        m.checkNotNullParameter(channel, "parentChannel");
-        m.checkNotNullParameter(threadDraftState, "threadDraftState");
+        Intrinsics3.checkNotNullParameter(channel, "parentChannel");
+        Intrinsics3.checkNotNullParameter(threadDraftState, "threadDraftState");
         this.parentChannel = channel;
         this.parentMessageId = l;
         this.guildId = j;
@@ -35,10 +35,10 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
         this.canSeePrivateThreadOption = z3;
         this.canCreatePublicThread = z4;
         this.type = 37;
-        StringBuilder sbU = a.U("37");
-        sbU.append(channel.getId());
-        sbU.append(l);
-        this.key = sbU.toString();
+        StringBuilder sbM833U = outline.m833U("37");
+        sbM833U.append(channel.getId());
+        sbM833U.append(l);
+        this.key = sbM833U.toString();
     }
 
     public static /* synthetic */ ThreadDraftFormEntry copy$default(ThreadDraftFormEntry threadDraftFormEntry, Channel channel, Long l, long j, Guild guild, Integer num, StoreThreadDraft.ThreadDraftState threadDraftState, boolean z2, boolean z3, boolean z4, int i, Object obj) {
@@ -91,8 +91,8 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
     }
 
     public final ThreadDraftFormEntry copy(Channel parentChannel, Long parentMessageId, long guildId, Guild guild, Integer defaultAutoArchiveDuration, StoreThreadDraft.ThreadDraftState threadDraftState, boolean canCreatePrivateThread, boolean canSeePrivateThreadOption, boolean canCreatePublicThread) {
-        m.checkNotNullParameter(parentChannel, "parentChannel");
-        m.checkNotNullParameter(threadDraftState, "threadDraftState");
+        Intrinsics3.checkNotNullParameter(parentChannel, "parentChannel");
+        Intrinsics3.checkNotNullParameter(threadDraftState, "threadDraftState");
         return new ThreadDraftFormEntry(parentChannel, parentMessageId, guildId, guild, defaultAutoArchiveDuration, threadDraftState, canCreatePrivateThread, canSeePrivateThreadOption, canCreatePublicThread);
     }
 
@@ -104,7 +104,7 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
             return false;
         }
         ThreadDraftFormEntry threadDraftFormEntry = (ThreadDraftFormEntry) other;
-        return m.areEqual(this.parentChannel, threadDraftFormEntry.parentChannel) && m.areEqual(this.parentMessageId, threadDraftFormEntry.parentMessageId) && this.guildId == threadDraftFormEntry.guildId && m.areEqual(this.guild, threadDraftFormEntry.guild) && m.areEqual(this.defaultAutoArchiveDuration, threadDraftFormEntry.defaultAutoArchiveDuration) && m.areEqual(this.threadDraftState, threadDraftFormEntry.threadDraftState) && this.canCreatePrivateThread == threadDraftFormEntry.canCreatePrivateThread && this.canSeePrivateThreadOption == threadDraftFormEntry.canSeePrivateThreadOption && this.canCreatePublicThread == threadDraftFormEntry.canCreatePublicThread;
+        return Intrinsics3.areEqual(this.parentChannel, threadDraftFormEntry.parentChannel) && Intrinsics3.areEqual(this.parentMessageId, threadDraftFormEntry.parentMessageId) && this.guildId == threadDraftFormEntry.guildId && Intrinsics3.areEqual(this.guild, threadDraftFormEntry.guild) && Intrinsics3.areEqual(this.defaultAutoArchiveDuration, threadDraftFormEntry.defaultAutoArchiveDuration) && Intrinsics3.areEqual(this.threadDraftState, threadDraftFormEntry.threadDraftState) && this.canCreatePrivateThread == threadDraftFormEntry.canCreatePrivateThread && this.canSeePrivateThreadOption == threadDraftFormEntry.canSeePrivateThreadOption && this.canCreatePublicThread == threadDraftFormEntry.canCreatePublicThread;
     }
 
     public final boolean getCanCreatePrivateThread() {
@@ -158,9 +158,9 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
         Channel channel = this.parentChannel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         Long l = this.parentMessageId;
-        int iA = (b.a(this.guildId) + ((iHashCode + (l != null ? l.hashCode() : 0)) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.guildId) + ((iHashCode + (l != null ? l.hashCode() : 0)) * 31)) * 31;
         Guild guild = this.guild;
-        int iHashCode2 = (iA + (guild != null ? guild.hashCode() : 0)) * 31;
+        int iHashCode2 = (iM3a + (guild != null ? guild.hashCode() : 0)) * 31;
         Integer num = this.defaultAutoArchiveDuration;
         int iHashCode3 = (iHashCode2 + (num != null ? num.hashCode() : 0)) * 31;
         StoreThreadDraft.ThreadDraftState threadDraftState = this.threadDraftState;
@@ -182,23 +182,23 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ThreadDraftFormEntry(parentChannel=");
-        sbU.append(this.parentChannel);
-        sbU.append(", parentMessageId=");
-        sbU.append(this.parentMessageId);
-        sbU.append(", guildId=");
-        sbU.append(this.guildId);
-        sbU.append(", guild=");
-        sbU.append(this.guild);
-        sbU.append(", defaultAutoArchiveDuration=");
-        sbU.append(this.defaultAutoArchiveDuration);
-        sbU.append(", threadDraftState=");
-        sbU.append(this.threadDraftState);
-        sbU.append(", canCreatePrivateThread=");
-        sbU.append(this.canCreatePrivateThread);
-        sbU.append(", canSeePrivateThreadOption=");
-        sbU.append(this.canSeePrivateThreadOption);
-        sbU.append(", canCreatePublicThread=");
-        return a.O(sbU, this.canCreatePublicThread, ")");
+        StringBuilder sbM833U = outline.m833U("ThreadDraftFormEntry(parentChannel=");
+        sbM833U.append(this.parentChannel);
+        sbM833U.append(", parentMessageId=");
+        sbM833U.append(this.parentMessageId);
+        sbM833U.append(", guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", guild=");
+        sbM833U.append(this.guild);
+        sbM833U.append(", defaultAutoArchiveDuration=");
+        sbM833U.append(this.defaultAutoArchiveDuration);
+        sbM833U.append(", threadDraftState=");
+        sbM833U.append(this.threadDraftState);
+        sbM833U.append(", canCreatePrivateThread=");
+        sbM833U.append(this.canCreatePrivateThread);
+        sbM833U.append(", canSeePrivateThreadOption=");
+        sbM833U.append(this.canSeePrivateThreadOption);
+        sbM833U.append(", canCreatePublicThread=");
+        return outline.m827O(sbM833U, this.canCreatePublicThread, ")");
     }
 }

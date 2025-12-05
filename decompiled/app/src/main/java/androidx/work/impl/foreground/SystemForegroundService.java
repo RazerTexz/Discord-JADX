@@ -26,9 +26,9 @@ public class SystemForegroundService extends LifecycleService implements SystemF
     private boolean mIsShutdown;
     public NotificationManager mNotificationManager;
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$1 */
+    public class RunnableC07421 implements Runnable {
+        public RunnableC07421() {
         }
 
         @Override // java.lang.Runnable
@@ -37,13 +37,13 @@ public class SystemForegroundService extends LifecycleService implements SystemF
         }
     }
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$2 */
+    public class RunnableC07432 implements Runnable {
         public final /* synthetic */ Notification val$notification;
         public final /* synthetic */ int val$notificationId;
         public final /* synthetic */ int val$notificationType;
 
-        public AnonymousClass2(int i, Notification notification, int i2) {
+        public RunnableC07432(int i, Notification notification, int i2) {
             this.val$notificationId = i;
             this.val$notification = notification;
             this.val$notificationType = i2;
@@ -59,12 +59,12 @@ public class SystemForegroundService extends LifecycleService implements SystemF
         }
     }
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$3 */
+    public class RunnableC07443 implements Runnable {
         public final /* synthetic */ Notification val$notification;
         public final /* synthetic */ int val$notificationId;
 
-        public AnonymousClass3(int i, Notification notification) {
+        public RunnableC07443(int i, Notification notification) {
             this.val$notificationId = i;
             this.val$notification = notification;
         }
@@ -75,11 +75,11 @@ public class SystemForegroundService extends LifecycleService implements SystemF
         }
     }
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$4, reason: invalid class name */
-    public class AnonymousClass4 implements Runnable {
+    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$4 */
+    public class RunnableC07454 implements Runnable {
         public final /* synthetic */ int val$notificationId;
 
-        public AnonymousClass4(int i) {
+        public RunnableC07454(int i) {
             this.val$notificationId = i;
         }
 
@@ -105,12 +105,12 @@ public class SystemForegroundService extends LifecycleService implements SystemF
 
     @Override // androidx.work.impl.foreground.SystemForegroundDispatcher.Callback
     public void cancelNotification(int i) {
-        this.mHandler.post(new AnonymousClass4(i));
+        this.mHandler.post(new RunnableC07454(i));
     }
 
     @Override // androidx.work.impl.foreground.SystemForegroundDispatcher.Callback
     public void notify(int i, @NonNull Notification notification) {
-        this.mHandler.post(new AnonymousClass3(i, notification));
+        this.mHandler.post(new RunnableC07443(i, notification));
     }
 
     @Override // androidx.view.LifecycleService, android.app.Service
@@ -144,7 +144,7 @@ public class SystemForegroundService extends LifecycleService implements SystemF
 
     @Override // androidx.work.impl.foreground.SystemForegroundDispatcher.Callback
     public void startForeground(int i, int i2, @NonNull Notification notification) {
-        this.mHandler.post(new AnonymousClass2(i, notification, i2));
+        this.mHandler.post(new RunnableC07432(i, notification, i2));
     }
 
     @Override // androidx.work.impl.foreground.SystemForegroundDispatcher.Callback
@@ -160,6 +160,6 @@ public class SystemForegroundService extends LifecycleService implements SystemF
     }
 
     public void stopForegroundService() {
-        this.mHandler.post(new AnonymousClass1());
+        this.mHandler.post(new RunnableC07421());
     }
 }

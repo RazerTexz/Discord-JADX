@@ -34,9 +34,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.customview.view.AbsSavedState;
 import androidx.customview.widget.ViewDragHelper;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class DrawerLayout extends ViewGroup {
@@ -100,9 +100,9 @@ public class DrawerLayout extends ViewGroup {
     public static final boolean CAN_HIDE_DESCENDANTS = true;
     private static final boolean SET_DRAWER_SHADOW_FROM_ELEVATION = true;
 
-    /* renamed from: androidx.drawerlayout.widget.DrawerLayout$1, reason: invalid class name */
-    public class AnonymousClass1 implements View.OnApplyWindowInsetsListener {
-        public AnonymousClass1() {
+    /* renamed from: androidx.drawerlayout.widget.DrawerLayout$1 */
+    public class ViewOnApplyWindowInsetsListenerC03201 implements View.OnApplyWindowInsetsListener {
+        public ViewOnApplyWindowInsetsListenerC03201() {
         }
 
         @Override // android.view.View.OnApplyWindowInsetsListener
@@ -246,11 +246,11 @@ public class DrawerLayout extends ViewGroup {
     public class ViewDragCallback extends ViewDragHelper.Callback {
         private final int mAbsGravity;
         private ViewDragHelper mDragger;
-        private final Runnable mPeekRunnable = new AnonymousClass1();
+        private final Runnable mPeekRunnable = new RunnableC03221();
 
-        /* renamed from: androidx.drawerlayout.widget.DrawerLayout$ViewDragCallback$1, reason: invalid class name */
-        public class AnonymousClass1 implements Runnable {
-            public AnonymousClass1() {
+        /* renamed from: androidx.drawerlayout.widget.DrawerLayout$ViewDragCallback$1 */
+        public class RunnableC03221 implements Runnable {
+            public RunnableC03221() {
             }
 
             @Override // java.lang.Runnable
@@ -1111,13 +1111,13 @@ public class DrawerLayout extends ViewGroup {
                     int drawerViewAbsoluteGravity = getDrawerViewAbsoluteGravity(childAt) & 7;
                     boolean z5 = drawerViewAbsoluteGravity == 3;
                     if ((z5 && z3) || (!z5 && z4)) {
-                        StringBuilder sbU = a.U("Child drawer has absolute gravity ");
-                        sbU.append(gravityToString(drawerViewAbsoluteGravity));
-                        sbU.append(" but this ");
-                        sbU.append(TAG);
-                        sbU.append(" already has a ");
-                        sbU.append("drawer view along that edge");
-                        throw new IllegalStateException(sbU.toString());
+                        StringBuilder sbM833U = outline.m833U("Child drawer has absolute gravity ");
+                        sbM833U.append(gravityToString(drawerViewAbsoluteGravity));
+                        sbM833U.append(" but this ");
+                        sbM833U.append(TAG);
+                        sbM833U.append(" already has a ");
+                        sbM833U.append("drawer view along that edge");
+                        throw new IllegalStateException(sbM833U.toString());
                     }
                     if (z5) {
                         z3 = true;
@@ -1488,7 +1488,7 @@ public class DrawerLayout extends ViewGroup {
         ViewCompat.setAccessibilityDelegate(this, new AccessibilityDelegate());
         setMotionEventSplittingEnabled(false);
         if (ViewCompat.getFitsSystemWindows(this)) {
-            setOnApplyWindowInsetsListener(new AnonymousClass1());
+            setOnApplyWindowInsetsListener(new ViewOnApplyWindowInsetsListenerC03201());
             setSystemUiVisibility(1280);
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(THEME_ATTRS);
             try {
@@ -1595,15 +1595,15 @@ public class DrawerLayout extends ViewGroup {
     }
 
     public static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C03211();
         public int lockModeEnd;
         public int lockModeLeft;
         public int lockModeRight;
         public int lockModeStart;
         public int openDrawerGravity;
 
-        /* renamed from: androidx.drawerlayout.widget.DrawerLayout$SavedState$1, reason: invalid class name */
-        public static class AnonymousClass1 implements Parcelable.ClassLoaderCreator<SavedState> {
+        /* renamed from: androidx.drawerlayout.widget.DrawerLayout$SavedState$1 */
+        public static class C03211 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);
@@ -1690,9 +1690,9 @@ public class DrawerLayout extends ViewGroup {
         if (viewFindDrawerWithGravity != null) {
             closeDrawer(viewFindDrawerWithGravity, z2);
         } else {
-            StringBuilder sbU = a.U("No drawer view found with gravity ");
-            sbU.append(gravityToString(i));
-            throw new IllegalArgumentException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("No drawer view found with gravity ");
+            sbM833U.append(gravityToString(i));
+            throw new IllegalArgumentException(sbM833U.toString());
         }
     }
 
@@ -1705,9 +1705,9 @@ public class DrawerLayout extends ViewGroup {
         if (viewFindDrawerWithGravity != null) {
             openDrawer(viewFindDrawerWithGravity, z2);
         } else {
-            StringBuilder sbU = a.U("No drawer view found with gravity ");
-            sbU.append(gravityToString(i));
-            throw new IllegalArgumentException(sbU.toString());
+            StringBuilder sbM833U = outline.m833U("No drawer view found with gravity ");
+            sbM833U.append(gravityToString(i));
+            throw new IllegalArgumentException(sbM833U.toString());
         }
     }
 }

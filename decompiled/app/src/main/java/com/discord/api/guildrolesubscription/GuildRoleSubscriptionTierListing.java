@@ -1,11 +1,11 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.a;
 import com.discord.api.guildscheduledevent.GuildRoleSubscriptionRoleBenefits;
 import com.discord.api.premium.SubscriptionPlan;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GuildRoleSubscriptionTierListing.kt */
 /* loaded from: classes.dex */
@@ -53,7 +53,7 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
             return false;
         }
         GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing = (GuildRoleSubscriptionTierListing) other;
-        return this.id == guildRoleSubscriptionTierListing.id && this.applicationId == guildRoleSubscriptionTierListing.applicationId && m.areEqual(this.name, guildRoleSubscriptionTierListing.name) && this.published == guildRoleSubscriptionTierListing.published && m.areEqual(this.description, guildRoleSubscriptionTierListing.description) && m.areEqual(this.imageAsset, guildRoleSubscriptionTierListing.imageAsset) && m.areEqual(this.subscriptionPlans, guildRoleSubscriptionTierListing.subscriptionPlans) && m.areEqual(this.roleBenefits, guildRoleSubscriptionTierListing.roleBenefits) && this.roleId == guildRoleSubscriptionTierListing.roleId;
+        return this.id == guildRoleSubscriptionTierListing.id && this.applicationId == guildRoleSubscriptionTierListing.applicationId && Intrinsics3.areEqual(this.name, guildRoleSubscriptionTierListing.name) && this.published == guildRoleSubscriptionTierListing.published && Intrinsics3.areEqual(this.description, guildRoleSubscriptionTierListing.description) && Intrinsics3.areEqual(this.imageAsset, guildRoleSubscriptionTierListing.imageAsset) && Intrinsics3.areEqual(this.subscriptionPlans, guildRoleSubscriptionTierListing.subscriptionPlans) && Intrinsics3.areEqual(this.roleBenefits, guildRoleSubscriptionTierListing.roleBenefits) && this.roleId == guildRoleSubscriptionTierListing.roleId;
     }
 
     /* renamed from: f, reason: from getter */
@@ -96,28 +96,29 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
         return iHashCode5 + ((int) (j3 ^ (j3 >>> 32)));
     }
 
-    public final List<SubscriptionPlan> i() {
+    /* renamed from: i */
+    public final List<SubscriptionPlan> m7961i() {
         return this.subscriptionPlans;
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("GuildRoleSubscriptionTierListing(id=");
-        sbU.append(this.id);
-        sbU.append(", applicationId=");
-        sbU.append(this.applicationId);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", published=");
-        sbU.append(this.published);
-        sbU.append(", description=");
-        sbU.append(this.description);
-        sbU.append(", imageAsset=");
-        sbU.append(this.imageAsset);
-        sbU.append(", subscriptionPlans=");
-        sbU.append(this.subscriptionPlans);
-        sbU.append(", roleBenefits=");
-        sbU.append(this.roleBenefits);
-        sbU.append(", roleId=");
-        return a.C(sbU, this.roleId, ")");
+        StringBuilder sbM833U = outline.m833U("GuildRoleSubscriptionTierListing(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", applicationId=");
+        sbM833U.append(this.applicationId);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", published=");
+        sbM833U.append(this.published);
+        sbM833U.append(", description=");
+        sbM833U.append(this.description);
+        sbM833U.append(", imageAsset=");
+        sbM833U.append(this.imageAsset);
+        sbM833U.append(", subscriptionPlans=");
+        sbM833U.append(this.subscriptionPlans);
+        sbM833U.append(", roleBenefits=");
+        sbM833U.append(this.roleBenefits);
+        sbM833U.append(", roleId=");
+        return outline.m815C(sbM833U, this.roleId, ")");
     }
 }

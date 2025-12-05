@@ -1,7 +1,7 @@
 package com.discord.api.handoff;
 
-import b.d.b.a.a;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: CreateHandoffTokenRequest.kt */
 /* loaded from: classes.dex */
@@ -9,13 +9,13 @@ public final /* data */ class CreateHandoffTokenRequest {
     private final String key;
 
     public CreateHandoffTokenRequest(String str) {
-        m.checkNotNullParameter(str, "key");
+        Intrinsics3.checkNotNullParameter(str, "key");
         this.key = str;
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof CreateHandoffTokenRequest) && m.areEqual(this.key, ((CreateHandoffTokenRequest) other).key);
+            return (other instanceof CreateHandoffTokenRequest) && Intrinsics3.areEqual(this.key, ((CreateHandoffTokenRequest) other).key);
         }
         return true;
     }
@@ -29,6 +29,6 @@ public final /* data */ class CreateHandoffTokenRequest {
     }
 
     public String toString() {
-        return a.J(a.U("CreateHandoffTokenRequest(key="), this.key, ")");
+        return outline.m822J(outline.m833U("CreateHandoffTokenRequest(key="), this.key, ")");
     }
 }

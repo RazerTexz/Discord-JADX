@@ -9,11 +9,11 @@ import androidx.annotation.RestrictTo;
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 /* loaded from: classes.dex */
 public class ParcelImpl implements Parcelable {
-    public static final Parcelable.Creator<ParcelImpl> CREATOR = new AnonymousClass1();
+    public static final Parcelable.Creator<ParcelImpl> CREATOR = new C06801();
     private final VersionedParcelable mParcel;
 
-    /* renamed from: androidx.versionedparcelable.ParcelImpl$1, reason: invalid class name */
-    public static class AnonymousClass1 implements Parcelable.Creator<ParcelImpl> {
+    /* renamed from: androidx.versionedparcelable.ParcelImpl$1 */
+    public static class C06801 implements Parcelable.Creator<ParcelImpl> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ ParcelImpl createFromParcel(Parcel parcel) {
             return createFromParcel(parcel);

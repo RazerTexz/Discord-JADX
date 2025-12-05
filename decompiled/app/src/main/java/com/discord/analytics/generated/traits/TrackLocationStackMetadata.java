@@ -1,8 +1,8 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackLocationStackMetadata.kt */
 /* loaded from: classes.dex */
@@ -11,7 +11,7 @@ public final /* data */ class TrackLocationStackMetadata {
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackLocationStackMetadata) && m.areEqual(this.locationStack, ((TrackLocationStackMetadata) other).locationStack);
+            return (other instanceof TrackLocationStackMetadata) && Intrinsics3.areEqual(this.locationStack, ((TrackLocationStackMetadata) other).locationStack);
         }
         return true;
     }
@@ -25,6 +25,6 @@ public final /* data */ class TrackLocationStackMetadata {
     }
 
     public String toString() {
-        return a.L(a.U("TrackLocationStackMetadata(locationStack="), this.locationStack, ")");
+        return outline.m824L(outline.m833U("TrackLocationStackMetadata(locationStack="), this.locationStack, ")");
     }
 }

@@ -1,17 +1,17 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackCopyInstantInvite.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCopyInstantInvite implements AnalyticsSchema, TrackBaseReceiver, TrackOverlayClientMetadataReceiver {
+public final /* data */ class TrackCopyInstantInvite implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
     private final Long channel = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackCopyInstantInvite implements AnalyticsSchema,
             return false;
         }
         TrackCopyInstantInvite trackCopyInstantInvite = (TrackCopyInstantInvite) other;
-        return m.areEqual(this.channel, trackCopyInstantInvite.channel) && m.areEqual(this.channelType, trackCopyInstantInvite.channelType) && m.areEqual(this.group, trackCopyInstantInvite.group) && m.areEqual(this.server, trackCopyInstantInvite.server) && m.areEqual(this.code, trackCopyInstantInvite.code) && m.areEqual(this.guildScheduledEventId, trackCopyInstantInvite.guildScheduledEventId);
+        return Intrinsics3.areEqual(this.channel, trackCopyInstantInvite.channel) && Intrinsics3.areEqual(this.channelType, trackCopyInstantInvite.channelType) && Intrinsics3.areEqual(this.group, trackCopyInstantInvite.group) && Intrinsics3.areEqual(this.server, trackCopyInstantInvite.server) && Intrinsics3.areEqual(this.code, trackCopyInstantInvite.code) && Intrinsics3.areEqual(this.guildScheduledEventId, trackCopyInstantInvite.guildScheduledEventId);
     }
 
     public int hashCode() {
@@ -55,17 +55,17 @@ public final /* data */ class TrackCopyInstantInvite implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackCopyInstantInvite(channel=");
-        sbU.append(this.channel);
-        sbU.append(", channelType=");
-        sbU.append(this.channelType);
-        sbU.append(", group=");
-        sbU.append(this.group);
-        sbU.append(", server=");
-        sbU.append(this.server);
-        sbU.append(", code=");
-        sbU.append(this.code);
-        sbU.append(", guildScheduledEventId=");
-        return a.G(sbU, this.guildScheduledEventId, ")");
+        StringBuilder sbM833U = outline.m833U("TrackCopyInstantInvite(channel=");
+        sbM833U.append(this.channel);
+        sbM833U.append(", channelType=");
+        sbM833U.append(this.channelType);
+        sbM833U.append(", group=");
+        sbM833U.append(this.group);
+        sbM833U.append(", server=");
+        sbM833U.append(this.server);
+        sbM833U.append(", code=");
+        sbM833U.append(this.code);
+        sbM833U.append(", guildScheduledEventId=");
+        return outline.m819G(sbM833U, this.guildScheduledEventId, ")");
     }
 }

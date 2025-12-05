@@ -1,16 +1,17 @@
 package com.discord.utilities.rest;
 
 import android.content.Context;
-import b.a.k.b;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.restapi.RestAPIAbortCodes;
 import com.discord.utilities.error.Error;
-import d0.t.h0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
+import p007b.p008a.p027k.FormatUtils;
+import p507d0.Tuples;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: RestAPIAbortMessages.kt */
 /* loaded from: classes2.dex */
@@ -26,28 +27,28 @@ public final class RestAPIAbortMessages {
         }
 
         public final CharSequence getRelationshipResponse(Context context, int abortCode, String username) {
-            m.checkNotNullParameter(username, "username");
+            Intrinsics3.checkNotNullParameter(username, "username");
             Integer abortCodeMessageResId = RestAPIAbortMessages.getAbortCodeMessageResId(abortCode);
-            int iIntValue = abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : R.string.add_friend_error_other;
+            int iIntValue = abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : C5419R.string.add_friend_error_other;
             if (abortCode != 80000) {
                 if (context != null) {
-                    return b.h(context, iIntValue, new Object[0], null, 4);
+                    return FormatUtils.m216h(context, iIntValue, new Object[0], null, 4);
                 }
                 return null;
             }
             if (context != null) {
-                return b.h(context, iIntValue, new Object[]{username}, null, 4);
+                return FormatUtils.m216h(context, iIntValue, new Object[]{username}, null, 4);
             }
             return null;
         }
     }
 
     /* compiled from: RestAPIAbortMessages.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPIAbortMessages$handleAbortCodeOrDefault$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.utilities.rest.RestAPIAbortMessages$handleAbortCodeOrDefault$1 */
+    public static final class C68601 extends Lambda implements Function0<Boolean> {
+        public static final C68601 INSTANCE = new C68601();
 
-        public AnonymousClass1() {
+        public C68601() {
             super(0);
         }
 
@@ -65,8 +66,8 @@ public final class RestAPIAbortMessages {
     static {
         Integer numValueOf = Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INCOMING_DISABLED);
         Integer numValueOf2 = Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INCOMING_BLOCKED);
-        Integer numValueOf3 = Integer.valueOf(R.string.add_friend_error_other);
-        MESSAGES = h0.mapOf(d0.o.to(numValueOf, Integer.valueOf(R.string.bot_requires_email_verification)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.INVALID_MESSAGE_SEND_USER), Integer.valueOf(R.string.bot_dm_send_failed)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RATE_LIMIT_DM_OPEN), Integer.valueOf(R.string.bot_dm_rate_limited)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.SEND_MESSAGE_TEMPORARILY_DISABLED), Integer.valueOf(R.string.bot_dm_send_message_temporarily_disabled)), d0.o.to(numValueOf, Integer.valueOf(R.string.add_friend_error_invalid_discord_tag)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_FRIENDS), Integer.valueOf(R.string.add_friend_error_too_many_friends)), d0.o.to(numValueOf2, numValueOf3), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_SELF), numValueOf3), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_USER_BOT), numValueOf3), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_DISCORD_TAG), numValueOf3), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_ALREADY_FRIENDS), Integer.valueOf(R.string.add_friend_error_already_friends)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_THREADS), Integer.valueOf(R.string.too_many_threads_message)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS), Integer.valueOf(R.string.too_many_announcement_threads_message)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.SLOWMODE_RATE_LIMITED), Integer.valueOf(R.string.channel_slowmode_desc_short)));
+        Integer numValueOf3 = Integer.valueOf(C5419R.string.add_friend_error_other);
+        MESSAGES = Maps6.mapOf(Tuples.m10073to(numValueOf, Integer.valueOf(C5419R.string.bot_requires_email_verification)), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.INVALID_MESSAGE_SEND_USER), Integer.valueOf(C5419R.string.bot_dm_send_failed)), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.RATE_LIMIT_DM_OPEN), Integer.valueOf(C5419R.string.bot_dm_rate_limited)), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.SEND_MESSAGE_TEMPORARILY_DISABLED), Integer.valueOf(C5419R.string.bot_dm_send_message_temporarily_disabled)), Tuples.m10073to(numValueOf, Integer.valueOf(C5419R.string.add_friend_error_invalid_discord_tag)), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_FRIENDS), Integer.valueOf(C5419R.string.add_friend_error_too_many_friends)), Tuples.m10073to(numValueOf2, numValueOf3), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_SELF), numValueOf3), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_USER_BOT), numValueOf3), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_DISCORD_TAG), numValueOf3), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_ALREADY_FRIENDS), Integer.valueOf(C5419R.string.add_friend_error_already_friends)), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_THREADS), Integer.valueOf(C5419R.string.too_many_threads_message)), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS), Integer.valueOf(C5419R.string.too_many_announcement_threads_message)), Tuples.m10073to(Integer.valueOf(RestAPIAbortCodes.SLOWMODE_RATE_LIMITED), Integer.valueOf(C5419R.string.channel_slowmode_desc_short)));
     }
 
     private RestAPIAbortMessages() {
@@ -79,15 +80,15 @@ public final class RestAPIAbortMessages {
     /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void handleAbortCodeOrDefault$default(RestAPIAbortMessages restAPIAbortMessages, Error error, Function0 function0, Function0 function02, int i, Object obj) {
         if ((i & 4) != 0) {
-            function02 = AnonymousClass1.INSTANCE;
+            function02 = C68601.INSTANCE;
         }
         restAPIAbortMessages.handleAbortCodeOrDefault(error, function0, function02);
     }
 
     public final void handleAbortCodeOrDefault(Error errorResponse, Function0<Unit> onHandle, Function0<Boolean> onDefault) {
-        m.checkNotNullParameter(errorResponse, "errorResponse");
-        m.checkNotNullParameter(onHandle, "onHandle");
-        m.checkNotNullParameter(onDefault, "onDefault");
+        Intrinsics3.checkNotNullParameter(errorResponse, "errorResponse");
+        Intrinsics3.checkNotNullParameter(onHandle, "onHandle");
+        Intrinsics3.checkNotNullParameter(onDefault, "onDefault");
         if (errorResponse.getType() != Error.Type.DISCORD_BAD_REQUEST) {
             errorResponse.setShowErrorToasts(onDefault.invoke().booleanValue());
         } else {

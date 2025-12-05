@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.widgets.guilds.list.GuildListViewHolder;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: FolderItemDecoration.kt */
 /* loaded from: classes2.dex */
@@ -18,9 +18,9 @@ public final class FolderItemDecoration extends RecyclerView.ItemDecoration {
     private final Drawable tintableDrawableNoChildren;
 
     public FolderItemDecoration(Drawable drawable, Drawable drawable2, Drawable drawable3, int i) {
-        m.checkNotNullParameter(drawable, "drawableNoChildren");
-        m.checkNotNullParameter(drawable2, "tintableDrawableNoChildren");
-        m.checkNotNullParameter(drawable3, "drawableWithChildren");
+        Intrinsics3.checkNotNullParameter(drawable, "drawableNoChildren");
+        Intrinsics3.checkNotNullParameter(drawable2, "tintableDrawableNoChildren");
+        Intrinsics3.checkNotNullParameter(drawable3, "drawableWithChildren");
         this.drawableNoChildren = drawable;
         this.tintableDrawableNoChildren = drawable2;
         this.drawableWithChildren = drawable3;
@@ -44,7 +44,7 @@ public final class FolderItemDecoration extends RecyclerView.ItemDecoration {
                 i = 1;
                 while (z3 && i < parent.getChildCount()) {
                     RecyclerView.ViewHolder childViewHolder2 = parent.getChildViewHolder(parent.getChildAt(i));
-                    if ((childViewHolder2 instanceof GuildListViewHolder.GuildViewHolder) && m.areEqual(((GuildListViewHolder.GuildViewHolder) childViewHolder2).getFolderId(), folderId)) {
+                    if ((childViewHolder2 instanceof GuildListViewHolder.GuildViewHolder) && Intrinsics3.areEqual(((GuildListViewHolder.GuildViewHolder) childViewHolder2).getFolderId(), folderId)) {
                         i++;
                         z3 = true;
                     } else {
@@ -56,12 +56,12 @@ public final class FolderItemDecoration extends RecyclerView.ItemDecoration {
             }
         }
         if (i > 0) {
-            m.checkNotNullExpressionValue(childAt, "firstView");
+            Intrinsics3.checkNotNullExpressionValue(childAt, "firstView");
             int left = (childAt.getLeft() + childAt.getRight()) / 2;
             int top = (childAt.getTop() + childAt.getBottom()) / 2;
             boolean z4 = parent.getChildCount() == i;
             RecyclerView.ViewHolder childViewHolder3 = parent.getChildViewHolder(parent.getChildAt(parent.getChildCount() - 1));
-            if (z4 && (childViewHolder3 instanceof GuildListViewHolder.GuildViewHolder) && m.areEqual(((GuildListViewHolder.GuildViewHolder) childViewHolder3).isLastGuildInFolder(), Boolean.FALSE)) {
+            if (z4 && (childViewHolder3 instanceof GuildListViewHolder.GuildViewHolder) && Intrinsics3.areEqual(((GuildListViewHolder.GuildViewHolder) childViewHolder3).isLastGuildInFolder(), Boolean.FALSE)) {
                 z2 = true;
             }
             int height = childAt.getHeight();
@@ -79,9 +79,9 @@ public final class FolderItemDecoration extends RecyclerView.ItemDecoration {
     @Override // androidx.recyclerview.widget.RecyclerView.ItemDecoration
     public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
         Drawable drawable;
-        m.checkNotNullParameter(c, "c");
-        m.checkNotNullParameter(parent, "parent");
-        m.checkNotNullParameter(state, "state");
+        Intrinsics3.checkNotNullParameter(c, "c");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(state, "state");
         if (parent.getChildCount() < 1) {
             return;
         }
@@ -92,7 +92,7 @@ public final class FolderItemDecoration extends RecyclerView.ItemDecoration {
             if (childViewHolder instanceof GuildListViewHolder.FolderViewHolder) {
                 GuildListViewHolder.FolderViewHolder folderViewHolder = (GuildListViewHolder.FolderViewHolder) childViewHolder;
                 if (folderViewHolder.shouldDrawDecoration()) {
-                    m.checkNotNullExpressionValue(childAt, "view");
+                    Intrinsics3.checkNotNullExpressionValue(childAt, "view");
                     int left = (childAt.getLeft() + childAt.getRight()) / 2;
                     int top = (childAt.getTop() + childAt.getBottom()) / 2;
                     int numChildren = folderViewHolder.getNumChildren();
@@ -117,7 +117,7 @@ public final class FolderItemDecoration extends RecyclerView.ItemDecoration {
                 }
             }
             if ((childViewHolder instanceof GuildListViewHolder.GuildViewHolder) && ((GuildListViewHolder.GuildViewHolder) childViewHolder).isTargetedForFolderCreation()) {
-                m.checkNotNullExpressionValue(childAt, "view");
+                Intrinsics3.checkNotNullExpressionValue(childAt, "view");
                 int left2 = (childAt.getLeft() + childAt.getRight()) / 2;
                 int top2 = (childAt.getTop() + childAt.getBottom()) / 2;
                 Drawable drawable3 = this.drawableNoChildren;

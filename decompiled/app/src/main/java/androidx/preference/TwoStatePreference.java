@@ -125,11 +125,11 @@ public abstract class TwoStatePreference extends Preference {
     }
 
     public static class SavedState extends Preference.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new AnonymousClass1();
+        public static final Parcelable.Creator<SavedState> CREATOR = new C05291();
         public boolean mChecked;
 
-        /* renamed from: androidx.preference.TwoStatePreference$SavedState$1, reason: invalid class name */
-        public static class AnonymousClass1 implements Parcelable.Creator<SavedState> {
+        /* renamed from: androidx.preference.TwoStatePreference$SavedState$1 */
+        public static class C05291 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
                 return createFromParcel(parcel);

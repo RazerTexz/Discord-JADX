@@ -1,9 +1,9 @@
 package com.discord.api.stageinstance;
 
-import b.d.b.a.a;
 import com.discord.api.guildmember.GuildMember;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: RecommendedStageInstance.kt */
 /* loaded from: classes.dex */
@@ -26,11 +26,13 @@ public final /* data */ class RecommendedStageInstance {
         return this.participantCount;
     }
 
-    public final List<GuildMember> c() {
+    /* renamed from: c */
+    public final List<GuildMember> m8219c() {
         return this.sampleSpeakerMembers;
     }
 
-    public final List<Long> d() {
+    /* renamed from: d */
+    public final List<Long> m8220d() {
         return this.speakers;
     }
 
@@ -42,7 +44,7 @@ public final /* data */ class RecommendedStageInstance {
             return false;
         }
         RecommendedStageInstance recommendedStageInstance = (RecommendedStageInstance) other;
-        return m.areEqual(this.guild, recommendedStageInstance.guild) && m.areEqual(this.instance, recommendedStageInstance.instance) && m.areEqual(this.speakers, recommendedStageInstance.speakers) && m.areEqual(this.sampleSpeakerMembers, recommendedStageInstance.sampleSpeakerMembers) && this.participantCount == recommendedStageInstance.participantCount && this.source == recommendedStageInstance.source && Double.compare(this.score, recommendedStageInstance.score) == 0;
+        return Intrinsics3.areEqual(this.guild, recommendedStageInstance.guild) && Intrinsics3.areEqual(this.instance, recommendedStageInstance.instance) && Intrinsics3.areEqual(this.speakers, recommendedStageInstance.speakers) && Intrinsics3.areEqual(this.sampleSpeakerMembers, recommendedStageInstance.sampleSpeakerMembers) && this.participantCount == recommendedStageInstance.participantCount && this.source == recommendedStageInstance.source && Double.compare(this.score, recommendedStageInstance.score) == 0;
     }
 
     public int hashCode() {
@@ -59,21 +61,21 @@ public final /* data */ class RecommendedStageInstance {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("RecommendedStageInstance(guild=");
-        sbU.append(this.guild);
-        sbU.append(", instance=");
-        sbU.append(this.instance);
-        sbU.append(", speakers=");
-        sbU.append(this.speakers);
-        sbU.append(", sampleSpeakerMembers=");
-        sbU.append(this.sampleSpeakerMembers);
-        sbU.append(", participantCount=");
-        sbU.append(this.participantCount);
-        sbU.append(", source=");
-        sbU.append(this.source);
-        sbU.append(", score=");
-        sbU.append(this.score);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("RecommendedStageInstance(guild=");
+        sbM833U.append(this.guild);
+        sbM833U.append(", instance=");
+        sbM833U.append(this.instance);
+        sbM833U.append(", speakers=");
+        sbM833U.append(this.speakers);
+        sbM833U.append(", sampleSpeakerMembers=");
+        sbM833U.append(this.sampleSpeakerMembers);
+        sbM833U.append(", participantCount=");
+        sbM833U.append(this.participantCount);
+        sbM833U.append(", source=");
+        sbM833U.append(this.source);
+        sbM833U.append(", score=");
+        sbM833U.append(this.score);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

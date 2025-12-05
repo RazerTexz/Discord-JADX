@@ -1,7 +1,6 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,6 +12,7 @@ import java.util.Objects;
 import org.webrtc.DataChannel;
 import org.webrtc.MediaStreamTrack;
 import org.webrtc.RtpTransceiver;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes3.dex */
 public class PeerConnection {
@@ -122,7 +122,7 @@ public class PeerConnection {
             private final List<String> urls;
             private String username;
 
-            public /* synthetic */ Builder(List list, AnonymousClass1 anonymousClass1) {
+            public /* synthetic */ Builder(List list, C129761 c129761) {
                 this(list);
             }
 
@@ -173,7 +173,7 @@ public class PeerConnection {
             }
         }
 
-        public /* synthetic */ IceServer(String str, List list, String str2, String str3, TlsCertPolicy tlsCertPolicy, String str4, List list2, List list3, AnonymousClass1 anonymousClass1) {
+        public /* synthetic */ IceServer(String str, List list, String str2, String str3, TlsCertPolicy tlsCertPolicy, String str4, List list2, List list3, C129761 c129761) {
             this(str, list, str2, str3, tlsCertPolicy, str4, list2, list3);
         }
 
@@ -252,7 +252,7 @@ public class PeerConnection {
             sb.append("] [");
             sb.append(this.tlsAlpnProtocols);
             sb.append("] [");
-            return a.L(sb, this.tlsEllipticCurves, "]");
+            return outline.m824L(sb, this.tlsEllipticCurves, "]");
         }
 
         @Deprecated

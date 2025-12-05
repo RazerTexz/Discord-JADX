@@ -5,38 +5,38 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.f;
-import b.a.d.f0;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.ContactSyncPermissionsSheetBinding;
 import com.discord.i18n.Hook;
 import com.discord.i18n.RenderContext;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.spans.ClickableSpan;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.contact_sync.WidgetContactSyncViewModel;
-import d0.z.d.a0;
-import d0.z.d.m;
-import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppHelpDesk;
+import p007b.p008a.p018d.AppViewModelDelegates2;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p507d0.p592z.p594d.Reflection2;
 
 /* compiled from: ContactSyncPermissionsSheet.kt */
 /* loaded from: classes2.dex */
 public final class ContactSyncPermissionsSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(ContactSyncPermissionsSheet.class, "binding", "getBinding()Lcom/discord/databinding/ContactSyncPermissionsSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(ContactSyncPermissionsSheet.class, "binding", "getBinding()Lcom/discord/databinding/ContactSyncPermissionsSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -53,7 +53,7 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
         }
 
         public final ContactSyncPermissionsSheet show(FragmentManager fragmentManager) {
-            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             ContactSyncPermissionsSheet contactSyncPermissionsSheet = new ContactSyncPermissionsSheet();
             contactSyncPermissionsSheet.show(fragmentManager, ContactSyncPermissionsSheet.class.getSimpleName());
             return contactSyncPermissionsSheet;
@@ -65,77 +65,77 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
     }
 
     /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1 */
+    public static final class C82091 extends Lambda implements Function1<RenderContext, Unit> {
+        public C82091() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(RenderContext renderContext) {
             invoke2(renderContext);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* compiled from: ContactSyncPermissionsSheet.kt */
-        /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C04041 extends o implements Function1<Hook, Unit> {
+        /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1$1, reason: invalid class name */
+        public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
 
             /* compiled from: ContactSyncPermissionsSheet.kt */
             /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C04051 extends o implements Function1<View, Unit> {
-                public static final C04051 INSTANCE = new C04051();
+            public static final class C132831 extends Lambda implements Function1<View, Unit> {
+                public static final C132831 INSTANCE = new C132831();
 
-                public C04051() {
+                public C132831() {
                     super(1);
                 }
 
                 @Override // kotlin.jvm.functions.Function1
                 public /* bridge */ /* synthetic */ Unit invoke(View view) {
                     invoke2(view);
-                    return Unit.a;
+                    return Unit.f27425a;
                 }
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(View view) {
-                    m.checkNotNullParameter(view, "it");
+                    Intrinsics3.checkNotNullParameter(view, "it");
                     UriHandler uriHandler = UriHandler.INSTANCE;
                     Context context = view.getContext();
-                    m.checkNotNullExpressionValue(context, "it.context");
-                    UriHandler.handle$default(uriHandler, context, f.a.a(360061878534L, null), false, false, null, 28, null);
+                    Intrinsics3.checkNotNullExpressionValue(context, "it.context");
+                    UriHandler.handle$default(uriHandler, context, AppHelpDesk.f507a.m149a(360061878534L, null), false, false, null, 28, null);
                 }
             }
 
-            public C04041() {
+            public AnonymousClass1() {
                 super(1);
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                m.checkNotNullParameter(hook, "$receiver");
-                hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(ContactSyncPermissionsSheet.this.getContext(), R.color.link)), false, null, C04051.INSTANCE, 4, null));
+                Intrinsics3.checkNotNullParameter(hook, "$receiver");
+                hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(ContactSyncPermissionsSheet.this.getContext(), C5419R.color.link)), false, null, C132831.INSTANCE, 4, null));
             }
 
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ Unit invoke(Hook hook) {
                 invoke2(hook);
-                return Unit.a;
+                return Unit.f27425a;
             }
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            m.checkNotNullParameter(renderContext, "$receiver");
-            renderContext.a("learnMoreHook", new C04041());
+            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            renderContext.m8422a("learnMoreHook", new AnonymousClass1());
         }
     }
 
     /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$2 */
+    public static final class ViewOnClickListenerC82102 implements View.OnClickListener {
         public final /* synthetic */ boolean $discoverable;
 
-        public AnonymousClass2(boolean z2) {
+        public ViewOnClickListenerC82102(boolean z2) {
             this.$discoverable = z2;
         }
 
@@ -148,11 +148,11 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
     }
 
     /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$3, reason: invalid class name */
-    public static final class AnonymousClass3 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$3 */
+    public static final class ViewOnClickListenerC82113 implements View.OnClickListener {
         public final /* synthetic */ WidgetContactSyncViewModel.ViewState $viewState;
 
-        public AnonymousClass3(WidgetContactSyncViewModel.ViewState viewState) {
+        public ViewOnClickListenerC82113(WidgetContactSyncViewModel.ViewState viewState) {
             this.$viewState = viewState;
         }
 
@@ -163,11 +163,11 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
     }
 
     /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$4 */
+    public static final class ViewOnClickListenerC82124 implements View.OnClickListener {
         public final /* synthetic */ WidgetContactSyncViewModel.ViewState $viewState;
 
-        public AnonymousClass4(WidgetContactSyncViewModel.ViewState viewState) {
+        public ViewOnClickListenerC82124(WidgetContactSyncViewModel.ViewState viewState) {
             this.$viewState = viewState;
         }
 
@@ -178,29 +178,29 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
     }
 
     /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<WidgetContactSyncViewModel.ViewState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$onResume$1 */
+    public static final class C82131 extends Lambda implements Function1<WidgetContactSyncViewModel.ViewState, Unit> {
+        public C82131() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetContactSyncViewModel.ViewState viewState) {
             invoke2(viewState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetContactSyncViewModel.ViewState viewState) {
-            m.checkNotNullParameter(viewState, "it");
+            Intrinsics3.checkNotNullParameter(viewState, "it");
             ContactSyncPermissionsSheet.access$configureUI(ContactSyncPermissionsSheet.this, viewState);
         }
     }
 
     public ContactSyncPermissionsSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, ContactSyncPermissionsSheet$binding$2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetContactSyncViewModel.class), new ContactSyncPermissionsSheet$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(new ContactSyncPermissionsSheet$viewModel$2(this)));
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, ContactSyncPermissionsSheet2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetContactSyncViewModel.class), new C8207x6c1a5d95(this), new AppViewModelDelegates2(new ContactSyncPermissionsSheet3(this)));
     }
 
     public static final /* synthetic */ void access$configureUI(ContactSyncPermissionsSheet contactSyncPermissionsSheet, WidgetContactSyncViewModel.ViewState viewState) {
@@ -213,21 +213,21 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
 
     private final void configureUI(WidgetContactSyncViewModel.ViewState viewState) {
         boolean z2 = viewState.getAllowPhone() || viewState.getAllowEmail();
-        CheckedSetting checkedSetting = getBinding().f2092b;
-        m.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncPermissionsDiscoverableToggle");
+        CheckedSetting checkedSetting = getBinding().f15026b;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncPermissionsDiscoverableToggle");
         checkedSetting.setChecked(z2);
-        CheckedSetting checkedSetting2 = getBinding().e;
-        m.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncPermissionsPhoneToggle");
+        CheckedSetting checkedSetting2 = getBinding().f15029e;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncPermissionsPhoneToggle");
         checkedSetting2.setChecked(viewState.getAllowPhone());
-        CheckedSetting checkedSetting3 = getBinding().c;
-        m.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncPermissionsEmailToggle");
+        CheckedSetting checkedSetting3 = getBinding().f15027c;
+        Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncPermissionsEmailToggle");
         checkedSetting3.setChecked(viewState.getAllowEmail());
-        LinkifiedTextView linkifiedTextView = getBinding().d;
-        m.checkNotNullExpressionValue(linkifiedTextView, "binding.contactSyncPermissionsLearnMore");
-        b.m(linkifiedTextView, R.string.contact_sync_learn_more, new Object[0], new AnonymousClass1());
-        getBinding().f2092b.e(new AnonymousClass2(z2));
-        getBinding().e.e(new AnonymousClass3(viewState));
-        getBinding().c.e(new AnonymousClass4(viewState));
+        LinkifiedTextView linkifiedTextView = getBinding().f15028d;
+        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.contactSyncPermissionsLearnMore");
+        FormatUtils.m221m(linkifiedTextView, C5419R.string.contact_sync_learn_more, new Object[0], new C82091());
+        getBinding().f15026b.m8527e(new ViewOnClickListenerC82102(z2));
+        getBinding().f15029e.m8527e(new ViewOnClickListenerC82113(viewState));
+        getBinding().f15027c.m8527e(new ViewOnClickListenerC82124(viewState));
     }
 
     private final ContactSyncPermissionsSheetBinding getBinding() {
@@ -240,12 +240,12 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public int getContentViewResId() {
-        return R.layout.contact_sync_permissions_sheet;
+        return C5419R.layout.contact_sync_permissions_sheet;
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onResume() {
         super.onResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), ContactSyncPermissionsSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), ContactSyncPermissionsSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C82131(), 62, (Object) null);
     }
 }

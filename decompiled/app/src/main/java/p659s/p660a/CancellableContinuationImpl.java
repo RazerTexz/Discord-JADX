@@ -1,0 +1,42 @@
+package p659s.p660a;
+
+import com.discord.widgets.chat.input.MentionUtils;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+
+/* compiled from: CancellableContinuationImpl.kt */
+/* renamed from: s.a.b1, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class CancellableContinuationImpl extends CancellableContinuationImpl4 {
+
+    /* renamed from: j */
+    public final Function1<Throwable, Unit> f27717j;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public CancellableContinuationImpl(Function1<? super Throwable, Unit> function1) {
+        this.f27717j = function1;
+    }
+
+    @Override // p659s.p660a.CompletionHandler
+    /* renamed from: a */
+    public void mo11193a(Throwable th) {
+        this.f27717j.invoke(th);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public Unit invoke(Throwable th) {
+        this.f27717j.invoke(th);
+        return Unit.f27425a;
+    }
+
+    public String toString() {
+        StringBuilder sbM833U = outline.m833U("InvokeOnCancel[");
+        sbM833U.append(C3404f.m4284e0(this.f27717j));
+        sbM833U.append(MentionUtils.MENTIONS_CHAR);
+        sbM833U.append(C3404f.m4312l0(this));
+        sbM833U.append(']');
+        return sbM833U.toString();
+    }
+}

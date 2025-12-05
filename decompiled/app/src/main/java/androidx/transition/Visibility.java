@@ -28,13 +28,13 @@ public abstract class Visibility extends Transition {
     private static final String PROPNAME_PARENT = "android:visibility:parent";
     private static final String[] sTransitionProperties = {PROPNAME_VISIBILITY, PROPNAME_PARENT};
 
-    /* renamed from: androidx.transition.Visibility$1, reason: invalid class name */
-    public class AnonymousClass1 extends TransitionListenerAdapter {
+    /* renamed from: androidx.transition.Visibility$1 */
+    public class C06731 extends TransitionListenerAdapter {
         public final /* synthetic */ View val$finalOverlayView;
         public final /* synthetic */ ViewGroup val$overlayHost;
         public final /* synthetic */ View val$startView;
 
-        public AnonymousClass1(ViewGroup viewGroup, View view, View view2) {
+        public C06731(ViewGroup viewGroup, View view, View view2) {
             this.val$overlayHost = viewGroup;
             this.val$finalOverlayView = view;
             this.val$startView = view2;
@@ -42,7 +42,7 @@ public abstract class Visibility extends Transition {
 
         @Override // androidx.transition.TransitionListenerAdapter, androidx.transition.Transition.TransitionListener
         public void onTransitionEnd(@NonNull Transition transition) {
-            this.val$startView.setTag(R.id.save_overlay_view, null);
+            this.val$startView.setTag(C0658R.id.save_overlay_view, null);
             ViewGroupUtils.getOverlay(this.val$overlayHost).remove(this.val$finalOverlayView);
             transition.removeListener(this);
         }
@@ -334,7 +334,7 @@ public abstract class Visibility extends Transition {
         }
         View view3 = transitionValues.view;
         View viewCopyViewImage = transitionValues2 != null ? transitionValues2.view : null;
-        int i3 = R.id.save_overlay_view;
+        int i3 = C0658R.id.save_overlay_view;
         View view4 = (View) view3.getTag(i3);
         if (view4 != null) {
             view2 = null;
@@ -416,7 +416,7 @@ public abstract class Visibility extends Transition {
                 ViewGroupUtils.getOverlay(viewGroup).remove(view4);
             } else {
                 view3.setTag(i3, view4);
-                addListener(new AnonymousClass1(viewGroup, view4, view3));
+                addListener(new C06731(viewGroup, view4, view3));
             }
         }
         return animatorOnDisappear2;

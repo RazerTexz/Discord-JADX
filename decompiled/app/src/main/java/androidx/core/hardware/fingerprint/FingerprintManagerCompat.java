@@ -18,11 +18,11 @@ import javax.crypto.Mac;
 public class FingerprintManagerCompat {
     private final Context mContext;
 
-    /* renamed from: androidx.core.hardware.fingerprint.FingerprintManagerCompat$1, reason: invalid class name */
-    public class AnonymousClass1 extends FingerprintManager.AuthenticationCallback {
+    /* renamed from: androidx.core.hardware.fingerprint.FingerprintManagerCompat$1 */
+    public class C02291 extends FingerprintManager.AuthenticationCallback {
         public final /* synthetic */ AuthenticationCallback val$callback;
 
-        public AnonymousClass1(AuthenticationCallback authenticationCallback) {
+        public C02291(AuthenticationCallback authenticationCallback) {
             this.val$callback = authenticationCallback;
         }
 
@@ -114,7 +114,7 @@ public class FingerprintManagerCompat {
 
     @RequiresApi(23)
     private static FingerprintManager.AuthenticationCallback wrapCallback(AuthenticationCallback authenticationCallback) {
-        return new AnonymousClass1(authenticationCallback);
+        return new C02291(authenticationCallback);
     }
 
     @RequiresApi(23)

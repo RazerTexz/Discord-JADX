@@ -1,9 +1,9 @@
 package co.discord.media_engine.internal;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.Arrays;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -68,7 +68,7 @@ public final /* data */ class NativeStats {
             return false;
         }
         NativeStats nativeStats = (NativeStats) other;
-        return m.areEqual(this.transport, nativeStats.transport) && m.areEqual(this.outbound, nativeStats.outbound) && m.areEqual(this.screenshare, nativeStats.screenshare) && m.areEqual(this.inbound, nativeStats.inbound);
+        return Intrinsics3.areEqual(this.transport, nativeStats.transport) && Intrinsics3.areEqual(this.outbound, nativeStats.outbound) && Intrinsics3.areEqual(this.screenshare, nativeStats.screenshare) && Intrinsics3.areEqual(this.inbound, nativeStats.inbound);
     }
 
     public final Inbound[] getInbound() {
@@ -99,15 +99,15 @@ public final /* data */ class NativeStats {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("NativeStats(transport=");
-        sbU.append(this.transport);
-        sbU.append(", outbound=");
-        sbU.append(this.outbound);
-        sbU.append(", screenshare=");
-        sbU.append(this.screenshare);
-        sbU.append(", inbound=");
-        sbU.append(Arrays.toString(this.inbound));
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("NativeStats(transport=");
+        sbM833U.append(this.transport);
+        sbM833U.append(", outbound=");
+        sbM833U.append(this.outbound);
+        sbM833U.append(", screenshare=");
+        sbM833U.append(this.screenshare);
+        sbM833U.append(", inbound=");
+        sbM833U.append(Arrays.toString(this.inbound));
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

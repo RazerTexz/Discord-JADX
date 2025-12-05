@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Build;
 import android.provider.Settings;
-import d0.g0.w;
-import d0.t.m0;
-import d0.z.d.m;
 import java.util.Iterator;
 import java.util.Set;
+import p507d0.p579g0.Strings4;
+import p507d0.p580t.SetsJVM;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: DeviceUtils.kt */
 /* loaded from: classes2.dex */
@@ -33,21 +33,21 @@ public final class DeviceUtils {
     }
 
     public final boolean canDrawOverlays(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         return Build.VERSION.SDK_INT <= 22 || Settings.canDrawOverlays(context);
     }
 
     public final boolean isDevice(String manufacturer, Integer versionCode, String model) {
-        return isDevice(manufacturer != null ? m0.setOf(manufacturer) : null, versionCode != null ? m0.setOf(Integer.valueOf(versionCode.intValue())) : null, model != null ? m0.setOf(model) : null);
+        return isDevice(manufacturer != null ? SetsJVM.setOf(manufacturer) : null, versionCode != null ? SetsJVM.setOf(Integer.valueOf(versionCode.intValue())) : null, model != null ? SetsJVM.setOf(model) : null);
     }
 
     public final boolean isSmallScreen(Resources resources) {
-        m.checkNotNullParameter(resources, "resources");
+        Intrinsics3.checkNotNullParameter(resources, "resources");
         return ((float) resources.getDisplayMetrics().widthPixels) <= ((float) SMALL_SCREEN_WIDTH_DP) * resources.getDisplayMetrics().density;
     }
 
     public final boolean isTablet(Resources resources) {
-        m.checkNotNullParameter(resources, "resources");
+        Intrinsics3.checkNotNullParameter(resources, "resources");
         return (resources.getConfiguration().screenLayout & 15) >= 3;
     }
 
@@ -76,8 +76,8 @@ public final class DeviceUtils {
         if (!manufacturers.isEmpty()) {
             for (String str : manufacturers) {
                 String str2 = Build.MANUFACTURER;
-                m.checkNotNullExpressionValue(str2, "Build.MANUFACTURER");
-                if (w.contains((CharSequence) str2, (CharSequence) str, true)) {
+                Intrinsics3.checkNotNullExpressionValue(str2, "Build.MANUFACTURER");
+                if (Strings4.contains((CharSequence) str2, (CharSequence) str, true)) {
                     z2 = true;
                     break;
                 }
@@ -105,8 +105,8 @@ public final class DeviceUtils {
         if (!models.isEmpty()) {
             for (String str3 : models) {
                 String str4 = Build.MODEL;
-                m.checkNotNullExpressionValue(str4, "Build.MODEL");
-                if (w.contains((CharSequence) str4, (CharSequence) str3, true)) {
+                Intrinsics3.checkNotNullExpressionValue(str4, "Build.MODEL");
+                if (Strings4.contains((CharSequence) str4, (CharSequence) str3, true)) {
                     z4 = true;
                     break;
                 }

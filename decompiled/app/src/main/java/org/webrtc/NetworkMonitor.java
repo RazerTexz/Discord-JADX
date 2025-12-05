@@ -21,9 +21,9 @@ public class NetworkMonitor {
     private final ArrayList<NetworkObserver> networkObservers;
     private int numObservers;
 
-    /* renamed from: org.webrtc.NetworkMonitor$1, reason: invalid class name */
-    public class AnonymousClass1 implements NetworkChangeDetectorFactory {
-        public AnonymousClass1() {
+    /* renamed from: org.webrtc.NetworkMonitor$1 */
+    public class C129731 implements NetworkChangeDetectorFactory {
+        public C129731() {
         }
 
         @Override // org.webrtc.NetworkChangeDetectorFactory
@@ -32,9 +32,9 @@ public class NetworkMonitor {
         }
     }
 
-    /* renamed from: org.webrtc.NetworkMonitor$2, reason: invalid class name */
-    public class AnonymousClass2 implements NetworkChangeDetector.Observer {
-        public AnonymousClass2() {
+    /* renamed from: org.webrtc.NetworkMonitor$2 */
+    public class C129742 implements NetworkChangeDetector.Observer {
+        public C129742() {
         }
 
         @Override // org.webrtc.NetworkChangeDetector.Observer
@@ -69,7 +69,7 @@ public class NetworkMonitor {
         void onConnectionTypeChanged(NetworkChangeDetector.ConnectionType connectionType);
     }
 
-    public /* synthetic */ NetworkMonitor(AnonymousClass1 anonymousClass1) {
+    public /* synthetic */ NetworkMonitor(C129731 c129731) {
         this();
     }
 
@@ -113,7 +113,7 @@ public class NetworkMonitor {
     }
 
     private NetworkChangeDetector createNetworkChangeDetector(Context context) {
-        return this.networkChangeDetectorFactory.create(new AnonymousClass2(), context);
+        return this.networkChangeDetectorFactory.create(new C129742(), context);
     }
 
     private NetworkChangeDetector.ConnectionType getCurrentConnectionType() {
@@ -278,7 +278,7 @@ public class NetworkMonitor {
     }
 
     private NetworkMonitor() {
-        this.networkChangeDetectorFactory = new AnonymousClass1();
+        this.networkChangeDetectorFactory = new C129731();
         this.networkChangeDetectorLock = new Object();
         this.nativeNetworkObservers = new ArrayList<>();
         this.networkObservers = new ArrayList<>();
@@ -288,7 +288,7 @@ public class NetworkMonitor {
 
     @CalledByNative
     private void stopMonitoring(long j) {
-        Logging.d(TAG, "Stop monitoring with native observer " + j);
+        Logging.m11027d(TAG, "Stop monitoring with native observer " + j);
         stopMonitoring();
         synchronized (this.nativeNetworkObservers) {
             this.nativeNetworkObservers.remove(Long.valueOf(j));
@@ -302,7 +302,7 @@ public class NetworkMonitor {
 
     @CalledByNative
     private void startMonitoring(@Nullable Context context, long j) {
-        Logging.d(TAG, "Start monitoring with native observer " + j);
+        Logging.m11027d(TAG, "Start monitoring with native observer " + j);
         if (context == null) {
             context = ContextUtils.getApplicationContext();
         }

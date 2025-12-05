@@ -2,22 +2,16 @@ package com.discord.widgets.settings.account;
 
 import android.content.Context;
 import androidx.annotation.StringRes;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.models.user.User;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserRelationships;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
-import d0.f0.q;
-import d0.t.i0;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -25,12 +19,18 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p578f0._Sequences2;
+import p507d0.p580t._Maps;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
+public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -40,21 +40,21 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
     private final RestAPI restAPI;
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$1 */
+    public static final class C97801 extends Lambda implements Function1<StoreState, Unit> {
+        public C97801() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetSettingsBlockedUsersViewModel.access$handleStoreState(WidgetSettingsBlockedUsersViewModel.this, storeState);
         }
     }
@@ -65,11 +65,11 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
         }
 
         public final Observable<StoreState> observeStores(StoreUserRelationships storeUserRelationships, StoreUser storeUser) {
-            m.checkNotNullParameter(storeUserRelationships, "storeUserRelationships");
-            m.checkNotNullParameter(storeUser, "storeUser");
-            Observable observableY = storeUserRelationships.observe().Y(new WidgetSettingsBlockedUsersViewModel$Companion$observeStores$1(storeUser));
-            m.checkNotNullExpressionValue(observableY, "storeUserRelationships\n …          }\n            }");
-            return observableY;
+            Intrinsics3.checkNotNullParameter(storeUserRelationships, "storeUserRelationships");
+            Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+            Observable observableM11099Y = storeUserRelationships.observe().m11099Y(new WidgetSettingsBlockedUsersViewModel2(storeUser));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "storeUserRelationships\n …          }\n            }");
+            return observableM11099Y;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -121,7 +121,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.B(a.U("ShowToast(stringRes="), this.stringRes, ")");
+                return outline.m814B(outline.m833U("ShowToast(stringRes="), this.stringRes, ")");
             }
         }
 
@@ -140,7 +140,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
         private final User user;
 
         public Item(User user) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             this.user = user;
             this.key = String.valueOf(user.getId());
         }
@@ -158,13 +158,13 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
         }
 
         public final Item copy(User user) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             return new Item(user);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Item) && m.areEqual(this.user, ((Item) other).user);
+                return (other instanceof Item) && Intrinsics3.areEqual(this.user, ((Item) other).user);
             }
             return true;
         }
@@ -192,10 +192,10 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Item(user=");
-            sbU.append(this.user);
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("Item(user=");
+            sbM833U.append(this.user);
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -205,7 +205,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(Map<Long, ? extends User> map) {
-            m.checkNotNullParameter(map, "users");
+            Intrinsics3.checkNotNullParameter(map, "users");
             this.users = map;
         }
 
@@ -222,13 +222,13 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
         }
 
         public final StoreState copy(Map<Long, ? extends User> users) {
-            m.checkNotNullParameter(users, "users");
+            Intrinsics3.checkNotNullParameter(users, "users");
             return new StoreState(users);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof StoreState) && m.areEqual(this.users, ((StoreState) other).users);
+                return (other instanceof StoreState) && Intrinsics3.areEqual(this.users, ((StoreState) other).users);
             }
             return true;
         }
@@ -246,7 +246,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            return a.M(a.U("StoreState(users="), this.users, ")");
+            return outline.m825M(outline.m833U("StoreState(users="), this.users, ")");
         }
     }
 
@@ -269,7 +269,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(List<Item> list) {
                 super(null);
-                m.checkNotNullParameter(list, "items");
+                Intrinsics3.checkNotNullParameter(list, "items");
                 this.items = list;
             }
 
@@ -286,13 +286,13 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(List<Item> items) {
-                m.checkNotNullParameter(items, "items");
+                Intrinsics3.checkNotNullParameter(items, "items");
                 return new Loaded(items);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && m.areEqual(this.items, ((Loaded) other).items);
+                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.items, ((Loaded) other).items);
                 }
                 return true;
             }
@@ -310,7 +310,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.L(a.U("Loaded(items="), this.items, ")");
+                return outline.m824L(outline.m833U("Loaded(items="), this.items, ")");
             }
         }
 
@@ -332,11 +332,11 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Map.Entry<? extends Long, ? extends User>, Item> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$1 */
+    public static final class C97821 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends User>, Item> {
+        public static final C97821 INSTANCE = new C97821();
 
-        public AnonymousClass1() {
+        public C97821() {
             super(1);
         }
 
@@ -347,15 +347,15 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Item invoke2(Map.Entry<Long, ? extends User> entry) {
-            m.checkNotNullParameter(entry, "userEntry");
+            Intrinsics3.checkNotNullParameter(entry, "userEntry");
             return new Item(entry.getValue());
         }
     }
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$2, reason: invalid class name */
-    public static final class AnonymousClass2<T> implements Comparator<Item> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$2 */
+    public static final class C97832<T> implements Comparator<Item> {
+        public static final C97832 INSTANCE = new C97832();
 
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Item item, Item item2) {
@@ -369,41 +369,41 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$1 */
+    public static final class C97841 extends Lambda implements Function1<Void, Unit> {
+        public C97841() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
-            WidgetSettingsBlockedUsersViewModel.access$emitShowToastEvent(WidgetSettingsBlockedUsersViewModel.this, R.string.user_has_been_unblocked);
+            WidgetSettingsBlockedUsersViewModel.access$emitShowToastEvent(WidgetSettingsBlockedUsersViewModel.this, C5419R.string.user_has_been_unblocked);
         }
     }
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$2 */
+    public static final class C97852 extends Lambda implements Function1<Error, Unit> {
+        public C97852() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
-            WidgetSettingsBlockedUsersViewModel.access$emitShowToastEvent(WidgetSettingsBlockedUsersViewModel.this, R.string.default_failure_to_perform_action_message);
+            Intrinsics3.checkNotNullParameter(error, "it");
+            WidgetSettingsBlockedUsersViewModel.access$emitShowToastEvent(WidgetSettingsBlockedUsersViewModel.this, C5419R.string.default_failure_to_perform_action_message);
         }
     }
 
@@ -431,11 +431,11 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
 
     private final void emitShowToastEvent(@StringRes int stringRes) {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new Event.ShowToast(stringRes));
+        publishSubject.f27650k.onNext(new Event.ShowToast(stringRes));
     }
 
     private final List<Item> getItems(Map<Long, ? extends User> users) {
-        return q.toList(q.sortedWith(q.map(i0.asSequence(users), AnonymousClass1.INSTANCE), AnonymousClass2.INSTANCE));
+        return _Sequences2.toList(_Sequences2.sortedWith(_Sequences2.map(_Maps.asSequence(users), C97821.INSTANCE), C97832.INSTANCE));
     }
 
     private final void handleStoreState(StoreState storeState) {
@@ -453,21 +453,21 @@ public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     public final void onClickUnblock(long userId) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.removeRelationship(LOCATION, userId), false, 1, null), this, null, 2, null), WidgetSettingsBlockedUsersViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.removeRelationship(LOCATION, userId), false, 1, null), this, null, 2, null), WidgetSettingsBlockedUsersViewModel.class, (Context) null, (Function1) null, new C97852(), (Function0) null, (Function0) null, new C97841(), 54, (Object) null);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetSettingsBlockedUsersViewModel(Observable<StoreState> observable, RestAPI restAPI) {
         super(ViewState.Uninitialized.INSTANCE);
-        m.checkNotNullParameter(observable, "storeObservable");
-        m.checkNotNullParameter(restAPI, "restAPI");
+        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
         this.restAPI = restAPI;
-        this.eventSubject = PublishSubject.k0();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetSettingsBlockedUsersViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        this.eventSubject = PublishSubject.m11133k0();
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetSettingsBlockedUsersViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C97801(), 62, (Object) null);
     }
 }

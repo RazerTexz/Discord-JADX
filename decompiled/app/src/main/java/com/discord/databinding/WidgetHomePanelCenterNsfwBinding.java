@@ -12,37 +12,42 @@ import com.google.android.material.button.MaterialButton;
 /* loaded from: classes.dex */
 public final class WidgetHomePanelCenterNsfwBinding implements ViewBinding {
 
+    /* renamed from: a */
     @NonNull
-    public final LinearLayout a;
+    public final LinearLayout f17132a;
 
-    /* renamed from: b, reason: collision with root package name */
+    /* renamed from: b */
     @NonNull
-    public final ImageView f2466b;
+    public final ImageView f17133b;
 
+    /* renamed from: c */
     @NonNull
-    public final MaterialButton c;
+    public final MaterialButton f17134c;
 
+    /* renamed from: d */
     @NonNull
-    public final MaterialButton d;
+    public final MaterialButton f17135d;
 
+    /* renamed from: e */
     @NonNull
-    public final LinkifiedTextView e;
+    public final LinkifiedTextView f17136e;
 
+    /* renamed from: f */
     @NonNull
-    public final TextView f;
+    public final TextView f17137f;
 
     public WidgetHomePanelCenterNsfwBinding(@NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2, @NonNull ImageView imageView, @NonNull MaterialButton materialButton, @NonNull MaterialButton materialButton2, @NonNull LinkifiedTextView linkifiedTextView, @NonNull TextView textView) {
-        this.a = linearLayout;
-        this.f2466b = imageView;
-        this.c = materialButton;
-        this.d = materialButton2;
-        this.e = linkifiedTextView;
-        this.f = textView;
+        this.f17132a = linearLayout;
+        this.f17133b = imageView;
+        this.f17134c = materialButton;
+        this.f17135d = materialButton2;
+        this.f17136e = linkifiedTextView;
+        this.f17137f = textView;
     }
 
     @Override // androidx.viewbinding.ViewBinding
     @NonNull
     public View getRoot() {
-        return this.a;
+        return this.f17132a;
     }
 }

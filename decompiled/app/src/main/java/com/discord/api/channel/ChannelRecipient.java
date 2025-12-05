@@ -1,9 +1,9 @@
 package com.discord.api.channel;
 
-import b.d.b.a.a;
 import com.discord.api.user.User;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: ChannelRecipient.kt */
 /* loaded from: classes.dex */
@@ -35,7 +35,7 @@ public final /* data */ class ChannelRecipient {
             return false;
         }
         ChannelRecipient channelRecipient = (ChannelRecipient) other;
-        return m.areEqual(this.nick, channelRecipient.nick) && this.channelId == channelRecipient.channelId && m.areEqual(this.user, channelRecipient.user);
+        return Intrinsics3.areEqual(this.nick, channelRecipient.nick) && this.channelId == channelRecipient.channelId && Intrinsics3.areEqual(this.user, channelRecipient.user);
     }
 
     public int hashCode() {
@@ -48,13 +48,13 @@ public final /* data */ class ChannelRecipient {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ChannelRecipient(nick=");
-        sbU.append(this.nick);
-        sbU.append(", channelId=");
-        sbU.append(this.channelId);
-        sbU.append(", user=");
-        sbU.append(this.user);
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ChannelRecipient(nick=");
+        sbM833U.append(this.nick);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", user=");
+        sbM833U.append(this.user);
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

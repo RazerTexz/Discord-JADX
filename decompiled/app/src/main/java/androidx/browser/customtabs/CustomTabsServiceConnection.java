@@ -7,7 +7,7 @@ import android.os.IBinder;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import x.a.a.b;
+import p668x.p669a.p670a.ICustomTabsService;
 
 /* loaded from: classes.dex */
 public abstract class CustomTabsServiceConnection implements ServiceConnection {
@@ -15,10 +15,10 @@ public abstract class CustomTabsServiceConnection implements ServiceConnection {
     @Nullable
     private Context mApplicationContext;
 
-    /* renamed from: androidx.browser.customtabs.CustomTabsServiceConnection$1, reason: invalid class name */
-    public class AnonymousClass1 extends CustomTabsClient {
-        public AnonymousClass1(b bVar, ComponentName componentName, Context context) {
-            super(bVar, componentName, context);
+    /* renamed from: androidx.browser.customtabs.CustomTabsServiceConnection$1 */
+    public class C01541 extends CustomTabsClient {
+        public C01541(ICustomTabsService iCustomTabsService, ComponentName componentName, Context context) {
+            super(iCustomTabsService, componentName, context);
         }
     }
 
@@ -35,7 +35,7 @@ public abstract class CustomTabsServiceConnection implements ServiceConnection {
         if (this.mApplicationContext == null) {
             throw new IllegalStateException("Custom Tabs Service connected before an applicationcontext has been provided.");
         }
-        onCustomTabsServiceConnected(componentName, new AnonymousClass1(b.a.asInterface(iBinder), componentName, this.mApplicationContext));
+        onCustomTabsServiceConnected(componentName, new C01541(ICustomTabsService.a.asInterface(iBinder), componentName, this.mApplicationContext));
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})

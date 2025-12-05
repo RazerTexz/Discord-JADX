@@ -14,7 +14,7 @@ import android.view.ViewOutlineProvider;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.constraintlayout.utils.widget.ImageFilterView;
-import androidx.constraintlayout.widget.R;
+import androidx.constraintlayout.widget.C0201R;
 
 /* loaded from: classes.dex */
 public class ImageFilterButton extends AppCompatImageButton {
@@ -29,9 +29,9 @@ public class ImageFilterButton extends AppCompatImageButton {
     private float mRoundPercent;
     public ViewOutlineProvider mViewOutlineProvider;
 
-    /* renamed from: androidx.constraintlayout.utils.widget.ImageFilterButton$1, reason: invalid class name */
-    public class AnonymousClass1 extends ViewOutlineProvider {
-        public AnonymousClass1() {
+    /* renamed from: androidx.constraintlayout.utils.widget.ImageFilterButton$1 */
+    public class C01951 extends ViewOutlineProvider {
+        public C01951() {
         }
 
         @Override // android.view.ViewOutlineProvider
@@ -40,9 +40,9 @@ public class ImageFilterButton extends AppCompatImageButton {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.utils.widget.ImageFilterButton$2, reason: invalid class name */
-    public class AnonymousClass2 extends ViewOutlineProvider {
-        public AnonymousClass2() {
+    /* renamed from: androidx.constraintlayout.utils.widget.ImageFilterButton$2 */
+    public class C01962 extends ViewOutlineProvider {
+        public C01962() {
         }
 
         @Override // android.view.ViewOutlineProvider
@@ -72,24 +72,24 @@ public class ImageFilterButton extends AppCompatImageButton {
     private void init(Context context, AttributeSet attributeSet) {
         setPadding(0, 0, 0, 0);
         if (attributeSet != null) {
-            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.styleable.ImageFilterView);
+            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C0201R.styleable.ImageFilterView);
             int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
-            Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(R.styleable.ImageFilterView_altSrc);
+            Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(C0201R.styleable.ImageFilterView_altSrc);
             for (int i = 0; i < indexCount; i++) {
                 int index = typedArrayObtainStyledAttributes.getIndex(i);
-                if (index == R.styleable.ImageFilterView_crossfade) {
+                if (index == C0201R.styleable.ImageFilterView_crossfade) {
                     this.mCrossfade = typedArrayObtainStyledAttributes.getFloat(index, 0.0f);
-                } else if (index == R.styleable.ImageFilterView_warmth) {
+                } else if (index == C0201R.styleable.ImageFilterView_warmth) {
                     setWarmth(typedArrayObtainStyledAttributes.getFloat(index, 0.0f));
-                } else if (index == R.styleable.ImageFilterView_saturation) {
+                } else if (index == C0201R.styleable.ImageFilterView_saturation) {
                     setSaturation(typedArrayObtainStyledAttributes.getFloat(index, 0.0f));
-                } else if (index == R.styleable.ImageFilterView_contrast) {
+                } else if (index == C0201R.styleable.ImageFilterView_contrast) {
                     setContrast(typedArrayObtainStyledAttributes.getFloat(index, 0.0f));
-                } else if (index == R.styleable.ImageFilterView_round) {
+                } else if (index == C0201R.styleable.ImageFilterView_round) {
                     setRound(typedArrayObtainStyledAttributes.getDimension(index, 0.0f));
-                } else if (index == R.styleable.ImageFilterView_roundPercent) {
+                } else if (index == C0201R.styleable.ImageFilterView_roundPercent) {
                     setRoundPercent(typedArrayObtainStyledAttributes.getFloat(index, 0.0f));
-                } else if (index == R.styleable.ImageFilterView_overlay) {
+                } else if (index == C0201R.styleable.ImageFilterView_overlay) {
                     setOverlay(typedArrayObtainStyledAttributes.getBoolean(index, this.mOverlay));
                 }
             }
@@ -185,9 +185,9 @@ public class ImageFilterButton extends AppCompatImageButton {
                 this.mRect = new RectF();
             }
             if (this.mViewOutlineProvider == null) {
-                AnonymousClass2 anonymousClass2 = new AnonymousClass2();
-                this.mViewOutlineProvider = anonymousClass2;
-                setOutlineProvider(anonymousClass2);
+                C01962 c01962 = new C01962();
+                this.mViewOutlineProvider = c01962;
+                setOutlineProvider(c01962);
             }
             setClipToOutline(true);
             this.mRect.set(0.0f, 0.0f, getWidth(), getHeight());
@@ -216,9 +216,9 @@ public class ImageFilterButton extends AppCompatImageButton {
                 this.mRect = new RectF();
             }
             if (this.mViewOutlineProvider == null) {
-                AnonymousClass1 anonymousClass1 = new AnonymousClass1();
-                this.mViewOutlineProvider = anonymousClass1;
-                setOutlineProvider(anonymousClass1);
+                C01951 c01951 = new C01951();
+                this.mViewOutlineProvider = c01951;
+                setOutlineProvider(c01951);
             }
             setClipToOutline(true);
             int width = getWidth();

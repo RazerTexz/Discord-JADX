@@ -1,9 +1,7 @@
 package com.discord.widgets.guilds;
 
 import android.content.Context;
-import b.a.d.d0;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelGuildFolder;
 import com.discord.models.domain.ModelUserSettings;
@@ -12,10 +10,8 @@ import com.discord.stores.StoreGuildsSorted;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserSettings;
 import com.discord.utilities.error.Error;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
@@ -23,12 +19,17 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Iterables2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
+public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -38,21 +39,21 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
     private final StoreUserSettings storeUserSettings;
 
     /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$1 */
+    public static final class C85781 extends Lambda implements Function1<StoreState, Unit> {
+        public C85781() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetGuildFolderSettingsViewModel.access$handleStoreState(WidgetGuildFolderSettingsViewModel.this, storeState);
         }
     }
@@ -67,9 +68,9 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(long folderId, StoreUserSettings storeUserSettings, StoreGuildsSorted storeGuildsSorted) {
-            Observable<StoreState> observableJ = Observable.j(storeUserSettings.observeGuildFolders(), storeGuildsSorted.observeEntries(), new WidgetGuildFolderSettingsViewModel$Companion$observeStoreState$1(folderId));
-            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…Guilds)\n        }\n      }");
-            return observableJ;
+            Observable<StoreState> observableM11076j = Observable.m11076j(storeUserSettings.observeGuildFolders(), storeGuildsSorted.observeEntries(), new WidgetGuildFolderSettingsViewModel2(folderId));
+            Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable.combineLatest…Guilds)\n        }\n      }");
+            return observableM11076j;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -121,7 +122,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.B(a.U("UpdateFolderSettingsFailure(failureMessageStringRes="), this.failureMessageStringRes, ")");
+                return outline.m814B(outline.m833U("UpdateFolderSettingsFailure(failureMessageStringRes="), this.failureMessageStringRes, ")");
             }
         }
 
@@ -166,7 +167,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                return a.B(a.U("UpdateFolderSettingsSuccess(successMessageStringRes="), this.successMessageStringRes, ")");
+                return outline.m814B(outline.m833U("UpdateFolderSettingsSuccess(successMessageStringRes="), this.successMessageStringRes, ")");
             }
         }
 
@@ -220,7 +221,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
                 return false;
             }
             FormState formState = (FormState) other;
-            return m.areEqual(this.name, formState.name) && m.areEqual(this.color, formState.color);
+            return Intrinsics3.areEqual(this.name, formState.name) && Intrinsics3.areEqual(this.color, formState.color);
         }
 
         public final Integer getColor() {
@@ -239,10 +240,10 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("FormState(name=");
-            sbU.append(this.name);
-            sbU.append(", color=");
-            return a.F(sbU, this.color, ")");
+            StringBuilder sbM833U = outline.m833U("FormState(name=");
+            sbM833U.append(this.name);
+            sbM833U.append(", color=");
+            return outline.m818F(sbM833U, this.color, ")");
         }
     }
 
@@ -267,8 +268,8 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Valid(ModelGuildFolder modelGuildFolder, List<? extends StoreGuildsSorted.Entry> list) {
                 super(null);
-                m.checkNotNullParameter(modelGuildFolder, "folder");
-                m.checkNotNullParameter(list, "sortedGuilds");
+                Intrinsics3.checkNotNullParameter(modelGuildFolder, "folder");
+                Intrinsics3.checkNotNullParameter(list, "sortedGuilds");
                 this.folder = modelGuildFolder;
                 this.sortedGuilds = list;
             }
@@ -294,8 +295,8 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             }
 
             public final Valid copy(ModelGuildFolder folder, List<? extends StoreGuildsSorted.Entry> sortedGuilds) {
-                m.checkNotNullParameter(folder, "folder");
-                m.checkNotNullParameter(sortedGuilds, "sortedGuilds");
+                Intrinsics3.checkNotNullParameter(folder, "folder");
+                Intrinsics3.checkNotNullParameter(sortedGuilds, "sortedGuilds");
                 return new Valid(folder, sortedGuilds);
             }
 
@@ -307,7 +308,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return m.areEqual(this.folder, valid.folder) && m.areEqual(this.sortedGuilds, valid.sortedGuilds);
+                return Intrinsics3.areEqual(this.folder, valid.folder) && Intrinsics3.areEqual(this.sortedGuilds, valid.sortedGuilds);
             }
 
             public final ModelGuildFolder getFolder() {
@@ -326,10 +327,10 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Valid(folder=");
-                sbU.append(this.folder);
-                sbU.append(", sortedGuilds=");
-                return a.L(sbU, this.sortedGuilds, ")");
+                StringBuilder sbM833U = outline.m833U("Valid(folder=");
+                sbM833U.append(this.folder);
+                sbM833U.append(", sortedGuilds=");
+                return outline.m824L(sbM833U, this.sortedGuilds, ")");
             }
         }
 
@@ -352,7 +353,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(FormState formState, boolean z2) {
                 super(null);
-                m.checkNotNullParameter(formState, "formState");
+                Intrinsics3.checkNotNullParameter(formState, "formState");
                 this.formState = formState;
                 this.showSave = z2;
             }
@@ -378,7 +379,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             }
 
             public final Loaded copy(FormState formState, boolean showSave) {
-                m.checkNotNullParameter(formState, "formState");
+                Intrinsics3.checkNotNullParameter(formState, "formState");
                 return new Loaded(formState, showSave);
             }
 
@@ -390,7 +391,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return m.areEqual(this.formState, loaded.formState) && this.showSave == loaded.showSave;
+                return Intrinsics3.areEqual(this.formState, loaded.formState) && this.showSave == loaded.showSave;
             }
 
             public final FormState getFormState() {
@@ -414,10 +415,10 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Loaded(formState=");
-                sbU.append(this.formState);
-                sbU.append(", showSave=");
-                return a.O(sbU, this.showSave, ")");
+                StringBuilder sbM833U = outline.m833U("Loaded(formState=");
+                sbM833U.append(this.formState);
+                sbM833U.append(", showSave=");
+                return outline.m827O(sbM833U, this.showSave, ")");
             }
         }
 
@@ -439,41 +440,41 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<ModelUserSettings, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$1 */
+    public static final class C85791 extends Lambda implements Function1<ModelUserSettings, Unit> {
+        public C85791() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(ModelUserSettings modelUserSettings) {
             invoke2(modelUserSettings);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
-            m.checkNotNullParameter(modelUserSettings, "it");
+            Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
             WidgetGuildFolderSettingsViewModel.access$emitUpdateSuccessEvent(WidgetGuildFolderSettingsViewModel.this);
         }
     }
 
     /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$2 */
+    public static final class C85802 extends Lambda implements Function1<Error, Unit> {
+        public C85802() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "it");
+            Intrinsics3.checkNotNullParameter(error, "it");
             WidgetGuildFolderSettingsViewModel.access$emitUpdateFailureEvent(WidgetGuildFolderSettingsViewModel.this);
         }
     }
@@ -496,12 +497,12 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
 
     private final void emitUpdateFailureEvent() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new Event.UpdateFolderSettingsFailure(R.string.default_failure_to_perform_action_message));
+        publishSubject.f27650k.onNext(new Event.UpdateFolderSettingsFailure(C5419R.string.default_failure_to_perform_action_message));
     }
 
     private final void emitUpdateSuccessEvent() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        publishSubject.k.onNext(new Event.UpdateFolderSettingsSuccess(R.string.guild_folder_updated_success));
+        publishSubject.f27650k.onNext(new Event.UpdateFolderSettingsSuccess(C5419R.string.guild_folder_updated_success));
     }
 
     private final void handleStoreState(StoreState storeState) {
@@ -514,7 +515,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
     }
 
     private final boolean shouldShowSave(StoreState.Valid storeState, FormState formState) {
-        return (m.areEqual(storeState.getFolder().getColor(), formState.getColor()) ^ true) || (m.areEqual(storeState.getFolder().getName(), formState.getName()) ^ true);
+        return (Intrinsics3.areEqual(storeState.getFolder().getColor(), formState.getColor()) ^ true) || (Intrinsics3.areEqual(storeState.getFolder().getName(), formState.getName()) ^ true);
     }
 
     private final void updateFormState(FormState formState) {
@@ -543,7 +544,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -563,7 +564,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
             if (loaded != null) {
                 FormState formState = loaded.getFormState();
                 List<StoreGuildsSorted.Entry> sortedGuilds = valid.getSortedGuilds();
-                ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(sortedGuilds, 10));
+                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(sortedGuilds, 10));
                 for (StoreGuildsSorted.Entry entry : sortedGuilds) {
                     if (entry instanceof StoreGuildsSorted.Entry.SingletonGuild) {
                         modelGuildFolderAsModelGuildFolder = entry.asModelGuildFolder();
@@ -576,7 +577,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
                     }
                     arrayList.add(modelGuildFolderAsModelGuildFolder);
                 }
-                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updateUserSettings(RestAPIParams.UserSettings.INSTANCE.createWithGuildFolders(arrayList)), false, 1, null), this, null, 2, null), WidgetGuildFolderSettingsViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
+                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updateUserSettings(RestAPIParams.UserSettings.INSTANCE.createWithGuildFolders(arrayList)), false, 1, null), this, null, 2, null), WidgetGuildFolderSettingsViewModel.class, (Context) null, (Function1) null, new C85802(), (Function0) null, (Function0) null, new C85791(), 54, (Object) null);
             }
         }
     }
@@ -593,7 +594,7 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
     }
 
     public final void setName(String name) {
-        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -611,11 +612,11 @@ public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGuildFolderSettingsViewModel(long j, StoreUserSettings storeUserSettings, StoreGuildsSorted storeGuildsSorted) {
         super(ViewState.Uninitialized.INSTANCE);
-        m.checkNotNullParameter(storeUserSettings, "storeUserSettings");
-        m.checkNotNullParameter(storeGuildsSorted, "storeGuildsSorted");
+        Intrinsics3.checkNotNullParameter(storeUserSettings, "storeUserSettings");
+        Intrinsics3.checkNotNullParameter(storeGuildsSorted, "storeGuildsSorted");
         this.folderId = j;
         this.storeUserSettings = storeUserSettings;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(Companion.access$observeStoreState(INSTANCE, j, storeUserSettings, storeGuildsSorted)), this, null, 2, null), WidgetGuildFolderSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
-        this.eventSubject = PublishSubject.k0();
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(Companion.access$observeStoreState(INSTANCE, j, storeUserSettings, storeGuildsSorted)), this, null, 2, null), WidgetGuildFolderSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85781(), 62, (Object) null);
+        this.eventSubject = PublishSubject.m11133k0();
     }
 }

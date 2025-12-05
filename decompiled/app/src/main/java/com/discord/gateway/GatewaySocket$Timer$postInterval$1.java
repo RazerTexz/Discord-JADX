@@ -2,7 +2,7 @@ package com.discord.gateway;
 
 import androidx.core.app.NotificationCompat;
 import kotlin.jvm.functions.Function0;
-import rx.functions.Action1;
+import p658rx.functions.Action1;
 
 /* compiled from: GatewaySocket.kt */
 /* loaded from: classes.dex */
@@ -13,7 +13,7 @@ public final class GatewaySocket$Timer$postInterval$1<T> implements Action1<Long
         this.$callback = function0;
     }
 
-    @Override // rx.functions.Action1
+    @Override // p658rx.functions.Action1
     public /* bridge */ /* synthetic */ void call(Long l) {
         call2(l);
     }

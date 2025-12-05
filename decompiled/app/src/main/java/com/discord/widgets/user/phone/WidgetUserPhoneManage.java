@@ -9,10 +9,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.d.j;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetUserPhoneManageBinding;
 import com.discord.models.phone.PhoneCountryCode;
 import com.discord.models.user.MeUser;
@@ -21,39 +18,43 @@ import com.discord.stores.StorePhone;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.captcha.CaptchaHelper;
 import com.discord.utilities.drawable.DrawableCompat;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.features.GrowthTeamFeatures;
 import com.discord.utilities.intent.IntentUtilsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.widgets.captcha.WidgetCaptcha;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.discord.widgets.user.WidgetUserPasswordVerify;
 import com.discord.widgets.user.account.WidgetUserAccountVerifyBase;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.button.MaterialButton;
-import d0.g0.t;
-import d0.t.g0;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Collection;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.Tuples;
+import p507d0.p579g0.StringsJVM;
+import p507d0.p580t.MapsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetUserPhoneManage.kt */
 /* loaded from: classes.dex */
 public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetUserPhoneManage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserPhoneManageBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserPhoneManage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserPhoneManageBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -92,15 +93,15 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
         }
 
         public final void launch(Context context, WidgetUserAccountVerifyBase.Mode mode, Source source) {
-            m.checkNotNullParameter(context, "context");
-            m.checkNotNullParameter(mode, "mode");
-            m.checkNotNullParameter(source, "source");
+            Intrinsics3.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(mode, "mode");
+            Intrinsics3.checkNotNullParameter(source, "source");
             Intent launchIntent = WidgetUserAccountVerifyBase.INSTANCE.getLaunchIntent(mode, true, false);
             if (mode == WidgetUserAccountVerifyBase.Mode.NO_HISTORY_FROM_USER_SETTINGS) {
                 launchIntent.addFlags(BasicMeasure.EXACTLY);
             }
             launchIntent.putExtra("intent_args_key", source.getSource());
-            j.d(context, WidgetUserPhoneManage.class, launchIntent);
+            AppScreen2.m156d(context, WidgetUserPhoneManage.class, launchIntent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -109,12 +110,12 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<PhoneCountryCode> {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$1 */
+    public static final class C102591 extends Lambda implements Function0<PhoneCountryCode> {
         public final /* synthetic */ StorePhone $phoneStore;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(StorePhone storePhone) {
+        public C102591(StorePhone storePhone) {
             super(0);
             this.$phoneStore = storePhone;
         }
@@ -132,36 +133,36 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<PhoneCountryCode, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$2 */
+    public static final class C102602 extends Lambda implements Function1<PhoneCountryCode, Unit> {
+        public C102602() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(PhoneCountryCode phoneCountryCode) {
             invoke2(phoneCountryCode);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PhoneCountryCode phoneCountryCode) {
-            m.checkNotNullParameter(phoneCountryCode, "it");
-            WidgetUserPhoneManage.access$getBinding$p(WidgetUserPhoneManage.this).f.setCountryCode(phoneCountryCode);
+            Intrinsics3.checkNotNullParameter(phoneCountryCode, "it");
+            WidgetUserPhoneManage.access$getBinding$p(WidgetUserPhoneManage.this).f18353f.setCountryCode(phoneCountryCode);
         }
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends o implements Function0<Unit> {
-        public AnonymousClass3() {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$3 */
+    public static final class C102613 extends Lambda implements Function0<Unit> {
+        public C102613() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -171,9 +172,9 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$4, reason: invalid class name */
-    public static final class AnonymousClass4 implements View.OnClickListener {
-        public AnonymousClass4() {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$4 */
+    public static final class ViewOnClickListenerC102624 implements View.OnClickListener {
+        public ViewOnClickListenerC102624() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -183,9 +184,9 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$5, reason: invalid class name */
-    public static final class AnonymousClass5 implements View.OnClickListener {
-        public AnonymousClass5() {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$5 */
+    public static final class ViewOnClickListenerC102635 implements View.OnClickListener {
+        public ViewOnClickListenerC102635() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -195,79 +196,79 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<MeUser, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBoundOrOnResume$1 */
+    public static final class C102641 extends Lambda implements Function1<MeUser, Unit> {
+        public C102641() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(MeUser meUser) {
             invoke2(meUser);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
-            m.checkNotNullParameter(meUser, "it");
+            Intrinsics3.checkNotNullParameter(meUser, "it");
             WidgetUserPhoneManage.access$configureUI(WidgetUserPhoneManage.this, meUser);
         }
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$removePhoneNumber$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$removePhoneNumber$1 */
+    public static final class C102651 extends Lambda implements Function1<View, Unit> {
+        public C102651() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            m.checkNotNullParameter(view, "it");
+            Intrinsics3.checkNotNullParameter(view, "it");
             WidgetUserPasswordVerify.INSTANCE.launchRemovePhoneNumber(WidgetUserPhoneManage.this.requireContext(), WidgetUserPhoneManage.access$getPasswordVerifyLauncher$p(WidgetUserPhoneManage.this));
         }
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$updatePhoneNumber$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$updatePhoneNumber$1 */
+    public static final class C102661 extends Lambda implements Function1<Error, Unit> {
+        public C102661() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Error error) {
             invoke2(error);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            m.checkNotNullParameter(error, "error");
+            Intrinsics3.checkNotNullParameter(error, "error");
             if (GrowthTeamFeatures.INSTANCE.isPhoneVerifyCaptchaEnabled()) {
                 WidgetCaptcha.Companion companion = WidgetCaptcha.INSTANCE;
                 Context contextRequireContext = WidgetUserPhoneManage.this.requireContext();
                 ActivityResultLauncher<Intent> activityResultLauncherAccess$getCaptchaLauncher$p = WidgetUserPhoneManage.access$getCaptchaLauncher$p(WidgetUserPhoneManage.this);
                 Error.Response response = error.getResponse();
-                m.checkNotNullExpressionValue(response, "error.response");
-                companion.processErrorsForCaptcha(contextRequireContext, activityResultLauncherAccess$getCaptchaLauncher$p, u.toMutableList((Collection) response.getMessages().keySet()), error);
+                Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+                companion.processErrorsForCaptcha(contextRequireContext, activityResultLauncherAccess$getCaptchaLauncher$p, _Collections.toMutableList((Collection) response.getMessages().keySet()), error);
             }
         }
     }
 
     /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$updatePhoneNumber$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$updatePhoneNumber$2 */
+    public static final class C102672 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $phoneNumber;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(String str) {
+        public C102672(String str) {
             super(1);
             this.$phoneNumber = str;
         }
@@ -275,7 +276,7 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -285,11 +286,11 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     }
 
     public WidgetUserPhoneManage() {
-        super(R.layout.widget_user_phone_manage);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetUserPhoneManage$binding$2.INSTANCE, null, 2, null);
-        this.passwordVerifyLauncher = WidgetUserPasswordVerify.INSTANCE.registerForResult(this, new WidgetUserPhoneManage$passwordVerifyLauncher$1(this));
-        this.phoneVerificationLauncher = WidgetUserPhoneVerify.INSTANCE.registerForResult(this, new WidgetUserPhoneManage$phoneVerificationLauncher$1(this));
-        this.captchaLauncher = WidgetCaptcha.INSTANCE.registerForResult(this, new WidgetUserPhoneManage$captchaLauncher$1(this));
+        super(C5419R.layout.widget_user_phone_manage);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetUserPhoneManage2.INSTANCE, null, 2, null);
+        this.passwordVerifyLauncher = WidgetUserPasswordVerify.INSTANCE.registerForResult(this, new WidgetUserPhoneManage4(this));
+        this.phoneVerificationLauncher = WidgetUserPhoneVerify.INSTANCE.registerForResult(this, new WidgetUserPhoneManage5(this));
+        this.captchaLauncher = WidgetCaptcha.INSTANCE.registerForResult(this, new WidgetUserPhoneManage3(this));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetUserPhoneManage widgetUserPhoneManage, MeUser meUser) {
@@ -319,7 +320,7 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     public static final /* synthetic */ String access$getSource$p(WidgetUserPhoneManage widgetUserPhoneManage) {
         String str = widgetUserPhoneManage.source;
         if (str == null) {
-            m.throwUninitializedPropertyAccessException("source");
+            Intrinsics3.throwUninitializedPropertyAccessException("source");
         }
         return str;
     }
@@ -346,23 +347,23 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
 
     private final void configureUI(MeUser meUser) {
         if (meUser.getPhoneNumber() != null) {
-            getBinding().g.setText(R.string.phone_verification_update_title);
-            TextView textView = getBinding().d;
-            m.checkNotNullExpressionValue(textView, "binding.userPhoneAddDescriptionNote");
-            b.n(textView, R.string.phone_verification_current_phone, new Object[]{meUser.getPhoneNumber()}, null, 4);
-            TextView textView2 = getBinding().c;
-            m.checkNotNullExpressionValue(textView2, "binding.removePhone");
+            getBinding().f18354g.setText(C5419R.string.phone_verification_update_title);
+            TextView textView = getBinding().f18351d;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.userPhoneAddDescriptionNote");
+            FormatUtils.m222n(textView, C5419R.string.phone_verification_current_phone, new Object[]{meUser.getPhoneNumber()}, null, 4);
+            TextView textView2 = getBinding().f18350c;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.removePhone");
             textView2.setVisibility(0);
         } else {
-            getBinding().g.setText(R.string.enter_phone_title);
-            getBinding().d.setText(R.string.enter_phone_description);
-            TextView textView3 = getBinding().c;
-            m.checkNotNullExpressionValue(textView3, "binding.removePhone");
+            getBinding().f18354g.setText(C5419R.string.enter_phone_title);
+            getBinding().f18351d.setText(C5419R.string.enter_phone_description);
+            TextView textView3 = getBinding().f18350c;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.removePhone");
             textView3.setVisibility(8);
         }
         if (meUser.getEmail() == null) {
-            TextView textView4 = getBinding().c;
-            m.checkNotNullExpressionValue(textView4, "binding.removePhone");
+            TextView textView4 = getBinding().f18350c;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.removePhone");
             textView4.setVisibility(8);
         }
     }
@@ -372,10 +373,10 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     }
 
     private final void handlePhoneNumberTextChanged() {
-        String textOrEmpty = getBinding().f.getTextOrEmpty();
-        MaterialButton materialButton = getBinding().e;
-        m.checkNotNullExpressionValue(materialButton, "binding.userPhoneAddNext");
-        materialButton.setEnabled((textOrEmpty.length() > 0) && t.startsWith$default(textOrEmpty, BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX, false, 2, null));
+        String textOrEmpty = getBinding().f18353f.getTextOrEmpty();
+        MaterialButton materialButton = getBinding().f18352e;
+        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.userPhoneAddNext");
+        materialButton.setEnabled((textOrEmpty.length() > 0) && StringsJVM.startsWith$default(textOrEmpty, BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX, false, 2, null));
     }
 
     private final void removePhoneNumber() {
@@ -385,29 +386,29 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
         }
         WidgetNoticeDialog.Companion companion = WidgetNoticeDialog.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         Resources resources = getResources();
-        m.checkNotNullExpressionValue(resources, "resources");
-        CharSequence charSequenceI = b.i(resources, R.string.user_settings_account_remove_phone_number_warning_title, new Object[0], null, 4);
+        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+        CharSequence charSequenceM217i = FormatUtils.m217i(resources, C5419R.string.user_settings_account_remove_phone_number_warning_title, new Object[0], null, 4);
         Resources resources2 = getResources();
-        m.checkNotNullExpressionValue(resources2, "resources");
-        CharSequence charSequenceI2 = b.i(resources2, R.string.user_settings_account_remove_phone_number_warning_body, new Object[0], null, 4);
+        Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
+        CharSequence charSequenceM217i2 = FormatUtils.m217i(resources2, C5419R.string.user_settings_account_remove_phone_number_warning_body, new Object[0], null, 4);
         Resources resources3 = getResources();
-        m.checkNotNullExpressionValue(resources3, "resources");
-        CharSequence charSequenceI3 = b.i(resources3, R.string.remove, new Object[0], null, 4);
+        Intrinsics3.checkNotNullExpressionValue(resources3, "resources");
+        CharSequence charSequenceM217i3 = FormatUtils.m217i(resources3, C5419R.string.remove, new Object[0], null, 4);
         Resources resources4 = getResources();
-        m.checkNotNullExpressionValue(resources4, "resources");
-        WidgetNoticeDialog.Companion.show$default(companion, parentFragmentManager, charSequenceI, charSequenceI2, charSequenceI3, b.i(resources4, R.string.cancel, new Object[0], null, 4), g0.mapOf(d0.o.to(Integer.valueOf(R.id.notice_ok), new AnonymousClass1())), null, null, null, Integer.valueOf(R.attr.notice_theme_positive_red), null, null, 0, null, 15808, null);
+        Intrinsics3.checkNotNullExpressionValue(resources4, "resources");
+        WidgetNoticeDialog.Companion.show$default(companion, parentFragmentManager, charSequenceM217i, charSequenceM217i2, charSequenceM217i3, FormatUtils.m217i(resources4, C5419R.string.cancel, new Object[0], null, 4), MapsJVM.mapOf(Tuples.m10073to(Integer.valueOf(C5419R.id.notice_ok), new C102651())), null, null, null, Integer.valueOf(C5419R.attr.notice_theme_positive_red), null, null, 0, null, 15808, null);
     }
 
     private final void updatePhoneNumber(CaptchaHelper.CaptchaPayload captchaPayload) {
-        String textOrEmpty = getBinding().f.getTextOrEmpty();
+        String textOrEmpty = getBinding().f18353f.getTextOrEmpty();
         RestAPI api = RestAPI.INSTANCE.getApi();
         String str = this.source;
         if (str == null) {
-            m.throwUninitializedPropertyAccessException("source");
+            Intrinsics3.throwUninitializedPropertyAccessException("source");
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.restSubscribeOn$default(api.userAddPhone(new RestAPIParams.Phone(textOrEmpty, str, captchaPayload != null ? captchaPayload.getCaptchaKey() : null, captchaPayload != null ? captchaPayload.getCaptchaRqtoken() : null)), false, 1, null), getBinding().f2687b, 0L, 2, null), this, null, 2, null), WidgetUserPhoneManage.class, (Context) null, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(textOrEmpty), 54, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.restSubscribeOn$default(api.userAddPhone(new RestAPIParams.Phone(textOrEmpty, str, captchaPayload != null ? captchaPayload.getCaptchaKey() : null, captchaPayload != null ? captchaPayload.getCaptchaRqtoken() : null)), false, 1, null), getBinding().f18349b, 0L, 2, null), this, null, 2, null), WidgetUserPhoneManage.class, (Context) null, (Function1) null, new C102661(), (Function0) null, (Function0) null, new C102672(textOrEmpty), 54, (Object) null);
     }
 
     public static /* synthetic */ void updatePhoneNumber$default(WidgetUserPhoneManage widgetUserPhoneManage, CaptchaHelper.CaptchaPayload captchaPayload, int i, Object obj) {
@@ -419,21 +420,21 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
 
     @Override // com.discord.widgets.user.account.WidgetUserAccountVerifyBase, com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
-        setActionBarDisplayHomeAsUpEnabled(!isForced(), Integer.valueOf(DrawableCompat.getThemedDrawableRes$default(view, R.attr.ic_action_bar_close, 0, 2, (Object) null)), !isForced() ? Integer.valueOf(R.string.close) : null);
+        setActionBarDisplayHomeAsUpEnabled(!isForced(), Integer.valueOf(DrawableCompat.getThemedDrawableRes$default(view, C5419R.attr.ic_action_bar_close, 0, 2, (Object) null)), !isForced() ? Integer.valueOf(C5419R.string.close) : null);
         this.source = IntentUtilsKt.getStringExtraOrDefault(getMostRecentIntent(), "intent_args_key", Companion.Source.DEFAULT.getSource());
-        getBinding().f.b(this);
+        getBinding().f18353f.m8600b(this);
         StorePhone phone = StoreStream.INSTANCE.getPhone();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{phone}, false, null, null, new AnonymousClass1(phone), 14, null), this, null, 2, null), WidgetUserPhoneManage.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
-        getBinding().f.a(this, new AnonymousClass3());
-        getBinding().e.setOnClickListener(new AnonymousClass4());
-        getBinding().c.setOnClickListener(new AnonymousClass5());
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{phone}, false, null, null, new C102591(phone), 14, null), this, null, 2, null), WidgetUserPhoneManage.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C102602(), 62, (Object) null);
+        getBinding().f18353f.m8599a(this, new C102613());
+        getBinding().f18352e.setOnClickListener(new ViewOnClickListenerC102624());
+        getBinding().f18350c.setOnClickListener(new ViewOnClickListenerC102635());
     }
 
     @Override // com.discord.widgets.user.account.WidgetUserAccountVerifyBase, com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreUser.observeMe$default(StoreStream.INSTANCE.getUsers(), false, 1, null), this, null, 2, null), WidgetUserPhoneManage.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreUser.observeMe$default(StoreStream.INSTANCE.getUsers(), false, 1, null), this, null, 2, null), WidgetUserPhoneManage.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C102641(), 62, (Object) null);
     }
 }

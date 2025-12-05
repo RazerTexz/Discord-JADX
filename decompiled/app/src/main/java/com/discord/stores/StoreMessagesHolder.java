@@ -2,18 +2,15 @@ package com.discord.stores;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.a.u.a;
-import b.a.u.b;
 import com.discord.api.message.reaction.MessageReaction;
 import com.discord.api.message.reaction.MessageReactionEmoji;
 import com.discord.api.message.reaction.MessageReactionUpdate;
 import com.discord.models.message.Message;
 import com.discord.stores.StoreMessagesLoader;
-import com.discord.utilities.message.LocalMessageCreatorsKt;
+import com.discord.utilities.message.LocalMessageCreators;
 import com.discord.utilities.message.MessageUtils;
 import com.discord.utilities.persister.Persister;
 import com.discord.utilities.time.ClockFactory;
-import j0.l.e.k;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -26,11 +23,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
-import rx.Observable;
-import rx.Subscription;
-import rx.subjects.BehaviorSubject;
-import rx.subjects.SerializedSubject;
-import rx.subjects.Subject;
+import p007b.p008a.p057u.C1309a;
+import p007b.p008a.p057u.C1310b;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
+import p658rx.Subscription;
+import p658rx.subjects.BehaviorSubject;
+import p658rx.subjects.SerializedSubject;
+import p658rx.subjects.Subject;
 
 /* loaded from: classes2.dex */
 public class StoreMessagesHolder {
@@ -47,7 +47,7 @@ public class StoreMessagesHolder {
     private long selectedChannelId;
     private final Set<Long> staleMessages = new HashSet();
     private final LinkedHashMap<Long, TreeMap<Long, Message>> messages = new LinkedHashMap<>();
-    private final Subject<Map<Long, List<Message>>, Map<Long, List<Message>>> messagesPublisher = new SerializedSubject(BehaviorSubject.k0());
+    private final Subject<Map<Long, List<Message>>, Map<Long, List<Message>>> messagesPublisher = new SerializedSubject(BehaviorSubject.m11129k0());
     private Map<Long, List<Message>> messagesSnapshot = Collections.emptyMap();
     private final Map<String, Long> messageNonceIds = new HashMap();
     private final Persister<Map<Long, List<Message>>> cache = new Persister<>("STORE_MESSAGES_CACHE_V38", new HashMap());
@@ -59,20 +59,20 @@ public class StoreMessagesHolder {
     public StoreMessagesHolder() {
         HashSet hashSet = new HashSet();
         this.detachedChannels = hashSet;
-        this.detachedChannelsSubject = new SerializedSubject(BehaviorSubject.l0(new HashSet(hashSet)));
+        this.detachedChannelsSubject = new SerializedSubject(BehaviorSubject.m11130l0(new HashSet(hashSet)));
     }
 
     private static Message addReaction(Message message, MessageReactionEmoji messageReactionEmoji, boolean z2) {
         MessageReaction messageReaction;
         Map<String, MessageReaction> reactionsMap = message.getReactionsMap();
-        String strC = messageReactionEmoji.c();
-        if (z2 && reactionsMap.containsKey(strC) && reactionsMap.get(strC).getMe()) {
+        String strM8116c = messageReactionEmoji.m8116c();
+        if (z2 && reactionsMap.containsKey(strM8116c) && reactionsMap.get(strM8116c).getMe()) {
             return message;
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap(reactionsMap);
         boolean z3 = true;
-        if (reactionsMap.containsKey(strC)) {
-            MessageReaction messageReaction2 = (MessageReaction) linkedHashMap.get(messageReactionEmoji.c());
+        if (reactionsMap.containsKey(strM8116c)) {
+            MessageReaction messageReaction2 = (MessageReaction) linkedHashMap.get(messageReactionEmoji.m8116c());
             int count = messageReaction2.getCount() + 1;
             MessageReactionEmoji emoji = messageReaction2.getEmoji();
             if (!messageReaction2.getMe() && !z2) {
@@ -82,8 +82,8 @@ public class StoreMessagesHolder {
         } else {
             messageReaction = new MessageReaction(1, messageReactionEmoji, z2);
         }
-        linkedHashMap.put(strC, messageReaction);
-        return LocalMessageCreatorsKt.createWithReactions(message, linkedHashMap);
+        linkedHashMap.put(strM8116c, messageReaction);
+        return LocalMessageCreators.createWithReactions(message, linkedHashMap);
     }
 
     private Map<Long, List<Message>> computeMessagesCache() {
@@ -131,7 +131,7 @@ public class StoreMessagesHolder {
                 if (subscription != null) {
                     subscription.unsubscribe();
                 }
-                this.cachePersistSubscription = new k(null).q(j2, TimeUnit.MILLISECONDS).W(new b(this), a.j);
+                this.cachePersistSubscription = new ScalarSynchronousObservable(null).m11111q(j2, TimeUnit.MILLISECONDS).m11097W(new C1310b(this), C1309a.f1997j);
             }
         }
     }
@@ -159,24 +159,24 @@ public class StoreMessagesHolder {
 
     private static Message removeReaction(Message message, MessageReactionEmoji messageReactionEmoji, boolean z2) {
         Map<String, MessageReaction> reactionsMap = message.getReactionsMap();
-        String strC = messageReactionEmoji.c();
-        if (!reactionsMap.containsKey(strC)) {
+        String strM8116c = messageReactionEmoji.m8116c();
+        if (!reactionsMap.containsKey(strM8116c)) {
             return message;
         }
-        if (z2 && !reactionsMap.get(strC).getMe()) {
+        if (z2 && !reactionsMap.get(strM8116c).getMe()) {
             return message;
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap(reactionsMap);
-        MessageReaction messageReaction = (MessageReaction) linkedHashMap.get(strC);
+        MessageReaction messageReaction = (MessageReaction) linkedHashMap.get(strM8116c);
         if (messageReaction.getCount() == 1) {
-            linkedHashMap.remove(strC);
+            linkedHashMap.remove(strM8116c);
         } else {
-            linkedHashMap.put(strC, new MessageReaction(messageReaction.getCount() - 1, messageReaction.getEmoji(), messageReaction.getMe() && !z2));
+            linkedHashMap.put(strM8116c, new MessageReaction(messageReaction.getCount() - 1, messageReaction.getEmoji(), messageReaction.getMe() && !z2));
         }
         if (linkedHashMap.isEmpty()) {
             linkedHashMap = null;
         }
-        return LocalMessageCreatorsKt.createWithReactions(message, linkedHashMap);
+        return LocalMessageCreators.createWithReactions(message, linkedHashMap);
     }
 
     private boolean updateDetachedState(long j, Map<Long, Message> map, boolean z2, boolean z3, boolean z4) {
@@ -206,7 +206,8 @@ public class StoreMessagesHolder {
         return z5;
     }
 
-    public /* synthetic */ void a(Object obj) {
+    /* renamed from: a */
+    public /* synthetic */ void m8508a(Object obj) {
         messageCacheTryPersist();
     }
 
@@ -344,7 +345,7 @@ public class StoreMessagesHolder {
             if (message == null) {
                 return;
             }
-            treeMap.put(Long.valueOf(messageId), LocalMessageCreatorsKt.createWithReactions(message, null));
+            treeMap.put(Long.valueOf(messageId), LocalMessageCreators.createWithReactions(message, null));
             this.updatedChannels.add(Long.valueOf(channelId));
             publishIfUpdated();
         }
@@ -359,17 +360,17 @@ public class StoreMessagesHolder {
             if (message == null) {
                 return;
             }
-            String strC = messageReactionUpdate.getEmoji().c();
+            String strM8116c = messageReactionUpdate.getEmoji().m8116c();
             Map<String, MessageReaction> reactionsMap = message.getReactionsMap();
-            if (reactionsMap.containsKey(strC)) {
+            if (reactionsMap.containsKey(strM8116c)) {
                 LinkedHashMap linkedHashMap = new LinkedHashMap();
                 for (Map.Entry<String, MessageReaction> entry : reactionsMap.entrySet()) {
                     String key = entry.getKey();
-                    if (!key.equals(strC)) {
+                    if (!key.equals(strM8116c)) {
                         linkedHashMap.put(key, entry.getValue());
                     }
                 }
-                treeMap.put(Long.valueOf(messageId), LocalMessageCreatorsKt.createWithReactions(message, linkedHashMap));
+                treeMap.put(Long.valueOf(messageId), LocalMessageCreators.createWithReactions(message, linkedHashMap));
                 this.updatedChannels.add(Long.valueOf(channelId));
                 publishIfUpdated();
             }

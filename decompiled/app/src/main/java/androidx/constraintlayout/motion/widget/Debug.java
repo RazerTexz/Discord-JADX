@@ -6,31 +6,31 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import b.d.b.a.a;
 import java.io.PrintStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class Debug {
     public static void dumpLayoutParams(ViewGroup viewGroup, String str) throws SecurityException, IllegalArgumentException {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
-        StringBuilder sbU = a.U(".(");
-        sbU.append(stackTraceElement.getFileName());
-        sbU.append(":");
-        sbU.append(stackTraceElement.getLineNumber());
-        sbU.append(") ");
-        sbU.append(str);
-        sbU.append("  ");
-        String string = sbU.toString();
+        StringBuilder sbM833U = outline.m833U(".(");
+        sbM833U.append(stackTraceElement.getFileName());
+        sbM833U.append(":");
+        sbM833U.append(stackTraceElement.getLineNumber());
+        sbM833U.append(") ");
+        sbM833U.append(str);
+        sbM833U.append("  ");
+        String string = sbM833U.toString();
         int childCount = viewGroup.getChildCount();
         System.out.println(str + " children " + childCount);
         for (int i = 0; i < childCount; i++) {
             View childAt = viewGroup.getChildAt(i);
             PrintStream printStream = System.out;
-            StringBuilder sbX = a.X(string, "     ");
-            sbX.append(getName(childAt));
-            printStream.println(sbX.toString());
+            StringBuilder sbM836X = outline.m836X(string, "     ");
+            sbM836X.append(getName(childAt));
+            printStream.println(sbM836X.toString());
             ViewGroup.LayoutParams layoutParams = childAt.getLayoutParams();
             for (Field field : layoutParams.getClass().getFields()) {
                 try {
@@ -46,18 +46,18 @@ public class Debug {
 
     public static void dumpPoc(Object obj) throws SecurityException, IllegalArgumentException {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
-        StringBuilder sbU = a.U(".(");
-        sbU.append(stackTraceElement.getFileName());
-        sbU.append(":");
-        sbU.append(stackTraceElement.getLineNumber());
-        sbU.append(")");
-        String string = sbU.toString();
+        StringBuilder sbM833U = outline.m833U(".(");
+        sbM833U.append(stackTraceElement.getFileName());
+        sbM833U.append(":");
+        sbM833U.append(stackTraceElement.getLineNumber());
+        sbM833U.append(")");
+        String string = sbM833U.toString();
         Class<?> cls = obj.getClass();
         PrintStream printStream = System.out;
-        StringBuilder sbX = a.X(string, "------------- ");
-        sbX.append(cls.getName());
-        sbX.append(" --------------------");
-        printStream.println(sbX.toString());
+        StringBuilder sbM836X = outline.m836X(string, "------------- ");
+        sbM836X.append(cls.getName());
+        sbM836X.append(" --------------------");
+        printStream.println(sbM836X.toString());
         for (Field field : cls.getFields()) {
             try {
                 Object obj2 = field.get(obj);
@@ -68,10 +68,10 @@ public class Debug {
             }
         }
         PrintStream printStream2 = System.out;
-        StringBuilder sbX2 = a.X(string, "------------- ");
-        sbX2.append(cls.getSimpleName());
-        sbX2.append(" --------------------");
-        printStream2.println(sbX2.toString());
+        StringBuilder sbM836X2 = outline.m836X(string, "------------- ");
+        sbM836X2.append(cls.getSimpleName());
+        sbM836X2.append(" --------------------");
+        printStream2.println(sbM836X2.toString());
     }
 
     public static String getActionType(MotionEvent motionEvent) throws SecurityException {
@@ -86,44 +86,44 @@ public class Debug {
 
     public static String getCallFrom(int i) {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[i + 2];
-        StringBuilder sbU = a.U(".(");
-        sbU.append(stackTraceElement.getFileName());
-        sbU.append(":");
-        sbU.append(stackTraceElement.getLineNumber());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U(".(");
+        sbM833U.append(stackTraceElement.getFileName());
+        sbM833U.append(":");
+        sbM833U.append(stackTraceElement.getLineNumber());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public static String getLoc() {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
-        StringBuilder sbU = a.U(".(");
-        sbU.append(stackTraceElement.getFileName());
-        sbU.append(":");
-        sbU.append(stackTraceElement.getLineNumber());
-        sbU.append(") ");
-        sbU.append(stackTraceElement.getMethodName());
-        sbU.append("()");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U(".(");
+        sbM833U.append(stackTraceElement.getFileName());
+        sbM833U.append(":");
+        sbM833U.append(stackTraceElement.getLineNumber());
+        sbM833U.append(") ");
+        sbM833U.append(stackTraceElement.getMethodName());
+        sbM833U.append("()");
+        return sbM833U.toString();
     }
 
     public static String getLocation() {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
-        StringBuilder sbU = a.U(".(");
-        sbU.append(stackTraceElement.getFileName());
-        sbU.append(":");
-        sbU.append(stackTraceElement.getLineNumber());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U(".(");
+        sbM833U.append(stackTraceElement.getFileName());
+        sbM833U.append(":");
+        sbM833U.append(stackTraceElement.getLineNumber());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public static String getLocation2() {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[2];
-        StringBuilder sbU = a.U(".(");
-        sbU.append(stackTraceElement.getFileName());
-        sbU.append(":");
-        sbU.append(stackTraceElement.getLineNumber());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U(".(");
+        sbM833U.append(stackTraceElement.getFileName());
+        sbM833U.append(":");
+        sbM833U.append(stackTraceElement.getLineNumber());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     public static String getName(View view) {
@@ -141,35 +141,35 @@ public class Debug {
     public static void logStack(String str, String str2, int i) {
         StackTraceElement[] stackTrace = new Throwable().getStackTrace();
         int iMin = Math.min(i, stackTrace.length - 1);
-        String strW = " ";
+        String strM883w = " ";
         for (int i2 = 1; i2 <= iMin; i2++) {
             StackTraceElement stackTraceElement = stackTrace[i2];
-            StringBuilder sbU = a.U(".(");
-            sbU.append(stackTrace[i2].getFileName());
-            sbU.append(":");
-            sbU.append(stackTrace[i2].getLineNumber());
-            sbU.append(") ");
-            sbU.append(stackTrace[i2].getMethodName());
-            String string = sbU.toString();
-            strW = a.w(strW, " ");
-            Log.v(str, str2 + strW + string + strW);
+            StringBuilder sbM833U = outline.m833U(".(");
+            sbM833U.append(stackTrace[i2].getFileName());
+            sbM833U.append(":");
+            sbM833U.append(stackTrace[i2].getLineNumber());
+            sbM833U.append(") ");
+            sbM833U.append(stackTrace[i2].getMethodName());
+            String string = sbM833U.toString();
+            strM883w = outline.m883w(strM883w, " ");
+            Log.v(str, str2 + strM883w + string + strM883w);
         }
     }
 
     public static void printStack(String str, int i) {
         StackTraceElement[] stackTrace = new Throwable().getStackTrace();
         int iMin = Math.min(i, stackTrace.length - 1);
-        String strW = " ";
+        String strM883w = " ";
         for (int i2 = 1; i2 <= iMin; i2++) {
             StackTraceElement stackTraceElement = stackTrace[i2];
-            StringBuilder sbU = a.U(".(");
-            sbU.append(stackTrace[i2].getFileName());
-            sbU.append(":");
-            sbU.append(stackTrace[i2].getLineNumber());
-            sbU.append(") ");
-            String string = sbU.toString();
-            strW = a.w(strW, " ");
-            System.out.println(str + strW + string + strW);
+            StringBuilder sbM833U = outline.m833U(".(");
+            sbM833U.append(stackTrace[i2].getFileName());
+            sbM833U.append(":");
+            sbM833U.append(stackTrace[i2].getLineNumber());
+            sbM833U.append(") ");
+            String string = sbM833U.toString();
+            strM883w = outline.m883w(strM883w, " ");
+            System.out.println(str + strM883w + string + strM883w);
         }
     }
 
@@ -180,7 +180,7 @@ public class Debug {
         try {
             return context.getResources().getResourceEntryName(i);
         } catch (Exception unused) {
-            return a.q("?", i);
+            return outline.m871q("?", i);
         }
     }
 
@@ -211,18 +211,18 @@ public class Debug {
 
     public static void dumpLayoutParams(ViewGroup.LayoutParams layoutParams, String str) throws SecurityException, IllegalArgumentException {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
-        StringBuilder sbU = a.U(".(");
-        sbU.append(stackTraceElement.getFileName());
-        sbU.append(":");
-        sbU.append(stackTraceElement.getLineNumber());
-        sbU.append(") ");
-        sbU.append(str);
-        sbU.append("  ");
-        String string = sbU.toString();
+        StringBuilder sbM833U = outline.m833U(".(");
+        sbM833U.append(stackTraceElement.getFileName());
+        sbM833U.append(":");
+        sbM833U.append(stackTraceElement.getLineNumber());
+        sbM833U.append(") ");
+        sbM833U.append(str);
+        sbM833U.append("  ");
+        String string = sbM833U.toString();
         PrintStream printStream = System.out;
-        StringBuilder sbY = a.Y(" >>>>>>>>>>>>>>>>>>. dump ", string, "  ");
-        sbY.append(layoutParams.getClass().getName());
-        printStream.println(sbY.toString());
+        StringBuilder sbM837Y = outline.m837Y(" >>>>>>>>>>>>>>>>>>. dump ", string, "  ");
+        sbM837Y.append(layoutParams.getClass().getName());
+        printStream.println(sbM837Y.toString());
         for (Field field : layoutParams.getClass().getFields()) {
             try {
                 Object obj = field.get(layoutParams);

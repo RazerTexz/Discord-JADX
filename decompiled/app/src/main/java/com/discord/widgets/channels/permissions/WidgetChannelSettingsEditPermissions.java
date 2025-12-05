@@ -14,10 +14,7 @@ import androidx.annotation.AttrRes;
 import androidx.annotation.IdRes;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.j;
-import b.a.k.b;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
 import com.discord.api.permission.PermissionOverwrite;
@@ -25,27 +22,21 @@ import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetChannelSettingsEditPermissionsBinding;
 import com.discord.restapi.RestAPIParams;
-import com.discord.utilities.channel.ChannelPermissionUtilsKt;
-import com.discord.utilities.channel.PermissionLabelOverrides;
+import com.discord.utilities.channel.ChannelPermissionUtils;
+import com.discord.utilities.channel.ChannelPermissionUtils2;
 import com.discord.utilities.font.FontUtils;
 import com.discord.utilities.guilds.RoleUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.spans.TypefaceSpanCompat;
 import com.discord.utilities.stateful.StatefulViews;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
 import com.discord.views.TernaryCheckBox;
 import com.discord.views.user.SettingsMemberView;
 import com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel;
 import com.discord.widgets.chat.list.TextInVoiceFeatureFlag;
-import d0.g;
-import d0.t.m0;
-import d0.t.n0;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -56,7 +47,16 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
-import rx.functions.Action2;
+import p007b.p008a.p018d.AppScreen2;
+import p007b.p008a.p027k.FormatUtils;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.LazyJVM;
+import p507d0.p580t.Sets5;
+import p507d0.p580t.SetsJVM;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.functions.Action2;
 
 /* compiled from: WidgetChannelSettingsEditPermissions.kt */
 /* loaded from: classes2.dex */
@@ -86,12 +86,12 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
 
     /* renamed from: type$delegate, reason: from kotlin metadata */
     private final Lazy type;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChannelSettingsEditPermissions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSettingsEditPermissionsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSettingsEditPermissions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSettingsEditPermissionsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Set<Long> STAGE_HIDDEN_PERMISSIONS = n0.setOf((Object[]) new Long[]{512L, 256L, Long.valueOf(Permission.SPEAK), Long.valueOf(Permission.USE_VAD)});
-    private static final Set<Long> STAGE_DISABLED_PERMISSIONS = m0.setOf(Long.valueOf(Permission.REQUEST_TO_SPEAK));
+    private static final Set<Long> STAGE_HIDDEN_PERMISSIONS = Sets5.setOf((Object[]) new Long[]{512L, 256L, Long.valueOf(Permission.SPEAK), Long.valueOf(Permission.USE_VAD)});
+    private static final Set<Long> STAGE_DISABLED_PERMISSIONS = SetsJVM.setOf(Long.valueOf(Permission.REQUEST_TO_SPEAK));
 
     /* compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final class Companion {
@@ -112,74 +112,74 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             intent.putExtra(WidgetChannelSettingsEditPermissions.INTENT_EXTRA_CHANNEL_ID, channelId);
             intent.putExtra("INTENT_EXTRA_TARGET_ID", targetId);
             intent.putExtra(WidgetChannelSettingsEditPermissions.INTENT_EXTRA_TYPE, type);
-            j.d(context, WidgetChannelSettingsEditPermissions.class, intent);
+            AppScreen2.m156d(context, WidgetChannelSettingsEditPermissions.class, intent);
         }
 
         @SuppressLint({"NonConstantResourceId"})
         private final long getPermission(@IdRes int permissionSettingId) {
             switch (permissionSettingId) {
-                case R.id.channel_permission_events_manage_events /* 2131362385 */:
+                case C5419R.id.channel_permission_events_manage_events /* 2131362385 */:
                     return Permission.MANAGE_EVENTS;
-                case R.id.channel_permission_general_create_instant_invite /* 2131362386 */:
+                case C5419R.id.channel_permission_general_create_instant_invite /* 2131362386 */:
                     return 1L;
-                case R.id.channel_permission_general_manage_channel /* 2131362387 */:
+                case C5419R.id.channel_permission_general_manage_channel /* 2131362387 */:
                     return 16L;
-                case R.id.channel_permission_general_manage_permissions /* 2131362388 */:
+                case C5419R.id.channel_permission_general_manage_permissions /* 2131362388 */:
                     return Permission.MANAGE_ROLES;
-                case R.id.channel_permission_general_manage_threads /* 2131362389 */:
+                case C5419R.id.channel_permission_general_manage_threads /* 2131362389 */:
                     return Permission.MANAGE_THREADS;
-                case R.id.channel_permission_general_manage_webhooks /* 2131362390 */:
+                case C5419R.id.channel_permission_general_manage_webhooks /* 2131362390 */:
                     return Permission.MANAGE_WEBHOOKS;
-                case R.id.channel_permission_owner_view /* 2131362391 */:
+                case C5419R.id.channel_permission_owner_view /* 2131362391 */:
                 default:
-                    throw new IllegalArgumentException(a.q("Invalid ID: ", permissionSettingId));
-                case R.id.channel_permission_stage_request_to_speak /* 2131362392 */:
+                    throw new IllegalArgumentException(outline.m871q("Invalid ID: ", permissionSettingId));
+                case C5419R.id.channel_permission_stage_request_to_speak /* 2131362392 */:
                     return Permission.REQUEST_TO_SPEAK;
-                case R.id.channel_permission_text_add_reactions /* 2131362393 */:
+                case C5419R.id.channel_permission_text_add_reactions /* 2131362393 */:
                     return 64L;
-                case R.id.channel_permission_text_attach_files /* 2131362394 */:
+                case C5419R.id.channel_permission_text_attach_files /* 2131362394 */:
                     return Permission.ATTACH_FILES;
-                case R.id.channel_permission_text_create_private_threads /* 2131362395 */:
+                case C5419R.id.channel_permission_text_create_private_threads /* 2131362395 */:
                     return Permission.CREATE_PRIVATE_THREADS;
-                case R.id.channel_permission_text_create_public_threads /* 2131362396 */:
+                case C5419R.id.channel_permission_text_create_public_threads /* 2131362396 */:
                     return Permission.CREATE_PUBLIC_THREADS;
-                case R.id.channel_permission_text_embed_links /* 2131362397 */:
+                case C5419R.id.channel_permission_text_embed_links /* 2131362397 */:
                     return Permission.EMBED_LINKS;
-                case R.id.channel_permission_text_manage_messages /* 2131362398 */:
+                case C5419R.id.channel_permission_text_manage_messages /* 2131362398 */:
                     return Permission.MANAGE_MESSAGES;
-                case R.id.channel_permission_text_mention_everyone /* 2131362399 */:
+                case C5419R.id.channel_permission_text_mention_everyone /* 2131362399 */:
                     return Permission.MENTION_EVERYONE;
-                case R.id.channel_permission_text_read_message_history /* 2131362400 */:
+                case C5419R.id.channel_permission_text_read_message_history /* 2131362400 */:
                     return Permission.READ_MESSAGE_HISTORY;
-                case R.id.channel_permission_text_read_messages /* 2131362401 */:
+                case C5419R.id.channel_permission_text_read_messages /* 2131362401 */:
                     return Permission.VIEW_CHANNEL;
-                case R.id.channel_permission_text_send_messages /* 2131362402 */:
+                case C5419R.id.channel_permission_text_send_messages /* 2131362402 */:
                     return Permission.SEND_MESSAGES;
-                case R.id.channel_permission_text_send_messages_in_threads /* 2131362403 */:
+                case C5419R.id.channel_permission_text_send_messages_in_threads /* 2131362403 */:
                     return Permission.SEND_MESSAGES_IN_THREADS;
-                case R.id.channel_permission_text_send_tts_messages /* 2131362404 */:
+                case C5419R.id.channel_permission_text_send_tts_messages /* 2131362404 */:
                     return Permission.SEND_TTS_MESSAGES;
-                case R.id.channel_permission_text_use_external_emojis /* 2131362405 */:
+                case C5419R.id.channel_permission_text_use_external_emojis /* 2131362405 */:
                     return Permission.USE_EXTERNAL_EMOJIS;
-                case R.id.channel_permission_text_use_external_stickers /* 2131362406 */:
+                case C5419R.id.channel_permission_text_use_external_stickers /* 2131362406 */:
                     return Permission.USE_EXTERNAL_STICKERS;
-                case R.id.channel_permission_use_application_commands /* 2131362407 */:
+                case C5419R.id.channel_permission_use_application_commands /* 2131362407 */:
                     return Permission.USE_APPLICATION_COMMANDS;
-                case R.id.channel_permission_voice_connect /* 2131362408 */:
+                case C5419R.id.channel_permission_voice_connect /* 2131362408 */:
                     return Permission.CONNECT;
-                case R.id.channel_permission_voice_deafen_members /* 2131362409 */:
+                case C5419R.id.channel_permission_voice_deafen_members /* 2131362409 */:
                     return Permission.DEAFEN_MEMBERS;
-                case R.id.channel_permission_voice_move_members /* 2131362410 */:
+                case C5419R.id.channel_permission_voice_move_members /* 2131362410 */:
                     return Permission.MOVE_MEMBERS;
-                case R.id.channel_permission_voice_mute_members /* 2131362411 */:
+                case C5419R.id.channel_permission_voice_mute_members /* 2131362411 */:
                     return Permission.MUTE_MEMBERS;
-                case R.id.channel_permission_voice_priority_speaker /* 2131362412 */:
+                case C5419R.id.channel_permission_voice_priority_speaker /* 2131362412 */:
                     return 256L;
-                case R.id.channel_permission_voice_speak /* 2131362413 */:
+                case C5419R.id.channel_permission_voice_speak /* 2131362413 */:
                     return Permission.SPEAK;
-                case R.id.channel_permission_voice_use_vad /* 2131362414 */:
+                case C5419R.id.channel_permission_voice_use_vad /* 2131362414 */:
                     return Permission.USE_VAD;
-                case R.id.channel_permission_voice_video /* 2131362415 */:
+                case C5419R.id.channel_permission_voice_video /* 2131362415 */:
                     return 512L;
             }
         }
@@ -187,7 +187,7 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         private final void setTextWithFont(TextView textView, String str, @AttrRes int i) {
             FontUtils fontUtils = FontUtils.INSTANCE;
             Context context = textView.getContext();
-            m.checkNotNullExpressionValue(context, "context");
+            Intrinsics3.checkNotNullExpressionValue(context, "context");
             Typeface themedFont = fontUtils.getThemedFont(context, i);
             if (themedFont != null) {
                 TypefaceSpanCompat typefaceSpanCompat = new TypefaceSpanCompat(themedFont);
@@ -198,12 +198,12 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         }
 
         public final void createForRole(Context context, long guildId, long channelId, long targetId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             create(context, guildId, channelId, targetId, 1);
         }
 
         public final void createForUser(Context context, long guildId, long channelId, long targetId) {
-            m.checkNotNullParameter(context, "context");
+            Intrinsics3.checkNotNullParameter(context, "context");
             create(context, guildId, channelId, targetId, 0);
         }
 
@@ -213,23 +213,23 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2> implements Action2<MenuItem, Context> {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$configureUI$1 */
+    public static final class C75361<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ WidgetChannelSettingsEditPermissionsModel $model;
 
-        public AnonymousClass1(WidgetChannelSettingsEditPermissionsModel widgetChannelSettingsEditPermissionsModel) {
+        public C75361(WidgetChannelSettingsEditPermissionsModel widgetChannelSettingsEditPermissionsModel) {
             this.$model = widgetChannelSettingsEditPermissionsModel;
         }
 
-        @Override // rx.functions.Action2
+        @Override // p658rx.functions.Action2
         public /* bridge */ /* synthetic */ void call(MenuItem menuItem, Context context) {
             call2(menuItem, context);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
-            m.checkNotNullExpressionValue(menuItem, "menuItem");
-            if (menuItem.getItemId() != R.id.menu_edit_overwrite_delete) {
+            Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
+            if (menuItem.getItemId() != C5419R.id.menu_edit_overwrite_delete) {
                 return;
             }
             WidgetChannelSettingsEditPermissions.access$deletePermissionOverwrites(WidgetChannelSettingsEditPermissions.this, this.$model.getChannel().getId(), WidgetChannelSettingsEditPermissions.access$getTargetId$p(WidgetChannelSettingsEditPermissions.this));
@@ -237,11 +237,11 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 implements View.OnClickListener {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$configureUI$2 */
+    public static final class ViewOnClickListenerC75372 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelSettingsEditPermissionsModel $model;
 
-        public AnonymousClass2(WidgetChannelSettingsEditPermissionsModel widgetChannelSettingsEditPermissionsModel) {
+        public ViewOnClickListenerC75372(WidgetChannelSettingsEditPermissionsModel widgetChannelSettingsEditPermissionsModel) {
             this.$model = widgetChannelSettingsEditPermissionsModel;
         }
 
@@ -252,16 +252,16 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$deletePermissionOverwrites$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$deletePermissionOverwrites$1 */
+    public static final class C75381 extends Lambda implements Function1<Void, Unit> {
+        public C75381() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) throws Exception {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -278,16 +278,16 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetChannelSettingsEditPermissionsModel, Unit> {
-        public AnonymousClass1(WidgetChannelSettingsEditPermissions widgetChannelSettingsEditPermissions) {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$onViewBoundOrOnResume$1 */
+    public static final /* synthetic */ class C75391 extends FunctionReferenceImpl implements Function1<WidgetChannelSettingsEditPermissionsModel, Unit> {
+        public C75391(WidgetChannelSettingsEditPermissions widgetChannelSettingsEditPermissions) {
             super(1, widgetChannelSettingsEditPermissions, WidgetChannelSettingsEditPermissions.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/permissions/WidgetChannelSettingsEditPermissionsModel;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(WidgetChannelSettingsEditPermissionsModel widgetChannelSettingsEditPermissionsModel) {
             invoke2(widgetChannelSettingsEditPermissionsModel);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -297,15 +297,15 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$setupPermissionCheckedState$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements TernaryCheckBox.b {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$setupPermissionCheckedState$1 */
+    public static final class C75401 implements TernaryCheckBox.InterfaceC7094b {
         public final /* synthetic */ int $checkboxId;
 
-        public AnonymousClass1(int i) {
+        public C75401(int i) {
             this.$checkboxId = i;
         }
 
-        @Override // com.discord.views.TernaryCheckBox.b
+        @Override // com.discord.views.TernaryCheckBox.InterfaceC7094b
         public void onSwitchStatusChanged(int switchStatus) {
             StatefulViews statefulViewsAccess$getState$p = WidgetChannelSettingsEditPermissions.access$getState$p(WidgetChannelSettingsEditPermissions.this);
             if (statefulViewsAccess$getState$p != null) {
@@ -313,19 +313,19 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             }
             StatefulViews statefulViewsAccess$getState$p2 = WidgetChannelSettingsEditPermissions.access$getState$p(WidgetChannelSettingsEditPermissions.this);
             if (statefulViewsAccess$getState$p2 != null) {
-                statefulViewsAccess$getState$p2.configureSaveActionView(WidgetChannelSettingsEditPermissions.access$getBinding$p(WidgetChannelSettingsEditPermissions.this).H);
+                statefulViewsAccess$getState$p2.configureSaveActionView(WidgetChannelSettingsEditPermissions.access$getBinding$p(WidgetChannelSettingsEditPermissions.this).f15915H);
             }
         }
     }
 
     /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$updatePermissionOverwrites$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<RestAPIParams.ChannelPermissionOverwrites> {
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$updatePermissionOverwrites$1 */
+    public static final class C75411 extends Lambda implements Function0<RestAPIParams.ChannelPermissionOverwrites> {
         public final /* synthetic */ long $targetId;
         public final /* synthetic */ int $type;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(int i, long j) {
+        public C75411(int i, long j) {
             super(0);
             this.$type = i;
             this.$targetId = j;
@@ -347,7 +347,7 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
                     break;
                 }
                 TernaryCheckBox ternaryCheckBox = (TernaryCheckBox) it.next();
-                if (ternaryCheckBox.b()) {
+                if (ternaryCheckBox.m8559b()) {
                     jAccess$getPermission |= Companion.access$getPermission(WidgetChannelSettingsEditPermissions.INSTANCE, ternaryCheckBox.getId());
                 } else {
                     if (ternaryCheckBox.switchStatus == -1) {
@@ -360,18 +360,18 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$updatePermissionOverwrites$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
-        public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
+    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$updatePermissionOverwrites$2 */
+    public static final class C75422 extends Lambda implements Function1<Void, Unit> {
+        public static final C75422 INSTANCE = new C75422();
 
-        public AnonymousClass2() {
+        public C75422() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -380,13 +380,13 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     public WidgetChannelSettingsEditPermissions() {
-        super(R.layout.widget_channel_settings_edit_permissions);
-        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChannelSettingsEditPermissions$binding$2.INSTANCE, null, 2, null);
-        this.permissionCheckboxes = g.lazy(new WidgetChannelSettingsEditPermissions$permissionCheckboxes$2(this));
-        this.guildId = g.lazy(new WidgetChannelSettingsEditPermissions$guildId$2(this));
-        this.channelId = g.lazy(new WidgetChannelSettingsEditPermissions$channelId$2(this));
-        this.targetId = g.lazy(new WidgetChannelSettingsEditPermissions$targetId$2(this));
-        this.type = g.lazy(new WidgetChannelSettingsEditPermissions$type$2(this));
+        super(C5419R.layout.widget_channel_settings_edit_permissions);
+        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelSettingsEditPermissions2.INSTANCE, null, 2, null);
+        this.permissionCheckboxes = LazyJVM.lazy(new WidgetChannelSettingsEditPermissions5(this));
+        this.guildId = LazyJVM.lazy(new WidgetChannelSettingsEditPermissions4(this));
+        this.channelId = LazyJVM.lazy(new WidgetChannelSettingsEditPermissions3(this));
+        this.targetId = LazyJVM.lazy(new WidgetChannelSettingsEditPermissions6(this));
+        this.type = LazyJVM.lazy(new WidgetChannelSettingsEditPermissions7(this));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetChannelSettingsEditPermissions widgetChannelSettingsEditPermissions, WidgetChannelSettingsEditPermissionsModel widgetChannelSettingsEditPermissionsModel) {
@@ -433,9 +433,9 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             }
             return;
         }
-        List<PermissionOverwrite> listV = model.getChannel().v();
-        if (listV != null) {
-            Iterator<T> it = listV.iterator();
+        List<PermissionOverwrite> listM7655v = model.getChannel().m7655v();
+        if (listM7655v != null) {
+            Iterator<T> it = listM7655v.iterator();
             while (true) {
                 if (it.hasNext()) {
                     next2 = it.next();
@@ -451,68 +451,68 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         } else {
             permissionOverwrite = null;
         }
-        int i = permissionOverwrite != null ? R.menu.menu_edit_permission_overwrite : R.menu.menu_empty;
-        setActionBarTitle(ChannelUtils.k(model.getChannel()) ? R.string.category_settings : R.string.channel_settings);
-        setActionBarSubtitle(ChannelUtils.d(model.getChannel(), requireContext(), true));
-        AppFragment.setActionBarOptionsMenu$default(this, i, new AnonymousClass1(model), null, 4, null);
+        int i = permissionOverwrite != null ? C5419R.menu.menu_edit_permission_overwrite : C5419R.menu.menu_empty;
+        setActionBarTitle(ChannelUtils.m7687k(model.getChannel()) ? C5419R.string.category_settings : C5419R.string.channel_settings);
+        setActionBarSubtitle(ChannelUtils.m7680d(model.getChannel(), requireContext(), true));
+        AppFragment.setActionBarOptionsMenu$default(this, i, new C75361(model), null, 4, null);
         if (model instanceof WidgetChannelSettingsEditPermissionsModel.ModelForRole) {
-            SettingsMemberView settingsMemberView = getBinding().M;
-            m.checkNotNullExpressionValue(settingsMemberView, "binding.memberView");
+            SettingsMemberView settingsMemberView = getBinding().f15920M;
+            Intrinsics3.checkNotNullExpressionValue(settingsMemberView, "binding.memberView");
             settingsMemberView.setVisibility(8);
-            TextView textView = getBinding().J;
-            m.checkNotNullExpressionValue(textView, "binding.channelPermissionsTargetName");
+            TextView textView = getBinding().f15917J;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.channelPermissionsTargetName");
             textView.setVisibility(0);
             Companion companion = INSTANCE;
-            TextView textView2 = getBinding().J;
-            m.checkNotNullExpressionValue(textView2, "binding.channelPermissionsTargetName");
+            TextView textView2 = getBinding().f15917J;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.channelPermissionsTargetName");
             WidgetChannelSettingsEditPermissionsModel.ModelForRole modelForRole = (WidgetChannelSettingsEditPermissionsModel.ModelForRole) model;
-            Companion.access$setTextWithFont(companion, textView2, modelForRole.getGuildRole().getName(), R.attr.font_primary_semibold);
-            getBinding().J.setTextColor(RoleUtils.getRoleColor$default(modelForRole.getGuildRole(), requireContext(), null, 2, null));
+            Companion.access$setTextWithFont(companion, textView2, modelForRole.getGuildRole().getName(), C5419R.attr.font_primary_semibold);
+            getBinding().f15917J.setTextColor(RoleUtils.getRoleColor$default(modelForRole.getGuildRole(), requireContext(), null, 2, null));
         } else if (model instanceof WidgetChannelSettingsEditPermissionsModel.ModelForUser) {
-            SettingsMemberView settingsMemberView2 = getBinding().M;
-            m.checkNotNullExpressionValue(settingsMemberView2, "binding.memberView");
+            SettingsMemberView settingsMemberView2 = getBinding().f15920M;
+            Intrinsics3.checkNotNullExpressionValue(settingsMemberView2, "binding.memberView");
             settingsMemberView2.setVisibility(0);
-            TextView textView3 = getBinding().J;
-            m.checkNotNullExpressionValue(textView3, "binding.channelPermissionsTargetName");
+            TextView textView3 = getBinding().f15917J;
+            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.channelPermissionsTargetName");
             textView3.setVisibility(8);
             WidgetChannelSettingsEditPermissionsModel.ModelForUser modelForUser = (WidgetChannelSettingsEditPermissionsModel.ModelForUser) model;
-            getBinding().M.a(modelForUser.getUser(), modelForUser.getGuildMember());
+            getBinding().f15920M.m8621a(modelForUser.getUser(), modelForUser.getGuildMember());
             Companion companion2 = INSTANCE;
-            TextView textView4 = getBinding().J;
-            m.checkNotNullExpressionValue(textView4, "binding.channelPermissionsTargetName");
-            Companion.access$setTextWithFont(companion2, textView4, modelForUser.getUser().getUsername(), R.attr.font_primary_normal);
+            TextView textView4 = getBinding().f15917J;
+            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.channelPermissionsTargetName");
+            Companion.access$setTextWithFont(companion2, textView4, modelForUser.getUser().getUsername(), C5419R.attr.font_primary_normal);
         }
-        TextView textView5 = getBinding().F;
-        m.checkNotNullExpressionValue(textView5, "binding.channelPermissionsChannelName");
-        textView5.setText(ChannelUtils.d(model.getChannel(), requireContext(), true));
-        boolean z2 = ChannelUtils.J(model.getChannel()) && TextInVoiceFeatureFlag.INSTANCE.getINSTANCE().isEnabled(Long.valueOf(model.getChannel().getGuildId()));
-        LinearLayout linearLayout = getBinding().K;
-        m.checkNotNullExpressionValue(linearLayout, "binding.channelPermissionsTextContainer");
-        linearLayout.setVisibility(ChannelUtils.v(model.getChannel()) || ChannelUtils.k(model.getChannel()) || z2 ? 0 : 8);
-        LinearLayout linearLayout2 = getBinding().L;
-        m.checkNotNullExpressionValue(linearLayout2, "binding.channelPermissionsVoiceContainer");
-        linearLayout2.setVisibility(ChannelUtils.w(model.getChannel()) || ChannelUtils.k(model.getChannel()) ? 0 : 8);
-        LinearLayout linearLayout3 = getBinding().I;
-        m.checkNotNullExpressionValue(linearLayout3, "binding.channelPermissionsStageContainer");
-        linearLayout3.setVisibility(ChannelUtils.D(model.getChannel()) || ChannelUtils.k(model.getChannel()) ? 0 : 8);
-        LinearLayout linearLayout4 = getBinding().G;
-        m.checkNotNullExpressionValue(linearLayout4, "binding.channelPermissionsEventsContainer");
-        linearLayout4.setVisibility(ChannelUtils.w(model.getChannel()) || ChannelUtils.k(model.getChannel()) ? 0 : 8);
-        TernaryCheckBox ternaryCheckBox = getBinding().g;
-        m.checkNotNullExpressionValue(ternaryCheckBox, "binding.channelPermissionGeneralManageWebhooks");
-        ternaryCheckBox.setVisibility(ChannelUtils.v(model.getChannel()) || ChannelUtils.k(model.getChannel()) ? 0 : 8);
-        if (ChannelUtils.k(model.getChannel())) {
-            getBinding().N.setText(R.string.role_permissions_section_general_category);
+        TextView textView5 = getBinding().f15913F;
+        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.channelPermissionsChannelName");
+        textView5.setText(ChannelUtils.m7680d(model.getChannel(), requireContext(), true));
+        boolean z2 = ChannelUtils.m7675J(model.getChannel()) && TextInVoiceFeatureFlag.INSTANCE.getINSTANCE().isEnabled(Long.valueOf(model.getChannel().getGuildId()));
+        LinearLayout linearLayout = getBinding().f15918K;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.channelPermissionsTextContainer");
+        linearLayout.setVisibility(ChannelUtils.m7698v(model.getChannel()) || ChannelUtils.m7687k(model.getChannel()) || z2 ? 0 : 8);
+        LinearLayout linearLayout2 = getBinding().f15919L;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout2, "binding.channelPermissionsVoiceContainer");
+        linearLayout2.setVisibility(ChannelUtils.m7699w(model.getChannel()) || ChannelUtils.m7687k(model.getChannel()) ? 0 : 8);
+        LinearLayout linearLayout3 = getBinding().f15916I;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout3, "binding.channelPermissionsStageContainer");
+        linearLayout3.setVisibility(ChannelUtils.m7669D(model.getChannel()) || ChannelUtils.m7687k(model.getChannel()) ? 0 : 8);
+        LinearLayout linearLayout4 = getBinding().f15914G;
+        Intrinsics3.checkNotNullExpressionValue(linearLayout4, "binding.channelPermissionsEventsContainer");
+        linearLayout4.setVisibility(ChannelUtils.m7699w(model.getChannel()) || ChannelUtils.m7687k(model.getChannel()) ? 0 : 8);
+        TernaryCheckBox ternaryCheckBox = getBinding().f15928g;
+        Intrinsics3.checkNotNullExpressionValue(ternaryCheckBox, "binding.channelPermissionGeneralManageWebhooks");
+        ternaryCheckBox.setVisibility(ChannelUtils.m7698v(model.getChannel()) || ChannelUtils.m7687k(model.getChannel()) ? 0 : 8);
+        if (ChannelUtils.m7687k(model.getChannel())) {
+            getBinding().f15921N.setText(C5419R.string.role_permissions_section_general_category);
         }
-        Map<Integer, PermissionLabelOverrides> categoryLabels = ChannelPermissionUtilsKt.getCategoryLabels(model.getUseNewThreadsPermissions(), requireContext());
+        Map<Integer, ChannelPermissionUtils2> categoryLabels = ChannelPermissionUtils.getCategoryLabels(model.getUseNewThreadsPermissions(), requireContext());
         boolean z3 = model.getType() == 1 && model.getTargetId() == model.getChannel().getGuildId();
-        List<PermissionOverwrite> listV2 = model.getChannel().v();
-        m.checkNotNull(listV2);
-        Iterator<PermissionOverwrite> it2 = listV2.iterator();
+        List<PermissionOverwrite> listM7655v2 = model.getChannel().m7655v();
+        Intrinsics3.checkNotNull(listM7655v2);
+        Iterator<PermissionOverwrite> it2 = listM7655v2.iterator();
         while (true) {
             if (it2.hasNext()) {
                 next = it2.next();
-                if (next.e() == model.getTargetId()) {
+                if (next.m8131e() == model.getTargetId()) {
                     break;
                 }
             } else {
@@ -521,12 +521,12 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             }
         }
         if (!model.getUseNewThreadsPermissions()) {
-            getBinding().f2274s.setLabel(getString(R.string.interim_send_messages_in_threads));
-            getBinding().f2274s.setSubtext(b.k(this, R.string.interim_role_permissions_send_messages_in_threads_description_text, new Object[0], null, 4));
-            getBinding().l.setLabel(getString(R.string.interim_create_public_threads));
-            getBinding().l.setSubtext(b.k(this, R.string.interim_role_permissions_create_public_threads_description_text, new Object[0], null, 4));
-            getBinding().k.setLabel(getString(R.string.interim_create_private_threads));
-            getBinding().k.setSubtext(b.k(this, R.string.interim_role_permissions_create_private_threads_description_text, new Object[0], null, 4));
+            getBinding().f15940s.setLabel(getString(C5419R.string.interim_send_messages_in_threads));
+            getBinding().f15940s.setSubtext(FormatUtils.m219k(this, C5419R.string.f14772xa26a6cbf, new Object[0], null, 4));
+            getBinding().f15933l.setLabel(getString(C5419R.string.interim_create_public_threads));
+            getBinding().f15933l.setSubtext(FormatUtils.m219k(this, C5419R.string.interim_role_permissions_create_public_threads_description_text, new Object[0], null, 4));
+            getBinding().f15932k.setLabel(getString(C5419R.string.interim_create_private_threads));
+            getBinding().f15932k.setSubtext(FormatUtils.m219k(this, C5419R.string.interim_role_permissions_create_private_threads_description_text, new Object[0], null, 4));
         }
         for (TernaryCheckBox ternaryCheckBox2 : getPermissionCheckboxes()) {
             int id2 = ternaryCheckBox2.getId();
@@ -536,21 +536,21 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             }
             setupPermissionEnabledState(ternaryCheckBox2, jAccess$getPermission, model);
             setupPermissionCheckedState(ternaryCheckBox2, next);
-            if (id2 == R.id.channel_permission_voice_priority_speaker) {
-                ternaryCheckBox2.setSubtext(b.j(ternaryCheckBox2, R.string.role_permissions_priority_speaker_description_voice_mobile, new Object[]{getString(R.string.keybind_push_to_talk_priority)}, null, 4));
+            if (id2 == C5419R.id.channel_permission_voice_priority_speaker) {
+                ternaryCheckBox2.setSubtext(FormatUtils.m218j(ternaryCheckBox2, C5419R.string.role_permissions_priority_speaker_description_voice_mobile, new Object[]{getString(C5419R.string.keybind_push_to_talk_priority)}, null, 4));
             }
-            if (id2 == R.id.channel_permission_text_create_private_threads) {
-                ternaryCheckBox2.setVisibility(ChannelUtils.i(model.getChannel()) ^ true ? 0 : 8);
+            if (id2 == C5419R.id.channel_permission_text_create_private_threads) {
+                ternaryCheckBox2.setVisibility(ChannelUtils.m7685i(model.getChannel()) ^ true ? 0 : 8);
             }
-            if (id2 == R.id.channel_permission_general_manage_threads) {
-                ternaryCheckBox2.setVisibility(ChannelUtils.w(model.getChannel()) ^ true ? 0 : 8);
+            if (id2 == C5419R.id.channel_permission_general_manage_threads) {
+                ternaryCheckBox2.setVisibility(ChannelUtils.m7699w(model.getChannel()) ^ true ? 0 : 8);
             }
             updateCheckboxLabels(ternaryCheckBox2, model.getChannel().getType(), z3, categoryLabels.get(Integer.valueOf(id2)));
         }
-        getBinding().H.setOnClickListener(new AnonymousClass2(model));
+        getBinding().f15915H.setOnClickListener(new ViewOnClickListenerC75372(model));
         StatefulViews statefulViews = this.state;
         if (statefulViews != null) {
-            statefulViews.configureSaveActionView(getBinding().H);
+            statefulViews.configureSaveActionView(getBinding().f15915H);
         }
     }
 
@@ -563,7 +563,7 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     private final void deletePermissionOverwrites(long channelId, long targetId) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().deletePermissionOverwrites(channelId, targetId), false, 1, null), this, null, 2, null), WidgetChannelSettingsEditPermissions.class, getContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 60, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().deletePermissionOverwrites(channelId, targetId), false, 1, null), this, null, 2, null), WidgetChannelSettingsEditPermissions.class, getContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75381(), 60, (Object) null);
     }
 
     private final WidgetChannelSettingsEditPermissionsBinding getBinding() {
@@ -602,39 +602,39 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         int id2 = checkBox.getId();
         long jAccess$getPermission = Companion.access$getPermission(INSTANCE, id2);
         if (jAccess$getPermission == (allow & jAccess$getPermission)) {
-            checkBox.f();
+            checkBox.m8563f();
         } else if (jAccess$getPermission == (jAccess$getPermission & deny)) {
-            checkBox.e();
+            checkBox.m8562e();
         } else {
-            checkBox.d();
+            checkBox.m8561d();
         }
         StatefulViews statefulViews = this.state;
         if (statefulViews != null) {
         }
-        checkBox.setOnSwitchStatusChangedListener(new AnonymousClass1(id2));
+        checkBox.setOnSwitchStatusChangedListener(new C75401(id2));
     }
 
     private final void setupPermissionEnabledState(TernaryCheckBox checkBox, long permission, WidgetChannelSettingsEditPermissionsModel model) {
-        if (ChannelUtils.D(model.getChannel()) && STAGE_DISABLED_PERMISSIONS.contains(Long.valueOf(permission))) {
-            checkBox.setDisabled(R.string.stage_channel_cannot_overwrite_permission);
+        if (ChannelUtils.m7669D(model.getChannel()) && STAGE_DISABLED_PERMISSIONS.contains(Long.valueOf(permission))) {
+            checkBox.setDisabled(C5419R.string.stage_channel_cannot_overwrite_permission);
             return;
         }
         if (model instanceof WidgetChannelSettingsEditPermissionsModel.ModelForUser) {
             WidgetChannelSettingsEditPermissionsModel.ModelForUser modelForUser = (WidgetChannelSettingsEditPermissionsModel.ModelForUser) model;
             if (modelForUser.isMe()) {
-                if (checkBox.b()) {
-                    checkBox.setDisabled(R.string.cannot_deny_self_simple);
+                if (checkBox.m8559b()) {
+                    checkBox.setDisabled(C5419R.string.cannot_deny_self_simple);
                     return;
                 } else {
-                    checkBox.setOffDisabled(R.string.cannot_deny_self_simple);
+                    checkBox.setOffDisabled(C5419R.string.cannot_deny_self_simple);
                     return;
                 }
             }
             if ((modelForUser.getMyPermissionsForChannel() & permission) == permission) {
-                checkBox.c();
+                checkBox.m8560c();
                 return;
             } else {
-                checkBox.setDisabled(R.string.cannot_deny_missing_permission);
+                checkBox.setDisabled(C5419R.string.cannot_deny_missing_permission);
                 return;
             }
         }
@@ -647,29 +647,29 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             int i = checkBox.switchStatus;
             if (i == 0) {
                 if (modelForRole.canDenyRolePermission(permission)) {
-                    checkBox.c();
+                    checkBox.m8560c();
                     return;
                 } else if ((modelForRole.getMyPermissionsForChannel() & permission) == permission) {
-                    checkBox.setOffDisabled(R.string.cannot_deny_singular_permission);
+                    checkBox.setOffDisabled(C5419R.string.cannot_deny_singular_permission);
                     return;
                 } else {
-                    checkBox.setOffDisabled(R.string.cannot_deny_missing_permission);
+                    checkBox.setOffDisabled(C5419R.string.cannot_deny_missing_permission);
                     return;
                 }
             }
             if (i == -1) {
-                checkBox.c();
+                checkBox.m8560c();
                 return;
             }
-            if (checkBox.b()) {
+            if (checkBox.m8559b()) {
                 if (!modelForRole.canNeutralizeRolePermission(permission)) {
-                    checkBox.setDisabled(R.string.cannot_deny_singular_permission);
+                    checkBox.setDisabled(C5419R.string.cannot_deny_singular_permission);
                     return;
                 }
                 if (modelForRole.canNeutralizeRolePermission(permission) && !modelForRole.canDenyRolePermission(permission)) {
-                    checkBox.setOffDisabled(R.string.cannot_deny_singular_permission);
+                    checkBox.setOffDisabled(C5419R.string.cannot_deny_singular_permission);
                 } else if (modelForRole.canNeutralizeRolePermission(permission) && modelForRole.canDenyRolePermission(permission)) {
-                    checkBox.c();
+                    checkBox.m8560c();
                 }
             }
         }
@@ -679,7 +679,7 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private final void updateCheckboxLabels(TernaryCheckBox checkBox, int channelType, boolean isEveryoneRole, PermissionLabelOverrides labels) {
+    private final void updateCheckboxLabels(TernaryCheckBox checkBox, int channelType, boolean isEveryoneRole, ChannelPermissionUtils2 labels) {
         CharSequence textChannelEveryoneSubtext;
         if (labels != null) {
             if (channelType != 0) {
@@ -716,8 +716,8 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
                     textChannelEveryoneSubtext = null;
                 } else {
                     textChannelEveryoneSubtext = labels.getAnnouncementChannelSubtext();
-                    LinkifiedTextView linkifiedTextView = checkBox.binding.f;
-                    m.checkNotNullExpressionValue(linkifiedTextView, "binding.settingSubtext");
+                    LinkifiedTextView linkifiedTextView = checkBox.binding.f675f;
+                    Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.settingSubtext");
                     linkifiedTextView.setMovementMethod(LinkMovementMethod.getInstance());
                 }
             } else if (isEveryoneRole) {
@@ -733,12 +733,12 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     }
 
     private final void updatePermissionOverwrites(long channelId, long targetId, int type) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updatePermissionOverwrites(channelId, targetId, new AnonymousClass1(type, targetId).invoke()), false, 1, null), this, null, 2, null), WidgetChannelSettingsEditPermissions.class, requireContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass2.INSTANCE, 60, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updatePermissionOverwrites(channelId, targetId, new C75411(type, targetId).invoke()), false, 1, null), this, null, 2, null), WidgetChannelSettingsEditPermissions.class, requireContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, C75422.INSTANCE, 60, (Object) null);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        m.checkNotNullParameter(view, "view");
+        Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         StatefulViews statefulViews = new StatefulViews(getPermissionCheckboxes());
@@ -751,6 +751,6 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     @Override // com.discord.app.AppFragment
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(WidgetChannelSettingsEditPermissionsModel.INSTANCE.get(getGuildId(), getChannelId(), getTargetId(), getType()), this, null, 2, null), WidgetChannelSettingsEditPermissions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(WidgetChannelSettingsEditPermissionsModel.INSTANCE.get(getGuildId(), getChannelId(), getTargetId(), getType()), this, null, 2, null), WidgetChannelSettingsEditPermissions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C75391(this), 62, (Object) null);
     }
 }

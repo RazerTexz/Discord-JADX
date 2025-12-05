@@ -295,18 +295,18 @@ public class JavacSingularsRecipes {
 
         public void generateMethods(HandleBuilder.BuilderJob job, SingularData data, boolean deprecate) {
             JavacTreeMaker maker = job.builderType.getTreeMaker();
-            ExpressionMaker returnTypeMaker = new AnonymousClass1(job, maker);
-            StatementMaker returnStatementMaker = new AnonymousClass2(job, maker);
+            ExpressionMaker returnTypeMaker = new C129081(job, maker);
+            StatementMaker returnStatementMaker = new C129092(job, maker);
             generateMethods(job.checkerFramework, data, deprecate, job.builderType, job.source, job.oldFluent, returnTypeMaker, returnStatementMaker, job.accessInners);
         }
 
-        /* renamed from: lombok.javac.handlers.JavacSingularsRecipes$JavacSingularizer$1, reason: invalid class name */
+        /* renamed from: lombok.javac.handlers.JavacSingularsRecipes$JavacSingularizer$1 */
         /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$JavacSingularizer$1.SCL.lombok */
-        class AnonymousClass1 implements ExpressionMaker {
+        class C129081 implements ExpressionMaker {
             private final /* synthetic */ HandleBuilder.BuilderJob val$job;
             private final /* synthetic */ JavacTreeMaker val$maker;
 
-            AnonymousClass1(HandleBuilder.BuilderJob builderJob, JavacTreeMaker javacTreeMaker) {
+            C129081(HandleBuilder.BuilderJob builderJob, JavacTreeMaker javacTreeMaker) {
                 this.val$job = builderJob;
                 this.val$maker = javacTreeMaker;
             }
@@ -320,13 +320,13 @@ public class JavacSingularsRecipes {
             }
         }
 
-        /* renamed from: lombok.javac.handlers.JavacSingularsRecipes$JavacSingularizer$2, reason: invalid class name */
+        /* renamed from: lombok.javac.handlers.JavacSingularsRecipes$JavacSingularizer$2 */
         /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$JavacSingularizer$2.SCL.lombok */
-        class AnonymousClass2 implements StatementMaker {
+        class C129092 implements StatementMaker {
             private final /* synthetic */ HandleBuilder.BuilderJob val$job;
             private final /* synthetic */ JavacTreeMaker val$maker;
 
-            AnonymousClass2(HandleBuilder.BuilderJob builderJob, JavacTreeMaker javacTreeMaker) {
+            C129092(HandleBuilder.BuilderJob builderJob, JavacTreeMaker javacTreeMaker) {
                 this.val$job = builderJob;
                 this.val$maker = javacTreeMaker;
             }
@@ -394,7 +394,7 @@ public class JavacSingularsRecipes {
                 name = builderType.toName(HandlerUtil.buildAccessorName(setterPrefix, name.toString()));
             }
             statements.prepend(createConstructBuilderVarIfNeeded(maker, data, builderType, source));
-            com.sun.tools.javac.util.List<JCTree.JCAnnotation> methodAnnotations = JavacHandlerUtil.copyAnnotations(JavacHandlerUtil.findCopyableToBuilderSingularSetterAnnotations(SingularData.access$2(data).up()));
+            com.sun.tools.javac.util.List<JCTree.JCAnnotation> methodAnnotations = JavacHandlerUtil.copyAnnotations(JavacHandlerUtil.findCopyableToBuilderSingularSetterAnnotations(SingularData.access$2(data).m10925up()));
             finishAndInjectMethod(cfv, maker, returnType, returnStatement, data, builderType, source, deprecate, statements, name, params, methodAnnotations, access, null);
         }
 
@@ -433,11 +433,11 @@ public class JavacSingularsRecipes {
                 JCTree.JCBinary jCBinaryBinary = maker.Binary(Javac.CTC_NOT_EQUAL, maker.Ident(data.getPluralName()), maker.Literal(Javac.CTC_BOT, null));
                 JCTree.JCBlock jCBlockBlock = maker.Block(0L, statements.toList());
                 statements = new ListBuffer<>();
-                statements.add(maker.If(jCBinaryBinary, jCBlockBlock, null));
+                statements.add(maker.m10940If(jCBinaryBinary, jCBlockBlock, null));
             } else {
                 statements.prepend(JavacHandlerUtil.generateNullCheck(maker, null, data.getPluralName(), builderType, "%s cannot be null"));
             }
-            com.sun.tools.javac.util.List<JCTree.JCAnnotation> methodAnnotations = JavacHandlerUtil.copyAnnotations(JavacHandlerUtil.findCopyableToSetterAnnotations(SingularData.access$2(data).up()));
+            com.sun.tools.javac.util.List<JCTree.JCAnnotation> methodAnnotations = JavacHandlerUtil.copyAnnotations(JavacHandlerUtil.findCopyableToSetterAnnotations(SingularData.access$2(data).m10925up()));
             finishAndInjectMethod(cfv, maker, returnType, returnStatement, data, builderType, source, deprecate, statements, name, com.sun.tools.javac.util.List.of(param), methodAnnotations, access, Boolean.valueOf(ignoreNullCollections));
         }
 

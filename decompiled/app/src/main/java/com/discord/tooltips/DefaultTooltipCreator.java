@@ -1,6 +1,6 @@
 package com.discord.tooltips;
 
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: DefaultTooltipCreator.kt */
 /* loaded from: classes2.dex */
@@ -10,7 +10,7 @@ public final class DefaultTooltipCreator {
     public final TooltipManager tooltipManager;
 
     public DefaultTooltipCreator(TooltipManager tooltipManager) {
-        m.checkNotNullParameter(tooltipManager, "tooltipManager");
+        Intrinsics3.checkNotNullParameter(tooltipManager, "tooltipManager");
         this.tooltipManager = tooltipManager;
     }
 }

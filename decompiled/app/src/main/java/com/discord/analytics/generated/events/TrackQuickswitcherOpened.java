@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackQuickswitcherOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackQuickswitcherOpened implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackQuickswitcherOpened implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence source = null;
     private final Long currentGuildId = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackQuickswitcherOpened implements AnalyticsSchem
             return false;
         }
         TrackQuickswitcherOpened trackQuickswitcherOpened = (TrackQuickswitcherOpened) other;
-        return m.areEqual(this.source, trackQuickswitcherOpened.source) && m.areEqual(this.currentGuildId, trackQuickswitcherOpened.currentGuildId) && m.areEqual(this.currentChannelId, trackQuickswitcherOpened.currentChannelId) && m.areEqual(this.currentChannelType, trackQuickswitcherOpened.currentChannelType);
+        return Intrinsics3.areEqual(this.source, trackQuickswitcherOpened.source) && Intrinsics3.areEqual(this.currentGuildId, trackQuickswitcherOpened.currentGuildId) && Intrinsics3.areEqual(this.currentChannelId, trackQuickswitcherOpened.currentChannelId) && Intrinsics3.areEqual(this.currentChannelType, trackQuickswitcherOpened.currentChannelType);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackQuickswitcherOpened implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackQuickswitcherOpened(source=");
-        sbU.append(this.source);
-        sbU.append(", currentGuildId=");
-        sbU.append(this.currentGuildId);
-        sbU.append(", currentChannelId=");
-        sbU.append(this.currentChannelId);
-        sbU.append(", currentChannelType=");
-        return a.G(sbU, this.currentChannelType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackQuickswitcherOpened(source=");
+        sbM833U.append(this.source);
+        sbM833U.append(", currentGuildId=");
+        sbM833U.append(this.currentGuildId);
+        sbM833U.append(", currentChannelId=");
+        sbM833U.append(this.currentChannelId);
+        sbM833U.append(", currentChannelType=");
+        return outline.m819G(sbM833U, this.currentChannelType, ")");
     }
 }

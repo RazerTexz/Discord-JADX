@@ -9,11 +9,6 @@ import android.util.Log;
 import androidx.annotation.CallSuper;
 import androidx.annotation.MainThread;
 import androidx.annotation.VisibleForTesting;
-import b.i.a.f.e.o.f;
-import b.i.c.s.a0;
-import b.i.c.s.y;
-import b.i.c.w.d;
-import b.i.c.w.e;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
 import java.util.concurrent.ExecutorService;
@@ -21,6 +16,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
+import p007b.p225i.p226a.p288f.p299e.p308o.p309j.ThreadFactoryC3408a;
+import p007b.p225i.p361c.p398s.BinderC4806a0;
+import p007b.p225i.p361c.p398s.C4834y;
+import p007b.p225i.p361c.p406w.C4868f;
+import p007b.p225i.p361c.p406w.ExecutorC4867e;
+import p007b.p225i.p361c.p406w.RunnableC4866d;
 
 /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
 @SuppressLint({"UnwrappedWakefulBroadcastReceiver"})
@@ -35,13 +37,14 @@ public abstract class EnhancedIntentService extends Service {
     private int runningTasks;
 
     /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    public class a implements a0.a {
-        public a() {
+    /* renamed from: com.google.firebase.messaging.EnhancedIntentService$a */
+    public class C11087a implements BinderC4806a0.a {
+        public C11087a() {
         }
     }
 
     public EnhancedIntentService() {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new b.i.a.f.e.o.j.a("Firebase-Messaging-Intent-Handle"));
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new ThreadFactoryC3408a("Firebase-Messaging-Intent-Handle"));
         threadPoolExecutor.allowCoreThreadTimeOut(true);
         this.executor = Executors.unconfigurableExecutorService(threadPoolExecutor);
         this.lock = new Object();
@@ -54,10 +57,10 @@ public abstract class EnhancedIntentService extends Service {
 
     private void finishTask(Intent intent) {
         if (intent != null) {
-            synchronized (y.f1777b) {
-                if (y.c != null && intent.getBooleanExtra("com.google.firebase.iid.WakeLockHolder.wakefulintent", false)) {
+            synchronized (C4834y.f12915b) {
+                if (C4834y.f12916c != null && intent.getBooleanExtra("com.google.firebase.iid.WakeLockHolder.wakefulintent", false)) {
                     intent.putExtra("com.google.firebase.iid.WakeLockHolder.wakefulintent", false);
-                    y.c.b();
+                    C4834y.f12916c.m6002b();
                 }
             }
         }
@@ -73,11 +76,11 @@ public abstract class EnhancedIntentService extends Service {
     @MainThread
     private Task<Void> processIntent(Intent intent) {
         if (handleIntentOnMainThread(intent)) {
-            return f.Z(null);
+            return C3404f.m4264Z(null);
         }
         TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
-        this.executor.execute(new d(this, intent, taskCompletionSource));
-        return taskCompletionSource.a;
+        this.executor.execute(new RunnableC4866d(this, intent, taskCompletionSource));
+        return taskCompletionSource.f20845a;
     }
 
     public Intent getStartCommandIntent(Intent intent) {
@@ -98,7 +101,7 @@ public abstract class EnhancedIntentService extends Service {
         try {
             handleIntent(intent);
         } finally {
-            taskCompletionSource.a.s(null);
+            taskCompletionSource.f20845a.m6024s(null);
         }
     }
 
@@ -108,7 +111,7 @@ public abstract class EnhancedIntentService extends Service {
             Log.d("EnhancedIntentService", "Service received bind request");
         }
         if (this.binder == null) {
-            this.binder = new a0(new a());
+            this.binder = new BinderC4806a0(new C11087a());
         }
         return this.binder;
     }
@@ -132,11 +135,11 @@ public abstract class EnhancedIntentService extends Service {
             return 2;
         }
         Task<Void> taskProcessIntent = processIntent(startCommandIntent);
-        if (taskProcessIntent.o()) {
+        if (taskProcessIntent.mo6020o()) {
             finishTask(intent);
             return 2;
         }
-        taskProcessIntent.c(e.j, new b.i.c.w.f(this, intent));
+        taskProcessIntent.mo6008c(ExecutorC4867e.f13020j, new C4868f(this, intent));
         return 3;
     }
 

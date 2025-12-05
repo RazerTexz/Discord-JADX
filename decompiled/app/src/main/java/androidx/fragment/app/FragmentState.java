@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 @SuppressLint({"BanParcelableUsage"})
 /* loaded from: classes.dex */
 public final class FragmentState implements Parcelable {
-    public static final Parcelable.Creator<FragmentState> CREATOR = new AnonymousClass1();
+    public static final Parcelable.Creator<FragmentState> CREATOR = new C03901();
     public final Bundle mArguments;
     public final String mClassName;
     public final int mContainerId;
@@ -24,8 +24,8 @@ public final class FragmentState implements Parcelable {
     public final String mTag;
     public final String mWho;
 
-    /* renamed from: androidx.fragment.app.FragmentState$1, reason: invalid class name */
-    public class AnonymousClass1 implements Parcelable.Creator<FragmentState> {
+    /* renamed from: androidx.fragment.app.FragmentState$1 */
+    public class C03901 implements Parcelable.Creator<FragmentState> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ FragmentState createFromParcel(Parcel parcel) {
             return createFromParcel(parcel);

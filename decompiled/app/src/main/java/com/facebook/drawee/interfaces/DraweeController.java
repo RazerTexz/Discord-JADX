@@ -5,15 +5,20 @@ import android.view.MotionEvent;
 
 /* loaded from: classes.dex */
 public interface DraweeController {
-    void a();
+    /* renamed from: a */
+    void mo8652a();
 
-    DraweeHierarchy b();
+    /* renamed from: b */
+    DraweeHierarchy mo8653b();
 
-    Animatable c();
+    /* renamed from: c */
+    Animatable mo8654c();
 
-    void d();
+    /* renamed from: d */
+    void mo8655d();
 
-    void e(DraweeHierarchy draweeHierarchy);
+    /* renamed from: e */
+    void mo1045e(DraweeHierarchy draweeHierarchy);
 
     boolean onTouchEvent(MotionEvent motionEvent);
 }

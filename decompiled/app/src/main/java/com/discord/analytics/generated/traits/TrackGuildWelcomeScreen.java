@@ -1,8 +1,8 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.a;
-import d0.z.d.m;
 import java.util.List;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackGuildWelcomeScreen.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackGuildWelcomeScreen {
             return false;
         }
         TrackGuildWelcomeScreen trackGuildWelcomeScreen = (TrackGuildWelcomeScreen) other;
-        return m.areEqual(this.options, trackGuildWelcomeScreen.options) && m.areEqual(this.optionsChannelIds, trackGuildWelcomeScreen.optionsChannelIds) && m.areEqual(this.guildDescription, trackGuildWelcomeScreen.guildDescription) && m.areEqual(this.hasCustomEmojis, trackGuildWelcomeScreen.hasCustomEmojis);
+        return Intrinsics3.areEqual(this.options, trackGuildWelcomeScreen.options) && Intrinsics3.areEqual(this.optionsChannelIds, trackGuildWelcomeScreen.optionsChannelIds) && Intrinsics3.areEqual(this.guildDescription, trackGuildWelcomeScreen.guildDescription) && Intrinsics3.areEqual(this.hasCustomEmojis, trackGuildWelcomeScreen.hasCustomEmojis);
     }
 
     public int hashCode() {
@@ -35,13 +35,13 @@ public final /* data */ class TrackGuildWelcomeScreen {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackGuildWelcomeScreen(options=");
-        sbU.append(this.options);
-        sbU.append(", optionsChannelIds=");
-        sbU.append(this.optionsChannelIds);
-        sbU.append(", guildDescription=");
-        sbU.append(this.guildDescription);
-        sbU.append(", hasCustomEmojis=");
-        return a.D(sbU, this.hasCustomEmojis, ")");
+        StringBuilder sbM833U = outline.m833U("TrackGuildWelcomeScreen(options=");
+        sbM833U.append(this.options);
+        sbM833U.append(", optionsChannelIds=");
+        sbM833U.append(this.optionsChannelIds);
+        sbM833U.append(", guildDescription=");
+        sbM833U.append(this.guildDescription);
+        sbM833U.append(", hasCustomEmojis=");
+        return outline.m816D(sbM833U, this.hasCustomEmojis, ")");
     }
 }

@@ -31,12 +31,12 @@ public final class InputConnectionCompat {
     private static final String COMMIT_CONTENT_RESULT_RECEIVER_KEY = "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_RESULT_RECEIVER";
     public static final int INPUT_CONTENT_GRANT_READ_URI_PERMISSION = 1;
 
-    /* renamed from: androidx.core.view.inputmethod.InputConnectionCompat$1, reason: invalid class name */
-    public class AnonymousClass1 extends InputConnectionWrapper {
+    /* renamed from: androidx.core.view.inputmethod.InputConnectionCompat$1 */
+    public class C03011 extends InputConnectionWrapper {
         public final /* synthetic */ OnCommitContentListener val$listener;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(InputConnection inputConnection, boolean z2, OnCommitContentListener onCommitContentListener) {
+        public C03011(InputConnection inputConnection, boolean z2, OnCommitContentListener onCommitContentListener) {
             super(inputConnection, z2);
             this.val$listener = onCommitContentListener;
         }
@@ -50,12 +50,12 @@ public final class InputConnectionCompat {
         }
     }
 
-    /* renamed from: androidx.core.view.inputmethod.InputConnectionCompat$2, reason: invalid class name */
-    public class AnonymousClass2 extends InputConnectionWrapper {
+    /* renamed from: androidx.core.view.inputmethod.InputConnectionCompat$2 */
+    public class C03022 extends InputConnectionWrapper {
         public final /* synthetic */ OnCommitContentListener val$listener;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(InputConnection inputConnection, boolean z2, OnCommitContentListener onCommitContentListener) {
+        public C03022(InputConnection inputConnection, boolean z2, OnCommitContentListener onCommitContentListener) {
             super(inputConnection, z2);
             this.val$listener = onCommitContentListener;
         }
@@ -125,7 +125,7 @@ public final class InputConnectionCompat {
             throw new IllegalArgumentException("editorInfo must be non-null");
         }
         if (onCommitContentListener != null) {
-            return Build.VERSION.SDK_INT >= 25 ? new AnonymousClass1(inputConnection, false, onCommitContentListener) : EditorInfoCompat.getContentMimeTypes(editorInfo).length == 0 ? inputConnection : new AnonymousClass2(inputConnection, false, onCommitContentListener);
+            return Build.VERSION.SDK_INT >= 25 ? new C03011(inputConnection, false, onCommitContentListener) : EditorInfoCompat.getContentMimeTypes(editorInfo).length == 0 ? inputConnection : new C03022(inputConnection, false, onCommitContentListener);
         }
         throw new IllegalArgumentException("onCommitContentListener must be non-null");
     }

@@ -9,7 +9,7 @@ import androidx.core.view.AccessibilityDelegateCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import com.discord.stores.StoreStream;
-import d0.z.d.m;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: AccessibilityUtils.kt */
 /* loaded from: classes2.dex */
@@ -17,12 +17,12 @@ public final class AccessibilityUtils {
     public static final AccessibilityUtils INSTANCE = new AccessibilityUtils();
 
     /* compiled from: AccessibilityUtils.kt */
-    /* renamed from: com.discord.utilities.accessibility.AccessibilityUtils$setViewIsHeading$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends AccessibilityDelegateCompat {
+    /* renamed from: com.discord.utilities.accessibility.AccessibilityUtils$setViewIsHeading$1 */
+    public static final class C66651 extends AccessibilityDelegateCompat {
         @Override // androidx.core.view.AccessibilityDelegateCompat
         public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfoCompat info) {
-            m.checkNotNullParameter(host, "host");
-            m.checkNotNullParameter(info, "info");
+            Intrinsics3.checkNotNullParameter(host, "host");
+            Intrinsics3.checkNotNullParameter(info, "info");
             super.onInitializeAccessibilityNodeInfo(host, info);
             info.setHeading(true);
         }
@@ -36,20 +36,20 @@ public final class AccessibilityUtils {
     }
 
     public final void sendAnnouncement(Context context, @StringRes int message) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         String string = context.getString(message);
-        m.checkNotNullExpressionValue(string, "context.getString(message)");
+        Intrinsics3.checkNotNullExpressionValue(string, "context.getString(message)");
         sendAnnouncement(context, string);
     }
 
     public final void setViewIsHeading(View view) {
-        m.checkNotNullParameter(view, "view");
-        ViewCompat.setAccessibilityDelegate(view, new AnonymousClass1());
+        Intrinsics3.checkNotNullParameter(view, "view");
+        ViewCompat.setAccessibilityDelegate(view, new C66651());
     }
 
     public final void sendAnnouncement(Context context, String message) {
-        m.checkNotNullParameter(context, "context");
-        m.checkNotNullParameter(message, "message");
+        Intrinsics3.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(message, "message");
         Object systemService = context.getSystemService("accessibility");
         if (!(systemService instanceof AccessibilityManager)) {
             systemService = null;
@@ -57,7 +57,7 @@ public final class AccessibilityUtils {
         AccessibilityManager accessibilityManager = (AccessibilityManager) systemService;
         if (accessibilityManager != null) {
             AccessibilityEvent accessibilityEventObtain = AccessibilityEvent.obtain();
-            m.checkNotNullExpressionValue(accessibilityEventObtain, "event");
+            Intrinsics3.checkNotNullExpressionValue(accessibilityEventObtain, "event");
             accessibilityEventObtain.setEventType(16384);
             accessibilityEventObtain.getText().add(message);
             try {

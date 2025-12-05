@@ -3,12 +3,12 @@ package com.discord.widgets.settings;
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
 import com.discord.stores.StoreUserSettings;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.views.CheckedSetting;
-import d0.z.d.m;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import rx.functions.Action1;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.functions.Action1;
 
 /* compiled from: WidgetSettingsPrivacy.kt */
 /* loaded from: classes2.dex */
@@ -21,7 +21,7 @@ public final class WidgetSettingsPrivacy$onViewBound$$inlined$apply$lambda$1<T> 
         this.this$0 = widgetSettingsPrivacy;
     }
 
-    @Override // rx.functions.Action1
+    @Override // p658rx.functions.Action1
     public /* bridge */ /* synthetic */ void call(Boolean bool) {
         call2(bool);
     }
@@ -29,7 +29,7 @@ public final class WidgetSettingsPrivacy$onViewBound$$inlined$apply$lambda$1<T> 
     /* renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Boolean bool) {
         StoreUserSettings storeUserSettingsAccess$getUserSettings$p = WidgetSettingsPrivacy.access$getUserSettings$p(this.this$0);
-        m.checkNotNullExpressionValue(bool, "checked");
+        Intrinsics3.checkNotNullExpressionValue(bool, "checked");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(storeUserSettingsAccess$getUserSettings$p.setIsAccessibilityDetectionAllowed(bool.booleanValue()), false, 1, null), this.$this_apply.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, WidgetSettingsPrivacy$onViewBound$1$1$1.INSTANCE, 62, (Object) null);
     }
 }

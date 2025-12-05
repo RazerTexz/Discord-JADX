@@ -1,8 +1,8 @@
 package com.discord.api.message.embed;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: EmbedAuthor.kt */
 /* loaded from: classes.dex */
@@ -35,7 +35,7 @@ public final /* data */ class EmbedAuthor {
             return false;
         }
         EmbedAuthor embedAuthor = (EmbedAuthor) other;
-        return m.areEqual(this.name, embedAuthor.name) && m.areEqual(this.url, embedAuthor.url) && m.areEqual(this.iconUrl, embedAuthor.iconUrl) && m.areEqual(this.proxyIconUrl, embedAuthor.proxyIconUrl);
+        return Intrinsics3.areEqual(this.name, embedAuthor.name) && Intrinsics3.areEqual(this.url, embedAuthor.url) && Intrinsics3.areEqual(this.iconUrl, embedAuthor.iconUrl) && Intrinsics3.areEqual(this.proxyIconUrl, embedAuthor.proxyIconUrl);
     }
 
     public int hashCode() {
@@ -50,13 +50,13 @@ public final /* data */ class EmbedAuthor {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("EmbedAuthor(name=");
-        sbU.append(this.name);
-        sbU.append(", url=");
-        sbU.append(this.url);
-        sbU.append(", iconUrl=");
-        sbU.append(this.iconUrl);
-        sbU.append(", proxyIconUrl=");
-        return a.J(sbU, this.proxyIconUrl, ")");
+        StringBuilder sbM833U = outline.m833U("EmbedAuthor(name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", url=");
+        sbM833U.append(this.url);
+        sbM833U.append(", iconUrl=");
+        sbM833U.append(this.iconUrl);
+        sbM833U.append(", proxyIconUrl=");
+        return outline.m822J(sbM833U, this.proxyIconUrl, ")");
     }
 }

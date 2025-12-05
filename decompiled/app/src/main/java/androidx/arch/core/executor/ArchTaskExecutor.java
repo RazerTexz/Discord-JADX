@@ -17,21 +17,21 @@ public class ArchTaskExecutor extends TaskExecutor {
     private TaskExecutor mDelegate;
 
     @NonNull
-    private static final Executor sMainThreadExecutor = new AnonymousClass1();
+    private static final Executor sMainThreadExecutor = new ExecutorC01381();
 
     @NonNull
-    private static final Executor sIOThreadExecutor = new AnonymousClass2();
+    private static final Executor sIOThreadExecutor = new ExecutorC01392();
 
-    /* renamed from: androidx.arch.core.executor.ArchTaskExecutor$1, reason: invalid class name */
-    public static class AnonymousClass1 implements Executor {
+    /* renamed from: androidx.arch.core.executor.ArchTaskExecutor$1 */
+    public static class ExecutorC01381 implements Executor {
         @Override // java.util.concurrent.Executor
         public void execute(Runnable runnable) {
             ArchTaskExecutor.getInstance().postToMainThread(runnable);
         }
     }
 
-    /* renamed from: androidx.arch.core.executor.ArchTaskExecutor$2, reason: invalid class name */
-    public static class AnonymousClass2 implements Executor {
+    /* renamed from: androidx.arch.core.executor.ArchTaskExecutor$2 */
+    public static class ExecutorC01392 implements Executor {
         @Override // java.util.concurrent.Executor
         public void execute(Runnable runnable) {
             ArchTaskExecutor.getInstance().executeOnDiskIO(runnable);

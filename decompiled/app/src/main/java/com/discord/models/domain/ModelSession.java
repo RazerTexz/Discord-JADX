@@ -1,11 +1,11 @@
 package com.discord.models.domain;
 
-import b.a.m.a.c0;
-import b.d.b.a.a;
 import com.discord.api.activity.Activity;
 import com.discord.models.domain.Model;
 import java.io.IOException;
 import java.util.List;
+import p007b.p008a.p033m.p034a.C1135c0;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ModelSession implements Model {
@@ -19,7 +19,9 @@ public class ModelSession implements Model {
     public static class ClientInfo implements Model {
         private String client;
         private int number;
-        private String os;
+
+        /* renamed from: os */
+        private String f18578os;
 
         @Override // com.discord.models.domain.Model
         public void assignField(Model.JsonReader jsonReader) throws IOException {
@@ -33,7 +35,7 @@ public class ModelSession implements Model {
                     this.number = jsonReader.nextInt(this.number);
                     break;
                 case "os":
-                    this.os = jsonReader.nextString(this.os);
+                    this.f18578os = jsonReader.nextString(this.f18578os);
                     break;
                 default:
                     jsonReader.skipValue();
@@ -75,7 +77,7 @@ public class ModelSession implements Model {
         }
 
         public String getOs() {
-            return this.os;
+            return this.f18578os;
         }
 
         public int hashCode() {
@@ -87,14 +89,14 @@ public class ModelSession implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ModelSession.ClientInfo(os=");
-            sbU.append(getOs());
-            sbU.append(", client=");
-            sbU.append(getClient());
-            sbU.append(", number=");
-            sbU.append(getNumber());
-            sbU.append(")");
-            return sbU.toString();
+            StringBuilder sbM833U = outline.m833U("ModelSession.ClientInfo(os=");
+            sbM833U.append(getOs());
+            sbM833U.append(", client=");
+            sbM833U.append(getClient());
+            sbM833U.append(", number=");
+            sbM833U.append(getNumber());
+            sbM833U.append(")");
+            return sbM833U.toString();
         }
     }
 
@@ -119,7 +121,7 @@ public class ModelSession implements Model {
                 this.sessionId = jsonReader.nextString(this.sessionId);
                 break;
             case "activities":
-                this.activities = jsonReader.nextList(new c0(jsonReader));
+                this.activities = jsonReader.nextList(new C1135c0(jsonReader));
                 break;
             default:
                 jsonReader.skipValue();
@@ -200,19 +202,19 @@ public class ModelSession implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("ModelSession(sessionId=");
-        sbU.append(getSessionId());
-        sbU.append(", lastModified=");
-        sbU.append(getLastModified());
-        sbU.append(", status=");
-        sbU.append(getStatus());
-        sbU.append(", activities=");
-        sbU.append(getActivities());
-        sbU.append(", clientInfo=");
-        sbU.append(getClientInfo());
-        sbU.append(", active=");
-        sbU.append(isActive());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("ModelSession(sessionId=");
+        sbM833U.append(getSessionId());
+        sbM833U.append(", lastModified=");
+        sbM833U.append(getLastModified());
+        sbM833U.append(", status=");
+        sbM833U.append(getStatus());
+        sbM833U.append(", activities=");
+        sbM833U.append(getActivities());
+        sbM833U.append(", clientInfo=");
+        sbM833U.append(getClientInfo());
+        sbM833U.append(", active=");
+        sbM833U.append(isActive());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 }

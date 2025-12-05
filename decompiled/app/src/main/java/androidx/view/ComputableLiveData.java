@@ -23,9 +23,9 @@ public abstract class ComputableLiveData<T> {
     @VisibleForTesting
     public final Runnable mRefreshRunnable;
 
-    /* renamed from: androidx.lifecycle.ComputableLiveData$1, reason: invalid class name */
-    public class AnonymousClass1 extends LiveData<T> {
-        public AnonymousClass1() {
+    /* renamed from: androidx.lifecycle.ComputableLiveData$1 */
+    public class C04261 extends LiveData<T> {
+        public C04261() {
         }
 
         @Override // androidx.view.LiveData
@@ -35,9 +35,9 @@ public abstract class ComputableLiveData<T> {
         }
     }
 
-    /* renamed from: androidx.lifecycle.ComputableLiveData$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.lifecycle.ComputableLiveData$2 */
+    public class RunnableC04272 implements Runnable {
+        public RunnableC04272() {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -71,9 +71,9 @@ public abstract class ComputableLiveData<T> {
         }
     }
 
-    /* renamed from: androidx.lifecycle.ComputableLiveData$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
-        public AnonymousClass3() {
+    /* renamed from: androidx.lifecycle.ComputableLiveData$3 */
+    public class RunnableC04283 implements Runnable {
+        public RunnableC04283() {
         }
 
         @Override // java.lang.Runnable
@@ -106,9 +106,9 @@ public abstract class ComputableLiveData<T> {
     public ComputableLiveData(@NonNull Executor executor) {
         this.mInvalid = new AtomicBoolean(true);
         this.mComputing = new AtomicBoolean(false);
-        this.mRefreshRunnable = new AnonymousClass2();
-        this.mInvalidationRunnable = new AnonymousClass3();
+        this.mRefreshRunnable = new RunnableC04272();
+        this.mInvalidationRunnable = new RunnableC04283();
         this.mExecutor = executor;
-        this.mLiveData = new AnonymousClass1();
+        this.mLiveData = new C04261();
     }
 }

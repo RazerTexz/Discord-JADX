@@ -8,18 +8,18 @@ import androidx.annotation.Nullable;
 /* loaded from: classes.dex */
 public abstract class AbsSavedState implements Parcelable {
     private final Parcelable mSuperState;
-    public static final AbsSavedState EMPTY_STATE = new AnonymousClass1();
-    public static final Parcelable.Creator<AbsSavedState> CREATOR = new AnonymousClass2();
+    public static final AbsSavedState EMPTY_STATE = new C03121();
+    public static final Parcelable.Creator<AbsSavedState> CREATOR = new C03132();
 
-    /* renamed from: androidx.customview.view.AbsSavedState$1, reason: invalid class name */
-    public static class AnonymousClass1 extends AbsSavedState {
-        public AnonymousClass1() {
-            super((AnonymousClass1) null);
+    /* renamed from: androidx.customview.view.AbsSavedState$1 */
+    public static class C03121 extends AbsSavedState {
+        public C03121() {
+            super((C03121) null);
         }
     }
 
-    /* renamed from: androidx.customview.view.AbsSavedState$2, reason: invalid class name */
-    public static class AnonymousClass2 implements Parcelable.ClassLoaderCreator<AbsSavedState> {
+    /* renamed from: androidx.customview.view.AbsSavedState$2 */
+    public static class C03132 implements Parcelable.ClassLoaderCreator<AbsSavedState> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
             return createFromParcel(parcel);
@@ -55,7 +55,7 @@ public abstract class AbsSavedState implements Parcelable {
         }
     }
 
-    public /* synthetic */ AbsSavedState(AnonymousClass1 anonymousClass1) {
+    public /* synthetic */ AbsSavedState(C03121 c03121) {
         this();
     }
 

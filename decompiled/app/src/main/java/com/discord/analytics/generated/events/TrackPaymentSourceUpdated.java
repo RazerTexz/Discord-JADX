@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPaymentSourceUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPaymentSourceUpdated implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPaymentSourceUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long paymentSourceId = null;
     private final Long cardExpirationDate = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackPaymentSourceUpdated implements AnalyticsSche
             return false;
         }
         TrackPaymentSourceUpdated trackPaymentSourceUpdated = (TrackPaymentSourceUpdated) other;
-        return m.areEqual(this.paymentSourceId, trackPaymentSourceUpdated.paymentSourceId) && m.areEqual(this.cardExpirationDate, trackPaymentSourceUpdated.cardExpirationDate) && m.areEqual(this.isDefault, trackPaymentSourceUpdated.isDefault);
+        return Intrinsics3.areEqual(this.paymentSourceId, trackPaymentSourceUpdated.paymentSourceId) && Intrinsics3.areEqual(this.cardExpirationDate, trackPaymentSourceUpdated.cardExpirationDate) && Intrinsics3.areEqual(this.isDefault, trackPaymentSourceUpdated.isDefault);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackPaymentSourceUpdated implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPaymentSourceUpdated(paymentSourceId=");
-        sbU.append(this.paymentSourceId);
-        sbU.append(", cardExpirationDate=");
-        sbU.append(this.cardExpirationDate);
-        sbU.append(", isDefault=");
-        return a.D(sbU, this.isDefault, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPaymentSourceUpdated(paymentSourceId=");
+        sbM833U.append(this.paymentSourceId);
+        sbM833U.append(", cardExpirationDate=");
+        sbM833U.append(this.cardExpirationDate);
+        sbM833U.append(", isDefault=");
+        return outline.m816D(sbM833U, this.isDefault, ")");
     }
 }

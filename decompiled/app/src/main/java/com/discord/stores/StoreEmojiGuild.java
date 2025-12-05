@@ -4,12 +4,8 @@ import android.content.Context;
 import com.discord.api.emoji.GuildEmojisUpdate;
 import com.discord.models.domain.emoji.ModelEmojiGuild;
 import com.discord.stores.updates.ObservationDeck;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.h0;
-import d0.t.n;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -18,7 +14,11 @@ import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import rx.Observable;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.Maps6;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreEmojiGuild.kt */
 /* loaded from: classes2.dex */
@@ -31,12 +31,12 @@ public final class StoreEmojiGuild extends StoreV2 {
     private final RestAPI restAPI;
 
     /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$activate$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreEmojiGuild$activate$1 */
+    public static final class C58991 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C58991(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -44,7 +44,7 @@ public final class StoreEmojiGuild extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -54,16 +54,16 @@ public final class StoreEmojiGuild extends StoreV2 {
     }
 
     /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$deactivate$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreEmojiGuild$deactivate$1 */
+    public static final class C59001 extends Lambda implements Function0<Unit> {
+        public C59001() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -73,13 +73,13 @@ public final class StoreEmojiGuild extends StoreV2 {
     }
 
     /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$deleteEmoji$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreEmojiGuild$deleteEmoji$1 */
+    public static final class C59011 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $emojiId;
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2) {
+        public C59011(long j, long j2) {
             super(0);
             this.$guildId = j;
             this.$emojiId = j2;
@@ -88,7 +88,7 @@ public final class StoreEmojiGuild extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -97,7 +97,7 @@ public final class StoreEmojiGuild extends StoreV2 {
             Long lValueOf = Long.valueOf(this.$guildId);
             List listEmptyList = (List) StoreEmojiGuild.access$getGuildEmoji$p(StoreEmojiGuild.this).get(Long.valueOf(this.$guildId));
             if (listEmptyList == null) {
-                listEmptyList = n.emptyList();
+                listEmptyList = Collections2.emptyList();
             }
             ArrayList arrayList = new ArrayList();
             for (Object obj : listEmptyList) {
@@ -111,12 +111,12 @@ public final class StoreEmojiGuild extends StoreV2 {
     }
 
     /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$fetchGuildEmoji$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<List<? extends ModelEmojiGuild>, Unit> {
+    /* renamed from: com.discord.stores.StoreEmojiGuild$fetchGuildEmoji$1 */
+    public static final class C59021 extends Lambda implements Function1<List<? extends ModelEmojiGuild>, Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C59021(long j) {
             super(1);
             this.$guildId = j;
         }
@@ -124,24 +124,24 @@ public final class StoreEmojiGuild extends StoreV2 {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(List<? extends ModelEmojiGuild> list) {
             invoke2((List<ModelEmojiGuild>) list);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelEmojiGuild> list) {
-            m.checkNotNullParameter(list, "emojis");
+            Intrinsics3.checkNotNullParameter(list, "emojis");
             StoreEmojiGuild.access$handleGuildEmojisLoaded(StoreEmojiGuild.this, this.$guildId, list);
         }
     }
 
     /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$handleGuildEmojisLoaded$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreEmojiGuild$handleGuildEmojisLoaded$1 */
+    public static final class C59031 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $emojis;
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(List list, long j) {
+        public C59031(List list, long j) {
             super(0);
             this.$emojis = list;
             this.$guildId = j;
@@ -150,7 +150,7 @@ public final class StoreEmojiGuild extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -161,12 +161,12 @@ public final class StoreEmojiGuild extends StoreV2 {
     }
 
     /* compiled from: StoreEmojiGuild.kt */
-    /* renamed from: com.discord.stores.StoreEmojiGuild$observeGuildEmoji$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<List<? extends ModelEmojiGuild>> {
+    /* renamed from: com.discord.stores.StoreEmojiGuild$observeGuildEmoji$1 */
+    public static final class C59041 extends Lambda implements Function0<List<? extends ModelEmojiGuild>> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C59041(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -184,14 +184,14 @@ public final class StoreEmojiGuild extends StoreV2 {
     }
 
     public StoreEmojiGuild(ObservationDeck observationDeck, Dispatcher dispatcher, RestAPI restAPI) {
-        m.checkNotNullParameter(observationDeck, "observationDeck");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(restAPI, "restAPI");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
         this.observationDeck = observationDeck;
         this.dispatcher = dispatcher;
         this.restAPI = restAPI;
         this.guildEmoji = new LinkedHashMap();
-        this.guildEmojiSnapshot = h0.emptyMap();
+        this.guildEmojiSnapshot = Maps6.emptyMap();
         this.activeGuildId = -1L;
     }
 
@@ -211,34 +211,34 @@ public final class StoreEmojiGuild extends StoreV2 {
         storeEmojiGuild.activeGuildId = j;
     }
 
-    @StoreThread
+    @Store3
     private final void handleGuildEmojisLoaded(long guildId, List<ModelEmojiGuild> emojis) {
-        this.dispatcher.schedule(new AnonymousClass1(emojis, guildId));
+        this.dispatcher.schedule(new C59031(emojis, guildId));
     }
 
     public final void activate(long guildId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId));
+        this.dispatcher.schedule(new C58991(guildId));
     }
 
     public final void deactivate() {
-        this.dispatcher.schedule(new AnonymousClass1());
+        this.dispatcher.schedule(new C59001());
     }
 
     public final void deleteEmoji(long guildId, long emojiId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId, emojiId));
+        this.dispatcher.schedule(new C59011(guildId, emojiId));
     }
 
     public final void fetchGuildEmoji(long guildId) {
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.getGuildEmojis(guildId), false, 1, null), StoreEmojiGuild.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(guildId), 62, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.getGuildEmojis(guildId), false, 1, null), StoreEmojiGuild.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C59021(guildId), 62, (Object) null);
     }
 
     public final List<ModelEmojiGuild> getGuildEmoji(long guildId) {
         return this.guildEmojiSnapshot.get(Long.valueOf(guildId));
     }
 
-    @StoreThread
+    @Store3
     public final void handleEmojiUpdate(GuildEmojisUpdate emojiUpdate) {
-        m.checkNotNullParameter(emojiUpdate, "emojiUpdate");
+        Intrinsics3.checkNotNullParameter(emojiUpdate, "emojiUpdate");
         long guildId = emojiUpdate.getGuildId();
         long j = this.activeGuildId;
         if (guildId == j) {
@@ -247,9 +247,9 @@ public final class StoreEmojiGuild extends StoreV2 {
     }
 
     public final Observable<List<ModelEmojiGuild>> observeGuildEmoji(long guildId) {
-        Observable<List<ModelEmojiGuild>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(guildId), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
-        return observableR;
+        Observable<List<ModelEmojiGuild>> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C59041(guildId), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     @Override // com.discord.stores.StoreV2

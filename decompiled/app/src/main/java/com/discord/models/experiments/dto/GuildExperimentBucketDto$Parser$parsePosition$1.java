@@ -5,7 +5,7 @@ import com.discord.models.domain.Model;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$IntRef;
-import rx.functions.Action1;
+import p658rx.functions.Action1;
 
 /* compiled from: GuildExperimentDto.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final class GuildExperimentBucketDto$Parser$parsePosition$1<T> implements
         this.$end = ref$IntRef2;
     }
 
-    @Override // rx.functions.Action1
+    @Override // p658rx.functions.Action1
     public /* bridge */ /* synthetic */ void call(String str) throws IOException {
         call2(str);
     }

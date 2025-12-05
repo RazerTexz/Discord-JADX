@@ -12,62 +12,67 @@ import android.widget.ListAdapter;
 import androidx.annotation.NonNull;
 import androidx.core.util.Pair;
 import androidx.core.view.ViewCompat;
-import b.i.a.g.d.b;
-import b.i.a.g.d.f;
-import b.i.a.g.d.g;
-import b.i.a.g.d.l;
-import com.google.android.material.R;
+import com.google.android.material.C10817R;
 import com.google.android.material.internal.ViewUtils;
 import java.util.Calendar;
+import p007b.p225i.p226a.p341g.p345d.CalendarStyle;
+import p007b.p225i.p226a.p341g.p345d.MaterialCalendarGridView2;
+import p007b.p225i.p226a.p341g.p345d.MonthAdapter;
+import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
 /* loaded from: classes3.dex */
 public final class MaterialCalendarGridView extends GridView {
-    public final Calendar j;
-    public final boolean k;
+
+    /* renamed from: j */
+    public final Calendar f20977j;
+
+    /* renamed from: k */
+    public final boolean f20978k;
 
     public MaterialCalendarGridView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
-        this.j = l.i();
+        this.f20977j = UtcDates.m6076i();
         if (MaterialDatePicker.isFullscreen(getContext())) {
-            setNextFocusLeftId(R.id.cancel_button);
-            setNextFocusRightId(R.id.confirm_button);
+            setNextFocusLeftId(C10817R.id.cancel_button);
+            setNextFocusRightId(C10817R.id.confirm_button);
         }
-        this.k = MaterialDatePicker.isNestedScrollable(getContext());
-        ViewCompat.setAccessibilityDelegate(this, new f(this));
+        this.f20978k = MaterialDatePicker.isNestedScrollable(getContext());
+        ViewCompat.setAccessibilityDelegate(this, new MaterialCalendarGridView2(this));
     }
 
     @NonNull
-    public g a() {
-        return (g) super.getAdapter();
+    /* renamed from: a */
+    public MonthAdapter m9130a() {
+        return (MonthAdapter) super.getAdapter();
     }
 
     @Override // android.widget.GridView, android.widget.AdapterView
     @NonNull
     public /* bridge */ /* synthetic */ Adapter getAdapter() {
-        return a();
+        return m9130a();
     }
 
     @Override // android.widget.AbsListView, android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        a().notifyDataSetChanged();
+        m9130a().notifyDataSetChanged();
     }
 
     @Override // android.view.View
     public final void onDraw(@NonNull Canvas canvas) {
-        int iA;
+        int iM6062a;
         int width;
-        int iA2;
+        int iM6062a2;
         int width2;
         int width3;
         int i;
         MaterialCalendarGridView materialCalendarGridView = this;
         super.onDraw(canvas);
-        g gVarA = a();
-        DateSelector<?> dateSelector = gVarA.l;
-        b bVar = gVarA.n;
-        Long lC = gVarA.c(gVarA.b());
-        Long lC2 = gVarA.c(gVarA.d());
+        MonthAdapter monthAdapterM9130a = m9130a();
+        DateSelector<?> dateSelector = monthAdapterM9130a.f11608l;
+        CalendarStyle calendarStyle = monthAdapterM9130a.f11610n;
+        Long lM6064c = monthAdapterM9130a.m6064c(monthAdapterM9130a.m6063b());
+        Long lM6064c2 = monthAdapterM9130a.m6064c(monthAdapterM9130a.m6065d());
         for (Pair<Long, Long> pair : dateSelector.getSelectedRanges()) {
             Long l = pair.first;
             if (l != null) {
@@ -76,52 +81,52 @@ public final class MaterialCalendarGridView extends GridView {
                     long jLongValue2 = pair.second.longValue();
                     Long lValueOf = Long.valueOf(jLongValue);
                     Long lValueOf2 = Long.valueOf(jLongValue2);
-                    if (!(lC == null || lC2 == null || lValueOf == null || lValueOf2 == null || lValueOf.longValue() > lC2.longValue() || lValueOf2.longValue() < lC.longValue())) {
+                    if (!(lM6064c == null || lM6064c2 == null || lValueOf == null || lValueOf2 == null || lValueOf.longValue() > lM6064c2.longValue() || lValueOf2.longValue() < lM6064c.longValue())) {
                         boolean zIsLayoutRtl = ViewUtils.isLayoutRtl(this);
-                        if (jLongValue < lC.longValue()) {
-                            iA = gVarA.b();
-                            width = iA % gVarA.k.m == 0 ? 0 : !zIsLayoutRtl ? materialCalendarGridView.getChildAt(iA - 1).getRight() : materialCalendarGridView.getChildAt(iA - 1).getLeft();
+                        if (jLongValue < lM6064c.longValue()) {
+                            iM6062a = monthAdapterM9130a.m6063b();
+                            width = iM6062a % monthAdapterM9130a.f11607k.f20987m == 0 ? 0 : !zIsLayoutRtl ? materialCalendarGridView.getChildAt(iM6062a - 1).getRight() : materialCalendarGridView.getChildAt(iM6062a - 1).getLeft();
                         } else {
-                            materialCalendarGridView.j.setTimeInMillis(jLongValue);
-                            iA = gVarA.a(materialCalendarGridView.j.get(5));
-                            View childAt = materialCalendarGridView.getChildAt(iA);
+                            materialCalendarGridView.f20977j.setTimeInMillis(jLongValue);
+                            iM6062a = monthAdapterM9130a.m6062a(materialCalendarGridView.f20977j.get(5));
+                            View childAt = materialCalendarGridView.getChildAt(iM6062a);
                             width = (childAt.getWidth() / 2) + childAt.getLeft();
                         }
-                        if (jLongValue2 > lC2.longValue()) {
-                            iA2 = Math.min(gVarA.d(), getChildCount() - 1);
-                            width2 = (iA2 + 1) % gVarA.k.m == 0 ? getWidth() : !zIsLayoutRtl ? materialCalendarGridView.getChildAt(iA2).getRight() : materialCalendarGridView.getChildAt(iA2).getLeft();
+                        if (jLongValue2 > lM6064c2.longValue()) {
+                            iM6062a2 = Math.min(monthAdapterM9130a.m6065d(), getChildCount() - 1);
+                            width2 = (iM6062a2 + 1) % monthAdapterM9130a.f11607k.f20987m == 0 ? getWidth() : !zIsLayoutRtl ? materialCalendarGridView.getChildAt(iM6062a2).getRight() : materialCalendarGridView.getChildAt(iM6062a2).getLeft();
                         } else {
-                            materialCalendarGridView.j.setTimeInMillis(jLongValue2);
-                            iA2 = gVarA.a(materialCalendarGridView.j.get(5));
-                            View childAt2 = materialCalendarGridView.getChildAt(iA2);
+                            materialCalendarGridView.f20977j.setTimeInMillis(jLongValue2);
+                            iM6062a2 = monthAdapterM9130a.m6062a(materialCalendarGridView.f20977j.get(5));
+                            View childAt2 = materialCalendarGridView.getChildAt(iM6062a2);
                             width2 = (childAt2.getWidth() / 2) + childAt2.getLeft();
                         }
-                        int itemId = (int) gVarA.getItemId(iA);
-                        int itemId2 = (int) gVarA.getItemId(iA2);
+                        int itemId = (int) monthAdapterM9130a.getItemId(iM6062a);
+                        int itemId2 = (int) monthAdapterM9130a.getItemId(iM6062a2);
                         while (itemId <= itemId2) {
                             int numColumns = getNumColumns() * itemId;
                             int numColumns2 = (getNumColumns() + numColumns) - 1;
                             View childAt3 = materialCalendarGridView.getChildAt(numColumns);
-                            int top = childAt3.getTop() + bVar.a.a.top;
-                            int bottom = childAt3.getBottom() - bVar.a.a.bottom;
+                            int top = childAt3.getTop() + calendarStyle.f11584a.f11578a.top;
+                            int bottom = childAt3.getBottom() - calendarStyle.f11584a.f11578a.bottom;
                             if (zIsLayoutRtl) {
-                                int i2 = iA2 > numColumns2 ? 0 : width2;
-                                width3 = numColumns > iA ? getWidth() : width;
+                                int i2 = iM6062a2 > numColumns2 ? 0 : width2;
+                                width3 = numColumns > iM6062a ? getWidth() : width;
                                 i = i2;
                             } else {
-                                i = numColumns > iA ? 0 : width;
-                                width3 = iA2 > numColumns2 ? getWidth() : width2;
+                                i = numColumns > iM6062a ? 0 : width;
+                                width3 = iM6062a2 > numColumns2 ? getWidth() : width2;
                             }
-                            canvas.drawRect(i, top, width3, bottom, bVar.h);
+                            canvas.drawRect(i, top, width3, bottom, calendarStyle.f11591h);
                             itemId++;
                             materialCalendarGridView = this;
-                            gVarA = gVarA;
+                            monthAdapterM9130a = monthAdapterM9130a;
                         }
                     }
                 }
             }
             materialCalendarGridView = this;
-            gVarA = gVarA;
+            monthAdapterM9130a = monthAdapterM9130a;
         }
     }
 
@@ -132,9 +137,9 @@ public final class MaterialCalendarGridView extends GridView {
             return;
         }
         if (i == 33) {
-            setSelection(a().d());
+            setSelection(m9130a().m6065d());
         } else if (i == 130) {
-            setSelection(a().b());
+            setSelection(m9130a().m6063b());
         } else {
             super.onFocusChanged(true, i, rect);
         }
@@ -145,19 +150,19 @@ public final class MaterialCalendarGridView extends GridView {
         if (!super.onKeyDown(i, keyEvent)) {
             return false;
         }
-        if (getSelectedItemPosition() == -1 || getSelectedItemPosition() >= a().b()) {
+        if (getSelectedItemPosition() == -1 || getSelectedItemPosition() >= m9130a().m6063b()) {
             return true;
         }
         if (19 != i) {
             return false;
         }
-        setSelection(a().b());
+        setSelection(m9130a().m6063b());
         return true;
     }
 
     @Override // android.widget.GridView, android.widget.AbsListView, android.view.View
     public void onMeasure(int i, int i2) {
-        if (!this.k) {
+        if (!this.f20978k) {
             super.onMeasure(i, i2);
             return;
         }
@@ -172,8 +177,8 @@ public final class MaterialCalendarGridView extends GridView {
 
     @Override // android.widget.GridView, android.widget.AdapterView
     public void setSelection(int i) {
-        if (i < a().b()) {
-            super.setSelection(a().b());
+        if (i < m9130a().m6063b()) {
+            super.setSelection(m9130a().m6063b());
         } else {
             super.setSelection(i);
         }
@@ -182,13 +187,13 @@ public final class MaterialCalendarGridView extends GridView {
     @Override // android.widget.GridView, android.widget.AdapterView
     @NonNull
     public /* bridge */ /* synthetic */ ListAdapter getAdapter() {
-        return a();
+        return m9130a();
     }
 
     @Override // android.widget.GridView, android.widget.AbsListView
     public final void setAdapter(ListAdapter listAdapter) {
-        if (!(listAdapter instanceof g)) {
-            throw new IllegalArgumentException(String.format("%1$s must have its Adapter set to a %2$s", MaterialCalendarGridView.class.getCanonicalName(), g.class.getCanonicalName()));
+        if (!(listAdapter instanceof MonthAdapter)) {
+            throw new IllegalArgumentException(String.format("%1$s must have its Adapter set to a %2$s", MaterialCalendarGridView.class.getCanonicalName(), MonthAdapter.class.getCanonicalName()));
         }
         super.setAdapter(listAdapter);
     }

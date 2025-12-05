@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuildReceiver;
+import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackSourceMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackCustomStatusUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCustomStatusUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackLocationMetadataReceiver, TrackSourceMetadataReceiver {
+public final /* data */ class TrackCustomStatusUpdated implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackLocationMetadata2, TrackSourceMetadata2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private TrackLocationMetadata trackLocationMetadata;
@@ -27,14 +27,15 @@ public final /* data */ class TrackCustomStatusUpdated implements AnalyticsSchem
     private final Long voiceChannelVoiceStateCount = null;
     private final transient String analyticsSchemaTypeName = "custom_status_updated";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
-    public void c(TrackGuild trackGuild) {
+    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    /* renamed from: c */
+    public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
@@ -52,7 +53,7 @@ public final /* data */ class TrackCustomStatusUpdated implements AnalyticsSchem
             return false;
         }
         TrackCustomStatusUpdated trackCustomStatusUpdated = (TrackCustomStatusUpdated) other;
-        return m.areEqual(this.hasEmoji, trackCustomStatusUpdated.hasEmoji) && m.areEqual(this.emojiType, trackCustomStatusUpdated.emojiType) && m.areEqual(this.textLen, trackCustomStatusUpdated.textLen) && m.areEqual(this.clearAfter, trackCustomStatusUpdated.clearAfter) && m.areEqual(this.voiceChannelId, trackCustomStatusUpdated.voiceChannelId) && m.areEqual(this.voiceChannelVoiceStateCount, trackCustomStatusUpdated.voiceChannelVoiceStateCount);
+        return Intrinsics3.areEqual(this.hasEmoji, trackCustomStatusUpdated.hasEmoji) && Intrinsics3.areEqual(this.emojiType, trackCustomStatusUpdated.emojiType) && Intrinsics3.areEqual(this.textLen, trackCustomStatusUpdated.textLen) && Intrinsics3.areEqual(this.clearAfter, trackCustomStatusUpdated.clearAfter) && Intrinsics3.areEqual(this.voiceChannelId, trackCustomStatusUpdated.voiceChannelId) && Intrinsics3.areEqual(this.voiceChannelVoiceStateCount, trackCustomStatusUpdated.voiceChannelVoiceStateCount);
     }
 
     public int hashCode() {
@@ -71,17 +72,17 @@ public final /* data */ class TrackCustomStatusUpdated implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackCustomStatusUpdated(hasEmoji=");
-        sbU.append(this.hasEmoji);
-        sbU.append(", emojiType=");
-        sbU.append(this.emojiType);
-        sbU.append(", textLen=");
-        sbU.append(this.textLen);
-        sbU.append(", clearAfter=");
-        sbU.append(this.clearAfter);
-        sbU.append(", voiceChannelId=");
-        sbU.append(this.voiceChannelId);
-        sbU.append(", voiceChannelVoiceStateCount=");
-        return a.G(sbU, this.voiceChannelVoiceStateCount, ")");
+        StringBuilder sbM833U = outline.m833U("TrackCustomStatusUpdated(hasEmoji=");
+        sbM833U.append(this.hasEmoji);
+        sbM833U.append(", emojiType=");
+        sbM833U.append(this.emojiType);
+        sbM833U.append(", textLen=");
+        sbM833U.append(this.textLen);
+        sbM833U.append(", clearAfter=");
+        sbM833U.append(this.clearAfter);
+        sbM833U.append(", voiceChannelId=");
+        sbM833U.append(this.voiceChannelId);
+        sbM833U.append(", voiceChannelVoiceStateCount=");
+        return outline.m819G(sbM833U, this.voiceChannelVoiceStateCount, ")");
     }
 }

@@ -1,12 +1,12 @@
 package com.discord.widgets.servers;
 
 import com.discord.widgets.servers.WidgetServerSettingsSecurity;
-import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
+import p507d0.p592z.p594d.Lambda;
 
 /* compiled from: WidgetServerSettingsSecurity.kt */
 /* loaded from: classes2.dex */
-public final class WidgetServerSettingsSecurity$ToggleMfaDialog$mfaEnabled$2 extends o implements Function0<Boolean> {
+public final class WidgetServerSettingsSecurity$ToggleMfaDialog$mfaEnabled$2 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetServerSettingsSecurity.ToggleMfaDialog this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

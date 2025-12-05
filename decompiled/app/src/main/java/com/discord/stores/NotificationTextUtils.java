@@ -1,7 +1,6 @@
 package com.discord.stores;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.message.Message;
@@ -13,12 +12,13 @@ import com.discord.models.user.User;
 import com.discord.stores.StoreThreadsJoined;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.threads.ThreadUtils;
-import d0.t.n;
-import d0.z.d.m;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: NotificationTextUtils.kt */
 /* loaded from: classes2.dex */
@@ -51,20 +51,20 @@ public final class NotificationTextUtils {
             if (iComputeThreadNotificationSetting == 8) {
                 return false;
             }
-            if (!m.areEqual(message.getMentionEveryone(), Boolean.TRUE)) {
-                List<com.discord.api.user.User> listT = message.t();
-                if (listT == null) {
-                    List<Long> listS = message.s();
-                    if (listS == null) {
+            if (!Intrinsics3.areEqual(message.getMentionEveryone(), Boolean.TRUE)) {
+                List<com.discord.api.user.User> listM8047t = message.m8047t();
+                if (listM8047t == null) {
+                    List<Long> listM8046s = message.m8046s();
+                    if (listM8046s == null) {
                         return false;
                     }
-                    if (listS.isEmpty()) {
+                    if (listM8046s.isEmpty()) {
                         z2 = false;
                         if (z2) {
                             return false;
                         }
                     } else {
-                        Iterator<T> it = listS.iterator();
+                        Iterator<T> it = listM8046s.iterator();
                         while (it.hasNext()) {
                             if (myRoleIds.contains(Long.valueOf(((Number) it.next()).longValue()))) {
                                 z2 = true;
@@ -75,12 +75,12 @@ public final class NotificationTextUtils {
                         if (z2) {
                         }
                     }
-                } else if (listT.isEmpty()) {
+                } else if (listM8047t.isEmpty()) {
                     z3 = false;
                     if (!z3) {
                     }
                 } else {
-                    Iterator<T> it2 = listT.iterator();
+                    Iterator<T> it2 = listM8047t.iterator();
                     while (it2.hasNext()) {
                         if (((com.discord.api.user.User) it2.next()).getId() == me2.getId()) {
                             z3 = true;
@@ -102,22 +102,22 @@ public final class NotificationTextUtils {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     private final boolean messageContainsMention(User me2, Collection<Long> myRoleIds, Message message, boolean isSuppressEveryone, boolean isSuppressRoles) {
-        List<Long> listS;
+        List<Long> listM8046s;
         boolean z2;
         boolean z3;
-        if (!m.areEqual(message.getMentionEveryone(), Boolean.TRUE) || isSuppressEveryone) {
-            List<com.discord.api.user.User> listT = message.t();
-            if (listT == null) {
-                if (isSuppressRoles || (listS = message.s()) == null) {
+        if (!Intrinsics3.areEqual(message.getMentionEveryone(), Boolean.TRUE) || isSuppressEveryone) {
+            List<com.discord.api.user.User> listM8047t = message.m8047t();
+            if (listM8047t == null) {
+                if (isSuppressRoles || (listM8046s = message.m8046s()) == null) {
                     return false;
                 }
-                if (listS.isEmpty()) {
+                if (listM8046s.isEmpty()) {
                     z2 = false;
                     if (z2) {
                         return false;
                     }
                 } else {
-                    Iterator<T> it = listS.iterator();
+                    Iterator<T> it = listM8046s.iterator();
                     while (it.hasNext()) {
                         if (myRoleIds.contains(Long.valueOf(((Number) it.next()).longValue()))) {
                             z2 = true;
@@ -128,12 +128,12 @@ public final class NotificationTextUtils {
                     if (z2) {
                     }
                 }
-            } else if (listT.isEmpty()) {
+            } else if (listM8047t.isEmpty()) {
                 z3 = false;
                 if (!z3) {
                 }
             } else {
-                Iterator<T> it2 = listT.iterator();
+                Iterator<T> it2 = listM8047t.iterator();
                 while (it2.hasNext()) {
                     if (((com.discord.api.user.User) it2.next()).getId() == me2.getId()) {
                         z3 = true;
@@ -165,7 +165,7 @@ public final class NotificationTextUtils {
     }
 
     private final boolean shouldNotifyForLevel(Integer msgNotifLevel, User me2, Collection<Long> myRoleIds, Message message, Channel channel, Long channelPermissions, long selectedVoiceChannelId, boolean isSuppressEveryone, boolean isSuppressRoles) {
-        if (ChannelUtils.J(channel) && !PermissionUtils.can(Permission.CONNECT, channelPermissions)) {
+        if (ChannelUtils.m7675J(channel) && !PermissionUtils.can(Permission.CONNECT, channelPermissions)) {
             return false;
         }
         int i = ModelNotificationSettings.FREQUENCY_ALL;
@@ -178,7 +178,7 @@ public final class NotificationTextUtils {
             if (msgNotifLevel != null && msgNotifLevel.intValue() == i3) {
                 return false;
             }
-        } else if (ChannelUtils.J(channel) && selectedVoiceChannelId != channel.getId() && !messageContainsMention(me2, myRoleIds, message, isSuppressEveryone, isSuppressRoles)) {
+        } else if (ChannelUtils.m7675J(channel) && selectedVoiceChannelId != channel.getId() && !messageContainsMention(me2, myRoleIds, message, isSuppressEveryone, isSuppressRoles)) {
             return false;
         }
         return true;
@@ -230,29 +230,29 @@ public final class NotificationTextUtils {
     public final boolean shouldNotifyInAppPopup(User me2, Message msg, Channel channel, Map<Long, Integer> blockedRelationships, Channel parentChannel, Guild guild, Map<Long, ? extends Map<Long, GuildMember>> guildMembers, Map<Long, ? extends ModelNotificationSettings> guildSettings, Map<Long, StoreThreadsJoined.JoinedThread> joinedThreads, long selectedVoiceChannelId, Long channelPermissions) {
         com.discord.api.user.User author;
         List<Long> listEmptyList;
-        m.checkNotNullParameter(me2, "me");
-        m.checkNotNullParameter(msg, NotificationCompat.CATEGORY_MESSAGE);
-        m.checkNotNullParameter(channel, "channel");
-        m.checkNotNullParameter(blockedRelationships, "blockedRelationships");
-        m.checkNotNullParameter(guildMembers, "guildMembers");
-        m.checkNotNullParameter(guildSettings, "guildSettings");
-        m.checkNotNullParameter(joinedThreads, "joinedThreads");
-        if (ChannelUtils.y(channel) || (author = msg.getAuthor()) == null || author.getId() == 0 || author.getId() == me2.getId() || blockedRelationships.containsKey(Long.valueOf(author.getId()))) {
+        Intrinsics3.checkNotNullParameter(me2, "me");
+        Intrinsics3.checkNotNullParameter(msg, NotificationCompat.CATEGORY_MESSAGE);
+        Intrinsics3.checkNotNullParameter(channel, "channel");
+        Intrinsics3.checkNotNullParameter(blockedRelationships, "blockedRelationships");
+        Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+        Intrinsics3.checkNotNullParameter(guildSettings, "guildSettings");
+        Intrinsics3.checkNotNullParameter(joinedThreads, "joinedThreads");
+        if (ChannelUtils.m7701y(channel) || (author = msg.getAuthor()) == null || author.getId() == 0 || author.getId() == me2.getId() || blockedRelationships.containsKey(Long.valueOf(author.getId()))) {
             return false;
         }
         Integer type = msg.getType();
         if (type != null && type.intValue() == 3) {
             return false;
         }
-        Map map = (Map) a.c(channel, guildMembers);
-        GuildMember guildMember = map != null ? (GuildMember) a.f(me2, map) : null;
+        Map map = (Map) outline.m843c(channel, guildMembers);
+        GuildMember guildMember = map != null ? (GuildMember) outline.m849f(me2, map) : null;
         if (guildMember == null || (listEmptyList = guildMember.getRoles()) == null) {
-            listEmptyList = n.emptyList();
+            listEmptyList = Collections2.emptyList();
         }
         List<Long> list = listEmptyList;
-        ModelNotificationSettings modelNotificationSettings = (ModelNotificationSettings) a.c(channel, guildSettings);
-        if (ChannelUtils.H(channel)) {
-            return isThreadNotificationAllowed(me2, list, msg, (StoreThreadsJoined.JoinedThread) a.d(channel, joinedThreads), modelNotificationSettings, guild, channel, parentChannel);
+        ModelNotificationSettings modelNotificationSettings = (ModelNotificationSettings) outline.m843c(channel, guildSettings);
+        if (ChannelUtils.m7673H(channel)) {
+            return isThreadNotificationAllowed(me2, list, msg, (StoreThreadsJoined.JoinedThread) outline.m845d(channel, joinedThreads), modelNotificationSettings, guild, channel, parentChannel);
         }
         if (modelNotificationSettings != null) {
             return isNotificationAllowed(modelNotificationSettings, me2, list, msg, guild, channel, channelPermissions, selectedVoiceChannelId);

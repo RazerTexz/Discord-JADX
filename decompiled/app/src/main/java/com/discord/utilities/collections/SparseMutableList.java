@@ -1,13 +1,6 @@
 package com.discord.utilities.collections;
 
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.a;
-import d0.t.n;
-import d0.t.q;
-import d0.t.s;
-import d0.z.d.g;
-import d0.z.d.g0.c;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -16,10 +9,18 @@ import java.util.List;
 import java.util.ListIterator;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.Collections2;
+import p507d0.p580t.MutableCollectionsJVM;
+import p507d0.p580t.ReversedViews3;
+import p507d0.p592z.p594d.CollectionToArray;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.p595g0.KMarkers;
+import p507d0.p592z.p594d.p595g0.KMarkers3;
 
 /* compiled from: SparseMutableList.kt */
 /* loaded from: classes2.dex */
-public final class SparseMutableList<T> implements List<T>, c {
+public final class SparseMutableList<T> implements List<T>, KMarkers3 {
     private final List<Chunk<T>> chunks;
     private final int expectedChunkSize;
     private int size;
@@ -45,8 +46,8 @@ public final class SparseMutableList<T> implements List<T>, c {
 
             public final <T> Chunk<T> tryMergeChunks(Chunk<T> chunk1, Chunk<T> chunk2) {
                 Chunk<T> chunk;
-                m.checkNotNullParameter(chunk1, "chunk1");
-                m.checkNotNullParameter(chunk2, "chunk2");
+                Intrinsics3.checkNotNullParameter(chunk1, "chunk1");
+                Intrinsics3.checkNotNullParameter(chunk2, "chunk2");
                 if (Chunk.access$getStartIndex$p(chunk1) < Chunk.access$getStartIndex$p(chunk2)) {
                     chunk = chunk1;
                 } else {
@@ -74,7 +75,7 @@ public final class SparseMutableList<T> implements List<T>, c {
         }
 
         public Chunk(int i, List<T> list) {
-            m.checkNotNullParameter(list, "list");
+            Intrinsics3.checkNotNullParameter(list, "list");
             this.startIndex = i;
             this.list = list;
         }
@@ -126,11 +127,11 @@ public final class SparseMutableList<T> implements List<T>, c {
         }
 
         public final boolean containsListIndex(int listIndex) {
-            return this.startIndex <= listIndex && n.getLastIndex(this.list) + this.startIndex >= listIndex;
+            return this.startIndex <= listIndex && Collections2.getLastIndex(this.list) + this.startIndex >= listIndex;
         }
 
         public final Chunk<T> copy(int startIndex, List<T> list) {
-            m.checkNotNullParameter(list, "list");
+            Intrinsics3.checkNotNullParameter(list, "list");
             return new Chunk<>(startIndex, list);
         }
 
@@ -150,16 +151,16 @@ public final class SparseMutableList<T> implements List<T>, c {
                 return false;
             }
             Chunk chunk = (Chunk) other;
-            return this.startIndex == chunk.startIndex && m.areEqual(this.list, chunk.list);
+            return this.startIndex == chunk.startIndex && Intrinsics3.areEqual(this.list, chunk.list);
         }
 
         public final int firstListIndexOf(T elenent) {
-            int lastIndex = n.getLastIndex(this.list);
+            int lastIndex = Collections2.getLastIndex(this.list);
             if (lastIndex < 0) {
                 return -1;
             }
             int i = 0;
-            while (!m.areEqual(this.list.get(i), elenent)) {
+            while (!Intrinsics3.areEqual(this.list.get(i), elenent)) {
                 if (i == lastIndex) {
                     return -1;
                 }
@@ -195,8 +196,8 @@ public final class SparseMutableList<T> implements List<T>, c {
         }
 
         public final int lastListIndexOf(T element) {
-            for (int lastIndex = n.getLastIndex(this.list); lastIndex >= 0; lastIndex--) {
-                if (m.areEqual(this.list.get(lastIndex), element)) {
+            for (int lastIndex = Collections2.getLastIndex(this.list); lastIndex >= 0; lastIndex--) {
+                if (Intrinsics3.areEqual(this.list.get(lastIndex), element)) {
                     return this.startIndex + lastIndex;
                 }
             }
@@ -205,7 +206,7 @@ public final class SparseMutableList<T> implements List<T>, c {
 
         public final void removeAfterInclusive(int listIndex) {
             int i = listIndex - this.startIndex;
-            if (i > n.getLastIndex(this.list)) {
+            if (i > Collections2.getLastIndex(this.list)) {
                 return;
             }
             if (i <= 0) {
@@ -232,24 +233,24 @@ public final class SparseMutableList<T> implements List<T>, c {
         }
 
         public final void setList(List<T> list) {
-            m.checkNotNullParameter(list, "<set-?>");
+            Intrinsics3.checkNotNullParameter(list, "<set-?>");
             this.list = list;
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("Chunk(startIndex=");
-            sbU.append(this.startIndex);
-            sbU.append(", list=");
-            return a.L(sbU, this.list, ")");
+            StringBuilder sbM833U = outline.m833U("Chunk(startIndex=");
+            sbM833U.append(this.startIndex);
+            sbM833U.append(", list=");
+            return outline.m824L(sbM833U, this.list, ")");
         }
 
         public int compareTo(Chunk<T> other) {
-            m.checkNotNullParameter(other, "other");
+            Intrinsics3.checkNotNullParameter(other, "other");
             return this.startIndex - other.startIndex;
         }
 
         public final <R> Chunk<R> deepCopy(Function1<? super T, ? extends R> transform) {
-            m.checkNotNullParameter(transform, "transform");
+            Intrinsics3.checkNotNullParameter(transform, "transform");
             ArrayList arrayList = new ArrayList(this.list.size());
             Iterator<T> it = this.list.iterator();
             while (it.hasNext()) {
@@ -261,12 +262,12 @@ public final class SparseMutableList<T> implements List<T>, c {
     }
 
     /* compiled from: SparseMutableList.kt */
-    public static final class SparseMutableListIterator<T> implements ListIterator<T>, d0.z.d.g0.a {
+    public static final class SparseMutableListIterator<T> implements ListIterator<T>, KMarkers {
         private int index;
         private final SparseMutableList<T> sparseMutableList;
 
         public SparseMutableListIterator(SparseMutableList<T> sparseMutableList, int i) {
-            m.checkNotNullParameter(sparseMutableList, "sparseMutableList");
+            Intrinsics3.checkNotNullParameter(sparseMutableList, "sparseMutableList");
             this.sparseMutableList = sparseMutableList;
             this.index = i;
         }
@@ -282,7 +283,7 @@ public final class SparseMutableList<T> implements List<T>, c {
 
         @Override // java.util.ListIterator, java.util.Iterator
         public boolean hasNext() {
-            return nextIndex() < n.getLastIndex(this.sparseMutableList);
+            return nextIndex() < Collections2.getLastIndex(this.sparseMutableList);
         }
 
         @Override // java.util.ListIterator
@@ -345,13 +346,13 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     private final void addChunk(Chunk<T> chunk) {
         this.chunks.add(chunk);
-        q.sort(this.chunks);
+        MutableCollectionsJVM.sort(this.chunks);
     }
 
     private final void decrementChunksFromIndex(int chunkIndex) {
         int lastIndex;
-        int lastIndex2 = n.getLastIndex(this.chunks);
-        if (chunkIndex < 0 || lastIndex2 < chunkIndex || chunkIndex > (lastIndex = n.getLastIndex(this.chunks))) {
+        int lastIndex2 = Collections2.getLastIndex(this.chunks);
+        if (chunkIndex < 0 || lastIndex2 < chunkIndex || chunkIndex > (lastIndex = Collections2.getLastIndex(this.chunks))) {
             return;
         }
         while (true) {
@@ -390,8 +391,8 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     private final void incrementChunksFromIndex(int chunkIndex) {
         int lastIndex;
-        int lastIndex2 = n.getLastIndex(this.chunks);
-        if (chunkIndex < 0 || lastIndex2 < chunkIndex || chunkIndex > (lastIndex = n.getLastIndex(this.chunks))) {
+        int lastIndex2 = Collections2.getLastIndex(this.chunks);
+        if (chunkIndex < 0 || lastIndex2 < chunkIndex || chunkIndex > (lastIndex = Collections2.getLastIndex(this.chunks))) {
             return;
         }
         while (true) {
@@ -405,7 +406,7 @@ public final class SparseMutableList<T> implements List<T>, c {
     }
 
     private final void resolveChunks() {
-        q.sort(this.chunks);
+        MutableCollectionsJVM.sort(this.chunks);
         int i = 0;
         while (i < this.chunks.size() - 1) {
             Chunk<T> chunk = this.chunks.get(i);
@@ -432,7 +433,7 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     @Override // java.util.List
     public boolean addAll(int index, Collection<? extends T> elements) {
-        m.checkNotNullParameter(elements, "elements");
+        Intrinsics3.checkNotNullParameter(elements, "elements");
         throw new UnsupportedOperationException();
     }
 
@@ -449,7 +450,7 @@ public final class SparseMutableList<T> implements List<T>, c {
         }
         Iterator<T> it = iterator();
         while (it.hasNext()) {
-            if (m.areEqual(it.next(), element)) {
+            if (Intrinsics3.areEqual(it.next(), element)) {
                 return true;
             }
         }
@@ -458,7 +459,7 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     @Override // java.util.List, java.util.Collection
     public boolean containsAll(Collection<? extends Object> elements) {
-        m.checkNotNullParameter(elements, "elements");
+        Intrinsics3.checkNotNullParameter(elements, "elements");
         HashSet hashSet = new HashSet(elements);
         if (hashSet.size() > size()) {
             return false;
@@ -485,10 +486,10 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     @Override // java.util.List
     public T get(int index) {
-        if (index > n.getLastIndex(this)) {
-            StringBuilder sbV = a.V("index ", index, " invalid in list of size ");
-            sbV.append(size());
-            throw new IndexOutOfBoundsException(sbV.toString());
+        if (index > Collections2.getLastIndex(this)) {
+            StringBuilder sbM834V = outline.m834V("index ", index, " invalid in list of size ");
+            sbM834V.append(size());
+            throw new IndexOutOfBoundsException(sbM834V.toString());
         }
         int chunkIndex = getChunkIndex(index);
         Chunk<T> chunk = chunkIndex >= 0 ? this.chunks.get(chunkIndex) : null;
@@ -518,9 +519,9 @@ public final class SparseMutableList<T> implements List<T>, c {
         for (T t : this) {
             int i2 = i + 1;
             if (i < 0) {
-                n.throwIndexOverflow();
+                Collections2.throwIndexOverflow();
             }
-            if (m.areEqual(t, element)) {
+            if (Intrinsics3.areEqual(t, element)) {
                 return i;
             }
             i = i2;
@@ -541,7 +542,7 @@ public final class SparseMutableList<T> implements List<T>, c {
     @Override // java.util.List
     public int lastIndexOf(Object element) {
         if (element != null) {
-            Iterator<T> it = s.asReversedMutable(this.chunks).iterator();
+            Iterator<T> it = ReversedViews3.asReversedMutable(this.chunks).iterator();
             while (it.hasNext()) {
                 int iLastListIndexOf = ((Chunk) it.next()).lastListIndexOf(element);
                 if (iLastListIndexOf >= 0) {
@@ -550,8 +551,8 @@ public final class SparseMutableList<T> implements List<T>, c {
             }
             return -1;
         }
-        for (int lastIndex = n.getLastIndex(this); lastIndex >= 0; lastIndex--) {
-            if (m.areEqual(get(lastIndex), element)) {
+        for (int lastIndex = Collections2.getLastIndex(this); lastIndex >= 0; lastIndex--) {
+            if (Intrinsics3.areEqual(get(lastIndex), element)) {
                 return lastIndex;
             }
         }
@@ -570,7 +571,7 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     @Override // java.util.List, java.util.Collection
     public boolean removeAll(Collection<? extends Object> elements) {
-        m.checkNotNullParameter(elements, "elements");
+        Intrinsics3.checkNotNullParameter(elements, "elements");
         boolean z2 = false;
         SparseMutableListIterator sparseMutableListIterator = new SparseMutableListIterator(this, 0, 2, null);
         while (sparseMutableListIterator.hasNext()) {
@@ -585,9 +586,9 @@ public final class SparseMutableList<T> implements List<T>, c {
     public T removeAt(int index) {
         T tRemoveAtListIndex;
         if (index < 0 || index >= size()) {
-            StringBuilder sbV = a.V("index: ", index, " -- size: ");
-            sbV.append(size());
-            throw new ArrayIndexOutOfBoundsException(sbV.toString());
+            StringBuilder sbM834V = outline.m834V("index: ", index, " -- size: ");
+            sbM834V.append(size());
+            throw new ArrayIndexOutOfBoundsException(sbM834V.toString());
         }
         int chunkIndex = getChunkIndex(index);
         if (chunkIndex >= 0) {
@@ -607,7 +608,7 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     @Override // java.util.List, java.util.Collection
     public boolean retainAll(Collection<? extends Object> elements) {
-        m.checkNotNullParameter(elements, "elements");
+        Intrinsics3.checkNotNullParameter(elements, "elements");
         throw new UnsupportedOperationException();
     }
 
@@ -658,12 +659,12 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     @Override // java.util.List, java.util.Collection
     public Object[] toArray() {
-        return g.toArray(this);
+        return CollectionToArray.toArray(this);
     }
 
     @Override // java.util.List, java.util.Collection
     public <T> T[] toArray(T[] tArr) {
-        return (T[]) g.toArray(this, tArr);
+        return (T[]) CollectionToArray.toArray(this, tArr);
     }
 
     @Override // java.util.List
@@ -705,7 +706,7 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     @Override // java.util.List, java.util.Collection
     public boolean addAll(Collection<? extends T> elements) {
-        m.checkNotNullParameter(elements, "elements");
+        Intrinsics3.checkNotNullParameter(elements, "elements");
         return addAll(size(), elements);
     }
 
@@ -718,7 +719,7 @@ public final class SparseMutableList<T> implements List<T>, c {
     public boolean remove(Object element) {
         SparseMutableListIterator sparseMutableListIterator = new SparseMutableListIterator(this, 0, 2, null);
         while (sparseMutableListIterator.hasNext()) {
-            if (m.areEqual(sparseMutableListIterator.next(), element)) {
+            if (Intrinsics3.areEqual(sparseMutableListIterator.next(), element)) {
                 sparseMutableListIterator.remove();
                 return true;
             }
@@ -728,7 +729,7 @@ public final class SparseMutableList<T> implements List<T>, c {
 
     private final void addChunk(int index, Chunk<T> chunk) {
         this.chunks.add(index, chunk);
-        q.sort(this.chunks);
+        MutableCollectionsJVM.sort(this.chunks);
     }
 
     public /* synthetic */ SparseMutableList(int i, int i2, int i3, DefaultConstructorMarker defaultConstructorMarker) {
@@ -736,7 +737,7 @@ public final class SparseMutableList<T> implements List<T>, c {
     }
 
     public final <R> SparseMutableList<R> deepCopy(Function1<? super T, ? extends R> transform) {
-        m.checkNotNullParameter(transform, "transform");
+        Intrinsics3.checkNotNullParameter(transform, "transform");
         SparseMutableList<R> sparseMutableList = new SparseMutableList<>(size(), 0, 2, null);
         Iterator<T> it = this.chunks.iterator();
         while (it.hasNext()) {

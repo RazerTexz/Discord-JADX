@@ -1,15 +1,16 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.p502io.Input;
+import com.esotericsoftware.kryo.p502io.Output;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p106e.p107a.Log;
 
 /* loaded from: classes.dex */
 public class VersionFieldSerializer<T> extends FieldSerializer<T> {
@@ -45,7 +46,7 @@ public class VersionFieldSerializer<T> extends FieldSerializer<T> {
             }
         }
         this.removedFields.clear();
-        a.C0064a c0064a = a.a;
+        Log.a aVar = Log.f3007a;
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
@@ -54,15 +55,15 @@ public class VersionFieldSerializer<T> extends FieldSerializer<T> {
         kryo.reference(tCreate);
         int varInt = input.readVarInt(true);
         if (!this.compatible && varInt != this.typeVersion) {
-            StringBuilder sbV = b.d.b.a.a.V("Version not compatible: ", varInt, " <-> ");
-            sbV.append(this.typeVersion);
-            throw new KryoException(sbV.toString());
+            StringBuilder sbM834V = outline.m834V("Version not compatible: ", varInt, " <-> ");
+            sbM834V.append(this.typeVersion);
+            throw new KryoException(sbM834V.toString());
         }
         FieldSerializer.CachedField[] fields = getFields();
         int length = fields.length;
         for (int i = 0; i < length; i++) {
             if (this.fieldVersion[i] > varInt) {
-                a.C0064a c0064a = a.a;
+                Log.a aVar = Log.f3007a;
             } else {
                 fields[i].read(input, tCreate);
             }

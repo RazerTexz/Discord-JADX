@@ -1,5 +1,6 @@
 package androidx.appcompat.widget;
 
+import android.R;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
@@ -23,7 +24,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
-import androidx.appcompat.R;
+import androidx.appcompat.C0051R;
 import androidx.appcompat.view.menu.MenuPresenter;
 import androidx.core.graphics.Insets;
 import androidx.core.view.NestedScrollingParent;
@@ -32,14 +33,14 @@ import androidx.core.view.NestedScrollingParent3;
 import androidx.core.view.NestedScrollingParentHelper;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import b.d.b.a.a;
+import p007b.p100d.p104b.p105a.outline;
 
 @SuppressLint({"UnknownNullness"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
 public class ActionBarOverlayLayout extends ViewGroup implements DecorContentParent, NestedScrollingParent, NestedScrollingParent2, NestedScrollingParent3 {
     private static final int ACTION_BAR_ANIMATE_DELAY = 600;
-    public static final int[] ATTRS = {R.attr.actionBarSize, android.R.attr.windowContentOverlay};
+    public static final int[] ATTRS = {C0051R.attr.actionBarSize, R.attr.windowContentOverlay};
     private static final String TAG = "ActionBarOverlayLayout";
     private int mActionBarHeight;
     public ActionBarContainer mActionBarTop;
@@ -81,9 +82,9 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
     private Drawable mWindowContentOverlay;
     private int mWindowVisibility;
 
-    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$1, reason: invalid class name */
-    public class AnonymousClass1 extends AnimatorListenerAdapter {
-        public AnonymousClass1() {
+    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$1 */
+    public class C00911 extends AnimatorListenerAdapter {
+        public C00911() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -101,9 +102,9 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$2 */
+    public class RunnableC00922 implements Runnable {
+        public RunnableC00922() {
         }
 
         @Override // java.lang.Runnable
@@ -114,9 +115,9 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
-        public AnonymousClass3() {
+    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$3 */
+    public class RunnableC00933 implements Runnable {
+        public RunnableC00933() {
         }
 
         @Override // java.lang.Runnable
@@ -220,9 +221,9 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
         if (view instanceof Toolbar) {
             return ((Toolbar) view).getWrapper();
         }
-        StringBuilder sbU = a.U("Can't make a decor toolbar out of ");
-        sbU.append(view.getClass().getSimpleName());
-        throw new IllegalStateException(sbU.toString());
+        StringBuilder sbM833U = outline.m833U("Can't make a decor toolbar out of ");
+        sbM833U.append(view.getClass().getSimpleName());
+        throw new IllegalStateException(sbM833U.toString());
     }
 
     private void init(Context context) {
@@ -464,7 +465,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
         WindowInsetsCompat windowInsetsCompat = this.mBaseInnerInsets;
         this.mInnerInsets = windowInsetsCompat;
         if (this.mOverlayMode || z2) {
-            this.mInnerInsets = new WindowInsetsCompat.Builder(this.mInnerInsets).setSystemWindowInsets(Insets.of(windowInsetsCompat.getSystemWindowInsetLeft(), this.mInnerInsets.getSystemWindowInsetTop() + measuredHeight, this.mInnerInsets.getSystemWindowInsetRight(), this.mInnerInsets.getSystemWindowInsetBottom() + 0)).build();
+            this.mInnerInsets = new WindowInsetsCompat.Builder(this.mInnerInsets).setSystemWindowInsets(Insets.m82of(windowInsetsCompat.getSystemWindowInsetLeft(), this.mInnerInsets.getSystemWindowInsetTop() + measuredHeight, this.mInnerInsets.getSystemWindowInsetRight(), this.mInnerInsets.getSystemWindowInsetBottom() + 0)).build();
         } else {
             Rect rect = this.mContentInsets;
             rect.top += measuredHeight;
@@ -574,9 +575,9 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
 
     public void pullChildren() {
         if (this.mContent == null) {
-            this.mContent = (ContentFrameLayout) findViewById(R.id.action_bar_activity_content);
-            this.mActionBarTop = (ActionBarContainer) findViewById(R.id.action_bar_container);
-            this.mDecorToolbar = getDecorToolbar(findViewById(R.id.action_bar));
+            this.mContent = (ContentFrameLayout) findViewById(C0051R.id.action_bar_activity_content);
+            this.mActionBarTop = (ActionBarContainer) findViewById(C0051R.id.action_bar_container);
+            this.mDecorToolbar = getDecorToolbar(findViewById(C0051R.id.action_bar));
         }
     }
 
@@ -698,9 +699,9 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
         this.mLastBaseInnerInsets = windowInsetsCompat;
         this.mInnerInsets = windowInsetsCompat;
         this.mLastInnerInsets = windowInsetsCompat;
-        this.mTopAnimatorListener = new AnonymousClass1();
-        this.mRemoveActionBarHideOffset = new AnonymousClass2();
-        this.mAddActionBarHideOffset = new AnonymousClass3();
+        this.mTopAnimatorListener = new C00911();
+        this.mRemoveActionBarHideOffset = new RunnableC00922();
+        this.mAddActionBarHideOffset = new RunnableC00933();
         init(context);
         this.mParentHelper = new NestedScrollingParentHelper(this);
     }

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackActivityInternalMenuInteraction.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalMenuInteraction implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
+public final /* data */ class TrackActivityInternalMenuInteraction implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence menuName = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackActivityInternalMenuInteraction implements An
             return false;
         }
         TrackActivityInternalMenuInteraction trackActivityInternalMenuInteraction = (TrackActivityInternalMenuInteraction) other;
-        return m.areEqual(this.menuName, trackActivityInternalMenuInteraction.menuName) && m.areEqual(this.interactionType, trackActivityInternalMenuInteraction.interactionType) && m.areEqual(this.phase, trackActivityInternalMenuInteraction.phase);
+        return Intrinsics3.areEqual(this.menuName, trackActivityInternalMenuInteraction.menuName) && Intrinsics3.areEqual(this.interactionType, trackActivityInternalMenuInteraction.interactionType) && Intrinsics3.areEqual(this.phase, trackActivityInternalMenuInteraction.phase);
     }
 
     public int hashCode() {
@@ -45,11 +45,11 @@ public final /* data */ class TrackActivityInternalMenuInteraction implements An
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackActivityInternalMenuInteraction(menuName=");
-        sbU.append(this.menuName);
-        sbU.append(", interactionType=");
-        sbU.append(this.interactionType);
-        sbU.append(", phase=");
-        return a.E(sbU, this.phase, ")");
+        StringBuilder sbM833U = outline.m833U("TrackActivityInternalMenuInteraction(menuName=");
+        sbM833U.append(this.menuName);
+        sbM833U.append(", interactionType=");
+        sbM833U.append(this.interactionType);
+        sbM833U.append(", phase=");
+        return outline.m817E(sbM833U, this.phase, ")");
     }
 }

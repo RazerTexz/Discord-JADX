@@ -1,10 +1,10 @@
 package org.webrtc;
 
 import android.view.SurfaceHolder;
-import h0.c.k0;
 import java.util.concurrent.CountDownLatch;
 import org.webrtc.EglBase;
 import org.webrtc.RendererCommon;
+import p617h0.p628c.RunnableC12471k0;
 
 /* loaded from: classes3.dex */
 public class SurfaceEglRenderer extends EglRenderer implements SurfaceHolder.Callback {
@@ -23,7 +23,7 @@ public class SurfaceEglRenderer extends EglRenderer implements SurfaceHolder.Cal
     }
 
     private void logD(String str) {
-        Logging.d(TAG, this.name + ": " + str);
+        Logging.m11027d(TAG, this.name + ": " + str);
     }
 
     private void updateFrameDimensionsAndReportEvents(VideoFrame videoFrame) {
@@ -110,7 +110,7 @@ public class SurfaceEglRenderer extends EglRenderer implements SurfaceHolder.Cal
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
         ThreadUtils.checkIsOnMainThread();
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        releaseEglSurface(new k0(countDownLatch));
+        releaseEglSurface(new RunnableC12471k0(countDownLatch));
         ThreadUtils.awaitUninterruptibly(countDownLatch);
     }
 

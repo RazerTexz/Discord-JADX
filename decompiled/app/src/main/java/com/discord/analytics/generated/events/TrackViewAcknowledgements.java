@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackMarketingSite;
-import com.discord.analytics.generated.traits.TrackMarketingSiteReceiver;
+import com.discord.analytics.generated.traits.TrackMarketingSite2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackViewAcknowledgements.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackViewAcknowledgements implements AnalyticsSchema, TrackBaseReceiver, TrackMarketingSiteReceiver {
+public final /* data */ class TrackViewAcknowledgements implements AnalyticsSchema, TrackBase2, TrackMarketingSite2 {
     private TrackBase trackBase;
     private TrackMarketingSite trackMarketingSite;
     private final CharSequence frompage = null;
@@ -24,7 +24,7 @@ public final /* data */ class TrackViewAcknowledgements implements AnalyticsSche
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackViewAcknowledgements) && m.areEqual(this.frompage, ((TrackViewAcknowledgements) other).frompage);
+            return (other instanceof TrackViewAcknowledgements) && Intrinsics3.areEqual(this.frompage, ((TrackViewAcknowledgements) other).frompage);
         }
         return true;
     }
@@ -38,6 +38,6 @@ public final /* data */ class TrackViewAcknowledgements implements AnalyticsSche
     }
 
     public String toString() {
-        return a.E(a.U("TrackViewAcknowledgements(frompage="), this.frompage, ")");
+        return outline.m817E(outline.m833U("TrackViewAcknowledgements(frompage="), this.frompage, ")");
     }
 }

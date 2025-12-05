@@ -14,13 +14,13 @@ public abstract class SnapHelper extends RecyclerView.OnFlingListener {
     public static final float MILLISECONDS_PER_INCH = 100.0f;
     private Scroller mGravityScroller;
     public RecyclerView mRecyclerView;
-    private final RecyclerView.OnScrollListener mScrollListener = new AnonymousClass1();
+    private final RecyclerView.OnScrollListener mScrollListener = new C05761();
 
-    /* renamed from: androidx.recyclerview.widget.SnapHelper$1, reason: invalid class name */
-    public class AnonymousClass1 extends RecyclerView.OnScrollListener {
+    /* renamed from: androidx.recyclerview.widget.SnapHelper$1 */
+    public class C05761 extends RecyclerView.OnScrollListener {
         public boolean mScrolled = false;
 
-        public AnonymousClass1() {
+        public C05761() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
@@ -41,9 +41,9 @@ public abstract class SnapHelper extends RecyclerView.OnFlingListener {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.SnapHelper$2, reason: invalid class name */
-    public class AnonymousClass2 extends LinearSmoothScroller {
-        public AnonymousClass2(Context context) {
+    /* renamed from: androidx.recyclerview.widget.SnapHelper$2 */
+    public class C05772 extends LinearSmoothScroller {
+        public C05772(Context context) {
             super(context);
         }
 
@@ -126,7 +126,7 @@ public abstract class SnapHelper extends RecyclerView.OnFlingListener {
     @Deprecated
     public LinearSmoothScroller createSnapScroller(@NonNull RecyclerView.LayoutManager layoutManager) {
         if (layoutManager instanceof RecyclerView.SmoothScroller.ScrollVectorProvider) {
-            return new AnonymousClass2(this.mRecyclerView.getContext());
+            return new C05772(this.mRecyclerView.getContext());
         }
         return null;
     }

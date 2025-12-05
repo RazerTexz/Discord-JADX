@@ -1,0 +1,109 @@
+package com.discord.widgets.botuikit.views.select;
+
+import java.io.Serializable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+
+/* compiled from: SelectComponentBottomSheet.kt */
+/* renamed from: com.discord.widgets.botuikit.views.select.ComponentContext, reason: use source file name */
+/* loaded from: classes2.dex */
+public final /* data */ class SelectComponentBottomSheet2 implements Serializable {
+    private final long applicationId;
+    private final long channelId;
+    private final Long guildId;
+    private final Long messageFlags;
+    private final long messageId;
+
+    public SelectComponentBottomSheet2(Long l, long j, long j2, Long l2, long j3) {
+        this.guildId = l;
+        this.messageId = j;
+        this.channelId = j2;
+        this.messageFlags = l2;
+        this.applicationId = j3;
+    }
+
+    public static /* synthetic */ SelectComponentBottomSheet2 copy$default(SelectComponentBottomSheet2 selectComponentBottomSheet2, Long l, long j, long j2, Long l2, long j3, int i, Object obj) {
+        return selectComponentBottomSheet2.copy((i & 1) != 0 ? selectComponentBottomSheet2.guildId : l, (i & 2) != 0 ? selectComponentBottomSheet2.messageId : j, (i & 4) != 0 ? selectComponentBottomSheet2.channelId : j2, (i & 8) != 0 ? selectComponentBottomSheet2.messageFlags : l2, (i & 16) != 0 ? selectComponentBottomSheet2.applicationId : j3);
+    }
+
+    /* renamed from: component1, reason: from getter */
+    public final Long getGuildId() {
+        return this.guildId;
+    }
+
+    /* renamed from: component2, reason: from getter */
+    public final long getMessageId() {
+        return this.messageId;
+    }
+
+    /* renamed from: component3, reason: from getter */
+    public final long getChannelId() {
+        return this.channelId;
+    }
+
+    /* renamed from: component4, reason: from getter */
+    public final Long getMessageFlags() {
+        return this.messageFlags;
+    }
+
+    /* renamed from: component5, reason: from getter */
+    public final long getApplicationId() {
+        return this.applicationId;
+    }
+
+    public final SelectComponentBottomSheet2 copy(Long guildId, long messageId, long channelId, Long messageFlags, long applicationId) {
+        return new SelectComponentBottomSheet2(guildId, messageId, channelId, messageFlags, applicationId);
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof SelectComponentBottomSheet2)) {
+            return false;
+        }
+        SelectComponentBottomSheet2 selectComponentBottomSheet2 = (SelectComponentBottomSheet2) other;
+        return Intrinsics3.areEqual(this.guildId, selectComponentBottomSheet2.guildId) && this.messageId == selectComponentBottomSheet2.messageId && this.channelId == selectComponentBottomSheet2.channelId && Intrinsics3.areEqual(this.messageFlags, selectComponentBottomSheet2.messageFlags) && this.applicationId == selectComponentBottomSheet2.applicationId;
+    }
+
+    public final long getApplicationId() {
+        return this.applicationId;
+    }
+
+    public final long getChannelId() {
+        return this.channelId;
+    }
+
+    public final Long getGuildId() {
+        return this.guildId;
+    }
+
+    public final Long getMessageFlags() {
+        return this.messageFlags;
+    }
+
+    public final long getMessageId() {
+        return this.messageId;
+    }
+
+    public int hashCode() {
+        Long l = this.guildId;
+        int iM3a = (C0002b.m3a(this.channelId) + ((C0002b.m3a(this.messageId) + ((l != null ? l.hashCode() : 0) * 31)) * 31)) * 31;
+        Long l2 = this.messageFlags;
+        return C0002b.m3a(this.applicationId) + ((iM3a + (l2 != null ? l2.hashCode() : 0)) * 31);
+    }
+
+    public String toString() {
+        StringBuilder sbM833U = outline.m833U("ComponentContext(guildId=");
+        sbM833U.append(this.guildId);
+        sbM833U.append(", messageId=");
+        sbM833U.append(this.messageId);
+        sbM833U.append(", channelId=");
+        sbM833U.append(this.channelId);
+        sbM833U.append(", messageFlags=");
+        sbM833U.append(this.messageFlags);
+        sbM833U.append(", applicationId=");
+        return outline.m815C(sbM833U, this.applicationId, ")");
+    }
+}

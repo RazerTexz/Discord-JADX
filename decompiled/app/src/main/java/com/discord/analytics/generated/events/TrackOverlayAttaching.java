@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackOverlayAttaching.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence directxVersion = null;
     private final CharSequence gameName = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, 
             return false;
         }
         TrackOverlayAttaching trackOverlayAttaching = (TrackOverlayAttaching) other;
-        return m.areEqual(this.directxVersion, trackOverlayAttaching.directxVersion) && m.areEqual(this.gameName, trackOverlayAttaching.gameName) && m.areEqual(this.gpuInfo, trackOverlayAttaching.gpuInfo) && m.areEqual(this.osName, trackOverlayAttaching.osName) && m.areEqual(this.overlaySession, trackOverlayAttaching.overlaySession) && m.areEqual(this.module, trackOverlayAttaching.module);
+        return Intrinsics3.areEqual(this.directxVersion, trackOverlayAttaching.directxVersion) && Intrinsics3.areEqual(this.gameName, trackOverlayAttaching.gameName) && Intrinsics3.areEqual(this.gpuInfo, trackOverlayAttaching.gpuInfo) && Intrinsics3.areEqual(this.osName, trackOverlayAttaching.osName) && Intrinsics3.areEqual(this.overlaySession, trackOverlayAttaching.overlaySession) && Intrinsics3.areEqual(this.module, trackOverlayAttaching.module);
     }
 
     public int hashCode() {
@@ -51,17 +51,17 @@ public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackOverlayAttaching(directxVersion=");
-        sbU.append(this.directxVersion);
-        sbU.append(", gameName=");
-        sbU.append(this.gameName);
-        sbU.append(", gpuInfo=");
-        sbU.append(this.gpuInfo);
-        sbU.append(", osName=");
-        sbU.append(this.osName);
-        sbU.append(", overlaySession=");
-        sbU.append(this.overlaySession);
-        sbU.append(", module=");
-        return a.E(sbU, this.module, ")");
+        StringBuilder sbM833U = outline.m833U("TrackOverlayAttaching(directxVersion=");
+        sbM833U.append(this.directxVersion);
+        sbM833U.append(", gameName=");
+        sbM833U.append(this.gameName);
+        sbM833U.append(", gpuInfo=");
+        sbM833U.append(this.gpuInfo);
+        sbM833U.append(", osName=");
+        sbM833U.append(this.osName);
+        sbM833U.append(", overlaySession=");
+        sbM833U.append(this.overlaySession);
+        sbM833U.append(", module=");
+        return outline.m817E(sbM833U, this.module, ")");
     }
 }

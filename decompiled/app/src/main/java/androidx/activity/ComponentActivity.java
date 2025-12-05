@@ -49,9 +49,9 @@ import androidx.view.ViewModelStoreOwner;
 import androidx.view.ViewTreeLifecycleOwner;
 import androidx.view.ViewTreeSavedStateRegistryOwner;
 import androidx.view.ViewTreeViewModelStoreOwner;
-import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
+import p007b.p100d.p104b.p105a.outline;
 
 /* loaded from: classes.dex */
 public class ComponentActivity extends androidx.core.app.ComponentActivity implements ContextAware, LifecycleOwner, ViewModelStoreOwner, HasDefaultViewModelProviderFactory, SavedStateRegistryOwner, OnBackPressedDispatcherOwner, ActivityResultRegistryOwner, ActivityResultCaller {
@@ -67,9 +67,9 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
     public final SavedStateRegistryController mSavedStateRegistryController;
     private ViewModelStore mViewModelStore;
 
-    /* renamed from: androidx.activity.ComponentActivity$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.activity.ComponentActivity$1 */
+    public class RunnableC00331 implements Runnable {
+        public RunnableC00331() {
         }
 
         @Override // java.lang.Runnable
@@ -84,8 +84,8 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         }
     }
 
-    /* renamed from: androidx.activity.ComponentActivity$2, reason: invalid class name */
-    public class AnonymousClass2 extends ActivityResultRegistry {
+    /* renamed from: androidx.activity.ComponentActivity$2 */
+    public class C00342 extends ActivityResultRegistry {
 
         /* renamed from: androidx.activity.ComponentActivity$2$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
@@ -99,27 +99,27 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
 
             @Override // java.lang.Runnable
             public void run() {
-                AnonymousClass2.this.dispatchResult(this.val$requestCode, this.val$synchronousResult.getValue());
+                C00342.this.dispatchResult(this.val$requestCode, this.val$synchronousResult.getValue());
             }
         }
 
-        /* renamed from: androidx.activity.ComponentActivity$2$2, reason: invalid class name and collision with other inner class name */
-        public class RunnableC00002 implements Runnable {
+        /* renamed from: androidx.activity.ComponentActivity$2$2, reason: invalid class name */
+        public class AnonymousClass2 implements Runnable {
             public final /* synthetic */ IntentSender.SendIntentException val$e;
             public final /* synthetic */ int val$requestCode;
 
-            public RunnableC00002(int i, IntentSender.SendIntentException sendIntentException) {
+            public AnonymousClass2(int i, IntentSender.SendIntentException sendIntentException) {
                 this.val$requestCode = i;
                 this.val$e = sendIntentException;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                AnonymousClass2.this.dispatchResult(this.val$requestCode, 0, new Intent().setAction(ActivityResultContracts.StartIntentSenderForResult.ACTION_INTENT_SENDER_REQUEST).putExtra(ActivityResultContracts.StartIntentSenderForResult.EXTRA_SEND_INTENT_EXCEPTION, this.val$e));
+                C00342.this.dispatchResult(this.val$requestCode, 0, new Intent().setAction(ActivityResultContracts.StartIntentSenderForResult.ACTION_INTENT_SENDER_REQUEST).putExtra(ActivityResultContracts.StartIntentSenderForResult.EXTRA_SEND_INTENT_EXCEPTION, this.val$e));
             }
         }
 
-        public AnonymousClass2() {
+        public C00342() {
         }
 
         @Override // androidx.activity.result.ActivityResultRegistry
@@ -149,7 +149,7 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
                     ActivityCompat.startIntentSenderForResult(componentActivity, intentSenderRequest.getIntentSender(), i, intentSenderRequest.getFillInIntent(), intentSenderRequest.getFlagsMask(), intentSenderRequest.getFlagsValues(), 0, bundle2);
                     return;
                 } catch (IntentSender.SendIntentException e) {
-                    new Handler(Looper.getMainLooper()).post(new RunnableC00002(i, e));
+                    new Handler(Looper.getMainLooper()).post(new AnonymousClass2(i, e));
                     return;
                 }
             }
@@ -170,9 +170,9 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         }
     }
 
-    /* renamed from: androidx.activity.ComponentActivity$3, reason: invalid class name */
-    public class AnonymousClass3 implements LifecycleEventObserver {
-        public AnonymousClass3() {
+    /* renamed from: androidx.activity.ComponentActivity$3 */
+    public class C00353 implements LifecycleEventObserver {
+        public C00353() {
         }
 
         @Override // androidx.view.LifecycleEventObserver
@@ -187,9 +187,9 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         }
     }
 
-    /* renamed from: androidx.activity.ComponentActivity$4, reason: invalid class name */
-    public class AnonymousClass4 implements LifecycleEventObserver {
-        public AnonymousClass4() {
+    /* renamed from: androidx.activity.ComponentActivity$4 */
+    public class C00364 implements LifecycleEventObserver {
+        public C00364() {
         }
 
         @Override // androidx.view.LifecycleEventObserver
@@ -204,9 +204,9 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         }
     }
 
-    /* renamed from: androidx.activity.ComponentActivity$5, reason: invalid class name */
-    public class AnonymousClass5 implements LifecycleEventObserver {
-        public AnonymousClass5() {
+    /* renamed from: androidx.activity.ComponentActivity$5 */
+    public class C00375 implements LifecycleEventObserver {
+        public C00375() {
         }
 
         @Override // androidx.view.LifecycleEventObserver
@@ -225,16 +225,16 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         this.mContextAwareHelper = new ContextAwareHelper();
         this.mLifecycleRegistry = new LifecycleRegistry(this);
         this.mSavedStateRegistryController = SavedStateRegistryController.create(this);
-        this.mOnBackPressedDispatcher = new OnBackPressedDispatcher(new AnonymousClass1());
+        this.mOnBackPressedDispatcher = new OnBackPressedDispatcher(new RunnableC00331());
         this.mNextLocalRequestCode = new AtomicInteger();
-        this.mActivityResultRegistry = new AnonymousClass2();
+        this.mActivityResultRegistry = new C00342();
         if (getLifecycle() == null) {
             throw new IllegalStateException("getLifecycle() returned null in ComponentActivity's constructor. Please make sure you are lazily constructing your Lifecycle in the first call to getLifecycle() rather than relying on field initialization.");
         }
         int i = Build.VERSION.SDK_INT;
-        getLifecycle().addObserver(new AnonymousClass3());
-        getLifecycle().addObserver(new AnonymousClass4());
-        getLifecycle().addObserver(new AnonymousClass5());
+        getLifecycle().addObserver(new C00353());
+        getLifecycle().addObserver(new C00364());
+        getLifecycle().addObserver(new C00375());
         if (i <= 23) {
             getLifecycle().addObserver(new ImmLeaksCleaner(this));
         }
@@ -413,9 +413,9 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
     @Override // androidx.activity.result.ActivityResultCaller
     @NonNull
     public final <I, O> ActivityResultLauncher<I> registerForActivityResult(@NonNull ActivityResultContract<I, O> activityResultContract, @NonNull ActivityResultRegistry activityResultRegistry, @NonNull ActivityResultCallback<O> activityResultCallback) {
-        StringBuilder sbU = a.U("activity_rq#");
-        sbU.append(this.mNextLocalRequestCode.getAndIncrement());
-        return activityResultRegistry.register(sbU.toString(), this, activityResultContract, activityResultCallback);
+        StringBuilder sbM833U = outline.m833U("activity_rq#");
+        sbM833U.append(this.mNextLocalRequestCode.getAndIncrement());
+        return activityResultRegistry.register(sbM833U.toString(), this, activityResultContract, activityResultCallback);
     }
 
     @Override // androidx.activity.contextaware.ContextAware

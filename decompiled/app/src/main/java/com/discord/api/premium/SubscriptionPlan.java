@@ -1,8 +1,8 @@
 package com.discord.api.premium;
 
-import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: SubscriptionPlan.kt */
 /* loaded from: classes.dex */
@@ -41,7 +41,7 @@ public final /* data */ class SubscriptionPlan {
             return false;
         }
         SubscriptionPlan subscriptionPlan = (SubscriptionPlan) other;
-        return this.id == subscriptionPlan.id && this.intervalCount == subscriptionPlan.intervalCount && m.areEqual(this.interval, subscriptionPlan.interval) && m.areEqual(this.name, subscriptionPlan.name) && this.price == subscriptionPlan.price;
+        return this.id == subscriptionPlan.id && this.intervalCount == subscriptionPlan.intervalCount && Intrinsics3.areEqual(this.interval, subscriptionPlan.interval) && Intrinsics3.areEqual(this.name, subscriptionPlan.name) && this.price == subscriptionPlan.price;
     }
 
     public int hashCode() {
@@ -54,15 +54,15 @@ public final /* data */ class SubscriptionPlan {
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("SubscriptionPlan(id=");
-        sbU.append(this.id);
-        sbU.append(", intervalCount=");
-        sbU.append(this.intervalCount);
-        sbU.append(", interval=");
-        sbU.append(this.interval);
-        sbU.append(", name=");
-        sbU.append(this.name);
-        sbU.append(", price=");
-        return a.B(sbU, this.price, ")");
+        StringBuilder sbM833U = outline.m833U("SubscriptionPlan(id=");
+        sbM833U.append(this.id);
+        sbM833U.append(", intervalCount=");
+        sbM833U.append(this.intervalCount);
+        sbM833U.append(", interval=");
+        sbM833U.append(this.interval);
+        sbM833U.append(", name=");
+        sbM833U.append(this.name);
+        sbM833U.append(", price=");
+        return outline.m814B(sbM833U, this.price, ")");
     }
 }

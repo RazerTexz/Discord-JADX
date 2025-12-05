@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackPremiumCanceled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumCanceled implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackPremiumCanceled implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence cancellationType = null;
     private final Long subscriptionLength = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackPremiumCanceled implements AnalyticsSchema, T
             return false;
         }
         TrackPremiumCanceled trackPremiumCanceled = (TrackPremiumCanceled) other;
-        return m.areEqual(this.cancellationType, trackPremiumCanceled.cancellationType) && m.areEqual(this.subscriptionLength, trackPremiumCanceled.subscriptionLength) && m.areEqual(this.plan, trackPremiumCanceled.plan);
+        return Intrinsics3.areEqual(this.cancellationType, trackPremiumCanceled.cancellationType) && Intrinsics3.areEqual(this.subscriptionLength, trackPremiumCanceled.subscriptionLength) && Intrinsics3.areEqual(this.plan, trackPremiumCanceled.plan);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackPremiumCanceled implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackPremiumCanceled(cancellationType=");
-        sbU.append(this.cancellationType);
-        sbU.append(", subscriptionLength=");
-        sbU.append(this.subscriptionLength);
-        sbU.append(", plan=");
-        return a.E(sbU, this.plan, ")");
+        StringBuilder sbM833U = outline.m833U("TrackPremiumCanceled(cancellationType=");
+        sbM833U.append(this.cancellationType);
+        sbM833U.append(", subscriptionLength=");
+        sbM833U.append(this.subscriptionLength);
+        sbM833U.append(", plan=");
+        return outline.m817E(sbM833U, this.plan, ")");
     }
 }

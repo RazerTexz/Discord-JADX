@@ -1,82 +1,88 @@
 package com.discord.simpleast.code;
 
 import android.text.SpannableStringBuilder;
-import b.a.t.a.f;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.simpleast.core.node.Node;
 import com.discord.simpleast.core.node.StyleNode;
-import d0.z.d.m;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p008a.p050t.p051a.CodeStyleProviders;
+import p007b.p008a.p050t.p052b.p053a.TextNode;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: CodeNode.kt */
 /* loaded from: classes.dex */
-public class CodeNode<RC> extends b.a.t.b.a.a<RC> {
+public class CodeNode<RC> extends TextNode<RC> {
 
     /* renamed from: a, reason: from kotlin metadata */
     public final String language;
 
-    /* renamed from: b, reason: collision with root package name and from kotlin metadata */
-    public final StyleNode.a<RC> stylesProvider;
+    /* renamed from: b, reason: from kotlin metadata */
+    public final StyleNode.InterfaceC5656a<RC> stylesProvider;
 
     /* compiled from: CodeNode.kt */
-    public static abstract class a {
-        public final String a;
+    /* renamed from: com.discord.simpleast.code.CodeNode$a */
+    public static abstract class AbstractC5653a {
+
+        /* renamed from: a */
+        public final String f18949a;
 
         /* compiled from: CodeNode.kt */
-        /* renamed from: com.discord.simpleast.code.CodeNode$a$a, reason: collision with other inner class name */
-        public static final class C0188a<RC> extends a {
+        /* renamed from: com.discord.simpleast.code.CodeNode$a$a */
+        public static final class a<RC> extends AbstractC5653a {
 
-            /* renamed from: b, reason: collision with root package name */
-            public final List<Node<RC>> f2807b;
+            /* renamed from: b */
+            public final List<Node<RC>> f18950b;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             /* JADX WARN: Multi-variable type inference failed */
-            public C0188a(String str, List<? extends Node<RC>> list) {
+            public a(String str, List<? extends Node<RC>> list) {
                 super(str, null);
-                m.checkNotNullParameter(str, "raw");
-                m.checkNotNullParameter(list, "children");
-                this.f2807b = list;
+                Intrinsics3.checkNotNullParameter(str, "raw");
+                Intrinsics3.checkNotNullParameter(list, "children");
+                this.f18950b = list;
             }
         }
 
         /* compiled from: CodeNode.kt */
-        public static final class b extends a {
+        /* renamed from: com.discord.simpleast.code.CodeNode$a$b */
+        public static final class b extends AbstractC5653a {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public b(String str) {
                 super(str, null);
-                m.checkNotNullParameter(str, "body");
+                Intrinsics3.checkNotNullParameter(str, "body");
             }
         }
 
-        public a(String str, DefaultConstructorMarker defaultConstructorMarker) {
-            this.a = str;
+        public AbstractC5653a(String str, DefaultConstructorMarker defaultConstructorMarker) {
+            this.f18949a = str;
         }
     }
 
     /* compiled from: CodeNode.kt */
-    public static final class b<RC> extends Node.a<RC> {
+    /* renamed from: com.discord.simpleast.code.CodeNode$b */
+    public static final class C5654b<RC> extends Node.C5655a<RC> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public b(String str, String str2, f<RC> fVar) {
-            super(new StyleNode.b(str, fVar.d), new StyleNode.b(str2, fVar.f));
-            m.checkNotNullParameter(str, "pre");
-            m.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_NAME);
-            m.checkNotNullParameter(fVar, "codeStyleProviders");
+        public C5654b(String str, String str2, CodeStyleProviders<RC> codeStyleProviders) {
+            super(new StyleNode.C5657b(str, codeStyleProviders.f1909d), new StyleNode.C5657b(str2, codeStyleProviders.f1911f));
+            Intrinsics3.checkNotNullParameter(str, "pre");
+            Intrinsics3.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            Intrinsics3.checkNotNullParameter(codeStyleProviders, "codeStyleProviders");
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public CodeNode(a aVar, String str, StyleNode.a<RC> aVar2) {
-        super(aVar.a);
-        m.checkNotNullParameter(aVar, "content");
-        m.checkNotNullParameter(aVar2, "stylesProvider");
+    public CodeNode(AbstractC5653a abstractC5653a, String str, StyleNode.InterfaceC5656a<RC> interfaceC5656a) {
+        super(abstractC5653a.f18949a);
+        Intrinsics3.checkNotNullParameter(abstractC5653a, "content");
+        Intrinsics3.checkNotNullParameter(interfaceC5656a, "stylesProvider");
         this.language = str;
-        this.stylesProvider = aVar2;
-        if (aVar instanceof a.C0188a) {
-            Iterator<T> it = ((a.C0188a) aVar).f2807b.iterator();
+        this.stylesProvider = interfaceC5656a;
+        if (abstractC5653a instanceof AbstractC5653a.a) {
+            Iterator<T> it = ((AbstractC5653a.a) abstractC5653a).f18950b.iterator();
             while (it.hasNext()) {
                 Node<R> node = (Node) it.next();
                 Objects.requireNonNull(node, "null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
@@ -88,16 +94,16 @@ public class CodeNode<RC> extends b.a.t.b.a.a<RC> {
     public boolean equals(Object other) {
         if (other instanceof CodeNode) {
             CodeNode codeNode = (CodeNode) other;
-            if (m.areEqual(codeNode.language, this.language) && m.areEqual(codeNode.getContent(), getContent())) {
+            if (Intrinsics3.areEqual(codeNode.language, this.language) && Intrinsics3.areEqual(codeNode.getContent(), getContent())) {
                 return true;
             }
         }
         return false;
     }
 
-    @Override // b.a.t.b.a.a, com.discord.simpleast.core.node.Node
+    @Override // p007b.p008a.p050t.p052b.p053a.TextNode, com.discord.simpleast.core.node.Node
     public void render(SpannableStringBuilder builder, RC renderContext) {
-        m.checkNotNullParameter(builder, "builder");
+        Intrinsics3.checkNotNullParameter(builder, "builder");
         Iterable<?> iterable = this.stylesProvider.get(renderContext);
         if (!hasChildren()) {
             int length = builder.length();

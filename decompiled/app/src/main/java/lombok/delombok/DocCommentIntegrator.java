@@ -73,13 +73,13 @@ public class DocCommentIntegrator {
         private CommentAttacher_8() {
         }
 
-        /* renamed from: lombok.delombok.DocCommentIntegrator$CommentAttacher_8$1, reason: invalid class name */
+        /* renamed from: lombok.delombok.DocCommentIntegrator$CommentAttacher_8$1 */
         /* loaded from: discord-126021.apk:lombok/delombok/DocCommentIntegrator$CommentAttacher_8$1.SCL.lombok */
-        class AnonymousClass1 implements Tokens.Comment {
+        class C128451 implements Tokens.Comment {
             private final /* synthetic */ String val$docCommentContent_;
             private final /* synthetic */ JCTree val$node;
 
-            AnonymousClass1(String str, JCTree jCTree) {
+            C128451(String str, JCTree jCTree) {
                 this.val$docCommentContent_ = str;
                 this.val$node = jCTree;
             }
@@ -102,7 +102,7 @@ public class DocCommentIntegrator {
         }
 
         static void attach(JCTree node, String docCommentContent, Object map_) {
-            ((DocCommentTable) map_).putComment(node, new AnonymousClass1(docCommentContent, node));
+            ((DocCommentTable) map_).putComment(node, new C128451(docCommentContent, node));
         }
     }
 

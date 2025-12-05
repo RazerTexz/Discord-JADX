@@ -7,8 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.WidgetAddFriendUserListItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.presence.Presence;
@@ -21,8 +20,6 @@ import com.discord.utilities.user.UserUtils;
 import com.discord.views.StatusView;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -30,6 +27,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetFriendsAddUserAdapter.kt */
 /* loaded from: classes2.dex */
@@ -48,41 +48,41 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UserViewHolder(WidgetFriendsAddUserAdapter widgetFriendsAddUserAdapter) {
-            super(R.layout.widget_add_friend_user_list_item, widgetFriendsAddUserAdapter);
-            m.checkNotNullParameter(widgetFriendsAddUserAdapter, "adapter");
+            super(C5419R.layout.widget_add_friend_user_list_item, widgetFriendsAddUserAdapter);
+            Intrinsics3.checkNotNullParameter(widgetFriendsAddUserAdapter, "adapter");
             View view = this.itemView;
-            int i = R.id.add_friend_user_accept_button;
-            AppCompatImageView appCompatImageView = (AppCompatImageView) view.findViewById(R.id.add_friend_user_accept_button);
+            int i = C5419R.id.add_friend_user_accept_button;
+            AppCompatImageView appCompatImageView = (AppCompatImageView) view.findViewById(C5419R.id.add_friend_user_accept_button);
             if (appCompatImageView != null) {
-                i = R.id.add_friend_user_check_image;
-                AppCompatImageView appCompatImageView2 = (AppCompatImageView) view.findViewById(R.id.add_friend_user_check_image);
+                i = C5419R.id.add_friend_user_check_image;
+                AppCompatImageView appCompatImageView2 = (AppCompatImageView) view.findViewById(C5419R.id.add_friend_user_check_image);
                 if (appCompatImageView2 != null) {
-                    i = R.id.add_friend_user_decline_button;
-                    AppCompatImageView appCompatImageView3 = (AppCompatImageView) view.findViewById(R.id.add_friend_user_decline_button);
+                    i = C5419R.id.add_friend_user_decline_button;
+                    AppCompatImageView appCompatImageView3 = (AppCompatImageView) view.findViewById(C5419R.id.add_friend_user_decline_button);
                     if (appCompatImageView3 != null) {
-                        i = R.id.add_friend_user_item_avatar;
-                        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.add_friend_user_item_avatar);
+                        i = C5419R.id.add_friend_user_item_avatar;
+                        SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.add_friend_user_item_avatar);
                         if (simpleDraweeView != null) {
-                            i = R.id.add_friend_user_item_buttons;
-                            LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.add_friend_user_item_buttons);
+                            i = C5419R.id.add_friend_user_item_buttons;
+                            LinearLayout linearLayout = (LinearLayout) view.findViewById(C5419R.id.add_friend_user_item_buttons);
                             if (linearLayout != null) {
-                                i = R.id.add_friend_user_item_name;
-                                TextView textView = (TextView) view.findViewById(R.id.add_friend_user_item_name);
+                                i = C5419R.id.add_friend_user_item_name;
+                                TextView textView = (TextView) view.findViewById(C5419R.id.add_friend_user_item_name);
                                 if (textView != null) {
-                                    i = R.id.add_friend_user_item_name_secondary;
-                                    TextView textView2 = (TextView) view.findViewById(R.id.add_friend_user_item_name_secondary);
+                                    i = C5419R.id.add_friend_user_item_name_secondary;
+                                    TextView textView2 = (TextView) view.findViewById(C5419R.id.add_friend_user_item_name_secondary);
                                     if (textView2 != null) {
-                                        i = R.id.add_friend_user_item_status;
-                                        StatusView statusView = (StatusView) view.findViewById(R.id.add_friend_user_item_status);
+                                        i = C5419R.id.add_friend_user_item_status;
+                                        StatusView statusView = (StatusView) view.findViewById(C5419R.id.add_friend_user_item_status);
                                         if (statusView != null) {
-                                            i = R.id.add_friend_user_item_text;
-                                            LinearLayout linearLayout2 = (LinearLayout) view.findViewById(R.id.add_friend_user_item_text);
+                                            i = C5419R.id.add_friend_user_item_text;
+                                            LinearLayout linearLayout2 = (LinearLayout) view.findViewById(C5419R.id.add_friend_user_item_text);
                                             if (linearLayout2 != null) {
-                                                i = R.id.add_friend_user_send_button;
-                                                AppCompatImageView appCompatImageView4 = (AppCompatImageView) view.findViewById(R.id.add_friend_user_send_button);
+                                                i = C5419R.id.add_friend_user_send_button;
+                                                AppCompatImageView appCompatImageView4 = (AppCompatImageView) view.findViewById(C5419R.id.add_friend_user_send_button);
                                                 if (appCompatImageView4 != null) {
                                                     WidgetAddFriendUserListItemBinding widgetAddFriendUserListItemBinding = new WidgetAddFriendUserListItemBinding((ConstraintLayout) view, appCompatImageView, appCompatImageView2, appCompatImageView3, simpleDraweeView, linearLayout, textView, textView2, statusView, linearLayout2, appCompatImageView4);
-                                                    m.checkNotNullExpressionValue(widgetAddFriendUserListItemBinding, "WidgetAddFriendUserListItemBinding.bind(itemView)");
+                                                    Intrinsics3.checkNotNullExpressionValue(widgetAddFriendUserListItemBinding, "WidgetAddFriendUserListItemBinding.bind(itemView)");
                                                     this.binding = widgetAddFriendUserListItemBinding;
                                                     return;
                                                 }
@@ -109,45 +109,45 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ItemUser data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             User user = data.getUser();
-            SimpleDraweeView simpleDraweeView = this.binding.e;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.addFriendUserItemAvatar");
+            SimpleDraweeView simpleDraweeView = this.binding.f15638e;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.addFriendUserItemAvatar");
             IconUtils.setIcon$default(simpleDraweeView, user, 0, null, null, null, 60, null);
-            TextView textView = this.binding.f;
-            m.checkNotNullExpressionValue(textView, "binding.addFriendUserItemName");
-            CharSequence username = (CharSequence) u.lastOrNull((List) data.getAliases());
+            TextView textView = this.binding.f15639f;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.addFriendUserItemName");
+            CharSequence username = (CharSequence) _Collections.lastOrNull((List) data.getAliases());
             if (username == null) {
                 username = user.getUsername();
             }
             textView.setText(username);
-            TextView textView2 = this.binding.g;
-            m.checkNotNullExpressionValue(textView2, "binding.addFriendUserItemNameSecondary");
+            TextView textView2 = this.binding.f15640g;
+            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.addFriendUserItemNameSecondary");
             textView2.setText(UserUtils.INSTANCE.getDiscriminatorWithPadding(user));
-            this.binding.h.setPresence(data.getPresence());
-            StatusView statusView = this.binding.h;
-            m.checkNotNullExpressionValue(statusView, "binding.addFriendUserItemStatus");
+            this.binding.f15641h.setPresence(data.getPresence());
+            StatusView statusView = this.binding.f15641h;
+            Intrinsics3.checkNotNullExpressionValue(statusView, "binding.addFriendUserItemStatus");
             boolean z2 = true;
             statusView.setVisibility(data.getPresence() != null ? 0 : 8);
             long id2 = data.getUser().getId();
             boolean zContains = WidgetFriendsAddUserAdapter.access$getOutgoingRequestUserIds$p((WidgetFriendsAddUserAdapter) this.adapter).contains(Long.valueOf(id2));
             boolean zContains2 = WidgetFriendsAddUserAdapter.access$getIncomingRequestUserIds$p((WidgetFriendsAddUserAdapter) this.adapter).contains(Long.valueOf(id2));
-            this.binding.f2223b.setOnClickListener(new WidgetFriendsAddUserAdapter$UserViewHolder$onConfigure$1(this, id2));
-            this.binding.d.setOnClickListener(new WidgetFriendsAddUserAdapter$UserViewHolder$onConfigure$2(this, id2, zContains2));
-            this.binding.i.setOnClickListener(new WidgetFriendsAddUserAdapter$UserViewHolder$onConfigure$3(this, user));
-            this.binding.a.setOnClickListener(new WidgetFriendsAddUserAdapter$UserViewHolder$onConfigure$4(this, id2));
-            AppCompatImageView appCompatImageView = this.binding.c;
-            m.checkNotNullExpressionValue(appCompatImageView, "binding.addFriendUserCheckImage");
+            this.binding.f15635b.setOnClickListener(new WidgetFriendsAddUserAdapter2(this, id2));
+            this.binding.f15637d.setOnClickListener(new WidgetFriendsAddUserAdapter3(this, id2, zContains2));
+            this.binding.f15642i.setOnClickListener(new WidgetFriendsAddUserAdapter4(this, user));
+            this.binding.f15634a.setOnClickListener(new WidgetFriendsAddUserAdapter5(this, id2));
+            AppCompatImageView appCompatImageView = this.binding.f15636c;
+            Intrinsics3.checkNotNullExpressionValue(appCompatImageView, "binding.addFriendUserCheckImage");
             appCompatImageView.setVisibility(data.isFriend() ? 0 : 8);
-            AppCompatImageView appCompatImageView2 = this.binding.i;
-            m.checkNotNullExpressionValue(appCompatImageView2, "binding.addFriendUserSendButton");
+            AppCompatImageView appCompatImageView2 = this.binding.f15642i;
+            Intrinsics3.checkNotNullExpressionValue(appCompatImageView2, "binding.addFriendUserSendButton");
             appCompatImageView2.setVisibility(!data.isFriend() && !zContains && !zContains2 ? 0 : 8);
-            AppCompatImageView appCompatImageView3 = this.binding.f2223b;
-            m.checkNotNullExpressionValue(appCompatImageView3, "binding.addFriendUserAcceptButton");
+            AppCompatImageView appCompatImageView3 = this.binding.f15635b;
+            Intrinsics3.checkNotNullExpressionValue(appCompatImageView3, "binding.addFriendUserAcceptButton");
             appCompatImageView3.setVisibility(!data.isFriend() && zContains2 ? 0 : 8);
-            AppCompatImageView appCompatImageView4 = this.binding.d;
-            m.checkNotNullExpressionValue(appCompatImageView4, "binding.addFriendUserDeclineButton");
+            AppCompatImageView appCompatImageView4 = this.binding.f15637d;
+            Intrinsics3.checkNotNullExpressionValue(appCompatImageView4, "binding.addFriendUserDeclineButton");
             if (data.isFriend() || (!zContains && !zContains2)) {
                 z2 = false;
             }
@@ -158,10 +158,10 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetFriendsAddUserAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
         this.outgoingRequestUserIds = new HashSet<>();
         this.incomingRequestUserIds = new HashSet<>();
-        this.onItemClick = WidgetFriendsAddUserAdapter$onItemClick$1.INSTANCE;
+        this.onItemClick = WidgetFriendsAddUserAdapter6.INSTANCE;
     }
 
     public static final /* synthetic */ Function1 access$getAcceptHandler$p(WidgetFriendsAddUserAdapter widgetFriendsAddUserAdapter) {
@@ -205,8 +205,8 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
     }
 
     public final void addFriendRequestUserIds(Collection<Long> outgoingIds, Collection<Long> incomingIds) {
-        m.checkNotNullParameter(outgoingIds, "outgoingIds");
-        m.checkNotNullParameter(incomingIds, "incomingIds");
+        Intrinsics3.checkNotNullParameter(outgoingIds, "outgoingIds");
+        Intrinsics3.checkNotNullParameter(incomingIds, "incomingIds");
         this.outgoingRequestUserIds.clear();
         this.outgoingRequestUserIds.addAll(outgoingIds);
         this.incomingRequestUserIds.clear();
@@ -220,28 +220,28 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
     }
 
     public final void setAcceptHandler(Function1<? super Long, Unit> handler) {
-        m.checkNotNullParameter(handler, "handler");
+        Intrinsics3.checkNotNullParameter(handler, "handler");
         this.acceptHandler = handler;
     }
 
     public final void setDeclineHandler(Function2<? super Long, ? super Boolean, Unit> handler) {
-        m.checkNotNullParameter(handler, "handler");
+        Intrinsics3.checkNotNullParameter(handler, "handler");
         this.declineHandler = handler;
     }
 
     public final void setOnItemClick(Function1<? super Long, Unit> onItemClick) {
-        m.checkNotNullParameter(onItemClick, "onItemClick");
+        Intrinsics3.checkNotNullParameter(onItemClick, "onItemClick");
         this.onItemClick = onItemClick;
     }
 
     public final void setSendHandler(Function2<? super String, ? super Integer, Unit> handler) {
-        m.checkNotNullParameter(handler, "handler");
+        Intrinsics3.checkNotNullParameter(handler, "handler");
         this.sendHandler = handler;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public UserViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 1) {
             return new UserViewHolder(this);
         }
@@ -266,7 +266,7 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
             }
 
             public final ItemUser create(WidgetGlobalSearchModel.ItemUser item) {
-                m.checkNotNullParameter(item, "item");
+                Intrinsics3.checkNotNullParameter(item, "item");
                 return new ItemUser(item.getUser(), item.getAliases(), item.getPresence(), item.isFriend());
             }
 
@@ -277,8 +277,8 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
 
         /* JADX WARN: Multi-variable type inference failed */
         public ItemUser(User user, List<? extends CharSequence> list, Presence presence, boolean z2) {
-            m.checkNotNullParameter(user, "user");
-            m.checkNotNullParameter(list, "aliases");
+            Intrinsics3.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(list, "aliases");
             this.user = user;
             this.aliases = list;
             this.presence = presence;
@@ -324,8 +324,8 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
         }
 
         public final ItemUser copy(User user, List<? extends CharSequence> aliases, Presence presence, boolean isFriend) {
-            m.checkNotNullParameter(user, "user");
-            m.checkNotNullParameter(aliases, "aliases");
+            Intrinsics3.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(aliases, "aliases");
             return new ItemUser(user, aliases, presence, isFriend);
         }
 
@@ -337,7 +337,7 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
                 return false;
             }
             ItemUser itemUser = (ItemUser) other;
-            return m.areEqual(this.user, itemUser.user) && m.areEqual(this.aliases, itemUser.aliases) && m.areEqual(this.presence, itemUser.presence) && this.isFriend == itemUser.isFriend;
+            return Intrinsics3.areEqual(this.user, itemUser.user) && Intrinsics3.areEqual(this.aliases, itemUser.aliases) && Intrinsics3.areEqual(this.presence, itemUser.presence) && this.isFriend == itemUser.isFriend;
         }
 
         public final List<CharSequence> getAliases() {
@@ -383,14 +383,14 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("ItemUser(user=");
-            sbU.append(this.user);
-            sbU.append(", aliases=");
-            sbU.append(this.aliases);
-            sbU.append(", presence=");
-            sbU.append(this.presence);
-            sbU.append(", isFriend=");
-            return a.O(sbU, this.isFriend, ")");
+            StringBuilder sbM833U = outline.m833U("ItemUser(user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", aliases=");
+            sbM833U.append(this.aliases);
+            sbM833U.append(", presence=");
+            sbM833U.append(this.presence);
+            sbM833U.append(", isFriend=");
+            return outline.m827O(sbM833U, this.isFriend, ")");
         }
 
         public /* synthetic */ ItemUser(User user, List list, Presence presence, boolean z2, int i, DefaultConstructorMarker defaultConstructorMarker) {

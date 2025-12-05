@@ -7,62 +7,70 @@ import android.graphics.Rect;
 import android.os.Build;
 import androidx.annotation.VisibleForTesting;
 import androidx.exifinterface.media.ExifInterface;
-import b.f.d.d.c;
-import b.f.d.d.m;
-import b.f.j.j.e;
-import b.f.j.l.b;
-import b.f.j.m.a;
-import b.f.j.n.d;
 import com.facebook.common.memory.PooledByteBuffer;
 import com.facebook.common.references.CloseableReference;
 import com.facebook.imagepipeline.common.TooManyBitmapsException;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import p007b.p109f.p115d.p119d.DoNotStrip;
+import p007b.p109f.p115d.p119d.Throwables;
+import p007b.p109f.p161j.p175j.EncodedImage2;
+import p007b.p109f.p161j.p177l.BitmapCounter;
+import p007b.p109f.p161j.p177l.BitmapCounterProvider;
+import p007b.p109f.p161j.p178m.ImagePipelineNativeLoader;
+import p007b.p109f.p161j.p179n.PlatformDecoder;
+import p007b.p109f.p186k.BitmapUtil;
+import p007b.p109f.p190m.DoNotOptimize;
+import p007b.p109f.p190m.p191n.NativeLoader;
 
-@c
+@DoNotStrip
 /* loaded from: classes3.dex */
-public abstract class DalvikPurgeableDecoder implements d {
-    public static final byte[] a;
+public abstract class DalvikPurgeableDecoder implements PlatformDecoder {
 
-    /* renamed from: b, reason: collision with root package name */
-    public final b f2898b;
+    /* renamed from: a */
+    public static final byte[] f19566a;
 
-    @b.f.m.d
+    /* renamed from: b */
+    public final BitmapCounter f19567b;
+
+    @DoNotOptimize
     public static class OreoUtils {
         private OreoUtils() {
         }
     }
 
     static {
-        List<String> list = a.a;
-        b.f.m.n.a.c("imagepipeline");
-        a = new byte[]{-1, ExifInterface.MARKER_EOI};
+        List<String> list = ImagePipelineNativeLoader.f3980a;
+        NativeLoader.m1589c("imagepipeline");
+        f19566a = new byte[]{-1, ExifInterface.MARKER_EOI};
     }
 
     public DalvikPurgeableDecoder() {
-        if (b.f.j.l.c.c == null) {
-            synchronized (b.f.j.l.c.class) {
-                if (b.f.j.l.c.c == null) {
-                    b.f.j.l.c.c = new b(b.f.j.l.c.f593b, b.f.j.l.c.a);
+        if (BitmapCounterProvider.f3925c == null) {
+            synchronized (BitmapCounterProvider.class) {
+                if (BitmapCounterProvider.f3925c == null) {
+                    BitmapCounterProvider.f3925c = new BitmapCounter(BitmapCounterProvider.f3924b, BitmapCounterProvider.f3923a);
                 }
             }
         }
-        this.f2898b = b.f.j.l.c.c;
+        this.f19567b = BitmapCounterProvider.f3925c;
     }
 
     @VisibleForTesting
-    public static boolean e(CloseableReference<PooledByteBuffer> closeableReference, int i) {
-        PooledByteBuffer pooledByteBufferU = closeableReference.u();
-        return i >= 2 && pooledByteBufferU.h(i + (-2)) == -1 && pooledByteBufferU.h(i - 1) == -39;
+    /* renamed from: e */
+    public static boolean m8709e(CloseableReference<PooledByteBuffer> closeableReference, int i) {
+        PooledByteBuffer pooledByteBufferM8642u = closeableReference.m8642u();
+        return i >= 2 && pooledByteBufferM8642u.mo1395h(i + (-2)) == -1 && pooledByteBufferM8642u.mo1395h(i - 1) == -39;
     }
 
-    @c
+    @DoNotStrip
     private static native void nativePinBitmap(Bitmap bitmap);
 
-    @Override // b.f.j.n.d
-    public CloseableReference<Bitmap> a(e eVar, Bitmap.Config config, Rect rect, ColorSpace colorSpace) {
-        int i = eVar.q;
+    @Override // p007b.p109f.p161j.p179n.PlatformDecoder
+    /* renamed from: a */
+    public CloseableReference<Bitmap> mo1414a(EncodedImage2 encodedImage2, Bitmap.Config config, Rect rect, ColorSpace colorSpace) {
+        int i = encodedImage2.f3898q;
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inDither = true;
         options.inPreferredConfig = config;
@@ -73,18 +81,19 @@ public abstract class DalvikPurgeableDecoder implements d {
         if (Build.VERSION.SDK_INT >= 26) {
             options.inPreferredColorSpace = ColorSpace.get(ColorSpace.Named.SRGB);
         }
-        CloseableReference<PooledByteBuffer> closeableReferenceC = eVar.c();
-        Objects.requireNonNull(closeableReferenceC);
+        CloseableReference<PooledByteBuffer> closeableReferenceM1340c = encodedImage2.m1340c();
+        Objects.requireNonNull(closeableReferenceM1340c);
         try {
-            return f(c(closeableReferenceC, options));
+            return m8712f(mo8710c(closeableReferenceM1340c, options));
         } finally {
-            closeableReferenceC.close();
+            closeableReferenceM1340c.close();
         }
     }
 
-    @Override // b.f.j.n.d
-    public CloseableReference<Bitmap> b(e eVar, Bitmap.Config config, Rect rect, int i, ColorSpace colorSpace) {
-        int i2 = eVar.q;
+    @Override // p007b.p109f.p161j.p179n.PlatformDecoder
+    /* renamed from: b */
+    public CloseableReference<Bitmap> mo1415b(EncodedImage2 encodedImage2, Bitmap.Config config, Rect rect, int i, ColorSpace colorSpace) {
+        int i2 = encodedImage2.f3898q;
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inDither = true;
         options.inPreferredConfig = config;
@@ -95,20 +104,23 @@ public abstract class DalvikPurgeableDecoder implements d {
         if (Build.VERSION.SDK_INT >= 26) {
             options.inPreferredColorSpace = ColorSpace.get(ColorSpace.Named.SRGB);
         }
-        CloseableReference<PooledByteBuffer> closeableReferenceC = eVar.c();
-        Objects.requireNonNull(closeableReferenceC);
+        CloseableReference<PooledByteBuffer> closeableReferenceM1340c = encodedImage2.m1340c();
+        Objects.requireNonNull(closeableReferenceM1340c);
         try {
-            return f(d(closeableReferenceC, i, options));
+            return m8712f(mo8711d(closeableReferenceM1340c, i, options));
         } finally {
-            closeableReferenceC.close();
+            closeableReferenceM1340c.close();
         }
     }
 
-    public abstract Bitmap c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options);
+    /* renamed from: c */
+    public abstract Bitmap mo8710c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options);
 
-    public abstract Bitmap d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options);
+    /* renamed from: d */
+    public abstract Bitmap mo8711d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options);
 
-    public CloseableReference<Bitmap> f(Bitmap bitmap) throws Throwable {
+    /* renamed from: f */
+    public CloseableReference<Bitmap> m8712f(Bitmap bitmap) throws Throwable {
         boolean z2;
         int i;
         long j;
@@ -116,17 +128,17 @@ public abstract class DalvikPurgeableDecoder implements d {
         Objects.requireNonNull(bitmap);
         try {
             nativePinBitmap(bitmap);
-            b bVar = this.f2898b;
-            synchronized (bVar) {
-                int iD = b.f.k.a.d(bitmap);
-                int i3 = bVar.a;
-                if (i3 < bVar.c) {
-                    long j2 = bVar.f592b + iD;
-                    if (j2 > bVar.d) {
+            BitmapCounter bitmapCounter = this.f19567b;
+            synchronized (bitmapCounter) {
+                int iM1541d = BitmapUtil.m1541d(bitmap);
+                int i3 = bitmapCounter.f3917a;
+                if (i3 < bitmapCounter.f3919c) {
+                    long j2 = bitmapCounter.f3918b + iM1541d;
+                    if (j2 > bitmapCounter.f3920d) {
                         z2 = false;
                     } else {
-                        bVar.a = i3 + 1;
-                        bVar.f592b = j2;
+                        bitmapCounter.f3917a = i3 + 1;
+                        bitmapCounter.f3918b = j2;
                         z2 = true;
                     }
                 } else {
@@ -134,33 +146,33 @@ public abstract class DalvikPurgeableDecoder implements d {
                 }
             }
             if (z2) {
-                return CloseableReference.D(bitmap, this.f2898b.e);
+                return CloseableReference.m8633D(bitmap, this.f19567b.f3921e);
             }
-            int iD2 = b.f.k.a.d(bitmap);
+            int iM1541d2 = BitmapUtil.m1541d(bitmap);
             bitmap.recycle();
             Locale locale = Locale.US;
             Object[] objArr = new Object[5];
-            objArr[0] = Integer.valueOf(iD2);
-            b bVar2 = this.f2898b;
-            synchronized (bVar2) {
-                i = bVar2.a;
+            objArr[0] = Integer.valueOf(iM1541d2);
+            BitmapCounter bitmapCounter2 = this.f19567b;
+            synchronized (bitmapCounter2) {
+                i = bitmapCounter2.f3917a;
             }
             objArr[1] = Integer.valueOf(i);
-            b bVar3 = this.f2898b;
-            synchronized (bVar3) {
-                j = bVar3.f592b;
+            BitmapCounter bitmapCounter3 = this.f19567b;
+            synchronized (bitmapCounter3) {
+                j = bitmapCounter3.f3918b;
             }
             objArr[2] = Long.valueOf(j);
-            b bVar4 = this.f2898b;
-            synchronized (bVar4) {
-                i2 = bVar4.c;
+            BitmapCounter bitmapCounter4 = this.f19567b;
+            synchronized (bitmapCounter4) {
+                i2 = bitmapCounter4.f3919c;
             }
             objArr[3] = Integer.valueOf(i2);
-            objArr[4] = Integer.valueOf(this.f2898b.b());
+            objArr[4] = Integer.valueOf(this.f19567b.m1372b());
             throw new TooManyBitmapsException(String.format(locale, "Attempted to pin a bitmap of size %d bytes. The current pool count is %d, the current pool size is %d bytes. The current pool max count is %d, the current pool max size is %d bytes.", objArr));
         } catch (Exception e) {
             bitmap.recycle();
-            m.a(e);
+            Throwables.m972a(e);
             throw new RuntimeException(e);
         }
     }

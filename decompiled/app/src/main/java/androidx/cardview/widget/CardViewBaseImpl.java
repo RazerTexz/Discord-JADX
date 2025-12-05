@@ -13,9 +13,9 @@ import androidx.cardview.widget.RoundRectDrawableWithShadow;
 public class CardViewBaseImpl implements CardViewImpl {
     public final RectF mCornerRect = new RectF();
 
-    /* renamed from: androidx.cardview.widget.CardViewBaseImpl$1, reason: invalid class name */
-    public class AnonymousClass1 implements RoundRectDrawableWithShadow.RoundRectHelper {
-        public AnonymousClass1() {
+    /* renamed from: androidx.cardview.widget.CardViewBaseImpl$1 */
+    public class C01621 implements RoundRectDrawableWithShadow.RoundRectHelper {
+        public C01621() {
         }
 
         @Override // androidx.cardview.widget.RoundRectDrawableWithShadow.RoundRectHelper
@@ -91,7 +91,7 @@ public class CardViewBaseImpl implements CardViewImpl {
 
     @Override // androidx.cardview.widget.CardViewImpl
     public void initStatic() {
-        RoundRectDrawableWithShadow.sRoundRectHelper = new AnonymousClass1();
+        RoundRectDrawableWithShadow.sRoundRectHelper = new C01621();
     }
 
     @Override // androidx.cardview.widget.CardViewImpl

@@ -27,12 +27,12 @@ public final class ActivityRecreator {
     public static final Method requestRelaunchActivityMethod;
     public static final Field tokenField;
 
-    /* renamed from: androidx.core.app.ActivityRecreator$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
+    /* renamed from: androidx.core.app.ActivityRecreator$1 */
+    public class RunnableC02151 implements Runnable {
         public final /* synthetic */ LifecycleCheckCallbacks val$callbacks;
         public final /* synthetic */ Object val$token;
 
-        public AnonymousClass1(LifecycleCheckCallbacks lifecycleCheckCallbacks, Object obj) {
+        public RunnableC02151(LifecycleCheckCallbacks lifecycleCheckCallbacks, Object obj) {
             this.val$callbacks = lifecycleCheckCallbacks;
             this.val$token = obj;
         }
@@ -43,12 +43,12 @@ public final class ActivityRecreator {
         }
     }
 
-    /* renamed from: androidx.core.app.ActivityRecreator$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
+    /* renamed from: androidx.core.app.ActivityRecreator$2 */
+    public class RunnableC02162 implements Runnable {
         public final /* synthetic */ Application val$application;
         public final /* synthetic */ LifecycleCheckCallbacks val$callbacks;
 
-        public AnonymousClass2(Application application, LifecycleCheckCallbacks lifecycleCheckCallbacks) {
+        public RunnableC02162(Application application, LifecycleCheckCallbacks lifecycleCheckCallbacks) {
             this.val$application = application;
             this.val$callbacks = lifecycleCheckCallbacks;
         }
@@ -59,12 +59,12 @@ public final class ActivityRecreator {
         }
     }
 
-    /* renamed from: androidx.core.app.ActivityRecreator$3, reason: invalid class name */
-    public class AnonymousClass3 implements Runnable {
+    /* renamed from: androidx.core.app.ActivityRecreator$3 */
+    public class RunnableC02173 implements Runnable {
         public final /* synthetic */ Object val$activityThread;
         public final /* synthetic */ Object val$token;
 
-        public AnonymousClass3(Object obj, Object obj2) {
+        public RunnableC02173(Object obj, Object obj2) {
             this.val$activityThread = obj;
             this.val$token = obj2;
         }
@@ -231,7 +231,7 @@ public final class ActivityRecreator {
         try {
             Object obj2 = tokenField.get(activity);
             if (obj2 == obj && activity.hashCode() == i) {
-                mainHandler.postAtFrontOfQueue(new AnonymousClass3(mainThreadField.get(activity), obj2));
+                mainHandler.postAtFrontOfQueue(new RunnableC02173(mainThreadField.get(activity), obj2));
                 return true;
             }
             return false;
@@ -262,7 +262,7 @@ public final class ActivityRecreator {
             LifecycleCheckCallbacks lifecycleCheckCallbacks = new LifecycleCheckCallbacks(activity);
             application.registerActivityLifecycleCallbacks(lifecycleCheckCallbacks);
             Handler handler = mainHandler;
-            handler.post(new AnonymousClass1(lifecycleCheckCallbacks, obj2));
+            handler.post(new RunnableC02151(lifecycleCheckCallbacks, obj2));
             try {
                 if (needsRelaunchCall()) {
                     Method method = requestRelaunchActivityMethod;
@@ -271,10 +271,10 @@ public final class ActivityRecreator {
                 } else {
                     activity.recreate();
                 }
-                handler.post(new AnonymousClass2(application, lifecycleCheckCallbacks));
+                handler.post(new RunnableC02162(application, lifecycleCheckCallbacks));
                 return true;
             } catch (Throwable th) {
-                mainHandler.post(new AnonymousClass2(application, lifecycleCheckCallbacks));
+                mainHandler.post(new RunnableC02162(application, lifecycleCheckCallbacks));
                 throw th;
             }
         } catch (Throwable unused) {

@@ -27,11 +27,11 @@ public final class MenuItemCompat {
     public static final int SHOW_AS_ACTION_WITH_TEXT = 4;
     private static final String TAG = "MenuItemCompat";
 
-    /* renamed from: androidx.core.view.MenuItemCompat$1, reason: invalid class name */
-    public class AnonymousClass1 implements MenuItem.OnActionExpandListener {
+    /* renamed from: androidx.core.view.MenuItemCompat$1 */
+    public class MenuItemOnActionExpandListenerC02791 implements MenuItem.OnActionExpandListener {
         public final /* synthetic */ OnActionExpandListener val$listener;
 
-        public AnonymousClass1(OnActionExpandListener onActionExpandListener) {
+        public MenuItemOnActionExpandListenerC02791(OnActionExpandListener onActionExpandListener) {
             this.val$listener = onActionExpandListener;
         }
 
@@ -199,7 +199,7 @@ public final class MenuItemCompat {
 
     @Deprecated
     public static MenuItem setOnActionExpandListener(MenuItem menuItem, OnActionExpandListener onActionExpandListener) {
-        return menuItem.setOnActionExpandListener(new AnonymousClass1(onActionExpandListener));
+        return menuItem.setOnActionExpandListener(new MenuItemOnActionExpandListenerC02791(onActionExpandListener));
     }
 
     public static void setShortcut(MenuItem menuItem, char c, char c2, int i, int i2) {

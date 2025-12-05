@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackLoginAttempted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLoginAttempted implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackLoginAttempted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long fingerprint = null;
     private final CharSequence identityType = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackLoginAttempted implements AnalyticsSchema, Tr
             return false;
         }
         TrackLoginAttempted trackLoginAttempted = (TrackLoginAttempted) other;
-        return m.areEqual(this.fingerprint, trackLoginAttempted.fingerprint) && m.areEqual(this.identityType, trackLoginAttempted.identityType);
+        return Intrinsics3.areEqual(this.fingerprint, trackLoginAttempted.fingerprint) && Intrinsics3.areEqual(this.identityType, trackLoginAttempted.identityType);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackLoginAttempted implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackLoginAttempted(fingerprint=");
-        sbU.append(this.fingerprint);
-        sbU.append(", identityType=");
-        return a.E(sbU, this.identityType, ")");
+        StringBuilder sbM833U = outline.m833U("TrackLoginAttempted(fingerprint=");
+        sbM833U.append(this.fingerprint);
+        sbM833U.append(", identityType=");
+        return outline.m817E(sbM833U, this.identityType, ")");
     }
 }

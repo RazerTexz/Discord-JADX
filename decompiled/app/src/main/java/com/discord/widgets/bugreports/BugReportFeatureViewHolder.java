@@ -3,25 +3,25 @@ package com.discord.widgets.bugreports;
 import android.view.View;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.discord.api.bugreport.Feature;
+import com.discord.api.bugreport.BugReportConfig2;
 import com.discord.databinding.WidgetBugReportFeatureListItemBinding;
-import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetBugReport.kt */
 /* loaded from: classes2.dex */
 public final class BugReportFeatureViewHolder extends RecyclerView.ViewHolder {
     private final WidgetBugReportFeatureListItemBinding binding;
-    private final Function1<Feature, Unit> onClickListener;
+    private final Function1<BugReportConfig2, Unit> onClickListener;
 
     /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.BugReportFeatureViewHolder$bind$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements View.OnClickListener {
-        public final /* synthetic */ Feature $data;
+    /* renamed from: com.discord.widgets.bugreports.BugReportFeatureViewHolder$bind$1 */
+    public static final class ViewOnClickListenerC72821 implements View.OnClickListener {
+        public final /* synthetic */ BugReportConfig2 $data;
 
-        public AnonymousClass1(Feature feature) {
-            this.$data = feature;
+        public ViewOnClickListenerC72821(BugReportConfig2 bugReportConfig2) {
+            this.$data = bugReportConfig2;
         }
 
         @Override // android.view.View.OnClickListener
@@ -32,30 +32,30 @@ public final class BugReportFeatureViewHolder extends RecyclerView.ViewHolder {
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     /* JADX WARN: Multi-variable type inference failed */
-    public BugReportFeatureViewHolder(WidgetBugReportFeatureListItemBinding widgetBugReportFeatureListItemBinding, Function1<? super Feature, Unit> function1) {
-        super(widgetBugReportFeatureListItemBinding.a);
-        m.checkNotNullParameter(widgetBugReportFeatureListItemBinding, "binding");
-        m.checkNotNullParameter(function1, "onClickListener");
+    public BugReportFeatureViewHolder(WidgetBugReportFeatureListItemBinding widgetBugReportFeatureListItemBinding, Function1<? super BugReportConfig2, Unit> function1) {
+        super(widgetBugReportFeatureListItemBinding.f15755a);
+        Intrinsics3.checkNotNullParameter(widgetBugReportFeatureListItemBinding, "binding");
+        Intrinsics3.checkNotNullParameter(function1, "onClickListener");
         this.binding = widgetBugReportFeatureListItemBinding;
         this.onClickListener = function1;
     }
 
-    public final void bind(Feature data) {
-        m.checkNotNullParameter(data, "data");
-        TextView textView = this.binding.f2244b;
-        m.checkNotNullExpressionValue(textView, "binding.featureListItemFeature");
+    public final void bind(BugReportConfig2 data) {
+        Intrinsics3.checkNotNullParameter(data, "data");
+        TextView textView = this.binding.f15756b;
+        Intrinsics3.checkNotNullExpressionValue(textView, "binding.featureListItemFeature");
         textView.setText(data.getName());
-        TextView textView2 = this.binding.c;
-        m.checkNotNullExpressionValue(textView2, "binding.featureListItemSquad");
+        TextView textView2 = this.binding.f15757c;
+        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.featureListItemSquad");
         textView2.setText(data.getSquad());
-        this.binding.a.setOnClickListener(new AnonymousClass1(data));
+        this.binding.f15755a.setOnClickListener(new ViewOnClickListenerC72821(data));
     }
 
     public final WidgetBugReportFeatureListItemBinding getBinding() {
         return this.binding;
     }
 
-    public final Function1<Feature, Unit> getOnClickListener() {
+    public final Function1<BugReportConfig2, Unit> getOnClickListener() {
         return this.onClickListener;
     }
 }

@@ -6,8 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.databinding.GroupInviteFriendsSheetItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.user.User;
@@ -17,13 +16,14 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.checkbox.MaterialCheckBox;
-import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: GroupInviteFriendsSheetAdapter.kt */
 /* loaded from: classes2.dex */
@@ -47,8 +47,8 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
             }
 
             public final ArrayList<FriendItem> createItems(Collection<? extends User> users, Set<? extends User> checkedUsers) {
-                m.checkNotNullParameter(users, "users");
-                m.checkNotNullParameter(checkedUsers, "checkedUsers");
+                Intrinsics3.checkNotNullParameter(users, "users");
+                Intrinsics3.checkNotNullParameter(checkedUsers, "checkedUsers");
                 ArrayList<FriendItem> arrayList = new ArrayList<>();
                 for (User user : users) {
                     arrayList.add(new FriendItem(user, checkedUsers.contains(user)));
@@ -62,7 +62,7 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
         }
 
         public FriendItem(User user, boolean z2) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             this.user = user;
             this.isSelected = z2;
             this.key = String.valueOf(user.getId());
@@ -89,7 +89,7 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
         }
 
         public final FriendItem copy(User user, boolean isSelected) {
-            m.checkNotNullParameter(user, "user");
+            Intrinsics3.checkNotNullParameter(user, "user");
             return new FriendItem(user, isSelected);
         }
 
@@ -101,7 +101,7 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
                 return false;
             }
             FriendItem friendItem = (FriendItem) other;
-            return m.areEqual(this.user, friendItem.user) && this.isSelected == friendItem.isSelected;
+            return Intrinsics3.areEqual(this.user, friendItem.user) && this.isSelected == friendItem.isSelected;
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -135,10 +135,10 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("FriendItem(user=");
-            sbU.append(this.user);
-            sbU.append(", isSelected=");
-            return a.O(sbU, this.isSelected, ")");
+            StringBuilder sbM833U = outline.m833U("FriendItem(user=");
+            sbM833U.append(this.user);
+            sbM833U.append(", isSelected=");
+            return outline.m827O(sbM833U, this.isSelected, ")");
         }
     }
 
@@ -149,19 +149,19 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public GroupInviteFriendsListItem(@LayoutRes int i, GroupInviteFriendsSheetAdapter groupInviteFriendsSheetAdapter) {
             super(i, groupInviteFriendsSheetAdapter);
-            m.checkNotNullParameter(groupInviteFriendsSheetAdapter, "adapter");
+            Intrinsics3.checkNotNullParameter(groupInviteFriendsSheetAdapter, "adapter");
             View view = this.itemView;
-            int i2 = R.id.friends_list_item_avatar;
-            SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.friends_list_item_avatar);
+            int i2 = C5419R.id.friends_list_item_avatar;
+            SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.friends_list_item_avatar);
             if (simpleDraweeView != null) {
-                i2 = R.id.friends_list_item_name;
-                TextView textView = (TextView) view.findViewById(R.id.friends_list_item_name);
+                i2 = C5419R.id.friends_list_item_name;
+                TextView textView = (TextView) view.findViewById(C5419R.id.friends_list_item_name);
                 if (textView != null) {
-                    i2 = R.id.user_selected_checkbox;
-                    MaterialCheckBox materialCheckBox = (MaterialCheckBox) view.findViewById(R.id.user_selected_checkbox);
+                    i2 = C5419R.id.user_selected_checkbox;
+                    MaterialCheckBox materialCheckBox = (MaterialCheckBox) view.findViewById(C5419R.id.user_selected_checkbox);
                     if (materialCheckBox != null) {
                         GroupInviteFriendsSheetItemBinding groupInviteFriendsSheetItemBinding = new GroupInviteFriendsSheetItemBinding((ConstraintLayout) view, simpleDraweeView, textView, materialCheckBox);
-                        m.checkNotNullExpressionValue(groupInviteFriendsSheetItemBinding, "GroupInviteFriendsSheetItemBinding.bind(itemView)");
+                        Intrinsics3.checkNotNullExpressionValue(groupInviteFriendsSheetItemBinding, "GroupInviteFriendsSheetItemBinding.bind(itemView)");
                         this.binding = groupInviteFriendsSheetItemBinding;
                         return;
                     }
@@ -185,19 +185,19 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendItem data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             User user = data.getUser();
-            TextView textView = this.binding.c;
-            m.checkNotNullExpressionValue(textView, "binding.friendsListItemName");
+            TextView textView = this.binding.f15115c;
+            Intrinsics3.checkNotNullExpressionValue(textView, "binding.friendsListItemName");
             textView.setText(user.getUsername());
-            SimpleDraweeView simpleDraweeView = this.binding.f2115b;
-            m.checkNotNullExpressionValue(simpleDraweeView, "binding.friendsListItemAvatar");
-            IconUtils.setIcon$default(simpleDraweeView, user, R.dimen.avatar_size_standard, null, null, null, 56, null);
-            MaterialCheckBox materialCheckBox = this.binding.d;
-            m.checkNotNullExpressionValue(materialCheckBox, "binding.userSelectedCheckbox");
+            SimpleDraweeView simpleDraweeView = this.binding.f15114b;
+            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.friendsListItemAvatar");
+            IconUtils.setIcon$default(simpleDraweeView, user, C5419R.dimen.avatar_size_standard, null, null, null, 56, null);
+            MaterialCheckBox materialCheckBox = this.binding.f15116d;
+            Intrinsics3.checkNotNullExpressionValue(materialCheckBox, "binding.userSelectedCheckbox");
             materialCheckBox.setChecked(data.isSelected());
-            this.binding.d.setOnClickListener(new GroupInviteFriendsSheetAdapter$GroupInviteFriendsListItem$onConfigure$1(this, user));
+            this.binding.f15116d.setOnClickListener(new GroupInviteFriendsSheetAdapter2(this, user));
         }
     }
 
@@ -205,8 +205,8 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
     /* JADX WARN: Multi-variable type inference failed */
     public GroupInviteFriendsSheetAdapter(RecyclerView recyclerView, Function2<? super User, ? super Boolean, Unit> function2) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
-        m.checkNotNullParameter(function2, "onUserChecked");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        Intrinsics3.checkNotNullParameter(function2, "onUserChecked");
         this.onUserChecked = function2;
     }
 
@@ -221,9 +221,9 @@ public final class GroupInviteFriendsSheetAdapter extends MGRecyclerAdapterSimpl
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, FriendItem> onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
-            return new GroupInviteFriendsListItem(R.layout.group_invite_friends_sheet_item, this);
+            return new GroupInviteFriendsListItem(C5419R.layout.group_invite_friends_sheet_item, this);
         }
         throw invalidViewTypeException(viewType);
     }

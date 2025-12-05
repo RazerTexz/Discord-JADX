@@ -1,7 +1,7 @@
 package com.discord.widgets.chat.list.entries;
 
-import a0.a.a.b;
-import b.d.b.a.a;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p100d.p104b.p105a.outline;
 
 /* compiled from: SpacerEntry.kt */
 /* loaded from: classes2.dex */
@@ -52,10 +52,10 @@ public final /* data */ class SpacerEntry extends ChatListEntry {
     }
 
     public int hashCode() {
-        return b.a(this.channelId);
+        return C0002b.m3a(this.channelId);
     }
 
     public String toString() {
-        return a.C(a.U("SpacerEntry(channelId="), this.channelId, ")");
+        return outline.m815C(outline.m833U("SpacerEntry(channelId="), this.channelId, ")");
     }
 }

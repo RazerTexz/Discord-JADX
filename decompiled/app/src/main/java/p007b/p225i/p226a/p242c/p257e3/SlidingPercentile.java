@@ -1,0 +1,127 @@
+package p007b.p225i.p226a.p242c.p257e3;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+/* compiled from: SlidingPercentile.java */
+/* renamed from: b.i.a.c.e3.x, reason: use source file name */
+/* loaded from: classes3.dex */
+public class SlidingPercentile {
+
+    /* renamed from: a */
+    public static final /* synthetic */ int f6630a = 0;
+
+    /* renamed from: b */
+    public final int f6631b;
+
+    /* renamed from: f */
+    public int f6635f;
+
+    /* renamed from: g */
+    public int f6636g;
+
+    /* renamed from: h */
+    public int f6637h;
+
+    /* renamed from: d */
+    public final b[] f6633d = new b[5];
+
+    /* renamed from: c */
+    public final ArrayList<b> f6632c = new ArrayList<>();
+
+    /* renamed from: e */
+    public int f6634e = -1;
+
+    /* compiled from: SlidingPercentile.java */
+    /* renamed from: b.i.a.c.e3.x$b */
+    public static class b {
+
+        /* renamed from: a */
+        public int f6638a;
+
+        /* renamed from: b */
+        public int f6639b;
+
+        /* renamed from: c */
+        public float f6640c;
+
+        public b() {
+        }
+
+        public b(a aVar) {
+        }
+    }
+
+    public SlidingPercentile(int i) {
+        this.f6631b = i;
+    }
+
+    /* renamed from: a */
+    public void m2875a(int i, float f) {
+        b bVar;
+        if (this.f6634e != 1) {
+            Collections.sort(this.f6632c, C2702d.f6521j);
+            this.f6634e = 1;
+        }
+        int i2 = this.f6637h;
+        if (i2 > 0) {
+            b[] bVarArr = this.f6633d;
+            int i3 = i2 - 1;
+            this.f6637h = i3;
+            bVar = bVarArr[i3];
+        } else {
+            bVar = new b(null);
+        }
+        int i4 = this.f6635f;
+        this.f6635f = i4 + 1;
+        bVar.f6638a = i4;
+        bVar.f6639b = i;
+        bVar.f6640c = f;
+        this.f6632c.add(bVar);
+        this.f6636g += i;
+        while (true) {
+            int i5 = this.f6636g;
+            int i6 = this.f6631b;
+            if (i5 <= i6) {
+                return;
+            }
+            int i7 = i5 - i6;
+            b bVar2 = this.f6632c.get(0);
+            int i8 = bVar2.f6639b;
+            if (i8 <= i7) {
+                this.f6636g -= i8;
+                this.f6632c.remove(0);
+                int i9 = this.f6637h;
+                if (i9 < 5) {
+                    b[] bVarArr2 = this.f6633d;
+                    this.f6637h = i9 + 1;
+                    bVarArr2[i9] = bVar2;
+                }
+            } else {
+                bVar2.f6639b = i8 - i7;
+                this.f6636g -= i7;
+            }
+        }
+    }
+
+    /* renamed from: b */
+    public float m2876b(float f) {
+        if (this.f6634e != 0) {
+            Collections.sort(this.f6632c, C2701c.f6520j);
+            this.f6634e = 0;
+        }
+        float f2 = f * this.f6636g;
+        int i = 0;
+        for (int i2 = 0; i2 < this.f6632c.size(); i2++) {
+            b bVar = this.f6632c.get(i2);
+            i += bVar.f6639b;
+            if (i >= f2) {
+                return bVar.f6640c;
+            }
+        }
+        if (this.f6632c.isEmpty()) {
+            return Float.NaN;
+        }
+        return this.f6632c.get(r5.size() - 1).f6640c;
+    }
+}

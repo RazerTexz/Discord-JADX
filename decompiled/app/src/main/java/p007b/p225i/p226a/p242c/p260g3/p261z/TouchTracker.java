@@ -1,0 +1,95 @@
+package p007b.p225i.p226a.p242c.p260g3.p261z;
+
+import android.content.Context;
+import android.graphics.PointF;
+import android.opengl.Matrix;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import androidx.annotation.BinderThread;
+import p007b.p225i.p226a.p242c.p260g3.p261z.OrientationListener;
+import p007b.p225i.p226a.p242c.p260g3.p261z.SphericalGLSurfaceView;
+
+/* compiled from: TouchTracker.java */
+/* renamed from: b.i.a.c.g3.z.l, reason: use source file name */
+/* loaded from: classes3.dex */
+public final class TouchTracker extends GestureDetector.SimpleOnGestureListener implements View.OnTouchListener, OrientationListener.a {
+
+    /* renamed from: l */
+    public final a f7046l;
+
+    /* renamed from: m */
+    public final float f7047m;
+
+    /* renamed from: n */
+    public final GestureDetector f7048n;
+
+    /* renamed from: j */
+    public final PointF f7044j = new PointF();
+
+    /* renamed from: k */
+    public final PointF f7045k = new PointF();
+
+    /* renamed from: o */
+    public volatile float f7049o = 3.1415927f;
+
+    /* compiled from: TouchTracker.java */
+    /* renamed from: b.i.a.c.g3.z.l$a */
+    public interface a {
+    }
+
+    public TouchTracker(Context context, a aVar, float f) {
+        this.f7046l = aVar;
+        this.f7047m = f;
+        this.f7048n = new GestureDetector(context, this);
+    }
+
+    @Override // p007b.p225i.p226a.p242c.p260g3.p261z.OrientationListener.a
+    @BinderThread
+    /* renamed from: a */
+    public void mo3199a(float[] fArr, float f) {
+        this.f7049o = -f;
+    }
+
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public boolean onDown(MotionEvent motionEvent) {
+        this.f7044j.set(motionEvent.getX(), motionEvent.getY());
+        return true;
+    }
+
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent2, float f, float f2) {
+        float x2 = (motionEvent2.getX() - this.f7044j.x) / this.f7047m;
+        float y2 = motionEvent2.getY();
+        PointF pointF = this.f7044j;
+        float f3 = (y2 - pointF.y) / this.f7047m;
+        pointF.set(motionEvent2.getX(), motionEvent2.getY());
+        double d = this.f7049o;
+        float fCos = (float) Math.cos(d);
+        float fSin = (float) Math.sin(d);
+        PointF pointF2 = this.f7045k;
+        pointF2.x -= (fCos * x2) - (fSin * f3);
+        float f4 = (fCos * f3) + (fSin * x2) + pointF2.y;
+        pointF2.y = f4;
+        pointF2.y = Math.max(-45.0f, Math.min(45.0f, f4));
+        a aVar = this.f7046l;
+        PointF pointF3 = this.f7045k;
+        SphericalGLSurfaceView.a aVar2 = (SphericalGLSurfaceView.a) aVar;
+        synchronized (aVar2) {
+            aVar2.f7039p = pointF3.y;
+            aVar2.m3203b();
+            Matrix.setRotateM(aVar2.f7038o, 0, -pointF3.x, 0.0f, 1.0f, 0.0f);
+        }
+        return true;
+    }
+
+    @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
+    public boolean onSingleTapUp(MotionEvent motionEvent) {
+        return SphericalGLSurfaceView.this.performClick();
+    }
+
+    @Override // android.view.View.OnTouchListener
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        return this.f7048n.onTouchEvent(motionEvent);
+    }
+}

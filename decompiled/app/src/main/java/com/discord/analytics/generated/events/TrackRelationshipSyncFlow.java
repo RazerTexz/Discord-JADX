@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
+import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackRelationshipSyncFlow.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackRelationshipSyncFlow implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
+public final /* data */ class TrackRelationshipSyncFlow implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence flowType = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackRelationshipSyncFlow implements AnalyticsSche
             return false;
         }
         TrackRelationshipSyncFlow trackRelationshipSyncFlow = (TrackRelationshipSyncFlow) other;
-        return m.areEqual(this.flowType, trackRelationshipSyncFlow.flowType) && m.areEqual(this.fromStep, trackRelationshipSyncFlow.fromStep) && m.areEqual(this.toStep, trackRelationshipSyncFlow.toStep) && m.areEqual(this.skip, trackRelationshipSyncFlow.skip) && m.areEqual(this.back, trackRelationshipSyncFlow.back) && m.areEqual(this.secondsOnFromStep, trackRelationshipSyncFlow.secondsOnFromStep) && m.areEqual(this.numContactsFound, trackRelationshipSyncFlow.numContactsFound) && m.areEqual(this.numContactsAdded, trackRelationshipSyncFlow.numContactsAdded) && m.areEqual(this.mobileContactsPermission, trackRelationshipSyncFlow.mobileContactsPermission) && m.areEqual(this.hasPhoneNumber, trackRelationshipSyncFlow.hasPhoneNumber);
+        return Intrinsics3.areEqual(this.flowType, trackRelationshipSyncFlow.flowType) && Intrinsics3.areEqual(this.fromStep, trackRelationshipSyncFlow.fromStep) && Intrinsics3.areEqual(this.toStep, trackRelationshipSyncFlow.toStep) && Intrinsics3.areEqual(this.skip, trackRelationshipSyncFlow.skip) && Intrinsics3.areEqual(this.back, trackRelationshipSyncFlow.back) && Intrinsics3.areEqual(this.secondsOnFromStep, trackRelationshipSyncFlow.secondsOnFromStep) && Intrinsics3.areEqual(this.numContactsFound, trackRelationshipSyncFlow.numContactsFound) && Intrinsics3.areEqual(this.numContactsAdded, trackRelationshipSyncFlow.numContactsAdded) && Intrinsics3.areEqual(this.mobileContactsPermission, trackRelationshipSyncFlow.mobileContactsPermission) && Intrinsics3.areEqual(this.hasPhoneNumber, trackRelationshipSyncFlow.hasPhoneNumber);
     }
 
     public int hashCode() {
@@ -66,25 +66,25 @@ public final /* data */ class TrackRelationshipSyncFlow implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackRelationshipSyncFlow(flowType=");
-        sbU.append(this.flowType);
-        sbU.append(", fromStep=");
-        sbU.append(this.fromStep);
-        sbU.append(", toStep=");
-        sbU.append(this.toStep);
-        sbU.append(", skip=");
-        sbU.append(this.skip);
-        sbU.append(", back=");
-        sbU.append(this.back);
-        sbU.append(", secondsOnFromStep=");
-        sbU.append(this.secondsOnFromStep);
-        sbU.append(", numContactsFound=");
-        sbU.append(this.numContactsFound);
-        sbU.append(", numContactsAdded=");
-        sbU.append(this.numContactsAdded);
-        sbU.append(", mobileContactsPermission=");
-        sbU.append(this.mobileContactsPermission);
-        sbU.append(", hasPhoneNumber=");
-        return a.D(sbU, this.hasPhoneNumber, ")");
+        StringBuilder sbM833U = outline.m833U("TrackRelationshipSyncFlow(flowType=");
+        sbM833U.append(this.flowType);
+        sbM833U.append(", fromStep=");
+        sbM833U.append(this.fromStep);
+        sbM833U.append(", toStep=");
+        sbM833U.append(this.toStep);
+        sbM833U.append(", skip=");
+        sbM833U.append(this.skip);
+        sbM833U.append(", back=");
+        sbM833U.append(this.back);
+        sbM833U.append(", secondsOnFromStep=");
+        sbM833U.append(this.secondsOnFromStep);
+        sbM833U.append(", numContactsFound=");
+        sbM833U.append(this.numContactsFound);
+        sbM833U.append(", numContactsAdded=");
+        sbM833U.append(this.numContactsAdded);
+        sbM833U.append(", mobileContactsPermission=");
+        sbM833U.append(this.mobileContactsPermission);
+        sbM833U.append(", hasPhoneNumber=");
+        return outline.m816D(sbM833U, this.hasPhoneNumber, ")");
     }
 }

@@ -4,8 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.a;
-import com.discord.R;
+import com.discord.C5419R;
 import com.discord.api.role.GuildRole;
 import com.discord.databinding.ViewCheckableRoleListItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -14,11 +13,12 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.views.CheckedSetting;
-import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
 /* loaded from: classes2.dex */
@@ -31,13 +31,13 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RoleListItem(WidgetServerSettingsEditMemberRolesAdapter widgetServerSettingsEditMemberRolesAdapter) {
-            super(R.layout.view_checkable_role_list_item, widgetServerSettingsEditMemberRolesAdapter);
-            m.checkNotNullParameter(widgetServerSettingsEditMemberRolesAdapter, "adapter");
+            super(C5419R.layout.view_checkable_role_list_item, widgetServerSettingsEditMemberRolesAdapter);
+            Intrinsics3.checkNotNullParameter(widgetServerSettingsEditMemberRolesAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             CheckedSetting checkedSetting = (CheckedSetting) view;
             ViewCheckableRoleListItemBinding viewCheckableRoleListItemBinding = new ViewCheckableRoleListItemBinding(checkedSetting, checkedSetting);
-            m.checkNotNullExpressionValue(viewCheckableRoleListItemBinding, "ViewCheckableRoleListItemBinding.bind(itemView)");
+            Intrinsics3.checkNotNullExpressionValue(viewCheckableRoleListItemBinding, "ViewCheckableRoleListItemBinding.bind(itemView)");
             this.binding = viewCheckableRoleListItemBinding;
         }
 
@@ -52,25 +52,25 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, RoleItem data) {
-            m.checkNotNullParameter(data, "data");
+            Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
-            this.binding.f2179b.setText(data.getRole().getName());
-            CheckedSetting checkedSetting = this.binding.f2179b;
+            this.binding.f15398b.setText(data.getRole().getName());
+            CheckedSetting checkedSetting = this.binding.f15398b;
             GuildRole role = data.getRole();
-            CheckedSetting checkedSetting2 = this.binding.f2179b;
-            m.checkNotNullExpressionValue(checkedSetting2, "binding.roleItemCheckedSetting");
+            CheckedSetting checkedSetting2 = this.binding.f15398b;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.roleItemCheckedSetting");
             Context context = checkedSetting2.getContext();
-            m.checkNotNullExpressionValue(context, "binding.roleItemCheckedSetting.context");
+            Intrinsics3.checkNotNullExpressionValue(context, "binding.roleItemCheckedSetting.context");
             checkedSetting.setTextColor(RoleUtils.getRoleColor$default(role, context, null, 2, null));
-            CheckedSetting checkedSetting3 = this.binding.f2179b;
-            m.checkNotNullExpressionValue(checkedSetting3, "binding.roleItemCheckedSetting");
+            CheckedSetting checkedSetting3 = this.binding.f15398b;
+            Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.roleItemCheckedSetting");
             checkedSetting3.setChecked(data.isUserHasRole());
             if (data.isManageable()) {
-                this.binding.f2179b.e(new WidgetServerSettingsEditMemberRolesAdapter$RoleListItem$onConfigure$1(this, data));
+                this.binding.f15398b.m8527e(new WidgetServerSettingsEditMemberRolesAdapter2(this, data));
             } else if (data.isRoleManaged()) {
-                this.binding.f2179b.b(R.string.managed_role_explaination);
+                this.binding.f15398b.m8525b(C5419R.string.managed_role_explaination);
             } else {
-                CheckedSetting.d(this.binding.f2179b, null, 1);
+                CheckedSetting.m8523d(this.binding.f15398b, null, 1);
             }
         }
     }
@@ -78,7 +78,7 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetServerSettingsEditMemberRolesAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        m.checkNotNullParameter(recyclerView, "recycler");
+        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
     }
 
     public static final /* synthetic */ Function1 access$getRoleClickListener$p(WidgetServerSettingsEditMemberRolesAdapter widgetServerSettingsEditMemberRolesAdapter) {
@@ -90,8 +90,8 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
     }
 
     public final void configure(List<RoleItem> roleItems, Function1<? super Long, Unit> roleClickListener) {
-        m.checkNotNullParameter(roleItems, "roleItems");
-        m.checkNotNullParameter(roleClickListener, "roleClickListener");
+        Intrinsics3.checkNotNullParameter(roleItems, "roleItems");
+        Intrinsics3.checkNotNullParameter(roleClickListener, "roleClickListener");
         this.roleClickListener = roleClickListener;
         setData(roleItems);
     }
@@ -103,7 +103,7 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RoleListItem onCreateViewHolder(ViewGroup parent, int viewType) {
-        m.checkNotNullParameter(parent, "parent");
+        Intrinsics3.checkNotNullParameter(parent, "parent");
         if (viewType == 1) {
             return new RoleListItem(this);
         }
@@ -120,7 +120,7 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
         private final int type;
 
         public RoleItem(GuildRole guildRole, boolean z2, boolean z3) {
-            m.checkNotNullParameter(guildRole, "role");
+            Intrinsics3.checkNotNullParameter(guildRole, "role");
             this.role = guildRole;
             this.isUserHasRole = z2;
             this.isManageable = z3;
@@ -157,7 +157,7 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
         }
 
         public final RoleItem copy(GuildRole role, boolean isUserHasRole, boolean isManageable) {
-            m.checkNotNullParameter(role, "role");
+            Intrinsics3.checkNotNullParameter(role, "role");
             return new RoleItem(role, isUserHasRole, isManageable);
         }
 
@@ -169,7 +169,7 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
                 return false;
             }
             RoleItem roleItem = (RoleItem) other;
-            return m.areEqual(this.role, roleItem.role) && this.isUserHasRole == roleItem.isUserHasRole && this.isManageable == roleItem.isManageable;
+            return Intrinsics3.areEqual(this.role, roleItem.role) && this.isUserHasRole == roleItem.isUserHasRole && this.isManageable == roleItem.isManageable;
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -213,18 +213,18 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
         }
 
         public String toString() {
-            StringBuilder sbU = a.U("RoleItem(role=");
-            sbU.append(this.role);
-            sbU.append(", isUserHasRole=");
-            sbU.append(this.isUserHasRole);
-            sbU.append(", isManageable=");
-            return a.O(sbU, this.isManageable, ")");
+            StringBuilder sbM833U = outline.m833U("RoleItem(role=");
+            sbM833U.append(this.role);
+            sbM833U.append(", isUserHasRole=");
+            sbM833U.append(this.isUserHasRole);
+            sbM833U.append(", isManageable=");
+            return outline.m827O(sbM833U, this.isManageable, ")");
         }
 
         /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
         public RoleItem(GuildRole guildRole, boolean z2, GuildRole guildRole2, boolean z3, boolean z4) {
             this(guildRole, z2, !guildRole.getManaged() && (z3 || RoleUtils.rankIsHigher(guildRole2, guildRole)) && z4);
-            m.checkNotNullParameter(guildRole, "role");
+            Intrinsics3.checkNotNullParameter(guildRole, "role");
         }
     }
 }

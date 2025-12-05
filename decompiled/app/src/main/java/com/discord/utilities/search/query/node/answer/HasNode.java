@@ -1,51 +1,51 @@
 package com.discord.utilities.search.query.node.answer;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.utilities.search.network.SearchQuery;
 import com.discord.utilities.search.query.FilterType;
 import com.discord.utilities.search.strings.SearchStringProvider;
 import com.discord.utilities.search.validation.SearchData;
-import d0.t.m0;
-import d0.t.u;
-import d0.z.d.m;
 import java.util.Set;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.SetsJVM;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: HasNode.kt */
 /* loaded from: classes2.dex */
 public final /* data */ class HasNode extends AnswerNode {
-    private final HasAnswerOption hasAnswerOption;
+    private final HasNode2 hasAnswerOption;
     private final CharSequence text;
 
-    public HasNode(HasAnswerOption hasAnswerOption, CharSequence charSequence) {
-        m.checkNotNullParameter(hasAnswerOption, "hasAnswerOption");
-        m.checkNotNullParameter(charSequence, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
-        this.hasAnswerOption = hasAnswerOption;
+    public HasNode(HasNode2 hasNode2, CharSequence charSequence) {
+        Intrinsics3.checkNotNullParameter(hasNode2, "hasAnswerOption");
+        Intrinsics3.checkNotNullParameter(charSequence, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        this.hasAnswerOption = hasNode2;
         this.text = charSequence;
     }
 
     /* renamed from: component1, reason: from getter */
-    private final HasAnswerOption getHasAnswerOption() {
+    private final HasNode2 getHasAnswerOption() {
         return this.hasAnswerOption;
     }
 
-    public static /* synthetic */ HasNode copy$default(HasNode hasNode, HasAnswerOption hasAnswerOption, CharSequence charSequence, int i, Object obj) {
+    public static /* synthetic */ HasNode copy$default(HasNode hasNode, HasNode2 hasNode2, CharSequence charSequence, int i, Object obj) {
         if ((i & 1) != 0) {
-            hasAnswerOption = hasNode.hasAnswerOption;
+            hasNode2 = hasNode.hasAnswerOption;
         }
         if ((i & 2) != 0) {
             charSequence = hasNode.getText();
         }
-        return hasNode.copy(hasAnswerOption, charSequence);
+        return hasNode.copy(hasNode2, charSequence);
     }
 
     public final CharSequence component2() {
         return getText();
     }
 
-    public final HasNode copy(HasAnswerOption hasAnswerOption, CharSequence text) {
-        m.checkNotNullParameter(hasAnswerOption, "hasAnswerOption");
-        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+    public final HasNode copy(HasNode2 hasAnswerOption, CharSequence text) {
+        Intrinsics3.checkNotNullParameter(hasAnswerOption, "hasAnswerOption");
+        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         return new HasNode(hasAnswerOption, text);
     }
 
@@ -57,7 +57,7 @@ public final /* data */ class HasNode extends AnswerNode {
             return false;
         }
         HasNode hasNode = (HasNode) other;
-        return m.areEqual(this.hasAnswerOption, hasNode.hasAnswerOption) && m.areEqual(getText(), hasNode.getText());
+        return Intrinsics3.areEqual(this.hasAnswerOption, hasNode.hasAnswerOption) && Intrinsics3.areEqual(getText(), hasNode.getText());
     }
 
     @Override // com.discord.utilities.search.query.node.QueryNode
@@ -67,44 +67,44 @@ public final /* data */ class HasNode extends AnswerNode {
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public Set<FilterType> getValidFilters() {
-        return m0.setOf(FilterType.HAS);
+        return SetsJVM.setOf(FilterType.HAS);
     }
 
     public int hashCode() {
-        HasAnswerOption hasAnswerOption = this.hasAnswerOption;
-        int iHashCode = (hasAnswerOption != null ? hasAnswerOption.hashCode() : 0) * 31;
+        HasNode2 hasNode2 = this.hasAnswerOption;
+        int iHashCode = (hasNode2 != null ? hasNode2.hashCode() : 0) * 31;
         CharSequence text = getText();
         return iHashCode + (text != null ? text.hashCode() : 0);
     }
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public boolean isValid(SearchData searchData) {
-        m.checkNotNullParameter(searchData, "searchData");
+        Intrinsics3.checkNotNullParameter(searchData, "searchData");
         return true;
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("HasNode(hasAnswerOption=");
-        sbU.append(this.hasAnswerOption);
-        sbU.append(", text=");
-        sbU.append(getText());
-        sbU.append(")");
-        return sbU.toString();
+        StringBuilder sbM833U = outline.m833U("HasNode(hasAnswerOption=");
+        sbM833U.append(this.hasAnswerOption);
+        sbM833U.append(", text=");
+        sbM833U.append(getText());
+        sbM833U.append(")");
+        return sbM833U.toString();
     }
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public void updateQuery(SearchQuery.Builder queryBuilder, SearchData searchData, FilterType filterType) {
-        m.checkNotNullParameter(queryBuilder, "queryBuilder");
-        m.checkNotNullParameter(searchData, "searchData");
-        if (u.contains(getValidFilters(), filterType)) {
+        Intrinsics3.checkNotNullParameter(queryBuilder, "queryBuilder");
+        Intrinsics3.checkNotNullParameter(searchData, "searchData");
+        if (_Collections.contains(getValidFilters(), filterType)) {
             queryBuilder.appendParam("has", this.hasAnswerOption.getRestParamValue());
         }
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public HasNode(String str, SearchStringProvider searchStringProvider) {
-        this(HasAnswerOption.INSTANCE.getOptionFromString(str, searchStringProvider), str);
-        m.checkNotNullParameter(str, "match");
-        m.checkNotNullParameter(searchStringProvider, "searchStringProvider");
+        this(HasNode2.INSTANCE.getOptionFromString(str, searchStringProvider), str);
+        Intrinsics3.checkNotNullParameter(str, "match");
+        Intrinsics3.checkNotNullParameter(searchStringProvider, "searchStringProvider");
     }
 }

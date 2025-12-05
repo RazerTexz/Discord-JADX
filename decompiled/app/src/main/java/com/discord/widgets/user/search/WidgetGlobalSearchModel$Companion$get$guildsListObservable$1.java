@@ -6,19 +6,19 @@ import com.discord.models.domain.ModelNotificationSettings;
 import com.discord.models.guild.Guild;
 import com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.z.d.m;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import rx.functions.Func4;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.functions.Func4;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$get$guildsListObservable$1<T1, T2, T3, T4, R> implements Func4<WidgetGlobalSearchModel.SearchContext, WidgetGlobalSearchModel.ChannelContext, Map<Long, ? extends ModelNotificationSettings>, LinkedHashMap<Long, Guild>, WidgetGlobalSearchGuildsModel> {
     public static final WidgetGlobalSearchModel$Companion$get$guildsListObservable$1 INSTANCE = new WidgetGlobalSearchModel$Companion$get$guildsListObservable$1();
 
-    @Override // rx.functions.Func4
+    @Override // p658rx.functions.Func4
     public /* bridge */ /* synthetic */ WidgetGlobalSearchGuildsModel call(WidgetGlobalSearchModel.SearchContext searchContext, WidgetGlobalSearchModel.ChannelContext channelContext, Map<Long, ? extends ModelNotificationSettings> map, LinkedHashMap<Long, Guild> linkedHashMap) {
         return call2(searchContext, channelContext, map, linkedHashMap);
     }
@@ -31,9 +31,9 @@ public final class WidgetGlobalSearchModel$Companion$get$guildsListObservable$1<
         Set<Long> unreadGuildIds = channelContext.getUnreadGuildIds();
         Map<Long, Integer> mentionCounts = searchContext.getMentionCounts();
         Map<Long, Channel> channelsPrivate = channelContext.getChannelsPrivate();
-        m.checkNotNullExpressionValue(linkedHashMap, "sortedGuilds");
+        Intrinsics3.checkNotNullExpressionValue(linkedHashMap, "sortedGuilds");
         Map<Long, List<Long>> guildToChannels = channelContext.getGuildToChannels();
-        m.checkNotNullExpressionValue(map, "guildSettings");
+        Intrinsics3.checkNotNullExpressionValue(map, "guildSettings");
         return companion.create(recentGuildIds, selectedVoiceChannelId, unreadGuildIds, mentionCounts, channelsPrivate, linkedHashMap, guildToChannels, map);
     }
 }

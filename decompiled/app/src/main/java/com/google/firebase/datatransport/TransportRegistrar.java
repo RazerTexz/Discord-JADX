@@ -2,29 +2,31 @@ package com.google.firebase.datatransport;
 
 import android.content.Context;
 import androidx.annotation.Keep;
-import b.i.a.b.i.a;
-import b.i.a.b.j.n;
-import b.i.c.l.d;
-import b.i.c.l.e;
-import b.i.c.l.g;
-import b.i.c.l.o;
 import java.util.Collections;
 import java.util.List;
+import p007b.p225i.p226a.p228b.TransportFactory;
+import p007b.p225i.p226a.p228b.p229i.CCTDestination;
+import p007b.p225i.p226a.p228b.p231j.TransportRuntime;
+import p007b.p225i.p361c.p368l.Component4;
+import p007b.p225i.p361c.p368l.ComponentContainer;
+import p007b.p225i.p361c.p368l.ComponentRegistrar;
+import p007b.p225i.p361c.p368l.Dependency2;
+import p007b.p225i.p361c.p390n.C4766a;
 
 /* compiled from: com.google.firebase:firebase-datatransport@@17.0.3 */
 @Keep
 /* loaded from: classes3.dex */
-public class TransportRegistrar implements g {
-    public static /* synthetic */ b.i.a.b.g lambda$getComponents$0(e eVar) {
-        n.b((Context) eVar.a(Context.class));
-        return n.a().c(a.e);
+public class TransportRegistrar implements ComponentRegistrar {
+    public static /* synthetic */ TransportFactory lambda$getComponents$0(ComponentContainer componentContainer) {
+        TransportRuntime.m2360b((Context) componentContainer.mo6346a(Context.class));
+        return TransportRuntime.m2359a().m2361c(CCTDestination.f5127e);
     }
 
-    @Override // b.i.c.l.g
-    public List<d<?>> getComponents() {
-        d.b bVarA = d.a(b.i.a.b.g.class);
-        bVarA.a(new o(Context.class, 1, 0));
-        bVarA.c(b.i.c.n.a.a);
-        return Collections.singletonList(bVarA.b());
+    @Override // p007b.p225i.p361c.p368l.ComponentRegistrar
+    public List<Component4<?>> getComponents() {
+        Component4.b bVarM6348a = Component4.m6348a(TransportFactory.class);
+        bVarM6348a.m6351a(new Dependency2(Context.class, 1, 0));
+        bVarM6348a.m6353c(C4766a.f12804a);
+        return Collections.singletonList(bVarM6348a.m6352b());
     }
 }

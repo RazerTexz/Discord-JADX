@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackVerifyEnqueueSucceeded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVerifyEnqueueSucceeded implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackVerifyEnqueueSucceeded implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence phoneNumber = null;
     private final CharSequence channel = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackVerifyEnqueueSucceeded implements AnalyticsSc
             return false;
         }
         TrackVerifyEnqueueSucceeded trackVerifyEnqueueSucceeded = (TrackVerifyEnqueueSucceeded) other;
-        return m.areEqual(this.phoneNumber, trackVerifyEnqueueSucceeded.phoneNumber) && m.areEqual(this.channel, trackVerifyEnqueueSucceeded.channel);
+        return Intrinsics3.areEqual(this.phoneNumber, trackVerifyEnqueueSucceeded.phoneNumber) && Intrinsics3.areEqual(this.channel, trackVerifyEnqueueSucceeded.channel);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackVerifyEnqueueSucceeded implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackVerifyEnqueueSucceeded(phoneNumber=");
-        sbU.append(this.phoneNumber);
-        sbU.append(", channel=");
-        return a.E(sbU, this.channel, ")");
+        StringBuilder sbM833U = outline.m833U("TrackVerifyEnqueueSucceeded(phoneNumber=");
+        sbM833U.append(this.phoneNumber);
+        sbM833U.append(", channel=");
+        return outline.m817E(sbM833U, this.channel, ")");
     }
 }

@@ -4,13 +4,9 @@ import android.content.Context;
 import com.discord.api.guild.Guild;
 import com.discord.models.domain.ModelPayload;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.collections.LeastRecentlyAddedSet;
 import com.discord.utilities.persister.Persister;
-import d0.t.r;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -20,7 +16,11 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p507d0.p580t.MutableCollections;
+import p507d0.p580t._Collections;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: StoreGuildSelected.kt */
 /* loaded from: classes2.dex */
@@ -37,12 +37,12 @@ public final class StoreGuildSelected extends StoreV2 {
     private final StoreStream stream;
 
     /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$dispatchSampleGuildIdSelected$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGuildSelected$dispatchSampleGuildIdSelected$1 */
+    public static final class C60711 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C60711(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -50,7 +50,7 @@ public final class StoreGuildSelected extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -60,12 +60,12 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$handleConnectionOpen$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Long, Boolean> {
+    /* renamed from: com.discord.stores.StoreGuildSelected$handleConnectionOpen$1 */
+    public static final class C60721 extends Lambda implements Function1<Long, Boolean> {
         public final /* synthetic */ ModelPayload $payload;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ModelPayload modelPayload) {
+        public C60721(ModelPayload modelPayload) {
             super(1);
             this.$payload = modelPayload;
         }
@@ -83,7 +83,7 @@ public final class StoreGuildSelected extends StoreV2 {
             boolean z2;
             if (j != 0) {
                 List<Guild> guilds = this.$payload.getGuilds();
-                m.checkNotNullExpressionValue(guilds, "payload.guilds");
+                Intrinsics3.checkNotNullExpressionValue(guilds, "payload.guilds");
                 if ((guilds instanceof Collection) && guilds.isEmpty()) {
                     z2 = false;
                     if (z2) {
@@ -107,9 +107,9 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$observeRecentSelectedGuildIds$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<List<? extends Long>> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreGuildSelected$observeRecentSelectedGuildIds$1 */
+    public static final class C60731 extends Lambda implements Function0<List<? extends Long>> {
+        public C60731() {
             super(0);
         }
 
@@ -126,9 +126,9 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$observeSelectedGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<com.discord.models.guild.Guild> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreGuildSelected$observeSelectedGuild$1 */
+    public static final class C60741 extends Lambda implements Function0<com.discord.models.guild.Guild> {
+        public C60741() {
             super(0);
         }
 
@@ -145,9 +145,9 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$observeSelectedGuildId$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Long> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.stores.StoreGuildSelected$observeSelectedGuildId$1 */
+    public static final class C60751 extends Lambda implements Function0<Long> {
+        public C60751() {
             super(0);
         }
 
@@ -163,12 +163,12 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$set$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+    /* renamed from: com.discord.stores.StoreGuildSelected$set$1 */
+    public static final class C60761 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j) {
+        public C60761(long j) {
             super(0);
             this.$guildId = j;
         }
@@ -176,7 +176,7 @@ public final class StoreGuildSelected extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             invoke2();
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -186,7 +186,7 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     public /* synthetic */ StoreGuildSelected(StoreStream storeStream, Dispatcher dispatcher, StoreGuilds storeGuilds, StoreAnalytics storeAnalytics, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(storeStream, dispatcher, storeGuilds, storeAnalytics, (i & 16) != 0 ? ObservationDeckProvider.get() : observationDeck);
+        this(storeStream, dispatcher, storeGuilds, storeAnalytics, (i & 16) != 0 ? ObservationDeck4.get() : observationDeck);
     }
 
     public static final /* synthetic */ StoreGuilds access$getGuildStore$p(StoreGuildSelected storeGuildSelected) {
@@ -198,7 +198,7 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     public final void dispatchSampleGuildIdSelected(long guildId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId));
+        this.dispatcher.schedule(new C60711(guildId));
     }
 
     public final List<Long> getRecentlySelectedGuildIds() {
@@ -206,44 +206,44 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     public final long getSelectedGuildId() {
-        Long l = (Long) u.firstOrNull((List) this.selectedGuildIdsSnapshot);
+        Long l = (Long) _Collections.firstOrNull((List) this.selectedGuildIdsSnapshot);
         if (l != null) {
             return l.longValue();
         }
         return 0L;
     }
 
-    @StoreThread
+    @Store3
     public final long getSelectedGuildIdInternal$app_productionGoogleRelease() {
-        Long l = (Long) u.lastOrNull(this.selectedGuildIds);
+        Long l = (Long) _Collections.lastOrNull(this.selectedGuildIds);
         if (l != null) {
             return l.longValue();
         }
         return 0L;
     }
 
-    @StoreThread
+    @Store3
     public final void handleConnectionOpen(ModelPayload payload) {
-        m.checkNotNullParameter(payload, "payload");
-        r.removeAll(this.selectedGuildIds, new AnonymousClass1(payload));
+        Intrinsics3.checkNotNullParameter(payload, "payload");
+        MutableCollections.removeAll(this.selectedGuildIds, new C60721(payload));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildRemove(Guild guild) {
-        m.checkNotNullParameter(guild, "guild");
+        Intrinsics3.checkNotNullParameter(guild, "guild");
         if (this.selectedGuildIds.remove(Long.valueOf(guild.getId()))) {
             markChanged();
         }
     }
 
-    @StoreThread
+    @Store3
     public final void handleGuildSelected(long guildId) {
         this.selectedGuildIds.add(Long.valueOf(guildId));
         markChanged();
     }
 
-    @StoreThread
+    @Store3
     public final void handlePreLogout() {
         this.selectedGuildIds.clear();
         markChanged();
@@ -251,7 +251,7 @@ public final class StoreGuildSelected extends StoreV2 {
 
     @Override // com.discord.stores.Store
     public void init(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         super.init(context);
         this.selectedGuildIds.clear();
         this.selectedGuildIds.addAll(this.selectedGuildIdsCache.get());
@@ -259,35 +259,35 @@ public final class StoreGuildSelected extends StoreV2 {
     }
 
     public final Observable<List<Long>> observeRecentSelectedGuildIds() {
-        Observable<List<Long>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
-        return observableR;
+        Observable<List<Long>> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C60731(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck\n        …  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final Observable<com.discord.models.guild.Guild> observeSelectedGuild() {
-        Observable<com.discord.models.guild.Guild> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this, this.guildStore}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
-        return observableR;
+        Observable<com.discord.models.guild.Guild> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this, this.guildStore}, false, null, null, new C60741(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck\n        …  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final Observable<Long> observeSelectedGuildId() {
-        Observable<Long> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
-        return observableR;
+        Observable<Long> observableM11112r = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new C60751(), 14, null).m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "observationDeck.connectR…  .distinctUntilChanged()");
+        return observableM11112r;
     }
 
     public final void set(long guildId) {
-        this.dispatcher.schedule(new AnonymousClass1(guildId));
+        this.dispatcher.schedule(new C60761(guildId));
     }
 
     @Override // com.discord.stores.StoreV2
-    @StoreThread
+    @Store3
     public void snapshotData() {
         super.snapshotData();
         if (this.selectedGuildIds.isEmpty()) {
             this.selectedGuildIds.add(0L);
         }
-        this.analyticsStore.trackGuildViewed(((Number) u.last(this.selectedGuildIds)).longValue());
+        this.analyticsStore.trackGuildViewed(((Number) _Collections.last(this.selectedGuildIds)).longValue());
         Set<Long> lurkingGuildIdsSync = this.stream.getLurking().getLurkingGuildIdsSync();
         LeastRecentlyAddedSet<Long> leastRecentlyAddedSet = new LeastRecentlyAddedSet<>(0, null, 3, null);
         LeastRecentlyAddedSet<Long> leastRecentlyAddedSet2 = this.selectedGuildIds;
@@ -299,15 +299,15 @@ public final class StoreGuildSelected extends StoreV2 {
         }
         leastRecentlyAddedSet.addAll(arrayList);
         this.selectedGuildIdsCache.set(leastRecentlyAddedSet, true);
-        this.selectedGuildIdsSnapshot = u.reversed(this.selectedGuildIds);
+        this.selectedGuildIdsSnapshot = _Collections.reversed(this.selectedGuildIds);
     }
 
     public StoreGuildSelected(StoreStream storeStream, Dispatcher dispatcher, StoreGuilds storeGuilds, StoreAnalytics storeAnalytics, ObservationDeck observationDeck) {
-        m.checkNotNullParameter(storeStream, "stream");
-        m.checkNotNullParameter(dispatcher, "dispatcher");
-        m.checkNotNullParameter(storeGuilds, "guildStore");
-        m.checkNotNullParameter(storeAnalytics, "analyticsStore");
-        m.checkNotNullParameter(observationDeck, "observationDeck");
+        Intrinsics3.checkNotNullParameter(storeStream, "stream");
+        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        Intrinsics3.checkNotNullParameter(storeGuilds, "guildStore");
+        Intrinsics3.checkNotNullParameter(storeAnalytics, "analyticsStore");
+        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
         this.stream = storeStream;
         this.dispatcher = dispatcher;
         this.guildStore = storeGuilds;

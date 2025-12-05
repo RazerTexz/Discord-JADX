@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackBotQuarantined.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackBotQuarantined implements AnalyticsSchema, TrackBaseReceiver {
+public final /* data */ class TrackBotQuarantined implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long botId = null;
     private final transient String analyticsSchemaTypeName = "bot_quarantined";
@@ -21,7 +21,7 @@ public final /* data */ class TrackBotQuarantined implements AnalyticsSchema, Tr
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackBotQuarantined) && m.areEqual(this.botId, ((TrackBotQuarantined) other).botId);
+            return (other instanceof TrackBotQuarantined) && Intrinsics3.areEqual(this.botId, ((TrackBotQuarantined) other).botId);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackBotQuarantined implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        return a.G(a.U("TrackBotQuarantined(botId="), this.botId, ")");
+        return outline.m819G(outline.m833U("TrackBotQuarantined(botId="), this.botId, ")");
     }
 }

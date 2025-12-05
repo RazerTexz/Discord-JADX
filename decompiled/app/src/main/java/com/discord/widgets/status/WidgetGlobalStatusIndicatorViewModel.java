@@ -1,10 +1,7 @@
 package com.discord.widgets.status;
 
-import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.stageinstance.StageInstance;
@@ -23,17 +20,14 @@ import com.discord.stores.StoreUserRelationships;
 import com.discord.stores.StoreVoiceChannelSelected;
 import com.discord.stores.StoreVoiceParticipants;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.updates.ObservationDeck4;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.media.AppSound;
 import com.discord.utilities.media.AppSoundManager;
-import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.streams.StreamContext;
 import com.discord.utilities.streams.StreamContextService;
 import com.discord.widgets.stage.StageChannelAPI;
-import d0.z.d.k;
-import d0.z.d.m;
-import d0.z.d.o;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
@@ -41,31 +35,37 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.FunctionReferenceImpl;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
+public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
     /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
-        public AnonymousClass1(WidgetGlobalStatusIndicatorViewModel widgetGlobalStatusIndicatorViewModel) {
+    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$1 */
+    public static final /* synthetic */ class C101081 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+        public C101081(WidgetGlobalStatusIndicatorViewModel widgetGlobalStatusIndicatorViewModel) {
             super(1, widgetGlobalStatusIndicatorViewModel, WidgetGlobalStatusIndicatorViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/status/WidgetGlobalStatusIndicatorViewModel$StoreState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "p1");
+            Intrinsics3.checkNotNullParameter(storeState, "p1");
             WidgetGlobalStatusIndicatorViewModel.access$handleStoreState((WidgetGlobalStatusIndicatorViewModel) this.receiver, storeState);
         }
     }
@@ -76,11 +76,11 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(StreamContextService streamContextService, StoreVoiceChannelSelected storeVoiceChannelSelected, StoreConnectivity storeConnectivity, StoreChannelsSelected storeChannelsSelected, StoreRtcConnection storeRtcConnection, StoreGuilds storeGuilds, StoreVoiceParticipants storeVoiceParticipants, StoreStageChannels storeStageChannels, StoreUserRelationships storeUserRelationships, StoreStageInstances storeStageInstances, ObservationDeck observationDeck) {
-            return storeVoiceChannelSelected.observeSelectedChannel().Y(new WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1(storeConnectivity, storeChannelsSelected, storeRtcConnection, storeGuilds, storeVoiceParticipants, streamContextService, storeStageChannels, observationDeck, storeUserRelationships, storeStageInstances));
+            return storeVoiceChannelSelected.observeSelectedChannel().m11099Y(new WidgetGlobalStatusIndicatorViewModel2(storeConnectivity, storeChannelsSelected, storeRtcConnection, storeGuilds, storeVoiceParticipants, streamContextService, storeStageChannels, observationDeck, storeUserRelationships, storeStageInstances));
         }
 
         public static /* synthetic */ Observable observeStoreState$default(Companion companion, StreamContextService streamContextService, StoreVoiceChannelSelected storeVoiceChannelSelected, StoreConnectivity storeConnectivity, StoreChannelsSelected storeChannelsSelected, StoreRtcConnection storeRtcConnection, StoreGuilds storeGuilds, StoreVoiceParticipants storeVoiceParticipants, StoreStageChannels storeStageChannels, StoreUserRelationships storeUserRelationships, StoreStageInstances storeStageInstances, ObservationDeck observationDeck, int i, Object obj) {
-            return companion.observeStoreState(streamContextService, storeVoiceChannelSelected, storeConnectivity, storeChannelsSelected, storeRtcConnection, storeGuilds, storeVoiceParticipants, storeStageChannels, storeUserRelationships, storeStageInstances, (i & 1024) != 0 ? ObservationDeckProvider.get() : observationDeck);
+            return companion.observeStoreState(streamContextService, storeVoiceChannelSelected, storeConnectivity, storeChannelsSelected, storeRtcConnection, storeGuilds, storeVoiceParticipants, storeStageChannels, storeUserRelationships, storeStageInstances, (i & 1024) != 0 ? ObservationDeck4.get() : observationDeck);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -107,11 +107,11 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public CallOngoing(Channel channel, Channel channel2, RtcConnection.StateChange stateChange, RtcConnection.Quality quality, Guild guild, Map<Long, StoreVoiceParticipants.VoiceUser> map, StreamContext streamContext, StageRequestToSpeakState stageRequestToSpeakState, int i, StageInstance stageInstance) {
                 super(null);
-                m.checkNotNullParameter(channel, "selectedVoiceChannel");
-                m.checkNotNullParameter(stateChange, "connectionStateChange");
-                m.checkNotNullParameter(quality, "connectionQuality");
-                m.checkNotNullParameter(map, "participants");
-                m.checkNotNullParameter(stageRequestToSpeakState, "requestToSpeakState");
+                Intrinsics3.checkNotNullParameter(channel, "selectedVoiceChannel");
+                Intrinsics3.checkNotNullParameter(stateChange, "connectionStateChange");
+                Intrinsics3.checkNotNullParameter(quality, "connectionQuality");
+                Intrinsics3.checkNotNullParameter(map, "participants");
+                Intrinsics3.checkNotNullParameter(stageRequestToSpeakState, "requestToSpeakState");
                 this.selectedVoiceChannel = channel;
                 this.selectedTextChannel = channel2;
                 this.connectionStateChange = stateChange;
@@ -178,11 +178,11 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public final CallOngoing copy(Channel selectedVoiceChannel, Channel selectedTextChannel, RtcConnection.StateChange connectionStateChange, RtcConnection.Quality connectionQuality, Guild guild, Map<Long, StoreVoiceParticipants.VoiceUser> participants, StreamContext streamContext, StageRequestToSpeakState requestToSpeakState, int blockedUsersOnStage, StageInstance stageInstance) {
-                m.checkNotNullParameter(selectedVoiceChannel, "selectedVoiceChannel");
-                m.checkNotNullParameter(connectionStateChange, "connectionStateChange");
-                m.checkNotNullParameter(connectionQuality, "connectionQuality");
-                m.checkNotNullParameter(participants, "participants");
-                m.checkNotNullParameter(requestToSpeakState, "requestToSpeakState");
+                Intrinsics3.checkNotNullParameter(selectedVoiceChannel, "selectedVoiceChannel");
+                Intrinsics3.checkNotNullParameter(connectionStateChange, "connectionStateChange");
+                Intrinsics3.checkNotNullParameter(connectionQuality, "connectionQuality");
+                Intrinsics3.checkNotNullParameter(participants, "participants");
+                Intrinsics3.checkNotNullParameter(requestToSpeakState, "requestToSpeakState");
                 return new CallOngoing(selectedVoiceChannel, selectedTextChannel, connectionStateChange, connectionQuality, guild, participants, streamContext, requestToSpeakState, blockedUsersOnStage, stageInstance);
             }
 
@@ -194,7 +194,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
                     return false;
                 }
                 CallOngoing callOngoing = (CallOngoing) other;
-                return m.areEqual(this.selectedVoiceChannel, callOngoing.selectedVoiceChannel) && m.areEqual(this.selectedTextChannel, callOngoing.selectedTextChannel) && m.areEqual(this.connectionStateChange, callOngoing.connectionStateChange) && m.areEqual(this.connectionQuality, callOngoing.connectionQuality) && m.areEqual(this.guild, callOngoing.guild) && m.areEqual(this.participants, callOngoing.participants) && m.areEqual(this.streamContext, callOngoing.streamContext) && m.areEqual(this.requestToSpeakState, callOngoing.requestToSpeakState) && this.blockedUsersOnStage == callOngoing.blockedUsersOnStage && m.areEqual(this.stageInstance, callOngoing.stageInstance);
+                return Intrinsics3.areEqual(this.selectedVoiceChannel, callOngoing.selectedVoiceChannel) && Intrinsics3.areEqual(this.selectedTextChannel, callOngoing.selectedTextChannel) && Intrinsics3.areEqual(this.connectionStateChange, callOngoing.connectionStateChange) && Intrinsics3.areEqual(this.connectionQuality, callOngoing.connectionQuality) && Intrinsics3.areEqual(this.guild, callOngoing.guild) && Intrinsics3.areEqual(this.participants, callOngoing.participants) && Intrinsics3.areEqual(this.streamContext, callOngoing.streamContext) && Intrinsics3.areEqual(this.requestToSpeakState, callOngoing.requestToSpeakState) && this.blockedUsersOnStage == callOngoing.blockedUsersOnStage && Intrinsics3.areEqual(this.stageInstance, callOngoing.stageInstance);
             }
 
             public final int getBlockedUsersOnStage() {
@@ -259,28 +259,28 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("CallOngoing(selectedVoiceChannel=");
-                sbU.append(this.selectedVoiceChannel);
-                sbU.append(", selectedTextChannel=");
-                sbU.append(this.selectedTextChannel);
-                sbU.append(", connectionStateChange=");
-                sbU.append(this.connectionStateChange);
-                sbU.append(", connectionQuality=");
-                sbU.append(this.connectionQuality);
-                sbU.append(", guild=");
-                sbU.append(this.guild);
-                sbU.append(", participants=");
-                sbU.append(this.participants);
-                sbU.append(", streamContext=");
-                sbU.append(this.streamContext);
-                sbU.append(", requestToSpeakState=");
-                sbU.append(this.requestToSpeakState);
-                sbU.append(", blockedUsersOnStage=");
-                sbU.append(this.blockedUsersOnStage);
-                sbU.append(", stageInstance=");
-                sbU.append(this.stageInstance);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("CallOngoing(selectedVoiceChannel=");
+                sbM833U.append(this.selectedVoiceChannel);
+                sbM833U.append(", selectedTextChannel=");
+                sbM833U.append(this.selectedTextChannel);
+                sbM833U.append(", connectionStateChange=");
+                sbM833U.append(this.connectionStateChange);
+                sbM833U.append(", connectionQuality=");
+                sbM833U.append(this.connectionQuality);
+                sbM833U.append(", guild=");
+                sbM833U.append(this.guild);
+                sbM833U.append(", participants=");
+                sbM833U.append(this.participants);
+                sbM833U.append(", streamContext=");
+                sbM833U.append(this.streamContext);
+                sbM833U.append(", requestToSpeakState=");
+                sbM833U.append(this.requestToSpeakState);
+                sbM833U.append(", blockedUsersOnStage=");
+                sbM833U.append(this.blockedUsersOnStage);
+                sbM833U.append(", stageInstance=");
+                sbM833U.append(this.stageInstance);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -291,7 +291,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public ConnectivityState(StoreConnectivity.DelayedState delayedState) {
                 super(null);
-                m.checkNotNullParameter(delayedState, "connectivityState");
+                Intrinsics3.checkNotNullParameter(delayedState, "connectivityState");
                 this.connectivityState = delayedState;
             }
 
@@ -308,13 +308,13 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public final ConnectivityState copy(StoreConnectivity.DelayedState connectivityState) {
-                m.checkNotNullParameter(connectivityState, "connectivityState");
+                Intrinsics3.checkNotNullParameter(connectivityState, "connectivityState");
                 return new ConnectivityState(connectivityState);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof ConnectivityState) && m.areEqual(this.connectivityState, ((ConnectivityState) other).connectivityState);
+                    return (other instanceof ConnectivityState) && Intrinsics3.areEqual(this.connectivityState, ((ConnectivityState) other).connectivityState);
                 }
                 return true;
             }
@@ -332,10 +332,10 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("ConnectivityState(connectivityState=");
-                sbU.append(this.connectivityState);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("ConnectivityState(connectivityState=");
+                sbM833U.append(this.connectivityState);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -366,9 +366,9 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public CallOngoing(Channel channel, Channel channel2, RtcConnection.State state, RtcConnection.Quality quality, Guild guild, int i, boolean z2, StreamContext streamContext) {
                 super(null);
-                m.checkNotNullParameter(channel, "selectedVoiceChannel");
-                m.checkNotNullParameter(state, "connectionState");
-                m.checkNotNullParameter(quality, "connectionQuality");
+                Intrinsics3.checkNotNullParameter(channel, "selectedVoiceChannel");
+                Intrinsics3.checkNotNullParameter(state, "connectionState");
+                Intrinsics3.checkNotNullParameter(quality, "connectionQuality");
                 this.selectedVoiceChannel = channel;
                 this.selectedTextChannel = channel2;
                 this.connectionState = state;
@@ -425,9 +425,9 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public final CallOngoing copy(Channel selectedVoiceChannel, Channel selectedTextChannel, RtcConnection.State connectionState, RtcConnection.Quality connectionQuality, Guild guild, int participants, boolean hasVideo, StreamContext streamContext) {
-                m.checkNotNullParameter(selectedVoiceChannel, "selectedVoiceChannel");
-                m.checkNotNullParameter(connectionState, "connectionState");
-                m.checkNotNullParameter(connectionQuality, "connectionQuality");
+                Intrinsics3.checkNotNullParameter(selectedVoiceChannel, "selectedVoiceChannel");
+                Intrinsics3.checkNotNullParameter(connectionState, "connectionState");
+                Intrinsics3.checkNotNullParameter(connectionQuality, "connectionQuality");
                 return new CallOngoing(selectedVoiceChannel, selectedTextChannel, connectionState, connectionQuality, guild, participants, hasVideo, streamContext);
             }
 
@@ -439,7 +439,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
                     return false;
                 }
                 CallOngoing callOngoing = (CallOngoing) other;
-                return m.areEqual(this.selectedVoiceChannel, callOngoing.selectedVoiceChannel) && m.areEqual(this.selectedTextChannel, callOngoing.selectedTextChannel) && m.areEqual(this.connectionState, callOngoing.connectionState) && m.areEqual(this.connectionQuality, callOngoing.connectionQuality) && m.areEqual(this.guild, callOngoing.guild) && this.participants == callOngoing.participants && this.hasVideo == callOngoing.hasVideo && m.areEqual(this.streamContext, callOngoing.streamContext);
+                return Intrinsics3.areEqual(this.selectedVoiceChannel, callOngoing.selectedVoiceChannel) && Intrinsics3.areEqual(this.selectedTextChannel, callOngoing.selectedTextChannel) && Intrinsics3.areEqual(this.connectionState, callOngoing.connectionState) && Intrinsics3.areEqual(this.connectionQuality, callOngoing.connectionQuality) && Intrinsics3.areEqual(this.guild, callOngoing.guild) && this.participants == callOngoing.participants && this.hasVideo == callOngoing.hasVideo && Intrinsics3.areEqual(this.streamContext, callOngoing.streamContext);
             }
 
             public final RtcConnection.Quality getConnectionQuality() {
@@ -503,24 +503,24 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("CallOngoing(selectedVoiceChannel=");
-                sbU.append(this.selectedVoiceChannel);
-                sbU.append(", selectedTextChannel=");
-                sbU.append(this.selectedTextChannel);
-                sbU.append(", connectionState=");
-                sbU.append(this.connectionState);
-                sbU.append(", connectionQuality=");
-                sbU.append(this.connectionQuality);
-                sbU.append(", guild=");
-                sbU.append(this.guild);
-                sbU.append(", participants=");
-                sbU.append(this.participants);
-                sbU.append(", hasVideo=");
-                sbU.append(this.hasVideo);
-                sbU.append(", streamContext=");
-                sbU.append(this.streamContext);
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("CallOngoing(selectedVoiceChannel=");
+                sbM833U.append(this.selectedVoiceChannel);
+                sbM833U.append(", selectedTextChannel=");
+                sbM833U.append(this.selectedTextChannel);
+                sbM833U.append(", connectionState=");
+                sbM833U.append(this.connectionState);
+                sbM833U.append(", connectionQuality=");
+                sbM833U.append(this.connectionQuality);
+                sbM833U.append(", guild=");
+                sbM833U.append(this.guild);
+                sbM833U.append(", participants=");
+                sbM833U.append(this.participants);
+                sbM833U.append(", hasVideo=");
+                sbM833U.append(this.hasVideo);
+                sbM833U.append(", streamContext=");
+                sbM833U.append(this.streamContext);
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -561,11 +561,11 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public int hashCode() {
-                return b.a(this.delay);
+                return C0002b.m3a(this.delay);
             }
 
             public String toString() {
-                return a.C(a.U("Connecting(delay="), this.delay, ")");
+                return outline.m815C(outline.m833U("Connecting(delay="), this.delay, ")");
             }
         }
 
@@ -634,20 +634,20 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
 
             /* JADX WARN: Multi-variable type inference failed */
             public int hashCode() {
-                int iA = b.a(this.delay) * 31;
+                int iM3a = C0002b.m3a(this.delay) * 31;
                 boolean z2 = this.airplaneMode;
                 int i = z2;
                 if (z2 != 0) {
                     i = 1;
                 }
-                return iA + i;
+                return iM3a + i;
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Offline(delay=");
-                sbU.append(this.delay);
-                sbU.append(", airplaneMode=");
-                return a.O(sbU, this.airplaneMode, ")");
+                StringBuilder sbM833U = outline.m833U("Offline(delay=");
+                sbM833U.append(this.delay);
+                sbM833U.append(", airplaneMode=");
+                return outline.m827O(sbM833U, this.airplaneMode, ")");
             }
         }
 
@@ -724,9 +724,9 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public final StageChannelOngoing copy(Channel selectedVoiceChannel, RtcConnection.State connectionState, RtcConnection.Quality connectionQuality, Guild guild, StreamContext streamContext, boolean isSpeaking, StageInstance stageInstance, boolean isInvitedToSpeak, boolean isAckingInvitation, int blockedUsersOnStage) {
-                m.checkNotNullParameter(selectedVoiceChannel, "selectedVoiceChannel");
-                m.checkNotNullParameter(connectionState, "connectionState");
-                m.checkNotNullParameter(connectionQuality, "connectionQuality");
+                Intrinsics3.checkNotNullParameter(selectedVoiceChannel, "selectedVoiceChannel");
+                Intrinsics3.checkNotNullParameter(connectionState, "connectionState");
+                Intrinsics3.checkNotNullParameter(connectionQuality, "connectionQuality");
                 return new StageChannelOngoing(selectedVoiceChannel, connectionState, connectionQuality, guild, streamContext, isSpeaking, stageInstance, isInvitedToSpeak, isAckingInvitation, blockedUsersOnStage);
             }
 
@@ -738,7 +738,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
                     return false;
                 }
                 StageChannelOngoing stageChannelOngoing = (StageChannelOngoing) other;
-                return m.areEqual(this.selectedVoiceChannel, stageChannelOngoing.selectedVoiceChannel) && m.areEqual(this.connectionState, stageChannelOngoing.connectionState) && m.areEqual(this.connectionQuality, stageChannelOngoing.connectionQuality) && m.areEqual(this.guild, stageChannelOngoing.guild) && m.areEqual(this.streamContext, stageChannelOngoing.streamContext) && this.isSpeaking == stageChannelOngoing.isSpeaking && m.areEqual(this.stageInstance, stageChannelOngoing.stageInstance) && this.isInvitedToSpeak == stageChannelOngoing.isInvitedToSpeak && this.isAckingInvitation == stageChannelOngoing.isAckingInvitation && this.blockedUsersOnStage == stageChannelOngoing.blockedUsersOnStage;
+                return Intrinsics3.areEqual(this.selectedVoiceChannel, stageChannelOngoing.selectedVoiceChannel) && Intrinsics3.areEqual(this.connectionState, stageChannelOngoing.connectionState) && Intrinsics3.areEqual(this.connectionQuality, stageChannelOngoing.connectionQuality) && Intrinsics3.areEqual(this.guild, stageChannelOngoing.guild) && Intrinsics3.areEqual(this.streamContext, stageChannelOngoing.streamContext) && this.isSpeaking == stageChannelOngoing.isSpeaking && Intrinsics3.areEqual(this.stageInstance, stageChannelOngoing.stageInstance) && this.isInvitedToSpeak == stageChannelOngoing.isInvitedToSpeak && this.isAckingInvitation == stageChannelOngoing.isAckingInvitation && this.blockedUsersOnStage == stageChannelOngoing.blockedUsersOnStage;
             }
 
             public final int getBlockedUsersOnStage() {
@@ -818,34 +818,34 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("StageChannelOngoing(selectedVoiceChannel=");
-                sbU.append(this.selectedVoiceChannel);
-                sbU.append(", connectionState=");
-                sbU.append(this.connectionState);
-                sbU.append(", connectionQuality=");
-                sbU.append(this.connectionQuality);
-                sbU.append(", guild=");
-                sbU.append(this.guild);
-                sbU.append(", streamContext=");
-                sbU.append(this.streamContext);
-                sbU.append(", isSpeaking=");
-                sbU.append(this.isSpeaking);
-                sbU.append(", stageInstance=");
-                sbU.append(this.stageInstance);
-                sbU.append(", isInvitedToSpeak=");
-                sbU.append(this.isInvitedToSpeak);
-                sbU.append(", isAckingInvitation=");
-                sbU.append(this.isAckingInvitation);
-                sbU.append(", blockedUsersOnStage=");
-                return a.B(sbU, this.blockedUsersOnStage, ")");
+                StringBuilder sbM833U = outline.m833U("StageChannelOngoing(selectedVoiceChannel=");
+                sbM833U.append(this.selectedVoiceChannel);
+                sbM833U.append(", connectionState=");
+                sbM833U.append(this.connectionState);
+                sbM833U.append(", connectionQuality=");
+                sbM833U.append(this.connectionQuality);
+                sbM833U.append(", guild=");
+                sbM833U.append(this.guild);
+                sbM833U.append(", streamContext=");
+                sbM833U.append(this.streamContext);
+                sbM833U.append(", isSpeaking=");
+                sbM833U.append(this.isSpeaking);
+                sbM833U.append(", stageInstance=");
+                sbM833U.append(this.stageInstance);
+                sbM833U.append(", isInvitedToSpeak=");
+                sbM833U.append(this.isInvitedToSpeak);
+                sbM833U.append(", isAckingInvitation=");
+                sbM833U.append(this.isAckingInvitation);
+                sbM833U.append(", blockedUsersOnStage=");
+                return outline.m814B(sbM833U, this.blockedUsersOnStage, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public StageChannelOngoing(Channel channel, RtcConnection.State state, RtcConnection.Quality quality, Guild guild, StreamContext streamContext, boolean z2, StageInstance stageInstance, boolean z3, boolean z4, int i) {
                 super(null);
-                m.checkNotNullParameter(channel, "selectedVoiceChannel");
-                m.checkNotNullParameter(state, "connectionState");
-                m.checkNotNullParameter(quality, "connectionQuality");
+                Intrinsics3.checkNotNullParameter(channel, "selectedVoiceChannel");
+                Intrinsics3.checkNotNullParameter(state, "connectionState");
+                Intrinsics3.checkNotNullParameter(quality, "connectionQuality");
                 this.selectedVoiceChannel = channel;
                 this.connectionState = state;
                 this.connectionQuality = quality;
@@ -888,13 +888,13 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
     }
 
     /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$ackStageInvitationToSpeak$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
+    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$ackStageInvitationToSpeak$1 */
+    public static final class C101101 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ boolean $accept;
         public final /* synthetic */ ViewState.StageChannelOngoing $stageState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(boolean z2, ViewState.StageChannelOngoing stageChannelOngoing) {
+        public C101101(boolean z2, ViewState.StageChannelOngoing stageChannelOngoing) {
             super(1);
             this.$accept = z2;
             this.$stageState = stageChannelOngoing;
@@ -903,7 +903,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Void r1) {
             invoke2(r1);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
@@ -933,7 +933,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
             StreamContextService streamContextService = new StreamContextService(null, null, null, null, null, null, null, null, 255, null);
             StoreStream.Companion companion2 = StoreStream.INSTANCE;
             observableObserveStoreState$default = Companion.observeStoreState$default(companion, streamContextService, companion2.getVoiceChannelSelected(), companion2.getConnectivity(), companion2.getChannelsSelected(), companion2.getRtcConnection(), companion2.getGuilds(), companion2.getVoiceParticipants(), companion2.getStageChannels(), companion2.getUserRelationships(), companion2.getStageInstances(), null, 1024, null);
-            m.checkNotNullExpressionValue(observableObserveStoreState$default, "observeStoreState(\n     ….getStageInstances(),\n  )");
+            Intrinsics3.checkNotNullExpressionValue(observableObserveStoreState$default, "observeStoreState(\n     ….getStageInstances(),\n  )");
         } else {
             observableObserveStoreState$default = observable;
         }
@@ -978,7 +978,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
         }
         if (storeState instanceof StoreState.CallOngoing) {
             StoreState.CallOngoing callOngoing = (StoreState.CallOngoing) storeState;
-            if (ChannelUtils.D(callOngoing.getSelectedVoiceChannel())) {
+            if (ChannelUtils.m7669D(callOngoing.getSelectedVoiceChannel())) {
                 boolean z3 = callOngoing.getRequestToSpeakState() == StageRequestToSpeakState.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
                 boolean z4 = callOngoing.getRequestToSpeakState() == StageRequestToSpeakState.ON_STAGE;
                 ViewState viewState = getViewState();
@@ -1019,16 +1019,16 @@ public final class WidgetGlobalStatusIndicatorViewModel extends d0<ViewState> {
         ViewState.StageChannelOngoing stageChannelOngoing = (ViewState.StageChannelOngoing) viewState;
         if (stageChannelOngoing != null) {
             updateViewState(ViewState.StageChannelOngoing.copy$default(stageChannelOngoing, null, null, null, null, null, false, null, false, true, 0, 767, null));
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(StageChannelAPI.INSTANCE.ackInvitationToSpeak(stageChannelOngoing.getSelectedVoiceChannel(), accept), false, 1, null), this, null, 2, null), WidgetGlobalStatusIndicatorViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(accept, stageChannelOngoing), 62, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(StageChannelAPI.INSTANCE.ackInvitationToSpeak(stageChannelOngoing.getSelectedVoiceChannel(), accept), false, 1, null), this, null, 2, null), WidgetGlobalStatusIndicatorViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C101101(accept, stageChannelOngoing), 62, (Object) null);
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGlobalStatusIndicatorViewModel(Observable<StoreState> observable) {
         super(ViewState.Inactive.INSTANCE);
-        m.checkNotNullParameter(observable, "storeStateObservable");
-        Observable<StoreState> observableR = observable.r();
-        m.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetGlobalStatusIndicatorViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        Observable<StoreState> observableM11112r = observable.m11112r();
+        Intrinsics3.checkNotNullExpressionValue(observableM11112r, "storeStateObservable\n   …  .distinctUntilChanged()");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableM11112r), this, null, 2, null), WidgetGlobalStatusIndicatorViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C101081(this), 62, (Object) null);
     }
 }

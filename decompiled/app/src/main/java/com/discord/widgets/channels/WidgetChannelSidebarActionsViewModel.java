@@ -1,9 +1,6 @@
 package com.discord.widgets.channels;
 
-import a0.a.a.b;
 import android.content.Context;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.models.domain.ModelNotificationSettings;
@@ -14,9 +11,7 @@ import com.discord.stores.StoreNavigation;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserGuildSettings;
-import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.m;
-import d0.z.d.o;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
@@ -24,31 +19,36 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p658rx.Observable;
 
 /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
+public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
     /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel$1 */
+    public static final class C73471 extends Lambda implements Function1<StoreState, Unit> {
+        public C73471() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetChannelSidebarActionsViewModel.access$handleStoreState(WidgetChannelSidebarActionsViewModel.this, storeState);
         }
     }
@@ -59,9 +59,9 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(StoreNavigation storeNavigation, StoreChannels storeChannels, StoreChannelsSelected storeChannelsSelected, StoreUserGuildSettings storeUserGuildSettings, StoreGuildsNsfw storeGuildNSFW, StoreUser storeUser) {
-            Observable observableY = storeNavigation.observeRightPanelState().Y(new WidgetChannelSidebarActionsViewModel$Companion$observeStoreState$1(storeChannelsSelected, storeUserGuildSettings, storeUser, storeChannels, storeGuildNSFW));
-            m.checkNotNullExpressionValue(observableY, "storeNavigation\n        …          }\n            }");
-            return observableY;
+            Observable observableM11099Y = storeNavigation.observeRightPanelState().m11099Y(new WidgetChannelSidebarActionsViewModel2(storeChannelsSelected, storeUserGuildSettings, storeUser, storeChannels, storeGuildNSFW));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "storeNavigation\n        …          }\n            }");
+            return observableM11099Y;
         }
 
         public static /* synthetic */ Observable observeStoreState$default(Companion companion, StoreNavigation storeNavigation, StoreChannels storeChannels, StoreChannelsSelected storeChannelsSelected, StoreUserGuildSettings storeUserGuildSettings, StoreGuildsNsfw storeGuildsNsfw, StoreUser storeUser, int i, Object obj) {
@@ -108,7 +108,7 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public ChannelFound(Channel channel, Channel channel2, ModelNotificationSettings modelNotificationSettings, boolean z2) {
                 super(null);
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 this.channel = channel;
                 this.parentChannel = channel2;
                 this.guildNotificationSettings = modelNotificationSettings;
@@ -152,7 +152,7 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
             }
 
             public final ChannelFound copy(Channel channel, Channel parentChannel, ModelNotificationSettings guildNotificationSettings, boolean disablePins) {
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 return new ChannelFound(channel, parentChannel, guildNotificationSettings, disablePins);
             }
 
@@ -164,7 +164,7 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
                     return false;
                 }
                 ChannelFound channelFound = (ChannelFound) other;
-                return m.areEqual(this.channel, channelFound.channel) && m.areEqual(this.parentChannel, channelFound.parentChannel) && m.areEqual(this.guildNotificationSettings, channelFound.guildNotificationSettings) && this.disablePins == channelFound.disablePins;
+                return Intrinsics3.areEqual(this.channel, channelFound.channel) && Intrinsics3.areEqual(this.parentChannel, channelFound.parentChannel) && Intrinsics3.areEqual(this.guildNotificationSettings, channelFound.guildNotificationSettings) && this.disablePins == channelFound.disablePins;
             }
 
             public final Channel getChannel() {
@@ -200,14 +200,14 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("ChannelFound(channel=");
-                sbU.append(this.channel);
-                sbU.append(", parentChannel=");
-                sbU.append(this.parentChannel);
-                sbU.append(", guildNotificationSettings=");
-                sbU.append(this.guildNotificationSettings);
-                sbU.append(", disablePins=");
-                return a.O(sbU, this.disablePins, ")");
+                StringBuilder sbM833U = outline.m833U("ChannelFound(channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(", parentChannel=");
+                sbM833U.append(this.parentChannel);
+                sbM833U.append(", guildNotificationSettings=");
+                sbM833U.append(this.guildNotificationSettings);
+                sbM833U.append(", disablePins=");
+                return outline.m827O(sbM833U, this.disablePins, ")");
             }
         }
 
@@ -342,13 +342,13 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
 
             /* JADX WARN: Multi-variable type inference failed */
             public int hashCode() {
-                int iA = (b.a(this.guildId) + (b.a(this.channelId) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.guildId) + (C0002b.m3a(this.channelId) * 31)) * 31;
                 boolean z2 = this.isMuted;
                 int i = z2;
                 if (z2 != 0) {
                     i = 1;
                 }
-                int i2 = (iA + i) * 31;
+                int i2 = (iM3a + i) * 31;
                 boolean z3 = this.hasUnreadPins;
                 int i3 = z3;
                 if (z3 != 0) {
@@ -400,24 +400,24 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Guild(channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", guildId=");
-                sbU.append(this.guildId);
-                sbU.append(", isMuted=");
-                sbU.append(this.isMuted);
-                sbU.append(", hasUnreadPins=");
-                sbU.append(this.hasUnreadPins);
-                sbU.append(", disablePins=");
-                sbU.append(this.disablePins);
-                sbU.append(", isThread=");
-                sbU.append(this.isThread);
-                sbU.append(", isGuildForumPost=");
-                sbU.append(this.isGuildForumPost);
-                sbU.append(", isGuildForumChannel=");
-                sbU.append(this.isGuildForumChannel);
-                sbU.append(", shouldHideChannelSidebar=");
-                return a.O(sbU, this.shouldHideChannelSidebar, ")");
+                StringBuilder sbM833U = outline.m833U("Guild(channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", guildId=");
+                sbM833U.append(this.guildId);
+                sbM833U.append(", isMuted=");
+                sbM833U.append(this.isMuted);
+                sbM833U.append(", hasUnreadPins=");
+                sbM833U.append(this.hasUnreadPins);
+                sbM833U.append(", disablePins=");
+                sbM833U.append(this.disablePins);
+                sbM833U.append(", isThread=");
+                sbM833U.append(this.isThread);
+                sbM833U.append(", isGuildForumPost=");
+                sbM833U.append(this.isGuildForumPost);
+                sbM833U.append(", isGuildForumChannel=");
+                sbM833U.append(this.isGuildForumChannel);
+                sbM833U.append(", shouldHideChannelSidebar=");
+                return outline.m827O(sbM833U, this.shouldHideChannelSidebar, ")");
             }
         }
 
@@ -473,13 +473,13 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
 
             /* JADX WARN: Multi-variable type inference failed */
             public int hashCode() {
-                int iA = b.a(this.channelId) * 31;
+                int iM3a = C0002b.m3a(this.channelId) * 31;
                 boolean z2 = this.isMuted;
                 int i = z2;
                 if (z2 != 0) {
                     i = 1;
                 }
-                return iA + i;
+                return iM3a + i;
             }
 
             public final boolean isMuted() {
@@ -487,10 +487,10 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("Private(channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", isMuted=");
-                return a.O(sbU, this.isMuted, ")");
+                StringBuilder sbM833U = outline.m833U("Private(channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", isMuted=");
+                return outline.m827O(sbM833U, this.isMuted, ")");
             }
         }
 
@@ -527,7 +527,7 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
         ModelNotificationSettings.ChannelOverride channelOverride;
         List<ModelNotificationSettings.ChannelOverride> channelOverrides;
         Object next;
-        if (m.areEqual(storeState, StoreState.ChannelNotFound.INSTANCE)) {
+        if (Intrinsics3.areEqual(storeState, StoreState.ChannelNotFound.INSTANCE)) {
             updateViewState(ViewState.Uninitialized.INSTANCE);
             return;
         }
@@ -536,15 +536,15 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
         }
         StoreState.ChannelFound channelFound = (StoreState.ChannelFound) storeState;
         boolean z2 = false;
-        if (!ChannelUtils.B(channelFound.getChannel())) {
+        if (!ChannelUtils.m7667B(channelFound.getChannel())) {
             long id2 = channelFound.getChannel().getId();
             long guildId = channelFound.getChannel().getGuildId();
             ModelNotificationSettings guildNotificationSettings = channelFound.getGuildNotificationSettings();
             boolean z3 = (guildNotificationSettings == null || (channelOverride = guildNotificationSettings.getChannelOverride(id2)) == null || !channelOverride.isMuted()) ? false : true;
             boolean disablePins = channelFound.getDisablePins();
-            boolean zH = ChannelUtils.H(channelFound.getChannel());
+            boolean zM7673H = ChannelUtils.m7673H(channelFound.getChannel());
             Channel parentChannel = channelFound.getParentChannel();
-            updateViewState(new ViewState.Guild(id2, guildId, z3, false, disablePins, zH, parentChannel != null && ChannelUtils.q(parentChannel), ChannelUtils.q(channelFound.getChannel()), ChannelUtils.o(channelFound.getChannel())));
+            updateViewState(new ViewState.Guild(id2, guildId, z3, false, disablePins, zM7673H, parentChannel != null && ChannelUtils.m7693q(parentChannel), ChannelUtils.m7693q(channelFound.getChannel()), ChannelUtils.m7691o(channelFound.getChannel())));
             return;
         }
         ModelNotificationSettings guildNotificationSettings2 = channelFound.getGuildNotificationSettings();
@@ -558,7 +558,7 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
                 }
                 next = it.next();
                 ModelNotificationSettings.ChannelOverride channelOverride2 = (ModelNotificationSettings.ChannelOverride) next;
-                m.checkNotNullExpressionValue(channelOverride2, "channelOverride");
+                Intrinsics3.checkNotNullExpressionValue(channelOverride2, "channelOverride");
                 if (channelOverride2.getChannelId() == id3) {
                     break;
                 }
@@ -574,7 +574,7 @@ public final class WidgetChannelSidebarActionsViewModel extends d0<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChannelSidebarActionsViewModel(Observable<StoreState> observable) {
         super(ViewState.Uninitialized.INSTANCE);
-        m.checkNotNullParameter(observable, "storeStateObservable");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetChannelSidebarActionsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetChannelSidebarActionsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C73471(), 62, (Object) null);
     }
 }

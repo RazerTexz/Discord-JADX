@@ -3,8 +3,6 @@ package com.discord.widgets.channels;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.core.app.NotificationCompat;
-import b.a.d.d0;
-import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.role.GuildRole;
@@ -20,22 +18,14 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreTabsNavigation;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserSettings;
-import com.discord.utilities.channel.GuildChannelIconType;
+import com.discord.utilities.channel.GuildChannelIconUtils;
+import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
-import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.textprocessing.DiscordParser;
 import com.discord.utilities.textprocessing.MessageParseState;
 import com.discord.utilities.textprocessing.MessagePreprocessor;
 import com.discord.utilities.textprocessing.MessageRenderContext;
 import com.discord.utilities.textprocessing.node.SpoilerNode;
-import d0.t.g0;
-import d0.t.n0;
-import d0.t.o0;
-import d0.t.u;
-import d0.z.d.m;
-import d0.z.d.o;
-import j0.k.b;
-import j0.l.e.k;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -48,12 +38,23 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.PublishSubject;
+import p001a0.p002a.p003a.C0002b;
+import p007b.p008a.p018d.AppViewModel;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p580t.MapsJVM;
+import p507d0.p580t.Sets5;
+import p507d0.p580t._Collections;
+import p507d0.p580t._Sets;
+import p507d0.p592z.p594d.Intrinsics3;
+import p507d0.p592z.p594d.Lambda;
+import p637j0.p641k.Func1;
+import p637j0.p642l.p647e.ScalarSynchronousObservable;
+import p658rx.Observable;
+import p658rx.subjects.PublishSubject;
 
 /* compiled from: WidgetChannelTopicViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelTopicViewModel extends d0<ViewState> {
+public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -65,11 +66,11 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
     private boolean wasRightPanelOpened;
 
     /* compiled from: WidgetChannelTopicViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements b<Companion.NavState, Observable<? extends StoreState>> {
-        public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
+    /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$1 */
+    public static final class C73631<T, R> implements Func1<Companion.NavState, Observable<? extends StoreState>> {
+        public static final C73631 INSTANCE = new C73631();
 
-        @Override // j0.k.b
+        @Override // p637j0.p641k.Func1
         public /* bridge */ /* synthetic */ Observable<? extends StoreState> call(Companion.NavState navState) {
             return call2(navState);
         }
@@ -78,31 +79,31 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
         public final Observable<? extends StoreState> call2(Companion.NavState navState) {
             if (navState.isRightPanelOpened()) {
                 Companion companion = WidgetChannelTopicViewModel.INSTANCE;
-                m.checkNotNullExpressionValue(navState, "navState");
+                Intrinsics3.checkNotNullExpressionValue(navState, "navState");
                 return Companion.observeStoreState$default(companion, navState, null, null, null, null, null, 62, null);
             }
             Companion companion2 = WidgetChannelTopicViewModel.INSTANCE;
-            m.checkNotNullExpressionValue(navState, "navState");
-            return Companion.observeStoreState$default(companion2, navState, null, null, null, null, null, 62, null).Z(1);
+            Intrinsics3.checkNotNullExpressionValue(navState, "navState");
+            return Companion.observeStoreState$default(companion2, navState, null, null, null, null, null, 62, null).m11100Z(1);
         }
     }
 
     /* compiled from: WidgetChannelTopicViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends o implements Function1<StoreState, Unit> {
-        public AnonymousClass2() {
+    /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$2 */
+    public static final class C73642 extends Lambda implements Function1<StoreState, Unit> {
+        public C73642() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(StoreState storeState) {
             invoke2(storeState);
-            return Unit.a;
+            return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            m.checkNotNullParameter(storeState, "storeState");
+            Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetChannelTopicViewModel.access$handleStoreState(WidgetChannelTopicViewModel.this, storeState);
         }
     }
@@ -179,10 +180,10 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("NavState(isRightPanelOpened=");
-                sbU.append(this.isRightPanelOpened);
-                sbU.append(", isOnHomeTab=");
-                return a.O(sbU, this.isOnHomeTab, ")");
+                StringBuilder sbM833U = outline.m833U("NavState(isRightPanelOpened=");
+                sbM833U.append(this.isRightPanelOpened);
+                sbM833U.append(", isOnHomeTab=");
+                return outline.m827O(sbM833U, this.isOnHomeTab, ")");
             }
         }
 
@@ -199,26 +200,26 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
 
         private final Observable<StoreState.Guild> mapChannelToGuildStoreState(Channel channel, NavState navState, StoreChannels storeChannels, StoreUser storeUsers, StoreGuilds storeGuilds, StoreUserSettings storeUserSettings) {
             long guildId = channel.getGuildId();
-            Observable<StoreState.Guild> observableG = Observable.g(StoreChannels.observeChannelsForGuild$default(storeChannels, guildId, null, 2, null), storeUsers.observeAllUsers(), storeGuilds.observeComputed(guildId), storeGuilds.observeRoles(guildId), StoreUserSettings.observeIsAnimatedEmojisEnabled$default(storeUserSettings, false, 1, null), new WidgetChannelTopicViewModel$Companion$mapChannelToGuildStoreState$1(channel, navState));
-            m.checkNotNullExpressionValue(observableG, "Observable.combineLatest…HomeTab\n        )\n      }");
-            return observableG;
+            Observable<StoreState.Guild> observableM11072g = Observable.m11072g(StoreChannels.observeChannelsForGuild$default(storeChannels, guildId, null, 2, null), storeUsers.observeAllUsers(), storeGuilds.observeComputed(guildId), storeGuilds.observeRoles(guildId), StoreUserSettings.observeIsAnimatedEmojisEnabled$default(storeUserSettings, false, 1, null), new WidgetChannelTopicViewModel2(channel, navState));
+            Intrinsics3.checkNotNullExpressionValue(observableM11072g, "Observable.combineLatest…HomeTab\n        )\n      }");
+            return observableM11072g;
         }
 
         private final Observable<StoreState> mapChannelToPrivateStoreState(Channel channel, NavState navState, StoreGuilds storeGuilds, StoreUserSettings storeUserSettings) {
-            if (ChannelUtils.p(channel)) {
-                k kVar = new k(new StoreState.GDM(channel, storeUserSettings.getIsDeveloperMode(), navState.isRightPanelOpened(), navState.isOnHomeTab()));
-                m.checkNotNullExpressionValue(kVar, "Observable.just(\n       …            )\n          )");
-                return kVar;
+            if (ChannelUtils.m7692p(channel)) {
+                ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(new StoreState.GDM(channel, storeUserSettings.getIsDeveloperMode(), navState.isRightPanelOpened(), navState.isOnHomeTab()));
+                Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(\n       …            )\n          )");
+                return scalarSynchronousObservable;
             }
-            Observable observableG = storeGuilds.observeComputed().G(new WidgetChannelTopicViewModel$Companion$mapChannelToPrivateStoreState$1(channel, storeUserSettings, navState));
-            m.checkNotNullExpressionValue(observableG, "storeGuilds.observeCompu…            )\n          }");
-            return observableG;
+            Observable observableM11083G = storeGuilds.observeComputed().m11083G(new WidgetChannelTopicViewModel3(channel, storeUserSettings, navState));
+            Intrinsics3.checkNotNullExpressionValue(observableM11083G, "storeGuilds.observeCompu…            )\n          }");
+            return observableM11083G;
         }
 
         private final Observable<NavState> observeNavState(StoreNavigation storeNavigation, StoreTabsNavigation storeTabsNavigation) {
-            Observable<NavState> observableJ = Observable.j(storeNavigation.observeRightPanelState().G(WidgetChannelTopicViewModel$Companion$observeNavState$1.INSTANCE), storeTabsNavigation.observeSelectedTab().G(WidgetChannelTopicViewModel$Companion$observeNavState$2.INSTANCE), WidgetChannelTopicViewModel$Companion$observeNavState$3.INSTANCE);
-            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…sOpen, isOnHomeTab)\n    }");
-            return observableJ;
+            Observable<NavState> observableM11076j = Observable.m11076j(storeNavigation.observeRightPanelState().m11083G(WidgetChannelTopicViewModel4.INSTANCE), storeTabsNavigation.observeSelectedTab().m11083G(WidgetChannelTopicViewModel5.INSTANCE), WidgetChannelTopicViewModel6.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observableM11076j, "Observable.combineLatest…sOpen, isOnHomeTab)\n    }");
+            return observableM11076j;
         }
 
         public static /* synthetic */ Observable observeNavState$default(Companion companion, StoreNavigation storeNavigation, StoreTabsNavigation storeTabsNavigation, int i, Object obj) {
@@ -232,9 +233,9 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(NavState navState, StoreChannelsSelected storeChannelsSelected, StoreChannels storeChannels, StoreUser storeUsers, StoreGuilds storeGuilds, StoreUserSettings storeUserSettings) {
-            Observable observableY = storeChannelsSelected.observeSelectedChannel().Y(new WidgetChannelTopicViewModel$Companion$observeStoreState$1(navState, storeGuilds, storeUserSettings, storeChannels, storeUsers));
-            m.checkNotNullExpressionValue(observableY, "storeChannelsSelected\n  …            }\n          }");
-            return observableY;
+            Observable observableM11099Y = storeChannelsSelected.observeSelectedChannel().m11099Y(new WidgetChannelTopicViewModel7(navState, storeGuilds, storeUserSettings, storeChannels, storeUsers));
+            Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "storeChannelsSelected\n  …            }\n          }");
+            return observableM11099Y;
         }
 
         public static /* synthetic */ Observable observeStoreState$default(Companion companion, NavState navState, StoreChannelsSelected storeChannelsSelected, StoreChannels storeChannels, StoreUser storeUser, StoreGuilds storeGuilds, StoreUserSettings storeUserSettings, int i, Object obj) {
@@ -291,37 +292,38 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
         private final boolean isRightPanelOpened;
 
         /* compiled from: WidgetChannelTopicViewModel.kt */
-        public static final /* data */ class DM extends StoreState {
+        /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$StoreState$DM */
+        public static final /* data */ class C7367DM extends StoreState {
             private final Channel channel;
             private final boolean developerModeEnabled;
             private final Collection<Map<Long, GuildMember>> guildMembers;
             private final boolean isOnHomeTab;
             private final boolean isRightPanelOpened;
 
-            public /* synthetic */ DM(Channel channel, Collection collection, boolean z2, boolean z3, boolean z4, int i, DefaultConstructorMarker defaultConstructorMarker) {
+            public /* synthetic */ C7367DM(Channel channel, Collection collection, boolean z2, boolean z3, boolean z4, int i, DefaultConstructorMarker defaultConstructorMarker) {
                 this(channel, collection, (i & 4) != 0 ? false : z2, z3, z4);
             }
 
-            public static /* synthetic */ DM copy$default(DM dm, Channel channel, Collection collection, boolean z2, boolean z3, boolean z4, int i, Object obj) {
+            public static /* synthetic */ C7367DM copy$default(C7367DM c7367dm, Channel channel, Collection collection, boolean z2, boolean z3, boolean z4, int i, Object obj) {
                 if ((i & 1) != 0) {
-                    channel = dm.channel;
+                    channel = c7367dm.channel;
                 }
                 if ((i & 2) != 0) {
-                    collection = dm.guildMembers;
+                    collection = c7367dm.guildMembers;
                 }
                 Collection collection2 = collection;
                 if ((i & 4) != 0) {
-                    z2 = dm.developerModeEnabled;
+                    z2 = c7367dm.developerModeEnabled;
                 }
                 boolean z5 = z2;
                 if ((i & 8) != 0) {
-                    z3 = dm.getIsRightPanelOpened();
+                    z3 = c7367dm.getIsRightPanelOpened();
                 }
                 boolean z6 = z3;
                 if ((i & 16) != 0) {
-                    z4 = dm.getIsOnHomeTab();
+                    z4 = c7367dm.getIsOnHomeTab();
                 }
-                return dm.copy(channel, collection2, z5, z6, z4);
+                return c7367dm.copy(channel, collection2, z5, z6, z4);
             }
 
             /* renamed from: component1, reason: from getter */
@@ -346,21 +348,21 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 return getIsOnHomeTab();
             }
 
-            public final DM copy(Channel channel, Collection<? extends Map<Long, GuildMember>> guildMembers, boolean developerModeEnabled, boolean isRightPanelOpened, boolean isOnHomeTab) {
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(guildMembers, "guildMembers");
-                return new DM(channel, guildMembers, developerModeEnabled, isRightPanelOpened, isOnHomeTab);
+            public final C7367DM copy(Channel channel, Collection<? extends Map<Long, GuildMember>> guildMembers, boolean developerModeEnabled, boolean isRightPanelOpened, boolean isOnHomeTab) {
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+                return new C7367DM(channel, guildMembers, developerModeEnabled, isRightPanelOpened, isOnHomeTab);
             }
 
             public boolean equals(Object other) {
                 if (this == other) {
                     return true;
                 }
-                if (!(other instanceof DM)) {
+                if (!(other instanceof C7367DM)) {
                     return false;
                 }
-                DM dm = (DM) other;
-                return m.areEqual(this.channel, dm.channel) && m.areEqual(this.guildMembers, dm.guildMembers) && this.developerModeEnabled == dm.developerModeEnabled && getIsRightPanelOpened() == dm.getIsRightPanelOpened() && getIsOnHomeTab() == dm.getIsOnHomeTab();
+                C7367DM c7367dm = (C7367DM) other;
+                return Intrinsics3.areEqual(this.channel, c7367dm.channel) && Intrinsics3.areEqual(this.guildMembers, c7367dm.guildMembers) && this.developerModeEnabled == c7367dm.developerModeEnabled && getIsRightPanelOpened() == c7367dm.getIsRightPanelOpened() && getIsOnHomeTab() == c7367dm.getIsOnHomeTab();
             }
 
             public final Channel getChannel() {
@@ -417,26 +419,26 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("DM(channel=");
-                sbU.append(this.channel);
-                sbU.append(", guildMembers=");
-                sbU.append(this.guildMembers);
-                sbU.append(", developerModeEnabled=");
-                sbU.append(this.developerModeEnabled);
-                sbU.append(", isRightPanelOpened=");
-                sbU.append(getIsRightPanelOpened());
-                sbU.append(", isOnHomeTab=");
-                sbU.append(getIsOnHomeTab());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("DM(channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(", guildMembers=");
+                sbM833U.append(this.guildMembers);
+                sbM833U.append(", developerModeEnabled=");
+                sbM833U.append(this.developerModeEnabled);
+                sbM833U.append(", isRightPanelOpened=");
+                sbM833U.append(getIsRightPanelOpened());
+                sbM833U.append(", isOnHomeTab=");
+                sbM833U.append(getIsOnHomeTab());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             /* JADX WARN: Multi-variable type inference failed */
-            public DM(Channel channel, Collection<? extends Map<Long, GuildMember>> collection, boolean z2, boolean z3, boolean z4) {
+            public C7367DM(Channel channel, Collection<? extends Map<Long, GuildMember>> collection, boolean z2, boolean z3, boolean z4) {
                 super(z3, z4, null);
-                m.checkNotNullParameter(channel, "channel");
-                m.checkNotNullParameter(collection, "guildMembers");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(collection, "guildMembers");
                 this.channel = channel;
                 this.guildMembers = collection;
                 this.developerModeEnabled = z2;
@@ -491,7 +493,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public final GDM copy(Channel channel, boolean developerModeEnabled, boolean isRightPanelOpened, boolean isOnHomeTab) {
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 return new GDM(channel, developerModeEnabled, isRightPanelOpened, isOnHomeTab);
             }
 
@@ -503,7 +505,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     return false;
                 }
                 GDM gdm = (GDM) other;
-                return m.areEqual(this.channel, gdm.channel) && this.developerModeEnabled == gdm.developerModeEnabled && getIsRightPanelOpened() == gdm.getIsRightPanelOpened() && getIsOnHomeTab() == gdm.getIsOnHomeTab();
+                return Intrinsics3.areEqual(this.channel, gdm.channel) && this.developerModeEnabled == gdm.developerModeEnabled && getIsRightPanelOpened() == gdm.getIsRightPanelOpened() && getIsOnHomeTab() == gdm.getIsOnHomeTab();
             }
 
             public final Channel getChannel() {
@@ -554,22 +556,22 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("GDM(channel=");
-                sbU.append(this.channel);
-                sbU.append(", developerModeEnabled=");
-                sbU.append(this.developerModeEnabled);
-                sbU.append(", isRightPanelOpened=");
-                sbU.append(getIsRightPanelOpened());
-                sbU.append(", isOnHomeTab=");
-                sbU.append(getIsOnHomeTab());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("GDM(channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(", developerModeEnabled=");
+                sbM833U.append(this.developerModeEnabled);
+                sbM833U.append(", isRightPanelOpened=");
+                sbM833U.append(getIsRightPanelOpened());
+                sbM833U.append(", isOnHomeTab=");
+                sbM833U.append(getIsOnHomeTab());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public GDM(Channel channel, boolean z2, boolean z3, boolean z4) {
                 super(z3, z4, null);
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 this.channel = channel;
                 this.developerModeEnabled = z2;
                 this.isRightPanelOpened = z3;
@@ -585,27 +587,27 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             /* compiled from: WidgetChannelTopicViewModel.kt */
             public static final /* data */ class DefaultTopic extends Guild {
                 private final Channel channel;
-                private final GuildChannelIconType channelIconType;
+                private final GuildChannelIconUtils channelIconType;
                 private final boolean isOnHomeTab;
                 private final boolean isRightPanelOpened;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public DefaultTopic(Channel channel, GuildChannelIconType guildChannelIconType, boolean z2, boolean z3) {
+                public DefaultTopic(Channel channel, GuildChannelIconUtils guildChannelIconUtils, boolean z2, boolean z3) {
                     super(z2, z3, null);
-                    m.checkNotNullParameter(channel, "channel");
-                    m.checkNotNullParameter(guildChannelIconType, "channelIconType");
+                    Intrinsics3.checkNotNullParameter(channel, "channel");
+                    Intrinsics3.checkNotNullParameter(guildChannelIconUtils, "channelIconType");
                     this.channel = channel;
-                    this.channelIconType = guildChannelIconType;
+                    this.channelIconType = guildChannelIconUtils;
                     this.isRightPanelOpened = z2;
                     this.isOnHomeTab = z3;
                 }
 
-                public static /* synthetic */ DefaultTopic copy$default(DefaultTopic defaultTopic, Channel channel, GuildChannelIconType guildChannelIconType, boolean z2, boolean z3, int i, Object obj) {
+                public static /* synthetic */ DefaultTopic copy$default(DefaultTopic defaultTopic, Channel channel, GuildChannelIconUtils guildChannelIconUtils, boolean z2, boolean z3, int i, Object obj) {
                     if ((i & 1) != 0) {
                         channel = defaultTopic.channel;
                     }
                     if ((i & 2) != 0) {
-                        guildChannelIconType = defaultTopic.channelIconType;
+                        guildChannelIconUtils = defaultTopic.channelIconType;
                     }
                     if ((i & 4) != 0) {
                         z2 = defaultTopic.getIsRightPanelOpened();
@@ -613,7 +615,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     if ((i & 8) != 0) {
                         z3 = defaultTopic.getIsOnHomeTab();
                     }
-                    return defaultTopic.copy(channel, guildChannelIconType, z2, z3);
+                    return defaultTopic.copy(channel, guildChannelIconUtils, z2, z3);
                 }
 
                 /* renamed from: component1, reason: from getter */
@@ -622,7 +624,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 }
 
                 /* renamed from: component2, reason: from getter */
-                public final GuildChannelIconType getChannelIconType() {
+                public final GuildChannelIconUtils getChannelIconType() {
                     return this.channelIconType;
                 }
 
@@ -634,9 +636,9 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     return getIsOnHomeTab();
                 }
 
-                public final DefaultTopic copy(Channel channel, GuildChannelIconType channelIconType, boolean isRightPanelOpened, boolean isOnHomeTab) {
-                    m.checkNotNullParameter(channel, "channel");
-                    m.checkNotNullParameter(channelIconType, "channelIconType");
+                public final DefaultTopic copy(Channel channel, GuildChannelIconUtils channelIconType, boolean isRightPanelOpened, boolean isOnHomeTab) {
+                    Intrinsics3.checkNotNullParameter(channel, "channel");
+                    Intrinsics3.checkNotNullParameter(channelIconType, "channelIconType");
                     return new DefaultTopic(channel, channelIconType, isRightPanelOpened, isOnHomeTab);
                 }
 
@@ -648,14 +650,14 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                         return false;
                     }
                     DefaultTopic defaultTopic = (DefaultTopic) other;
-                    return m.areEqual(this.channel, defaultTopic.channel) && m.areEqual(this.channelIconType, defaultTopic.channelIconType) && getIsRightPanelOpened() == defaultTopic.getIsRightPanelOpened() && getIsOnHomeTab() == defaultTopic.getIsOnHomeTab();
+                    return Intrinsics3.areEqual(this.channel, defaultTopic.channel) && Intrinsics3.areEqual(this.channelIconType, defaultTopic.channelIconType) && getIsRightPanelOpened() == defaultTopic.getIsRightPanelOpened() && getIsOnHomeTab() == defaultTopic.getIsOnHomeTab();
                 }
 
                 public final Channel getChannel() {
                     return this.channel;
                 }
 
-                public final GuildChannelIconType getChannelIconType() {
+                public final GuildChannelIconUtils getChannelIconType() {
                     return this.channelIconType;
                 }
 
@@ -669,8 +671,8 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 public int hashCode() {
                     Channel channel = this.channel;
                     int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
-                    GuildChannelIconType guildChannelIconType = this.channelIconType;
-                    int iHashCode2 = (iHashCode + (guildChannelIconType != null ? guildChannelIconType.hashCode() : 0)) * 31;
+                    GuildChannelIconUtils guildChannelIconUtils = this.channelIconType;
+                    int iHashCode2 = (iHashCode + (guildChannelIconUtils != null ? guildChannelIconUtils.hashCode() : 0)) * 31;
                     boolean isRightPanelOpened = getIsRightPanelOpened();
                     ?? r1 = isRightPanelOpened;
                     if (isRightPanelOpened) {
@@ -694,16 +696,16 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("DefaultTopic(channel=");
-                    sbU.append(this.channel);
-                    sbU.append(", channelIconType=");
-                    sbU.append(this.channelIconType);
-                    sbU.append(", isRightPanelOpened=");
-                    sbU.append(getIsRightPanelOpened());
-                    sbU.append(", isOnHomeTab=");
-                    sbU.append(getIsOnHomeTab());
-                    sbU.append(")");
-                    return sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("DefaultTopic(channel=");
+                    sbM833U.append(this.channel);
+                    sbM833U.append(", channelIconType=");
+                    sbM833U.append(this.channelIconType);
+                    sbM833U.append(", isRightPanelOpened=");
+                    sbM833U.append(getIsRightPanelOpened());
+                    sbM833U.append(", isOnHomeTab=");
+                    sbM833U.append(getIsOnHomeTab());
+                    sbM833U.append(")");
+                    return sbM833U.toString();
                 }
             }
 
@@ -711,7 +713,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             public static final /* data */ class Topic extends Guild {
                 private final boolean allowAnimatedEmojis;
                 private final Channel channel;
-                private final GuildChannelIconType channelIconType;
+                private final GuildChannelIconUtils channelIconType;
                 private final Map<Long, Channel> channels;
                 private final boolean isOnHomeTab;
                 private final boolean isRightPanelOpened;
@@ -721,17 +723,17 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 /* JADX WARN: Multi-variable type inference failed */
-                public Topic(Channel channel, Map<Long, Channel> map, GuildChannelIconType guildChannelIconType, Map<Long, ? extends User> map2, Map<Long, GuildMember> map3, Map<Long, GuildRole> map4, boolean z2, boolean z3, boolean z4) {
+                public Topic(Channel channel, Map<Long, Channel> map, GuildChannelIconUtils guildChannelIconUtils, Map<Long, ? extends User> map2, Map<Long, GuildMember> map3, Map<Long, GuildRole> map4, boolean z2, boolean z3, boolean z4) {
                     super(z3, z4, null);
-                    m.checkNotNullParameter(channel, "channel");
-                    m.checkNotNullParameter(map, "channels");
-                    m.checkNotNullParameter(guildChannelIconType, "channelIconType");
-                    m.checkNotNullParameter(map2, "users");
-                    m.checkNotNullParameter(map3, "members");
-                    m.checkNotNullParameter(map4, "roles");
+                    Intrinsics3.checkNotNullParameter(channel, "channel");
+                    Intrinsics3.checkNotNullParameter(map, "channels");
+                    Intrinsics3.checkNotNullParameter(guildChannelIconUtils, "channelIconType");
+                    Intrinsics3.checkNotNullParameter(map2, "users");
+                    Intrinsics3.checkNotNullParameter(map3, "members");
+                    Intrinsics3.checkNotNullParameter(map4, "roles");
                     this.channel = channel;
                     this.channels = map;
-                    this.channelIconType = guildChannelIconType;
+                    this.channelIconType = guildChannelIconUtils;
                     this.users = map2;
                     this.members = map3;
                     this.roles = map4;
@@ -740,8 +742,8 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     this.isOnHomeTab = z4;
                 }
 
-                public static /* synthetic */ Topic copy$default(Topic topic, Channel channel, Map map, GuildChannelIconType guildChannelIconType, Map map2, Map map3, Map map4, boolean z2, boolean z3, boolean z4, int i, Object obj) {
-                    return topic.copy((i & 1) != 0 ? topic.channel : channel, (i & 2) != 0 ? topic.channels : map, (i & 4) != 0 ? topic.channelIconType : guildChannelIconType, (i & 8) != 0 ? topic.users : map2, (i & 16) != 0 ? topic.members : map3, (i & 32) != 0 ? topic.roles : map4, (i & 64) != 0 ? topic.allowAnimatedEmojis : z2, (i & 128) != 0 ? topic.getIsRightPanelOpened() : z3, (i & 256) != 0 ? topic.getIsOnHomeTab() : z4);
+                public static /* synthetic */ Topic copy$default(Topic topic, Channel channel, Map map, GuildChannelIconUtils guildChannelIconUtils, Map map2, Map map3, Map map4, boolean z2, boolean z3, boolean z4, int i, Object obj) {
+                    return topic.copy((i & 1) != 0 ? topic.channel : channel, (i & 2) != 0 ? topic.channels : map, (i & 4) != 0 ? topic.channelIconType : guildChannelIconUtils, (i & 8) != 0 ? topic.users : map2, (i & 16) != 0 ? topic.members : map3, (i & 32) != 0 ? topic.roles : map4, (i & 64) != 0 ? topic.allowAnimatedEmojis : z2, (i & 128) != 0 ? topic.getIsRightPanelOpened() : z3, (i & 256) != 0 ? topic.getIsOnHomeTab() : z4);
                 }
 
                 /* renamed from: component1, reason: from getter */
@@ -754,7 +756,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 }
 
                 /* renamed from: component3, reason: from getter */
-                public final GuildChannelIconType getChannelIconType() {
+                public final GuildChannelIconUtils getChannelIconType() {
                     return this.channelIconType;
                 }
 
@@ -783,13 +785,13 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     return getIsOnHomeTab();
                 }
 
-                public final Topic copy(Channel channel, Map<Long, Channel> channels, GuildChannelIconType channelIconType, Map<Long, ? extends User> users, Map<Long, GuildMember> members, Map<Long, GuildRole> roles, boolean allowAnimatedEmojis, boolean isRightPanelOpened, boolean isOnHomeTab) {
-                    m.checkNotNullParameter(channel, "channel");
-                    m.checkNotNullParameter(channels, "channels");
-                    m.checkNotNullParameter(channelIconType, "channelIconType");
-                    m.checkNotNullParameter(users, "users");
-                    m.checkNotNullParameter(members, "members");
-                    m.checkNotNullParameter(roles, "roles");
+                public final Topic copy(Channel channel, Map<Long, Channel> channels, GuildChannelIconUtils channelIconType, Map<Long, ? extends User> users, Map<Long, GuildMember> members, Map<Long, GuildRole> roles, boolean allowAnimatedEmojis, boolean isRightPanelOpened, boolean isOnHomeTab) {
+                    Intrinsics3.checkNotNullParameter(channel, "channel");
+                    Intrinsics3.checkNotNullParameter(channels, "channels");
+                    Intrinsics3.checkNotNullParameter(channelIconType, "channelIconType");
+                    Intrinsics3.checkNotNullParameter(users, "users");
+                    Intrinsics3.checkNotNullParameter(members, "members");
+                    Intrinsics3.checkNotNullParameter(roles, "roles");
                     return new Topic(channel, channels, channelIconType, users, members, roles, allowAnimatedEmojis, isRightPanelOpened, isOnHomeTab);
                 }
 
@@ -801,7 +803,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                         return false;
                     }
                     Topic topic = (Topic) other;
-                    return m.areEqual(this.channel, topic.channel) && m.areEqual(this.channels, topic.channels) && m.areEqual(this.channelIconType, topic.channelIconType) && m.areEqual(this.users, topic.users) && m.areEqual(this.members, topic.members) && m.areEqual(this.roles, topic.roles) && this.allowAnimatedEmojis == topic.allowAnimatedEmojis && getIsRightPanelOpened() == topic.getIsRightPanelOpened() && getIsOnHomeTab() == topic.getIsOnHomeTab();
+                    return Intrinsics3.areEqual(this.channel, topic.channel) && Intrinsics3.areEqual(this.channels, topic.channels) && Intrinsics3.areEqual(this.channelIconType, topic.channelIconType) && Intrinsics3.areEqual(this.users, topic.users) && Intrinsics3.areEqual(this.members, topic.members) && Intrinsics3.areEqual(this.roles, topic.roles) && this.allowAnimatedEmojis == topic.allowAnimatedEmojis && getIsRightPanelOpened() == topic.getIsRightPanelOpened() && getIsOnHomeTab() == topic.getIsOnHomeTab();
                 }
 
                 public final boolean getAllowAnimatedEmojis() {
@@ -812,7 +814,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     return this.channel;
                 }
 
-                public final GuildChannelIconType getChannelIconType() {
+                public final GuildChannelIconUtils getChannelIconType() {
                     return this.channelIconType;
                 }
 
@@ -845,8 +847,8 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
                     Map<Long, Channel> map = this.channels;
                     int iHashCode2 = (iHashCode + (map != null ? map.hashCode() : 0)) * 31;
-                    GuildChannelIconType guildChannelIconType = this.channelIconType;
-                    int iHashCode3 = (iHashCode2 + (guildChannelIconType != null ? guildChannelIconType.hashCode() : 0)) * 31;
+                    GuildChannelIconUtils guildChannelIconUtils = this.channelIconType;
+                    int iHashCode3 = (iHashCode2 + (guildChannelIconUtils != null ? guildChannelIconUtils.hashCode() : 0)) * 31;
                     Map<Long, User> map2 = this.users;
                     int iHashCode4 = (iHashCode3 + (map2 != null ? map2.hashCode() : 0)) * 31;
                     Map<Long, GuildMember> map3 = this.members;
@@ -882,26 +884,26 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("Topic(channel=");
-                    sbU.append(this.channel);
-                    sbU.append(", channels=");
-                    sbU.append(this.channels);
-                    sbU.append(", channelIconType=");
-                    sbU.append(this.channelIconType);
-                    sbU.append(", users=");
-                    sbU.append(this.users);
-                    sbU.append(", members=");
-                    sbU.append(this.members);
-                    sbU.append(", roles=");
-                    sbU.append(this.roles);
-                    sbU.append(", allowAnimatedEmojis=");
-                    sbU.append(this.allowAnimatedEmojis);
-                    sbU.append(", isRightPanelOpened=");
-                    sbU.append(getIsRightPanelOpened());
-                    sbU.append(", isOnHomeTab=");
-                    sbU.append(getIsOnHomeTab());
-                    sbU.append(")");
-                    return sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("Topic(channel=");
+                    sbM833U.append(this.channel);
+                    sbM833U.append(", channels=");
+                    sbM833U.append(this.channels);
+                    sbM833U.append(", channelIconType=");
+                    sbM833U.append(this.channelIconType);
+                    sbM833U.append(", users=");
+                    sbM833U.append(this.users);
+                    sbM833U.append(", members=");
+                    sbM833U.append(this.members);
+                    sbM833U.append(", roles=");
+                    sbM833U.append(this.roles);
+                    sbM833U.append(", allowAnimatedEmojis=");
+                    sbM833U.append(this.allowAnimatedEmojis);
+                    sbM833U.append(", isRightPanelOpened=");
+                    sbM833U.append(getIsRightPanelOpened());
+                    sbM833U.append(", isOnHomeTab=");
+                    sbM833U.append(getIsOnHomeTab());
+                    sbM833U.append(")");
+                    return sbM833U.toString();
                 }
             }
 
@@ -1003,12 +1005,12 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("NoChannel(isRightPanelOpened=");
-                sbU.append(getIsRightPanelOpened());
-                sbU.append(", isOnHomeTab=");
-                sbU.append(getIsOnHomeTab());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("NoChannel(isRightPanelOpened=");
+                sbM833U.append(getIsRightPanelOpened());
+                sbM833U.append(", isOnHomeTab=");
+                sbM833U.append(getIsOnHomeTab());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -1038,7 +1040,8 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
         private final boolean isRightPanelOpened;
 
         /* compiled from: WidgetChannelTopicViewModel.kt */
-        public static final /* data */ class DM extends ViewState {
+        /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$ViewState$DM */
+        public static final /* data */ class C7368DM extends ViewState {
             private final long channelId;
             private final boolean developerModeEnabled;
             private final List<GuildMember> guildMembers;
@@ -1048,12 +1051,12 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             private final Set<String> recipientNicknames;
             private final Long recipientUserId;
 
-            public /* synthetic */ DM(String str, Long l, Set set, List list, long j, boolean z2, boolean z3, boolean z4, int i, DefaultConstructorMarker defaultConstructorMarker) {
+            public /* synthetic */ C7368DM(String str, Long l, Set set, List list, long j, boolean z2, boolean z3, boolean z4, int i, DefaultConstructorMarker defaultConstructorMarker) {
                 this(str, l, set, list, j, (i & 32) != 0 ? false : z2, z3, z4);
             }
 
-            public static /* synthetic */ DM copy$default(DM dm, String str, Long l, Set set, List list, long j, boolean z2, boolean z3, boolean z4, int i, Object obj) {
-                return dm.copy((i & 1) != 0 ? dm.recipientName : str, (i & 2) != 0 ? dm.recipientUserId : l, (i & 4) != 0 ? dm.recipientNicknames : set, (i & 8) != 0 ? dm.guildMembers : list, (i & 16) != 0 ? dm.channelId : j, (i & 32) != 0 ? dm.developerModeEnabled : z2, (i & 64) != 0 ? dm.getIsRightPanelOpened() : z3, (i & 128) != 0 ? dm.getIsOnHomeTab() : z4);
+            public static /* synthetic */ C7368DM copy$default(C7368DM c7368dm, String str, Long l, Set set, List list, long j, boolean z2, boolean z3, boolean z4, int i, Object obj) {
+                return c7368dm.copy((i & 1) != 0 ? c7368dm.recipientName : str, (i & 2) != 0 ? c7368dm.recipientUserId : l, (i & 4) != 0 ? c7368dm.recipientNicknames : set, (i & 8) != 0 ? c7368dm.guildMembers : list, (i & 16) != 0 ? c7368dm.channelId : j, (i & 32) != 0 ? c7368dm.developerModeEnabled : z2, (i & 64) != 0 ? c7368dm.getIsRightPanelOpened() : z3, (i & 128) != 0 ? c7368dm.getIsOnHomeTab() : z4);
             }
 
             /* renamed from: component1, reason: from getter */
@@ -1092,21 +1095,21 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 return getIsOnHomeTab();
             }
 
-            public final DM copy(String recipientName, Long recipientUserId, Set<String> recipientNicknames, List<GuildMember> guildMembers, long channelId, boolean developerModeEnabled, boolean isRightPanelOpened, boolean isOnHomeTab) {
-                m.checkNotNullParameter(recipientNicknames, "recipientNicknames");
-                m.checkNotNullParameter(guildMembers, "guildMembers");
-                return new DM(recipientName, recipientUserId, recipientNicknames, guildMembers, channelId, developerModeEnabled, isRightPanelOpened, isOnHomeTab);
+            public final C7368DM copy(String recipientName, Long recipientUserId, Set<String> recipientNicknames, List<GuildMember> guildMembers, long channelId, boolean developerModeEnabled, boolean isRightPanelOpened, boolean isOnHomeTab) {
+                Intrinsics3.checkNotNullParameter(recipientNicknames, "recipientNicknames");
+                Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+                return new C7368DM(recipientName, recipientUserId, recipientNicknames, guildMembers, channelId, developerModeEnabled, isRightPanelOpened, isOnHomeTab);
             }
 
             public boolean equals(Object other) {
                 if (this == other) {
                     return true;
                 }
-                if (!(other instanceof DM)) {
+                if (!(other instanceof C7368DM)) {
                     return false;
                 }
-                DM dm = (DM) other;
-                return m.areEqual(this.recipientName, dm.recipientName) && m.areEqual(this.recipientUserId, dm.recipientUserId) && m.areEqual(this.recipientNicknames, dm.recipientNicknames) && m.areEqual(this.guildMembers, dm.guildMembers) && this.channelId == dm.channelId && this.developerModeEnabled == dm.developerModeEnabled && getIsRightPanelOpened() == dm.getIsRightPanelOpened() && getIsOnHomeTab() == dm.getIsOnHomeTab();
+                C7368DM c7368dm = (C7368DM) other;
+                return Intrinsics3.areEqual(this.recipientName, c7368dm.recipientName) && Intrinsics3.areEqual(this.recipientUserId, c7368dm.recipientUserId) && Intrinsics3.areEqual(this.recipientNicknames, c7368dm.recipientNicknames) && Intrinsics3.areEqual(this.guildMembers, c7368dm.guildMembers) && this.channelId == c7368dm.channelId && this.developerModeEnabled == c7368dm.developerModeEnabled && getIsRightPanelOpened() == c7368dm.getIsRightPanelOpened() && getIsOnHomeTab() == c7368dm.getIsOnHomeTab();
             }
 
             public final long getChannelId() {
@@ -1149,13 +1152,13 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 Set<String> set = this.recipientNicknames;
                 int iHashCode3 = (iHashCode2 + (set != null ? set.hashCode() : 0)) * 31;
                 List<GuildMember> list = this.guildMembers;
-                int iA = (a0.a.a.b.a(this.channelId) + ((iHashCode3 + (list != null ? list.hashCode() : 0)) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.channelId) + ((iHashCode3 + (list != null ? list.hashCode() : 0)) * 31)) * 31;
                 ?? r0 = this.developerModeEnabled;
                 int i = r0;
                 if (r0 != 0) {
                     i = 1;
                 }
-                int i2 = (iA + i) * 31;
+                int i2 = (iM3a + i) * 31;
                 boolean isRightPanelOpened = getIsRightPanelOpened();
                 ?? r02 = isRightPanelOpened;
                 if (isRightPanelOpened) {
@@ -1179,31 +1182,31 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("DM(recipientName=");
-                sbU.append(this.recipientName);
-                sbU.append(", recipientUserId=");
-                sbU.append(this.recipientUserId);
-                sbU.append(", recipientNicknames=");
-                sbU.append(this.recipientNicknames);
-                sbU.append(", guildMembers=");
-                sbU.append(this.guildMembers);
-                sbU.append(", channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", developerModeEnabled=");
-                sbU.append(this.developerModeEnabled);
-                sbU.append(", isRightPanelOpened=");
-                sbU.append(getIsRightPanelOpened());
-                sbU.append(", isOnHomeTab=");
-                sbU.append(getIsOnHomeTab());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("DM(recipientName=");
+                sbM833U.append(this.recipientName);
+                sbM833U.append(", recipientUserId=");
+                sbM833U.append(this.recipientUserId);
+                sbM833U.append(", recipientNicknames=");
+                sbM833U.append(this.recipientNicknames);
+                sbM833U.append(", guildMembers=");
+                sbM833U.append(this.guildMembers);
+                sbM833U.append(", channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", developerModeEnabled=");
+                sbM833U.append(this.developerModeEnabled);
+                sbM833U.append(", isRightPanelOpened=");
+                sbM833U.append(getIsRightPanelOpened());
+                sbM833U.append(", isOnHomeTab=");
+                sbM833U.append(getIsOnHomeTab());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public DM(String str, Long l, Set<String> set, List<GuildMember> list, long j, boolean z2, boolean z3, boolean z4) {
+            public C7368DM(String str, Long l, Set<String> set, List<GuildMember> list, long j, boolean z2, boolean z3, boolean z4) {
                 super(z3, z4, null);
-                m.checkNotNullParameter(set, "recipientNicknames");
-                m.checkNotNullParameter(list, "guildMembers");
+                Intrinsics3.checkNotNullParameter(set, "recipientNicknames");
+                Intrinsics3.checkNotNullParameter(list, "guildMembers");
                 this.recipientName = str;
                 this.recipientUserId = l;
                 this.recipientNicknames = set;
@@ -1273,7 +1276,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public final GDM copy(Channel channel, long channelId, boolean developerModeEnabled, boolean isRightPanelOpened, boolean isOnHomeTab) {
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 return new GDM(channel, channelId, developerModeEnabled, isRightPanelOpened, isOnHomeTab);
             }
 
@@ -1285,7 +1288,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     return false;
                 }
                 GDM gdm = (GDM) other;
-                return m.areEqual(this.channel, gdm.channel) && this.channelId == gdm.channelId && this.developerModeEnabled == gdm.developerModeEnabled && getIsRightPanelOpened() == gdm.getIsRightPanelOpened() && getIsOnHomeTab() == gdm.getIsOnHomeTab();
+                return Intrinsics3.areEqual(this.channel, gdm.channel) && this.channelId == gdm.channelId && this.developerModeEnabled == gdm.developerModeEnabled && getIsRightPanelOpened() == gdm.getIsRightPanelOpened() && getIsOnHomeTab() == gdm.getIsOnHomeTab();
             }
 
             public final Channel getChannel() {
@@ -1310,13 +1313,13 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 Channel channel = this.channel;
-                int iA = (a0.a.a.b.a(this.channelId) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
+                int iM3a = (C0002b.m3a(this.channelId) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
                 ?? r0 = this.developerModeEnabled;
                 int i = r0;
                 if (r0 != 0) {
                     i = 1;
                 }
-                int i2 = (iA + i) * 31;
+                int i2 = (iM3a + i) * 31;
                 boolean isRightPanelOpened = getIsRightPanelOpened();
                 ?? r02 = isRightPanelOpened;
                 if (isRightPanelOpened) {
@@ -1340,24 +1343,24 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("GDM(channel=");
-                sbU.append(this.channel);
-                sbU.append(", channelId=");
-                sbU.append(this.channelId);
-                sbU.append(", developerModeEnabled=");
-                sbU.append(this.developerModeEnabled);
-                sbU.append(", isRightPanelOpened=");
-                sbU.append(getIsRightPanelOpened());
-                sbU.append(", isOnHomeTab=");
-                sbU.append(getIsOnHomeTab());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("GDM(channel=");
+                sbM833U.append(this.channel);
+                sbM833U.append(", channelId=");
+                sbM833U.append(this.channelId);
+                sbM833U.append(", developerModeEnabled=");
+                sbM833U.append(this.developerModeEnabled);
+                sbM833U.append(", isRightPanelOpened=");
+                sbM833U.append(getIsRightPanelOpened());
+                sbM833U.append(", isOnHomeTab=");
+                sbM833U.append(getIsOnHomeTab());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public GDM(Channel channel, long j, boolean z2, boolean z3, boolean z4) {
                 super(z3, z4, null);
-                m.checkNotNullParameter(channel, "channel");
+                Intrinsics3.checkNotNullParameter(channel, "channel");
                 this.channel = channel;
                 this.channelId = j;
                 this.developerModeEnabled = z2;
@@ -1368,31 +1371,31 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
 
         /* compiled from: WidgetChannelTopicViewModel.kt */
         public static abstract class Guild extends ViewState {
-            private final GuildChannelIconType channelIconType;
+            private final GuildChannelIconUtils channelIconType;
             private final boolean isOnHomeTab;
             private final boolean isRightPanelOpened;
 
             /* compiled from: WidgetChannelTopicViewModel.kt */
             public static final /* data */ class DefaultTopic extends Guild {
                 private final Channel channel;
-                private final GuildChannelIconType channelIconType;
+                private final GuildChannelIconUtils channelIconType;
                 private final boolean isOnHomeTab;
                 private final boolean isRightPanelOpened;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public DefaultTopic(GuildChannelIconType guildChannelIconType, Channel channel, boolean z2, boolean z3) {
-                    super(guildChannelIconType, z2, z3, null);
-                    m.checkNotNullParameter(guildChannelIconType, "channelIconType");
-                    m.checkNotNullParameter(channel, "channel");
-                    this.channelIconType = guildChannelIconType;
+                public DefaultTopic(GuildChannelIconUtils guildChannelIconUtils, Channel channel, boolean z2, boolean z3) {
+                    super(guildChannelIconUtils, z2, z3, null);
+                    Intrinsics3.checkNotNullParameter(guildChannelIconUtils, "channelIconType");
+                    Intrinsics3.checkNotNullParameter(channel, "channel");
+                    this.channelIconType = guildChannelIconUtils;
                     this.channel = channel;
                     this.isRightPanelOpened = z2;
                     this.isOnHomeTab = z3;
                 }
 
-                public static /* synthetic */ DefaultTopic copy$default(DefaultTopic defaultTopic, GuildChannelIconType guildChannelIconType, Channel channel, boolean z2, boolean z3, int i, Object obj) {
+                public static /* synthetic */ DefaultTopic copy$default(DefaultTopic defaultTopic, GuildChannelIconUtils guildChannelIconUtils, Channel channel, boolean z2, boolean z3, int i, Object obj) {
                     if ((i & 1) != 0) {
-                        guildChannelIconType = defaultTopic.getChannelIconType();
+                        guildChannelIconUtils = defaultTopic.getChannelIconType();
                     }
                     if ((i & 2) != 0) {
                         channel = defaultTopic.channel;
@@ -1403,10 +1406,10 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     if ((i & 8) != 0) {
                         z3 = defaultTopic.getIsOnHomeTab();
                     }
-                    return defaultTopic.copy(guildChannelIconType, channel, z2, z3);
+                    return defaultTopic.copy(guildChannelIconUtils, channel, z2, z3);
                 }
 
-                public final GuildChannelIconType component1() {
+                public final GuildChannelIconUtils component1() {
                     return getChannelIconType();
                 }
 
@@ -1423,9 +1426,9 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     return getIsOnHomeTab();
                 }
 
-                public final DefaultTopic copy(GuildChannelIconType channelIconType, Channel channel, boolean isRightPanelOpened, boolean isOnHomeTab) {
-                    m.checkNotNullParameter(channelIconType, "channelIconType");
-                    m.checkNotNullParameter(channel, "channel");
+                public final DefaultTopic copy(GuildChannelIconUtils channelIconType, Channel channel, boolean isRightPanelOpened, boolean isOnHomeTab) {
+                    Intrinsics3.checkNotNullParameter(channelIconType, "channelIconType");
+                    Intrinsics3.checkNotNullParameter(channel, "channel");
                     return new DefaultTopic(channelIconType, channel, isRightPanelOpened, isOnHomeTab);
                 }
 
@@ -1437,7 +1440,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                         return false;
                     }
                     DefaultTopic defaultTopic = (DefaultTopic) other;
-                    return m.areEqual(getChannelIconType(), defaultTopic.getChannelIconType()) && m.areEqual(this.channel, defaultTopic.channel) && getIsRightPanelOpened() == defaultTopic.getIsRightPanelOpened() && getIsOnHomeTab() == defaultTopic.getIsOnHomeTab();
+                    return Intrinsics3.areEqual(getChannelIconType(), defaultTopic.getChannelIconType()) && Intrinsics3.areEqual(this.channel, defaultTopic.channel) && getIsRightPanelOpened() == defaultTopic.getIsRightPanelOpened() && getIsOnHomeTab() == defaultTopic.getIsOnHomeTab();
                 }
 
                 public final Channel getChannel() {
@@ -1445,12 +1448,12 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState.Guild
-                public GuildChannelIconType getChannelIconType() {
+                public GuildChannelIconUtils getChannelIconType() {
                     return this.channelIconType;
                 }
 
                 public int hashCode() {
-                    GuildChannelIconType channelIconType = getChannelIconType();
+                    GuildChannelIconUtils channelIconType = getChannelIconType();
                     int iHashCode = (channelIconType != null ? channelIconType.hashCode() : 0) * 31;
                     Channel channel = this.channel;
                     int iHashCode2 = (iHashCode + (channel != null ? channel.hashCode() : 0)) * 31;
@@ -1477,16 +1480,16 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("DefaultTopic(channelIconType=");
-                    sbU.append(getChannelIconType());
-                    sbU.append(", channel=");
-                    sbU.append(this.channel);
-                    sbU.append(", isRightPanelOpened=");
-                    sbU.append(getIsRightPanelOpened());
-                    sbU.append(", isOnHomeTab=");
-                    sbU.append(getIsOnHomeTab());
-                    sbU.append(")");
-                    return sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("DefaultTopic(channelIconType=");
+                    sbM833U.append(getChannelIconType());
+                    sbM833U.append(", channel=");
+                    sbM833U.append(this.channel);
+                    sbM833U.append(", isRightPanelOpened=");
+                    sbM833U.append(getIsRightPanelOpened());
+                    sbM833U.append(", isOnHomeTab=");
+                    sbM833U.append(getIsOnHomeTab());
+                    sbM833U.append(")");
+                    return sbM833U.toString();
                 }
             }
 
@@ -1495,7 +1498,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 private final boolean allowAnimatedEmojis;
                 private final List<Node<MessageRenderContext>> ast;
                 private final Channel channel;
-                private final GuildChannelIconType channelIconType;
+                private final GuildChannelIconUtils channelIconType;
                 private final Map<Long, String> channelNames;
                 private final boolean isLinkifyConflicting;
                 private final boolean isOnHomeTab;
@@ -1505,15 +1508,15 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 private final Map<Long, String> userNames;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public Topic(String str, Map<Long, String> map, Map<Long, String> map2, Map<Long, GuildRole> map3, boolean z2, List<Node<MessageRenderContext>> list, boolean z3, GuildChannelIconType guildChannelIconType, Channel channel, boolean z4, boolean z5) {
-                    super(guildChannelIconType, z4, z5, null);
-                    m.checkNotNullParameter(str, "rawTopicString");
-                    m.checkNotNullParameter(map, "channelNames");
-                    m.checkNotNullParameter(map2, "userNames");
-                    m.checkNotNullParameter(map3, "roles");
-                    m.checkNotNullParameter(list, "ast");
-                    m.checkNotNullParameter(guildChannelIconType, "channelIconType");
-                    m.checkNotNullParameter(channel, "channel");
+                public Topic(String str, Map<Long, String> map, Map<Long, String> map2, Map<Long, GuildRole> map3, boolean z2, List<Node<MessageRenderContext>> list, boolean z3, GuildChannelIconUtils guildChannelIconUtils, Channel channel, boolean z4, boolean z5) {
+                    super(guildChannelIconUtils, z4, z5, null);
+                    Intrinsics3.checkNotNullParameter(str, "rawTopicString");
+                    Intrinsics3.checkNotNullParameter(map, "channelNames");
+                    Intrinsics3.checkNotNullParameter(map2, "userNames");
+                    Intrinsics3.checkNotNullParameter(map3, "roles");
+                    Intrinsics3.checkNotNullParameter(list, "ast");
+                    Intrinsics3.checkNotNullParameter(guildChannelIconUtils, "channelIconType");
+                    Intrinsics3.checkNotNullParameter(channel, "channel");
                     this.rawTopicString = str;
                     this.channelNames = map;
                     this.userNames = map2;
@@ -1521,14 +1524,14 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     this.allowAnimatedEmojis = z2;
                     this.ast = list;
                     this.isLinkifyConflicting = z3;
-                    this.channelIconType = guildChannelIconType;
+                    this.channelIconType = guildChannelIconUtils;
                     this.channel = channel;
                     this.isRightPanelOpened = z4;
                     this.isOnHomeTab = z5;
                 }
 
-                public static /* synthetic */ Topic copy$default(Topic topic, String str, Map map, Map map2, Map map3, boolean z2, List list, boolean z3, GuildChannelIconType guildChannelIconType, Channel channel, boolean z4, boolean z5, int i, Object obj) {
-                    return topic.copy((i & 1) != 0 ? topic.rawTopicString : str, (i & 2) != 0 ? topic.channelNames : map, (i & 4) != 0 ? topic.userNames : map2, (i & 8) != 0 ? topic.roles : map3, (i & 16) != 0 ? topic.allowAnimatedEmojis : z2, (i & 32) != 0 ? topic.ast : list, (i & 64) != 0 ? topic.isLinkifyConflicting : z3, (i & 128) != 0 ? topic.getChannelIconType() : guildChannelIconType, (i & 256) != 0 ? topic.channel : channel, (i & 512) != 0 ? topic.getIsRightPanelOpened() : z4, (i & 1024) != 0 ? topic.getIsOnHomeTab() : z5);
+                public static /* synthetic */ Topic copy$default(Topic topic, String str, Map map, Map map2, Map map3, boolean z2, List list, boolean z3, GuildChannelIconUtils guildChannelIconUtils, Channel channel, boolean z4, boolean z5, int i, Object obj) {
+                    return topic.copy((i & 1) != 0 ? topic.rawTopicString : str, (i & 2) != 0 ? topic.channelNames : map, (i & 4) != 0 ? topic.userNames : map2, (i & 8) != 0 ? topic.roles : map3, (i & 16) != 0 ? topic.allowAnimatedEmojis : z2, (i & 32) != 0 ? topic.ast : list, (i & 64) != 0 ? topic.isLinkifyConflicting : z3, (i & 128) != 0 ? topic.getChannelIconType() : guildChannelIconUtils, (i & 256) != 0 ? topic.channel : channel, (i & 512) != 0 ? topic.getIsRightPanelOpened() : z4, (i & 1024) != 0 ? topic.getIsOnHomeTab() : z5);
                 }
 
                 /* renamed from: component1, reason: from getter */
@@ -1570,7 +1573,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     return this.isLinkifyConflicting;
                 }
 
-                public final GuildChannelIconType component8() {
+                public final GuildChannelIconUtils component8() {
                     return getChannelIconType();
                 }
 
@@ -1579,14 +1582,14 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                     return this.channel;
                 }
 
-                public final Topic copy(String rawTopicString, Map<Long, String> channelNames, Map<Long, String> userNames, Map<Long, GuildRole> roles, boolean allowAnimatedEmojis, List<Node<MessageRenderContext>> ast, boolean isLinkifyConflicting, GuildChannelIconType channelIconType, Channel channel, boolean isRightPanelOpened, boolean isOnHomeTab) {
-                    m.checkNotNullParameter(rawTopicString, "rawTopicString");
-                    m.checkNotNullParameter(channelNames, "channelNames");
-                    m.checkNotNullParameter(userNames, "userNames");
-                    m.checkNotNullParameter(roles, "roles");
-                    m.checkNotNullParameter(ast, "ast");
-                    m.checkNotNullParameter(channelIconType, "channelIconType");
-                    m.checkNotNullParameter(channel, "channel");
+                public final Topic copy(String rawTopicString, Map<Long, String> channelNames, Map<Long, String> userNames, Map<Long, GuildRole> roles, boolean allowAnimatedEmojis, List<Node<MessageRenderContext>> ast, boolean isLinkifyConflicting, GuildChannelIconUtils channelIconType, Channel channel, boolean isRightPanelOpened, boolean isOnHomeTab) {
+                    Intrinsics3.checkNotNullParameter(rawTopicString, "rawTopicString");
+                    Intrinsics3.checkNotNullParameter(channelNames, "channelNames");
+                    Intrinsics3.checkNotNullParameter(userNames, "userNames");
+                    Intrinsics3.checkNotNullParameter(roles, "roles");
+                    Intrinsics3.checkNotNullParameter(ast, "ast");
+                    Intrinsics3.checkNotNullParameter(channelIconType, "channelIconType");
+                    Intrinsics3.checkNotNullParameter(channel, "channel");
                     return new Topic(rawTopicString, channelNames, userNames, roles, allowAnimatedEmojis, ast, isLinkifyConflicting, channelIconType, channel, isRightPanelOpened, isOnHomeTab);
                 }
 
@@ -1598,7 +1601,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                         return false;
                     }
                     Topic topic = (Topic) other;
-                    return m.areEqual(this.rawTopicString, topic.rawTopicString) && m.areEqual(this.channelNames, topic.channelNames) && m.areEqual(this.userNames, topic.userNames) && m.areEqual(this.roles, topic.roles) && this.allowAnimatedEmojis == topic.allowAnimatedEmojis && m.areEqual(this.ast, topic.ast) && this.isLinkifyConflicting == topic.isLinkifyConflicting && m.areEqual(getChannelIconType(), topic.getChannelIconType()) && m.areEqual(this.channel, topic.channel) && getIsRightPanelOpened() == topic.getIsRightPanelOpened() && getIsOnHomeTab() == topic.getIsOnHomeTab();
+                    return Intrinsics3.areEqual(this.rawTopicString, topic.rawTopicString) && Intrinsics3.areEqual(this.channelNames, topic.channelNames) && Intrinsics3.areEqual(this.userNames, topic.userNames) && Intrinsics3.areEqual(this.roles, topic.roles) && this.allowAnimatedEmojis == topic.allowAnimatedEmojis && Intrinsics3.areEqual(this.ast, topic.ast) && this.isLinkifyConflicting == topic.isLinkifyConflicting && Intrinsics3.areEqual(getChannelIconType(), topic.getChannelIconType()) && Intrinsics3.areEqual(this.channel, topic.channel) && getIsRightPanelOpened() == topic.getIsRightPanelOpened() && getIsOnHomeTab() == topic.getIsOnHomeTab();
                 }
 
                 public final boolean getAllowAnimatedEmojis() {
@@ -1614,7 +1617,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState.Guild
-                public GuildChannelIconType getChannelIconType() {
+                public GuildChannelIconUtils getChannelIconType() {
                     return this.channelIconType;
                 }
 
@@ -1658,7 +1661,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                         i3 = 1;
                     }
                     int i4 = (iHashCode5 + i3) * 31;
-                    GuildChannelIconType channelIconType = getChannelIconType();
+                    GuildChannelIconUtils channelIconType = getChannelIconType();
                     int iHashCode6 = (i4 + (channelIconType != null ? channelIconType.hashCode() : 0)) * 31;
                     Channel channel = this.channel;
                     int iHashCode7 = (iHashCode6 + (channel != null ? channel.hashCode() : 0)) * 31;
@@ -1689,38 +1692,38 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = a.U("Topic(rawTopicString=");
-                    sbU.append(this.rawTopicString);
-                    sbU.append(", channelNames=");
-                    sbU.append(this.channelNames);
-                    sbU.append(", userNames=");
-                    sbU.append(this.userNames);
-                    sbU.append(", roles=");
-                    sbU.append(this.roles);
-                    sbU.append(", allowAnimatedEmojis=");
-                    sbU.append(this.allowAnimatedEmojis);
-                    sbU.append(", ast=");
-                    sbU.append(this.ast);
-                    sbU.append(", isLinkifyConflicting=");
-                    sbU.append(this.isLinkifyConflicting);
-                    sbU.append(", channelIconType=");
-                    sbU.append(getChannelIconType());
-                    sbU.append(", channel=");
-                    sbU.append(this.channel);
-                    sbU.append(", isRightPanelOpened=");
-                    sbU.append(getIsRightPanelOpened());
-                    sbU.append(", isOnHomeTab=");
-                    sbU.append(getIsOnHomeTab());
-                    sbU.append(")");
-                    return sbU.toString();
+                    StringBuilder sbM833U = outline.m833U("Topic(rawTopicString=");
+                    sbM833U.append(this.rawTopicString);
+                    sbM833U.append(", channelNames=");
+                    sbM833U.append(this.channelNames);
+                    sbM833U.append(", userNames=");
+                    sbM833U.append(this.userNames);
+                    sbM833U.append(", roles=");
+                    sbM833U.append(this.roles);
+                    sbM833U.append(", allowAnimatedEmojis=");
+                    sbM833U.append(this.allowAnimatedEmojis);
+                    sbM833U.append(", ast=");
+                    sbM833U.append(this.ast);
+                    sbM833U.append(", isLinkifyConflicting=");
+                    sbM833U.append(this.isLinkifyConflicting);
+                    sbM833U.append(", channelIconType=");
+                    sbM833U.append(getChannelIconType());
+                    sbM833U.append(", channel=");
+                    sbM833U.append(this.channel);
+                    sbM833U.append(", isRightPanelOpened=");
+                    sbM833U.append(getIsRightPanelOpened());
+                    sbM833U.append(", isOnHomeTab=");
+                    sbM833U.append(getIsOnHomeTab());
+                    sbM833U.append(")");
+                    return sbM833U.toString();
                 }
             }
 
-            public /* synthetic */ Guild(GuildChannelIconType guildChannelIconType, boolean z2, boolean z3, DefaultConstructorMarker defaultConstructorMarker) {
-                this(guildChannelIconType, z2, z3);
+            public /* synthetic */ Guild(GuildChannelIconUtils guildChannelIconUtils, boolean z2, boolean z3, DefaultConstructorMarker defaultConstructorMarker) {
+                this(guildChannelIconUtils, z2, z3);
             }
 
-            public GuildChannelIconType getChannelIconType() {
+            public GuildChannelIconUtils getChannelIconType() {
                 return this.channelIconType;
             }
 
@@ -1736,9 +1739,9 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
                 return this.isRightPanelOpened;
             }
 
-            private Guild(GuildChannelIconType guildChannelIconType, boolean z2, boolean z3) {
+            private Guild(GuildChannelIconUtils guildChannelIconUtils, boolean z2, boolean z3) {
                 super(z2, z3, null);
-                this.channelIconType = guildChannelIconType;
+                this.channelIconType = guildChannelIconUtils;
                 this.isRightPanelOpened = z2;
                 this.isOnHomeTab = z3;
             }
@@ -1819,12 +1822,12 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = a.U("NoChannel(isRightPanelOpened=");
-                sbU.append(getIsRightPanelOpened());
-                sbU.append(", isOnHomeTab=");
-                sbU.append(getIsOnHomeTab());
-                sbU.append(")");
-                return sbU.toString();
+                StringBuilder sbM833U = outline.m833U("NoChannel(isRightPanelOpened=");
+                sbM833U.append(getIsRightPanelOpened());
+                sbM833U.append(", isOnHomeTab=");
+                sbM833U.append(getIsOnHomeTab());
+                sbM833U.append(")");
+                return sbM833U.toString();
             }
         }
 
@@ -1855,8 +1858,8 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
     /* JADX WARN: Illegal instructions before constructor call */
     public /* synthetic */ WidgetChannelTopicViewModel(Observable observable, Parser parser, int i, DefaultConstructorMarker defaultConstructorMarker) {
         if ((i & 1) != 0) {
-            observable = Companion.observeNavState$default(INSTANCE, null, null, 3, null).Y(AnonymousClass1.INSTANCE);
-            m.checkNotNullExpressionValue(observable, "observeNavState().switch…avState\n    ).take(1)\n  }");
+            observable = Companion.observeNavState$default(INSTANCE, null, null, 3, null).m11099Y(C73631.INSTANCE);
+            Intrinsics3.checkNotNullExpressionValue(observable, "observeNavState().switch…avState\n    ).take(1)\n  }");
         }
         this(observable, (i & 2) != 0 ? DiscordParser.createParser$default(false, true, false, false, false, 28, null) : parser);
     }
@@ -1885,7 +1888,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
         MessagePreprocessor messagePreprocessor = new MessagePreprocessor(-1L, this.revealedIndices, null, false, null, 28, null);
         messagePreprocessor.process(listGenerateAST);
         Map<Long, User> users = topic.getUsers();
-        LinkedHashMap linkedHashMap = new LinkedHashMap(g0.mapCapacity(users.size()));
+        LinkedHashMap linkedHashMap = new LinkedHashMap(MapsJVM.mapCapacity(users.size()));
         Iterator<T> it = users.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
@@ -1900,11 +1903,11 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
         }
         String str = topic2 != null ? topic2 : "";
         Map<Long, Channel> channels = topic.getChannels();
-        LinkedHashMap linkedHashMap2 = new LinkedHashMap(g0.mapCapacity(channels.size()));
+        LinkedHashMap linkedHashMap2 = new LinkedHashMap(MapsJVM.mapCapacity(channels.size()));
         Iterator<T> it2 = channels.entrySet().iterator();
         while (it2.hasNext()) {
             Map.Entry entry2 = (Map.Entry) it2.next();
-            linkedHashMap2.put(entry2.getKey(), ChannelUtils.c((Channel) entry2.getValue()));
+            linkedHashMap2.put(entry2.getKey(), ChannelUtils.m7679c((Channel) entry2.getValue()));
         }
         LinkedHashMap linkedHashMap3 = new LinkedHashMap();
         for (Map.Entry entry3 : linkedHashMap2.entrySet()) {
@@ -1916,7 +1919,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
     }
 
     private final void handlePrivateStoreState(StoreState storeState) {
-        if (!(storeState instanceof StoreState.DM)) {
+        if (!(storeState instanceof StoreState.C7367DM)) {
             if (storeState instanceof StoreState.GDM) {
                 StoreState.GDM gdm = (StoreState.GDM) storeState;
                 updateViewState(new ViewState.GDM(gdm.getChannel(), gdm.getChannel().getId(), gdm.getDeveloperModeEnabled(), storeState.getIsRightPanelOpened(), storeState.getIsOnHomeTab()));
@@ -1924,37 +1927,37 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
             }
             return;
         }
-        StoreState.DM dm = (StoreState.DM) storeState;
-        User userA = ChannelUtils.a(dm.getChannel());
-        String nickOrUsername$default = userA != null ? GuildMember.Companion.getNickOrUsername$default(GuildMember.INSTANCE, userA, null, dm.getChannel(), null, 8, null) : null;
-        User userA2 = ChannelUtils.a(dm.getChannel());
-        Long lValueOf = userA2 != null ? Long.valueOf(userA2.getId()) : null;
-        long id2 = dm.getChannel().getId();
-        Collection<Map<Long, GuildMember>> guildMembers = dm.getGuildMembers();
+        StoreState.C7367DM c7367dm = (StoreState.C7367DM) storeState;
+        User userM7677a = ChannelUtils.m7677a(c7367dm.getChannel());
+        String nickOrUsername$default = userM7677a != null ? GuildMember.Companion.getNickOrUsername$default(GuildMember.INSTANCE, userM7677a, null, c7367dm.getChannel(), null, 8, null) : null;
+        User userM7677a2 = ChannelUtils.m7677a(c7367dm.getChannel());
+        Long lValueOf = userM7677a2 != null ? Long.valueOf(userM7677a2.getId()) : null;
+        long id2 = c7367dm.getChannel().getId();
+        Collection<Map<Long, GuildMember>> guildMembers = c7367dm.getGuildMembers();
         ArrayList arrayList = new ArrayList();
         Iterator<T> it = guildMembers.iterator();
         while (it.hasNext()) {
             Map map = (Map) it.next();
-            User userA3 = ChannelUtils.a(dm.getChannel());
-            GuildMember guildMember = (GuildMember) map.get(userA3 != null ? Long.valueOf(userA3.getId()) : null);
+            User userM7677a3 = ChannelUtils.m7677a(c7367dm.getChannel());
+            GuildMember guildMember = (GuildMember) map.get(userM7677a3 != null ? Long.valueOf(userM7677a3.getId()) : null);
             String nick = guildMember != null ? guildMember.getNick() : null;
             if (nick != null) {
                 arrayList.add(nick);
             }
         }
-        Set set = u.toSet(arrayList);
-        Collection<Map<Long, GuildMember>> guildMembers2 = dm.getGuildMembers();
+        Set set = _Collections.toSet(arrayList);
+        Collection<Map<Long, GuildMember>> guildMembers2 = c7367dm.getGuildMembers();
         ArrayList arrayList2 = new ArrayList();
         Iterator<T> it2 = guildMembers2.iterator();
         while (it2.hasNext()) {
             Map map2 = (Map) it2.next();
-            User userA4 = ChannelUtils.a(dm.getChannel());
-            GuildMember guildMember2 = (GuildMember) map2.get(userA4 != null ? Long.valueOf(userA4.getId()) : null);
+            User userM7677a4 = ChannelUtils.m7677a(c7367dm.getChannel());
+            GuildMember guildMember2 = (GuildMember) map2.get(userM7677a4 != null ? Long.valueOf(userM7677a4.getId()) : null);
             if (guildMember2 != null) {
                 arrayList2.add(guildMember2);
             }
         }
-        updateViewState(new ViewState.DM(nickOrUsername$default, lValueOf, set, u.toList(arrayList2), id2, dm.getDeveloperModeEnabled(), storeState.getIsRightPanelOpened(), storeState.getIsOnHomeTab()));
+        updateViewState(new ViewState.C7368DM(nickOrUsername$default, lValueOf, set, _Collections.toList(arrayList2), id2, c7367dm.getDeveloperModeEnabled(), storeState.getIsRightPanelOpened(), storeState.getIsOnHomeTab()));
     }
 
     @MainThread
@@ -1963,15 +1966,15 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
         if (storeState instanceof StoreState.Guild.Topic) {
             long id2 = ((StoreState.Guild.Topic) storeState).getChannel().getId();
             Long l = this.previousChannelId;
-            this.revealedIndices = (l != null && id2 == l.longValue()) ? this.revealedIndices : n0.emptySet();
+            this.revealedIndices = (l != null && id2 == l.longValue()) ? this.revealedIndices : Sets5.emptySet();
             lValueOf = Long.valueOf(id2);
         } else {
-            lValueOf = storeState instanceof StoreState.Guild.DefaultTopic ? Long.valueOf(((StoreState.Guild.DefaultTopic) storeState).getChannel().getId()) : storeState instanceof StoreState.DM ? Long.valueOf(((StoreState.DM) storeState).getChannel().getId()) : storeState instanceof StoreState.GDM ? Long.valueOf(((StoreState.GDM) storeState).getChannel().getId()) : null;
+            lValueOf = storeState instanceof StoreState.Guild.DefaultTopic ? Long.valueOf(((StoreState.Guild.DefaultTopic) storeState).getChannel().getId()) : storeState instanceof StoreState.C7367DM ? Long.valueOf(((StoreState.C7367DM) storeState).getChannel().getId()) : storeState instanceof StoreState.GDM ? Long.valueOf(((StoreState.GDM) storeState).getChannel().getId()) : null;
         }
         this.previousChannelId = lValueOf;
         if (storeState.getIsRightPanelOpened() != this.wasRightPanelOpened || storeState.getIsOnHomeTab() != this.wasOnHomeTab) {
             if (storeState.getIsRightPanelOpened() && storeState.getIsOnHomeTab()) {
-                this.eventSubject.k.onNext(Event.FocusFirstElement.INSTANCE);
+                this.eventSubject.f27650k.onNext(Event.FocusFirstElement.INSTANCE);
             }
             this.wasRightPanelOpened = storeState.getIsRightPanelOpened();
             this.wasOnHomeTab = storeState.getIsOnHomeTab();
@@ -1986,18 +1989,18 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
     }
 
     public final Unit handleClosePrivateChannel(Context context) {
-        m.checkNotNullParameter(context, "context");
+        Intrinsics3.checkNotNullParameter(context, "context");
         Long l = this.previousChannelId;
         if (l == null) {
             return null;
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().deleteChannel(l.longValue()), false, 1, null), this, null, 2, null), context, "javaClass", (Function1) null, new WidgetChannelTopicViewModel$handleClosePrivateChannel$$inlined$let$lambda$1(this, context), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
-        return Unit.a;
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().deleteChannel(l.longValue()), false, 1, null), this, null, 2, null), context, "javaClass", (Function1) null, new WidgetChannelTopicViewModel8(this, context), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
+        return Unit.f27425a;
     }
 
     @MainThread
     public final void handleOnIndexClicked(SpoilerNode<?> spoilerNode) {
-        m.checkNotNullParameter(spoilerNode, "spoilerNode");
+        Intrinsics3.checkNotNullParameter(spoilerNode, "spoilerNode");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Guild.Topic)) {
             viewState = null;
@@ -2005,7 +2008,7 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
         ViewState.Guild.Topic topic = (ViewState.Guild.Topic) viewState;
         if (topic != null) {
             List<Node<MessageRenderContext>> listGenerateAST = generateAST(topic.getRawTopicString());
-            this.revealedIndices = o0.plus(this.revealedIndices, Integer.valueOf(spoilerNode.getId()));
+            this.revealedIndices = _Sets.plus(this.revealedIndices, Integer.valueOf(spoilerNode.getId()));
             MessagePreprocessor messagePreprocessor = new MessagePreprocessor(-1L, this.revealedIndices, null, false, null, 28, null);
             messagePreprocessor.process(listGenerateAST);
             updateViewState(ViewState.Guild.Topic.copy$default(topic, null, null, null, null, false, listGenerateAST, messagePreprocessor.isLinkifyConflicting(), null, null, false, false, 1951, null));
@@ -2014,19 +2017,19 @@ public final class WidgetChannelTopicViewModel extends d0<ViewState> {
 
     public final Observable<Event> listenForEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChannelTopicViewModel(Observable<StoreState> observable, Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState> parser) {
         super(new ViewState.NoChannel(false, false));
-        m.checkNotNullParameter(observable, "storeStateObservable");
-        m.checkNotNullParameter(parser, "topicParser");
+        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        Intrinsics3.checkNotNullParameter(parser, "topicParser");
         this.topicParser = parser;
-        this.revealedIndices = n0.emptySet();
+        this.revealedIndices = Sets5.emptySet();
         this.previousChannelId = 0L;
-        this.eventSubject = PublishSubject.k0();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetChannelTopicViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
+        this.eventSubject = PublishSubject.m11133k0();
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetChannelTopicViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C73642(), 62, (Object) null);
     }
 }

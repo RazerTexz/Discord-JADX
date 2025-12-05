@@ -1,0 +1,84 @@
+package p007b.p225i.p226a.p288f.p313h.p323j;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ServiceInfo;
+import android.os.Handler;
+import androidx.annotation.RequiresPermission;
+import java.util.Objects;
+import p007b.p225i.p226a.p288f.p313h.p323j.InterfaceC3551x0;
+import p007b.p225i.p226a.p288f.p339m.C4351a;
+
+/* renamed from: b.i.a.f.h.j.t0 */
+/* loaded from: classes3.dex */
+public final class C3543t0<T extends Context & InterfaceC3551x0> {
+
+    /* renamed from: a */
+    public static Boolean f9800a;
+
+    /* renamed from: b */
+    public final Handler f9801b = new HandlerC3511e1();
+
+    /* renamed from: c */
+    public final T f9802c;
+
+    public C3543t0(T t) {
+        this.f9802c = t;
+    }
+
+    /* renamed from: c */
+    public static boolean m4500c(Context context) {
+        Objects.requireNonNull(context, "null reference");
+        Boolean bool = f9800a;
+        if (bool != null) {
+            return bool.booleanValue();
+        }
+        boolean z2 = false;
+        try {
+            ServiceInfo serviceInfo = context.getPackageManager().getServiceInfo(new ComponentName(context, "com.google.android.gms.analytics.AnalyticsService"), 0);
+            if (serviceInfo != null) {
+                if (serviceInfo.enabled) {
+                    z2 = true;
+                }
+            }
+        } catch (PackageManager.NameNotFoundException unused) {
+        }
+        f9800a = Boolean.valueOf(z2);
+        return z2;
+    }
+
+    @RequiresPermission(allOf = {"android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"})
+    /* renamed from: a */
+    public final int m4501a(Intent intent, int i) {
+        try {
+            synchronized (C3541s0.f9796a) {
+                C4351a c4351a = C3541s0.f9797b;
+                if (c4351a != null && c4351a.f11460c.isHeld()) {
+                    c4351a.m6002b();
+                }
+            }
+        } catch (SecurityException unused) {
+        }
+        C3529m0 c3529m0M4451c = C3515g.m4450b(this.f9802c).m4451c();
+        if (intent == null) {
+            c3529m0M4451c.m4428D("AnalyticsService started with null intent");
+            return 2;
+        }
+        String action = intent.getAction();
+        c3529m0M4451c.m4430a(2, "Local AnalyticsService called. startId, action", Integer.valueOf(i), action, null);
+        if ("com.google.android.gms.analytics.ANALYTICS_DISPATCH".equals(action)) {
+            m4502b(new RunnableC3545u0(this, i, c3529m0M4451c));
+        }
+        return 2;
+    }
+
+    /* renamed from: b */
+    public final void m4502b(Runnable runnable) {
+        C3497a c3497aM4453e = C3515g.m4450b(this.f9802c).m4453e();
+        C3549w0 c3549w0 = new C3549w0(this, runnable);
+        c3497aM4453e.m4444N();
+        c3497aM4453e.m4435q().m3968a(new RunnableC3503c(c3497aM4453e, c3549w0));
+    }
+}

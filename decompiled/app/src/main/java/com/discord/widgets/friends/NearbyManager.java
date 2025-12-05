@@ -1,14 +1,6 @@
 package com.discord.widgets.friends;
 
 import androidx.fragment.app.FragmentActivity;
-import b.c.a.a0.d;
-import b.d.b.a.a;
-import b.i.a.f.e.h.j.k;
-import b.i.a.f.j.b.a;
-import b.i.a.f.j.b.b;
-import b.i.a.f.j.b.e.i;
-import b.i.a.f.j.b.e.n;
-import b.i.a.f.j.b.e.o;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.google.android.gms.nearby.messages.Message;
 import com.google.android.gms.nearby.messages.MessageFilter;
@@ -17,15 +9,23 @@ import com.google.android.gms.nearby.messages.MessagesClient;
 import com.google.android.gms.nearby.messages.PublishOptions;
 import com.google.android.gms.nearby.messages.Strategy;
 import com.google.android.gms.nearby.messages.SubscribeOptions;
-import d0.g0.c;
-import d0.z.d.m;
 import java.nio.charset.Charset;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p100d.p104b.p105a.outline;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3301k;
+import p007b.p225i.p226a.p288f.p333j.p334b.C4264a;
+import p007b.p225i.p226a.p288f.p333j.p334b.C4265b;
+import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4286i;
+import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4296n;
+import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4298o;
+import p507d0.p579g0.Charsets2;
+import p507d0.p592z.p594d.Intrinsics3;
+import p658rx.Observable;
+import p658rx.subjects.BehaviorSubject;
 
 /* compiled from: NearbyManager.kt */
 /* loaded from: classes2.dex */
@@ -39,7 +39,7 @@ public final class NearbyManager {
     private Message outboundMessage;
     private SubscribeOptions subscribeOptions;
     private final HashSet<Long> nearbyUserIds = new HashSet<>();
-    private final BehaviorSubject<NearbyState> nearbyStateSubject = BehaviorSubject.l0(NearbyState.Uninitialized.INSTANCE);
+    private final BehaviorSubject<NearbyState> nearbyStateSubject = BehaviorSubject.m11130l0(NearbyState.Uninitialized.INSTANCE);
 
     /* compiled from: NearbyManager.kt */
     public static abstract class NearbyState {
@@ -51,7 +51,7 @@ public final class NearbyManager {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Connected(Set<Long> set) {
                 super(null);
-                m.checkNotNullParameter(set, "nearbyUserIds");
+                Intrinsics3.checkNotNullParameter(set, "nearbyUserIds");
                 this.nearbyUserIds = set;
             }
 
@@ -68,13 +68,13 @@ public final class NearbyManager {
             }
 
             public final Connected copy(Set<Long> nearbyUserIds) {
-                m.checkNotNullParameter(nearbyUserIds, "nearbyUserIds");
+                Intrinsics3.checkNotNullParameter(nearbyUserIds, "nearbyUserIds");
                 return new Connected(nearbyUserIds);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Connected) && m.areEqual(this.nearbyUserIds, ((Connected) other).nearbyUserIds);
+                    return (other instanceof Connected) && Intrinsics3.areEqual(this.nearbyUserIds, ((Connected) other).nearbyUserIds);
                 }
                 return true;
             }
@@ -92,7 +92,7 @@ public final class NearbyManager {
             }
 
             public String toString() {
-                return a.N(a.U("Connected(nearbyUserIds="), this.nearbyUserIds, ")");
+                return outline.m826N(outline.m833U("Connected(nearbyUserIds="), this.nearbyUserIds, ")");
             }
         }
 
@@ -137,7 +137,7 @@ public final class NearbyManager {
             }
 
             public String toString() {
-                return a.B(a.U("Disconnected(code="), this.code, ")");
+                return outline.m814B(outline.m833U("Disconnected(code="), this.code, ")");
             }
         }
 
@@ -159,12 +159,12 @@ public final class NearbyManager {
     }
 
     /* compiled from: NearbyManager.kt */
-    /* renamed from: com.discord.widgets.friends.NearbyManager$setupBroadcaster$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends b {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.friends.NearbyManager$setupBroadcaster$1 */
+    public static final class C83741 extends C4265b {
+        public C83741() {
         }
 
-        @Override // b.i.a.f.j.b.b
+        @Override // p007b.p225i.p226a.p288f.p333j.p334b.C4265b
         public void onExpired() {
             super.onExpired();
             NearbyManager.this.activateNearby();
@@ -172,9 +172,9 @@ public final class NearbyManager {
     }
 
     /* compiled from: NearbyManager.kt */
-    /* renamed from: com.discord.widgets.friends.NearbyManager$setupListener$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends MessageListener {
-        public AnonymousClass1() {
+    /* renamed from: com.discord.widgets.friends.NearbyManager$setupListener$1 */
+    public static final class C83751 extends MessageListener {
+        public C83751() {
         }
 
         @Override // com.google.android.gms.nearby.messages.MessageListener
@@ -219,13 +219,13 @@ public final class NearbyManager {
     }
 
     private final void buildClient(FragmentActivity fragmentActivity) {
-        b.i.a.f.j.b.a aVar = new b.i.a.f.j.b.a(new a.C0119a(), null);
-        d.z(fragmentActivity, "Activity must not be null");
-        d.z(aVar, "Options must not be null");
-        i iVar = new i(fragmentActivity, aVar);
-        k kVarM = iVar.m(new NearbyManager$buildClient$$inlined$also$lambda$1(this));
-        iVar.k(kVarM, new n(kVarM), new o(kVarM));
-        this.messagesClient = iVar;
+        C4264a c4264a = new C4264a(new C4264a.a(), null);
+        AnimatableValueParser.m595z(fragmentActivity, "Activity must not be null");
+        AnimatableValueParser.m595z(c4264a, "Options must not be null");
+        C4286i c4286i = new C4286i(fragmentActivity, c4264a);
+        C3301k c3301kM5990m = c4286i.m5990m(new NearbyManager2(this));
+        c4286i.m5988k(c3301kM5990m, new C4296n(c3301kM5990m), new C4298o(c3301kM5990m));
+        this.messagesClient = c4286i;
     }
 
     private final synchronized void foundUserId(long userId) {
@@ -242,13 +242,13 @@ public final class NearbyManager {
     }
 
     private final Long parseUserId(Message message) {
-        byte[] bArr = message.l;
-        m.checkNotNullExpressionValue(bArr, "message.content");
-        String str = new String(bArr, c.a);
+        byte[] bArr = message.f20713l;
+        Intrinsics3.checkNotNullExpressionValue(bArr, "message.content");
+        String str = new String(bArr, Charsets2.f25136a);
         if (str.charAt(0) == 'u') {
             try {
                 String strSubstring = str.substring(2);
-                m.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
+                Intrinsics3.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
                 return Long.valueOf(Long.parseLong(strSubstring));
             } catch (Throwable unused) {
             }
@@ -257,19 +257,19 @@ public final class NearbyManager {
     }
 
     private final void setupBroadcaster(long userId) {
-        this.messagePublishOptions = new PublishOptions(Strategy.j, new AnonymousClass1(), null);
-        String strT = b.d.b.a.a.t("u:", userId);
-        Charset charset = c.a;
-        Objects.requireNonNull(strT, "null cannot be cast to non-null type java.lang.String");
-        byte[] bytes = strT.getBytes(charset);
-        m.checkNotNullExpressionValue(bytes, "(this as java.lang.String).getBytes(charset)");
-        this.outboundMessage = new Message(2, bytes, "", "", Message.j, 0L);
+        this.messagePublishOptions = new PublishOptions(Strategy.f20727j, new C83741(), null);
+        String strM877t = outline.m877t("u:", userId);
+        Charset charset = Charsets2.f25136a;
+        Objects.requireNonNull(strM877t, "null cannot be cast to non-null type java.lang.String");
+        byte[] bytes = strM877t.getBytes(charset);
+        Intrinsics3.checkNotNullExpressionValue(bytes, "(this as java.lang.String).getBytes(charset)");
+        this.outboundMessage = new Message(2, bytes, "", "", Message.f20711j, 0L);
     }
 
     private final void setupListener() {
-        this.messageListener = new AnonymousClass1();
-        Strategy strategy = Strategy.j;
-        this.subscribeOptions = new SubscribeOptions(Strategy.k, MessageFilter.j, null);
+        this.messageListener = new C83751();
+        Strategy strategy = Strategy.f20727j;
+        this.subscribeOptions = new SubscribeOptions(Strategy.f20728k, MessageFilter.f20718j, null);
     }
 
     public final void activateNearby() {
@@ -282,12 +282,12 @@ public final class NearbyManager {
             return;
         }
         this.nearbyStateSubject.onNext(new NearbyState.Connected(new HashSet(this.nearbyUserIds)));
-        messagesClient.f(message, publishOptions);
-        messagesClient.g(messageListener, subscribeOptions);
+        messagesClient.mo5984f(message, publishOptions);
+        messagesClient.mo5985g(messageListener, subscribeOptions);
     }
 
     public final void buildClientAndPublish(FragmentActivity fragmentActivity) {
-        m.checkNotNullParameter(fragmentActivity, "fragmentActivity");
+        Intrinsics3.checkNotNullParameter(fragmentActivity, "fragmentActivity");
         if (this.messagesClient == null) {
             buildClient(fragmentActivity);
         }
@@ -301,15 +301,15 @@ public final class NearbyManager {
         if (messagesClient == null || (message = this.outboundMessage) == null || (messageListener = this.messageListener) == null) {
             return;
         }
-        messagesClient.h(message);
-        messagesClient.i(messageListener);
+        messagesClient.mo5986h(message);
+        messagesClient.mo5987i(messageListener);
         this.nearbyUserIds.clear();
         this.nearbyStateSubject.onNext(NearbyState.Uninitialized.INSTANCE);
     }
 
     public final Observable<NearbyState> getState() {
         BehaviorSubject<NearbyState> behaviorSubject = this.nearbyStateSubject;
-        m.checkNotNullExpressionValue(behaviorSubject, "nearbyStateSubject");
+        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "nearbyStateSubject");
         return behaviorSubject;
     }
 

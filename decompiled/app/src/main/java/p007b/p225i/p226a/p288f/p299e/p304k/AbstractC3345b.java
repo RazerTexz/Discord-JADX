@@ -1,0 +1,540 @@
+package p007b.p225i.p226a.p288f.p299e.p304k;
+
+import android.accounts.Account;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.os.DeadObjectException;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Looper;
+import android.os.RemoteException;
+import android.text.TextUtils;
+import android.util.Log;
+import androidx.annotation.CallSuper;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RecentlyNonNull;
+import androidx.annotation.RecentlyNullable;
+import androidx.annotation.WorkerThread;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.Feature;
+import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.common.internal.GetServiceRequest;
+import com.google.android.gms.common.internal.zzi;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
+import p007b.p085c.p086a.p087a0.AnimatableValueParser;
+import p007b.p225i.p226a.p288f.p299e.C3256c;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3293g;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3327x;
+import p007b.p225i.p226a.p288f.p299e.p300h.p301j.RunnableC3325w;
+
+/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* renamed from: b.i.a.f.e.k.b */
+/* loaded from: classes3.dex */
+public abstract class AbstractC3345b<T extends IInterface> {
+
+    /* renamed from: a */
+    public static final Feature[] f9476a = new Feature[0];
+
+    /* renamed from: c */
+    public C3386v0 f9478c;
+
+    /* renamed from: d */
+    public final Context f9479d;
+
+    /* renamed from: e */
+    public final AbstractC3351e f9480e;
+
+    /* renamed from: f */
+    public final C3256c f9481f;
+
+    /* renamed from: g */
+    public final Handler f9482g;
+
+    /* renamed from: j */
+    @Nullable
+    public InterfaceC3359i f9485j;
+
+    /* renamed from: k */
+    @RecentlyNonNull
+    public c f9486k;
+
+    /* renamed from: l */
+    @Nullable
+    public T f9487l;
+
+    /* renamed from: n */
+    @Nullable
+    public ServiceConnectionC3364k0 f9489n;
+
+    /* renamed from: p */
+    @Nullable
+    public final a f9491p;
+
+    /* renamed from: q */
+    @Nullable
+    public final b f9492q;
+
+    /* renamed from: r */
+    public final int f9493r;
+
+    /* renamed from: s */
+    @Nullable
+    public final String f9494s;
+
+    /* renamed from: b */
+    @Nullable
+    public volatile String f9477b = null;
+
+    /* renamed from: h */
+    public final Object f9483h = new Object();
+
+    /* renamed from: i */
+    public final Object f9484i = new Object();
+
+    /* renamed from: m */
+    public final ArrayList<AbstractC3360i0<?>> f9488m = new ArrayList<>();
+
+    /* renamed from: o */
+    public int f9490o = 1;
+
+    /* renamed from: t */
+    @Nullable
+    public ConnectionResult f9495t = null;
+
+    /* renamed from: u */
+    public boolean f9496u = false;
+
+    /* renamed from: v */
+    @Nullable
+    public volatile zzi f9497v = null;
+
+    /* renamed from: w */
+    @RecentlyNonNull
+    public AtomicInteger f9498w = new AtomicInteger(0);
+
+    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+    /* renamed from: b.i.a.f.e.k.b$a */
+    public interface a {
+        /* renamed from: c */
+        void mo4144c(int i);
+
+        /* renamed from: i */
+        void mo4145i(@Nullable Bundle bundle);
+    }
+
+    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+    /* renamed from: b.i.a.f.e.k.b$b */
+    public interface b {
+        /* renamed from: g */
+        void mo4146g(@RecentlyNonNull ConnectionResult connectionResult);
+    }
+
+    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+    /* renamed from: b.i.a.f.e.k.b$c */
+    public interface c {
+        /* renamed from: a */
+        void mo4103a(@RecentlyNonNull ConnectionResult connectionResult);
+    }
+
+    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+    /* renamed from: b.i.a.f.e.k.b$d */
+    public class d implements c {
+        public d() {
+        }
+
+        @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b.c
+        /* renamed from: a */
+        public final void mo4103a(@RecentlyNonNull ConnectionResult connectionResult) {
+            if (connectionResult.m9020x0()) {
+                AbstractC3345b abstractC3345b = AbstractC3345b.this;
+                abstractC3345b.m4128b(null, abstractC3345b.mo4141v());
+            } else {
+                b bVar = AbstractC3345b.this.f9492q;
+                if (bVar != null) {
+                    bVar.mo4146g(connectionResult);
+                }
+            }
+        }
+    }
+
+    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+    /* renamed from: b.i.a.f.e.k.b$e */
+    public interface e {
+    }
+
+    public AbstractC3345b(@RecentlyNonNull Context context, @RecentlyNonNull Looper looper, @RecentlyNonNull AbstractC3351e abstractC3351e, @RecentlyNonNull C3256c c3256c, int i, @Nullable a aVar, @Nullable b bVar, @Nullable String str) {
+        AnimatableValueParser.m595z(context, "Context must not be null");
+        this.f9479d = context;
+        AnimatableValueParser.m595z(looper, "Looper must not be null");
+        AnimatableValueParser.m595z(abstractC3351e, "Supervisor must not be null");
+        this.f9480e = abstractC3351e;
+        AnimatableValueParser.m595z(c3256c, "API availability must not be null");
+        this.f9481f = c3256c;
+        this.f9482g = new HandlerC3358h0(this, looper);
+        this.f9493r = i;
+        this.f9491p = aVar;
+        this.f9492q = bVar;
+        this.f9494s = str;
+    }
+
+    /* renamed from: C */
+    public static /* synthetic */ void m4122C(AbstractC3345b abstractC3345b, int i) {
+        int i2;
+        int i3;
+        synchronized (abstractC3345b.f9483h) {
+            i2 = abstractC3345b.f9490o;
+        }
+        if (i2 == 3) {
+            abstractC3345b.f9496u = true;
+            i3 = 5;
+        } else {
+            i3 = 4;
+        }
+        Handler handler = abstractC3345b.f9482g;
+        handler.sendMessage(handler.obtainMessage(i3, abstractC3345b.f9498w.get(), 16));
+    }
+
+    /* renamed from: D */
+    public static /* synthetic */ boolean m4123D(AbstractC3345b abstractC3345b) {
+        if (abstractC3345b.f9496u || TextUtils.isEmpty(abstractC3345b.mo3984x()) || TextUtils.isEmpty(null)) {
+            return false;
+        }
+        try {
+            Class.forName(abstractC3345b.mo3984x());
+            return true;
+        } catch (ClassNotFoundException unused) {
+            return false;
+        }
+    }
+
+    /* renamed from: E */
+    public static /* synthetic */ boolean m4124E(AbstractC3345b abstractC3345b, int i, int i2, IInterface iInterface) {
+        synchronized (abstractC3345b.f9483h) {
+            if (abstractC3345b.f9490o != i) {
+                return false;
+            }
+            abstractC3345b.m4127F(i2, iInterface);
+            return true;
+        }
+    }
+
+    @CallSuper
+    /* renamed from: A */
+    public void m4125A(int i) {
+        System.currentTimeMillis();
+    }
+
+    @RecentlyNonNull
+    /* renamed from: B */
+    public final String m4126B() {
+        String str = this.f9494s;
+        return str == null ? this.f9479d.getClass().getName() : str;
+    }
+
+    /* renamed from: F */
+    public final void m4127F(int i, @Nullable T t) {
+        C3386v0 c3386v0;
+        AnimatableValueParser.m539l((i == 4) == (t != null));
+        synchronized (this.f9483h) {
+            try {
+                this.f9490o = i;
+                this.f9487l = t;
+                if (i == 1) {
+                    ServiceConnectionC3364k0 serviceConnectionC3364k0 = this.f9489n;
+                    if (serviceConnectionC3364k0 != null) {
+                        AbstractC3351e abstractC3351e = this.f9480e;
+                        String str = this.f9478c.f9572a;
+                        Objects.requireNonNull(str, "null reference");
+                        Objects.requireNonNull(this.f9478c);
+                        String strM4126B = m4126B();
+                        Objects.requireNonNull(this.f9478c);
+                        abstractC3351e.m4153b(str, "com.google.android.gms", 4225, serviceConnectionC3364k0, strM4126B, false);
+                        this.f9489n = null;
+                    }
+                } else if (i == 2 || i == 3) {
+                    ServiceConnectionC3364k0 serviceConnectionC3364k02 = this.f9489n;
+                    if (serviceConnectionC3364k02 != null && (c3386v0 = this.f9478c) != null) {
+                        String str2 = c3386v0.f9572a;
+                        StringBuilder sb = new StringBuilder(String.valueOf(str2).length() + 70 + "com.google.android.gms".length());
+                        sb.append("Calling connect() while still connected, missing disconnect() for ");
+                        sb.append(str2);
+                        sb.append(" on ");
+                        sb.append("com.google.android.gms");
+                        Log.e("GmsClient", sb.toString());
+                        AbstractC3351e abstractC3351e2 = this.f9480e;
+                        String str3 = this.f9478c.f9572a;
+                        Objects.requireNonNull(str3, "null reference");
+                        Objects.requireNonNull(this.f9478c);
+                        String strM4126B2 = m4126B();
+                        Objects.requireNonNull(this.f9478c);
+                        abstractC3351e2.m4153b(str3, "com.google.android.gms", 4225, serviceConnectionC3364k02, strM4126B2, false);
+                        this.f9498w.incrementAndGet();
+                    }
+                    ServiceConnectionC3364k0 serviceConnectionC3364k03 = new ServiceConnectionC3364k0(this, this.f9498w.get());
+                    this.f9489n = serviceConnectionC3364k03;
+                    String strMo3985y = mo3985y();
+                    Object obj = AbstractC3351e.f9517a;
+                    this.f9478c = new C3386v0("com.google.android.gms", strMo3985y, 4225, false);
+                    AbstractC3351e abstractC3351e3 = this.f9480e;
+                    Objects.requireNonNull(strMo3985y, "null reference");
+                    Objects.requireNonNull(this.f9478c);
+                    String strM4126B3 = m4126B();
+                    Objects.requireNonNull(this.f9478c);
+                    if (!abstractC3351e3.mo4154c(new C3376q0(strMo3985y, "com.google.android.gms", 4225, false), serviceConnectionC3364k03, strM4126B3)) {
+                        String str4 = this.f9478c.f9572a;
+                        StringBuilder sb2 = new StringBuilder(String.valueOf(str4).length() + 34 + "com.google.android.gms".length());
+                        sb2.append("unable to connect to service: ");
+                        sb2.append(str4);
+                        sb2.append(" on ");
+                        sb2.append("com.google.android.gms");
+                        Log.e("GmsClient", sb2.toString());
+                        int i2 = this.f9498w.get();
+                        Handler handler = this.f9482g;
+                        handler.sendMessage(handler.obtainMessage(7, i2, -1, new C3368m0(this, 16)));
+                    }
+                } else if (i == 4) {
+                    Objects.requireNonNull(t, "null reference");
+                    m4143z(t);
+                }
+            } finally {
+            }
+        }
+    }
+
+    @WorkerThread
+    /* renamed from: b */
+    public void m4128b(@Nullable InterfaceC3355g interfaceC3355g, @RecentlyNonNull Set<Scope> set) {
+        Bundle bundleMo4140u = mo4140u();
+        GetServiceRequest getServiceRequest = new GetServiceRequest(this.f9493r, null);
+        getServiceRequest.f20530m = this.f9479d.getPackageName();
+        getServiceRequest.f20533p = bundleMo4140u;
+        if (set != null) {
+            getServiceRequest.f20532o = (Scope[]) set.toArray(new Scope[set.size()]);
+        }
+        if (mo4042o()) {
+            Account accountMo4138s = mo4138s();
+            if (accountMo4138s == null) {
+                accountMo4138s = new Account("<<default account>>", "com.google");
+            }
+            getServiceRequest.f20534q = accountMo4138s;
+            if (interfaceC3355g != null) {
+                getServiceRequest.f20531n = interfaceC3355g.asBinder();
+            }
+        }
+        getServiceRequest.f20535r = f9476a;
+        getServiceRequest.f20536s = mo4139t();
+        try {
+            synchronized (this.f9484i) {
+                InterfaceC3359i interfaceC3359i = this.f9485j;
+                if (interfaceC3359i != null) {
+                    interfaceC3359i.mo4147w(new BinderC3362j0(this, this.f9498w.get()), getServiceRequest);
+                } else {
+                    Log.w("GmsClient", "mServiceBroker is null, client disconnected");
+                }
+            }
+        } catch (DeadObjectException e2) {
+            Log.w("GmsClient", "IGmsServiceBroker.getService failed", e2);
+            Handler handler = this.f9482g;
+            handler.sendMessage(handler.obtainMessage(6, this.f9498w.get(), 3));
+        } catch (RemoteException e3) {
+            e = e3;
+            Log.w("GmsClient", "IGmsServiceBroker.getService failed", e);
+            int i = this.f9498w.get();
+            Handler handler2 = this.f9482g;
+            handler2.sendMessage(handler2.obtainMessage(1, i, -1, new C3366l0(this, 8, null, null)));
+        } catch (SecurityException e4) {
+            throw e4;
+        } catch (RuntimeException e5) {
+            e = e5;
+            Log.w("GmsClient", "IGmsServiceBroker.getService failed", e);
+            int i2 = this.f9498w.get();
+            Handler handler22 = this.f9482g;
+            handler22.sendMessage(handler22.obtainMessage(1, i2, -1, new C3366l0(this, 8, null, null)));
+        }
+    }
+
+    /* renamed from: c */
+    public void m4129c(@RecentlyNonNull String str) {
+        this.f9477b = str;
+        mo4036h();
+    }
+
+    /* renamed from: e */
+    public boolean m4130e() {
+        boolean z2;
+        synchronized (this.f9483h) {
+            int i = this.f9490o;
+            z2 = true;
+            if (i != 2 && i != 3) {
+                z2 = false;
+            }
+        }
+        return z2;
+    }
+
+    @RecentlyNonNull
+    /* renamed from: f */
+    public String m4131f() {
+        if (!m4134j() || this.f9478c == null) {
+            throw new RuntimeException("Failed to connect when checking package");
+        }
+        return "com.google.android.gms";
+    }
+
+    /* renamed from: g */
+    public void m4132g(@RecentlyNonNull c cVar) {
+        AnimatableValueParser.m595z(cVar, "Connection progress callbacks cannot be null.");
+        this.f9486k = cVar;
+        m4127F(2, null);
+    }
+
+    /* renamed from: h */
+    public void mo4036h() {
+        this.f9498w.incrementAndGet();
+        synchronized (this.f9488m) {
+            int size = this.f9488m.size();
+            for (int i = 0; i < size; i++) {
+                AbstractC3360i0<?> abstractC3360i0 = this.f9488m.get(i);
+                synchronized (abstractC3360i0) {
+                    abstractC3360i0.f9524a = null;
+                }
+            }
+            this.f9488m.clear();
+        }
+        synchronized (this.f9484i) {
+            this.f9485j = null;
+        }
+        m4127F(1, null);
+    }
+
+    /* renamed from: i */
+    public void m4133i(@RecentlyNonNull e eVar) {
+        C3327x c3327x = (C3327x) eVar;
+        C3293g.this.f9390x.post(new RunnableC3325w(c3327x));
+    }
+
+    /* renamed from: j */
+    public boolean m4134j() {
+        boolean z2;
+        synchronized (this.f9483h) {
+            z2 = this.f9490o == 4;
+        }
+        return z2;
+    }
+
+    /* renamed from: k */
+    public boolean mo4039k() {
+        return true;
+    }
+
+    /* renamed from: l */
+    public int mo3982l() {
+        return C3256c.f9306a;
+    }
+
+    @RecentlyNullable
+    /* renamed from: m */
+    public final Feature[] m4135m() {
+        zzi zziVar = this.f9497v;
+        if (zziVar == null) {
+            return null;
+        }
+        return zziVar.f20556k;
+    }
+
+    @RecentlyNullable
+    /* renamed from: n */
+    public String m4136n() {
+        return this.f9477b;
+    }
+
+    /* renamed from: o */
+    public boolean mo4042o() {
+        return false;
+    }
+
+    /* renamed from: q */
+    public void m4137q() throws PackageManager.NameNotFoundException {
+        int iMo4018b = this.f9481f.mo4018b(this.f9479d, mo3982l());
+        if (iMo4018b == 0) {
+            m4132g(new d());
+            return;
+        }
+        m4127F(1, null);
+        d dVar = new d();
+        AnimatableValueParser.m595z(dVar, "Connection progress callbacks cannot be null.");
+        this.f9486k = dVar;
+        Handler handler = this.f9482g;
+        handler.sendMessage(handler.obtainMessage(3, this.f9498w.get(), iMo4018b, null));
+    }
+
+    @RecentlyNullable
+    /* renamed from: r */
+    public abstract T mo3983r(@RecentlyNonNull IBinder iBinder);
+
+    @RecentlyNullable
+    /* renamed from: s */
+    public Account mo4138s() {
+        return null;
+    }
+
+    @RecentlyNonNull
+    /* renamed from: t */
+    public Feature[] mo4139t() {
+        return f9476a;
+    }
+
+    @RecentlyNonNull
+    /* renamed from: u */
+    public Bundle mo4140u() {
+        return new Bundle();
+    }
+
+    @RecentlyNonNull
+    /* renamed from: v */
+    public Set<Scope> mo4141v() {
+        return Collections.emptySet();
+    }
+
+    @RecentlyNonNull
+    /* renamed from: w */
+    public final T m4142w() throws DeadObjectException {
+        T t;
+        synchronized (this.f9483h) {
+            try {
+                if (this.f9490o == 5) {
+                    throw new DeadObjectException();
+                }
+                if (!m4134j()) {
+                    throw new IllegalStateException("Not connected. Call connect() and wait for onConnected() to be called.");
+                }
+                t = this.f9487l;
+                AnimatableValueParser.m595z(t, "Client is connected but service is null");
+            } catch (Throwable th) {
+                throw th;
+            }
+        }
+        return t;
+    }
+
+    @NonNull
+    /* renamed from: x */
+    public abstract String mo3984x();
+
+    @NonNull
+    /* renamed from: y */
+    public abstract String mo3985y();
+
+    @CallSuper
+    /* renamed from: z */
+    public void m4143z(@RecentlyNonNull T t) {
+        System.currentTimeMillis();
+    }
+}

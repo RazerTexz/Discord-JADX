@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBaseReceiver;
+import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.analytics.generated.traits.TrackMarketingSite;
-import com.discord.analytics.generated.traits.TrackMarketingSiteReceiver;
+import com.discord.analytics.generated.traits.TrackMarketingSite2;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.m;
+import p007b.p100d.p104b.p105a.outline;
+import p507d0.p592z.p594d.Intrinsics3;
 
 /* compiled from: TrackFriendRequestFailed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchema, TrackBaseReceiver, TrackMarketingSiteReceiver {
+public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchema, TrackBase2, TrackMarketingSite2 {
     private TrackBase trackBase;
     private TrackMarketingSite trackMarketingSite;
     private final Long discriminator = null;
@@ -41,7 +41,7 @@ public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchem
             return false;
         }
         TrackFriendRequestFailed trackFriendRequestFailed = (TrackFriendRequestFailed) other;
-        return m.areEqual(this.discriminator, trackFriendRequestFailed.discriminator) && m.areEqual(this.email, trackFriendRequestFailed.email) && m.areEqual(this.reason, trackFriendRequestFailed.reason) && m.areEqual(this.username, trackFriendRequestFailed.username) && m.areEqual(this.discrimLen, trackFriendRequestFailed.discrimLen) && m.areEqual(this.usernameLen, trackFriendRequestFailed.usernameLen) && m.areEqual(this.isEmailLike, trackFriendRequestFailed.isEmailLike) && m.areEqual(this.isInviteLike, trackFriendRequestFailed.isInviteLike) && m.areEqual(this.isNumOnly, trackFriendRequestFailed.isNumOnly) && m.areEqual(this.query, trackFriendRequestFailed.query);
+        return Intrinsics3.areEqual(this.discriminator, trackFriendRequestFailed.discriminator) && Intrinsics3.areEqual(this.email, trackFriendRequestFailed.email) && Intrinsics3.areEqual(this.reason, trackFriendRequestFailed.reason) && Intrinsics3.areEqual(this.username, trackFriendRequestFailed.username) && Intrinsics3.areEqual(this.discrimLen, trackFriendRequestFailed.discrimLen) && Intrinsics3.areEqual(this.usernameLen, trackFriendRequestFailed.usernameLen) && Intrinsics3.areEqual(this.isEmailLike, trackFriendRequestFailed.isEmailLike) && Intrinsics3.areEqual(this.isInviteLike, trackFriendRequestFailed.isInviteLike) && Intrinsics3.areEqual(this.isNumOnly, trackFriendRequestFailed.isNumOnly) && Intrinsics3.areEqual(this.query, trackFriendRequestFailed.query);
     }
 
     public int hashCode() {
@@ -68,25 +68,25 @@ public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = a.U("TrackFriendRequestFailed(discriminator=");
-        sbU.append(this.discriminator);
-        sbU.append(", email=");
-        sbU.append(this.email);
-        sbU.append(", reason=");
-        sbU.append(this.reason);
-        sbU.append(", username=");
-        sbU.append(this.username);
-        sbU.append(", discrimLen=");
-        sbU.append(this.discrimLen);
-        sbU.append(", usernameLen=");
-        sbU.append(this.usernameLen);
-        sbU.append(", isEmailLike=");
-        sbU.append(this.isEmailLike);
-        sbU.append(", isInviteLike=");
-        sbU.append(this.isInviteLike);
-        sbU.append(", isNumOnly=");
-        sbU.append(this.isNumOnly);
-        sbU.append(", query=");
-        return a.E(sbU, this.query, ")");
+        StringBuilder sbM833U = outline.m833U("TrackFriendRequestFailed(discriminator=");
+        sbM833U.append(this.discriminator);
+        sbM833U.append(", email=");
+        sbM833U.append(this.email);
+        sbM833U.append(", reason=");
+        sbM833U.append(this.reason);
+        sbM833U.append(", username=");
+        sbM833U.append(this.username);
+        sbM833U.append(", discrimLen=");
+        sbM833U.append(this.discrimLen);
+        sbM833U.append(", usernameLen=");
+        sbM833U.append(this.usernameLen);
+        sbM833U.append(", isEmailLike=");
+        sbM833U.append(this.isEmailLike);
+        sbM833U.append(", isInviteLike=");
+        sbM833U.append(this.isInviteLike);
+        sbM833U.append(", isNumOnly=");
+        sbM833U.append(this.isNumOnly);
+        sbM833U.append(", query=");
+        return outline.m817E(sbM833U, this.query, ")");
     }
 }

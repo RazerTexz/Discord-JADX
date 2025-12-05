@@ -22,12 +22,12 @@ public class RoomTrackingLiveData<T> extends LiveData<T> {
     public final AtomicBoolean mInvalid = new AtomicBoolean(true);
     public final AtomicBoolean mComputing = new AtomicBoolean(false);
     public final AtomicBoolean mRegisteredObserver = new AtomicBoolean(false);
-    public final Runnable mRefreshRunnable = new AnonymousClass1();
-    public final Runnable mInvalidationRunnable = new AnonymousClass2();
+    public final Runnable mRefreshRunnable = new RunnableC05941();
+    public final Runnable mInvalidationRunnable = new RunnableC05952();
 
-    /* renamed from: androidx.room.RoomTrackingLiveData$1, reason: invalid class name */
-    public class AnonymousClass1 implements Runnable {
-        public AnonymousClass1() {
+    /* renamed from: androidx.room.RoomTrackingLiveData$1 */
+    public class RunnableC05941 implements Runnable {
+        public RunnableC05941() {
         }
 
         @Override // java.lang.Runnable
@@ -66,9 +66,9 @@ public class RoomTrackingLiveData<T> extends LiveData<T> {
         }
     }
 
-    /* renamed from: androidx.room.RoomTrackingLiveData$2, reason: invalid class name */
-    public class AnonymousClass2 implements Runnable {
-        public AnonymousClass2() {
+    /* renamed from: androidx.room.RoomTrackingLiveData$2 */
+    public class RunnableC05952 implements Runnable {
+        public RunnableC05952() {
         }
 
         @Override // java.lang.Runnable
@@ -81,9 +81,9 @@ public class RoomTrackingLiveData<T> extends LiveData<T> {
         }
     }
 
-    /* renamed from: androidx.room.RoomTrackingLiveData$3, reason: invalid class name */
-    public class AnonymousClass3 extends InvalidationTracker.Observer {
-        public AnonymousClass3(String[] strArr) {
+    /* renamed from: androidx.room.RoomTrackingLiveData$3 */
+    public class C05963 extends InvalidationTracker.Observer {
+        public C05963(String[] strArr) {
             super(strArr);
         }
 
@@ -99,7 +99,7 @@ public class RoomTrackingLiveData<T> extends LiveData<T> {
         this.mInTransaction = z2;
         this.mComputeFunction = callable;
         this.mContainer = invalidationLiveDataContainer;
-        this.mObserver = new AnonymousClass3(strArr);
+        this.mObserver = new C05963(strArr);
     }
 
     public static /* synthetic */ void access$000(RoomTrackingLiveData roomTrackingLiveData, Object obj) {
