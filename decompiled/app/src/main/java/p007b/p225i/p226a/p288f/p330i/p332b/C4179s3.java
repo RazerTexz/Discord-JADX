@@ -40,7 +40,7 @@ public final class C4179s3 {
     }
 
     /* renamed from: d */
-    public final void m5863d(String str, Object obj, Object obj2, Object obj3) {
+    public final void m5863d(String str, Object obj, Object obj2, Object obj3) throws IllegalStateException {
         this.f11197d.m5799w(this.f11194a, this.f11195b, this.f11196c, str, obj, obj2, obj3);
     }
 }

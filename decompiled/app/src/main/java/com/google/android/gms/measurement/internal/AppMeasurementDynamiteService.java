@@ -273,7 +273,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void logHealthData(int i, String str, InterfaceC3422a interfaceC3422a, InterfaceC3422a interfaceC3422a2, InterfaceC3422a interfaceC3422a3) throws RemoteException {
+    public void logHealthData(int i, String str, InterfaceC3422a interfaceC3422a, InterfaceC3422a interfaceC3422a2, InterfaceC3422a interfaceC3422a3) throws IllegalStateException, RemoteException {
         m9111g();
         this.f20659a.mo5726g().m5799w(i, true, false, str, interfaceC3422a == null ? null : BinderC3423b.m4381i(interfaceC3422a), interfaceC3422a2 == null ? null : BinderC3423b.m4381i(interfaceC3422a2), interfaceC3422a3 != null ? BinderC3423b.m4381i(interfaceC3422a3) : null);
     }

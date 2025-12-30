@@ -20,7 +20,7 @@ public final class C4050g9 extends AbstractC4064i {
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4064i
     /* renamed from: a */
-    public final void mo5560a() {
+    public final void mo5560a() throws IllegalStateException {
         this.f10761f.m5659s();
         this.f10761f.mo5726g().f11149n.m5860a("Starting upload from DelayedRunnable");
         this.f10760e.m5716Q();

@@ -23,7 +23,7 @@ public final class RunnableC4115m5 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() {
+    public final void run() throws IllegalStateException {
         this.f10966l.f11390a.m5717R();
         this.f10966l.f11390a.m5732m(this.f10964j, this.f10965k);
     }

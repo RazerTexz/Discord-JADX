@@ -26,7 +26,7 @@ public final class RunnableC4082j5 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() {
+    public final void run() throws IllegalStateException {
         zzap zzapVar;
         BinderC4257z4 binderC4257z4 = this.f10851l;
         zzaq zzaqVar = this.f10849j;

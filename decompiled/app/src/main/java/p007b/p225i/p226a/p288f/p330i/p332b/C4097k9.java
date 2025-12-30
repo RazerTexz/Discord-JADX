@@ -314,7 +314,7 @@ public class C4097k9 implements InterfaceC4192t5 {
 
     @WorkerThread
     /* renamed from: B */
-    public final void m5702B(zzaq zzaqVar, zzn zznVar) {
+    public final void m5702B(zzaq zzaqVar, zzn zznVar) throws IllegalStateException {
         if (C3644ea.m4872b() && this.f10906k.f11260h.m5526o(C4142p.f11021A0)) {
             C4201u3 c4201u3M5931b = C4201u3.m5931b(zzaqVar);
             this.f10906k.m5949t().m5894H(c4201u3M5931b.f11244d, m5710K().m5636h0(zznVar.f20683j));
@@ -1311,7 +1311,7 @@ public class C4097k9 implements InterfaceC4192t5 {
 
     @WorkerThread
     /* renamed from: Q */
-    public final void m5716Q() {
+    public final void m5716Q() throws IllegalStateException {
         C3973a4 c3973a4M5622T;
         String strM4715J;
         m5720U();
@@ -1788,7 +1788,7 @@ public class C4097k9 implements InterfaceC4192t5 {
 
     @WorkerThread
     /* renamed from: l */
-    public final void m5731l(zzaq zzaqVar, zzn zznVar) {
+    public final void m5731l(zzaq zzaqVar, zzn zznVar) throws IllegalStateException {
         List<zzz> listM5609F;
         List<zzz> listM5609F2;
         List<zzz> listM5609F3;
@@ -1919,7 +1919,7 @@ public class C4097k9 implements InterfaceC4192t5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m5732m(zzaq zzaqVar, String str) {
+    public final void m5732m(zzaq zzaqVar, String str) throws IllegalStateException {
         boolean z2;
         C3973a4 c3973a4M5622T = m5710K().m5622T(str);
         if (c3973a4M5622T == null || TextUtils.isEmpty(c3973a4M5622T.m5459M())) {
@@ -2186,7 +2186,7 @@ public class C4097k9 implements InterfaceC4192t5 {
 
     @WorkerThread
     /* renamed from: r */
-    public final void m5737r(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) {
+    public final void m5737r(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) throws IllegalStateException {
         m5720U();
         m5715P();
         AnimatableValueParser.m583w(str);
@@ -3676,7 +3676,7 @@ public class C4097k9 implements InterfaceC4192t5 {
 
     @WorkerThread
     /* renamed from: x */
-    public final void m5743x() {
+    public final void m5743x() throws IllegalStateException {
         m5720U();
         if (this.f10913r || this.f10914s || this.f10915t) {
             this.f10906k.mo5726g().f11149n.m5863d("Not stopping services. fetch, network, upload", Boolean.valueOf(this.f10913r), Boolean.valueOf(this.f10914s), Boolean.valueOf(this.f10915t));

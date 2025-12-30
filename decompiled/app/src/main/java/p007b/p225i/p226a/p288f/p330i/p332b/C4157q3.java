@@ -251,7 +251,7 @@ public final class C4157q3 extends AbstractC4170r5 {
     }
 
     /* renamed from: w */
-    public final void m5799w(int i, boolean z2, boolean z3, String str, Object obj, Object obj2, Object obj3) {
+    public final void m5799w(int i, boolean z2, boolean z3, String str, Object obj, Object obj2, Object obj3) throws IllegalStateException {
         if (!z2 && Log.isLoggable(m5797F(), i)) {
             Log.println(i, m5797F(), m5790u(false, str, obj, obj2, obj3));
         }

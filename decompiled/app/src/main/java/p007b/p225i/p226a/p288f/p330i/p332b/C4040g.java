@@ -603,7 +603,7 @@ public final class C4040g extends AbstractC4074i9 {
 
     @WorkerThread
     /* renamed from: K */
-    public final boolean m5613K(C3635e1 c3635e1, boolean z2) {
+    public final boolean m5613K(C3635e1 c3635e1, boolean z2) throws IllegalStateException {
         mo5848b();
         m5684n();
         AnimatableValueParser.m583w(c3635e1.m4710G1());
@@ -741,7 +741,7 @@ public final class C4040g extends AbstractC4074i9 {
 
     @WorkerThread
     /* renamed from: O */
-    public final boolean m5617O(String str, int i, C3730l0 c3730l0) {
+    public final boolean m5617O(String str, int i, C3730l0 c3730l0) throws IllegalStateException {
         m5684n();
         mo5848b();
         AnimatableValueParser.m583w(str);
@@ -772,7 +772,7 @@ public final class C4040g extends AbstractC4074i9 {
 
     @WorkerThread
     /* renamed from: P */
-    public final boolean m5618P(String str, int i, C3769o0 c3769o0) {
+    public final boolean m5618P(String str, int i, C3769o0 c3769o0) throws IllegalStateException {
         m5684n();
         mo5848b();
         AnimatableValueParser.m583w(str);
@@ -995,7 +995,7 @@ public final class C4040g extends AbstractC4074i9 {
 
     @WorkerThread
     /* renamed from: V */
-    public final void m5624V(String str, String str2) {
+    public final void m5624V(String str, String str2) throws IllegalStateException {
         AnimatableValueParser.m583w(str);
         AnimatableValueParser.m583w(str2);
         mo5848b();
@@ -1179,7 +1179,7 @@ public final class C4040g extends AbstractC4074i9 {
 
     @WorkerThread
     /* renamed from: a0 */
-    public final int m5629a0(String str, String str2) {
+    public final int m5629a0(String str, String str2) throws IllegalStateException {
         AnimatableValueParser.m583w(str);
         AnimatableValueParser.m583w(str2);
         mo5848b();

@@ -17,7 +17,7 @@ public final class C4108l9 implements InterfaceC4256z3 {
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4256z3
     /* renamed from: a */
-    public final void mo5751a(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) {
+    public final void mo5751a(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) throws IllegalStateException {
         this.f10951a.m5737r(str, i, th, bArr, map);
     }
 }

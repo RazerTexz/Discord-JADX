@@ -25,7 +25,7 @@ public final class RunnableC4152p9 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() {
+    public final void run() throws IllegalStateException {
         C4196t9 c4196t9M5949t = this.f11134l.f10997a.f10906k.m5949t();
         String str = this.f11132j;
         Bundle bundle = this.f11133k;

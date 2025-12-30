@@ -563,7 +563,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     }
 
     /* renamed from: T */
-    public final void m5906T(String str, String str2, String str3, Bundle bundle, @Nullable List<String> list, boolean z2) {
+    public final void m5906T(String str, String str2, String str3, Bundle bundle, @Nullable List<String> list, boolean z2) throws IllegalStateException {
         int iM5923u0;
         String str4;
         int iM5919s;
@@ -619,7 +619,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     }
 
     /* renamed from: Z */
-    public final boolean m5908Z(String str, int i, String str2) {
+    public final boolean m5908Z(String str, int i, String str2) throws IllegalStateException {
         if (str2 == null) {
             mo5726g().f11143h.m5861b("Name is required and can't be null. Type", str);
             return false;
@@ -660,7 +660,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     }
 
     /* renamed from: b0 */
-    public final boolean m5910b0(String str, String str2, int i, Object obj) {
+    public final boolean m5910b0(String str, String str2, int i, Object obj) throws IllegalStateException {
         if (obj != null && !(obj instanceof Long) && !(obj instanceof Float) && !(obj instanceof Integer) && !(obj instanceof Byte) && !(obj instanceof Short) && !(obj instanceof Boolean) && !(obj instanceof Double)) {
             if (!(obj instanceof String) && !(obj instanceof Character) && !(obj instanceof CharSequence)) {
                 return false;
@@ -843,7 +843,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final int m5919s(String str, String str2, String str3, Object obj, Bundle bundle, @Nullable List<String> list, boolean z2, boolean z3) {
+    public final int m5919s(String str, String str2, String str3, Object obj, Bundle bundle, @Nullable List<String> list, boolean z2, boolean z3) throws IllegalStateException {
         int i;
         int size;
         boolean z4;

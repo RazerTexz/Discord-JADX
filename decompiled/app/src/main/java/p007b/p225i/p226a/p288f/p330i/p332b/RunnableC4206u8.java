@@ -19,7 +19,7 @@ public final class RunnableC4206u8 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() {
+    public final void run() throws IllegalStateException {
         this.f11288j.m5717R();
         C4097k9 c4097k9 = this.f11288j;
         Runnable runnable = this.f11289k;
