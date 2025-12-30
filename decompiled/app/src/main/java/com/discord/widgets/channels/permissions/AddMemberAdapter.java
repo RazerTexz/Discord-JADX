@@ -1,6 +1,5 @@
 package com.discord.widgets.channels.permissions;
 
-import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -127,11 +126,11 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i)));
         }
 
-        public static final /* synthetic */ void access$handleClick(AddMemberAdapterItemItem addMemberAdapterItemItem, Item.PermissionOwnerItem permissionOwnerItem) throws Resources.NotFoundException {
+        public static final /* synthetic */ void access$handleClick(AddMemberAdapterItemItem addMemberAdapterItemItem, Item.PermissionOwnerItem permissionOwnerItem) {
             addMemberAdapterItemItem.handleClick(permissionOwnerItem);
         }
 
-        private final void handleClick(Item.PermissionOwnerItem item) throws Resources.NotFoundException {
+        private final void handleClick(Item.PermissionOwnerItem item) {
             PermissionOwner permissionOwner = item.getPermissionOwner();
             Item.PermissionOwnerItem.Companion.AddStatus addStatus = item.getAddStatus();
             if (Intrinsics3.areEqual(addStatus, Item.PermissionOwnerItem.Companion.AddStatus.CanAdd.INSTANCE)) {

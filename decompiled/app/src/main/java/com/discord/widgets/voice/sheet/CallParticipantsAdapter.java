@@ -1,5 +1,6 @@
 package com.discord.widgets.voice.sheet;
 
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
@@ -706,12 +707,12 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-        public /* bridge */ /* synthetic */ void onConfigure(int i, MGRecyclerDataPayload mGRecyclerDataPayload) {
+        public /* bridge */ /* synthetic */ void onConfigure(int i, MGRecyclerDataPayload mGRecyclerDataPayload) throws Resources.NotFoundException {
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
-        public void onConfigure2(int position, MGRecyclerDataPayload data) {
+        public void onConfigure2(int position, MGRecyclerDataPayload data) throws Resources.NotFoundException {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             if (data instanceof ListItem.Event) {

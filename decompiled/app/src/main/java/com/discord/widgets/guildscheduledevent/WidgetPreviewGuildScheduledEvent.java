@@ -2,6 +2,7 @@ package com.discord.widgets.guildscheduledevent;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
@@ -232,13 +233,13 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(PreviewGuildScheduledEventViewModel.ViewState viewState) {
+        public /* bridge */ /* synthetic */ Unit invoke(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(PreviewGuildScheduledEventViewModel.ViewState viewState) {
+        public final void invoke2(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetPreviewGuildScheduledEvent.access$configureUi((WidgetPreviewGuildScheduledEvent) this.receiver, viewState);
         }
@@ -334,7 +335,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(PreviewGuildScheduledEventViewModel.class), new C8932x73600cfd(appViewModelDelegates3), new AppViewModelDelegates5(widgetPreviewGuildScheduledEvent6));
     }
 
-    public static final /* synthetic */ void access$configureUi(WidgetPreviewGuildScheduledEvent widgetPreviewGuildScheduledEvent, PreviewGuildScheduledEventViewModel.ViewState viewState) {
+    public static final /* synthetic */ void access$configureUi(WidgetPreviewGuildScheduledEvent widgetPreviewGuildScheduledEvent, PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
         widgetPreviewGuildScheduledEvent.configureUi(viewState);
     }
 
@@ -389,7 +390,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         textView2.setVisibility(8);
     }
 
-    private final void configureUi(PreviewGuildScheduledEventViewModel.ViewState viewState) {
+    private final void configureUi(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
         int i;
         if (viewState instanceof PreviewGuildScheduledEventViewModel.ViewState.Invalid) {
             FragmentActivity activity = getActivity();

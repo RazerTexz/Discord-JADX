@@ -2,6 +2,7 @@ package com.discord.widgets.guilds.invite;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
@@ -97,13 +98,13 @@ public final class WidgetGuildInvite extends AppFragment {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(GuildInviteViewModel.ViewState viewState) {
+        public /* bridge */ /* synthetic */ Unit invoke(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(GuildInviteViewModel.ViewState viewState) {
+        public final void invoke2(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetGuildInvite.this.configureUI(viewState);
         }
@@ -122,7 +123,7 @@ public final class WidgetGuildInvite extends AppFragment {
         widgetGuildInvite.configureUIFailure(error);
     }
 
-    private final void configureLoadedUI(GuildInviteViewModel.ViewState.Loaded viewState) {
+    private final void configureLoadedUI(GuildInviteViewModel.ViewState.Loaded viewState) throws Resources.NotFoundException {
         boolean z2;
         GuildScheduledEventModel model;
         ModelInvite invite = viewState.getInvite();
@@ -183,7 +184,7 @@ public final class WidgetGuildInvite extends AppFragment {
         analyticsTracker.inviteResolved(invite, str);
     }
 
-    public final void configureUI(GuildInviteViewModel.ViewState viewState) {
+    public final void configureUI(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
         Intrinsics3.checkNotNullParameter(viewState, "viewState");
         if (viewState instanceof GuildInviteViewModel.ViewState.Invalid) {
             configureUIFailure(null);

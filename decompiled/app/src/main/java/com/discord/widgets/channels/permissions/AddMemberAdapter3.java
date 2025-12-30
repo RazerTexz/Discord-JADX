@@ -1,6 +1,5 @@
 package com.discord.widgets.channels.permissions;
 
-import android.content.res.Resources;
 import android.view.View;
 import com.discord.widgets.channels.permissions.AddMemberAdapter;
 
@@ -17,7 +16,7 @@ public final class AddMemberAdapter3 implements View.OnClickListener {
     }
 
     @Override // android.view.View.OnClickListener
-    public final void onClick(View view) throws Resources.NotFoundException {
+    public final void onClick(View view) {
         AddMemberAdapter.AddMemberAdapterItemItem.access$handleClick(this.this$0, this.$item);
     }
 }
