@@ -23,7 +23,7 @@ jobs:
           repo: skylot/jadx
           branch: master
           workflow: build-artifacts.yml
-          name: .*(?<!win)$
+          name: (?<!win)$
           name_is_regexp: true
 
       - name: Decompile
